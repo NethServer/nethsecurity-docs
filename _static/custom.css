@@ -1,0 +1,18 @@
+aside.sidebar:not(.margin),
+div.sidebar:not(.margin) {
+  width:35%;
+  padding: 10px;
+  background-color: #fff;
+  margin: 0px;
+}
+aside.sidebar p.sidebar-title {
+  border-bottom: 0px;
+  padding-left: 0px;
+  color: var(--pst-color-muted);
+}
+aside.sidebar, div.sidebar {
+  border: 0px;
+}
+aside.sidebar p, div.sidebar p {
+  color: var(--pst-color-muted);
+}
