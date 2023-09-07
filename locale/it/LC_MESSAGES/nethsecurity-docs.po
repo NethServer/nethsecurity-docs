@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-07 09:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../backup.rst:3
+msgid "Backup and restore"
+msgstr ""
+
+#: ../../backup.rst:5 ../../certificates.rst:5 ../../dns_dhcp.rst:5
+#: ../../dns_filter.rst:5 ../../dpi_filter.rst:7 ../../firewall.rst:5
+#: ../../hotspot.rst:5 ../../install.rst:9 ../../introduction.rst:8
+#: ../../ipsec_tunnels.rst:5 ../../metrics.rst:5 ../../migration.rst:15
+#: ../../multiwan.rst:5 ../../nat.rst:5 ../../nat_helpers.rst:5
+#: ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
+#: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
+#: ../../release_notes.rst:10 ../../remote_support.rst:7
+#: ../../reverse_proxy.rst:5 ../../routing.rst:5 ../../smtp.rst:5
+#: ../../storage.rst:5 ../../subscription.rst:5
+#: ../../system_requirements.rst:16 ../../threat_shield.rst:5
+#: ../../updates.rst:7
+msgid "TODO"
+msgstr ""
+
+#: ../../certificates.rst:3
+msgid "Certificates"
+msgstr ""
+
+#: ../../controller.rst:3
+msgid "Controller"
+msgstr ""
+
+#: ../../controller.rst:5
+msgid "TODO:"
+msgstr ""
+
+#: ../../controller.rst:7
+msgid "registration"
+msgstr ""
+
+#: ../../controller.rst:8
+msgid "remote logs"
+msgstr ""
+
+#: ../../controller.rst:9
+msgid "remote metrics"
+msgstr ""
+
+#: ../../dns_dhcp.rst:3
+msgid "DNS & DHCP"
+msgstr ""
+
+#: ../../dns_filter.rst:3
+msgid "DNS filter"
+msgstr ""
+
+#: ../../dpi_filter.rst:5
+msgid "Deep Packet Inspection (DPI) filter"
+msgstr ""
+
+#: ../../firewall.rst:3
+msgid "Firewall"
+msgstr ""
+
+#: ../../hotspot.rst:3
+msgid "HotSpot"
+msgstr ""
+
+#: ../../index.rst:13
+msgid "About"
+msgstr ""
+
+#: ../../index.rst:20 ../../install.rst:5
+msgid "Installation"
+msgstr ""
+
+#: ../../index.rst:28
+msgid "Configuration"
+msgstr ""
+
+#: ../../index.rst:50
+msgid "Applications"
+msgstr ""
+
+#: ../../index.rst:64
+msgid "Best practices"
+msgstr ""
+
+#: ../../index.rst:5
+msgid "NethSecurity administrator manual"
+msgstr ""
+
+#: ../../index.rst:9
+msgid "`Developer manual <https://https://nethserver.github.io/nethsecurity/>`_"
+msgstr ""
+
+#: ../../index.rst:11
+msgid "Help on `Community <http://community.nethserver.org>`_"
+msgstr ""
+
+#: ../../introduction.rst:3
+msgid "Introduction"
+msgstr ""
+
+#: ../../introduction.rst:6
+msgid "About NethSecurity"
+msgstr ""
+
+#: ../../introduction.rst:11
+msgid "Get support"
+msgstr ""
+
+#: ../../introduction.rst:13
+msgid ""
+"You want to know more or look for some help? Check out our great "
+"`community <https://community.nethserver.org>`_!"
+msgstr ""
+
+#: ../../introduction.rst:16
+msgid ""
+"If you're looking for more technical details, take a look to the "
+"`developer manual <https://https://nethserver.github.io/nethsecurity/>`_."
+msgstr ""
+
+#: ../../introduction.rst:18
+msgid ""
+"Bugs can be discussed and reported inside the `community forum "
+"<https://community.nethserver.org>`_. A public issue tracker is available"
+" at `GitHub <https://github.com/NethServer/dev/issues>`_."
+msgstr ""
+
+#: ../../ipsec_tunnels.rst:3
+msgid "IPSec tunnels"
+msgstr ""
+
+#: ../../metrics.rst:3
+msgid "Metrics"
+msgstr ""
+
+#: ../../migration.rst:5
+msgid "NethServer 7 migration"
+msgstr ""
+
+#: ../../migration.rst:9
+msgid ""
+"Migration is the process to convert a NethServer 7 machine (*source*) "
+"into a NethSecurity 8 (*destination*)."
+msgstr ""
+
+#: ../../migration.rst:11
+msgid "Before starting you will need:"
+msgstr ""
+
+#: ../../migration.rst:13
+msgid "SSH and Cockpit access to the source NethServer 7 machine"
+msgstr ""
+
+#: ../../multiwan.rst:3
+msgid "MultiWAN"
+msgstr ""
+
+#: ../../nat.rst:3
+msgid "NAT"
+msgstr ""
+
+#: ../../nat_helpers.rst:3
+msgid "NAT helpers"
+msgstr ""
+
+#: ../../network.rst:3
+msgid "Network"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:3
+msgid "OpenVPN Roadwarrior"
+msgstr ""
+
+#: ../../openvpn_tunnels.rst:3
+msgid "OpenVPN tunnels"
+msgstr ""
+
+#: ../../port_forward.rst:3
+msgid "Port forward"
+msgstr ""
+
+#: ../../qos.rst:3
+msgid "Qualitiy of Service (QoS)"
+msgstr ""
+
+#: ../../release_notes.rst:3
+msgid "Release notes"
+msgstr ""
+
+#: ../../release_notes.rst:5
+msgid "NethSecurity releases."
+msgstr ""
+
+#: ../../release_notes.rst:7
+#, python-format
+msgid ""
+"List of `known bugs "
+"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
+msgstr ""
+
+#: ../../release_notes.rst:8
+msgid ""
+"Discussions around `possible bugs "
+"<http://community.nethserver.org/c/bug>`_"
+msgstr ""
+
+#: ../../remote_access.rst:3
+msgid "Remote access"
+msgstr ""
+
+#: ../../remote_access.rst:5
+msgid "SSH"
+msgstr ""
+
+#: ../../remote_access.rst:6
+msgid "NS UI"
+msgstr ""
+
+#: ../../remote_access.rst:7
+msgid "LUCI"
+msgstr ""
+
+#: ../../remote_support.rst:3
+msgid "Remote support"
+msgstr ""
+
+#: ../../remote_support.rst:5
+msgid "don and sos.nethesis.it"
+msgstr ""
+
+#: ../../reverse_proxy.rst:3
+msgid "Reverse proxy"
+msgstr ""
+
+#: ../../routing.rst:3
+msgid "Routing"
+msgstr ""
+
+#: ../../smtp.rst:3
+msgid "SMTP relay"
+msgstr ""
+
+#: ../../storage.rst:3
+msgid "Storage"
+msgstr ""
+
+#: ../../subscription.rst:3
+msgid "Subscription"
+msgstr ""
+
+#: ../../system_requirements.rst:5
+msgid "System requirements"
+msgstr ""
+
+#: ../../system_requirements.rst:7
+msgid ""
+"NethSecurity is currently available only for `x86-64 architecture "
+"<https://en.wikipedia.org/wiki/X86-64>`_."
+msgstr ""
+
+#: ../../system_requirements.rst:9
+msgid "Minimum hardware requirements for a single node installation:"
+msgstr ""
+
+#: ../../system_requirements.rst:11
+msgid "1 vCPU/cores"
+msgstr ""
+
+#: ../../system_requirements.rst:12
+msgid "1GB RAM"
+msgstr ""
+
+#: ../../system_requirements.rst:13
+msgid "1GB disk"
+msgstr ""
+
+#: ../../system_requirements.rst:14
+msgid "2 Ethernet network cards"
+msgstr ""
+
+#: ../../threat_shield.rst:3
+msgid "Threat shield"
+msgstr ""
+
+#: ../../updates.rst:5
+msgid "Updates"
+msgstr ""
+
