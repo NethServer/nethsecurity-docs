@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-07 09:23+0000\n"
+"POT-Creation-Date: 2023-09-14 07:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -108,7 +108,7 @@ msgid "NethSecurity administrator manual"
 msgstr ""
 
 #: ../../index.rst:9
-msgid "`Developer manual <https://https://nethserver.github.io/nethsecurity/>`_"
+msgid "`Developer manual <https://nethserver.github.io/nethsecurity/>`_"
 msgstr ""
 
 #: ../../index.rst:11
@@ -306,4 +306,9 @@ msgstr ""
 #: ../../updates.rst:5
 msgid "Updates"
 msgstr ""
+
+#~ msgid ""
+#~ "`Developer manual "
+#~ "<https://https://nethserver.github.io/nethsecurity/>`_"
+#~ msgstr ""
 
