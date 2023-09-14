@@ -6,7 +6,7 @@ NethSecurity administrator manual
 
 .. sidebar:: Looking for ...
 
-        * `Developer manual <https://https://nethserver.github.io/nethsecurity/>`_
+        * `Developer manual <https://nethserver.github.io/nethsecurity/>`_
 
         * Help on `Community <http://community.nethserver.org>`_
 
