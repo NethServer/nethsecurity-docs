@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 10:52+0000\n"
+"POT-Creation-Date: 2023-10-04 10:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -30,9 +30,9 @@ msgstr ""
 #: ../../migration.rst:15 ../../multiwan.rst:5 ../../nat.rst:5
 #: ../../nat_helpers.rst:5 ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
 #: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
-#: ../../release_notes.rst:10 ../../remote_support.rst:7
-#: ../../reverse_proxy.rst:5 ../../routing.rst:5 ../../smtp.rst:5
-#: ../../storage.rst:5 ../../subscription.rst:5 ../../threat_shield.rst:5
+#: ../../remote_support.rst:7 ../../reverse_proxy.rst:5 ../../routing.rst:5
+#: ../../smtp.rst:5 ../../storage.rst:5 ../../subscription.rst:5
+#: ../../threat_shield.rst:5
 msgid "TODO"
 msgstr ""
 
@@ -467,7 +467,7 @@ msgid "Release notes"
 msgstr ""
 
 #: ../../release_notes.rst:5
-msgid "NethSecurity releases."
+msgid "NethSecurity releases changelogs."
 msgstr ""
 
 #: ../../release_notes.rst:7
@@ -481,6 +481,60 @@ msgstr ""
 msgid ""
 "Discussions around `possible bugs "
 "<http://community.nethserver.org/c/bug>`_"
+msgstr ""
+
+#: ../../release_notes.rst:11
+msgid "Alpha1"
+msgstr ""
+
+#: ../../release_notes.rst:13
+msgid "To be announced yet."
+msgstr ""
+
+#: ../../release_notes.rst:16
+msgid "Releases glossary"
+msgstr ""
+
+#: ../../release_notes.rst:18
+msgid ""
+"The software release cycle includes four stages: Alpha, Beta, Release "
+"Candidate (RC), and Stable."
+msgstr ""
+
+#: ../../release_notes.rst:20
+msgid ""
+"During the **Alpha** stage, the software is not thoroughly tested and may"
+" not include all planned features. This release is not suitable for "
+"production environments. However, it can be used to preview what's coming"
+" in the upcoming version. Please note that updates from an Alpha release "
+"to other releases are not supported."
+msgstr ""
+
+#: ../../release_notes.rst:24
+msgid ""
+"The **Beta** stage indicates that the software is mostly feature "
+"complete, but it may still contain many known and unknown bugs. This "
+"release should not be used on production environments. However, it can be"
+" used to test the software before deploying it to production. Updates "
+"from a Beta release to an RC or Stable release are supported but may "
+"require a manual procedure."
+msgstr ""
+
+#: ../../release_notes.rst:28
+msgid ""
+"During the **Release Candidate (RC)** stage, the software is feature "
+"complete, and it contains no known bugs. If no major issues arise, it can"
+" be promoted to Stable. Updates from an RC release to a Stable release "
+"are supported and should be almost automatic. However, if you're new to "
+"the software, it's best to use it in production only if you already have "
+"some experience with it."
+msgstr ""
+
+#: ../../release_notes.rst:33
+msgid ""
+"The **Stable** release is the most reliable and safe to use in production"
+" environments. It has been thoroughly tested and is considered to be free"
+" of major bugs."
 msgstr ""
 
 #: ../../remote_access.rst:3
@@ -626,5 +680,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "1GB disk"
+#~ msgstr ""
+
+#~ msgid "NethSecurity releases."
 #~ msgstr ""
 
