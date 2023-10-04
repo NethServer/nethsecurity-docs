@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-14 07:20+0000\n"
+"POT-Creation-Date: 2023-10-04 10:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -26,16 +26,14 @@ msgstr ""
 
 #: ../../backup.rst:5 ../../certificates.rst:5 ../../dns_dhcp.rst:5
 #: ../../dns_filter.rst:5 ../../dpi_filter.rst:7 ../../firewall.rst:5
-#: ../../hotspot.rst:5 ../../install.rst:9 ../../introduction.rst:8
-#: ../../ipsec_tunnels.rst:5 ../../metrics.rst:5 ../../migration.rst:15
-#: ../../multiwan.rst:5 ../../nat.rst:5 ../../nat_helpers.rst:5
-#: ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
-#: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
-#: ../../release_notes.rst:10 ../../remote_support.rst:7
-#: ../../reverse_proxy.rst:5 ../../routing.rst:5 ../../smtp.rst:5
-#: ../../storage.rst:5 ../../subscription.rst:5
-#: ../../system_requirements.rst:16 ../../threat_shield.rst:5
-#: ../../updates.rst:7
+#: ../../hotspot.rst:5 ../../install.rst:9 ../../ipsec_tunnels.rst:5
+#: ../../metrics.rst:5 ../../migration.rst:15 ../../multiwan.rst:5
+#: ../../nat.rst:5 ../../nat_helpers.rst:5 ../../network.rst:5
+#: ../../openvpn_roadwarrior.rst:5 ../../openvpn_tunnels.rst:5
+#: ../../port_forward.rst:5 ../../qos.rst:5 ../../release_notes.rst:10
+#: ../../remote_support.rst:7 ../../reverse_proxy.rst:5 ../../routing.rst:5
+#: ../../smtp.rst:5 ../../storage.rst:5 ../../subscription.rst:5
+#: ../../threat_shield.rst:5 ../../updates.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -123,23 +121,117 @@ msgstr ""
 msgid "About NethSecurity"
 msgstr ""
 
+#: ../../introduction.rst:8
+msgid ""
+"NethSecurity is an Unified Threat Management (UTM) solution that provides"
+" a comprehensive suite of security features, including firewall, content "
+"filtering, deep packet inspection (DPI) using Netifyd, Dedalo hotspot, "
+"OpenVPN, and an optional remote controller. It is designed to be easy to "
+"install and configure, making it a good choice for both small and medium-"
+"sized businesses (SMBs) as well as enterprise organizations."
+msgstr ""
+
 #: ../../introduction.rst:11
-msgid "Get support"
+msgid ""
+"NethSecurity is based on `OpenWrt <https://openwrt.org>`_, a popular "
+"Linux distribution for embedded devices. This gives it a number of "
+"advantages, including:"
 msgstr ""
 
 #: ../../introduction.rst:13
+msgid "flexibility: it can be installed on a wide range of hardware"
+msgstr ""
+
+#: ../../introduction.rst:14
+msgid ""
+"customization: it can be customized to meet the specific needs of each "
+"organization"
+msgstr ""
+
+#: ../../introduction.rst:15
+msgid ""
+"community support: it benefits from the large and active `NethServer "
+"community <https://community.nethserver.org>`_"
+msgstr ""
+
+#: ../../introduction.rst:17
+msgid "NethSecurity includes a variety of security features, including:"
+msgstr ""
+
+#: ../../introduction.rst:19
+msgid ""
+"firewall: NethSecurity's firewall provides stateful packet inspection and"
+" filtering to protect networks from unauthorized access"
+msgstr ""
+
+#: ../../introduction.rst:20
+msgid ""
+"DNS content filtering: NethSecurity's content filtering feature blocks "
+"users from accessing inappropriate or malicious websites"
+msgstr ""
+
+#: ../../introduction.rst:21
+msgid ""
+"Deep Packet Inspection (DPI): NethSecurity uses Netifyd to perform DPI, "
+"which allows it to inspect the contents of packets and identify malicious"
+" or unwanted traffic"
+msgstr ""
+
+#: ../../introduction.rst:22
+msgid ""
+"`Icaro hotspot <https://nethesis.github.io/icaro/>`_: Iedalo hotspot is a"
+" captive portal solution that can be used to manage and authenticate "
+"users on wireless networks."
+msgstr ""
+
+#: ../../introduction.rst:23
+msgid ""
+"VPN: OpenVPN and IPSec are popular open-source VPN protocol that can be "
+"used to create secure tunnels between networks."
+msgstr ""
+
+#: ../../introduction.rst:24
+msgid ""
+"Remote controller: NethSecurity includes a remote controller that allows "
+"administrators to manage their NethSecurity devices remotely."
+msgstr ""
+
+#: ../../introduction.rst:26
+msgid ""
+"In addition to these security features, NethSecurity also includes a "
+"number of other features, such as:"
+msgstr ""
+
+#: ../../introduction.rst:28
+msgid ""
+"quality of service (QoS): NethSecurity's QoS feature allows "
+"administrators to prioritize traffic and ensure that critical "
+"applications always have the bandwidth they need."
+msgstr ""
+
+#: ../../introduction.rst:29
+msgid ""
+"IPv6 support: NethSecurity supports IPv6, the next-generation internet "
+"protocol"
+msgstr ""
+
+#: ../../introduction.rst:32
+msgid "Get support"
+msgstr ""
+
+#: ../../introduction.rst:34
 msgid ""
 "You want to know more or look for some help? Check out our great "
 "`community <https://community.nethserver.org>`_!"
 msgstr ""
 
-#: ../../introduction.rst:16
+#: ../../introduction.rst:37
 msgid ""
 "If you're looking for more technical details, take a look to the "
 "`developer manual <https://https://nethserver.github.io/nethsecurity/>`_."
 msgstr ""
 
-#: ../../introduction.rst:18
+#: ../../introduction.rst:39
 msgid ""
 "Bugs can be discussed and reported inside the `community forum "
 "<https://community.nethserver.org>`_. A public issue tracker is available"
@@ -288,15 +380,33 @@ msgid "1 vCPU/cores"
 msgstr ""
 
 #: ../../system_requirements.rst:12
-msgid "1GB RAM"
+msgid "1GB of RAM"
 msgstr ""
 
 #: ../../system_requirements.rst:13
-msgid "1GB disk"
+msgid "1GB of disk space"
 msgstr ""
 
 #: ../../system_requirements.rst:14
 msgid "2 Ethernet network cards"
+msgstr ""
+
+#: ../../system_requirements.rst:16
+msgid "Recommended hardware requirements:"
+msgstr ""
+
+#: ../../system_requirements.rst:18
+msgid "2 vCPU/cores"
+msgstr ""
+
+#: ../../system_requirements.rst:19
+msgid "2GB of RAM"
+msgstr ""
+
+#: ../../system_requirements.rst:20
+msgid ""
+"1GB if disk space plus an additional USB storage for persistent data like"
+" logs"
 msgstr ""
 
 #: ../../threat_shield.rst:3
@@ -310,5 +420,11 @@ msgstr ""
 #~ msgid ""
 #~ "`Developer manual "
 #~ "<https://https://nethserver.github.io/nethsecurity/>`_"
+#~ msgstr ""
+
+#~ msgid "1GB RAM"
+#~ msgstr ""
+
+#~ msgid "1GB disk"
 #~ msgstr ""
 
