@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 10:20+0000\n"
+"POT-Creation-Date: 2023-10-04 10:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -26,14 +26,14 @@ msgstr ""
 
 #: ../../backup.rst:5 ../../certificates.rst:5 ../../dns_dhcp.rst:5
 #: ../../dns_filter.rst:5 ../../dpi_filter.rst:7 ../../firewall.rst:5
-#: ../../hotspot.rst:5 ../../install.rst:9 ../../ipsec_tunnels.rst:5
-#: ../../metrics.rst:5 ../../migration.rst:15 ../../multiwan.rst:5
-#: ../../nat.rst:5 ../../nat_helpers.rst:5 ../../network.rst:5
-#: ../../openvpn_roadwarrior.rst:5 ../../openvpn_tunnels.rst:5
-#: ../../port_forward.rst:5 ../../qos.rst:5 ../../release_notes.rst:10
-#: ../../remote_support.rst:7 ../../reverse_proxy.rst:5 ../../routing.rst:5
-#: ../../smtp.rst:5 ../../storage.rst:5 ../../subscription.rst:5
-#: ../../threat_shield.rst:5 ../../updates.rst:7
+#: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../metrics.rst:5
+#: ../../migration.rst:15 ../../multiwan.rst:5 ../../nat.rst:5
+#: ../../nat_helpers.rst:5 ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
+#: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
+#: ../../release_notes.rst:10 ../../remote_support.rst:7
+#: ../../reverse_proxy.rst:5 ../../routing.rst:5 ../../smtp.rst:5
+#: ../../storage.rst:5 ../../subscription.rst:5 ../../threat_shield.rst:5
+#: ../../updates.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -111,6 +111,173 @@ msgstr ""
 
 #: ../../index.rst:11
 msgid "Help on `Community <http://community.nethserver.org>`_"
+msgstr ""
+
+#: ../../install.rst:9
+msgid ""
+"First, make sure to download the latest x86_64 image from the `official "
+"download link "
+"<https://updates.nethsecurity.nethserver.org/22.03.5/targets/x86/64/nethsecurity-22.03.5-x86-64"
+"-generic-ext4-combined-efi.img.gz>`_."
+msgstr ""
+
+#: ../../install.rst:11
+msgid ""
+"To install NethSecurity, you can either write the downloaded image "
+"directly to the disk or boot from a USB stick."
+msgstr ""
+
+#: ../../install.rst:14
+msgid "Install on bare metal"
+msgstr ""
+
+#: ../../install.rst:16
+msgid ""
+"NethSecurity can be run from a USB stick or installed directly to any "
+"bootable device like hard disks or SD cards."
+msgstr ""
+
+#: ../../install.rst:19
+msgid "attach the target disk/stick/card to a desktop Linux machine"
+msgstr ""
+
+#: ../../install.rst:20
+msgid ""
+"find the disk/stick/card device name, in this example the device is named"
+" ``/dev/sdd``"
+msgstr ""
+
+#: ../../install.rst:21
+msgid "as ``root`` user, write the downloaded image to the device: ::"
+msgstr ""
+
+#: ../../install.rst:25
+msgid "unplug the disk/stick/card from the desktop and plug it into the server"
+msgstr ""
+
+#: ../../install.rst:26
+msgid ""
+"boot the server, select the correct device (USB, SD card or hard disk) "
+"from boot menu"
+msgstr ""
+
+#: ../../install.rst:27
+msgid "the server is installed and ready to be used"
+msgstr ""
+
+#: ../../install.rst:29
+msgid ""
+"If you're running a desktop Windows machine, you will need extra software"
+" for point 2. First, make sure to format the USB drive then unmount it. "
+"Use one of the following tools to write the USB stick:"
+msgstr ""
+
+#: ../../install.rst:33
+msgid "`Etcher <https://etcher.io/>`_"
+msgstr ""
+
+#: ../../install.rst:34
+msgid "`Win32 Disk Imager <http://sourceforge.net/projects/win32diskimager/>`_"
+msgstr ""
+
+#: ../../install.rst:35
+msgid "`Rawrite32 <http://www.netbsd.org/~martin/rawrite32/>`_"
+msgstr ""
+
+#: ../../install.rst:36
+msgid "`dd for Windows <http://www.chrysocome.net/dd>`_"
+msgstr ""
+
+#: ../../install.rst:39
+msgid "Install from USB to disk"
+msgstr ""
+
+#: ../../install.rst:41
+msgid ""
+"Since running from the USB stick does not guarantee best performances, "
+"you can also install NethSecurity to the hard disk while running it from "
+"the USB stick itself:"
+msgstr ""
+
+#: ../../install.rst:44
+msgid "make sure the server has Internet access"
+msgstr ""
+
+#: ../../install.rst:45
+msgid "connect to the server using VGA, serial console or SSH"
+msgstr ""
+
+#: ../../install.rst:46
+msgid "login with default credentials"
+msgstr ""
+
+#: ../../install.rst:47
+msgid "execute ``ns-install`` and follow the instructions"
+msgstr ""
+
+#: ../../install.rst:51
+msgid "Install on virtual machines"
+msgstr ""
+
+#: ../../install.rst:53
+msgid "You can use the downloaded image as a virtual machine disk:"
+msgstr ""
+
+#: ../../install.rst:55
+msgid "extract the downloaded image: ::"
+msgstr ""
+
+#: ../../install.rst:59
+msgid "create a new virtual machine and select the uncompressed image as disk"
+msgstr ""
+
+#: ../../install.rst:60
+msgid "boot the virtual machine"
+msgstr ""
+
+#: ../../install.rst:63
+msgid "Install on Proxmox"
+msgstr ""
+
+#: ../../install.rst:65
+msgid "The image can be imported inside `Proxmox <https://www.proxmox.com/>`_."
+msgstr ""
+
+#: ../../install.rst:67
+msgid ""
+"First, make sure to have 2 different network bridges. In this example we "
+"are going to use ``vmbr0`` and ``vmbr1``. The described procedure can be "
+"also done using the Proxmox UI."
+msgstr ""
+
+#: ../../install.rst:70
+msgid ""
+"Create the virtual machine, in this example the machine will have id "
+"``401``::"
+msgstr ""
+
+#: ../../install.rst:75
+msgid "Download the image: ::"
+msgstr ""
+
+#: ../../install.rst:80
+msgid "Extract the image: ::"
+msgstr ""
+
+#: ../../install.rst:84
+msgid "Import the extracted images a virtual machine disk: ::"
+msgstr ""
+
+#: ../../install.rst:88
+msgid "Attach the disk to the virtual machine: ::"
+msgstr ""
+
+#: ../../install.rst:92
+msgid "Setup the boot order: ::"
+msgstr ""
+
+#: ../../install.rst:96
+msgid "Finally, start the virtual machine."
 msgstr ""
 
 #: ../../introduction.rst:3
