@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 11:15+0000\n"
+"POT-Creation-Date: 2023-10-04 11:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -31,8 +31,7 @@ msgstr ""
 #: ../../nat_helpers.rst:5 ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
 #: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
 #: ../../remote_support.rst:7 ../../reverse_proxy.rst:5 ../../routing.rst:5
-#: ../../smtp.rst:5 ../../storage.rst:5 ../../subscription.rst:5
-#: ../../threat_shield.rst:5
+#: ../../smtp.rst:5 ../../subscription.rst:5 ../../threat_shield.rst:5
 msgid "TODO"
 msgstr ""
 
@@ -713,6 +712,61 @@ msgstr ""
 
 #: ../../storage.rst:3
 msgid "Storage"
+msgstr ""
+
+#: ../../storage.rst:7
+msgid ""
+"As default, logs are written inside a volatile in-memory directory to "
+"prevent errors on the root file system in case of failure. However, if "
+"your system fails, you may lose all of your logs."
+msgstr ""
+
+#: ../../storage.rst:9
+msgid ""
+"NethSecurity allows you to save a copy of your system logs on an external"
+" storage device, such as a USB stick. This can be useful for "
+"troubleshooting problems or for keeping a record of your system activity."
+msgstr ""
+
+#: ../../storage.rst:11
+msgid ""
+"To use the an external disk, attach the disk device to your machine and "
+"run the following command: ::"
+msgstr ""
+
+#: ../../storage.rst:15
+msgid "Where ``device`` is the name of the external device like ``/dev/sdb``."
+msgstr ""
+
+#: ../../storage.rst:17
+msgid ""
+"The command will prepare the device by erasing all partitions and "
+"existing data, creating a single partition using the ext4 filesystem, and"
+" mounting the storage at ``/mnt/data``."
+msgstr ""
+
+#: ../../storage.rst:20
+msgid "The system will then be reconfigured as follows:"
+msgstr ""
+
+#: ../../storage.rst:22
+msgid "rsyslog will write logs also inside ``/mnt/data/logs/messages`` file"
+msgstr ""
+
+#: ../../storage.rst:23
+msgid "logrotate will rotate ``/mnt/data/logs/messages`` once a week"
+msgstr ""
+
+#: ../../storage.rst:25
+msgid ""
+"Extra generated data like metrics, will be synced from in-memory "
+"filesystems to persistent storage once a day during the night."
+msgstr ""
+
+#: ../../storage.rst:27
+msgid ""
+"To remove the data storage and restore in-memory log retention only, run "
+"the following command: ::"
 msgstr ""
 
 #: ../../subscription.rst:3
