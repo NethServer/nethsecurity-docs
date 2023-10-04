@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 10:56+0000\n"
+"POT-Creation-Date: 2023-10-04 11:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -277,6 +277,54 @@ msgstr ""
 
 #: ../../install.rst:96
 msgid "Finally, start the virtual machine."
+msgstr ""
+
+#: ../../install.rst:100
+msgid "Default network configuration"
+msgstr ""
+
+#: ../../install.rst:102
+msgid ""
+"When you first boot NethSecurity, the system will try to configure the "
+"network interfaces."
+msgstr ""
+
+#: ../../install.rst:104
+msgid "By default, the network configuration will be as follows:"
+msgstr ""
+
+#: ../../install.rst:106
+msgid ""
+"The LAN interface will be configured with a static IP address of "
+"192.168.1.1."
+msgstr ""
+
+#: ../../install.rst:107 ../../install.rst:112
+msgid ""
+"The WAN interface will be configured to use DHCP to obtain an IP address "
+"from your ISP."
+msgstr ""
+
+#: ../../install.rst:109
+msgid ""
+"An exception to this default network configuration is virtual machines "
+"running on KVM and on Digital Ocean cloud provider (droplet). In this "
+"case, the network configuration will be as follows:"
+msgstr ""
+
+#: ../../install.rst:111
+msgid ""
+"The LAN interface will be configured to use DHCP to obtain an IP address "
+"from the virtualization platform."
+msgstr ""
+
+#: ../../install.rst:114
+msgid ""
+"**Note:** If you are using NethSecurity in a production environment, you "
+"may need to modify the default network configuration to meet your "
+"specific needs. For example, you may need to configure the LAN interface "
+"with a different IP address or configure the WAN interface to use a "
+"static IP address."
 msgstr ""
 
 #: ../../introduction.rst:3
