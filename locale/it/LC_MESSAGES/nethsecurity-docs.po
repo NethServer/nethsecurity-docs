@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 11:01+0000\n"
+"POT-Creation-Date: 2023-10-04 11:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -589,16 +589,106 @@ msgstr ""
 msgid "Remote access"
 msgstr ""
 
-#: ../../remote_access.rst:5
+#: ../../remote_access.rst:8
+msgid "Default credentials"
+msgstr ""
+
+#: ../../remote_access.rst:10
+msgid "Default credentials are:"
+msgstr ""
+
+#: ../../remote_access.rst:12
+msgid "User: ``root``"
+msgstr ""
+
+#: ../../remote_access.rst:13
+msgid "Password: ``Nethesis,1234``"
+msgstr ""
+
+#: ../../remote_access.rst:15
+msgid "Such credentials can be used to login into the web interface or using SSH."
+msgstr ""
+
+#: ../../remote_access.rst:19
+msgid ""
+"The default password for the root user is ``Nethesis,1234``. It is "
+"recommended to change the password immediately after logging in for the "
+"first time."
+msgstr ""
+
+#: ../../remote_access.rst:22
+msgid "Web user interface"
+msgstr ""
+
+#: ../../remote_access.rst:24
+msgid "NethSecurity has two different web user interfaces:"
+msgstr ""
+
+#: ../../remote_access.rst:26
+msgid "NethSecurity UI: A custom user interface focused on usage simplicity."
+msgstr ""
+
+#: ../../remote_access.rst:27
+msgid ""
+"LuCI: The original OpenWrt web interface. Please bear in mind that some "
+"pages may cause unpredictable configuration changes."
+msgstr ""
+
+#: ../../remote_access.rst:29
+msgid "Both user interfaces listen on port 443 (HTTPS):"
+msgstr ""
+
+#: ../../remote_access.rst:31
+msgid "NethSecurity is accessible at ``https://server_ip``"
+msgstr ""
+
+#: ../../remote_access.rst:32
+msgid "LuCI is accessible at ``https://server_ip/cgi-bin/luci``"
+msgstr ""
+
+#: ../../remote_access.rst:35
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:6
-msgid "NS UI"
+#: ../../remote_access.rst:37
+msgid ""
+"By default, the system accepts SSH connections on the standard port 22. "
+"Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:7
-msgid "LUCI"
+#: ../../remote_access.rst:39
+msgid "From a Linux machine, use the following command: ::"
+msgstr ""
+
+#: ../../remote_access.rst:44
+msgid "VGA console and keyboard layout"
+msgstr ""
+
+#: ../../remote_access.rst:46
+msgid ""
+"If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
+"Then, you will be able to log in to the console using the default "
+"credentials above."
+msgstr ""
+
+#: ../../remote_access.rst:48
+msgid "Please note that the system is configured with the US keyboard layout."
+msgstr ""
+
+#: ../../remote_access.rst:50
+msgid ""
+"To temporarily change the current keyboard layout to Italian, log in to "
+"the system and then execute the following command: ::"
+msgstr ""
+
+#: ../../remote_access.rst:54
+msgid ""
+"The keyboard layout configuration can be saved by writing the keymap code"
+" inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
+msgstr ""
+
+#: ../../remote_access.rst:59
+msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
 #: ../../remote_support.rst:3
@@ -731,5 +821,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "NethSecurity releases."
+#~ msgstr ""
+
+#~ msgid "NS UI"
+#~ msgstr ""
+
+#~ msgid "LUCI"
 #~ msgstr ""
 
