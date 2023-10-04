@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 10:41+0000\n"
+"POT-Creation-Date: 2023-10-04 10:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -33,7 +33,6 @@ msgstr ""
 #: ../../release_notes.rst:10 ../../remote_support.rst:7
 #: ../../reverse_proxy.rst:5 ../../routing.rst:5 ../../smtp.rst:5
 #: ../../storage.rst:5 ../../subscription.rst:5 ../../threat_shield.rst:5
-#: ../../updates.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -582,6 +581,40 @@ msgstr ""
 
 #: ../../updates.rst:5
 msgid "Updates"
+msgstr ""
+
+#: ../../updates.rst:9
+msgid "NethSecurity uses two different methods to update the system:"
+msgstr ""
+
+#: ../../updates.rst:11
+msgid ""
+"**1. Security and minor bugfixes are distributed using packages.** To "
+"update the system, run the following commands: ::"
+msgstr ""
+
+#: ../../updates.rst:15
+msgid ""
+"The ``opkg update`` command updates the list of available packages, and "
+"the ``opkg upgrade`` command upgrades all of the installed packages to "
+"the latest versions."
+msgstr ""
+
+#: ../../updates.rst:17
+msgid ""
+"**2. New features are released with new images.** To update the system to"
+" a new version with new features, download the new image file and run the"
+" following command: ::"
+msgstr ""
+
+#: ../../updates.rst:21
+msgid "The ``sysupgrade`` command flashes the new image file to the device."
+msgstr ""
+
+#: ../../updates.rst:23
+msgid ""
+"**Note:** it is important to back up your configuration before updating "
+"your NethSecurity system."
 msgstr ""
 
 #~ msgid ""
