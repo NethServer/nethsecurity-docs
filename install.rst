@@ -94,3 +94,21 @@ Setup the boot order: ::
   qm set 401 --boot order=scsi0
 
 Finally, start the virtual machine.
+
+
+Default network configuration
+=============================
+
+When you first boot NethSecurity, the system will try to configure the network interfaces.
+
+By default, the network configuration will be as follows:
+
+* The LAN interface will be configured with a static IP address of 192.168.1.1.
+* The WAN interface will be configured to use DHCP to obtain an IP address from your ISP.
+
+An exception to this default network configuration is virtual machines running on KVM and on Digital Ocean cloud provider (droplet). In this case, the network configuration will be as follows:
+
+* The LAN interface will be configured to use DHCP to obtain an IP address from the virtualization platform.
+* The WAN interface will be configured to use DHCP to obtain an IP address from your ISP.
+
+**Note:** If you are using NethSecurity in a production environment, you may need to modify the default network configuration to meet your specific needs. For example, you may need to configure the LAN interface with a different IP address or configure the WAN interface to use a static IP address.
