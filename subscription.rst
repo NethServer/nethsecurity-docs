@@ -1,3 +1,5 @@
+.. _subscription-section:
+
 ============
 Subscription
 ============
@@ -12,7 +14,7 @@ which provides additional benefits and features:
 
 Typical benefits of the subscription service include:
 
-- **Support**: subscribers can receive priority support. This can be crucial for businesses relying on NethSecurity for their operations.
+- **Support**: subscribers can receive priority support. This can be crucial for businesses relying on NethSecurity for their operations. See also :ref:`remote_support-section`.
 - **Consultation and customization**: subscribers could get consultation services and assistance with customization to tailor the server's functionalities according to specific business requirements.
 - **Monitoring portals**: subscribers can access monitoring portals to manage their subscription and receive alerts for registered servers.
 - **DPI signatures and block lists**: firewall with valid subscriptions will regurarly download up-to-date :ref:`DPI signatures <dpi_filter-section>`, :ref:`IP <threat_shield-section>` and :ref:`DNS <dns_filter-section>` block lists.
