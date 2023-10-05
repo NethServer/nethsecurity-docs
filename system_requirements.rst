@@ -6,7 +6,7 @@ System requirements
 
 NethSecurity is currently available only for `x86-64 architecture <https://en.wikipedia.org/wiki/X86-64>`_.
 
-Minimum hardware requirements for a single node installation:
+Minimum hardware requirements:
 
 - 1 vCPU/cores
 - 1GB of RAM
