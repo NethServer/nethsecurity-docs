@@ -6,9 +6,9 @@ Subscription
 which provides additional benefits and features:
 
 - **Community subscription**: self-service registration mostly suited for IT consultant.
-  Portal is available at `my.nethserver.com <https://my.nethserver.com>`
+  Portal is available at `my.nethserver.com <https://my.nethserver.com>`_
 - **Enterpise subscription**: service reserved to Nethesis resellers, request more info at `sales departement <mailto:info@nethesis.it>`_.
-  Portal is available at: `my.nethesis.it <https://my.nethesis.it>`
+  Portal is available at: `my.nethesis.it <https://my.nethesis.it>`_
 
 Typical benefits of the subscription service include:
 
