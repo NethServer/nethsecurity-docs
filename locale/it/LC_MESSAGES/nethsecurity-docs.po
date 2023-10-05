@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-05 10:32+0000\n"
+"POT-Creation-Date: 2023-10-05 10:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -30,8 +30,7 @@ msgstr ""
 #: ../../migration.rst:15 ../../multiwan.rst:5 ../../nat.rst:5
 #: ../../nat_helpers.rst:5 ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
 #: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
-#: ../../remote_support.rst:7 ../../routing.rst:5 ../../smtp.rst:5
-#: ../../threat_shield.rst:7
+#: ../../routing.rst:5 ../../smtp.rst:5 ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -690,12 +689,45 @@ msgstr ""
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
-#: ../../remote_support.rst:3
+#: ../../remote_support.rst:5
 msgid "Remote support"
 msgstr ""
 
-#: ../../remote_support.rst:5
-msgid "don and sos.nethesis.it"
+#: ../../remote_support.rst:7
+msgid ""
+"The :ref:`Enterprise subscription <subscription-section>` allows you to "
+"access the Nethesis remote support."
+msgstr ""
+
+#: ../../remote_support.rst:9
+msgid ""
+"The remote support session will connect the firewall to a `WindMill "
+"instance <https://github.com/nethesis/windmill>`_ hosted by Nethesis at "
+"``sos.nethesis.it``. The firewall must be able to connect to the above "
+"host on port ``1194`` UDP. If port ``1194`` is closed, the system will "
+"try to fallback on port ``443`` TCP."
+msgstr ""
+
+#: ../../remote_support.rst:14
+msgid ""
+"The remote support must be started and stopped by the firewall "
+"administrator. To start a session:"
+msgstr ""
+
+#: ../../remote_support.rst:17
+msgid "access the ``Subscription`` page and go to the ``Remote support`` section"
+msgstr ""
+
+#: ../../remote_support.rst:18
+msgid "click the :guilabel:`Start session` button"
+msgstr ""
+
+#: ../../remote_support.rst:19
+msgid "copy the ``Session ID`` and share it with the support team"
+msgstr ""
+
+#: ../../remote_support.rst:21
+msgid "To terminate the session, click the :guilabel:`End session` button."
 msgstr ""
 
 #: ../../reverse_proxy.rst:3
@@ -805,55 +837,56 @@ msgid ""
 "the following command: ::"
 msgstr ""
 
-#: ../../subscription.rst:3
+#: ../../subscription.rst:5
 msgid "Subscription"
 msgstr ""
 
-#: ../../subscription.rst:5
+#: ../../subscription.rst:7
 msgid ""
 "`Nethesis <https://www.nethesis.it>`_ offers two types of subscription "
 "services for NethSecurity, which provides additional benefits and "
 "features:"
 msgstr ""
 
-#: ../../subscription.rst:8
+#: ../../subscription.rst:10
 msgid ""
 "**Community subscription**: self-service registration mostly suited for "
 "IT consultant. Portal is available at `my.nethserver.com "
-"<https://my.nethserver.com>`"
+"<https://my.nethserver.com>`_"
 msgstr ""
 
-#: ../../subscription.rst:10
+#: ../../subscription.rst:12
 msgid ""
 "**Enterpise subscription**: service reserved to Nethesis resellers, "
 "request more info at `sales departement <mailto:info@nethesis.it>`_. "
-"Portal is available at: `my.nethesis.it <https://my.nethesis.it>`"
-msgstr ""
-
-#: ../../subscription.rst:13
-msgid "Typical benefits of the subscription service include:"
+"Portal is available at: `my.nethesis.it <https://my.nethesis.it>`_"
 msgstr ""
 
 #: ../../subscription.rst:15
-msgid ""
-"**Support**: subscribers can receive priority support. This can be "
-"crucial for businesses relying on NethSecurity for their operations."
+msgid "Typical benefits of the subscription service include:"
 msgstr ""
 
-#: ../../subscription.rst:16
+#: ../../subscription.rst:17
+msgid ""
+"**Support**: subscribers can receive priority support. This can be "
+"crucial for businesses relying on NethSecurity for their operations. See "
+"also :ref:`remote_support-section`."
+msgstr ""
+
+#: ../../subscription.rst:18
 msgid ""
 "**Consultation and customization**: subscribers could get consultation "
 "services and assistance with customization to tailor the server's "
 "functionalities according to specific business requirements."
 msgstr ""
 
-#: ../../subscription.rst:17
+#: ../../subscription.rst:19
 msgid ""
 "**Monitoring portals**: subscribers can access monitoring portals to "
 "manage their subscription and receive alerts for registered servers."
 msgstr ""
 
-#: ../../subscription.rst:18
+#: ../../subscription.rst:20
 msgid ""
 "**DPI signatures and block lists**: firewall with valid subscriptions "
 "will regurarly download up-to-date :ref:`DPI signatures <dpi_filter-"
@@ -861,7 +894,7 @@ msgid ""
 "section>` block lists."
 msgstr ""
 
-#: ../../subscription.rst:20
+#: ../../subscription.rst:22
 msgid ""
 "It's important to note that while a subscription might not be required "
 "for normal use, businesses with specific needs or those seeking "
@@ -869,43 +902,43 @@ msgid ""
 "NethSecurity offer."
 msgstr ""
 
-#: ../../subscription.rst:23
+#: ../../subscription.rst:25
 msgid "Register the system"
 msgstr ""
 
-#: ../../subscription.rst:25
+#: ../../subscription.rst:27
 msgid "To register the system, follow the below steps:"
 msgstr ""
 
-#: ../../subscription.rst:27
+#: ../../subscription.rst:29
 msgid ""
 "Access the Enterprise or Community portal, add a new server and copy the "
 "token"
 msgstr ""
 
-#: ../../subscription.rst:28
+#: ../../subscription.rst:30
 msgid "Access the firewall and go to the ``Subscription`` page"
 msgstr ""
 
-#: ../../subscription.rst:29
+#: ../../subscription.rst:31
 msgid "Paste the token inside the ``Authentication token`` field"
 msgstr ""
 
-#: ../../subscription.rst:30
+#: ../../subscription.rst:32
 msgid "Click the :guilabel:`Register` button"
 msgstr ""
 
-#: ../../subscription.rst:32
+#: ../../subscription.rst:34
 msgid ""
 "The system will automatically registered to the correct Enterprise or "
 "Community portal."
 msgstr ""
 
-#: ../../subscription.rst:35
+#: ../../subscription.rst:37
 msgid "Remove the subscription"
 msgstr ""
 
-#: ../../subscription.rst:37
+#: ../../subscription.rst:39
 msgid ""
 "When the subscription expires, or at the end of a trial period, click the"
 " :guilabel:`Cancel subscription` button."
@@ -1022,5 +1055,30 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Minimum hardware requirements for a single node installation:"
+#~ msgstr ""
+
+#~ msgid "don and sos.nethesis.it"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Community subscription**: self-service "
+#~ "registration mostly suited for IT "
+#~ "consultant. Portal is available at "
+#~ "`my.nethserver.com <https://my.nethserver.com>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Enterpise subscription**: service reserved "
+#~ "to Nethesis resellers, request more info"
+#~ " at `sales departement "
+#~ "<mailto:info@nethesis.it>`_. Portal is available "
+#~ "at: `my.nethesis.it <https://my.nethesis.it>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Support**: subscribers can receive priority"
+#~ " support. This can be crucial for "
+#~ "businesses relying on NethSecurity for "
+#~ "their operations."
 #~ msgstr ""
 
