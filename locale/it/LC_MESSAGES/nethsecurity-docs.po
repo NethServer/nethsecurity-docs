@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 12:13+0000\n"
+"POT-Creation-Date: 2023-10-05 09:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -25,13 +25,13 @@ msgid "Backup and restore"
 msgstr ""
 
 #: ../../backup.rst:5 ../../certificates.rst:5 ../../dns_dhcp.rst:5
-#: ../../dns_filter.rst:5 ../../dpi_filter.rst:7 ../../firewall.rst:5
+#: ../../dns_filter.rst:7 ../../dpi_filter.rst:7 ../../firewall.rst:5
 #: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../metrics.rst:5
 #: ../../migration.rst:15 ../../multiwan.rst:5 ../../nat.rst:5
 #: ../../nat_helpers.rst:5 ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
 #: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
 #: ../../remote_support.rst:7 ../../routing.rst:5 ../../smtp.rst:5
-#: ../../subscription.rst:5 ../../threat_shield.rst:5
+#: ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -63,7 +63,7 @@ msgstr ""
 msgid "DNS & DHCP"
 msgstr ""
 
-#: ../../dns_filter.rst:3
+#: ../../dns_filter.rst:5
 msgid "DNS filter"
 msgstr ""
 
@@ -809,6 +809,108 @@ msgstr ""
 msgid "Subscription"
 msgstr ""
 
+#: ../../subscription.rst:5
+msgid ""
+"`Nethesis <https://www.nethesis.it>`_ offers two types of subscription "
+"services for NethSecurity, which provides additional benefits and "
+"features:"
+msgstr ""
+
+#: ../../subscription.rst:8
+msgid ""
+"**Community subscription**: self-service registration mostly suited for "
+"IT consultant. Portal is available at `my.nethserver.com "
+"<https://my.nethserver.com>`"
+msgstr ""
+
+#: ../../subscription.rst:10
+msgid ""
+"**Enterpise subscription**: service reserved to Nethesis resellers, "
+"request more info at `sales departement <mailto:info@nethesis.it>`_. "
+"Portal is available at: `my.nethesis.it <https://my.nethesis.it>`"
+msgstr ""
+
+#: ../../subscription.rst:13
+msgid "Typical benefits of the subscription service include:"
+msgstr ""
+
+#: ../../subscription.rst:15
+msgid ""
+"**Support**: subscribers can receive priority support. This can be "
+"crucial for businesses relying on NethSecurity for their operations."
+msgstr ""
+
+#: ../../subscription.rst:16
+msgid ""
+"**Consultation and customization**: subscribers could get consultation "
+"services and assistance with customization to tailor the server's "
+"functionalities according to specific business requirements."
+msgstr ""
+
+#: ../../subscription.rst:17
+msgid ""
+"**Monitoring portals**: subscribers can access monitoring portals to "
+"manage their subscription and receive alerts for registered servers."
+msgstr ""
+
+#: ../../subscription.rst:18
+msgid ""
+"**DPI signatures and block lists**: firewall with valid subscriptions "
+"will regurarly download up-to-date :ref:`DPI signatures <dpi_filter-"
+"section>`, :ref:`IP <threat_shield-section>` and :ref:`DNS <dns_filter-"
+"section>` block lists."
+msgstr ""
+
+#: ../../subscription.rst:20
+msgid ""
+"It's important to note that while a subscription might not be required "
+"for normal use, businesses with specific needs or those seeking "
+"additional support and features might find value in subscribing to "
+"NethSecurity offer."
+msgstr ""
+
+#: ../../subscription.rst:23
+msgid "Register the system"
+msgstr ""
+
+#: ../../subscription.rst:25
+msgid "To register the system, follow the below steps:"
+msgstr ""
+
+#: ../../subscription.rst:27
+msgid ""
+"Access the Enterprise or Community portal, add a new server and copy the "
+"token"
+msgstr ""
+
+#: ../../subscription.rst:28
+msgid "Access the firewall and go to the ``Subscription`` page"
+msgstr ""
+
+#: ../../subscription.rst:29
+msgid "Paste the token inside the ``Authentication token`` field"
+msgstr ""
+
+#: ../../subscription.rst:30
+msgid "Click the :guilabel:`Register` button"
+msgstr ""
+
+#: ../../subscription.rst:32
+msgid ""
+"The system will automatically registered to the correct Enterprise or "
+"Community portal."
+msgstr ""
+
+#: ../../subscription.rst:35
+msgid "Remove the subscription"
+msgstr ""
+
+#: ../../subscription.rst:37
+msgid ""
+"When the subscription expires, or at the end of a trial period, click the"
+" :guilabel:`Cancel subscription` button."
+msgstr ""
+
 #: ../../system_requirements.rst:5
 msgid "System requirements"
 msgstr ""
@@ -857,7 +959,7 @@ msgid ""
 " logs"
 msgstr ""
 
-#: ../../threat_shield.rst:3
+#: ../../threat_shield.rst:5
 msgid "Threat shield"
 msgstr ""
 
