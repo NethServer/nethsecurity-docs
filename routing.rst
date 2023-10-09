@@ -1,3 +1,5 @@
+.. _static_routes-section:
+
 =======
 Routing
 =======
