@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-05 10:50+0000\n"
+"POT-Creation-Date: 2023-10-09 15:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -30,7 +30,7 @@ msgstr ""
 #: ../../migration.rst:15 ../../multiwan.rst:5 ../../nat.rst:5
 #: ../../nat_helpers.rst:5 ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
 #: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
-#: ../../routing.rst:5 ../../smtp.rst:5 ../../threat_shield.rst:7
+#: ../../routing.rst:5 ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -734,7 +734,7 @@ msgstr ""
 msgid "Reverse proxy"
 msgstr ""
 
-#: ../../reverse_proxy.rst:7
+#: ../../reverse_proxy.rst:7 ../../smtp.rst:7
 msgid ""
 "This feature is still under development and does not have a user "
 "interface yet. It can currently only be configured through the command "
@@ -775,7 +775,40 @@ msgid "Routing"
 msgstr ""
 
 #: ../../smtp.rst:3
-msgid "SMTP relay"
+msgid "Mail notifications (SMTP)"
+msgstr ""
+
+#: ../../smtp.rst:9
+msgid ""
+"This section provides instructions for configuring the SMTP client "
+"(msmpt) on NethSecurity firewall for sending email notifications. The "
+"SMTP client is used exclusively for sending notification emails and "
+"relies on an external SMTP server for delivery."
+msgstr ""
+
+#: ../../smtp.rst:12
+msgid ""
+"The `msmpt <https://marlam.de/msmtp/>`_ SMTP client offers advanced "
+"features to enhance security and reliability:"
+msgstr ""
+
+#: ../../smtp.rst:14
+msgid ""
+"**TLS/SSL Support:** msmpt supports TLS/SSL encryption for secure "
+"communication between the firewall and the external SMTP server"
+msgstr ""
+
+#: ../../smtp.rst:15
+msgid ""
+"**Authentication:** some SMTP servers require authentication to identify "
+"the user sending the email"
+msgstr ""
+
+#: ../../smtp.rst:17
+msgid ""
+"See the `developer manual <https://dev.nethsecurity.org/packages/ns-"
+"api/#nssmtp>`_ for the commands on how to configure it from the command "
+"line."
 msgstr ""
 
 #: ../../storage.rst:3
@@ -868,30 +901,30 @@ msgstr ""
 
 #: ../../subscription.rst:17
 msgid ""
-"**Support**: subscribers can receive priority support. This can be "
-"crucial for businesses relying on NethSecurity for their operations. See "
-"also :ref:`remote_support-section`."
-msgstr ""
-
-#: ../../subscription.rst:18
-msgid ""
-"**Consultation and customization**: subscribers could get consultation "
-"services and assistance with customization to tailor the server's "
-"functionalities according to specific business requirements."
-msgstr ""
-
-#: ../../subscription.rst:19
-msgid ""
 "**Monitoring portals**: subscribers can access monitoring portals to "
 "manage their subscription and receive alerts for registered servers."
 msgstr ""
 
-#: ../../subscription.rst:20
+#: ../../subscription.rst:18
 msgid ""
 "**DPI signatures and block lists**: firewall with valid subscriptions "
 "will regurarly download up-to-date :ref:`DPI signatures <dpi_filter-"
 "section>`, :ref:`IP <threat_shield-section>` and :ref:`DNS <dns_filter-"
 "section>` block lists."
+msgstr ""
+
+#: ../../subscription.rst:19
+msgid ""
+"**Support**: subscribers can receive priority support on stable releases."
+" This can be crucial for businesses relying on NethSecurity for their "
+"operations. See also :ref:`remote_support-section`."
+msgstr ""
+
+#: ../../subscription.rst:20
+msgid ""
+"**Consultation and customization**: subscribers could get consultation "
+"services and assistance with customization to tailor the server's "
+"functionalities according to specific business requirements."
 msgstr ""
 
 #: ../../subscription.rst:22
@@ -1080,5 +1113,16 @@ msgstr ""
 #~ " support. This can be crucial for "
 #~ "businesses relying on NethSecurity for "
 #~ "their operations."
+#~ msgstr ""
+
+#~ msgid "SMTP relay"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Support**: subscribers can receive priority"
+#~ " support. This can be crucial for "
+#~ "businesses relying on NethSecurity for "
+#~ "their operations. See also :ref"
+#~ ":`remote_support-section`."
 #~ msgstr ""
 
