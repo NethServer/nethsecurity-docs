@@ -11,5 +11,5 @@ Static routing is simple and predictable, making it ideal for stable networks wh
 Static routes can be configured from the ``Routes`` page, under the ``Network`` section from the left menu.
 
 To add a new route click on the :guilabel:`Add route` button.
-To modify an existing route click on the :guilabel:`Edit button` on the table record.
+To modify an existing route click on the :guilabel:`Edit` button on the table record.
 To delete a route, click the three-dots menu :guilabel:`⋮` on the table record and press the :guilabel:`Delete` button.
