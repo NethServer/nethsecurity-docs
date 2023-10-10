@@ -2,6 +2,10 @@
 Storage
 =======
 
+.. warning::
+
+   This feature is still under development and does not have a user interface yet. It can currently only be configured through the command line.
+
 .. highlight:: bash
 
 As default, logs are written inside a volatile in-memory directory to prevent errors on the root file system in case of failure. However, if your system fails, you may lose all of your logs.
