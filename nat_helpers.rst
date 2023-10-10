@@ -15,4 +15,4 @@ For example, in FTP, NAT helpers modify the IP addresses and ports inside the FT
 Similarly, NAT helpers for SIP and other protocols ensure that devices using these protocols can establish connections across NAT boundaries without issues.
 
 NAT helpers are disabled by default in NethSecurity.
-Follow the instruction inside the `developer manual <https://dev.nethsecurity.org/nat_helpers/>`_ to enabled the helpers.
+Follow the instruction inside the `developer manual <https://dev.nethsecurity.org/nat_helpers/>`_ to enable the helpers.
