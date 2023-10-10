@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 15:34+0000\n"
+"POT-Creation-Date: 2023-10-10 15:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -102,8 +102,8 @@ msgstr ""
 #: ../../certificates.rst:5 ../../dns_dhcp.rst:5 ../../dns_filter.rst:7
 #: ../../dpi_filter.rst:7 ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5
 #: ../../metrics.rst:5 ../../migration.rst:15 ../../multiwan.rst:5
-#: ../../nat_helpers.rst:5 ../../openvpn_roadwarrior.rst:5
-#: ../../openvpn_tunnels.rst:5 ../../qos.rst:5 ../../threat_shield.rst:7
+#: ../../openvpn_roadwarrior.rst:5 ../../openvpn_tunnels.rst:5 ../../qos.rst:5
+#: ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -726,6 +726,41 @@ msgstr ""
 
 #: ../../nat_helpers.rst:3
 msgid "NAT helpers"
+msgstr ""
+
+#: ../../nat_helpers.rst:7 ../../reverse_proxy.rst:7 ../../smtp.rst:7
+#: ../../storage.rst:7
+msgid ""
+"This feature is still under development and does not have a user "
+"interface yet. It can currently only be configured through the command "
+"line."
+msgstr ""
+
+#: ../../nat_helpers.rst:9
+msgid ""
+"NAT (Network Address Translation) helpers, also known as NAT ALGs "
+"(Application Layer Gateways), are components in the firewall that assist "
+"in translating IP addresses and port numbers embedded within application-"
+"layer data packets. NAT helpers are essential in scenarios where network "
+"protocols include IP addresses and port information inside the packet "
+"payload, making it necessary to modify these details for proper NAT "
+"traversal."
+msgstr ""
+
+#: ../../nat_helpers.rst:14
+msgid ""
+"For example, in FTP, NAT helpers modify the IP addresses and ports inside"
+" the FTP control and data packets, enabling proper NAT traversal for FTP "
+"connections. Similarly, NAT helpers for SIP and other protocols ensure "
+"that devices using these protocols can establish connections across NAT "
+"boundaries without issues."
+msgstr ""
+
+#: ../../nat_helpers.rst:17
+msgid ""
+"NAT helpers are disabled by default in NethSecurity. Follow the "
+"instruction inside the `developer manual "
+"<https://dev.nethsecurity.org/nat_helpers/>`_ to enabled the helpers."
 msgstr ""
 
 #: ../../network.rst:3
@@ -1372,13 +1407,6 @@ msgstr ""
 msgid "Reverse proxy"
 msgstr ""
 
-#: ../../reverse_proxy.rst:7 ../../smtp.rst:7
-msgid ""
-"This feature is still under development and does not have a user "
-"interface yet. It can currently only be configured through the command "
-"line."
-msgstr ""
-
 #: ../../reverse_proxy.rst:9
 msgid ""
 "NethSecurity provides a reverse proxy using nginx. A reverse proxy is a "
@@ -1482,56 +1510,56 @@ msgstr ""
 msgid "Storage"
 msgstr ""
 
-#: ../../storage.rst:7
+#: ../../storage.rst:11
 msgid ""
 "As default, logs are written inside a volatile in-memory directory to "
 "prevent errors on the root file system in case of failure. However, if "
 "your system fails, you may lose all of your logs."
 msgstr ""
 
-#: ../../storage.rst:9
+#: ../../storage.rst:13
 msgid ""
 "NethSecurity allows you to save a copy of your system logs on an external"
 " storage device, such as a USB stick. This can be useful for "
 "troubleshooting problems or for keeping a record of your system activity."
 msgstr ""
 
-#: ../../storage.rst:11
+#: ../../storage.rst:15
 msgid ""
 "To use the an external disk, attach the disk device to your machine and "
 "run the following command: ::"
 msgstr ""
 
-#: ../../storage.rst:15
+#: ../../storage.rst:19
 msgid "Where ``device`` is the name of the external device like ``/dev/sdb``."
 msgstr ""
 
-#: ../../storage.rst:17
+#: ../../storage.rst:21
 msgid ""
 "The command will prepare the device by erasing all partitions and "
 "existing data, creating a single partition using the ext4 filesystem, and"
 " mounting the storage at ``/mnt/data``."
 msgstr ""
 
-#: ../../storage.rst:20
+#: ../../storage.rst:24
 msgid "The system will then be reconfigured as follows:"
 msgstr ""
 
-#: ../../storage.rst:22
+#: ../../storage.rst:26
 msgid "rsyslog will write logs also inside ``/mnt/data/logs/messages`` file"
 msgstr ""
 
-#: ../../storage.rst:23
+#: ../../storage.rst:27
 msgid "logrotate will rotate ``/mnt/data/logs/messages`` once a week"
 msgstr ""
 
-#: ../../storage.rst:25
+#: ../../storage.rst:29
 msgid ""
 "Extra generated data like metrics, will be synced from in-memory "
 "filesystems to persistent storage once a day during the night."
 msgstr ""
 
-#: ../../storage.rst:27
+#: ../../storage.rst:31
 msgid ""
 "To remove the data storage and restore in-memory log retention only, run "
 "the following command: ::"
