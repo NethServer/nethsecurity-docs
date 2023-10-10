@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-09 15:23+0000\n"
+"POT-Creation-Date: 2023-10-10 08:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -30,7 +30,7 @@ msgstr ""
 #: ../../migration.rst:15 ../../multiwan.rst:5 ../../nat.rst:5
 #: ../../nat_helpers.rst:5 ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
 #: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
-#: ../../routing.rst:5 ../../threat_shield.rst:7
+#: ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -770,8 +770,37 @@ msgid ""
 "line."
 msgstr ""
 
-#: ../../routing.rst:3
-msgid "Routing"
+#: ../../routing.rst:5
+msgid "Static routes"
+msgstr ""
+
+#: ../../routing.rst:7
+msgid ""
+"Static routing in Linux allows precise control over how data packets "
+"navigate a network. Unlike dynamic routing, which is automatic, static "
+"routing requires manual configuration by network administrators."
+msgstr ""
+
+#: ../../routing.rst:9
+msgid ""
+"Static routing is simple and predictable, making it ideal for stable "
+"networks where paths don't change frequently. Administrators can define "
+"routes manually, providing specific instructions on how data should "
+"travel through the network."
+msgstr ""
+
+#: ../../routing.rst:11
+msgid ""
+"Static routes can be configured from the ``Routes`` page, under the "
+"``Network`` section from the left menu."
+msgstr ""
+
+#: ../../routing.rst:13
+msgid ""
+"To add a new route click on the :guilabel:`Add route` button. To modify "
+"an existing route click on the :guilabel:`Edit button` on the table "
+"record. To delete a route, click the three-dots menu :guilabel:`⋮` on the"
+" table record and press the :guilabel:`Delete` button."
 msgstr ""
 
 #: ../../smtp.rst:3
@@ -1124,5 +1153,8 @@ msgstr ""
 #~ "businesses relying on NethSecurity for "
 #~ "their operations. See also :ref"
 #~ ":`remote_support-section`."
+#~ msgstr ""
+
+#~ msgid "Routing"
 #~ msgstr ""
 
