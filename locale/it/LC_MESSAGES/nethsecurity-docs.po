@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 08:23+0000\n"
+"POT-Creation-Date: 2023-10-10 12:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -27,10 +27,9 @@ msgstr ""
 #: ../../backup.rst:5 ../../certificates.rst:5 ../../dns_dhcp.rst:5
 #: ../../dns_filter.rst:7 ../../dpi_filter.rst:7 ../../firewall.rst:5
 #: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../metrics.rst:5
-#: ../../migration.rst:15 ../../multiwan.rst:5 ../../nat.rst:5
-#: ../../nat_helpers.rst:5 ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
-#: ../../openvpn_tunnels.rst:5 ../../port_forward.rst:5 ../../qos.rst:5
-#: ../../threat_shield.rst:7
+#: ../../migration.rst:15 ../../multiwan.rst:5 ../../nat_helpers.rst:5
+#: ../../network.rst:5 ../../openvpn_roadwarrior.rst:5
+#: ../../openvpn_tunnels.rst:5 ../../qos.rst:5 ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -484,6 +483,61 @@ msgstr ""
 msgid "NAT"
 msgstr ""
 
+#: ../../nat.rst:7
+msgid ""
+"This feature is still under development and can be configured only from "
+"LuCI web interface."
+msgstr ""
+
+#: ../../nat.rst:9
+msgid ""
+"Network Address Translation (NAT) is used to modify network address "
+"information in packet headers while in transit. NAT primarily enables the"
+" translation of private IP addresses used within a local network to a "
+"public IP address, allowing multiple devices within the local network to "
+"share a single public IP when accessing the internet. As default, all "
+"hosts within the local network access the WAN using the firewall are "
+"using masquerade. Masquerade is a form of NAT that automatically assigns "
+"the source IP address of outgoing packets to the public IP address of the"
+" firewall. This ensures that internal hosts accessing the internet appear"
+" to external servers as if they are originating from the firewall's "
+"public IP address."
+msgstr ""
+
+#: ../../nat.rst:16
+msgid "There are two other common types of NAT configuration:"
+msgstr ""
+
+#: ../../nat.rst:18
+msgid "Source NAT (SNAT)"
+msgstr ""
+
+#: ../../nat.rst:19
+msgid ""
+"Destination (DNAT or port forward, see the :ref:`port forward chapter "
+"<port_forward-section>`"
+msgstr ""
+
+#: ../../nat.rst:22
+msgid "Source NAT"
+msgstr ""
+
+#: ../../nat.rst:24
+msgid ""
+"Source NAT, often referred to as SNAT, modifies the source IP address of "
+"outgoing packets. It is commonly used in networks where private IP "
+"addresses are translated into a single public IP address when "
+"communicating with external networks. SNAT ensures that responses from "
+"external servers are routed back to the correct internal device by "
+"modifying the source IP address of outgoing packets to the public IP "
+"address. This allows multiple internal devices to access the internet "
+"using a shared public IP address, enhancing security and scalability."
+msgstr ""
+
+#: ../../nat.rst:29
+msgid "Access the legacy LuCI web interface to configure source NAT rules."
+msgstr ""
+
 #: ../../nat_helpers.rst:3
 msgid "NAT helpers"
 msgstr ""
@@ -500,8 +554,124 @@ msgstr ""
 msgid "OpenVPN tunnels"
 msgstr ""
 
-#: ../../port_forward.rst:3
+#: ../../port_forward.rst:5
 msgid "Port forward"
+msgstr ""
+
+#: ../../port_forward.rst:7
+msgid ""
+"The firewall prevents requests from public networks to access private "
+"ones. For instance, if there's a web server operating within the LAN, "
+"only computers within the local network can access this service. Any "
+"attempts made by external users from outside the local network are "
+"denied."
+msgstr ""
+
+#: ../../port_forward.rst:11
+msgid ""
+"A port forward is a networking technique used in firewalls to redirect "
+"specific network traffic from one IP address and port number combination "
+"to another. It is typically employed to enable external users to access "
+"services or applications hosted on devices within a private local "
+"network."
+msgstr ""
+
+#: ../../port_forward.rst:15
+msgid ""
+"For web servers, common listening ports include port 80 (HTTP) and port "
+"443 (HTTPS). When creating a port forward, certain parameters must be "
+"specified:"
+msgstr ""
+
+#: ../../port_forward.rst:18
+msgid ""
+"``Name``: assigning a name to a port forward rule is beneficial for "
+"future reference and management. By providing a descriptive and "
+"meaningful name, network administrators can easily identify the purpose "
+"and context of each port forward."
+msgstr ""
+
+#: ../../port_forward.rst:20
+msgid "``Source port``: the port from which the request originates."
+msgstr ""
+
+#: ../../port_forward.rst:21
+msgid ""
+"``Destination port``: the port to which the traffic is directed; this can"
+" differ from the source port."
+msgstr ""
+
+#: ../../port_forward.rst:22
+msgid ""
+"``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, "
+"``UDPLITE``, ``ICMP``, ``ESP``, ``AH`` ``SCTP`` or the special value "
+"``ALL`` for all supported protocols."
+msgstr ""
+
+#: ../../port_forward.rst:23
+msgid ""
+"``Destination address``: specifies the internal host to which the traffic"
+" should be redirected."
+msgstr ""
+
+#: ../../port_forward.rst:25
+msgid ""
+"By default, all port forwards are accessible only for hosts inside the "
+"WAN. Refer to the :ref:`hairpin-section` for instructions on changing "
+"this default behavior."
+msgstr ""
+
+#: ../../port_forward.rst:27
+msgid "For each port forward the user can configure also the following aspects:"
+msgstr ""
+
+#: ../../port_forward.rst:29
+msgid ""
+"Enabling logging: port forwards can be configured to log incoming traffic"
+" for each rule. By enabling the ``Log`` option, the network administrator"
+" can keep track of the traffic passing through the port forward, allowing"
+" for monitoring and analysis"
+msgstr ""
+
+#: ../../port_forward.rst:31
+msgid ""
+"Access restriction: port forwards can be restricted to specific IP "
+"addresses or CIDR blocks. By adding a list of allowed IP addresses or "
+"specifying CIDR notations inside the ``Restrict access to`` field,   the "
+"user can limit access to the port forward. This enhances security by "
+"controlling which external devices are allowed to connect to the internal"
+" service."
+msgstr ""
+
+#: ../../port_forward.rst:34
+msgid ""
+"Binding to specific public IP: port forwards can be bound to a specific "
+"public IP address using the ``WAN IP`` field. This means that if your "
+"router/firewall has multiple public IP addresses, you can assign a port "
+"forward to a particular IP. This feature is valuable when dealing with "
+"complex network setups, ensuring that traffic directed to a specific "
+"public IP is forwarded correctly to the internal server."
+msgstr ""
+
+#: ../../port_forward.rst:42
+msgid "Hairpin NAT"
+msgstr ""
+
+#: ../../port_forward.rst:44
+msgid ""
+"Hairpin NAT, also known as NAT loopback or NAT reflection, is a technique"
+" used in networking where internal hosts access a server located within "
+"the same local network using the external IP address of the router or "
+"firewall. In other words, when internal devices attempt to connect to a "
+"server using the public IP address, hairpin NAT ensures that the traffic "
+"is routed internally without going out to the internet and then back into"
+" the local network."
+msgstr ""
+
+#: ../../port_forward.rst:49
+msgid ""
+"To enable the hairpin, enable the ``Hairpin NAT`` option and select one "
+"or more zones where the NAT loopback should be enabled."
 msgstr ""
 
 #: ../../qos.rst:3
