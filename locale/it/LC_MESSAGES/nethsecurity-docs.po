@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-11 09:44+0000\n"
+"POT-Creation-Date: 2023-10-11 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -96,24 +96,72 @@ msgstr ""
 msgid "If the backup has been encrypted, use the following command: ::"
 msgstr ""
 
-#: ../../controller.rst:3
+#: ../../controller.rst:5
 msgid "Controller"
 msgstr ""
 
-#: ../../controller.rst:5
-msgid "TODO:"
-msgstr ""
-
 #: ../../controller.rst:7
-msgid "registration"
+msgid ""
+"The NethSecurity controller is an application that can run on `NethServer"
+" 8 <https://ns.nethserver.org>`_. The controller enables to manage "
+"multiple NethSecurity installations remotely."
 msgstr ""
 
-#: ../../controller.rst:8
-msgid "remote logs"
+#: ../../controller.rst:10
+msgid ""
+"Firewalls can connect to the controller. Upon successful registration, "
+"the server performs the following actions:"
 msgstr ""
 
-#: ../../controller.rst:9
-msgid "remote metrics"
+#: ../../controller.rst:12
+msgid "generates a VPN configuration and transmits it to the firewall"
+msgstr ""
+
+#: ../../controller.rst:13
+msgid "safely stores credentials required for accessing the remote firewall"
+msgstr ""
+
+#: ../../controller.rst:15
+msgid ""
+"Once a firewall is linked to a controller, it will autonomously transmit "
+"the following data to the controller:"
+msgstr ""
+
+#: ../../controller.rst:17
+msgid ""
+"all logs, which will be stored within the `Loki "
+"<https://grafana.com/oss/loki/>`_ instance of NethServer 8"
+msgstr ""
+
+#: ../../controller.rst:18
+msgid ""
+"metrics, collected every 5 minutes, and these metrics will be accessible "
+"through `Grafana <https://grafana.com/>`_ on NethServer 8"
+msgstr ""
+
+#: ../../controller.rst:20
+msgid ""
+"The firewall can operate independently, and the controller is entirely "
+"optional for its functionality."
+msgstr ""
+
+#: ../../controller.rst:23
+msgid "Registration"
+msgstr ""
+
+#: ../../controller.rst:27 ../../nat_helpers.rst:7
+#: ../../openvpn_roadwarrior.rst:7 ../../openvpn_tunnels.rst:7
+#: ../../reverse_proxy.rst:7 ../../smtp.rst:7 ../../storage.rst:7
+msgid ""
+"This feature is still under development and does not have a user "
+"interface yet. It can currently only be configured through the command "
+"line."
+msgstr ""
+
+#: ../../controller.rst:29
+msgid ""
+"See the `developer manual <https://dev.nethsecurity.org/packages/ns-plug"
+"/#nethsecurity-controller-client>` for more info."
 msgstr ""
 
 #: ../../dns_dhcp.rst:3
@@ -121,9 +169,8 @@ msgid "DNS & DHCP"
 msgstr ""
 
 #: ../../dns_dhcp.rst:5 ../../dns_filter.rst:7 ../../dpi_filter.rst:7
-#: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../metrics.rst:5
-#: ../../migration.rst:15 ../../multiwan.rst:5 ../../qos.rst:5
-#: ../../threat_shield.rst:7
+#: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../migration.rst:15
+#: ../../multiwan.rst:5 ../../qos.rst:5 ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -645,6 +692,31 @@ msgstr ""
 msgid "Metrics"
 msgstr ""
 
+#: ../../metrics.rst:5
+msgid ""
+"NethSecurity uses `netdata <https://www.netdata.cloud/>`_ as monitoring "
+"tool. Netdata is an open-source, real-time, performance monitoring and "
+"troubleshooting tool for systems and applications. It provides "
+"comprehensive insights into the performance and health of systems and "
+"applications through visualizations and detailed metrics. Netdata is "
+"designed to be lightweight, fast, and easy to use."
+msgstr ""
+
+#: ../../metrics.rst:10
+msgid ""
+"The Netdata web user interface is accessible at the LAN IP address of the"
+" firewall on port ``19999``, with the HTTP protocol. Address example: "
+"``http://192.168.1.1:19999``"
+msgstr ""
+
+#: ../../metrics.rst:13
+msgid ""
+"Netdata metrics are saved in RAM and will be reset at very machine "
+"reboot. If the firewall is connected to the :ref:`remote controller "
+"<controller-section>`, metrics will be stored to the controller itself "
+"and preserved across reboots."
+msgstr ""
+
 #: ../../migration.rst:5
 msgid "NethServer 7 migration"
 msgstr ""
@@ -722,15 +794,6 @@ msgstr ""
 
 #: ../../nat_helpers.rst:3
 msgid "NAT helpers"
-msgstr ""
-
-#: ../../nat_helpers.rst:7 ../../openvpn_roadwarrior.rst:7
-#: ../../openvpn_tunnels.rst:7 ../../reverse_proxy.rst:7 ../../smtp.rst:7
-#: ../../storage.rst:7
-msgid ""
-"This feature is still under development and does not have a user "
-"interface yet. It can currently only be configured through the command "
-"line."
 msgstr ""
 
 #: ../../nat_helpers.rst:9
@@ -1953,5 +2016,17 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Certificates"
+#~ msgstr ""
+
+#~ msgid "TODO:"
+#~ msgstr ""
+
+#~ msgid "registration"
+#~ msgstr ""
+
+#~ msgid "remote logs"
+#~ msgstr ""
+
+#~ msgid "remote metrics"
 #~ msgstr ""
 
