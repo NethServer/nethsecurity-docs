@@ -41,7 +41,6 @@ NethSecurity administrator manual
    backup
    qos
    nat_helpers
-   certificates
    smtp
    controller
    subscription
