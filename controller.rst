@@ -26,4 +26,4 @@ Registration
 
    This feature is still under development and does not have a user interface yet. It can currently only be configured through the command line.
 
-See the `developer manual <https://dev.nethsecurity.org/packages/ns-plug/#nethsecurity-controller-client>` for more info.
+See the `developer manual <https://dev.nethsecurity.org/packages/ns-plug/#nethsecurity-controller-client>`_ for more info.
