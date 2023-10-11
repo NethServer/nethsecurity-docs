@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-11 09:27+0000\n"
+"POT-Creation-Date: 2023-10-11 09:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -122,8 +122,8 @@ msgstr ""
 
 #: ../../dns_dhcp.rst:5 ../../dns_filter.rst:7 ../../dpi_filter.rst:7
 #: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../metrics.rst:5
-#: ../../migration.rst:15 ../../multiwan.rst:5 ../../openvpn_roadwarrior.rst:5
-#: ../../qos.rst:5 ../../threat_shield.rst:7
+#: ../../migration.rst:15 ../../multiwan.rst:5 ../../qos.rst:5
+#: ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -724,8 +724,9 @@ msgstr ""
 msgid "NAT helpers"
 msgstr ""
 
-#: ../../nat_helpers.rst:7 ../../openvpn_tunnels.rst:7
-#: ../../reverse_proxy.rst:7 ../../smtp.rst:7 ../../storage.rst:7
+#: ../../nat_helpers.rst:7 ../../openvpn_roadwarrior.rst:7
+#: ../../openvpn_tunnels.rst:7 ../../reverse_proxy.rst:7 ../../smtp.rst:7
+#: ../../storage.rst:7
 msgid ""
 "This feature is still under development and does not have a user "
 "interface yet. It can currently only be configured through the command "
@@ -1047,6 +1048,56 @@ msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:3
 msgid "OpenVPN Roadwarrior"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:9
+msgid ""
+"Roadwarrior refers to a specific configuration of the OpenVPN VPN "
+"tailored for remote users, allowing them secure access to a private "
+"network from anywhere on the internet. This setup is particularly useful "
+"for businesses and organizations with employees or collaborators spread "
+"across different locations, ensuring encrypted communication and data "
+"privacy. OpenVPN Roadwarrior configuration support various authentication"
+" methods:"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:15
+msgid "local user authentication with certificate only"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:16
+msgid "local user authentication with password"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:17
+msgid "local user Authentication with password and certificate"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:18
+msgid "remote OpenLDAP/Active Directory user authentication with password"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:19
+msgid ""
+"remote OpenLDAP/Active Directory user authentication with password and "
+"certificate"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:21
+msgid ""
+"Clients connected to the roadwarrior are assigned to the ``rwopenvpn`` "
+"zone, which is inherently trusted. This zone has privileged access to "
+"both LAN and WAN zones within the network infrastructure."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:24
+msgid "This is a detailed list of currently implemented authentication methods:"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:26
+msgid ""
+"See the `developer manual <https://dev.nethsecurity.org/packages/ns-"
+"openvpn/#openvpn-road-warrior>`_ for more info on manual configuration."
 msgstr ""
 
 #: ../../openvpn_tunnels.rst:3
