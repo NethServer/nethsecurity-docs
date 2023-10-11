@@ -161,7 +161,7 @@ msgstr ""
 #: ../../controller.rst:29
 msgid ""
 "See the `developer manual <https://dev.nethsecurity.org/packages/ns-plug"
-"/#nethsecurity-controller-client>` for more info."
+"/#nethsecurity-controller-client>`_ for more info."
 msgstr ""
 
 #: ../../dns_dhcp.rst:3
@@ -2028,5 +2028,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "remote metrics"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See the `developer manual "
+#~ "<https://dev.nethsecurity.org/packages/ns-plug/#nethsecurity-"
+#~ "controller-client>` for more info."
 #~ msgstr ""
 
