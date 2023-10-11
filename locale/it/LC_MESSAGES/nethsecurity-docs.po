@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 15:57+0000\n"
+"POT-Creation-Date: 2023-10-11 09:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -25,6 +25,7 @@ msgid "Backup and restore"
 msgstr ""
 
 #: ../../backup.rst:7 ../../firewall.rst:9 ../../nat.rst:7
+#: ../../reverse_proxy.rst:23
 msgid ""
 "This feature is still under development and can be configured only from "
 "LuCI web interface."
@@ -95,18 +96,6 @@ msgstr ""
 msgid "If the backup has been encrypted, use the following command: ::"
 msgstr ""
 
-#: ../../certificates.rst:3
-msgid "Certificates"
-msgstr ""
-
-#: ../../certificates.rst:5 ../../dns_dhcp.rst:5 ../../dns_filter.rst:7
-#: ../../dpi_filter.rst:7 ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5
-#: ../../metrics.rst:5 ../../migration.rst:15 ../../multiwan.rst:5
-#: ../../openvpn_roadwarrior.rst:5 ../../openvpn_tunnels.rst:5 ../../qos.rst:5
-#: ../../threat_shield.rst:7
-msgid "TODO"
-msgstr ""
-
 #: ../../controller.rst:3
 msgid "Controller"
 msgstr ""
@@ -129,6 +118,13 @@ msgstr ""
 
 #: ../../dns_dhcp.rst:3
 msgid "DNS & DHCP"
+msgstr ""
+
+#: ../../dns_dhcp.rst:5 ../../dns_filter.rst:7 ../../dpi_filter.rst:7
+#: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../metrics.rst:5
+#: ../../migration.rst:15 ../../multiwan.rst:5 ../../openvpn_roadwarrior.rst:5
+#: ../../qos.rst:5 ../../threat_shield.rst:7
+msgid "TODO"
 msgstr ""
 
 #: ../../dns_filter.rst:5
@@ -281,11 +277,11 @@ msgstr ""
 msgid "Configuration"
 msgstr ""
 
-#: ../../index.rst:50
+#: ../../index.rst:49
 msgid "Applications"
 msgstr ""
 
-#: ../../index.rst:64
+#: ../../index.rst:63
 msgid "Best practices"
 msgstr ""
 
@@ -728,8 +724,8 @@ msgstr ""
 msgid "NAT helpers"
 msgstr ""
 
-#: ../../nat_helpers.rst:7 ../../reverse_proxy.rst:7 ../../smtp.rst:7
-#: ../../storage.rst:7
+#: ../../nat_helpers.rst:7 ../../openvpn_tunnels.rst:7
+#: ../../reverse_proxy.rst:7 ../../smtp.rst:7 ../../storage.rst:7
 msgid ""
 "This feature is still under development and does not have a user "
 "interface yet. It can currently only be configured through the command "
@@ -1055,6 +1051,20 @@ msgstr ""
 
 #: ../../openvpn_tunnels.rst:3
 msgid "OpenVPN tunnels"
+msgstr ""
+
+#: ../../openvpn_tunnels.rst:9
+msgid ""
+"OpenVPN net-to-net tunnels establish secure connections between two "
+"separate networks, such as branch offices of a company, over the "
+"internet. These connections use SSL/TLS protocols for encryption and "
+"authentication, ensuring data confidentiality and integrity."
+msgstr ""
+
+#: ../../openvpn_tunnels.rst:12
+msgid ""
+"See the `developer manual <https://dev.nethsecurity.org/packages/ns-"
+"openvpn/#openvpn-tunnels>`_ for more info on manual configuration."
 msgstr ""
 
 #: ../../port_forward.rst:5
@@ -1434,6 +1444,48 @@ msgid ""
 "See the `developer manual <https://dev.nethsecurity.org/packages/ns-"
 "reverse-proxy/>`_ for a guide on how to configure it from the command "
 "line."
+msgstr ""
+
+#: ../../reverse_proxy.rst:19
+msgid "Let's Encrypt certificates"
+msgstr ""
+
+#: ../../reverse_proxy.rst:25
+msgid ""
+"Let's Encrypt is a free, automated, and open Certificate Authority (CA) "
+"that provides SSL/TLS certificates for securing websites. These "
+"certificates ensure encrypted communication between web servers and "
+"users' browsers, enhancing security and privacy on the internet. Unlike "
+"traditional CAs, Let's Encrypt offers SSL certificates through an "
+"automated system, making it accessible to website owners and "
+"administrators without significant costs or technical expertise."
+msgstr ""
+
+#: ../../reverse_proxy.rst:30
+msgid ""
+"To obtain a valid Let's Encrpt certificate, make sure the following "
+"requirements are met:"
+msgstr ""
+
+#: ../../reverse_proxy.rst:32
+msgid ""
+"The server must be reachable from outside at port 80. Make sure your port"
+" 80 is open to the public Internet (you can check with sites like `CSM "
+"<http://www.canyouseeme.org/>`_);"
+msgstr ""
+
+#: ../../reverse_proxy.rst:35
+msgid ""
+"The domains that you want the certificate for must be public domain names"
+" associated to server own public IP. Make sure you have public DNS name "
+"pointing to your server (you can check with sites like `VDNS "
+"<http://viewdns.info/>`_)."
+msgstr ""
+
+#: ../../reverse_proxy.rst:39
+msgid ""
+"Let's Encrypt certificates can be configured from the ``ACME certs`` page"
+" inside LuCI web interface, under the ``Services`` section."
 msgstr ""
 
 #: ../../routing.rst:5
@@ -1847,5 +1899,8 @@ msgstr ""
 #~ "inside the `developer manual "
 #~ "<https://dev.nethsecurity.org/nat_helpers/>`_ to enabled"
 #~ " the helpers."
+#~ msgstr ""
+
+#~ msgid "Certificates"
 #~ msgstr ""
 
