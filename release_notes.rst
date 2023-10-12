@@ -12,6 +12,8 @@ Alpha1
 
 To be announced yet.
 
+.. _release_glossary-section:
+
 Releases glossary
 =================
 
