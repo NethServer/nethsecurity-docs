@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-11 16:11+0000\n"
+"POT-Creation-Date: 2023-10-12 08:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -170,7 +170,7 @@ msgstr ""
 
 #: ../../dns_dhcp.rst:5 ../../dns_filter.rst:7 ../../dpi_filter.rst:7
 #: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../migration.rst:15
-#: ../../multiwan.rst:5 ../../qos.rst:5 ../../threat_shield.rst:7
+#: ../../qos.rst:5 ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -312,23 +312,23 @@ msgstr ""
 msgid "HotSpot"
 msgstr ""
 
-#: ../../index.rst:13
+#: ../../index.rst:20
 msgid "About"
 msgstr ""
 
-#: ../../index.rst:20 ../../install.rst:5
+#: ../../index.rst:27 ../../install.rst:5
 msgid "Installation"
 msgstr ""
 
-#: ../../index.rst:28
+#: ../../index.rst:35
 msgid "Configuration"
 msgstr ""
 
-#: ../../index.rst:49
+#: ../../index.rst:56
 msgid "Applications"
 msgstr ""
 
-#: ../../index.rst:63
+#: ../../index.rst:70
 msgid "Best practices"
 msgstr ""
 
@@ -336,11 +336,20 @@ msgstr ""
 msgid "NethSecurity administrator manual"
 msgstr ""
 
-#: ../../index.rst:9
+#: ../../index.rst:9 ../../introduction.rst:7
+msgid ""
+"NethSecurity is currently in the :ref:`alpha development phase "
+"<release_glossary-section>`. During this stage, the software is "
+"undergoing testing, and there might be instabilities or unforeseen "
+"errors. It is highly discouraged to use NethSecurity in production "
+"environments."
+msgstr ""
+
+#: ../../index.rst:16
 msgid "`Developer manual <https://nethserver.github.io/nethsecurity/>`_"
 msgstr ""
 
-#: ../../index.rst:11
+#: ../../index.rst:18
 msgid "Help on `Community <http://community.nethserver.org>`_"
 msgstr ""
 
@@ -563,11 +572,11 @@ msgstr ""
 msgid "Introduction"
 msgstr ""
 
-#: ../../introduction.rst:6
+#: ../../introduction.rst:13
 msgid "About NethSecurity"
 msgstr ""
 
-#: ../../introduction.rst:8
+#: ../../introduction.rst:15
 msgid ""
 "NethSecurity is an Unified Threat Management (UTM) solution that provides"
 " a comprehensive suite of security features, including firewall, content "
@@ -577,107 +586,107 @@ msgid ""
 "sized businesses (SMBs) as well as enterprise organizations."
 msgstr ""
 
-#: ../../introduction.rst:11
+#: ../../introduction.rst:18
 msgid ""
 "NethSecurity is based on `OpenWrt <https://openwrt.org>`_, a popular "
 "Linux distribution for embedded devices. This gives it a number of "
 "advantages, including:"
 msgstr ""
 
-#: ../../introduction.rst:13
+#: ../../introduction.rst:20
 msgid "flexibility: it can be installed on a wide range of hardware"
 msgstr ""
 
-#: ../../introduction.rst:14
+#: ../../introduction.rst:21
 msgid ""
 "customization: it can be customized to meet the specific needs of each "
 "organization"
 msgstr ""
 
-#: ../../introduction.rst:15
+#: ../../introduction.rst:22
 msgid ""
 "community support: it benefits from the large and active `NethServer "
 "community <https://community.nethserver.org>`_"
 msgstr ""
 
-#: ../../introduction.rst:17
+#: ../../introduction.rst:24
 msgid "NethSecurity includes a variety of security features, including:"
 msgstr ""
 
-#: ../../introduction.rst:19
+#: ../../introduction.rst:26
 msgid ""
 "firewall: NethSecurity's firewall provides stateful packet inspection and"
 " filtering to protect networks from unauthorized access"
 msgstr ""
 
-#: ../../introduction.rst:20
+#: ../../introduction.rst:27
 msgid ""
 "DNS content filtering: NethSecurity's content filtering feature blocks "
 "users from accessing inappropriate or malicious websites"
 msgstr ""
 
-#: ../../introduction.rst:21
+#: ../../introduction.rst:28
 msgid ""
 "Deep Packet Inspection (DPI): NethSecurity uses Netifyd to perform DPI, "
 "which allows it to inspect the contents of packets and identify malicious"
 " or unwanted traffic"
 msgstr ""
 
-#: ../../introduction.rst:22
+#: ../../introduction.rst:29
 msgid ""
 "`Icaro hotspot <https://nethesis.github.io/icaro/>`_: Iedalo hotspot is a"
 " captive portal solution that can be used to manage and authenticate "
 "users on wireless networks."
 msgstr ""
 
-#: ../../introduction.rst:23
+#: ../../introduction.rst:30
 msgid ""
 "VPN: OpenVPN and IPSec are popular open-source VPN protocol that can be "
 "used to create secure tunnels between networks."
 msgstr ""
 
-#: ../../introduction.rst:24
+#: ../../introduction.rst:31
 msgid ""
 "Remote controller: NethSecurity includes a remote controller that allows "
 "administrators to manage their NethSecurity devices remotely."
 msgstr ""
 
-#: ../../introduction.rst:26
+#: ../../introduction.rst:33
 msgid ""
 "In addition to these security features, NethSecurity also includes a "
 "number of other features, such as:"
 msgstr ""
 
-#: ../../introduction.rst:28
+#: ../../introduction.rst:35
 msgid ""
 "quality of service (QoS): NethSecurity's QoS feature allows "
 "administrators to prioritize traffic and ensure that critical "
 "applications always have the bandwidth they need."
 msgstr ""
 
-#: ../../introduction.rst:29
+#: ../../introduction.rst:36
 msgid ""
 "IPv6 support: NethSecurity supports IPv6, the next-generation internet "
 "protocol"
 msgstr ""
 
-#: ../../introduction.rst:32
+#: ../../introduction.rst:39
 msgid "Get support"
 msgstr ""
 
-#: ../../introduction.rst:34
+#: ../../introduction.rst:41
 msgid ""
 "You want to know more or look for some help? Check out our great "
 "`community <https://community.nethserver.org>`_!"
 msgstr ""
 
-#: ../../introduction.rst:37
+#: ../../introduction.rst:44
 msgid ""
 "If you're looking for more technical details, take a look to the "
 "`developer manual <https://https://nethserver.github.io/nethsecurity/>`_."
 msgstr ""
 
-#: ../../introduction.rst:39
+#: ../../introduction.rst:46
 msgid ""
 "Bugs can be discussed and reported inside the `community forum "
 "<https://community.nethserver.org>`_. A public issue tracker is available"
@@ -737,6 +746,215 @@ msgstr ""
 
 #: ../../multiwan.rst:3
 msgid "MultiWAN"
+msgstr ""
+
+#: ../../multiwan.rst:5
+msgid ""
+"MultiWAN (Wide Area Network) configuration is a setup in which the "
+"firewall utilizes multiple internet connections from different internet "
+"service providers (ISPs) simultaneously. This configuration aims to "
+"enhance network reliability, increase bandwidth, and improve internet "
+"speed by distributing network traffic across multiple links. It can "
+"provide failover protection, ensuring that if one connection fails, the "
+"network traffic is automatically redirected to the functional connection,"
+" minimizing downtime and ensuring continuous internet access. MultiWAN "
+"configurations are often used in businesses and organizations that "
+"require a highly available and stable internet connection for their "
+"operations."
+msgstr ""
+
+#: ../../multiwan.rst:12
+msgid ""
+"MultiWAN configuration requires at least two network interfaces in the "
+"WAN zone of the system. This is the fundamental requirement for "
+"implementing a MultiWAN connection."
+msgstr ""
+
+#: ../../multiwan.rst:14
+msgid ""
+"The first time you access the configuration page, it is mandatory to "
+"create a default policy. This policy is essential and cannot be deleted. "
+"The default policy defines the basic behavior of the MultiWAN system. "
+"It's necessary to specify its behavior. There are two available main "
+"options:"
+msgstr ""
+
+#: ../../multiwan.rst:17
+msgid ""
+"``Balanced``: In this mode, WAN connections are utilized simultaneously, "
+"and traffic is balanced based on the weight assigned to each WAN."
+msgstr ""
+
+#: ../../multiwan.rst:18
+msgid ""
+"``Backup``: In backup mode, the secondary WAN connection comes into play "
+"only if the primary connection fails. This ensures a backup connectivity "
+"if the primary WAN fails."
+msgstr ""
+
+#: ../../multiwan.rst:20
+msgid ""
+"There is also a ``Custom mode`` that allows more detailed configuration, "
+"especially useful when dealing with three or more WAN connections. This "
+"mode provides greater flexibility in managing traffic between different "
+"WAN connections."
+msgstr ""
+
+#: ../../multiwan.rst:23
+msgid ""
+"In the custom mode of Multi-WAN configuration, the following concepts "
+"apply:"
+msgstr ""
+
+#: ../../multiwan.rst:25
+msgid ""
+"Independent priority levels: each priority level operates independently "
+"of others. WAN interfaces within a particular priority level do not "
+"affect or depend on interfaces in other levels."
+msgstr ""
+
+#: ../../multiwan.rst:27
+msgid ""
+"Multiple WAN interfaces within a priority level: each priority level can "
+"contain two or more WAN interfaces. These interfaces are grouped together"
+" for specific configuration settings."
+msgstr ""
+
+#: ../../multiwan.rst:29
+msgid ""
+"Weights determine traffic distribution: the weights assigned to WAN "
+"interfaces within a priority level determine how traffic is distributed "
+"among these interfaces. Higher weights indicate a higher proportion of "
+"traffic allocation."
+msgstr ""
+
+#: ../../multiwan.rst:31
+msgid ""
+"Priority decreases with new levels: adding a new priority level results "
+"in interfaces within this level having lower priority. They are only "
+"utilized if all interfaces in the previous level fail."
+msgstr ""
+
+#: ../../multiwan.rst:34
+msgid ""
+"Consider a scenario where the first two WAN interfaces are configured in "
+"balance mode, and the last interface serves as a backup if both the first"
+" two interfaces fail:"
+msgstr ""
+
+#: ../../multiwan.rst:36
+msgid ""
+"select the first two WAN interfaces and set them to balance mode by "
+"assigning weights to both depending on internet connection performances"
+msgstr ""
+
+#: ../../multiwan.rst:37
+msgid ""
+"add a new priority level by clicking on :guilabel:`Add priority level` "
+"button"
+msgstr ""
+
+#: ../../multiwan.rst:38
+msgid ""
+"select the third WAN interface and assign a weight. However, in this "
+"scenario, the weight does not influence the traffic distribution as it is"
+" the only interface at this level. It acts as a backup, coming into play "
+"only if both interfaces in the previous level fail."
+msgstr ""
+
+#: ../../multiwan.rst:42
+msgid "Routing rules"
+msgstr ""
+
+#: ../../multiwan.rst:44
+msgid ""
+"Users can create outbound traffic rules based on specific criteria such "
+"as source IP, destination IP, source port(s), destination port(s), and IP"
+" protocol types. This policy-based routing feature enables users to "
+"customize which outbound connections use specific WAN interfaces, "
+"allowing for a fine-tuned network setup."
+msgstr ""
+
+#: ../../multiwan.rst:47
+msgid "Here's how you can create a custom rule:"
+msgstr ""
+
+#: ../../multiwan.rst:49
+msgid ""
+"Create a new policy: to begin customizing traffic routing, start by "
+"creating a new policy. Click on the :guilabel:`Create policy` button to "
+"initiate the process."
+msgstr ""
+
+#: ../../multiwan.rst:51
+msgid ""
+"Create a new rule: then click on the :guilabel:`Create rule` button. This"
+" step allows you to define specific conditions under which the traffic "
+"will be routed differently from the default policy."
+msgstr ""
+
+#: ../../multiwan.rst:54
+msgid ""
+"Give the rule a meaningful name: assign a descriptive and meaningful name"
+" to the rule. This name should reflect the purpose or conditions of the "
+"traffic routing rule for easy identification."
+msgstr ""
+
+#: ../../multiwan.rst:57
+msgid ""
+"Specify traffic type: define the criteria for the traffic you want to "
+"customize. This can include the source IP address, destination IP "
+"address, specific protocols, ports, or any combination of these factors. "
+"By specifying these parameters, you narrow down the scope of the rule to "
+"a specific type of traffic."
+msgstr ""
+
+#: ../../multiwan.rst:60
+msgid ""
+"Select the created policy for this traffic type: choose the custom policy"
+" you created in the first step as the routing preference for this "
+"specific type of traffic. By associating the rule with a particular "
+"policy, you are instructing the system to route the defined traffic "
+"according to the settings specified within that policy."
+msgstr ""
+
+#: ../../multiwan.rst:65
+msgid "General settings"
+msgstr ""
+
+#: ../../multiwan.rst:67
+msgid "NethSecurity monitors each WAN connection using repeated ICMP tests."
+msgstr ""
+
+#: ../../multiwan.rst:69
+msgid ""
+"The ``General settings`` page allow users to specify the following "
+"parameters:"
+msgstr ""
+
+#: ../../multiwan.rst:71
+msgid ""
+"List of hosts to monitor: users can define a list of hosts (computers, "
+"servers, or devices) that the system will monitor for connectivity "
+"status. These hosts are checked to ensure they are reachable via the "
+"network."
+msgstr ""
+
+#: ../../multiwan.rst:73
+msgid ""
+"Number of ICMP packets (pings) to send: users can set the number of ICMP "
+"(Internet Control Message Protocol) packets to be sent during each "
+"monitoring test. By setting the number of packets, users can control the "
+"intensity of the monitoring."
+msgstr ""
+
+#: ../../multiwan.rst:75
+msgid ""
+"Determining unreachability after how many failed tests:  users can "
+"configure the system to determine when a WAN connection should be "
+"considered unreachable. This is done by specifying a threshold - after "
+"how many consecutive failed tests the WAN connection is deemed "
+"unreachable."
 msgstr ""
 
 #: ../../nat.rst:3
@@ -1334,17 +1552,17 @@ msgstr ""
 msgid "To be announced yet."
 msgstr ""
 
-#: ../../release_notes.rst:16
+#: ../../release_notes.rst:18
 msgid "Releases glossary"
 msgstr ""
 
-#: ../../release_notes.rst:18
+#: ../../release_notes.rst:20
 msgid ""
 "The software release cycle includes four stages: Alpha, Beta, Release "
 "Candidate (RC), and Stable."
 msgstr ""
 
-#: ../../release_notes.rst:20
+#: ../../release_notes.rst:22
 msgid ""
 "During the **Alpha** stage, the software is not thoroughly tested and may"
 " not include all planned features. This release is not suitable for "
@@ -1353,7 +1571,7 @@ msgid ""
 "to other releases are not supported."
 msgstr ""
 
-#: ../../release_notes.rst:24
+#: ../../release_notes.rst:26
 msgid ""
 "The **Beta** stage indicates that the software is mostly feature "
 "complete, but it may still contain many known and unknown bugs. This "
@@ -1363,7 +1581,7 @@ msgid ""
 "require a manual procedure."
 msgstr ""
 
-#: ../../release_notes.rst:28
+#: ../../release_notes.rst:30
 msgid ""
 "During the **Release Candidate (RC)** stage, the software is feature "
 "complete, and it contains no known bugs. If no major issues arise, it can"
@@ -1373,7 +1591,7 @@ msgid ""
 "some experience with it."
 msgstr ""
 
-#: ../../release_notes.rst:33
+#: ../../release_notes.rst:35
 msgid ""
 "The **Stable** release is the most reliable and safe to use in production"
 " environments. It has been thoroughly tested and is considered to be free"
