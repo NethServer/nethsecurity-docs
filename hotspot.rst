@@ -66,5 +66,18 @@ This operation is mandatory to associate your unit with the created hotspot inst
 
 Once you have logged in you can continue to fill in the following fields.
 
+``Parent Hotspot`` : choose which instance you want to connect your unit to
+
+``Unit name`` : your NethSecurity's name
+
+``Unit description`` : insert a brief description so that you can identify your unit more easily
+
+``Network address`` : clients will receive an IP address belonging to this network (use CIDR format)
+
+``DHCP range start/end`` : by default the system use the whole network range, you can specify a narrower one acting on start and end IP addresses.
+
+
+
+
 
 
