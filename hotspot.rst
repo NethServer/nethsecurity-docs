@@ -41,8 +41,7 @@ A client part running on NethSecurity (in nethspot terminology this client is ca
 * It assigns IP addresses to devices 
 * It redirects devices to the captive portal
 
-.. warning::
-
+.. note::
    This manual only cover the client part.
    If you're interested on the hotspot manager section please refer to https://nethesis.github.io/icaro/ if you want to create your own instance of icaro or contact info@nethesis.it if you want to use SaaS provided by Nethesis and located at https://my.nethspot.com.
 
