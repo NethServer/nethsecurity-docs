@@ -7,7 +7,6 @@ NethServer 7 migration
 Migration is the process to convert a NethServer 7 machine (*source*) into a NethSecurity (*destination*).
 
 Migrating the firewall configuration from NethServer 7 to NethSecurity is a crucial process to ensure the continuity and security of your network services.
-This guide provides detailed instructions on how to perform the migration, covering two distinct scenarios based on the existing configuration of NethServer 7.
 
 Migration requirements:
 
