@@ -24,7 +24,7 @@ Testing the migration
 =====================
 
 This method allows for thorough testing without affecting your existing installation.
-It's a safe way to evaluate the new setup, ensuring compatibility and functionality before committing to a full migration.
+A test system will boot from an USB drive leaving the existing installation untouched. 
 
 To perform a test migration, follow these steps:
 
@@ -32,7 +32,8 @@ To perform a test migration, follow these steps:
 
 2. Download the live USB image: click :guilabel:`Download` in the ``Download live USB image`` section
 
-3. Prepare the USB drive: write the downloaded image using your preferred method to an USB drive
+3. Prepare the USB drive: write the downloaded image using your preferred method to an USB drive, see the 
+   :ref:`installation section <install-section>` for more info on how to copy the image on a disk.
 
 4. Boot from USB drive: shutdown the firewall, plug the USB drive and restart it, ensuring it boots from the USB drive.
    This is typically done through BIOS/UEFI settings
