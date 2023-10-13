@@ -114,7 +114,8 @@ During the migration, the following configurations will be imported from NethSer
   To re-enable the service make sure to manually setup ``tftp_root`` option
 - static routes
 - port forwards
-- firewall rules: rules using NDPI services are not supported; NAT helpers should be reconfigured manually after migration
+- firewall rules: rules using NDPI services are not supported; source and destination objects are not currently supported and will be converted
+  to rules with IP/CIDR addresses; NAT helpers should be reconfigured manually after migration
 - multiWAN configuration
 - QoS: classes with reserved bandwidth and rules are not supported
 - OpenVPN roadwarrior: mail notification is not supported, existing connection database is not migrated; OTP authentication is not supported
