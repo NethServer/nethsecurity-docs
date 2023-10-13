@@ -49,7 +49,7 @@ Status
 ------
 
 This section shows all users connected to the system, distinguishing those who have authenticated from those who have simply received an IP address, it provides further information such as MAC address, traffic carried out and so on.
-More detailed information is available in the centralized manager.
+More detailed informations are available in the Hotspot manager.
 
 Settings
 --------
@@ -62,7 +62,7 @@ Multiple geographically separated units (NethSecurity) can be connected to the s
 Login to your hotspot manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This operation is mandatory to associate your unit with the created hotspot instance, use the same user and password of your hotspot manager, the ``Hostname`` field at default point to my.nethesis.com.
+This operation is mandatory to associate your unit with the created hotspot instance, use the same user and password of your hotspot manager, the ``Hostname`` field at default points to my.nethesis.com.
 
 Once you have logged in you can continue to fill in the following fields.
 
@@ -76,7 +76,9 @@ Once you have logged in you can continue to fill in the following fields.
 
 ``DHCP range start/end`` : by default the system use the whole network range, you can specify a narrower one acting on start and end IP addresses.
 
+After having fullfilled the form clic ``save`` button to register the unit.
 
+.. note:: Please verify in the hotspot manager-> Units that your unit has been correctly registered, every unit must show its MAC address
 
 
 
