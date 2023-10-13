@@ -59,3 +59,12 @@ This section allows you to associate a unit with a specific hotspot instance cre
 .. note:: Before associating the unit you must create an instance in the hotspot manager.
 
 Multiple geographically separated units (NethSecurity) can be connected to the same centralized hotspot instance, creating a conference in which all users access the same captive portal and in which they can reuse the same login in all connected units.
+
+Login to your hotspot manager
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This operation is mandatory to associate your unit with the created hotspot instance, use the same user and password of your hotspot manager, the ``Hostname`` field at default point to my.nethesis.com 
+Once you have logged in you can continue to fill in the following fields.
+
+
+
