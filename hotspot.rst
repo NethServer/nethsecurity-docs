@@ -1,5 +1,5 @@
 =======
-HotSpot
+Hotspot
 =======
 
 Hotspot main goal is to provide internet connectivity via wi-fi to casual users. Users are sent to a captive portal from which they can access the network by authenticating themselves via social login, sms, email or a voucher code. 
