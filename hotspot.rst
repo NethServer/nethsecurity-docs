@@ -63,7 +63,8 @@ Multiple geographically separated units (NethSecurity) can be connected to the s
 Login to your hotspot manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This operation is mandatory to associate your unit with the created hotspot instance, use the same user and password of your hotspot manager, the ``Hostname`` field at default point to my.nethesis.com 
+This operation is mandatory to associate your unit with the created hotspot instance, use the same user and password of your hotspot manager, the ``Hostname`` field at default point to my.nethesis.com.
+
 Once you have logged in you can continue to fill in the following fields.
 
 
