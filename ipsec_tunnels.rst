@@ -10,5 +10,5 @@ IPSec tunnels
 IPsec tunnels, are a crucial component of modern network security. 
 These tunnels provide a secure and encrypted communication pathway over the internet or any untrusted network, ensuring the confidentiality and integrity of data in transit. 
 
-See the `Openwrt Manual <https://openwrt.org/docs/guide-user/services/vpn/strongswan/site2site>`_ for more info on manual configuration.
+NethSecurity by default uses routed tunnels, see the `Openwrt Manual <https://openwrt.org/docs/guide-user/services/vpn/strongswan/site2site>`_ for more info on manual configuration.
 
