@@ -65,6 +65,10 @@ Login to your hotspot manager
 This operation is mandatory to associate your unit with the created hotspot instance, use the same user and password of your hotspot manager, the ``Hostname`` field at default points to my.nethesis.com.
 
 Once you have logged in you can continue to fill in the following fields.
+This login access will remain active for 24 hours without any need to login again.
+
+Register your unit
+^^^^^^^^^^^^^^^^^^
 
 ``Parent Hotspot`` : choose which instance you want to connect your unit to
 
@@ -72,14 +76,19 @@ Once you have logged in you can continue to fill in the following fields.
 
 ``Unit description`` : insert a brief description so that you can identify your unit more easily
 
-``Network address`` : clients will receive an IP address belonging to this network (use CIDR format)
+``Network address`` : clients will receive an IP address belonging to this network (use CIDR format).
+The first address of the network class is always assigned to the NethSecurity hotspot interface.
+The total number of clients that can be managed at the same time depends on the number of leases issued by DHCP.
+If you need to provide service for more than 253 possible devices, consider using a larger netmask (/23 or /22 or even larger).
 
 ``DHCP range start/end`` : by default the system use the whole network range, you can specify a narrower one acting on start and end IP addresses.
 
 After having fullfilled the form clic ``save`` button to register the unit.
 
-.. note:: Please verify in the hotspot manager-> Units that your unit has been correctly registered, every unit must show its MAC address
+.. note:: Please verify in the Hotspot manager-> Units that your unit has been properly registered. Each properly registered unit must show its MAC address in the Hotspot Manager. If the MAC address is missing please unregister the unit and try to do the registration again.
 
+Unregister your unit
+^^^^^^^^^^^^^^^^^^
 
-
+If you made some error registering your unit (es. using the bad instance) or you want simply to remove this service, do the login 
 
