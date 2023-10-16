@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 08:18+0000\n"
+"POT-Creation-Date: 2023-10-16 16:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -149,7 +149,7 @@ msgstr ""
 msgid "Registration"
 msgstr ""
 
-#: ../../controller.rst:27 ../../nat_helpers.rst:7
+#: ../../controller.rst:27 ../../ipsec_tunnels.rst:7 ../../nat_helpers.rst:7
 #: ../../openvpn_roadwarrior.rst:7 ../../openvpn_tunnels.rst:7
 #: ../../reverse_proxy.rst:7 ../../smtp.rst:7 ../../storage.rst:7
 msgid ""
@@ -169,8 +169,7 @@ msgid "DNS & DHCP"
 msgstr ""
 
 #: ../../dns_dhcp.rst:5 ../../dns_filter.rst:7 ../../dpi_filter.rst:7
-#: ../../hotspot.rst:5 ../../ipsec_tunnels.rst:5 ../../migration.rst:15
-#: ../../qos.rst:5 ../../threat_shield.rst:7
+#: ../../migration.rst:15 ../../qos.rst:5 ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -309,7 +308,228 @@ msgid ""
 msgstr ""
 
 #: ../../hotspot.rst:3
-msgid "HotSpot"
+msgid "Hotspot"
+msgstr ""
+
+#: ../../hotspot.rst:5
+msgid ""
+"Hotspot main goal is to provide internet connectivity via wi-fi to casual"
+" users. Users are sent to a captive portal from which they can access the"
+" network by authenticating themselves via social login, sms, email or a "
+"voucher code. The hotspot service allows the regulation, accountability "
+"and pricing of Internet access in public places, like squares, hotels, "
+"stations and many others."
+msgstr ""
+
+#: ../../hotspot.rst:9
+msgid "Main features"
+msgstr ""
+
+#: ../../hotspot.rst:11
+msgid "Network isolation between corporate and guests"
+msgstr ""
+
+#: ../../hotspot.rst:13
+msgid "Customizable captive portal page"
+msgstr ""
+
+#: ../../hotspot.rst:15
+msgid ""
+"Many authentication modes supported (Social Login, SMS, Email or Voucher "
+"code)"
+msgstr ""
+
+#: ../../hotspot.rst:17
+msgid "AutoLogin support"
+msgstr ""
+
+#: ../../hotspot.rst:19
+msgid "Hotspot manager with different accesses type (admin, customer, desk)"
+msgstr ""
+
+#: ../../hotspot.rst:21
+msgid "Export of accounts and connections report"
+msgstr ""
+
+#: ../../hotspot.rst:24
+msgid "How it works?"
+msgstr ""
+
+#: ../../hotspot.rst:26
+msgid "The implementation is based on 2 components:"
+msgstr ""
+
+#: ../../hotspot.rst:28
+msgid ""
+"A hotspot manager section running on a cloud server, a dedicated WebUI "
+"allows you to perform tasks as:"
+msgstr ""
+
+#: ../../hotspot.rst:30
+msgid ""
+"create a hotspot instance: usually each instance is referred to a "
+"specific location (e.g. Art Cafè, Ritz Hotel and so on)"
+msgstr ""
+
+#: ../../hotspot.rst:32
+msgid "edit the captive portal page"
+msgstr ""
+
+#: ../../hotspot.rst:34
+msgid "choose what type of login to use"
+msgstr ""
+
+#: ../../hotspot.rst:36
+msgid "see session and users logged"
+msgstr ""
+
+#: ../../hotspot.rst:38
+msgid ""
+"A client part running on NethSecurity (in nethspot terminology this "
+"client is called \"unit\") ."
+msgstr ""
+
+#: ../../hotspot.rst:40
+msgid "It has to be physically connected to the Access Points network"
+msgstr ""
+
+#: ../../hotspot.rst:41
+msgid "It assigns IP addresses to devices"
+msgstr ""
+
+#: ../../hotspot.rst:42
+msgid "It redirects devices to the captive portal"
+msgstr ""
+
+#: ../../hotspot.rst:45
+msgid ""
+"This manual only cover the client part. If you're interested on the "
+"hotspot manager section please refer to `Icaro project "
+"<https://nethesis.github.io/icaro>`_ if you want to create your own "
+"instance of Icaro or contact info@nethesis.it if you want to use SaaS "
+"provided by Nethesis and located at `my.nethspot.com "
+"<https://my.nethspot.com>`_."
+msgstr ""
+
+#: ../../hotspot.rst:49
+msgid "Status"
+msgstr ""
+
+#: ../../hotspot.rst:51
+msgid ""
+"This section shows all users connected to the system, distinguishing "
+"those who have authenticated from those who have simply received an IP "
+"address, it provides further information such as MAC address, traffic "
+"carried out and so on. More detailed informations are available in the "
+"hotspot manager."
+msgstr ""
+
+#: ../../hotspot.rst:55
+msgid "Settings"
+msgstr ""
+
+#: ../../hotspot.rst:56
+msgid ""
+"This section allows you to associate a unit with a specific hotspot "
+"instance created in the hotspot manager."
+msgstr ""
+
+#: ../../hotspot.rst:58
+msgid ""
+"Before associating the unit you must create an instance in the hotspot "
+"manager."
+msgstr ""
+
+#: ../../hotspot.rst:60
+msgid ""
+"Multiple geographically separated units (NethSecurity) can be connected "
+"to the same centralized hotspot instance, creating a conference in which "
+"all users access the same captive portal and in which they can reuse the "
+"same login in all connected units."
+msgstr ""
+
+#: ../../hotspot.rst:63
+msgid "Login to your hotspot manager"
+msgstr ""
+
+#: ../../hotspot.rst:65
+msgid ""
+"This operation is mandatory to associate your unit with the created "
+"hotspot instance, use the same user and password of your hotspot manager,"
+" the ``Hostname`` field at default points to my.nethspot.com."
+msgstr ""
+
+#: ../../hotspot.rst:67
+msgid ""
+"Once you have logged in you can continue to fill in the following fields."
+" This login access will remain active for 24 hours without any need to "
+"login again."
+msgstr ""
+
+#: ../../hotspot.rst:71
+msgid "Register your unit"
+msgstr ""
+
+#: ../../hotspot.rst:73
+msgid ""
+"``Parent Hotspot`` : choose which instance you want to connect your unit "
+"to"
+msgstr ""
+
+#: ../../hotspot.rst:75
+msgid "``Unit name`` : your NethSecurity's name"
+msgstr ""
+
+#: ../../hotspot.rst:77
+msgid ""
+"``Unit description`` : insert a brief description so that you can "
+"identify your unit more easily"
+msgstr ""
+
+#: ../../hotspot.rst:79
+msgid ""
+"``Network address`` : clients will receive an IP address belonging to "
+"this network (use CIDR format). The first address of the network class is"
+" always assigned to the NethSecurity hotspot interface. The total number "
+"of clients that can be managed at the same time depends on the DHCP range"
+" you specified. If you need to provide hotspot service for more than 253 "
+"devices, consider using a larger netmask (/23 or /22 or even larger) and "
+"be sure to have an appropriate range."
+msgstr ""
+
+#: ../../hotspot.rst:84
+msgid ""
+"``DHCP range start/end`` : by default the system use the whole network "
+"range, you can specify a narrower one acting on start and end IP "
+"addresses."
+msgstr ""
+
+#: ../../hotspot.rst:86
+msgid ""
+"After having fulfilled the form click :guilabel:`Save` button to register"
+" the unit."
+msgstr ""
+
+#: ../../hotspot.rst:88
+msgid ""
+"Please verify in the hotspot manager-> Units that your unit has been "
+"properly registered. Each properly registered unit must show its MAC "
+"address in the hotspot manager. If the MAC address is missing please "
+"unregister the unit and try to do the registration again."
+msgstr ""
+
+#: ../../hotspot.rst:91
+msgid "Unregister your unit"
+msgstr ""
+
+#: ../../hotspot.rst:93
+msgid ""
+"If you made some error registering your unit (es. unit was associated to "
+"a wrong hotspot instance) or you want to remove this service, do the "
+"login in the hotspot section of NethSecurity and click to "
+":guilabel:`Unregister unit`. Your unit will be removed both from the "
+"NethSecurity and from the remote hotspot manager, the interface used in "
+"your Nethsecurity will be freed up and you can use it for other purposes."
 msgstr ""
 
 #: ../../index.rst:20
@@ -695,6 +915,21 @@ msgstr ""
 
 #: ../../ipsec_tunnels.rst:3
 msgid "IPSec tunnels"
+msgstr ""
+
+#: ../../ipsec_tunnels.rst:10
+msgid ""
+"IPsec tunnels, are a crucial component of modern network security. These "
+"tunnels provide a secure and encrypted communication pathway over the "
+"internet or any untrusted network, ensuring the confidentiality and "
+"integrity of data in transit."
+msgstr ""
+
+#: ../../ipsec_tunnels.rst:13
+msgid ""
+"NethSecurity by default uses Route-Based VPNs, see the `Openwrt Manual "
+"<https://openwrt.org/docs/guide-user/services/vpn/strongswan/site2site>`_"
+" for more info on manual configuration."
 msgstr ""
 
 #: ../../metrics.rst:3
@@ -2252,5 +2487,8 @@ msgstr ""
 #~ "See the `developer manual "
 #~ "<https://dev.nethsecurity.org/packages/ns-plug/#nethsecurity-"
 #~ "controller-client>` for more info."
+#~ msgstr ""
+
+#~ msgid "HotSpot"
 #~ msgstr ""
 
