@@ -88,7 +88,8 @@ After having fullfilled the form clic ``save`` button to register the unit.
 .. note:: Please verify in the Hotspot manager-> Units that your unit has been properly registered. Each properly registered unit must show its MAC address in the Hotspot Manager. If the MAC address is missing please unregister the unit and try to do the registration again.
 
 Unregister your unit
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
-If you made some error registering your unit (es. using the bad instance) or you want simply to remove this service, do the login 
+If you made some error registering your unit (es. unit was associated to a wrong hotspot instance) or you want to remove this service, do the login in the Hotspot section of NethSecurity and click to ``Unregister unit``.
+Your unit will be removed both from the NethSecurity and from the remote Hotspot Manager, the interface used in your Nethsecurity will be freed up and you can use it for other purposes.
 
