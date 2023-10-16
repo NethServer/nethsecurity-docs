@@ -25,7 +25,7 @@ How it works?
 
 The implementation is based on 2 components:
 
-A hotspot manager section running on a cloud server, a dedicated WebUI allows you to perform task as:
+A hotspot manager section running on a cloud server, a dedicated WebUI allows you to perform tasks as:
 
 * create a hotspot instance: usually each instance is referred to a specific location (e.g. Art Cafè, Ritz Hotel and so on)
 
@@ -43,13 +43,13 @@ A client part running on NethSecurity (in nethspot terminology this client is ca
 
 .. note::
    This manual only cover the client part.
-   If you're interested on the hotspot manager section please refer to https://nethesis.github.io/icaro/ if you want to create your own instance of icaro or contact info@nethesis.it if you want to use SaaS provided by Nethesis and located at https://my.nethspot.com.
+   If you're interested on the hotspot manager section please refer to `Icaro project <https://nethesis.github.io/icaro>`_ if you want to create your own instance of Icaro or contact info@nethesis.it if you want to use SaaS provided by Nethesis and located at `my.nethspot.com <https://my.nethspot.com>`_.
 
 Status
 ------
 
 This section shows all users connected to the system, distinguishing those who have authenticated from those who have simply received an IP address, it provides further information such as MAC address, traffic carried out and so on.
-More detailed informations are available in the Hotspot manager.
+More detailed informations are available in the hotspot manager.
 
 Settings
 --------
@@ -62,7 +62,7 @@ Multiple geographically separated units (NethSecurity) can be connected to the s
 Login to your hotspot manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This operation is mandatory to associate your unit with the created hotspot instance, use the same user and password of your hotspot manager, the ``Hostname`` field at default points to my.nethesis.com.
+This operation is mandatory to associate your unit with the created hotspot instance, use the same user and password of your hotspot manager, the ``Hostname`` field at default points to my.nethspot.com.
 
 Once you have logged in you can continue to fill in the following fields.
 This login access will remain active for 24 hours without any need to login again.
@@ -78,18 +78,18 @@ Register your unit
 
 ``Network address`` : clients will receive an IP address belonging to this network (use CIDR format).
 The first address of the network class is always assigned to the NethSecurity hotspot interface.
-The total number of clients that can be managed at the same time depends on the number of leases issued by DHCP.
-If you need to provide service for more than 253 possible devices, consider using a larger netmask (/23 or /22 or even larger).
+The total number of clients that can be managed at the same time depends on the DHCP range you specified.
+If you need to provide hotspot service for more than 253 devices, consider using a larger netmask (/23 or /22 or even larger) and be sure to have an appropriate range.
 
 ``DHCP range start/end`` : by default the system use the whole network range, you can specify a narrower one acting on start and end IP addresses.
 
-After having fullfilled the form clic ``save`` button to register the unit.
+After having fulfilled the form click :guilabel:`Save` button to register the unit.
 
-.. note:: Please verify in the Hotspot manager-> Units that your unit has been properly registered. Each properly registered unit must show its MAC address in the Hotspot Manager. If the MAC address is missing please unregister the unit and try to do the registration again.
+.. note:: Please verify in the hotspot manager-> Units that your unit has been properly registered. Each properly registered unit must show its MAC address in the hotspot manager. If the MAC address is missing please unregister the unit and try to do the registration again.
 
 Unregister your unit
 ^^^^^^^^^^^^^^^^^^^^
 
-If you made some error registering your unit (es. unit was associated to a wrong hotspot instance) or you want to remove this service, do the login in the Hotspot section of NethSecurity and click to ``Unregister unit``.
-Your unit will be removed both from the NethSecurity and from the remote Hotspot Manager, the interface used in your Nethsecurity will be freed up and you can use it for other purposes.
+If you made some error registering your unit (es. unit was associated to a wrong hotspot instance) or you want to remove this service, do the login in the hotspot section of NethSecurity and click to :guilabel:`Unregister unit`.
+Your unit will be removed both from the NethSecurity and from the remote hotspot manager, the interface used in your Nethsecurity will be freed up and you can use it for other purposes.
 
