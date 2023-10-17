@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-17 06:26+0000\n"
+"POT-Creation-Date: 2023-10-17 16:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -169,13 +169,167 @@ msgstr ""
 msgid "DNS & DHCP"
 msgstr ""
 
-#: ../../dns_dhcp.rst:5 ../../dns_filter.rst:7 ../../dpi_filter.rst:7
-#: ../../qos.rst:5 ../../threat_shield.rst:7
-msgid "TODO"
+#: ../../dns_dhcp.rst:5
+msgid ""
+"NethSecurity can provide DNS and DHCP services to every local network. "
+"The menu is divided in 5 tabs:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:8 ../../dns_dhcp.rst:15
+msgid "DHCP"
+msgstr ""
+
+#: ../../dns_dhcp.rst:9
+msgid "Static leases"
+msgstr ""
+
+#: ../../dns_dhcp.rst:10 ../../dns_dhcp.rst:46
+msgid "Dynamic leases"
+msgstr ""
+
+#: ../../dns_dhcp.rst:11 ../../dns_dhcp.rst:51
+msgid "DNS"
+msgstr ""
+
+#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:60
+msgid "DNS records"
+msgstr ""
+
+#: ../../dns_dhcp.rst:16
+msgid ""
+"This section allows you to enable and manage a DHCP server for every "
+"local network configured in your NethSecurity. A list of all local "
+"interfaces is provided and you can enable the service clicking on button "
+":guilabel:`Edit`"
+msgstr ""
+
+#: ../../dns_dhcp.rst:20
+msgid "``Enable DHCP`` : enable/disable the service"
+msgstr ""
+
+#: ../../dns_dhcp.rst:22
+msgid "``Range IP start`` : first IP address of DHCP range"
+msgstr ""
+
+#: ../../dns_dhcp.rst:24
+msgid "``Range IP end`` : last IP address of DHCP range"
+msgstr ""
+
+#: ../../dns_dhcp.rst:26
+msgid "``Lease time`` :  lease time (default 1 hour)"
+msgstr ""
+
+#: ../../dns_dhcp.rst:28
+msgid ""
+"**Advanced settings** It is possible to declare very specific DHCP "
+"options, searching for the field to configure (e.g. DNS passed to "
+"clients, tftp IP address and so on) and then specifying the value."
+msgstr ""
+
+#: ../../dns_dhcp.rst:32
+msgid "Static Leases"
+msgstr ""
+
+#: ../../dns_dhcp.rst:33
+msgid ""
+"Static leases assign stable IP addresses and symbolic hostnames to DHCP "
+"clients. The host is identified by its MAC address, assigned a fixed IP "
+"address, and provided with a symbolic hostname for easy recognition."
+msgstr ""
+
+#: ../../dns_dhcp.rst:35
+msgid ""
+"Click the button :guilabel:`Add reservation` to add a new device's "
+"reservation."
+msgstr ""
+
+#: ../../dns_dhcp.rst:37
+msgid "``Hostname`` : Hostname asssociated to the IP address"
+msgstr ""
+
+#: ../../dns_dhcp.rst:39
+msgid ""
+"``IP address`` : IP adddress to assign to the specified MAC Address.The "
+"IP address must be within the DHCP range"
+msgstr ""
+
+#: ../../dns_dhcp.rst:41
+msgid ""
+"``MAC address`` : MAC address of the device where you want to make the "
+"reservation"
+msgstr ""
+
+#: ../../dns_dhcp.rst:43
+msgid "``Reservation name`` : Optional, freely configurable filed"
+msgstr ""
+
+#: ../../dns_dhcp.rst:47
+msgid ""
+"Dynamic leases represent IP addresses that are currently in use and have "
+"been allocated to devices on the network. This tab shows all currently "
+"active leases."
+msgstr ""
+
+#: ../../dns_dhcp.rst:52
+msgid ""
+"The system will resolve host and domain names using DNS queries to "
+"external DNS servers. ``DNS forwarding servers``: Click the button "
+":guilabel:`Add DNS Server` to specify the desired DNS, you can add more "
+"servers, each one is individually managed."
+msgstr ""
+
+#: ../../dns_dhcp.rst:55
+msgid ""
+"```DNS Domain`` : Insert the the local DNS domain, ensuring that queries "
+"for this domain are always resolved locally."
+msgstr ""
+
+#: ../../dns_dhcp.rst:57
+msgid ""
+"``Log DNS queries``: enable it if you want all the DNS queries to be "
+"logged by the system."
+msgstr ""
+
+#: ../../dns_dhcp.rst:61
+msgid ""
+"The system can handle local DNS records. When the server performs a DNS "
+"lookup, first it will search inside local DNS records. If no local record"
+" is found, an external DNS query will be done."
+msgstr ""
+
+#: ../../dns_dhcp.rst:63
+msgid "Local DNS record will always override records from external DNS servers."
+msgstr ""
+
+#: ../../dns_dhcp.rst:65
+msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
+msgstr ""
+
+#: ../../dns_dhcp.rst:67
+msgid "``Hostname`` : DNS hostname"
+msgstr ""
+
+#: ../../dns_dhcp.rst:69
+msgid "``IP address`` : IP address associated to hostname"
+msgstr ""
+
+#: ../../dns_dhcp.rst:71
+msgid "``Name`` : optional field"
+msgstr ""
+
+#: ../../dns_dhcp.rst:73
+msgid ""
+"``Wildcard DNS record``: enable it if you want this answer for any "
+"subdomain you haven't already defined"
 msgstr ""
 
 #: ../../dns_filter.rst:5
 msgid "DNS filter"
+msgstr ""
+
+#: ../../dns_filter.rst:7 ../../dpi_filter.rst:7 ../../qos.rst:5
+#: ../../threat_shield.rst:7
+msgid "TODO"
 msgstr ""
 
 #: ../../dpi_filter.rst:5
