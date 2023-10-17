@@ -6,7 +6,7 @@ Installation
 
 .. highlight:: bash
 
-First, make sure to download the latest x86_64 image from the `official download link <https://updates.nethsecurity.nethserver.org/23.05.0/targets/x86/64/nethsecurity-22.03.5-x86-64-generic-ext4-combined-efi.img.gz>`_.
+First, make sure to download the latest x86_64 image from the `official download link <https://updates.nethsecurity.nethserver.org/23.05.0/targets/x86/64/nethsecurity-23.05.0-x86-64-generic-ext4-combined-efi.img.gz>`_.
 
 To install NethSecurity, you can either write the downloaded image directly to the disk or boot from a USB stick.
 
