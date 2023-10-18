@@ -14,7 +14,7 @@ This section is divided in 5 tabs:
 DHCP
 ----
 This section allows you to enable and manage a DHCP server for every local network configured in your NethSecurity.
-Every local interface is provided with a card where and you can enable the service clicking on button :guilabel:`Edit`
+Every local interface is provided with a card where you can enable the service clicking on button :guilabel:`Edit`
 
 
 ``Enable DHCP`` : enable/disable the service
