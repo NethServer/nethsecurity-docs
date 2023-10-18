@@ -12,7 +12,7 @@
 #
 # sys.path.insert(0, os.path.abspath('.'))
 import datetime
-
+import urllib.request
 
 # -- Project information -----------------------------------------------------
 
@@ -29,7 +29,8 @@ copyright = u'%d, Nethesis Srl and the NethSecurity project contributors' % date
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-        'sphinx_copybutton'
+        'sphinx_copybutton',
+        'sphinx.ext.extlinks'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -69,3 +70,19 @@ html_logo = "_static/logo.svg"
 html_favicon = "_static/favicon.ico"
 
 highlight_options = {'stripall': True}
+
+# Retrieve latest release
+base_url="https://updates.nethsecurity.nethserver.org"
+version = ""
+with urllib.request.urlopen(f'{base_url}/latest_release') as f:
+    version = f.read().decode('utf-8').strip()
+
+extlinks = {
+    'download_image_x86': (f'{base_url}/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz', None),
+    'download_hash_x86': (f'{base_url}/{version}/targets/x86/64/sha256sums', None)
+}
+rst_prolog = f"""
+.. |image| replace:: nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
+.. |version| replace:: {version}
+.. |download_url| replace:: {base_url}/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
+"""
