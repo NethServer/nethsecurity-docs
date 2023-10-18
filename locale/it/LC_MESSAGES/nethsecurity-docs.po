@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 06:50+0000\n"
+"POT-Creation-Date: 2023-10-18 07:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -183,15 +183,15 @@ msgstr ""
 msgid "Static leases"
 msgstr ""
 
-#: ../../dns_dhcp.rst:10 ../../dns_dhcp.rst:46
+#: ../../dns_dhcp.rst:10 ../../dns_dhcp.rst:52
 msgid "Dynamic leases"
 msgstr ""
 
-#: ../../dns_dhcp.rst:11 ../../dns_dhcp.rst:51
+#: ../../dns_dhcp.rst:11 ../../dns_dhcp.rst:57
 msgid "DNS"
 msgstr ""
 
-#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:60
+#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:70
 msgid "DNS records"
 msgstr ""
 
@@ -200,124 +200,138 @@ msgid ""
 "This section allows you to enable and manage a DHCP server for every "
 "local network configured in your NethSecurity. Every local interface is "
 "provided with a card where you can enable the service clicking on button "
-":guilabel:`Edit`"
+":guilabel:`Edit`."
 msgstr ""
 
-#: ../../dns_dhcp.rst:20
-msgid "``Enable DHCP`` : enable/disable the service"
+#: ../../dns_dhcp.rst:19 ../../dns_dhcp.rst:41 ../../dns_dhcp.rst:60
+#: ../../dns_dhcp.rst:77
+msgid "Available fields:"
 msgstr ""
 
 #: ../../dns_dhcp.rst:22
-msgid "``Range IP start`` : first IP address of DHCP range"
+msgid "``Enable DHCP`` : enable/disable the service"
 msgstr ""
 
 #: ../../dns_dhcp.rst:24
-msgid "``Range IP end`` : last IP address of DHCP range"
+msgid "``Range IP start`` : first IP address of DHCP range"
 msgstr ""
 
 #: ../../dns_dhcp.rst:26
-msgid "``Lease time`` :  lease time (default 1 hour)"
+msgid "``Range IP end`` : last IP address of DHCP range"
 msgstr ""
 
 #: ../../dns_dhcp.rst:28
-msgid ""
-"**Advanced settings** It is possible to declare very specific DHCP "
-"options, searching for the field to configure (e.g. DNS passed to "
-"clients, tftp IP address and so on) and then specifying the value."
+msgid "``Lease time`` :  lease time (default 1 hour)"
+msgstr ""
+
+#: ../../dns_dhcp.rst:30
+msgid "**Advanced settings**"
 msgstr ""
 
 #: ../../dns_dhcp.rst:32
+msgid ""
+"It is possible to declare very specific DHCP options, searching for the "
+"field to configure (e.g. DNS passed to clients, tftp IP address and so "
+"on) and then specifying the value."
+msgstr ""
+
+#: ../../dns_dhcp.rst:35
 msgid "Static Leases"
 msgstr ""
 
-#: ../../dns_dhcp.rst:33
+#: ../../dns_dhcp.rst:36
 msgid ""
 "Static leases assigns stable IP addresses and symbolic hostnames to DHCP "
 "clients. The host is identified by its MAC address, assigned a fixed IP "
 "address, and provided with a symbolic hostname for easy recognition."
 msgstr ""
 
-#: ../../dns_dhcp.rst:35
+#: ../../dns_dhcp.rst:38
 msgid ""
 "Click the button :guilabel:`Add reservation` to add a new device's "
 "reservation."
 msgstr ""
 
-#: ../../dns_dhcp.rst:37
+#: ../../dns_dhcp.rst:43
 msgid "``Hostname`` : Hostname asssociated to the IP address"
 msgstr ""
 
-#: ../../dns_dhcp.rst:39
+#: ../../dns_dhcp.rst:45
 msgid ""
 "``IP address`` : IP adddress to assign to the specified MAC Address.The "
 "IP address must be within the DHCP range"
 msgstr ""
 
-#: ../../dns_dhcp.rst:41
+#: ../../dns_dhcp.rst:47
 msgid ""
 "``MAC address`` : MAC address of the device where you want to make the "
 "reservation"
 msgstr ""
 
-#: ../../dns_dhcp.rst:43
+#: ../../dns_dhcp.rst:49
 msgid "``Reservation name`` : Optional, freely configurable filed"
 msgstr ""
 
-#: ../../dns_dhcp.rst:47
+#: ../../dns_dhcp.rst:53
 msgid ""
 "Dynamic leases represents IP addresses that are currently in use and have"
 " been allocated to devices on the network. This tab shows all currently "
 "active leases."
 msgstr ""
 
-#: ../../dns_dhcp.rst:52
+#: ../../dns_dhcp.rst:58
 msgid ""
 "The system will resolve host and domain names using DNS queries to "
-"external DNS servers. ``DNS forwarding servers``: Click the button "
-":guilabel:`Add DNS Server` to specify the desired DNS, you can add more "
-"servers, each one is individually managed."
+"external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:55
+#: ../../dns_dhcp.rst:63
 msgid ""
-"```DNS Domain`` : Insert the the local DNS domain, ensuring that queries "
+"``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` "
+"to specify the desired DNS, you can add more servers, each one is "
+"individually managed."
+msgstr ""
+
+#: ../../dns_dhcp.rst:65
+msgid ""
+"``DNS Domain`` : Insert the the local DNS domain, ensuring that queries "
 "for this domain are always resolved locally."
 msgstr ""
 
-#: ../../dns_dhcp.rst:57
+#: ../../dns_dhcp.rst:67
 msgid ""
 "``Log DNS queries``: enable it if you want all the DNS queries to be "
 "logged by the system."
 msgstr ""
 
-#: ../../dns_dhcp.rst:61
+#: ../../dns_dhcp.rst:71
 msgid ""
 "The system can handle local DNS records. When the server performs a DNS "
 "lookup, first it will search inside local DNS records. If no local record"
 " is found, an external DNS query will be done."
 msgstr ""
 
-#: ../../dns_dhcp.rst:63
-msgid "Local DNS record will always override records from external DNS servers."
+#: ../../dns_dhcp.rst:73
+msgid "Local DNS records will always override records from external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:65
+#: ../../dns_dhcp.rst:75
 msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
 msgstr ""
 
-#: ../../dns_dhcp.rst:67
+#: ../../dns_dhcp.rst:80
 msgid "``Hostname`` : DNS hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:69
+#: ../../dns_dhcp.rst:82
 msgid "``IP address`` : IP address associated to hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:71
+#: ../../dns_dhcp.rst:84
 msgid "``Name`` : optional field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:73
+#: ../../dns_dhcp.rst:86
 msgid ""
 "``Wildcard DNS record``: enable it if you want this answer for any "
 "subdomain you haven't already defined"
@@ -330,6 +344,31 @@ msgstr ""
 #: ../../dns_filter.rst:7 ../../dpi_filter.rst:7 ../../qos.rst:5
 #: ../../threat_shield.rst:7
 msgid "TODO"
+msgstr ""
+
+#: ../../download.rst:5
+msgid "Download"
+msgstr ""
+
+#: ../../download.rst:7
+msgid ""
+"Begin by downloading the most recent x86_64 image from the official "
+":download_image_x86:`download link <>`."
+msgstr ""
+
+#: ../../download.rst:9
+msgid ""
+"For verification, :download_hash_x86:`download the hash file <>` and "
+"execute the following command in a Linux shell to ensure the integrity of"
+" the downloaded image:"
+msgstr ""
+
+#: ../../download.rst:15
+msgid ""
+"To proceed with the installation of NethSecurity, you have two options: "
+"write the downloaded image directly to your disk or create a bootable USB"
+" stick. Refer to the installation page for detailed instructions on both "
+"methods."
 msgstr ""
 
 #: ../../dpi_filter.rst:5
@@ -695,15 +734,15 @@ msgstr ""
 msgid "Installation"
 msgstr ""
 
-#: ../../index.rst:35
+#: ../../index.rst:36
 msgid "Configuration"
 msgstr ""
 
-#: ../../index.rst:56
+#: ../../index.rst:57
 msgid "Applications"
 msgstr ""
 
-#: ../../index.rst:70
+#: ../../index.rst:71
 msgid "Best practices"
 msgstr ""
 
@@ -730,211 +769,224 @@ msgstr ""
 
 #: ../../install.rst:9
 msgid ""
-"First, make sure to download the latest x86_64 image from the `official "
-"download link "
-"<https://updates.nethsecurity.nethserver.org/23.05.0/targets/x86/64/nethsecurity-23.05.0-x86-64"
-"-generic-ext4-combined-efi.img.gz>`_."
+"To begin the installation process, start by :ref:`downloading <download-"
+"section>` the latest image. Once the download is complete, you have two "
+"methods to install NethSecurity:"
 msgstr ""
 
-#: ../../install.rst:11
+#: ../../install.rst:12
 msgid ""
-"To install NethSecurity, you can either write the downloaded image "
-"directly to the disk or boot from a USB stick."
+"Direct disk installation: write the downloaded image directly to your "
+"computer's disk. This method allows for a straightforward installation "
+"process directly onto your system's storage."
 msgstr ""
 
-#: ../../install.rst:14
+#: ../../install.rst:15
+msgid ""
+"USB boot onstallation: alternatively, you can create a bootable USB stick"
+" using the downloaded image. Boot the system from the USB stick and type "
+"a command to initiate the installation process."
+msgstr ""
+
+#: ../../install.rst:18
+msgid ""
+"Choose the method that best suits your needs and proceed with the "
+"installation process for NethSecurity."
+msgstr ""
+
+#: ../../install.rst:21
 msgid "Install on bare metal"
 msgstr ""
 
-#: ../../install.rst:16
+#: ../../install.rst:23
 msgid ""
 "NethSecurity can be run from a USB stick or installed directly to any "
 "bootable device like hard disks or SD cards."
 msgstr ""
 
-#: ../../install.rst:19
+#: ../../install.rst:26
 msgid "attach the target disk/stick/card to a desktop Linux machine"
 msgstr ""
 
-#: ../../install.rst:20
+#: ../../install.rst:27
 msgid ""
 "find the disk/stick/card device name, in this example the device is named"
 " ``/dev/sdd``"
 msgstr ""
 
-#: ../../install.rst:21
-msgid "as ``root`` user, write the downloaded image to the device: ::"
+#: ../../install.rst:28
+msgid "as ``root`` user, write the downloaded image to the device:"
 msgstr ""
 
-#: ../../install.rst:25
+#: ../../install.rst:34
 msgid "unplug the disk/stick/card from the desktop and plug it into the server"
 msgstr ""
 
-#: ../../install.rst:26
+#: ../../install.rst:35
 msgid ""
 "boot the server, select the correct device (USB, SD card or hard disk) "
 "from boot menu"
 msgstr ""
 
-#: ../../install.rst:27
+#: ../../install.rst:36
 msgid "the server is installed and ready to be used"
 msgstr ""
 
-#: ../../install.rst:29
+#: ../../install.rst:38
 msgid ""
 "If you're running a desktop Windows machine, you will need extra software"
 " for point 2. First, make sure to format the USB drive then unmount it. "
 "Use one of the following tools to write the USB stick:"
 msgstr ""
 
-#: ../../install.rst:33
+#: ../../install.rst:42
 msgid "`Etcher <https://etcher.io/>`_"
 msgstr ""
 
-#: ../../install.rst:34
+#: ../../install.rst:43
 msgid "`Win32 Disk Imager <http://sourceforge.net/projects/win32diskimager/>`_"
 msgstr ""
 
-#: ../../install.rst:35
+#: ../../install.rst:44
 msgid "`Rawrite32 <http://www.netbsd.org/~martin/rawrite32/>`_"
 msgstr ""
 
-#: ../../install.rst:36
+#: ../../install.rst:45
 msgid "`dd for Windows <http://www.chrysocome.net/dd>`_"
 msgstr ""
 
-#: ../../install.rst:39
+#: ../../install.rst:48
 msgid "Install from USB to disk"
 msgstr ""
 
-#: ../../install.rst:41
+#: ../../install.rst:50
 msgid ""
 "Since running from the USB stick does not guarantee best performances, "
 "you can also install NethSecurity to the hard disk while running it from "
 "the USB stick itself:"
 msgstr ""
 
-#: ../../install.rst:44
+#: ../../install.rst:53
 msgid "make sure the server has Internet access"
 msgstr ""
 
-#: ../../install.rst:45
+#: ../../install.rst:54
 msgid "connect to the server using VGA, serial console or SSH"
 msgstr ""
 
-#: ../../install.rst:46
+#: ../../install.rst:55
 msgid "login with default credentials"
 msgstr ""
 
-#: ../../install.rst:47
+#: ../../install.rst:56
 msgid "execute ``ns-install`` and follow the instructions"
 msgstr ""
 
-#: ../../install.rst:51
+#: ../../install.rst:60
 msgid "Install on virtual machines"
 msgstr ""
 
-#: ../../install.rst:53
+#: ../../install.rst:62
 msgid "You can use the downloaded image as a virtual machine disk:"
 msgstr ""
 
-#: ../../install.rst:55
-msgid "extract the downloaded image: ::"
+#: ../../install.rst:64
+msgid "extract the downloaded image:"
 msgstr ""
 
-#: ../../install.rst:59
+#: ../../install.rst:70
 msgid "create a new virtual machine and select the uncompressed image as disk"
 msgstr ""
 
-#: ../../install.rst:60
+#: ../../install.rst:71
 msgid "boot the virtual machine"
 msgstr ""
 
-#: ../../install.rst:63
+#: ../../install.rst:74
 msgid "Install on Proxmox"
 msgstr ""
 
-#: ../../install.rst:65
+#: ../../install.rst:76
 msgid "The image can be imported inside `Proxmox <https://www.proxmox.com/>`_."
 msgstr ""
 
-#: ../../install.rst:67
+#: ../../install.rst:78
 msgid ""
 "First, make sure to have 2 different network bridges. In this example we "
 "are going to use ``vmbr0`` and ``vmbr1``. The described procedure can be "
 "also done using the Proxmox UI."
 msgstr ""
 
-#: ../../install.rst:70
+#: ../../install.rst:81
 msgid ""
 "Create the virtual machine, in this example the machine will have id "
 "``401``::"
 msgstr ""
 
-#: ../../install.rst:75
-msgid "Download the image: ::"
+#: ../../install.rst:86
+msgid "Download the image:"
 msgstr ""
 
-#: ../../install.rst:80
-msgid "Extract the image: ::"
+#: ../../install.rst:93
+msgid "Extract the image:"
 msgstr ""
 
-#: ../../install.rst:84
-msgid "Import the extracted images a virtual machine disk: ::"
+#: ../../install.rst:99
+msgid "Import the extracted images a virtual machine disk:"
 msgstr ""
 
-#: ../../install.rst:88
+#: ../../install.rst:105
 msgid "Attach the disk to the virtual machine: ::"
 msgstr ""
 
-#: ../../install.rst:92
+#: ../../install.rst:109
 msgid "Setup the boot order: ::"
 msgstr ""
 
-#: ../../install.rst:96
+#: ../../install.rst:113
 msgid "Finally, start the virtual machine."
 msgstr ""
 
-#: ../../install.rst:100
+#: ../../install.rst:117
 msgid "Default network configuration"
 msgstr ""
 
-#: ../../install.rst:102
+#: ../../install.rst:119
 msgid ""
 "When you first boot NethSecurity, the system will try to configure the "
 "network interfaces."
 msgstr ""
 
-#: ../../install.rst:104
+#: ../../install.rst:121
 msgid "By default, the network configuration will be as follows:"
 msgstr ""
 
-#: ../../install.rst:106
+#: ../../install.rst:123
 msgid ""
 "The LAN interface will be configured with a static IP address of "
 "192.168.1.1."
 msgstr ""
 
-#: ../../install.rst:107 ../../install.rst:112
+#: ../../install.rst:124 ../../install.rst:129
 msgid ""
 "The WAN interface will be configured to use DHCP to obtain an IP address "
 "from your ISP."
 msgstr ""
 
-#: ../../install.rst:109
+#: ../../install.rst:126
 msgid ""
 "An exception to this default network configuration is virtual machines "
 "running on KVM and on Digital Ocean cloud provider (droplet). In this "
 "case, the network configuration will be as follows:"
 msgstr ""
 
-#: ../../install.rst:111
+#: ../../install.rst:128
 msgid ""
 "The LAN interface will be configured to use DHCP to obtain an IP address "
 "from the virtualization platform."
 msgstr ""
 
-#: ../../install.rst:114
+#: ../../install.rst:131
 msgid ""
 "**Note:** If you are using NethSecurity in a production environment, you "
 "may need to modify the default network configuration to meet your "
@@ -3042,5 +3094,76 @@ msgstr ""
 #~ "provided with a card where and you"
 #~ " can enable the service clicking on"
 #~ " button :guilabel:`Edit`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This section allows you to enable "
+#~ "and manage a DHCP server for every"
+#~ " local network configured in your "
+#~ "NethSecurity. Every local interface is "
+#~ "provided with a card where you can"
+#~ " enable the service clicking on "
+#~ "button :guilabel:`Edit`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Advanced settings** It is possible to"
+#~ " declare very specific DHCP options, "
+#~ "searching for the field to configure "
+#~ "(e.g. DNS passed to clients, tftp "
+#~ "IP address and so on) and then "
+#~ "specifying the value."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The system will resolve host and "
+#~ "domain names using DNS queries to "
+#~ "external DNS servers. ``DNS forwarding "
+#~ "servers``: Click the button :guilabel:`Add "
+#~ "DNS Server` to specify the desired "
+#~ "DNS, you can add more servers, "
+#~ "each one is individually managed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "```DNS Domain`` : Insert the the "
+#~ "local DNS domain, ensuring that queries"
+#~ " for this domain are always resolved"
+#~ " locally."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Local DNS record will always override"
+#~ " records from external DNS servers."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First, make sure to download the "
+#~ "latest x86_64 image from the `official"
+#~ " download link "
+#~ "<https://updates.nethsecurity.nethserver.org/23.05.0/targets/x86/64/nethsecurity-23.05.0-x86-64"
+#~ "-generic-ext4-combined-efi.img.gz>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To install NethSecurity, you can either"
+#~ " write the downloaded image directly "
+#~ "to the disk or boot from a "
+#~ "USB stick."
+#~ msgstr ""
+
+#~ msgid "as ``root`` user, write the downloaded image to the device: ::"
+#~ msgstr ""
+
+#~ msgid "extract the downloaded image: ::"
+#~ msgstr ""
+
+#~ msgid "Download the image: ::"
+#~ msgstr ""
+
+#~ msgid "Extract the image: ::"
+#~ msgstr ""
+
+#~ msgid "Import the extracted images a virtual machine disk: ::"
 #~ msgstr ""
 
