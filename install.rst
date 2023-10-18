@@ -50,10 +50,9 @@ Install from USB to disk
 Since running from the USB stick does not guarantee best performances, you can also install
 NethSecurity to the hard disk while running it from the USB stick itself:
 
-1. make sure the server has Internet access
-2. connect to the server using VGA, serial console or SSH
-3. login with default credentials
-4. execute ``ns-install`` and follow the instructions
+1. connect to the server using VGA, serial console or SSH
+2. login with default credentials
+3. execute ``ns-install`` and follow the instructions
 
 
 Install on virtual machines
