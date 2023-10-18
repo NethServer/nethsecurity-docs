@@ -6,9 +6,16 @@ Installation
 
 .. highlight:: bash
 
-First, make sure to download the latest x86_64 image from the `official download link <https://updates.nethsecurity.nethserver.org/23.05.0/targets/x86/64/nethsecurity-23.05.0-x86-64-generic-ext4-combined-efi.img.gz>`_.
+To begin the installation process, start by :ref:`downloading <download-section>` the latest image.
+Once the download is complete, you have two methods to install NethSecurity:
 
-To install NethSecurity, you can either write the downloaded image directly to the disk or boot from a USB stick.
+- Direct disk installation: write the downloaded image directly to your computer's disk.
+  This method allows for a straightforward installation process directly onto your system's storage.
+
+- USB boot onstallation: alternatively, you can create a bootable USB stick using the downloaded image.
+  Boot the system from the USB stick and type a command to initiate the installation process.
+
+Choose the method that best suits your needs and proceed with the installation process for NethSecurity.
 
 Install on bare metal
 =====================
@@ -18,9 +25,11 @@ hard disks or SD cards.
 
 1. attach the target disk/stick/card to a desktop Linux machine
 2. find the disk/stick/card device name, in this example the device is named ``/dev/sdd``
-3. as ``root`` user, write the downloaded image to the device: ::
+3. as ``root`` user, write the downloaded image to the device:
    
-     zcat nethsecurity-<version>-x86-64-generic-squashfs-combined.img.gz | dd of=/dev/sdd bs=1M iflag=fullblock status=progress oflag=direct
+   .. parsed-literal::
+
+     zcat |image| | dd of=/dev/sdd bs=1M iflag=fullblock status=progress oflag=direct
    
 4. unplug the disk/stick/card from the desktop and plug it into the server
 5. boot the server, select the correct device (USB, SD card or hard disk) from boot menu
@@ -52,9 +61,11 @@ Install on virtual machines
 
 You can use the downloaded image as a virtual machine disk:
 
-1. extract the downloaded image: ::
+1. extract the downloaded image:
+
+   .. parsed-literal::
    
-     gunzip nethsecurity-<version>-x86-64-generic-squashfs-combined.img.gz
+     gunzip |image|
    
 2. create a new virtual machine and select the uncompressed image as disk
 3. boot the virtual machine
@@ -72,18 +83,24 @@ Create the virtual machine, in this example the machine will have id ``401``::
   qm create 401 --name "NethSecurity" --ostype l26 --cores 1 --memory 1024 --net0 virtio,bridge=vmbr0,firewall=0 --net1 virtio,bridge=vmbr1,firewall=0 --scsihw virtio-scsi-pci
 
 
-Download the image: ::
+Download the image:
 
-  wget "https://updates.nethsecurity.nethserver.org/22.03.5/targets/x86/64/nethsecurity-22.03.5-x86-64-generic-ext4-combined-efi.img.gz"
+.. parsed-literal::
+
+  wget '|download_url|'
 
 
-Extract the image: ::
+Extract the image:
 
-  gunzip nethsecurity-<version>-x86-64-generic-ext4-combined-efi.img.gz
+.. parsed-literal::
 
-Import the extracted images a virtual machine disk: ::
+  gunzip |image|
 
-  qm importdisk 401 nethsecurity-<version>-x86-64-generic-ext4-combined-efi.img local-lvm
+Import the extracted images a virtual machine disk:
+
+.. parsed-literal::
+
+  qm importdisk 401 |image| local-lvm
 
 Attach the disk to the virtual machine: ::
 
