@@ -29,6 +29,7 @@ NethSecurity administrator manual
    :caption: Installation
 
    system_requirements
+   download
    install
    updates
 
