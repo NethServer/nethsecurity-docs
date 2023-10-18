@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 07:05+0000\n"
+"POT-Creation-Date: 2023-10-18 12:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -867,126 +867,122 @@ msgid ""
 msgstr ""
 
 #: ../../install.rst:53
-msgid "make sure the server has Internet access"
-msgstr ""
-
-#: ../../install.rst:54
 msgid "connect to the server using VGA, serial console or SSH"
 msgstr ""
 
-#: ../../install.rst:55
+#: ../../install.rst:54
 msgid "login with default credentials"
 msgstr ""
 
-#: ../../install.rst:56
+#: ../../install.rst:55
 msgid "execute ``ns-install`` and follow the instructions"
 msgstr ""
 
-#: ../../install.rst:60
+#: ../../install.rst:59
 msgid "Install on virtual machines"
 msgstr ""
 
-#: ../../install.rst:62
+#: ../../install.rst:61
 msgid "You can use the downloaded image as a virtual machine disk:"
 msgstr ""
 
-#: ../../install.rst:64
+#: ../../install.rst:63
 msgid "extract the downloaded image:"
 msgstr ""
 
-#: ../../install.rst:70
+#: ../../install.rst:69
 msgid "create a new virtual machine and select the uncompressed image as disk"
 msgstr ""
 
-#: ../../install.rst:71
+#: ../../install.rst:70
 msgid "boot the virtual machine"
 msgstr ""
 
-#: ../../install.rst:74
+#: ../../install.rst:73
 msgid "Install on Proxmox"
 msgstr ""
 
-#: ../../install.rst:76
+#: ../../install.rst:75
 msgid "The image can be imported inside `Proxmox <https://www.proxmox.com/>`_."
 msgstr ""
 
-#: ../../install.rst:78
+#: ../../install.rst:77
 msgid ""
 "First, make sure to have 2 different network bridges. In this example we "
 "are going to use ``vmbr0`` and ``vmbr1``. The described procedure can be "
 "also done using the Proxmox UI."
 msgstr ""
 
-#: ../../install.rst:81
+#: ../../install.rst:80
 msgid ""
 "Create the virtual machine, in this example the machine will have id "
 "``401``::"
 msgstr ""
 
-#: ../../install.rst:86
+#: ../../install.rst:85
 msgid "Download the image:"
 msgstr ""
 
-#: ../../install.rst:93
+#: ../../install.rst:92
 msgid "Extract the image:"
 msgstr ""
 
-#: ../../install.rst:99
+#: ../../install.rst:98
 msgid "Import the extracted images a virtual machine disk:"
 msgstr ""
 
-#: ../../install.rst:105
+#: ../../install.rst:104
 msgid "Attach the disk to the virtual machine: ::"
 msgstr ""
 
-#: ../../install.rst:109
+#: ../../install.rst:108
 msgid "Setup the boot order: ::"
 msgstr ""
 
-#: ../../install.rst:113
+#: ../../install.rst:112
 msgid "Finally, start the virtual machine."
 msgstr ""
 
-#: ../../install.rst:117
+#: ../../install.rst:116
 msgid "Default network configuration"
 msgstr ""
 
-#: ../../install.rst:119
+#: ../../install.rst:118
 msgid ""
 "When you first boot NethSecurity, the system will try to configure the "
 "network interfaces."
 msgstr ""
 
-#: ../../install.rst:121
+#: ../../install.rst:120
 msgid "By default, the network configuration will be as follows:"
 msgstr ""
 
-#: ../../install.rst:123
+#: ../../install.rst:122
 msgid ""
 "The LAN interface will be configured with a static IP address of "
 "192.168.1.1."
 msgstr ""
 
-#: ../../install.rst:124 ../../install.rst:129
+#: ../../install.rst:123 ../../install.rst:128
 msgid ""
 "The WAN interface will be configured to use DHCP to obtain an IP address "
 "from your ISP."
 msgstr ""
 
-#: ../../install.rst:126
+#: ../../install.rst:125
 msgid ""
 "An exception to this default network configuration is virtual machines "
 "running on KVM and on Digital Ocean cloud provider (droplet). In this "
 "case, the network configuration will be as follows:"
 msgstr ""
 
-#: ../../install.rst:128
+#: ../../install.rst:127
 msgid ""
 "The LAN interface will be configured to use DHCP to obtain an IP address "
 "from the virtualization platform."
 msgstr ""
 
-#: ../../install.rst:131
+#: ../../install.rst:130
 msgid ""
 "**Note:** If you are using NethSecurity in a production environment, you "
 "may need to modify the default network configuration to meet your "
@@ -3165,5 +3161,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Import the extracted images a virtual machine disk: ::"
+#~ msgstr ""
+
+#~ msgid "make sure the server has Internet access"
 #~ msgstr ""
 
