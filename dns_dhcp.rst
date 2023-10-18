@@ -3,7 +3,7 @@ DNS & DHCP
 ==========
 
 NethSecurity can provide DNS and DHCP services to every local network.
-The menu is divided in 5 tabs:
+This section is divided in 5 tabs:
 
 * DHCP
 * Static leases
@@ -14,7 +14,7 @@ The menu is divided in 5 tabs:
 DHCP
 ----
 This section allows you to enable and manage a DHCP server for every local network configured in your NethSecurity.
-A list of all local interfaces is provided and you can enable the service clicking on button :guilabel:`Edit`
+Every local interface is provided with a card where and you can enable the service clicking on button :guilabel:`Edit`
 
 
 ``Enable DHCP`` : enable/disable the service
@@ -30,7 +30,7 @@ It is possible to declare very specific DHCP options, searching for the field to
 
 Static Leases
 -------------
-Static leases assign stable IP addresses and symbolic hostnames to DHCP clients. The host is identified by its MAC address, assigned a fixed IP address, and provided with a symbolic hostname for easy recognition.
+Static leases assigns stable IP addresses and symbolic hostnames to DHCP clients. The host is identified by its MAC address, assigned a fixed IP address, and provided with a symbolic hostname for easy recognition.
 
 Click the button :guilabel:`Add reservation` to add a new device's reservation.
 
@@ -44,7 +44,7 @@ Click the button :guilabel:`Add reservation` to add a new device's reservation.
 
 Dynamic leases
 --------------
-Dynamic leases represent IP addresses that are currently in use and have been allocated to devices on the network.
+Dynamic leases represents IP addresses that are currently in use and have been allocated to devices on the network.
 This tab shows all currently active leases.
 
 DNS
