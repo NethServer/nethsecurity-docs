@@ -14,7 +14,9 @@ This section is divided in 5 tabs:
 DHCP
 ----
 This section allows you to enable and manage a DHCP server for every local network configured in your NethSecurity.
-Every local interface is provided with a card where you can enable the service clicking on button :guilabel:`Edit`
+Every local interface is provided with a card where you can enable the service clicking on button :guilabel:`Edit`.
+
+Available fields:
 
 
 ``Enable DHCP`` : enable/disable the service
@@ -26,6 +28,7 @@ Every local interface is provided with a card where you can enable the service c
 ``Lease time`` :  lease time (default 1 hour)
 
 **Advanced settings**
+
 It is possible to declare very specific DHCP options, searching for the field to configure (e.g. DNS passed to clients, tftp IP address and so on) and then specifying the value.
 
 Static Leases
@@ -33,6 +36,9 @@ Static Leases
 Static leases assigns stable IP addresses and symbolic hostnames to DHCP clients. The host is identified by its MAC address, assigned a fixed IP address, and provided with a symbolic hostname for easy recognition.
 
 Click the button :guilabel:`Add reservation` to add a new device's reservation.
+
+
+Available fields:
 
 ``Hostname`` : Hostname asssociated to the IP address
 
@@ -49,20 +55,27 @@ This tab shows all currently active leases.
 
 DNS
 ---
-The system will resolve host and domain names using DNS queries to external DNS servers. 
+The system will resolve host and domain names using DNS queries to external DNS servers.
+
+Available fields:
+
+
 ``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` to specify the desired DNS, you can add more servers, each one is individually managed.
 
-```DNS Domain`` : Insert the the local DNS domain, ensuring that queries for this domain are always resolved locally.
+``DNS Domain`` : Insert the the local DNS domain, ensuring that queries for this domain are always resolved locally.
 
 ``Log DNS queries``: enable it if you want all the DNS queries to be logged by the system.
 
 DNS records
-----------
+-----------
 The system can handle local DNS records. When the server performs a DNS lookup, first it will search inside local DNS records. If no local record is found, an external DNS query will be done.
 
-.. note:: Local DNS record will always override records from external DNS servers.
+.. note:: Local DNS records will always override records from external DNS servers.
 
 Click the button :guilabel:`Add DNS record` to add a new DNS hostname.
+
+Available fields:
+
 
 ``Hostname`` : DNS hostname
 
