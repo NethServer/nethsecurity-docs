@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 12:17+0000\n"
+"POT-Creation-Date: 2023-10-19 04:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -342,7 +342,6 @@ msgid "DNS filter"
 msgstr ""
 
 #: ../../dns_filter.rst:7 ../../dpi_filter.rst:7 ../../qos.rst:5
-#: ../../threat_shield.rst:7
 msgid "TODO"
 msgstr ""
 
@@ -2870,6 +2869,46 @@ msgstr ""
 msgid ""
 "1GB if disk space plus an additional USB storage for persistent data like"
 " logs"
+msgstr ""
+
+#: ../../threat_shield.rst:7
+msgid ""
+"NethSecurity is equipped with various tools and integrations useful for "
+"countering threats coming from the internet."
+msgstr ""
+
+#: ../../threat_shield.rst:9
+msgid ""
+"One of these tools is Threat Shield: a shield that blocks any traffic "
+"coming from compromised IP addresses or destined to them as well as any "
+"requests addressed to hostnames that could be malicious."
+msgstr ""
+
+#: ../../threat_shield.rst:11
+msgid "Threat shield uses BanIP and Adblock software to block malicious traffic."
+msgstr ""
+
+#: ../../threat_shield.rst:13
+msgid ""
+"These 2 softwares ar loaded with high quality blacklists very frequently "
+"updated and maintained by `Yoroy <https://yoroi.company>`_ a leading "
+"company focused on CyberSecurity and member of `Cyber Threat Alliance "
+"<https://www.cyberthreatalliance.org>`_. Yoroi blacklists ensure great "
+"effectiveness and high confidence, minimizing the possibility of false "
+"positives."
+msgstr ""
+
+#: ../../threat_shield.rst:16
+msgid ""
+"This tool can only be activated for firewalls provided with a "
+"subscription, currently there is no web configuration interface but it is"
+" still possible to configure it from a character interface."
+msgstr ""
+
+#: ../../threat_shield.rst:18
+msgid ""
+"How to configure this service  is explained in the `developer manual "
+"<https://dev.nethsecurity.org/packages/ns-threat_shield>`_."
 msgstr ""
 
 #: ../../updates.rst:5

@@ -17,6 +17,8 @@ Once the download is complete, you have two methods to install NethSecurity:
 
 Choose the method that best suits your needs and proceed with the installation process for NethSecurity.
 
+.. _install_bare_metal-section:
+
 Install on bare metal
 =====================
 
