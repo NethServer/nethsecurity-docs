@@ -61,7 +61,7 @@ Follow the instructions displayed on the screen to mount the root filesystem and
 Emergency recovery
 ==================
 
-Emergency recovery in NethSecurity, also known as un-bricking, is a  feature enabling users to restore their firewall device in cases of severe malfunctions.
+Emergency recovery in NethSecurity, also known as unbricking, is a feature enabling users to restore their firewall device in cases of severe malfunctions.
 Unbricking ensures that even the most critical issues can be resolved, restoring the device to full functionality, unless there are hardware failures.
 
 If you still have access to the system, you can use the following commands to download and write the image: ::
