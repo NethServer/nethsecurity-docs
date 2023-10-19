@@ -66,7 +66,7 @@ Unbricking ensures that even the most critical issues can be resolved, restoring
 
 If you still have access to the system, you can use the following commands to download and write the image: ::
 
-  ns-download-l
+  ns-download -l
 
 This command will display the path of the downloaded image. Use this path in the following command: ::
 
