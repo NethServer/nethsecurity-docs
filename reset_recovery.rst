@@ -9,7 +9,7 @@ NethSecurity provides multiple options to reset your firewall and restore its fu
 * :ref:`Failsafe mode <failsafe-section>`: this option is useful if you have lost control of your device, making it inaccessible due to a configuration error.
   Failsafe mode allows you to reboot the firewall into a basic operating state while retaining most of your packages and settings.
 * :ref:`Recovery mode <recovery-section>`: if your firewall's firmware becomes corrupted, recovery mode comes to the rescue.
-  It enables you to install new firmware and un-brick a faulty machine.
+  It enables you to install new firmware and unbrick a faulty machine.
 
 .. _factory_reset-section:
 
