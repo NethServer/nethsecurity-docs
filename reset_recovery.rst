@@ -30,6 +30,10 @@ If NethSecurity was installed through an in-place migration from NethServer 7, a
 the system will retain all configurations migrated from NethServer 7. If this is not desired, and a clean start is preferred,
 it is advisable to proceed with a new :ref:`installation <install-section>` rather than using the factory reset.
 
+The factory reset restores the currently installed version. 
+For instance, if the firewall was initially installed with version 23.05.0 and then updated to 23.05.1, after the factory reset,
+you will have a clean installation of version 23.05.1.
+
 .. _failsafe-section:
 
 Failsafe mode
@@ -43,10 +47,10 @@ However, it's important to note that failsafe mode cannot resolve more complex i
 While it resembles a reset, failsafe mode enables you to access your device and restore settings if necessary, whereas a reset would simply erase all configurations.
 
 The simplest way to activate failsafe mode is to connect directly to the firewall using a VGA/HDMI monitor or a serial cable. To do this,
-boot the machine, wait for the Grub boot menu to appear, and select `NethSecurity (failsafe)`.
+boot the machine, wait for the Grub boot menu to appear, and select ``NethSecurity (failsafe)``.
 
 You can access the firewall directly through the serial port using a null-modem cable and a common terminal program.
-For Windows, you can use PuTTY version 0.60 or higher. For Linux, options include minicom and picocom. Set the baud rate
+For Windows, you can use ``PuTTY`` version 0.60 or higher. For Linux, options include ``minicom`` and ``picocom``. Set the baud rate
 to 115200, data bits to 8, parity to None, and stop bits to 1 (abbreviated as 8N1).
 
 After entering failsafe mode, the firewall will start with a network address of 192.168.1.1/24, usually on the eth0 network interface,
