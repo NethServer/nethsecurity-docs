@@ -51,7 +51,7 @@ to 115200, data bits to 8, parity to None, and stop bits to 1 (abbreviated as 8N
 You can access the firewall directly through the serial port using a null-modem cable and a common terminal program (including PuTTY, version >= 0.60).
 Set the baud rate to 115200, data bits to 8, parity to None, and stop bits to 1 (abbreviated as 8N1).
 
-After entering failsafe mode, the firewall will initiate with a network address of 192.168.1.1/24, usually on the eth0 network interface,
+After entering failsafe mode, the firewall will start with a network address of 192.168.1.1/24, usually on the eth0 network interface,
 and only essential services will be operational. It's important to note that the DHCP server will be inactive in failsafe mode.
 Follow the instructions displayed on the screen to mount the root filesystem and access other utilities as needed.
 
