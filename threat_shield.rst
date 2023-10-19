@@ -15,4 +15,4 @@ Yoroi blacklists ensure great effectiveness and high confidence, minimizing the 
 
 This tool can only be activated for firewalls provided with a subscription, currently there is no web configuration interface but it is still possible to configure it from a character interface.
 
-How to enable this service configure is explained in the `developer manual <https://dev.nethsecurity.org/packages/ns-threat_shield>`_.
+How to configure this service  is explained in the `developer manual <https://dev.nethsecurity.org/packages/ns-threat_shield>`_.
