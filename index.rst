@@ -32,6 +32,7 @@ NethSecurity administrator manual
    download
    install
    updates
+   reset_recovery
 
 .. toctree::
    :maxdepth: 2
