@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-19 04:57+0000\n"
+"POT-Creation-Date: 2023-10-19 13:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -733,15 +733,15 @@ msgstr ""
 msgid "Installation"
 msgstr ""
 
-#: ../../index.rst:36
+#: ../../index.rst:37
 msgid "Configuration"
 msgstr ""
 
-#: ../../index.rst:57
+#: ../../index.rst:58
 msgid "Applications"
 msgstr ""
 
-#: ../../index.rst:71
+#: ../../index.rst:72
 msgid "Best practices"
 msgstr ""
 
@@ -793,195 +793,195 @@ msgid ""
 "installation process for NethSecurity."
 msgstr ""
 
-#: ../../install.rst:21
+#: ../../install.rst:23
 msgid "Install on bare metal"
 msgstr ""
 
-#: ../../install.rst:23
+#: ../../install.rst:25
 msgid ""
 "NethSecurity can be run from a USB stick or installed directly to any "
 "bootable device like hard disks or SD cards."
 msgstr ""
 
-#: ../../install.rst:26
+#: ../../install.rst:28
 msgid "attach the target disk/stick/card to a desktop Linux machine"
 msgstr ""
 
-#: ../../install.rst:27
+#: ../../install.rst:29
 msgid ""
 "find the disk/stick/card device name, in this example the device is named"
 " ``/dev/sdd``"
 msgstr ""
 
-#: ../../install.rst:28
+#: ../../install.rst:30
 msgid "as ``root`` user, write the downloaded image to the device:"
 msgstr ""
 
-#: ../../install.rst:34
+#: ../../install.rst:36
 msgid "unplug the disk/stick/card from the desktop and plug it into the server"
 msgstr ""
 
-#: ../../install.rst:35
+#: ../../install.rst:37
 msgid ""
 "boot the server, select the correct device (USB, SD card or hard disk) "
 "from boot menu"
 msgstr ""
 
-#: ../../install.rst:36
+#: ../../install.rst:38
 msgid "the server is installed and ready to be used"
 msgstr ""
 
-#: ../../install.rst:38
+#: ../../install.rst:40
 msgid ""
 "If you're running a desktop Windows machine, you will need extra software"
 " for point 2. First, make sure to format the USB drive then unmount it. "
 "Use one of the following tools to write the USB stick:"
 msgstr ""
 
-#: ../../install.rst:42
+#: ../../install.rst:44
 msgid "`Etcher <https://etcher.io/>`_"
 msgstr ""
 
-#: ../../install.rst:43
+#: ../../install.rst:45
 msgid "`Win32 Disk Imager <http://sourceforge.net/projects/win32diskimager/>`_"
 msgstr ""
 
-#: ../../install.rst:44
+#: ../../install.rst:46
 msgid "`Rawrite32 <http://www.netbsd.org/~martin/rawrite32/>`_"
 msgstr ""
 
-#: ../../install.rst:45
+#: ../../install.rst:47
 msgid "`dd for Windows <http://www.chrysocome.net/dd>`_"
 msgstr ""
 
-#: ../../install.rst:48
+#: ../../install.rst:50
 msgid "Install from USB to disk"
 msgstr ""
 
-#: ../../install.rst:50
+#: ../../install.rst:52
 msgid ""
 "Since running from the USB stick does not guarantee best performances, "
 "you can also install NethSecurity to the hard disk while running it from "
 "the USB stick itself:"
 msgstr ""
 
-#: ../../install.rst:53
+#: ../../install.rst:55
 msgid "connect to the server using VGA, serial console or SSH"
 msgstr ""
 
-#: ../../install.rst:54
+#: ../../install.rst:56
 msgid "login with default credentials"
 msgstr ""
 
-#: ../../install.rst:55
+#: ../../install.rst:57
 msgid "execute ``ns-install`` and follow the instructions"
 msgstr ""
 
-#: ../../install.rst:59
+#: ../../install.rst:61
 msgid "Install on virtual machines"
 msgstr ""
 
-#: ../../install.rst:61
+#: ../../install.rst:63
 msgid "You can use the downloaded image as a virtual machine disk:"
 msgstr ""
 
-#: ../../install.rst:63
+#: ../../install.rst:65
 msgid "extract the downloaded image:"
 msgstr ""
 
-#: ../../install.rst:69
+#: ../../install.rst:71
 msgid "create a new virtual machine and select the uncompressed image as disk"
 msgstr ""
 
-#: ../../install.rst:70
+#: ../../install.rst:72
 msgid "boot the virtual machine"
 msgstr ""
 
-#: ../../install.rst:73
+#: ../../install.rst:75
 msgid "Install on Proxmox"
 msgstr ""
 
-#: ../../install.rst:75
+#: ../../install.rst:77
 msgid "The image can be imported inside `Proxmox <https://www.proxmox.com/>`_."
 msgstr ""
 
-#: ../../install.rst:77
+#: ../../install.rst:79
 msgid ""
 "First, make sure to have 2 different network bridges. In this example we "
 "are going to use ``vmbr0`` and ``vmbr1``. The described procedure can be "
 "also done using the Proxmox UI."
 msgstr ""
 
-#: ../../install.rst:80
+#: ../../install.rst:82
 msgid ""
 "Create the virtual machine, in this example the machine will have id "
 "``401``::"
 msgstr ""
 
-#: ../../install.rst:85
+#: ../../install.rst:87
 msgid "Download the image:"
 msgstr ""
 
-#: ../../install.rst:92
+#: ../../install.rst:94
 msgid "Extract the image:"
 msgstr ""
 
-#: ../../install.rst:98
+#: ../../install.rst:100
 msgid "Import the extracted images a virtual machine disk:"
 msgstr ""
 
-#: ../../install.rst:104
+#: ../../install.rst:106
 msgid "Attach the disk to the virtual machine: ::"
 msgstr ""
 
-#: ../../install.rst:108
+#: ../../install.rst:110
 msgid "Setup the boot order: ::"
 msgstr ""
 
-#: ../../install.rst:112
+#: ../../install.rst:114
 msgid "Finally, start the virtual machine."
 msgstr ""
 
-#: ../../install.rst:116
+#: ../../install.rst:118
 msgid "Default network configuration"
 msgstr ""
 
-#: ../../install.rst:118
+#: ../../install.rst:120
 msgid ""
 "When you first boot NethSecurity, the system will try to configure the "
 "network interfaces."
 msgstr ""
 
-#: ../../install.rst:120
+#: ../../install.rst:122
 msgid "By default, the network configuration will be as follows:"
 msgstr ""
 
-#: ../../install.rst:122
+#: ../../install.rst:124
 msgid ""
 "The LAN interface will be configured with a static IP address of "
 "192.168.1.1."
 msgstr ""
 
-#: ../../install.rst:123 ../../install.rst:128
+#: ../../install.rst:125 ../../install.rst:130
 msgid ""
 "The WAN interface will be configured to use DHCP to obtain an IP address "
 "from your ISP."
 msgstr ""
 
-#: ../../install.rst:125
+#: ../../install.rst:127
 msgid ""
 "An exception to this default network configuration is virtual machines "
 "running on KVM and on Digital Ocean cloud provider (droplet). In this "
 "case, the network configuration will be as follows:"
 msgstr ""
 
-#: ../../install.rst:127
+#: ../../install.rst:129
 msgid ""
 "The LAN interface will be configured to use DHCP to obtain an IP address "
 "from the virtualization platform."
 msgstr ""
 
-#: ../../install.rst:130
+#: ../../install.rst:132
 msgid ""
 "**Note:** If you are using NethSecurity in a production environment, you "
 "may need to modify the default network configuration to meet your "
@@ -2518,6 +2518,162 @@ msgstr ""
 
 #: ../../remote_support.rst:21
 msgid "To terminate the session, click the :guilabel:`End session` button."
+msgstr ""
+
+#: ../../reset_recovery.rst:3 ../../reset_recovery.rst:17
+msgid "Factory reset"
+msgstr ""
+
+#: ../../reset_recovery.rst:5
+msgid ""
+"NethSecurity provides multiple options to reset your firewall and restore"
+" its functionality:"
+msgstr ""
+
+#: ../../reset_recovery.rst:7
+msgid ""
+":ref:`Factory reset <factory_reset-section>`: choosing this method erases"
+" all your installed packages and customized settings, reverting the "
+"firewall back to its original state as it was after NethSecurity "
+"installation."
+msgstr ""
+
+#: ../../reset_recovery.rst:9
+msgid ""
+":ref:`Failsafe mode <failsafe-section>`: this option is useful if you "
+"have lost control of your device, making it inaccessible due to a "
+"configuration error. Failsafe mode allows you to reboot the firewall into"
+" a basic operating state while retaining most of your packages and "
+"settings."
+msgstr ""
+
+#: ../../reset_recovery.rst:11
+msgid ""
+":ref:`Recovery mode <recovery-section>`: if your firewall's firmware "
+"becomes corrupted, recovery mode comes to the rescue. It enables you to "
+"install new firmware and unbrick a faulty machine."
+msgstr ""
+
+#: ../../reset_recovery.rst:19
+msgid ""
+"In NethSecurity, a factory reset refers to the process of reverting the "
+"firewall device back to its original settings and configuration as it was"
+" when it was first installed. This procedure erases all the customized "
+"settings, configurations, installed packages, and user data on the "
+"device, effectively restoring it to a pristine state."
+msgstr ""
+
+#: ../../reset_recovery.rst:23
+msgid ""
+"This procedure relies on the completion of the boot process. If the "
+"factory reset doesn't work, consider using failsafe mode instead."
+msgstr ""
+
+#: ../../reset_recovery.rst:25
+msgid ""
+"To start fresh without reinstalling the firmware, execute the following "
+"commands. ::"
+msgstr ""
+
+#: ../../reset_recovery.rst:29
+msgid ""
+"If NethSecurity was installed through an in-place migration from "
+"NethServer 7, after the factory reset, the system will retain all "
+"configurations migrated from NethServer 7. If this is not desired, and a "
+"clean start is preferred, it is advisable to proceed with a new "
+":ref:`installation <install-section>` rather than using the factory "
+"reset."
+msgstr ""
+
+#: ../../reset_recovery.rst:33
+msgid ""
+"The factory reset restores the currently installed version. For instance,"
+" if the firewall was initially installed with version 23.05.0 and then "
+"updated to 23.05.1, after the factory reset, you will have a clean "
+"installation of version 23.05.1."
+msgstr ""
+
+#: ../../reset_recovery.rst:40
+msgid "Failsafe mode"
+msgstr ""
+
+#: ../../reset_recovery.rst:42
+msgid ""
+"NethSecurity provides a failsafe mode that can override the current "
+"configuration of your device. If your device becomes inaccessible due to "
+"a configuration error, failsafe mode comes to your rescue. When you boot "
+"into failsafe mode, the device initializes in a basic operating state, "
+"using a set of predefined defaults, allowing you to address the issue "
+"manually."
+msgstr ""
+
+#: ../../reset_recovery.rst:46
+msgid ""
+"However, it's important to note that failsafe mode cannot resolve more "
+"complex issues such as faulty hardware or a damaged kernel. While it "
+"resembles a reset, failsafe mode enables you to access your device and "
+"restore settings if necessary, whereas a reset would simply erase all "
+"configurations."
+msgstr ""
+
+#: ../../reset_recovery.rst:49
+msgid ""
+"The simplest way to activate failsafe mode is to connect directly to the "
+"firewall using a VGA/HDMI monitor or a serial cable. To do this, boot the"
+" machine, wait for the Grub boot menu to appear, and select "
+"``NethSecurity (failsafe)``."
+msgstr ""
+
+#: ../../reset_recovery.rst:52
+msgid ""
+"You can access the firewall directly through the serial port using a "
+"null-modem cable and a common terminal program. For Windows, you can use "
+"``PuTTY`` version 0.60 or higher. For Linux, options include ``minicom`` "
+"and ``picocom``. Set the baud rate to 115200, data bits to 8, parity to "
+"None, and stop bits to 1 (abbreviated as 8N1)."
+msgstr ""
+
+#: ../../reset_recovery.rst:56
+msgid ""
+"After entering failsafe mode, the firewall will start with a network "
+"address of 192.168.1.1/24, usually on the eth0 network interface, and "
+"only essential services will be operational. It's important to note that "
+"the DHCP server will be inactive in failsafe mode. Follow the "
+"instructions displayed on the screen to mount the root filesystem and "
+"access other utilities as needed."
+msgstr ""
+
+#: ../../reset_recovery.rst:64
+msgid "Emergency recovery"
+msgstr ""
+
+#: ../../reset_recovery.rst:66
+msgid ""
+"Emergency recovery in NethSecurity, also known as unbricking, is a "
+"feature enabling users to restore their firewall device in cases of "
+"severe malfunctions. Unbricking ensures that even the most critical "
+"issues can be resolved, restoring the device to full functionality, "
+"unless there are hardware failures."
+msgstr ""
+
+#: ../../reset_recovery.rst:69
+msgid ""
+"If you still have access to the system, you can use the following "
+"commands to download and write the image: ::"
+msgstr ""
+
+#: ../../reset_recovery.rst:73
+msgid ""
+"This command will display the path of the downloaded image. Use this path"
+" in the following command: ::"
+msgstr ""
+
+#: ../../reset_recovery.rst:77
+msgid ""
+"If you can't access the system, :ref:`download the latest image "
+"<download-section>`, then follow :ref:`installation instructions "
+"<install_bare_metal-section>` to write the image directly into the "
+"storage media."
 msgstr ""
 
 #: ../../reverse_proxy.rst:9
