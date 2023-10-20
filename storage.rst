@@ -15,7 +15,7 @@ To configure the additional storage, follow these steps:
 * Select the desired storage where logs will be written to
 * Click on button :guilabel:`Format and configure storage`
 
-The command will prepare the device by erasing all partitions and existing data, creating a single partition using the ext4 filesystem, and mounting the storage at ``/mnt/data``.
+The system will prepare the device by erasing all partitions and existing data, creating a single partition using the ext4 filesystem, and mounting the storage at ``/mnt/data``.
 
 The system will then be reconfigured as follows:
 
