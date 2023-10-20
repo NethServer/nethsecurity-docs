@@ -8,6 +8,8 @@ The memory storage capacity is limited and the oldest logs are automatically rem
 
 NethSecurity allows you to save a copy of system logs to a storage device other than the one it's currently on, like a USB stick or an additional hard drive. This can be useful for troubleshooting or keeping a system activity log.
 
+To configure the additional storage, follow these steps:
+
 * Attach your storage device (external or internal)
 * Go to the Storage page
 * Select the desired storage where logs will be written to
