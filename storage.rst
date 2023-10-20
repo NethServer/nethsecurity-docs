@@ -21,4 +21,4 @@ The system will then be reconfigured as follows:
 - logrotate will rotate ``/mnt/data/logs/messages`` once a week
 
 Extra generated data like metrics, will be synced from in-memory filesystem to persistent storage once a day during the night.
-To remove the data storage and restore in-memory log retention only, click on button :guilabel:`remove-storage`.
+To remove the data storage and restore in-memory log retention only, click on button :guilabel:`Remove storage`.
