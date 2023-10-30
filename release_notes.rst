@@ -7,10 +7,10 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
-Major changes on 2023-11-xx
+Major changes on 2023-10-31
 ===========================
 
-**Alpha1**
+**Alpha 1**
 
 This is an alpha release, designed for evaluation purposes to explore the functionalities of the new system.
 Users have the option to use the new interface, which is currently under development and may contain known issues (`view issues <link>`_),
@@ -30,7 +30,6 @@ The new interface includes the following features:
 - DNS and DHCP Settings
 - Routing Configuration
 - Multi-WAN Support
-- Dedalo Hotspot Configuration
 - Port Forwarding Options
 - Zones and Policies Management
 - Flashstart DNS Filtering
