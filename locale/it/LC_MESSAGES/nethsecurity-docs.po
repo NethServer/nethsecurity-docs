@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-30 16:56+0000\n"
+"POT-Creation-Date: 2023-10-31 16:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -1280,7 +1280,7 @@ msgstr ""
 #: ../../introduction.rst:44
 msgid ""
 "If you're looking for more technical details, take a look to the "
-"`developer manual <https://https://nethserver.github.io/nethsecurity/>`_."
+"`developer manual <https://nethserver.github.io/nethsecurity/>`_."
 msgstr ""
 
 #: ../../introduction.rst:46
@@ -3879,5 +3879,12 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "To be announced yet."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you're looking for more technical "
+#~ "details, take a look to the "
+#~ "`developer manual "
+#~ "<https://https://nethserver.github.io/nethsecurity/>`_."
 #~ msgstr ""
 
