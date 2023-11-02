@@ -83,6 +83,7 @@ extlinks = {
 }
 rst_prolog = f"""
 .. |image| replace:: nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
+.. |image_no_gz| replace:: nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img
 .. |version| replace:: {version}
 .. |download_url| replace:: {base_url}/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
 """

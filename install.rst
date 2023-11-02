@@ -101,7 +101,7 @@ Import the extracted images a virtual machine disk:
 
 .. parsed-literal::
 
-  qm importdisk 401 |image| local-lvm
+  qm importdisk 401 |image_no_gz| local-lvm
 
 Attach the disk to the virtual machine: ::
 
