@@ -23,13 +23,33 @@ Web user interface
 
 NethSecurity has two different web user interfaces:
 
-* NethSecurity UI: A custom user interface focused on usage simplicity.
+* NethSecurity UI (``ns-ui``): A custom user interface focused on usage simplicity.
 * LuCI: The original OpenWrt web interface. Please bear in mind that some pages may cause unpredictable configuration changes.
 
 Both user interfaces listen on port 443 (HTTPS):
 
 * NethSecurity is accessible at ``https://server_ip``
 * LuCI is accessible at ``https://server_ip/cgi-bin/luci``
+
+Change web user interface port
+------------------------------
+
+Web user interfaces commonly operate on port 443, a convention established for its ease of accessibility through modern web browsers.
+However, specific scenarios necessitate the redirection of port 443 to an internal web server.
+
+Users have the capability to selectively disable or enable both default interfaces: the ns-ui and LuCI. Moreover, NethSecurity allows the
+addition of extra ``ns-ui`` instances on different ports, granting users the freedom to customize their network configurations according to their needs.
+
+To disable both UIs on port 443, and enable enable ``ns-ui`` only port 9090, execute: ::
+
+  uci set ns-ui.config.nsui_extra_enable=1
+  uci set ns-ui.config.nsui_extra_port=9090
+  uci set ns-ui.config.nsui_enable=0
+  uci set ns-ui.config.luci_enable=0
+  uci commit ns-ui
+  ns-ui
+
+For more info, see the `ns-ui page <https://dev.nethsecurity.org/packages/ns-ui/>`_ inside the the developer manual.
 
 SSH
 ===
