@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-31 16:02+0000\n"
+"POT-Creation-Date: 2023-11-02 07:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -2866,7 +2866,9 @@ msgid "NethSecurity has two different web user interfaces:"
 msgstr ""
 
 #: ../../remote_access.rst:26
-msgid "NethSecurity UI: A custom user interface focused on usage simplicity."
+msgid ""
+"NethSecurity UI (``ns-ui``): A custom user interface focused on usage "
+"simplicity."
 msgstr ""
 
 #: ../../remote_access.rst:27
@@ -2888,47 +2890,80 @@ msgid "LuCI is accessible at ``https://server_ip/cgi-bin/luci``"
 msgstr ""
 
 #: ../../remote_access.rst:35
-msgid "SSH"
+msgid "Change web user interface port"
 msgstr ""
 
 #: ../../remote_access.rst:37
+msgid ""
+"Web user interfaces commonly operate on port 443, a convention "
+"established for its ease of accessibility through modern web browsers. "
+"However, specific scenarios necessitate the redirection of port 443 to an"
+" internal web server."
+msgstr ""
+
+#: ../../remote_access.rst:40
+msgid ""
+"Users have the capability to selectively disable or enable both default "
+"interfaces: the ns-ui and LuCI. Moreover, NethSecurity allows the "
+"addition of extra ``ns-ui`` instances on different ports, granting users "
+"the freedom to customize their network configurations according to their "
+"needs."
+msgstr ""
+
+#: ../../remote_access.rst:43
+msgid ""
+"To disable both UIs on port 443, and enable enable ``ns-ui`` only port "
+"9090, execute: ::"
+msgstr ""
+
+#: ../../remote_access.rst:52
+msgid ""
+"For more info, see the `ns-ui page <https://dev.nethsecurity.org/packages"
+"/ns-ui/>`_ inside the the developer manual."
+msgstr ""
+
+#: ../../remote_access.rst:55
+msgid "SSH"
+msgstr ""
+
+#: ../../remote_access.rst:57
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:39
+#: ../../remote_access.rst:59
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:44
+#: ../../remote_access.rst:64
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:46
+#: ../../remote_access.rst:66
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:48
+#: ../../remote_access.rst:68
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:50
+#: ../../remote_access.rst:70
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:54
+#: ../../remote_access.rst:74
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:59
+#: ../../remote_access.rst:79
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
@@ -3270,11 +3305,11 @@ msgid ""
 "line."
 msgstr ""
 
-#: ../../storage.rst:4
+#: ../../storage.rst:5
 msgid "Storage"
 msgstr ""
 
-#: ../../storage.rst:6
+#: ../../storage.rst:7
 msgid ""
 "As default, logs are written in a volatile in-memory directory to prevent"
 " errors on the root file system in case of failure. The memory storage "
@@ -3283,7 +3318,7 @@ msgid ""
 "your system fails, you may lose all of your logs."
 msgstr ""
 
-#: ../../storage.rst:9
+#: ../../storage.rst:10
 msgid ""
 "NethSecurity allows you to save a copy of system logs to a storage device"
 " other than the one it's currently on, like a USB stick or an additional "
@@ -3291,46 +3326,46 @@ msgid ""
 "activity log."
 msgstr ""
 
-#: ../../storage.rst:11
+#: ../../storage.rst:12
 msgid "To configure the additional storage, follow these steps:"
 msgstr ""
 
-#: ../../storage.rst:13
+#: ../../storage.rst:14
 msgid "Attach your storage device (external or internal)"
 msgstr ""
 
-#: ../../storage.rst:14
+#: ../../storage.rst:15
 msgid "Go to the Storage page"
 msgstr ""
 
-#: ../../storage.rst:15
+#: ../../storage.rst:16
 msgid "Select the desired storage where logs will be written to"
 msgstr ""
 
-#: ../../storage.rst:16
+#: ../../storage.rst:17
 msgid "Click on button :guilabel:`Format and configure storage`"
 msgstr ""
 
-#: ../../storage.rst:18
+#: ../../storage.rst:19
 msgid ""
 "The system will prepare the device by erasing all partitions and existing"
 " data, creating a single partition using the ext4 filesystem, and "
 "mounting the storage at ``/mnt/data``."
 msgstr ""
 
-#: ../../storage.rst:20
+#: ../../storage.rst:21
 msgid "The system will then be reconfigured as follows:"
 msgstr ""
 
-#: ../../storage.rst:22
+#: ../../storage.rst:23
 msgid "rsyslog will write logs also inside ``/mnt/data/logs/messages`` file"
 msgstr ""
 
-#: ../../storage.rst:23
+#: ../../storage.rst:24
 msgid "logrotate will rotate ``/mnt/data/logs/messages`` once a week"
 msgstr ""
 
-#: ../../storage.rst:25
+#: ../../storage.rst:26
 msgid ""
 "Extra generated data like metrics, will be synced from in-memory "
 "filesystem to persistent storage once a day during the night. To remove "
@@ -3886,5 +3921,8 @@ msgstr ""
 #~ "details, take a look to the "
 #~ "`developer manual "
 #~ "<https://https://nethserver.github.io/nethsecurity/>`_."
+#~ msgstr ""
+
+#~ msgid "NethSecurity UI: A custom user interface focused on usage simplicity."
 #~ msgstr ""
 
