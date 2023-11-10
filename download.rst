@@ -10,6 +10,6 @@ For verification, :download_hash_x86:`download the hash file <>` and execute the
 
 .. parsed-literal::
 
-   grep |image| sha25sums | sha256sum -c
+   grep |image| sha256sums | sha256sum -c
 
 To proceed with the installation of NethSecurity, you have two options: write the downloaded image directly to your disk or create a bootable USB stick. Refer to the installation page for detailed instructions on both methods.
