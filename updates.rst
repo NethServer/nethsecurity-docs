@@ -10,7 +10,7 @@ NethSecurity uses two different methods to update the system:
 
 **1. Security and minor bugfixes are distributed using packages.** To update the system, run the following commands: ::
 
-    opkg update && opkg upgrade
+    opkg update; opkg list-upgradable | cut -f 1 -d ' ' | xargs -r opkg upgrade
 
 The ``opkg update`` command updates the list of available packages, and the ``opkg upgrade`` command upgrades all of the installed packages to the latest versions.
 
