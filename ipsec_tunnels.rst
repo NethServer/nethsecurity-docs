@@ -1,7 +1,7 @@
 .. _ipsec_tunnels-section:
 
 ==============
-IPSec tunnels
+IPsec tunnels
 ==============
 
 IPsec tunnels, are a crucial component of modern network security. 
@@ -14,29 +14,37 @@ NethSecurity by default uses Route-Based VPNs, so each tunnel rely on a specific
 
 Configuration
 -------------
-The configuration of an IPsec tunnel involves 2 peers which we will call A and B, data will be encrypted using same shared key in both firewalls.
+The configuration of an IPsec tunnel includes 2 peers which we will call A and B which can be:
 
-The IPsec tunnel configuration of each firewall consists of 2 main blocks:
-* network parameters
-* all other parameters (data encryption, IKE configuration, ESP...)
+* 1 Nethsecurity + 1 third-party firewall
+* 2 Nethsecurity
 
-The network parameters concern:
-* the WAN interface used
+Devices A and B must be configured with parameters which, depending on the specific section, will be identical or mirrored.
+
+The parameters that must be configured in a mirrored way between the 2 devices are typically those linked to the network:
+
+* the WAN interface used by the tunnel
 * the 2 (or more) networks we want to connect (local network, remote network)
-* identifiers (typically the public IP addresses of the WANs of the 2 firewalls, but others can also be used)
+* the local and remote identifiers (typically the public IPs of the WANs of the 2 firewalls, but others can also be used)
 
-The network parameters must be configured in a mirrored way in firewalls A and B, therefore:
+Therefore:
+
 * The WAN IP address of firewall A must coincide with the Remote IP address of firewall B
 * the local network of firewall A must coincide with the remote network of firewall B
 * the local ID of firewall A must coincide with the remote ID of firewall B
 
-Click Add IPsec tunnel on NethSecurity to configure the new tunnel.
-All network parameters are configurable in step 1/3 of the NethSecurity drawer.
+All other parameters, however, must be identical in both firewalls to allow correct communication (encryption key, IKE and ESP configuration...).
+NethSecurity uses a shared key as the only method to encrypt data.
 
-All the other parameters (step 2/3 and 3/3 on NethSecurity) must be identical in both firewalls A and B to allow correct communication.
+How to create a new IPsec tunnel
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Click :guilabel:`Add IPsec tunnel` button to configure a new tunnel.
+Assign a name to this tunnel then configure it, the drawer is splitted in 3 steps, the step 1/3 contains only network-related parameters, while the others contain all the remaining parameters that must be identical in both firewalls to allow correct communication.
 
-Note:
-If an endpoint is behind a NAT, we suggest to set the values for Local and Remote identifier fields to custom unique names with an "email like" syntax, e.g. nsec@site-a and otherdevice@site-b.
+Once you completed the configuration a new tunnel will be shown in the IPSec page.
+
+
+.. note:: If an endpoint is behind a NAT, we suggest to set the values for Local and Remote identifier fields to custom unique names with an "email like" syntax, e.g. nsec@site-a and otherdevice@site-b.
 
 
 
