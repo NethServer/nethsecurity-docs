@@ -1,12 +1,69 @@
+.. _openvpn_tunnels-section:
+
 ===============
 OpenVPN tunnels
 ===============
 
-.. warning::
-
-   This feature is still under development and does not have a user interface yet. It can currently only be configured through the command line.
-
 OpenVPN net-to-net tunnels establish secure connections between two separate networks, such as branch offices of a company, over the internet.
 These connections use SSL/TLS protocols for encryption and authentication, ensuring data confidentiality and integrity.
 
-See the `developer manual <https://dev.nethsecurity.org/packages/ns-openvpn/#openvpn-tunnels>`_ for more info on manual configuration.
+The connection is handled by 2 NethSecurity firewalls, each one has a specific role (they are not identical peers).
+When creating an OpenVPN net2net connection a firewall will have the master role (server) whereas the other NethSecurity will connect to it as a client.
+One NethSecurity can be the same time server and client for different tunnels, all tunnels use OpenVPN routed mode.
+
+
+.. note:: On NethSecurity the OpenVPN tunnels UI has been designed to make connecting 2 Nethesis devices very simple. For this reason, it is deliberately limited and does not expose all the parameters that can be configured with OpenVPN to connect to any third-party device.
+To connect to a third-party device, it's recommended the use of IPsec protocol.
+
+Configuration
+-------------
+To connect 2 firewalls via an openvpn tunnel, first configure the server firewall, then configure the client firewall.
+The server must have at least one public IP to be contacted by the client, while the client may not even have public IPs.
+The configuration of the firewall server requires only a very few parameters, where possible all the parameters are already filled in automatically to avoid errors and speed up the process.
+Once the server firewall has been configured, it will be possible to download the client configuration to import onto the other firewall.
+
+Proceed as follows:
+
+Access the OpenVPN tunnels page, move to Tunnel servers tab and click on :guilabel:`Add server tunnel`.
+
+Insert all required fields, but please note:
+
+* Public endpoints are a list of IP addresses or hostnames that clients can use to reach the OpenVPN tunnel server
+* Local networks it’s a list of local networks that will be accessible from the remote server. If topology is set to p2p, the same list will be reported inside the client Remote networks field
+* Remote networks, it’s a list of networks behind the remote server which will be accessible from hosts in the local network
+* After the configuration is saved, click on the :guilabel:`Download` action and select Client configuration
+* Access the client firewall, OpenVPN tunnel,  move to Client tunnel tab, click on :guilabel:`Import configuration`
+
+Topology
+--------
+Tunnels can have two kinds of topologies: subnet and p2p (Point to Point).
+
+Subnet
+^^^^^^
+Subnet is the default topology and the recommended one: in subnet topology, the server will accept connections and will act as a DHCP server for every connected clients.
+
+In this scenario the server will authenticate clients using TLS certificates and will push local routes to remote clients.
+The client will be able to authenticate with TLS certificates or user name and password.
+
+P2P
+^^^
+
+In a p2p topology, the administrator must configure one server for each client, in this scenario the only supported authentication method is the PSK (Pre-Shared Key). 
+Please make sure to exchange the PSK using a secure channel (like SSH or HTTPS) the administrator must select an IP for both end points routes to remote networks must be configured on each end point.
+
+
+Advanced features
+-----------------
+The web interface allows the configuration of advanced features like:
+
+* Multiple remote host: Multiple remote server addresses can be specified for redundancy; the OpenVPN client will try to connect to each host in the given order
+
+* Protocol: bear in mind that OpenVPN is designed to operate optimally over UDP, but TCP capability is provided for situations where UDP cannot be used
+
+* Cipher: the cryptographic algorithm used to encrypt all the traffic. If not explicitly selected, the server and client will try to negotiate the best cipher available on both sides
+
+
+
+
+
+
