@@ -16,7 +16,7 @@ Configuration
 -------------
 The configuration of an IPsec tunnel includes 2 peers which we will call A and B which can be:
 
-* 1 Nethsecurity + 1 third-party firewall
+* 1 Nethsecurity and 1 third-party firewall
 * 2 Nethsecurity
 
 Devices A and B must be configured with parameters which, depending on the specific section, will be identical or mirrored.
