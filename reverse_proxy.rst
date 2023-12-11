@@ -13,7 +13,7 @@ In simpler terms, a reverse proxy is like a traffic cop for web servers. It dire
 
 Reverse proxies are often used to improve performance by caching static content and distributing traffic across multiple servers. They can also be used to increase security by implementing the TLS endpoint.
 
-See the `developer manual <https://dev.nethsecurity.org/packages/ns-reverse-proxy/>`_ for a guide on how to configure it from the command line.
+See the `developer manual <https://dev.nethsecurity.org/packages/nginx/>`_ for a guide on how to configure it from the command line.
 
 Let's Encrypt certificates
 ==========================
