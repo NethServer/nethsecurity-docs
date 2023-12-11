@@ -33,7 +33,7 @@ Therefore:
 * the local network of firewall A must coincide with the remote network of firewall B
 * the local ID of firewall A must coincide with the remote ID of firewall B
 
-All other parameters, however, must be identical in both firewalls to allow correct communication (encryption key, IKE and ESP configuration...).
+All other parameters, however, must be identical in both firewalls to allow correct communication (encryption key, IKE and ESP configuration, etc.).
 NethSecurity uses a shared key as the only method to encrypt data.
 
 How to create a new IPsec tunnel
