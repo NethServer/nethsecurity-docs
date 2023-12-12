@@ -68,4 +68,4 @@ The web interface allows the configuration of advanced features like:
 
 * ``Cipher``: the cryptographic algorithm used to encrypt all the traffic. If not explicitly selected, the server and client will try to negotiate the best cipher available on both sides
 
-* ``Enforce a minimum TLS version``: Allows you to choose a minimum version of TLS, in which case connections will only be allowed from devices that use a version greater than or equal to the one reported
+* ``Enforce a minimum TLS version``: Allows you to choose a minimum version of TLS, in which case connections will only be allowed from devices that use a version greater than or equal to the one selected
