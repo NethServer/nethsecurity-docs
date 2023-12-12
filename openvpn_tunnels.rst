@@ -18,7 +18,7 @@ To connect to a third-party device, it's recommended the use of IPsec protocol.
 Configuration
 -------------
 To connect 2 firewalls via an openvpn tunnel, first configure the server firewall, then configure the client firewall.
-The server must have at least one public IP to be contacted by the client, while the client may not even have public IPs.
+The server needs at least one public IP address to be accessible to the client, while the client may not even have public IPs.
 The configuration of the firewall server requires only a very few parameters, where possible all the parameters are already filled in automatically to avoid errors and speed up the process.
 Once the server firewall has been configured, it will be possible to download the client configuration to import onto the other firewall.
 
