@@ -12,7 +12,7 @@ When creating an OpenVPN net2net connection a firewall will have the master role
 One NethSecurity can be the same time server and client for different tunnels, all tunnels use OpenVPN routed mode.
 
 
-On NethSecurity the OpenVPN tunnels UI has been designed to make connecting 2 Nethesis devices very simple. For this reason, it is deliberately limited and does not expose all the parameters that can be configured with OpenVPN to connect to any third-party device.
+The OpenVPN tunnels interface has been crafted for straightforward connection between two NethSecuirty devices. For this reason, it is deliberately limited and does not expose all the parameters that can be configured with OpenVPN to connect to any third-party device.
 To connect to a third-party device, it's recommended the use of IPsec protocol.
 
 Configuration
