@@ -62,7 +62,7 @@ The web interface allows the configuration of advanced features like:
 
 * ``Protocol``: OpenVPN is designed to operate optimally over UDP, but TCP capability is provided for situations where UDP cannot be used
 
-* ``Compression``: if enabled, data to be sent through the VPN tunnel will be compressed. This option is disabled by default both for security reasons. Compression is rarely essential nowadays, as internet traffic is typically already highly compressed and optimized.
+* ``Compression``: if enabled, data to be sent through the VPN tunnel will be compressed. This option is disabled by default both for security reasons. Compression is rarely essential nowadays, as internet traffic is typically already highly compressed and optimized
 
 * ``Digest``: the digest algorithm used to transform an arbitrarily large block of data into a fixed-size output. If not explicitly selected, the server and client will try to negotiate the best digest available on both sides
 
