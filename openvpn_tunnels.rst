@@ -58,7 +58,7 @@ The web interface allows the configuration of advanced features like:
 
 * ``Multiple remote host``: multiple remote server addresses can be specified for redundancy; the OpenVPN client will try to connect to each host in the given order
 
-* Protocol: OpenVPN is designed to operate optimally over UDP, but TCP capability is provided for situations where UDP cannot be used
+* ``Protocol``: OpenVPN is designed to operate optimally over UDP, but TCP capability is provided for situations where UDP cannot be used
 
 * Cipher: the cryptographic algorithm used to encrypt all the traffic. If not explicitly selected, the server and client will try to negotiate the best cipher available on both sides
 
