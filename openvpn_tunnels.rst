@@ -32,7 +32,7 @@ Insert all required fields, but please note:
 * ``Local networks`` it's a list of local networks that will be accessible from the remote server. If topology is set to p2p, the same list will be reported inside the client ``Remote networks`` field
 * ``Remote networks``, it’s a list of networks behind the remote server which will be accessible from hosts in the local network
 * After the configuration is saved, click on the :guilabel:`Download` action and select ``Client configuration``
-* Access the client firewall, OpenVPN tunnel,  move to ``Client tunnel`` tab, click on :guilabel:`Import configuration`
+* Access the client firewall, OpenVPN tunnel, move to ``Client tunnel`` tab, click on :guilabel:`Import configuration`
 
 Topology
 --------
