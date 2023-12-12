@@ -8,7 +8,7 @@ OpenVPN net-to-net tunnels establish secure connections between two separate net
 These connections use SSL/TLS protocols for encryption and authentication, ensuring data confidentiality and integrity.
 
 The connection is handled by 2 NethSecurity firewalls, each one has a specific role.
-When creating an OpenVPN net2net connection a firewall will have the master role (server) whereas the other NethSecurity will connect to it as a client.
+When creating an OpenVPN net2net connection a firewall will have the server role whereas the other NethSecurity will connect to it as a client.
 One NethSecurity can be the same time server and client for different tunnels, all tunnels use OpenVPN routed mode.
 
 
