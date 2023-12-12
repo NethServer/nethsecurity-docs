@@ -64,7 +64,7 @@ The web interface allows the configuration of advanced features like:
 
 * ``Compression``: if enabled, data to be sent through the VPN tunnel will be compressed. This option is disabled by default both for security reasons. Compression is rarely essential nowadays, as internet traffic is typically already highly compressed and optimized.
 
-* ``Digest``: the digest algorithm used to transform an arbitrarily large block of data into a fixed-size output.If not explicitly selected, the server and client will try to negotiate the best cipher available on both sides
+* ``Digest``: the digest algorithm used to transform an arbitrarily large block of data into a fixed-size output. If not explicitly selected, the server and client will try to negotiate the best digest available on both sides
 
 * ``Cipher``: the cryptographic algorithm used to encrypt all the traffic. If not explicitly selected, the server and client will try to negotiate the best cipher available on both sides
 
