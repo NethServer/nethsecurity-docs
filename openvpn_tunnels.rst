@@ -7,7 +7,7 @@ OpenVPN tunnels
 OpenVPN net-to-net tunnels establish secure connections between two separate networks, such as branch offices of a company, over the internet.
 These connections use SSL/TLS protocols for encryption and authentication, ensuring data confidentiality and integrity.
 
-The connection is handled by 2 NethSecurity firewalls, each one has a specific role (they are not identical peers).
+The connection is handled by 2 NethSecurity firewalls, each one has a specific role.
 When creating an OpenVPN net2net connection a firewall will have the master role (server) whereas the other NethSecurity will connect to it as a client.
 One NethSecurity can be the same time server and client for different tunnels, all tunnels use OpenVPN routed mode.
 
@@ -23,7 +23,7 @@ The configuration of the firewall server requires only a very few parameters, wh
 Once the server firewall has been configured, it will be possible to download the client configuration to import onto the other firewall.
 
 Proceed as follows:
-
+^^^^^^^^^^^^^^^^^^^
 Access the OpenVPN tunnels page, move to Tunnel servers tab and click on :guilabel:`Add server tunnel`.
 
 Insert all required fields, but please note:
@@ -58,7 +58,7 @@ The web interface allows the configuration of advanced features like:
 
 * Multiple remote host: Multiple remote server addresses can be specified for redundancy; the OpenVPN client will try to connect to each host in the given order
 
-* Protocol: bear in mind that OpenVPN is designed to operate optimally over UDP, but TCP capability is provided for situations where UDP cannot be used
+* Protocol: OpenVPN is designed to operate optimally over UDP, but TCP capability is provided for situations where UDP cannot be used
 
 * Cipher: the cryptographic algorithm used to encrypt all the traffic. If not explicitly selected, the server and client will try to negotiate the best cipher available on both sides
 
