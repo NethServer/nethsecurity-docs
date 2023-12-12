@@ -28,11 +28,11 @@ Access the OpenVPN tunnels page, move to ``Server tunnel`` tab and click on :gui
 
 Insert all required fields, but please note:
 
-* Public endpoints are a list of IP addresses or hostnames that clients can use to reach the OpenVPN tunnel server
-* Local networks it’s a list of local networks that will be accessible from the remote server. If topology is set to p2p, the same list will be reported inside the client Remote networks field
-* Remote networks, it’s a list of networks behind the remote server which will be accessible from hosts in the local network
-* After the configuration is saved, click on the :guilabel:`Download` action and select Client configuration
-* Access the client firewall, OpenVPN tunnel,  move to Client tunnel tab, click on :guilabel:`Import configuration`
+* ``Public endpoints`` it's a list of IP addresses or hostnames that clients can use to reach the OpenVPN tunnel server
+* ``Local networks`` it's a list of local networks that will be accessible from the remote server. If topology is set to p2p, the same list will be reported inside the client ``Remote networks`` field
+* ``Remote networks``, it’s a list of networks behind the remote server which will be accessible from hosts in the local network
+* After the configuration is saved, click on the :guilabel:`Download` action and select ``Client configuration``
+* Access the client firewall, OpenVPN tunnel,  move to ``Client tunnel`` tab, click on :guilabel:`Import configuration`
 
 Topology
 --------
