@@ -36,20 +36,22 @@ Insert all required fields, but please note:
 
 Topology
 --------
-Tunnels can have two kinds of topologies: subnet and p2p (Point to Point).
+Tunnels can have two kinds of topologies: ``subnet`` and ``p2p`` (Point to Point).
 
 Subnet
 ^^^^^^
-Subnet is the default topology and the recommended one: in subnet topology, the server will accept connections and will act as a DHCP server for every connected clients.
+``Subnet`` is the default topology and the recommended one: in ``subnet`` topology, the server will accept connections and will act as a DHCP server for every connected clients.
 
 In this scenario the server will authenticate clients using TLS certificates and will push local routes to remote client.
-The client will be able to authenticate with TLS certificates or user name and password.
 
 P2P
 ^^^
 
 In a ``p2p`` topology, the administrator must configure one server for each client, in this scenario the only supported authentication method is the PSK (Pre-Shared Key). 
-Please make sure to exchange the PSK using a secure channel (like SSH or HTTPS) the administrator must select an IP for both end points routes to remote networks must be configured on each end point.
+
+* make sure to exchange the PSK using a secure channel (like SSH or HTTPS) 
+* the administrator must select an IP for both end points 
+* routes to remote networks must be configured on each end point
 
 
 Advanced features
@@ -60,10 +62,10 @@ The web interface allows the configuration of advanced features like:
 
 * ``Protocol``: OpenVPN is designed to operate optimally over UDP, but TCP capability is provided for situations where UDP cannot be used
 
+* ``Compression``: if enabled, data to be sent through the VPN tunnel will be compressed. This option is disabled by default both for security reasons and because it is almost never necessary (today internet traffic is already highly compressed and optimized).
+
+* ``Digest``: the digest algorithm used to transform an arbitrarily large block of data into a fixed-size output.If not explicitly selected, the server and client will try to negotiate the best cipher available on both sides
+
 * ``Cipher``: the cryptographic algorithm used to encrypt all the traffic. If not explicitly selected, the server and client will try to negotiate the best cipher available on both sides
 
-
-
-
-
-
+* ``Enforce a minimum TLS version``: Allows you to choose a minimum version of TLS, in which case connections will only be allowed from devices that use a version greater than or equal to the one reported
