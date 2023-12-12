@@ -42,7 +42,7 @@ Subnet
 ^^^^^^
 Subnet is the default topology and the recommended one: in subnet topology, the server will accept connections and will act as a DHCP server for every connected clients.
 
-In this scenario the server will authenticate clients using TLS certificates and will push local routes to remote clients.
+In this scenario the server will authenticate clients using TLS certificates and will push local routes to remote client.
 The client will be able to authenticate with TLS certificates or user name and password.
 
 P2P
