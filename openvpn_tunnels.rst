@@ -13,7 +13,7 @@ One NethSecurity can be the same time server and client for different tunnels, a
 
 
 The OpenVPN tunnels interface has been crafted for straightforward connection between two NethSecuirty devices. For this reason, it is deliberately limited and does not expose all the parameters that can be configured with OpenVPN to connect to any third-party device.
-To connect to a third-party device, it's recommended the use of IPsec protocol.
+To connect to a third-party device, it's recommended to use the IPsec protocol.
 
 Configuration
 -------------
