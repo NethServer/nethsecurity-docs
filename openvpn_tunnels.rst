@@ -50,7 +50,7 @@ P2P
 In a ``p2p`` topology, the administrator must configure one server for each client, in this scenario the only supported authentication method is the PSK (Pre-Shared Key). 
 
 * make sure to exchange the PSK using a secure channel (like SSH or HTTPS) 
-* the administrator must select an IP for both end points 
+* the administrator must select an IP for both endpoints 
 * routes to remote networks must be configured on each end point
 
 
