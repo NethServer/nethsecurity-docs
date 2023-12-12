@@ -39,7 +39,7 @@ NethSecurity uses a shared key as the only method to encrypt data.
 How to create a new IPsec tunnel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Click :guilabel:`Add IPsec tunnel` button to configure a new tunnel.
-Assign a name to this tunnel then configure it, the drawer is split in 3 steps. The first step contains only network-related parameters, while the others contain all the remaining parameters that must be identical in both firewalls to allow correct communication.
+Assign a name to this tunnel then configure it, the configuration is split in 3 steps. The first step contains only network-related parameters, while the others contain all the remaining parameters that must be identical in both firewalls to allow correct communication.
 
 Once you completed the configuration a new tunnel will be shown in the IPSec page.
 
