@@ -40,7 +40,7 @@ Tunnels can have two kinds of topologies: ``subnet`` and ``p2p`` (Point to Point
 
 Subnet
 ^^^^^^
-``Subnet`` is the default topology and the recommended one: in ``subnet`` topology, the server will accept connections and will act as a DHCP server for every connected clients.
+``Subnet`` is the default topology and the recommended one: in ``subnet`` topology, the server will accept connections and will act as a DHCP server for every connected client.
 
 In this scenario the server will authenticate clients using TLS certificates and will push local routes to remote client.
 
