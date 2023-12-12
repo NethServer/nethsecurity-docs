@@ -51,7 +51,7 @@ In a ``p2p`` topology, the administrator must configure one server for each clie
 
 * make sure to exchange the PSK using a secure channel (like SSH or HTTPS) 
 * the administrator must select an IP for both endpoints 
-* routes to remote networks must be configured on each end point
+* routes to remote networks must be configured on each endpoint
 
 
 Advanced features
