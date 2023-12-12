@@ -24,7 +24,7 @@ Once the server firewall has been configured, it will be possible to download th
 
 Proceed as follows:
 ^^^^^^^^^^^^^^^^^^^
-Access the OpenVPN tunnels page, move to Tunnel servers tab and click on :guilabel:`Add server tunnel`.
+Access the OpenVPN tunnels page, move to ``Server tunnel`` tab and click on :guilabel:`Add server tunnel`.
 
 Insert all required fields, but please note:
 
