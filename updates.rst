@@ -15,7 +15,7 @@ These updates do not require a restart of NethSecurity, they are tied to a speci
 
 **2. System updates** (switching to a different version)
 
-These updates involve the transition to a new version of the firmware that introduces new features, improvements and a greater hardware support.
+These updates involve the transition to a new version of the firmware that introduces new features, improvements and wider hardware support.
 
 This type of update will reboot the device (which will therefore not be reachable for a few dozen seconds) and then completely rewrites the firmware, preserving all the configurations.
 However it is recommended to save a configuration backup before proceeding with the upgrade.
