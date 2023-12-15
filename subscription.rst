@@ -36,4 +36,4 @@ The system will automatically register to the correct Enterprise or Community po
 Remove the subscription
 =======================
 
-When the subscription expires, or at the end of a trial period, click the :guilabel:`Cancel subscription` button.
+When the subscription expires, or at the end of a trial period, click the :guilabel:`Cancel registration` button.
