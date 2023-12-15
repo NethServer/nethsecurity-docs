@@ -24,9 +24,8 @@ If a new version is available, the user interface will display an information ba
 
 Alternatively, it is always possible to manually upload a compatible image using the :guilabel:`Update with image file` button and proceed with the update.
 
-.. note:: You can also perform a ``System update`` from the command line.
-
-To do this, simply save download the new image file (it is recommended to save it in /tmp) and run the following command: ::
+You can also perform a ``System update`` from the command line.
+To do this, simply save download the new image file (it is recommended to save it inside ``/tmp`` directory) and run the following command: ::
 
   sysupgrade -v nethsecurity-<version>-x86-64-generic-squashfs-combined.img.gz
 
