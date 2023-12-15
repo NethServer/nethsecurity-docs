@@ -2,45 +2,38 @@
 Backup and restore
 ==================
 
-.. warning::
-
-   This feature is still under development and can be configured only from LuCI web interface.
-
-.. highlight:: bash
-
 NethSecurity provides a flexible and powerful backup system to save and restore your firewall's configuration settings.
 
-To manually generate and download a backup, access the ``Backup / Flash firmware`` page inside LuCI web interface, under the ``System`` section.
+If the machine does not have an :ref:`Enterprise subscription <subscription-section>`, the backup will be stored locally on the firewall.
+To manually generate and download a backup, access the ``Backup & Restore`` page under the ``System`` section,
+then click on the :guilabel:`Download backup` button.
+
+If the machine has a valid Enterprise subscription, the page will show a list of backups available from the remote server.
+The user can click the :guilabel:`Run backup` buttont: the backup will be stored on a remote server and the user will be able
+to download it by clicking the :guilabel:`Download` button.
+
+Backup encryption
+=================
+
+The backup is not encrypted by default.
+To enable encryption, click on the :guilabel:`Configure passphrase` button and set a strong password.
+To disable encryption, click on the :guilabel:`Configure passphrase` button and leave the password field empty.
+
+.. note:: If the backup is encrypted and the password is lost, it will no longer be possible to restore the configuration.
 
 Automatic backup
 ================
 
 If the machine has a valid :ref:`Enterprise subscription <subscription-section>`, a scheduled cron job will run every night to perform a backup.
 This backup is then sent to a remote server over a secure channel.
-
-Backup encryption
------------------
-
-Encryption of the backup file occurs if the file ``/etc/backup.pass`` exists.
-Choose a good passphrase and write it to the file. Example: ::
-
-  echo 'my$ver98StrongPass-' > /etc/backup.pass
-
-The presence of this file triggers the backup to be encrypted using the specified passphrase. Only the encrypted backup is transmitted to the remote server.
-
-To disable encryption, simply remove the file ``/etc/backup.pass``.
+If the backup is encrypted, only the encrypted backup will be sent to the remote server.
 
 Restore
 =======
 
-The backup can be restored from the the ``Backup / Flash firmware`` page inside LuCI web interface.
+The backup can be restored from the the ``Restore`` tab inside the page inside the ``Backup & Restore`` page
+The user can initiate the restore process by clicking the "Restore backup" button and uploading the backup file.
+If the machine has a valid Enterprise subscription, the web interface will additionally present a list of backups available from the remote server.
+If the backup is encrypted, enter the passphrase, and finally, click the "Restore" button to complete the process.
 
-Machines with a valid Enterprise subscription can download and restore the backups stored inside the remote server.
-To download the latest backup and restore it, use this command: ::
-
-  remote-backup download $(remote-backup list | jq -r .[0].file) - | sysupgrade -r -
-
-If the backup has been encrypted, use the following command: ::
-
-  echo 'my$ver98StrongPass-' > /etc/backup.pass
-  remote-backup download $(remote-backup list | jq -r .[0].file) - | gpg --batch --passphrase-file /etc/backup.pass -d | sysupgrade -r -
+After the restore the system will be rebooted.
