@@ -13,7 +13,7 @@ Netdata is enabled by default on NethSecurity and it is accessible from the LAN 
 and click :guilabel:`Open report` button from the ``Real time report`` tab.
 
 Netdata metrics are saved in RAM and will be reset at very machine reboot.
-If the firewall is connected to the :ref:`remote controller <controller-section>`, metrics will be stored to the controller itself and preserved across reboots.ùù
+If the firewall is connected to the :ref:`remote controller <controller-section>`, metrics will be stored to the controller itself and preserved across reboots.
 
 .. _alert-section:
 
