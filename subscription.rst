@@ -14,7 +14,7 @@ which provides additional benefits and features:
 
 Typical benefits of the subscription service include:
 
-- **Monitoring portals**: subscribers can access monitoring portals to manage their subscription and receive alerts for registered servers.
+- **Monitoring portals**: subscribers can access monitoring portals to manage their subscription and receive :ref:`alerts <alert-section>` for registered servers.
 - **DPI signatures and block lists**: firewall with valid subscriptions will regurarly download up-to-date :ref:`DPI signatures <dpi_filter-section>`, :ref:`IP <threat_shield-section>` and :ref:`DNS <dns_filter-section>` block lists.
 - **Support**: subscribers can receive priority support on stable releases. This can be crucial for businesses relying on NethSecurity for their operations. See also :ref:`remote_support-section`.
 - **Consultation and customization**: subscribers could get consultation services and assistance with customization to tailor the server's functionalities according to specific business requirements.
@@ -31,7 +31,7 @@ To register the system, follow the below steps:
 - Paste the token inside the ``Authentication token`` field
 - Click the :guilabel:`Register` button
 
-The system will automatically registered to the correct Enterprise or Community portal.
+The system will automatically registered to the correct Enterprise or Community portal
 
 Remove the subscription
 =======================
