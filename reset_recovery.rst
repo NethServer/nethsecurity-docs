@@ -22,9 +22,9 @@ and user data on the device, effectively restoring it to a pristine state.
 
 This procedure relies on the completion of the boot process. If the factory reset doesn't work, consider using failsafe mode instead.
 
-To start fresh without reinstalling the firmware, execute the following commands. ::
-
-  firstboot -y && reboot
+To start fresh without reinstalling the firmware, access the ``Factory reset`` page under the ``System`` section.
+Click the :guilabel:`Perform factory reset` button to reset the firewall to its original state.
+The factory reset process will take a few seconds to complete. Once the process is complete, the firewall will reboot automatically.
 
 If NethSecurity was installed through an in-place migration from NethServer 7, after the factory reset,
 the system will retain all configurations migrated from NethServer 7. If this is not desired, and a clean start is preferred,
