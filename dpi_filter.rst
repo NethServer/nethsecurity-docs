@@ -34,3 +34,14 @@ It's noteworthy that the number of applications that can be identified and manag
 In the absence of a subscription, the system inherently recognizes a baseline of approximately 400 applications.
 However, with an active subscription, this capacity significantly expands, encompassing around 3000 applications. In this scenario,
 the list of recognized applications undergoes daily updates, ensuring that the system stays abreast of the ever-evolving landscape of applications and digital services.
+
+Exceptions
+----------
+
+DPI exclusion allows for the exclusion of specific network addresses, such as the gateway or other critical infrastructure, preventing them from being blocked.
+
+To add a new exception, click the ``Add exception`` button.
+Enter the ``IP address`` that should be exempted from the filter.
+You can include a description explaining the reason for the exclusion.
+
+Each exception can be enabled or disabled as desired.
