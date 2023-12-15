@@ -31,7 +31,7 @@ To register the system, follow the below steps:
 - Paste the token inside the ``Authentication token`` field
 - Click the :guilabel:`Register` button
 
-The system will automatically registered to the correct Enterprise or Community portal
+The system will automatically register to the correct Enterprise or Community portal
 
 Remove the subscription
 =======================
