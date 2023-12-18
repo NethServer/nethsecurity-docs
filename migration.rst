@@ -17,8 +17,9 @@ Migration scenarios:
 
 - Migration in-place (firewall only): if the original NethServer 7 only contains the firewall module, you can perform an in-place migration and
   reuse the existing hardware. This scenario simplifies the migration process without the need for additional hardware.
+
 - Migration with other installed modules: if NethServer 7 contains additional modules such as the mail server, suitable hardware is required to run NethSecurity.
-  In this case you will need to import the configuration on a freshly installed NethSecurity.
+  In this case you will need to :ref:`import the configuration <import_migration-section>` on a freshly installed NethSecurity.
 
 Testing the migration
 =====================
@@ -73,6 +74,8 @@ To perform the in-place migration from NethServer 7 to NethSecurity, follow thes
 7. Complete the migration on first boot: upon the first boot of NethSecurity, the configuration from NethServer 7 will be automatically migrated.
    Ensure to carefully verify all settings and services to confirm they have been migrated correctly.
 
+.. _import_migration-section:
+
 Migration with other installed modules
 ======================================
 
@@ -91,15 +94,13 @@ To perform the migration from NethServer 7 to NethSecurity, follow these steps:
 
 3. Download the archive with exported configuration: click :guilabel:`Download` in the ``Download export archive`` section
 
-4. Upload the exported archive: from a Linux machine, use the following command to transfer the exported archive to the new NethSecurity installation
-   via SSH. Example: ::
+4. Access the ``Backup & Restore`` page on NethSecurity and go to the ``Migration`` tab, then click :guilabel:`Upload migration file` and select the archive downloaded in the previous step
 
-     scp -O export.tar.gz 192.168.1.1:/tmp
+5. When importing the configuration onto new hardware, the MAC addresses of the network interfaces change, requiring a decision on how to remap these interfaces.
+   The user interface displays the interfaces of the source machine on the left and those of the destination machine on the right.
+   If the source machine had configured VLANs, the user must remap the physical interface, and the system will automatically recreate the VLAN on the underlying interface.
 
-   If you are using a Windows machine, you can utilize tools like WinSCP to perform the transfer.
-
-4. Migrate using the command line: access the NethSecurity machine via SSH and follow the instructions from
-   the `developer manual <https://dev.nethsecurity.org/packages/ns-migration/#usage>`_.
+6. Click :guilabel:`Migrate` to start the migration process
 
 Migrated configurations
 =======================
