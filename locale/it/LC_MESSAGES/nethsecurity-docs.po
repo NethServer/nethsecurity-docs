@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 16:59+0000\n"
+"POT-Creation-Date: 2023-12-18 17:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -552,6 +552,28 @@ msgid ""
 "applications. In this scenario, the list of recognized applications "
 "undergoes daily updates, ensuring that the system stays abreast of the "
 "ever-evolving landscape of applications and digital services."
+msgstr ""
+
+#: ../../dpi_filter.rst:39
+msgid "Exceptions"
+msgstr ""
+
+#: ../../dpi_filter.rst:41
+msgid ""
+"DPI exclusion allows for the exclusion of specific network addresses, "
+"such as the gateway or other critical infrastructure, preventing them "
+"from being blocked."
+msgstr ""
+
+#: ../../dpi_filter.rst:43
+msgid ""
+"To add a new exception, click the ``Add exception`` button. Enter the "
+"``IP address`` that should be exempted from the filter. You can include a"
+" description explaining the reason for the exclusion."
+msgstr ""
+
+#: ../../dpi_filter.rst:47
+msgid "Each exception can be enabled or disabled as desired."
 msgstr ""
 
 #: ../../firewall.rst:5
@@ -3028,7 +3050,7 @@ msgstr ""
 msgid "Example: ::"
 msgstr ""
 
-#: ../../qos.rst:99
+#: ../../qos.rst:99 ../../troubleshooting.rst:5
 msgid "Troubleshooting"
 msgstr ""
 
@@ -3928,6 +3950,67 @@ msgstr ""
 msgid ""
 "How to configure this service  is explained in the `developer manual "
 "<https://dev.nethsecurity.org/packages/ns-threat_shield>`_."
+msgstr ""
+
+#: ../../troubleshooting.rst:7
+msgid ""
+"NethSecurity is a sophisticated firewall system with numerous "
+"interconnected components. While the system automates many configurations"
+" seamlessly, occasional breakdowns can occur. When issues arise, the user"
+" interface (UI) displays an error message capturing the nature of the "
+"problem."
+msgstr ""
+
+#: ../../troubleshooting.rst:11
+msgid ""
+"The error message provides valuable information, presenting the details "
+"of the request and the encountered error in JSON format. To assist in "
+"diagnosing and resolving the issue, users can utilize the ``Copy "
+"command`` button. Clicking this button allows you to retrieve the command"
+" that resulted in the error. Simply paste this copied command into a "
+"shell to obtain more detailed information."
+msgstr ""
+
+#: ../../troubleshooting.rst:16
+msgid ""
+"In the event you require support, you can reach out directly to Nethesis "
+"if you have a subscription. Alternatively, community support is available"
+" at `https://community.nethserver.org`."
+msgstr ""
+
+#: ../../troubleshooting.rst:19
+msgid ""
+"When reporting an error to the support team, it's crucial to provide the "
+"following essential information:"
+msgstr ""
+
+#: ../../troubleshooting.rst:21
+msgid ""
+"**Request and Response Contents:** Include the content of the ``Request``"
+" and ``Response`` sections found in the error message."
+msgstr ""
+
+#: ../../troubleshooting.rst:24
+msgid ""
+"**Copied Command:** Paste the command copied using the ``Copy command`` "
+"button."
+msgstr ""
+
+#: ../../troubleshooting.rst:27
+msgid ""
+"**Execution Output:** For further assistance, execute the copied command "
+"and report the output."
+msgstr ""
+
+#: ../../troubleshooting.rst:30
+msgid ""
+"If the provided information is insufficient, in extreme cases, it may be "
+"necessary to share the content of the JavaScript console if the error is "
+"present. Follow your browser's instructions (usually accessed by pressing"
+" ``F12``), copy the entire console content, and paste it for a more in-"
+"depth analysis. Your collaboration in providing accurate and detailed "
+"information ensures a more effective and timely resolution to any issues "
+"encountered with NethSecurity."
 msgstr ""
 
 #: ../../updates.rst:5
