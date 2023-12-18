@@ -94,8 +94,7 @@ To perform the migration from NethServer 7 to NethSecurity, follow these steps:
 
 3. Download the archive with exported configuration: click :guilabel:`Download` in the ``Download export archive`` section
 
-4. Access the ``Backup & Restore`` page on NethSecurity and go to the ``Migration`` tab, then click :guilabel:`Upload migration file` and select the archive
-   downloaded in the previous step
+4. Access the ``Backup & Restore`` page on NethSecurity and go to the ``Migration`` tab, then click :guilabel:`Upload migration file` and select the archive downloaded in the previous step
 
 5. When importing the configuration onto new hardware, the MAC addresses of the network interfaces change, requiring a decision on how to remap these interfaces.
    The user interface displays the interfaces of the source machine on the left and those of the destination machine on the right.
