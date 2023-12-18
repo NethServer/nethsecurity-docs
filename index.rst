@@ -74,3 +74,4 @@ NethSecurity administrator manual
    :caption: Best practices
 
    migration
+   troubleshooting
