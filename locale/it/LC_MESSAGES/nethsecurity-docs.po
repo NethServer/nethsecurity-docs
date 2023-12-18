@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 17:01+0000\n"
+"POT-Creation-Date: 2023-12-18 17:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -151,7 +151,7 @@ msgstr ""
 msgid "Registration"
 msgstr ""
 
-#: ../../controller.rst:27 ../../migration.rst:81 ../../nat_helpers.rst:7
+#: ../../controller.rst:27 ../../migration.rst:84 ../../nat_helpers.rst:7
 #: ../../openvpn_roadwarrior.rst:7 ../../qos.rst:7 ../../reverse_proxy.rst:7
 #: ../../smtp.rst:7
 msgid ""
@@ -1594,93 +1594,94 @@ msgid ""
 "process without the need for additional hardware."
 msgstr ""
 
-#: ../../migration.rst:20
+#: ../../migration.rst:21
 msgid ""
 "Migration with other installed modules: if NethServer 7 contains "
 "additional modules such as the mail server, suitable hardware is required"
-" to run NethSecurity. In this case you will need to import the "
-"configuration on a freshly installed NethSecurity."
+" to run NethSecurity. In this case you will need to :ref:`import the "
+"configuration <import_migration-section>` on a freshly installed "
+"NethSecurity."
 msgstr ""
 
-#: ../../migration.rst:24
+#: ../../migration.rst:25
 msgid "Testing the migration"
 msgstr ""
 
-#: ../../migration.rst:26
+#: ../../migration.rst:27
 msgid ""
 "This method allows for thorough testing without affecting your existing "
 "installation. A test system will boot from an USB drive leaving the "
 "existing installation untouched."
 msgstr ""
 
-#: ../../migration.rst:29
+#: ../../migration.rst:30
 msgid "To perform a test migration, follow these steps:"
 msgstr ""
 
-#: ../../migration.rst:31 ../../migration.rst:59 ../../migration.rst:90
+#: ../../migration.rst:32 ../../migration.rst:60 ../../migration.rst:93
 msgid ""
 "Access ``Firewall Migration`` page on NethServer 7 Cockpit: the page will"
 " list all migrated configurations"
 msgstr ""
 
-#: ../../migration.rst:33
+#: ../../migration.rst:34
 msgid ""
 "Download the live USB image: click :guilabel:`Download` in the ``Download"
 " live USB image`` section"
 msgstr ""
 
-#: ../../migration.rst:35
+#: ../../migration.rst:36
 msgid ""
 "Prepare the USB drive: write the downloaded image using your preferred "
 "method to an USB drive, see the :ref:`installation section <install-"
 "section>` for more info on how to copy the image on a disk."
 msgstr ""
 
-#: ../../migration.rst:38
+#: ../../migration.rst:39
 msgid ""
 "Boot from USB drive: shutdown the firewall, plug the USB drive and "
 "restart it, ensuring it boots from the USB drive. This is typically done "
 "through BIOS/UEFI settings"
 msgstr ""
 
-#: ../../migration.rst:41
+#: ../../migration.rst:42
 msgid ""
 "Migration boot: during the boot process, the system loads from the USB "
 "drive instead of the internal hard drive"
 msgstr ""
 
-#: ../../migration.rst:43
+#: ../../migration.rst:44
 msgid ""
 "Testing environment: your system now operates using the migrated system "
 "stored on the USB. Any changes or tests performed occur within this "
 "isolated environment"
 msgstr ""
 
-#: ../../migration.rst:46
+#: ../../migration.rst:47
 msgid ""
 "Remember, after testing, you can simply remove the USB drive, reboot the "
 "firewall normally, and it will resume using the original setup, leaving "
 "your existing installation untouched."
 msgstr ""
 
-#: ../../migration.rst:50
+#: ../../migration.rst:51
 msgid "Migration in-place"
 msgstr ""
 
-#: ../../migration.rst:52
+#: ../../migration.rst:53
 msgid ""
 "If the initial NethServer 7 setup includes only the firewall module, you "
 "can seamlessly migrate and reuse the current hardware. This approach "
 "streamlines the migration, eliminating the necessity for extra hardware."
 msgstr ""
 
-#: ../../migration.rst:55
+#: ../../migration.rst:56
 msgid ""
 "To perform the in-place migration from NethServer 7 to NethSecurity, "
 "follow these steps:"
 msgstr ""
 
-#: ../../migration.rst:57
+#: ../../migration.rst:58
 msgid ""
 "Backup your data: the in-place migration is a destructive process. It is "
 "strongly recommended to create a full backup of the machine before "
@@ -1688,7 +1689,7 @@ msgid ""
 "issues during the migration."
 msgstr ""
 
-#: ../../migration.rst:61
+#: ../../migration.rst:62
 msgid ""
 "Download configuration archive as a precaution: as a precaution, download"
 " the archive containing the exported configuration by clicking "
@@ -1697,14 +1698,14 @@ msgid ""
 "migration fails."
 msgstr ""
 
-#: ../../migration.rst:64
+#: ../../migration.rst:65
 msgid ""
 "Initiate the migration: when ready, click the :guilabel:`Migrate` button "
 "to start the migration process. This signals the system to begin "
 "migrating from NethServer 7 to NethSecurity."
 msgstr ""
 
-#: ../../migration.rst:67
+#: ../../migration.rst:68
 msgid ""
 "Select the target disk: choose the disk where NethSecurity will be "
 "installed. Note that NethSecurity does not support RAID. If the original "
@@ -1712,7 +1713,7 @@ msgid ""
 "unchanged and unused during the migration process."
 msgstr ""
 
-#: ../../migration.rst:70
+#: ../../migration.rst:71
 msgid ""
 "Confirm and start the process: after selecting the disk, click "
 ":guilabel:`Migrate` to confirm. The system will download the NethSecurity"
@@ -1720,7 +1721,7 @@ msgid ""
 "automatically reboot."
 msgstr ""
 
-#: ../../migration.rst:73
+#: ../../migration.rst:74
 msgid ""
 "Complete the migration on first boot: upon the first boot of "
 "NethSecurity, the configuration from NethServer 7 will be automatically "
@@ -1728,11 +1729,11 @@ msgid ""
 " they have been migrated correctly."
 msgstr ""
 
-#: ../../migration.rst:77
+#: ../../migration.rst:80
 msgid "Migration with other installed modules"
 msgstr ""
 
-#: ../../migration.rst:83
+#: ../../migration.rst:86
 msgid ""
 "If NethServer 7 includes additional modules like the mail server, "
 "specific hardware is necessary for NethSecurity. In this scenario, you'll"
@@ -1740,88 +1741,90 @@ msgid ""
 "system."
 msgstr ""
 
-#: ../../migration.rst:86
+#: ../../migration.rst:89
 msgid ""
 "To perform the migration from NethServer 7 to NethSecurity, follow these "
 "steps:"
 msgstr ""
 
-#: ../../migration.rst:88
+#: ../../migration.rst:91
 msgid ""
 "Install NethSecurity on a new machine: follow the :ref:`installation "
 "instructions <install-section>`"
 msgstr ""
 
-#: ../../migration.rst:92
+#: ../../migration.rst:95
 msgid ""
 "Download the archive with exported configuration: click "
 ":guilabel:`Download` in the ``Download export archive`` section"
 msgstr ""
 
-#: ../../migration.rst:94
+#: ../../migration.rst:97
 msgid ""
-"Upload the exported archive: from a Linux machine, use the following "
-"command to transfer the exported archive to the new NethSecurity "
-"installation via SSH. Example: ::"
+"Access the ``Backup & Restore`` page on NethSecurity and go to the "
+"``Migration`` tab, then click :guilabel:`Upload migration file` and "
+"select the archive downloaded in the previous step"
 msgstr ""
 
 #: ../../migration.rst:99
 msgid ""
-"If you are using a Windows machine, you can utilize tools like WinSCP to "
-"perform the transfer."
+"When importing the configuration onto new hardware, the MAC addresses of "
+"the network interfaces change, requiring a decision on how to remap these"
+" interfaces. The user interface displays the interfaces of the source "
+"machine on the left and those of the destination machine on the right. If"
+" the source machine had configured VLANs, the user must remap the "
+"physical interface, and the system will automatically recreate the VLAN "
+"on the underlying interface."
 msgstr ""
 
-#: ../../migration.rst:101
-msgid ""
-"Migrate using the command line: access the NethSecurity machine via SSH "
-"and follow the instructions from the `developer manual "
-"<https://dev.nethsecurity.org/packages/ns-migration/#usage>`_."
+#: ../../migration.rst:103
+msgid "Click :guilabel:`Migrate` to start the migration process"
 msgstr ""
 
-#: ../../migration.rst:105
+#: ../../migration.rst:106
 msgid "Migrated configurations"
 msgstr ""
 
-#: ../../migration.rst:107
+#: ../../migration.rst:108
 msgid ""
 "During the migration, the following configurations will be imported from "
 "NethServer 7:"
 msgstr ""
 
-#: ../../migration.rst:109
+#: ../../migration.rst:110
 msgid "root password"
 msgstr ""
 
-#: ../../migration.rst:110
+#: ../../migration.rst:111
 msgid "network configuration: bridges over bonds are not supported"
 msgstr ""
 
-#: ../../migration.rst:111
+#: ../../migration.rst:112
 msgid "date and timezone"
 msgstr ""
 
-#: ../../migration.rst:112
+#: ../../migration.rst:113
 msgid ""
 "DHCP servers and reservations: DHCP server on bonds interfaces are not "
 "supported"
 msgstr ""
 
-#: ../../migration.rst:113
+#: ../../migration.rst:114
 msgid ""
 "DNS configuration with host definition: TFTP options are migrated, but "
 "not the content of the TFTP server. To re-enable the service make sure to"
 " manually setup ``tftp_root`` option"
 msgstr ""
 
-#: ../../migration.rst:115
+#: ../../migration.rst:116
 msgid "static routes"
 msgstr ""
 
-#: ../../migration.rst:116
+#: ../../migration.rst:117
 msgid "port forwards"
 msgstr ""
 
-#: ../../migration.rst:117
+#: ../../migration.rst:118
 msgid ""
 "firewall rules: rules using NDPI services are not supported; source and "
 "destination objects are not currently supported and will be converted to "
@@ -1829,84 +1832,84 @@ msgid ""
 " after migration"
 msgstr ""
 
-#: ../../migration.rst:119
+#: ../../migration.rst:120
 msgid "multiWAN configuration"
 msgstr ""
 
-#: ../../migration.rst:120
+#: ../../migration.rst:121
 msgid "QoS: classes with reserved bandwidth and rules are not supported"
 msgstr ""
 
-#: ../../migration.rst:121
+#: ../../migration.rst:122
 msgid ""
 "OpenVPN roadwarrior: mail notification is not supported, existing "
 "connection database is not migrated; OTP authentication is not supported"
 msgstr ""
 
-#: ../../migration.rst:122
+#: ../../migration.rst:123
 msgid "OpenVPN runnels"
 msgstr ""
 
-#: ../../migration.rst:123
+#: ../../migration.rst:124
 msgid "IPSec tunnels"
 msgstr ""
 
-#: ../../migration.rst:124 ../../threat_shield.rst:5
+#: ../../migration.rst:125 ../../threat_shield.rst:5
 msgid "Threat shield"
 msgstr ""
 
-#: ../../migration.rst:125 ../../subscription.rst:5
+#: ../../migration.rst:126 ../../subscription.rst:5
 msgid "Subscription"
 msgstr ""
 
-#: ../../migration.rst:126
+#: ../../migration.rst:127
 msgid ""
 "Hotspot: if the migration has been executed on a new hardware, the "
 "hotspot interface will change MAC address and it must be registered again"
 " to the remote hotspot manager"
 msgstr ""
 
-#: ../../migration.rst:128
+#: ../../migration.rst:129
 msgid "Let's Encrypt certificate configuration"
 msgstr ""
 
-#: ../../migration.rst:129 ../../reverse_proxy.rst:3
+#: ../../migration.rst:130 ../../reverse_proxy.rst:3
 msgid "Reverse proxy"
 msgstr ""
 
-#: ../../migration.rst:130
+#: ../../migration.rst:131
 msgid "Flashstart"
 msgstr ""
 
-#: ../../migration.rst:132
+#: ../../migration.rst:133
 msgid "The following features are not migrated to NethSecurity:"
 msgstr ""
 
-#: ../../migration.rst:134
+#: ../../migration.rst:135
 msgid "Web proxy (Squid) and filter (ufdbGuard)"
 msgstr ""
 
-#: ../../migration.rst:135
+#: ../../migration.rst:136
 msgid "IPS (Suricata) and IPS alerts (EveBox)"
 msgstr ""
 
-#: ../../migration.rst:136
+#: ../../migration.rst:137
 msgid "UPS monitoring (NUT)"
 msgstr ""
 
-#: ../../migration.rst:137
+#: ../../migration.rst:138
 msgid "System statistics (Collectd)"
 msgstr ""
 
-#: ../../migration.rst:138
+#: ../../migration.rst:139
 msgid "Reports (Dante)"
 msgstr ""
 
-#: ../../migration.rst:139
+#: ../../migration.rst:140
 msgid "Bandwidth monitor (ntopng)"
 msgstr ""
 
-#: ../../migration.rst:140
+#: ../../migration.rst:141
 msgid "Fail2ban"
 msgstr ""
 
@@ -4539,5 +4542,37 @@ msgstr ""
 #~ "When the subscription expires, or at "
 #~ "the end of a trial period, click"
 #~ " the :guilabel:`Cancel subscription` button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Migration with other installed modules: "
+#~ "if NethServer 7 contains additional "
+#~ "modules such as the mail server, "
+#~ "suitable hardware is required to run "
+#~ "NethSecurity. In this case you will "
+#~ "need to import the configuration on "
+#~ "a freshly installed NethSecurity."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Upload the exported archive: from a "
+#~ "Linux machine, use the following command"
+#~ " to transfer the exported archive to"
+#~ " the new NethSecurity installation via "
+#~ "SSH. Example: ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are using a Windows "
+#~ "machine, you can utilize tools like "
+#~ "WinSCP to perform the transfer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Migrate using the command line: access"
+#~ " the NethSecurity machine via SSH and"
+#~ " follow the instructions from the "
+#~ "`developer manual <https://dev.nethsecurity.org/packages"
+#~ "/ns-migration/#usage>`_."
 #~ msgstr ""
 
