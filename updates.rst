@@ -10,7 +10,7 @@ NethSecurity allows two types of updates, both available from the ``Update`` sec
 
 These updates are intended for minor updates and bugfixes.
 
-Typically they are performed automatically, but at any time it is possible to check for new updates available by clicking on :guilabel:`Check for Fixes` button.
+Typically they could be performed automatically, but at any time it is possible to check for new updates available by clicking on :guilabel:`Check for Fixes` button.
 These updates do not require a restart of NethSecurity, they are tied to a specific version and distributed using packages.
 
 **2. System updates** (switching to a different version)
