@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 17:15+0000\n"
+"POT-Creation-Date: 2023-12-19 07:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -3449,8 +3449,11 @@ msgstr ""
 
 #: ../../reset_recovery.rst:25
 msgid ""
-"To start fresh without reinstalling the firmware, execute the following "
-"commands. ::"
+"To start fresh without reinstalling the firmware, access the ``Factory "
+"reset`` page under the ``System`` section. Click the :guilabel:`Perform "
+"factory reset` button to reset the firewall to its original state. The "
+"factory reset process will take a few seconds to complete. Once the "
+"process is complete, the firewall will reboot automatically."
 msgstr ""
 
 #: ../../reset_recovery.rst:29
@@ -3471,11 +3474,17 @@ msgid ""
 "installation of version 23.05.1."
 msgstr ""
 
-#: ../../reset_recovery.rst:40
+#: ../../reset_recovery.rst:37
+msgid ""
+"If you want to execute the factory reset from command line, just execute "
+"the following commands. ::"
+msgstr ""
+
+#: ../../reset_recovery.rst:44
 msgid "Failsafe mode"
 msgstr ""
 
-#: ../../reset_recovery.rst:42
+#: ../../reset_recovery.rst:46
 msgid ""
 "NethSecurity provides a failsafe mode that can override the current "
 "configuration of your device. If your device becomes inaccessible due to "
@@ -3485,7 +3494,7 @@ msgid ""
 "manually."
 msgstr ""
 
-#: ../../reset_recovery.rst:46
+#: ../../reset_recovery.rst:50
 msgid ""
 "However, it's important to note that failsafe mode cannot resolve more "
 "complex issues such as faulty hardware or a damaged kernel. While it "
@@ -3494,7 +3503,7 @@ msgid ""
 "configurations."
 msgstr ""
 
-#: ../../reset_recovery.rst:49
+#: ../../reset_recovery.rst:53
 msgid ""
 "The simplest way to activate failsafe mode is to connect directly to the "
 "firewall using a VGA/HDMI monitor or a serial cable. To do this, boot the"
@@ -3502,7 +3511,7 @@ msgid ""
 "``NethSecurity (failsafe)``."
 msgstr ""
 
-#: ../../reset_recovery.rst:52
+#: ../../reset_recovery.rst:56
 msgid ""
 "You can access the firewall directly through the serial port using a "
 "null-modem cable and a common terminal program. For Windows, you can use "
@@ -3511,7 +3520,7 @@ msgid ""
 "None, and stop bits to 1 (abbreviated as 8N1)."
 msgstr ""
 
-#: ../../reset_recovery.rst:56
+#: ../../reset_recovery.rst:60
 msgid ""
 "After entering failsafe mode, the firewall will start with a network "
 "address of 192.168.1.1/24, usually on the eth0 network interface, and "
@@ -3521,11 +3530,11 @@ msgid ""
 "access other utilities as needed."
 msgstr ""
 
-#: ../../reset_recovery.rst:64
+#: ../../reset_recovery.rst:68
 msgid "Emergency recovery"
 msgstr ""
 
-#: ../../reset_recovery.rst:66
+#: ../../reset_recovery.rst:70
 msgid ""
 "Emergency recovery in NethSecurity, also known as unbricking, is a "
 "feature enabling users to restore their firewall device in cases of "
@@ -3534,19 +3543,19 @@ msgid ""
 "unless there are hardware failures."
 msgstr ""
 
-#: ../../reset_recovery.rst:69
+#: ../../reset_recovery.rst:73
 msgid ""
 "If you still have access to the system, you can use the following "
 "commands to download and write the image: ::"
 msgstr ""
 
-#: ../../reset_recovery.rst:73
+#: ../../reset_recovery.rst:77
 msgid ""
 "This command will display the path of the downloaded image. Use this path"
 " in the following command: ::"
 msgstr ""
 
-#: ../../reset_recovery.rst:77
+#: ../../reset_recovery.rst:81
 msgid ""
 "If you can't access the system, :ref:`download the latest image "
 "<download-section>`, then follow :ref:`installation instructions "
@@ -4574,5 +4583,11 @@ msgstr ""
 #~ " follow the instructions from the "
 #~ "`developer manual <https://dev.nethsecurity.org/packages"
 #~ "/ns-migration/#usage>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To start fresh without reinstalling the"
+#~ " firmware, execute the following commands."
+#~ " ::"
 #~ msgstr ""
 
