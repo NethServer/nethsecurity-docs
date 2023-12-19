@@ -34,6 +34,10 @@ The factory reset restores the currently installed version.
 For instance, if the firewall was initially installed with version 23.05.0 and then updated to 23.05.1, after the factory reset,
 you will have a clean installation of version 23.05.1.
 
+If you want to execute the factory reset from command line, just execute the following commands. ::
+
+  firstboot -y && reboot
+
 .. _failsafe-section:
 
 Failsafe mode
