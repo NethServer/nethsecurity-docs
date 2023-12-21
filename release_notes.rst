@@ -8,14 +8,13 @@ NethSecurity releases changelogs.
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
 Major changes on 2023-12-11
+===========================
 
 **Alpha 2**
 
 This alpha release is specifically crafted for evaluation purposes, focusing on testing the functionalities of the new system's user interface. 
 Users are provided with the option to experience either the ongoing development of the new interface or stick with the established LuCI interface.
 Known bugs in the new interface can be found `here <https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_.
-
-Changes since Alpha 1
 
 **UI Enhancements**
 
@@ -39,7 +38,6 @@ Changes since Alpha 1
 - Established a mechanism to send alerts to remote portals, including my.nethesis.it and my.nethserver.com.
 - Added support for One-Time Passwords (OTP) in future OpenVPN Road Warrior server configurations.
 
-===========================
 Major changes on 2023-10-31
 ===========================
 
