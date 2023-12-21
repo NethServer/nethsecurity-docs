@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-21 10:41+0000\n"
+"POT-Creation-Date: 2023-12-21 13:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -2497,18 +2497,18 @@ msgid ""
 msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:3
-msgid "OpenVPN Roadwarrior"
+msgid "OpenVPN Road Warrior"
 msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:9
 msgid ""
-"Roadwarrior refers to a specific configuration of the OpenVPN VPN "
+"Road Warrior refers to a specific configuration of the OpenVPN VPN "
 "tailored for remote users, allowing them secure access to a private "
 "network from anywhere on the internet. This setup is particularly useful "
 "for businesses and organizations with employees or collaborators spread "
 "across different locations, ensuring encrypted communication and data "
-"privacy. OpenVPN Roadwarrior configuration support various authentication"
-" methods:"
+"privacy. OpenVPN Road Warrior configuration support various "
+"authentication methods:"
 msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:15
@@ -2535,7 +2535,7 @@ msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:21
 msgid ""
-"Clients connected to the roadwarrior are assigned to the ``rwopenvpn`` "
+"Clients connected to the Road Warrior are assigned to the ``rwopenvpn`` "
 "zone, which is inherently trusted. This zone has privileged access to "
 "both LAN and WAN zones within the network infrastructure."
 msgstr ""
@@ -3184,15 +3184,22 @@ msgid ""
 " server configurations."
 msgstr ""
 
-#: ../../release_notes.rst:42
-msgid "Major changes on 2023-10-31"
+#: ../../release_notes.rst:41
+msgid ""
+"**Note**: the bond configuration is still in progress, and as a result, "
+"bond-type network interfaces are currently non-functional in this "
+"release."
 msgstr ""
 
 #: ../../release_notes.rst:44
-msgid "**Alpha 1**"
+msgid "Major changes on 2023-10-31"
 msgstr ""
 
 #: ../../release_notes.rst:46
+msgid "**Alpha 1**"
+msgstr ""
+
+#: ../../release_notes.rst:48
 msgid ""
 "This is an alpha release, designed for evaluation purposes to explore the"
 " functionalities of the new system. Users have the option to use the new "
@@ -3202,7 +3209,7 @@ msgid ""
 "interface is completed."
 msgstr ""
 
-#: ../../release_notes.rst:50
+#: ../../release_notes.rst:52
 msgid ""
 "While the entire backend functionality is already operational and "
 "thoroughly tested, the new interface is not yet complete. Some bugs in "
@@ -3210,77 +3217,77 @@ msgid ""
 "<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
 msgstr ""
 
-#: ../../release_notes.rst:53
+#: ../../release_notes.rst:55
 msgid "The new interface includes the following features:"
 msgstr ""
 
-#: ../../release_notes.rst:55
+#: ../../release_notes.rst:57
 msgid "Dashboard"
 msgstr ""
 
-#: ../../release_notes.rst:56
+#: ../../release_notes.rst:58
 msgid "Subscription Management"
 msgstr ""
 
-#: ../../release_notes.rst:57
+#: ../../release_notes.rst:59
 msgid "Hostname and Timezone Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:58
+#: ../../release_notes.rst:60
 msgid "Additional Storage Setup"
 msgstr ""
 
-#: ../../release_notes.rst:59
+#: ../../release_notes.rst:61
 msgid "Network Interface Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:60
+#: ../../release_notes.rst:62
 msgid "DNS and DHCP Settings"
 msgstr ""
 
-#: ../../release_notes.rst:61
+#: ../../release_notes.rst:63
 msgid "Routing Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:62
+#: ../../release_notes.rst:64
 msgid "Multi-WAN Support"
 msgstr ""
 
-#: ../../release_notes.rst:63
+#: ../../release_notes.rst:65
 msgid "Port Forwarding Options"
 msgstr ""
 
-#: ../../release_notes.rst:64
+#: ../../release_notes.rst:66
 msgid "Zones and Policies Management"
 msgstr ""
 
-#: ../../release_notes.rst:65
+#: ../../release_notes.rst:67
 msgid "Flashstart DNS Filtering"
 msgstr ""
 
-#: ../../release_notes.rst:66
+#: ../../release_notes.rst:68
 msgid "Deep Packet Inspection (DPI) Filtering"
 msgstr ""
 
-#: ../../release_notes.rst:67
+#: ../../release_notes.rst:69
 msgid "Root User Password Change"
 msgstr ""
 
-#: ../../release_notes.rst:68
+#: ../../release_notes.rst:70
 msgid "Access to System Logs"
 msgstr ""
 
-#: ../../release_notes.rst:73
+#: ../../release_notes.rst:75
 msgid "Releases glossary"
 msgstr ""
 
-#: ../../release_notes.rst:75
+#: ../../release_notes.rst:77
 msgid ""
 "The software release cycle includes four stages: Alpha, Beta, Release "
 "Candidate (RC), and Stable."
 msgstr ""
 
-#: ../../release_notes.rst:77
+#: ../../release_notes.rst:79
 msgid ""
 "During the **Alpha** stage, the software is not thoroughly tested and may"
 " not include all planned features. This release is not suitable for "
@@ -3289,7 +3296,7 @@ msgid ""
 "to other releases are not supported."
 msgstr ""
 
-#: ../../release_notes.rst:81
+#: ../../release_notes.rst:83
 msgid ""
 "The **Beta** stage indicates that the software is mostly feature "
 "complete, but it may still contain many known and unknown bugs. This "
@@ -3299,7 +3306,7 @@ msgid ""
 "require a manual procedure."
 msgstr ""
 
-#: ../../release_notes.rst:85
+#: ../../release_notes.rst:87
 msgid ""
 "During the **Release Candidate (RC)** stage, the software is feature "
 "complete, and it contains no known bugs. If no major issues arise, it can"
@@ -3309,7 +3316,7 @@ msgid ""
 "some experience with it."
 msgstr ""
 
-#: ../../release_notes.rst:90
+#: ../../release_notes.rst:92
 msgid ""
 "The **Stable** release is the most reliable and safe to use in production"
 " environments. It has been thoroughly tested and is considered to be free"
@@ -4704,5 +4711,32 @@ msgstr ""
 #~ " old LuCI interface will be removed"
 #~ " once the corresponding page on the"
 #~ " new interface is completed."
+#~ msgstr ""
+
+#~ msgid "OpenVPN Roadwarrior"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Roadwarrior refers to a specific "
+#~ "configuration of the OpenVPN VPN "
+#~ "tailored for remote users, allowing them"
+#~ " secure access to a private network"
+#~ " from anywhere on the internet. This"
+#~ " setup is particularly useful for "
+#~ "businesses and organizations with employees"
+#~ " or collaborators spread across different"
+#~ " locations, ensuring encrypted communication "
+#~ "and data privacy. OpenVPN Roadwarrior "
+#~ "configuration support various authentication "
+#~ "methods:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Clients connected to the roadwarrior are"
+#~ " assigned to the ``rwopenvpn`` zone, "
+#~ "which is inherently trusted. This zone"
+#~ " has privileged access to both LAN"
+#~ " and WAN zones within the network "
+#~ "infrastructure."
 #~ msgstr ""
 
