@@ -38,6 +38,8 @@ Known bugs in the new interface can be found `here <https://trello.com/b/FndRrgI
 - Established a mechanism to send alerts to remote portals, including my.nethesis.it and my.nethserver.com.
 - Added support for One-Time Passwords (OTP) in future OpenVPN Road Warrior server configurations.
 
+**Note**: the bond configuration is still in progress, and as a result, bond-type network interfaces are currently non-functional in this release.
+
 Major changes on 2023-10-31
 ===========================
 
