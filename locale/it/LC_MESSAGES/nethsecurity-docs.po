@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-19 07:54+0000\n"
+"POT-Creation-Date: 2023-12-21 10:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -3085,24 +3085,124 @@ msgid ""
 msgstr ""
 
 #: ../../release_notes.rst:11
-msgid "Major changes on 2023-10-31"
+msgid "Major changes on 2023-12-11"
 msgstr ""
 
 #: ../../release_notes.rst:13
-msgid "**Alpha 1**"
+msgid "**Alpha 2**"
 msgstr ""
 
 #: ../../release_notes.rst:15
 msgid ""
-"This is an alpha release, designed for evaluation purposes to explore the"
-" functionalities of the new system. Users have the option to use the new "
-"interface, which is currently under development and may contain known "
-"issues (`view issues <link>`_), or the legacy LuCI interface. Please note"
-" that some features available on the old LuCI interface will be removed "
-"once the corresponding page on the new interface is completed."
+"This alpha release is specifically crafted for evaluation purposes, "
+"focusing on testing the functionalities of the new system's user "
+"interface. Users are provided with the option to experience either the "
+"ongoing development of the new interface or stick with the established "
+"LuCI interface. Known bugs in the new interface can be found `here "
+"<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
 msgstr ""
 
-#: ../../release_notes.rst:20
+#: ../../release_notes.rst:19
+msgid "**UI Enhancements**"
+msgstr ""
+
+#: ../../release_notes.rst:21
+msgid ""
+"Resolved numerous bugs across various pages, including DHCP and DPI "
+"filter, enhancing overall pages stability."
+msgstr ""
+
+#: ../../release_notes.rst:22
+msgid "Introduced the OpenVPN tunnel configuration page."
+msgstr ""
+
+#: ../../release_notes.rst:23
+msgid "Added the IPsec tunnel configuration page."
+msgstr ""
+
+#: ../../release_notes.rst:24
+msgid "Incorporated the Hotspot (Dedalo) configuration page."
+msgstr ""
+
+#: ../../release_notes.rst:25
+msgid "Implemented the Backup and Restore page."
+msgstr ""
+
+#: ../../release_notes.rst:26
+msgid "Introduced exclusion functionality to the DPI filter page."
+msgstr ""
+
+#: ../../release_notes.rst:27
+msgid ""
+"Exposed netdata reports within the UI, featuring a configurable ping "
+"latency monitor."
+msgstr ""
+
+#: ../../release_notes.rst:28
+msgid "Addressed the default language issue for non-translated languages."
+msgstr ""
+
+#: ../../release_notes.rst:29
+msgid "Refactored and improved the Network page."
+msgstr ""
+
+#: ../../release_notes.rst:30
+msgid "Added a page to manage System Updates."
+msgstr ""
+
+#: ../../release_notes.rst:31
+msgid "Included a migration page from NethServer 7."
+msgstr ""
+
+#: ../../release_notes.rst:32
+msgid "Enabled factory reset functionality directly from the UI."
+msgstr ""
+
+#: ../../release_notes.rst:33
+msgid ""
+"Implemented a VPN Users page in preparation for the upcoming OpenVPN Road"
+" Warrior server."
+msgstr ""
+
+#: ../../release_notes.rst:35
+msgid "**General Improvements**"
+msgstr ""
+
+#: ../../release_notes.rst:37
+msgid "Updated the base OpenWrt to version 23.05.2."
+msgstr ""
+
+#: ../../release_notes.rst:38
+msgid ""
+"Established a mechanism to send alerts to remote portals, including "
+"my.nethesis.it and my.nethserver.com."
+msgstr ""
+
+#: ../../release_notes.rst:39
+msgid ""
+"Added support for One-Time Passwords (OTP) in future OpenVPN Road Warrior"
+" server configurations."
+msgstr ""
+
+#: ../../release_notes.rst:42
+msgid "Major changes on 2023-10-31"
+msgstr ""
+
+#: ../../release_notes.rst:44
+msgid "**Alpha 1**"
+msgstr ""
+
+#: ../../release_notes.rst:46
+msgid ""
+"This is an alpha release, designed for evaluation purposes to explore the"
+" functionalities of the new system. Users have the option to use the new "
+"interface, which is currently under development or the legacy LuCI "
+"interface. Please note that some features available on the old LuCI "
+"interface will be removed once the corresponding page on the new "
+"interface is completed."
+msgstr ""
+
+#: ../../release_notes.rst:50
 msgid ""
 "While the entire backend functionality is already operational and "
 "thoroughly tested, the new interface is not yet complete. Some bugs in "
@@ -3110,77 +3210,77 @@ msgid ""
 "<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
 msgstr ""
 
-#: ../../release_notes.rst:23
+#: ../../release_notes.rst:53
 msgid "The new interface includes the following features:"
 msgstr ""
 
-#: ../../release_notes.rst:25
+#: ../../release_notes.rst:55
 msgid "Dashboard"
 msgstr ""
 
-#: ../../release_notes.rst:26
+#: ../../release_notes.rst:56
 msgid "Subscription Management"
 msgstr ""
 
-#: ../../release_notes.rst:27
+#: ../../release_notes.rst:57
 msgid "Hostname and Timezone Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:28
+#: ../../release_notes.rst:58
 msgid "Additional Storage Setup"
 msgstr ""
 
-#: ../../release_notes.rst:29
+#: ../../release_notes.rst:59
 msgid "Network Interface Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:30
+#: ../../release_notes.rst:60
 msgid "DNS and DHCP Settings"
 msgstr ""
 
-#: ../../release_notes.rst:31
+#: ../../release_notes.rst:61
 msgid "Routing Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:32
+#: ../../release_notes.rst:62
 msgid "Multi-WAN Support"
 msgstr ""
 
-#: ../../release_notes.rst:33
+#: ../../release_notes.rst:63
 msgid "Port Forwarding Options"
 msgstr ""
 
-#: ../../release_notes.rst:34
+#: ../../release_notes.rst:64
 msgid "Zones and Policies Management"
 msgstr ""
 
-#: ../../release_notes.rst:35
+#: ../../release_notes.rst:65
 msgid "Flashstart DNS Filtering"
 msgstr ""
 
-#: ../../release_notes.rst:36
+#: ../../release_notes.rst:66
 msgid "Deep Packet Inspection (DPI) Filtering"
 msgstr ""
 
-#: ../../release_notes.rst:37
+#: ../../release_notes.rst:67
 msgid "Root User Password Change"
 msgstr ""
 
-#: ../../release_notes.rst:38
+#: ../../release_notes.rst:68
 msgid "Access to System Logs"
 msgstr ""
 
-#: ../../release_notes.rst:43
+#: ../../release_notes.rst:73
 msgid "Releases glossary"
 msgstr ""
 
-#: ../../release_notes.rst:45
+#: ../../release_notes.rst:75
 msgid ""
 "The software release cycle includes four stages: Alpha, Beta, Release "
 "Candidate (RC), and Stable."
 msgstr ""
 
-#: ../../release_notes.rst:47
+#: ../../release_notes.rst:77
 msgid ""
 "During the **Alpha** stage, the software is not thoroughly tested and may"
 " not include all planned features. This release is not suitable for "
@@ -3189,7 +3289,7 @@ msgid ""
 "to other releases are not supported."
 msgstr ""
 
-#: ../../release_notes.rst:51
+#: ../../release_notes.rst:81
 msgid ""
 "The **Beta** stage indicates that the software is mostly feature "
 "complete, but it may still contain many known and unknown bugs. This "
@@ -3199,7 +3299,7 @@ msgid ""
 "require a manual procedure."
 msgstr ""
 
-#: ../../release_notes.rst:55
+#: ../../release_notes.rst:85
 msgid ""
 "During the **Release Candidate (RC)** stage, the software is feature "
 "complete, and it contains no known bugs. If no major issues arise, it can"
@@ -3209,7 +3309,7 @@ msgid ""
 "some experience with it."
 msgstr ""
 
-#: ../../release_notes.rst:60
+#: ../../release_notes.rst:90
 msgid ""
 "The **Stable** release is the most reliable and safe to use in production"
 " environments. It has been thoroughly tested and is considered to be free"
@@ -4589,5 +4689,20 @@ msgstr ""
 #~ "To start fresh without reinstalling the"
 #~ " firmware, execute the following commands."
 #~ " ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is an alpha release, designed "
+#~ "for evaluation purposes to explore the"
+#~ " functionalities of the new system. "
+#~ "Users have the option to use the"
+#~ " new interface, which is currently "
+#~ "under development and may contain known"
+#~ " issues (`view issues <link>`_), or "
+#~ "the legacy LuCI interface. Please note"
+#~ " that some features available on the"
+#~ " old LuCI interface will be removed"
+#~ " once the corresponding page on the"
+#~ " new interface is completed."
 #~ msgstr ""
 
