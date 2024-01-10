@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-21 13:48+0000\n"
+"POT-Creation-Date: 2024-01-10 08:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -2860,7 +2860,7 @@ msgid ""
 msgstr ""
 
 #: ../../qos.rst:3
-msgid "Qualitiy of Service (QoS)"
+msgid "Quality of Service (QoS)"
 msgstr ""
 
 #: ../../qos.rst:9
@@ -4738,5 +4738,8 @@ msgstr ""
 #~ " has privileged access to both LAN"
 #~ " and WAN zones within the network "
 #~ "infrastructure."
+#~ msgstr ""
+
+#~ msgid "Qualitiy of Service (QoS)"
 #~ msgstr ""
 
