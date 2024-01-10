@@ -1,5 +1,5 @@
 =========================
-Qualitiy of Service (QoS)
+Quality of Service (QoS)
 =========================
 
 .. warning::
