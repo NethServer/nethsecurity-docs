@@ -74,16 +74,16 @@ highlight_options = {'stripall': True}
 # Retrieve latest release
 base_url="https://updates.nethsecurity.nethserver.org"
 version = ""
-with urllib.request.urlopen(f'{base_url}/latest_release') as f:
+with urllib.request.urlopen(f'{base_url}/stable/latest_release') as f:
     version = f.read().decode('utf-8').strip()
 
 extlinks = {
-    'download_image_x86': (f'{base_url}/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz', None),
-    'download_hash_x86': (f'{base_url}/{version}/targets/x86/64/sha256sums', None)
+    'download_image_x86': (f'{base_url}/stable/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz', None),
+    'download_hash_x86': (f'{base_url}/stable/{version}/targets/x86/64/sha256sums', None)
 }
 rst_prolog = f"""
 .. |image| replace:: nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
 .. |image_no_gz| replace:: nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img
 .. |version| replace:: {version}
-.. |download_url| replace:: {base_url}/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
+.. |download_url| replace:: {base_url}/stable/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
 """
