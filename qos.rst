@@ -21,7 +21,7 @@ Configuration
 
 Bandwidth management is handled dynamically and automatically by the system. Configuration is straightforward, involving specifying upload and download bandwidth values for each interface under QoS. 
 
-While QoS can be set up on any interface, it typically functions optimally on WAN-type interfaces, aligning upload and download data with connectivity parameters.
+While QoS can be set up on any interface, it typically functions optimally on WAN-type interfaces, setting upload and download speeds to the internet connection data rates.
 
 To ensure resilience against service fluctuations, it is advisable to maintain a safety margin by configuring these parameters 10% lower than the measured values
 
