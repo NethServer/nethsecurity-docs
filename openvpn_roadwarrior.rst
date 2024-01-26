@@ -78,10 +78,21 @@ Advanced settings
 ``Custom DHCP options`` : Allows you to pass specific DHCP options to the client (e.g. DOMAIN, DNS, WINS and so on)
 
 
-Client 
---------------------
-ogni client un account
-no contemporaneità
+Client accounts
+---------------
+
+Now that the server has been configured, it is necessary to create the client accounts that need to connect. To do this, click on :guilabel:`Add VPN  Account` and fill the form:
+
+``User`` : each account is associated with one and only user from the chosen database, select the user for this account
+
+``Reserved IP`` : It is possible to specify an IP address that is part of the defined VPN network and will always be assigned to this specific account (useful for creating firewall rules), otherwise the IP address will be a random one.
+
+``Certificate expiration (days)`` : It's possible to specificy a certificate duration (default 3650 days)
+
+
+
+no concurrency
+
 
 Clients connected to the Road Warrior are assigned to the ``rwopenvpn`` zone, which is inherently trusted.
 This zone has privileged access to both LAN and WAN zones within the network infrastructure.
