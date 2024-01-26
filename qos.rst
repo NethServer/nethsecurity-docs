@@ -33,7 +33,7 @@ Advanced Configuration
 While Qosify works effectively without extensive configuration, it can be further optimized by setting bandwidth limits and rules.
 Fine-tuning QoS parameters can result in even better network performance.
 
-The modifications to the standard behavior however can be useful in very limited scenarios, for which, currently, it is only possible to act directly through the character console.
+The modifications to the standard behavior however can be useful in very limited scenarios, for which, currently, it is only possible to act directly through the command line.
 
 
 Priority classes
