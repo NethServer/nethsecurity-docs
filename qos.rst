@@ -39,7 +39,7 @@ The modifications to the standard behavior however can be useful in very limited
 Priority classes
 ----------------
 
-The QoS uses four classes of priority, each class can use a maximum percentage of bandwidth defined by its threshold.
+QoS uses four classes of priority, each class can use a maximum percentage of bandwidth defined by its threshold.
 
 - **Bulk (CS1, LE in kernel v5.9+):** This class is designed for low-priority traffic, with a 6.25% threshold.
 - **Best Effort (General):** This class has a 100% threshold and is used for typical, non-prioritized traffic.
