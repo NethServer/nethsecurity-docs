@@ -31,11 +31,17 @@ Configuration
 To configure a new OpenVPN server click :guilabel:`Create Server` button and configure/verify the proposed fileds:
 
 ``Server name`` : give a name to this OpenVPN server
+
 ``User database`` : choose the database where account will be created
+
 ``Create an account for each user`` : this is a special field and won't be showed again the future, it allows you to automatically create a VPN account for each user present in the database. All accounts created will have a certificate valid for 3650 days.
+
 ``Mode`` : Bridged or routed (default routed)
+
 ``VPN Network`` : the virtual network used by clients; every client will receive an IP address taken from this network. NethSecurity already suggests an uncommon network to avoid overlaps with other networks used by the firewall.
+
 ``Public IP/hostname of this unit`` : NethSecurity automatically fill this field with the public IP address of each WAN you are using
+
 ```` :
 ```` :
 ```` :
