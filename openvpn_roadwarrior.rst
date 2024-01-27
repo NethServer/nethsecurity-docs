@@ -10,6 +10,8 @@ private network from anywhere on the internet.
 This setup is particularly useful for businesses and organizations with employees or collaborators spread across different locations,
 ensuring encrypted communication and data privacy.
 
+OpenVPN is a protocol supported by the most widely used platforms, with free clients available for Windows, MacOS, Linux, Android, and iOS systems.
+
 .. note::  Before configuring the OpenVPN Roadwarrior, make sure you have read the chapter related to the :ref:`user database <users_database-section>`.
 
 How it works
@@ -27,6 +29,8 @@ On the OpenVPN server, OpenVPN accounts linked to users from the specific databa
 
 Server Configuration
 --------------------
+
+The server configuration is straightforward because NethSecurity automatically sets most fields to correct values, which only need verification.
 
 To configure a new OpenVPN server click :guilabel:`Create Server` button and configure/verify the proposed fileds:
 
@@ -77,25 +81,63 @@ Advanced settings
 
 ``Custom DHCP options`` : Allows you to pass specific DHCP options to the client (e.g. DOMAIN, DNS, WINS and so on)
 
+Click on :guilabel:`Create` button to create the server, after that, main server details will be shown in the Web UI.
 
 Client accounts
 ---------------
 
-Now that the server has been configured, it is necessary to create the client accounts that need to connect. To do this, click on :guilabel:`Add VPN  Account` and fill the form:
+Now that the server has been configured, it is necessary to create the accounts for the connecting clients. To do this, click on :guilabel:`Add VPN  Account` and fill the form:
 
 ``User`` : each account is associated with one and only user from the chosen database, select the user for this account
 
-``Reserved IP`` : It is possible to specify an IP address that is part of the defined VPN network and will always be assigned to this specific account (useful for creating firewall rules), otherwise the IP address will be a random one.
+``Reserved IP`` : Specify an IP address that is part of the defined VPN network and will always be assigned to this specific account, this can be very useful for creating firewall rules. Leave it blank to assign everytime a random IP address.
 
-``Certificate expiration (days)`` : It's possible to specificy a certificate duration (default 3650 days)
+``Certificate expiration (days)`` : Specificy a certificate duration (default 3650 days)
+
+Once the account is created, it is necessary to export the configuration and load it into the client that needs to connect. To do this, simply click on the menu of the specific account where these options are located:
+
+``Download configuration`` : Download the ready-to-use file, simply to be loaded into the client. This file is dynamically generated based on the current configuration of the OpenVPN server and already contains all the necessary information, including configuration details (server addresses, port, etc.) and required certificates. In case the server's operating mode is changed (e.g., if the authentication mode is altered), it is necessary to download the file again.
+
+``Download Certificate`` : Download only the necessary certificates; it does not contain any client configuration data.
+
+``Disable`` : Disable the account (it can be re-enabled at any time).
+
+``Regenerate Certificate`` : Recreate the personal certificate for the account; if the current certificate has not expired, it will be revoked, and it will be necessary to use the new one. After recreating the certificate, it is necessary to update it on the client by either redownloading the entire configuration or just the certificate.
+
+``Delete`` : Delete the account and its certificate, this operation is irreversible and the certificate is not recoverable.
+
+Client Behavior
+^^^^^^^^^^^^^^^
+Some information about the behavior of the clients.
+
+* Clients connected to the Road Warrior are assigned to the ``rwopenvpn`` zone, which is inherently trusted.
+  By default this zone has privileged access to both LAN and WAN zones within the network infrastructure.
+
+* Connection Backup: In presence of multiple WANs, clients will connect using the first IP/hostname of the server configuration, if it's unavailable they will use the second IP/hostname and so on if there are many.
+
+* For security reasons, it is not possible to connect multiple clients with the same account. Each account can be used by only one client at a time. 
+
+* If a new client attempts to connect with an account that is already connected to the system, the first account will be disconnected.
+
+
+Client Software
+^^^^^^^^^^^^^^^
+
+All major platforms are supported. Here are some references to download the necessary software:
+
+* Windows Systems: `OpenVPN WebSite <https://openvpn.net/community-downloads/>`_ 
+
+* MacOS Systems :  `TunnelBlick <https://tunnelblick.net/>`_ or the `Official Client <https://openvpn.net/client-connect-vpn-for-mac-os/>
+
+* Linux Systems : Usually already available in your distro's software section, if needed sources are available here : OpenVPN WebSite <https://openvpn.net/community-downloads/>`_ 
+
+* Android Systems : `OpenVPN Connect <https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_
+
+* iOS Systems : `OpenVPN Connect <https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_
 
 
 
-no concurrency
 
-
-Clients connected to the Road Warrior are assigned to the ``rwopenvpn`` zone, which is inherently trusted.
-This zone has privileged access to both LAN and WAN zones within the network infrastructure.
 
 
 
