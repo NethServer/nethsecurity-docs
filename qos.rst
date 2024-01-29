@@ -30,6 +30,10 @@ To ensure resilience against service fluctuations, it is advisable to maintain a
 Advanced Configuration
 ====================
 
+QoS relies on an eBPF (Extended Berkeley Packet Filter) based classifier to set Differentiated Services Code Point (DSCP) fields in packets. This classification helps prioritize and manage network traffic efficiently.
+To maximize efficiency, QoS operates in the kernel space using eBPF technology. This ensures minimal overhead and minimal impact on system performance.
+In addition to IP and port-based rules, QoS allows you to define traffic rules based on DNS names, providing granular control over how traffic is classified and treated.
+
 While Qosify works effectively without extensive configuration, it can be further optimized by setting bandwidth limits and rules.
 Fine-tuning QoS parameters can result in even better network performance.
 
