@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-10 08:34+0000\n"
+"POT-Creation-Date: 2024-01-29 07:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -152,8 +152,7 @@ msgid "Registration"
 msgstr ""
 
 #: ../../controller.rst:27 ../../migration.rst:84 ../../nat_helpers.rst:7
-#: ../../openvpn_roadwarrior.rst:7 ../../qos.rst:7 ../../reverse_proxy.rst:7
-#: ../../smtp.rst:7
+#: ../../openvpn_roadwarrior.rst:7 ../../reverse_proxy.rst:7 ../../smtp.rst:7
 msgid ""
 "This feature is still under development and does not have a user "
 "interface yet. It can currently only be configured through the command "
@@ -397,7 +396,7 @@ msgid ""
 msgstr ""
 
 #: ../../dns_filter.rst:28 ../../dpi_filter.rst:21 ../../index.rst:37
-#: ../../ipsec_tunnels.rst:16 ../../openvpn_tunnels.rst:19 ../../qos.rst:45
+#: ../../ipsec_tunnels.rst:16 ../../openvpn_tunnels.rst:19 ../../qos.rst:20
 msgid "Configuration"
 msgstr ""
 
@@ -2863,43 +2862,67 @@ msgstr ""
 msgid "Quality of Service (QoS)"
 msgstr ""
 
-#: ../../qos.rst:9
+#: ../../qos.rst:5
 msgid ""
-"NethSecuirty QoS uses Qosify to optimize network's performance. QoS is "
-"based on the CAKE (Common Applications Kept Enhanced) queuing discipline "
-"for Linux. It provides Active Queue Management (AQM) and Flow Queuing "
+"NethSecurity QoS provides Active Queue Management (AQM) and Flow Queuing "
 "(FQ) capabilities to help ensure that your network resources are used "
 "efficiently and fairly."
 msgstr ""
 
-#: ../../qos.rst:14
+#: ../../qos.rst:8
 msgid "Operating principles"
 msgstr ""
 
-#: ../../qos.rst:16
+#: ../../qos.rst:10
 msgid ""
-"`Qosify <https://github.com/openwrt/qosify>`_ is designed to make the "
-"best use of available bandwidth, without imposing strict limits or "
-"shaping traffic by default. It operates on the following principles:"
+"NethSecurity QoS is designed to make the best use of available bandwidth,"
+" without imposing strict limits or shaping traffic by default. It "
+"operates on the following principles:"
 msgstr ""
 
-#: ../../qos.rst:19
+#: ../../qos.rst:13
 msgid ""
-"*Bandwidth usage*: Qosify strives to utilize the available bandwidth to "
-"its fullest potential. By default, it does not impose strict bandwidth "
+"*Bandwidth usage*: QoS strives to utilize the available bandwidth to its "
+"fullest potential. By default, it does not impose strict bandwidth "
 "limitations on your network. Instead, it dynamically adjusts to network "
 "conditions, ensuring that unused bandwidth is efficiently utilized."
 msgstr ""
 
-#: ../../qos.rst:23
+#: ../../qos.rst:16
 msgid ""
-"*Flow management*: Qosify actively manages network flows to prevent any "
+"*Flow management*: QoS actively manages network flows to prevent any "
 "single client or application from monopolizing the available bandwidth. "
 "This ensures fair and equitable access to network resources for all "
 "users."
 msgstr ""
 
+#: ../../qos.rst:22
+msgid ""
+"Bandwidth management is handled dynamically and automatically by the "
+"system. Configuration is straightforward, involving specifying upload and"
+" download bandwidth values for each interface under QoS."
+msgstr ""
+
+#: ../../qos.rst:24
+msgid ""
+"While QoS can be set up on any interface, it typically functions "
+"optimally on WAN-type interfaces, setting upload and download speeds to "
+"the internet connection data rates."
+msgstr ""
+
 #: ../../qos.rst:26
+#, python-format
+msgid ""
+"To ensure resilience against service fluctuations, it is advisable to "
+"maintain a safety margin by configuring these parameters 10% lower than "
+"the measured values"
+msgstr ""
+
+#: ../../qos.rst:31
+msgid "Advanced Configuration"
+msgstr ""
+
+#: ../../qos.rst:33
 msgid ""
 "QoS relies on an eBPF (Extended Berkeley Packet Filter) based classifier "
 "to set Differentiated Services Code Point (DSCP) fields in packets. This "
@@ -2911,7 +2934,55 @@ msgid ""
 "how traffic is classified and treated."
 msgstr ""
 
-#: ../../qos.rst:30
+#: ../../qos.rst:37
+msgid ""
+"While Qosify works effectively without extensive configuration, it can be"
+" further optimized by setting bandwidth limits and rules. Fine-tuning QoS"
+" parameters can result in even better network performance."
+msgstr ""
+
+#: ../../qos.rst:40
+msgid ""
+"The modifications to the standard behavior however can be useful in very "
+"limited scenarios, for which, currently, it is only possible to act "
+"directly through the command line."
+msgstr ""
+
+#: ../../qos.rst:44
+msgid "Priority classes"
+msgstr ""
+
+#: ../../qos.rst:46
+msgid ""
+"QoS uses four classes of priority, each class can use a maximum "
+"percentage of bandwidth defined by its threshold."
+msgstr ""
+
+#: ../../qos.rst:48
+msgid ""
+"**Bulk (CS1, LE in kernel v5.9+):** This class is designed for low-"
+"priority traffic, with a 6.25% threshold."
+msgstr ""
+
+#: ../../qos.rst:49
+msgid ""
+"**Best Effort (General):** This class has a 100% threshold and is used "
+"for typical, non-prioritized traffic."
+msgstr ""
+
+#: ../../qos.rst:50
+msgid ""
+"**Video (AF4x, AF3x, CS3, AF2x, CS2, TOS4, TOS1):** Video traffic falls "
+"under this class, with a 50% threshold."
+msgstr ""
+
+#: ../../qos.rst:51
+msgid ""
+"**Voice (CS7, CS6, EF, VA, CS5, CS4):** Voice traffic is given the "
+"highest priority, with a 25% threshold."
+msgstr ""
+
+#: ../../qos.rst:54
 msgid ""
 "QoS can temporarily reduce the priority of a flow if it generates a "
 "significant amount of traffic, which is configurable. For example, a flow"
@@ -2920,144 +2991,98 @@ msgid ""
 "packets to ensure low-latency transmission of time-sensitive data."
 msgstr ""
 
-#: ../../qos.rst:35
-msgid "Priority classes"
-msgstr ""
-
-#: ../../qos.rst:37
+#: ../../qos.rst:58
 msgid ""
-"CAKE uses four classes of priority, as defined by the DiffServ "
-"(Differentiated Services) model:"
+"In addition to IP and port-based rules, QoS allows you to define traffic "
+"rules based on DNS names, providing granular control over how traffic is "
+"classified and treated."
 msgstr ""
 
-#: ../../qos.rst:39
-msgid ""
-"**Bulk (CS1, LE in kernel v5.9+):** This class is designed for low-"
-"priority traffic, with a 6.25% threshold."
-msgstr ""
-
-#: ../../qos.rst:40
-msgid ""
-"**Best Effort (General):** This class has a 100% threshold and is used "
-"for typical, non-prioritized traffic."
-msgstr ""
-
-#: ../../qos.rst:41
-msgid ""
-"**Video (AF4x, AF3x, CS3, AF2x, CS2, TOS4, TOS1):** Video traffic falls "
-"under this class, with a 50% threshold."
-msgstr ""
-
-#: ../../qos.rst:42
-msgid ""
-"**Voice (CS7, CS6, EF, VA, CS5, CS4):** Voice traffic is given the "
-"highest priority, with a 25% threshold."
-msgstr ""
-
-#: ../../qos.rst:49
-msgid ""
-"While Qosify works effectively without extensive configuration, it can be"
-" further optimized by setting bandwidth limits and rules. Fine-tuning QoS"
-" parameters can result in even better network performance."
-msgstr ""
-
-#: ../../qos.rst:52
-msgid "To enable qosify on the wan interface, execute: ::"
-msgstr ""
-
-#: ../../qos.rst:56
-msgid "To set bandwidth (30mbit download and 10 mbit upload): ::"
-msgstr ""
-
-#: ../../qos.rst:61
-msgid "Apply config and restart qosify: ::"
-msgstr ""
-
-#: ../../qos.rst:67
+#: ../../qos.rst:60
 msgid ""
 "To override DSCP classification, create a file "
 "``/etc/qosify/10-custom.conf`` with mappings: Each line has two "
 "whitespace separated fields, match and dscp."
 msgstr ""
 
-#: ../../qos.rst:70
+#: ../../qos.rst:63
 msgid "Match is one of:"
 msgstr ""
 
-#: ../../qos.rst:72
+#: ../../qos.rst:65
 msgid "``tcp:<port>[-<endport>]``"
 msgstr ""
 
-#: ../../qos.rst:73
+#: ../../qos.rst:66
 msgid "TCP single port, or range from <port> to <endport>"
 msgstr ""
 
-#: ../../qos.rst:74
+#: ../../qos.rst:67
 msgid "``udp:<port>[-<endport>]``"
 msgstr ""
 
-#: ../../qos.rst:75
+#: ../../qos.rst:68
 msgid "UDP single port, or range from <port> to <endport>"
 msgstr ""
 
-#: ../../qos.rst:76
+#: ../../qos.rst:69
 msgid "``<ipaddr>``"
 msgstr ""
 
-#: ../../qos.rst:77
+#: ../../qos.rst:70
 msgid "IPv4 address, e.g. 1.1.1.1"
 msgstr ""
 
-#: ../../qos.rst:78
+#: ../../qos.rst:71
 msgid "``<ipv6addr>``"
 msgstr ""
 
-#: ../../qos.rst:79
+#: ../../qos.rst:72
 msgid "IPv6 address, e.g. ff01::1"
 msgstr ""
 
-#: ../../qos.rst:80
+#: ../../qos.rst:73
 msgid "``dns:<pattern>``"
 msgstr ""
 
-#: ../../qos.rst:81
+#: ../../qos.rst:74
 msgid "fnmatch() pattern supporting * and ? as wildcard characters"
 msgstr ""
 
-#: ../../qos.rst:83
+#: ../../qos.rst:76
 msgid "``dns:/<regex>``"
 msgstr ""
 
-#: ../../qos.rst:83
+#: ../../qos.rst:76
 msgid ""
 "POSIX.2 extended regular expression for matching hostnames Only works, if"
 " dns lookups are passed to qosify via the add_dns_host ubus call."
 msgstr ""
 
-#: ../../qos.rst:86
+#: ../../qos.rst:79
 msgid "``dns_c:...``"
 msgstr ""
 
-#: ../../qos.rst:86
+#: ../../qos.rst:79
 msgid "Like dns, but only matches cname entries"
 msgstr ""
 
-#: ../../qos.rst:88
+#: ../../qos.rst:81
 msgid ""
 "The dscp can be a raw value, or a codepoint like CS0. Adding a ``+`` in "
 "front of the value tells qosify to only override the DSCP value if it is "
 "zero."
 msgstr ""
 
-#: ../../qos.rst:92
+#: ../../qos.rst:85
 msgid "Example: ::"
 msgstr ""
 
-#: ../../qos.rst:99 ../../troubleshooting.rst:5
+#: ../../qos.rst:92 ../../troubleshooting.rst:5
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../../qos.rst:101
+#: ../../qos.rst:94
 msgid ""
 "Inspect qosify status with ``qosify-status``, look for pkts in the 4 "
 "classes."
@@ -4741,5 +4766,61 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Qualitiy of Service (QoS)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecuirty QoS uses Qosify to optimize"
+#~ " network's performance. QoS is based "
+#~ "on the CAKE (Common Applications Kept"
+#~ " Enhanced) queuing discipline for Linux."
+#~ " It provides Active Queue Management "
+#~ "(AQM) and Flow Queuing (FQ) capabilities"
+#~ " to help ensure that your network "
+#~ "resources are used efficiently and "
+#~ "fairly."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Qosify <https://github.com/openwrt/qosify>`_ is "
+#~ "designed to make the best use of"
+#~ " available bandwidth, without imposing "
+#~ "strict limits or shaping traffic by "
+#~ "default. It operates on the following"
+#~ " principles:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Bandwidth usage*: Qosify strives to "
+#~ "utilize the available bandwidth to its"
+#~ " fullest potential. By default, it "
+#~ "does not impose strict bandwidth "
+#~ "limitations on your network. Instead, it"
+#~ " dynamically adjusts to network conditions,"
+#~ " ensuring that unused bandwidth is "
+#~ "efficiently utilized."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Flow management*: Qosify actively manages "
+#~ "network flows to prevent any single "
+#~ "client or application from monopolizing "
+#~ "the available bandwidth. This ensures "
+#~ "fair and equitable access to network "
+#~ "resources for all users."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "CAKE uses four classes of priority, "
+#~ "as defined by the DiffServ "
+#~ "(Differentiated Services) model:"
+#~ msgstr ""
+
+#~ msgid "To enable qosify on the wan interface, execute: ::"
+#~ msgstr ""
+
+#~ msgid "To set bandwidth (30mbit download and 10 mbit upload): ::"
+#~ msgstr ""
+
+#~ msgid "Apply config and restart qosify: ::"
 #~ msgstr ""
 
