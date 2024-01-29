@@ -59,6 +59,7 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Applications
 
+   users_databases
    openvpn_roadwarrior
    openvpn_tunnels
    ipsec_tunnels
