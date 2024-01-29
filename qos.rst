@@ -27,8 +27,8 @@ To ensure resilience against service fluctuations, it is advisable to maintain a
 
 
 
-Advanced Configuration
-====================
+Advanced configuration
+======================
 
 QoS relies on an eBPF (Extended Berkeley Packet Filter) based classifier to set Differentiated Services Code Point (DSCP) fields in packets. This classification helps prioritize and manage network traffic efficiently.
 To maximize efficiency, QoS operates in the kernel space using eBPF technology. This ensures minimal overhead and minimal impact on system performance.
