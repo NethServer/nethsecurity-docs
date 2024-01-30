@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 13:50+0000\n"
+"POT-Creation-Date: 2024-01-30 17:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -3853,50 +3853,67 @@ msgstr ""
 msgid ""
 "NethSecurity allows you to save a copy of system logs to a storage device"
 " other than the one it's currently on, like a USB stick or an additional "
-"hard drive. This can be useful for troubleshooting or keeping a system "
-"activity log."
-msgstr ""
-
-#: ../../storage.rst:12
-msgid "To configure the additional storage, follow these steps:"
-msgstr ""
-
-#: ../../storage.rst:14
-msgid "Attach your storage device (external or internal)"
+"hard drive. Additionally, if the disk containing the operating system has"
+" unallocated space, NethSecurity allows you to leverage this space as "
+"data storage. This provides a convenient and efficient way to utilize "
+"existing resources for expanding storage capacity without the need for "
+"additional external devices."
 msgstr ""
 
 #: ../../storage.rst:15
-msgid "Go to the Storage page"
-msgstr ""
-
-#: ../../storage.rst:16
-msgid "Select the desired storage where logs will be written to"
+msgid ""
+"This configuration can be useful for troubleshooting or keeping a system "
+"activity log."
 msgstr ""
 
 #: ../../storage.rst:17
-msgid "Click on button :guilabel:`Format and configure storage`"
+msgid "To configure the additional storage, follow these steps:"
 msgstr ""
 
 #: ../../storage.rst:19
-msgid ""
-"The system will prepare the device by erasing all partitions and existing"
-" data, creating a single partition using the ext4 filesystem, and "
-"mounting the storage at ``/mnt/data``."
+msgid "If you're willing to use an external device, attach your storage device"
+msgstr ""
+
+#: ../../storage.rst:20
+msgid "Access the ``Storage`` page under the ``System`` section on the right menu"
 msgstr ""
 
 #: ../../storage.rst:21
-msgid "The system will then be reconfigured as follows:"
+msgid "Select the desired storage where logs will be written to"
 msgstr ""
 
-#: ../../storage.rst:23
-msgid "rsyslog will write logs also inside ``/mnt/data/logs/messages`` file"
+#: ../../storage.rst:22
+msgid "Click on button :guilabel:`Format and configure storage`"
 msgstr ""
 
 #: ../../storage.rst:24
+msgid ""
+"If the chosen device is the primary disk, the system will generate a new "
+"partition utilizing any unallocated space. In the case of an additional "
+"disk selection, the system will undertake the preparation process, which "
+"involves erasing all existing partitions and data on the selected device,"
+" resulting in the creation of a one single partition."
+msgstr ""
+
+#: ../../storage.rst:28
+msgid ""
+"In both cases, the partition will be formatted using the ext4 filesystem "
+"and mounted as storage at ``/mnt/data``."
+msgstr ""
+
+#: ../../storage.rst:30
+msgid "The system will then be reconfigured as follows:"
+msgstr ""
+
+#: ../../storage.rst:32
+msgid "rsyslog will write logs also inside ``/mnt/data/logs/messages`` file"
+msgstr ""
+
+#: ../../storage.rst:33
 msgid "logrotate will rotate ``/mnt/data/logs/messages`` once a week"
 msgstr ""
 
-#: ../../storage.rst:26
+#: ../../storage.rst:35
 msgid ""
 "Extra generated data like metrics, will be synced from in-memory "
 "filesystem to persistent storage once a day during the night. To remove "
@@ -4825,5 +4842,29 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Advanced Configuration"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity allows you to save a "
+#~ "copy of system logs to a storage"
+#~ " device other than the one it's "
+#~ "currently on, like a USB stick or"
+#~ " an additional hard drive. This can"
+#~ " be useful for troubleshooting or "
+#~ "keeping a system activity log."
+#~ msgstr ""
+
+#~ msgid "Attach your storage device (external or internal)"
+#~ msgstr ""
+
+#~ msgid "Go to the Storage page"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The system will prepare the device "
+#~ "by erasing all partitions and existing"
+#~ " data, creating a single partition "
+#~ "using the ext4 filesystem, and mounting"
+#~ " the storage at ``/mnt/data``."
 #~ msgstr ""
 
