@@ -24,7 +24,7 @@ To configure a new proxy pass, click on the :guilabel:`Add reverse proxy` and cu
   If type is ``Path``, enter the resource path starting with a '/' for matching rules (e.g., ``/resource-path``).
   If type is ``Domain``, enter the fully qualified domain name for website matching rules. Select also an associated :ref:`certificate <certificates-section>`.
 - ``Destination URL``: specify the forwarding location for incoming requests (e.g., ``http://destination-server:port/path``).
-- ``Allowed networks``: define allowed IPv4/IPv6 networks in CIDR format. By default, accessible from anyone.
+- ``Allowed networks``: define allowed IPv4/IPv6 networks in CIDR format. By default, accessible from anywhere.
 - ``Description``: optionally, add a description for clarity.
 
 Additional information:
