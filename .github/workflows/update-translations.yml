@@ -15,12 +15,9 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install Sphinx
-        run: sudo apt-get install -y python3-sphinx python3-pip
-
-      - name: Install Sphinx deps
         run: pip install -r requirements.txt
 
       - name: Update po files
