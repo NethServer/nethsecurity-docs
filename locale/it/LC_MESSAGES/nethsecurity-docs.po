@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-31 07:40+0000\n"
+"POT-Creation-Date: 2024-02-01 15:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -152,7 +152,7 @@ msgid "Registration"
 msgstr ""
 
 #: ../../controller.rst:27 ../../migration.rst:84 ../../nat_helpers.rst:7
-#: ../../reverse_proxy.rst:7 ../../smtp.rst:7
+#: ../../smtp.rst:7
 msgid ""
 "This feature is still under development and does not have a user "
 "interface yet. It can currently only be configured through the command "
@@ -576,45 +576,24 @@ msgid "Each exception can be enabled or disabled as desired."
 msgstr ""
 
 #: ../../firewall.rst:5
-msgid "Firewall rules"
+msgid "Firewall"
 msgstr ""
 
-#: ../../firewall.rst:9 ../../nat.rst:7 ../../reverse_proxy.rst:23
+#: ../../firewall.rst:7
 msgid ""
-"This feature is still under development and can be configured only from "
-"LuCI web interface."
+"Firewall zones categorize network interfaces, defining trust boundaries, "
+"while firewall rules dictate traffic handling between zones. Zones "
+"organize network segments, and rules enforce security policies by "
+"specifying conditions for permitted or denied actions. Together, they "
+"allow the definition and application of rules for network traffic within "
+"the firewall."
 msgstr ""
 
-#: ../../firewall.rst:11
-msgid ""
-"Firewall rules define how network traffic is segmented and controlled "
-"between different zones. Firewalls acts as barriers between trusted "
-"internal networks and untrusted external networks, such as the internet. "
-"These rules specify which traffic is allowed, denied, or monitored based "
-"on predefined security policies."
-msgstr ""
-
-#: ../../firewall.rst:15
-msgid ""
-"The order of rules is important; the first matching rule is applied, "
-"determining the fate of the network packet."
-msgstr ""
-
-#: ../../firewall.rst:17
-msgid ""
-"Firewall rules can be configured from the ``Firewall`` page inside LuCI "
-"web interface, under the ``Network`` section."
-msgstr ""
-
-#: ../../firewall.rst:22
+#: ../../firewall.rst:14
 msgid "Zones and policies"
 msgstr ""
 
-#: ../../firewall.rst:26
-msgid "Zones and policies can be configured from the NethSecurity UI."
-msgstr ""
-
-#: ../../firewall.rst:28
+#: ../../firewall.rst:16
 msgid ""
 "In a firewall system, zones and policies are fundamental concepts that "
 "help manage network security by controlling the flow of traffic between "
@@ -628,7 +607,7 @@ msgid ""
 "and from that zone."
 msgstr ""
 
-#: ../../firewall.rst:35
+#: ../../firewall.rst:23
 msgid ""
 "Policies in a firewall define the rules and actions that determine how "
 "traffic is handled between different zones. These rules specify which "
@@ -636,63 +615,63 @@ msgid ""
 "security criteria"
 msgstr ""
 
-#: ../../firewall.rst:38
+#: ../../firewall.rst:26
 msgid "Default zones:"
 msgstr ""
 
-#: ../../firewall.rst:40
+#: ../../firewall.rst:28
 msgid ""
 "**WAN (Wide Area Network):** represents the external, untrusted network "
 "(e.g., the internet)."
 msgstr ""
 
-#: ../../firewall.rst:41
+#: ../../firewall.rst:29
 msgid ""
 "**LAN (Local Area Network):** represents the internal, trusted network "
 "(e.g., devices within a private home or organization)."
 msgstr ""
 
-#: ../../firewall.rst:43
+#: ../../firewall.rst:31
 msgid "Accepted traffic:"
 msgstr ""
 
-#: ../../firewall.rst:45
+#: ../../firewall.rst:33
 msgid ""
 "**from LAN to WAN:** traffic from devices within the LAN zone to the WAN "
 "zone is allowed, enabling internal devices to access the internet."
 msgstr ""
 
-#: ../../firewall.rst:46
+#: ../../firewall.rst:34
 msgid ""
 "**from LAN to firewall itself:** traffic from LAN devices to the firewall"
 " itself is permitted, facilitating communication for various purposes."
 msgstr ""
 
-#: ../../firewall.rst:47
+#: ../../firewall.rst:35
 msgid ""
 "**From LAN to LAN itself:** traffic between devices within the LAN zone "
 "is allowed, enabling internal devices to communicate with each other."
 msgstr ""
 
-#: ../../firewall.rst:49
+#: ../../firewall.rst:37
 msgid "Denied traffic:"
 msgstr ""
 
-#: ../../firewall.rst:51
+#: ../../firewall.rst:39
 msgid ""
 "**From WAN to firewall itself:** traffic from the WAN zone to the "
 "firewall itself is denied, preventing unauthorized external access "
 "attempts."
 msgstr ""
 
-#: ../../firewall.rst:52
+#: ../../firewall.rst:40
 msgid ""
 "**From WAN to WAN itself:** direct communication between external "
 "networks (WAN to WAN) is denied, isolating different external entities "
 "for enhanced security."
 msgstr ""
 
-#: ../../firewall.rst:54
+#: ../../firewall.rst:42
 msgid ""
 "In this configuration, the firewall regulates traffic between the WAN and"
 " LAN zones, allowing internal devices to access the internet and "
@@ -701,10 +680,127 @@ msgid ""
 "external networks."
 msgstr ""
 
-#: ../../firewall.rst:56
+#: ../../firewall.rst:44
 msgid ""
 "Default zones can't be deleted but the network administrator can change "
 "existing policies or create new zones."
+msgstr ""
+
+#: ../../firewall.rst:49
+msgid "Rules"
+msgstr ""
+
+#: ../../firewall.rst:51
+msgid ""
+"Firewall rules define how network traffic is segmented and controlled "
+"between different zones. Firewalls acts as barriers between trusted "
+"internal networks and untrusted external networks, such as the internet. "
+"These rules specify which traffic is allowed, denied, or monitored based "
+"on predefined security policies."
+msgstr ""
+
+#: ../../firewall.rst:55
+msgid ""
+"The order of rules is important; the first matching rule is applied, "
+"determining the fate of the network packet."
+msgstr ""
+
+#: ../../firewall.rst:57
+msgid "The page is organized into three tabs, each serving a specific purpose:"
+msgstr ""
+
+#: ../../firewall.rst:59
+msgid ""
+"``Forward rules`` tab: thiis tab is dedicated to configuring rules for "
+"data packets moving between different zones in the network."
+msgstr ""
+
+#: ../../firewall.rst:60
+msgid ""
+"``Input rules`` tab: this tab is dedicated to configuring rules for "
+"incoming packets destined for the firewall itself."
+msgstr ""
+
+#: ../../firewall.rst:61
+msgid ""
+"``Output rules`` tab: this tab is dedicated to configuring rules for "
+"packets emitted by the firewall."
+msgstr ""
+
+#: ../../firewall.rst:63
+msgid ""
+"Locate the button to add a new rule, click on it to initiate the rule "
+"creation process. Fill in the following fields for the new rule:"
+msgstr ""
+
+#: ../../firewall.rst:66
+msgid ""
+"``Status``: enable or disable the rule based on your requirements. By "
+"default the rule is enabled during creation."
+msgstr ""
+
+#: ../../firewall.rst:67
+msgid "``Rule name``: assign a descriptive name to identify the rule."
+msgstr ""
+
+#: ../../firewall.rst:68
+msgid ""
+"``Source address``: enter one or more IPv4/IPv6 addresses or networks. "
+"Leave unselected for any source address. This field is not present for "
+"``Output rules``, as the source address is always the firewall itself."
+msgstr ""
+
+#: ../../firewall.rst:70
+msgid ""
+"``Source zone``: specify the traffic source zone. Choose a specific zone "
+"or select 'Any' to include traffic from any zone."
+msgstr ""
+
+#: ../../firewall.rst:71
+msgid ""
+"``Destination address``: enter one or more IPv4/IPv6 addresses or "
+"networks. Leave unselected for any destination address. This field is not"
+" present for ``Input rules``, as the destination address is always the "
+"firewall itself."
+msgstr ""
+
+#: ../../firewall.rst:73
+msgid ""
+"``Destination zone``: specify the traffic destination zone. Choose a "
+"specific zone. Bear in mind that the source and destination zones can't "
+"be the same."
+msgstr ""
+
+#: ../../firewall.rst:74
+msgid ""
+"``Destination service``: select from the list or choose 'Custom' to enter"
+" specific ports and select protocols."
+msgstr ""
+
+#: ../../firewall.rst:75
+msgid ""
+"``Action``: define the action when the rule conditions are met: * "
+"``Accept``: accept the network traffic. * ``Reject``: block the traffic "
+"and notify the sender host. * ``Drop``: block the traffic, packets are "
+"dropped and no notification is sent to the sender host."
+msgstr ""
+
+#: ../../firewall.rst:79
+msgid ""
+"``Rule position``: decide whether to add the rule to the bottom or top of"
+" the rule list."
+msgstr ""
+
+#: ../../firewall.rst:80
+msgid ""
+"``Logging``: indicate whether traffic matching this rule should be "
+"logged. The log entry will include the rule name as a prefix."
+msgstr ""
+
+#: ../../firewall.rst:81
+msgid ""
+"``Tags``: optionally, add tags for organizational purposes. Note that the"
+" 'automated' tag is reserved for system use."
 msgstr ""
 
 #: ../../hotspot.rst:3
@@ -954,7 +1050,7 @@ msgstr ""
 
 #: ../../index.rst:9 ../../introduction.rst:7
 msgid ""
-"NethSecurity is currently in the :ref:`alpha development phase "
+"NethSecurity is currently in the :ref:`beta development phase "
 "<release_glossary-section>`. During this stage, the software is "
 "undergoing testing, and there might be instabilities or unforeseen "
 "errors. It is highly discouraged to use NethSecurity in production "
@@ -1872,7 +1968,7 @@ msgstr ""
 msgid "Let's Encrypt certificate configuration"
 msgstr ""
 
-#: ../../migration.rst:130 ../../reverse_proxy.rst:3
+#: ../../migration.rst:130 ../../reverse_proxy.rst:6
 msgid "Reverse proxy"
 msgstr ""
 
@@ -2127,6 +2223,12 @@ msgstr ""
 
 #: ../../nat.rst:3
 msgid "NAT"
+msgstr ""
+
+#: ../../nat.rst:7
+msgid ""
+"This feature is still under development and can be configured only from "
+"LuCI web interface."
 msgstr ""
 
 #: ../../nat.rst:9
@@ -3412,14 +3514,94 @@ msgid ""
 msgstr ""
 
 #: ../../release_notes.rst:11
-msgid "Major changes on 2023-12-11"
+msgid "Major changes on 2024-02-01"
 msgstr ""
 
 #: ../../release_notes.rst:13
-msgid "**Alpha 2**"
+msgid "**Beta 1**"
 msgstr ""
 
 #: ../../release_notes.rst:15
+msgid "Image version: `8-23.05.2-ns.0.0.1-beta1`"
+msgstr ""
+
+#: ../../release_notes.rst:17
+msgid ""
+"The Beta1 release marks the transition to the new UI as the primary "
+"configuration interface. Luci remains active by default for "
+"configurations not yet available in the new UI and for verification "
+"purposes. Known bugs in the new interface can be found `here "
+"<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
+msgstr ""
+
+#: ../../release_notes.rst:21
+msgid "Main changes:"
+msgstr ""
+
+#: ../../release_notes.rst:23
+msgid ""
+"Added a dedicated page for managing certificates and reverse proxy "
+"settings. Improved the import process for both configurations."
+msgstr ""
+
+#: ../../release_notes.rst:24
+msgid ""
+"Introduced a new page for configuring firewall rules. Users are advised "
+"to use this page instead of Luci's, as using both may lead to "
+"incompatibilities."
+msgstr ""
+
+#: ../../release_notes.rst:25
+msgid ""
+"Added a page for Quality of Service (QoS) configuration to enhance "
+"network traffic management."
+msgstr ""
+
+#: ../../release_notes.rst:26
+msgid ""
+"Added a page for configuring OpenVPN Roadwarrior. Updated the migration "
+"process for the new implementation."
+msgstr ""
+
+#: ../../release_notes.rst:27
+msgid ""
+"Introduced the option to use a partition of the main disk as storage for "
+"logs."
+msgstr ""
+
+#: ../../release_notes.rst:28
+msgid ""
+"Improved the migration process for multiwan and OpenVPN tunnels, "
+"enhancing overall system compatibility."
+msgstr ""
+
+#: ../../release_notes.rst:29
+msgid ""
+"Streamlined the management of upgrades and migrations, focusing on a "
+"smoother transition."
+msgstr ""
+
+#: ../../release_notes.rst:30
+msgid ""
+"Implemented a new versioning system to uniquely identify each image, "
+"enhancing clarity in tracking releases."
+msgstr ""
+
+#: ../../release_notes.rst:31
+msgid ""
+"Incorporated numerous usability improvements and fixed issues across "
+"existing pages, ensuring a more user-friendly experience."
+msgstr ""
+
+#: ../../release_notes.rst:34
+msgid "Major changes on 2023-12-11"
+msgstr ""
+
+#: ../../release_notes.rst:36
+msgid "**Alpha 2**"
+msgstr ""
+
+#: ../../release_notes.rst:38
 msgid ""
 "This alpha release is specifically crafted for evaluation purposes, "
 "focusing on testing the functionalities of the new system's user "
@@ -3429,104 +3611,104 @@ msgid ""
 "<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
 msgstr ""
 
-#: ../../release_notes.rst:19
+#: ../../release_notes.rst:42
 msgid "**UI Enhancements**"
 msgstr ""
 
-#: ../../release_notes.rst:21
+#: ../../release_notes.rst:44
 msgid ""
 "Resolved numerous bugs across various pages, including DHCP and DPI "
 "filter, enhancing overall pages stability."
 msgstr ""
 
-#: ../../release_notes.rst:22
+#: ../../release_notes.rst:45
 msgid "Introduced the OpenVPN tunnel configuration page."
 msgstr ""
 
-#: ../../release_notes.rst:23
+#: ../../release_notes.rst:46
 msgid "Added the IPsec tunnel configuration page."
 msgstr ""
 
-#: ../../release_notes.rst:24
+#: ../../release_notes.rst:47
 msgid "Incorporated the Hotspot (Dedalo) configuration page."
 msgstr ""
 
-#: ../../release_notes.rst:25
+#: ../../release_notes.rst:48
 msgid "Implemented the Backup and Restore page."
 msgstr ""
 
-#: ../../release_notes.rst:26
+#: ../../release_notes.rst:49
 msgid "Introduced exclusion functionality to the DPI filter page."
 msgstr ""
 
-#: ../../release_notes.rst:27
+#: ../../release_notes.rst:50
 msgid ""
 "Exposed netdata reports within the UI, featuring a configurable ping "
 "latency monitor."
 msgstr ""
 
-#: ../../release_notes.rst:28
+#: ../../release_notes.rst:51
 msgid "Addressed the default language issue for non-translated languages."
 msgstr ""
 
-#: ../../release_notes.rst:29
+#: ../../release_notes.rst:52
 msgid "Refactored and improved the Network page."
 msgstr ""
 
-#: ../../release_notes.rst:30
+#: ../../release_notes.rst:53
 msgid "Added a page to manage System Updates."
 msgstr ""
 
-#: ../../release_notes.rst:31
+#: ../../release_notes.rst:54
 msgid "Included a migration page from NethServer 7."
 msgstr ""
 
-#: ../../release_notes.rst:32
+#: ../../release_notes.rst:55
 msgid "Enabled factory reset functionality directly from the UI."
 msgstr ""
 
-#: ../../release_notes.rst:33
+#: ../../release_notes.rst:56
 msgid ""
 "Implemented a VPN Users page in preparation for the upcoming OpenVPN Road"
 " Warrior server."
 msgstr ""
 
-#: ../../release_notes.rst:35
+#: ../../release_notes.rst:58
 msgid "**General Improvements**"
 msgstr ""
 
-#: ../../release_notes.rst:37
+#: ../../release_notes.rst:60
 msgid "Updated the base OpenWrt to version 23.05.2."
 msgstr ""
 
-#: ../../release_notes.rst:38
+#: ../../release_notes.rst:61
 msgid ""
 "Established a mechanism to send alerts to remote portals, including "
 "my.nethesis.it and my.nethserver.com."
 msgstr ""
 
-#: ../../release_notes.rst:39
+#: ../../release_notes.rst:62
 msgid ""
 "Added support for One-Time Passwords (OTP) in future OpenVPN Road Warrior"
 " server configurations."
 msgstr ""
 
-#: ../../release_notes.rst:41
+#: ../../release_notes.rst:64
 msgid ""
 "**Note**: the bond configuration is still in progress, and as a result, "
 "bond-type network interfaces are currently non-functional in this "
 "release."
 msgstr ""
 
-#: ../../release_notes.rst:44
+#: ../../release_notes.rst:67
 msgid "Major changes on 2023-10-31"
 msgstr ""
 
-#: ../../release_notes.rst:46
+#: ../../release_notes.rst:69
 msgid "**Alpha 1**"
 msgstr ""
 
-#: ../../release_notes.rst:48
+#: ../../release_notes.rst:71
 msgid ""
 "This is an alpha release, designed for evaluation purposes to explore the"
 " functionalities of the new system. Users have the option to use the new "
@@ -3536,7 +3718,7 @@ msgid ""
 "interface is completed."
 msgstr ""
 
-#: ../../release_notes.rst:52
+#: ../../release_notes.rst:75
 msgid ""
 "While the entire backend functionality is already operational and "
 "thoroughly tested, the new interface is not yet complete. Some bugs in "
@@ -3544,77 +3726,77 @@ msgid ""
 "<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
 msgstr ""
 
-#: ../../release_notes.rst:55
+#: ../../release_notes.rst:78
 msgid "The new interface includes the following features:"
 msgstr ""
 
-#: ../../release_notes.rst:57
+#: ../../release_notes.rst:80
 msgid "Dashboard"
 msgstr ""
 
-#: ../../release_notes.rst:58
+#: ../../release_notes.rst:81
 msgid "Subscription Management"
 msgstr ""
 
-#: ../../release_notes.rst:59
+#: ../../release_notes.rst:82
 msgid "Hostname and Timezone Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:60
+#: ../../release_notes.rst:83
 msgid "Additional Storage Setup"
 msgstr ""
 
-#: ../../release_notes.rst:61
+#: ../../release_notes.rst:84
 msgid "Network Interface Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:62
+#: ../../release_notes.rst:85
 msgid "DNS and DHCP Settings"
 msgstr ""
 
-#: ../../release_notes.rst:63
+#: ../../release_notes.rst:86
 msgid "Routing Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:64
+#: ../../release_notes.rst:87
 msgid "Multi-WAN Support"
 msgstr ""
 
-#: ../../release_notes.rst:65
+#: ../../release_notes.rst:88
 msgid "Port Forwarding Options"
 msgstr ""
 
-#: ../../release_notes.rst:66
+#: ../../release_notes.rst:89
 msgid "Zones and Policies Management"
 msgstr ""
 
-#: ../../release_notes.rst:67
+#: ../../release_notes.rst:90
 msgid "Flashstart DNS Filtering"
 msgstr ""
 
-#: ../../release_notes.rst:68
+#: ../../release_notes.rst:91
 msgid "Deep Packet Inspection (DPI) Filtering"
 msgstr ""
 
-#: ../../release_notes.rst:69
+#: ../../release_notes.rst:92
 msgid "Root User Password Change"
 msgstr ""
 
-#: ../../release_notes.rst:70
+#: ../../release_notes.rst:93
 msgid "Access to System Logs"
 msgstr ""
 
-#: ../../release_notes.rst:75
+#: ../../release_notes.rst:98
 msgid "Releases glossary"
 msgstr ""
 
-#: ../../release_notes.rst:77
+#: ../../release_notes.rst:100
 msgid ""
 "The software release cycle includes four stages: Alpha, Beta, Release "
 "Candidate (RC), and Stable."
 msgstr ""
 
-#: ../../release_notes.rst:79
+#: ../../release_notes.rst:102
 msgid ""
 "During the **Alpha** stage, the software is not thoroughly tested and may"
 " not include all planned features. This release is not suitable for "
@@ -3623,7 +3805,7 @@ msgid ""
 "to other releases are not supported."
 msgstr ""
 
-#: ../../release_notes.rst:83
+#: ../../release_notes.rst:106
 msgid ""
 "The **Beta** stage indicates that the software is mostly feature "
 "complete, but it may still contain many known and unknown bugs. This "
@@ -3633,7 +3815,7 @@ msgid ""
 "require a manual procedure."
 msgstr ""
 
-#: ../../release_notes.rst:87
+#: ../../release_notes.rst:110
 msgid ""
 "During the **Release Candidate (RC)** stage, the software is feature "
 "complete, and it contains no known bugs. If no major issues arise, it can"
@@ -3643,7 +3825,7 @@ msgid ""
 "some experience with it."
 msgstr ""
 
-#: ../../release_notes.rst:92
+#: ../../release_notes.rst:115
 msgid ""
 "The **Stable** release is the most reliable and safe to use in production"
 " environments. It has been thoroughly tested and is considered to be free"
@@ -3997,12 +4179,16 @@ msgid ""
 "storage media."
 msgstr ""
 
-#: ../../reverse_proxy.rst:9
+#: ../../reverse_proxy.rst:3
+msgid "Certificates and reverse proxy"
+msgstr ""
+
+#: ../../reverse_proxy.rst:8
 msgid ""
-"NethSecurity provides a reverse proxy using nginx. A reverse proxy is a "
-"server that sits in front of one or more web servers and forwards "
-"requests to them. It can be used to improve performance, security, and "
-"reliability."
+"NethSecurity provides a reverse proxy using `nginx <https://nginx.org>`_."
+" A reverse proxy, sometimes called also proxy pass, is a server that sits"
+" in front of one or more web servers and forwards requests to them. It "
+"can be used to improve performance, security, and reliability."
 msgstr ""
 
 #: ../../reverse_proxy.rst:12
@@ -4021,16 +4207,97 @@ msgstr ""
 
 #: ../../reverse_proxy.rst:16
 msgid ""
-"See the `developer manual "
-"<https://dev.nethsecurity.org/packages/nginx/>`_ for a guide on how to "
-"configure it from the command line."
+"This page allows users to configure proxy pass settings, specifying "
+"whether the rule applies to a domain or a path. For domain "
+"configurations, users can select a certificate. The destination URL "
+"determines where incoming requests are forwarded, and the allowed network"
+" field provides the option to restrict access to specific CIDR-formatted "
+"networks. A description can be added for clarity."
 msgstr ""
 
-#: ../../reverse_proxy.rst:19
-msgid "Let's Encrypt certificates"
+#: ../../reverse_proxy.rst:21
+msgid ""
+"To configure a new proxy pass, click on the :guilabel:`Add reverse proxy`"
+" and customize the following options:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:25
+#: ../../reverse_proxy.rst:23
+msgid ""
+"``Type``: choose between Domain or Path. If type is ``Path``, enter the "
+"resource path starting with a '/' for matching rules (e.g., ``/resource-"
+"path``). If type is ``Domain``, enter the fully qualified domain name for"
+" website matching rules. Select also an associated :ref:`certificate "
+"<certificates-section>`."
+msgstr ""
+
+#: ../../reverse_proxy.rst:26
+msgid ""
+"``Destination URL``: specify the forwarding location for incoming "
+"requests (e.g., ``http://destination-server:port/path``)."
+msgstr ""
+
+#: ../../reverse_proxy.rst:27
+msgid ""
+"``Allowed networks``: define allowed IPv4/IPv6 networks in CIDR format. "
+"By default, accessible from anywhere."
+msgstr ""
+
+#: ../../reverse_proxy.rst:28
+msgid "``Description``: optionally, add a description for clarity."
+msgstr ""
+
+#: ../../reverse_proxy.rst:30
+msgid "Additional information:"
+msgstr ""
+
+#: ../../reverse_proxy.rst:32
+msgid ""
+"Headers sent to destination server: X-Forwarded-Proto, X-Forwarded-For, X"
+"-Real-IP are always sent."
+msgstr ""
+
+#: ../../reverse_proxy.rst:33
+msgid ""
+"Certificate validation: if the destination uses HTTPS, the certificate is"
+" not validated to avoid errors on misconfigured servers."
+msgstr ""
+
+#: ../../reverse_proxy.rst:34
+msgid "WebSocket support: all reverse proxies automatically support WebSockets."
+msgstr ""
+
+#: ../../reverse_proxy.rst:39
+msgid "Certificates"
+msgstr ""
+
+#: ../../reverse_proxy.rst:41
+msgid ""
+"The ``Certificates`` page centralizes certificate management "
+"functionalities, facilitating the handling of certificates on the "
+"firewall. At the firewall's initial startup, a self-signed certificate is"
+" automatically generated. This certificate serves as a default secure "
+"option."
+msgstr ""
+
+#: ../../reverse_proxy.rst:44
+msgid ""
+"The certificate management page allows users to upload custom "
+"certificates, request certificates from Let's Encrypt, and manage "
+"existing certificates."
+msgstr ""
+
+#: ../../reverse_proxy.rst:46
+msgid ""
+"The page lists all certificates, highlighting the default certificate. "
+"The default certificate is the one automatically served when accessing "
+"the firewall through its FQDN or IP address."
+msgstr ""
+
+#: ../../reverse_proxy.rst:50
+msgid "Let's Encrypt"
+msgstr ""
+
+#: ../../reverse_proxy.rst:52
 msgid ""
 "Let's Encrypt is a free, automated, and open Certificate Authority (CA) "
 "that provides SSL/TLS certificates for securing websites. These "
@@ -4041,20 +4308,71 @@ msgid ""
 "administrators without significant costs or technical expertise."
 msgstr ""
 
-#: ../../reverse_proxy.rst:30
+#: ../../reverse_proxy.rst:57
 msgid ""
-"To obtain a valid Let's Encrpt certificate, make sure the following "
-"requirements are met:"
+"The certificate page allows users to request certificates from Let's "
+"Encrypt. The process is straightforward and requires minimal "
+"configuration. Users can specify a meaningful name for the certificate "
+"and one or more domains. The certificate is automatically renewed every "
+"60 days."
 msgstr ""
 
-#: ../../reverse_proxy.rst:32
+#: ../../reverse_proxy.rst:60
+msgid ""
+"The Let's Encrypt certificate request process involves the following "
+"steps:"
+msgstr ""
+
+#: ../../reverse_proxy.rst:62
+msgid "click on the :guilabel:`Add Let's Encrypt certificate` button;"
+msgstr ""
+
+#: ../../reverse_proxy.rst:63
+msgid "specify a meaningful name for the certificate;"
+msgstr ""
+
+#: ../../reverse_proxy.rst:64
+msgid "specify one or more domains for the certificate;"
+msgstr ""
+
+#: ../../reverse_proxy.rst:65
+msgid "click on the :guilabel:`Save` button."
+msgstr ""
+
+#: ../../reverse_proxy.rst:67
+msgid "The validation process can be performed in two ways:"
+msgstr ""
+
+#: ../../reverse_proxy.rst:69
+msgid ""
+"Standalone mode (HTTP validation): the Standalone mode involves "
+"temporarily stopping the web server to allow the ACME client tool to bind"
+" to the required ports directly. It serves the authentication challenges "
+"to prove domain ownership, obtaining and installing the certificate."
+msgstr ""
+
+#: ../../reverse_proxy.rst:72
+msgid ""
+"DNS validation: DNS validation requires adding a specific DNS TXT record "
+"to the domain's DNS configuration. ACME client checks for this record to "
+"verify domain ownership. This method is useful in situations where "
+"modifying web server configurations is challenging or not desired."
+msgstr ""
+
+#: ../../reverse_proxy.rst:75
+msgid ""
+"When standalone mode is selected, make sure the following requirements "
+"are met:"
+msgstr ""
+
+#: ../../reverse_proxy.rst:77
 msgid ""
 "The server must be reachable from outside at port 80. Make sure your port"
 " 80 is open to the public Internet (you can check with sites like `CSM "
 "<http://www.canyouseeme.org/>`_);"
 msgstr ""
 
-#: ../../reverse_proxy.rst:35
+#: ../../reverse_proxy.rst:80
 msgid ""
 "The domains that you want the certificate for must be public domain names"
 " associated to server own public IP. Make sure you have public DNS name "
@@ -4062,10 +4380,51 @@ msgid ""
 "<http://viewdns.info/>`_)."
 msgstr ""
 
-#: ../../reverse_proxy.rst:39
+#: ../../reverse_proxy.rst:84
 msgid ""
-"Let's Encrypt certificates can be configured from the ``ACME certs`` page"
-" inside LuCI web interface, under the ``Services`` section."
+"Select DNS validation if your DNS provider supports API access. Choose "
+"the DNS provider from the drop-down menu and enter the API key and "
+"secret. Follow the `acme.sh DNS providers documentation "
+"<https://github.com/acmesh-official/acme.sh/wiki/dnsapi>`_) to know which"
+" API key and secret are required for your DNS provider. The DNS "
+"validation is the only one supported for wildcard certificates."
+msgstr ""
+
+#: ../../reverse_proxy.rst:89
+msgid ""
+"The certificate generation process can take a few minutes. During this "
+"time, the certificate status is ``Pending``."
+msgstr ""
+
+#: ../../reverse_proxy.rst:92
+msgid "Custom certificate"
+msgstr ""
+
+#: ../../reverse_proxy.rst:94
+msgid "The user can upload a custom certificate to the firewall."
+msgstr ""
+
+#: ../../reverse_proxy.rst:96
+msgid "The process involves the following steps:"
+msgstr ""
+
+#: ../../reverse_proxy.rst:98
+msgid "click on the :guilabel:`Import certificate` button"
+msgstr ""
+
+#: ../../reverse_proxy.rst:99
+msgid "specify a meaningful name for the certificate"
+msgstr ""
+
+#: ../../reverse_proxy.rst:100
+msgid ""
+"drag and drop the certificate, private key, and optionally, the chain "
+"certificate; ensure that all uploaded files adhere to the `PEM format "
+"<https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail>`_ standards"
+msgstr ""
+
+#: ../../reverse_proxy.rst:102
+msgid "click on the :guilabel:`Save` button"
 msgstr ""
 
 #: ../../routing.rst:5
@@ -5365,5 +5724,62 @@ msgstr ""
 #~ "<https://dev.nethsecurity.org/packages/ns-openvpn/#openvpn-"
 #~ "road-warrior>`_ for more info on "
 #~ "manual configuration."
+#~ msgstr ""
+
+#~ msgid "Firewall rules"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Firewall rules can be configured from"
+#~ " the ``Firewall`` page inside LuCI "
+#~ "web interface, under the ``Network`` "
+#~ "section."
+#~ msgstr ""
+
+#~ msgid "Zones and policies can be configured from the NethSecurity UI."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity is currently in the "
+#~ ":ref:`alpha development phase <release_glossary-"
+#~ "section>`. During this stage, the "
+#~ "software is undergoing testing, and "
+#~ "there might be instabilities or "
+#~ "unforeseen errors. It is highly "
+#~ "discouraged to use NethSecurity in "
+#~ "production environments."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity provides a reverse proxy "
+#~ "using nginx. A reverse proxy is a"
+#~ " server that sits in front of "
+#~ "one or more web servers and "
+#~ "forwards requests to them. It can "
+#~ "be used to improve performance, "
+#~ "security, and reliability."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See the `developer manual "
+#~ "<https://dev.nethsecurity.org/packages/nginx/>`_ for a "
+#~ "guide on how to configure it from"
+#~ " the command line."
+#~ msgstr ""
+
+#~ msgid "Let's Encrypt certificates"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To obtain a valid Let's Encrpt "
+#~ "certificate, make sure the following "
+#~ "requirements are met:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Let's Encrypt certificates can be "
+#~ "configured from the ``ACME certs`` page"
+#~ " inside LuCI web interface, under the"
+#~ " ``Services`` section."
 #~ msgstr ""
 
