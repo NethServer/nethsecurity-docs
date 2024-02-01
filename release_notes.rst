@@ -12,6 +12,8 @@ Major changes on 2024-02-01
 
 **Beta 1**
 
+Image version: `8-23.05.2-ns.0.0.1-beta1`
+
 The Beta1 release marks the transition to the new UI as the primary configuration interface.
 Luci remains active by default for configurations not yet available in the new UI and for verification purposes.
 Known bugs in the new interface can be found `here <https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_.
