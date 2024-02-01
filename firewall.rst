@@ -58,7 +58,7 @@ The page is organized into three tabs, each serving a specific purpose:
 
 * ``Forward rules`` tab: thiis tab is dedicated to configuring rules for data packets moving between different zones in the network.
 * ``Input rules`` tab: this tab is dedicated to configuring rules for incoming packets destined for the firewall itself.
-* ``Output rules`` tab: this tab is dedicated to configuring rules for data packets leaving the firewall.
+* ``Output rules`` tab: this tab is dedicated to configuring rules for packets emitted by the firewall.
 
 Locate the button to add a new rule, click on it to initiate the rule creation process.
 Fill in the following fields for the new rule:
