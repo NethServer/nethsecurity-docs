@@ -6,7 +6,7 @@ Reverse proxy
 =============
 
 NethSecurity provides a reverse proxy using `nginx <https://nginx.org>`_.
-A reverse proxy, sometimes called also proxy pass,  is a server that sits in front of one or more web servers and forwards requests to them.
+A reverse proxy, sometimes called also proxy pass, is a server that sits in front of one or more web servers and forwards requests to them.
 It can be used to improve performance, security, and reliability.
 
 In simpler terms, a reverse proxy is like a traffic cop for web servers. It directs incoming requests to the appropriate server and sends back the responses.
