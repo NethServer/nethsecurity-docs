@@ -7,6 +7,27 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-02-01
+===========================
+
+**Beta 1**
+
+The Beta1 release marks the transition to the new UI as the primary configuration interface.
+Luci remains active by default for configurations not yet available in the new UI and for verification purposes.
+Known bugs in the new interface can be found `here <https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_.
+
+Main changes:
+
+- Added a dedicated page for managing certificates and reverse proxy settings. Improved the import process for both configurations.
+- Introduced a new page for configuring firewall rules. Users are advised to use this page instead of Luci's, as using both may lead to incompatibilities.
+- Added a page for Quality of Service (QoS) configuration to enhance network traffic management.
+- Added a page for configuring OpenVPN Roadwarrior. Updated the migration process for the new implementation.
+- Introduced the option to use a partition of the main disk as storage for logs.
+- Improved the migration process for multiwan and OpenVPN tunnels, enhancing overall system compatibility.
+- Streamlined the management of upgrades and migrations, focusing on a smoother transition.
+- Implemented a new versioning system to uniquely identify each image, enhancing clarity in tracking releases.
+- Incorporated numerous usability improvements and fixed issues across existing pages, ensuring a more user-friendly experience.
+
 Major changes on 2023-12-11
 ===========================
 
