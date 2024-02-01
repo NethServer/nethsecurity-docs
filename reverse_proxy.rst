@@ -30,7 +30,7 @@ To configure a new proxy pass, click on the :guilabel:`Add reverse proxy` and cu
 Additional information:
 
 - Headers sent to destination server: X-Forwarded-Proto, X-Forwarded-For, X-Real-IP are always sent.
-- Certificate validation: of the destination uses HTTPS, the certificate is not validated to avoid errors on misconfigured servers.
+- Certificate validation: if the destination uses HTTPS, the certificate is not validated to avoid errors on misconfigured servers.
 - WebSocket support: all reverse proxies automatically support WebSockets.
 
 .. _certificates-section:
