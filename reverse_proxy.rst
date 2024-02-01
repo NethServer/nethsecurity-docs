@@ -55,7 +55,7 @@ Unlike traditional CAs, Let's Encrypt offers SSL certificates through an automat
 and administrators without significant costs or technical expertise.
 
 The certificate page allows users to request certificates from Let's Encrypt. The process is straightforward and requires minimal configuration.
-Users can specify a meaningful name for the certificate and one or more domains. The certificate is automatically renewed every 90 days.
+Users can specify a meaningful name for the certificate and one or more domains. The certificate is automatically renewed every 60 days.
 
 The Let's Encrypt certificate request process involves the following steps:
 
