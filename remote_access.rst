@@ -4,6 +4,8 @@ Remote access
 
 .. highlight:: bash
 
+.. _default_credentials-section:
+
 Default credentials
 ===================
 

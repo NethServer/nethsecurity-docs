@@ -53,7 +53,7 @@ Since running from the USB stick does not guarantee best performances, you can a
 NethSecurity to the hard disk while running it from the USB stick itself:
 
 1. connect to the server using VGA, serial console or SSH
-2. login with default credentials
+2. login with :ref:`default credentials <default_credentials-section>`
 3. execute ``ns-install`` and follow the instructions
 
 
