@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-01 15:57+0000\n"
+"POT-Creation-Date: 2024-02-02 14:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -1169,7 +1169,7 @@ msgid "connect to the server using VGA, serial console or SSH"
 msgstr ""
 
 #: ../../install.rst:56
-msgid "login with default credentials"
+msgid "login with :ref:`default credentials <default_credentials-section>`"
 msgstr ""
 
 #: ../../install.rst:57
@@ -3836,70 +3836,70 @@ msgstr ""
 msgid "Remote access"
 msgstr ""
 
-#: ../../remote_access.rst:8
+#: ../../remote_access.rst:10
 msgid "Default credentials"
 msgstr ""
 
-#: ../../remote_access.rst:10
+#: ../../remote_access.rst:12
 msgid "Default credentials are:"
 msgstr ""
 
-#: ../../remote_access.rst:12
+#: ../../remote_access.rst:14
 msgid "User: ``root``"
 msgstr ""
 
-#: ../../remote_access.rst:13
+#: ../../remote_access.rst:15
 msgid "Password: ``Nethesis,1234``"
 msgstr ""
 
-#: ../../remote_access.rst:15
+#: ../../remote_access.rst:17
 msgid "Such credentials can be used to login into the web interface or using SSH."
 msgstr ""
 
-#: ../../remote_access.rst:19
+#: ../../remote_access.rst:21
 msgid ""
 "The default password for the root user is ``Nethesis,1234``. It is "
 "recommended to change the password immediately after logging in for the "
 "first time."
 msgstr ""
 
-#: ../../remote_access.rst:22
+#: ../../remote_access.rst:24
 msgid "Web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:24
+#: ../../remote_access.rst:26
 msgid "NethSecurity has two different web user interfaces:"
 msgstr ""
 
-#: ../../remote_access.rst:26
+#: ../../remote_access.rst:28
 msgid ""
 "NethSecurity UI (``ns-ui``): A custom user interface focused on usage "
 "simplicity."
 msgstr ""
 
-#: ../../remote_access.rst:27
+#: ../../remote_access.rst:29
 msgid ""
 "LuCI: The original OpenWrt web interface. Please bear in mind that some "
 "pages may cause unpredictable configuration changes."
 msgstr ""
 
-#: ../../remote_access.rst:29
+#: ../../remote_access.rst:31
 msgid "Both user interfaces listen on port 443 (HTTPS):"
 msgstr ""
 
-#: ../../remote_access.rst:31
+#: ../../remote_access.rst:33
 msgid "NethSecurity is accessible at ``https://server_ip``"
 msgstr ""
 
-#: ../../remote_access.rst:32
+#: ../../remote_access.rst:34
 msgid "LuCI is accessible at ``https://server_ip/cgi-bin/luci``"
 msgstr ""
 
-#: ../../remote_access.rst:35
+#: ../../remote_access.rst:37
 msgid "Change web user interface port"
 msgstr ""
 
-#: ../../remote_access.rst:37
+#: ../../remote_access.rst:39
 msgid ""
 "Web user interfaces commonly operate on port 443, a convention "
 "established for its ease of accessibility through modern web browsers. "
@@ -3907,7 +3907,7 @@ msgid ""
 " internal web server."
 msgstr ""
 
-#: ../../remote_access.rst:40
+#: ../../remote_access.rst:42
 msgid ""
 "Users have the capability to selectively disable or enable both default "
 "interfaces: the ns-ui and LuCI. Moreover, NethSecurity allows the "
@@ -3916,60 +3916,60 @@ msgid ""
 "needs."
 msgstr ""
 
-#: ../../remote_access.rst:43
+#: ../../remote_access.rst:45
 msgid ""
 "To disable both UIs on port 443, and enable enable ``ns-ui`` only port "
 "9090, execute: ::"
 msgstr ""
 
-#: ../../remote_access.rst:52
+#: ../../remote_access.rst:54
 msgid ""
 "For more info, see the `ns-ui page <https://dev.nethsecurity.org/packages"
 "/ns-ui/>`_ inside the the developer manual."
 msgstr ""
 
-#: ../../remote_access.rst:55
+#: ../../remote_access.rst:57
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:57
+#: ../../remote_access.rst:59
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:59
+#: ../../remote_access.rst:61
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:64
+#: ../../remote_access.rst:66
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:66
+#: ../../remote_access.rst:68
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:68
+#: ../../remote_access.rst:70
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:70
+#: ../../remote_access.rst:72
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:74
+#: ../../remote_access.rst:76
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:79
+#: ../../remote_access.rst:81
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
@@ -5781,5 +5781,8 @@ msgstr ""
 #~ "configured from the ``ACME certs`` page"
 #~ " inside LuCI web interface, under the"
 #~ " ``Services`` section."
+#~ msgstr ""
+
+#~ msgid "login with default credentials"
 #~ msgstr ""
 
