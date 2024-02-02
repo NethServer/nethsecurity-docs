@@ -61,7 +61,6 @@ html_css_files = ["custom.css"]
 html_theme_options = {
     "repository_url": "https://github.com/NethServer/nethsecurity",
     "use_repository_button": True,
-    "logo_only": True,
     "use_download_button": False
 }
 
