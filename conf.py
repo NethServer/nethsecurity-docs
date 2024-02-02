@@ -86,3 +86,47 @@ rst_prolog = f"""
 .. |version| replace:: {version}
 .. |download_url| replace:: {base_url}/stable/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
 """
+
+# generate download table
+import re
+import boto3
+import semver
+from botocore import UNSIGNED
+from botocore.client import Config
+
+def owrt_version(release):
+    match = re.match(r"^([\d.]+)(?:-(.+))?$", release)
+    if match:
+        version = match.group(1).split(".")
+        return (int(version[0]), int(version[1]) if len(version) > 1 else 0,
+                    int(version[2]) if len(version) > 2 else 0)
+    else:
+        raise ValueError(f"Invalid OpenWrt release format: {release}")
+
+def ns_version(version):
+    try:
+        return semver.VersionInfo.parse(version)
+    except ValueError:
+        return semver.VersionInfo.parse('0.0.0')
+
+region = "ams3"
+bucket_name = "nethsecurity"
+s3_client = boto3.client("s3", region_name=region, endpoint_url='https://' + region + '.digitaloceanspaces.com', config=Config(signature_version=UNSIGNED))
+for prefix in ['dev', 'stable']:
+    unordered_versions = []
+    response = s3_client.list_objects_v2(Bucket=bucket_name, Prefix=f'{prefix}/', Delimiter='/')
+    for o in response.get('CommonPrefixes'):
+        entry = entry = o.get('Prefix').removeprefix(f'{prefix}/').rstrip('/')
+        if entry.startswith('8-'):
+            unordered_versions.append(entry) 
+    # Sort by OpenWrt release
+    owrt_sorted = sorted(unordered_versions, key=lambda x: owrt_version(x))
+    # Sort by NethSecurity release
+    sorted_dev = sorted(owrt_sorted, key=lambda v: ns_version(v), reverse=True)
+    fp = open(f'{prefix}.csv', 'w')
+    fp.write("Version,Image,Hash\n")
+    for entry in sorted_dev:
+        image = f'`image <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic-squashfs-combined-efi.img.gz>`_'
+        hash = f'`sha256sum <{base_url}/{prefix}/{entry}/targets/x86/64/sha256sums>`_'
+        fp.write(f'{entry},{image},{hash}\n')
+    fp.close()
