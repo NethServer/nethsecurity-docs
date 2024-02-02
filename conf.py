@@ -86,3 +86,22 @@ rst_prolog = f"""
 .. |version| replace:: {version}
 .. |download_url| replace:: {base_url}/stable/{version}/targets/x86/64/nethsecurity-{version}-x86-64-generic-squashfs-combined-efi.img.gz
 """
+
+# generate download table
+import boto3
+from botocore import UNSIGNED
+from botocore.client import Config
+region = "ams3"
+bucket_name = "nethsecurity"
+s3_client = boto3.client("s3", region_name=region, endpoint_url='https://' + region + '.digitaloceanspaces.com', config=Config(signature_version=UNSIGNED))
+for prefix in ['dev', 'stable']:
+    fp = open(f'{prefix}.csv', 'w')
+    fp.write("Version,Image,Hash\n")
+    response = s3_client.list_objects_v2(Bucket=bucket_name, Prefix=f'{prefix}/', Delimiter='/')
+    for o in response.get('CommonPrefixes'):
+        entry = entry = o.get('Prefix').removeprefix(f'{prefix}/').rstrip('/')
+        if entry.startswith('8-'):
+            image = f'`image <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic-squashfs-combined-efi.img.gz>`_'
+            hash = f'`sha256sum <{base_url}/{prefix}/{entry}/targets/x86/64/sha256sums>`_'
+            fp.write(f'{entry},{image},{hash}\n')
+    fp.close()
