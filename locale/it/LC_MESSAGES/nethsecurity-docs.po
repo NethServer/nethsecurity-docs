@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-02 14:09+0000\n"
+"POT-Creation-Date: 2024-02-05 07:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -454,24 +454,156 @@ msgid "Download"
 msgstr ""
 
 #: ../../download.rst:7
-msgid ""
-"Begin by downloading the most recent x86_64 image from the official "
-":download_image_x86:`download link <>`."
+msgid "Begin by downloading the most recent x86_64 image from the table below."
 msgstr ""
 
 #: ../../download.rst:9
 msgid ""
-"For verification, :download_hash_x86:`download the hash file <>` and "
-"execute the following command in a Linux shell to ensure the integrity of"
-" the downloaded image:"
+"For verification, download also the hash file and execute the following "
+"command in a Linux shell to ensure the integrity of the downloaded image:"
 msgstr ""
 
 #: ../../download.rst:15
 msgid ""
 "To proceed with the installation of NethSecurity, you have two options: "
 "write the downloaded image directly to your disk or create a bootable USB"
-" stick. Refer to the installation page for detailed instructions on both "
-"methods."
+" stick. Refer to the :ref:`installation <install-section>` page for "
+"detailed instructions on both methods."
+msgstr ""
+
+#: ../../download.rst:18
+msgid "Stable releases"
+msgstr ""
+
+#: ../../dev.csv:1 ../../stable.csv:1
+msgid "Version"
+msgstr ""
+
+#: ../../dev.csv:1 ../../stable.csv:1
+msgid "Image"
+msgstr ""
+
+#: ../../dev.csv:1 ../../stable.csv:1
+msgid "Hash"
+msgstr ""
+
+#: ../../dev.csv:1 ../../stable.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1"
+msgstr ""
+
+#: ../../stable.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../stable.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../download.rst:23
+msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-3-g4c5b89a"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-3-g4c5b89a/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-3-g4c5b89a-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-3-g4c5b89a/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-4-g5330037"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-4-g5330037/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-4-g5330037-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-4-g5330037/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-6-g9ac12be"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-6-g9ac12be/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-6-g9ac12be-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-6-g9ac12be/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-7-g45d7fb0"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-7-g45d7fb0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-7-g45d7fb0-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-7-g45d7fb0/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-8-g7405c0c"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-8-g7405c0c/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-8-g7405c0c-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-8-g7405c0c/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`_"
 msgstr ""
 
 #: ../../dpi_filter.rst:5
@@ -5784,5 +5916,29 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "login with default credentials"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Begin by downloading the most recent "
+#~ "x86_64 image from the official "
+#~ ":download_image_x86:`download link <>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For verification, :download_hash_x86:`download the"
+#~ " hash file <>` and execute the "
+#~ "following command in a Linux shell "
+#~ "to ensure the integrity of the "
+#~ "downloaded image:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To proceed with the installation of "
+#~ "NethSecurity, you have two options: "
+#~ "write the downloaded image directly to"
+#~ " your disk or create a bootable "
+#~ "USB stick. Refer to the installation "
+#~ "page for detailed instructions on both"
+#~ " methods."
 #~ msgstr ""
 
