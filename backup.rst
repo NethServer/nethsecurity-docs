@@ -11,6 +11,9 @@ then click on the :guilabel:`Download backup` button.
 If the machine has a valid Enterprise subscription, the page will show a list of backups available from the remote server.
 The user can click the :guilabel:`Run backup` buttont: the backup will be stored on a remote server and the user will be able
 to download it by clicking the :guilabel:`Download` button.
+Please note that the date of the backup is the server date.
+The dates displayed in the backup list are based on the time of the server storing the backups, not the time of the firewall that created them.
+This means the dates might differ depending on time zone differences.
 
 Backup encryption
 =================
