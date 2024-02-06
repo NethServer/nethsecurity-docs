@@ -25,6 +25,7 @@ jobs:
         run: |
           make gettext
           sphinx-intl update -p _build/gettext -l it
+          rm -f *.csv || true # remove csv files
 
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v4
