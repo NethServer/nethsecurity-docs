@@ -104,6 +104,11 @@ def owrt_version(release):
         raise ValueError(f"Invalid OpenWrt release format: {release}")
 
 def ns_version(version):
+    # convert from 0.0.1-beta1-3-g4c5b89a to 0.0.1-beta1.3
+    # to correctly sort build part
+    if version.count('-') > 1:
+      parts = version.split('-')
+      version = parts[0] + '-' + parts[1] + '.' + parts[2]
     try:
         return semver.VersionInfo.parse(version)
     except ValueError:
@@ -122,7 +127,7 @@ for prefix in ['dev', 'stable']:
     # Sort by OpenWrt release
     owrt_sorted = sorted(unordered_versions, key=lambda x: owrt_version(x))
     # Sort by NethSecurity release
-    sorted_dev = sorted(owrt_sorted, key=lambda v: ns_version(v), reverse=True)
+    sorted_dev = sorted(owrt_sorted, key=lambda v: ns_version(v[13:]), reverse=True)
     fp = open(f'{prefix}.csv', 'w')
     fp.write("Version,Image,Hash\n")
     for entry in sorted_dev:
