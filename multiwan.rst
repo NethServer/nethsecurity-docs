@@ -14,7 +14,7 @@ MultiWAN configuration requires at least two network interfaces in the WAN zone 
 The first time you access the configuration page, it is mandatory to create a default policy. This policy is essential and cannot be deleted. The default policy defines the basic behavior of the MultiWAN system.
 It's necessary to specify its behavior. There are two available main options:
 
-- ``Balanced``: In this mode, WAN connections are utilized simultaneously, and traffic is balanced based on the weight assigned to each WAN.
+- ``Balanced``: In this mode, WAN connections are utilized simultaneously, and traffic is balanced based on the weight assigned to each WAN. The WAN weight can vary from 1 to 1000.
 - ``Backup``: In backup mode, the secondary WAN connection comes into play only if the primary connection fails. This ensures a backup connectivity if the primary WAN fails.
 
 There is also a ``Custom mode`` that allows more detailed configuration, especially useful when dealing with three or more WAN connections.
