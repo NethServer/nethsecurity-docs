@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-07 13:40+0000\n"
+"POT-Creation-Date: 2024-02-07 14:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -2263,7 +2263,8 @@ msgstr ""
 #: ../../multiwan.rst:17
 msgid ""
 "``Balanced``: In this mode, WAN connections are utilized simultaneously, "
-"and traffic is balanced based on the weight assigned to each WAN."
+"and traffic is balanced based on the weight assigned to each WAN. The WAN"
+" weight can vary from 1 to 1000."
 msgstr ""
 
 #: ../../multiwan.rst:18
@@ -6205,5 +6206,12 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Addresses for private networks (RFC1918)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Balanced``: In this mode, WAN "
+#~ "connections are utilized simultaneously, and"
+#~ " traffic is balanced based on the "
+#~ "weight assigned to each WAN."
 #~ msgstr ""
 
