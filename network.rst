@@ -116,7 +116,7 @@ PPPoE with DHCPv6-PD
 DHCPv6 Prefix Delegation (DHCPv6-DP) automates the assignment of IPv6 prefixes from your internet service provider (ISP).
 It eliminates the need for manual configuration or Network Address Translation (NAT), simplifying IPv6 deployment.
 
-First, make sure your ISP must support DHCPv6-PD, than follow these steps:
+First, make sure your ISP supports DHCPv6-PD, than follow these steps:
 
 - Configure WAN Interface: set the WAN interface mode to PPPoE and enable the ``Enable IPv6`` option
 - Configure LAN interface: enable the "Enable IPv6" option and leave the IPv6 address field blank
