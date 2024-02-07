@@ -122,5 +122,5 @@ First, make sure your ISP supports DHCPv6-PD, than follow these steps:
 - Configure LAN interface: enable the "Enable IPv6" option and leave the IPv6 address field blank
 
 By enabling IPv6 for both WAN and LAN interfaces without specifying an address for the LAN, your router will automatically request
-and receive a /64 IPv6 prefix from your ISP through DHCPv6-PD.
+and receive an IPv6 prefix (usually a /64) from your ISP through DHCPv6-PD.
 This prefix will then be used to assign individual IPv6 addresses to devices on your network.
