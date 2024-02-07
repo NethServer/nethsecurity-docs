@@ -49,3 +49,24 @@ All listed IP addresses or networks here will not be affected by DNS filter.
    Do not make changes to the DNS servers configured in your NethSecurity or in network clients.
    When content filtering is enabled, all DNS traffic from the clients will be automatically redirected to the external content filtering regardless of their configuration.
 
+Alternative Block Website
+-------------------------
+
+.. highlight:: bash
+
+.. block_website-section:
+
+Access to specific internet sites can be also restricted by manipulating their DNS resolution.
+Enabling ``AdBlock`` allows the interception and resolution of DNS queries from the lan client through the firewall DNS server.
+
+To enable AdBlock, execute: ::
+
+  uci set adblock.global.adb_enabled=1
+  uci commit adblock
+  /etc/init.d/adblock start
+
+Navigate to the ``DNS & DHCP`` page under the ``Network`` section, select ``DNS records`` tab and click the ``Add DNS record`` button.
+In the ``Hostname`` field, enter the hostname of the site you want to block, such as ``www.nethserver.org``, set the IP address to ``127.0.0.1`` and provide a descriptive name like “Block NethServer”.
+Click the ``Save`` button and apply the changes.
+
+.. note::  If you want to block an entire domain, enter the domain inside the Hostname filed like ``nethserver.org`` and enable the Wildcard DNS record: this will block also all nethserver.org subdomain.
