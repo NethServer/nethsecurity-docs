@@ -29,7 +29,7 @@ The newly created :ref:`VLAN devices <vlan-section>` are visible in this section
 
 .. _RFC1918-section:
 
-.. rubric:: Addresses for private networks (RFC1918)
+.. rubric:: IPv4 addresses for private networks (RFC1918)
 
 TCP/IP private networks not directly connected to Internet should use special addresses selected by
 Internet Assigned Numbers Authority (IANA).
@@ -109,3 +109,18 @@ Users can setup a new PPPoE connection using an unassigned Ethernet network inte
 
 Inside the network interface window, choose the wan zone then, select the ``PPPoE`` protocol.
 Then fill all required fields like ``Username`` and ``Password``.
+
+PPPoE with DHCPv6-PD
+^^^^^^^^^^^^^^^^^^^^
+
+DHCPv6 Prefix Delegation (DHCPv6-DP) automates the assignment of IPv6 prefixes from your internet service provider (ISP).
+It eliminates the need for manual configuration or Network Address Translation (NAT), simplifying IPv6 deployment.
+
+First, make sure your ISP supports DHCPv6-PD, than follow these steps:
+
+- Configure WAN Interface: set the WAN interface mode to PPPoE and enable the ``Enable IPv6`` option
+- Configure LAN interface: enable the "Enable IPv6" option and leave the IPv6 address field blank
+
+By enabling IPv6 for both WAN and LAN interfaces without specifying an address for the LAN, your router will automatically request
+and receive an IPv6 prefix (usually a /64) from your ISP through DHCPv6-PD.
+This prefix will then be used to assign individual IPv6 addresses to devices on your network.
