@@ -74,3 +74,20 @@ The ``General settings`` page allow users to specify the following parameters:
   By setting the number of packets, users can control the intensity of the monitoring.
 - Determining unreachability after how many failed tests:  users can configure the system to determine when a WAN connection should be considered unreachable.
   This is done by specifying a threshold - after how many consecutive failed tests the WAN connection is deemed unreachable.
+ 
+
+Reset configuration
+===================
+
+.. warning::
+
+   This will effectively reset the MultiWAN configuration, with a loss of Internet connection if no WAN is configured.
+
+If your firewall was previously configured with two or more WAN interfaces and after reconfiguration there is only one WAN interface, it is recommended to reset the MultiWAN configuration. This will ensure that your firewall is properly configured and functioning as intended.
+
+::
+
+  /usr/libexec/rpcd/ns.mwan call clear_config
+  uci commit mwan
+  reload_config
+
