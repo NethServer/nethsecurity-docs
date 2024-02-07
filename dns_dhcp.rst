@@ -59,12 +59,40 @@ The system will resolve host and domain names using DNS queries to external DNS 
 
 Available fields:
 
-
-``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` to specify the desired DNS, you can add more servers, each one is individually managed.
+``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` to specify the desired upstream DNS, you can add more servers, each one is individually managed.
 
 ``DNS Domain`` : Insert the the local DNS domain, ensuring that queries for this domain are always resolved locally.
 
 ``Log DNS queries``: enable it if you want all the DNS queries to be logged by the system.
+
+Forwarding servers
+^^^^^^^^^^^^^^^^^^
+
+This section explains how to configure upstream DNS servers for your system. You can use this to either:
+
+- Specify a single upstream DNS server: enter the IP address of the desired server in the dedicated field
+- Set up domain-specific DNS servers: this allows you to route queries for specific domains to different servers.
+
+Domain specific DNS Servers:
+
+- Empty domain (``//``): ,atches unqualified names (without dots).
+- Specific domain (``/google.com/``): matches the exact domain and its subdomains (e.g., google.com, www.google.com).
+- Wildcard domain (``*google.com/``): matches any domain containing "google.com" (e.g., google.com, www.google.com, supergoogle.com).
+- Non-wildcard takes priority: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., ``/google.com/`` will handle google.com and www.google.com, leaving supergoogle.com to the wildcard).
+
+Server address:
+
+- IP address: specify the IP address of the desired server.
+- Port: append the desired port after the IP address using `#`.
+
+Examples:
+
+- Send all queries for "google.com" and its subdomains to 1.2.3.4, except "www.google.com" (which goes to standard servers):
+  ``/google.com/1.2.3.4``
+- Send all unqualified names (e.g., "localhost") to 10.0.0.1 and everything else to standard servers: ``//10.0.0.1``
+
+- Send queries for "internal.nethserver.org" and its subdomains to 192.168.1.1 and everything else to standard servers:
+  ``/ad.nethserver.org/192.168.1.1``
 
 DNS records
 -----------
