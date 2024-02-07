@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-07 11:27+0000\n"
+"POT-Creation-Date: 2024-02-07 13:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -506,6 +506,40 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-36-g559fbea"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-36-g559fbea/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-36-g559fbea-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-36-g559fbea/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-35-g6a182e9"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-35-g6a182e9/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-35-g6a182e9-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-35-g6a182e9/targets/x86/64/sha256sums>`_"
 msgstr ""
 
 #: ../../dev.csv:1
