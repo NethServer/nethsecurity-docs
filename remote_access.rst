@@ -40,7 +40,7 @@ While convenient, this can potentially introduce a security risk.
 
 To mitigate this risk, you can take two main steps:
 
-- remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page,  navigate to the ``Input rules`` tab,
+- remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page, navigate to the ``Input rules`` tab,
   and locate the "Allow-UI-from-WAN" rule. Click the :guilabel:`Delete` button to remove it
 - allowing access from specific IPs or networks: in the Firewall rules page, locate the "Allow-UI-from-WAN"
   rule and click the :guilabel:`Edit` button. In the ``Source address``  field, enter the IP addresses or network CIDRs
