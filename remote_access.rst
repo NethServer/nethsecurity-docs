@@ -42,7 +42,7 @@ To mitigate this risk, you have two options (remove or restrict access):
 
 - remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page, navigate to the ``Input rules`` tab,
   and locate the "Allow-UI-from-WAN" rule. Click the :guilabel:`Delete` button to remove it
-- allowing access from specific IPs or networks: in the Firewall rules page, locate the "Allow-UI-from-WAN"
+- restrict access from specific IPs or networks: in the Firewall rules page, locate the "Allow-UI-from-WAN"
   rule and click the :guilabel:`Edit` button. In the ``Source address`` field, enter the IP addresses or network CIDRs
   from which you want to allow access to the NethSecurity UI.
 
