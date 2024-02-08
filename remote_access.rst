@@ -69,7 +69,7 @@ Disable web user interface on port 443
 --------------------------------------
 
 While exposing port 443 (HTTPS) can be necessary for certain services, directly accessing the NethSecurity UI through this port
-may introduces a potential security risk. Here's how to safely maintain port 443 functionality while protecting your NethSecurity UI.
+may introduce a potential security risk. Here's how to safely maintain port 443 functionality while protecting your NethSecurity UI.
 
 If you don't require accessing the NethSecurity UI through port 443, disable it to minimize attack opportunities.
 Execute the following commands on your NethServer system: ::
