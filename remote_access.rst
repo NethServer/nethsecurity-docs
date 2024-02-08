@@ -38,7 +38,7 @@ Restricting access to NethSecurity UI
 By default, this interface is accessible on port 9090 from both your internal network (LAN) and the wider internet (WAN).
 While convenient, this can potentially introduce a security risk.
 
-To mitigate this risk, you can take two main steps:
+To mitigate this risk, you have two options (remove or restrict access):
 
 - remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page, navigate to the ``Input rules`` tab,
   and locate the "Allow-UI-from-WAN" rule. Click the :guilabel:`Delete` button to remove it
