@@ -43,7 +43,7 @@ To mitigate this risk, you have two options (remove or restrict access):
 - remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page, navigate to the ``Input rules`` tab,
   and locate the "Allow-UI-from-WAN" rule. Click the :guilabel:`Delete` button to remove it
 - allowing access from specific IPs or networks: in the Firewall rules page, locate the "Allow-UI-from-WAN"
-  rule and click the :guilabel:`Edit` button. In the ``Source address``  field, enter the IP addresses or network CIDRs
+  rule and click the :guilabel:`Edit` button. In the ``Source address`` field, enter the IP addresses or network CIDRs
   from which you want to allow access to the NethSecurity UI.
 
   For example, to allow access only from your home network, you could enter the IP range 192.168.1.0/24
@@ -58,9 +58,9 @@ Additional security measures:
 Change web user interface port
 ------------------------------
 
-Users have the capability to change the NethSecurity UI port.
+Users can change the NethSecurity UI port.
 
-To change NethSecurity UI port from 9090 to 8181, execute: ::
+To change the NethSecurity UI port from 9090 to 8181, execute: ::
 
   uci set ns-ui.config.nsui_extra_port=8181
   uci commit ns-ui && ns-ui
@@ -72,7 +72,7 @@ While exposing port 443 (HTTPS) can be necessary for certain services, directly 
 may introduces a potential security risk. Here's how to safely maintain port 443 functionality while protecting your NethSecurity UI.
 
 If you don't require accessing the NethSecurity UI through port 443, disable it to minimize attack opportunities.
-Execute the following command on your NethServer system: ::
+Execute the following commands on your NethServer system: ::
 
   uci set ns-ui.config.nsui_enable=0
   uci commit ns-ui && ns-ui
@@ -107,9 +107,9 @@ Enabling 2FA on NethSecurity UI:
 
 - Log in to your NethSecurity web interface
 - Click on the user icon in the top right corner and select ``Account settings``
-- Dind the Two-factor authentication option and click :guilabel:`Configure 2FA`
+- Find the Two-factor authentication option and click :guilabel:`Configure 2FA`
 
-Setting up qour authenticator app:
+Setting up your authenticator app:
 
 - Download an authenticator app on your smartphone or tablet. Popular options include FreeOTP, Google Authenticator, and Microsoft Authenticator.
 - Open the app and scan the QR code displayed on the NethSecurity web interface. This will add your NethSecurity account to the authenticator app.
