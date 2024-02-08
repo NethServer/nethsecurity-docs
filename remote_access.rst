@@ -14,7 +14,7 @@ Default credentials are:
 * User: ``root``
 * Password: ``Nethesis,1234``
 
-Such credentials can be used to login into the web interface or using SSH:
+Such credentials can be used to log in to the web interface or using SSH:
 
 - Web user interface: **https://<server_ip>:9090**
 - SSH default port: **22**
