@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 05:50+0000\n"
+"POT-Creation-Date: 2024-02-08 08:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -45,14 +45,18 @@ msgid ""
 "list of backups available from the remote server. The user can click the "
 ":guilabel:`Run backup` buttont: the backup will be stored on a remote "
 "server and the user will be able to download it by clicking the "
-":guilabel:`Download` button."
+":guilabel:`Download` button. Please note that the date of the backup is "
+"the server date. The dates displayed in the backup list are based on the "
+"time of the server storing the backups, not the time of the firewall that"
+" created them. This means the dates might differ depending on time zone "
+"differences."
 msgstr ""
 
-#: ../../backup.rst:16
+#: ../../backup.rst:19
 msgid "Backup encryption"
 msgstr ""
 
-#: ../../backup.rst:18
+#: ../../backup.rst:21
 msgid ""
 "The backup is not encrypted by default. To enable encryption, click on "
 "the :guilabel:`Configure passphrase` button and set a strong password. To"
@@ -60,17 +64,17 @@ msgid ""
 " and leave the password field empty."
 msgstr ""
 
-#: ../../backup.rst:22
+#: ../../backup.rst:25
 msgid ""
 "If the backup is encrypted and the password is lost, it will no longer be"
 " possible to restore the configuration."
 msgstr ""
 
-#: ../../backup.rst:25
+#: ../../backup.rst:28
 msgid "Automatic backup"
 msgstr ""
 
-#: ../../backup.rst:27
+#: ../../backup.rst:30
 msgid ""
 "If the machine has a valid :ref:`Enterprise subscription <subscription-"
 "section>`, a scheduled cron job will run every night to perform a backup."
@@ -79,11 +83,11 @@ msgid ""
 "remote server."
 msgstr ""
 
-#: ../../backup.rst:32
+#: ../../backup.rst:35
 msgid "Restore"
 msgstr ""
 
-#: ../../backup.rst:34
+#: ../../backup.rst:37
 msgid ""
 "The backup can be restored from the the ``Restore`` tab inside the page "
 "inside the ``Backup & Restore`` page The user can initiate the restore "
@@ -94,7 +98,7 @@ msgid ""
 "finally, click the \"Restore\" button to complete the process."
 msgstr ""
 
-#: ../../backup.rst:39
+#: ../../backup.rst:42
 msgid "After the restore the system will be rebooted."
 msgstr ""
 
@@ -6224,5 +6228,17 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-24-g9b65b01/targets/x86/64/sha256sums>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the machine has a valid "
+#~ "Enterprise subscription, the page will "
+#~ "show a list of backups available "
+#~ "from the remote server. The user "
+#~ "can click the :guilabel:`Run backup` "
+#~ "buttont: the backup will be stored "
+#~ "on a remote server and the user"
+#~ " will be able to download it by"
+#~ " clicking the :guilabel:`Download` button."
 #~ msgstr ""
 
