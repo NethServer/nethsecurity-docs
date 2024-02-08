@@ -14,7 +14,10 @@ Default credentials are:
 * User: ``root``
 * Password: ``Nethesis,1234``
 
-Such credentials can be used to login into the web interface or using SSH.
+Such credentials can be used to login into the web interface or using SSH:
+
+- Web user interface: **https://<server_ip>:9090**
+- SSH default port: **22**
 
 .. note::
 
@@ -23,35 +26,73 @@ Such credentials can be used to login into the web interface or using SSH.
 Web user interface
 ==================
 
-NethSecurity has two different web user interfaces:
+NethSecurity UI (ns-ui), the NethSecurity official web interface, is available on port ``9090`` at the following URL: **https://<server_ip>:9090**.
 
-* NethSecurity UI (``ns-ui``): A custom user interface focused on usage simplicity.
-* LuCI: The original OpenWrt web interface. Please bear in mind that some pages may cause unpredictable configuration changes.
+To ease the access, NethSecurity UI is also available on standard HTTP port ``443`` at the following URL: **https://<server_ip>** or **http://<server_fqdn>**.
 
-Both user interfaces listen on port 443 (HTTPS):
+Both URL are accessible from LAN and WAN by default.
 
-* NethSecurity is accessible at ``https://server_ip``
-* LuCI is accessible at ``https://server_ip/cgi-bin/luci``
+Restricting access to NethSecurity UI
+-------------------------------------
+
+By default, this interface is accessible on port 9090 from both your internal network (LAN) and the wider internet (WAN).
+While convenient, this can potentially introduce a security risk.
+
+To mitigate this risk, you can take two main steps:
+
+- remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page,  navigate to the ``Input rules`` tab,
+  and locate the "Allow-UI-from-WAN" rule. Click the :guilabel:`Delete` button to remove it
+- allowing access from specific IPs or networks: in the Firewall rules page, locate the "Allow-UI-from-WAN"
+  rule and click the :guilabel:`Edit` button. In the ``Source address``  field, enter the IP addresses or network CIDRs
+  from which you want to allow access to the NethSecurity UI.
+
+  For example, to allow access only from your home network, you could enter the IP range 192.168.1.0/24
+  Only allow access from trusted IP addresses or networks. Leaving this field blank will allow anyone on the internet to access the NethSecurity UI.
+
+Additional security measures:
+
+- use a strong password for the admin user
+- enable two-factor authentication (2FA) for the admin user
+- keep your firewall up to date with the latest security patches
 
 Change web user interface port
 ------------------------------
 
-Web user interfaces commonly operate on port 443, a convention established for its ease of accessibility through modern web browsers.
-However, specific scenarios necessitate the redirection of port 443 to an internal web server.
+Users have the capability to change the NethSecurity UI port.
 
-Users have the capability to selectively disable or enable both default interfaces: the ns-ui and LuCI. Moreover, NethSecurity allows the
-addition of extra ``ns-ui`` instances on different ports, granting users the freedom to customize their network configurations according to their needs.
+To change NethSecurity UI port from 9090 to 8181, execute: ::
 
-To disable both UIs on port 443, and enable enable ``ns-ui`` only port 9090, execute: ::
+  uci set ns-ui.config.nsui_extra_port=8181
+  uci commit ns-ui && ns-ui
 
-  uci set ns-ui.config.nsui_extra_enable=1
-  uci set ns-ui.config.nsui_extra_port=9090
+Disable web user interface on port 443
+--------------------------------------
+
+While exposing port 443 (HTTPS) can be necessary for certain services, directly accessing the NethSecurity UI through this port
+may introduces a potential security risk. Here's how to safely maintain port 443 functionality while protecting your NethSecurity UI.
+
+If you don't require accessing the NethSecurity UI through port 443, disable it to minimize attack opportunities.
+Execute the following command on your NethServer system: ::
+
   uci set ns-ui.config.nsui_enable=0
-  uci set ns-ui.config.luci_enable=0
+  uci commit ns-ui && ns-ui
+
+This option disables access to the NethSecurity UI through both the server IP address and FQDN on port 443.
+
+If you need port 443 for other services, configure your firewall to redirect traffic destined for port 443 to a separate web server hosting those services.
+Ensure this separate server has strong security measures in place.
+
+Legacy web user interface
+-------------------------
+
+NethSecurity offers also LuCI, the original OpenWrt web interface. Please bear in mind that some pages may cause unpredictable configuration changes.
+Luci is disabled by default. To enable it, execute: ::
+
+  uci set ns-ui.config.luci_enable=1
   uci commit ns-ui
   ns-ui
 
-For more info, see the `ns-ui page <https://dev.nethsecurity.org/packages/ns-ui/>`_ inside the the developer manual.
+Once enabled, Luci will be available only on port 443 at this URL: **https://<server_ip>/cgi-bin/luci**
 
 SSH
 ===
