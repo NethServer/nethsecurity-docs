@@ -49,12 +49,12 @@ All listed IP addresses or networks here will not be affected by DNS filter.
    Do not make changes to the DNS servers configured in your NethSecurity or in network clients.
    When content filtering is enabled, all DNS traffic from the clients will be automatically redirected to the external content filtering regardless of their configuration.
 
-Alternative Block Website
+Block a specific web site
 -------------------------
 
 .. highlight:: bash
 
-.. block_website-section:
+.. _block_website-section:
 
 Access to specific internet sites can be also restricted by manipulating their DNS resolution.
 Enabling ``AdBlock`` allows the interception and resolution of DNS queries from the lan client through the firewall DNS server.
