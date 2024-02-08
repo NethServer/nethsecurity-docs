@@ -30,7 +30,7 @@ NethSecurity UI (ns-ui), the NethSecurity official web interface, is available o
 
 To ease the access, NethSecurity UI is also available on standard HTTP port ``443`` at the following URL: **https://<server_ip>** or **http://<server_fqdn>**.
 
-Both URL are accessible from LAN and WAN by default.
+Both URLs are accessible from LAN and WAN by default.
 
 Restricting access to NethSecurity UI
 -------------------------------------
