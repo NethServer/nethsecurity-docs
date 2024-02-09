@@ -75,7 +75,7 @@ This section explains how to configure upstream DNS servers for your system. You
 
 Domain specific DNS Servers:
 
-- Empty domain (``//``): ,atches unqualified names (without dots).
+- Empty domain (``//``): matches unqualified names (without dots).
 - Specific domain (``/google.com/``): matches the exact domain and its subdomains (e.g., google.com, www.google.com).
 - Wildcard domain (``*google.com/``): matches any domain containing "google.com" (e.g., google.com, www.google.com, supergoogle.com).
 - Non-wildcard takes priority: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., ``/google.com/`` will handle google.com and www.google.com, leaving supergoogle.com to the wildcard).
