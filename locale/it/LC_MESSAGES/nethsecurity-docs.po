@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-09 08:12+0000\n"
+"POT-Creation-Date: 2024-02-09 16:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -195,7 +195,7 @@ msgstr ""
 msgid "DNS"
 msgstr ""
 
-#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:70
+#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:98
 msgid "DNS records"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgid ""
 msgstr ""
 
 #: ../../dns_dhcp.rst:19 ../../dns_dhcp.rst:41 ../../dns_dhcp.rst:60
-#: ../../dns_dhcp.rst:77
+#: ../../dns_dhcp.rst:105
 msgid "Available fields:"
 msgstr ""
 
@@ -289,53 +289,139 @@ msgid ""
 "external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:63
+#: ../../dns_dhcp.rst:62
 msgid ""
 "``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` "
-"to specify the desired DNS, you can add more servers, each one is "
-"individually managed."
+"to specify the desired upstream DNS, you can add more servers, each one "
+"is individually managed."
 msgstr ""
 
-#: ../../dns_dhcp.rst:65
+#: ../../dns_dhcp.rst:64
 msgid ""
 "``DNS Domain`` : Insert the the local DNS domain, ensuring that queries "
 "for this domain are always resolved locally."
 msgstr ""
 
-#: ../../dns_dhcp.rst:67
+#: ../../dns_dhcp.rst:66
 msgid ""
 "``Log DNS queries``: enable it if you want all the DNS queries to be "
 "logged by the system."
 msgstr ""
 
+#: ../../dns_dhcp.rst:69
+msgid "Forwarding servers"
+msgstr ""
+
 #: ../../dns_dhcp.rst:71
+msgid ""
+"This section explains how to configure upstream DNS servers for your "
+"system. You can use this to either:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:73
+msgid ""
+"Specify a single upstream DNS server: enter the IP address of the desired"
+" server in the dedicated field"
+msgstr ""
+
+#: ../../dns_dhcp.rst:74
+msgid ""
+"Set up domain-specific DNS servers: this allows you to route queries for "
+"specific domains to different servers."
+msgstr ""
+
+#: ../../dns_dhcp.rst:76
+msgid "Domain specific DNS Servers:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:78
+msgid "Empty domain (``//``): matches unqualified names (without dots)."
+msgstr ""
+
+#: ../../dns_dhcp.rst:79
+msgid ""
+"Specific domain (``/google.com/``): matches the exact domain and its "
+"subdomains (e.g., google.com, www.google.com)."
+msgstr ""
+
+#: ../../dns_dhcp.rst:80
+msgid ""
+"Wildcard domain (``*google.com/``): matches any domain containing "
+"\"google.com\" (e.g., google.com, www.google.com, supergoogle.com)."
+msgstr ""
+
+#: ../../dns_dhcp.rst:81
+msgid ""
+"Non-wildcard takes priority: if both specific and wildcard domains are "
+"defined for the same pattern, the specific one takes precedence (e.g., "
+"``/google.com/`` will handle google.com and www.google.com, leaving "
+"supergoogle.com to the wildcard)."
+msgstr ""
+
+#: ../../dns_dhcp.rst:83
+msgid "Server address:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:85
+msgid "IP address: specify the IP address of the desired server."
+msgstr ""
+
+#: ../../dns_dhcp.rst:86
+msgid "Port: append the desired port after the IP address using `#`."
+msgstr ""
+
+#: ../../dns_dhcp.rst:88
+msgid "Examples:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:90
+msgid ""
+"Send all queries for \"google.com\" and its subdomains to 1.2.3.4, except"
+" \"www.google.com\" (which goes to standard servers): "
+"``/google.com/1.2.3.4``"
+msgstr ""
+
+#: ../../dns_dhcp.rst:92
+msgid ""
+"Send all unqualified names (e.g., \"localhost\") to 10.0.0.1 and "
+"everything else to standard servers: ``//10.0.0.1``"
+msgstr ""
+
+#: ../../dns_dhcp.rst:94
+msgid ""
+"Send queries for \"internal.nethserver.org\" and its subdomains to "
+"192.168.1.1 and everything else to standard servers: "
+"``/ad.nethserver.org/192.168.1.1``"
+msgstr ""
+
+#: ../../dns_dhcp.rst:99
 msgid ""
 "The system can handle local DNS records. When the server performs a DNS "
 "lookup, first it will search inside local DNS records. If no local record"
 " is found, an external DNS query will be done."
 msgstr ""
 
-#: ../../dns_dhcp.rst:73
+#: ../../dns_dhcp.rst:101
 msgid "Local DNS records will always override records from external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:75
+#: ../../dns_dhcp.rst:103
 msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
 msgstr ""
 
-#: ../../dns_dhcp.rst:80
+#: ../../dns_dhcp.rst:108
 msgid "``Hostname`` : DNS hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:82
+#: ../../dns_dhcp.rst:110
 msgid "``IP address`` : IP address associated to hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:84
+#: ../../dns_dhcp.rst:112
 msgid "``Name`` : optional field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:86
+#: ../../dns_dhcp.rst:114
 msgid ""
 "``Wildcard DNS record``: enable it if you want this answer for any "
 "subdomain you haven't already defined"
@@ -510,6 +596,91 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-45-ged4af2f"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-45-ged4af2f/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-45-ged4af2f-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-45-ged4af2f/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-44-g2da9f2d"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-44-g2da9f2d/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-44-g2da9f2d-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-44-g2da9f2d/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-43-gb96cbb1"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-43-gb96cbb1/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-43-gb96cbb1-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-43-gb96cbb1/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-42-g86b2151"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-42-g86b2151/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-42-g86b2151-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-42-g86b2151/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-41-gaae33d3"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-41-gaae33d3/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-41-gaae33d3-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-41-gaae33d3/targets/x86/64/sha256sums>`_"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -6257,5 +6428,13 @@ msgstr ""
 #~ "on a remote server and the user"
 #~ " will be able to download it by"
 #~ " clicking the :guilabel:`Download` button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``DNS forwarding servers``: Click the "
+#~ "button :guilabel:`Add DNS Server` to "
+#~ "specify the desired DNS, you can "
+#~ "add more servers, each one is "
+#~ "individually managed."
 #~ msgstr ""
 
