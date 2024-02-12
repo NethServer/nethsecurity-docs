@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-12 14:13+0000\n"
+"POT-Creation-Date: 2024-02-12 14:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -195,7 +195,7 @@ msgstr ""
 msgid "DNS"
 msgstr ""
 
-#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:98
+#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:116
 msgid "DNS records"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgid ""
 msgstr ""
 
 #: ../../dns_dhcp.rst:19 ../../dns_dhcp.rst:41 ../../dns_dhcp.rst:60
-#: ../../dns_dhcp.rst:105
+#: ../../dns_dhcp.rst:123
 msgid "Available fields:"
 msgstr ""
 
@@ -330,98 +330,142 @@ msgid ""
 "specific domains to different servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:76
-msgid "Domain specific DNS Servers:"
-msgstr ""
-
-#: ../../dns_dhcp.rst:78
-msgid "Empty domain (``//``): matches unqualified names (without dots)."
+#: ../../dns_dhcp.rst:77
+msgid "Domain-specific DNS Servers"
 msgstr ""
 
 #: ../../dns_dhcp.rst:79
 msgid ""
-"Specific domain (``/google.com/``): matches the exact domain and its "
-"subdomains (e.g., google.com, www.google.com)."
-msgstr ""
-
-#: ../../dns_dhcp.rst:80
-msgid ""
-"Wildcard domain (``*google.com/``): matches any domain containing "
-"\"google.com\" (e.g., google.com, www.google.com, supergoogle.com)."
+"To use a custom DNS server for a specific domain, use the following "
+"syntax:"
 msgstr ""
 
 #: ../../dns_dhcp.rst:81
-msgid ""
-"Non-wildcard takes priority: if both specific and wildcard domains are "
-"defined for the same pattern, the specific one takes precedence (e.g., "
-"``/google.com/`` will handle google.com and www.google.com, leaving "
-"supergoogle.com to the wildcard)."
+msgid "``/DOMAIN/IP_ADDRESS#PORT``"
 msgstr ""
 
 #: ../../dns_dhcp.rst:83
-msgid "Server address:"
+msgid "where:"
 msgstr ""
 
 #: ../../dns_dhcp.rst:85
-msgid "IP address: specify the IP address of the desired server."
+msgid "IP_ADDRESS: specify the IP address of the desired server"
 msgstr ""
 
 #: ../../dns_dhcp.rst:86
-msgid "Port: append the desired port after the IP address using `#`."
+msgid "PORT: append the desired port (after the IP address using `#` character)."
 msgstr ""
 
 #: ../../dns_dhcp.rst:88
-msgid "Examples:"
+msgid ""
+"The ``PORT`` value is optional so usually the configuration appears just "
+"like:"
 msgstr ""
 
 #: ../../dns_dhcp.rst:90
-msgid ""
-"Send all queries for \"google.com\" and its subdomains to 1.2.3.4, except"
-" \"www.google.com\" (which goes to standard servers): "
-"``/google.com/1.2.3.4``"
+msgid "``/DOMAIN/IP_ADDRESS``"
 msgstr ""
 
 #: ../../dns_dhcp.rst:92
+msgid "These are the main supported options:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:94
+msgid "Empty domain (``//``): matches unqualified names (without dots)."
+msgstr ""
+
+#: ../../dns_dhcp.rst:95
+msgid ""
+"Specific domain (``/google.com/``): matches the exact domain and all its "
+"subdomains (e.g., google.com, www.google.com, drive.google.com...)."
+msgstr ""
+
+#: ../../dns_dhcp.rst:96
+msgid ""
+"Wildcard domain (``*google.com/``): matches any domain **containing** "
+"\"google.com\" (e.g., google.com, www.google.com, supergoogle.com)."
+msgstr ""
+
+#: ../../dns_dhcp.rst:98
+msgid "Examples:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:100
+msgid ""
+"Send all queries for \"google.com\" and its subdomains to 1.2.3.4:  "
+"``/google.com/1.2.3.4``"
+msgstr ""
+
+#: ../../dns_dhcp.rst:101
 msgid ""
 "Send all unqualified names (e.g., \"localhost\") to 10.0.0.1 and "
 "everything else to standard servers: ``//10.0.0.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:94
+#: ../../dns_dhcp.rst:102
 msgid ""
-"Send queries for \"internal.nethserver.org\" and its subdomains to "
+"Send queries for domain \"ad.nethserver.org\" and its subdomains to "
 "192.168.1.1 and everything else to standard servers: "
 "``/ad.nethserver.org/192.168.1.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:99
+#: ../../dns_dhcp.rst:106
+msgid ""
+"More specific domains take precedence over less specific domains, so for "
+"a configuration like this:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:108
+msgid "``/google.com/1.2.3.4``"
+msgstr ""
+
+#: ../../dns_dhcp.rst:109
+msgid "``/www.google.com/2.3.4.5``"
+msgstr ""
+
+#: ../../dns_dhcp.rst:111
+msgid ""
+"NethSecurity will send queries for google.com and gmail.google.com to "
+"1.2.3.4, but www.google.com will go to 2.3.4.5"
+msgstr ""
+
+#: ../../dns_dhcp.rst:113
+msgid ""
+"This is true also for wildcards: if both specific and wildcard domains "
+"are defined for the same pattern, the specific one takes precedence "
+"(e.g., having ``/google.com/`` and ``/*google.com/`` : the first will "
+"handle google.com and www.google.com, the wildcard will handle "
+"supergoogle.com."
+msgstr ""
+
+#: ../../dns_dhcp.rst:117
 msgid ""
 "The system can handle local DNS records. When the server performs a DNS "
 "lookup, first it will search inside local DNS records. If no local record"
 " is found, an external DNS query will be done."
 msgstr ""
 
-#: ../../dns_dhcp.rst:101
+#: ../../dns_dhcp.rst:119
 msgid "Local DNS records will always override records from external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:103
+#: ../../dns_dhcp.rst:121
 msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
 msgstr ""
 
-#: ../../dns_dhcp.rst:108
+#: ../../dns_dhcp.rst:126
 msgid "``Hostname`` : DNS hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:110
+#: ../../dns_dhcp.rst:128
 msgid "``IP address`` : IP address associated to hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:112
+#: ../../dns_dhcp.rst:130
 msgid "``Name`` : optional field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:114
+#: ../../dns_dhcp.rst:132
 msgid ""
 "``Wildcard DNS record``: enable it if you want this answer for any "
 "subdomain you haven't already defined"
@@ -596,6 +640,40 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-60-gcde81a2"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-60-gcde81a2/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-60-gcde81a2-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-60-gcde81a2/targets/x86/64/sha256sums>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`_"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3/targets/x86/64/sha256sums>`_"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -6811,5 +6889,53 @@ msgstr ""
 #~ "system from the USB stick and type"
 #~ " a command to initiate the "
 #~ "installation process."
+#~ msgstr ""
+
+#~ msgid "Domain specific DNS Servers:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specific domain (``/google.com/``): matches "
+#~ "the exact domain and its subdomains "
+#~ "(e.g., google.com, www.google.com)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Wildcard domain (``*google.com/``): matches "
+#~ "any domain containing \"google.com\" (e.g.,"
+#~ " google.com, www.google.com, supergoogle.com)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Non-wildcard takes priority: if both "
+#~ "specific and wildcard domains are "
+#~ "defined for the same pattern, the "
+#~ "specific one takes precedence (e.g., "
+#~ "``/google.com/`` will handle google.com and"
+#~ " www.google.com, leaving supergoogle.com to "
+#~ "the wildcard)."
+#~ msgstr ""
+
+#~ msgid "Server address:"
+#~ msgstr ""
+
+#~ msgid "IP address: specify the IP address of the desired server."
+#~ msgstr ""
+
+#~ msgid "Port: append the desired port after the IP address using `#`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Send all queries for \"google.com\" and"
+#~ " its subdomains to 1.2.3.4, except "
+#~ "\"www.google.com\" (which goes to standard "
+#~ "servers): ``/google.com/1.2.3.4``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Send queries for \"internal.nethserver.org\" "
+#~ "and its subdomains to 192.168.1.1 and"
+#~ " everything else to standard servers: "
+#~ "``/ad.nethserver.org/192.168.1.1``"
 #~ msgstr ""
 
