@@ -78,7 +78,7 @@ Domain-specific DNS Servers
 
 To use a custom DNS server for a specific domain, use the following syntax:
 
-``/DOMAIN_OPTION/IP_ADDRESS#PORT``
+``/DOMAIN/IP_ADDRESS#PORT``
 
 where:
 
