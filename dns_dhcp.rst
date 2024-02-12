@@ -87,7 +87,7 @@ where:
 
 The ``PORT`` value is optional so usually the configuration appears just like:
 
-``/DOMAIN_OPTION/IP_ADDRESS``
+``/DOMAIN/IP_ADDRESS``
 
 These are the main supported options:
 
