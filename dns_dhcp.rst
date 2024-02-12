@@ -103,8 +103,6 @@ Examples:
   ``/ad.nethserver.org/192.168.1.1``
 
 
-Conflicts management
-
 More specific domains take precedence over less specific domains, so for a configuration like this:
 
 - ``/google.com/1.2.3.4``
