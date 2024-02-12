@@ -73,23 +73,23 @@ This section explains how to configure upstream DNS servers for your system. You
 - Specify a single upstream DNS server: enter the IP address of the desired server in the dedicated field
 - Set up domain-specific DNS servers: this allows you to route queries for specific domains to different servers.
 
-Domain specific DNS Servers
+Domain-specific DNS Servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The syntax for indicating a DNS server for a specific domain is as follows:
+To use a custom DNS server for a specific domain, use the following syntax:
 
 ``/DOMAIN_OPTION/IP_ADDRESS#PORT``
 
 where:
 
-- IP_ADDRESS : specify the IP address of the desired server.
+- IP_ADDRESS: specify the IP address of the desired server
 - PORT: append the desired port (after the IP address using `#` character).
 
 The ``PORT`` value is optional so usually the configuration appears just like:
 
 ``/DOMAIN_OPTION/IP_ADDRESS``
 
-These are the main supported options.
+These are the main supported options:
 
 - Empty domain (``//``): matches unqualified names (without dots).
 - Specific domain (``/google.com/``): matches the exact domain and all its subdomains (e.g., google.com, www.google.com, drive.google.com...).
@@ -110,9 +110,9 @@ More specific domains take precedence over less specific domains, so for a confi
 - ``/google.com/1.2.3.4``
 - ``/www.google.com/2.3.4.5``
 
-NethSecurity will send queries  for google.com and gmail.google.com to 1.2.3.4, but www.google.com will go to 2.3.4.5
+NethSecurity will send queries for google.com and gmail.google.com to 1.2.3.4, but www.google.com will go to 2.3.4.5
 
-This is true also for wildcard: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
+This is true also for wildcards: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
 
 
 
