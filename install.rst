@@ -12,7 +12,7 @@ Once the download is complete, you have two methods to install NethSecurity:
 - Direct disk installation: write the downloaded image directly to your computer's disk.
   This method allows for a straightforward installation process directly onto your system's storage.
 
-- USB boot onstallation: alternatively, you can create a bootable USB stick using the downloaded image.
+- USB boot installation: alternatively, you can create a bootable USB stick using the downloaded image.
   Boot the system from the USB stick and type a command to initiate the installation process.
 
 Choose the method that best suits your needs and proceed with the installation process for NethSecurity.
@@ -118,7 +118,7 @@ Install on VMWare
 -----------------
 
 `VMWare <https://www.vmware.com>`_ may encounter issues when importing raw disk images directly.
-To ensure a smooth import, convert the raw image to the VMWare native ``.vmdk`` format before proceeding.
+To ensure a smooth import, first decompress the image file, then convert the raw image to the VMWare native ``.vmdk`` format before proceeding.
 
 On Windows, you can use a software like `V2V Converted <https://www.starwindsoftware.com/starwind-v2v-converter>`_.
 
