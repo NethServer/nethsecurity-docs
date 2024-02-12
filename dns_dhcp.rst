@@ -73,26 +73,44 @@ This section explains how to configure upstream DNS servers for your system. You
 - Specify a single upstream DNS server: enter the IP address of the desired server in the dedicated field
 - Set up domain-specific DNS servers: this allows you to route queries for specific domains to different servers.
 
-Domain specific DNS Servers:
+Domain-specific DNS Servers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To use a custom DNS server for a specific domain, use the following syntax:
+
+``/DOMAIN/IP_ADDRESS#PORT``
+
+where:
+
+- IP_ADDRESS: specify the IP address of the desired server
+- PORT: append the desired port (after the IP address using `#` character).
+
+The ``PORT`` value is optional so usually the configuration appears just like:
+
+``/DOMAIN/IP_ADDRESS``
+
+These are the main supported options:
 
 - Empty domain (``//``): matches unqualified names (without dots).
-- Specific domain (``/google.com/``): matches the exact domain and its subdomains (e.g., google.com, www.google.com).
-- Wildcard domain (``*google.com/``): matches any domain containing "google.com" (e.g., google.com, www.google.com, supergoogle.com).
-- Non-wildcard takes priority: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., ``/google.com/`` will handle google.com and www.google.com, leaving supergoogle.com to the wildcard).
-
-Server address:
-
-- IP address: specify the IP address of the desired server.
-- Port: append the desired port after the IP address using `#`.
+- Specific domain (``/google.com/``): matches the exact domain and all its subdomains (e.g., google.com, www.google.com, drive.google.com...).
+- Wildcard domain (``*google.com/``): matches any domain **containing** "google.com" (e.g., google.com, www.google.com, supergoogle.com).
 
 Examples:
 
-- Send all queries for "google.com" and its subdomains to 1.2.3.4, except "www.google.com" (which goes to standard servers):
-  ``/google.com/1.2.3.4``
+- Send all queries for "google.com" and its subdomains to 1.2.3.4:  ``/google.com/1.2.3.4``
 - Send all unqualified names (e.g., "localhost") to 10.0.0.1 and everything else to standard servers: ``//10.0.0.1``
-
-- Send queries for "internal.nethserver.org" and its subdomains to 192.168.1.1 and everything else to standard servers:
+- Send queries for domain "ad.nethserver.org" and its subdomains to 192.168.1.1 and everything else to standard servers:
   ``/ad.nethserver.org/192.168.1.1``
+
+
+More specific domains take precedence over less specific domains, so for a configuration like this:
+
+- ``/google.com/1.2.3.4``
+- ``/www.google.com/2.3.4.5``
+
+NethSecurity will send queries for google.com and gmail.google.com to 1.2.3.4, but www.google.com will go to 2.3.4.5
+
+This is true also for wildcards: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
 
 DNS records
 -----------
