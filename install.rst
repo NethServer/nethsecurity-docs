@@ -114,6 +114,23 @@ Setup the boot order: ::
 Finally, start the virtual machine.
 
 
+Install on VMWare
+-----------------
+
+`VMWare <https://www.vmware.com>`_ may encounter issues when importing raw disk images directly.
+To ensure a smooth import, convert the raw image to the VMWare native ``.vmdk`` format before proceeding.
+
+On Windows, you can use a software like `V2V Converted <https://www.starwindsoftware.com/starwind-v2v-converter>`_.
+
+On Linux you can use the ``qemu-img`` command. Example: ::
+
+  qemu-img convert -f raw -O vmdk <source_image.raw> <destination_image.vmdk>
+
+Replace:
+
+- ``<source_image.raw>`` with the actual path to your raw disk image
+- ``<destination_image.vmdk>`` with your desired .vmdk filename
+
 Default network configuration
 =============================
 
