@@ -99,7 +99,7 @@ Examples:
 
 - Send all queries for "google.com" and its subdomains to 1.2.3.4:  ``/google.com/1.2.3.4``
 - Send all unqualified names (e.g., "localhost") to 10.0.0.1 and everything else to standard servers: ``//10.0.0.1``
-- Send queries for "internal.nethserver.org" and its subdomains to 192.168.1.1 and everything else to standard servers:
+- Send queries for domain "ad.nethserver.org" and its subdomains to 192.168.1.1 and everything else to standard servers:
   ``/ad.nethserver.org/192.168.1.1``
 
 
