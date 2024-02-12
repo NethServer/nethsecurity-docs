@@ -114,10 +114,6 @@ NethSecurity will send queries for google.com and gmail.google.com to 1.2.3.4, b
 
 This is true also for wildcards: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
 
-
-
-
-
 DNS records
 -----------
 The system can handle local DNS records. When the server performs a DNS lookup, first it will search inside local DNS records. If no local record is found, an external DNS query will be done.
