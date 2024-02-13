@@ -3,7 +3,7 @@
 SNMP Server
 ===========
 
-SNMP Simple Network Management Protocol (SNMP) provides a standardized way to monitor and manage network devices like your firewall remotely.
+Simple Network Management Protocol (SNMP) provides a standardized way to monitor and manage network devices like your firewall remotely.
 It allows authorized users to retrieve essential information like device status, performance metrics, and configuration settings.
 
 The SNMP server is **enabled by default** on your firewall, allowing access from within your local area network (LAN) on all IPv4 and IPv6 addresses.
