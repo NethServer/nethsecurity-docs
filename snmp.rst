@@ -42,6 +42,12 @@ Replace `<string>` with the relevant information. For example:
 
     /etc/init.d/snmpd restart
 
+The SNMP server configuration is stored in the `/etc/config/snmpd` file.
+
+You can test the configuration by using an SNMP client like `snmpwalk` or `snmpget` from a remote machine. For example: ::
+
+    snmpwalk -v 2c -c public 127.0.0.1
+
 Disabling the SNMP Server
 -------------------------
 
