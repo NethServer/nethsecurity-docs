@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 09:43+0000\n"
+"POT-Creation-Date: 2024-02-13 10:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -5018,7 +5018,7 @@ msgid ""
 "device. Here's how to do it through the command line:"
 msgstr ""
 
-#: ../../snmp.rst:16 ../../snmp.rst:50
+#: ../../snmp.rst:16 ../../snmp.rst:56
 msgid "Open a terminal window on your firewall."
 msgstr ""
 
@@ -5040,31 +5040,41 @@ msgstr ""
 msgid "Restart the SNMP server to ensure the configurations take effect:"
 msgstr ""
 
-#: ../../snmp.rst:46
+#: ../../snmp.rst:45
+msgid "The SNMP server configuration is stored in the `/etc/config/snmpd` file."
+msgstr ""
+
+#: ../../snmp.rst:47
+msgid ""
+"You can test the configuration by using an SNMP client like `snmpwalk` or"
+" `snmpget` from a remote machine. For example: ::"
+msgstr ""
+
+#: ../../snmp.rst:52
 msgid "Disabling the SNMP Server"
 msgstr ""
 
-#: ../../snmp.rst:48
+#: ../../snmp.rst:54
 msgid ""
 "If you don't require remote access to the SNMP server, you can disable it"
 " for additional security. Follow these steps:"
 msgstr ""
 
-#: ../../snmp.rst:51
+#: ../../snmp.rst:57
 msgid "Use the following commands to disable the server:"
 msgstr ""
 
-#: ../../snmp.rst:59
+#: ../../snmp.rst:65
 msgid ""
 "**Remember:** Disabling the SNMP server might impact monitoring tools or "
 "applications relying on it."
 msgstr ""
 
-#: ../../snmp.rst:62
+#: ../../snmp.rst:68
 msgid "Enabling remote access"
 msgstr ""
 
-#: ../../snmp.rst:64
+#: ../../snmp.rst:70
 msgid ""
 "If you need to access the SNMP server from outside your LAN, create a "
 "firewall rule that allows incoming UDP traffic on port ``161`` to the "
@@ -5073,21 +5083,21 @@ msgid ""
 "addresses."
 msgstr ""
 
-#: ../../snmp.rst:69
+#: ../../snmp.rst:75
 msgid "Security considerations"
 msgstr ""
 
-#: ../../snmp.rst:71
+#: ../../snmp.rst:77
 msgid "Prioritize security before enabling remote access:"
 msgstr ""
 
-#: ../../snmp.rst:73
+#: ../../snmp.rst:79
 msgid ""
 "**Strong Community String:** Replace the default \"public\" community "
 "string with a complex and unique one."
 msgstr ""
 
-#: ../../snmp.rst:74
+#: ../../snmp.rst:80
 msgid ""
 "**Access Control:** Implement Access Control Lists (ACLs) to restrict "
 "access to authorized IP addresses only."
