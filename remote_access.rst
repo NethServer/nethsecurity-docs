@@ -82,6 +82,8 @@ This option disables access to the NethSecurity UI through both the server IP ad
 If you need port 443 for other services, configure your firewall to redirect traffic destined for port 443 to a separate web server hosting those services.
 Ensure this separate server has strong security measures in place.
 
+.. _luci-section:
+
 Legacy web user interface
 -------------------------
 
