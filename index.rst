@@ -70,6 +70,7 @@ NethSecurity administrator manual
    reverse_proxy
    metrics
    snmp
+   ddns
 
 .. toctree::
    :maxdepth: 2
