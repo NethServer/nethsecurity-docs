@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:17+0000\n"
+"POT-Creation-Date: 2024-02-13 14:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -167,6 +167,251 @@ msgstr ""
 msgid ""
 "See the `developer manual <https://dev.nethsecurity.org/packages/ns-plug"
 "/#nethsecurity-controller-client>`_ for more info."
+msgstr ""
+
+#: ../../ddns.rst:4
+msgid "Dynamic DNS"
+msgstr ""
+
+#: ../../ddns.rst:6
+msgid ""
+"Dynamic DNS (DDNS) automatically updates your domain name's DNS record "
+"with your current IP address, even if it changes dynamically. This allows"
+" you to access your firewall remotely using a consistent domain name "
+"instead of remembering a potentially changing IP address."
+msgstr ""
+
+#: ../../ddns.rst:10
+msgid "Supported Providers"
+msgstr ""
+
+#: ../../ddns.rst:12
+msgid "NethSecurity supports the following DDNS providers:"
+msgstr ""
+
+#: ../../ddns.rst:14
+msgid "`Cloudflare <https://www.cloudflare.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:15
+msgid "`DigitalOcean <https://www.digitalocean.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:16
+msgid "`DNSpod <https://www.dnspod.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:17
+msgid "`Freedns <https://freedns.afraid.org>`_"
+msgstr ""
+
+#: ../../ddns.rst:18
+msgid "`Gandi <https://www.gandi.net>`_"
+msgstr ""
+
+#: ../../ddns.rst:19
+msgid "`GCP (Google Cloud Platform) <https://cloud.google.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:20
+msgid "`GoDaddy <https://www.godaddy.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:21
+msgid "`Luadns <https://luadns.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:22
+msgid "`No-IP <https://www.noip.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:23
+msgid "`NS1 <https://ns1.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:24
+msgid "`One.com <https://www.one.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:25
+msgid "`Pdns <https://www.powerdns.com>`_"
+msgstr ""
+
+#: ../../ddns.rst:26
+msgid "`Route53 <https://aws.amazon.com/route53>`_"
+msgstr ""
+
+#: ../../ddns.rst:27
+msgid "`TransIP <https://www.transip.nl>`_"
+msgstr ""
+
+#: ../../ddns.rst:29
+msgid "Prerequisites:"
+msgstr ""
+
+#: ../../ddns.rst:31
+msgid "A NethSecurity firewall with internet access."
+msgstr ""
+
+#: ../../ddns.rst:32
+msgid "An account with your chosen DDNS provider."
+msgstr ""
+
+#: ../../ddns.rst:33
+msgid "A registered domain name with your DDNS provider."
+msgstr ""
+
+#: ../../ddns.rst:36
+msgid "General configuration steps"
+msgstr ""
+
+#: ../../ddns.rst:38 ../../snmp.rst:16 ../../snmp.rst:56
+msgid "Open a terminal window on your firewall."
+msgstr ""
+
+#: ../../ddns.rst:39
+msgid ""
+"Select your chosen DDNS provider from the list of supported providers. To"
+" obtain the list of supported providers, run the following command: ::"
+msgstr ""
+
+#: ../../ddns.rst:44
+msgid ""
+"Enter your DDNS configuration details, including your provider "
+"credentials in the designated fields. These may include:"
+msgstr ""
+
+#: ../../ddns.rst:46
+msgid ""
+"The DDNS provider's service name, from the above list: use the "
+"``service_name`` field."
+msgstr ""
+
+#: ../../ddns.rst:47
+msgid "Username or client ID: use the ``username`` field."
+msgstr ""
+
+#: ../../ddns.rst:48
+msgid "Password or API key: use the ``password`` field."
+msgstr ""
+
+#: ../../ddns.rst:49
+msgid ""
+"Domain name to be associated with your dynamic IP address: use the "
+"``domain`` field, you can also use the ``lookup_host`` field."
+msgstr ""
+
+#: ../../ddns.rst:50
+msgid ""
+"Interface to monitor for IP address changes (e.g., \"wan\"): use the "
+"``interface`` field."
+msgstr ""
+
+#: ../../ddns.rst:52
+msgid ""
+"While the general steps remain consistent, specific configuration details"
+" may vary slightly depending on your chosen provider. It's recommended to"
+" consult your provider's documentation for detailed instructions and any "
+"additional settings required."
+msgstr ""
+
+#: ../../ddns.rst:55
+msgid ""
+"Due to the variety of supported providers, including their unique "
+"interfaces and authentication methods, it's not possible to provide "
+"specific configuration steps for each provider within this guide."
+msgstr ""
+
+#: ../../ddns.rst:58
+msgid ""
+"If your provider is not listed, you may still be able to configure it "
+"using a :ref:`custom configuration <custom-ddns-section>`."
+msgstr ""
+
+#: ../../ddns.rst:61
+msgid "Using the UCI command line"
+msgstr ""
+
+#: ../../ddns.rst:63
+msgid "Use uci commands to set and commit configuration options: ::"
+msgstr ""
+
+#: ../../ddns.rst:73
+msgid "Remember to replace placeholders with your values."
+msgstr ""
+
+#: ../../ddns.rst:75
+msgid "Then, restart the DDNS service: ::"
+msgstr ""
+
+#: ../../ddns.rst:79
+msgid ""
+"See the `UCI documentation <https://openwrt.org/docs/guide-user/base-"
+"system/ddns>`_ for a full list of supported settings."
+msgstr ""
+
+#: ../../ddns.rst:81
+msgid "Additional notes:"
+msgstr ""
+
+#: ../../ddns.rst:83
+msgid ""
+"Ensure your chosen DDNS provider plan supports API access and dynamic "
+"updates."
+msgstr ""
+
+#: ../../ddns.rst:84
+msgid ""
+"Double-check all entered credentials for accuracy to avoid update "
+"failures."
+msgstr ""
+
+#: ../../ddns.rst:85
+msgid ""
+"Consider enabling logging for the DDNS service to monitor updates and "
+"troubleshoot any issues."
+msgstr ""
+
+#: ../../ddns.rst:86
+msgid ""
+"Some providers may offer advanced features like wildcards and subdomain "
+"updates. Explore these options based on your specific needs."
+msgstr ""
+
+#: ../../ddns.rst:89
+msgid "Example: afraid.org (FreeDNS)"
+msgstr ""
+
+#: ../../ddns.rst:91
+msgid ""
+"Configure a domain with FreeDNS (afraid.org) using the UCI command line. "
+"The domain is named \"sanchio.crabdance.com\" and the username and "
+"password are \"myuser\" and \"mypass\", respectively. ::"
+msgstr ""
+
+#: ../../ddns.rst:115
+msgid "Custom example: dyndns.it (DynDNS)"
+msgstr ""
+
+#: ../../ddns.rst:117
+msgid ""
+"You can also configure some custom DDNS providers using the UCI command "
+"line. Configure a domain with DynDNS using the UCI command line. The "
+"domain is named \"nstest1.freeddns.it\" and the username and password are"
+" \"nstest1\" and \"nstest\", respectively. ::"
+msgstr ""
+
+#: ../../ddns.rst:139
+msgid "Using Luci"
+msgstr ""
+
+#: ../../ddns.rst:141
+msgid ""
+"The :ref:`Luci <luci-section>` web interface offers a simplified way to "
+"configure DDNS on NethSecurity. Refer to the `official documentation "
+"<https://openwrt.org/docs/guide-"
+"user/services/ddns/client#web_interface_instructions>`_ for detailed "
+"instructions on using Luci to configure DDNS."
 msgstr ""
 
 #: ../../dns_dhcp.rst:3
@@ -1289,7 +1534,7 @@ msgstr ""
 msgid "Applications"
 msgstr ""
 
-#: ../../index.rst:74
+#: ../../index.rst:75
 msgid "Best practices"
 msgstr ""
 
@@ -4334,28 +4579,28 @@ msgid ""
 "in place."
 msgstr ""
 
-#: ../../remote_access.rst:86
+#: ../../remote_access.rst:88
 msgid "Legacy web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:88
+#: ../../remote_access.rst:90
 msgid ""
 "NethSecurity offers also LuCI, the original OpenWrt web interface. Please"
 " bear in mind that some pages may cause unpredictable configuration "
 "changes. Luci is disabled by default. To enable it, execute: ::"
 msgstr ""
 
-#: ../../remote_access.rst:95
+#: ../../remote_access.rst:97
 msgid ""
 "Once enabled, Luci will be available only on port 443 at this URL: "
 "**https://<server_ip>/cgi-bin/luci**"
 msgstr ""
 
-#: ../../remote_access.rst:100
+#: ../../remote_access.rst:102
 msgid "NethSecurity UI 2FA"
 msgstr ""
 
-#: ../../remote_access.rst:102
+#: ../../remote_access.rst:104
 msgid ""
 "Protecting your NethSecurity administrator account is crucial, and Two-"
 "Factor Authentication (2FA) adds an extra layer of security beyond just a"
@@ -4365,103 +4610,103 @@ msgid ""
 " risk of unauthorized access even if your password is compromised."
 msgstr ""
 
-#: ../../remote_access.rst:106
+#: ../../remote_access.rst:108
 msgid "Enabling 2FA on NethSecurity UI:"
 msgstr ""
 
-#: ../../remote_access.rst:108
+#: ../../remote_access.rst:110
 msgid "Log in to your NethSecurity web interface"
 msgstr ""
 
-#: ../../remote_access.rst:109
+#: ../../remote_access.rst:111
 msgid ""
 "Click on the user icon in the top right corner and select ``Account "
 "settings``"
 msgstr ""
 
-#: ../../remote_access.rst:110
+#: ../../remote_access.rst:112
 msgid ""
 "Find the Two-factor authentication option and click :guilabel:`Configure "
 "2FA`"
 msgstr ""
 
-#: ../../remote_access.rst:112
+#: ../../remote_access.rst:114
 msgid "Setting up your authenticator app:"
 msgstr ""
 
-#: ../../remote_access.rst:114
+#: ../../remote_access.rst:116
 msgid ""
 "Download an authenticator app on your smartphone or tablet. Popular "
 "options include FreeOTP, Google Authenticator, and Microsoft "
 "Authenticator."
 msgstr ""
 
-#: ../../remote_access.rst:115
+#: ../../remote_access.rst:117
 msgid ""
 "Open the app and scan the QR code displayed on the NethSecurity web "
 "interface. This will add your NethSecurity account to the authenticator "
 "app."
 msgstr ""
 
-#: ../../remote_access.rst:116
+#: ../../remote_access.rst:118
 msgid ""
 "Enter the 6-digit code displayed by your authenticator app in the One-"
 "Time Password (OTP) field on the NethSecurity web interface."
 msgstr ""
 
-#: ../../remote_access.rst:118
+#: ../../remote_access.rst:120
 msgid ""
 "The system will also provide you with a set of backup codes. These codes "
 "can be used to log in if you lose your smartphone or authenticator app. "
 "Store these codes securely, preferably offline."
 msgstr ""
 
-#: ../../remote_access.rst:121
+#: ../../remote_access.rst:123
 msgid "You can disable 2FA from the same page."
 msgstr ""
 
-#: ../../remote_access.rst:124
+#: ../../remote_access.rst:126
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:126
+#: ../../remote_access.rst:128
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:128
+#: ../../remote_access.rst:130
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:133
+#: ../../remote_access.rst:135
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:135
+#: ../../remote_access.rst:137
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:137
+#: ../../remote_access.rst:139
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:139
+#: ../../remote_access.rst:141
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:143
+#: ../../remote_access.rst:145
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:148
+#: ../../remote_access.rst:150
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
@@ -5016,10 +5261,6 @@ msgstr ""
 msgid ""
 "It's crucial to configure essential information that identifies your "
 "device. Here's how to do it through the command line:"
-msgstr ""
-
-#: ../../snmp.rst:16 ../../snmp.rst:56
-msgid "Open a terminal window on your firewall."
 msgstr ""
 
 #: ../../snmp.rst:17
