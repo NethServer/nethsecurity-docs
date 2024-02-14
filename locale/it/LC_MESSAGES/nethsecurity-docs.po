@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 14:36+0000\n"
+"POT-Creation-Date: 2024-02-14 11:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -874,17 +874,51 @@ msgstr ""
 msgid ""
 "`image "
 "<https://updates.nethsecurity.nethserver.org/stable/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`_"
+"-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../stable.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`_"
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-68-ged0e27a"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-68-ged0e27a/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-68-ged0e27a-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-68-ged0e27a/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-67-g1b1a9ff"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-67-g1b1a9ff/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-67-g1b1a9ff-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-67-g1b1a9ff/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -895,13 +929,13 @@ msgstr ""
 msgid ""
 "`image "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-66-g3a7209d/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-66-g3a7209d-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`_"
+"-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-66-g3a7209d/targets/x86/64/sha256sums>`_"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-66-g3a7209d/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -912,60 +946,26 @@ msgstr ""
 msgid ""
 "`image "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-61-g28d7b7e/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-61-g28d7b7e-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`_"
+"-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-61-g28d7b7e/targets/x86/64/sha256sums>`_"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-60-gcde81a2"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-60-gcde81a2/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-60-gcde81a2-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`_"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-60-gcde81a2/targets/x86/64/sha256sums>`_"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`_"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3/targets/x86/64/sha256sums>`_"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-61-g28d7b7e/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`_"
+"-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`_"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dpi_filter.rst:5
@@ -7296,5 +7296,77 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-44-g2da9f2d/targets/x86/64/sha256sums>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/stable/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/stable/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-66-g3a7209d/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-66-g3a7209d-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-66-g3a7209d/targets/x86/64/sha256sums>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-61-g28d7b7e/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-61-g28d7b7e-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-61-g28d7b7e/targets/x86/64/sha256sums>`_"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-60-gcde81a2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-60-gcde81a2/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-60-gcde81a2-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-60-gcde81a2/targets/x86/64/sha256sums>`_"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-59-gfad5ba3/targets/x86/64/sha256sums>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`_"
 #~ msgstr ""
 
