@@ -128,7 +128,7 @@ for prefix in ['dev', 'stable']:
     fp = open(f'{prefix}.csv', 'w')
     fp.write("Version,Image,Hash\n")
     for entry in sorted_dev:
-        image = f'`image <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic-squashfs-combined-efi.img.gz>`_'
-        hash = f'`sha256sum <{base_url}/{prefix}/{entry}/targets/x86/64/sha256sums>`_'
+        image = f'`image <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic-squashfs-combined-efi.img.gz>`__'
+        hash = f'`sha256sum <{base_url}/{prefix}/{entry}/targets/x86/64/sha256sums>`__'
         fp.write(f'{entry},{image},{hash}\n')
     fp.close()
