@@ -7,6 +7,126 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-02-29
+===========================
+
+**Beta 2**
+
+Image version: `8-23.05.2-ns.0.0.2-beta2`
+
+The Beta2 release focuses on improving the new UI and enhancing the overall user experience.
+
+.. rubric:: New features
+
+New packages included in the image:
+
+* Added SNMPD package for network monitoring and management.
+* Dyndns package included for dynamic DNS services.
+* Expanded driver support for older network interfaces and vmnet environments.
+
+User interface (UI):
+
+* Default UI port changed to 9090, accessible from WAN. The UI is also accessible from LAN and WAN on port 443.
+* LuCI interface disabled by default for streamlined experience.
+* New page configure Source NAT, Masquerading, No-NAT and netmap rules.
+* Improved readability of network packet counts on the network page.
+
+Network:
+
+* PPPoE with DHCPv6-PD support implemented.
+* It's now possible to configure bond network interfaces from the UI.
+
+DPI:
+
+* Automatic network change reconfiguration enabled.
+* All non-WAN interfaces displayed on the DPI page. To upgrade the DPI configuration on existing installations, execute:
+
+  .. code-block:: bash
+
+    echo '{"changes": {"network": []}}' | /usr/libexec/rpcd/ns.commit call commit
+
+Additional features:
+
+* Improved the installation script ``ns-install``: installation is now faster and it halts the system at the end of the installation process.
+* Improved migration UI for smoother upgrade experience.
+* DHCP static lease creation from existing dynamic leases.
+* Two-factor authentication (2FA) for administrator accounts.
+* Redesigned login experience with a more integrated and admin-oriented look and feel.
+* Pre and post commit hooks added for enhanced API control.
+* Subscription-based opt-in feature for automatic updates, accessible only to users with active subscriptions.
+
+.. rubric:: Bug fixes
+
+MultiWAN:
+
+- Improved rule flexibility: now allows specifying single IP addresses (not just CIDR format) in source/destination fields for rules.
+- Policy protection: prevents accidental deletion of policies already used in rules.
+- Fixed mwan chart display: mwan chart within Netdata now shows correctly after multi-WAN configuration.
+
+Firewall:
+
+- Enhanced protocol handling: creates rules for all protocols (not just TCP/UDP) when "any" is selected.
+- Improved rule readability: in rules with 2 or more source/destination addresses, only the second address was readily visible in the tooltip.
+
+Port Forwarding:
+
+- Streamlined configuration: source and destination ports are only required for TCP/UDP protocols.
+- Simplified ALL protocol selection: when "ALL" protocol is chosen, other protocol options are disabled as they are redundant.
+
+Certificates:
+
+- Fixed issue: custom certificate being overwritten with self-generated certificate when set as default certificate for the firewall FQDN.
+- Correctly display certificate domain: on the certificate list, the subject displayed now corresponds to the client certificate instead of the first certificate in the chain.
+- Fix Let's Encrypt certificate deletion: forced acme.sh to generate a new configuration when recreating a Let's Encrypt certificate for the same domain,
+  instead of reusing the existing one.
+- Let's Encrypt certificate request: disabled automatic redirection from port 80 to 443 to avoid conflicts with acme.sh.
+
+DPI:
+
+- Fixed configuration loss: resolved issue where saved DPI filter configurations were deleted during upgrade from previous versions
+
+Network:
+
+- Improved interface management: enabled editing of interfaces even after their associated zone is deleted.
+
+API:
+
+- Log consistency: standardized API server logs for NethSecurity API server to match objects passed to scripts.
+
+OpenVPN:
+
+- Resolved port update issue: changing OpenVPN Road Warrior service port through the UI now correctly reflects the update in the service configuration and associated firewall rule.
+- Configuration protection: fixed issue where RoadWarrior configuration was lost when changing a user's password.
+- Enhanced authentication: addressed OpenVPN Roadwarrior authentication failures using local users in Nethsecurity beta1.
+- Resolved tunnel server status: fixed issue where the tunnel server status was not correctly displayed in the UI.
+
+Hotspot:
+
+- MAC address inclusion: resolved problem where MAC addresses were missing in the "unit" section of the Hotspot Manager when the hotspot relied on a VLAN.
+- VLAN deletion: fixed issue preventing deletion of VLANs previously used by unregistered hotspots, even after the VLAN was freed.
+- Enhanced status visibility: added enabled/disabled status to the main tab for quick reference.
+
+DHCP:
+
+- Fixed missing key value for a preconfigured advanced option, ensuring proper functionality.
+- Improved display of multiple options by removing redundant label.
+
+IPsec:
+
+- IPsec rule NAT port: corrected port for Allow-IPsec-NAT rule, changed from 500 to 4500 (UDP)
+- Duplicate rules: prevented duplicate firewall rule creation on tunnel creations
+- Fix spelling of IPsec rule names
+
+.. rubric:: Known bugs
+
+IPsec:
+
+- Only the first subnet in the IPSec tunnel is functional: when defining more than one network in an IPSec tunnel between different devices,
+  only the first network works; traffic destined to other subnets in the tunnel is not routed correctly.
+  A workaround is to create multiple tunnels with individual subnets.
+  This issue does not occur between two NethSecurity 8 devices (as they use the same daemon), but it can occur between, for example,
+  a NethSecurity 8 and a NethServer 7.9.
+
 Major changes on 2024-02-01
 ===========================
 
