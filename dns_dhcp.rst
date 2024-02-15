@@ -122,9 +122,11 @@ In the presence of split DNS, resolving public domains with internal resources, 
 
 ``Sep 21 13:09:36 fw1 dnsmasq[1]: possible DNS-rebind attack detected: ad.nethesis.it``
 
-How to fix these problems
-~~~~~~~~~~~~~~~~~~~~~~~~~
-You can easily fix these problems from the CLI
+.. note:: To ensure maximum compatibility and prevent malfunctions in migrated installations using the dedicated tool from NethServer 7.9, DNS Rebind Protection is disabled, ensuring the same behavior as the previous version.
+
+How to fix DNS rebind protection issues
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can easily fix any of these issues from the CLI.
 
 Solution 1: Put the specific domain in a whitelist (suggested)::
 
@@ -146,6 +148,15 @@ Completely disable DNS rebind protection using these commands::
  uci set dhcp.@dnsmasq[0].rebind_protection='0'
  uci commit dhcp
  /etc/init.d/dnsmasq restart
+
+How to enable DNS rebind protection (e.g. on migrated firewalls)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+ uci set dhcp.@dnsmasq[0].rebind_protection='1'
+ uci commit dhcp
+ /etc/init.d/dnsmasq restart
+
 
 
 
