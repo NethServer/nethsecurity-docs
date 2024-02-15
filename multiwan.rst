@@ -88,6 +88,6 @@ If your firewall was previously configured with two or more WAN interfaces and a
 ::
 
   /usr/libexec/rpcd/ns.mwan call clear_config
-  uci commit mwan
+  uci commit mwan3
   reload_config
 
