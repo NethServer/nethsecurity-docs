@@ -7,11 +7,11 @@ Threat shield
 NethSecurity is equipped with various tools and integrations useful for countering threats coming from the internet.
 One of these tools is Threat Shield: a shield that blocks any traffic coming from compromised IP addresses or destined to them as well as any requests addressed to hostnames that could be malicious.
 
-The service can load community blocklists or can rely on high-quality blocklists very frequently updated and maintained by `Yoroy <https://yoroi.company>`_ a leading company focused on
-CyberSecurity and member of `Cyber Threat Alliance <https://www.cyberthreatalliance.org>`_.
+The service can load community blocklists or can rely on high-quality blocklists very frequently updated and maintained by `Nethesis <https://www.nethesis.it>`_ and `Yoroy <https://yoroi.company>`_
+a leading company focused on CyberSecurity and member of `Cyber Threat Alliance <https://www.cyberthreatalliance.org>`_.
 Yoroi blacklists ensure great effectiveness and high confidence, minimizing the possibility of false positives.
 
-This tool can only be activated for firewalls provided with a subscription, currently there is no web configuration interface but it is still possible to configure it from a character interface.
+Please note that to access the Nethesis and Yoroi blocklist, the machine must have a valid extra entitlement for this service.
 
 IP based Threat shield
 =======================
@@ -20,11 +20,10 @@ The service is disabled by default, to enable it navigate to the ``Threat shield
 Access the ``Settings`` tab and activate the ``Status`` switch.
 
 When the service is enabled, the ``Blocklist`` tab will display all available blocklists.
-If the machine is not registered, the Community blocklists will be visible.
-If the machine is registered, only the Enterprise blocklists will be visible.
-Please note that to access the Enterprise blocklist, the machine must have a valid extra entitlement for this service.
-
+You can enable or disable each blocklist by using the switch on the right side of the list.
 Enabled blocklist will be automatically updated at regular intervals.
+
+Yoroi and Nethesis blocklists will be listed only if the machine has a valid Enterprise :ref:`subscription <subscription-section>` and a valid entitlement for the Threat Shield service.
 
 Allow list
 ----------
