@@ -30,7 +30,7 @@ Allow list
 
 Sometimes it may be necessary to allow access to certain IP addresses, to do this you can use the ``Allowlist`` tab.
 Use the :guilabel:`Add address` button to add a new address to the list.
-The address can be a valid IPv4/IPv6 address with optional CIDR notation, a MAC address , or a fully qualified hostname (FQDN).
+The address can be a valid IPv4/IPv6 address with optional CIDR notation, a MAC address, or a fully qualified hostname (FQDN).
 
 For example, the address can be:
 
@@ -49,6 +49,6 @@ DNS based Threat shield
 =======================
 
 The DNS filter uses AdBlock which blocks any request to a domain that is considered malicious.
-The service can load community--maintained blocklist or use Yoroi feeds.
+The service can load community-maintained blocklist or use Yoroi feeds.
 
 AdBlock can be configured from the command line interface as explained in the `developer manual <https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-dns>`_.
