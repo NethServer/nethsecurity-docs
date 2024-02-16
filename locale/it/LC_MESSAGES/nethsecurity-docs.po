@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 16:03+0000\n"
+"POT-Creation-Date: 2024-02-16 16:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -885,6 +885,40 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-80-gdbd7cfd"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-80-gdbd7cfd/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-80-gdbd7cfd-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-80-gdbd7cfd/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -5710,8 +5744,8 @@ msgid ""
 "Sometimes it may be necessary to allow access to certain IP addresses, to"
 " do this you can use the ``Allowlist`` tab. Use the :guilabel:`Add "
 "address` button to add a new address to the list. The address can be a "
-"valid IPv4/IPv6 address with optional CIDR notation, a MAC address , or a"
-" fully qualified hostname (FQDN)."
+"valid IPv4/IPv6 address with optional CIDR notation, a MAC address, or a "
+"fully qualified hostname (FQDN)."
 msgstr ""
 
 #: ../../threat_shield.rst:35
@@ -5756,8 +5790,8 @@ msgstr ""
 #: ../../threat_shield.rst:51
 msgid ""
 "The DNS filter uses AdBlock which blocks any request to a domain that is "
-"considered malicious. The service can load community--maintained "
-"blocklist or use Yoroi feeds."
+"considered malicious. The service can load community-maintained blocklist"
+" or use Yoroi feeds."
 msgstr ""
 
 #: ../../threat_shield.rst:54
@@ -7658,5 +7692,26 @@ msgstr ""
 #~ " `developer manual "
 #~ "<https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-"
 #~ "dns>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sometimes it may be necessary to "
+#~ "allow access to certain IP addresses,"
+#~ " to do this you can use the "
+#~ "``Allowlist`` tab. Use the :guilabel:`Add "
+#~ "address` button to add a new "
+#~ "address to the list. The address "
+#~ "can be a valid IPv4/IPv6 address "
+#~ "with optional CIDR notation, a MAC "
+#~ "address , or a fully qualified "
+#~ "hostname (FQDN)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The DNS filter uses AdBlock which "
+#~ "blocks any request to a domain "
+#~ "that is considered malicious. The "
+#~ "service can load community--maintained "
+#~ "blocklist or use Yoroi feeds."
 #~ msgstr ""
 
