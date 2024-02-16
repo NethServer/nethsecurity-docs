@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 15:17+0000\n"
+"POT-Creation-Date: 2024-02-16 16:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -885,6 +885,57 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-79-gf830027"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-79-gf830027/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-79-gf830027-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-79-gf830027/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-78-gf502616"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-78-gf502616/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-78-gf502616-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-78-gf502616/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-77-g99b3a38"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-77-g99b3a38/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-77-g99b3a38-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-77-g99b3a38/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -5602,15 +5653,15 @@ msgstr ""
 msgid ""
 "NethSecurity is equipped with various tools and integrations useful for "
 "countering threats coming from the internet. One of these tools is Threat"
-" Shield: a shield that blocks any traffic coming from compromised IP "
-"addresses or destined to them as well as any requests addressed to "
-"hostnames that could be malicious."
+" Shield, which blocks any traffic coming from compromised IP addresses or"
+" destined to them as well as any requests addressed to hostnames that "
+"could be malicious."
 msgstr ""
 
 #: ../../threat_shield.rst:10
 msgid ""
-"The service can load community blocklists or can rely on high-quality "
-"blocklists very frequently updated and maintained by `Nethesis "
+"The service can load community-maintained blocklists or can rely on high-"
+"quality blocklists very frequently updated and maintained by `Nethesis "
 "<https://www.nethesis.it>`_ and `Yoroy <https://yoroi.company>`_ a "
 "leading company focused on CyberSecurity and member of `Cyber Threat "
 "Alliance <https://www.cyberthreatalliance.org>`_. Yoroi blacklists ensure"
@@ -5660,7 +5711,7 @@ msgid ""
 " do this you can use the ``Allowlist`` tab. Use the :guilabel:`Add "
 "address` button to add a new address to the list. The address can be a "
 "valid IPv4/IPv6 address with optional CIDR notation, a MAC address , or a"
-" fully qualified host name (FQDN)."
+" fully qualified hostname (FQDN)."
 msgstr ""
 
 #: ../../threat_shield.rst:35
@@ -5684,7 +5735,7 @@ msgid "MAC address: 00:0a:95:9d:68:16"
 msgstr ""
 
 #: ../../threat_shield.rst:41
-msgid "Fully qualified host name: example.com"
+msgid "Fully qualified hostname: example.com"
 msgstr ""
 
 #: ../../threat_shield.rst:43
@@ -5695,7 +5746,7 @@ msgstr ""
 msgid ""
 "You can add a comment to provide additional information about the "
 "address, such as its purpose or owner. This can help in organizing and "
-"managing the allow list effectively."
+"managing the allowlist effectively."
 msgstr ""
 
 #: ../../threat_shield.rst:49
@@ -5704,15 +5755,15 @@ msgstr ""
 
 #: ../../threat_shield.rst:51
 msgid ""
-"The DNS filter uses AdBlock that blocks any request to a domain that is "
-"considered malicious. The service can load community blocklist or use "
-"Yoroi feeds."
+"The DNS filter uses AdBlock which blocks any request to a domain that is "
+"considered malicious. The service can load community--maintained "
+"blocklist or use Yoroi feeds."
 msgstr ""
 
 #: ../../threat_shield.rst:54
 msgid ""
-"AdBlock can be configured from command line interface as explained in the"
-" `developer manual <https://dev.nethsecurity.org/packages/ns-"
+"AdBlock can be configured from the command line interface as explained in"
+" the `developer manual <https://dev.nethsecurity.org/packages/ns-"
 "threat_shield/#ts-dns>`_."
 msgstr ""
 
@@ -7540,5 +7591,72 @@ msgstr ""
 #~ "How to configure this service  is "
 #~ "explained in the `developer manual "
 #~ "<https://dev.nethsecurity.org/packages/ns-threat_shield>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity is equipped with various "
+#~ "tools and integrations useful for "
+#~ "countering threats coming from the "
+#~ "internet. One of these tools is "
+#~ "Threat Shield: a shield that blocks "
+#~ "any traffic coming from compromised IP"
+#~ " addresses or destined to them as "
+#~ "well as any requests addressed to "
+#~ "hostnames that could be malicious."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The service can load community "
+#~ "blocklists or can rely on high-"
+#~ "quality blocklists very frequently updated "
+#~ "and maintained by `Nethesis "
+#~ "<https://www.nethesis.it>`_ and `Yoroy "
+#~ "<https://yoroi.company>`_ a leading company "
+#~ "focused on CyberSecurity and member of"
+#~ " `Cyber Threat Alliance "
+#~ "<https://www.cyberthreatalliance.org>`_. Yoroi blacklists"
+#~ " ensure great effectiveness and high "
+#~ "confidence, minimizing the possibility of "
+#~ "false positives."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sometimes it may be necessary to "
+#~ "allow access to certain IP addresses,"
+#~ " to do this you can use the "
+#~ "``Allowlist`` tab. Use the :guilabel:`Add "
+#~ "address` button to add a new "
+#~ "address to the list. The address "
+#~ "can be a valid IPv4/IPv6 address "
+#~ "with optional CIDR notation, a MAC "
+#~ "address , or a fully qualified "
+#~ "host name (FQDN)."
+#~ msgstr ""
+
+#~ msgid "Fully qualified host name: example.com"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can add a comment to provide"
+#~ " additional information about the address,"
+#~ " such as its purpose or owner. "
+#~ "This can help in organizing and "
+#~ "managing the allow list effectively."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The DNS filter uses AdBlock that "
+#~ "blocks any request to a domain "
+#~ "that is considered malicious. The "
+#~ "service can load community blocklist or"
+#~ " use Yoroi feeds."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "AdBlock can be configured from command"
+#~ " line interface as explained in the"
+#~ " `developer manual "
+#~ "<https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-"
+#~ "dns>`_."
 #~ msgstr ""
 
