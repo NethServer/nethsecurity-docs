@@ -112,6 +112,53 @@ NethSecurity will send queries for google.com and gmail.google.com to 1.2.3.4, b
 
 This is true also for wildcards: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
 
+DNS Rebind Protection
+^^^^^^^^^^^^^^^^^^
+
+DNS Rebind Protection is a security feature that safeguards against DNS rebinding attacks. It blocks the use of private IP ranges by public domains, preventing malicious websites from manipulating browsers to make unauthorized requests to local network devices.
+
+DNS Rebind Protection is enabled by default on NethSecurity and usually does not have operational repercussions. 
+In the presence of split DNS, resolving public domains with internal resources, rebind protection may lead to resolution issues. In such scenarios, potential problems can be checked in the logs, where lines similar to these may appear:
+
+``Sep 21 13:09:36 fw1 dnsmasq[1]: possible DNS-rebind attack detected: ad.nethesis.it``
+
+.. note:: To ensure maximum compatibility and prevent malfunctions in migrated installations using the dedicated tool from NethServer 7.9, DNS Rebind Protection is disabled, ensuring the same behavior as the previous version.
+
+How to fix DNS rebind protection issues
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can easily fix any of these issues from the CLI.
+
+Solution 1: Put the specific domain in a whitelist (suggested)::
+
+  uci set dhcp.@dnsmasq[0].rebind_domain='nethesis.it'
+
+in case if multiple domains write them separated by a space::
+
+ uci set dhcp.@dnsmasq[0].rebind_domain='nethesis.it' 'mydomain'
+
+then commit and restart::
+
+  uci commit dhcp
+  /etc/init.d/dnsmasq restart
+
+Solution 2: Disable the DNS protection 
+
+Completely disable DNS rebind protection using these commands::
+
+ uci set dhcp.@dnsmasq[0].rebind_protection='0'
+ uci commit dhcp
+ /etc/init.d/dnsmasq restart
+
+How to enable DNS rebind protection (e.g. on migrated firewalls)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+ uci set dhcp.@dnsmasq[0].rebind_protection='1'
+ uci commit dhcp
+ /etc/init.d/dnsmasq restart
+
+
+
 DNS records
 -----------
 The system can handle local DNS records. When the server performs a DNS lookup, first it will search inside local DNS records. If no local record is found, an external DNS query will be done.
