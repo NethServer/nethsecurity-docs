@@ -113,7 +113,7 @@ NethSecurity will send queries for google.com and gmail.google.com to 1.2.3.4, b
 This is true also for wildcards: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
 
 DNS Rebind Protection
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 DNS Rebind Protection is a security feature that safeguards against DNS rebinding attacks. It blocks the use of private IP ranges by public domains, preventing malicious websites from manipulating browsers to make unauthorized requests to local network devices.
 
