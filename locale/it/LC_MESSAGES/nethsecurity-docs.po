@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 13:15+0000\n"
+"POT-Creation-Date: 2024-02-16 15:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -885,6 +885,23 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-76-g86e2c6f"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-76-g86e2c6f/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-76-g86e2c6f-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-76-g86e2c6f/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -5584,41 +5601,119 @@ msgstr ""
 #: ../../threat_shield.rst:7
 msgid ""
 "NethSecurity is equipped with various tools and integrations useful for "
-"countering threats coming from the internet."
+"countering threats coming from the internet. One of these tools is Threat"
+" Shield: a shield that blocks any traffic coming from compromised IP "
+"addresses or destined to them as well as any requests addressed to "
+"hostnames that could be malicious."
 msgstr ""
 
-#: ../../threat_shield.rst:9
+#: ../../threat_shield.rst:10
 msgid ""
-"One of these tools is Threat Shield: a shield that blocks any traffic "
-"coming from compromised IP addresses or destined to them as well as any "
-"requests addressed to hostnames that could be malicious."
+"The service can load community blocklists or can rely on high-quality "
+"blocklists very frequently updated and maintained by `Nethesis "
+"<https://www.nethesis.it>`_ and `Yoroy <https://yoroi.company>`_ a "
+"leading company focused on CyberSecurity and member of `Cyber Threat "
+"Alliance <https://www.cyberthreatalliance.org>`_. Yoroi blacklists ensure"
+" great effectiveness and high confidence, minimizing the possibility of "
+"false positives."
 msgstr ""
 
-#: ../../threat_shield.rst:11
-msgid "Threat shield uses BanIP and Adblock software to block malicious traffic."
-msgstr ""
-
-#: ../../threat_shield.rst:13
+#: ../../threat_shield.rst:14
 msgid ""
-"These 2 softwares ar loaded with high quality blacklists very frequently "
-"updated and maintained by `Yoroy <https://yoroi.company>`_ a leading "
-"company focused on CyberSecurity and member of `Cyber Threat Alliance "
-"<https://www.cyberthreatalliance.org>`_. Yoroi blacklists ensure great "
-"effectiveness and high confidence, minimizing the possibility of false "
-"positives."
+"Please note that to access the Nethesis and Yoroi blocklist, the machine "
+"must have a valid extra entitlement for this service."
 msgstr ""
 
-#: ../../threat_shield.rst:16
-msgid ""
-"This tool can only be activated for firewalls provided with a "
-"subscription, currently there is no web configuration interface but it is"
-" still possible to configure it from a character interface."
+#: ../../threat_shield.rst:17
+msgid "IP based Threat shield"
 msgstr ""
 
-#: ../../threat_shield.rst:18
+#: ../../threat_shield.rst:19
 msgid ""
-"How to configure this service  is explained in the `developer manual "
-"<https://dev.nethsecurity.org/packages/ns-threat_shield>`_."
+"The service is disabled by default, to enable it navigate to the ``Threat"
+" shield`` page under the ``Security`` section. Access the ``Settings`` "
+"tab and activate the ``Status`` switch."
+msgstr ""
+
+#: ../../threat_shield.rst:22
+msgid ""
+"When the service is enabled, the ``Blocklist`` tab will display all "
+"available blocklists. You can enable or disable each blocklist by using "
+"the switch on the right side of the list. Enabled blocklist will be "
+"automatically updated at regular intervals."
+msgstr ""
+
+#: ../../threat_shield.rst:26
+msgid ""
+"Yoroi and Nethesis blocklists will be listed only if the machine has a "
+"valid Enterprise :ref:`subscription <subscription-section>` and a valid "
+"entitlement for the Threat Shield service."
+msgstr ""
+
+#: ../../threat_shield.rst:29
+msgid "Allow list"
+msgstr ""
+
+#: ../../threat_shield.rst:31
+msgid ""
+"Sometimes it may be necessary to allow access to certain IP addresses, to"
+" do this you can use the ``Allowlist`` tab. Use the :guilabel:`Add "
+"address` button to add a new address to the list. The address can be a "
+"valid IPv4/IPv6 address with optional CIDR notation, a MAC address , or a"
+" fully qualified host name (FQDN)."
+msgstr ""
+
+#: ../../threat_shield.rst:35
+msgid "For example, the address can be:"
+msgstr ""
+
+#: ../../threat_shield.rst:37
+msgid "IPv4 address: 192.168.0.1"
+msgstr ""
+
+#: ../../threat_shield.rst:38
+msgid "IPv6 address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+msgstr ""
+
+#: ../../threat_shield.rst:39
+msgid "IPv4 address with CIDR notation: 192.168.0.0/24"
+msgstr ""
+
+#: ../../threat_shield.rst:40
+msgid "MAC address: 00:0a:95:9d:68:16"
+msgstr ""
+
+#: ../../threat_shield.rst:41
+msgid "Fully qualified host name: example.com"
+msgstr ""
+
+#: ../../threat_shield.rst:43
+msgid "A comment can be associated with each address to facilitate management."
+msgstr ""
+
+#: ../../threat_shield.rst:45
+msgid ""
+"You can add a comment to provide additional information about the "
+"address, such as its purpose or owner. This can help in organizing and "
+"managing the allow list effectively."
+msgstr ""
+
+#: ../../threat_shield.rst:49
+msgid "DNS based Threat shield"
+msgstr ""
+
+#: ../../threat_shield.rst:51
+msgid ""
+"The DNS filter uses AdBlock that blocks any request to a domain that is "
+"considered malicious. The service can load community blocklist or use "
+"Yoroi feeds."
+msgstr ""
+
+#: ../../threat_shield.rst:54
+msgid ""
+"AdBlock can be configured from command line interface as explained in the"
+" `developer manual <https://dev.nethsecurity.org/packages/ns-"
+"threat_shield/#ts-dns>`_."
 msgstr ""
 
 #: ../../troubleshooting.rst:7
@@ -7396,5 +7491,54 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-61-g28d7b7e/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity is equipped with various "
+#~ "tools and integrations useful for "
+#~ "countering threats coming from the "
+#~ "internet."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "One of these tools is Threat "
+#~ "Shield: a shield that blocks any "
+#~ "traffic coming from compromised IP "
+#~ "addresses or destined to them as "
+#~ "well as any requests addressed to "
+#~ "hostnames that could be malicious."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Threat shield uses BanIP and Adblock "
+#~ "software to block malicious traffic."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These 2 softwares ar loaded with "
+#~ "high quality blacklists very frequently "
+#~ "updated and maintained by `Yoroy "
+#~ "<https://yoroi.company>`_ a leading company "
+#~ "focused on CyberSecurity and member of"
+#~ " `Cyber Threat Alliance "
+#~ "<https://www.cyberthreatalliance.org>`_. Yoroi blacklists"
+#~ " ensure great effectiveness and high "
+#~ "confidence, minimizing the possibility of "
+#~ "false positives."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This tool can only be activated "
+#~ "for firewalls provided with a "
+#~ "subscription, currently there is no web"
+#~ " configuration interface but it is "
+#~ "still possible to configure it from "
+#~ "a character interface."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "How to configure this service  is "
+#~ "explained in the `developer manual "
+#~ "<https://dev.nethsecurity.org/packages/ns-threat_shield>`_."
 #~ msgstr ""
 
