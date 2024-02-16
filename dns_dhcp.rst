@@ -118,7 +118,7 @@ DNS Rebind Protection
 DNS Rebind Protection is a security feature that safeguards against DNS rebinding attacks. It blocks the use of private IP ranges by public domains, preventing malicious websites from manipulating browsers to make unauthorized requests to local network devices.
 
 DNS Rebind Protection is enabled by default on NethSecurity and usually does not have operational repercussions. 
-In the presence of split DNS, resolving public domains with internal resources, rebind protection may lead to resolution issues. In such scenarios, potential problems can be checked in the logs, where lines similar to these may appear:
+In the presence of split DNS, resolving public domains with internal resources, rebind protection may lead to resolution issues. In such scenarios, potential problems can be found in the log (`/var/log/messages`), where lines similar to these may appear:
 
 ``Sep 21 13:09:36 fw1 dnsmasq[1]: possible DNS-rebind attack detected: ad.nethesis.it``
 
