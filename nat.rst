@@ -89,20 +89,21 @@ The rule should contain the internal network (192.168.1.0./24) as the source and
 Netmap
 ======
 
-Netmap os a NAT technique that offers 1:1 network-wide translation without changing the individual host addresses.
+Netmap is a NAT technique that offers 1:1 network-wide translation without changing the individual host addresses.
 This means it could map an entire private network (e.g., 192.168.1.0/24) to a another network (e.g., 10.5.6.0/24) at once,
 eliminating the need to manually configure individual NAT rules for each device.
 
-**Example** In some cases, the remote and local networks of a Net to Net VPN may overlap. This makes it impossible to route traffic between the two networks.
-The overlap can be 
-Networks A and B are overlapping (192.168.0.0/24). They will be translated to networks 10.1.1.0/24 and 10.2.2.0/24 in order to be able to communicate:
+**Example** 2 firewalls, A and B holding a VPN tunnel between Networks A and B, local and remote networks are overlapping (192.168.1.0/24), so this makes it impossible to route traffic between them. 
+Translate A and B networks onto two alternative networks can solve the problem so that there are no overlapping networks.
 
-* Network A: 192.168.0.0/24 -> is translated to -> Network C: 10.1.1.0/24
-* Network B: 192.168.0.0/24 -> is translated to -> Network D: 10.2.2.0/24
+Let's use this translation scheme.
 
-A host in network A trying to reach a host in network B will contact not the real IP but its translated network dual (only the last octet remains the same). 
-For example, the host 192.168.0.10 from the network A wanting to reach 192.168.0.20 in network B will actually need to contact the IP 10.2.2.20.
-Before the request exits firewall A, the source of the packet will be rewritten to the IP 10.1.1.10 to eliminate every routing issue on network B. The same process will occur for the returning packets.
+* Network A: 192.168.1.0/24 -> is translated to -> Network ALT_A: 10.1.1.0/24
+* Network B: 192.168.1.0/24 -> is translated to -> Network ALT_B: 10.2.2.0/24
+
+A host in network A trying to reach a host in network B must not contact the real IP but its translated network (only the last octet remains the same). 
+For example, the host 192.168.1.10 from the network A wanting to reach 192.168.0.20 in network B must contact the IP 10.2.2.20 instead.
+Before the request exits firewall A (FW-A), the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The same process will occur for the returning packets.
 
 
 **Solution** The problem can be solved by using netmap to translate the traffic to a different private network. This allows the traffic to be routed correctly.
@@ -119,7 +120,7 @@ From CLI create a rule::
  uci set netmap.r1=rule
  uci set netmap.r1.name=source_nat
  uci set netmap.r1.dest=10.2.2.0/24
- uci set netmap.r1.map_from=192.168.0.0/24
+ uci set netmap.r1.map_from=192.168.1.0/24
  uci set netmap.r1.map_to=10.1.1.0/24
 
 
@@ -144,14 +145,14 @@ From CLI create a rule::
  uci set netmap.r2.name=dest_nat
  uci set netmap.r2.src=10.2.2.0/24
  uci set netmap.r2.map_from=10.1.1.0/24
- uci set netmap.r2.map_to=192.168.0.0/24
+ uci set netmap.r2.map_to=192.168.1.0/24
 
 
 
 you can also specify optional in/out devices this way::
 
- uci  add_list netmap.r1.device_in='eth0'
- uci  add_list netmap.r1.device_out='tunrw1'
+ uci  add_list netmap.r2.device_in='tunrw1'
+ uci  add_list netmap.r2.device_out='eth01'
 
 Then commit and apply::
 
