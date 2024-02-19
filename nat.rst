@@ -60,7 +60,7 @@ Masquerade can also be used to mask traffic originating from a remote network (e
 
 **Problem** The host cannot reach the local device due to the lack of a gateway.
 
-**Solution** Create a NAT rule with masquerade action for the traffic coming from the VPN Network.This masks the traffic from the VPN network (192.168.7.0/24) to the local network with the firewall's IP of the destination interface.
+**Solution** Create a NAT rule with masquerade action for the traffic coming from the VPN Network. This masks the traffic from the VPN network (192.168.7.0/24) to the local network with the firewall's IP of the destination interface.
 The rule should contain the VPN network (192.168.7.0/24) as the source and the internal host network (192.168.1.0/24) as the destination address, outbound zone can be left empty;
 select MASQUERADE as action.
 
@@ -75,9 +75,9 @@ Disabling NAT (no-NAT) allows you to bypass the NAT process for specific traffic
 This is particularly useful when it comes to avoiding WAN masquerading for specific destinations.
 
 **Example** Your firewall is connected to a router that, in addition to allowing internet access, also enables reaching private networks through CDN connections or IPsec tunnels. 
-In order to reach private remote networks, traffic from local network must come out with its original ip address (no masquerade rewriting).
+In order to reach private remote networks, traffic from local network must come out with its original IP address (no masquerade rewriting).
 
-**Problem** The router tunnel policies only allow traffic between the NethSecurity local network and the destination networks, but all traffic comes out of nethsecurity with the masked IP (NethSecurity WAN IP).
+**Problem** The router tunnel policies only allow traffic between the NethSecurity local network and the destination networks, but all traffic comes out of the firewall with the masked IP (NethSecurity WAN IP).
 Due to masquerading, direct communication between the NethSecurity LAN and the remote network is not possible.
 
 **Solution**: Create a NAT (Network Address Translation) rule with ACCEPT in your firewall.
@@ -93,7 +93,7 @@ Netmap is a NAT technique that offers 1:1 network-wide translation without chang
 This means it could map an entire private network (e.g., 192.168.1.0/24) to a another network (e.g., 10.5.6.0/24) at once,
 eliminating the need to manually configure individual NAT rules for each device.
 
-**Example** 2 firewalls, A and B holding a VPN tunnel between Networks A and B, local and remote networks are overlapping (192.168.1.0/24), so this makes it impossible to route traffic between them. 
+**Example** 2 firewalls, FW-A and FW-B holding a VPN tunnel between networks A and B, local and remote networks are overlapping (192.168.1.0/24), so this makes it impossible to route traffic between them. 
 Translate A and B networks onto two alternative networks can solve the problem so that there are no overlapping networks.
 
 Let's use this translation scheme.
@@ -103,7 +103,7 @@ Let's use this translation scheme.
 
 A host in network A trying to reach a host in network B must not contact the real IP but its translated network (only the last octet remains the same). 
 For example, the host 192.168.1.10 from the network A wanting to reach 192.168.0.20 in network B must contact the IP 10.2.2.20 instead.
-Before the request exits firewall A (FW-A), the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The same process will occur for the returning packets.
+Before the request exits firewall  FW-A, the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The same process will occur for the returning packets.
 
 
 **Solution** The problem can be solved by using netmap to translate the traffic to a different private network. This allows the traffic to be routed correctly.
@@ -113,6 +113,7 @@ Before the request exits firewall A (FW-A), the source of the packet will be rew
 
 Source Netmap
 -------------
+
 The "source netmap" allows us to determine how the source should change when traffic is directed towards a specific destination. E.g., destination network 10.2.2.0/24, source network: 192.168.0.0/24, natted source network: 10.1.1.0/24.
 
 From CLI create a rule::
@@ -122,8 +123,6 @@ From CLI create a rule::
  uci set netmap.r1.dest=10.2.2.0/24
  uci set netmap.r1.map_from=192.168.1.0/24
  uci set netmap.r1.map_to=10.1.1.0/24
-
-
 
 you can also specify optional in/out devices this way::
 
@@ -146,8 +145,6 @@ From CLI create a rule::
  uci set netmap.r2.src=10.2.2.0/24
  uci set netmap.r2.map_from=10.1.1.0/24
  uci set netmap.r2.map_to=192.168.1.0/24
-
-
 
 you can also specify optional in/out devices this way::
 
