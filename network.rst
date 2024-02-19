@@ -73,6 +73,10 @@ Modes providing fault tolerance only:
 * Active backup (recommended)
 * Broadcast policy
 
+When creating a bond, the UI will display a management IP address in the private network 127.0.0.1.
+This IP address is used solely for managing the bond and is not involved in traffic forwarding.
+Once the bond device is created, you can assign an IP address and a firewall zone to it.
+Please note that bond configurations are not editable after creation. If you need to modify the bond's IP address or zone, you must delete the interface and create a new one.
 
 .. _vlan-section:
 
