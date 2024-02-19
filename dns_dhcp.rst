@@ -132,10 +132,6 @@ Solution 1: Put the specific domain in a whitelist (suggested)::
 
   uci add_list dhcp.@dnsmasq[0].rebind_domain="nethesis.it"
 
-in case if multiple domains write them separated by a space::
-
- uci set dhcp.@dnsmasq[0].rebind_domain='nethesis.it' 'mydomain'
-
 then commit and restart::
 
   uci commit dhcp
@@ -150,7 +146,7 @@ Completely disable DNS rebind protection using these commands::
  /etc/init.d/dnsmasq restart
 
 How to enable DNS rebind protection (e.g. on migrated firewalls)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
  uci set dhcp.@dnsmasq[0].rebind_protection='1'
