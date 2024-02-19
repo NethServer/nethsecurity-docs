@@ -130,7 +130,7 @@ You can easily fix any of these issues from the CLI.
 
 Solution 1: Put the specific domain in a whitelist (suggested)::
 
-  uci set dhcp.@dnsmasq[0].rebind_domain='nethesis.it'
+  uci add_list dhcp.@dnsmasq[0].rebind_domain="nethesis.it"
 
 in case if multiple domains write them separated by a space::
 
