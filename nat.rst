@@ -14,7 +14,7 @@ This ensures that internal hosts accessing the internet appear to external serve
 Access the ``NAT`` page under the ``Firewall`` section to configure the following types of NAT rules:
 
 - :ref:`Source NAT <snat-section>`
-- :ref:`Masquerade <masquerde-section>`
+- :ref:`Masquerade <masquerade-section>`
 - :ref:`Disable NAT (no-NAT) <disable_nat-section>`
 - :ref:`Netmap <netmap-section>`
 
