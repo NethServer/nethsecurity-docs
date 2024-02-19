@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-19 13:25+0000\n"
+"POT-Creation-Date: 2024-02-19 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -885,6 +885,57 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-97-g7e263fc"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-97-g7e263fc/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-97-g7e263fc-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-97-g7e263fc/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-96-ga759afb"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-96-ga759afb/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-96-ga759afb-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-96-ga759afb/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-95-g67845a2"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-95-g67845a2/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-95-g67845a2-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-95-g67845a2/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -5928,12 +5979,211 @@ msgstr ""
 msgid ""
 "NethSecurity is a sophisticated firewall system with numerous "
 "interconnected components. While the system automates many configurations"
-" seamlessly, occasional breakdowns can occur. When issues arise, the user"
-" interface (UI) displays an error message capturing the nature of the "
-"problem."
+" seamlessly, occasional breakdowns can occur."
 msgstr ""
 
-#: ../../troubleshooting.rst:11
+#: ../../troubleshooting.rst:10
+msgid ""
+"You can create a support request and report issues to the Nethesis "
+"support team or the NethServer community forum."
+msgstr ""
+
+#: ../../troubleshooting.rst:12
+msgid ""
+"For stable releases, you can open a ticket on the `Nethesis helpdesk "
+"portal <https://helpdesk.nethesis.it>`_ if your machine has a "
+"subscription."
+msgstr ""
+
+#: ../../troubleshooting.rst:14
+msgid ""
+"For unstable releases, you can open a new thread on the `NethServer "
+"community English-only forum <https://community.nethserver.org>`_ in the "
+"NethSecurity category. If you are a Nethesis partner, you can open a new "
+"Italian thread on the `Nethesis partner community "
+"<https://partner.nethesis.it>`_ in the NethSecurity category."
+msgstr ""
+
+#: ../../troubleshooting.rst:17
+msgid ""
+"When opening a support request or reporting an issue, you should follow "
+"these guidelines to ensure a quick and effective resolution:"
+msgstr ""
+
+#: ../../troubleshooting.rst:19
+msgid "Assign clear and descriptive titles to each ticket or discussion."
+msgstr ""
+
+#: ../../troubleshooting.rst:20
+msgid "Provide complete and detailed information in each request."
+msgstr ""
+
+#: ../../troubleshooting.rst:21
+msgid ""
+"Include screenshots, logs, and any other relevant information to aid in "
+"troubleshooting."
+msgstr ""
+
+#: ../../troubleshooting.rst:22
+msgid ""
+"Collaborate with the support team by providing feedback and responding to"
+" their inquiries."
+msgstr ""
+
+#: ../../troubleshooting.rst:25
+msgid "**1. Gather information**"
+msgstr ""
+
+#: ../../troubleshooting.rst:27
+msgid ""
+"Before creating a support request, it's crucial to gather as much "
+"information as possible about the issue you're facing. This helps the "
+"support team identify and resolve the problem quickly."
+msgstr ""
+
+#: ../../troubleshooting.rst:29
+msgid "Your support request should include the following:"
+msgstr ""
+
+#: ../../troubleshooting.rst:31
+msgid ""
+"**Your system configuration:** This includes the version of NethSecurity "
+"you're using; you can find the information inside the Dashboard page. "
+"Please report the full version like ``8 "
+"23.05.2-ns.0.0.1-beta1-96-ga759afb``"
+msgstr ""
+
+#: ../../troubleshooting.rst:33
+msgid ""
+"**The problem you're encountering:** Describe the problem in detail, "
+"including the steps you took to reproduce it."
+msgstr ""
+
+#: ../../troubleshooting.rst:34
+msgid ""
+"**Any error messages:** If you receive any error messages, include them "
+"in your request. You can use the :ref:`user interface "
+"<troubleshooting_ui-section>` to gather this information, or access the "
+"command line and use ``less /var/log/messages`` to find the relevant "
+"logs."
+msgstr ""
+
+#: ../../troubleshooting.rst:37
+msgid ""
+"**Any changes you made:** If you made any changes to your system "
+"configuration, list them in your request."
+msgstr ""
+
+#: ../../troubleshooting.rst:38
+msgid ""
+"**Your desired outcome:** What do you hope to achieve by contacting "
+"support?"
+msgstr ""
+
+#: ../../troubleshooting.rst:40
+msgid "**2. Describe the problem objectively**"
+msgstr ""
+
+#: ../../troubleshooting.rst:42
+msgid ""
+"When describing the problem, focus on objective symptoms. Avoid "
+"subjective statements like \"it's not working\" or \"it's slow.\" "
+"Instead, describe what happens when you perform specific actions."
+msgstr ""
+
+#: ../../troubleshooting.rst:44
+msgid ""
+"Example: instead of saying \"The firewall isn't working,\" you could say "
+"\"When I try to access a website, I receive this error message.\""
+msgstr ""
+
+#: ../../troubleshooting.rst:46
+msgid "**3. Respond to requests for information**"
+msgstr ""
+
+#: ../../troubleshooting.rst:48
+msgid ""
+"If the support team asks you to perform tests or provide additional "
+"details, do so promptly and thoroughly. The more information you provide,"
+" the easier it is for them to solve the issue."
+msgstr ""
+
+#: ../../troubleshooting.rst:50
+msgid "**4. Communicate the outcome of the solution**"
+msgstr ""
+
+#: ../../troubleshooting.rst:52
+msgid ""
+"Once the support team offers a solution, test it and communicate the "
+"outcome. If it resolved the problem, let them know. If not, provide "
+"additional information so they can continue investigating."
+msgstr ""
+
+#: ../../troubleshooting.rst:54
+msgid "**5. Don't reboot if the problem is blocking**"
+msgstr ""
+
+#: ../../troubleshooting.rst:56
+msgid ""
+"Avoid rebooting the system if the problem is blocking. Rebooting can "
+"sometimes worsen the issue. Instead, contact support and work with them "
+"to resolve it."
+msgstr ""
+
+#: ../../troubleshooting.rst:58
+msgid "**6. Multiple tickets or discussions for the same issue**"
+msgstr ""
+
+#: ../../troubleshooting.rst:60
+msgid ""
+"It is recommended to open \"n\" tickets or discussions for \"n\" "
+"different requests, even if they relate to the same underlying problem. "
+"While it may seem rigid and inconvenient, this approach offers "
+"significant advantages:"
+msgstr ""
+
+#: ../../troubleshooting.rst:63
+msgid ""
+"**Improved workload parallelization:** Allows the support team to work on"
+" multiple aspects of the problem simultaneously."
+msgstr ""
+
+#: ../../troubleshooting.rst:64
+msgid ""
+"**Faster resolution by specialists:** Different requests can be assigned "
+"to different specialists with relevant expertise, accelerating "
+"resolution."
+msgstr ""
+
+#: ../../troubleshooting.rst:65
+msgid ""
+"**More effective problem-solving:** Focuses attention on each individual "
+"request, avoiding confusion and disorientation."
+msgstr ""
+
+#: ../../troubleshooting.rst:66
+msgid ""
+"**Enhanced priority management:** Enables assigning different priorities "
+"to each request based on urgency and impact."
+msgstr ""
+
+#: ../../troubleshooting.rst:67
+msgid ""
+"**Better communication:** Facilitates clear communication between the "
+"support team and you, ensuring dedicated discussion for each issue."
+msgstr ""
+
+#: ../../troubleshooting.rst:73
+msgid "Gathering information from the user interface"
+msgstr ""
+
+#: ../../troubleshooting.rst:75
+msgid ""
+"When issues arise, the user interface (UI) displays an error message "
+"capturing the nature of the problem."
+msgstr ""
+
+#: ../../troubleshooting.rst:77
 msgid ""
 "The error message provides valuable information, presenting the details "
 "of the request and the encountered error in JSON format. To assist in "
@@ -5943,38 +6193,31 @@ msgid ""
 "shell to obtain more detailed information."
 msgstr ""
 
-#: ../../troubleshooting.rst:16
-msgid ""
-"In the event you require support, you can reach out directly to Nethesis "
-"if you have a subscription. Alternatively, community support is available"
-" at `https://community.nethserver.org`."
-msgstr ""
-
-#: ../../troubleshooting.rst:19
+#: ../../troubleshooting.rst:82
 msgid ""
 "When reporting an error to the support team, it's crucial to provide the "
 "following essential information:"
 msgstr ""
 
-#: ../../troubleshooting.rst:21
+#: ../../troubleshooting.rst:84
 msgid ""
 "**Request and Response Contents:** Include the content of the ``Request``"
 " and ``Response`` sections found in the error message."
 msgstr ""
 
-#: ../../troubleshooting.rst:24
+#: ../../troubleshooting.rst:87
 msgid ""
 "**Copied Command:** Paste the command copied using the ``Copy command`` "
 "button."
 msgstr ""
 
-#: ../../troubleshooting.rst:27
+#: ../../troubleshooting.rst:90
 msgid ""
 "**Execution Output:** For further assistance, execute the copied command "
 "and report the output."
 msgstr ""
 
-#: ../../troubleshooting.rst:30
+#: ../../troubleshooting.rst:93
 msgid ""
 "If the provided information is insufficient, in extreme cases, it may be "
 "necessary to share the content of the JavaScript console if the error is "
@@ -8007,5 +8250,24 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Access the legacy LuCI web interface to configure source NAT rules."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity is a sophisticated firewall "
+#~ "system with numerous interconnected "
+#~ "components. While the system automates "
+#~ "many configurations seamlessly, occasional "
+#~ "breakdowns can occur. When issues arise,"
+#~ " the user interface (UI) displays an"
+#~ " error message capturing the nature "
+#~ "of the problem."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the event you require support, "
+#~ "you can reach out directly to "
+#~ "Nethesis if you have a subscription. "
+#~ "Alternatively, community support is available"
+#~ " at `https://community.nethserver.org`."
 #~ msgstr ""
 
