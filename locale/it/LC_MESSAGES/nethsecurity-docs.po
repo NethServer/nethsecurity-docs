@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-19 16:06+0000\n"
+"POT-Creation-Date: 2024-02-19 16:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -3340,11 +3340,24 @@ msgstr ""
 msgid "Broadcast policy"
 msgstr ""
 
-#: ../../network.rst:80
+#: ../../network.rst:76
+msgid ""
+"When creating a bond, the UI will display a management IP address in the "
+"private network 127.0.0.1. This IP address is used solely for managing "
+"the bond and is not involved in traffic forwarding. Once the bond device "
+"is created, you can assign an IP address and a firewall zone to it. "
+"Please note that bond configuration is not editable after creation. If "
+"you need to modify the bond's IP address or zone, you'll have to remove "
+"its configuration and reconfigure it again. If you need to change bond "
+"devices, bond mode or management IP you'll have to remove bond "
+"configuration and bond device and recreate it from scratch"
+msgstr ""
+
+#: ../../network.rst:86
 msgid "VLAN"
 msgstr ""
 
-#: ../../network.rst:82
+#: ../../network.rst:88
 msgid ""
 "A VLAN, or Virtual Local Area Network, is a network technology that "
 "allows network administrators to create logically segmented networks "
@@ -3353,40 +3366,40 @@ msgid ""
 "connected to the same network switch."
 msgstr ""
 
-#: ../../network.rst:84
+#: ../../network.rst:90
 msgid ""
 "You can create a new VLAN device by clicking the :guilabel:`Create VLAN "
 "device` button. Select the VLAN device type:"
 msgstr ""
 
-#: ../../network.rst:87
+#: ../../network.rst:93
 msgid ""
 "VLAN 802.1q is primarily used for standard VLAN implementations within "
 "organizations"
 msgstr ""
 
-#: ../../network.rst:88
+#: ../../network.rst:94
 msgid ""
 "802.1ad (QinQ) is used in service provider networks where multiple "
 "customers require VLAN segmentation, and these segmented VLANs need to be"
 " transported across the provider's network"
 msgstr ""
 
-#: ../../network.rst:91
+#: ../../network.rst:97
 msgid ""
 "Make sure also to chose correct VLAN ID. Please bear in mind that you "
 "must setup the same VLAN ID inside the network switch."
 msgstr ""
 
-#: ../../network.rst:96
+#: ../../network.rst:102
 msgid "IP aliasing"
 msgstr ""
 
-#: ../../network.rst:98
+#: ../../network.rst:104
 msgid "Use IP aliasing to assign more IP addresses to the same network interface."
 msgstr ""
 
-#: ../../network.rst:100
+#: ../../network.rst:106
 msgid ""
 "The most common use is with a wan interface: when the ISP provides a pool"
 " of public IP addresses (within the same subnet) you can add some (or "
@@ -3394,18 +3407,18 @@ msgid ""
 " in the port forward configuration)."
 msgstr ""
 
-#: ../../network.rst:102
+#: ../../network.rst:108
 msgid ""
 "To add an alias, click the tree-dots menu :guilabel:`⋮` on right corner "
 "of the existing network interface, then select :guilabel:`Create alias "
 "interface` item."
 msgstr ""
 
-#: ../../network.rst:105
+#: ../../network.rst:111
 msgid "PPPoE"
 msgstr ""
 
-#: ../../network.rst:107
+#: ../../network.rst:113
 msgid ""
 "PPPoE (Point-to-Point Protocol over Ethernet) connects the server to "
 "Internet through a DSL modem. Users can setup a new PPPoE connection "
@@ -3413,18 +3426,18 @@ msgid ""
 "interface."
 msgstr ""
 
-#: ../../network.rst:110
+#: ../../network.rst:116
 msgid ""
 "Inside the network interface window, choose the wan zone then, select the"
 " ``PPPoE`` protocol. Then fill all required fields like ``Username`` and "
 "``Password``."
 msgstr ""
 
-#: ../../network.rst:114
+#: ../../network.rst:120
 msgid "PPPoE with DHCPv6-PD"
 msgstr ""
 
-#: ../../network.rst:116
+#: ../../network.rst:122
 msgid ""
 "DHCPv6 Prefix Delegation (DHCPv6-DP) automates the assignment of IPv6 "
 "prefixes from your internet service provider (ISP). It eliminates the "
@@ -3432,23 +3445,23 @@ msgid ""
 "simplifying IPv6 deployment."
 msgstr ""
 
-#: ../../network.rst:119
+#: ../../network.rst:125
 msgid "First, make sure your ISP supports DHCPv6-PD, than follow these steps:"
 msgstr ""
 
-#: ../../network.rst:121
+#: ../../network.rst:127
 msgid ""
 "Configure WAN Interface: set the WAN interface mode to PPPoE and enable "
 "the ``Enable IPv6`` option"
 msgstr ""
 
-#: ../../network.rst:122
+#: ../../network.rst:128
 msgid ""
 "Configure LAN interface: enable the \"Enable IPv6\" option and leave the "
 "IPv6 address field blank"
 msgstr ""
 
-#: ../../network.rst:124
+#: ../../network.rst:130
 msgid ""
 "By enabling IPv6 for both WAN and LAN interfaces without specifying an "
 "address for the LAN, your router will automatically request and receive "
