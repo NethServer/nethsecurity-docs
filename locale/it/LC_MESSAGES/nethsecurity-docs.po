@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-19 16:47+0000\n"
+"POT-Creation-Date: 2024-02-20 11:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -936,74 +936,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-95-g67845a2/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-94-g2dba710"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-94-g2dba710/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-94-g2dba710-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-94-g2dba710/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-90-g9b44f96"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-90-g9b44f96/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-90-g9b44f96-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-90-g9b44f96/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-87-ga5d6e67"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-87-ga5d6e67/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-87-ga5d6e67-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-87-ga5d6e67/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3343,9 +3275,9 @@ msgstr ""
 #: ../../network.rst:76
 msgid ""
 "When creating a bond, the UI will display a management IP address in the "
-"private network 127.0.0.1. This IP address is used solely for managing "
-"the bond and is not involved in traffic forwarding. Once the bond device "
-"is created, you can assign an IP address and a firewall zone to it. "
+"private network 127.x.x.1/32. This IP address is used solely for managing"
+" the bond and is not involved in traffic forwarding. Once the bond device"
+" is created, you can assign an IP address and a firewall zone to it. "
 "Please note that bond configuration is not editable after creation. If "
 "you need to modify the bond's IP address or zone, you'll have to remove "
 "its configuration and reconfigure it again. If you need to change bond "
@@ -8282,5 +8214,83 @@ msgstr ""
 #~ "Nethesis if you have a subscription. "
 #~ "Alternatively, community support is available"
 #~ " at `https://community.nethserver.org`."
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-94-g2dba710"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-94-g2dba710/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-94-g2dba710-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-94-g2dba710/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-90-g9b44f96"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-90-g9b44f96/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-90-g9b44f96-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-90-g9b44f96/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-87-ga5d6e67"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-87-ga5d6e67/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-87-ga5d6e67-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-87-ga5d6e67/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-81-gc3dcad8/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When creating a bond, the UI will"
+#~ " display a management IP address in"
+#~ " the private network 127.0.0.1. This "
+#~ "IP address is used solely for "
+#~ "managing the bond and is not "
+#~ "involved in traffic forwarding. Once the"
+#~ " bond device is created, you can "
+#~ "assign an IP address and a "
+#~ "firewall zone to it. Please note "
+#~ "that bond configuration is not editable"
+#~ " after creation. If you need to "
+#~ "modify the bond's IP address or "
+#~ "zone, you'll have to remove its "
+#~ "configuration and reconfigure it again. "
+#~ "If you need to change bond "
+#~ "devices, bond mode or management IP "
+#~ "you'll have to remove bond configuration"
+#~ " and bond device and recreate it "
+#~ "from scratch"
 #~ msgstr ""
 
