@@ -111,10 +111,26 @@ Before the request exits firewall  FW-A, the source of the packet will be rewrit
 
 **Result** The traffic between networks A and B will be routed correctly.
 
-Source Netmap
+Source netmap
 -------------
 
-The "source netmap" allows us to determine how the source should change when traffic is directed towards a specific destination. E.g., destination network 10.2.2.0/24, source network: 192.168.0.0/24, natted source network: 10.1.1.0/24.
+The "source netmap" allows us to determine how the source should change when traffic is directed towards a specific destination. 
+E.g., destination network 10.2.2.0/24, source network: 192.168.0.0/24, natted source network: 10.1.1.0/24.
+
+You can create a source netmap rule from the web interface inside the ``NAT`` page.
+On the lower part of the page, click on the :guilabel:`Add source NETMAP` button to create a new rule.
+Inside the drawer, fill the fields as follows:
+
+- **Name**: a name for the rule
+- **Destination network**: the destination network in CIDR notation, e.g., 10.2.2.0/24 for the example above
+- **Source network**: the source network, e.g., 192.168.1.0/24
+- **Mapped network**: the translated source network, e.g., 10.1.1.0/24
+
+Under the ``Advanced settings`` section, you can specify the input and output devices for the rule.
+If the device is not specified, the rule will be applied to all devices.
+
+CLI commands
+^^^^^^^^^^^^
 
 From CLI create a rule::
 
@@ -136,7 +152,24 @@ Then commit and apply::
 
 Destination Netmap
 ------------------
-The "destination netmap" allows us to determine how the destination IP should change when traffic comes from a specific network. E.g., source network 10.2.2.0/24, destination network: 10.1.1.0/24, natted destination network: 192.168.0.0/24.
+
+The "destination netmap" allows us to determine how the destination IP should change when traffic comes from a specific network.
+E.g., source network 10.2.2.0/24, destination network: 10.1.1.0/24, natted destination network: 192.168.0.0/24.
+
+You can create a destination netmap rule from the web interface inside the ``NAT`` page.
+On the lower part of the page, click on the :guilabel:`Add destination NETMAP` button to create a new rule.
+Inside the drawer, fill the fields as follows:
+
+- **Name**: a name for the rule
+- **Source network**: the source network in CIDR notation, e.g., 10.2.2.0/24
+- **Destination network**: the destination network, e.g., 10.1.1.0/24
+- **Mapped network**: the translated destination network, e.g., 192.168.1.0/24
+
+Under the ``Advanced settings`` section, you can specify the input and output devices for the rule.
+If the device is not specified, the rule will be applied to all devices.
+
+CLI commands
+^^^^^^^^^^^^
 
 From CLI create a rule::
 
