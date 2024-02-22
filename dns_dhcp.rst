@@ -148,8 +148,10 @@ Completely disable DNS rebind protection using these commands::
 How to enable DNS rebind protection (e.g. on migrated firewalls)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
+If you have disabled rebind protection in the past or if your configuration comes from a migration and you want to enable rebind protection, we suggest enabling `rebind_localhost` as well. This parameter only takes effect if rebind protection is enabled and allows upstream 127.0.0.0/8 responses, which are required for DNS-based blacklist services.
 
  uci set dhcp.@dnsmasq[0].rebind_protection='1'
+ uci set dhcp.@dnsmasq[0].rebind_localhost='1'
  uci commit dhcp
  /etc/init.d/dnsmasq restart
 
