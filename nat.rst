@@ -24,8 +24,8 @@ You can configure also destination NAT rules (DNAT), usually namedport forward o
 
 .. _snat-section:
 
-Source NAT
-==========
+SNAT
+====
 
 Source NAT, often referred to as SNAT, modifies the source IP address of outgoing packets. It is commonly used in networks where private IP addresses
 are translated into a single public IP address when communicating with external networks. SNAT ensures that responses from external servers are
@@ -49,7 +49,7 @@ This improves the reputation of your mail server and allows for specific configu
 
 .. _masquerade-section:
 
-Masquerade
+MASQUERADE
 ==========
 
 The masquerade rule masks all outgoing traffic with the IP address of the firewall's outbound interface.
@@ -103,13 +103,23 @@ Let's use this translation scheme.
 
 A host in network A trying to reach a host in network B must not contact the real IP but its translated network (only the last octet remains the same). 
 For example, the host 192.168.1.10 from the network A wanting to reach 192.168.0.20 in network B must contact the IP 10.2.2.20 instead.
-Before the request exits firewall  FW-A, the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The same process will occur for the returning packets.
+Before the request exits firewall  FW-A, the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The inverse process will occur for the returning packets.
 
 
 **Solution** The problem can be solved by using netmap to translate the traffic to a different private network. This allows the traffic to be routed correctly.
 
+**How to do it**
 
-**Result** The traffic between networks A and B will be routed correctly.
+To allow network A to access a resource in network B, two rules are necessary: one for source netmap and one for destination netmap.
+
+* The first rule, acting as a source netmap, specifies that all traffic directed towards the network 10.2.2.0/24 (destination network) and originating from the network 192.168.1.0/24 (source network) will be mapped onto the network 10.1.1.0/24 (mapped source network).
+
+* The second rule functions as a destination netmap, playing a crucial role in correctly receiving responses. It necessitates that traffic originating from the network 10.2.2.0/24 (source network) and destined for the network 10.1.1.0/24 (destination network) will be mapped onto the network 192.168.1.0/24 (mapped destination network).
+
+
+**Result** All traffic requests (and their responses) from network A to network B will be routed correctly.
+
+.. note:: If you need to allow requests starting from network B toward network A you must do the same in the firewall B.
 
 Source netmap
 -------------
@@ -129,26 +139,6 @@ Inside the drawer, fill the fields as follows:
 Under the ``Advanced settings`` section, you can specify the input and output devices for the rule.
 If the device is not specified, the rule will be applied to all devices.
 
-CLI commands
-^^^^^^^^^^^^
-
-From CLI create a rule::
-
- uci set netmap.r1=rule
- uci set netmap.r1.name=source_nat
- uci set netmap.r1.dest=10.2.2.0/24
- uci set netmap.r1.map_from=192.168.1.0/24
- uci set netmap.r1.map_to=10.1.1.0/24
-
-you can also specify optional in/out devices this way::
-
- uci  add_list netmap.r1.device_in='eth0'
- uci  add_list netmap.r1.device_out='tunrw1'
-
-Then commit and apply::
-
- uci commit netmap
- ns-netmap
 
 Destination Netmap
 ------------------
@@ -171,7 +161,25 @@ If the device is not specified, the rule will be applied to all devices.
 CLI commands
 ^^^^^^^^^^^^
 
-From CLI create a rule::
+To create a SOURCE netmap rule from CLI ::
+
+ uci set netmap.r1=rule
+ uci set netmap.r1.name=source_nat
+ uci set netmap.r1.dest=10.2.2.0/24
+ uci set netmap.r1.map_from=192.168.1.0/24
+ uci set netmap.r1.map_to=10.1.1.0/24
+
+you can also specify optional in/out devices this way::
+
+ uci  add_list netmap.r1.device_in='eth0'
+ uci  add_list netmap.r1.device_out='tunrw1'
+
+Then commit and apply::
+
+ uci commit netmap
+ ns-netmap
+
+To create a DESTINATION netmap rule from CLI ::
 
  uci set netmap.r2=rule
  uci set netmap.r2.name=dest_nat
