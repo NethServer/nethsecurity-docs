@@ -15,7 +15,7 @@ Access the ``NAT`` page under the ``Firewall`` section to configure the followin
 
 - :ref:`Source NAT <snat-section>`
 - :ref:`Masquerade <masquerade-section>`
-- :ref:`Disable NAT (no-NAT) <disable_nat-section>`
+- :ref:`Accept (disable NAT) <disable_nat-section>`
 - :ref:`Netmap <netmap-section>`
 
 Please note that these NAT rules are applied to all network protocols.
@@ -68,10 +68,10 @@ select MASQUERADE as action.
 
 .. _disable_nat-section:
 
-Disable NAT (no-NAT)
+ACCEPT (disable NAT)
 ====================
 
-Disabling NAT (no-NAT) allows you to bypass the NAT process for specific traffic. 
+An ACCEPT rule disables the NAT (no-NAT) and allows you to bypass the NAT process for specific traffic.
 This is particularly useful when it comes to avoiding WAN masquerading for specific destinations.
 
 **Example** Your firewall is connected to a router that, in addition to allowing internet access, also enables reaching private networks through CDN connections or IPsec tunnels. 
@@ -139,7 +139,6 @@ Inside the drawer, fill the fields as follows:
 Under the ``Advanced settings`` section, you can specify the input and output devices for the rule.
 If the device is not specified, the rule will be applied to all devices.
 
-
 Destination Netmap
 ------------------
 
@@ -196,3 +195,4 @@ Then commit and apply::
 
  uci commit netmap
  ns-netmap
+ /etc/init.d/firewall reload
