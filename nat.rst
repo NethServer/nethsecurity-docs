@@ -159,7 +159,7 @@ Under the ``Advanced settings`` section, you can specify the input and output de
 If the device is not specified, the rule will be applied to all devices.
 
 CLI commands
-^^^^^^^^^^^^
+------------
 
 To create a SOURCE netmap rule from CLI ::
 
