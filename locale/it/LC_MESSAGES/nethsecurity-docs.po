@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-23 10:06+0000\n"
+"POT-Creation-Date: 2024-02-23 13:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -957,6 +957,23 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-123-ged4b079"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-123-ged4b079/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-123-ged4b079-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-123-ged4b079/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -2857,7 +2874,7 @@ msgid ":ref:`Masquerade <masquerade-section>`"
 msgstr ""
 
 #: ../../nat.rst:18
-msgid ":ref:`Disable NAT (no-NAT) <disable_nat-section>`"
+msgid ":ref:`Accept (disable NAT) <disable_nat-section>`"
 msgstr ""
 
 #: ../../nat.rst:19
@@ -2876,7 +2893,7 @@ msgid ""
 msgstr ""
 
 #: ../../nat.rst:28
-msgid "Source NAT"
+msgid "SNAT"
 msgstr ""
 
 #: ../../nat.rst:30
@@ -2930,7 +2947,7 @@ msgid ""
 msgstr ""
 
 #: ../../nat.rst:53
-msgid "Masquerade"
+msgid "MASQUERADE"
 msgstr ""
 
 #: ../../nat.rst:55
@@ -2973,14 +2990,14 @@ msgid ""
 msgstr ""
 
 #: ../../nat.rst:72
-msgid "Disable NAT (no-NAT)"
+msgid "ACCEPT (disable NAT)"
 msgstr ""
 
 #: ../../nat.rst:74
 msgid ""
-"Disabling NAT (no-NAT) allows you to bypass the NAT process for specific "
-"traffic. This is particularly useful when it comes to avoiding WAN "
-"masquerading for specific destinations."
+"An ACCEPT rule disables the NAT (no-NAT) and allows you to bypass the NAT"
+" process for specific traffic. This is particularly useful when it comes "
+"to avoiding WAN masquerading for specific destinations."
 msgstr ""
 
 #: ../../nat.rst:77
@@ -3056,7 +3073,7 @@ msgid ""
 "reach 192.168.0.20 in network B must contact the IP 10.2.2.20 instead. "
 "Before the request exits firewall  FW-A, the source of the packet will be"
 " rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing "
-"issue on network B. The same process will occur for the returning "
+"issue on network B. The inverse process will occur for the returning "
 "packets."
 msgstr ""
 
@@ -3067,15 +3084,50 @@ msgid ""
 "routed correctly."
 msgstr ""
 
-#: ../../nat.rst:112
-msgid "**Result** The traffic between networks A and B will be routed correctly."
+#: ../../nat.rst:111
+msgid "**How to do it**"
+msgstr ""
+
+#: ../../nat.rst:113
+msgid ""
+"To allow network A to access a resource in network B, two rules are "
+"necessary: one for source netmap and one for destination netmap."
 msgstr ""
 
 #: ../../nat.rst:115
-msgid "Source Netmap"
+msgid ""
+"The first rule, acting as a source netmap, specifies that all traffic "
+"directed towards the network 10.2.2.0/24 (destination network) and "
+"originating from the network 192.168.1.0/24 (source network) will be "
+"mapped onto the network 10.1.1.0/24 (mapped source network)."
 msgstr ""
 
 #: ../../nat.rst:117
+msgid ""
+"The second rule functions as a destination netmap, playing a crucial role"
+" in correctly receiving responses. It necessitates that traffic "
+"originating from the network 10.2.2.0/24 (source network) and destined "
+"for the network 10.1.1.0/24 (destination network) will be mapped onto the"
+" network 192.168.1.0/24 (mapped destination network)."
+msgstr ""
+
+#: ../../nat.rst:120
+msgid ""
+"**Result** All traffic requests (and their responses) from network A to "
+"network B will be routed correctly."
+msgstr ""
+
+#: ../../nat.rst:122
+msgid ""
+"If you need to allow requests starting from network B toward network A "
+"you must do the same in the firewall B."
+msgstr ""
+
+#: ../../nat.rst:125
+msgid "Source netmap"
+msgstr ""
+
+#: ../../nat.rst:127
 msgid ""
 "The \"source netmap\" allows us to determine how the source should change"
 " when traffic is directed towards a specific destination. E.g., "
@@ -3083,28 +3135,91 @@ msgid ""
 "source network: 10.1.1.0/24."
 msgstr ""
 
-#: ../../nat.rst:119 ../../nat.rst:141
-msgid "From CLI create a rule::"
+#: ../../nat.rst:130
+msgid ""
+"You can create a source netmap rule from the web interface inside the "
+"``NAT`` page. On the lower part of the page, click on the :guilabel:`Add "
+"source NETMAP` button to create a new rule. Inside the drawer, fill the "
+"fields as follows:"
 msgstr ""
 
-#: ../../nat.rst:127 ../../nat.rst:149
-msgid "you can also specify optional in/out devices this way::"
+#: ../../nat.rst:134 ../../nat.rst:152
+msgid "**Name**: a name for the rule"
 msgstr ""
 
-#: ../../nat.rst:132 ../../nat.rst:154
-msgid "Then commit and apply::"
+#: ../../nat.rst:135
+msgid ""
+"**Destination network**: the destination network in CIDR notation, e.g., "
+"10.2.2.0/24 for the example above"
 msgstr ""
 
-#: ../../nat.rst:138
+#: ../../nat.rst:136
+msgid "**Source network**: the source network, e.g., 192.168.1.0/24"
+msgstr ""
+
+#: ../../nat.rst:137
+msgid "**Mapped network**: the translated source network, e.g., 10.1.1.0/24"
+msgstr ""
+
+#: ../../nat.rst:139 ../../nat.rst:157
+msgid ""
+"Under the ``Advanced settings`` section, you can specify the input and "
+"output devices for the rule. If the device is not specified, the rule "
+"will be applied to all devices."
+msgstr ""
+
+#: ../../nat.rst:143
 msgid "Destination Netmap"
 msgstr ""
 
-#: ../../nat.rst:139
+#: ../../nat.rst:145
 msgid ""
 "The \"destination netmap\" allows us to determine how the destination IP "
 "should change when traffic comes from a specific network. E.g., source "
 "network 10.2.2.0/24, destination network: 10.1.1.0/24, natted destination"
 " network: 192.168.0.0/24."
+msgstr ""
+
+#: ../../nat.rst:148
+msgid ""
+"You can create a destination netmap rule from the web interface inside "
+"the ``NAT`` page. On the lower part of the page, click on the "
+":guilabel:`Add destination NETMAP` button to create a new rule. Inside "
+"the drawer, fill the fields as follows:"
+msgstr ""
+
+#: ../../nat.rst:153
+msgid "**Source network**: the source network in CIDR notation, e.g., 10.2.2.0/24"
+msgstr ""
+
+#: ../../nat.rst:154
+msgid "**Destination network**: the destination network, e.g., 10.1.1.0/24"
+msgstr ""
+
+#: ../../nat.rst:155
+msgid ""
+"**Mapped network**: the translated destination network, e.g., "
+"192.168.1.0/24"
+msgstr ""
+
+#: ../../nat.rst:161
+msgid "CLI commands"
+msgstr ""
+
+#: ../../nat.rst:163
+msgid "To create a SOURCE netmap rule from CLI ::"
+msgstr ""
+
+#: ../../nat.rst:171 ../../nat.rst:189
+msgid "you can also specify optional in/out devices this way::"
+msgstr ""
+
+#: ../../nat.rst:176 ../../nat.rst:194
+msgid "Then commit and apply::"
+msgstr ""
+
+#: ../../nat.rst:181
+msgid "To create a DESTINATION netmap rule from CLI ::"
 msgstr ""
 
 #: ../../nat_helpers.rst:3
@@ -8409,5 +8524,54 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-95-g67845a2/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ":ref:`Disable NAT (no-NAT) <disable_nat-section>`"
+#~ msgstr ""
+
+#~ msgid "Source NAT"
+#~ msgstr ""
+
+#~ msgid "Masquerade"
+#~ msgstr ""
+
+#~ msgid "Disable NAT (no-NAT)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Disabling NAT (no-NAT) allows you "
+#~ "to bypass the NAT process for "
+#~ "specific traffic. This is particularly "
+#~ "useful when it comes to avoiding "
+#~ "WAN masquerading for specific destinations."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A host in network A trying to "
+#~ "reach a host in network B must "
+#~ "not contact the real IP but its"
+#~ " translated network (only the last "
+#~ "octet remains the same). For example,"
+#~ " the host 192.168.1.10 from the "
+#~ "network A wanting to reach 192.168.0.20"
+#~ " in network B must contact the "
+#~ "IP 10.2.2.20 instead. Before the request"
+#~ " exits firewall  FW-A, the source of"
+#~ " the packet will be rewritten by "
+#~ "FW-A to the ALT_IP 10.1.1.10 to "
+#~ "eliminate every routing issue on network"
+#~ " B. The same process will occur "
+#~ "for the returning packets."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Result** The traffic between networks "
+#~ "A and B will be routed correctly."
+#~ msgstr ""
+
+#~ msgid "Source Netmap"
+#~ msgstr ""
+
+#~ msgid "From CLI create a rule::"
 #~ msgstr ""
 
