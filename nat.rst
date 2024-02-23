@@ -15,7 +15,7 @@ Access the ``NAT`` page under the ``Firewall`` section to configure the followin
 
 - :ref:`Source NAT <snat-section>`
 - :ref:`Masquerade <masquerade-section>`
-- :ref:`Disable NAT (no-NAT) <disable_nat-section>`
+- :ref:`Accept (disable NAT) <disable_nat-section>`
 - :ref:`Netmap <netmap-section>`
 
 Please note that these NAT rules are applied to all network protocols.
@@ -24,8 +24,8 @@ You can configure also destination NAT rules (DNAT), usually namedport forward o
 
 .. _snat-section:
 
-Source NAT
-==========
+SNAT
+====
 
 Source NAT, often referred to as SNAT, modifies the source IP address of outgoing packets. It is commonly used in networks where private IP addresses
 are translated into a single public IP address when communicating with external networks. SNAT ensures that responses from external servers are
@@ -49,7 +49,7 @@ This improves the reputation of your mail server and allows for specific configu
 
 .. _masquerade-section:
 
-Masquerade
+MASQUERADE
 ==========
 
 The masquerade rule masks all outgoing traffic with the IP address of the firewall's outbound interface.
@@ -68,10 +68,10 @@ select MASQUERADE as action.
 
 .. _disable_nat-section:
 
-Disable NAT (no-NAT)
+ACCEPT (disable NAT)
 ====================
 
-Disabling NAT (no-NAT) allows you to bypass the NAT process for specific traffic. 
+An ACCEPT rule disables the NAT (no-NAT) and allows you to bypass the NAT process for specific traffic.
 This is particularly useful when it comes to avoiding WAN masquerading for specific destinations.
 
 **Example** Your firewall is connected to a router that, in addition to allowing internet access, also enables reaching private networks through CDN connections or IPsec tunnels. 
@@ -103,20 +103,64 @@ Let's use this translation scheme.
 
 A host in network A trying to reach a host in network B must not contact the real IP but its translated network (only the last octet remains the same). 
 For example, the host 192.168.1.10 from the network A wanting to reach 192.168.0.20 in network B must contact the IP 10.2.2.20 instead.
-Before the request exits firewall  FW-A, the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The same process will occur for the returning packets.
+Before the request exits firewall  FW-A, the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The inverse process will occur for the returning packets.
 
 
 **Solution** The problem can be solved by using netmap to translate the traffic to a different private network. This allows the traffic to be routed correctly.
 
+**How to do it**
 
-**Result** The traffic between networks A and B will be routed correctly.
+To allow network A to access a resource in network B, two rules are necessary: one for source netmap and one for destination netmap.
 
-Source Netmap
+* The first rule, acting as a source netmap, specifies that all traffic directed towards the network 10.2.2.0/24 (destination network) and originating from the network 192.168.1.0/24 (source network) will be mapped onto the network 10.1.1.0/24 (mapped source network).
+
+* The second rule functions as a destination netmap, playing a crucial role in correctly receiving responses. It necessitates that traffic originating from the network 10.2.2.0/24 (source network) and destined for the network 10.1.1.0/24 (destination network) will be mapped onto the network 192.168.1.0/24 (mapped destination network).
+
+
+**Result** All traffic requests (and their responses) from network A to network B will be routed correctly.
+
+.. note:: If you need to allow requests starting from network B toward network A you must do the same in the firewall B.
+
+Source netmap
 -------------
 
-The "source netmap" allows us to determine how the source should change when traffic is directed towards a specific destination. E.g., destination network 10.2.2.0/24, source network: 192.168.0.0/24, natted source network: 10.1.1.0/24.
+The "source netmap" allows us to determine how the source should change when traffic is directed towards a specific destination. 
+E.g., destination network 10.2.2.0/24, source network: 192.168.0.0/24, natted source network: 10.1.1.0/24.
 
-From CLI create a rule::
+You can create a source netmap rule from the web interface inside the ``NAT`` page.
+On the lower part of the page, click on the :guilabel:`Add source NETMAP` button to create a new rule.
+Inside the drawer, fill the fields as follows:
+
+- **Name**: a name for the rule
+- **Destination network**: the destination network in CIDR notation, e.g., 10.2.2.0/24 for the example above
+- **Source network**: the source network, e.g., 192.168.1.0/24
+- **Mapped network**: the translated source network, e.g., 10.1.1.0/24
+
+Under the ``Advanced settings`` section, you can specify the input and output devices for the rule.
+If the device is not specified, the rule will be applied to all devices.
+
+Destination Netmap
+------------------
+
+The "destination netmap" allows us to determine how the destination IP should change when traffic comes from a specific network.
+E.g., source network 10.2.2.0/24, destination network: 10.1.1.0/24, natted destination network: 192.168.0.0/24.
+
+You can create a destination netmap rule from the web interface inside the ``NAT`` page.
+On the lower part of the page, click on the :guilabel:`Add destination NETMAP` button to create a new rule.
+Inside the drawer, fill the fields as follows:
+
+- **Name**: a name for the rule
+- **Source network**: the source network in CIDR notation, e.g., 10.2.2.0/24
+- **Destination network**: the destination network, e.g., 10.1.1.0/24
+- **Mapped network**: the translated destination network, e.g., 192.168.1.0/24
+
+Under the ``Advanced settings`` section, you can specify the input and output devices for the rule.
+If the device is not specified, the rule will be applied to all devices.
+
+CLI commands
+------------
+
+To create a SOURCE netmap rule from CLI ::
 
  uci set netmap.r1=rule
  uci set netmap.r1.name=source_nat
@@ -134,11 +178,7 @@ Then commit and apply::
  uci commit netmap
  ns-netmap
 
-Destination Netmap
-------------------
-The "destination netmap" allows us to determine how the destination IP should change when traffic comes from a specific network. E.g., source network 10.2.2.0/24, destination network: 10.1.1.0/24, natted destination network: 192.168.0.0/24.
-
-From CLI create a rule::
+To create a DESTINATION netmap rule from CLI ::
 
  uci set netmap.r2=rule
  uci set netmap.r2.name=dest_nat
@@ -155,3 +195,4 @@ Then commit and apply::
 
  uci commit netmap
  ns-netmap
+ /etc/init.d/firewall reload
