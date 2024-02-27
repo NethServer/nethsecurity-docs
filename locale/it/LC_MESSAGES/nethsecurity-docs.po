@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 07:56+0000\n"
+"POT-Creation-Date: 2024-02-27 08:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -5908,27 +5908,37 @@ msgstr ""
 
 #: ../../subscription.rst:18
 msgid ""
-"**DPI signatures and block lists**: firewall with valid subscriptions "
-"will regurarly download up-to-date :ref:`DPI signatures <dpi_filter-"
-"section>`, :ref:`IP <threat_shield-section>` and :ref:`DNS <dns_filter-"
-"section>` block lists."
+"**Enhanced DPI signatures**: firewalls with a valid subscription have "
+"access to a much larger database of :ref:`DPI signatures <dpi_filter-"
+"section>` (more than 1820 in total instead of 415) that are regularly "
+"updated."
 msgstr ""
 
 #: ../../subscription.rst:19
+msgid ""
+"**Enterprise Block lists**: Firewalls with a valid subscription can "
+"purchase high-quality IP and DNS blocklists. These lists are actively "
+"maintained, updated very frequently, and exhibit high effectiveness while"
+" generating a very low number of false positives, they can be used in "
+":ref:`IP <threat_shield-section>` and :ref:`DNS <dns_filter-section>` "
+"block lists."
+msgstr ""
+
+#: ../../subscription.rst:20
 msgid ""
 "**Support**: subscribers can receive priority support on stable releases."
 " This can be crucial for businesses relying on NethSecurity for their "
 "operations. See also :ref:`remote_support-section`."
 msgstr ""
 
-#: ../../subscription.rst:20
+#: ../../subscription.rst:21
 msgid ""
 "**Consultation and customization**: subscribers could get consultation "
 "services and assistance with customization to tailor the server's "
 "functionalities according to specific business requirements."
 msgstr ""
 
-#: ../../subscription.rst:22
+#: ../../subscription.rst:23
 msgid ""
 "It's important to note that while a subscription might not be required "
 "for normal use, businesses with specific needs or those seeking "
@@ -5936,43 +5946,43 @@ msgid ""
 "NethSecurity offer."
 msgstr ""
 
-#: ../../subscription.rst:25
+#: ../../subscription.rst:26
 msgid "Register the system"
 msgstr ""
 
-#: ../../subscription.rst:27
+#: ../../subscription.rst:28
 msgid "To register the system, follow the below steps:"
 msgstr ""
 
-#: ../../subscription.rst:29
+#: ../../subscription.rst:30
 msgid ""
 "Access the Enterprise or Community portal, add a new server and copy the "
 "token"
 msgstr ""
 
-#: ../../subscription.rst:30
+#: ../../subscription.rst:31
 msgid "Access the firewall and go to the ``Subscription`` page"
 msgstr ""
 
-#: ../../subscription.rst:31
+#: ../../subscription.rst:32
 msgid "Paste the token inside the ``Authentication token`` field"
 msgstr ""
 
-#: ../../subscription.rst:32
+#: ../../subscription.rst:33
 msgid "Click the :guilabel:`Register` button"
 msgstr ""
 
-#: ../../subscription.rst:34
+#: ../../subscription.rst:35
 msgid ""
 "The system will automatically register to the correct Enterprise or "
 "Community portal"
 msgstr ""
 
-#: ../../subscription.rst:37
+#: ../../subscription.rst:38
 msgid "Remove the subscription"
 msgstr ""
 
-#: ../../subscription.rst:39
+#: ../../subscription.rst:40
 msgid ""
 "When the subscription expires, or at the end of a trial period, click the"
 " :guilabel:`Cancel registration` button."
@@ -8660,5 +8670,14 @@ msgstr ""
 #~ " port 80 is open to the public"
 #~ " Internet (you can check with sites"
 #~ " like `CSM <http://www.canyouseeme.org/>`_);"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**DPI signatures and block lists**: "
+#~ "firewall with valid subscriptions will "
+#~ "regurarly download up-to-date :ref:`DPI"
+#~ " signatures <dpi_filter-section>`, :ref:`IP "
+#~ "<threat_shield-section>` and :ref:`DNS "
+#~ "<dns_filter-section>` block lists."
 #~ msgstr ""
 
