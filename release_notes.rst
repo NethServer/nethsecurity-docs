@@ -7,12 +7,12 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
-Major changes on 2024-xx-xx
+Major changes on 2024-02-29
 ===========================
 
 **Beta 2**
 
-Image version: `8-23.05.2-ns.0.0.1-beta2`
+Image version: `8-23.05.2-ns.0.0.2-beta2`
 
 The Beta2 release focuses on improving the new UI and enhancing the overall user experience.
 
