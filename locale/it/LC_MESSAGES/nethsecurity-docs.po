@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-23 13:21+0000\n"
+"POT-Creation-Date: 2024-02-27 07:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -960,20 +960,54 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-123-ged4b079"
+msgid "8-23.05.2-ns.0.0.1-beta1-133-g3065942"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-123-ged4b079/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-123-ged4b079-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-133-g3065942/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-133-g3065942-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-123-ged4b079/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-133-g3065942/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-130-ga9202f4"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-130-ga9202f4/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-130-ga9202f4-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-130-ga9202f4/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -991,40 +1025,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-117-g93db9c3/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-114-gc6cc91e"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-114-gc6cc91e/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-114-gc6cc91e-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-114-gc6cc91e/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-112-g1cb2645"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-112-g1cb2645/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-112-g1cb2645-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-112-g1cb2645/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -2568,7 +2568,7 @@ msgstr ""
 msgid "Let's Encrypt certificate configuration"
 msgstr ""
 
-#: ../../migration.rst:130 ../../reverse_proxy.rst:6
+#: ../../migration.rst:130 ../../reverse_proxy.rst:8
 msgid "Reverse proxy"
 msgstr ""
 
@@ -5328,7 +5328,7 @@ msgstr ""
 msgid "Certificates and reverse proxy"
 msgstr ""
 
-#: ../../reverse_proxy.rst:8
+#: ../../reverse_proxy.rst:10
 msgid ""
 "NethSecurity provides a reverse proxy using `nginx <https://nginx.org>`_."
 " A reverse proxy, sometimes called also proxy pass, is a server that sits"
@@ -5336,21 +5336,27 @@ msgid ""
 "can be used to improve performance, security, and reliability."
 msgstr ""
 
-#: ../../reverse_proxy.rst:12
+#: ../../reverse_proxy.rst:14
 msgid ""
 "In simpler terms, a reverse proxy is like a traffic cop for web servers. "
 "It directs incoming requests to the appropriate server and sends back the"
 " responses."
 msgstr ""
 
-#: ../../reverse_proxy.rst:14
+#: ../../reverse_proxy.rst:16
 msgid ""
 "Reverse proxies are often used to improve performance by caching static "
 "content and distributing traffic across multiple servers. They can also "
 "be used to increase security by implementing the TLS endpoint."
 msgstr ""
 
-#: ../../reverse_proxy.rst:16
+#: ../../reverse_proxy.rst:20
+msgid ""
+"The reverse proxy is only available on port 443 (HTTPS) and *not* on port"
+" 80 (HTTP)."
+msgstr ""
+
+#: ../../reverse_proxy.rst:22
 msgid ""
 "This page allows users to configure proxy pass settings, specifying "
 "whether the rule applies to a domain or a path. For domain "
@@ -5360,13 +5366,13 @@ msgid ""
 "networks. A description can be added for clarity."
 msgstr ""
 
-#: ../../reverse_proxy.rst:21
+#: ../../reverse_proxy.rst:27
 msgid ""
 "To configure a new proxy pass, click on the :guilabel:`Add reverse proxy`"
 " and customize the following options:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:23
+#: ../../reverse_proxy.rst:29
 msgid ""
 "``Type``: choose between Domain or Path. If type is ``Path``, enter the "
 "resource path starting with a '/' for matching rules (e.g., ``/resource-"
@@ -5375,47 +5381,47 @@ msgid ""
 "<certificates-section>`."
 msgstr ""
 
-#: ../../reverse_proxy.rst:26
+#: ../../reverse_proxy.rst:32
 msgid ""
 "``Destination URL``: specify the forwarding location for incoming "
 "requests (e.g., ``http://destination-server:port/path``)."
 msgstr ""
 
-#: ../../reverse_proxy.rst:27
+#: ../../reverse_proxy.rst:33
 msgid ""
 "``Allowed networks``: define allowed IPv4/IPv6 networks in CIDR format. "
 "By default, accessible from anywhere."
 msgstr ""
 
-#: ../../reverse_proxy.rst:28
+#: ../../reverse_proxy.rst:34
 msgid "``Description``: optionally, add a description for clarity."
 msgstr ""
 
-#: ../../reverse_proxy.rst:30
+#: ../../reverse_proxy.rst:36
 msgid "Additional information:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:32
+#: ../../reverse_proxy.rst:38
 msgid ""
 "Headers sent to destination server: X-Forwarded-Proto, X-Forwarded-For, X"
 "-Real-IP are always sent."
 msgstr ""
 
-#: ../../reverse_proxy.rst:33
+#: ../../reverse_proxy.rst:39
 msgid ""
 "Certificate validation: if the destination uses HTTPS, the certificate is"
 " not validated to avoid errors on misconfigured servers."
 msgstr ""
 
-#: ../../reverse_proxy.rst:34
+#: ../../reverse_proxy.rst:40
 msgid "WebSocket support: all reverse proxies automatically support WebSockets."
 msgstr ""
 
-#: ../../reverse_proxy.rst:39
+#: ../../reverse_proxy.rst:45
 msgid "Certificates"
 msgstr ""
 
-#: ../../reverse_proxy.rst:41
+#: ../../reverse_proxy.rst:47
 msgid ""
 "The ``Certificates`` page centralizes certificate management "
 "functionalities, facilitating the handling of certificates on the "
@@ -5424,25 +5430,25 @@ msgid ""
 "option."
 msgstr ""
 
-#: ../../reverse_proxy.rst:44
+#: ../../reverse_proxy.rst:50
 msgid ""
 "The certificate management page allows users to upload custom "
 "certificates, request certificates from Let's Encrypt, and manage "
 "existing certificates."
 msgstr ""
 
-#: ../../reverse_proxy.rst:46
+#: ../../reverse_proxy.rst:52
 msgid ""
 "The page lists all certificates, highlighting the default certificate. "
 "The default certificate is the one automatically served when accessing "
 "the firewall through its FQDN or IP address."
 msgstr ""
 
-#: ../../reverse_proxy.rst:50
+#: ../../reverse_proxy.rst:56
 msgid "Let's Encrypt"
 msgstr ""
 
-#: ../../reverse_proxy.rst:52
+#: ../../reverse_proxy.rst:58
 msgid ""
 "Let's Encrypt is a free, automated, and open Certificate Authority (CA) "
 "that provides SSL/TLS certificates for securing websites. These "
@@ -5453,7 +5459,7 @@ msgid ""
 "administrators without significant costs or technical expertise."
 msgstr ""
 
-#: ../../reverse_proxy.rst:57
+#: ../../reverse_proxy.rst:63
 msgid ""
 "The certificate page allows users to request certificates from Let's "
 "Encrypt. The process is straightforward and requires minimal "
@@ -5462,33 +5468,33 @@ msgid ""
 "60 days."
 msgstr ""
 
-#: ../../reverse_proxy.rst:60
+#: ../../reverse_proxy.rst:66
 msgid ""
 "The Let's Encrypt certificate request process involves the following "
 "steps:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:62
+#: ../../reverse_proxy.rst:68
 msgid "click on the :guilabel:`Add Let's Encrypt certificate` button;"
 msgstr ""
 
-#: ../../reverse_proxy.rst:63
+#: ../../reverse_proxy.rst:69
 msgid "specify a meaningful name for the certificate;"
 msgstr ""
 
-#: ../../reverse_proxy.rst:64
+#: ../../reverse_proxy.rst:70
 msgid "specify one or more domains for the certificate;"
 msgstr ""
 
-#: ../../reverse_proxy.rst:65
+#: ../../reverse_proxy.rst:71
 msgid "click on the :guilabel:`Save` button."
 msgstr ""
 
-#: ../../reverse_proxy.rst:67
+#: ../../reverse_proxy.rst:73
 msgid "The validation process can be performed in two ways:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:69
+#: ../../reverse_proxy.rst:75
 msgid ""
 "Standalone mode (HTTP validation): the Standalone mode involves "
 "temporarily stopping the web server to allow the ACME client tool to bind"
@@ -5496,7 +5502,7 @@ msgid ""
 "to prove domain ownership, obtaining and installing the certificate."
 msgstr ""
 
-#: ../../reverse_proxy.rst:72
+#: ../../reverse_proxy.rst:78
 msgid ""
 "DNS validation: DNS validation requires adding a specific DNS TXT record "
 "to the domain's DNS configuration. ACME client checks for this record to "
@@ -5504,20 +5510,34 @@ msgid ""
 "modifying web server configurations is challenging or not desired."
 msgstr ""
 
-#: ../../reverse_proxy.rst:75
+#: ../../reverse_proxy.rst:81
 msgid ""
 "When standalone mode is selected, make sure the following requirements "
 "are met:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:77
+#: ../../reverse_proxy.rst:83
 msgid ""
-"The server must be reachable from outside at port 80. Make sure your port"
-" 80 is open to the public Internet (you can check with sites like `CSM "
-"<http://www.canyouseeme.org/>`_);"
+"The firewall must be reachable from outside on port 80. The acme client "
+"will:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:80
+#: ../../reverse_proxy.rst:85
+msgid "temporarily bind to port 80 to serve the authentication challenges"
+msgstr ""
+
+#: ../../reverse_proxy.rst:86
+msgid "temporarily open port 80 to the public Internet to perform the validation."
+msgstr ""
+
+#: ../../reverse_proxy.rst:88
+msgid ""
+"Once the validation is complete, port 80 is automatically closed. Please "
+"note that if port 80 is forwarded to another server, the validation will "
+"fail."
+msgstr ""
+
+#: ../../reverse_proxy.rst:91
 msgid ""
 "The domains that you want the certificate for must be public domain names"
 " associated to server own public IP. Make sure you have public DNS name "
@@ -5525,7 +5545,7 @@ msgid ""
 "<http://viewdns.info/>`_)."
 msgstr ""
 
-#: ../../reverse_proxy.rst:84
+#: ../../reverse_proxy.rst:95
 msgid ""
 "Select DNS validation if your DNS provider supports API access. Choose "
 "the DNS provider from the drop-down menu and enter the API key and "
@@ -5535,40 +5555,57 @@ msgid ""
 "validation is the only one supported for wildcard certificates."
 msgstr ""
 
-#: ../../reverse_proxy.rst:89
+#: ../../reverse_proxy.rst:100
 msgid ""
 "The certificate generation process can take a few minutes. During this "
 "time, the certificate status is ``Pending``."
 msgstr ""
 
-#: ../../reverse_proxy.rst:92
+#: ../../reverse_proxy.rst:103
+msgid "Debug Let's Encrypt"
+msgstr ""
+
+#: ../../reverse_proxy.rst:105
+msgid ""
+"If the Let's Encrypt certificate request fails, the user can debug the "
+"process by entering the following commands in the terminal: ::"
+msgstr ""
+
+#: ../../reverse_proxy.rst:110
+msgid ""
+"The debug messages will be printed on the standard output. After the "
+"problem is solved, the user can disable debug by entering the following "
+"command in the terminal: ::"
+msgstr ""
+
+#: ../../reverse_proxy.rst:116
 msgid "Custom certificate"
 msgstr ""
 
-#: ../../reverse_proxy.rst:94
+#: ../../reverse_proxy.rst:118
 msgid "The user can upload a custom certificate to the firewall."
 msgstr ""
 
-#: ../../reverse_proxy.rst:96
+#: ../../reverse_proxy.rst:120
 msgid "The process involves the following steps:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:98
+#: ../../reverse_proxy.rst:122
 msgid "click on the :guilabel:`Import certificate` button"
 msgstr ""
 
-#: ../../reverse_proxy.rst:99
+#: ../../reverse_proxy.rst:123
 msgid "specify a meaningful name for the certificate"
 msgstr ""
 
-#: ../../reverse_proxy.rst:100
+#: ../../reverse_proxy.rst:124
 msgid ""
 "drag and drop the certificate, private key, and optionally, the chain "
 "certificate; ensure that all uploaded files adhere to the `PEM format "
 "<https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail>`_ standards"
 msgstr ""
 
-#: ../../reverse_proxy.rst:102
+#: ../../reverse_proxy.rst:126
 msgid "click on the :guilabel:`Save` button"
 msgstr ""
 
@@ -8573,5 +8610,55 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "From CLI create a rule::"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-123-ged4b079"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-123-ged4b079/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-123-ged4b079-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-123-ged4b079/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-114-gc6cc91e"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-114-gc6cc91e/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-114-gc6cc91e-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-114-gc6cc91e/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-112-g1cb2645"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-112-g1cb2645/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-112-g1cb2645-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-112-g1cb2645/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The server must be reachable from "
+#~ "outside at port 80. Make sure your"
+#~ " port 80 is open to the public"
+#~ " Internet (you can check with sites"
+#~ " like `CSM <http://www.canyouseeme.org/>`_);"
 #~ msgstr ""
 
