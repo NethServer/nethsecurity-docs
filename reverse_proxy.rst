@@ -80,13 +80,13 @@ The validation process can be performed in two ways:
 
 When standalone mode is selected, make sure the following requirements are met:
 
-1. The server must be reachable from outside at port 80. The acme client will:
+1. The firewall must be reachable from outside on port 80. The acme client will:
 
    - temporarily bind to port 80 to serve the authentication challenges
    - temporarily open port 80 to the public Internet to perform the validation.
 
-   Once the validation is complete, the port 80 is automatically closed.
-   Please note that if the port 80 is forwarded to another server, the validation will fail.
+   Once the validation is complete, port 80 is automatically closed.
+   Please note that if port 80 is forwarded to another server, the validation will fail.
 
 2. The domains that you want the certificate for must be public domain names
    associated to server own public IP. Make sure you have public DNS name
@@ -102,13 +102,13 @@ The certificate generation process can take a few minutes. During this time, the
 Debug Let's Encrypt
 ^^^^^^^^^^^^^^^^^^^
 
-If the Let's Encrypt certificate request fails, the user can debug the process by entering the following command in the terminal: ::
+If the Let's Encrypt certificate request fails, the user can debug the process by entering the following commands in the terminal: ::
 
   uci set acme.@acme[0].debug=1
   /etc/init.d/acme start
 
-The debug will be printed on the standard output.
-After the problem is solved, the user can disable the debug by entering the following command in the terminal: ::
+The debug messages will be printed on the standard output.
+After the problem is solved, the user can disable debug by entering the following command in the terminal: ::
 
   uci revert acme
 
