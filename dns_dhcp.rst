@@ -29,6 +29,12 @@ Available fields:
 **Advanced settings**
 
 It is possible to declare very specific DHCP options, searching for the field to configure (e.g. DNS passed to clients, tftp IP address and so on) and then specifying the value.
+The value can be also a list of values separated by a comma.
+
+Example to override the DNS passed to clients with 2 servers:
+
+- selected option: ``dns-server``
+- value: ``1.1.1.1,8.8.8.8``
 
 Static Leases
 -------------
