@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 08:54+0000\n"
+"POT-Creation-Date: 2024-02-28 09:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -432,15 +432,15 @@ msgstr ""
 msgid "Static leases"
 msgstr ""
 
-#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:49
+#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:55
 msgid "Dynamic leases"
 msgstr ""
 
-#: ../../dns_dhcp.rst:13 ../../dns_dhcp.rst:55
+#: ../../dns_dhcp.rst:13 ../../dns_dhcp.rst:61
 msgid "DNS"
 msgstr ""
 
-#: ../../dns_dhcp.rst:14 ../../dns_dhcp.rst:113
+#: ../../dns_dhcp.rst:14 ../../dns_dhcp.rst:119
 msgid "DNS records"
 msgstr ""
 
@@ -452,8 +452,8 @@ msgid ""
 ":guilabel:`Edit`."
 msgstr ""
 
-#: ../../dns_dhcp.rst:22 ../../dns_dhcp.rst:41 ../../dns_dhcp.rst:59
-#: ../../dns_dhcp.rst:121
+#: ../../dns_dhcp.rst:22 ../../dns_dhcp.rst:47 ../../dns_dhcp.rst:65
+#: ../../dns_dhcp.rst:127
 msgid "Available fields:"
 msgstr ""
 
@@ -481,200 +481,213 @@ msgstr ""
 msgid ""
 "It is possible to declare very specific DHCP options, searching for the "
 "field to configure (e.g. DNS passed to clients, tftp IP address and so "
-"on) and then specifying the value."
+"on) and then specifying the value. The value can be also a list of values"
+" separated by a comma."
 msgstr ""
 
 #: ../../dns_dhcp.rst:34
-msgid "Static Leases"
+msgid "Example to override the DNS passed to clients with 2 servers:"
 msgstr ""
 
 #: ../../dns_dhcp.rst:36
+msgid "selected option: ``dns-server``"
+msgstr ""
+
+#: ../../dns_dhcp.rst:37
+msgid "value: ``1.1.1.1,8.8.8.8``"
+msgstr ""
+
+#: ../../dns_dhcp.rst:40
+msgid "Static Leases"
+msgstr ""
+
+#: ../../dns_dhcp.rst:42
 msgid ""
 "Static leases assigns stable IP addresses and symbolic hostnames to DHCP "
 "clients. The host is identified by its MAC address, assigned a fixed IP "
 "address, and provided with a symbolic hostname for easy recognition."
 msgstr ""
 
-#: ../../dns_dhcp.rst:38
+#: ../../dns_dhcp.rst:44
 msgid ""
 "Click the button :guilabel:`Add reservation` to add a new device's "
 "reservation."
 msgstr ""
 
-#: ../../dns_dhcp.rst:43
+#: ../../dns_dhcp.rst:49
 msgid "``Hostname`` : Hostname asssociated to the IP address"
 msgstr ""
 
-#: ../../dns_dhcp.rst:44
+#: ../../dns_dhcp.rst:50
 msgid ""
 "``IP address`` : IP adddress to assign to the specified MAC Address.The "
 "IP address must be within the DHCP range"
 msgstr ""
 
-#: ../../dns_dhcp.rst:45
+#: ../../dns_dhcp.rst:51
 msgid ""
 "``MAC address`` : MAC address of the device where you want to make the "
 "reservation"
 msgstr ""
 
-#: ../../dns_dhcp.rst:46
+#: ../../dns_dhcp.rst:52
 msgid "``Reservation name`` : Optional, freely configurable filed"
 msgstr ""
 
-#: ../../dns_dhcp.rst:51
+#: ../../dns_dhcp.rst:57
 msgid ""
 "Dynamic leases represents IP addresses that are currently in use and have"
 " been allocated to devices on the network. This tab shows all currently "
 "active leases."
 msgstr ""
 
-#: ../../dns_dhcp.rst:57
+#: ../../dns_dhcp.rst:63
 msgid ""
 "The system will resolve host and domain names using DNS queries to "
 "external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:61
+#: ../../dns_dhcp.rst:67
 msgid ""
 "``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` "
 "to specify the desired upstream DNS, you can add more servers, each one "
 "is individually managed."
 msgstr ""
 
-#: ../../dns_dhcp.rst:62
+#: ../../dns_dhcp.rst:68
 msgid ""
 "``DNS Domain`` : Insert the the local DNS domain, ensuring that queries "
 "for this domain are always resolved locally."
 msgstr ""
 
-#: ../../dns_dhcp.rst:63
+#: ../../dns_dhcp.rst:69
 msgid ""
 "``Log DNS queries``: enable it if you want all the DNS queries to be "
 "logged by the system."
 msgstr ""
 
-#: ../../dns_dhcp.rst:66
+#: ../../dns_dhcp.rst:72
 msgid "Forwarding servers"
 msgstr ""
 
-#: ../../dns_dhcp.rst:68
+#: ../../dns_dhcp.rst:74
 msgid ""
 "This section explains how to configure upstream DNS servers for your "
 "system. You can use this to either:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:70
+#: ../../dns_dhcp.rst:76
 msgid ""
 "Specify a single upstream DNS server: enter the IP address of the desired"
 " server in the dedicated field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:71
+#: ../../dns_dhcp.rst:77
 msgid ""
 "Set up domain-specific DNS servers: this allows you to route queries for "
 "specific domains to different servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:74
+#: ../../dns_dhcp.rst:80
 msgid "Domain-specific DNS servers"
 msgstr ""
 
-#: ../../dns_dhcp.rst:76
+#: ../../dns_dhcp.rst:82
 msgid ""
 "To use a custom DNS server for a specific domain, use the following "
 "syntax:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:78
+#: ../../dns_dhcp.rst:84
 msgid "``/DOMAIN/IP_ADDRESS#PORT``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:80
+#: ../../dns_dhcp.rst:86
 msgid "where:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:82
+#: ../../dns_dhcp.rst:88
 msgid "IP_ADDRESS: specify the IP address of the desired server"
 msgstr ""
 
-#: ../../dns_dhcp.rst:83
+#: ../../dns_dhcp.rst:89
 msgid "PORT: append the desired port (after the IP address using `#` character)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:85
+#: ../../dns_dhcp.rst:91
 msgid ""
 "The ``PORT`` value is optional so usually the configuration appears just "
 "like:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:87
+#: ../../dns_dhcp.rst:93
 msgid "``/DOMAIN/IP_ADDRESS``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:89
+#: ../../dns_dhcp.rst:95
 msgid "These are the main supported options:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:91
+#: ../../dns_dhcp.rst:97
 msgid "Empty domain (``//``): matches unqualified names (without dots)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:92
+#: ../../dns_dhcp.rst:98
 msgid ""
 "Specific domain (``/google.com/``): matches the exact domain and all its "
 "subdomains (e.g., google.com, www.google.com, drive.google.com...)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:93
+#: ../../dns_dhcp.rst:99
 msgid ""
 "Wildcard domain (``*google.com/``): matches any domain **containing** "
 "\"google.com\" (e.g., google.com, www.google.com, supergoogle.com)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:95
+#: ../../dns_dhcp.rst:101
 msgid "Examples:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:97
+#: ../../dns_dhcp.rst:103
 msgid ""
 "Send all queries for \"google.com\" and its subdomains to 1.2.3.4:  "
 "``/google.com/1.2.3.4``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:98
+#: ../../dns_dhcp.rst:104
 msgid ""
 "Send all unqualified names (e.g., \"localhost\") to 10.0.0.1 and "
 "everything else to standard servers: ``//10.0.0.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:99
+#: ../../dns_dhcp.rst:105
 msgid ""
 "Send queries for domain \"ad.nethserver.org\" and its subdomains to "
 "192.168.1.1 and everything else to standard servers: "
 "``/ad.nethserver.org/192.168.1.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:103
+#: ../../dns_dhcp.rst:109
 msgid ""
 "More specific domains take precedence over less specific domains, so for "
 "a configuration like this:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:105
+#: ../../dns_dhcp.rst:111
 msgid "``/google.com/1.2.3.4``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:106
+#: ../../dns_dhcp.rst:112
 msgid "``/www.google.com/2.3.4.5``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:108
+#: ../../dns_dhcp.rst:114
 msgid ""
 "NethSecurity will send queries for google.com and gmail.google.com to "
 "1.2.3.4, but www.google.com will go to 2.3.4.5"
 msgstr ""
 
-#: ../../dns_dhcp.rst:110
+#: ../../dns_dhcp.rst:116
 msgid ""
 "This is true also for wildcards: if both specific and wildcard domains "
 "are defined for the same pattern, the specific one takes precedence "
@@ -683,44 +696,44 @@ msgid ""
 "supergoogle.com."
 msgstr ""
 
-#: ../../dns_dhcp.rst:115
+#: ../../dns_dhcp.rst:121
 msgid ""
 "The system can handle local DNS records. When the server performs a DNS "
 "lookup, first it will search inside local DNS records. If no local record"
 " is found, an external DNS query will be done."
 msgstr ""
 
-#: ../../dns_dhcp.rst:117
+#: ../../dns_dhcp.rst:123
 msgid "Local DNS records will always override records from external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:119
+#: ../../dns_dhcp.rst:125
 msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
 msgstr ""
 
-#: ../../dns_dhcp.rst:123
+#: ../../dns_dhcp.rst:129
 msgid "``Hostname`` : DNS hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:124
+#: ../../dns_dhcp.rst:130
 msgid "``IP address`` : IP address associated to hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:125
+#: ../../dns_dhcp.rst:131
 msgid "``Name`` : optional field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:126
+#: ../../dns_dhcp.rst:132
 msgid ""
 "``Wildcard DNS record``: enable it if you want this answer for any "
 "subdomain you haven't already defined"
 msgstr ""
 
-#: ../../dns_dhcp.rst:129
+#: ../../dns_dhcp.rst:135
 msgid "DNS Rebind Protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:131
+#: ../../dns_dhcp.rst:137
 msgid ""
 "DNS Rebind Protection is a security feature that safeguards against DNS "
 "rebinding attacks. It blocks the use of private IP ranges by public "
@@ -728,7 +741,7 @@ msgid ""
 " unauthorized requests to local network devices."
 msgstr ""
 
-#: ../../dns_dhcp.rst:133
+#: ../../dns_dhcp.rst:139
 msgid ""
 "DNS Rebind Protection is enabled by default on NethSecurity and usually "
 "does not have operational repercussions. In the presence of split DNS, "
@@ -738,7 +751,7 @@ msgid ""
 "may appear:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:141
+#: ../../dns_dhcp.rst:147
 msgid ""
 "To ensure maximum compatibility and prevent malfunctions in migrated "
 "installations using the dedicated tool from NethServer 7.9, DNS Rebind "
@@ -746,39 +759,39 @@ msgid ""
 "version."
 msgstr ""
 
-#: ../../dns_dhcp.rst:144
+#: ../../dns_dhcp.rst:150
 msgid "How to fix DNS rebind protection issues"
 msgstr ""
 
-#: ../../dns_dhcp.rst:146
+#: ../../dns_dhcp.rst:152
 msgid "You can easily fix any of these issues from the CLI."
 msgstr ""
 
-#: ../../dns_dhcp.rst:148
+#: ../../dns_dhcp.rst:154
 msgid "**Solution 1**: Whitelist the domain"
 msgstr ""
 
-#: ../../dns_dhcp.rst:150
+#: ../../dns_dhcp.rst:156
 msgid "Put the specific domain in a whitelist (suggested): ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:154
+#: ../../dns_dhcp.rst:160
 msgid "then commit and restart: ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:159
+#: ../../dns_dhcp.rst:165
 msgid "**Solution 2**: disable the DNS protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:161
+#: ../../dns_dhcp.rst:167
 msgid "Completely disable DNS rebind protection using these commands: ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:168
+#: ../../dns_dhcp.rst:174
 msgid "How to enable DNS rebind protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:170
+#: ../../dns_dhcp.rst:176
 msgid ""
 "If you have previously disabled rebind protection or if your "
 "configuration comes from a migration and you wish to enable rebind "
@@ -960,6 +973,40 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-136-gb51a437"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-136-gb51a437/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-136-gb51a437-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-136-gb51a437/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.1-beta1-135-g9f18e26"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-135-g9f18e26/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-135-g9f18e26-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-135-g9f18e26/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.2-ns.0.0.1-beta1-133-g3065942"
 msgstr ""
 
@@ -974,57 +1021,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-133-g3065942/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-130-ga9202f4"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-130-ga9202f4/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-130-ga9202f4-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-130-ga9202f4/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.1-beta1-117-g93db9c3"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-117-g93db9c3/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-117-g93db9c3-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-117-g93db9c3/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -8679,5 +8675,56 @@ msgstr ""
 #~ " signatures <dpi_filter-section>`, :ref:`IP "
 #~ "<threat_shield-section>` and :ref:`DNS "
 #~ "<dns_filter-section>` block lists."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is possible to declare very "
+#~ "specific DHCP options, searching for the"
+#~ " field to configure (e.g. DNS passed"
+#~ " to clients, tftp IP address and "
+#~ "so on) and then specifying the "
+#~ "value."
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-131-ga1d40d0/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-130-ga9202f4"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-130-ga9202f4/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-130-ga9202f4-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-130-ga9202f4/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.1-beta1-117-g93db9c3"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-117-g93db9c3/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.1-beta1-117-g93db9c3-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-117-g93db9c3/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
