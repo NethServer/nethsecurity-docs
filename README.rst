@@ -139,7 +139,7 @@ To generate po files locally for a new language: ::
    make gettext
    sphinx-intl update -p _build/gettext -l it
 
-You can contribute to the translation by accessing [Weblate](https://hosted.weblate.org/projects/ns8/nethsecurity//).
+You can contribute to the translation by accessing `Weblate <https://hosted.weblate.org/projects/ns8/nethsecurity-docs/>`_.
 
 Documentation style guidelines
 ==============================
