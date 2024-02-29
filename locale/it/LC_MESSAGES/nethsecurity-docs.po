@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-29 08:47+0000\n"
+"POT-Creation-Date: 2024-02-29 14:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -970,6 +970,23 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.2-beta2"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -4502,18 +4519,355 @@ msgid ""
 msgstr ""
 
 #: ../../release_notes.rst:11
-msgid "Major changes on 2024-02-01"
+msgid "Major changes on 2024-02-29"
 msgstr ""
 
 #: ../../release_notes.rst:13
-msgid "**Beta 1**"
+msgid "**Beta 2**"
 msgstr ""
 
 #: ../../release_notes.rst:15
-msgid "Image version: `8-23.05.2-ns.0.0.1-beta1`"
+msgid "Image version: `8-23.05.2-ns.0.0.2-beta2`"
 msgstr ""
 
 #: ../../release_notes.rst:17
+msgid ""
+"The Beta2 release focuses on improving the new UI and enhancing the "
+"overall user experience."
+msgstr ""
+
+#: ../../release_notes.rst:20
+msgid "New features"
+msgstr ""
+
+#: ../../release_notes.rst:21
+msgid "New packages included in the image:"
+msgstr ""
+
+#: ../../release_notes.rst:23
+msgid "Added SNMPD package for network monitoring and management."
+msgstr ""
+
+#: ../../release_notes.rst:24
+msgid "Dyndns package included for dynamic DNS services."
+msgstr ""
+
+#: ../../release_notes.rst:25
+msgid ""
+"Expanded driver support for older network interfaces and vmnet "
+"environments."
+msgstr ""
+
+#: ../../release_notes.rst:27
+msgid "User interface (UI):"
+msgstr ""
+
+#: ../../release_notes.rst:29
+msgid ""
+"Default UI port changed to 9090, accessible from WAN. The UI is also "
+"accessible from LAN and WAN on port 443."
+msgstr ""
+
+#: ../../release_notes.rst:30
+msgid "LuCI interface disabled by default for streamlined experience."
+msgstr ""
+
+#: ../../release_notes.rst:31
+msgid "New page configure Source NAT, Masquerading, No-NAT and netmap rules."
+msgstr ""
+
+#: ../../release_notes.rst:32
+msgid "Improved readability of network packet counts on the network page."
+msgstr ""
+
+#: ../../release_notes.rst:34 ../../release_notes.rst:88
+msgid "Network:"
+msgstr ""
+
+#: ../../release_notes.rst:36
+msgid "PPPoE with DHCPv6-PD support implemented."
+msgstr ""
+
+#: ../../release_notes.rst:37
+msgid "It's now possible to configure bond network interfaces from the UI."
+msgstr ""
+
+#: ../../release_notes.rst:39 ../../release_notes.rst:84
+msgid "DPI:"
+msgstr ""
+
+#: ../../release_notes.rst:41
+msgid "Automatic network change reconfiguration enabled."
+msgstr ""
+
+#: ../../release_notes.rst:42
+msgid ""
+"All non-WAN interfaces displayed on the DPI page. To upgrade the DPI "
+"configuration on existing installations, execute:"
+msgstr ""
+
+#: ../../release_notes.rst:48
+msgid "Additional features:"
+msgstr ""
+
+#: ../../release_notes.rst:50
+msgid ""
+"Improved the installation script ``ns-install``: installation is now "
+"faster and it halts the system at the end of the installation process."
+msgstr ""
+
+#: ../../release_notes.rst:51
+msgid "Improved migration UI for smoother upgrade experience."
+msgstr ""
+
+#: ../../release_notes.rst:52
+msgid "DHCP static lease creation from existing dynamic leases."
+msgstr ""
+
+#: ../../release_notes.rst:53
+msgid "Two-factor authentication (2FA) for administrator accounts."
+msgstr ""
+
+#: ../../release_notes.rst:54
+msgid ""
+"Redesigned login experience with a more integrated and admin-oriented "
+"look and feel."
+msgstr ""
+
+#: ../../release_notes.rst:55
+msgid "Pre and post commit hooks added for enhanced API control."
+msgstr ""
+
+#: ../../release_notes.rst:56
+msgid ""
+"Subscription-based opt-in feature for automatic updates, accessible only "
+"to users with active subscriptions."
+msgstr ""
+
+#: ../../release_notes.rst:59
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../release_notes.rst:60
+msgid "MultiWAN:"
+msgstr ""
+
+#: ../../release_notes.rst:62
+msgid ""
+"Improved rule flexibility: now allows specifying single IP addresses (not"
+" just CIDR format) in source/destination fields for rules."
+msgstr ""
+
+#: ../../release_notes.rst:63
+msgid ""
+"Policy protection: prevents accidental deletion of policies already used "
+"in rules."
+msgstr ""
+
+#: ../../release_notes.rst:64
+msgid ""
+"Fixed mwan chart display: mwan chart within Netdata now shows correctly "
+"after multi-WAN configuration."
+msgstr ""
+
+#: ../../release_notes.rst:66
+msgid "Firewall:"
+msgstr ""
+
+#: ../../release_notes.rst:68
+msgid ""
+"Enhanced protocol handling: creates rules for all protocols (not just "
+"TCP/UDP) when \"any\" is selected."
+msgstr ""
+
+#: ../../release_notes.rst:69
+msgid ""
+"Improved rule readability: in rules with 2 or more source/destination "
+"addresses, only the second address was readily visible in the tooltip."
+msgstr ""
+
+#: ../../release_notes.rst:71
+msgid "Port Forwarding:"
+msgstr ""
+
+#: ../../release_notes.rst:73
+msgid ""
+"Streamlined configuration: source and destination ports are only required"
+" for TCP/UDP protocols."
+msgstr ""
+
+#: ../../release_notes.rst:74
+msgid ""
+"Simplified ALL protocol selection: when \"ALL\" protocol is chosen, other"
+" protocol options are disabled as they are redundant."
+msgstr ""
+
+#: ../../release_notes.rst:76
+msgid "Certificates:"
+msgstr ""
+
+#: ../../release_notes.rst:78
+msgid ""
+"Fixed issue: custom certificate being overwritten with self-generated "
+"certificate when set as default certificate for the firewall FQDN."
+msgstr ""
+
+#: ../../release_notes.rst:79
+msgid ""
+"Correctly display certificate domain: on the certificate list, the "
+"subject displayed now corresponds to the client certificate instead of "
+"the first certificate in the chain."
+msgstr ""
+
+#: ../../release_notes.rst:80
+msgid ""
+"Fix Let's Encrypt certificate deletion: forced acme.sh to generate a new "
+"configuration when recreating a Let's Encrypt certificate for the same "
+"domain, instead of reusing the existing one."
+msgstr ""
+
+#: ../../release_notes.rst:82
+msgid ""
+"Let's Encrypt certificate request: disabled automatic redirection from "
+"port 80 to 443 to avoid conflicts with acme.sh."
+msgstr ""
+
+#: ../../release_notes.rst:86
+msgid ""
+"Fixed configuration loss: resolved issue where saved DPI filter "
+"configurations were deleted during upgrade from previous versions"
+msgstr ""
+
+#: ../../release_notes.rst:90
+msgid ""
+"Improved interface management: enabled editing of interfaces even after "
+"their associated zone is deleted."
+msgstr ""
+
+#: ../../release_notes.rst:92
+msgid "API:"
+msgstr ""
+
+#: ../../release_notes.rst:94
+msgid ""
+"Log consistency: standardized API server logs for NethSecurity API server"
+" to match objects passed to scripts."
+msgstr ""
+
+#: ../../release_notes.rst:96
+msgid "OpenVPN:"
+msgstr ""
+
+#: ../../release_notes.rst:98
+msgid ""
+"Resolved port update issue: changing OpenVPN Road Warrior service port "
+"through the UI now correctly reflects the update in the service "
+"configuration and associated firewall rule."
+msgstr ""
+
+#: ../../release_notes.rst:99
+msgid ""
+"Configuration protection: fixed issue where RoadWarrior configuration was"
+" lost when changing a user's password."
+msgstr ""
+
+#: ../../release_notes.rst:100
+msgid ""
+"Enhanced authentication: addressed OpenVPN Roadwarrior authentication "
+"failures using local users in Nethsecurity beta1."
+msgstr ""
+
+#: ../../release_notes.rst:101
+msgid ""
+"Resolved tunnel server status: fixed issue where the tunnel server status"
+" was not correctly displayed in the UI."
+msgstr ""
+
+#: ../../release_notes.rst:103
+msgid "Hotspot:"
+msgstr ""
+
+#: ../../release_notes.rst:105
+msgid ""
+"MAC address inclusion: resolved problem where MAC addresses were missing "
+"in the \"unit\" section of the Hotspot Manager when the hotspot relied on"
+" a VLAN."
+msgstr ""
+
+#: ../../release_notes.rst:106
+msgid ""
+"VLAN deletion: fixed issue preventing deletion of VLANs previously used "
+"by unregistered hotspots, even after the VLAN was freed."
+msgstr ""
+
+#: ../../release_notes.rst:107
+msgid ""
+"Enhanced status visibility: added enabled/disabled status to the main tab"
+" for quick reference."
+msgstr ""
+
+#: ../../release_notes.rst:109
+msgid "DHCP:"
+msgstr ""
+
+#: ../../release_notes.rst:111
+msgid ""
+"Fixed missing key value for a preconfigured advanced option, ensuring "
+"proper functionality."
+msgstr ""
+
+#: ../../release_notes.rst:112
+msgid "Improved display of multiple options by removing redundant label."
+msgstr ""
+
+#: ../../release_notes.rst:114 ../../release_notes.rst:122
+msgid "IPsec:"
+msgstr ""
+
+#: ../../release_notes.rst:116
+msgid ""
+"IPsec rule NAT port: corrected port for Allow-IPsec-NAT rule, changed "
+"from 500 to 4500 (UDP)"
+msgstr ""
+
+#: ../../release_notes.rst:117
+msgid ""
+"Duplicate rules: prevented duplicate firewall rule creation on tunnel "
+"creations"
+msgstr ""
+
+#: ../../release_notes.rst:118
+msgid "Fix spelling of IPsec rule names"
+msgstr ""
+
+#: ../../release_notes.rst:121
+msgid "Known bugs"
+msgstr ""
+
+#: ../../release_notes.rst:124
+msgid ""
+"Only the first subnet in the IPSec tunnel is functional: when defining "
+"more than one network in an IPSec tunnel between different devices, only "
+"the first network works; traffic destined to other subnets in the tunnel "
+"is not routed correctly. A workaround is to create multiple tunnels with "
+"individual subnets. This issue does not occur between two NethSecurity 8 "
+"devices (as they use the same daemon), but it can occur between, for "
+"example, a NethSecurity 8 and a NethServer 7.9."
+msgstr ""
+
+#: ../../release_notes.rst:131
+msgid "Major changes on 2024-02-01"
+msgstr ""
+
+#: ../../release_notes.rst:133
+msgid "**Beta 1**"
+msgstr ""
+
+#: ../../release_notes.rst:135
+msgid "Image version: `8-23.05.2-ns.0.0.1-beta1`"
+msgstr ""
+
+#: ../../release_notes.rst:137
 msgid ""
 "The Beta1 release marks the transition to the new UI as the primary "
 "configuration interface. Luci remains active by default for "
@@ -4522,74 +4876,74 @@ msgid ""
 "<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
 msgstr ""
 
-#: ../../release_notes.rst:21
+#: ../../release_notes.rst:141
 msgid "Main changes:"
 msgstr ""
 
-#: ../../release_notes.rst:23
+#: ../../release_notes.rst:143
 msgid ""
 "Added a dedicated page for managing certificates and reverse proxy "
 "settings. Improved the import process for both configurations."
 msgstr ""
 
-#: ../../release_notes.rst:24
+#: ../../release_notes.rst:144
 msgid ""
 "Introduced a new page for configuring firewall rules. Users are advised "
 "to use this page instead of Luci's, as using both may lead to "
 "incompatibilities."
 msgstr ""
 
-#: ../../release_notes.rst:25
+#: ../../release_notes.rst:145
 msgid ""
 "Added a page for Quality of Service (QoS) configuration to enhance "
 "network traffic management."
 msgstr ""
 
-#: ../../release_notes.rst:26
+#: ../../release_notes.rst:146
 msgid ""
 "Added a page for configuring OpenVPN Roadwarrior. Updated the migration "
 "process for the new implementation."
 msgstr ""
 
-#: ../../release_notes.rst:27
+#: ../../release_notes.rst:147
 msgid ""
 "Introduced the option to use a partition of the main disk as storage for "
 "logs."
 msgstr ""
 
-#: ../../release_notes.rst:28
+#: ../../release_notes.rst:148
 msgid ""
 "Improved the migration process for multiwan and OpenVPN tunnels, "
 "enhancing overall system compatibility."
 msgstr ""
 
-#: ../../release_notes.rst:29
+#: ../../release_notes.rst:149
 msgid ""
 "Streamlined the management of upgrades and migrations, focusing on a "
 "smoother transition."
 msgstr ""
 
-#: ../../release_notes.rst:30
+#: ../../release_notes.rst:150
 msgid ""
 "Implemented a new versioning system to uniquely identify each image, "
 "enhancing clarity in tracking releases."
 msgstr ""
 
-#: ../../release_notes.rst:31
+#: ../../release_notes.rst:151
 msgid ""
 "Incorporated numerous usability improvements and fixed issues across "
 "existing pages, ensuring a more user-friendly experience."
 msgstr ""
 
-#: ../../release_notes.rst:34
+#: ../../release_notes.rst:154
 msgid "Major changes on 2023-12-11"
 msgstr ""
 
-#: ../../release_notes.rst:36
+#: ../../release_notes.rst:156
 msgid "**Alpha 2**"
 msgstr ""
 
-#: ../../release_notes.rst:38
+#: ../../release_notes.rst:158
 msgid ""
 "This alpha release is specifically crafted for evaluation purposes, "
 "focusing on testing the functionalities of the new system's user "
@@ -4599,104 +4953,104 @@ msgid ""
 "<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
 msgstr ""
 
-#: ../../release_notes.rst:42
+#: ../../release_notes.rst:162
 msgid "**UI Enhancements**"
 msgstr ""
 
-#: ../../release_notes.rst:44
+#: ../../release_notes.rst:164
 msgid ""
 "Resolved numerous bugs across various pages, including DHCP and DPI "
 "filter, enhancing overall pages stability."
 msgstr ""
 
-#: ../../release_notes.rst:45
+#: ../../release_notes.rst:165
 msgid "Introduced the OpenVPN tunnel configuration page."
 msgstr ""
 
-#: ../../release_notes.rst:46
+#: ../../release_notes.rst:166
 msgid "Added the IPsec tunnel configuration page."
 msgstr ""
 
-#: ../../release_notes.rst:47
+#: ../../release_notes.rst:167
 msgid "Incorporated the Hotspot (Dedalo) configuration page."
 msgstr ""
 
-#: ../../release_notes.rst:48
+#: ../../release_notes.rst:168
 msgid "Implemented the Backup and Restore page."
 msgstr ""
 
-#: ../../release_notes.rst:49
+#: ../../release_notes.rst:169
 msgid "Introduced exclusion functionality to the DPI filter page."
 msgstr ""
 
-#: ../../release_notes.rst:50
+#: ../../release_notes.rst:170
 msgid ""
 "Exposed netdata reports within the UI, featuring a configurable ping "
 "latency monitor."
 msgstr ""
 
-#: ../../release_notes.rst:51
+#: ../../release_notes.rst:171
 msgid "Addressed the default language issue for non-translated languages."
 msgstr ""
 
-#: ../../release_notes.rst:52
+#: ../../release_notes.rst:172
 msgid "Refactored and improved the Network page."
 msgstr ""
 
-#: ../../release_notes.rst:53
+#: ../../release_notes.rst:173
 msgid "Added a page to manage System Updates."
 msgstr ""
 
-#: ../../release_notes.rst:54
+#: ../../release_notes.rst:174
 msgid "Included a migration page from NethServer 7."
 msgstr ""
 
-#: ../../release_notes.rst:55
+#: ../../release_notes.rst:175
 msgid "Enabled factory reset functionality directly from the UI."
 msgstr ""
 
-#: ../../release_notes.rst:56
+#: ../../release_notes.rst:176
 msgid ""
 "Implemented a VPN Users page in preparation for the upcoming OpenVPN Road"
 " Warrior server."
 msgstr ""
 
-#: ../../release_notes.rst:58
+#: ../../release_notes.rst:178
 msgid "**General Improvements**"
 msgstr ""
 
-#: ../../release_notes.rst:60
+#: ../../release_notes.rst:180
 msgid "Updated the base OpenWrt to version 23.05.2."
 msgstr ""
 
-#: ../../release_notes.rst:61
+#: ../../release_notes.rst:181
 msgid ""
 "Established a mechanism to send alerts to remote portals, including "
 "my.nethesis.it and my.nethserver.com."
 msgstr ""
 
-#: ../../release_notes.rst:62
+#: ../../release_notes.rst:182
 msgid ""
 "Added support for One-Time Passwords (OTP) in future OpenVPN Road Warrior"
 " server configurations."
 msgstr ""
 
-#: ../../release_notes.rst:64
+#: ../../release_notes.rst:184
 msgid ""
 "**Note**: the bond configuration is still in progress, and as a result, "
 "bond-type network interfaces are currently non-functional in this "
 "release."
 msgstr ""
 
-#: ../../release_notes.rst:67
+#: ../../release_notes.rst:187
 msgid "Major changes on 2023-10-31"
 msgstr ""
 
-#: ../../release_notes.rst:69
+#: ../../release_notes.rst:189
 msgid "**Alpha 1**"
 msgstr ""
 
-#: ../../release_notes.rst:71
+#: ../../release_notes.rst:191
 msgid ""
 "This is an alpha release, designed for evaluation purposes to explore the"
 " functionalities of the new system. Users have the option to use the new "
@@ -4706,7 +5060,7 @@ msgid ""
 "interface is completed."
 msgstr ""
 
-#: ../../release_notes.rst:75
+#: ../../release_notes.rst:195
 msgid ""
 "While the entire backend functionality is already operational and "
 "thoroughly tested, the new interface is not yet complete. Some bugs in "
@@ -4714,77 +5068,77 @@ msgid ""
 "<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
 msgstr ""
 
-#: ../../release_notes.rst:78
+#: ../../release_notes.rst:198
 msgid "The new interface includes the following features:"
 msgstr ""
 
-#: ../../release_notes.rst:80
+#: ../../release_notes.rst:200
 msgid "Dashboard"
 msgstr ""
 
-#: ../../release_notes.rst:81
+#: ../../release_notes.rst:201
 msgid "Subscription Management"
 msgstr ""
 
-#: ../../release_notes.rst:82
+#: ../../release_notes.rst:202
 msgid "Hostname and Timezone Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:83
+#: ../../release_notes.rst:203
 msgid "Additional Storage Setup"
 msgstr ""
 
-#: ../../release_notes.rst:84
+#: ../../release_notes.rst:204
 msgid "Network Interface Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:85
+#: ../../release_notes.rst:205
 msgid "DNS and DHCP Settings"
 msgstr ""
 
-#: ../../release_notes.rst:86
+#: ../../release_notes.rst:206
 msgid "Routing Configuration"
 msgstr ""
 
-#: ../../release_notes.rst:87
+#: ../../release_notes.rst:207
 msgid "Multi-WAN Support"
 msgstr ""
 
-#: ../../release_notes.rst:88
+#: ../../release_notes.rst:208
 msgid "Port Forwarding Options"
 msgstr ""
 
-#: ../../release_notes.rst:89
+#: ../../release_notes.rst:209
 msgid "Zones and Policies Management"
 msgstr ""
 
-#: ../../release_notes.rst:90
+#: ../../release_notes.rst:210
 msgid "Flashstart DNS Filtering"
 msgstr ""
 
-#: ../../release_notes.rst:91
+#: ../../release_notes.rst:211
 msgid "Deep Packet Inspection (DPI) Filtering"
 msgstr ""
 
-#: ../../release_notes.rst:92
+#: ../../release_notes.rst:212
 msgid "Root User Password Change"
 msgstr ""
 
-#: ../../release_notes.rst:93
+#: ../../release_notes.rst:213
 msgid "Access to System Logs"
 msgstr ""
 
-#: ../../release_notes.rst:98
+#: ../../release_notes.rst:218
 msgid "Releases glossary"
 msgstr ""
 
-#: ../../release_notes.rst:100
+#: ../../release_notes.rst:220
 msgid ""
 "The software release cycle includes four stages: Alpha, Beta, Release "
 "Candidate (RC), and Stable."
 msgstr ""
 
-#: ../../release_notes.rst:102
+#: ../../release_notes.rst:222
 msgid ""
 "During the **Alpha** stage, the software is not thoroughly tested and may"
 " not include all planned features. This release is not suitable for "
@@ -4793,7 +5147,7 @@ msgid ""
 "to other releases are not supported."
 msgstr ""
 
-#: ../../release_notes.rst:106
+#: ../../release_notes.rst:226
 msgid ""
 "The **Beta** stage indicates that the software is mostly feature "
 "complete, but it may still contain many known and unknown bugs. This "
@@ -4803,7 +5157,7 @@ msgid ""
 "require a manual procedure."
 msgstr ""
 
-#: ../../release_notes.rst:110
+#: ../../release_notes.rst:230
 msgid ""
 "During the **Release Candidate (RC)** stage, the software is feature "
 "complete, and it contains no known bugs. If no major issues arise, it can"
@@ -4813,7 +5167,7 @@ msgid ""
 "some experience with it."
 msgstr ""
 
-#: ../../release_notes.rst:115
+#: ../../release_notes.rst:235
 msgid ""
 "The **Stable** release is the most reliable and safe to use in production"
 " environments. It has been thoroughly tested and is considered to be free"
