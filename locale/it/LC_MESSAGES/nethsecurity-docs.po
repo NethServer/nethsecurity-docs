@@ -19,12 +19,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-01 11:14+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2024-02-29 14:10+0000\n"
-"PO-Revision-Date: 2024-03-01 11:15+0000\n"
-"Last-Translator: Davide <davide@franceschelli.eu>\n"
+"PO-Revision-Date: 2024-03-01 13:49+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/ns8/"
 "nethsecurity-docs/it/>\n"
 "Language: it\n"
@@ -37,7 +35,7 @@ msgstr ""
 
 #: ../../backup.rst:3
 msgid "Backup and restore"
-msgstr ""
+msgstr "Backup e ripristino"
 
 #: ../../backup.rst:5
 msgid ""
@@ -169,39 +167,49 @@ msgstr ""
 
 #: ../../controller.rst:12
 msgid "generates a VPN configuration and transmits it to the firewall"
-msgstr ""
+msgstr "genera una configurazione VPN e la trasmette al firewall"
 
 #: ../../controller.rst:13
 msgid "safely stores credentials required for accessing the remote firewall"
 msgstr ""
+"memorizza in modo sicuro le credenziali necessarie per accedere al firewall "
+"remoto"
 
 #: ../../controller.rst:15
 msgid ""
 "Once a firewall is linked to a controller, it will autonomously transmit "
 "the following data to the controller:"
 msgstr ""
+"Una volta che un firewall è collegato a un controller, trasmetterà "
+"autonomamente i seguenti dati al controller:"
 
 #: ../../controller.rst:17
 msgid ""
 "all logs, which will be stored within the `Loki "
 "<https://grafana.com/oss/loki/>`_ instance of NethServer 8"
 msgstr ""
+"tutti i log, che saranno memorizzati all'interno del `Loki <https://grafana."
+"com/oss/loki/>`_ istanza di NethServer 8"
 
 #: ../../controller.rst:18
 msgid ""
 "metrics, collected every 5 minutes, and these metrics will be accessible "
 "through `Grafana <https://grafana.com/>`_ on NethServer 8"
 msgstr ""
+"metriche, raccolte ogni 5 minuti, e queste metriche saranno accessibili "
+"tramite `Grafana <https://grafana.com/>`_ su NethServer 8"
 
 #: ../../controller.rst:20
 msgid ""
 "The firewall can operate independently, and the controller is entirely "
 "optional for its functionality."
 msgstr ""
+"Il firewall può funzionare indipendentemente, e il controller è "
+"completamente facoltativo per il suo funzionamento."
 
 #: ../../controller.rst:23
 msgid "Registration"
-msgstr ""
+msgstr "Registrazione"
 
 #: ../../controller.rst:27 ../../migration.rst:84 ../../nat_helpers.rst:7
 #: ../../smtp.rst:7
@@ -210,16 +218,20 @@ msgid ""
 "interface yet. It can currently only be configured through the command "
 "line."
 msgstr ""
+"Questa funzione è ancora in fase di sviluppo e non ha ancora un'interfaccia "
+"utente. Attualmente può essere configurata solo tramite la riga di comando."
 
 #: ../../controller.rst:29
 msgid ""
 "See the `developer manual <https://dev.nethsecurity.org/packages/ns-plug"
 "/#nethsecurity-controller-client>`_ for more info."
 msgstr ""
+"Per ulteriori informazioni, consultare il manuale del `developer <https://dev"
+".nethsecurity.org/packages/ns-plug/#nethsecurity-controller-client>`_."
 
 #: ../../ddns.rst:4
 msgid "Dynamic DNS"
-msgstr ""
+msgstr "DNS dinamico"
 
 #: ../../ddns.rst:6
 msgid ""
@@ -228,94 +240,98 @@ msgid ""
 " you to access your firewall remotely using a consistent domain name "
 "instead of remembering a potentially changing IP address."
 msgstr ""
+"Dynamic DNS (DDNS) aggiorna automaticamente il record DNS del tuo nome di "
+"dominio con l'indirizzo IP corrente, anche se cambia dinamicamente. Questo "
+"consente di accedere da remoto al firewall utilizzando un nome di dominio "
+"coerente invece di ricordare un indirizzo IP che potrebbe cambiare."
 
 #: ../../ddns.rst:10
 msgid "Supported Providers"
-msgstr ""
+msgstr "Fornitori supportati"
 
 #: ../../ddns.rst:12
 msgid "NethSecurity supports the following DDNS providers:"
-msgstr ""
+msgstr "NethSecurity supporta i seguenti provider DDNS:"
 
 #: ../../ddns.rst:14
 msgid "`Cloudflare <https://www.cloudflare.com>`_"
-msgstr ""
+msgstr "`Cloudflare <https://www.cloudflare.com>`_"
 
 #: ../../ddns.rst:15
 msgid "`DigitalOcean <https://www.digitalocean.com>`_"
-msgstr ""
+msgstr "`DigitalOcean <https://www.digitalocean.com>`_"
 
 #: ../../ddns.rst:16
 msgid "`DNSpod <https://www.dnspod.com>`_"
-msgstr ""
+msgstr "`DNSpod <https://www.dnspod.com>`_"
 
 #: ../../ddns.rst:17
 msgid "`Freedns <https://freedns.afraid.org>`_"
-msgstr ""
+msgstr "`Freedns <https://freedns.afraid.org>`_"
 
 #: ../../ddns.rst:18
 msgid "`Gandi <https://www.gandi.net>`_"
-msgstr ""
+msgstr "`Gandi <https://www.gandi.net>`_"
 
 #: ../../ddns.rst:19
 msgid "`GCP (Google Cloud Platform) <https://cloud.google.com>`_"
-msgstr ""
+msgstr "`GCP (Google Cloud Platform) <https://cloud.google.com>`_"
 
 #: ../../ddns.rst:20
 msgid "`GoDaddy <https://www.godaddy.com>`_"
-msgstr ""
+msgstr "`GoDaddy <https://www.godaddy.com>`_"
 
 #: ../../ddns.rst:21
 msgid "`Luadns <https://luadns.com>`_"
-msgstr ""
+msgstr "`Luadns <https://luadns.com>`_"
 
 #: ../../ddns.rst:22
 msgid "`No-IP <https://www.noip.com>`_"
-msgstr ""
+msgstr "`No-IP <https://www.noip.com>`_"
 
 #: ../../ddns.rst:23
 msgid "`NS1 <https://ns1.com>`_"
-msgstr ""
+msgstr "`NS1 <https://ns1.com>`_"
 
 #: ../../ddns.rst:24
 msgid "`One.com <https://www.one.com>`_"
-msgstr ""
+msgstr "`One.com <https://www.one.com>`_"
 
 #: ../../ddns.rst:25
 msgid "`Pdns <https://www.powerdns.com>`_"
-msgstr ""
+msgstr "`Pdns <https://www.powerdns.com>`_"
 
 #: ../../ddns.rst:26
 msgid "`Route53 <https://aws.amazon.com/route53>`_"
-msgstr ""
+msgstr "`Route53 <https://aws.amazon.com/route53>`_"
 
 #: ../../ddns.rst:27
 msgid "`TransIP <https://www.transip.nl>`_"
-msgstr ""
+msgstr "`TransIP <https://www.transip.nl>`_"
 
 #: ../../ddns.rst:29
 msgid "Prerequisites:"
-msgstr ""
+msgstr "Prerequisiti:"
 
 #: ../../ddns.rst:31
 msgid "A NethSecurity firewall with internet access."
-msgstr ""
+msgstr "Un firewall NethSecurity con accesso a Internet."
 
 #: ../../ddns.rst:32
 msgid "An account with your chosen DDNS provider."
-msgstr ""
+msgstr "Un account con il provider DDNS scelto."
 
 #: ../../ddns.rst:33
 msgid "A registered domain name with your DDNS provider."
-msgstr ""
+msgstr "Un nome di dominio registrato con il provider DDNS."
 
 #: ../../ddns.rst:36
 msgid "General configuration steps"
-msgstr ""
+msgstr "Procedura di configurazione generale"
 
 #: ../../ddns.rst:38 ../../snmp.rst:16 ../../snmp.rst:56
 msgid "Open a terminal window on your firewall."
-msgstr ""
+msgstr "Apri una finestra terminale sul tuo firewall."
 
 #: ../../ddns.rst:39
 msgid ""
@@ -1230,11 +1246,11 @@ msgstr ""
 
 #: ../../dpi_filter.rst:47
 msgid "Each exception can be enabled or disabled as desired."
-msgstr ""
+msgstr "Qualsiasi eccezione può essere abilitata o disabilitat individualmente."
 
 #: ../../firewall.rst:5
 msgid "Firewall"
-msgstr ""
+msgstr "Firewall"
 
 #: ../../firewall.rst:7
 msgid ""
@@ -1245,10 +1261,17 @@ msgid ""
 "allow the definition and application of rules for network traffic within "
 "the firewall."
 msgstr ""
+"Le zone del firewall delimitano le interfacce di rete, stabilendone i "
+"confini, mentre le regole del firewall determinano il controllo del traffico "
+"tra le diverse zone. Le zone organizzano i segmenti di rete, mentre le "
+"regole definiscono le politiche di sicurezza specificando le condizioni per "
+"consentire o negare determinate azioni. Insieme, consentono la definizione e "
+"l'applicazione di regole per la gestione del traffico di rete all'interno "
+"del firewall."
 
 #: ../../firewall.rst:14
 msgid "Zones and policies"
-msgstr ""
+msgstr "Zone e politiche"
 
 #: ../../firewall.rst:16
 msgid ""
@@ -1263,6 +1286,16 @@ msgid ""
 "set of security rules and policies that dictate how traffic can flow to "
 "and from that zone."
 msgstr ""
+"In un sistema firewall, zone e politiche sono concetti fondamentali che "
+"aiutano a gestire la sicurezza della rete controllando il flusso di traffico "
+"tra diversi segmenti di una rete. Una zona in un firewall rappresenta un "
+"segmento di rete specifico con il proprio livello di affidabilità. Per "
+"esempio, una configurazione comune potrebbe includere zone come WAN (Wide "
+"Area Network) che rappresentano la rete esterna e non attendibile ("
+"solitamente internet) e LAN (Local Area Network) che rappresentano la rete "
+"interna e affidabile (dispositivi all'interno di una casa o organizzazione "
+"privata). Ogni zona ha una propria serie di regole di sicurezza e politiche "
+"che dettano come il traffico può scorrere da e verso quella zona."
 
 #: ../../firewall.rst:23
 msgid ""
@@ -2338,7 +2371,7 @@ msgstr ""
 
 #: ../../migration.rst:5
 msgid "NethServer 7 migration"
-msgstr ""
+msgstr "Migrazione da NethServer 7"
 
 #: ../../migration.rst:7
 msgid ""
@@ -2767,6 +2800,18 @@ msgid ""
 "require a highly available and stable internet connection for their "
 "operations."
 msgstr ""
+"La configurazione MultiWAN (Wide Area Network) è un'implementazione in cui "
+"il firewall utilizza contemporaneamente più connessioni Internet provenienti "
+"da diversi fornitori di servizi Internet (ISP). Questa configurazione mira a "
+"migliorare la affidabilità della rete, aumentare la larghezza di banda e "
+"migliorare la velocità di Internet distribuendo il traffico di rete su più "
+"collegamenti. Può fornire protezione in caso di guasto, garantendo che se "
+"una connessione fallisce, il traffico di rete venga automaticamente "
+"reindirizzato alla connessione funzionante, riducendo al minimo i tempi di "
+"inattività e garantendo un accesso continuo a Internet. Le configurazioni "
+"MultiWAN sono spesso utilizzate in aziende e organizzazioni che richiedono "
+"una connessione Internet altamente disponibile e stabile per le loro "
+"operazioni."
 
 #: ../../multiwan.rst:12
 msgid ""
@@ -2774,6 +2819,9 @@ msgid ""
 "WAN zone of the system. This is the fundamental requirement for "
 "implementing a MultiWAN connection."
 msgstr ""
+"La configurazione MultiWAN richiede almeno due interfacce di rete nella zona "
+"WAN del sistema. Questo è il requisito fondamentale per implementare una "
+"connessione MultiWAN."
 
 #: ../../multiwan.rst:14
 msgid ""
@@ -2783,6 +2831,11 @@ msgid ""
 "It's necessary to specify its behavior. There are two available main "
 "options:"
 msgstr ""
+"La prima volta che si accede alla pagina di configurazione, è obbligatorio "
+"creare una policy predefinita. Questa policy è essenziale e non può essere "
+"eliminata. La policy predefinita definisce il comportamento di base del "
+"sistema MultiWAN. È necessario specificarne il comportamento. Ci sono due "
+"opzioni principali disponibili:"
 
 #: ../../multiwan.rst:17
 msgid ""
@@ -2790,6 +2843,9 @@ msgid ""
 "and traffic is balanced based on the weight assigned to each WAN. The WAN"
 " weight can vary from 1 to 1000."
 msgstr ""
+"``Bilanciato``: In questa modalità, le connessioni WAN vengono utilizzate "
+"contemporaneamente, e il traffico viene bilanciato in base al peso assegnato "
+"a ciascuna WAN. Il peso WAN può variare da 1 a 1000."
 
 #: ../../multiwan.rst:18
 msgid ""
@@ -2797,6 +2853,9 @@ msgid ""
 "only if the primary connection fails. This ensures a backup connectivity "
 "if the primary WAN fails."
 msgstr ""
+"``Backup``: In modalità di backup, la connessione WAN secondaria entra in "
+"gioco solo se la connessione primaria fallisce. Ciò garantisce una "
+"connettività di backup nel caso in cui la WAN primaria dovesse fallire."
 
 #: ../../multiwan.rst:20
 msgid ""
@@ -2805,12 +2864,18 @@ msgid ""
 "mode provides greater flexibility in managing traffic between different "
 "WAN connections."
 msgstr ""
+"Esiste anche una modalità ``Personalizzata`` che consente una configurazione "
+"più dettagliata, particolarmente utile quando si gestiscono tre o più "
+"connessioni WAN. Questa modalità offre una maggiore flessibilità nella "
+"gestione del traffico tra diverse connessioni WAN."
 
 #: ../../multiwan.rst:23
 msgid ""
 "In the custom mode of Multi-WAN configuration, the following concepts "
 "apply:"
 msgstr ""
+"Nella modalità personalizzata della configurazione MultiWAN, si applicano i "
+"seguenti concetti:"
 
 #: ../../multiwan.rst:25
 msgid ""
@@ -2818,6 +2883,10 @@ msgid ""
 "of others. WAN interfaces within a particular priority level do not "
 "affect or depend on interfaces in other levels."
 msgstr ""
+"Livelli di priorità indipendenti: ogni livello di priorità opera "
+"indipendentemente dagli altri. Le interfacce WAN all'interno di un "
+"particolare livello di priorità non influiscono né dipendono dalle "
+"interfacce in altri livelli."
 
 #: ../../multiwan.rst:27
 msgid ""
@@ -2825,6 +2894,9 @@ msgid ""
 "contain two or more WAN interfaces. These interfaces are grouped together"
 " for specific configuration settings."
 msgstr ""
+"Interfacce WAN multiple all'interno di un livello di priorità: ogni livello "
+"di priorità può contenere due o più interfacce WAN. Queste interfacce sono "
+"raggruppate insieme per impostazioni di configurazione specifiche."
 
 #: ../../multiwan.rst:29
 msgid ""
@@ -2833,6 +2905,10 @@ msgid ""
 "among these interfaces. Higher weights indicate a higher proportion of "
 "traffic allocation."
 msgstr ""
+"I pesi determinano la distribuzione del traffico: i pesi assegnati alle "
+"interfacce WAN all'interno di un livello di priorità determinano come il "
+"traffico viene distribuito tra queste interfacce. Pesi più alti indicano una "
+"maggiore proporzione di allocazione del traffico."
 
 #: ../../multiwan.rst:31
 msgid ""
@@ -2840,6 +2916,10 @@ msgid ""
 "in interfaces within this level having lower priority. They are only "
 "utilized if all interfaces in the previous level fail."
 msgstr ""
+"La priorità diminuisce con nuovi livelli: l'aggiunta di un nuovo livello di "
+"priorità comporta che le interfacce all'interno di questo livello abbiano "
+"una priorità più bassa. Vengono utilizzate solo se tutte le interfacce nel "
+"livello precedente falliscono."
 
 #: ../../multiwan.rst:34
 msgid ""
@@ -2847,18 +2927,26 @@ msgid ""
 "balance mode, and the last interface serves as a backup if both the first"
 " two interfaces fail:"
 msgstr ""
+"Considera uno scenario in cui le prime due interfacce WAN sono configurate "
+"in modalità di bilanciamento, mentre l'ultima interfaccia funge da backup "
+"nel caso in cui falliscano entrambe le prime due interfacce:"
 
 #: ../../multiwan.rst:36
 msgid ""
 "select the first two WAN interfaces and set them to balance mode by "
 "assigning weights to both depending on internet connection performances"
 msgstr ""
+"Seleziona le prime due interfacce WAN e impostale in modalità bilanciamento "
+"assegnando pesi a entrambe in base alle prestazioni della connessione "
+"Internet"
 
 #: ../../multiwan.rst:37
 msgid ""
 "add a new priority level by clicking on :guilabel:`Add priority level` "
 "button"
 msgstr ""
+"Aggiungi un nuovo livello di priorità facendo clic sul pulsante :guilabel:`"
+"Aggiungi livello di priorità`"
 
 #: ../../multiwan.rst:38
 msgid ""
@@ -2867,10 +2955,14 @@ msgid ""
 " the only interface at this level. It acts as a backup, coming into play "
 "only if both interfaces in the previous level fail."
 msgstr ""
+"Seleziona la terza interfaccia WAN e assegnale un peso. Tuttavia, in questo "
+"scenario, il peso non influenza la distribuzione del traffico poiché è "
+"l'unica interfaccia in questo livello. Essa funge da backup, entrando in "
+"gioco solo se entrambe le interfacce nel livello precedente falliscono."
 
 #: ../../multiwan.rst:42
 msgid "Routing rules"
-msgstr ""
+msgstr "Regole di routing"
 
 #: ../../multiwan.rst:44
 msgid ""
@@ -2880,10 +2972,16 @@ msgid ""
 "customize which outbound connections use specific WAN interfaces, "
 "allowing for a fine-tuned network setup."
 msgstr ""
+"Gli utenti possono creare regole di routing del traffico in uscita basate su "
+"criteri specifici come l'indirizzo IP di origine, l'indirizzo IP di "
+"destinazione, la porta di origine, la porta di destinazione e i tipi di "
+"protocollo IP. Questa funzionalità di routing basata su policy consente agli "
+"utenti di personalizzare quali connessioni in uscita utilizzano specifiche "
+"interfacce WAN, consentendo una configurazione di rete molto dettagliata."
 
 #: ../../multiwan.rst:47
 msgid "Here's how you can create a custom rule:"
-msgstr ""
+msgstr "Ecco come è possibile creare una regola personalizzata:"
 
 #: ../../multiwan.rst:49
 msgid ""
@@ -2891,6 +2989,9 @@ msgid ""
 "creating a new policy. Click on the :guilabel:`Create policy` button to "
 "initiate the process."
 msgstr ""
+"Crea una nuova policy: per iniziare a personalizzare il routing del "
+"traffico, inizia creando una nuova policy. Fai clic sul pulsante :guilabel:`"
+"Crea policy` per avviare il processo."
 
 #: ../../multiwan.rst:51
 msgid ""
@@ -2898,6 +2999,10 @@ msgid ""
 " step allows you to define specific conditions under which the traffic "
 "will be routed differently from the default policy."
 msgstr ""
+"Crea una nuova regola: successivamente, fai clic sul pulsante :guilabel:`"
+"Crea regola`. Questo passaggio ti consente di definire condizioni specifiche "
+"in base alle quali il traffico sarà instradato diversamente rispetto alla "
+"policy predefinita."
 
 #: ../../multiwan.rst:54
 msgid ""
@@ -2905,6 +3010,10 @@ msgid ""
 " to the rule. This name should reflect the purpose or conditions of the "
 "traffic routing rule for easy identification."
 msgstr ""
+"Assegna una denominazione significativa alla regola: attribuisci un nome "
+"descrittivo e significativo alla regola. Questo nome dovrebbe riflettere lo "
+"scopo o le condizioni della regola di routing del traffico per una facile "
+"identificazione."
 
 #: ../../multiwan.rst:57
 msgid ""
@@ -2914,6 +3023,11 @@ msgid ""
 "By specifying these parameters, you narrow down the scope of the rule to "
 "a specific type of traffic."
 msgstr ""
+"Specifica il tipo di traffico: definisci i criteri per il traffico che "
+"desideri personalizzare. Ciò può includere l'indirizzo IP di origine, "
+"l'indirizzo IP di destinazione, protocolli specifici, porte o qualsiasi "
+"combinazione di questi fattori. Specificando questi parametri, riduci "
+"l'influenza della regola a un tipo specifico di traffico."
 
 #: ../../multiwan.rst:60
 msgid ""
@@ -2923,20 +3037,28 @@ msgid ""
 "policy, you are instructing the system to route the defined traffic "
 "according to the settings specified within that policy."
 msgstr ""
+"Seleziona la policy creata per questo tipo di traffico: scegli la policy "
+"personalizzata che hai creato nel primo passo come preferenza di routing per "
+"questo tipo specifico di traffico. Associando la regola a una particolare "
+"policy, stai istruendo il sistema a instradare il traffico definito in base "
+"alle impostazioni specificate all'interno di quella policy."
 
 #: ../../multiwan.rst:65
 msgid "General settings"
-msgstr ""
+msgstr "Impostazioni generali"
 
 #: ../../multiwan.rst:67
 msgid "NethSecurity monitors each WAN connection using repeated ICMP tests."
 msgstr ""
+"NethSecurity monitora ogni connessione WAN utilizzando test ICMP ripetuti."
 
 #: ../../multiwan.rst:69
 msgid ""
 "The ``General settings`` page allow users to specify the following "
 "parameters:"
 msgstr ""
+"La pagina`` Impostazioni generali`` consente agli utenti di specificare i "
+"seguenti parametri:"
 
 #: ../../multiwan.rst:71
 msgid ""
@@ -2945,6 +3067,10 @@ msgid ""
 "status. These hosts are checked to ensure they are reachable via the "
 "network."
 msgstr ""
+"Elenco degli host da monitorare: gli utenti possono definire un elenco di "
+"host (computer, server o dispositivi) che il sistema monitorerà per lo stato "
+"della connettività. Questi host vengono controllati per assicurarsi che "
+"siano raggiungibili attraverso la rete."
 
 #: ../../multiwan.rst:73
 msgid ""
@@ -2953,6 +3079,10 @@ msgid ""
 "monitoring test. By setting the number of packets, users can control the "
 "intensity of the monitoring."
 msgstr ""
+"Numero di pacchetti ICMP (ping) da inviare: gli utenti possono impostare il "
+"numero di pacchetti ICMP (Internet Control Message Protocol) da inviare "
+"durante ogni test di monitoraggio. Impostando il numero di pacchetti, gli "
+"utenti possono controllare l'intensità del monitoraggio."
 
 #: ../../multiwan.rst:75
 msgid ""
@@ -3993,12 +4123,18 @@ msgid ""
 " very useful for creating firewall rules. Leave it blank to assign a "
 "random IP address on every connection."
 msgstr ""
+"``Reserved IP``: indica un indirizzo IP che fa parte della rete VPN definita "
+"che sarà sempre assegnato a questo account specifico, questo può essere "
+"molto utile per la creazione di regole firewall. Lascialo vuoto per "
+"assegnare un indirizzo IP casuale su ogni connessione."
 
 #: ../../openvpn_roadwarrior.rst:95
 msgid ""
 "``Certificate expiration (days)``: specify a certificate duration "
 "(default 3650 days)"
 msgstr ""
+"``Scadenza certificato (giorni)``: specificare la durata del certificato ("
+"predefinito 3650 giorni)"
 
 #: ../../openvpn_roadwarrior.rst:97
 msgid ""
@@ -4013,16 +4149,28 @@ msgid ""
 "operating mode is changed (e.g., if the authentication mode is altered), "
 "it is necessary to download the file again."
 msgstr ""
+"Una volta creato l'account, è necessario esportare la configurazione e "
+"caricarlo nel client che deve connettersi. Per fare questo, basta cliccare "
+"sul menu dell'account specifico e scegliere ``Scaricare la configurazione``. "
+"Questa azione scarica il file pronto all'uso per essere caricato nel client. "
+"Questo file è generato dinamicamente in base alla configurazione del server "
+"OpenVPN e contiene già tutte le informazioni necessarie, compresi i dettagli "
+"di configurazione (indirizzi di server, porta, ecc.) e i certificati "
+"richiesti. Nel caso in cui la modalità operativa del server venga modificata "
+"(ad esempio, se la modalità di autenticazione viene modificata), è "
+"necessario scaricare nuovamente il file."
 
 #: ../../openvpn_roadwarrior.rst:100
 msgid "Other available actions are:"
-msgstr ""
+msgstr "Altre azioni disponibili:"
 
 #: ../../openvpn_roadwarrior.rst:102
 msgid ""
 "``Disable``: disable the account; the account can be re-enabled at any "
 "time."
 msgstr ""
+"``Disabilita``: disabilita l'account; l'account può essere riabilitato in "
+"qualsiasi momento."
 
 #: ../../openvpn_roadwarrior.rst:104
 msgid ""
@@ -4032,20 +4180,27 @@ msgid ""
 "certificate, it is necessary to update it on the client by either "
 "redownloading the entire configuration or just the certificate."
 msgstr ""
+"``Rigenera certificato``: ricrea il certificato personale per l'account; se "
+"il certificato corrente non è scaduto, sarà revocato, e sarà necessario "
+"utilizzare il nuovo. Dopo aver rigenerato il certificato, è necessario "
+"aggiornarlo sul client ricaricando l'intera configurazione o semplicemente "
+"il certificato."
 
 #: ../../openvpn_roadwarrior.rst:106
 msgid ""
 "``Delete``: delete the account and its certificate, this operation is "
 "irreversible and the certificate is not recoverable."
 msgstr ""
+"``Elimina``: cancella l'account e il suo certificato. Questa operazione è "
+"irreversibile ed il certificato non può essere recuperato."
 
 #: ../../openvpn_roadwarrior.rst:109
 msgid "Client behavior"
-msgstr ""
+msgstr "Comportamento client"
 
 #: ../../openvpn_roadwarrior.rst:111
 msgid "Some information about the behavior of the clients:"
-msgstr ""
+msgstr "Alcune informazioni sul comportamento dei client:"
 
 #: ../../openvpn_roadwarrior.rst:113
 msgid ""
@@ -4054,6 +4209,10 @@ msgid ""
 "has privileged access to both LAN and WAN zones within the network "
 "infrastructure."
 msgstr ""
+"I client connessi alla VPN Road Warrior sono assegnati alla zona "
+"``rwopenvpn``, che è considerata attendibile. Per impostazione predefinita, "
+"questa zona ha accesso privilegiato sia alle zone LAN che WAN all'interno "
+"dell'infrastruttura di rete."
 
 #: ../../openvpn_roadwarrior.rst:116
 msgid ""
@@ -4061,6 +4220,9 @@ msgid ""
 "the first IP/hostname of the server configuration, if it's unavailable "
 "they will use the second IP/hostname and so on."
 msgstr ""
+"Connessione di Backup: in presenza di più connessioni WAN, i client si "
+"collegheranno utilizzando il primo IP/hostname della configurazione del "
+"server, se non è disponibile useranno il secondo IP/hostname e così via."
 
 #: ../../openvpn_roadwarrior.rst:118
 msgid ""
@@ -4069,6 +4231,10 @@ msgid ""
 " If a new client attempts to connect with an account that is already "
 "connected to the system, the first account will be disconnected."
 msgstr ""
+"Per motivi di sicurezza, non è possibile collegare più client con lo stesso "
+"account. Ogni account può essere utilizzato da un solo client alla volta. Se "
+"un nuovo client tenta il collegamento con un account già connesso al "
+"sistema, il primo account sarà disconnesso."
 
 #: ../../openvpn_roadwarrior.rst:125
 msgid "Client software"
@@ -4679,7 +4845,7 @@ msgstr ""
 
 #: ../../release_notes.rst:13
 msgid "**Beta 2**"
-msgstr ""
+msgstr "**Beta 2**"
 
 #: ../../release_notes.rst:15
 msgid "Image version: `8-23.05.2-ns.0.0.2-beta2`"
@@ -9288,4 +9454,3 @@ msgstr ""
 #~ "under the ``System`` section, then click"
 #~ " on the :guilabel:`Download backup` button."
 #~ msgstr ""
-
