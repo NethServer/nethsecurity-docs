@@ -3,21 +3,33 @@
 # This file is distributed under the same license as the NethSecurity
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
-#
-#, fuzzy
+# LibreTranslate <noreply-mt-libretranslate@weblate.org>, 2024.
+# Giacomo Sanchietti <giacomo.sanchietti@nethesis.it>, 2024.
+# Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2024.
+# Jacopo Ciceroni <jacopo.ciceroni@nethesis.it>, 2024.
+# Nicola Rauso <nicola.rauso@nethesis.it>, 2024.
+# Luca Gasparini <luca.gasparini@nethesis.it>, 2024.
+# Alessio Fattorini <alessio.fattorini@nethesis.it>, 2024.
+# Davide Marini <cotosso@gmail.com>, 2024.
+# antonio colapietro <tonyco97.tc@gmail.com>, 2024.
+# Matteo Mengoni <matteo.mengoni@live.it>, 2024.
+# Davide <davide@franceschelli.eu>, 2024.
+# elpidiobaldi <elpidio.baldi@nethesis.it>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: NethSecurity \n"
+"Project-Id-Version: NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-29 14:10+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2024-03-01 11:10+0000\n"
+"Last-Translator: Davide <davide@franceschelli.eu>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/ns8/"
+"nethsecurity-docs/it/>\n"
 "Language: it\n"
-"Language-Team: it <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.5-dev\n"
 "Generated-By: Babel 2.8.0\n"
 
 #: ../../backup.rst:3
@@ -29,6 +41,8 @@ msgid ""
 "NethSecurity provides a flexible and powerful backup system to save and "
 "restore your firewall's configuration settings."
 msgstr ""
+"NethSecurity fornisce un sistema di backup flessibile e potente per salvare "
+"e ripristinare le impostazioni di configurazione del firewall."
 
 #: ../../backup.rst:7
 msgid ""
@@ -51,10 +65,19 @@ msgid ""
 " created them. This means the dates might differ depending on time zone "
 "differences."
 msgstr ""
+"Se la macchina ha un abbonamento Enterprise valido, la pagina mostrerà un "
+"elenco di backup disponibili dal server remoto. L'utente può cliccare "
+"su:guilabel: ` Eseguire il backup` buttont: il backup verrà memorizzato su "
+"un server remoto e l'utente sarà in grado di scaricarlo cliccando sul "
+"pulsante: `Scarica`. Si prega di notare che la data del backup è la data del "
+"server. Le date visualizzate nell'elenco di backup si basano sul tempo in "
+"cui il server memorizza i backup, non sul tempo del firewall che li ha "
+"creati. Ciò significa che le date potrebbero differire a seconda delle "
+"differenze di fuso orario."
 
 #: ../../backup.rst:19
 msgid "Backup encryption"
-msgstr ""
+msgstr "Crittografia del backup"
 
 #: ../../backup.rst:21
 msgid ""
@@ -63,16 +86,22 @@ msgid ""
 " disable encryption, click on the :guilabel:`Configure passphrase` button"
 " and leave the password field empty."
 msgstr ""
+"Il backup non è crittografato di default. Per abilitare la crittografia, "
+"cliccare sul pulsante :guilabel:`Configura passphrase`e impostare una "
+"password forte. Per disabilitare la crittografia, cliccare sul pulsante "
+":guilabel:`Configura passphrase`e lasciare vuoto il campo password."
 
 #: ../../backup.rst:25
 msgid ""
 "If the backup is encrypted and the password is lost, it will no longer be"
 " possible to restore the configuration."
 msgstr ""
+"Se il backup viene crittografato e la password viene persa, non sarà più "
+"possibile ripristinare la configurazione."
 
 #: ../../backup.rst:28
 msgid "Automatic backup"
-msgstr ""
+msgstr "Backup automatico"
 
 #: ../../backup.rst:30
 msgid ""
@@ -82,10 +111,15 @@ msgid ""
 "the backup is encrypted, only the encrypted backup will be sent to the "
 "remote server."
 msgstr ""
+"Se la macchina ha un valido :ref: `Abbonamento Enterprise  < subscription-"
+"section>`, un lavoro di cron programmato verrà eseguito ogni notte per "
+"eseguire un backup. Questo backup viene quindi inviato a un server remoto "
+"tramite un canale sicuro. Se il backup è crittografato, solo il backup "
+"crittografato verrà inviato al server remoto."
 
 #: ../../backup.rst:35
 msgid "Restore"
-msgstr ""
+msgstr "Ripristino"
 
 #: ../../backup.rst:37
 msgid ""
@@ -97,14 +131,21 @@ msgid ""
 "remote server. If the backup is encrypted, enter the passphrase, and "
 "finally, click the \"Restore\" button to complete the process."
 msgstr ""
+"Il backup può essere ripristinato dalla scheda ``Restore`` all'interno della "
+"pagina ``Backup & Restore`` L'utente può avviare il processo di ripristino "
+"facendo clic sul pulsante :guilabel:`Restore backup` e caricando il file di "
+"backup. Se la macchina ha un abbonamento Enterprise valido, l'interfaccia "
+"web presenterà inoltre un elenco di backup disponibili dal server remoto. Se "
+"il backup è crittografato, inserire il passphrase, e infine, fare clic sul "
+"pulsante :guilabel:`Restore` per completare il processo."
 
 #: ../../backup.rst:42
 msgid "After the restore the system will be rebooted."
-msgstr ""
+msgstr "Dopo il ripristino il sistema verrà riavviato."
 
 #: ../../controller.rst:5
 msgid "Controller"
-msgstr ""
+msgstr "Controller"
 
 #: ../../controller.rst:7
 msgid ""
@@ -112,12 +153,17 @@ msgid ""
 " 8 <https://ns.nethserver.org>`_. The controller enables to manage "
 "multiple NethSecurity installations remotely."
 msgstr ""
+"Il controller NethSecurity è un'applicazione che può essere eseguita su `"
+"NethServer 8 <https://ns.nethserver.org> `_. Il controller consente di "
+"gestire più installazioni NethSecurity da remoto."
 
 #: ../../controller.rst:10
 msgid ""
 "Firewalls can connect to the controller. Upon successful registration, "
 "the server performs the following actions:"
 msgstr ""
+"I firewall possono connettersi al controller. Dopo che la registrazione ha "
+"avuto successo, il server esegue le seguenti azioni:"
 
 #: ../../controller.rst:12
 msgid "generates a VPN configuration and transmits it to the firewall"
@@ -862,7 +908,7 @@ msgstr ""
 #: ../../dns_filter.rst:28 ../../dpi_filter.rst:21 ../../index.rst:37
 #: ../../ipsec_tunnels.rst:16 ../../openvpn_tunnels.rst:19 ../../qos.rst:20
 msgid "Configuration"
-msgstr ""
+msgstr "Configurazione"
 
 #: ../../dns_filter.rst:30
 msgid "You can enable and disable the filter by changing the ``Status`` toggle."
@@ -870,7 +916,7 @@ msgstr ""
 
 #: ../../dns_filter.rst:33
 msgid "Authentication"
-msgstr ""
+msgstr "Autenticazione"
 
 #: ../../dns_filter.rst:34
 msgid ""
@@ -1118,6 +1164,9 @@ msgid ""
 "enabling the administrator to explore and pinpoint specific applications "
 "and application categories that require special attention."
 msgstr ""
+"L'interfaccia di default mostra una selezione delle applicazioni più comuni, "
+"include anche una funzionalità di ricerca avanzata che permette di ricercare "
+"all'interno di specifiche categorie."
 
 #: ../../dpi_filter.rst:32
 msgid ""
@@ -1131,10 +1180,18 @@ msgid ""
 "undergoes daily updates, ensuring that the system stays abreast of the "
 "ever-evolving landscape of applications and digital services."
 msgstr ""
+"Il numero di applicazioni che possono essere identificate e gestite dal "
+"sistema è influenzato dalla presenza di un :ref:`Abbonamento Enterprise "
+"<subscription-section>`. In assenza di abbonamento, il sistema riconosce una "
+"base di circa 400 applicazioni. Tuttavia, con un abbonamento attivo, questa "
+"capacità si espande significativamente, arrivando circa a 3000 applicazioni. "
+"Le applicazioni riconosciute vengono aggiornate giornalmente. In questo "
+"modo, l'elenco delle applicazioni viene aggiornato quotidianamente per "
+"garantire che il sistema sia sempre aggiornato."
 
 #: ../../dpi_filter.rst:39
 msgid "Exceptions"
-msgstr ""
+msgstr "Eccezioni"
 
 #: ../../dpi_filter.rst:41
 msgid ""
@@ -1142,6 +1199,8 @@ msgid ""
 "such as the gateway or other critical infrastructure, preventing them "
 "from being blocked."
 msgstr ""
+"L'esclusione DPI consente di escludere indirizzi di rete specifici, come il "
+"gateway o server, evitando eventuali blocchi indesiderati."
 
 #: ../../dpi_filter.rst:43
 msgid ""
@@ -1149,6 +1208,10 @@ msgid ""
 "``IP address`` that should be exempted from the filter. You can include a"
 " description explaining the reason for the exclusion."
 msgstr ""
+"Per aggiungere una nuova eccezione, fare clic sul pulsante ``Aggiungi "
+"l'eccezione``. Inserisci l'indirizzo ``IP` che deve essere esentato dal "
+"filtro. È possibile includere una descrizione che spiega la ragione per "
+"l'esclusione."
 
 #: ../../dpi_filter.rst:47
 msgid "Each exception can be enabled or disabled as desired."
@@ -1609,19 +1672,19 @@ msgstr ""
 
 #: ../../index.rst:20
 msgid "About"
-msgstr ""
+msgstr "Informazioni"
 
 #: ../../index.rst:27 ../../install.rst:5
 msgid "Installation"
-msgstr ""
+msgstr "Installazione"
 
 #: ../../index.rst:58
 msgid "Applications"
-msgstr ""
+msgstr "Applicazioni"
 
 #: ../../index.rst:75
 msgid "Best practices"
-msgstr ""
+msgstr "Consigli pratici"
 
 #: ../../index.rst:5
 msgid "NethSecurity administrator manual"
@@ -1642,7 +1705,7 @@ msgstr ""
 
 #: ../../index.rst:18
 msgid "Help on `Community <http://community.nethserver.org>`_"
-msgstr ""
+msgstr "`Community <http://community.nethserver.org>`_ di supporto"
 
 #: ../../install.rst:9
 msgid ""
@@ -1904,7 +1967,7 @@ msgstr ""
 
 #: ../../introduction.rst:3
 msgid "Introduction"
-msgstr ""
+msgstr "Introduzione"
 
 #: ../../introduction.rst:13
 msgid "About NethSecurity"
@@ -2006,7 +2069,7 @@ msgstr ""
 
 #: ../../introduction.rst:39
 msgid "Get support"
-msgstr ""
+msgstr "Richiedere assistenza"
 
 #: ../../introduction.rst:41
 msgid ""
@@ -2420,6 +2483,10 @@ msgid ""
 "NethServer 7 server has more than one disk, the other disks will remain "
 "unchanged and unused during the migration process."
 msgstr ""
+"Selezionare il disco di destinazione: scegliere il disco in cui verrà "
+"installato NethSecurity. Si noti che NethSecurity non supporta RAID. Se il "
+"server originale NethServer 7 ha più di un disco, gli altri dischi rimangono "
+"invariati e inutilizzati durante il processo di migrazione."
 
 #: ../../migration.rst:71
 msgid ""
@@ -2428,6 +2495,10 @@ msgid ""
 " image and write it to the selected disk. Subsequently, the system will "
 "automatically reboot."
 msgstr ""
+"Confermare e avviare il processo: dopo aver selezionato il disco, fare clic "
+"su:guilabel: `Migrate` per confermare. Il sistema scaricherà l'immagine "
+"NethSecurity e la scriverà sul disco selezionato. Successivamente, il "
+"sistema si riavvierà automaticamente."
 
 #: ../../migration.rst:74
 msgid ""
@@ -2436,10 +2507,14 @@ msgid ""
 "migrated. Ensure to carefully verify all settings and services to confirm"
 " they have been migrated correctly."
 msgstr ""
+"Completa la migrazione al primo avvio: al primo avvio di NethSecurity, la "
+"configurazione da NethServer 7 verrà migrata automaticamente. Accertati di "
+"verificare attentamente tutte le impostazioni e i servizi per confermare che "
+"siano stati migrati correttamente."
 
 #: ../../migration.rst:80
 msgid "Migration with other installed modules"
-msgstr ""
+msgstr "Migrazione con altri moduli installati"
 
 #: ../../migration.rst:86
 msgid ""
@@ -2448,24 +2523,33 @@ msgid ""
 " have to import the configuration into a newly installed NethSecurity "
 "system."
 msgstr ""
+"Se NethServer 7 include moduli aggiuntivi come il server di posta, sarà "
+"necessario un hardware specifico per NethSecurity. In questo caso, dovrai "
+"importare la configurazione in un sistema NethSecurity appena installato."
 
 #: ../../migration.rst:89
 msgid ""
 "To perform the migration from NethServer 7 to NethSecurity, follow these "
 "steps:"
 msgstr ""
+"Per eseguire la migrazione da NethServer 7 a NethSecurity, seguire questi "
+"passaggi:"
 
 #: ../../migration.rst:91
 msgid ""
 "Install NethSecurity on a new machine: follow the :ref:`installation "
 "instructions <install-section>`"
 msgstr ""
+"Installare NethSecurity su una nuova macchina: seguire le :ref:istruzioni di "
+"installazione <install-section>"
 
 #: ../../migration.rst:95
 msgid ""
 "Download the archive with exported configuration: click "
 ":guilabel:`Download` in the ``Download export archive`` section"
 msgstr ""
+"Scarica l'archivio con la configurazione esportata: fai clic su "
+":guilabel:`Download` nella sezione ``Download export archive``"
 
 #: ../../migration.rst:97
 msgid ""
@@ -2473,6 +2557,9 @@ msgid ""
 "``Migration`` tab, then click :guilabel:`Upload migration file` and "
 "select the archive downloaded in the previous step"
 msgstr ""
+"Accedi alla pagina ``Backup & Restore`` su NethSecurity e vai alla scheda "
+"``Migration``, successivamente fai clic su :guilabel:`Upload migration file` "
+"e seleziona l'archivio scaricato nel passo precedente"
 
 #: ../../migration.rst:99
 msgid ""
@@ -2484,38 +2571,49 @@ msgid ""
 "physical interface, and the system will automatically recreate the VLAN "
 "on the underlying interface."
 msgstr ""
+"Durante l'importazione della configurazione su nuovo hardware, gli indirizzi "
+"MAC delle interfacce di rete cambiano, richiedendo una decisione su come "
+"riassegnare tali interfacce. L'interfaccia utente mostra le interfacce della "
+"macchina di origine a sinistra e quelle della macchina di destinazione a "
+"destra. Se la macchina di origine aveva delle VLAN configurate, l'utente "
+"deve riassegnare l'interfaccia fisica e il sistema ricreerà automaticamente "
+"la VLAN sull'interfaccia sottostante."
 
 #: ../../migration.rst:103
 msgid "Click :guilabel:`Migrate` to start the migration process"
-msgstr ""
+msgstr "Fai clic su :guilabel:`Migra` per avviare il processo di migrazione"
 
 #: ../../migration.rst:106
 msgid "Migrated configurations"
-msgstr ""
+msgstr "Configurazioni migrare"
 
 #: ../../migration.rst:108
 msgid ""
 "During the migration, the following configurations will be imported from "
 "NethServer 7:"
 msgstr ""
+"Durante la migrazione, saranno importate le seguenti configurazioni da "
+"NethServer 7:"
 
 #: ../../migration.rst:110
 msgid "root password"
-msgstr ""
+msgstr "password di root"
 
 #: ../../migration.rst:111
 msgid "network configuration: bridges over bonds are not supported"
-msgstr ""
+msgstr "configurazione di rete: i bridge su bonds non sono supportati"
 
 #: ../../migration.rst:112
 msgid "date and timezone"
-msgstr ""
+msgstr "data e fuso orario"
 
 #: ../../migration.rst:113
 msgid ""
 "DHCP servers and reservations: DHCP server on bonds interfaces are not "
 "supported"
 msgstr ""
+"Server DHCP e prenotazioni: i server DHCP sulle interfacce di bond non sono "
+"supportati"
 
 #: ../../migration.rst:114
 msgid ""
@@ -2523,14 +2621,17 @@ msgid ""
 "not the content of the TFTP server. To re-enable the service make sure to"
 " manually setup ``tftp_root`` option"
 msgstr ""
+"Configurazione DNS con definizione dell' host: le opzioni TFTP vengono "
+"migrate, ma non il contenuto del server TFTP. Per riattivare il servizio, "
+"assicurati di impostare manualmente l'opzione ``tftp_root``"
 
 #: ../../migration.rst:116
 msgid "static routes"
-msgstr ""
+msgstr "rotte statiche"
 
 #: ../../migration.rst:117
 msgid "port forwards"
-msgstr ""
+msgstr "inoltro porte"
 
 #: ../../migration.rst:118
 msgid ""
@@ -2539,36 +2640,45 @@ msgid ""
 "rules with IP/CIDR addresses; NAT helpers should be reconfigured manually"
 " after migration"
 msgstr ""
+"regole del firewall: le regole che utilizzano i servizi NDPI non sono "
+"supportate; oggetti di origine e destinazione non sono attualmente "
+"supportati e verranno convertiti in regole con indirizzi IP/CIDR; i NAT "
+"helpers dovrebbero essere riconfigurati manualmente dopo la migrazione"
 
 #: ../../migration.rst:120
 msgid "multiWAN configuration"
-msgstr ""
+msgstr "configurazione multiWAN"
 
 #: ../../migration.rst:121
 msgid "QoS: classes with reserved bandwidth and rules are not supported"
 msgstr ""
+"QoS: classi con larghezza di banda riservata e regole non sono supportate"
 
 #: ../../migration.rst:122
 msgid ""
 "OpenVPN roadwarrior: mail notification is not supported, existing "
 "connection database is not migrated; OTP authentication is not supported"
 msgstr ""
+"OpenVPN roadwarrior: la notifica via email non è supportata, il database "
+"delle connessioni esistenti non viene migrato; l'autenticazione OTP non è "
+"supportata"
 
 #: ../../migration.rst:123
+#, fuzzy
 msgid "OpenVPN runnels"
-msgstr ""
+msgstr "OpenVPN tunnels"
 
 #: ../../migration.rst:124
 msgid "IPSec tunnels"
-msgstr ""
+msgstr "tunnel IPSec"
 
 #: ../../migration.rst:125 ../../threat_shield.rst:5
 msgid "Threat shield"
-msgstr ""
+msgstr "Threat shield"
 
 #: ../../migration.rst:126 ../../subscription.rst:5
 msgid "Subscription"
-msgstr ""
+msgstr "Abbonamento Enterprise"
 
 #: ../../migration.rst:127
 msgid ""
@@ -2576,50 +2686,53 @@ msgid ""
 "hotspot interface will change MAC address and it must be registered again"
 " to the remote hotspot manager"
 msgstr ""
+"Hotspot: se la migrazione è stata eseguita su un nuovo hardware, "
+"l'interfaccia hotspot cambierà indirizzo MAC e dovrà essere nuovamente "
+"registrata presso il gestore hotspot remoto"
 
 #: ../../migration.rst:129
 msgid "Let's Encrypt certificate configuration"
-msgstr ""
+msgstr "Configurazione del certificato Let's Encrypt"
 
 #: ../../migration.rst:130 ../../reverse_proxy.rst:8
 msgid "Reverse proxy"
-msgstr ""
+msgstr "Reverse proxy"
 
 #: ../../migration.rst:131
 msgid "Flashstart"
-msgstr ""
+msgstr "Flashstart"
 
 #: ../../migration.rst:133
 msgid "The following features are not migrated to NethSecurity:"
-msgstr ""
+msgstr "Le seguenti funzionalità non vengono migrate su NethSecurity:"
 
 #: ../../migration.rst:135
 msgid "Web proxy (Squid) and filter (ufdbGuard)"
-msgstr ""
+msgstr "Proxy web (Squid) e filtro (ufdbGuard)"
 
 #: ../../migration.rst:136
 msgid "IPS (Suricata) and IPS alerts (EveBox)"
-msgstr ""
+msgstr "IPS (Suricata) e avvisi IPS (EveBox)"
 
 #: ../../migration.rst:137
 msgid "UPS monitoring (NUT)"
-msgstr ""
+msgstr "Monitoraggio UPS (NUT)"
 
 #: ../../migration.rst:138
 msgid "System statistics (Collectd)"
-msgstr ""
+msgstr "Statistiche di sistema (Collectd)"
 
 #: ../../migration.rst:139
 msgid "Reports (Dante)"
-msgstr ""
+msgstr "Report (Dante)"
 
 #: ../../migration.rst:140
 msgid "Bandwidth monitor (ntopng)"
-msgstr ""
+msgstr "Monitoraggio della larghezza di banda (ntopng)"
 
 #: ../../migration.rst:141
 msgid "Fail2ban"
-msgstr ""
+msgstr "Fail2ban"
 
 #: ../../multiwan.rst:3
 msgid "MultiWAN"
@@ -3771,6 +3884,11 @@ msgid ""
 "typically disabled because it introduces increased latency and consumes "
 "bandwidth."
 msgstr ""
+"``Instrada tutto il traffico attraverso la VPN``: se abilitato, tutto il "
+"traffico proveniente dal client verrà instradato nel tunnel VPN, incluso il "
+"normale traffico internet. Può essere utilizzato per fini di monitoraggio e "
+"controllo, ma di solito è disabilitato poiché introduce una maggiore latenza "
+"e consumo di banda."
 
 #: ../../openvpn_roadwarrior.rst:71
 msgid ""
@@ -3778,12 +3896,17 @@ msgid ""
 "in the VPN tunnel; the LAN networks are automatically added, but they can"
 " also be removed and other networks can be added in the same way"
 msgstr ""
+"``Instrada queste reti sulla VPN``: lista di reti che il client instrada "
+"attraverso il tunnel VPN; le reti LAN vengono aggiunte automaticamente, se "
+"necessario altre reti possono essere aggiunte allo stesso modo"
 
 #: ../../openvpn_roadwarrior.rst:73
 msgid ""
 "``Allow client-to-client network traffic``: allows all connected clients "
 "to exchange traffic between them; it is recommended to leave it disabled."
 msgstr ""
+"``Consenti traffico tra client``: consente lo scambio di traffico tra i "
+"client connessi; si consiglia di lasciarlo disabilitato."
 
 #: ../../openvpn_roadwarrior.rst:75
 msgid ""
@@ -3793,6 +3916,11 @@ msgid ""
 "option is modified, it is necessary to download the client configuration "
 "again."
 msgstr ""
+"``Compressione``: comprime il traffico del tunnel OpenVPN per risparmiare "
+"larghezza di banda. Tuttavia, è ora un'opzione poco utile ed in alcuni casi, "
+"può essere dannosa. Si consiglia vivamente di lasciarla disabilitata. Quando "
+"questa opzione viene modificata, è necessario scaricare nuovamente la "
+"configurazione del client."
 
 #: ../../openvpn_roadwarrior.rst:77
 msgid ""
@@ -3809,16 +3937,21 @@ msgid ""
 "``Enforce a minimum TLS version``: allows connection only for clients "
 "using a TLS version equal to or greater than the one specified."
 msgstr ""
+"``Richiedi un numero di versione TLS minimo``: consente la connessione solo "
+"per i client che uilizzano una versione TLS pari o superiore a quella "
+"specificata."
 
 #: ../../openvpn_roadwarrior.rst:83
 msgid ""
 "``Custom DHCP options``: pass specific DHCP options to the client (e.g. "
 "DOMAIN, DNS, WINS and so on)"
 msgstr ""
+"``Opzioni DHCP personalizzate``: passa specifiche opzioni DHCP al client (ad "
+"esempio DOMAIN, DNS, WINS e così via)"
 
 #: ../../openvpn_roadwarrior.rst:87
 msgid "Client accounts"
-msgstr ""
+msgstr "Account VPN"
 
 #: ../../openvpn_roadwarrior.rst:89
 msgid ""
@@ -3826,12 +3959,17 @@ msgid ""
 "accounts for the connecting clients. To do this, click on :guilabel:`Add "
 "VPN Account` and fill out the form:"
 msgstr ""
+"Ora che il server è stato configurato, è necessario creare gli account per i "
+"client. Per fare questo, clicca su :guilabel:`Aggiungi account VPN` e "
+"compila il modulo:"
 
 #: ../../openvpn_roadwarrior.rst:91
 msgid ""
 "``User``: each account is associated with only one user from the chosen "
 "database, select the user for this account"
 msgstr ""
+"``Utente``: ogni account è associato ad un solo utente dal database scelto, "
+"selezionare l'utente per questo account"
 
 #: ../../openvpn_roadwarrior.rst:93
 msgid ""
@@ -4003,7 +4141,7 @@ msgstr ""
 
 #: ../../openvpn_tunnels.rst:26
 msgid "Proceed as follows:"
-msgstr ""
+msgstr "Procedere come segue:"
 
 #: ../../openvpn_tunnels.rst:27
 msgid ""
@@ -4499,7 +4637,7 @@ msgstr ""
 
 #: ../../release_notes.rst:3
 msgid "Release notes"
-msgstr ""
+msgstr "Note di rilascio"
 
 #: ../../release_notes.rst:5
 msgid "NethSecurity releases changelogs."
@@ -4511,12 +4649,14 @@ msgid ""
 "List of `known bugs "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
 msgstr ""
+"Elenco dei `bug noti <https://github.com/NethServer/dev/"
+"issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
 
 #: ../../release_notes.rst:8
 msgid ""
 "Discussions around `possible bugs "
 "<http://community.nethserver.org/c/bug>`_"
-msgstr ""
+msgstr "Discussioni su `possibili bug <http://community.nethserver.org/c/bug>`_"
 
 #: ../../release_notes.rst:11
 msgid "Major changes on 2024-02-29"
@@ -5184,7 +5324,7 @@ msgstr ""
 
 #: ../../remote_access.rst:12
 msgid "Default credentials are:"
-msgstr ""
+msgstr "Le credenziali di default sono:"
 
 #: ../../remote_access.rst:14
 msgid "User: ``root``"
@@ -9095,4 +9235,3 @@ msgstr ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1-133-g3065942/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
-
