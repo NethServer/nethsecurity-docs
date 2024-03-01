@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NethSecurity \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-01 11:10+0000\n"
+"POT-Creation-Date: 2024-03-01 11:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -34,11 +34,11 @@ msgstr ""
 msgid ""
 "If the machine does not have an :ref:`Enterprise subscription "
 "<subscription-section>`, the user can manually generate and download a "
-"backup, just access the ``Backup & Restore`` page under the ``System`` "
+"backup. Access the ``Backup & Restore`` page under the ``System`` "
 "section, then click on the :guilabel:`Download backup` button."
 msgstr ""
 
-#: ../../backup.rst:9
+#: ../../backup.rst:10
 msgid ""
 "If the machine has a valid Enterprise subscription, the page will show a "
 "list of backups available from the remote server. The user can click the "
@@ -51,11 +51,11 @@ msgid ""
 "differences."
 msgstr ""
 
-#: ../../backup.rst:17
+#: ../../backup.rst:18
 msgid "Backup encryption"
 msgstr ""
 
-#: ../../backup.rst:19
+#: ../../backup.rst:20
 msgid ""
 "The backup is not encrypted by default. To enable encryption, click on "
 "the :guilabel:`Configure passphrase` button and set a strong password. To"
@@ -63,17 +63,17 @@ msgid ""
 " and leave the password field empty."
 msgstr ""
 
-#: ../../backup.rst:23
+#: ../../backup.rst:24
 msgid ""
 "If the backup is encrypted and the password is lost, it will no longer be"
 " possible to restore the configuration."
 msgstr ""
 
-#: ../../backup.rst:26
+#: ../../backup.rst:27
 msgid "Automatic backup"
 msgstr ""
 
-#: ../../backup.rst:28
+#: ../../backup.rst:29
 msgid ""
 "If the machine has a valid :ref:`Enterprise subscription <subscription-"
 "section>`, a scheduled cron job will run every night to perform a backup."
@@ -82,11 +82,11 @@ msgid ""
 "remote server."
 msgstr ""
 
-#: ../../backup.rst:33
+#: ../../backup.rst:34
 msgid "Restore"
 msgstr ""
 
-#: ../../backup.rst:35
+#: ../../backup.rst:36
 msgid ""
 "The backup can be restored from the the ``Restore`` tab inside the page "
 "inside the ``Backup & Restore`` page The user can initiate the restore "
@@ -97,7 +97,7 @@ msgid ""
 "finally, click the :guilabel:`Restore` button to complete the process."
 msgstr ""
 
-#: ../../backup.rst:40
+#: ../../backup.rst:41
 msgid "After the restore the system will be rebooted."
 msgstr ""
 
@@ -9134,5 +9134,15 @@ msgstr ""
 #~ "is encrypted, enter the passphrase, and"
 #~ " finally, click the \"Restore\" button "
 #~ "to complete the process."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the machine does not have an"
+#~ " :ref:`Enterprise subscription <subscription-"
+#~ "section>`, the user can manually "
+#~ "generate and download a backup, just "
+#~ "access the ``Backup & Restore`` page "
+#~ "under the ``System`` section, then click"
+#~ " on the :guilabel:`Download backup` button."
 #~ msgstr ""
 
