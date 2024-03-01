@@ -4,7 +4,8 @@ Backup and restore
 
 NethSecurity provides a flexible and powerful backup system to save and restore your firewall's configuration settings.
 
-If the machine does not have an :ref:`Enterprise subscription <subscription-section>`, the user can manually generate and download a backup, just access the ``Backup & Restore`` page under the ``System`` section, then click on the :guilabel:`Download backup` button.
+If the machine does not have an :ref:`Enterprise subscription <subscription-section>`, the user can manually generate and download a backup.
+Access the ``Backup & Restore`` page under the ``System`` section, then click on the :guilabel:`Download backup` button.
 
 If the machine has a valid Enterprise subscription, the page will show a list of backups available from the remote server.
 The user can click the :guilabel:`Run backup` buttont: the backup will be stored on a remote server and the user will be able
