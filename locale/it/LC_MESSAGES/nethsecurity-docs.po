@@ -21,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-29 14:10+0000\n"
 "PO-Revision-Date: 2024-03-01 11:10+0000\n"
-"Last-Translator: Davide <davide@franceschelli.eu>\n"
+"Last-Translator: elpidiobaldi <elpidio.baldi@nethesis.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/ns8/"
 "nethsecurity-docs/it/>\n"
 "Language: it\n"
@@ -2736,7 +2736,7 @@ msgstr "Fail2ban"
 
 #: ../../multiwan.rst:3
 msgid "MultiWAN"
-msgstr ""
+msgstr "MultiWAN"
 
 #: ../../multiwan.rst:5
 msgid ""
