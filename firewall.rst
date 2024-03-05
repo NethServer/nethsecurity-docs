@@ -48,7 +48,7 @@ Guests and DMZ zones
 
 In addition to the default zones, the firewall can be configured with additional zones to accommodate specific network requirements.
 Two common examples are the Guests and DMZ (Demilitarized Zone) zones.
-Sometimes Guests zone is also named as vlue zone while DMZ zone is also named as orange zone.
+Sometimes the Guest zone is also known as the blue zone while the DMZ is also named as orange.
 
 Guests zone (blue)
 ^^^^^^^^^^^^^^^^^^^
