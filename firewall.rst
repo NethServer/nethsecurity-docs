@@ -57,7 +57,7 @@ Guests zone represents a network segment for guest devices, such as visitors or 
 This zone is typically isolated from the LAN zone to prevent unauthorized access to internal resources.
 But it is allowed to access the WAN zone.
 
-To create a Guests zone, follow these steps:
+To create a Guest zone, follow these steps:
 
 - access the ``Zones & policies`` section
 - click on the ``Add zone`` button
