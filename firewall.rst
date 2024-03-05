@@ -43,6 +43,47 @@ In this configuration, the firewall regulates traffic between the WAN and LAN zo
 
 Default zones can't be deleted but the network administrator can change existing policies or create new zones. 
 
+Guests and DMZ zones
+--------------------
+
+In addition to the default zones, the firewall can be configured with additional zones to accommodate specific network requirements.
+Two common examples are the Guest and DMZ (Demilitarized Zone) zones.
+Sometimes the Guest zone is also known as the blue zone while the DMZ is also named as orange.
+
+Guests zone (blue)
+^^^^^^^^^^^^^^^^^^^
+
+The Guest zone represents a network segment for guest devices, such as visitors or temporary users.
+This zone is typically isolated from the LAN zone to prevent unauthorized access to internal resources.
+But it is allowed to access the WAN zone.
+
+To create a Guest zone, follow these steps:
+
+- access the ``Zones & policies`` section
+- click on the ``Add zone`` button
+- enter **guest** inside the ``Name`` field: plesase note that the name is case sensitive and must be in lowercase, in this case the zone will be highlighted in blue
+- leave empty the ``Allow forwards to`` field
+- select ``LAN`` inside the ``Allow forwards from`` field
+- enable the ``Traffic to WAN`` option
+- select ``Drop`` for both ``Traffic to firewall`` and ``Traffic for the same zone`` fields
+- click on the ``Save`` button and apply the changes
+
+
+DMZ zone (orange)
+^^^^^^^^^^^^^^^^^
+
+The DMZ represents a network segment for servers and services that need to be accessible from the internet but isolated from the internal network.
+
+To create a DMZ, follow these steps:
+
+- access the ``Zones & policies`` section
+- click on the ``Add zone`` button
+- enter **dmz** inside the ``Name`` field: plesase note that the name is case sensitive and must be in lowercase, in this case the zone will be highlighted in orange
+- leave empty both the ``Allow forwards to`` and ``Allow forwards from`` fields
+- enable the ``Traffic to WAN`` option
+- select ``Drop`` for both ``Traffic to firewall`` and ``Traffic for the same zone`` fields
+- click on the ``Save`` button and apply the changes
+
 .. _firewall-rules-section:
 
 Rules
