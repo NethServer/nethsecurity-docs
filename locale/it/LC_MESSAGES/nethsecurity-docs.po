@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-05 11:35+0000\n"
+"POT-Creation-Date: 2024-03-05 15:38+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1058,6 +1058,23 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.2-ns.0.0.2-beta2-8-gce09f51"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-8-gce09f51/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-8-gce09f51-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-8-gce09f51/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.2-ns.0.0.2-beta2-3-gf928937"
 msgstr ""
 
@@ -1399,11 +1416,105 @@ msgid ""
 "existing policies or create new zones."
 msgstr ""
 
+#: ../../firewall.rst:47
+msgid "Guests and DMZ zones"
+msgstr ""
+
 #: ../../firewall.rst:49
+msgid ""
+"In addition to the default zones, the firewall can be configured with "
+"additional zones to accommodate specific network requirements. Two common"
+" examples are the Guest and DMZ (Demilitarized Zone) zones. Sometimes the"
+" Guest zone is also known as the blue zone while the DMZ is also named as"
+" orange."
+msgstr ""
+
+#: ../../firewall.rst:54
+msgid "Guests zone (blue)"
+msgstr ""
+
+#: ../../firewall.rst:56
+msgid ""
+"The Guest zone represents a network segment for guest devices, such as "
+"visitors or temporary users. This zone is typically isolated from the LAN"
+" zone to prevent unauthorized access to internal resources. But it is "
+"allowed to access the WAN zone."
+msgstr ""
+
+#: ../../firewall.rst:60
+msgid "To create a Guest zone, follow these steps:"
+msgstr ""
+
+#: ../../firewall.rst:62 ../../firewall.rst:79
+msgid "access the ``Zones & policies`` section"
+msgstr ""
+
+#: ../../firewall.rst:63 ../../firewall.rst:80
+msgid "click on the ``Add zone`` button"
+msgstr ""
+
+#: ../../firewall.rst:64
+msgid ""
+"enter **guest** inside the ``Name`` field: plesase note that the name is "
+"case sensitive and must be in lowercase, in this case the zone will be "
+"highlighted in blue"
+msgstr ""
+
+#: ../../firewall.rst:65
+msgid "leave empty the ``Allow forwards to`` field"
+msgstr ""
+
+#: ../../firewall.rst:66
+msgid "select ``LAN`` inside the ``Allow forwards from`` field"
+msgstr ""
+
+#: ../../firewall.rst:67 ../../firewall.rst:83
+msgid "enable the ``Traffic to WAN`` option"
+msgstr ""
+
+#: ../../firewall.rst:68 ../../firewall.rst:84
+msgid ""
+"select ``Drop`` for both ``Traffic to firewall`` and ``Traffic for the "
+"same zone`` fields"
+msgstr ""
+
+#: ../../firewall.rst:69 ../../firewall.rst:85
+msgid "click on the ``Save`` button and apply the changes"
+msgstr ""
+
+#: ../../firewall.rst:73
+msgid "DMZ zone (orange)"
+msgstr ""
+
+#: ../../firewall.rst:75
+msgid ""
+"The DMZ represents a network segment for servers and services that need "
+"to be accessible from the internet but isolated from the internal "
+"network."
+msgstr ""
+
+#: ../../firewall.rst:77
+msgid "To create a DMZ, follow these steps:"
+msgstr ""
+
+#: ../../firewall.rst:81
+msgid ""
+"enter **dmz** inside the ``Name`` field: plesase note that the name is "
+"case sensitive and must be in lowercase, in this case the zone will be "
+"highlighted in orange"
+msgstr ""
+
+#: ../../firewall.rst:82
+msgid ""
+"leave empty both the ``Allow forwards to`` and ``Allow forwards from`` "
+"fields"
+msgstr ""
+
+#: ../../firewall.rst:90
 msgid "Rules"
 msgstr ""
 
-#: ../../firewall.rst:51
+#: ../../firewall.rst:92
 msgid ""
 "Firewall rules define how network traffic is segmented and controlled "
 "between different zones. Firewalls acts as barriers between trusted "
@@ -1412,64 +1523,64 @@ msgid ""
 "on predefined security policies."
 msgstr ""
 
-#: ../../firewall.rst:55
+#: ../../firewall.rst:96
 msgid ""
 "The order of rules is important; the first matching rule is applied, "
 "determining the fate of the network packet."
 msgstr ""
 
-#: ../../firewall.rst:57
+#: ../../firewall.rst:98
 msgid "The page is organized into three tabs, each serving a specific purpose:"
 msgstr ""
 
-#: ../../firewall.rst:59
+#: ../../firewall.rst:100
 msgid ""
 "``Forward rules`` tab: thiis tab is dedicated to configuring rules for "
 "data packets moving between different zones in the network."
 msgstr ""
 
-#: ../../firewall.rst:60
+#: ../../firewall.rst:101
 msgid ""
 "``Input rules`` tab: this tab is dedicated to configuring rules for "
 "incoming packets destined for the firewall itself."
 msgstr ""
 
-#: ../../firewall.rst:61
+#: ../../firewall.rst:102
 msgid ""
 "``Output rules`` tab: this tab is dedicated to configuring rules for "
 "packets emitted by the firewall."
 msgstr ""
 
-#: ../../firewall.rst:63
+#: ../../firewall.rst:104
 msgid ""
 "Locate the button to add a new rule, click on it to initiate the rule "
 "creation process. Fill in the following fields for the new rule:"
 msgstr ""
 
-#: ../../firewall.rst:66
+#: ../../firewall.rst:107
 msgid ""
 "``Status``: enable or disable the rule based on your requirements. By "
 "default the rule is enabled during creation."
 msgstr ""
 
-#: ../../firewall.rst:67
+#: ../../firewall.rst:108
 msgid "``Rule name``: assign a descriptive name to identify the rule."
 msgstr ""
 
-#: ../../firewall.rst:68
+#: ../../firewall.rst:109
 msgid ""
 "``Source address``: enter one or more IPv4/IPv6 addresses or networks. "
 "Leave unselected for any source address. This field is not present for "
 "``Output rules``, as the source address is always the firewall itself."
 msgstr ""
 
-#: ../../firewall.rst:70
+#: ../../firewall.rst:111
 msgid ""
 "``Source zone``: specify the traffic source zone. Choose a specific zone "
 "or select 'Any' to include traffic from any zone."
 msgstr ""
 
-#: ../../firewall.rst:71
+#: ../../firewall.rst:112
 msgid ""
 "``Destination address``: enter one or more IPv4/IPv6 addresses or "
 "networks. Leave unselected for any destination address. This field is not"
@@ -1477,20 +1588,20 @@ msgid ""
 "firewall itself."
 msgstr ""
 
-#: ../../firewall.rst:73
+#: ../../firewall.rst:114
 msgid ""
 "``Destination zone``: specify the traffic destination zone. Choose a "
 "specific zone. Bear in mind that the source and destination zones can't "
 "be the same."
 msgstr ""
 
-#: ../../firewall.rst:74
+#: ../../firewall.rst:115
 msgid ""
 "``Destination service``: select from the list or choose 'Custom' to enter"
 " specific ports and select protocols."
 msgstr ""
 
-#: ../../firewall.rst:75
+#: ../../firewall.rst:116
 msgid ""
 "``Action``: define the action when the rule conditions are met: * "
 "``Accept``: accept the network traffic. * ``Reject``: block the traffic "
@@ -1498,19 +1609,19 @@ msgid ""
 "dropped and no notification is sent to the sender host."
 msgstr ""
 
-#: ../../firewall.rst:79
+#: ../../firewall.rst:120
 msgid ""
 "``Rule position``: decide whether to add the rule to the bottom or top of"
 " the rule list."
 msgstr ""
 
-#: ../../firewall.rst:80
+#: ../../firewall.rst:121
 msgid ""
 "``Logging``: indicate whether traffic matching this rule should be "
 "logged. The log entry will include the rule name as a prefix."
 msgstr ""
 
-#: ../../firewall.rst:81
+#: ../../firewall.rst:122
 msgid ""
 "``Tags``: optionally, add tags for organizational purposes. Note that the"
 " 'automated' tag is reserved for system use."
