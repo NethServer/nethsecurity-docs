@@ -61,7 +61,7 @@ To create a Guest zone, follow these steps:
 
 - access the ``Zones & policies`` section
 - click on the ``Add zone`` button
-- enter **guests** inside the ``Name`` field: plesase note that the name is case sensitive and must be in lowercase, in this case the zone will be highlighted in blue
+- enter **guest** inside the ``Name`` field: plesase note that the name is case sensitive and must be in lowercase, in this case the zone will be highlighted in blue
 - leave empty the ``Allow forwards to`` field
 - select ``LAN`` inside the ``Allow forwards from`` field
 - enable the ``Traffic to WAN`` option
