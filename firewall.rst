@@ -53,7 +53,7 @@ Sometimes the Guest zone is also known as the blue zone while the DMZ is also na
 Guests zone (blue)
 ^^^^^^^^^^^^^^^^^^^
 
-Guests zone represents a network segment for guest devices, such as visitors or temporary users.
+The Guest zone represents a network segment for guest devices, such as visitors or temporary users.
 This zone is typically isolated from the LAN zone to prevent unauthorized access to internal resources.
 But it is allowed to access the WAN zone.
 
