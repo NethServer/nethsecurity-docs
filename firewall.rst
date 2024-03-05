@@ -74,7 +74,7 @@ DMZ zone (orange)
 
 The DMZ represents a network segment for servers and services that need to be accessible from the internet but isolated from the internal network.
 
-To create a DMZ zone, follow these steps:
+To create a DMZ, follow these steps:
 
 - access the ``Zones & policies`` section
 - click on the ``Add zone`` button
