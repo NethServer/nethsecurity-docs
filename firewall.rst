@@ -72,7 +72,7 @@ To create a Guest zone, follow these steps:
 DMZ zone (orange)
 ^^^^^^^^^^^^^^^^^
 
-DMZ zone represents a network segment for servers and services that need to be accessible from the internet but isolated from the internal network.
+The DMZ represents a network segment for servers and services that need to be accessible from the internet but isolated from the internal network.
 
 To create a DMZ zone, follow these steps:
 
