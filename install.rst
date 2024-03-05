@@ -56,6 +56,9 @@ NethSecurity to the hard disk while running it from the USB stick itself:
 2. login with :ref:`default credentials <default_credentials-section>`
 3. execute ``ns-install`` and follow the instructions
 
+The firewall will be halted at the end of the installation.
+Once the firewall has been shutdown, you can safely remove the USB stick and
+boot the server again.
 
 Install on virtual machines
 ===========================
