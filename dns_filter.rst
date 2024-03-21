@@ -49,3 +49,41 @@ All listed IP addresses or networks here will not be affected by DNS filter.
    Do not make changes to the DNS servers configured in your NethSecurity or in network clients.
    When content filtering is enabled, all DNS traffic from the clients will be automatically redirected to the external content filtering regardless of their configuration.
 
+Block a specific web site
+-------------------------
+
+.. highlight:: bash
+
+.. _block_website-section:
+
+Access to specific internet sites can be also restricted by manipulating their DNS resolution.
+Enabling ``AdBlock`` allows the interception and resolution of DNS queries from the lan client through the firewall DNS server.
+
+To enable AdBlock, execute: ::
+
+  uci set adblock.global.adb_enabled='1'
+  uci set adblock.global.adb_forcedns='1'
+  uci add_list adblock.global.adb_zonelist='lan'
+  uci add_list adblock.global.adb_portlist='53'
+  uci del adblock.global.adb_sources
+  uci commit
+
+Add the domains that you want to block to the blocklist: ::
+
+  cat << EOF > /etc/adblock/adblock.blacklist
+  domain1.com
+  domain2.com
+  domain3.net
+  EOF
+
+Start the service: ::
+
+  /etc/init.d/adblock start
+
+Changes made to the blocklist require a reload of the service: ::
+
+  /etc/init.d/adblock reload
+
+.. warning::
+
+  The DNS resolution for the names listed in the blocklist will also affect the firewall itself
