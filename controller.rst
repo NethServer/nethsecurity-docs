@@ -4,7 +4,7 @@
 Controller
 ==========
 
-The NethSecurity controller is an application that can run on `NethServer 8 (NS8) <https://ns.nethserver.org>`_.
+The NethSecurity controller is an application that can run on `NethServer 8 <https://docs.nethserver.org/projects/ns8/en/latest/nethsecurity_controller.html>`_ (NS8).
 The controller allows remote control of multiple NethSecurity installations, called units.
 
 The firewall can operate independently without the need for the controller.
