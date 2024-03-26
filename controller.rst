@@ -5,7 +5,7 @@ Controller
 ==========
 
 The NethSecurity controller is an application that can run on `NethServer 8 (NS8) <https://ns.nethserver.org>`_.
-The controller enables to manage multiple NethSecurity installations remotely, called units.
+The controller allows remote control of multiple NethSecurity installations, called units.
 
 The firewall can operate independently without the need for the controller.
 The controller is an optional component that provides additional management and monitoring capabilities for the firewall.
@@ -13,7 +13,7 @@ The controller is an optional component that provides additional management and 
 The controller works by creating a secure connection between the central server and the units.
 Each firewall registers with the server using a client called ns-plug.
 Once registered, the server generates a VPN configuration that is sent back to the firewall
-This allows for secure communication between the controller and the unit.
+The VPN enables secure communication between the controller and the unit.
 
 Key features:
 
@@ -44,7 +44,7 @@ The following parameters need to be set:
 - `Log retention`: The log retention period in days, default is 180 days.
 - `Metrics retention`: The metrics retention period in days, default 15 days.
 
-After the configuration is done, the controller is ready to be used and can be accessed using a web browser at the configured hostname, like ``https://mycontroller.nethsecurity.org``.
+After completing the configuration, the controller is ready to be used and can be accessed using a web browser at the configured hostname, like ``https://mycontroller.nethsecurity.org``.
 
 Users
 =====
@@ -55,7 +55,6 @@ The controller has two types of users:
 - **User**: The user can manage the units and the firewall configurations.
 
 The administrator user is created during the controller configuration. 
-The administrator user is the only one who can create and manage users within the controller.
 
 It is recommended to create a user for each person who needs access to the controller.
 When creating a new user, the administrator must specify the username, the user display name, and the user password.
