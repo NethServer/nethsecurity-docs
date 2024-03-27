@@ -87,7 +87,13 @@ Ensure this separate server has strong security measures in place.
 Legacy web user interface
 -------------------------
 
-NethSecurity offers also LuCI, the original OpenWrt web interface. Please bear in mind that some pages may cause unpredictable configuration changes.
+.. warning::
+
+  Changes done via LuCI web interface may break the official NethSecurity UI.
+  Use at your own risk!
+
+
+NethSecurity offers also LuCI, the original OpenWrt web interface, which provides a wide range of configuration options but is not officially supported.
 Luci is disabled by default. To enable it, execute: ::
 
   uci set ns-ui.config.luci_enable=1
@@ -95,6 +101,12 @@ Luci is disabled by default. To enable it, execute: ::
   ns-ui
 
 Once enabled, Luci will be available only on port 443 at this URL: **https://<server_ip>/cgi-bin/luci**
+
+Changes to the following LuCI pages are known to cause unpredictable behavior:
+
+- HTTP access tab: it configures uhttpd which is not present inside NethSecurity
+- Logging tab: it configures logd which is not present inside NethSecurity
+- Networking: configuration created with this page is not compatible with NethSecurity UI
 
 .. _2fa-section:
 
