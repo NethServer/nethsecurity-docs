@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 09:30+0000\n"
+"POT-Creation-Date: 2024-03-27 09:52+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -155,86 +155,465 @@ msgstr "Controller"
 #: ../../controller.rst:7
 msgid ""
 "The NethSecurity controller is an application that can run on `NethServer"
-" 8 <https://ns.nethserver.org>`_. The controller enables to manage "
-"multiple NethSecurity installations remotely."
+" 8 "
+"<https://docs.nethserver.org/projects/ns8/en/latest/nethsecurity_controller.html>`_"
+" (NS8). The controller allows remote control of multiple NethSecurity "
+"installations, called units."
 msgstr ""
-"Il controller NethSecurity è un'applicazione che può essere eseguita su "
-"`NethServer 8 <https://ns.nethserver.org> `_. Il controller consente di "
-"gestire più installazioni NethSecurity da remoto."
 
 #: ../../controller.rst:10
 msgid ""
-"Firewalls can connect to the controller. Upon successful registration, "
-"the server performs the following actions:"
+"The firewall can operate independently without the need for the "
+"controller. The controller is an optional component that provides "
+"additional management and monitoring capabilities for the firewall."
 msgstr ""
-"I firewall possono connettersi al controller. Dopo che la registrazione "
-"ha avuto successo, il server esegue le seguenti azioni:"
-
-#: ../../controller.rst:12
-msgid "generates a VPN configuration and transmits it to the firewall"
-msgstr "genera una configurazione VPN e la trasmette al firewall"
 
 #: ../../controller.rst:13
+msgid ""
+"The controller works by creating a secure connection between the central "
+"server and the units. Each firewall registers with the server using a "
+"client called ns-plug. Once registered, the server generates a VPN "
+"configuration that is sent back to the firewall The VPN enables secure "
+"communication between the controller and the unit."
+msgstr ""
+
+#: ../../controller.rst:18
+#, fuzzy
+msgid "Key features:"
+msgstr "Funzionalità principali"
+
+#: ../../controller.rst:20
+msgid ""
+"**Centralized Management**: Manage multiple firewalls from a single "
+"server."
+msgstr ""
+
+#: ../../controller.rst:21
+msgid ""
+"**Secure Communication**: Establish a secure `OpenVPN "
+"<https://openvpn.net/>`_ connection between the server and the firewalls."
+msgstr ""
+
+#: ../../controller.rst:22
+msgid ""
+"**Easy Configuration**: Configure firewalls directly from the "
+"controller's user interface."
+msgstr ""
+
+#: ../../controller.rst:23
+msgid ""
+"**Monitoring and Logging**: Collect and analyze logs from the firewalls "
+"inside `Loki <https://grafana.com/oss/loki/>`_ for troubleshooting and "
+"monitoring purposes."
+msgstr ""
+
+#: ../../controller.rst:24
+msgid ""
+"**Metrics Visualization**: Visualize metrics from the firewalls using the"
+" built-in `Grafana <https://grafana.com/>`_ dashboard. Metrics are "
+"collected using `Prometheus <https://prometheus.io/>`_."
+msgstr ""
+
+#: ../../controller.rst:26
+msgid ""
+"**Web-based SSH**: Access the firewalls' command-line interface using a "
+"web-based SSH client."
+msgstr ""
+
+#: ../../controller.rst:30
+#, fuzzy
+msgid "Installation and configuration"
+msgstr "Configurazioni migrare"
+
+#: ../../controller.rst:32
+msgid ""
+"The controller can be installed on a NethServer 8 system from the "
+"Software Center. The module is named `NethSecurity Controller`."
+msgstr ""
+
+#: ../../controller.rst:34
+msgid ""
+"After the installation, the controller must be configured. The "
+"configuration can be done using the NethServer 8 web interface. The "
+"following parameters need to be set:"
+msgstr ""
+
+#: ../../controller.rst:37
+msgid ""
+"`Controller hostname`: The fully qualified domain name for the "
+"controller, like: ``mycontroller.nethsecurity.org``."
+msgstr ""
+
+#: ../../controller.rst:38
+msgid ""
+"`Let's Encrypt certificate`: Enable or disable Let's Encrypt certificate "
+"for the controller web interface."
+msgstr ""
+
+#: ../../controller.rst:39
+msgid ""
+"`VPN details`: The OpenVPN network and netmask. When choosing the "
+"network, make sure it does not overlap with the existing networks inside "
+"all the units that will be connected to the controller."
+msgstr ""
+
+#: ../../controller.rst:41
+msgid ""
+"`VPN common name`: The OpenVPN certificate name which is also the name of"
+" the controller."
+msgstr ""
+
+#: ../../controller.rst:42
+msgid ""
+"`Administrator user and password`: The default controller admin user and "
+"password. You should change the password after the first login both for "
+"the controller and the Grafana interface."
+msgstr ""
+
+#: ../../controller.rst:44
+msgid "`Log retention`: The log retention period in days, default is 180 days."
+msgstr ""
+
+#: ../../controller.rst:45
+msgid ""
+"`Metrics retention`: The metrics retention period in days, default 15 "
+"days."
+msgstr ""
+
+#: ../../controller.rst:47
+msgid ""
+"After completing the configuration, the controller is ready to be used "
+"and can be accessed using a web browser at the configured hostname, like "
+"``https://mycontroller.nethsecurity.org``."
+msgstr ""
+
+#: ../../controller.rst:50
+#, fuzzy
+msgid "Users"
+msgstr "Regole"
+
+#: ../../controller.rst:52
+msgid "The controller has two types of users:"
+msgstr ""
+
+#: ../../controller.rst:54
+msgid ""
+"**Administrator**: The administrator user is the only one that can create"
+" and manage users inside the controller."
+msgstr ""
+
+#: ../../controller.rst:55
+msgid "**User**: The user can manage the units and the firewall configurations."
+msgstr ""
+
+#: ../../controller.rst:57
+msgid "The administrator user is created during the controller configuration."
+msgstr ""
+
+#: ../../controller.rst:59
+msgid ""
+"It is recommended to create a user for each person who needs access to "
+"the controller. When creating a new user, the administrator must specify "
+"the username, the user display name, and the user password. The username "
+"is used to log in to the controller, while the display name is used to "
+"identify the user in the controller."
+msgstr ""
+
+#: ../../controller.rst:63
+msgid "The administrator can also reset the user password and delete users."
+msgstr ""
+
+#: ../../controller.rst:65
+msgid ""
+"After logging in, each user can change their own password and generate an"
+" SSH key pair for accessing the unit."
+msgstr ""
+
+#: ../../controller.rst:68
+msgid "Units"
+msgstr ""
+
+#: ../../controller.rst:70
+msgid ""
+"All users can manage units. A unit is a firewall that is managed by the "
+"controller."
+msgstr ""
+
+#: ../../controller.rst:72
+msgid ""
+"To connect a new unit to the controller, the user must create click on "
+"the :guilabel:`Add unit` button from the controller web interface. When a"
+" new unit is added, the controller performs the following actions:"
+msgstr ""
+
+#: ../../controller.rst:75
+msgid "creates a unique identifier for the unit"
+msgstr ""
+
+#: ../../controller.rst:76
+msgid "allocates an IP address inside the VPN network"
+msgstr ""
+
+#: ../../controller.rst:77
+#, fuzzy
+msgid "generates a VPN configuration including certificates"
+msgstr "genera una configurazione VPN e la trasmette al firewall"
+
+#: ../../controller.rst:78
 msgid "safely stores credentials required for accessing the remote firewall"
 msgstr ""
 "memorizza in modo sicuro le credenziali necessarie per accedere al "
 "firewall remoto"
 
-#: ../../controller.rst:15
+#: ../../controller.rst:80
 msgid ""
-"Once a firewall is linked to a controller, it will autonomously transmit "
-"the following data to the controller:"
+"A join code will be generated and displayed on the screen. The join code "
+"must be entered on the unit to establish the connection with the "
+"controller."
 msgstr ""
-"Una volta che un firewall è collegato a un controller, trasmetterà "
-"autonomamente i seguenti dati al controller:"
 
-#: ../../controller.rst:17
+#: ../../controller.rst:82
 msgid ""
-"all logs, which will be stored within the `Loki "
-"<https://grafana.com/oss/loki/>`_ instance of NethServer 8"
+"Access the ``Controller`` page inside the unit web interface and enter "
+"the join code in the ``Join code`` field. When joining the controller, "
+"the unit will download the VPN configuration and establish a secure "
+"connection with the controller. If the connection is successful, the unit"
+" will be displayed in the controller web interface with the status "
+"``Connected``."
 msgstr ""
-"tutti i log, che saranno memorizzati all'interno del `Loki "
-"<https://grafana.com/oss/loki/>`_ istanza di NethServer 8"
 
-#: ../../controller.rst:18
+#: ../../controller.rst:86
 msgid ""
-"metrics, collected every 5 minutes, and these metrics will be accessible "
-"through `Grafana <https://grafana.com/>`_ on NethServer 8"
+"Please note that if the controller does not have a valid Let's Encrypt "
+"certificate, you will need to disable the ``Verify TLS certificate`` "
+"option in the unit configuration."
 msgstr ""
-"metriche, raccolte ogni 5 minuti, e queste metriche saranno accessibili "
-"tramite `Grafana <https://grafana.com/>`_ su NethServer 8"
 
-#: ../../controller.rst:20
+#: ../../controller.rst:88
 msgid ""
-"The firewall can operate independently, and the controller is entirely "
-"optional for its functionality."
+"When the unit is connected, the user can directly access the unit web "
+"interface by clicking on the :guilabel:`Open unit` link without the need "
+"to enter the unit credentials."
 msgstr ""
-"Il firewall può funzionare indipendentemente, e il controller è "
-"completamente facoltativo per il suo funzionamento."
 
-#: ../../controller.rst:23
-msgid "Registration"
-msgstr "Registrazione"
+#: ../../controller.rst:91
+msgid "Remove a unit"
+msgstr ""
 
-#: ../../controller.rst:27 ../../migration.rst:84 ../../nat_helpers.rst:7
-#: ../../smtp.rst:7
+#: ../../controller.rst:92
 msgid ""
-"This feature is still under development and does not have a user "
-"interface yet. It can currently only be configured through the command "
-"line."
+"Units can be disconnected from the controller by clicking on the "
+":guilabel:`Remove unit` button from the controller web interface. When a "
+"unit is disconnected, the controller will remove the unit configuration "
+"and the VPN connection will be terminated."
 msgstr ""
-"Questa funzione è ancora in fase di sviluppo e non ha ancora "
-"un'interfaccia utente. Attualmente può essere configurata solo tramite la"
-" riga di comando."
 
-#: ../../controller.rst:29
+#: ../../controller.rst:95
 msgid ""
-"See the `developer manual <https://dev.nethsecurity.org/packages/ns-plug"
-"/#nethsecurity-controller-client>`_ for more info."
+"After removing the unit from the controller web interface, access the "
+"unit web interface and click :guilabel:`Disconnect unit` on the "
+"``Controller`` page: the unit will destroy the VPN configuration."
 msgstr ""
-"Per ulteriori informazioni, consultare il manuale del `developer "
-"<https://dev.nethsecurity.org/packages/ns-plug/#nethsecurity-controller-"
-"client>`_."
+
+#: ../../controller.rst:99
+msgid "Logs management"
+msgstr ""
+
+#: ../../controller.rst:101
+msgid ""
+"When a unit is connected, rsyslog is reconfigured to send logs using the "
+"syslog protocol (RFC 5424). It may take a few minutes before rsyslog "
+"starts sending the data. The logs are labeled using the unit's hostname: "
+"to ensure that the UI links work properly, make sure that:"
+msgstr ""
+
+#: ../../controller.rst:105
+msgid "the unit FQDN is unique within the cluster"
+msgstr ""
+
+#: ../../controller.rst:106
+msgid "the unit's name is the same as its hostname"
+msgstr ""
+
+#: ../../controller.rst:108
+msgid ""
+"Logs can be viewed by clicking on the :guilabel:`Open logs` link for each"
+" unit. The logs are displayed in a specific Grafana dashboard that also "
+"allows for searching and filtering."
+msgstr ""
+
+#: ../../controller.rst:112
+msgid "Logs retention period must be configured from the NS8 web interface."
+msgstr ""
+
+#: ../../controller.rst:116 ../../metrics.rst:5
+msgid "Metrics"
+msgstr ""
+
+#: ../../controller.rst:118
+msgid ""
+"Each unit exports its own statistics using netdata in the Prometheus "
+"format. As soon as a unit is connected, Prometheus starts scraping the "
+"metrics."
+msgstr ""
+
+#: ../../controller.rst:121
+msgid ""
+"The metrics can be viewed within the Grafana dashboard. Users can access "
+"the dashboard by clicking on the :guilabel:`Open metrics` link for each "
+"unit."
+msgstr ""
+
+#: ../../controller.rst:124
+msgid "Each unit target has the following labels:"
+msgstr ""
+
+#: ../../controller.rst:126
+msgid ""
+"`instance` the VPN IP of the connected machine with the netdata port (eg."
+" `172.19.64.3:19999`)"
+msgstr ""
+
+#: ../../controller.rst:127
+msgid "`job` fixed to `node`"
+msgstr ""
+
+#: ../../controller.rst:128
+msgid "`node` the VPN IP of the connected machine"
+msgstr ""
+
+#: ../../controller.rst:129
+msgid "`unit` the unit unique name of the connected machine"
+msgstr ""
+
+#: ../../controller.rst:133
+msgid "Metrics retention period must be configured from the NS8 web interface."
+msgstr ""
+
+#: ../../controller.rst:136
+msgid "Grafana"
+msgstr ""
+
+#: ../../controller.rst:138
+msgid ""
+"Grafana is an open-source platform used for monitoring and visualizing "
+"time-series data. It helps users create customizable dashboards with "
+"graphs, charts, and tables to analyze system metrics, logs, and other "
+"data from various sources."
+msgstr ""
+
+#: ../../controller.rst:141
+msgid ""
+"The controller includes a pre-configured Grafana instance that is used to"
+" visualize metrics and logs from the connected units. The Grafana "
+"instance is accessibile from the URL ``https://<controller-"
+"fqdn>/grafana``."
+msgstr ""
+
+#: ../../controller.rst:144
+msgid ""
+"By default, you can access it by using default credentials set during the"
+" controller configuration. Remember to change the default password after "
+"the first login. Grafana also provides features for managing users, "
+"teams, and permissions. It supports authentication via various methods "
+"including username/password, OAuth, LDAP, and more."
+msgstr ""
+
+#: ../../controller.rst:149
+msgid ""
+"You can also create custom dashboards and alerts to monitor the metrics "
+"and logs from the connected units. See the `official documentation "
+"<https://grafana.com/docs/grafana/latest/>`_ for more information on how "
+"to use Grafana."
+msgstr ""
+
+#: ../../controller.rst:153
+msgid "SSH access"
+msgstr ""
+
+#: ../../controller.rst:155
+msgid ""
+"It is possible to connect to the unit by clicking on the :guilabel:`Open "
+"SSH terminal` link. The connection is made through a web-based SSH client"
+" that allows access to the unit's shell."
+msgstr ""
+
+#: ../../controller.rst:158
+msgid "There are some limitations that need to be considered:"
+msgstr ""
+
+#: ../../controller.rst:160
+msgid "only SSH access on the standard port 22 is allowed"
+msgstr ""
+
+#: ../../controller.rst:161
+msgid "authentication is limited to username/password"
+msgstr ""
+
+#: ../../controller.rst:162
+msgid "the default user is root"
+msgstr ""
+
+#: ../../controller.rst:164
+msgid ""
+"To close the session, simply close the browser window or logout from the "
+"shell using CTRL + D."
+msgstr ""
+
+#: ../../controller.rst:167
+msgid "Accounting"
+msgstr ""
+
+#: ../../controller.rst:169
+msgid ""
+"All operations performed on the controller are logged in the NS8 log. "
+"Here are some examples of logged operations:"
+msgstr ""
+
+#: ../../controller.rst:171
+msgid "User login and logout"
+msgstr ""
+
+#: ../../controller.rst:172
+msgid "User creation/modification/deletion/password change"
+msgstr ""
+
+#: ../../controller.rst:173
+msgid "Unit list/creation/removal"
+msgstr ""
+
+#: ../../controller.rst:175
+msgid "Example of NS8 log: ::"
+msgstr ""
+
+#: ../../controller.rst:180
+msgid ""
+"Each unit has an rpcd user specific to the controller, which is used for "
+"management operations. When a user accesses the unit's web interface from"
+" the controller, all operations performed are logged in the unit's log, "
+"identified by the rpcd user. For example: ::"
+msgstr ""
+
+#: ../../controller.rst:186
+msgid ""
+"To determine who performed a specific operation, it is necessary to check"
+" the log of the unit identified by the rpcd user and correlate it with "
+"the login action performed on the controller."
+msgstr ""
+
+#: ../../controller.rst:189
+msgid ""
+"When a user connects to the unit via SSH, the login is logged in the "
+"unit's log, identified by the SSH user. Usually, the SSH user is root. "
+"For example: ::"
+msgstr ""
+
+#: ../../controller.rst:194
+msgid ""
+"If the user uses an SSH key for authentication, the log will contain the "
+"fingerprint of the SSH key used for authentication. This makes it easier "
+"to associate the SSH user with the operations performed. Example: ::"
+msgstr ""
 
 #: ../../ddns.rst:4
 msgid "Dynamic DNS"
@@ -1138,71 +1517,54 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-56-g3c0441b"
+msgid "8-23.05.2-ns.0.0.2-beta2-86-gd5d3234"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-56-g3c0441b/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-56-g3c0441b-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-86-gd5d3234/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-86-gd5d3234-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-56-g3c0441b/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-86-gd5d3234/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8"
+msgid "8-23.05.2-ns.0.0.2-beta2-84-g9ad0fc0"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-84-g9ad0fc0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-84-g9ad0fc0-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-84-g9ad0fc0/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-52-gedc78d0"
+msgid "8-23.05.2-ns.0.0.2-beta2-83-geec969e"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-52-gedc78d0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-52-gedc78d0-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-83-geec969e/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-83-geec969e-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-52-gedc78d0/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-51-g53db8f7"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-51-g53db8f7/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-51-g53db8f7-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-51-g53db8f7/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-83-geec969e/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -2438,7 +2800,7 @@ msgstr ""
 msgid ""
 "Bugs can be discussed and reported inside the `community forum "
 "<https://community.nethserver.org>`_. A public issue tracker is available"
-" at `GitHub <https://github.com/NethServer/dev/issues>`_."
+" at `GitHub <https://github.com/NethServer/nethsecurity/issues>`_."
 msgstr ""
 
 #: ../../ipsec_tunnels.rst:5
@@ -2561,10 +2923,6 @@ msgid ""
 "If an endpoint is behind a NAT, we suggest to set the values for Local "
 "and Remote identifier fields to custom unique names with an \"email "
 "like\" syntax, e.g. nsec@site-a and otherdevice@site-b."
-msgstr ""
-
-#: ../../metrics.rst:5
-msgid "Metrics"
 msgstr ""
 
 #: ../../metrics.rst:7
@@ -2866,6 +3224,16 @@ msgstr ""
 #: ../../migration.rst:80
 msgid "Migration with other installed modules"
 msgstr "Migrazione con altri moduli installati"
+
+#: ../../migration.rst:84 ../../nat_helpers.rst:7 ../../smtp.rst:7
+msgid ""
+"This feature is still under development and does not have a user "
+"interface yet. It can currently only be configured through the command "
+"line."
+msgstr ""
+"Questa funzione è ancora in fase di sviluppo e non ha ancora "
+"un'interfaccia utente. Attualmente può essere configurata solo tramite la"
+" riga di comando."
 
 #: ../../migration.rst:86
 msgid ""
@@ -5332,10 +5700,10 @@ msgid "NethSecurity releases changelogs."
 msgstr ""
 
 #: ../../release_notes.rst:7
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "List of `known bugs "
-"<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
+"<https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
 msgstr ""
 "Elenco dei `bug noti "
 "<https://github.com/NethServer/dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_"
@@ -6169,24 +6537,52 @@ msgstr ""
 msgid "Legacy web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:90
+#: ../../remote_access.rst:92
 msgid ""
-"NethSecurity offers also LuCI, the original OpenWrt web interface. Please"
-" bear in mind that some pages may cause unpredictable configuration "
-"changes. Luci is disabled by default. To enable it, execute: ::"
+"Changes done via LuCI web interface may break the official NethSecurity "
+"UI. Use at your own risk!"
 msgstr ""
 
-#: ../../remote_access.rst:97
+#: ../../remote_access.rst:96
+msgid ""
+"NethSecurity offers also LuCI, the original OpenWrt web interface, which "
+"provides a wide range of configuration options but is not officially "
+"supported. Luci is disabled by default. To enable it, execute: ::"
+msgstr ""
+
+#: ../../remote_access.rst:103
 msgid ""
 "Once enabled, Luci will be available only on port 443 at this URL: "
 "**https://<server_ip>/cgi-bin/luci**"
 msgstr ""
 
-#: ../../remote_access.rst:102
+#: ../../remote_access.rst:105
+msgid ""
+"Changes to the following LuCI pages are known to cause unpredictable "
+"behavior:"
+msgstr ""
+
+#: ../../remote_access.rst:107
+msgid ""
+"HTTP access tab: it configures uhttpd which is not present inside "
+"NethSecurity"
+msgstr ""
+
+#: ../../remote_access.rst:108
+msgid "Logging tab: it configures logd which is not present inside NethSecurity"
+msgstr ""
+
+#: ../../remote_access.rst:109
+msgid ""
+"Networking: configuration created with this page is not compatible with "
+"NethSecurity UI"
+msgstr ""
+
+#: ../../remote_access.rst:114
 msgid "NethSecurity UI 2FA"
 msgstr ""
 
-#: ../../remote_access.rst:104
+#: ../../remote_access.rst:116
 msgid ""
 "Protecting your NethSecurity administrator account is crucial, and Two-"
 "Factor Authentication (2FA) adds an extra layer of security beyond just a"
@@ -6196,103 +6592,103 @@ msgid ""
 " risk of unauthorized access even if your password is compromised."
 msgstr ""
 
-#: ../../remote_access.rst:108
+#: ../../remote_access.rst:120
 msgid "Enabling 2FA on NethSecurity UI:"
 msgstr ""
 
-#: ../../remote_access.rst:110
+#: ../../remote_access.rst:122
 msgid "Log in to your NethSecurity web interface"
 msgstr ""
 
-#: ../../remote_access.rst:111
+#: ../../remote_access.rst:123
 msgid ""
 "Click on the user icon in the top right corner and select ``Account "
 "settings``"
 msgstr ""
 
-#: ../../remote_access.rst:112
+#: ../../remote_access.rst:124
 msgid ""
 "Find the Two-factor authentication option and click :guilabel:`Configure "
 "2FA`"
 msgstr ""
 
-#: ../../remote_access.rst:114
+#: ../../remote_access.rst:126
 msgid "Setting up your authenticator app:"
 msgstr ""
 
-#: ../../remote_access.rst:116
+#: ../../remote_access.rst:128
 msgid ""
 "Download an authenticator app on your smartphone or tablet. Popular "
 "options include FreeOTP, Google Authenticator, and Microsoft "
 "Authenticator."
 msgstr ""
 
-#: ../../remote_access.rst:117
+#: ../../remote_access.rst:129
 msgid ""
 "Open the app and scan the QR code displayed on the NethSecurity web "
 "interface. This will add your NethSecurity account to the authenticator "
 "app."
 msgstr ""
 
-#: ../../remote_access.rst:118
+#: ../../remote_access.rst:130
 msgid ""
 "Enter the 6-digit code displayed by your authenticator app in the One-"
 "Time Password (OTP) field on the NethSecurity web interface."
 msgstr ""
 
-#: ../../remote_access.rst:120
+#: ../../remote_access.rst:132
 msgid ""
 "The system will also provide you with a set of backup codes. These codes "
 "can be used to log in if you lose your smartphone or authenticator app. "
 "Store these codes securely, preferably offline."
 msgstr ""
 
-#: ../../remote_access.rst:123
+#: ../../remote_access.rst:135
 msgid "You can disable 2FA from the same page."
 msgstr ""
 
-#: ../../remote_access.rst:126
+#: ../../remote_access.rst:138
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:128
+#: ../../remote_access.rst:140
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:130
+#: ../../remote_access.rst:142
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:135
+#: ../../remote_access.rst:147
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:137
+#: ../../remote_access.rst:149
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:139
+#: ../../remote_access.rst:151
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:141
+#: ../../remote_access.rst:153
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:145
+#: ../../remote_access.rst:157
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:150
+#: ../../remote_access.rst:162
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
@@ -10062,4 +10458,153 @@ msgstr ""
 
 #~ msgid "multiWAN configuration"
 #~ msgstr "configurazione multiWAN"
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-56-g3c0441b"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-56-g3c0441b/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-56-g3c0441b-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-56-g3c0441b/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-52-gedc78d0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-52-gedc78d0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-52-gedc78d0-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-52-gedc78d0/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-51-g53db8f7"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-51-g53db8f7/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-51-g53db8f7-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-51-g53db8f7/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity offers also LuCI, the "
+#~ "original OpenWrt web interface. Please "
+#~ "bear in mind that some pages may"
+#~ " cause unpredictable configuration changes. "
+#~ "Luci is disabled by default. To "
+#~ "enable it, execute: ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The NethSecurity controller is an "
+#~ "application that can run on `NethServer"
+#~ " 8 <https://ns.nethserver.org>`_. The controller"
+#~ " enables to manage multiple NethSecurity"
+#~ " installations remotely."
+#~ msgstr ""
+#~ "Il controller NethSecurity è un'applicazione"
+#~ " che può essere eseguita su "
+#~ "`NethServer 8 <https://ns.nethserver.org> `_. "
+#~ "Il controller consente di gestire più"
+#~ " installazioni NethSecurity da remoto."
+
+#~ msgid ""
+#~ "Firewalls can connect to the controller."
+#~ " Upon successful registration, the server"
+#~ " performs the following actions:"
+#~ msgstr ""
+#~ "I firewall possono connettersi al "
+#~ "controller. Dopo che la registrazione ha"
+#~ " avuto successo, il server esegue le"
+#~ " seguenti azioni:"
+
+#~ msgid ""
+#~ "Once a firewall is linked to a "
+#~ "controller, it will autonomously transmit "
+#~ "the following data to the controller:"
+#~ msgstr ""
+#~ "Una volta che un firewall è "
+#~ "collegato a un controller, trasmetterà "
+#~ "autonomamente i seguenti dati al "
+#~ "controller:"
+
+#~ msgid ""
+#~ "all logs, which will be stored "
+#~ "within the `Loki <https://grafana.com/oss/loki/>`_"
+#~ " instance of NethServer 8"
+#~ msgstr ""
+#~ "tutti i log, che saranno memorizzati "
+#~ "all'interno del `Loki "
+#~ "<https://grafana.com/oss/loki/>`_ istanza di "
+#~ "NethServer 8"
+
+#~ msgid ""
+#~ "metrics, collected every 5 minutes, and"
+#~ " these metrics will be accessible "
+#~ "through `Grafana <https://grafana.com/>`_ on "
+#~ "NethServer 8"
+#~ msgstr ""
+#~ "metriche, raccolte ogni 5 minuti, e "
+#~ "queste metriche saranno accessibili tramite"
+#~ " `Grafana <https://grafana.com/>`_ su NethServer"
+#~ " 8"
+
+#~ msgid ""
+#~ "The firewall can operate independently, "
+#~ "and the controller is entirely optional"
+#~ " for its functionality."
+#~ msgstr ""
+#~ "Il firewall può funzionare indipendentemente,"
+#~ " e il controller è completamente "
+#~ "facoltativo per il suo funzionamento."
+
+#~ msgid "Registration"
+#~ msgstr "Registrazione"
+
+#~ msgid ""
+#~ "See the `developer manual "
+#~ "<https://dev.nethsecurity.org/packages/ns-plug/#nethsecurity-"
+#~ "controller-client>`_ for more info."
+#~ msgstr ""
+#~ "Per ulteriori informazioni, consultare il "
+#~ "manuale del `developer "
+#~ "<https://dev.nethsecurity.org/packages/ns-plug/#nethsecurity-"
+#~ "controller-client>`_."
+
+#~ msgid ""
+#~ "Bugs can be discussed and reported "
+#~ "inside the `community forum "
+#~ "<https://community.nethserver.org>`_. A public issue"
+#~ " tracker is available at `GitHub "
+#~ "<https://github.com/NethServer/dev/issues>`_."
+#~ msgstr ""
 
