@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 09:30+0000\n"
+"POT-Creation-Date: 2024-03-27 08:59+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1138,71 +1138,54 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-56-g3c0441b"
+msgid "8-23.05.2-ns.0.0.2-beta2-86-gd5d3234"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-56-g3c0441b/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-56-g3c0441b-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-86-gd5d3234/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-86-gd5d3234-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-56-g3c0441b/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-86-gd5d3234/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8"
+msgid "8-23.05.2-ns.0.0.2-beta2-84-g9ad0fc0"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-84-g9ad0fc0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-84-g9ad0fc0-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-84-g9ad0fc0/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-52-gedc78d0"
+msgid "8-23.05.2-ns.0.0.2-beta2-83-geec969e"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-52-gedc78d0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-52-gedc78d0-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-83-geec969e/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-83-geec969e-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-52-gedc78d0/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-51-g53db8f7"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-51-g53db8f7/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-51-g53db8f7-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-51-g53db8f7/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-83-geec969e/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -6169,24 +6152,52 @@ msgstr ""
 msgid "Legacy web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:90
+#: ../../remote_access.rst:92
 msgid ""
-"NethSecurity offers also LuCI, the original OpenWrt web interface. Please"
-" bear in mind that some pages may cause unpredictable configuration "
-"changes. Luci is disabled by default. To enable it, execute: ::"
+"Changes done via LuCI web interface may break the official NethSecurity "
+"UI. Use at your own risk!"
 msgstr ""
 
-#: ../../remote_access.rst:97
+#: ../../remote_access.rst:96
+msgid ""
+"NethSecurity offers also LuCI, the original OpenWrt web interface, which "
+"provides a wide range of configuration options but is not officially "
+"supported. Luci is disabled by default. To enable it, execute: ::"
+msgstr ""
+
+#: ../../remote_access.rst:103
 msgid ""
 "Once enabled, Luci will be available only on port 443 at this URL: "
 "**https://<server_ip>/cgi-bin/luci**"
 msgstr ""
 
-#: ../../remote_access.rst:102
+#: ../../remote_access.rst:105
+msgid ""
+"Changes to the following LuCI pages are known to cause unpredictable "
+"behavior:"
+msgstr ""
+
+#: ../../remote_access.rst:107
+msgid ""
+"HTTP access tab: it configures uhttpd which is not present inside "
+"NethSecurity"
+msgstr ""
+
+#: ../../remote_access.rst:108
+msgid "Logging tab: it configures logd which is not present inside NethSecurity"
+msgstr ""
+
+#: ../../remote_access.rst:109
+msgid ""
+"Networking: configuration created with this page is not compatible with "
+"NethSecurity UI"
+msgstr ""
+
+#: ../../remote_access.rst:114
 msgid "NethSecurity UI 2FA"
 msgstr ""
 
-#: ../../remote_access.rst:104
+#: ../../remote_access.rst:116
 msgid ""
 "Protecting your NethSecurity administrator account is crucial, and Two-"
 "Factor Authentication (2FA) adds an extra layer of security beyond just a"
@@ -6196,103 +6207,103 @@ msgid ""
 " risk of unauthorized access even if your password is compromised."
 msgstr ""
 
-#: ../../remote_access.rst:108
+#: ../../remote_access.rst:120
 msgid "Enabling 2FA on NethSecurity UI:"
 msgstr ""
 
-#: ../../remote_access.rst:110
+#: ../../remote_access.rst:122
 msgid "Log in to your NethSecurity web interface"
 msgstr ""
 
-#: ../../remote_access.rst:111
+#: ../../remote_access.rst:123
 msgid ""
 "Click on the user icon in the top right corner and select ``Account "
 "settings``"
 msgstr ""
 
-#: ../../remote_access.rst:112
+#: ../../remote_access.rst:124
 msgid ""
 "Find the Two-factor authentication option and click :guilabel:`Configure "
 "2FA`"
 msgstr ""
 
-#: ../../remote_access.rst:114
+#: ../../remote_access.rst:126
 msgid "Setting up your authenticator app:"
 msgstr ""
 
-#: ../../remote_access.rst:116
+#: ../../remote_access.rst:128
 msgid ""
 "Download an authenticator app on your smartphone or tablet. Popular "
 "options include FreeOTP, Google Authenticator, and Microsoft "
 "Authenticator."
 msgstr ""
 
-#: ../../remote_access.rst:117
+#: ../../remote_access.rst:129
 msgid ""
 "Open the app and scan the QR code displayed on the NethSecurity web "
 "interface. This will add your NethSecurity account to the authenticator "
 "app."
 msgstr ""
 
-#: ../../remote_access.rst:118
+#: ../../remote_access.rst:130
 msgid ""
 "Enter the 6-digit code displayed by your authenticator app in the One-"
 "Time Password (OTP) field on the NethSecurity web interface."
 msgstr ""
 
-#: ../../remote_access.rst:120
+#: ../../remote_access.rst:132
 msgid ""
 "The system will also provide you with a set of backup codes. These codes "
 "can be used to log in if you lose your smartphone or authenticator app. "
 "Store these codes securely, preferably offline."
 msgstr ""
 
-#: ../../remote_access.rst:123
+#: ../../remote_access.rst:135
 msgid "You can disable 2FA from the same page."
 msgstr ""
 
-#: ../../remote_access.rst:126
+#: ../../remote_access.rst:138
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:128
+#: ../../remote_access.rst:140
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:130
+#: ../../remote_access.rst:142
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:135
+#: ../../remote_access.rst:147
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:137
+#: ../../remote_access.rst:149
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:139
+#: ../../remote_access.rst:151
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:141
+#: ../../remote_access.rst:153
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:145
+#: ../../remote_access.rst:157
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:150
+#: ../../remote_access.rst:162
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
@@ -10062,4 +10073,69 @@ msgstr ""
 
 #~ msgid "multiWAN configuration"
 #~ msgstr "configurazione multiWAN"
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-56-g3c0441b"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-56-g3c0441b/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-56-g3c0441b-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-56-g3c0441b/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-53-gb1c45a8/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-52-gedc78d0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-52-gedc78d0/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-52-gedc78d0-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-52-gedc78d0/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-51-g53db8f7"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-51-g53db8f7/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-51-g53db8f7-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-51-g53db8f7/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity offers also LuCI, the "
+#~ "original OpenWrt web interface. Please "
+#~ "bear in mind that some pages may"
+#~ " cause unpredictable configuration changes. "
+#~ "Luci is disabled by default. To "
+#~ "enable it, execute: ::"
+#~ msgstr ""
 
