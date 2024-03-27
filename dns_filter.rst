@@ -56,16 +56,19 @@ Block a specific web site
 
 .. _block_website-section:
 
-Access to specific internet sites can be also restricted by manipulating their DNS resolution.
-Enabling ``AdBlock`` allows the interception and resolution of DNS queries from the lan client through the firewall DNS server.
+Access to specific websites can be restricted by manipulating their DNS resolution, enabling ``AdBlock`` and activating the DNS query interception feature for LAN clients 
 
 To enable AdBlock, execute: ::
 
   uci set adblock.global.adb_enabled='1'
+  uci del adblock.global.adb_sources
+  uci commit
+
+enable DNS intercept: ::
+
   uci set adblock.global.adb_forcedns='1'
   uci add_list adblock.global.adb_zonelist='lan'
   uci add_list adblock.global.adb_portlist='53'
-  uci del adblock.global.adb_sources
   uci commit
 
 Add the domains that you want to block to the blocklist: ::
