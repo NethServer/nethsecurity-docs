@@ -4,13 +4,6 @@
 NethSecurity administrator manual
 =================================
 
-.. warning::
-
-   NethSecurity is currently in the :ref:`beta development phase <release_glossary-section>`. During this stage, the software is undergoing testing, and there might
-   be instabilities or unforeseen errors.
-   It is highly discouraged to use NethSecurity in production environments.
-
-
 .. sidebar:: Looking for ...
 
         * `Official site <https://www.nethsecurity.org>`_
