@@ -13,6 +13,8 @@ NethSecurity administrator manual
 
 .. sidebar:: Looking for ...
 
+        * `Official site <https://www.nethsecurity.org>`_
+
         * `Developer manual <https://nethserver.github.io/nethsecurity/>`_
 
         * Help on `Community <http://community.nethserver.org>`_
