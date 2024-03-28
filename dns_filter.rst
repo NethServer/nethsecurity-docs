@@ -49,14 +49,14 @@ All listed IP addresses or networks here will not be affected by DNS filter.
    Do not make changes to the DNS servers configured in your NethSecurity or in network clients.
    When content filtering is enabled, all DNS traffic from the clients will be automatically redirected to the external content filtering regardless of their configuration.
 
-Block a specific web site
+Block certain websites
 -------------------------
 
 .. highlight:: bash
 
 .. _block_website-section:
 
-Access to specific websites can also be restricted by manipulating their DNS resolution, enabling ``AdBlock`` and activating the DNS query interception feature for LAN clients 
+Access to certain websites can also be restricted by manipulating their DNS resolution, enabling ``AdBlock`` and, optionally, activating the DNS query interception feature for LAN clients.
 
 To enable AdBlock, execute: ::
 
@@ -64,7 +64,7 @@ To enable AdBlock, execute: ::
   uci del adblock.global.adb_sources
   uci commit
 
-enable DNS interception for the LAN: ::
+Enable DNS interception for the LAN: ::
 
   uci set adblock.global.adb_forcedns='1'
   uci add_list adblock.global.adb_zonelist='lan'
