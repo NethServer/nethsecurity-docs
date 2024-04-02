@@ -19,6 +19,16 @@ Such credentials can be used to log in to the web interface or using SSH:
 - Web user interface: **https://<server_ip>:9090**
 - SSH default port: **22**
 
+
+NethSecurity's default hostname is: ``NethSec``
+
+If your client has received an IP address from NethSecurity's DHCP, it will use NethSecurity as both gateway and DNS server. 
+Under these conditions you can contact NethSecurity using its hostame **nethsec** instead of the **server_ip** e.g.
+
+https://nethsec:9090
+
+This hostname can be modified in the System Settings section.
+
 .. note::
 
   The default password for the root user is ``Nethesis,1234``. It is recommended to change the password immediately after logging in for the first time.
