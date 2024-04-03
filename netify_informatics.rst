@@ -36,7 +36,7 @@ Visit the following page to register:
 
 `Netify Registration <https://portal.netify.ai/register>`_
 
-The service can be tried for free for 7 days. After this period, you can choose the plan that best fits your needs and availability here:
+The service can be tried for free for 7 days. After this period, you can choose the plan that best fits your needs. See:
 
 `Netify Informatics Pricing <https://www.netify.ai/products/netify-informatics/pricing>`_
 
