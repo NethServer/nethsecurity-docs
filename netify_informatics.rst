@@ -61,7 +61,7 @@ To enable data sending:
 
 To disable data sending:
 
-``/usr/libexec/rpcd/ns.netifyd call enable`` 
+``/usr/libexec/rpcd/ns.netifyd call disable`` 
 
 
 Regulatory Compliance Information
