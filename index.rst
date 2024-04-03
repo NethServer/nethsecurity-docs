@@ -71,6 +71,7 @@ NethSecurity administrator manual
    metrics
    snmp
    ddns
+   netify_informatics
 
 .. toctree::
    :maxdepth: 2
