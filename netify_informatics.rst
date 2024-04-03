@@ -42,7 +42,7 @@ The service can be tried for free for 7 days. After this period, you can choose 
 
 In the case of NethSecurity, there is always only one agent (the firewall itself).
 
-Enabling Metadata Sending
+Enabling metadata sending
 -------------------------
 
 Each NethSecurity is associated with a unique code. To find the code for your NethSecurity, access the command line and enter the command:
