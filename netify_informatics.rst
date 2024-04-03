@@ -22,7 +22,7 @@ Here are some examples of what Netify Informatics can do:
 
 `Risk and Reputation Analysis <https://www.netify.ai/products/netify-informatics/risk-and-reputation>`_
 
-How to Try the Service
+How to try the Service
 ======================
                                
 To use Netify Informatics, follow these steps:
