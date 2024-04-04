@@ -92,6 +92,22 @@ This option disables access to the NethSecurity UI through both the server IP ad
 If you need port 443 for other services, configure your firewall to redirect traffic destined for port 443 to a separate web server hosting those services.
 Ensure this separate server has strong security measures in place.
 
+.. _privacy_policy-section:
+
+Privacy policy
+--------------
+
+In some cases, it is necessary to display the privacy policy of a product before login.
+NethSecurity does not display any privacy policy by default, but it is possible to add a link to an external website that contains the privacy policy.
+
+To add a link to the privacy policy, access the command line and execute: ::
+
+  URL=https://mysite.org/privacy_policy; sed -i "s|PRIVACY_POLICY_URL\: ''|PRIVACY_POLICY_URL: '$URL'|" /www-ns/branding.js
+
+Substitute ``https://mysite.org/privacy_policy`` with the URL of your privacy policy.
+
+The link to the privacy policy will be displayed inside the login page after next page refresh.
+
 .. _luci-section:
 
 Legacy web user interface

@@ -23,12 +23,13 @@ NethSecurity is based on `OpenWrt <https://openwrt.org>`_, a popular Linux distr
 
 NethSecurity includes a variety of security features, including:
 
-* firewall: NethSecurity's firewall provides stateful packet inspection and filtering to protect networks from unauthorized access
+* Firewall: NethSecurity's firewall provides stateful packet inspection and filtering to protect networks from unauthorized access
 * DNS content filtering: NethSecurity's content filtering feature blocks users from accessing inappropriate or malicious websites
 * Deep Packet Inspection (DPI): NethSecurity uses Netifyd to perform DPI, which allows it to inspect the contents of packets and identify malicious or unwanted traffic
 * `Icaro hotspot <https://nethesis.github.io/icaro/>`_: Iedalo hotspot is a captive portal solution that can be used to manage and authenticate users on wireless networks.
 * VPN: OpenVPN and IPSec are popular open-source VPN protocol that can be used to create secure tunnels between networks.
 * Remote controller: NethSecurity includes a remote controller that allows administrators to manage their NethSecurity devices remotely.
+* For your needs of a Privacy Policy, this :ref:`command <privacy_policy-section>` enables a link in homepage.
 
 In addition to these security features, NethSecurity also includes a number of other features, such as:
 
