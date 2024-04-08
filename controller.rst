@@ -100,7 +100,7 @@ Logs management
 
 When a unit is connected, rsyslog is reconfigured to send logs using the syslog protocol (RFC 5424).
 It may take a few minutes before rsyslog starts sending the data.
-The logs are labeled using the unit's hostname: to ensure that the UI links work properly, make sure that:
+The logs are labeled using the unit's hostname: to ensure that the user interface links work properly, make sure that:
 
 - the unit FQDN is unique within the cluster
 - the unit's name is the same as its hostname
@@ -139,7 +139,7 @@ Grafana is an open-source platform used for monitoring and visualizing time-seri
 It helps users create customizable dashboards with graphs, charts, and tables to analyze system metrics, logs, and other data from various sources.
 
 The controller includes a pre-configured Grafana instance that is used to visualize metrics and logs from the connected units.
-The Grafana instance is accessibile from the URL ``https://<controller-fqdn>/grafana``.
+The Grafana instance is accessible from the URL ``https://<controller-fqdn>/grafana``.
 
 By default, you can access it by using default credentials set during the controller configuration.
 Remember to change the default password after the first login.
@@ -152,16 +152,56 @@ See the `official documentation <https://grafana.com/docs/grafana/latest/>`_ for
 SSH access
 ==========
 
+SSH, or Secure Shell, is a cryptographic network protocol for operating network services securely over an unsecured network.
+SSH provides a secure channel over an unsecured network in a client-server architecture, connecting an SSH client application to an SSH server.
+
 It is possible to connect to the unit by clicking on the :guilabel:`Open SSH terminal` link.
 The connection is made through a web-based SSH client that allows access to the unit's shell.
 
-There are some limitations that need to be considered:
+You can connect to units using username and password or an SSH key pair.
 
-- only SSH access on the standard port 22 is allowed
-- authentication is limited to username/password
-- the default user is root
-
+Once connected, the SSH session will be started inside a new browser tab. Some browsers require the permission to open popups for the SSH session to work properly.
 To close the session, simply close the browser window or logout from the shell using CTRL + D.
+
+Username and password
+---------------------
+
+The user can connect using a username and password of the unit in the following scenarios:
+- The logged-in user has not generated an SSH key pair
+- The public SSH key of the logged-in user hasn't been copied inside the SSH authorized keys file of the unit
+
+The user interface will display a form to enter the username and password.
+After entering the credentials, the user can click on the :guilabel:`Open terminal` button to start the SSH session.
+
+SSH key
+-------
+
+An SSH key pair is a set of two cryptographic keys that are used for authentication when establishing a secure connection using the SSH (Secure Shell) protocol.
+The pair consists of a private key and a public key:
+
+1. **Private Key**: This is kept secret and secure by the user. It should never be exposed to the outside world. It is used to decrypt data that has been encrypted with the public key.
+
+2. **Public Key**: This can be freely shared and is used to encrypt data that can only be decrypted with the private key.
+
+When you connect to a server using SSH with key pair authentication, you provide your public key to the server.
+The server then encrypts a challenge message with your public key. Your client then decrypts the message with your private key and sends the result back to the server.
+If the result is correct, the server knows that you must have the correct private key and allows you to connect.
+
+This method of authentication is more secure than using a password, as it provides a form of two-factor authentication:
+something you have (the private key file) and something you know (the passphrase to unlock the private key).
+
+To use an SSH key, generate a new key pair by accessing the ``Account settings`` page and and clicking on the :guilabel:`Generate SSH key pair` button.
+Enter a passphrase to protect the private key and click on the :guilabel:`Generate SSH key` button.
+The user interface will display the public key, while the private key is preserved safely inside the controller.
+
+Before connecting to the unit, you must copy the public key and paste it into the unit's SSH authorized keys file.
+You can do it from the ``Unit manager`` page, by clicking on the :guilabel:`Actions` button and selecting :guilabel:`Send SSH public key`.
+Choose the units you want to send the key to and click on the :guilabel:`Send SSH key` button.
+
+From now on, you can connect to the unit using the SSH key pair.
+The user interface will display a form to enter the passphrase when clicking on the :guilabel:`Open terminal` button.
+
+You can also revoke the SSH key pair by clicking on the :guilabel:`Revoke SSH public key` button from the :guilabel:`Actions` button.
 
 Accounting
 ==========
