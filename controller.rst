@@ -166,7 +166,9 @@ To close the session, simply close the browser window or logout from the shell u
 Username and password
 ---------------------
 
-If the logged-in user does not have an SSH key, the user can connect using a username and password of the unit.
+The user can connect using a username and password of the unit in the following scenarios:
+- The logged-in user has not generated an SSH key pair
+- The public SSH key of the logged-in user hasn't been copied inside the SSH authorized keys file of the unit
 
 The user interface will display a form to enter the username and password.
 After entering the credentials, the user can click on the :guilabel:`Open terminal` button to start the SSH session.
