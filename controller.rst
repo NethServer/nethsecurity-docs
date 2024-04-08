@@ -188,7 +188,7 @@ If the result is correct, the server knows that you must have the correct privat
 This method of authentication is more secure than using a password, as it provides a form of two-factor authentication:
 something you have (the private key file) and something you know (the passphrase to unlock the private key).
 
-To use an SSH key, generate a new key pair by accessing the ``Account Settings`` page and and clicking on the :guilabel:`Generate SSH key pair` button.
+To use an SSH key, generate a new key pair by accessing the ``Account settings`` page and and clicking on the :guilabel:`Generate SSH key pair` button.
 Enter a passphrase to protect the private key and click on the :guilabel:`Generate SSH key` button.
 The user interface will display the public key, while the private key is preserved safely inside the controller.
 
