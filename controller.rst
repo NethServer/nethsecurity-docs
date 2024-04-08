@@ -158,7 +158,7 @@ SSH provides a secure channel over an unsecured network in a client-server archi
 It is possible to connect to the unit by clicking on the :guilabel:`Open SSH terminal` link.
 The connection is made through a web-based SSH client that allows access to the unit's shell.
 
-You can connect to units using user name and password or an SSH key pair.
+You can connect to units using username and password or an SSH key pair.
 
 Once connected, the SSH session will be started inside a new browser tab. Some browsers require the permission to open popups for the SSH session to work properly.
 To close the session, simply close the browser window or logout from the shell using CTRL + D.
