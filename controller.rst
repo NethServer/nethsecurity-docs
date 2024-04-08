@@ -160,7 +160,7 @@ The connection is made through a web-based SSH client that allows access to the 
 
 You can connect to units using user name and password or an SSH key pair.
 
-Once connected, the SSH session will be started inside a new browser tab.
+Once connected, the SSH session will be started inside a new browser tab. Some browsers require the permission to open popups for the SSH session to work properly.
 To close the session, simply close the browser window or logout from the shell using CTRL + D.
 
 Username and password
