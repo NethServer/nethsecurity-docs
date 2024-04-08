@@ -193,7 +193,7 @@ Enter a passphrase to protect the private key and click on the :guilabel:`Genera
 The user interface will display the public key, while the private key is preserved safely inside the controller.
 
 Before connecting to the unit, you must copy the public key and paste it into the unit's SSH authorized keys file.
-You can do it from the ``Units`` page, by clicking on the :guilabel:`Actions` button and selecting :guilabel:`Send SSH public key`.
+You can do it from the ``Unit manager`` page, by clicking on the :guilabel:`Actions` button and selecting :guilabel:`Send SSH public key`.
 Choose the units you want to send the key to and click on the :guilabel:`Send SSH key` button.
 
 From now on, you can connect to the unit using the SSH key pair.
