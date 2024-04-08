@@ -153,7 +153,7 @@ SSH access
 ==========
 
 SSH, or Secure Shell, is a cryptographic network protocol for operating network services securely over an unsecured network.
-SSH provides a secure channel over an unsecured network in a client-server architecture, connecting an SSH client application with an SSH server.
+SSH provides a secure channel over an unsecured network in a client-server architecture, connecting an SSH client application to an SSH server.
 
 It is possible to connect to the unit by clicking on the :guilabel:`Open SSH terminal` link.
 The connection is made through a web-based SSH client that allows access to the unit's shell.
