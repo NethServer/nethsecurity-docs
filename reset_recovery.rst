@@ -26,6 +26,8 @@ To start fresh without reinstalling the firmware, access the ``Factory reset`` p
 Click the :guilabel:`Perform factory reset` button to reset the firewall to its original state.
 The factory reset process will take a few seconds to complete. Once the process is complete, the firewall will reboot automatically.
 
+.. note:: If the storage on which NethSecurity is running has been configured with a partition to save logs, the 'Factory reset' done from the Web UI will also remove the log partition and all its data.
+
 If NethSecurity was installed through an in-place migration from NethServer 7, after the factory reset,
 the system will retain all configurations migrated from NethServer 7. If this is not desired, and a clean start is preferred,
 it is advisable to proceed with a new :ref:`installation <install-section>` rather than using the factory reset.
@@ -37,6 +39,8 @@ you will have a clean installation of version 23.05.1.
 If you want to execute the factory reset from command line, just execute the following commands. ::
 
   firstboot -y && reboot
+
+.. note:: Performing a factory reset via the command line (including in failsafe mode) will not delete the log partition if it exists. Refer to the specific section below for more details.
 
 .. _failsafe-section:
 
@@ -80,3 +84,42 @@ This command will display the path of the downloaded image. Use this path in the
 
 If you can't access the system, :ref:`download the latest image <download-section>`, then follow :ref:`installation instructions <install_bare_metal-section>`
 to write the image directly into the storage media.
+
+
+Log Partition Management
+========================
+
+Unlike what happens with the web UI, performing a factory reset via the command line (including in Failsafe mode) will not delete the log partition if it exists, under this condition the system is not able to save logs on its storage.
+In order to allow the system to use again the storage to save new logs you need to remove the old partition.
+
+This can be easily done this way.
+
+* Verify if the log partition is present with the command:
+``parted /dev/sda print``::
+
+  root@NethSec:~# parted /dev/sda print
+  Model: ATA Hoodisk SSD (scsi)
+  Disk /dev/sda: 32.0GB
+  Sector size (logical/physical): 512B/512B
+  Partition Table: gpt
+  Disk Flags: 
+  
+  Number  Start   End     Size    File system  Name  Flags
+  128     17.4kB  262kB   245kB                      bios_grub
+   1      262kB   17.0MB  16.8MB  fat16              legacy_boot
+   2      17.0MB  332MB   315MB
+   3      512MB   32.0GB  31.5GB  ext2
+
+Partition 3 is the one used for logs.
+
+* to remove partition 3 execute the command:
+
+``parted /dev/sda rm 3``
+
+* Now verify again the partition table with the command:
+``parted /dev/sda print``
+
+Partition 3 should not be visible.
+
+Now the storage is ready to be configured for logs from the Web UI.
+
