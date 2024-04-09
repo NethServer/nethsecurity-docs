@@ -51,6 +51,10 @@ When configuring a remote database, click on the :guilabel:`Add database` button
 * ``User attribute field``: specifies the user attribute used to identify the user. For example, ``sAMAccountName`` for Active Directory or ``uid`` for OpenLDAP.
 
 * ``User CN field``: specifies the user attribute containing the user's complete name. For example, ``cn`` for nboth Active Directory and OpenLDAP.
+
+* ``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), representing the user used to bind to the LDAP server (eg. ``cn=admin,dc=example,dc=com``).
+
+* ``Bind password``: specifies the password of the user used to bind to the LDAP server.
  
 * ``StartTLS``: enables StartTLS for secure communication with the LDAP server
 
