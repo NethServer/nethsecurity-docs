@@ -25,7 +25,6 @@ Key features:
   Metrics are collected using `Prometheus <https://prometheus.io/>`_.
 - **Web-based SSH**: Access the firewalls' command-line interface using a web-based SSH client.
 
-
 Installation and configuration
 ===============================
 
@@ -239,3 +238,22 @@ This makes it easier to associate the SSH user with the operations performed. Ex
 
   Mar 26 11:09:33 NethSec dropbear[31090]: Child connection from 172.19.64.1:52012
   Mar 26 11:09:33 NethSec dropbear[31090]: Pubkey auth succeeded for 'root' with ssh-rsa key SHA256:FLecvNRKi0hxxxdjfP0urUZxxx6jxxxxNbZceOPFjyk from 172.19.64.1:52012
+
+Subscription and limitations
+============================
+
+The behavior of the controller running on a NS8 depends on its subscription status:
+
+Controller without subscription:
+
+- Allows the registration of up to 3 units.
+- Only community firewalls can register with the controller.
+
+Controller with a valid subscription:
+
+- The number of units is unlimited.
+- Only firewalls with a valid subscription can register with the controller.
+
+.. note::
+
+  These limitations are still not enforced in the current version of the controller.
