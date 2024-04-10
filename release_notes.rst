@@ -7,6 +7,78 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-04-10
+===========================
+
+**Release Candidate 1**
+
+Image version: `8-23.05.3-ns.0.0.3-rc1`
+
+The Release Candidate 1 release focuses on fixing bugs, adding the centralized controller, and improving the migration process from NethServer 7.
+
+The issue tracker has been moved to GitHub. The new URL is: `https://github.com/NethServer/nethsecurity/issues <https://github.com/NethServer/nethsecurity/issues>`_.
+
+.. rubric:: New features and improvements
+
+* NethSecurity has been rebased on `OpenWrt 23.05.3 <https://forum.openwrt.org/t/openwrt-23-05-3-service-release/192587>`_.
+* Added the :ref:`centralized controller <controller-section>` to manage multiple NethSecurity instances from a single interface.
+* Port forwards: support port ranges in the source port field.
+* Firewall rules: support IP ranges as destination rules.
+* Backup: allow download of the backup file from the UI even if the machine has an enterprise subscription and remote backup server is not available.
+* Threat shield: improve visualization of the threat shield page if the firewall does not have Internet access.
+* Subscription: show subscription even if the machine has no Internet access.
+* MultiWAN: improved management of the balance policy configuration.
+* Network page: the up/down status of network interfaces now accurately reflects the cable status instead of the kernel status.
+* Firewall rules: improve the visualization of the disabled firewall rules.
+* Added an option to enable the privacy policy link during login.
+* Remote support (don): allow access to UI and preserve the session after a firewall restart.
+* Users: support bind on remote LDAP user datbases.
+
+.. rubric:: Bug fixes
+
+* 2FA: enable 2FA for user only after OTP verification.
+* IPsec tunnels: correctly associate the ipsecX interface to the selected WAN.
+* IPsec: make sure to start after a migration even if the associated WAN is not available.
+* Migration: rework the network migration process to avoid issues with bonds, bridges, and aliases configuration.
+* Migration: display bonds and bridges in the remapping page during the migration.
+* Migration, update and backup: implement new upload and download methods to avoid issues with large files.
+* Migration: fixed an issue that prevented the DHCP server from starting when DHCP options were present in the configuration.
+* DPI: prevent loss of Enterprise signatures after an upgrade.
+* Storage: added the ability to recreate a deleted storage partition.
+* Network: fix creation of VLANs over bridges.
+* Port forward and IPsec tunnels: fixed the visualization of WAN IPs, the page now displays all aliases and avoids duplicates even if the WAN is not available.
+* Port forward: list LAN zone inside hairpin NAT destinations.
+* OpenVPN tunnel: fixed an issue that prevented the modification of a P2P tunnel.
+* MultiWAN page: correctly sort WAN interfaces by priority.
+* MultiWAN page: do not show WAN aliases inside the policy page.
+* DHCP: hide static leases inside the dynamic leases tab.
+* Proxy pass: fix an issue that was preventing the modification of a proxy pass rule.
+* OpenVPN tunnel: fix default cipher selection for P2P tunnels.
+* DPI: restart netifyd after a network configuration change.
+* FlashStart: fix firewall registration to the FlashStart service.
+* FlashStart: fix secondary DNS address.
+* Firewall rules: fix duplicated host in source and destination address.
+* OpenVPN Road Warrior: fix bulk user creation for large user lists.
+
+.. rubric:: Known bugs
+
+Network bonds still suffer from some issues. If you're migrating from NethServer 7, please be aware of the following:
+
+* VLAN over a bond interface is not created if bond hasn't a role
+* During bond creation, sometimes, the web UI doesn't show the devices to add to the bond
+* The newly created bond shows a button saying "Configure bond", but then it does not configure the bond itself but the interface member of the bond
+
+.. rubric:: Upgrade notes
+
+If you are upgrading from a previous beta version and have any IPsec tunnels configured, you must run the following commands after the upgrade:
+
+.. code-block:: shell
+
+  uci delete ipsec.ns_ipsec_global.interface
+  uci commit ipsec
+  /etc/init.d/swanctl restart
+
+
 Major changes on 2024-02-29
 ===========================
 
@@ -97,7 +169,7 @@ OpenVPN:
 
 - Resolved port update issue: changing OpenVPN Road Warrior service port through the UI now correctly reflects the update in the service configuration and associated firewall rule.
 - Configuration protection: fixed issue where RoadWarrior configuration was lost when changing a user's password.
-- Enhanced authentication: addressed OpenVPN Roadwarrior authentication failures using local users in Nethsecurity beta1.
+- Enhanced authentication: addressed OpenVPN Roadwarrior authentication failures using local users in NethSecurity beta1.
 - Resolved tunnel server status: fixed issue where the tunnel server status was not correctly displayed in the UI.
 
 Hotspot:

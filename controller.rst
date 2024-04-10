@@ -128,6 +128,9 @@ Each unit target has the following labels:
 - `node` the VPN IP of the connected machine
 - `unit` the unit unique name of the connected machine
 
+By default, only the admin user can access the metrics dashboard. If you want to allow other users to access the metrics dashboard,
+you can create a new role and assign it to the user directly from the Grafana web interface.
+
 .. note::
 
   Metrics retention period must be configured from the NS8 web interface.
