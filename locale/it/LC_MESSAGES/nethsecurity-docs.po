@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-10 13:32+0000\n"
+"POT-Creation-Date: 2024-04-10 15:01+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -220,97 +220,97 @@ msgid ""
 "web-based SSH client."
 msgstr ""
 
-#: ../../controller.rst:30
+#: ../../controller.rst:29
 #, fuzzy
 msgid "Installation and configuration"
 msgstr "Configurazioni migrare"
 
-#: ../../controller.rst:32
+#: ../../controller.rst:31
 msgid ""
 "The controller can be installed on a NethServer 8 system from the "
 "Software Center. The module is named `NethSecurity Controller`."
 msgstr ""
 
-#: ../../controller.rst:34
+#: ../../controller.rst:33
 msgid ""
 "After the installation, the controller must be configured. The "
 "configuration can be done using the NethServer 8 web interface. The "
 "following parameters need to be set:"
 msgstr ""
 
-#: ../../controller.rst:37
+#: ../../controller.rst:36
 msgid ""
 "`Controller hostname`: The fully qualified domain name for the "
 "controller, like: ``mycontroller.nethsecurity.org``."
 msgstr ""
 
-#: ../../controller.rst:38
+#: ../../controller.rst:37
 msgid ""
 "`Let's Encrypt certificate`: Enable or disable Let's Encrypt certificate "
 "for the controller web interface."
 msgstr ""
 
-#: ../../controller.rst:39
+#: ../../controller.rst:38
 msgid ""
 "`VPN details`: The OpenVPN network and netmask. When choosing the "
 "network, make sure it does not overlap with the existing networks inside "
 "all the units that will be connected to the controller."
 msgstr ""
 
-#: ../../controller.rst:41
+#: ../../controller.rst:40
 msgid ""
 "`VPN common name`: The OpenVPN certificate name which is also the name of"
 " the controller."
 msgstr ""
 
-#: ../../controller.rst:42
+#: ../../controller.rst:41
 msgid ""
 "`Administrator user and password`: The default controller admin user and "
 "password. You should change the password after the first login both for "
 "the controller and the Grafana interface."
 msgstr ""
 
-#: ../../controller.rst:44
+#: ../../controller.rst:43
 msgid "`Log retention`: The log retention period in days, default is 180 days."
 msgstr ""
 
-#: ../../controller.rst:45
+#: ../../controller.rst:44
 msgid ""
 "`Metrics retention`: The metrics retention period in days, default 15 "
 "days."
 msgstr ""
 
-#: ../../controller.rst:47
+#: ../../controller.rst:46
 msgid ""
 "After completing the configuration, the controller is ready to be used "
 "and can be accessed using a web browser at the configured hostname, like "
 "``https://mycontroller.nethsecurity.org``."
 msgstr ""
 
-#: ../../controller.rst:50
+#: ../../controller.rst:49
 #, fuzzy
 msgid "Users"
 msgstr "Regole"
 
-#: ../../controller.rst:52
+#: ../../controller.rst:51
 msgid "The controller has two types of users:"
 msgstr ""
 
-#: ../../controller.rst:54
+#: ../../controller.rst:53
 msgid ""
 "**Administrator**: The administrator user is the only one that can create"
 " and manage users inside the controller."
 msgstr ""
 
-#: ../../controller.rst:55
+#: ../../controller.rst:54
 msgid "**User**: The user can manage the units and the firewall configurations."
 msgstr ""
 
-#: ../../controller.rst:57
+#: ../../controller.rst:56
 msgid "The administrator user is created during the controller configuration."
 msgstr ""
 
-#: ../../controller.rst:59
+#: ../../controller.rst:58
 msgid ""
 "It is recommended to create a user for each person who needs access to "
 "the controller. When creating a new user, the administrator must specify "
@@ -319,60 +319,60 @@ msgid ""
 "identify the user in the controller."
 msgstr ""
 
-#: ../../controller.rst:63
+#: ../../controller.rst:62
 msgid "The administrator can also reset the user password and delete users."
 msgstr ""
 
-#: ../../controller.rst:65
+#: ../../controller.rst:64
 msgid ""
 "After logging in, each user can change their own password and generate an"
 " SSH key pair for accessing the unit."
 msgstr ""
 
-#: ../../controller.rst:68
+#: ../../controller.rst:67
 msgid "Units"
 msgstr ""
 
-#: ../../controller.rst:70
+#: ../../controller.rst:69
 msgid ""
 "All users can manage units. A unit is a firewall that is managed by the "
 "controller."
 msgstr ""
 
-#: ../../controller.rst:72
+#: ../../controller.rst:71
 msgid ""
 "To connect a new unit to the controller, the user must create click on "
 "the :guilabel:`Add unit` button from the controller web interface. When a"
 " new unit is added, the controller performs the following actions:"
 msgstr ""
 
-#: ../../controller.rst:75
+#: ../../controller.rst:74
 msgid "creates a unique identifier for the unit"
 msgstr ""
 
-#: ../../controller.rst:76
+#: ../../controller.rst:75
 msgid "allocates an IP address inside the VPN network"
 msgstr ""
 
-#: ../../controller.rst:77
+#: ../../controller.rst:76
 #, fuzzy
 msgid "generates a VPN configuration including certificates"
 msgstr "genera una configurazione VPN e la trasmette al firewall"
 
-#: ../../controller.rst:78
+#: ../../controller.rst:77
 msgid "safely stores credentials required for accessing the remote firewall"
 msgstr ""
 "memorizza in modo sicuro le credenziali necessarie per accedere al "
 "firewall remoto"
 
-#: ../../controller.rst:80
+#: ../../controller.rst:79
 msgid ""
 "A join code will be generated and displayed on the screen. The join code "
 "must be entered on the unit to establish the connection with the "
 "controller."
 msgstr ""
 
-#: ../../controller.rst:82
+#: ../../controller.rst:81
 msgid ""
 "Access the ``Controller`` page inside the unit web interface and enter "
 "the join code in the ``Join code`` field. When joining the controller, "
@@ -382,25 +382,25 @@ msgid ""
 "``Connected``."
 msgstr ""
 
-#: ../../controller.rst:86
+#: ../../controller.rst:85
 msgid ""
 "Please note that if the controller does not have a valid Let's Encrypt "
 "certificate, you will need to disable the ``Verify TLS certificate`` "
 "option in the unit configuration."
 msgstr ""
 
-#: ../../controller.rst:88
+#: ../../controller.rst:87
 msgid ""
 "When the unit is connected, the user can directly access the unit web "
 "interface by clicking on the :guilabel:`Open unit` link without the need "
 "to enter the unit credentials."
 msgstr ""
 
-#: ../../controller.rst:91
+#: ../../controller.rst:90
 msgid "Remove a unit"
 msgstr ""
 
-#: ../../controller.rst:92
+#: ../../controller.rst:91
 msgid ""
 "Units can be disconnected from the controller by clicking on the "
 ":guilabel:`Remove unit` button from the controller web interface. When a "
@@ -408,18 +408,18 @@ msgid ""
 "and the VPN connection will be terminated."
 msgstr ""
 
-#: ../../controller.rst:95
+#: ../../controller.rst:94
 msgid ""
 "After removing the unit from the controller web interface, access the "
 "unit web interface and click :guilabel:`Disconnect unit` on the "
 "``Controller`` page: the unit will destroy the VPN configuration."
 msgstr ""
 
-#: ../../controller.rst:99
+#: ../../controller.rst:98
 msgid "Logs management"
 msgstr ""
 
-#: ../../controller.rst:101
+#: ../../controller.rst:100
 msgid ""
 "When a unit is connected, rsyslog is reconfigured to send logs using the "
 "syslog protocol (RFC 5424). It may take a few minutes before rsyslog "
@@ -427,66 +427,66 @@ msgid ""
 "to ensure that the user interface links work properly, make sure that:"
 msgstr ""
 
-#: ../../controller.rst:105
+#: ../../controller.rst:104
 msgid "the unit FQDN is unique within the cluster"
 msgstr ""
 
-#: ../../controller.rst:106
+#: ../../controller.rst:105
 msgid "the unit's name is the same as its hostname"
 msgstr ""
 
-#: ../../controller.rst:108
+#: ../../controller.rst:107
 msgid ""
 "Logs can be viewed by clicking on the :guilabel:`Open logs` link for each"
 " unit. The logs are displayed in a specific Grafana dashboard that also "
 "allows for searching and filtering."
 msgstr ""
 
-#: ../../controller.rst:112
+#: ../../controller.rst:111
 msgid "Logs retention period must be configured from the NS8 web interface."
 msgstr ""
 
-#: ../../controller.rst:116 ../../metrics.rst:5
+#: ../../controller.rst:115 ../../metrics.rst:5
 msgid "Metrics"
 msgstr ""
 
-#: ../../controller.rst:118
+#: ../../controller.rst:117
 msgid ""
 "Each unit exports its own statistics using netdata in the Prometheus "
 "format. As soon as a unit is connected, Prometheus starts scraping the "
 "metrics."
 msgstr ""
 
-#: ../../controller.rst:121
+#: ../../controller.rst:120
 msgid ""
 "The metrics can be viewed within the Grafana dashboard. Users can access "
 "the dashboard by clicking on the :guilabel:`Open metrics` link for each "
 "unit."
 msgstr ""
 
-#: ../../controller.rst:124
+#: ../../controller.rst:123
 msgid "Each unit target has the following labels:"
 msgstr ""
 
-#: ../../controller.rst:126
+#: ../../controller.rst:125
 msgid ""
 "`instance` the VPN IP of the connected machine with the netdata port (eg."
 " `172.19.64.3:19999`)"
 msgstr ""
 
-#: ../../controller.rst:127
+#: ../../controller.rst:126
 msgid "`job` fixed to `node`"
 msgstr ""
 
-#: ../../controller.rst:128
+#: ../../controller.rst:127
 msgid "`node` the VPN IP of the connected machine"
 msgstr ""
 
-#: ../../controller.rst:129
+#: ../../controller.rst:128
 msgid "`unit` the unit unique name of the connected machine"
 msgstr ""
 
-#: ../../controller.rst:131
+#: ../../controller.rst:130
 msgid ""
 "By default, only the admin user can access the metrics dashboard. If you "
 "want to allow other users to access the metrics dashboard, you can create"
@@ -494,15 +494,15 @@ msgid ""
 "interface."
 msgstr ""
 
-#: ../../controller.rst:136
+#: ../../controller.rst:135
 msgid "Metrics retention period must be configured from the NS8 web interface."
 msgstr ""
 
-#: ../../controller.rst:139
+#: ../../controller.rst:138
 msgid "Grafana"
 msgstr ""
 
-#: ../../controller.rst:141
+#: ../../controller.rst:140
 msgid ""
 "Grafana is an open-source platform used for monitoring and visualizing "
 "time-series data. It helps users create customizable dashboards with "
@@ -510,7 +510,7 @@ msgid ""
 "data from various sources."
 msgstr ""
 
-#: ../../controller.rst:144
+#: ../../controller.rst:143
 msgid ""
 "The controller includes a pre-configured Grafana instance that is used to"
 " visualize metrics and logs from the connected units. The Grafana "
@@ -518,7 +518,7 @@ msgid ""
 "fqdn>/grafana``."
 msgstr ""
 
-#: ../../controller.rst:147
+#: ../../controller.rst:146
 msgid ""
 "By default, you can access it by using default credentials set during the"
 " controller configuration. Remember to change the default password after "
@@ -527,7 +527,7 @@ msgid ""
 "including username/password, OAuth, LDAP, and more."
 msgstr ""
 
-#: ../../controller.rst:152
+#: ../../controller.rst:151
 msgid ""
 "You can also create custom dashboards and alerts to monitor the metrics "
 "and logs from the connected units. See the `official documentation "
@@ -535,11 +535,11 @@ msgid ""
 "to use Grafana."
 msgstr ""
 
-#: ../../controller.rst:156
+#: ../../controller.rst:155
 msgid "SSH access"
 msgstr ""
 
-#: ../../controller.rst:158
+#: ../../controller.rst:157
 msgid ""
 "SSH, or Secure Shell, is a cryptographic network protocol for operating "
 "network services securely over an unsecured network. SSH provides a "
@@ -547,18 +547,18 @@ msgid ""
 " connecting an SSH client application to an SSH server."
 msgstr ""
 
-#: ../../controller.rst:161
+#: ../../controller.rst:160
 msgid ""
 "It is possible to connect to the unit by clicking on the :guilabel:`Open "
 "SSH terminal` link. The connection is made through a web-based SSH client"
 " that allows access to the unit's shell."
 msgstr ""
 
-#: ../../controller.rst:164
+#: ../../controller.rst:163
 msgid "You can connect to units using username and password or an SSH key pair."
 msgstr ""
 
-#: ../../controller.rst:166
+#: ../../controller.rst:165
 msgid ""
 "Once connected, the SSH session will be started inside a new browser tab."
 " Some browsers require the permission to open popups for the SSH session "
@@ -566,11 +566,11 @@ msgid ""
 "or logout from the shell using CTRL + D."
 msgstr ""
 
-#: ../../controller.rst:170
+#: ../../controller.rst:169
 msgid "Username and password"
 msgstr ""
 
-#: ../../controller.rst:172
+#: ../../controller.rst:171
 msgid ""
 "The user can connect using a username and password of the unit in the "
 "following scenarios: - The logged-in user has not generated an SSH key "
@@ -578,18 +578,18 @@ msgid ""
 " the SSH authorized keys file of the unit"
 msgstr ""
 
-#: ../../controller.rst:176
+#: ../../controller.rst:175
 msgid ""
 "The user interface will display a form to enter the username and "
 "password. After entering the credentials, the user can click on the "
 ":guilabel:`Open terminal` button to start the SSH session."
 msgstr ""
 
-#: ../../controller.rst:180
+#: ../../controller.rst:179
 msgid "SSH key"
 msgstr ""
 
-#: ../../controller.rst:182
+#: ../../controller.rst:181
 msgid ""
 "An SSH key pair is a set of two cryptographic keys that are used for "
 "authentication when establishing a secure connection using the SSH "
@@ -597,20 +597,20 @@ msgid ""
 "key:"
 msgstr ""
 
-#: ../../controller.rst:185
+#: ../../controller.rst:184
 msgid ""
 "**Private Key**: This is kept secret and secure by the user. It should "
 "never be exposed to the outside world. It is used to decrypt data that "
 "has been encrypted with the public key."
 msgstr ""
 
-#: ../../controller.rst:187
+#: ../../controller.rst:186
 msgid ""
 "**Public Key**: This can be freely shared and is used to encrypt data "
 "that can only be decrypted with the private key."
 msgstr ""
 
-#: ../../controller.rst:189
+#: ../../controller.rst:188
 msgid ""
 "When you connect to a server using SSH with key pair authentication, you "
 "provide your public key to the server. The server then encrypts a "
@@ -620,7 +620,7 @@ msgid ""
 "private key and allows you to connect."
 msgstr ""
 
-#: ../../controller.rst:193
+#: ../../controller.rst:192
 msgid ""
 "This method of authentication is more secure than using a password, as it"
 " provides a form of two-factor authentication: something you have (the "
@@ -628,7 +628,7 @@ msgid ""
 "private key)."
 msgstr ""
 
-#: ../../controller.rst:196
+#: ../../controller.rst:195
 msgid ""
 "To use an SSH key, generate a new key pair by accessing the ``Account "
 "settings`` page and and clicking on the :guilabel:`Generate SSH key pair`"
@@ -638,7 +638,7 @@ msgid ""
 "controller."
 msgstr ""
 
-#: ../../controller.rst:200
+#: ../../controller.rst:199
 msgid ""
 "Before connecting to the unit, you must copy the public key and paste it "
 "into the unit's SSH authorized keys file. You can do it from the ``Unit "
@@ -647,46 +647,46 @@ msgid ""
 "send the key to and click on the :guilabel:`Send SSH key` button."
 msgstr ""
 
-#: ../../controller.rst:204
+#: ../../controller.rst:203
 msgid ""
 "From now on, you can connect to the unit using the SSH key pair. The user"
 " interface will display a form to enter the passphrase when clicking on "
 "the :guilabel:`Open terminal` button."
 msgstr ""
 
-#: ../../controller.rst:207
+#: ../../controller.rst:206
 msgid ""
 "You can also revoke the SSH key pair by clicking on the :guilabel:`Revoke"
 " SSH public key` button from the :guilabel:`Actions` button."
 msgstr ""
 
-#: ../../controller.rst:210
+#: ../../controller.rst:209
 msgid "Accounting"
 msgstr ""
 
-#: ../../controller.rst:212
+#: ../../controller.rst:211
 msgid ""
 "All operations performed on the controller are logged in the NS8 log. "
 "Here are some examples of logged operations:"
 msgstr ""
 
-#: ../../controller.rst:214
+#: ../../controller.rst:213
 msgid "User login and logout"
 msgstr ""
 
-#: ../../controller.rst:215
+#: ../../controller.rst:214
 msgid "User creation/modification/deletion/password change"
 msgstr ""
 
-#: ../../controller.rst:216
+#: ../../controller.rst:215
 msgid "Unit list/creation/removal"
 msgstr ""
 
-#: ../../controller.rst:218
+#: ../../controller.rst:217
 msgid "Example of NS8 log: ::"
 msgstr ""
 
-#: ../../controller.rst:223
+#: ../../controller.rst:222
 msgid ""
 "Each unit has an rpcd user specific to the controller, which is used for "
 "management operations. When a user accesses the unit's web interface from"
@@ -694,25 +694,65 @@ msgid ""
 "identified by the rpcd user. For example: ::"
 msgstr ""
 
-#: ../../controller.rst:229
+#: ../../controller.rst:228
 msgid ""
 "To determine who performed a specific operation, it is necessary to check"
 " the log of the unit identified by the rpcd user and correlate it with "
 "the login action performed on the controller."
 msgstr ""
 
-#: ../../controller.rst:232
+#: ../../controller.rst:231
 msgid ""
 "When a user connects to the unit via SSH, the login is logged in the "
 "unit's log, identified by the SSH user. Usually, the SSH user is root. "
 "For example: ::"
 msgstr ""
 
-#: ../../controller.rst:237
+#: ../../controller.rst:236
 msgid ""
 "If the user uses an SSH key for authentication, the log will contain the "
 "fingerprint of the SSH key used for authentication. This makes it easier "
 "to associate the SSH user with the operations performed. Example: ::"
+msgstr ""
+
+#: ../../controller.rst:243
+msgid "Subscription and limitations"
+msgstr ""
+
+#: ../../controller.rst:245
+msgid ""
+"The behavior of the controller running on a NS8 depends on its "
+"subscription status:"
+msgstr ""
+
+#: ../../controller.rst:247
+msgid "Controller without subscription:"
+msgstr ""
+
+#: ../../controller.rst:249
+msgid "Allows the registration of up to 3 units."
+msgstr ""
+
+#: ../../controller.rst:250
+msgid "Only community firewalls can register with the controller."
+msgstr ""
+
+#: ../../controller.rst:252
+msgid "Controller with a valid subscription:"
+msgstr ""
+
+#: ../../controller.rst:254
+msgid "The number of units is unlimited."
+msgstr ""
+
+#: ../../controller.rst:255
+msgid "Only firewalls with a valid subscription can register with the controller."
+msgstr ""
+
+#: ../../controller.rst:259
+msgid ""
+"These limitations are still not enforced in the current version of the "
+"controller."
 msgstr ""
 
 #: ../../ddns.rst:4
@@ -1617,6 +1657,23 @@ msgid "Hash"
 msgstr ""
 
 #: ../../dev.csv:1 ../../stable.csv:1
+msgid "8-23.05.3-ns.0.0.3-rc1"
+msgstr ""
+
+#: ../../stable.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.3-ns.0.0.3-rc1/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../stable.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.3-ns.0.0.3-rc1/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1 ../../stable.csv:1
 msgid "8-23.05.2-ns.0.0.2-beta2"
 msgstr ""
 
@@ -1652,10 +1709,6 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.0.0.3-rc1"
 msgstr ""
 
 #: ../../dev.csv:1
