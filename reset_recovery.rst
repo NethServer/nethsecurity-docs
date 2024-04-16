@@ -36,11 +36,9 @@ The factory reset restores the currently installed version.
 For instance, if the firewall was initially installed with version 23.05.0 and then updated to 23.05.1, after the factory reset,
 you will have a clean installation of version 23.05.1.
 
-If you want to execute the factory reset from command line, just execute the following commands. ::
+If you want to execute the factory reset from command line, just execute the following command. ::
 
-  firstboot -y && reboot
-
-.. note:: Performing a factory reset via the command line (including in failsafe mode) will not delete the log partition if it exists. Refer to the specific section below for more details.
+  /usr/libexec/rpcd/ns.factoryreset call reset
 
 .. _failsafe-section:
 
@@ -65,6 +63,11 @@ After entering failsafe mode, the firewall will start with a network address of 
 and only essential services will be operational. It's important to note that the DHCP server will be inactive in failsafe mode.
 Follow the instructions displayed on the screen to mount the root filesystem and access other utilities as needed.
 
+If you want to execute the factory reset in failsafe mode, just execute the following commands. ::
+
+  firstboot -y && reboot
+
+.. note:: This commands will not delete the log partition from disk if it exists. If you need to delete the old partition please refer to the :ref:`storage-section` for more details.
 
 .. _recovery-section:
 
@@ -85,41 +88,4 @@ This command will display the path of the downloaded image. Use this path in the
 If you can't access the system, :ref:`download the latest image <download-section>`, then follow :ref:`installation instructions <install_bare_metal-section>`
 to write the image directly into the storage media.
 
-
-Log Partition Management
-========================
-
-Unlike what happens with the web UI, performing a factory reset via the command line (including in Failsafe mode) will not delete the log partition if it exists, under this condition the system is not able to save logs on its storage.
-In order to allow the system to use again the storage to save new logs you need to remove the old partition.
-
-This can be easily done this way.
-
-* Verify if the log partition is present with the command:
-``parted /dev/sda print``::
-
-  root@NethSec:~# parted /dev/sda print
-  Model: ATA Hoodisk SSD (scsi)
-  Disk /dev/sda: 32.0GB
-  Sector size (logical/physical): 512B/512B
-  Partition Table: gpt
-  Disk Flags: 
-  
-  Number  Start   End     Size    File system  Name  Flags
-  128     17.4kB  262kB   245kB                      bios_grub
-   1      262kB   17.0MB  16.8MB  fat16              legacy_boot
-   2      17.0MB  332MB   315MB
-   3      512MB   32.0GB  31.5GB  ext2
-
-Partition 3 is the one used for logs.
-
-* to remove partition 3 execute the command:
-
-``parted /dev/sda rm 3``
-
-* Now verify again the partition table with the command:
-``parted /dev/sda print``
-
-Partition 3 should not be visible.
-
-Now the storage is ready to be configured for logs from the Web UI.
 
