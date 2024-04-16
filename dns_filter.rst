@@ -52,11 +52,13 @@ All listed IP addresses or networks here will not be affected by DNS filter.
 Block certain websites
 -------------------------
 
-.. highlight:: bash
-
 .. _block_website-section:
 
-Access to certain websites can also be restricted by manipulating their DNS resolution, enabling ``AdBlock`` and, optionally, activating the DNS query interception feature for LAN clients.
+If you need to block specific domains and FQDNs you can do it directly from the Flashstart configuration page.
+
+If you don' have a subscription for Flashstart DNS Filter you can still make it directly on NethSecurity enabling ``AdBlock`` and, optionally, activating the DNS query interception feature for LAN clients.
+
+.. note:: Please use AdBlock to block browsing only if you are not already using the Flashstart service cause if used together, they may conflict.
 
 To enable AdBlock, execute: ::
 
