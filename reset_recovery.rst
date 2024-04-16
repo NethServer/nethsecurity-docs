@@ -87,5 +87,3 @@ This command will display the path of the downloaded image. Use this path in the
 
 If you can't access the system, :ref:`download the latest image <download-section>`, then follow :ref:`installation instructions <install_bare_metal-section>`
 to write the image directly into the storage media.
-
-
