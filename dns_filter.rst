@@ -4,7 +4,7 @@
 DNS filter
 ==========
 
-DNS filtering integrates with third-party DNS-based content filtering software, default supported content filter is the one provided from `Flashstart <https://www.flashstart.com>`_.
+DNS filtering integrates with third-party DNS-based content filtering software, default supported content filter is the one provided from `FlashStart <https://www.flashstart.com>`_.
 
 It basically links 2 components : filter configuration and network configuration.
 
@@ -18,8 +18,8 @@ It basically links 2 components : filter configuration and network configuration
 
 .. note::
 
-  Before configuring NethSecurity you need to create an account on Flashstart and configure the service.
-  Flashstart is a payed service that allows you to use trial licenses.
+  Before configuring NethSecurity you need to create an account on FlashStart and configure the service.
+  FlashStart is a payed service that allows you to use trial licenses.
   Please refer to the supplier's documentation `doc <https://cloud.flashstart.com/customerarea/support/docs>`_.
 
 Once the account has been created and the service configured, NethSecurity can be configured.
@@ -31,7 +31,7 @@ You can enable and disable the filter by changing the ``Status`` toggle.
 
 Authentication
 ^^^^^^^^^^^^^^
-Insert same username and password of your Flashstart account (tipically an email address), then click :guilabel:`Save` button.
+Insert same username and password of your FlashStart account (tipically an email address), then click :guilabel:`Save` button.
 
 Zones to filter
 ^^^^^^^^^^^^^^^
@@ -54,11 +54,11 @@ Block certain websites
 
 .. _block_website-section:
 
-If you need to block specific domains and FQDNs you can do it directly from the Flashstart configuration page.
+If you need to block specific domains and FQDNs you can do it directly from the FlashStart configuration page, just go to the section "Protection"-> "Personal Blacklists" and add them there.
 
-If you don' have a subscription for Flashstart DNS Filter you can still make it directly on NethSecurity enabling ``AdBlock`` and, optionally, activating the DNS query interception feature for LAN clients.
+If you don' have a subscription for FlashStart DNS Filter you can still make it directly on NethSecurity enabling ``AdBlock`` and, optionally, activating the DNS query interception feature for LAN clients.
 
-.. note:: Please use AdBlock to block browsing only if you are not already using the Flashstart service cause if used together, they may conflict.
+.. note:: Please use AdBlock to block browsing only if you are not already using the FlashStart service cause if used together, they may conflict.
 
 To enable AdBlock, execute: ::
 
