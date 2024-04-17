@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-10 15:01+0000\n"
+"POT-Creation-Date: 2024-04-17 06:35+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1476,7 +1476,7 @@ msgstr ""
 msgid ""
 "DNS filtering integrates with third-party DNS-based content filtering "
 "software, default supported content filter is the one provided from "
-"`Flashstart <https://www.flashstart.com>`_."
+"`FlashStart <https://www.flashstart.com>`_."
 msgstr ""
 
 #: ../../dns_filter.rst:9
@@ -1514,7 +1514,7 @@ msgstr ""
 #: ../../dns_filter.rst:21
 msgid ""
 "Before configuring NethSecurity you need to create an account on "
-"Flashstart and configure the service. Flashstart is a payed service that "
+"FlashStart and configure the service. FlashStart is a payed service that "
 "allows you to use trial licenses. Please refer to the supplier's "
 "documentation `doc "
 "<https://cloud.flashstart.com/customerarea/support/docs>`_."
@@ -1541,7 +1541,7 @@ msgstr "Autenticazione"
 
 #: ../../dns_filter.rst:34
 msgid ""
-"Insert same username and password of your Flashstart account (tipically "
+"Insert same username and password of your FlashStart account (tipically "
 "an email address), then click :guilabel:`Save` button."
 msgstr ""
 
@@ -1584,35 +1584,48 @@ msgstr ""
 msgid "Block certain websites"
 msgstr ""
 
+#: ../../dns_filter.rst:57
+msgid ""
+"If you need to block specific domains and FQDNs you can do it directly "
+"from the FlashStart configuration page, just go to the section "
+"\"Protection\"-> \"Personal Blacklists\" and add them there."
+msgstr ""
+
 #: ../../dns_filter.rst:59
 msgid ""
-"Access to certain websites can also be restricted by manipulating their "
-"DNS resolution, enabling ``AdBlock`` and, optionally, activating the DNS "
-"query interception feature for LAN clients."
+"If you don' have a subscription for FlashStart DNS Filter you can still "
+"make it directly on NethSecurity enabling ``AdBlock`` and, optionally, "
+"activating the DNS query interception feature for LAN clients."
 msgstr ""
 
 #: ../../dns_filter.rst:61
+msgid ""
+"Please use AdBlock to block browsing only if you are not already using "
+"the FlashStart service cause if used together, they may conflict."
+msgstr ""
+
+#: ../../dns_filter.rst:63
 msgid "To enable AdBlock, execute: ::"
 msgstr ""
 
-#: ../../dns_filter.rst:67
+#: ../../dns_filter.rst:69
 msgid "Enable DNS interception for the LAN: ::"
 msgstr ""
 
-#: ../../dns_filter.rst:74
+#: ../../dns_filter.rst:76
 msgid "Add the domains that you want to block to the blocklist: ::"
 msgstr ""
 
-#: ../../dns_filter.rst:82
+#: ../../dns_filter.rst:84
 #, fuzzy
 msgid "Start the service: ::"
 msgstr "Poi riavvia il servizio DDNS::"
 
-#: ../../dns_filter.rst:86
+#: ../../dns_filter.rst:88
 msgid "Changes made to the blocklist require a reload of the service: ::"
 msgstr ""
 
-#: ../../dns_filter.rst:92
+#: ../../dns_filter.rst:94
 msgid ""
 "The DNS resolution for the names listed in the blocklist will also affect"
 " the firewall itself"
@@ -1712,6 +1725,57 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.3-rc1-38-g9d146dc"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-38-g9d146dc/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-38-g9d146dc-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-38-g9d146dc/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.3-rc1-37-g70d0cd7"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-37-g70d0cd7/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-37-g70d0cd7-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-37-g70d0cd7/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.3-rc1-36-g26b70df"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-36-g26b70df/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-36-g26b70df-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-36-g26b70df/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid ""
 "`image "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-x86-64"
@@ -1722,74 +1786,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.2-ns.0.0.2-beta2-86-gd5d3234"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-86-gd5d3234/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-86-gd5d3234-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-86-gd5d3234/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.0.0.2-beta2-47-g91871a9"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-47-g91871a9/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.2-beta2-47-g91871a9-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-47-g91871a9/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.0.0.2-beta2-46-g3d86e01"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-46-g3d86e01/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.2-beta2-46-g3d86e01-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-46-g3d86e01/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.0.0.2-beta2-44-ge51877f"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-44-ge51877f/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.2-beta2-44-ge51877f-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-44-ge51877f/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -11576,5 +11572,94 @@ msgstr ""
 #~ "Enhanced authentication: addressed OpenVPN "
 #~ "Roadwarrior authentication failures using "
 #~ "local users in Nethsecurity beta1."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "DNS filtering integrates with third-"
+#~ "party DNS-based content filtering "
+#~ "software, default supported content filter "
+#~ "is the one provided from `Flashstart "
+#~ "<https://www.flashstart.com>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Before configuring NethSecurity you need "
+#~ "to create an account on Flashstart "
+#~ "and configure the service. Flashstart is"
+#~ " a payed service that allows you "
+#~ "to use trial licenses. Please refer "
+#~ "to the supplier's documentation `doc "
+#~ "<https://cloud.flashstart.com/customerarea/support/docs>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Insert same username and password of "
+#~ "your Flashstart account (tipically an "
+#~ "email address), then click :guilabel:`Save`"
+#~ " button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Access to certain websites can also "
+#~ "be restricted by manipulating their DNS"
+#~ " resolution, enabling ``AdBlock`` and, "
+#~ "optionally, activating the DNS query "
+#~ "interception feature for LAN clients."
+#~ msgstr ""
+
+#~ msgid "8-23.05.2-ns.0.0.2-beta2-86-gd5d3234"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-86-gd5d3234/targets/x86/64/nethsecurity-8-23.05.2-ns.0.0.2-beta2-86-gd5d3234-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.2-beta2-86-gd5d3234/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.0.0.2-beta2-47-g91871a9"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-47-g91871a9/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.2-beta2-47-g91871a9-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-47-g91871a9/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.0.0.2-beta2-46-g3d86e01"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-46-g3d86e01/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.2-beta2-46-g3d86e01-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-46-g3d86e01/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.0.0.2-beta2-44-ge51877f"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-44-ge51877f/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.2-beta2-44-ge51877f-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-44-ge51877f/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
