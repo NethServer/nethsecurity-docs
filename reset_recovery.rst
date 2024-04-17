@@ -26,6 +26,8 @@ To start fresh without reinstalling the firmware, access the ``Factory reset`` p
 Click the :guilabel:`Perform factory reset` button to reset the firewall to its original state.
 The factory reset process will take a few seconds to complete. Once the process is complete, the firewall will reboot automatically.
 
+.. note:: If the storage on which NethSecurity is running has been configured with a partition to save logs, the 'Factory reset' done from the Web UI will also remove the log partition and all its data.
+
 If NethSecurity was installed through an in-place migration from NethServer 7, after the factory reset,
 the system will retain all configurations migrated from NethServer 7. If this is not desired, and a clean start is preferred,
 it is advisable to proceed with a new :ref:`installation <install-section>` rather than using the factory reset.
@@ -34,9 +36,9 @@ The factory reset restores the currently installed version.
 For instance, if the firewall was initially installed with version 23.05.0 and then updated to 23.05.1, after the factory reset,
 you will have a clean installation of version 23.05.1.
 
-If you want to execute the factory reset from command line, just execute the following commands. ::
+If you want to execute the factory reset from command line, just execute the following command. ::
 
-  firstboot -y && reboot
+  /usr/libexec/rpcd/ns.factoryreset call reset
 
 .. _failsafe-section:
 
@@ -61,6 +63,11 @@ After entering failsafe mode, the firewall will start with a network address of 
 and only essential services will be operational. It's important to note that the DHCP server will be inactive in failsafe mode.
 Follow the instructions displayed on the screen to mount the root filesystem and access other utilities as needed.
 
+If you want to execute the factory reset in failsafe mode, just execute the following commands. ::
+
+  firstboot -y && reboot
+
+.. note:: This commands will not delete the log partition from disk if it exists. If you need to delete the old partition please refer to the :ref:`storage-section` for more details.
 
 .. _recovery-section:
 

@@ -34,3 +34,44 @@ The system will then be reconfigured as follows:
 
 Extra generated data like metrics, will be synced from in-memory filesystem to persistent storage once a day during the night.
 To remove the data storage and restore in-memory log retention only, click on button :guilabel:`Remove storage`.
+
+Log Partition Management
+========================
+
+In certain instances, you may encounter challenges utilizing the primary disk for log storage, as the user interface may not present any options. 
+In such cases, the issue typically stems from a pre-existing partition on the disk, which must be removed beforehand to ensure proper utilization by the system.
+
+This typically occurs even after performing a default reset using failsafe mode (which does not remove the log partition), in order to allow the system to use again the storage to save new logs you need to remove the old partition.
+
+This can be easily done this way.
+
+* Verify if the log partition is present with the command:
+
+``parted /dev/sda print``::
+
+  root@NethSec:~# parted /dev/sda print
+  Model: ATA Hoodisk SSD (scsi)
+  Disk /dev/sda: 32.0GB
+  Sector size (logical/physical): 512B/512B
+  Partition Table: gpt
+  Disk Flags: 
+  
+  Number  Start   End     Size    File system  Name  Flags
+  128     17.4kB  262kB   245kB                      bios_grub
+   1      262kB   17.0MB  16.8MB  fat16              legacy_boot
+   2      17.0MB  332MB   315MB
+   3      512MB   32.0GB  31.5GB  ext2
+
+Partition 3 is the one used for logs.
+
+* to remove partition 3 execute the command:
+
+``parted /dev/sda rm 3``
+
+* Now verify again the partition table with the command:
+
+``parted /dev/sda print``
+
+Partition 3 should not be visible.
+
+Now the storage is ready to be configured for logs from the Web UI.
