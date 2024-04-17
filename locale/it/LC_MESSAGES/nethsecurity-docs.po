@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-17 06:35+0000\n"
+"POT-Creation-Date: 2024-04-17 06:36+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -7474,6 +7474,13 @@ msgstr ""
 
 #: ../../reset_recovery.rst:29
 msgid ""
+"If the storage on which NethSecurity is running has been configured with "
+"a partition to save logs, the 'Factory reset' done from the Web UI will "
+"also remove the log partition and all its data."
+msgstr ""
+
+#: ../../reset_recovery.rst:31
+msgid ""
 "If NethSecurity was installed through an in-place migration from "
 "NethServer 7, after the factory reset, the system will retain all "
 "configurations migrated from NethServer 7. If this is not desired, and a "
@@ -7482,7 +7489,7 @@ msgid ""
 "reset."
 msgstr ""
 
-#: ../../reset_recovery.rst:33
+#: ../../reset_recovery.rst:35
 msgid ""
 "The factory reset restores the currently installed version. For instance,"
 " if the firewall was initially installed with version 23.05.0 and then "
@@ -7490,17 +7497,17 @@ msgid ""
 "installation of version 23.05.1."
 msgstr ""
 
-#: ../../reset_recovery.rst:37
+#: ../../reset_recovery.rst:39
 msgid ""
 "If you want to execute the factory reset from command line, just execute "
-"the following commands. ::"
-msgstr ""
-
-#: ../../reset_recovery.rst:44
-msgid "Failsafe mode"
+"the following command. ::"
 msgstr ""
 
 #: ../../reset_recovery.rst:46
+msgid "Failsafe mode"
+msgstr ""
+
+#: ../../reset_recovery.rst:48
 msgid ""
 "NethSecurity provides a failsafe mode that can override the current "
 "configuration of your device. If your device becomes inaccessible due to "
@@ -7510,7 +7517,7 @@ msgid ""
 "manually."
 msgstr ""
 
-#: ../../reset_recovery.rst:50
+#: ../../reset_recovery.rst:52
 msgid ""
 "However, it's important to note that failsafe mode cannot resolve more "
 "complex issues such as faulty hardware or a damaged kernel. While it "
@@ -7519,7 +7526,7 @@ msgid ""
 "configurations."
 msgstr ""
 
-#: ../../reset_recovery.rst:53
+#: ../../reset_recovery.rst:55
 msgid ""
 "The simplest way to activate failsafe mode is to connect directly to the "
 "firewall using a VGA/HDMI monitor or a serial cable. To do this, boot the"
@@ -7527,7 +7534,7 @@ msgid ""
 "``NethSecurity (failsafe)``."
 msgstr ""
 
-#: ../../reset_recovery.rst:56
+#: ../../reset_recovery.rst:58
 msgid ""
 "You can access the firewall directly through the serial port using a "
 "null-modem cable and a common terminal program. For Windows, you can use "
@@ -7536,7 +7543,7 @@ msgid ""
 "None, and stop bits to 1 (abbreviated as 8N1)."
 msgstr ""
 
-#: ../../reset_recovery.rst:60
+#: ../../reset_recovery.rst:62
 msgid ""
 "After entering failsafe mode, the firewall will start with a network "
 "address of 192.168.1.1/24, usually on the eth0 network interface, and "
@@ -7546,11 +7553,24 @@ msgid ""
 "access other utilities as needed."
 msgstr ""
 
-#: ../../reset_recovery.rst:68
-msgid "Emergency recovery"
+#: ../../reset_recovery.rst:66
+msgid ""
+"If you want to execute the factory reset in failsafe mode, just execute "
+"the following commands. ::"
 msgstr ""
 
 #: ../../reset_recovery.rst:70
+msgid ""
+"This commands will not delete the log partition from disk if it exists. "
+"If you need to delete the old partition please refer to the :ref"
+":`storage-section` for more details."
+msgstr ""
+
+#: ../../reset_recovery.rst:75
+msgid "Emergency recovery"
+msgstr ""
+
+#: ../../reset_recovery.rst:77
 msgid ""
 "Emergency recovery in NethSecurity, also known as unbricking, is a "
 "feature enabling users to restore their firewall device in cases of "
@@ -7559,19 +7579,19 @@ msgid ""
 "unless there are hardware failures."
 msgstr ""
 
-#: ../../reset_recovery.rst:73
+#: ../../reset_recovery.rst:80
 msgid ""
 "If you still have access to the system, you can use the following "
 "commands to download and write the image: ::"
 msgstr ""
 
-#: ../../reset_recovery.rst:77
+#: ../../reset_recovery.rst:84
 msgid ""
 "This command will display the path of the downloaded image. Use this path"
 " in the following command: ::"
 msgstr ""
 
-#: ../../reset_recovery.rst:81
+#: ../../reset_recovery.rst:88
 msgid ""
 "If you can't access the system, :ref:`download the latest image "
 "<download-section>`, then follow :ref:`installation instructions "
@@ -8127,6 +8147,67 @@ msgid ""
 "filesystem to persistent storage once a day during the night. To remove "
 "the data storage and restore in-memory log retention only, click on "
 "button :guilabel:`Remove storage`."
+msgstr ""
+
+#: ../../storage.rst:39
+msgid "Log Partition Management"
+msgstr ""
+
+#: ../../storage.rst:41
+msgid ""
+"In certain instances, you may encounter challenges utilizing the primary "
+"disk for log storage, as the user interface may not present any options. "
+"In such cases, the issue typically stems from a pre-existing partition on"
+" the disk, which must be removed beforehand to ensure proper utilization "
+"by the system."
+msgstr ""
+
+#: ../../storage.rst:44
+msgid ""
+"This typically occurs even after performing a default reset using "
+"failsafe mode (which does not remove the log partition), in order to "
+"allow the system to use again the storage to save new logs you need to "
+"remove the old partition."
+msgstr ""
+
+#: ../../storage.rst:46
+msgid "This can be easily done this way."
+msgstr ""
+
+#: ../../storage.rst:48
+msgid "Verify if the log partition is present with the command:"
+msgstr ""
+
+#: ../../storage.rst:50
+msgid "``parted /dev/sda print``::"
+msgstr ""
+
+#: ../../storage.rst:65
+msgid "Partition 3 is the one used for logs."
+msgstr ""
+
+#: ../../storage.rst:67
+msgid "to remove partition 3 execute the command:"
+msgstr ""
+
+#: ../../storage.rst:69
+msgid "``parted /dev/sda rm 3``"
+msgstr ""
+
+#: ../../storage.rst:71
+msgid "Now verify again the partition table with the command:"
+msgstr ""
+
+#: ../../storage.rst:73
+msgid "``parted /dev/sda print``"
+msgstr ""
+
+#: ../../storage.rst:75
+msgid "Partition 3 should not be visible."
+msgstr ""
+
+#: ../../storage.rst:77
+msgid "Now the storage is ready to be configured for logs from the Web UI."
 msgstr ""
 
 #: ../../subscription.rst:7
@@ -11661,5 +11742,11 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.2-beta2-44-ge51877f/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want to execute the factory"
+#~ " reset from command line, just "
+#~ "execute the following commands. ::"
 #~ msgstr ""
 
