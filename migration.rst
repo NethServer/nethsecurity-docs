@@ -122,13 +122,13 @@ During the migration, the following configurations will be imported from NethSer
 - OpenVPN roadwarrior: mail notification is not supported, existing connection database is not migrated; OTP authentication is not supported
 - OpenVPN runnels
 - IPSec tunnels
-- Threat shield
+- Threat shield: only enterprise lists are migrated, community lists must be reconfigured manually
 - Subscription
 - Hotspot: if the migration has been executed on a new hardware, the hotspot interface will change MAC address and it must be registered again 
   to the remote hotspot manager
 - Let's Encrypt certificate configuration
 - Reverse proxy
-- Flashstart
+- FlashStart
 
 The following features are not migrated to NethSecurity:
 
