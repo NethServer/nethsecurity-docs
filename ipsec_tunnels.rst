@@ -47,4 +47,8 @@ Once you completed the configuration a new tunnel will be shown in the IPSec pag
 .. note:: If an endpoint is behind a NAT, we suggest to set the values for Local and Remote identifier fields to custom unique names with an "email like" syntax, e.g. nsec@site-a and otherdevice@site-b.
 
 
-
+Multiple Networks management
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A single IPsec tunnel can handle multiple local and remote networks. 
+In this case, NethSecurity always creates multiple child SAs to ensure broad compatibility with remote devices. 
+The behavior remains the same for IKEv1 or IKEv2.
