@@ -97,7 +97,7 @@ The order of rules is important; the first matching rule is applied, determining
 
 The page is organized into three tabs, each serving a specific purpose:
 
-* ``Forward rules`` tab: thiis tab is dedicated to configuring rules for data packets moving between different zones in the network.
+* ``Forward rules`` tab: this tab is dedicated to configuring rules for data packets moving between different zones in the network.
 * ``Input rules`` tab: this tab is dedicated to configuring rules for incoming packets destined for the firewall itself.
 * ``Output rules`` tab: this tab is dedicated to configuring rules for packets emitted by the firewall.
 
