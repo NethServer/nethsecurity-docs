@@ -7,6 +7,53 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-04-29
+===========================
+
+**Relase Candidate 2**
+
+Image version: `8-23.05.3-ns.0.0.5-rc2`
+
+The Release Candidate 2 release focuses on fixing bugs and improving the overall user experience.
+
+Detailed changelog can be found `here <https://github.com/NethServer/nethsecurity/milestone/1?closed=1>`__.
+
+.. rubric:: New features and improvements
+
+- Firewall rules: improved display of rules section.
+- FlashStart: added DNS resolution functionality after service disablement.
+- Dashboard: enhanced card organization and added links.
+- Routes: enabled creation of routes without specifying gateway.
+- Autoreload VPN pages: implemented automatic data reload every 10 seconds.
+- Migration to vue-components lib: migrated components and utils to vue-components.
+- UI: set rpcd timeout to 300 seconds to support long running tasks.
+- DHCP: introduced network scanning feature.
+- User database: sorted users by username and ensured consistent execution of LDAP queries.
+- DHCP: enabled force option by default for DHCP servers, exposed the option in the UI.
+- OpenVPN road warrior: implemented sorting of OpenVPN road warrior users by username.
+
+.. rubric:: Bug fixes
+
+- Firewall rules: resolved glitch displaying incorrect content.
+- FlashStart: fixed DNS resolution failure post service disablement.
+- Routes: prevented editing of IPsec rules.
+- IPsec: balidated remote/local networks to avoid duplicates.
+- Port forward: corrected reflection option label.
+- Migration: ensured proper import of host groups into firewall rules.
+- Firewall rules: allowed insertion of custom IP addresses.
+- Threat shield: apply changes to allowlist immediately.
+- Migration: enabled editing of imported IPsec tunnel.
+- OpenVPN road warrior: resolved issue with user recreation from LDAP.
+- Fixed axios error when committing changes.
+- OpenVPN road warrior: fixed issue with bridged configuration.
+- IPsec: improved handling of multiple networks with a single tunnel.
+- Zones: fixed radio buttons IDs in Zones page.
+- FlashStart: fixed ineffective redirect rule.
+- Controller: fefined behavior based on subscription presence.
+- Firewall: updated ipset after address removal.
+- Migration: fixed issue with IPsec tunnel editing.
+
+
 Major changes on 2024-04-10
 ===========================
 
