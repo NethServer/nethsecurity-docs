@@ -51,7 +51,7 @@ When configuring a remote database, click on the :guilabel:`Add database` button
 * ``User attribute field``: specifies the user attribute used to identify the userm, this option is used by the OpenVPN road warrior server to compose the user bind DN.
   It should be ``cn`` for Active Directory or ``uid`` for OpenLDAP.
 
-* ``User CN field``: specifies the user attribute containing the user's complete name. For example, ``cn`` for nboth Active Directory and OpenLDAP.
+* ``User CN field``: specifies the user attribute containing the user's complete name. For example, ``cn`` for both Active Directory and OpenLDAP.
 
 * ``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), representing the user used to bind to the LDAP server (eg. ``cn=admin,dc=example,dc=com``).
 
