@@ -32,7 +32,7 @@ Available fields:
 
 Upon startup, the DHCP server checks if there are other DHCP servers on the network. 
 With this option disabled, the DHCP server won't be activated if another one is detected on the network.
-With this option enabled, the DHCP server will be started even if there are others within the network.
+If the force option is enabled, the DHCP server will be started even if there are other DHCP servers within the network.
 
 ``DHCP option`` 
 
