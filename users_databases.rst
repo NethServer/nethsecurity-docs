@@ -48,7 +48,8 @@ When configuring a remote database, click on the :guilabel:`Add database` button
 
 * ``User DN``: specifies the LDAP User Distinguished Name (DN). If not present, the default value is equal to base_dn (eg. ``cn=users,dc=example,dc=com``).
 
-* ``User attribute field``: specifies the user attribute used to identify the user. For example, ``sAMAccountName`` for Active Directory or ``uid`` for OpenLDAP.
+* ``User attribute field``: specifies the user attribute used to identify the userm, this option is used by the OpenVPN road warrior server to compose the user bind DN.
+  It should be ``cn`` for Active Directory or ``uid`` for OpenLDAP.
 
 * ``User CN field``: specifies the user attribute containing the user's complete name. For example, ``cn`` for nboth Active Directory and OpenLDAP.
 
