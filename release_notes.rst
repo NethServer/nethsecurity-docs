@@ -21,9 +21,9 @@ Detailed changelog can be found `here <https://github.com/NethServer/nethsecurit
 .. rubric:: New features and improvements
 
 - Firewall rules: improved display of rules section.
-- FlashStart: added DNS resolution functionality after service disablement.
+- FlashStart: added DNS resolution functionality after service disabling.
 - Dashboard: enhanced card organization and added links.
-- Routes: enabled creation of routes without specifying gateway.
+- Routes: enabled creation of routes without gateway.
 - Autoreload VPN pages: implemented automatic data reload every 10 seconds.
 - Migration to vue-components lib: migrated components and utils to vue-components.
 - UI: set rpcd timeout to 300 seconds to support long running tasks.
@@ -35,9 +35,9 @@ Detailed changelog can be found `here <https://github.com/NethServer/nethsecurit
 .. rubric:: Bug fixes
 
 - Firewall rules: resolved glitch displaying incorrect content.
-- FlashStart: fixed DNS resolution failure post service disablement.
+- FlashStart: fixed DNS resolution failure post service disabling.
 - Routes: prevented editing of IPsec rules.
-- IPsec: balidated remote/local networks to avoid duplicates.
+- IPsec: validated remote/local networks to avoid duplicates.
 - Port forward: corrected reflection option label.
 - Migration: ensured proper import of host groups into firewall rules.
 - Firewall rules: allowed insertion of custom IP addresses.
@@ -49,8 +49,8 @@ Detailed changelog can be found `here <https://github.com/NethServer/nethsecurit
 - IPsec: improved handling of multiple networks with a single tunnel.
 - Zones: fixed radio buttons IDs in Zones page.
 - FlashStart: fixed ineffective redirect rule.
-- Controller: fefined behavior based on subscription presence.
-- Firewall: updated ipset after address removal.
+- Controller: refined behavior based on subscription presence.
+- Firewall: updated ipset after IP address removal.
 - Migration: fixed issue with IPsec tunnel editing.
 
 
