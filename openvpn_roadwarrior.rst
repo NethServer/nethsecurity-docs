@@ -83,7 +83,7 @@ If needed, you can also customize some advanced options:
 * ``Custom DHCP options``: pass specific DHCP options to the client (e.g. DOMAIN, DNS, WINS and so on)
 
 
-Client accounts
+VPN accounts
 ---------------
 
 Now that the server has been configured, it is necessary to create the accounts for the connecting clients. To do this, click on :guilabel:`Add VPN Account` and fill out the form:
@@ -94,7 +94,7 @@ Now that the server has been configured, it is necessary to create the accounts 
 
 * ``Certificate expiration (days)``: specify a certificate duration (default 3650 days)
 
-Once the account is created, it is necessary to export the configuration and load it into the client that needs to connect. To do this, simply click on the menu of the specific account and choose ```Download configuration``.
+Once the account is created, it is necessary to export the configuration and load it into the client that needs to connect. To do this, simply click on the menu of the specific account and choose ``Download configuration``.
 This action downloads the ready-to-use file, simply to be loaded into the client. This file is dynamically generated based on the current configuration of the OpenVPN server and already contains all the necessary information, including configuration details (server addresses, port, etc.) and required certificates. In case the server's operating mode is changed (e.g., if the authentication mode is altered), it is necessary to download the file again.
 
 Other available actions are:
