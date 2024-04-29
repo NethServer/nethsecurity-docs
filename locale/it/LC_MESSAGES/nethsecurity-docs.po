@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 13:44+0000\n"
+"POT-Creation-Date: 2024-04-29 14:53+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -9083,37 +9083,38 @@ msgstr ""
 #: ../../users_databases.rst:51
 msgid ""
 "``User attribute field``: specifies the user attribute used to identify "
-"the user. For example, ``sAMAccountName`` for Active Directory or ``uid``"
-" for OpenLDAP."
+"the userm, this option is used by the OpenVPN road warrior server to "
+"compose the user bind DN. It should be ``cn`` for Active Directory or "
+"``uid`` for OpenLDAP."
 msgstr ""
 
-#: ../../users_databases.rst:53
+#: ../../users_databases.rst:54
 msgid ""
 "``User CN field``: specifies the user attribute containing the user's "
 "complete name. For example, ``cn`` for nboth Active Directory and "
 "OpenLDAP."
 msgstr ""
 
-#: ../../users_databases.rst:55
+#: ../../users_databases.rst:56
 msgid ""
 "``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), "
 "representing the user used to bind to the LDAP server (eg. "
 "``cn=admin,dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:57
+#: ../../users_databases.rst:58
 msgid ""
 "``Bind password``: specifies the password of the user used to bind to the"
 " LDAP server."
 msgstr ""
 
-#: ../../users_databases.rst:59
+#: ../../users_databases.rst:60
 msgid ""
 "``StartTLS``: enables StartTLS for secure communication with the LDAP "
 "server"
 msgstr ""
 
-#: ../../users_databases.rst:61
+#: ../../users_databases.rst:62
 msgid ""
 "``Verify TLS certificate``: determines whether to enable or disable "
 "certificate validation"
@@ -11981,5 +11982,13 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-52-gd30b26a/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``User attribute field``: specifies the "
+#~ "user attribute used to identify the "
+#~ "user. For example, ``sAMAccountName`` for "
+#~ "Active Directory or ``uid`` for "
+#~ "OpenLDAP."
 #~ msgstr ""
 
