@@ -42,7 +42,7 @@ Detailed changelog can be found `here <https://github.com/NethServer/nethsecurit
 - Migration: ensured proper import of host groups into firewall rules.
 - Firewall rules: allowed insertion of custom IP addresses.
 - Threat shield: apply changes to allowlist immediately.
-- Migration: enabled editing of imported IPsec tunnel.
+- Migration: improve IPSec option migration and allow editing of imported IPsec tunnel.
 - OpenVPN road warrior: resolved issue with user recreation from LDAP.
 - Fixed axios error when committing changes.
 - OpenVPN road warrior: fixed issue with bridged configuration.
@@ -51,8 +51,6 @@ Detailed changelog can be found `here <https://github.com/NethServer/nethsecurit
 - FlashStart: fixed ineffective redirect rule.
 - Controller: refined behavior based on subscription presence.
 - Firewall: updated ipset after IP address removal.
-- Migration: fixed issue with IPsec tunnel editing.
-
 
 Major changes on 2024-04-10
 ===========================
