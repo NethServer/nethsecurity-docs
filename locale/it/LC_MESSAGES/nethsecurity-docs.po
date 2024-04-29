@@ -5501,6 +5501,13 @@ msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:104
 msgid ""
+"If a client is already connected to the roadwarrior server, the "
+"``Disable`` action on the respective account causes an immediate "
+"disconnection from the server, interrupting the communication."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:106
+msgid ""
 "``Regenerate certificate``: recreate the personal certificate for the "
 "account; if the current certificate has not expired, it will be revoked, "
 "and it will be necessary to use the new one. After recreating the "
@@ -5513,7 +5520,7 @@ msgstr ""
 "necessario aggiornarlo sul client ricaricando l'intera configurazione o "
 "semplicemente il certificato."
 
-#: ../../openvpn_roadwarrior.rst:106
+#: ../../openvpn_roadwarrior.rst:108
 msgid ""
 "``Delete``: delete the account and its certificate, this operation is "
 "irreversible and the certificate is not recoverable."
@@ -5521,15 +5528,15 @@ msgstr ""
 "``Elimina``: cancella l'account e il suo certificato. Questa operazione è"
 " irreversibile ed il certificato non può essere recuperato."
 
-#: ../../openvpn_roadwarrior.rst:109
+#: ../../openvpn_roadwarrior.rst:111
 msgid "Client behavior"
 msgstr "Comportamento client"
 
-#: ../../openvpn_roadwarrior.rst:111
+#: ../../openvpn_roadwarrior.rst:113
 msgid "Some information about the behavior of the clients:"
 msgstr "Alcune informazioni sul comportamento dei client:"
 
-#: ../../openvpn_roadwarrior.rst:113
+#: ../../openvpn_roadwarrior.rst:115
 msgid ""
 "Clients connected to the Road Warrior VPN are assigned to the "
 "``rwopenvpn`` zone, which is inherently trusted. By default, this zone "
@@ -5541,7 +5548,7 @@ msgstr ""
 "predefinita, questa zona ha accesso privilegiato sia alle zone LAN che "
 "WAN all'interno dell'infrastruttura di rete."
 
-#: ../../openvpn_roadwarrior.rst:116
+#: ../../openvpn_roadwarrior.rst:118
 msgid ""
 "Connection backup: in case of multiple WANs, clients will connect using "
 "the first IP/hostname of the server configuration, if it's unavailable "
@@ -5551,7 +5558,7 @@ msgstr ""
 "collegheranno utilizzando il primo IP/hostname della configurazione del "
 "server, se non è disponibile useranno il secondo IP/hostname e così via."
 
-#: ../../openvpn_roadwarrior.rst:118
+#: ../../openvpn_roadwarrior.rst:120
 msgid ""
 "For security reasons, it is not possible to connect multiple clients with"
 " the same account. Each account can be used by only one client at a time."
@@ -5563,11 +5570,11 @@ msgstr ""
 " volta. Se un nuovo client tenta il collegamento con un account già "
 "connesso al sistema, il primo account sarà disconnesso."
 
-#: ../../openvpn_roadwarrior.rst:125
+#: ../../openvpn_roadwarrior.rst:127
 msgid "Client software"
 msgstr "Software client"
 
-#: ../../openvpn_roadwarrior.rst:127
+#: ../../openvpn_roadwarrior.rst:129
 msgid ""
 "All major platforms are supported. Here are some references to download "
 "the necessary software:"
@@ -5575,7 +5582,7 @@ msgstr ""
 "Tutte le principali piattaforme sono supportate. Ecco alcuni riferimenti "
 "per scaricare il software necessario:"
 
-#: ../../openvpn_roadwarrior.rst:129
+#: ../../openvpn_roadwarrior.rst:131
 msgid ""
 "Windows Systems: `OpenVPN WebSite <https://openvpn.net/community-"
 "downloads/>`_"
@@ -5583,7 +5590,7 @@ msgstr ""
 "Sistemi Windows: `Sito Web OpenVPN <https://openvpn.net/community-"
 "downloads/>`_"
 
-#: ../../openvpn_roadwarrior.rst:131
+#: ../../openvpn_roadwarrior.rst:133
 msgid ""
 "MacOS Systems: `TunnelBlick <https://tunnelblick.net/>`_ or the `Official"
 " Client <https://openvpn.net/client-connect-vpn-for-mac-os/>`_"
@@ -5591,7 +5598,7 @@ msgstr ""
 "Sistemi MacOS : `TunnelBlick <https://tunnelblick.net/>`_ o il `Client "
 "Ufficiale <https://openvpn.net/client-connect-vpn-for-mac-os/>`_"
 
-#: ../../openvpn_roadwarrior.rst:133
+#: ../../openvpn_roadwarrior.rst:135
 msgid ""
 "Linux Systems: usually already available in most distribution software "
 "section, sources are available at `OpenVPN WebSite <https://openvpn.net"
@@ -5601,7 +5608,7 @@ msgstr ""
 "sezioni software delle distribuzioni, i sorgenti sono reperibili sul "
 "`Sito Web OpenVPN <https://openvpn.net/community-downloads/>`_"
 
-#: ../../openvpn_roadwarrior.rst:135
+#: ../../openvpn_roadwarrior.rst:137
 msgid ""
 "Android Systems: `OpenVPN Connect on Play Store "
 "<https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_"
@@ -5609,7 +5616,7 @@ msgstr ""
 "Sistemi Android: `OpenVPN Connect su Play Store "
 "<https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_"
 
-#: ../../openvpn_roadwarrior.rst:137
+#: ../../openvpn_roadwarrior.rst:139
 msgid ""
 "iOS Systems: `OpenVPN Connect on App Store <https://apps.apple.com/it/app"
 "/openvpn-connect-openvpn-app/id590379981>`_"
