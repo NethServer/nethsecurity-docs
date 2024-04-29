@@ -101,6 +101,8 @@ Other available actions are:
 
 * ``Disable``: disable the account; the account can be re-enabled at any time.
 
+.. note:: If a client is already connected to the roadwarrior server, the ``Disable`` action on the respective account causes an immediate disconnection from the server, interrupting the communication.
+
 * ``Regenerate certificate``: recreate the personal certificate for the account; if the current certificate has not expired, it will be revoked, and it will be necessary to use the new one. After recreating the certificate, it is necessary to update it on the client by either redownloading the entire configuration or just the certificate.
 
 * ``Delete``: delete the account and its certificate, this operation is irreversible and the certificate is not recoverable.
