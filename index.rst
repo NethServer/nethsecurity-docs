@@ -26,47 +26,72 @@ NethSecurity administrator manual
    system_requirements
    download
    install
-   updates
-   reset_recovery
+   remote_access
 
 .. toctree::
    :maxdepth: 2
-   :caption: Configuration
+   :caption: System
 
-   remote_access
+   subscription
+   remote_support
+   backup
+   updates
+   storage
+   reset_recovery
+   reverse_proxy
+   controller
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Network
+
    network
    dns_dhcp
    routing
-   nat
-   storage
-   firewall
-   port_forward
    multiwan
-   backup
+   hotspot
    qos
-   nat_helpers
-   smtp
-   controller
-   subscription
-   remote_support
 
 .. toctree::
    :maxdepth: 2
-   :caption: Applications
+   :caption: Firewall
 
-   users_databases
+   firewall
+   port_forward
+   nat
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Security
+
+   threat_shield
+   dns_filter
+   dpi_filter
+
+.. toctree::
+   :maxdepth: 2
+   :caption: VPN
+
    openvpn_roadwarrior
    openvpn_tunnels
    ipsec_tunnels
-   dpi_filter
-   hotspot
-   threat_shield
-   dns_filter
-   reverse_proxy
+   users_databases
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Report
+   
    metrics
-   snmp
-   ddns
    netify_informatics
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Advanced (CLI)
+
+   ddns
+   smtp
+   snmp
+   nat_helpers
 
 .. toctree::
    :maxdepth: 2
