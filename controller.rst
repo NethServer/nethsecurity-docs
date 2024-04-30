@@ -242,7 +242,11 @@ This makes it easier to associate the SSH user with the operations performed. Ex
 Subscription and limitations
 ============================
 
-The behavior of the controller running on a NS8 depends on its subscription status:
+.. admonition:: Subscription required
+
+  Some restrictions can only be overcomed if the firewall has a valid subscription.
+
+The behavior of the controller running on a NS8 depends on its subscription status.
 
 Controller without subscription:
 
@@ -253,7 +257,3 @@ Controller with a valid subscription:
 
 - The number of units is unlimited.
 - Only firewalls with a valid subscription can register with the controller.
-
-.. note::
-
-  These limitations are still not enforced in the current version of the controller.
