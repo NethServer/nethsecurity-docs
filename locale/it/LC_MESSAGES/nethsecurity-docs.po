@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 15:57+0000\n"
+"POT-Creation-Date: 2024-04-30 13:58+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1544,8 +1544,8 @@ msgid ""
 "NethSecurity can be configured."
 msgstr ""
 
-#: ../../dns_filter.rst:28 ../../dpi_filter.rst:21 ../../index.rst:32
-#: ../../ipsec_tunnels.rst:16 ../../openvpn_tunnels.rst:19 ../../qos.rst:20
+#: ../../dns_filter.rst:28 ../../dpi_filter.rst:21 ../../ipsec_tunnels.rst:16
+#: ../../openvpn_tunnels.rst:19 ../../qos.rst:20
 msgid "Configuration"
 msgstr "Configurazione"
 
@@ -1964,7 +1964,7 @@ msgstr ""
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
 
-#: ../../firewall.rst:5
+#: ../../firewall.rst:5 ../../index.rst:55
 msgid "Firewall"
 msgstr "Firewall"
 
@@ -2637,11 +2637,31 @@ msgstr "Informazioni"
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../index.rst:53
-msgid "Applications"
-msgstr "Applicazioni"
+#: ../../index.rst:31
+msgid "System"
+msgstr ""
+
+#: ../../index.rst:44
+msgid "Network"
+msgstr ""
+
+#: ../../index.rst:63
+msgid "Security"
+msgstr ""
 
 #: ../../index.rst:71
+msgid "VPN"
+msgstr ""
+
+#: ../../index.rst:80
+msgid "Report"
+msgstr ""
+
+#: ../../index.rst:87
+msgid "Advanced (CLI)"
+msgstr ""
+
+#: ../../index.rst:96
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -12154,4 +12174,7 @@ msgstr ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-73-g285d776/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
+
+#~ msgid "Applications"
+#~ msgstr "Applicazioni"
 
