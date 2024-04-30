@@ -86,7 +86,7 @@ NethSecurity administrator manual
 
 .. toctree::
    :maxdepth: 2
-   :caption: CLI only Features 
+   :caption: Advanced (CLI)
 
    ddns
    smtp
