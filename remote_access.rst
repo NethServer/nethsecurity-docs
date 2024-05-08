@@ -65,6 +65,8 @@ Additional security measures:
 - enable :ref:`two-factor authentication (2FA) <2fa-section>` for the admin user
 - keep your firewall up to date with the latest security patches
 
+.. _change_ui_port-section:
+
 Change web user interface port
 ------------------------------
 
@@ -74,6 +76,10 @@ To change the NethSecurity UI port from 9090 to 8181, execute: ::
 
   uci set ns-ui.config.nsui_extra_port=8181
   uci commit ns-ui && ns-ui
+
+.. warning::
+
+  The controller uses port 9090 to communicate with the unit. Changing the port will prevent the controller from managing the NethSecurity.
 
 Disable web user interface on port 443
 --------------------------------------
