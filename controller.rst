@@ -86,6 +86,10 @@ Please note that if the controller does not have a valid Let's Encrypt certifica
 
 When the unit is connected, the user can directly access the unit web interface by clicking on the :guilabel:`Open unit` link without the need to enter the unit credentials.
 
+.. note:: 
+
+  The unit user interface :ref:`must listen on port 9090 <change_ui_port-section>` to allow the controller to access it.
+
 .. rubric:: Remove a unit
 
 Units can be disconnected from the controller by clicking on the :guilabel:`Remove unit` button from the controller web interface.
