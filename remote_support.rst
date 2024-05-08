@@ -4,6 +4,10 @@
 Remote support
 ==============
 
+.. admonition:: Enterprise subscription required
+
+   This feature is available only if the firewall has a valid enterprise subscription.
+
 The :ref:`Enterprise subscription <subscription-section>` allows you to access the Nethesis remote support.
 
 The remote support session will connect the firewall to a `WindMill instance <https://github.com/nethesis/windmill>`_ hosted

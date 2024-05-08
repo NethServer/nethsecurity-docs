@@ -30,6 +30,10 @@ Paswords of local users are stored in the Unix passwd format, ensuring compatibi
 Remote databases
 ================
 
+.. admonition:: Subscription required
+
+   This feature is available only if the firewall has a valid subscription.
+
 The adminsitrator can extend the capabilities of the firewall by adding new remote databases.
 Users in remote databases must be added directly at the source.
 User modifications should be made on the underlying LDAP server to accurately reflect changes in the firewall configuration page.
@@ -37,7 +41,7 @@ User modifications should be made on the underlying LDAP server to accurately re
 If the remote database is offline, VPN authentication will fail.
 It is crucial to ensure that the remote database is online and accessible to ensure proper user authentication through the VPN service.
 
-When configuring a remote database, click on the :guilabel:`Add database` button  and fill all the following fields:
+When configuring a remote database, click on the :guilabel:`Add remote database` button  and fill all the following fields:
 
 * ``LDAP URI``: specifies the LDAP Uniform Resource Identifier (URI), including the server address and port (e.g., ``ldap://example.com:389``).
 

@@ -29,6 +29,14 @@ This essential step involves choosing from a comprehensive list of applications 
 The interface, as a default feature, presents a catalog of commonly used applications. However, it provides an advanced search functionality enabling the
 administrator to explore and pinpoint specific applications and application categories that require special attention.
 
+Premium application signatures
+-------------------------------
+
+.. admonition:: Enterprise subscription required
+
+   This feature is available only if the firewall has a valid enterprise subscription.
+
+
 It's noteworthy that the number of applications that can be identified and managed by the system is influenced by the presence of an active
 :ref:`Enterprise subscription <subscription-section>`.
 In the absence of a subscription, the system inherently recognizes a baseline of approximately 400 applications.

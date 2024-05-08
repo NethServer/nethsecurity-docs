@@ -30,3 +30,13 @@ To do this, simply save download the new image file (it is recommended to save i
   sysupgrade -v nethsecurity-<version>-x86-64-generic-squashfs-combined.img.gz
 
 The ``sysupgrade`` command flashes the new image file to the device.
+
+Automatic updates
+-----------------
+
+.. admonition:: Subscription required
+
+   This feature is available only if the firewall has a valid subscription.
+
+Automatic updates can be enabled from the ``Update`` section under the ``System`` menu, by enabling the ``Automatic updates`` option.
+Updates are checked daily and, if available, they are automatically downloaded and installed.
