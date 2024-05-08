@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-30 13:58+0000\n"
+"POT-Creation-Date: 2024-05-08 15:05+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -47,44 +47,17 @@ msgstr ""
 
 #: ../../backup.rst:7
 msgid ""
-"If the machine does not have an :ref:`Enterprise subscription "
-"<subscription-section>`, the user can manually generate and download a "
-"backup. Access the ``Backup & Restore`` page under the ``System`` "
-"section, then click on the :guilabel:`Download backup` button."
+"Access the ``Backup & Restore`` page under the ``System`` section, then "
+"click on the :guilabel:`Download backup` button. If the machine has a "
+"valid Enterprise subscription, the backup is :ref:`automatic "
+"<automatic_backup-section>`."
 msgstr ""
-"Se la macchina non dispone di un :ref:`abbonamento Enterprise "
-"<subscription-section>`, è possibile generare e scaricare manualmente un "
-"backup. Accedere alla pagina ``Backup & Ripristino`` nella sezione "
-"``Sistema``, quindi fare clic sul pulsante :guilabel:`Scarica backup`."
 
-#: ../../backup.rst:10
-#, fuzzy
-msgid ""
-"If the machine has a valid Enterprise subscription, the page will show a "
-"list of backups available from the remote server. The user can click the "
-":guilabel:`Run backup` button: the backup will be stored on a remote "
-"server and the user will be able to download it by clicking the "
-":guilabel:`Download` button. Please note that the date of the backup is "
-"the server date. The dates displayed in the backup list are based on the "
-"time of the server storing the backups, not the time of the firewall that"
-" created them. This means the dates might differ depending on time zone "
-"differences."
-msgstr ""
-"Se la macchina ha un abbonamento Enterprise valido, la pagina mostrerà un"
-" elenco di backup disponibili dal server remoto. L'utente può cliccare "
-"su:guilabel: ` Eseguire il backup` buttont: il backup verrà memorizzato "
-"su un server remoto e l'utente sarà in grado di scaricarlo cliccando sul "
-"pulsante: `Scarica`. Si prega di notare che la data del backup è la data "
-"del server. Le date visualizzate nell'elenco di backup si basano sul "
-"tempo in cui il server memorizza i backup, non sul tempo del firewall che"
-" li ha creati. Ciò significa che le date potrebbero differire a seconda "
-"delle differenze di fuso orario."
-
-#: ../../backup.rst:18
+#: ../../backup.rst:11
 msgid "Backup encryption"
 msgstr "Crittografia del backup"
 
-#: ../../backup.rst:20
+#: ../../backup.rst:13
 msgid ""
 "The backup is not encrypted by default. To enable encryption, click on "
 "the :guilabel:`Configure passphrase` button and set a strong password. To"
@@ -96,7 +69,7 @@ msgstr ""
 "password forte. Per disabilitare la crittografia, cliccare sul pulsante "
 ":guilabel:`Configura passphrase`e lasciare vuoto il campo password."
 
-#: ../../backup.rst:24
+#: ../../backup.rst:17
 msgid ""
 "If the backup is encrypted and the password is lost, it will no longer be"
 " possible to restore the configuration."
@@ -104,29 +77,11 @@ msgstr ""
 "Se il backup viene crittografato e la password viene persa, non sarà più "
 "possibile ripristinare la configurazione."
 
-#: ../../backup.rst:27
-msgid "Automatic backup"
-msgstr "Backup automatico"
-
-#: ../../backup.rst:29
-msgid ""
-"If the machine has a valid :ref:`Enterprise subscription <subscription-"
-"section>`, a scheduled cron job will run every night to perform a backup."
-" This backup is then sent to a remote server over a secure channel. If "
-"the backup is encrypted, only the encrypted backup will be sent to the "
-"remote server."
-msgstr ""
-"Se la macchina ha un valido :ref: `Abbonamento Enterprise  < "
-"subscription-section>`, un lavoro di cron programmato verrà eseguito ogni"
-" notte per eseguire un backup. Questo backup viene quindi inviato a un "
-"server remoto tramite un canale sicuro. Se il backup è crittografato, "
-"solo il backup crittografato verrà inviato al server remoto."
-
-#: ../../backup.rst:34
+#: ../../backup.rst:22
 msgid "Restore"
 msgstr "Ripristino"
 
-#: ../../backup.rst:36
+#: ../../backup.rst:24
 msgid ""
 "The backup can be restored from the the ``Restore`` tab inside the page "
 "inside the ``Backup & Restore`` page The user can initiate the restore "
@@ -145,9 +100,60 @@ msgstr ""
 "passphrase, e infine, fare clic sul pulsante :guilabel:`Restore` per "
 "completare il processo."
 
-#: ../../backup.rst:41
+#: ../../backup.rst:29
 msgid "After the restore the system will be rebooted."
 msgstr "Dopo il ripristino il sistema verrà riavviato."
+
+#: ../../backup.rst:32
+msgid "Automatic backup"
+msgstr "Backup automatico"
+
+#: ../../backup.rst:34 ../../dpi_filter.rst:35 ../../remote_support.rst:7
+#: ../../threat_shield.rst:29
+msgid "Enterprise subscription required"
+msgstr ""
+
+#: ../../backup.rst:36 ../../dpi_filter.rst:37 ../../remote_support.rst:9
+#: ../../threat_shield.rst:31
+msgid ""
+"This feature is available only if the firewall has a valid enterprise "
+"subscription."
+msgstr ""
+
+#: ../../backup.rst:38
+msgid ""
+"If the machine has a valid :ref:`Enterprise subscription <subscription-"
+"section>`, a scheduled cron job will run every night to perform a backup."
+" This backup is then sent to a remote server over a secure channel. If "
+"the backup is encrypted, only the encrypted backup will be sent to the "
+"remote server."
+msgstr ""
+"Se la macchina ha un valido :ref: `Abbonamento Enterprise  < "
+"subscription-section>`, un lavoro di cron programmato verrà eseguito ogni"
+" notte per eseguire un backup. Questo backup viene quindi inviato a un "
+"server remoto tramite un canale sicuro. Se il backup è crittografato, "
+"solo il backup crittografato verrà inviato al server remoto."
+
+#: ../../backup.rst:42
+#, fuzzy
+msgid ""
+"The user can click the :guilabel:`Run backup` button: the backup will be "
+"stored on a remote server and the user will be able to download it by "
+"clicking the :guilabel:`Download` button. Please note that the date of "
+"the backup is the server date. The dates displayed in the backup list are"
+" based on the time of the server storing the backups, not the time of the"
+" firewall that created them. This means the dates might differ depending "
+"on time zone differences."
+msgstr ""
+"Se la macchina ha un abbonamento Enterprise valido, la pagina mostrerà un"
+" elenco di backup disponibili dal server remoto. L'utente può cliccare "
+"su:guilabel: ` Eseguire il backup` buttont: il backup verrà memorizzato "
+"su un server remoto e l'utente sarà in grado di scaricarlo cliccando sul "
+"pulsante: `Scarica`. Si prega di notare che la data del backup è la data "
+"del server. Le date visualizzate nell'elenco di backup si basano sul "
+"tempo in cui il server memorizza i backup, non sul tempo del firewall che"
+" li ha creati. Ciò significa che le date potrebbero differire a seconda "
+"delle differenze di fuso orario."
 
 #: ../../controller.rst:5
 msgid "Controller"
@@ -720,40 +726,45 @@ msgstr ""
 msgid "Subscription and limitations"
 msgstr ""
 
-#: ../../controller.rst:245
-msgid ""
-"The behavior of the controller running on a NS8 depends on its "
-"subscription status:"
-msgstr ""
+#: ../../controller.rst:245 ../../updates.rst:37 ../../users_databases.rst:33
+#, fuzzy
+msgid "Subscription required"
+msgstr "Subscription"
 
 #: ../../controller.rst:247
-msgid "Controller without subscription:"
+msgid ""
+"Some restrictions can only be overcomed if the firewall has a valid "
+"subscription."
 msgstr ""
 
 #: ../../controller.rst:249
+msgid ""
+"The behavior of the controller running on a NS8 depends on its "
+"subscription status."
+msgstr ""
+
+#: ../../controller.rst:251
+msgid "Controller without subscription:"
+msgstr ""
+
+#: ../../controller.rst:253
 msgid "Allows the registration of up to 3 units."
 msgstr ""
 
-#: ../../controller.rst:250
+#: ../../controller.rst:254
 msgid "Only community firewalls can register with the controller."
 msgstr ""
 
-#: ../../controller.rst:252
+#: ../../controller.rst:256
 msgid "Controller with a valid subscription:"
 msgstr ""
 
-#: ../../controller.rst:254
+#: ../../controller.rst:258
 msgid "The number of units is unlimited."
 msgstr ""
 
-#: ../../controller.rst:255
-msgid "Only firewalls with a valid subscription can register with the controller."
-msgstr ""
-
 #: ../../controller.rst:259
-msgid ""
-"These limitations are still not enforced in the current version of the "
-"controller."
+msgid "Only firewalls with a valid subscription can register with the controller."
 msgstr ""
 
 #: ../../ddns.rst:4
@@ -1760,6 +1771,125 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-28-g4568df6"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-28-g4568df6/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-28-g4568df6-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-28-g4568df6/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-27-g37d3406"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-27-g37d3406/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-27-g37d3406-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-27-g37d3406/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-26-gb3db7a3"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-26-gb3db7a3/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-26-gb3db7a3-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-26-gb3db7a3/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-13-g8ed8c2e"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-13-g8ed8c2e/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-13-g8ed8c2e-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-13-g8ed8c2e/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-12-g5a5ddba"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-12-g5a5ddba/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-12-g5a5ddba-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-12-g5a5ddba/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-10-gb1208cb"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-10-gb1208cb/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-10-gb1208cb-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-10-gb1208cb/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-9-gb67b1d3"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-9-gb67b1d3/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-9-gb67b1d3-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-9-gb67b1d3/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid ""
 "`image "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-x86-64"
@@ -1770,40 +1900,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.0.0.3-rc1-80-g615c01e"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-80-g615c01e/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-80-g615c01e-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-80-g615c01e/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.0.0.3-rc1-79-g3de4963"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-79-g3de4963/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-79-g3de4963-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-79-g3de4963/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -1914,7 +2010,11 @@ msgstr ""
 "comuni, include anche una funzionalità di ricerca avanzata che permette "
 "di ricercare all'interno di specifiche categorie."
 
-#: ../../dpi_filter.rst:32
+#: ../../dpi_filter.rst:33
+msgid "Premium application signatures"
+msgstr ""
+
+#: ../../dpi_filter.rst:40
 msgid ""
 "It's noteworthy that the number of applications that can be identified "
 "and managed by the system is influenced by the presence of an active "
@@ -1936,11 +2036,11 @@ msgstr ""
 "aggiornato quotidianamente per garantire che il sistema sia sempre "
 "aggiornato."
 
-#: ../../dpi_filter.rst:39
+#: ../../dpi_filter.rst:47
 msgid "Exceptions"
 msgstr "Eccezioni"
 
-#: ../../dpi_filter.rst:41
+#: ../../dpi_filter.rst:49
 msgid ""
 "DPI exclusion allows for the exclusion of specific network addresses, "
 "such as the gateway or other critical infrastructure, preventing them "
@@ -1949,7 +2049,7 @@ msgstr ""
 "L'esclusione DPI consente di escludere indirizzi di rete specifici, come "
 "il gateway o server, evitando eventuali blocchi indesiderati."
 
-#: ../../dpi_filter.rst:43
+#: ../../dpi_filter.rst:51
 msgid ""
 "To add a new exception, click the ``Add exception`` button. Enter the "
 "``IP address`` that should be exempted from the filter. You can include a"
@@ -1960,7 +2060,7 @@ msgstr ""
 "filtro. È possibile includere una descrizione che spiega la ragione per "
 "l'esclusione."
 
-#: ../../dpi_filter.rst:47
+#: ../../dpi_filter.rst:55
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
 
@@ -7600,13 +7700,13 @@ msgstr ""
 msgid "Remote support"
 msgstr ""
 
-#: ../../remote_support.rst:7
+#: ../../remote_support.rst:11
 msgid ""
 "The :ref:`Enterprise subscription <subscription-section>` allows you to "
 "access the Nethesis remote support."
 msgstr ""
 
-#: ../../remote_support.rst:9
+#: ../../remote_support.rst:13
 msgid ""
 "The remote support session will connect the firewall to a `WindMill "
 "instance <https://github.com/nethesis/windmill>`_ hosted by Nethesis at "
@@ -7615,25 +7715,25 @@ msgid ""
 "try to fallback on port ``443`` TCP."
 msgstr ""
 
-#: ../../remote_support.rst:14
+#: ../../remote_support.rst:18
 msgid ""
 "The remote support must be started and stopped by the firewall "
 "administrator. To start a session:"
 msgstr ""
 
-#: ../../remote_support.rst:17
+#: ../../remote_support.rst:21
 msgid "access the ``Subscription`` page and go to the ``Remote support`` section"
 msgstr ""
 
-#: ../../remote_support.rst:18
+#: ../../remote_support.rst:22
 msgid "click the :guilabel:`Start session` button"
 msgstr ""
 
-#: ../../remote_support.rst:19
+#: ../../remote_support.rst:23
 msgid "copy the ``Session ID`` and share it with the support team"
 msgstr ""
 
-#: ../../remote_support.rst:21
+#: ../../remote_support.rst:25
 msgid "To terminate the session, click the :guilabel:`End session` button."
 msgstr ""
 
@@ -8644,18 +8744,72 @@ msgid ""
 "automatically updated at regular intervals."
 msgstr ""
 
-#: ../../threat_shield.rst:26
-msgid ""
-"Yoroi and Nethesis blocklists will be listed only if the machine has a "
-"valid Enterprise :ref:`subscription <subscription-section>` and a valid "
-"entitlement for the Threat Shield service."
+#: ../../threat_shield.rst:27
+msgid "Premium blocklists"
 msgstr ""
 
-#: ../../threat_shield.rst:29
+#: ../../threat_shield.rst:33
+msgid ""
+"Premium blocklists offer several advantages over community-maintained "
+"blocklists:"
+msgstr ""
+
+#: ../../threat_shield.rst:35
+msgid ""
+"**Quality and Accuracy**: Premium blocklists, such as the ones provided "
+"by Nethesis and Yoroi, are curated and maintained by reputable "
+"cybersecurity companies. These companies have dedicated teams that "
+"continuously monitor and update the blocklists to ensure they are "
+"accurate and effective in blocking malicious traffic. This results in a "
+"higher level of quality and accuracy compared to community-maintained "
+"blocklists, which may not receive the same level of attention and "
+"updates."
+msgstr ""
+
+#: ../../threat_shield.rst:39
+msgid ""
+"**Timeliness**: Premium blocklists are frequently updated to include the "
+"latest threats and malicious IP addresses. Cybersecurity companies like "
+"Nethesis and Yoroi actively track emerging threats and promptly add them "
+"to their blocklists. This ensures that your system is protected against "
+"the most recent and evolving threats."
+msgstr ""
+
+#: ../../threat_shield.rst:43
+msgid ""
+"**Reduced False Positives**: False positives occur when legitimate "
+"traffic is mistakenly blocked. Premium blocklists are designed to "
+"minimize false positives by carefully curating and verifying the listed "
+"IP addresses and hostnames. The companies behind premium blocklists have "
+"robust processes in place to ensure that only malicious entities are "
+"included in the blocklists. This reduces the chances of legitimate "
+"traffic being blocked, minimizing disruptions to your network or "
+"services."
+msgstr ""
+
+#: ../../threat_shield.rst:48
+msgid ""
+"**Enterprise Support**: Premium blocklists often come with additional "
+"support and services tailored for enterprise environments. This includes "
+"access to technical support, documentation, and integration assistance. "
+"If any issues or questions arise while using the premium blocklists, you "
+"can rely on the support provided by the cybersecurity companies to help "
+"you address them effectively."
+msgstr ""
+
+#: ../../threat_shield.rst:53
+msgid ""
+"Yoroi and Nethesis blocklists are premium blocklists. These lists will be"
+" listed only if the machine has a valid Enterprise :ref:`subscription "
+"<subscription-section>` and a valid entitlement for the Threat Shield "
+"service."
+msgstr ""
+
+#: ../../threat_shield.rst:57
 msgid "Allow list"
 msgstr ""
 
-#: ../../threat_shield.rst:31
+#: ../../threat_shield.rst:59
 msgid ""
 "Sometimes it may be necessary to allow access to certain IP addresses, to"
 " do this you can use the ``Allowlist`` tab. Use the :guilabel:`Add "
@@ -8664,53 +8818,53 @@ msgid ""
 "fully qualified hostname (FQDN)."
 msgstr ""
 
-#: ../../threat_shield.rst:35
+#: ../../threat_shield.rst:63
 msgid "For example, the address can be:"
 msgstr ""
 
-#: ../../threat_shield.rst:37
+#: ../../threat_shield.rst:65
 msgid "IPv4 address: 192.168.0.1"
 msgstr ""
 
-#: ../../threat_shield.rst:38
+#: ../../threat_shield.rst:66
 msgid "IPv6 address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 msgstr ""
 
-#: ../../threat_shield.rst:39
+#: ../../threat_shield.rst:67
 msgid "IPv4 address with CIDR notation: 192.168.0.0/24"
 msgstr ""
 
-#: ../../threat_shield.rst:40
+#: ../../threat_shield.rst:68
 msgid "MAC address: 00:0a:95:9d:68:16"
 msgstr ""
 
-#: ../../threat_shield.rst:41
+#: ../../threat_shield.rst:69
 msgid "Fully qualified hostname: example.com"
 msgstr ""
 
-#: ../../threat_shield.rst:43
+#: ../../threat_shield.rst:71
 msgid "A comment can be associated with each address to facilitate management."
 msgstr ""
 
-#: ../../threat_shield.rst:45
+#: ../../threat_shield.rst:73
 msgid ""
 "You can add a comment to provide additional information about the "
 "address, such as its purpose or owner. This can help in organizing and "
 "managing the allowlist effectively."
 msgstr ""
 
-#: ../../threat_shield.rst:49
+#: ../../threat_shield.rst:77
 msgid "DNS based Threat shield"
 msgstr ""
 
-#: ../../threat_shield.rst:51
+#: ../../threat_shield.rst:79
 msgid ""
 "The DNS filter uses AdBlock which blocks any request to a domain that is "
 "considered malicious. The service can load community-maintained blocklist"
 " or use Yoroi feeds."
 msgstr ""
 
-#: ../../threat_shield.rst:54
+#: ../../threat_shield.rst:82
 msgid ""
 "AdBlock can be configured from the command line interface as explained in"
 " the `developer manual <https://dev.nethsecurity.org/packages/ns-"
@@ -9040,6 +9194,23 @@ msgstr ""
 msgid "The ``sysupgrade`` command flashes the new image file to the device."
 msgstr ""
 
+#: ../../updates.rst:35
+#, fuzzy
+msgid "Automatic updates"
+msgstr "rotte statiche"
+
+#: ../../updates.rst:39 ../../users_databases.rst:35
+msgid "This feature is available only if the firewall has a valid subscription."
+msgstr ""
+
+#: ../../updates.rst:41
+msgid ""
+"Automatic updates can be enabled from the ``Update`` section under the "
+"``System`` menu, by enabling the ``Automatic updates`` option. Updates "
+"are checked daily and, if available, they are automatically downloaded "
+"and installed."
+msgstr ""
+
 #: ../../users_databases.rst:5
 msgid "Users databases"
 msgstr ""
@@ -9110,7 +9281,7 @@ msgstr ""
 msgid "Remote databases"
 msgstr ""
 
-#: ../../users_databases.rst:33
+#: ../../users_databases.rst:37
 msgid ""
 "The adminsitrator can extend the capabilities of the firewall by adding "
 "new remote databases. Users in remote databases must be added directly at"
@@ -9118,47 +9289,47 @@ msgid ""
 "server to accurately reflect changes in the firewall configuration page."
 msgstr ""
 
-#: ../../users_databases.rst:37
+#: ../../users_databases.rst:41
 msgid ""
 "If the remote database is offline, VPN authentication will fail. It is "
 "crucial to ensure that the remote database is online and accessible to "
 "ensure proper user authentication through the VPN service."
 msgstr ""
 
-#: ../../users_databases.rst:40
+#: ../../users_databases.rst:44
 msgid ""
-"When configuring a remote database, click on the :guilabel:`Add database`"
-" button  and fill all the following fields:"
+"When configuring a remote database, click on the :guilabel:`Add remote "
+"database` button  and fill all the following fields:"
 msgstr ""
 
-#: ../../users_databases.rst:42
+#: ../../users_databases.rst:46
 msgid ""
 "``LDAP URI``: specifies the LDAP Uniform Resource Identifier (URI), "
 "including the server address and port (e.g., ``ldap://example.com:389``)."
 msgstr ""
 
-#: ../../users_databases.rst:44
+#: ../../users_databases.rst:48
 msgid ""
 "``Type``: specifies the type of LDAP server. The available options are "
 "``Active Directory`` and ``OpenLDAP``. If OpenLDAP is selected, the "
 "remote server should respect the RFC 2307 schema."
 msgstr ""
 
-#: ../../users_databases.rst:47
+#: ../../users_databases.rst:51
 msgid ""
 "``Base DN``: specifies the LDAP Base Distinguished Name (DN), "
 "representing the starting point for searches in the LDAP directory (eg. "
 "``dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:49
+#: ../../users_databases.rst:53
 msgid ""
 "``User DN``: specifies the LDAP User Distinguished Name (DN). If not "
 "present, the default value is equal to base_dn (eg. "
 "``cn=users,dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:51
+#: ../../users_databases.rst:55
 msgid ""
 "``User attribute field``: specifies the user attribute used to identify "
 "the userm, this option is used by the OpenVPN road warrior server to "
@@ -9166,33 +9337,33 @@ msgid ""
 "``uid`` for OpenLDAP."
 msgstr ""
 
-#: ../../users_databases.rst:54
+#: ../../users_databases.rst:58
 msgid ""
 "``User CN field``: specifies the user attribute containing the user's "
 "complete name. For example, ``cn`` for both Active Directory and "
 "OpenLDAP."
 msgstr ""
 
-#: ../../users_databases.rst:56
+#: ../../users_databases.rst:60
 msgid ""
 "``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), "
 "representing the user used to bind to the LDAP server (eg. "
 "``cn=admin,dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:58
+#: ../../users_databases.rst:62
 msgid ""
 "``Bind password``: specifies the password of the user used to bind to the"
 " LDAP server."
 msgstr ""
 
-#: ../../users_databases.rst:60
+#: ../../users_databases.rst:64
 msgid ""
 "``StartTLS``: enables StartTLS for secure communication with the LDAP "
 "server"
 msgstr ""
 
-#: ../../users_databases.rst:62
+#: ../../users_databases.rst:66
 msgid ""
 "``Verify TLS certificate``: determines whether to enable or disable "
 "certificate validation"
@@ -12177,4 +12348,77 @@ msgstr ""
 
 #~ msgid "Applications"
 #~ msgstr "Applicazioni"
+
+#~ msgid ""
+#~ "If the machine does not have an"
+#~ " :ref:`Enterprise subscription <subscription-"
+#~ "section>`, the user can manually "
+#~ "generate and download a backup. Access"
+#~ " the ``Backup & Restore`` page under"
+#~ " the ``System`` section, then click "
+#~ "on the :guilabel:`Download backup` button."
+#~ msgstr ""
+#~ "Se la macchina non dispone di un"
+#~ " :ref:`abbonamento Enterprise <subscription-"
+#~ "section>`, è possibile generare e "
+#~ "scaricare manualmente un backup. Accedere "
+#~ "alla pagina ``Backup & Ripristino`` "
+#~ "nella sezione ``Sistema``, quindi fare "
+#~ "clic sul pulsante :guilabel:`Scarica backup`."
+
+#~ msgid ""
+#~ "The behavior of the controller running"
+#~ " on a NS8 depends on its "
+#~ "subscription status:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These limitations are still not enforced"
+#~ " in the current version of the "
+#~ "controller."
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.0.0.3-rc1-80-g615c01e"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-80-g615c01e/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-80-g615c01e-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-80-g615c01e/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.0.0.3-rc1-79-g3de4963"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-79-g3de4963/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.3-rc1-79-g3de4963-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.3-rc1-79-g3de4963/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Yoroi and Nethesis blocklists will be"
+#~ " listed only if the machine has "
+#~ "a valid Enterprise :ref:`subscription "
+#~ "<subscription-section>` and a valid "
+#~ "entitlement for the Threat Shield "
+#~ "service."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When configuring a remote database, "
+#~ "click on the :guilabel:`Add database` "
+#~ "button  and fill all the following "
+#~ "fields:"
+#~ msgstr ""
 
