@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 15:05+0000\n"
+"POT-Creation-Date: 2024-05-08 15:16+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -403,11 +403,17 @@ msgid ""
 "to enter the unit credentials."
 msgstr ""
 
-#: ../../controller.rst:90
+#: ../../controller.rst:91
+msgid ""
+"The unit user interface :ref:`must listen on port 9090 <change_ui_port-"
+"section>` to allow the controller to access it."
+msgstr ""
+
+#: ../../controller.rst:94
 msgid "Remove a unit"
 msgstr ""
 
-#: ../../controller.rst:91
+#: ../../controller.rst:95
 msgid ""
 "Units can be disconnected from the controller by clicking on the "
 ":guilabel:`Remove unit` button from the controller web interface. When a "
@@ -415,18 +421,18 @@ msgid ""
 "and the VPN connection will be terminated."
 msgstr ""
 
-#: ../../controller.rst:94
+#: ../../controller.rst:98
 msgid ""
 "After removing the unit from the controller web interface, access the "
 "unit web interface and click :guilabel:`Disconnect unit` on the "
 "``Controller`` page: the unit will destroy the VPN configuration."
 msgstr ""
 
-#: ../../controller.rst:98
+#: ../../controller.rst:102
 msgid "Logs management"
 msgstr ""
 
-#: ../../controller.rst:100
+#: ../../controller.rst:104
 msgid ""
 "When a unit is connected, rsyslog is reconfigured to send logs using the "
 "syslog protocol (RFC 5424). It may take a few minutes before rsyslog "
@@ -434,66 +440,66 @@ msgid ""
 "to ensure that the user interface links work properly, make sure that:"
 msgstr ""
 
-#: ../../controller.rst:104
+#: ../../controller.rst:108
 msgid "the unit FQDN is unique within the cluster"
 msgstr ""
 
-#: ../../controller.rst:105
+#: ../../controller.rst:109
 msgid "the unit's name is the same as its hostname"
 msgstr ""
 
-#: ../../controller.rst:107
+#: ../../controller.rst:111
 msgid ""
 "Logs can be viewed by clicking on the :guilabel:`Open logs` link for each"
 " unit. The logs are displayed in a specific Grafana dashboard that also "
 "allows for searching and filtering."
 msgstr ""
 
-#: ../../controller.rst:111
+#: ../../controller.rst:115
 msgid "Logs retention period must be configured from the NS8 web interface."
 msgstr ""
 
-#: ../../controller.rst:115 ../../metrics.rst:5
+#: ../../controller.rst:119 ../../metrics.rst:5
 msgid "Metrics"
 msgstr ""
 
-#: ../../controller.rst:117
+#: ../../controller.rst:121
 msgid ""
 "Each unit exports its own statistics using netdata in the Prometheus "
 "format. As soon as a unit is connected, Prometheus starts scraping the "
 "metrics."
 msgstr ""
 
-#: ../../controller.rst:120
+#: ../../controller.rst:124
 msgid ""
 "The metrics can be viewed within the Grafana dashboard. Users can access "
 "the dashboard by clicking on the :guilabel:`Open metrics` link for each "
 "unit."
 msgstr ""
 
-#: ../../controller.rst:123
+#: ../../controller.rst:127
 msgid "Each unit target has the following labels:"
 msgstr ""
 
-#: ../../controller.rst:125
+#: ../../controller.rst:129
 msgid ""
 "`instance` the VPN IP of the connected machine with the netdata port (eg."
 " `172.19.64.3:19999`)"
 msgstr ""
 
-#: ../../controller.rst:126
+#: ../../controller.rst:130
 msgid "`job` fixed to `node`"
 msgstr ""
 
-#: ../../controller.rst:127
+#: ../../controller.rst:131
 msgid "`node` the VPN IP of the connected machine"
 msgstr ""
 
-#: ../../controller.rst:128
+#: ../../controller.rst:132
 msgid "`unit` the unit unique name of the connected machine"
 msgstr ""
 
-#: ../../controller.rst:130
+#: ../../controller.rst:134
 msgid ""
 "By default, only the admin user can access the metrics dashboard. If you "
 "want to allow other users to access the metrics dashboard, you can create"
@@ -501,15 +507,15 @@ msgid ""
 "interface."
 msgstr ""
 
-#: ../../controller.rst:135
+#: ../../controller.rst:139
 msgid "Metrics retention period must be configured from the NS8 web interface."
 msgstr ""
 
-#: ../../controller.rst:138
+#: ../../controller.rst:142
 msgid "Grafana"
 msgstr ""
 
-#: ../../controller.rst:140
+#: ../../controller.rst:144
 msgid ""
 "Grafana is an open-source platform used for monitoring and visualizing "
 "time-series data. It helps users create customizable dashboards with "
@@ -517,7 +523,7 @@ msgid ""
 "data from various sources."
 msgstr ""
 
-#: ../../controller.rst:143
+#: ../../controller.rst:147
 msgid ""
 "The controller includes a pre-configured Grafana instance that is used to"
 " visualize metrics and logs from the connected units. The Grafana "
@@ -525,7 +531,7 @@ msgid ""
 "fqdn>/grafana``."
 msgstr ""
 
-#: ../../controller.rst:146
+#: ../../controller.rst:150
 msgid ""
 "By default, you can access it by using default credentials set during the"
 " controller configuration. Remember to change the default password after "
@@ -534,7 +540,7 @@ msgid ""
 "including username/password, OAuth, LDAP, and more."
 msgstr ""
 
-#: ../../controller.rst:151
+#: ../../controller.rst:155
 msgid ""
 "You can also create custom dashboards and alerts to monitor the metrics "
 "and logs from the connected units. See the `official documentation "
@@ -542,11 +548,11 @@ msgid ""
 "to use Grafana."
 msgstr ""
 
-#: ../../controller.rst:155
+#: ../../controller.rst:159
 msgid "SSH access"
 msgstr ""
 
-#: ../../controller.rst:157
+#: ../../controller.rst:161
 msgid ""
 "SSH, or Secure Shell, is a cryptographic network protocol for operating "
 "network services securely over an unsecured network. SSH provides a "
@@ -554,18 +560,18 @@ msgid ""
 " connecting an SSH client application to an SSH server."
 msgstr ""
 
-#: ../../controller.rst:160
+#: ../../controller.rst:164
 msgid ""
 "It is possible to connect to the unit by clicking on the :guilabel:`Open "
 "SSH terminal` link. The connection is made through a web-based SSH client"
 " that allows access to the unit's shell."
 msgstr ""
 
-#: ../../controller.rst:163
+#: ../../controller.rst:167
 msgid "You can connect to units using username and password or an SSH key pair."
 msgstr ""
 
-#: ../../controller.rst:165
+#: ../../controller.rst:169
 msgid ""
 "Once connected, the SSH session will be started inside a new browser tab."
 " Some browsers require the permission to open popups for the SSH session "
@@ -573,11 +579,11 @@ msgid ""
 "or logout from the shell using CTRL + D."
 msgstr ""
 
-#: ../../controller.rst:169
+#: ../../controller.rst:173
 msgid "Username and password"
 msgstr ""
 
-#: ../../controller.rst:171
+#: ../../controller.rst:175
 msgid ""
 "The user can connect using a username and password of the unit in the "
 "following scenarios: - The logged-in user has not generated an SSH key "
@@ -585,18 +591,18 @@ msgid ""
 " the SSH authorized keys file of the unit"
 msgstr ""
 
-#: ../../controller.rst:175
+#: ../../controller.rst:179
 msgid ""
 "The user interface will display a form to enter the username and "
 "password. After entering the credentials, the user can click on the "
 ":guilabel:`Open terminal` button to start the SSH session."
 msgstr ""
 
-#: ../../controller.rst:179
+#: ../../controller.rst:183
 msgid "SSH key"
 msgstr ""
 
-#: ../../controller.rst:181
+#: ../../controller.rst:185
 msgid ""
 "An SSH key pair is a set of two cryptographic keys that are used for "
 "authentication when establishing a secure connection using the SSH "
@@ -604,20 +610,20 @@ msgid ""
 "key:"
 msgstr ""
 
-#: ../../controller.rst:184
+#: ../../controller.rst:188
 msgid ""
 "**Private Key**: This is kept secret and secure by the user. It should "
 "never be exposed to the outside world. It is used to decrypt data that "
 "has been encrypted with the public key."
 msgstr ""
 
-#: ../../controller.rst:186
+#: ../../controller.rst:190
 msgid ""
 "**Public Key**: This can be freely shared and is used to encrypt data "
 "that can only be decrypted with the private key."
 msgstr ""
 
-#: ../../controller.rst:188
+#: ../../controller.rst:192
 msgid ""
 "When you connect to a server using SSH with key pair authentication, you "
 "provide your public key to the server. The server then encrypts a "
@@ -627,7 +633,7 @@ msgid ""
 "private key and allows you to connect."
 msgstr ""
 
-#: ../../controller.rst:192
+#: ../../controller.rst:196
 msgid ""
 "This method of authentication is more secure than using a password, as it"
 " provides a form of two-factor authentication: something you have (the "
@@ -635,7 +641,7 @@ msgid ""
 "private key)."
 msgstr ""
 
-#: ../../controller.rst:195
+#: ../../controller.rst:199
 msgid ""
 "To use an SSH key, generate a new key pair by accessing the ``Account "
 "settings`` page and and clicking on the :guilabel:`Generate SSH key pair`"
@@ -645,7 +651,7 @@ msgid ""
 "controller."
 msgstr ""
 
-#: ../../controller.rst:199
+#: ../../controller.rst:203
 msgid ""
 "Before connecting to the unit, you must copy the public key and paste it "
 "into the unit's SSH authorized keys file. You can do it from the ``Unit "
@@ -654,46 +660,46 @@ msgid ""
 "send the key to and click on the :guilabel:`Send SSH key` button."
 msgstr ""
 
-#: ../../controller.rst:203
+#: ../../controller.rst:207
 msgid ""
 "From now on, you can connect to the unit using the SSH key pair. The user"
 " interface will display a form to enter the passphrase when clicking on "
 "the :guilabel:`Open terminal` button."
 msgstr ""
 
-#: ../../controller.rst:206
+#: ../../controller.rst:210
 msgid ""
 "You can also revoke the SSH key pair by clicking on the :guilabel:`Revoke"
 " SSH public key` button from the :guilabel:`Actions` button."
 msgstr ""
 
-#: ../../controller.rst:209
+#: ../../controller.rst:213
 msgid "Accounting"
 msgstr ""
 
-#: ../../controller.rst:211
+#: ../../controller.rst:215
 msgid ""
 "All operations performed on the controller are logged in the NS8 log. "
 "Here are some examples of logged operations:"
 msgstr ""
 
-#: ../../controller.rst:213
+#: ../../controller.rst:217
 msgid "User login and logout"
 msgstr ""
 
-#: ../../controller.rst:214
+#: ../../controller.rst:218
 msgid "User creation/modification/deletion/password change"
 msgstr ""
 
-#: ../../controller.rst:215
+#: ../../controller.rst:219
 msgid "Unit list/creation/removal"
 msgstr ""
 
-#: ../../controller.rst:217
+#: ../../controller.rst:221
 msgid "Example of NS8 log: ::"
 msgstr ""
 
-#: ../../controller.rst:222
+#: ../../controller.rst:226
 msgid ""
 "Each unit has an rpcd user specific to the controller, which is used for "
 "management operations. When a user accesses the unit's web interface from"
@@ -701,69 +707,69 @@ msgid ""
 "identified by the rpcd user. For example: ::"
 msgstr ""
 
-#: ../../controller.rst:228
+#: ../../controller.rst:232
 msgid ""
 "To determine who performed a specific operation, it is necessary to check"
 " the log of the unit identified by the rpcd user and correlate it with "
 "the login action performed on the controller."
 msgstr ""
 
-#: ../../controller.rst:231
+#: ../../controller.rst:235
 msgid ""
 "When a user connects to the unit via SSH, the login is logged in the "
 "unit's log, identified by the SSH user. Usually, the SSH user is root. "
 "For example: ::"
 msgstr ""
 
-#: ../../controller.rst:236
+#: ../../controller.rst:240
 msgid ""
 "If the user uses an SSH key for authentication, the log will contain the "
 "fingerprint of the SSH key used for authentication. This makes it easier "
 "to associate the SSH user with the operations performed. Example: ::"
 msgstr ""
 
-#: ../../controller.rst:243
+#: ../../controller.rst:247
 msgid "Subscription and limitations"
 msgstr ""
 
-#: ../../controller.rst:245 ../../updates.rst:37 ../../users_databases.rst:33
+#: ../../controller.rst:249 ../../updates.rst:37 ../../users_databases.rst:33
 #, fuzzy
 msgid "Subscription required"
 msgstr "Subscription"
 
-#: ../../controller.rst:247
+#: ../../controller.rst:251
 msgid ""
 "Some restrictions can only be overcomed if the firewall has a valid "
 "subscription."
 msgstr ""
 
-#: ../../controller.rst:249
+#: ../../controller.rst:253
 msgid ""
 "The behavior of the controller running on a NS8 depends on its "
 "subscription status."
 msgstr ""
 
-#: ../../controller.rst:251
+#: ../../controller.rst:255
 msgid "Controller without subscription:"
 msgstr ""
 
-#: ../../controller.rst:253
+#: ../../controller.rst:257
 msgid "Allows the registration of up to 3 units."
 msgstr ""
 
-#: ../../controller.rst:254
+#: ../../controller.rst:258
 msgid "Only community firewalls can register with the controller."
 msgstr ""
 
-#: ../../controller.rst:256
+#: ../../controller.rst:260
 msgid "Controller with a valid subscription:"
 msgstr ""
 
-#: ../../controller.rst:258
+#: ../../controller.rst:262
 msgid "The number of units is unlimited."
 msgstr ""
 
-#: ../../controller.rst:259
+#: ../../controller.rst:263
 msgid "Only firewalls with a valid subscription can register with the controller."
 msgstr ""
 
@@ -7462,23 +7468,29 @@ msgstr ""
 msgid "keep your firewall up to date with the latest security patches"
 msgstr ""
 
-#: ../../remote_access.rst:69
+#: ../../remote_access.rst:71
 msgid "Change web user interface port"
 msgstr ""
 
-#: ../../remote_access.rst:71
+#: ../../remote_access.rst:73
 msgid "Users can change the NethSecurity UI port."
 msgstr ""
 
-#: ../../remote_access.rst:73
+#: ../../remote_access.rst:75
 msgid "To change the NethSecurity UI port from 9090 to 8181, execute: ::"
 msgstr ""
 
-#: ../../remote_access.rst:79
+#: ../../remote_access.rst:82
+msgid ""
+"The controller uses port 9090 to communicate with the unit. Changing the "
+"port will prevent the controller from managing the NethSecurity."
+msgstr ""
+
+#: ../../remote_access.rst:85
 msgid "Disable web user interface on port 443"
 msgstr ""
 
-#: ../../remote_access.rst:81
+#: ../../remote_access.rst:87
 msgid ""
 "While exposing port 443 (HTTPS) can be necessary for certain services, "
 "directly accessing the NethSecurity UI through this port may introduce a "
@@ -7486,20 +7498,20 @@ msgid ""
 "functionality while protecting your NethSecurity UI."
 msgstr ""
 
-#: ../../remote_access.rst:84
+#: ../../remote_access.rst:90
 msgid ""
 "If you don't require accessing the NethSecurity UI through port 443, "
 "disable it to minimize attack opportunities. Execute the following "
 "commands on your NethServer system: ::"
 msgstr ""
 
-#: ../../remote_access.rst:90
+#: ../../remote_access.rst:96
 msgid ""
 "This option disables access to the NethSecurity UI through both the "
 "server IP address and FQDN on port 443."
 msgstr ""
 
-#: ../../remote_access.rst:92
+#: ../../remote_access.rst:98
 msgid ""
 "If you need port 443 for other services, configure your firewall to "
 "redirect traffic destined for port 443 to a separate web server hosting "
@@ -7507,11 +7519,11 @@ msgid ""
 "in place."
 msgstr ""
 
-#: ../../remote_access.rst:98
+#: ../../remote_access.rst:104
 msgid "Privacy policy"
 msgstr ""
 
-#: ../../remote_access.rst:100
+#: ../../remote_access.rst:106
 msgid ""
 "In some cases, it is necessary to display the privacy policy of a product"
 " before login. NethSecurity does not display any privacy policy by "
@@ -7519,74 +7531,74 @@ msgid ""
 "contains the privacy policy."
 msgstr ""
 
-#: ../../remote_access.rst:103
+#: ../../remote_access.rst:109
 msgid ""
 "To add a link to the privacy policy, access the command line and execute:"
 " ::"
 msgstr ""
 
-#: ../../remote_access.rst:107
+#: ../../remote_access.rst:113
 msgid ""
 "Substitute ``https://mysite.org/privacy_policy`` with the URL of your "
 "privacy policy."
 msgstr ""
 
-#: ../../remote_access.rst:109
+#: ../../remote_access.rst:115
 msgid ""
 "The link to the privacy policy will be displayed inside the login page "
 "after next page refresh."
 msgstr ""
 
-#: ../../remote_access.rst:114
+#: ../../remote_access.rst:120
 msgid "Legacy web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:118
+#: ../../remote_access.rst:124
 msgid ""
 "Changes done via LuCI web interface may break the official NethSecurity "
 "UI. Use at your own risk!"
 msgstr ""
 
-#: ../../remote_access.rst:122
+#: ../../remote_access.rst:128
 msgid ""
 "NethSecurity offers also LuCI, the original OpenWrt web interface, which "
 "provides a wide range of configuration options but is not officially "
 "supported. Luci is disabled by default. To enable it, execute: ::"
 msgstr ""
 
-#: ../../remote_access.rst:129
+#: ../../remote_access.rst:135
 msgid ""
 "Once enabled, Luci will be available only on port 443 at this URL: "
 "**https://<server_ip>/cgi-bin/luci**"
 msgstr ""
 
-#: ../../remote_access.rst:131
+#: ../../remote_access.rst:137
 msgid ""
 "Changes to the following LuCI pages are known to cause unpredictable "
 "behavior:"
 msgstr ""
 
-#: ../../remote_access.rst:133
+#: ../../remote_access.rst:139
 msgid ""
 "HTTP access tab: it configures uhttpd which is not present inside "
 "NethSecurity"
 msgstr ""
 
-#: ../../remote_access.rst:134
+#: ../../remote_access.rst:140
 msgid "Logging tab: it configures logd which is not present inside NethSecurity"
 msgstr ""
 
-#: ../../remote_access.rst:135
+#: ../../remote_access.rst:141
 msgid ""
 "Networking: configuration created with this page is not compatible with "
 "NethSecurity UI"
 msgstr ""
 
-#: ../../remote_access.rst:140
+#: ../../remote_access.rst:146
 msgid "NethSecurity UI 2FA"
 msgstr ""
 
-#: ../../remote_access.rst:142
+#: ../../remote_access.rst:148
 msgid ""
 "Protecting your NethSecurity administrator account is crucial, and Two-"
 "Factor Authentication (2FA) adds an extra layer of security beyond just a"
@@ -7596,103 +7608,103 @@ msgid ""
 " risk of unauthorized access even if your password is compromised."
 msgstr ""
 
-#: ../../remote_access.rst:146
+#: ../../remote_access.rst:152
 msgid "Enabling 2FA on NethSecurity UI:"
 msgstr ""
 
-#: ../../remote_access.rst:148
+#: ../../remote_access.rst:154
 msgid "Log in to your NethSecurity web interface"
 msgstr ""
 
-#: ../../remote_access.rst:149
+#: ../../remote_access.rst:155
 msgid ""
 "Click on the user icon in the top right corner and select ``Account "
 "settings``"
 msgstr ""
 
-#: ../../remote_access.rst:150
+#: ../../remote_access.rst:156
 msgid ""
 "Find the Two-factor authentication option and click :guilabel:`Configure "
 "2FA`"
 msgstr ""
 
-#: ../../remote_access.rst:152
+#: ../../remote_access.rst:158
 msgid "Setting up your authenticator app:"
 msgstr ""
 
-#: ../../remote_access.rst:154
+#: ../../remote_access.rst:160
 msgid ""
 "Download an authenticator app on your smartphone or tablet. Popular "
 "options include FreeOTP, Google Authenticator, and Microsoft "
 "Authenticator."
 msgstr ""
 
-#: ../../remote_access.rst:155
+#: ../../remote_access.rst:161
 msgid ""
 "Open the app and scan the QR code displayed on the NethSecurity web "
 "interface. This will add your NethSecurity account to the authenticator "
 "app."
 msgstr ""
 
-#: ../../remote_access.rst:156
+#: ../../remote_access.rst:162
 msgid ""
 "Enter the 6-digit code displayed by your authenticator app in the One-"
 "Time Password (OTP) field on the NethSecurity web interface."
 msgstr ""
 
-#: ../../remote_access.rst:158
+#: ../../remote_access.rst:164
 msgid ""
 "The system will also provide you with a set of backup codes. These codes "
 "can be used to log in if you lose your smartphone or authenticator app. "
 "Store these codes securely, preferably offline."
 msgstr ""
 
-#: ../../remote_access.rst:161
+#: ../../remote_access.rst:167
 msgid "You can disable 2FA from the same page."
 msgstr ""
 
-#: ../../remote_access.rst:164
+#: ../../remote_access.rst:170
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:166
+#: ../../remote_access.rst:172
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:168
+#: ../../remote_access.rst:174
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:173
+#: ../../remote_access.rst:179
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:175
+#: ../../remote_access.rst:181
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:177
+#: ../../remote_access.rst:183
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:179
+#: ../../remote_access.rst:185
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:183
+#: ../../remote_access.rst:189
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:188
+#: ../../remote_access.rst:194
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
