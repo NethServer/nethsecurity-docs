@@ -37,6 +37,11 @@ hard disks or SD cards.
 5. boot the server, select the correct device (USB, SD card or hard disk) from boot menu
 6. the server is installed and ready to be used
 
+.. rubric:: Writing the image on Windows
+
+.. note::
+  Writing the image on a Windows machine is not recommended because it may mess up the disk partitioning.
+
 If you're running a desktop Windows machine, you will need extra software for point 2.
 First, make sure to format the USB drive then unmount it.
 Use one of the following tools to write the USB stick:
@@ -44,7 +49,6 @@ Use one of the following tools to write the USB stick:
 * `Etcher <https://etcher.io/>`_ 
 * `Win32 Disk Imager <http://sourceforge.net/projects/win32diskimager/>`_
 * `Rawrite32 <http://www.netbsd.org/~martin/rawrite32/>`_
-* `dd for Windows <http://www.chrysocome.net/dd>`_
 
 Install from USB to disk
 ------------------------
