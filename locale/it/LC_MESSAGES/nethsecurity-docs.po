@@ -18,19 +18,19 @@
 # elpidiobaldi <elpidio.baldi@nethesis.it>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version:  NethSecurity\n"
+"Project-Id-Version: NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 15:16+0000\n"
-"PO-Revision-Date: 2024-03-01 13:49+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
-"translation-memory@weblate.org>\n"
+"PO-Revision-Date: 2024-05-16 10:46+0000\n"
+"Last-Translator: Davide Marini <cotosso@gmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/ns8/"
+"nethsecurity-docs/it/>\n"
 "Language: it\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/ns8"
-"/nethsecurity-docs/it/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
 "Generated-By: Babel 2.8.0\n"
 
 #: ../../backup.rst:3
@@ -52,6 +52,10 @@ msgid ""
 "valid Enterprise subscription, the backup is :ref:`automatic "
 "<automatic_backup-section>`."
 msgstr ""
+"Accedere alla pagina ``Backup & Restore`` sotto la sezione ``System```, "
+"quindi fare clic sul:guilabel:`Scarica il backup` pulsante. Se la macchina "
+"ha un abbonamento Enterprise valido, il backup è: `automatic "
+"<automatic_backup-section>`."
 
 #: ../../backup.rst:11
 msgid "Backup encryption"
@@ -111,7 +115,7 @@ msgstr "Backup automatico"
 #: ../../backup.rst:34 ../../dpi_filter.rst:35 ../../remote_support.rst:7
 #: ../../threat_shield.rst:29
 msgid "Enterprise subscription required"
-msgstr ""
+msgstr "E' richiesto l'abbonamento Enterprise"
 
 #: ../../backup.rst:36 ../../dpi_filter.rst:37 ../../remote_support.rst:9
 #: ../../threat_shield.rst:31
@@ -119,6 +123,8 @@ msgid ""
 "This feature is available only if the firewall has a valid enterprise "
 "subscription."
 msgstr ""
+"Questa funzione è disponibile solo se il firewall ha un abbonamento "
+"enterprise valido."
 
 #: ../../backup.rst:38
 msgid ""
@@ -167,6 +173,10 @@ msgid ""
 " (NS8). The controller allows remote control of multiple NethSecurity "
 "installations, called units."
 msgstr ""
+"Il controller NethSecurity è un'applicazione che può essere eseguita su `"
+"NethServer 8 <https://docs.nethserver.org/projects/ns8/en/latest/"
+"nethsecurity_controller.html>`_ (NS8). Il controller consente il controllo "
+"remoto di più installazioni di NethSecurity, chiamate unità."
 
 #: ../../controller.rst:10
 msgid ""
@@ -174,6 +184,9 @@ msgid ""
 "controller. The controller is an optional component that provides "
 "additional management and monitoring capabilities for the firewall."
 msgstr ""
+"Il firewall può funzionare indipendentemente senza la necessità di "
+"agganciarlo al controller. Il controller è un componente opzionale che "
+"fornisce una funzionalità di gestione e monitoraggio aggiuntive."
 
 #: ../../controller.rst:13
 msgid ""
@@ -183,6 +196,11 @@ msgid ""
 "configuration that is sent back to the firewall The VPN enables secure "
 "communication between the controller and the unit."
 msgstr ""
+"Il controller funziona creando una connessione sicura tra il server centrale "
+"(il controller) e le unità (i firewall). Ogni firewall si registra al "
+"controller utilizzando un client chiamato ns-plug. Una volta registrato, il "
+"controller genera una configurazione VPN che viene inviata al firewall. La "
+"VPN consente una comunicazione sicura tra il controller e l’unità."
 
 #: ../../controller.rst:18
 #, fuzzy
@@ -194,18 +212,23 @@ msgid ""
 "**Centralized Management**: Manage multiple firewalls from a single "
 "server."
 msgstr ""
+"** Gestione centralizzata ** Gestisci più firewall da un singolo controller."
 
 #: ../../controller.rst:21
 msgid ""
 "**Secure Communication**: Establish a secure `OpenVPN "
 "<https://openvpn.net/>`_ connection between the server and the firewalls."
 msgstr ""
+"**Comunicazione sicura**: Stabilisce una connessione sicura `OpenVPN "
+"<https://openvpn.net/>`_ tra il server e i firewall."
 
 #: ../../controller.rst:22
 msgid ""
 "**Easy Configuration**: Configure firewalls directly from the "
 "controller's user interface."
 msgstr ""
+"** Configurazione semplice ** Configura i firewall direttamente "
+"dall'interfaccia utente del controller."
 
 #: ../../controller.rst:23
 msgid ""
@@ -213,6 +236,8 @@ msgid ""
 "inside `Loki <https://grafana.com/oss/loki/>`_ for troubleshooting and "
 "monitoring purposes."
 msgstr ""
+"**Monitoring e Log** Raccoglie e analizza i log dei firewall all'interno di `"
+"Loki <https://grafana.com/oss/loki/>`_ per troubleshooting e monitoraggio."
 
 #: ../../controller.rst:24
 msgid ""
@@ -220,23 +245,29 @@ msgid ""
 " built-in `Grafana <https://grafana.com/>`_ dashboard. Metrics are "
 "collected using `Prometheus <https://prometheus.io/>`_."
 msgstr ""
+"**Metriche**: Visualizza le metriche dei firewall utilizzando la dashboard `"
+"Grafana <https://grafana.com/>`_. Le metriche sono raccolte utilizzando`"
+"Prometheus <https://prometheus.io/>`_."
 
 #: ../../controller.rst:26
 msgid ""
 "**Web-based SSH**: Access the firewalls' command-line interface using a "
 "web-based SSH client."
 msgstr ""
+"**SSH Web-based**: Accesso alla command line dei firewall utilizzando un "
+"client web SSH."
 
 #: ../../controller.rst:29
-#, fuzzy
 msgid "Installation and configuration"
-msgstr "Configurazioni migrare"
+msgstr "Installazione e configurazione"
 
 #: ../../controller.rst:31
 msgid ""
 "The controller can be installed on a NethServer 8 system from the "
 "Software Center. The module is named `NethSecurity Controller`."
 msgstr ""
+"Il controller può essere installato su NethServer 8 dal Software Center. Il "
+"modulo si chiama `NethSecurity Controller`."
 
 #: ../../controller.rst:33
 msgid ""
@@ -244,18 +275,25 @@ msgid ""
 "configuration can be done using the NethServer 8 web interface. The "
 "following parameters need to be set:"
 msgstr ""
+"Dopo l'installazione, il controller deve essere configurato. La "
+"configurazione può essere eseguita utilizzando l'interfaccia web di "
+"NethServer 8. Configurare i seguenti parametri:"
 
 #: ../../controller.rst:36
 msgid ""
 "`Controller hostname`: The fully qualified domain name for the "
 "controller, like: ``mycontroller.nethsecurity.org``."
 msgstr ""
+"`Controller hostname`: L' FQDN richiesto per il controller, come ad esempio: "
+"``mycontroller.nethsecurity.org`."
 
 #: ../../controller.rst:37
 msgid ""
 "`Let's Encrypt certificate`: Enable or disable Let's Encrypt certificate "
 "for the controller web interface."
 msgstr ""
+"`Certificato Let's encrypt`: Abilita o disabilita il certificato Let's "
+"Encrypt per l'interfaccia web del controller."
 
 #: ../../controller.rst:38
 msgid ""
@@ -263,12 +301,17 @@ msgid ""
 "network, make sure it does not overlap with the existing networks inside "
 "all the units that will be connected to the controller."
 msgstr ""
+"`Dettagli VPN`: Rete e subnet mask della rete OpenVPN. Quando si sceglie la "
+"rete, assicurarsi che non si sovrapponga alle reti esistenti all'interno di "
+"tutte le unità che saranno collegate al controller."
 
 #: ../../controller.rst:40
 msgid ""
 "`VPN common name`: The OpenVPN certificate name which is also the name of"
 " the controller."
 msgstr ""
+"`VPN common name`: Il nome del certificato OpenVPN che è anche il nome del "
+"controller."
 
 #: ../../controller.rst:41
 msgid ""
@@ -276,16 +319,23 @@ msgid ""
 "password. You should change the password after the first login both for "
 "the controller and the Grafana interface."
 msgstr ""
+"`Credenziali dell'amministratore`: L'utente e la password di amministratore "
+"del controller di default. È necessario modificare la password dopo il primo "
+"login sia per il controller che per l'interfaccia Grafana."
 
 #: ../../controller.rst:43
 msgid "`Log retention`: The log retention period in days, default is 180 days."
 msgstr ""
+"`Log retention`: Periodo di conservazione dei log in giorni, il default è "
+"180 giorni."
 
 #: ../../controller.rst:44
 msgid ""
 "`Metrics retention`: The metrics retention period in days, default 15 "
 "days."
 msgstr ""
+"`Retention delle metriche`: Il periodo di conservazione delle metriche in "
+"giorni, il default è 15 giorni."
 
 #: ../../controller.rst:46
 msgid ""
@@ -293,6 +343,9 @@ msgid ""
 "and can be accessed using a web browser at the configured hostname, like "
 "``https://mycontroller.nethsecurity.org``."
 msgstr ""
+"Dopo aver completato la configurazione, il controller è pronto per essere "
+"utilizzato ed è accessibile tramite browser web al nome host configurato, "
+"come ``https://mycontroller.nethsecurity.org```."
 
 #: ../../controller.rst:49
 #, fuzzy
@@ -301,21 +354,25 @@ msgstr "Regole"
 
 #: ../../controller.rst:51
 msgid "The controller has two types of users:"
-msgstr ""
+msgstr "Il controller ha due tipi di utenti:"
 
 #: ../../controller.rst:53
 msgid ""
 "**Administrator**: The administrator user is the only one that can create"
 " and manage users inside the controller."
 msgstr ""
+"**Amministratore**: L'utente amministratore è l'unico che può creare e "
+"gestire gli utenti all'interno del controller."
 
 #: ../../controller.rst:54
 msgid "**User**: The user can manage the units and the firewall configurations."
-msgstr ""
+msgstr "**Utente**: L'utente può gestire le unità e le configurazioni firewall."
 
 #: ../../controller.rst:56
 msgid "The administrator user is created during the controller configuration."
 msgstr ""
+"L'utente amministratore viene creato durante la configurazione del "
+"controller."
 
 #: ../../controller.rst:58
 msgid ""
@@ -325,26 +382,37 @@ msgid ""
 "is used to log in to the controller, while the display name is used to "
 "identify the user in the controller."
 msgstr ""
+"Si raccomanda di creare un utente per ogni persona che deve accedere al "
+"controller. Quando si crea un nuovo utente, l'amministratore dovrà "
+"specificare il nome utente, il nome visualizzato e la password dell'utente. "
+"Il nome utente si usa per accedere al controller, mentre il nome "
+"visualizzato si usa per identificare l'utente nel controller."
 
 #: ../../controller.rst:62
 msgid "The administrator can also reset the user password and delete users."
 msgstr ""
+"L'amministratore può anche ripristinare la password dell'utente ed eliminare "
+"gli utenti."
 
 #: ../../controller.rst:64
 msgid ""
 "After logging in, each user can change their own password and generate an"
 " SSH key pair for accessing the unit."
 msgstr ""
+"Dopo l'accesso, ogni utente può modificare la propria password e generare "
+"una coppia di chiavi SSH per accedere all'unità."
 
 #: ../../controller.rst:67
 msgid "Units"
-msgstr ""
+msgstr "Unità"
 
 #: ../../controller.rst:69
 msgid ""
 "All users can manage units. A unit is a firewall that is managed by the "
 "controller."
 msgstr ""
+"Tutti gli utenti possono gestire le unità. Un'unità è un firewall gestito "
+"dal controller."
 
 #: ../../controller.rst:71
 msgid ""
@@ -352,14 +420,17 @@ msgid ""
 "the :guilabel:`Add unit` button from the controller web interface. When a"
 " new unit is added, the controller performs the following actions:"
 msgstr ""
+"Per collegare una nuova unità al controller, cliccare su:guilabel: `Add unit`"
+" dall'interfaccia web del controller. Quando viene aggiunta una nuova unità, "
+"il controller esegue le seguenti azioni:"
 
 #: ../../controller.rst:74
 msgid "creates a unique identifier for the unit"
-msgstr ""
+msgstr "crea un identificatore univoco per l'unità"
 
 #: ../../controller.rst:75
 msgid "allocates an IP address inside the VPN network"
-msgstr ""
+msgstr "assegna un indirizzo IP all'interno della rete VPN"
 
 #: ../../controller.rst:76
 #, fuzzy
@@ -378,6 +449,8 @@ msgid ""
 "must be entered on the unit to establish the connection with the "
 "controller."
 msgstr ""
+"Un join code verrà generato e visualizzato sullo schermo. Il join code deve "
+"essere inserito nell'unità per stabilire la connessione con il controller."
 
 #: ../../controller.rst:81
 msgid ""
@@ -388,6 +461,12 @@ msgid ""
 " will be displayed in the controller web interface with the status "
 "``Connected``."
 msgstr ""
+"Accedere alla pagina ``Controller`` all'interno dell'interfaccia web "
+"dell'unità e inserire il join code nel campo ``join code`. Quando si "
+"connetterà al controller, l'unità scaricherà la configurazione VPN e "
+"stabilirà una connessione sicura con esso. Se la connessione ha successo, "
+"l'unità verrà visualizzata nell'interfaccia web del controller con lo stato "
+"``Connesso`."
 
 #: ../../controller.rst:85
 msgid ""
@@ -395,6 +474,9 @@ msgid ""
 "certificate, you will need to disable the ``Verify TLS certificate`` "
 "option in the unit configuration."
 msgstr ""
+"Se il controller non ha un certificato Let's Encrypt valido, è necessario "
+"disabilitare l'opzione ``Verify TLS certificato` nella configurazione "
+"dell'unità."
 
 #: ../../controller.rst:87
 msgid ""
@@ -402,16 +484,21 @@ msgid ""
 "interface by clicking on the :guilabel:`Open unit` link without the need "
 "to enter the unit credentials."
 msgstr ""
+"Quando l'unità è collegata, l'utente può accedere direttamente "
+"all'interfaccia web dell'unità facendo clic su :guilabel: ` Open unit` senza "
+"la necessità di inserire le credenziali dell'unità."
 
 #: ../../controller.rst:91
 msgid ""
 "The unit user interface :ref:`must listen on port 9090 <change_ui_port-"
 "section>` to allow the controller to access it."
 msgstr ""
+"L'interfaccia utente dell'unità: ref: `deve ascoltare sulla porta 9090 "
+"<change_ui_port-sezione> ` per consentire al controller di accedervi."
 
 #: ../../controller.rst:94
 msgid "Remove a unit"
-msgstr ""
+msgstr "Rimuovere un'unità"
 
 #: ../../controller.rst:95
 msgid ""
@@ -420,6 +507,10 @@ msgid ""
 "unit is disconnected, the controller will remove the unit configuration "
 "and the VPN connection will be terminated."
 msgstr ""
+"Le unità possono essere disconnesse dal controller facendo clic sul pulsante:"
+" `Remove unit` dall'interfaccia web del controller. Quando un'unità viene "
+"disconnessa, il controller rimuove la sua configurazione e la connessione "
+"VPN viene terminata."
 
 #: ../../controller.rst:98
 msgid ""
@@ -427,10 +518,13 @@ msgid ""
 "unit web interface and click :guilabel:`Disconnect unit` on the "
 "``Controller`` page: the unit will destroy the VPN configuration."
 msgstr ""
+"Dopo aver rimosso l'unità dall'interfaccia web del controller, accedere "
+"all'interfaccia web dell'unità e fare clic su :guilabel: `Disconnect unit` "
+"sulla pagina ``Controller``: l'unità eliminerà la configurazione VPN."
 
 #: ../../controller.rst:102
 msgid "Logs management"
-msgstr ""
+msgstr "Gestione dei Log"
 
 #: ../../controller.rst:104
 msgid ""
@@ -439,14 +533,20 @@ msgid ""
 "starts sending the data. The logs are labeled using the unit's hostname: "
 "to ensure that the user interface links work properly, make sure that:"
 msgstr ""
+"Quando un'unità è collegata, rsyslog viene riconfigurato per inviare i log "
+"utilizzando il protocollo syslog (RFC 5424). Potrebbe essere necessario "
+"qualche minuto prima che rsyslog inizi a inviare i dati. I log sono "
+"etichettati utilizzando il nome host dell'unità: per garantire che i "
+"collegamenti dell'interfaccia utente funzionino correttamente, assicurarsi "
+"che:"
 
 #: ../../controller.rst:108
 msgid "the unit FQDN is unique within the cluster"
-msgstr ""
+msgstr "FQDN dell'unità è unico all'interno del cluster"
 
 #: ../../controller.rst:109
 msgid "the unit's name is the same as its hostname"
-msgstr ""
+msgstr "il nome dell'unità è uguale all'hostname"
 
 #: ../../controller.rst:111
 msgid ""
@@ -454,14 +554,19 @@ msgid ""
 " unit. The logs are displayed in a specific Grafana dashboard that also "
 "allows for searching and filtering."
 msgstr ""
+"I log possono essere visualizzati cliccando sul link :guilabel:` Open logs` "
+"per ogni unità. I log vengono visualizzati in una specifica dashboard "
+"Grafana che consente anche la ricerca e il filtraggio."
 
 #: ../../controller.rst:115
 msgid "Logs retention period must be configured from the NS8 web interface."
 msgstr ""
+"Il periodo di conservazione dei log deve essere configurato dall'interfaccia "
+"web NS8."
 
 #: ../../controller.rst:119 ../../metrics.rst:5
 msgid "Metrics"
-msgstr ""
+msgstr "Metriche"
 
 #: ../../controller.rst:121
 msgid ""
@@ -469,6 +574,9 @@ msgid ""
 "format. As soon as a unit is connected, Prometheus starts scraping the "
 "metrics."
 msgstr ""
+"Ogni unità esporta le proprie statistiche utilizzando netdata nel formato "
+"Prometheus. Non appena un'unità è collegata, Prometheus inizia ad estrarre "
+"le metriche."
 
 #: ../../controller.rst:124
 msgid ""
@@ -476,28 +584,34 @@ msgid ""
 "the dashboard by clicking on the :guilabel:`Open metrics` link for each "
 "unit."
 msgstr ""
+"Le metriche possono essere visualizzate all'interno della dashboard Grafana. "
+"Gli utenti possono accedere alla dashboard cliccando sul link :guilabel: `"
+"Open metrics` dell'unità."
 
 #: ../../controller.rst:127
 msgid "Each unit target has the following labels:"
-msgstr ""
+msgstr "Ogni unità ha le seguenti etichette:"
 
 #: ../../controller.rst:129
 msgid ""
 "`instance` the VPN IP of the connected machine with the netdata port (eg."
 " `172.19.64.3:19999`)"
 msgstr ""
+"`instance` l'indirizzo IP VPN della macchina collegata seguito dalla porta "
+"di netdata (ad esempio `172.19.64.3:19999`)"
 
 #: ../../controller.rst:130
+#, fuzzy
 msgid "`job` fixed to `node`"
-msgstr ""
+msgstr "`job` fisso a `node `"
 
 #: ../../controller.rst:131
 msgid "`node` the VPN IP of the connected machine"
-msgstr ""
+msgstr "`nodo` indirizzo IP VPN della macchina collegata"
 
 #: ../../controller.rst:132
 msgid "`unit` the unit unique name of the connected machine"
-msgstr ""
+msgstr "`unità` il nome univoco dell'unità della macchina collegata"
 
 #: ../../controller.rst:134
 msgid ""
@@ -506,14 +620,20 @@ msgid ""
 " a new role and assign it to the user directly from the Grafana web "
 "interface."
 msgstr ""
+"Di default , solo l'utente amministratore può accedere alla dashboard delle "
+"metriche. Se si desidera consentire ad altri utenti l'accesso è possibile "
+"creare un nuovo ruolo e assegnarlo all'utente direttamente dall'interfaccia "
+"web Grafana."
 
 #: ../../controller.rst:139
 msgid "Metrics retention period must be configured from the NS8 web interface."
 msgstr ""
+"Il periodo di conservazione delle metriche deve essere configurato "
+"dall'interfaccia web NS8."
 
 #: ../../controller.rst:142
 msgid "Grafana"
-msgstr ""
+msgstr "Grafana"
 
 #: ../../controller.rst:144
 msgid ""
@@ -522,6 +642,10 @@ msgid ""
 "graphs, charts, and tables to analyze system metrics, logs, and other "
 "data from various sources."
 msgstr ""
+"Grafana è una piattaforma open source utilizzata per il monitoraggio e la "
+"visualizzazione dei dati time-series. temporali. Aiuta gli utenti a creare "
+"dashboard personalizzabili con grafici, grafici e tabelle per analizzare "
+"metriche di sistema, log e altri dati da varie fonti."
 
 #: ../../controller.rst:147
 msgid ""
@@ -530,6 +654,9 @@ msgid ""
 "instance is accessible from the URL ``https://<controller-"
 "fqdn>/grafana``."
 msgstr ""
+"Il controller include un'istanza Grafana preconfigurata che viene utilizzata "
+"per visualizzare metriche e log delle unità collegate. L'istanza Grafana è "
+"accessibile dall'URL ``https:// <controller-fqdn>/grafana`."
 
 #: ../../controller.rst:150
 msgid ""
@@ -539,6 +666,12 @@ msgid ""
 "teams, and permissions. It supports authentication via various methods "
 "including username/password, OAuth, LDAP, and more."
 msgstr ""
+"Di default è possibile accedervi utilizzando le credenziali predefinite "
+"impostate durante la configurazione del controller. Ricorda di modificare la "
+"password predefinita dopo il primo login. Grafana fornisce anche "
+"funzionalità per la gestione di utenti, team e autorizzazioni. Supporta "
+"l'autenticazione tramite vari metodi, tra cui nome utente / password, OAuth, "
+"LDAP, e altro ancora."
 
 #: ../../controller.rst:155
 msgid ""
@@ -547,10 +680,14 @@ msgid ""
 "<https://grafana.com/docs/grafana/latest/>`_ for more information on how "
 "to use Grafana."
 msgstr ""
+"È inoltre possibile creare dashboard e avvisi personalizzati per monitorare "
+"le metriche e i log delle unità collegate. Per ulteriori informazioni su "
+"come utilizzare Grafana, consultare la documentazione ufficiale "
+"<https://grafana.com/docs/grafana/latest/>`_."
 
 #: ../../controller.rst:159
 msgid "SSH access"
-msgstr ""
+msgstr "Accesso SSH"
 
 #: ../../controller.rst:161
 msgid ""
@@ -559,6 +696,10 @@ msgid ""
 "secure channel over an unsecured network in a client-server architecture,"
 " connecting an SSH client application to an SSH server."
 msgstr ""
+"SSH, o Secure Shell, è un protocollo di rete crittografico per operare su "
+"servizi di rete protetti all'interno di una rete non protetta. SSH fornisce "
+"un canale sicuro su una rete non protetta in un'architettura client-server, "
+"collegando un'applicazione client SSH a un server SSH."
 
 #: ../../controller.rst:164
 msgid ""
@@ -566,10 +707,15 @@ msgid ""
 "SSH terminal` link. The connection is made through a web-based SSH client"
 " that allows access to the unit's shell."
 msgstr ""
+"È possibile connettersi all'unità cliccando sul link: `Open SSH terminal`. "
+"La connessione avviene tramite un client SSHweb based che consente l'accesso "
+"alla shell dell'unità."
 
 #: ../../controller.rst:167
 msgid "You can connect to units using username and password or an SSH key pair."
 msgstr ""
+"È possibile connettersi a unità utilizzando nome utente e password oppure "
+"una coppia di chiavi SSH."
 
 #: ../../controller.rst:169
 msgid ""
@@ -578,10 +724,15 @@ msgid ""
 "to work properly. To close the session, simply close the browser window "
 "or logout from the shell using CTRL + D."
 msgstr ""
+"Una volta collegata, la sessione SSH verrà avviata all'interno di una nuova "
+"scheda del browser. Alcuni browser richiedono il permesso di aprire popup "
+"per la sessione SSH per funzionare correttamente. Per chiudere la sessione, "
+"basta chiudere la finestra del browser o il logout dalla shell utilizzando "
+"CTRL + D."
 
 #: ../../controller.rst:173
 msgid "Username and password"
-msgstr ""
+msgstr "Utente e password"
 
 #: ../../controller.rst:175
 msgid ""
@@ -590,6 +741,10 @@ msgid ""
 "pair - The public SSH key of the logged-in user hasn't been copied inside"
 " the SSH authorized keys file of the unit"
 msgstr ""
+"L'utente può connettersi utilizzando un nome utente e una password "
+"dell'unità nei seguenti scenari: - L'utente connesso non ha generato una "
+"coppia di chiavi SSH - La chiave SSH pubblica dell'utente connesso non è "
+"stata copiata all'interno del file di chiavi autorizzate SSH dell'unità"
 
 #: ../../controller.rst:179
 msgid ""
@@ -597,6 +752,9 @@ msgid ""
 "password. After entering the credentials, the user can click on the "
 ":guilabel:`Open terminal` button to start the SSH session."
 msgstr ""
+"L'interfaccia utente visualizzerà un modulo per inserire il nome utente e la "
+"password. Dopo aver inserito le credenziali, l'utente può cliccare sul link "
+":guilabel: `Apri terminale` per avviare la sessione SSH."
 
 #: ../../controller.rst:183
 msgid "SSH key"
@@ -12433,4 +12591,3 @@ msgstr ""
 #~ "button  and fill all the following "
 #~ "fields:"
 #~ msgstr ""
-
