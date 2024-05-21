@@ -73,6 +73,8 @@ A comment can be associated with each address to facilitate management.
 You can add a comment to provide additional information about the address, such as its purpose or owner.
 This can help in organizing and managing the allowlist effectively.
 
+.. _brute_force-section:
+
 Brute Force Attempt Block
 =========================
 
@@ -97,6 +99,7 @@ After changing the values, copy and paste these two commands: ::
   /etc/init.d/banip restart
 
 
+.. _threat_shield-dns-section:
 
 DNS based Threat shield
 =======================

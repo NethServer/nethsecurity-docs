@@ -74,17 +74,17 @@ To perform the in-place migration from NethServer 7 to NethSecurity, follow thes
 7. Complete the migration on first boot: upon the first boot of NethSecurity, the configuration from NethServer 7 will be automatically migrated.
    Ensure to carefully verify all settings and services to confirm they have been migrated correctly.
 
+After completing the migration, follow the :ref:`post-migration steps <post-migration-section>` to ensure the system is correctly configured.
+
 .. _import_migration-section:
 
 Migration with other installed modules
 ======================================
 
-.. warning::
+This scenario involves exporting a configuration archive from NethServer 7 and importing it into NethSecurity.
 
-   This feature is still under development and does not have a user interface yet. It can currently only be configured through the command line.
-
-If NethServer 7 includes additional modules like the mail server, specific hardware is necessary for NethSecurity.
-In this scenario, you'll have to import the configuration into a newly installed NethSecurity system.
+This method is recommended when the original NethServer 7 setup includes additional modules, such as the mail server.
+To perform this migration, you will need to install NethSecurity on new hardware and then import the configuration into the newly installed NethSecurity system.
 
 To perform the migration from NethServer 7 to NethSecurity, follow these steps:
 
@@ -102,33 +102,47 @@ To perform the migration from NethServer 7 to NethSecurity, follow these steps:
 
 6. Click :guilabel:`Migrate` to start the migration process
 
+After completing the migration, follow the :ref:`post-migration steps <post-migration-section>` to ensure the system is correctly configured.
+
+.. _post-migration-section:
+
+Post migration steps
+====================
+
+The in-place migration process is executed when the system is offline. Since the registration process requires an active Internet connections,
+the subscription is not migrated during the in-place migration.
+If you have execute an in-place migration, you must :ref:`register the system <subscription-section>` again.
+This step is not necessary if you have performed a migration with the exported archive method.
+
+Then, verify that all services are working correctly. If you encounter any issues, refer to the :ref:`troubleshooting section <troubleshooting-section>`.
+
 Migrated configurations
 =======================
 
 During the migration, the following configurations will be imported from NethServer 7:
 
-- root password
-- network configuration: bridges over bonds are not supported
-- date and timezone
+- Root password: it can be used to access the system via SSH and the web interface
+- Network configuration: everything should be migrated except for bridges over bonds that are not supported
+- Date and timezone
 - DHCP servers and reservations: DHCP server on bonds interfaces are not supported
 - DNS configuration with host definition: TFTP options are migrated, but not the content of the TFTP server.
   To re-enable the service make sure to manually setup ``tftp_root`` option
-- static routes
-- port forwards
-- firewall rules: rules using NDPI services are not supported; source and destination objects are not currently supported and will be converted
-  to rules with IP/CIDR addresses; all NAT helpers are automatically loaded after the migration with standard kernel paramters
-- multiWAN configuration: providers will be preserved while divert rules (policy routing) are not migrated
+- Static IPv4 routes
+- Port forwards
+- Firewall rules: rules using NDPI services are not supported; source and destination objects are not currently supported and will be converted
+  to rules with IP/CIDR addresses; all NAT helpers are automatically loaded after the migration with standard kernel parameters
+- MultiWAN configuration: providers will be preserved while divert rules (policy routing) are not migrated
 - QoS: classes with reserved bandwidth and rules are not supported
-- OpenVPN roadwarrior: mail notification is not supported, existing connection database is not migrated; OTP authentication is not supported
-- OpenVPN runnels
+- OpenVPN Road Warrior: all configuration is migrated; existing accounting database of client connections is not migrated, finally mail notification is not still supported on NethSecurity
+- OpenVPN tunnels
 - IPSec tunnels
 - Threat shield IP: only enterprise lists are migrated, community lists must be reconfigured manually
-- Subscription
+- Subscription: the subscription is migrated only when using the exported archive method
 - Hotspot: if the migration has been executed on a new hardware, the hotspot interface will change MAC address and it must be registered again 
   to the remote hotspot manager
-- Let's Encrypt certificate configuration
-- Reverse proxy
-- FlashStart
+- Let's Encrypt certificate configuration: certificates will be regenerated after the migration
+- Reverse proxy configuration: the configuration is migrated, but the certificates will be regenerated after the migration
+- FlashStart Cloud DNS filter
 
 The following features are not migrated to NethSecurity:
 
@@ -138,5 +152,5 @@ The following features are not migrated to NethSecurity:
 - System statistics (Collectd)
 - Reports (Dante)
 - Bandwidth monitor (ntopng)
-- Fail2ban
-- Threat shield DNS
+- Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block feature <brute_force-section>`
+- Threat shield DNS, currently :ref:`available only from command line <threat_shield-dns-section>`
