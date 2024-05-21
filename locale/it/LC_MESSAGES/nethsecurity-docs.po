@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-21 07:19+0000\n"
+"POT-Creation-Date: 2024-05-21 10:03+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1723,6 +1723,23 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-84-g6d89245"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-84-g6d89245/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-84-g6d89245-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-84-g6d89245/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3645,11 +3662,12 @@ msgid "port forwards"
 msgstr "inoltro porte"
 
 #: ../../migration.rst:118
+#, fuzzy
 msgid ""
 "firewall rules: rules using NDPI services are not supported; source and "
 "destination objects are not currently supported and will be converted to "
-"rules with IP/CIDR addresses; NAT helpers should be reconfigured manually"
-" after migration"
+"rules with IP/CIDR addresses; all NAT helpers are automatically loaded "
+"after the migration with standard kernel paramters"
 msgstr ""
 "regole del firewall: le regole che utilizzano i servizi NDPI non sono "
 "supportate; oggetti di origine e destinazione non sono attualmente "
@@ -4664,9 +4682,15 @@ msgstr ""
 
 #: ../../nat_helpers.rst:17
 msgid ""
-"NAT helpers are disabled by default in NethSecurity. Follow the "
-"instruction inside the `developer manual "
-"<https://dev.nethsecurity.org/nat_helpers/>`_ to enable the helpers."
+"On a fresh installation, NAT helpers are disabled by default. But when "
+"migrating from NethServer 7 to NethSecurity 8, the NAT helpers are "
+"enabled by the migration procedure."
+msgstr ""
+
+#: ../../nat_helpers.rst:20
+msgid ""
+"To configure NAT helpers, follow the instruction inside the `developer "
+"manual <https://dev.nethsecurity.org/nat_helpers/>`_."
 msgstr ""
 
 #: ../../netify_informatics.rst:5
@@ -12546,5 +12570,13 @@ msgstr ""
 #~ "Threat shield: only enterprise lists are"
 #~ " migrated, community lists must be "
 #~ "reconfigured manually"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NAT helpers are disabled by default "
+#~ "in NethSecurity. Follow the instruction "
+#~ "inside the `developer manual "
+#~ "<https://dev.nethsecurity.org/nat_helpers/>`_ to enable"
+#~ " the helpers."
 #~ msgstr ""
 
