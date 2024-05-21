@@ -121,7 +121,7 @@ Migrated configurations
 
 During the migration, the following configurations will be imported from NethServer 7:
 
-- Root password: it can be used to access the system via SSH and the web interface
+- Password of the *root* user: it can be used to access the system via SSH and the web interface
 - Network configuration: everything should be migrated except for bridges over bonds that are not supported
 - Date and timezone
 - DHCP servers and reservations: DHCP server on bonds interfaces are not supported
