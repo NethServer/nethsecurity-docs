@@ -73,6 +73,31 @@ A comment can be associated with each address to facilitate management.
 You can add a comment to provide additional information about the address, such as its purpose or owner.
 This can help in organizing and managing the allowlist effectively.
 
+Brute Force Attempt Block
+=========================
+
+When Threat Shield is enabled, the system automatically starts checking for brute force attack attempts on firewall services. Currently, the monitored services include SSH access and the firewall's legacy web interface (Luci). The system detects login attempts and automatically blocks IPs that have failed to enter the correct credentials. By default, the allowed attempts are 3, and the block lasts for 30 minutes.
+
+You can perform further actions using the command line; these are the supported commands:
+
+* View all IP addresses currently on the blocklist: ``/etc/init.d/banip survey blocklistv4``
+* Look up a specific IP in the blocklist: ``/etc/init.d/banip search IP_ADDRESS``
+* Unban an IP address: ``nft delete element inet banIP blocklistv4 { IP_ADDRESS }``
+
+.. note:: Bear in mind that you need to specify the correct blocklist in commands when prompted (blocklistv4 for IPv4, blocklistv6 for IPv6).
+
+You can modify the default values for the number of attempts and ban time using these commands:
+
+* To change the number of attempts before a ban: ``uci set banip.global.ban_logcount='3'``
+* To change the ban duration in minutes: ``uci set banip.global.ban_nftexpiry='30m'``
+
+After changing the values, copy and paste these two commands: ::
+
+  uci commit banip
+  /etc/init.d/banip restart
+
+
+
 DNS based Threat shield
 =======================
 
