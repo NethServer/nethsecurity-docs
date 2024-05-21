@@ -17,4 +17,4 @@ Similarly, NAT helpers for SIP and other protocols ensure that devices using the
 On a fresh installation, NAT helpers are disabled by default.
 But when migrating from NethServer 7 to NethSecurity 8, the NAT helpers are enabled by the migration procedure.
 
-To configure NAT helpers, follow the instruction inside the `developer manual <https://dev.nethsecurity.org/nat_helpers/>`_.
+To configure NAT helpers, follow the instruction inside the `developer manual <https://dev.nethsecurity.org/design/nat_helpers/>`_.
