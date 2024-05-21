@@ -876,7 +876,7 @@ msgstr ""
 
 #: ../../controller.rst:217
 msgid "User login and logout"
-msgstr ""
+msgstr "Accesso utente e logout"
 
 #: ../../controller.rst:218
 msgid "User creation/modification/deletion/password change"
