@@ -111,7 +111,7 @@ Post migration steps
 
 The in-place migration process is executed when the system is offline. Since the registration process requires an active Internet connections,
 the subscription is not migrated during the in-place migration.
-If you have execute an in-place migration, you must :ref:`register the system <subscription-section>` again.
+If you have performed an in-place migration, you must :ref:`register the system <subscription-section>` again.
 This step is not necessary if you have performed a migration with the exported archive method.
 
 Then, verify that all services are working correctly. If you encounter any issues, refer to the :ref:`troubleshooting section <troubleshooting-section>`.
