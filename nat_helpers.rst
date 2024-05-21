@@ -14,5 +14,7 @@ making it necessary to modify these details for proper NAT traversal.
 For example, in FTP, NAT helpers modify the IP addresses and ports inside the FTP control and data packets, enabling proper NAT traversal for FTP connections. 
 Similarly, NAT helpers for SIP and other protocols ensure that devices using these protocols can establish connections across NAT boundaries without issues.
 
-NAT helpers are disabled by default in NethSecurity.
-Follow the instruction inside the `developer manual <https://dev.nethsecurity.org/nat_helpers/>`_ to enable the helpers.
+On a fresh installation, NAT helpers are disabled by default.
+But when migrating from NethServer 7 to NethSecurity 8, the NAT helpers are enabled by the migration procedure.
+
+To configure NAT helpers, follow the instruction inside the `developer manual <https://dev.nethsecurity.org/nat_helpers/>`_.
