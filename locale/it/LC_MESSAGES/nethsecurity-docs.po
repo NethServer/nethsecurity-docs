@@ -885,7 +885,7 @@ msgstr ""
 
 #: ../../controller.rst:219
 msgid "Unit list/creation/removal"
-msgstr "Elenco unità/creazione/rimozione"
+msgstr "lista/creazione/rimozione delle unità"
 
 #: ../../controller.rst:221
 msgid "Example of NS8 log: ::"
