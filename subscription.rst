@@ -22,6 +22,8 @@ Typical benefits of the subscription service include:
 
 It's important to note that while a subscription might not be required for normal use, businesses with specific needs or those seeking additional support and features might find value in subscribing to NethSecurity offer.
 
+.. _register_subscription-section:
+
 Register the system
 ===================
 
@@ -32,7 +34,9 @@ To register the system, follow the below steps:
 - Paste the token inside the ``Authentication token`` field
 - Click the :guilabel:`Register` button
 
-The system will automatically register to the correct Enterprise or Community portal
+The system will automatically register to the correct Enterprise or Community portal.
+
+Please note that the registration process requires an active internet connection.
 
 Remove the subscription
 =======================
