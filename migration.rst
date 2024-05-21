@@ -133,7 +133,7 @@ During the migration, the following configurations will be imported from NethSer
   to rules with IP/CIDR addresses; all NAT helpers are automatically loaded after the migration with standard kernel parameters
 - MultiWAN configuration: providers will be preserved while divert rules (policy routing) are not migrated
 - QoS: classes with reserved bandwidth and rules are not supported
-- OpenVPN Road Warrior: all configuration is migrated; existing accounting database of client connections is not migrated, finally mail notification is not still supported on NethSecurity
+- OpenVPN Road Warrior: all settings are migrated; the accounting database of client connections is not migrated, finally mail notification is still not supported on NethSecurity
 - OpenVPN tunnels
 - IPSec tunnels
 - Threat shield IP: only enterprise lists are migrated, community lists must be reconfigured manually
