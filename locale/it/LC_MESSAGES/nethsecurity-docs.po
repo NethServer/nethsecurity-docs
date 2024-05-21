@@ -884,7 +884,7 @@ msgstr "Creazione/modificazione/delezione/password"
 
 #: ../../controller.rst:219
 msgid "Unit list/creation/removal"
-msgstr ""
+msgstr "Elenco unità/creazione/rimozione"
 
 #: ../../controller.rst:221
 msgid "Example of NS8 log: ::"
