@@ -81,7 +81,7 @@ After completing the migration, follow the :ref:`post-migration steps <post-migr
 Migration with other installed modules
 ======================================
 
-This scenario involves exporting a configuration archive from NethServer 7 and importing it into NethSecurity.
+This scenario involves exporting a special configuration archive from NethServer 7 and importing it into NethSecurity.
 
 This method is recommended when the original NethServer 7 setup includes additional modules, such as the mail server.
 To perform this migration, you will need to install NethSecurity on new hardware and then import the configuration into the newly installed NethSecurity system.
