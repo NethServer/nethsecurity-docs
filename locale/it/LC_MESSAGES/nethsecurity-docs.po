@@ -22,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 15:16+0000\n"
 "PO-Revision-Date: 2024-05-21 16:05+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"Last-Translator: mamengoni <matteo.mengoni@nethesis.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/ns8/"
 "nethsecurity-docs/it/>\n"
 "Language: it\n"
@@ -880,7 +880,8 @@ msgstr "Accesso utente e logout"
 
 #: ../../controller.rst:218
 msgid "User creation/modification/deletion/password change"
-msgstr "Creazione/modificazione/delezione/password"
+msgstr ""
+"Creazione/modifica/eliminazione dell'utente e cambiamento delle password"
 
 #: ../../controller.rst:219
 msgid "Unit list/creation/removal"
