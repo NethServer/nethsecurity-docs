@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-21 14:11+0000\n"
+"POT-Creation-Date: 2024-05-21 15:36+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -3567,31 +3567,29 @@ msgstr ""
 "di verificare attentamente tutte le impostazioni e i servizi per "
 "confermare che siano stati migrati correttamente."
 
-#: ../../migration.rst:80
+#: ../../migration.rst:77 ../../migration.rst:105
+msgid ""
+"After completing the migration, follow the :ref:`post-migration steps "
+"<post-migration-section>` to ensure the system is correctly configured."
+msgstr ""
+
+#: ../../migration.rst:82
 msgid "Migration with other installed modules"
 msgstr "Migrazione con altri moduli installati"
 
-#: ../../migration.rst:84 ../../nat_helpers.rst:7 ../../smtp.rst:7
+#: ../../migration.rst:84
 msgid ""
-"This feature is still under development and does not have a user "
-"interface yet. It can currently only be configured through the command "
-"line."
+"This scenario involves exporting a configuration archive from NethServer "
+"7 and importing it into NethSecurity."
 msgstr ""
-"Questa funzione è ancora in fase di sviluppo e non ha ancora "
-"un'interfaccia utente. Attualmente può essere configurata solo tramite la"
-" riga di comando."
 
 #: ../../migration.rst:86
 msgid ""
-"If NethServer 7 includes additional modules like the mail server, "
-"specific hardware is necessary for NethSecurity. In this scenario, you'll"
-" have to import the configuration into a newly installed NethSecurity "
-"system."
+"This method is recommended when the original NethServer 7 setup includes "
+"additional modules, such as the mail server. To perform this migration, "
+"you will need to install NethSecurity on new hardware and then import the"
+" configuration into the newly installed NethSecurity system."
 msgstr ""
-"Se NethServer 7 include moduli aggiuntivi come il server di posta, sarà "
-"necessario un hardware specifico per NethSecurity. In questo caso, dovrai"
-" importare la configurazione in un sistema NethSecurity appena "
-"installato."
 
 #: ../../migration.rst:89
 msgid ""
@@ -3649,11 +3647,33 @@ msgstr ""
 msgid "Click :guilabel:`Migrate` to start the migration process"
 msgstr "Fai clic su :guilabel:`Migra` per avviare il processo di migrazione"
 
-#: ../../migration.rst:106
+#: ../../migration.rst:110
+#, fuzzy
+msgid "Post migration steps"
+msgstr "Procedura di configurazione generale"
+
+#: ../../migration.rst:112
+msgid ""
+"The in-place migration process is executed when the system is offline. "
+"Since the registration process requires an active Internet connections, "
+"the subscription is not migrated during the in-place migration. If you "
+"have performed an in-place migration, you must :ref:`register the system "
+"<subscription-section>` again. This step is not necessary if you have "
+"performed a migration with the exported archive method."
+msgstr ""
+
+#: ../../migration.rst:117
+msgid ""
+"Then, verify that all services are working correctly. If you encounter "
+"any issues, refer to the :ref:`troubleshooting section <troubleshooting-"
+"section>`."
+msgstr ""
+
+#: ../../migration.rst:120
 msgid "Migrated configurations"
 msgstr "Configurazioni migrare"
 
-#: ../../migration.rst:108
+#: ../../migration.rst:122
 msgid ""
 "During the migration, the following configurations will be imported from "
 "NethServer 7:"
@@ -3661,19 +3681,25 @@ msgstr ""
 "Durante la migrazione, saranno importate le seguenti configurazioni da "
 "NethServer 7:"
 
-#: ../../migration.rst:110
-msgid "root password"
-msgstr "password di root"
+#: ../../migration.rst:124
+msgid ""
+"Password of the *root* user: it can be used to access the system via SSH "
+"and the web interface"
+msgstr ""
 
-#: ../../migration.rst:111
-msgid "network configuration: bridges over bonds are not supported"
+#: ../../migration.rst:125
+#, fuzzy
+msgid ""
+"Network configuration: everything should be migrated except for bridges "
+"over bonds that are not supported"
 msgstr "configurazione di rete: i bridge su bonds non sono supportati"
 
-#: ../../migration.rst:112
-msgid "date and timezone"
+#: ../../migration.rst:126
+#, fuzzy
+msgid "Date and timezone"
 msgstr "data e fuso orario"
 
-#: ../../migration.rst:113
+#: ../../migration.rst:127
 msgid ""
 "DHCP servers and reservations: DHCP server on bonds interfaces are not "
 "supported"
@@ -3681,7 +3707,7 @@ msgstr ""
 "Server DHCP e prenotazioni: i server DHCP sulle interfacce di bond non "
 "sono supportati"
 
-#: ../../migration.rst:114
+#: ../../migration.rst:128
 msgid ""
 "DNS configuration with host definition: TFTP options are migrated, but "
 "not the content of the TFTP server. To re-enable the service make sure to"
@@ -3691,67 +3717,67 @@ msgstr ""
 "migrate, ma non il contenuto del server TFTP. Per riattivare il servizio,"
 " assicurati di impostare manualmente l'opzione ``tftp_root``"
 
-#: ../../migration.rst:116
-msgid "static routes"
+#: ../../migration.rst:130
+#, fuzzy
+msgid "Static IPv4 routes"
 msgstr "rotte statiche"
 
-#: ../../migration.rst:117
-msgid "port forwards"
+#: ../../migration.rst:131
+#, fuzzy
+msgid "Port forwards"
 msgstr "inoltro porte"
 
-#: ../../migration.rst:118
+#: ../../migration.rst:132
 #, fuzzy
 msgid ""
-"firewall rules: rules using NDPI services are not supported; source and "
+"Firewall rules: rules using NDPI services are not supported; source and "
 "destination objects are not currently supported and will be converted to "
 "rules with IP/CIDR addresses; all NAT helpers are automatically loaded "
-"after the migration with standard kernel paramters"
+"after the migration with standard kernel parameters"
 msgstr ""
 "regole del firewall: le regole che utilizzano i servizi NDPI non sono "
 "supportate; oggetti di origine e destinazione non sono attualmente "
 "supportati e verranno convertiti in regole con indirizzi IP/CIDR; i NAT "
 "helpers dovrebbero essere riconfigurati manualmente dopo la migrazione"
 
-#: ../../migration.rst:120
+#: ../../migration.rst:134
 msgid ""
-"multiWAN configuration: providers will be preserved while divert rules "
+"MultiWAN configuration: providers will be preserved while divert rules "
 "(policy routing) are not migrated"
 msgstr ""
 
-#: ../../migration.rst:121
+#: ../../migration.rst:135
 msgid "QoS: classes with reserved bandwidth and rules are not supported"
 msgstr "QoS: classi con larghezza di banda riservata e regole non sono supportate"
 
-#: ../../migration.rst:122
+#: ../../migration.rst:136
 msgid ""
-"OpenVPN roadwarrior: mail notification is not supported, existing "
-"connection database is not migrated; OTP authentication is not supported"
+"OpenVPN Road Warrior: all settings are migrated; the accounting database "
+"of client connections is not migrated, finally mail notification is still"
+" not supported on NethSecurity"
 msgstr ""
-"OpenVPN roadwarrior: la notifica via email non è supportata, il database "
-"delle connessioni esistenti non viene migrato; l'autenticazione OTP non è"
-" supportata"
 
-#: ../../migration.rst:123
-#, fuzzy
-msgid "OpenVPN runnels"
-msgstr "OpenVPN tunnels"
+#: ../../migration.rst:137 ../../openvpn_tunnels.rst:5
+msgid "OpenVPN tunnels"
+msgstr "Tunnel OpenVPN"
 
-#: ../../migration.rst:124
+#: ../../migration.rst:138
 msgid "IPSec tunnels"
 msgstr "tunnel IPSec"
 
-#: ../../migration.rst:125
+#: ../../migration.rst:139
 msgid ""
 "Threat shield IP: only enterprise lists are migrated, community lists "
 "must be reconfigured manually"
 msgstr ""
 
-#: ../../migration.rst:126 ../../subscription.rst:5
-#, fuzzy
-msgid "Subscription"
-msgstr "Subscription"
+#: ../../migration.rst:140
+msgid ""
+"Subscription: the subscription is migrated only when using the exported "
+"archive method"
+msgstr ""
 
-#: ../../migration.rst:127
+#: ../../migration.rst:141
 msgid ""
 "Hotspot: if the migration has been executed on a new hardware, the "
 "hotspot interface will change MAC address and it must be registered again"
@@ -3761,55 +3787,61 @@ msgstr ""
 "l'interfaccia hotspot cambierà indirizzo MAC e dovrà essere nuovamente "
 "registrata presso il gestore hotspot remoto"
 
-#: ../../migration.rst:129
-msgid "Let's Encrypt certificate configuration"
-msgstr "Configurazione del certificato Let's Encrypt"
+#: ../../migration.rst:143
+msgid ""
+"Let's Encrypt certificate configuration: certificates will be regenerated"
+" after the migration"
+msgstr ""
 
-#: ../../migration.rst:130 ../../reverse_proxy.rst:8
-msgid "Reverse proxy"
-msgstr "Reverse proxy"
+#: ../../migration.rst:144
+msgid ""
+"Reverse proxy configuration: the configuration is migrated, but the "
+"certificates will be regenerated after the migration"
+msgstr ""
 
-#: ../../migration.rst:131
-#, fuzzy
-msgid "FlashStart"
-msgstr "Flashstart"
+#: ../../migration.rst:145
+msgid "FlashStart Cloud DNS filter"
+msgstr ""
 
-#: ../../migration.rst:133
+#: ../../migration.rst:147
 msgid "The following features are not migrated to NethSecurity:"
 msgstr "Le seguenti funzionalità non vengono migrate su NethSecurity:"
 
-#: ../../migration.rst:135
+#: ../../migration.rst:149
 msgid "Web proxy (Squid) and filter (ufdbGuard)"
 msgstr "Proxy web (Squid) e filtro (ufdbGuard)"
 
-#: ../../migration.rst:136
+#: ../../migration.rst:150
 msgid "IPS (Suricata) and IPS alerts (EveBox)"
 msgstr "IPS (Suricata) e avvisi IPS (EveBox)"
 
-#: ../../migration.rst:137
+#: ../../migration.rst:151
 msgid "UPS monitoring (NUT)"
 msgstr "Monitoraggio UPS (NUT)"
 
-#: ../../migration.rst:138
+#: ../../migration.rst:152
 msgid "System statistics (Collectd)"
 msgstr "Statistiche di sistema (Collectd)"
 
-#: ../../migration.rst:139
+#: ../../migration.rst:153
 msgid "Reports (Dante)"
 msgstr "Report (Dante)"
 
-#: ../../migration.rst:140
+#: ../../migration.rst:154
 msgid "Bandwidth monitor (ntopng)"
 msgstr "Monitoraggio della larghezza di banda (ntopng)"
 
-#: ../../migration.rst:141
-msgid "Fail2ban"
-msgstr "Fail2ban"
+#: ../../migration.rst:155
+msgid ""
+"Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block"
+" feature <brute_force-section>`"
+msgstr ""
 
-#: ../../migration.rst:142
-#, fuzzy
-msgid "Threat shield DNS"
-msgstr "Threat shield"
+#: ../../migration.rst:156
+msgid ""
+"Threat shield DNS, currently :ref:`available only from command line "
+"<threat_shield-dns-section>`"
+msgstr ""
 
 #: ../../multiwan.rst:3
 msgid "MultiWAN"
@@ -4697,6 +4729,16 @@ msgstr ""
 #: ../../nat_helpers.rst:3
 msgid "NAT helpers"
 msgstr ""
+
+#: ../../nat_helpers.rst:7 ../../smtp.rst:7
+msgid ""
+"This feature is still under development and does not have a user "
+"interface yet. It can currently only be configured through the command "
+"line."
+msgstr ""
+"Questa funzione è ancora in fase di sviluppo e non ha ancora "
+"un'interfaccia utente. Attualmente può essere configurata solo tramite la"
+" riga di comando."
 
 #: ../../nat_helpers.rst:9
 msgid ""
@@ -5672,10 +5714,6 @@ msgid ""
 msgstr ""
 "Sistemi iOS : `OpenVPN Connect su App Store "
 "<https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_"
-
-#: ../../openvpn_tunnels.rst:5
-msgid "OpenVPN tunnels"
-msgstr "Tunnel OpenVPN"
 
 #: ../../openvpn_tunnels.rst:7
 msgid ""
@@ -7900,6 +7938,10 @@ msgstr ""
 msgid "Certificates and reverse proxy"
 msgstr ""
 
+#: ../../reverse_proxy.rst:8
+msgid "Reverse proxy"
+msgstr "Reverse proxy"
+
 #: ../../reverse_proxy.rst:10
 msgid ""
 "NethSecurity provides a reverse proxy using `nginx <https://nginx.org>`_."
@@ -8507,6 +8549,11 @@ msgstr ""
 msgid "Now the storage is ready to be configured for logs from the Web UI."
 msgstr ""
 
+#: ../../subscription.rst:5
+#, fuzzy
+msgid "Subscription"
+msgstr "Subscription"
+
 #: ../../subscription.rst:7
 msgid ""
 "`Nethesis <https://www.nethesis.it>`_ offers two types of subscription "
@@ -8579,43 +8626,49 @@ msgid ""
 "NethSecurity offer."
 msgstr ""
 
-#: ../../subscription.rst:26
+#: ../../subscription.rst:28
 msgid "Register the system"
 msgstr ""
 
-#: ../../subscription.rst:28
+#: ../../subscription.rst:30
 msgid "To register the system, follow the below steps:"
 msgstr ""
 
-#: ../../subscription.rst:30
+#: ../../subscription.rst:32
 msgid ""
 "Access the Enterprise or Community portal, add a new server and copy the "
 "token"
 msgstr ""
 
-#: ../../subscription.rst:31
+#: ../../subscription.rst:33
 msgid "Access the firewall and go to the ``Subscription`` page"
 msgstr ""
 
-#: ../../subscription.rst:32
+#: ../../subscription.rst:34
 msgid "Paste the token inside the ``Authentication token`` field"
 msgstr ""
 
-#: ../../subscription.rst:33
+#: ../../subscription.rst:35
 msgid "Click the :guilabel:`Register` button"
 msgstr ""
 
-#: ../../subscription.rst:35
+#: ../../subscription.rst:37
 msgid ""
 "The system will automatically register to the correct Enterprise or "
-"Community portal"
+"Community portal."
 msgstr ""
 
-#: ../../subscription.rst:38
+#: ../../subscription.rst:39
+msgid ""
+"Please note that the registration process requires an active internet "
+"connection."
+msgstr ""
+
+#: ../../subscription.rst:42
 msgid "Remove the subscription"
 msgstr ""
 
-#: ../../subscription.rst:40
+#: ../../subscription.rst:44
 msgid ""
 "When the subscription expires, or at the end of a trial period, click the"
 " :guilabel:`Cancel registration` button."
@@ -8827,11 +8880,11 @@ msgid ""
 "managing the allowlist effectively."
 msgstr ""
 
-#: ../../threat_shield.rst:77
+#: ../../threat_shield.rst:79
 msgid "Brute Force Attempt Block"
 msgstr ""
 
-#: ../../threat_shield.rst:79
+#: ../../threat_shield.rst:81
 msgid ""
 "When Threat Shield is enabled, the system automatically starts checking "
 "for brute force attack attempts on firewall services. Currently, the "
@@ -8841,70 +8894,70 @@ msgid ""
 " the allowed attempts are 3, and the block lasts for 30 minutes."
 msgstr ""
 
-#: ../../threat_shield.rst:81
+#: ../../threat_shield.rst:83
 msgid ""
 "You can perform further actions using the command line; these are the "
 "supported commands:"
 msgstr ""
 
-#: ../../threat_shield.rst:83
+#: ../../threat_shield.rst:85
 msgid ""
 "View all IP addresses currently on the blocklist: ``/etc/init.d/banip "
 "survey blocklistv4``"
 msgstr ""
 
-#: ../../threat_shield.rst:84
+#: ../../threat_shield.rst:86
 msgid ""
 "Look up a specific IP in the blocklist: ``/etc/init.d/banip search "
 "IP_ADDRESS``"
 msgstr ""
 
-#: ../../threat_shield.rst:85
+#: ../../threat_shield.rst:87
 msgid ""
 "Unban an IP address: ``nft delete element inet banIP blocklistv4 { "
 "IP_ADDRESS }``"
 msgstr ""
 
-#: ../../threat_shield.rst:87
+#: ../../threat_shield.rst:89
 msgid ""
 "Bear in mind that you need to specify the correct blocklist in commands "
 "when prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6)."
 msgstr ""
 
-#: ../../threat_shield.rst:89
+#: ../../threat_shield.rst:91
 msgid ""
 "You can modify the default values for the number of attempts and ban time"
 " using these commands:"
 msgstr ""
 
-#: ../../threat_shield.rst:91
+#: ../../threat_shield.rst:93
 msgid ""
 "To change the number of attempts before a ban: ``uci set "
 "banip.global.ban_logcount='3'``"
 msgstr ""
 
-#: ../../threat_shield.rst:92
+#: ../../threat_shield.rst:94
 msgid ""
 "To change the ban duration in minutes: ``uci set "
 "banip.global.ban_nftexpiry='30m'``"
 msgstr ""
 
-#: ../../threat_shield.rst:94
+#: ../../threat_shield.rst:96
 msgid "After changing the values, copy and paste these two commands: ::"
 msgstr ""
 
-#: ../../threat_shield.rst:102
+#: ../../threat_shield.rst:105
 msgid "DNS based Threat shield"
 msgstr ""
 
-#: ../../threat_shield.rst:104
+#: ../../threat_shield.rst:107
 msgid ""
 "The DNS filter uses AdBlock which blocks any request to a domain that is "
 "considered malicious. The service can load community-maintained blocklist"
 " or use Yoroi feeds."
 msgstr ""
 
-#: ../../threat_shield.rst:107
+#: ../../threat_shield.rst:110
 msgid ""
 "AdBlock can be configured from the command line interface as explained in"
 " the `developer manual <https://dev.nethsecurity.org/packages/ns-"
@@ -12684,5 +12737,62 @@ msgstr ""
 #~ "To configure NAT helpers, follow the "
 #~ "instruction inside the `developer manual "
 #~ "<https://dev.nethsecurity.org/nat_helpers/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If NethServer 7 includes additional "
+#~ "modules like the mail server, specific"
+#~ " hardware is necessary for NethSecurity."
+#~ " In this scenario, you'll have to "
+#~ "import the configuration into a newly"
+#~ " installed NethSecurity system."
+#~ msgstr ""
+#~ "Se NethServer 7 include moduli "
+#~ "aggiuntivi come il server di posta, "
+#~ "sarà necessario un hardware specifico "
+#~ "per NethSecurity. In questo caso, dovrai"
+#~ " importare la configurazione in un "
+#~ "sistema NethSecurity appena installato."
+
+#~ msgid "root password"
+#~ msgstr "password di root"
+
+#~ msgid ""
+#~ "multiWAN configuration: providers will be "
+#~ "preserved while divert rules (policy "
+#~ "routing) are not migrated"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "OpenVPN roadwarrior: mail notification is "
+#~ "not supported, existing connection database"
+#~ " is not migrated; OTP authentication "
+#~ "is not supported"
+#~ msgstr ""
+#~ "OpenVPN roadwarrior: la notifica via "
+#~ "email non è supportata, il database "
+#~ "delle connessioni esistenti non viene "
+#~ "migrato; l'autenticazione OTP non è "
+#~ "supportata"
+
+#~ msgid "OpenVPN runnels"
+#~ msgstr "OpenVPN tunnels"
+
+#~ msgid "Let's Encrypt certificate configuration"
+#~ msgstr "Configurazione del certificato Let's Encrypt"
+
+#~ msgid "FlashStart"
+#~ msgstr "Flashstart"
+
+#~ msgid "Fail2ban"
+#~ msgstr "Fail2ban"
+
+#~ msgid "Threat shield DNS"
+#~ msgstr "Threat shield"
+
+#~ msgid ""
+#~ "The system will automatically register "
+#~ "to the correct Enterprise or Community"
+#~ " portal"
 #~ msgstr ""
 
