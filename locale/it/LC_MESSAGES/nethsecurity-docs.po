@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-21 15:36+0000\n"
+"POT-Creation-Date: 2024-05-21 15:45+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1744,6 +1744,23 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.0.0.5-rc2-95-g0073701"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-95-g0073701/targets/x86/64/nethsecurity-8-23.05.3-ns.0.0.5-rc2-95-g0073701-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.0.0.5-rc2-95-g0073701/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3579,8 +3596,8 @@ msgstr "Migrazione con altri moduli installati"
 
 #: ../../migration.rst:84
 msgid ""
-"This scenario involves exporting a configuration archive from NethServer "
-"7 and importing it into NethSecurity."
+"This scenario involves exporting a special configuration archive from "
+"NethServer 7 and importing it into NethSecurity."
 msgstr ""
 
 #: ../../migration.rst:86
@@ -12794,5 +12811,11 @@ msgstr ""
 #~ "The system will automatically register "
 #~ "to the correct Enterprise or Community"
 #~ " portal"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This scenario involves exporting a "
+#~ "configuration archive from NethServer 7 "
+#~ "and importing it into NethSecurity."
 #~ msgstr ""
 
