@@ -84,7 +84,7 @@ You can perform further actions using the command line; these are the supported 
 * Look up a specific IP in the blocklist: ``/etc/init.d/banip search IP_ADDRESS``
 * Unban an IP address: ``nft delete element inet banIP blocklistv4 { IP_ADDRESS }``
 
-.. note:: Bear in mind that you need to specify the correct blocklist in commands when prompted (blocklistv4 for IPv4, blocklistv6 for IPv6).
+.. note:: Bear in mind that you need to specify the correct blocklist in commands when prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6).
 
 You can modify the default values for the number of attempts and ban time using these commands:
 
