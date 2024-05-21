@@ -44,3 +44,18 @@ to download it by clicking the :guilabel:`Download` button.
 Please note that the date of the backup is the server date.
 The dates displayed in the backup list are based on the time of the server storing the backups, not the time of the firewall that created them.
 This means the dates might differ depending on time zone differences.
+
+Backup customization
+====================
+
+The backup includes all relevant configuration files.
+To list the files included in the backup, execute the following command: ::
+
+  sysupgrade -l
+
+The backup can be customized by adding files to the backup list.
+Just add a new line to the file ``/etc/sysupgrade.conf`` with the path of the file to be included in the backup.
+
+Example: ::
+
+   echo /etc/myfile >> /etc/sysupgrade.conf
