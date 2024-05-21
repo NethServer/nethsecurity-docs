@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 15:16+0000\n"
-"PO-Revision-Date: 2024-05-16 10:46+0000\n"
-"Last-Translator: Davide Marini <cotosso@gmail.com>\n"
+"PO-Revision-Date: 2024-05-21 08:40+0000\n"
+"Last-Translator: mamengoni <matteo.mengoni@nethesis.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/ns8/"
 "nethsecurity-docs/it/>\n"
 "Language: it\n"
@@ -141,7 +141,6 @@ msgstr ""
 "solo il backup crittografato verrà inviato al server remoto."
 
 #: ../../backup.rst:42
-#, fuzzy
 msgid ""
 "The user can click the :guilabel:`Run backup` button: the backup will be "
 "stored on a remote server and the user will be able to download it by "
@@ -151,15 +150,15 @@ msgid ""
 " firewall that created them. This means the dates might differ depending "
 "on time zone differences."
 msgstr ""
-"Se la macchina ha un abbonamento Enterprise valido, la pagina mostrerà un"
-" elenco di backup disponibili dal server remoto. L'utente può cliccare "
-"su:guilabel: ` Eseguire il backup` buttont: il backup verrà memorizzato "
-"su un server remoto e l'utente sarà in grado di scaricarlo cliccando sul "
-"pulsante: `Scarica`. Si prega di notare che la data del backup è la data "
-"del server. Le date visualizzate nell'elenco di backup si basano sul "
-"tempo in cui il server memorizza i backup, non sul tempo del firewall che"
-" li ha creati. Ciò significa che le date potrebbero differire a seconda "
-"delle differenze di fuso orario."
+"Se la macchina ha un abbonamento Enterprise valido, la pagina mostrerà un "
+"elenco di backup disponibili dal server remoto. L'utente può cliccare "
+"su:guilabel: ` Eseguire il backup` buttont: il backup verrà memorizzato su "
+"un server remoto e l'utente sarà in grado di scaricarlo cliccando sul "
+"pulsante: `Scarica`. Notare che la data del backup è la data del server. Le "
+"date visualizzate nell'elenco di backup si basano sul tempo da cui il server "
+"remoto memorizza i backup, non sul tempo del firewall che li ha creati. Ciò "
+"significa che le date potrebbero differire a seconda delle differenze di "
+"fuso orario."
 
 #: ../../controller.rst:5
 msgid "Controller"
@@ -203,9 +202,8 @@ msgstr ""
 "VPN consente una comunicazione sicura tra il controller e l’unità."
 
 #: ../../controller.rst:18
-#, fuzzy
 msgid "Key features:"
-msgstr "Funzionalità principali"
+msgstr "Funzionalità principali:"
 
 #: ../../controller.rst:20
 msgid ""
@@ -348,9 +346,8 @@ msgstr ""
 "come ``https://mycontroller.nethsecurity.org```."
 
 #: ../../controller.rst:49
-#, fuzzy
 msgid "Users"
-msgstr "Regole"
+msgstr "Utenti"
 
 #: ../../controller.rst:51
 msgid "The controller has two types of users:"
@@ -433,9 +430,8 @@ msgid "allocates an IP address inside the VPN network"
 msgstr "assegna un indirizzo IP all'interno della rete VPN"
 
 #: ../../controller.rst:76
-#, fuzzy
 msgid "generates a VPN configuration including certificates"
-msgstr "genera una configurazione VPN e la trasmette al firewall"
+msgstr "genera una configurazione VPN con inclusi i certificati"
 
 #: ../../controller.rst:77
 msgid "safely stores credentials required for accessing the remote firewall"
