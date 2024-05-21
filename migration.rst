@@ -116,7 +116,7 @@ During the migration, the following configurations will be imported from NethSer
 - static routes
 - port forwards
 - firewall rules: rules using NDPI services are not supported; source and destination objects are not currently supported and will be converted
-  to rules with IP/CIDR addresses; all NAT helpers are loaded by default after the migration
+  to rules with IP/CIDR addresses; all NAT helpers are automatically loaded after the migration with standard kernel paramters
 - multiWAN configuration: providers will be preserved while divert rules (policy routing) are not migrated
 - QoS: classes with reserved bandwidth and rules are not supported
 - OpenVPN roadwarrior: mail notification is not supported, existing connection database is not migrated; OTP authentication is not supported
