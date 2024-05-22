@@ -12930,7 +12930,6 @@ msgstr ""
 #~ "button  and fill all the following "
 #~ "fields:"
 #~ msgstr ""
-<<<<<<< HEAD
 
 #~ msgid ""
 #~ "`image "
