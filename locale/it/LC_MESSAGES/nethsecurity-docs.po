@@ -937,7 +937,7 @@ msgstr ""
 
 #: ../../controller.rst:247
 msgid "Subscription and limitations"
-msgstr ""
+msgstr "Abbonamento e limitazioni"
 
 #: ../../controller.rst:249 ../../updates.rst:37 ../../users_databases.rst:33
 #, fuzzy
