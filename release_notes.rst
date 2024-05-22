@@ -7,6 +7,66 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-05-22
+===========================
+
+**Stable**
+
+Image version: `8-23.05.3-ns.1.0.0`
+
+The Stable release focuses on fixing bugs and improving the overall user experience.
+
+Detailed changelog can be found `here <https://github.com/NethServer/nethsecurity/milestone/2?closed=1>`__.
+
+.. rubric:: New features and improvements
+
+- Routes: IPsec rules are now non-editable
+- IPsec: added a validator for remote and local networks
+- Autoreload VPN pages: VPN pages now automatically reload
+- DHCP: added network scanning feature
+- IPsec: improved handling of multiple networks within a single tunnel
+- DHCP: force option for DHCP is now available in the UI
+- Threat shield: remove enterprise list on subscription removal
+- DPI: remove premium signatures on unregister
+- Subscription: improve unregister modal
+- Inventory: collect basic usage statistics
+- IPsec: better expose PFS option
+- Dashboard: add a notification of new available version
+- Firewall rules: improve overall page readability
+- Zones and policies: improved drawer for WAN zone
+- Dashboard: show a warning if DNS is not configured
+- NAT helpers: all NAT helpers are now included in the image but disabled by default
+
+.. rubric:: Bug fixes
+
+- FlashStart: DNS resolution fails after disabling the service
+- FlashStart: fix first configuratin
+- Let’s Encrypt: certificates are not created
+- FlashStart: redirect rule is ineffective
+- Firewall: ipset is not updated after removing an address
+- Migration: host groups are not imported correctly in firewall rules
+- Firewall rules: unable to insert custom IP address
+- Threat shield: changes to allowlist are not immediately applied
+- Migration: unable to edit imported IPsec tunnel
+- OpenVPN road warrior: unable to re-create a previously created user from LDAP database
+- OpenVPN RW: hosts are unreachable with bridged configuration
+- MultiWAN: track IP is not updated
+- Reverse Proxy: allow IP list should not be mandatory
+- Controller: unable to connect unit if UI is disabled on port 443
+- Subscription: unable to register a community subscription
+- Install from USB: bad partition table
+- Migration: unable to start PPPoE interface
+- Threat shield: empty subscription feed
+- Auto updates: cron job is not started during night
+- Threat shield not started from the UI
+- Migration: threat shield IP is not migrated
+- EFI: unable to use free space as extra storage
+- Zone: force creation in lowercase
+- OpenVPN Road Warrior: OTP authentication, VPN disconnects after one hour
+- ns-api: threatshield, set ban_nftexpiry and ban_logcount
+- NAT helpers: active FTP sessions do not transfer files
+
+
 Major changes on 2024-04-29
 ===========================
 
@@ -15,7 +75,6 @@ Major changes on 2024-04-29
 Image version: `8-23.05.3-ns.0.0.5-rc2`
 
 The Release Candidate 2 release focuses on fixing bugs and improving the overall user experience.
-
 Detailed changelog can be found `here <https://github.com/NethServer/nethsecurity/milestone/1?closed=1>`__.
 
 .. rubric:: New features and improvements
