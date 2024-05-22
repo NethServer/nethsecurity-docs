@@ -947,6 +947,8 @@ msgid ""
 "Some restrictions can only be overcomed if the firewall has a valid "
 "subscription."
 msgstr ""
+"Alcune restrizioni possono essere superate solo se il firewall ha un "
+"abbonamento valido."
 
 #: ../../controller.rst:253
 msgid ""
