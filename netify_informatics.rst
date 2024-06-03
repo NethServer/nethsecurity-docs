@@ -58,7 +58,7 @@ Organization
 ------------
 An organization is essentially a customer where we have at least one NethSecurity firewall, multiple organizations are supported.
 
-Sites
+Site
 -----
 The same organization (customer) might have an office in Rome, Florence, and Paris. A site is defined for each physical location to isolate the mix of data, multiple sites are supported.
 
