@@ -22,28 +22,12 @@ Here are some examples of what Netify Informatics can do:
 
 `Risk and Reputation Analysis <https://www.netify.ai/products/netify-informatics/risk-and-reputation>`_
 
-How to try the Service
-======================
-                               
-To use Netify Informatics, follow these steps:
+To use the Netifyd Informatics platform, you must register on the website and enable data sending from NethSecurity. 
 
-*   Register on the Netify website
-*   Enable the sending of metadata from NethSecurity
-
-Registration
-------------
-Visit the following page to register:
-
-`Netify Registration <https://portal.netify.ai/register>`_
-
-The service can be tried for free for 7 days. After this period, you can choose the plan that best fits your needs. See:
-
-`Netify Informatics Pricing <https://www.netify.ai/products/netify-informatics/pricing>`_
-
-In the case of NethSecurity, there is always only one agent (the firewall itself).
+ .. note:: It's advisable to configure data sending on NethSecurity first and then enable data reception on the platform.
 
 Enabling metadata sending
--------------------------
+=========================
 
 Each NethSecurity is associated with a unique code. To find the code for your NethSecurity, access the command line and enter the command:
                       
@@ -62,6 +46,40 @@ To enable data sending:
 To disable data sending:
 
 ``/usr/libexec/rpcd/ns.netifyd call disable`` 
+
+
+
+Netifyd Informatics basics
+==========================
+
+Before you start, here is some fundamental information to better manage your installations. On Netify Informatics, you can granularly manage different customers, different locations of the same customer, and even different firewalls within the same location.The platform is organized with these elements.
+
+Organization
+------------
+An organization is essentially a customer where we have at least one NethSecurity firewall, multiple organizations are supported.
+
+Sites
+-----
+The same organization (customer) might have an office in Rome, Florence, and Paris. A site is defined for each physical location to isolate the mix of data, multiple sites are supported.
+
+Agent
+-----
+The agent represents your customer's NethSecurity unit. Netify supports multiple agents per site. If you have a simple network, one agent will likely see all traffic flows on a site's network.
+
+
+Registration
+============
+
+Visit the following page to register:
+
+`Netify Registration <https://portal.netify.ai/register>`_
+
+The service can be tried for free for 7 days. After this period, you can choose the plan that best fits your needs. See: `Netify Informatics Pricing <https://www.netify.ai/products/netify-informatics/pricing>`_
+
+Once you have a registered account, click on the “Provision Agent Wizard” button. This will start a process where you will need to create the organization (the customer) and enable the agent using the code prevoiusly obtained on NethSecurity 8.
+
+From this moment, Netify Informatics will start showing the data. You can then connect other firewalls of the same customer (same organization, same site or a different one) or create a new organization for a different customer.
+
 
 
 Regulatory Compliance Information
