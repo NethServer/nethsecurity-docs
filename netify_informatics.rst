@@ -22,9 +22,10 @@ Here are some examples of what Netify Informatics can do:
 
 `Risk and Reputation Analysis <https://www.netify.ai/products/netify-informatics/risk-and-reputation>`_
 
-To use the Netifyd Informatics platform, you must register on the website and enable data sending from NethSecurity. 
 
- .. note:: It's advisable to configure data sending on NethSecurity first and then enable data reception on the platform.
+Two steps are required to use the service: enable metadata sending from NethSecurity and provision an agent on Netify Informatics.
+
+ .. warning:: It's mandatory to configure data sending on NethSecurity first and then provision the agent on the platform.
 
 Enabling metadata sending
 =========================
@@ -48,11 +49,11 @@ To disable data sending:
 ``/usr/libexec/rpcd/ns.netifyd call disable`` 
 
 
+Firewalls management 
+====================
 
-Netifyd Informatics basics
-==========================
-
-Before you start, here is some fundamental information to better manage your installations. On Netify Informatics, you can granularly manage different customers, different locations of the same customer, and even different firewalls within the same location.The platform is organized with these elements.
+Before you start, here is some fundamental information to better manage your installations on Netify Informatics.
+You can granularly manage different customers, different locations of the same customer, and even different firewalls within the same location.The platform is organized with these elements.
 
 Organization
 ------------
@@ -67,18 +68,26 @@ Agent
 The agent represents your customer's NethSecurity unit. Netify supports multiple agents per site. If you have a simple network, one agent will likely see all traffic flows on a site's network.
 
 
-Registration
-============
+Registration and provisioning
+=============================
 
-Visit the following page to register:
+Visit the following page to create your account :
 
 `Netify Registration <https://portal.netify.ai/register>`_
 
-The service can be tried for free for 7 days. After this period, you can choose the plan that best fits your needs. See: `Netify Informatics Pricing <https://www.netify.ai/products/netify-informatics/pricing>`_
+
+Agent provisioning
+------------------
 
 Once you have a registered account, click on the “Provision Agent Wizard” button. This will start a process where you will need to create the organization (the customer) and enable the agent using the code prevoiusly obtained on NethSecurity 8.
 
 From this moment, Netify Informatics will start showing the data. You can then connect other firewalls of the same customer (same organization, same site or a different one) or create a new organization for a different customer.
+
+
+Pricing
+------------------
+The service can be tried for free for 7 days. After this period, you can choose the plan that best fits your needs. See: `Netify Informatics Pricing <https://www.netify.ai/products/netify-informatics/pricing>`_
+
 
 
 
