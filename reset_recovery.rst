@@ -30,9 +30,9 @@ The factory reset restores the currently installed version.
 For instance, if the firewall was initially installed with version 23.05.0 and then updated to 23.05.1, after the factory reset,
 you will have a clean installation of version 23.05.1.
 
-.. note:: If the storage on which NethSecurity is running has been configured with a partition to save logs, the 'Factory reset' done from the Web UI will also remove the log partition and all its data.
+If the storage on which NethSecurity is running has been configured with a partition to save logs, the 'Factory reset' done from the Web UI will also remove the log partition and all its data.
 
-.. warning:: If NethSecurity **was installed through an in-place migration** from NethServer 7, the factory reset will not restore the default configuration. Instead, the system will restart with all configurations migrated from NethServer 7.
+.. note:: If NethSecurity was installed through an in-place migration from NethServer 7, the factory reset will not restore the default configuration. Instead, the system will restart with all configurations migrated from NethServer 7.
 
 If you prefer a clean start, you can proceed with a new :ref:`installation <install-section>` rather than using the factory reset.
 
