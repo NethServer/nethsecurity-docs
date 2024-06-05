@@ -112,9 +112,10 @@ The ``Manager`` profile is dedicated to individuals who belong to the same organ
 
 The ``Viewer`` profile, likely the most commonly used, is for someone (e.g., an IT technician from your customer’s organization) who can view all data within their organization but does not have the ability to modify any Netify configurations.
 
-Note: The profile type can be changed at any time by an administrator, allowing you to switch a person from Manager to Viewer, for example.
-
 To invite someone, simply click on ``Manage Organization``, enter their email address, and choose the desired profile. The person will receive an invite from Netify by email and will be able to create their own account.
+
+ .. note:: The profile type can be changed at any time by an administrator, allowing you to switch a person from Manager to Viewer, for example.
+
 
 
 Regulatory Compliance
