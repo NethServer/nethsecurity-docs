@@ -26,15 +26,21 @@ To start fresh without reinstalling the firmware, access the ``Factory reset`` p
 Click the :guilabel:`Perform factory reset` button to reset the firewall to its original state.
 The factory reset process will take a few seconds to complete. Once the process is complete, the firewall will reboot automatically.
 
-.. note:: If the storage on which NethSecurity is running has been configured with a partition to save logs, the 'Factory reset' done from the Web UI will also remove the log partition and all its data.
-
-If NethSecurity was installed through an in-place migration from NethServer 7, after the factory reset,
-the system will retain all configurations migrated from NethServer 7. If this is not desired, and a clean start is preferred,
-it is advisable to proceed with a new :ref:`installation <install-section>` rather than using the factory reset.
-
 The factory reset restores the currently installed version. 
 For instance, if the firewall was initially installed with version 23.05.0 and then updated to 23.05.1, after the factory reset,
 you will have a clean installation of version 23.05.1.
+
+.. note:: If the storage on which NethSecurity is running has been configured with a partition to save logs, the 'Factory reset' done from the Web UI will also remove the log partition and all its data.
+
+.. warning:: If NethSecurity **was installed through an in-place migration** from NethServer 7, the factory reset will not restore the default configuration. Instead, the system will restart with all configurations migrated from NethServer 7.
+
+If you prefer a clean start, you can proceed with a new :ref:`installation <install-section>` rather than using the factory reset.
+
+Alternatively, you can follow these steps:
+
+* Update your NethSecurity with a newer image (if present) or using a standard image downloaded from :ref:`downloading <download-section>`.This will rewrite the ROM of your NethSecurity with a standard one, removing any migration files.
+* Now you can perform the Factory Reset, which will lead you to a clean start.
+
 
 If you want to execute the factory reset from command line, just execute the following command. ::
 
