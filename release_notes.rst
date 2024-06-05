@@ -7,6 +7,26 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-06-05
+===========================
+
+**This is a security release**
+
+Image version: `8-23.05.3-ns.1.0.1`
+
+Addressed security vulnerabily: `GHSA-74xv-ww67-jjpx <https://github.com/NethServer/nethsecurity/security/advisories/GHSA-74xv-ww67-jjpx>`_ (disclosure will be published on 2024-06-20)
+
+.. rubric:: Bug Fixes
+
+- Security fix for GHSA-74xv-ww67-jjpx
+
+- Ipsec: fix non working tunnel if selected WAN is a PPPoE over vlan
+- MultiWAN: force maximum length for rules and policies names
+- OpenVPN Road Warrior: prevent creation of users with trailing spaces
+- Inventory: improve data collection for subscriptions and network
+- Migration: fix OpenVPN Road Warrior users not visible in UI after migration
+- API server: improved stability and performance by optimizing boot order for proper startup at boot time
+
 Major changes on 2024-05-22
 ===========================
 
