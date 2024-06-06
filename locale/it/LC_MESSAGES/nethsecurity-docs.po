@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-05 14:24+0000\n"
+"POT-Creation-Date: 2024-06-06 10:09+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1980,6 +1980,23 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.0.1-4-g75159e0"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-4-g75159e0/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-4-g75159e0-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-4-g75159e0/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.3-ns.1.0.0-28-g2a9bceb"
 msgstr ""
 
@@ -2028,91 +2045,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-26-g6b0276b/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.0-25-g223efac"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-25-g223efac/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-25-g223efac-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-25-g223efac/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.0-24-g1892488"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-24-g1892488/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-24-g1892488-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-24-g1892488/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.0-21-g1622a2e"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-21-g1622a2e/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-21-g1622a2e-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-21-g1622a2e/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.0-19-ga2793f5"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-19-ga2793f5/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-19-ga2793f5-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-19-ga2793f5/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.0-18-gf7420a2"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-18-gf7420a2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-18-gf7420a2-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-18-gf7420a2/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -5067,10 +4999,11 @@ msgstr ""
 
 #: ../../netify_informatics.rst:7
 msgid ""
-"Netify Informatics is a third-party cloud service that utilizes analytics"
-" and AI to convert local DPI metadata obtained from NethSecurity into "
-"high-level network intelligence and visibility. The solution provides "
-"insights into various aspects of network activity, including:"
+"`Netify Informatics <https://www.netify.ai/products/netify-informatics>`_"
+" is a third-party cloud service that utilizes analytics and AI to convert"
+" local DPI metadata obtained from NethSecurity into high-level network "
+"intelligence and visibility. The solution provides insights into various "
+"aspects of network activity, including:"
 msgstr ""
 
 #: ../../netify_informatics.rst:9
@@ -5094,7 +5027,7 @@ msgstr ""
 msgid "Audit and Forensics"
 msgstr ""
 
-#: ../../netify_informatics.rst:14
+#: ../../netify_informatics.rst:14 ../../netify_informatics.rst:122
 msgid "Regulatory Compliance"
 msgstr ""
 
@@ -5120,111 +5053,240 @@ msgid ""
 "informatics/risk-and-reputation>`_"
 msgstr ""
 
-#: ../../netify_informatics.rst:26
+#: ../../netify_informatics.rst:27
+msgid "Before getting started"
+msgstr ""
+
+#: ../../netify_informatics.rst:29
+msgid ""
+"Here is some fundamental information to better manage your installations "
+"on Netify Informatics. You can granularly manage different customers, "
+"different locations of the same customer, and even different firewalls "
+"within the same location.The platform is organized with these elements."
+msgstr ""
+
+#: ../../netify_informatics.rst:33
 #, fuzzy
-msgid "How to try the Service"
-msgstr "Poi riavvia il servizio DDNS::"
-
-#: ../../netify_informatics.rst:28
-msgid "To use Netify Informatics, follow these steps:"
-msgstr ""
-
-#: ../../netify_informatics.rst:30
-msgid "Register on the Netify website"
-msgstr ""
-
-#: ../../netify_informatics.rst:31
-msgid "Enable the sending of metadata from NethSecurity"
-msgstr ""
+msgid "Organization"
+msgstr "Configurazione"
 
 #: ../../netify_informatics.rst:34
-msgid "Registration"
-msgstr ""
-
-#: ../../netify_informatics.rst:35
-msgid "Visit the following page to register:"
+msgid ""
+"An organization is essentially a customer where we have at least one "
+"NethSecurity firewall, multiple organizations are supported."
 msgstr ""
 
 #: ../../netify_informatics.rst:37
-msgid "`Netify Registration <https://portal.netify.ai/register>`_"
+msgid "Site"
 msgstr ""
 
-#: ../../netify_informatics.rst:39
+#: ../../netify_informatics.rst:38
 msgid ""
-"The service can be tried for free for 7 days. After this period, you can "
-"choose the plan that best fits your needs. See:"
+"The same organization (customer) might have an office in Rome, Florence, "
+"and Paris. A site is defined for each physical location to isolate the "
+"mix of data, multiple sites are supported."
 msgstr ""
 
 #: ../../netify_informatics.rst:41
-msgid ""
-"`Netify Informatics Pricing <https://www.netify.ai/products/netify-"
-"informatics/pricing>`_"
+msgid "Agent"
 msgstr ""
 
-#: ../../netify_informatics.rst:43
+#: ../../netify_informatics.rst:42
 msgid ""
-"In the case of NethSecurity, there is always only one agent (the firewall"
-" itself)."
+"The agent represents your customer's NethSecurity unit. Netify supports "
+"multiple agents per site. If you have a simple network, one agent will "
+"likely see all traffic flows on a site's network."
+msgstr ""
+
+#: ../../netify_informatics.rst:45
+msgid "How to Connect your NethSecurity to Netify Informatics"
 msgstr ""
 
 #: ../../netify_informatics.rst:46
-msgid "Enabling metadata sending"
+msgid "Two steps are required to use the service:"
 msgstr ""
 
 #: ../../netify_informatics.rst:48
+msgid "Enable metadata sending from NethSecurity"
+msgstr ""
+
+#: ../../netify_informatics.rst:49
+msgid "Provision an agent on Netify Informatics."
+msgstr ""
+
+#: ../../netify_informatics.rst:51
+msgid ""
+"It's mandatory to configure data sending on NethSecurity **first** and "
+"then provision the agent on the platform."
+msgstr ""
+
+#: ../../netify_informatics.rst:54
+msgid "Enabling metadata sending"
+msgstr ""
+
+#: ../../netify_informatics.rst:56
 msgid ""
 "Each NethSecurity is associated with a unique code. To find the code for "
 "your NethSecurity, access the command line and enter the command:"
 msgstr ""
 
-#: ../../netify_informatics.rst:50
+#: ../../netify_informatics.rst:58
 msgid "``/usr/libexec/rpcd/ns.netifyd call status | jq .uuid -r``"
 msgstr ""
 
-#: ../../netify_informatics.rst:52
+#: ../../netify_informatics.rst:60
 msgid "The system will return a result similar to this:"
 msgstr ""
 
-#: ../../netify_informatics.rst:54
+#: ../../netify_informatics.rst:62
 msgid "``B3-GV-WQ-SD``"
 msgstr ""
 
-#: ../../netify_informatics.rst:56
+#: ../../netify_informatics.rst:64
 msgid "Enter the code into the Netify Informatics web console."
 msgstr ""
 
-#: ../../netify_informatics.rst:58
+#: ../../netify_informatics.rst:66
 msgid "To enable data sending:"
 msgstr ""
 
-#: ../../netify_informatics.rst:60
+#: ../../netify_informatics.rst:68
 msgid "``/usr/libexec/rpcd/ns.netifyd call enable``"
 msgstr ""
 
-#: ../../netify_informatics.rst:62
+#: ../../netify_informatics.rst:70
 msgid "To disable data sending:"
 msgstr ""
 
-#: ../../netify_informatics.rst:64
+#: ../../netify_informatics.rst:72
 msgid "``/usr/libexec/rpcd/ns.netifyd call disable``"
 msgstr ""
 
-#: ../../netify_informatics.rst:68
-msgid "Regulatory Compliance Information"
+#: ../../netify_informatics.rst:76
+msgid "Registration and provisioning"
 msgstr ""
 
-#: ../../netify_informatics.rst:70
+#: ../../netify_informatics.rst:78
+msgid "Visit the following page to create your account :"
+msgstr ""
+
+#: ../../netify_informatics.rst:80
+msgid "`Netify Registration <https://portal.netify.ai/register>`_"
+msgstr ""
+
+#: ../../netify_informatics.rst:84
+msgid "Agent provisioning"
+msgstr ""
+
+#: ../../netify_informatics.rst:86
 msgid ""
-"`Netify Informatics Regulatory Compliance <https://www.netify.ai/products"
-"/netify-informatics/regulatory-compliance>`_"
+"Once you have a registered account, click on the “Provision Agent Wizard”"
+" button. This will start a process where you will need to create the "
+"organization (the customer) and enable the agent using the code "
+"prevoiusly obtained on NethSecurity 8."
 msgstr ""
 
-#: ../../netify_informatics.rst:73
+#: ../../netify_informatics.rst:88
+msgid ""
+"From this moment, Netify Informatics will start showing the data. You can"
+" then connect other firewalls of the same customer (same organization, "
+"same site or a different one) or create a new organization for a "
+"different customer."
+msgstr ""
+
+#: ../../netify_informatics.rst:92
+msgid "Pricing"
+msgstr ""
+
+#: ../../netify_informatics.rst:93
+msgid ""
+"The service can be tried for free for 7 days. After this period, you can "
+"choose the plan that best fits your needs. See: `Netify Informatics "
+"Pricing <https://www.netify.ai/products/netify-informatics/pricing>`_"
+msgstr ""
+
+#: ../../netify_informatics.rst:97
+msgid "Deployment Manager"
+msgstr ""
+
+#: ../../netify_informatics.rst:100
+msgid ""
+"The Deployment section allows you to manage Agents, Sites, and "
+"Organizations. While the management of Agents and Sites is relatively "
+"straightforward, the ``Organization Access`` section enables you to add "
+"additional members to your organization. This feature allows others to "
+"access the Netify panel and view all relevant data."
+msgstr ""
+
+#: ../../netify_informatics.rst:103
+msgid "There are three available profiles:"
+msgstr ""
+
+#: ../../netify_informatics.rst:105
+msgid "Administrator"
+msgstr ""
+
+#: ../../netify_informatics.rst:106
+msgid "Manager"
+msgstr ""
+
+#: ../../netify_informatics.rst:107
+msgid "Viewer"
+msgstr ""
+
+#: ../../netify_informatics.rst:109
+msgid ""
+"The ``Administrator`` profile, typically reserved for colleagues within "
+"your company, grants the highest level of permissions, allowing them to "
+"view, create, and modify configurations within Netify Informatics."
+msgstr ""
+
+#: ../../netify_informatics.rst:111
+msgid ""
+"The ``Manager`` profile is dedicated to individuals who belong to the "
+"same organization (the customer company). It grants them permission to "
+"view all sections inside Netify Informatics, see the deployment dashboard"
+" and edit the Identity manager section, but not to add other "
+"organizations or provision new agents."
+msgstr ""
+
+#: ../../netify_informatics.rst:113
+msgid ""
+"The ``Viewer`` profile, likely the most commonly used, is for someone "
+"(e.g., an IT technician from your customer’s organization) who can view "
+"all data within their organization but does not have the ability to "
+"modify any Netify configurations."
+msgstr ""
+
+#: ../../netify_informatics.rst:115
+msgid ""
+"To invite someone, simply click on ``Manage Organization``, enter their "
+"email address, and choose the desired profile. The person will receive an"
+" invite from Netify by email and will be able to create their own "
+"account."
+msgstr ""
+
+#: ../../netify_informatics.rst:117
+msgid ""
+"The profile type can be changed at any time by an administrator, allowing"
+" you to switch a person from Manager to Viewer, for example."
+msgstr ""
+
+#: ../../netify_informatics.rst:124
+msgid ""
+"All informations about regulatory complince are available here: `Netify "
+"Informatics Regulatory Compliance <https://www.netify.ai/products/netify-"
+"informatics/regulatory-compliance>`_"
+msgstr ""
+
+#: ../../netify_informatics.rst:128
 msgid "General FAQ"
 msgstr ""
 
-#: ../../netify_informatics.rst:75
-msgid "`Netify Informatics FAQ <https://www.netify.ai/resources/faq>`_"
+#: ../../netify_informatics.rst:129
+msgid ""
+"Netify FAQ available here:  `Netify Informatics FAQ "
+"<https://www.netify.ai/resources/faq>`_"
 msgstr ""
 
 #: ../../network.rst:3
@@ -12414,7 +12476,7 @@ msgstr ""
 #~ "facoltativo per il suo funzionamento."
 
 #~ msgid "Registration"
-#~ msgstr "Registrazione"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "See the `developer manual "
@@ -13521,5 +13583,131 @@ msgstr ""
 #~ "proceed with a new :ref:`installation "
 #~ "<install-section>` rather than using the"
 #~ " factory reset."
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.0-25-g223efac"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-25-g223efac/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-25-g223efac-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-25-g223efac/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.0-24-g1892488"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-24-g1892488/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-24-g1892488-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-24-g1892488/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.0-21-g1622a2e"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-21-g1622a2e/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-21-g1622a2e-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-21-g1622a2e/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.0-19-ga2793f5"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-19-ga2793f5/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-19-ga2793f5-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-19-ga2793f5/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.0-18-gf7420a2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-18-gf7420a2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.0-18-gf7420a2-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.0-18-gf7420a2/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Netify Informatics is a third-party "
+#~ "cloud service that utilizes analytics "
+#~ "and AI to convert local DPI "
+#~ "metadata obtained from NethSecurity into "
+#~ "high-level network intelligence and "
+#~ "visibility. The solution provides insights "
+#~ "into various aspects of network "
+#~ "activity, including:"
+#~ msgstr ""
+
+#~ msgid "How to try the Service"
+#~ msgstr "Poi riavvia il servizio DDNS::"
+
+#~ msgid "To use Netify Informatics, follow these steps:"
+#~ msgstr ""
+
+#~ msgid "Register on the Netify website"
+#~ msgstr ""
+
+#~ msgid "Enable the sending of metadata from NethSecurity"
+#~ msgstr ""
+
+#~ msgid "Visit the following page to register:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The service can be tried for free"
+#~ " for 7 days. After this period, "
+#~ "you can choose the plan that best"
+#~ " fits your needs. See:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Netify Informatics Pricing "
+#~ "<https://www.netify.ai/products/netify-informatics/pricing>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the case of NethSecurity, there "
+#~ "is always only one agent (the "
+#~ "firewall itself)."
+#~ msgstr ""
+
+#~ msgid "Regulatory Compliance Information"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Netify Informatics Regulatory Compliance "
+#~ "<https://www.netify.ai/products/netify-informatics"
+#~ "/regulatory-compliance>`_"
+#~ msgstr ""
+
+#~ msgid "`Netify Informatics FAQ <https://www.netify.ai/resources/faq>`_"
 #~ msgstr ""
 
