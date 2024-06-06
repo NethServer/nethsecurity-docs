@@ -4,7 +4,7 @@
 Netify Informatics
 ===================
 
-Netify Informatics is a third-party cloud service that utilizes analytics and AI to convert local DPI metadata obtained from NethSecurity into high-level network intelligence and visibility. The solution provides insights into various aspects of network activity, including:
+`Netify Informatics <https://www.netify.ai/products/netify-informatics>`_ is a third-party cloud service that utilizes analytics and AI to convert local DPI metadata obtained from NethSecurity into high-level network intelligence and visibility. The solution provides insights into various aspects of network activity, including:
 
 *   Device Discovery
 *   Geolocation
