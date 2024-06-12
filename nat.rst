@@ -47,6 +47,17 @@ select SNAT as action.
 **Result** All outbound traffic originating from your mail server will now be translated to the dedicated public IP address.
 This improves the reputation of your mail server and allows for specific configurations tailored to its needs. General internet traffic will continue to use the other public IP address.
 
+Source NAT in a MultiWAN scenario
+---------------------------------
+
+SNAT is often used with a server that has a private IP address to allow it to access the internet using one of the public IP addresses (IP Alias), this can become a little more complex in a MultiWAN scenario.
+Based on policy used, NethSecurity's might route the server's traffic through any available WAN, causing  'IP Mismatch', so traffic might exit through the wrong WAN, causing connectivity problems to the server with this shorce nat.
+
+To ensure the server's traffic exits through the correct WAN interface, In addition to the SNAT rule, it is necessary to create a rule in the multi-WAN setup that forces the server to use the one and only connectivity associated with the public IP address through which the server must exit.
+
+It is sufficient to create a policy with the specific connectivity to be used, and then create a rule for the server's private IP that applies this policy for all types of traffic.
+
+
 .. _masquerade-section:
 
 MASQUERADE
