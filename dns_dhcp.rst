@@ -65,6 +65,11 @@ Dynamic leases
 Dynamic leases represents IP addresses that are currently in use and have been allocated to devices on the network.
 This tab shows all currently active leases.
 
+Default Configuration
+---------------------
+
+The DHCP server is currently operating with the default configuration, which includes a capacity to manage up to 1000 concurrent leases.
+
 DNS
 ===
 
