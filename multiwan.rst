@@ -48,18 +48,16 @@ Here's how you can create a custom rule:
 
 1. Create a new policy: to begin customizing traffic routing, start by creating a new policy. Click on the :guilabel:`Create policy` button to initiate the process.
 
-2. Create a new rule: then click on the :guilabel:`Create rule` button. This step allows you to define specific conditions under which the traffic will be 
-   routed differently from the default policy.
+2. Create a new rule: then click on the :guilabel:`Create rule` button. This step allows you to define specific conditions under which the traffic will be routed differently from the default policy.
 
-3. Give the rule a meaningful name: assign a descriptive and meaningful name to the rule. This name should reflect the purpose or conditions of the traffic
-   routing rule for easy identification.
+3. Give the rule a meaningful name: assign a descriptive and meaningful name to the rule. This name should reflect the purpose or conditions of the traffic routing rule for easy identification.
 
-4. Specify traffic type: define the criteria for the traffic you want to customize. This can include the source IP address, destination IP address,
-   specific protocols, ports, or any combination of these factors. By specifying these parameters, you narrow down the scope of the rule to a specific type of traffic.
+4. Specify traffic type: define the criteria for the traffic you want to customize. This can include the source IP address, destination IP address, specific protocols, ports, or any combination of these factors. By specifying these parameters, you narrow down the scope of the rule to a specific type of traffic.
 
 5. Select the created policy for this traffic type: choose the custom policy you created in the first step as the routing preference for this specific type of traffic.
    By associating the rule with a particular policy, you are instructing the system to route the defined traffic according to the settings specified within that policy.
 
+* ``Sticky`` option : The sticky option in a rule ensures that traffic originating from the same source IP always exits through the same WAN for a duration of 10 minutes. This can prevent issues when connecting to websites of banks, insurance companies, etc. This option is tipically used for HTTPS traffic (TCP 443) with the desired policy (for example, using the default policy but having this option active only for this specific type of traffic).
 
 General settings
 ================
