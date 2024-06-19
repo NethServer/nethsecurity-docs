@@ -125,7 +125,6 @@ During the migration, the following configurations will be imported from NethSer
 - Network configuration: everything should be migrated except for bridges over bonds that are not supported
 - Date and timezone
 - DHCP servers and reservations: DHCP server on bonds interfaces are not supported
-- DHCP Server Lease Management: If demand exceeds 1000 leases, the dhcpleasemax is migrated to a higher capacity setting.
 - DNS configuration with host definition: TFTP options are migrated, but not the content of the TFTP server.
   To re-enable the service make sure to manually setup ``tftp_root`` option
 - Static IPv4 routes

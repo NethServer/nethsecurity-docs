@@ -68,7 +68,7 @@ This tab shows all currently active leases.
 Default Configuration
 ---------------------
 
-The DHCP server is currently operating with the default configuration, which includes a capacity to manage up to 1000 concurrent leases.
+By default, the DHCP server has a limit of 1000 concurrent leases to prevent DoS attacks. Set the dnsmasq ``dhcpleasemax`` option to change the limit.
 
 DNS
 ===
