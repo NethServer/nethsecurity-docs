@@ -60,6 +60,11 @@ Here's how you can create a custom rule:
 5. Select the created policy for this traffic type: choose the custom policy you created in the first step as the routing preference for this specific type of traffic.
    By associating the rule with a particular policy, you are instructing the system to route the defined traffic according to the settings specified within that policy.
 
+The following are the available options for defining traffic ports:
+
+- ``<port>``: Single port
+- ``<port>,<port>``: List of ports
+- ``<port>-<endport>``: Range from <port> to <endport>
 
 General settings
 ================
