@@ -54,7 +54,8 @@ Here's how you can create a custom rule:
 3. Give the rule a meaningful name: assign a descriptive and meaningful name to the rule. This name should reflect the purpose or conditions of the traffic
    routing rule for easy identification.
 
-4. Specify traffic type: define the criteria for the traffic you want to customize. This can include the source IP address, destination IP address, specific protocols, ports, or any combination of these factors. By specifying these parameters, you narrow down the scope of the rule to a specific type of traffic.
+4. Specify traffic type: define the criteria for the traffic you want to customize. This can include the source IP address, destination IP address,
+   specific protocols, ports, or any combination of these factors. By specifying these parameters, you narrow down the scope of the rule to a specific type of traffic.
 
 5. Select the created policy for this traffic type: choose the custom policy you created in the first step as the routing preference for this specific type of traffic.
    By associating the rule with a particular policy, you are instructing the system to route the defined traffic according to the settings specified within that policy.
