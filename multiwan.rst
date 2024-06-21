@@ -51,7 +51,7 @@ Here's how you can create a custom rule:
 2. Create a new rule: then click on the :guilabel:`Create rule` button. This step allows you to define specific conditions under which the traffic will be 
    routed differently from the default policy.
 
-3. Give the rule a meaningful name: assign a descriptive and meaningful name to the rule. This name should reflect the purpose or conditions of the traffic 
+3. Give the rule a meaningful name: assign a descriptive and meaningful name to the rule. This name should reflect the purpose or conditions of the traffic
    routing rule for easy identification.
 
 4. Specify traffic type: define the criteria for the traffic you want to customize. This can include the source IP address, destination IP address, specific protocols, ports, or any combination of these factors. By specifying these parameters, you narrow down the scope of the rule to a specific type of traffic.
