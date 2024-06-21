@@ -47,6 +47,14 @@ select SNAT as action.
 **Result** All outbound traffic originating from your mail server will now be translated to the dedicated public IP address.
 This improves the reputation of your mail server and allows for specific configurations tailored to its needs. General internet traffic will continue to use the other public IP address.
 
+Source NAT in a MultiWAN scenario
+---------------------------------
+
+If you have multiple WANs, you need to create a MultiWAN rule in addition to the SNAT rule. This rule will route traffic from the source IP address through the WAN with the public IP address.
+
+If you haven't set this up yet, add a custom policy that includes only the relevant WAN.
+Then, create a rule to apply this custom policy for traffic originating from the internal IP address (source address) to any destination and protocol.
+
 .. _masquerade-section:
 
 MASQUERADE
