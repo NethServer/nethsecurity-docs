@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-21 09:07+0000\n"
+"POT-Creation-Date: 2024-06-21 10:01+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -4376,30 +4376,39 @@ msgstr ""
 "policy."
 
 #: ../../multiwan.rst:63
-msgid "The following are the available options for defining traffic ports:"
+msgid ""
+"``Sticky`` option: The sticky option of a rule ensures that traffic "
+"originating from the same source IP always exits through the same WAN for"
+" a duration of 10 minutes. This can prevent issues when connecting to "
+"websites of banks, insurance companies, etc. This option is typically "
+"used for HTTPS traffic (443/TCP)."
 msgstr ""
 
 #: ../../multiwan.rst:65
-msgid "``<port>``: Single port"
-msgstr ""
-
-#: ../../multiwan.rst:66
-msgid "``<port>,<port>``: List of ports"
+msgid "The following are the available options for defining traffic ports:"
 msgstr ""
 
 #: ../../multiwan.rst:67
+msgid "``<port>``: Single port"
+msgstr ""
+
+#: ../../multiwan.rst:68
+msgid "``<port>,<port>``: List of ports"
+msgstr ""
+
+#: ../../multiwan.rst:69
 msgid "``<port>-<endport>``: Range from <port> to <endport>"
 msgstr ""
 
-#: ../../multiwan.rst:70
+#: ../../multiwan.rst:72
 msgid "General settings"
 msgstr "Impostazioni generali"
 
-#: ../../multiwan.rst:72
+#: ../../multiwan.rst:74
 msgid "NethSecurity monitors each WAN connection using repeated ICMP tests."
 msgstr "NethSecurity monitora ogni connessione WAN utilizzando test ICMP ripetuti."
 
-#: ../../multiwan.rst:74
+#: ../../multiwan.rst:76
 msgid ""
 "The ``General settings`` page allow users to specify the following "
 "parameters:"
@@ -4407,7 +4416,7 @@ msgstr ""
 "La pagina`` Impostazioni generali`` consente agli utenti di specificare i"
 " seguenti parametri:"
 
-#: ../../multiwan.rst:76
+#: ../../multiwan.rst:78
 msgid ""
 "List of hosts to monitor: users can define a list of hosts (computers, "
 "servers, or devices) that the system will monitor for connectivity "
@@ -4419,7 +4428,7 @@ msgstr ""
 "stato della connettività. Questi host vengono controllati per assicurarsi"
 " che siano raggiungibili attraverso la rete."
 
-#: ../../multiwan.rst:78
+#: ../../multiwan.rst:80
 msgid ""
 "Number of ICMP packets (pings) to send: users can set the number of ICMP "
 "(Internet Control Message Protocol) packets to be sent during each "
@@ -4431,7 +4440,7 @@ msgstr ""
 "inviare durante ogni test di monitoraggio. Impostando il numero di "
 "pacchetti, gli utenti possono controllare l'intensità del monitoraggio."
 
-#: ../../multiwan.rst:80
+#: ../../multiwan.rst:82
 msgid ""
 "Determining unreachability after how many failed tests:  users can "
 "configure the system to determine when a WAN connection should be "
@@ -4445,11 +4454,11 @@ msgstr ""
 "specificando una soglia: dopo quanti test consecutivi falliti la "
 "connessione WAN è considerata irraggiungibile."
 
-#: ../../multiwan.rst:85
+#: ../../multiwan.rst:87
 msgid "Reset configuration"
 msgstr "Ripristina configurazione"
 
-#: ../../multiwan.rst:89
+#: ../../multiwan.rst:91
 msgid ""
 "This will effectively reset the MultiWAN configuration, with a loss of "
 "Internet connection if no WAN is configured."
@@ -4457,7 +4466,7 @@ msgstr ""
 "Ciò ripristinerà effettivamente la configurazione MultiWAN, con una "
 "perdita di connessione Internet se nessuna WAN è configurata."
 
-#: ../../multiwan.rst:91
+#: ../../multiwan.rst:93
 msgid ""
 "If your firewall was previously configured with two or more WAN "
 "interfaces and after reconfiguration there is only one WAN interface, it "
