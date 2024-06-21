@@ -36,7 +36,7 @@ This hostname can be modified in the System Settings section.
 Web user interface
 ==================
 
-NethSecurity UI (ns-ui), the NethSecurity official web interface, is available on port ``9090`` at the following URL: **https://<server_ip>:9090**.
+NethSecurity UI (User Interface), the NethSecurity official web interface, is available on port ``9090`` at the following URL: **https://<server_ip>:9090**.
 
 To ease the access, NethSecurity UI is also available on standard HTTP port ``443`` at the following URL: **https://<server_ip>** or **http://<server_fqdn>**.
 
@@ -165,6 +165,38 @@ The system will also provide you with a set of backup codes. These codes can be 
 Store these codes securely, preferably offline.
 
 You can disable 2FA from the same page.
+
+.. _admin_users-section:
+
+NethSecurity UI administrators
+==============================
+
+The default user for accessing the user web interface is root, but it is possible to create other administrator users with access only to the web interface.
+
+To create a user in the local database, enter the `Username` and `Display name`.
+Make sure to set a password for the user.
+If the user needs administrative access to the web interface, enable the `Administrator user` option.
+
+It is possible to grant or remove administrative access only to users residing in the local database.
+
+Auditing user actions
+---------------------
+
+Every time an administrator logs in to the NethSecurity UI, the system logs the event, inside the `/var/log/messages` file.
+Example of login event for user `goofy`: ::
+
+  Jun 21 09:43:19 NethSec nethsecurity-api[5376]: nethsecurity_api 2024/06/21 09:43:19 middleware.go:78: [INFO][AUTH] authentication success for user goofy
+  Jun 21 09:43:19 NethSec nethsecurity-api[5376]: nethsecurity_api 2024/06/21 09:43:19 middleware.go:186: [INFO][AUTH] login response success for user o
+
+Example of logout event for user `goofy`: ::
+
+  Jun 21 09:46:13 NethSec nethsecurity-api[5376]: nethsecurity_api 2024/06/21 09:46:13 middleware.go:214: [INFO][AUTH] logout response success for user goofy
+
+
+Also every action performed by an administrator inside the NethSecurity UI is logged inside the `/var/log/messages` file.
+Example of action performed by user `goofy`: ::
+
+  Jun 21 09:43:19 NethSec nethsecurity-api[5376]: nethsecurity_api 2024/06/21 09:43:19 middleware.go:170: [INFO][AUTH] authorization success for user goofy. POST /api/ubus/call {"path":"ns.dashboard","method":"service-status","payload":{"service":"internet"}}
 
 SSH
 ===
