@@ -48,7 +48,8 @@ Here's how you can create a custom rule:
 
 1. Create a new policy: to begin customizing traffic routing, start by creating a new policy. Click on the :guilabel:`Create policy` button to initiate the process.
 
-2. Create a new rule: then click on the :guilabel:`Create rule` button. This step allows you to define specific conditions under which the traffic will be routed differently from the default policy.
+2. Create a new rule: then click on the :guilabel:`Create rule` button. This step allows you to define specific conditions under which the traffic will be 
+   routed differently from the default policy.
 
 3. Give the rule a meaningful name: assign a descriptive and meaningful name to the rule. This name should reflect the purpose or conditions of the traffic routing rule for easy identification.
 
