@@ -65,6 +65,11 @@ Dynamic leases
 Dynamic leases represents IP addresses that are currently in use and have been allocated to devices on the network.
 This tab shows all currently active leases.
 
+Default Configuration
+---------------------
+
+By default, the DHCP server has a limit of 1000 concurrent leases to prevent DoS attacks. Set the dnsmasq ``dhcpleasemax`` option to change the limit.
+
 DNS
 ===
 

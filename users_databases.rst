@@ -25,7 +25,7 @@ When configuring a local user, you should fill all the following fields:
 * ``Confirm password``: specifies the password of the user, make sure to match the password with the one specified in the previous field.
 
 The local user database is implemented as UCI configuration file.
-Paswords of local users are stored in the Unix passwd format, ensuring compatibility and security in the local user database.
+Passwords of local users are stored in the Unix passwd format, ensuring compatibility and security in the local user database.
 
 Remote databases
 ================
@@ -34,7 +34,7 @@ Remote databases
 
    This feature is available only if the firewall has a valid subscription.
 
-The adminsitrator can extend the capabilities of the firewall by adding new remote databases.
+The administrator can extend the capabilities of the firewall by adding new remote databases.
 Users in remote databases must be added directly at the source.
 User modifications should be made on the underlying LDAP server to accurately reflect changes in the firewall configuration page.
 
@@ -52,7 +52,7 @@ When configuring a remote database, click on the :guilabel:`Add remote database`
 
 * ``User DN``: specifies the LDAP User Distinguished Name (DN). If not present, the default value is equal to base_dn (eg. ``cn=users,dc=example,dc=com``).
 
-* ``User attribute field``: specifies the user attribute used to identify the userm, this option is used by the OpenVPN road warrior server to compose the user bind DN.
+* ``User attribute field``: specifies the user attribute used to identify the user, this option is used by the OpenVPN road warrior server to compose the user bind DN.
   It should be ``cn`` for Active Directory or ``uid`` for OpenLDAP.
 
 * ``User CN field``: specifies the user attribute containing the user's complete name. For example, ``cn`` for both Active Directory and OpenLDAP.
