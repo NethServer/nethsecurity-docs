@@ -22,35 +22,46 @@ Access the ``Settings`` tab and activate the ``Status`` switch.
 When the service is enabled, the ``Blocklist`` tab will display all available blocklists.
 You can enable or disable each blocklist by using the switch on the right side of the list.
 Enabled blocklist will be automatically updated at regular intervals.
+NethSecurity 8 allows the use of Community and Enterprise blocklists.
 
-Premium blocklists
+Community Blocklists
+--------------------
+Community blocklists are sourced from community contributors and cover various areas: Ads blocking, Malware blocking, Spam blocking, Tracker blocking, and so on. 
+NethSecurity makes them available as they are.
+The type of usage license may vary depending on the provider, so if the use is not personal, you may need to inquire with the provider.
+
+Maintenance
+^^^^^^^^^^^
+Each blocklist is maintained by its specific provider. NethSecurity already includes the URLs for downloading the feeds, which are valid at the time of the release. However, because these URLs are hardcoded, if the provider changes them, some blocklists may no longer be downloadable.
+
+Enterprise blocklists
 ------------------
 
 .. admonition:: Enterprise subscription required
 
    This feature is available only if the firewall has a valid enterprise subscription.
 
-Premium blocklists offer several advantages over community-maintained blocklists:
+Enterprise blocklists are specifically focused on security and offer several advantages over community-maintained blocklists:
 
-1. **Quality and Accuracy**: Premium blocklists, such as the ones provided by Nethesis and Yoroi, are curated and maintained by reputable cybersecurity companies.
+1. **Quality and Accuracy**: Enterprise blocklists, such as the ones provided by Nethesis and Yoroi, are curated and maintained by reputable cybersecurity companies.
    These companies have dedicated teams that continuously monitor and update the blocklists to ensure they are accurate and effective in blocking malicious traffic.
    This results in a higher level of quality and accuracy compared to community-maintained blocklists, which may not receive the same level of attention and updates.
 
-2. **Timeliness**: Premium blocklists are frequently updated to include the latest threats and malicious IP addresses. 
+2. **Timeliness**: Enterprise blocklists are frequently updated to include the latest threats and malicious IP addresses. 
    Cybersecurity companies like Nethesis and Yoroi actively track emerging threats and promptly add them to their blocklists. 
    This ensures that your system is protected against the most recent and evolving threats. 
    
 3. **Reduced False Positives**: False positives occur when legitimate traffic is mistakenly blocked. 
-   Premium blocklists are designed to minimize false positives by carefully curating and verifying the listed IP addresses and hostnames.
-   The companies behind premium blocklists have robust processes in place to ensure that only malicious entities are included in the blocklists.
+   Enterprise blocklists are designed to minimize false positives by carefully curating and verifying the listed IP addresses and hostnames.
+   The companies behind Enterprise blocklists have robust processes in place to ensure that only malicious entities are included in the blocklists.
    This reduces the chances of legitimate traffic being blocked, minimizing disruptions to your network or services.
 
-4. **Enterprise Support**: Premium blocklists often come with additional support and services tailored for enterprise environments.
+4. **Enterprise Support**: Enterprise blocklists often come with additional support and services tailored for enterprise environments.
    This includes access to technical support, documentation, and integration assistance.
-   If any issues or questions arise while using the premium blocklists, you can rely on the support provided by the cybersecurity companies to help you
+   If any issues or questions arise while using the Enterprise blocklists, you can rely on the support provided by the cybersecurity companies to help you
    address them effectively.
 
-Yoroi and Nethesis blocklists are premium blocklists.
+Yoroi and Nethesis blocklists are Enterprise blocklists.
 These lists will be listed only if the machine has a valid Enterprise :ref:`subscription <subscription-section>` and a valid entitlement for the Threat Shield service.
 
 Allow list
