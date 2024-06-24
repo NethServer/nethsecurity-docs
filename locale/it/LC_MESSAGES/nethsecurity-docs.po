@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-21 10:01+0000\n"
+"POT-Creation-Date: 2024-06-24 13:40+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -112,12 +112,12 @@ msgid "Automatic backup"
 msgstr "Backup automatico"
 
 #: ../../backup.rst:34 ../../dpi_filter.rst:35 ../../remote_support.rst:7
-#: ../../threat_shield.rst:29
+#: ../../threat_shield.rst:40
 msgid "Enterprise subscription required"
 msgstr "E' richiesto l'abbonamento Enterprise"
 
 #: ../../backup.rst:36 ../../dpi_filter.rst:37 ../../remote_support.rst:9
-#: ../../threat_shield.rst:31
+#: ../../threat_shield.rst:42
 msgid ""
 "This feature is available only if the firewall has a valid enterprise "
 "subscription."
@@ -1992,6 +1992,23 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.0.1-26-gf5dfdca"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-26-gf5dfdca/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-26-gf5dfdca-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-26-gf5dfdca/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.3-ns.1.0.1-24-g76f7dcc"
 msgstr ""
 
@@ -2023,74 +2040,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-19-gff81a44/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-18-g44bc3f2"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-18-g44bc3f2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-18-g44bc3f2-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-18-g44bc3f2/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-17-gb61b927"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-17-gb61b927/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-17-gb61b927-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-17-gb61b927/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-16-g36f10a3"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-16-g36f10a3/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-16-g36f10a3-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-16-g36f10a3/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-15-g10de678"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-15-g10de678/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-15-g10de678-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-15-g10de678/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -9460,23 +9409,49 @@ msgid ""
 "When the service is enabled, the ``Blocklist`` tab will display all "
 "available blocklists. You can enable or disable each blocklist by using "
 "the switch on the right side of the list. Enabled blocklist will be "
-"automatically updated at regular intervals."
+"automatically updated at regular intervals. NethSecurity 8 allows the use"
+" of Community and Enterprise blocklists."
 msgstr ""
 
-#: ../../threat_shield.rst:27
-msgid "Premium blocklists"
+#: ../../threat_shield.rst:28
+msgid "Community Blocklists"
 msgstr ""
 
-#: ../../threat_shield.rst:33
+#: ../../threat_shield.rst:29
 msgid ""
-"Premium blocklists offer several advantages over community-maintained "
-"blocklists:"
+"Community blocklists are sourced from community contributors and cover "
+"various areas: Ads blocking, Malware blocking, Spam blocking, Tracker "
+"blocking, and so on. NethSecurity makes them available as they are. The "
+"type of usage license may vary depending on the provider, so if the use "
+"is not personal, you may need to inquire with the provider."
+msgstr ""
+
+#: ../../threat_shield.rst:34
+msgid "Maintenance"
 msgstr ""
 
 #: ../../threat_shield.rst:35
 msgid ""
-"**Quality and Accuracy**: Premium blocklists, such as the ones provided "
-"by Nethesis and Yoroi, are curated and maintained by reputable "
+"Each blocklist is maintained by its specific provider. NethSecurity "
+"already includes the URLs for downloading the feeds, which are valid at "
+"the time of the release. However, because these URLs are hardcoded, if "
+"the provider changes them, some blocklists may no longer be downloadable."
+msgstr ""
+
+#: ../../threat_shield.rst:38
+msgid "Enterprise blocklists"
+msgstr ""
+
+#: ../../threat_shield.rst:44
+msgid ""
+"Enterprise blocklists are specifically focused on security and offer "
+"several advantages over community-maintained blocklists:"
+msgstr ""
+
+#: ../../threat_shield.rst:46
+msgid ""
+"**Quality and Accuracy**: Enterprise blocklists, such as the ones "
+"provided by Nethesis and Yoroi, are curated and maintained by reputable "
 "cybersecurity companies. These companies have dedicated teams that "
 "continuously monitor and update the blocklists to ensure they are "
 "accurate and effective in blocking malicious traffic. This results in a "
@@ -9485,50 +9460,50 @@ msgid ""
 "updates."
 msgstr ""
 
-#: ../../threat_shield.rst:39
+#: ../../threat_shield.rst:50
 msgid ""
-"**Timeliness**: Premium blocklists are frequently updated to include the "
-"latest threats and malicious IP addresses. Cybersecurity companies like "
-"Nethesis and Yoroi actively track emerging threats and promptly add them "
-"to their blocklists. This ensures that your system is protected against "
-"the most recent and evolving threats."
+"**Timeliness**: Enterprise blocklists are frequently updated to include "
+"the latest threats and malicious IP addresses. Cybersecurity companies "
+"like Nethesis and Yoroi actively track emerging threats and promptly add "
+"them to their blocklists. This ensures that your system is protected "
+"against the most recent and evolving threats."
 msgstr ""
 
-#: ../../threat_shield.rst:43
+#: ../../threat_shield.rst:54
 msgid ""
 "**Reduced False Positives**: False positives occur when legitimate "
-"traffic is mistakenly blocked. Premium blocklists are designed to "
+"traffic is mistakenly blocked. Enterprise blocklists are designed to "
 "minimize false positives by carefully curating and verifying the listed "
-"IP addresses and hostnames. The companies behind premium blocklists have "
-"robust processes in place to ensure that only malicious entities are "
-"included in the blocklists. This reduces the chances of legitimate "
+"IP addresses and hostnames. The companies behind Enterprise blocklists "
+"have robust processes in place to ensure that only malicious entities are"
+" included in the blocklists. This reduces the chances of legitimate "
 "traffic being blocked, minimizing disruptions to your network or "
 "services."
 msgstr ""
 
-#: ../../threat_shield.rst:48
+#: ../../threat_shield.rst:59
 msgid ""
-"**Enterprise Support**: Premium blocklists often come with additional "
+"**Enterprise Support**: Enterprise blocklists often come with additional "
 "support and services tailored for enterprise environments. This includes "
 "access to technical support, documentation, and integration assistance. "
-"If any issues or questions arise while using the premium blocklists, you "
-"can rely on the support provided by the cybersecurity companies to help "
-"you address them effectively."
+"If any issues or questions arise while using the Enterprise blocklists, "
+"you can rely on the support provided by the cybersecurity companies to "
+"help you address them effectively."
 msgstr ""
 
-#: ../../threat_shield.rst:53
+#: ../../threat_shield.rst:64
 msgid ""
-"Yoroi and Nethesis blocklists are premium blocklists. These lists will be"
-" listed only if the machine has a valid Enterprise :ref:`subscription "
+"Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will"
+" be listed only if the machine has a valid Enterprise :ref:`subscription "
 "<subscription-section>` and a valid entitlement for the Threat Shield "
 "service."
 msgstr ""
 
-#: ../../threat_shield.rst:57
+#: ../../threat_shield.rst:68
 msgid "Allow list"
 msgstr ""
 
-#: ../../threat_shield.rst:59
+#: ../../threat_shield.rst:70
 msgid ""
 "Sometimes it may be necessary to allow access to certain IP addresses, to"
 " do this you can use the ``Allowlist`` tab. Use the :guilabel:`Add "
@@ -9537,46 +9512,46 @@ msgid ""
 "fully qualified hostname (FQDN)."
 msgstr ""
 
-#: ../../threat_shield.rst:63
+#: ../../threat_shield.rst:74
 msgid "For example, the address can be:"
 msgstr ""
 
-#: ../../threat_shield.rst:65
+#: ../../threat_shield.rst:76
 msgid "IPv4 address: 192.168.0.1"
 msgstr ""
 
-#: ../../threat_shield.rst:66
+#: ../../threat_shield.rst:77
 msgid "IPv6 address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 msgstr ""
 
-#: ../../threat_shield.rst:67
+#: ../../threat_shield.rst:78
 msgid "IPv4 address with CIDR notation: 192.168.0.0/24"
 msgstr ""
 
-#: ../../threat_shield.rst:68
+#: ../../threat_shield.rst:79
 msgid "MAC address: 00:0a:95:9d:68:16"
 msgstr ""
 
-#: ../../threat_shield.rst:69
+#: ../../threat_shield.rst:80
 msgid "Fully qualified hostname: example.com"
 msgstr ""
 
-#: ../../threat_shield.rst:71
+#: ../../threat_shield.rst:82
 msgid "A comment can be associated with each address to facilitate management."
 msgstr ""
 
-#: ../../threat_shield.rst:73
+#: ../../threat_shield.rst:84
 msgid ""
 "You can add a comment to provide additional information about the "
 "address, such as its purpose or owner. This can help in organizing and "
 "managing the allowlist effectively."
 msgstr ""
 
-#: ../../threat_shield.rst:79
+#: ../../threat_shield.rst:90
 msgid "Brute Force Attempt Block"
 msgstr ""
 
-#: ../../threat_shield.rst:81
+#: ../../threat_shield.rst:92
 msgid ""
 "When Threat Shield is enabled, the system automatically starts checking "
 "for brute force attack attempts on firewall services. Currently, the "
@@ -9586,70 +9561,70 @@ msgid ""
 " the allowed attempts are 3, and the block lasts for 30 minutes."
 msgstr ""
 
-#: ../../threat_shield.rst:83
+#: ../../threat_shield.rst:94
 msgid ""
 "You can perform further actions using the command line; these are the "
 "supported commands:"
 msgstr ""
 
-#: ../../threat_shield.rst:85
+#: ../../threat_shield.rst:96
 msgid ""
 "View all IP addresses currently on the blocklist: ``/etc/init.d/banip "
 "survey blocklistv4``"
 msgstr ""
 
-#: ../../threat_shield.rst:86
+#: ../../threat_shield.rst:97
 msgid ""
 "Look up a specific IP in the blocklist: ``/etc/init.d/banip search "
 "IP_ADDRESS``"
 msgstr ""
 
-#: ../../threat_shield.rst:87
+#: ../../threat_shield.rst:98
 msgid ""
 "Unban an IP address: ``nft delete element inet banIP blocklistv4 { "
 "IP_ADDRESS }``"
 msgstr ""
 
-#: ../../threat_shield.rst:89
+#: ../../threat_shield.rst:100
 msgid ""
 "Bear in mind that you need to specify the correct blocklist in commands "
 "when prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6)."
 msgstr ""
 
-#: ../../threat_shield.rst:91
+#: ../../threat_shield.rst:102
 msgid ""
 "You can modify the default values for the number of attempts and ban time"
 " using these commands:"
 msgstr ""
 
-#: ../../threat_shield.rst:93
+#: ../../threat_shield.rst:104
 msgid ""
 "To change the number of attempts before a ban: ``uci set "
 "banip.global.ban_logcount='3'``"
 msgstr ""
 
-#: ../../threat_shield.rst:94
+#: ../../threat_shield.rst:105
 msgid ""
 "To change the ban duration in minutes: ``uci set "
 "banip.global.ban_nftexpiry='30m'``"
 msgstr ""
 
-#: ../../threat_shield.rst:96
+#: ../../threat_shield.rst:107
 msgid "After changing the values, copy and paste these two commands: ::"
 msgstr ""
 
-#: ../../threat_shield.rst:105
+#: ../../threat_shield.rst:116
 msgid "DNS based Threat shield"
 msgstr ""
 
-#: ../../threat_shield.rst:107
+#: ../../threat_shield.rst:118
 msgid ""
 "The DNS filter uses AdBlock which blocks any request to a domain that is "
 "considered malicious. The service can load community-maintained blocklist"
 " or use Yoroi feeds."
 msgstr ""
 
-#: ../../threat_shield.rst:110
+#: ../../threat_shield.rst:121
 msgid ""
 "AdBlock can be configured from the command line interface as explained in"
 " the `developer manual <https://dev.nethsecurity.org/packages/ns-"
@@ -13909,5 +13884,147 @@ msgstr ""
 #~ "compose the user bind DN. It "
 #~ "should be ``cn`` for Active Directory"
 #~ " or ``uid`` for OpenLDAP."
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-18-g44bc3f2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-18-g44bc3f2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-18-g44bc3f2-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-18-g44bc3f2/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-17-gb61b927"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-17-gb61b927/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-17-gb61b927-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-17-gb61b927/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-16-g36f10a3"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-16-g36f10a3/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-16-g36f10a3-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-16-g36f10a3/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-15-g10de678"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-15-g10de678/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-15-g10de678-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-15-g10de678/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the service is enabled, the "
+#~ "``Blocklist`` tab will display all "
+#~ "available blocklists. You can enable or"
+#~ " disable each blocklist by using the"
+#~ " switch on the right side of "
+#~ "the list. Enabled blocklist will be "
+#~ "automatically updated at regular intervals."
+#~ msgstr ""
+
+#~ msgid "Premium blocklists"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Premium blocklists offer several advantages"
+#~ " over community-maintained blocklists:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Quality and Accuracy**: Premium blocklists,"
+#~ " such as the ones provided by "
+#~ "Nethesis and Yoroi, are curated and "
+#~ "maintained by reputable cybersecurity "
+#~ "companies. These companies have dedicated "
+#~ "teams that continuously monitor and "
+#~ "update the blocklists to ensure they "
+#~ "are accurate and effective in blocking"
+#~ " malicious traffic. This results in a"
+#~ " higher level of quality and accuracy"
+#~ " compared to community-maintained "
+#~ "blocklists, which may not receive the"
+#~ " same level of attention and updates."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Timeliness**: Premium blocklists are "
+#~ "frequently updated to include the latest"
+#~ " threats and malicious IP addresses. "
+#~ "Cybersecurity companies like Nethesis and "
+#~ "Yoroi actively track emerging threats "
+#~ "and promptly add them to their "
+#~ "blocklists. This ensures that your "
+#~ "system is protected against the most "
+#~ "recent and evolving threats."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Reduced False Positives**: False positives"
+#~ " occur when legitimate traffic is "
+#~ "mistakenly blocked. Premium blocklists are "
+#~ "designed to minimize false positives by"
+#~ " carefully curating and verifying the "
+#~ "listed IP addresses and hostnames. The"
+#~ " companies behind premium blocklists have"
+#~ " robust processes in place to ensure"
+#~ " that only malicious entities are "
+#~ "included in the blocklists. This reduces"
+#~ " the chances of legitimate traffic "
+#~ "being blocked, minimizing disruptions to "
+#~ "your network or services."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Enterprise Support**: Premium blocklists "
+#~ "often come with additional support and"
+#~ " services tailored for enterprise "
+#~ "environments. This includes access to "
+#~ "technical support, documentation, and "
+#~ "integration assistance. If any issues or"
+#~ " questions arise while using the "
+#~ "premium blocklists, you can rely on "
+#~ "the support provided by the "
+#~ "cybersecurity companies to help you "
+#~ "address them effectively."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Yoroi and Nethesis blocklists are "
+#~ "premium blocklists. These lists will be"
+#~ " listed only if the machine has "
+#~ "a valid Enterprise :ref:`subscription "
+#~ "<subscription-section>` and a valid "
+#~ "entitlement for the Threat Shield "
+#~ "service."
 #~ msgstr ""
 
