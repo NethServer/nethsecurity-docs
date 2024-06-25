@@ -30,6 +30,8 @@ Passwords of local users are stored in the Unix passwd format, ensuring compatib
 Users inside the local database can be granted :ref:`administrative privileges <admin_users-section>` on the web user interface by enabling the ``Administrator user`` option.
 The user must have a password set.
 
+.. _remote_user_databases-section:
+
 Remote databases
 ================
 
@@ -59,7 +61,22 @@ When configuring a remote database, click on the :guilabel:`Add remote database`
   It should be ``cn`` for Active Directory or ``uid`` for OpenLDAP.
 
 * ``User CN field``: specifies the user attribute containing the user's complete name. For example, ``cn`` for both Active Directory and OpenLDAP.
+  This field is used to authenticate users in the OpenVPN road warrior server. The authentication process is based on a LDAP bind operation which
+  uses the user CN field to compose the user bind DN with the user DN.
+  Example: given a user named `jdoe` in the LDAP directory, the user bind DN is composed as `cn=jdoe,cn=users,dc=example,dc=com`.
 
+* ``Custom user bind DN``: if this field is set, the user CN field is ignored and the custom user bind DN is used to authenticate users in the
+  OpenVPN road warrior server. The field can contain a ``%u`` placeholder which is replaced with the username during the authentication process.
+  Use this setting if you do not know if the user CN field contain the user full name, like ``John Doe``, or the username, like ``jdoe``.
+  If the remote server is an Active Directory server, you can use one of the following values:
+
+  - ``%u@domain.local``: where `domain.local` is the domain name of the Active Directory server; inside the OpenVPN client, to authenticate the
+    user use only the username like ``jdoe``
+  - ``DOMAIN\%u``: where `DOMAIN` is the realm of the Active Directory server; inside the OpenVPN client, to authenticate the user use only the
+    username like ``jdoe``
+  - ``%u``: the placeholder is replaced with the username; inside the OpenVPN client, to authenticate the user user just the username with the
+    domain, like ``jdoe@example.com``.
+  
 * ``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), representing the user used to bind to the LDAP server (eg. ``cn=admin,dc=example,dc=com``).
 
 * ``Bind password``: specifies the password of the user used to bind to the LDAP server.
@@ -67,3 +84,64 @@ When configuring a remote database, click on the :guilabel:`Add remote database`
 * ``StartTLS``: enables StartTLS for secure communication with the LDAP server
 
 * ``Verify TLS certificate``: determines whether to enable or disable certificate validation
+
+
+Suggested configurations
+========================
+
+The following configurations are suggested for the most common LDAP servers.
+When configuring the remote database:
+
+- ensure the LDAP server is reachable from the firewall. If the LDAP URI contains a hostname, make sure the hostname is resolvable
+- replace the example values with the actual values of the LDAP server
+- for Active Directory, it's recommended to use ``Custom user bind DN`` field if you are not sure about the used LDAP schema
+
+NethServer 7 OpenLDAP
+---------------------
+
+You can access the OpenLDAP without authentication:
+
+* LDAP URI: ``ldap://ns7ldap.nethserver.org``
+* Type: ``OpenLDAP``
+* Base DN: ``dc=directory,dc=nh``
+* User DN: ``ou=People,dc=directory,dc=nh``
+* User attribute field``: ``uid``
+* User CN field: ``cn``
+
+If you want use authentication, you must enable StartTLS and use a bind DN:
+
+* LDAP URI: ``ldap://ns7ldap.nethserver.org``
+* Type: ``OpenLDAP``
+* Base DN: ``dc=directory,dc=nh``
+* User DN: ``ou=People,dc=directory,dc=nh``
+* User attribute field``: ``uid``
+* User CN field: ``cn``
+* Bind DN: ``cn=ldapservice,dc=directory,dc=nh``
+* Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field
+* StartTLS: ``enabled``
+
+NethServer 7 Active Directory (Samba)
+-------------------------------------
+
+* LDAP URI: ``ldap://nsdc-server.ad.example.com``
+* Type: ``Active Directory``
+* Base DN: ``dc=example,dc=com``
+* User DN: ``cn=Users,dc=example,dc=com``
+* User attribute field: ``cn``
+* User CN field: ``cn``
+* Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
+* Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field
+* StartTLS: ``enabled``
+
+Windows Server 2022 Active Directory
+------------------------------------
+
+* LDAP URI: ``ldap://w2k22dc.example.com``
+* Type: ``Active Directory``
+* Base DN: ``dc=example,dc=com``
+* User DN: ``cn=Users,dc=example,dc=com``
+* User attribute field: ``cn``
+* User CN field: ``sAMAccountName``
+* Custom user bind DN: ``%u@example.com``
+* Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
+* Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field

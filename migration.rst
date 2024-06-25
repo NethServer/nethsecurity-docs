@@ -114,6 +114,10 @@ the subscription is not migrated during the in-place migration.
 If you have performed an in-place migration, you must :ref:`register the system <subscription-section>` again.
 This step is not necessary if you have performed a migration with the exported archive method.
 
+If your using a remote LDAP or Active Directory server to authenticate OpenVPN Road Warrior clients, make sure that the remote server is 
+reachable from the new NethSecurity machine by verifying also the DNS name resolution. If necessary, update the DNS configuration on the new machine.
+Also review the :ref:`remote user database page <remote_user_databases-section>` to check if all users have been correctly imported.
+
 Then, verify that all services are working correctly. If you encounter any issues, refer to the :ref:`troubleshooting section <troubleshooting-section>`.
 
 Migrated configurations
@@ -133,7 +137,8 @@ During the migration, the following configurations will be imported from NethSer
   to rules with IP/CIDR addresses; all NAT helpers are automatically loaded after the migration with standard kernel parameters
 - MultiWAN configuration: providers will be preserved while divert rules (policy routing) are not migrated
 - QoS: classes with reserved bandwidth and rules are not supported
-- OpenVPN Road Warrior: all settings are migrated; the accounting database of client connections is not migrated, finally mail notification is still not supported on NethSecurity
+- OpenVPN Road Warrior: all settings are migrated; the accounting database of client connections is not migrated; mail notification is still not supported on NethSecurity.
+  If the machine was connected to a remote Active Directory and the OpenVPN server was configured to authenticate against it, please see also :ref:`remote_user_databases-section`.
 - OpenVPN tunnels
 - IPSec tunnels
 - Threat shield IP: only enterprise lists are migrated, community lists must be reconfigured manually
