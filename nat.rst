@@ -50,7 +50,7 @@ This improves the reputation of your mail server and allows for specific configu
 Source NAT in a MultiWAN scenario
 ---------------------------------
 
-If you have multiple WANs, you need to create a MultiWAN rule in addition to the SNAT rule. This rule will route traffic from the source IP address through the WAN with the public IP address.
+If you have multiple WANs and your SNAT rule rewrites to one of the public WAN IPs, you need to create a MultiWAN rule in addition to the SNAT rule. This rule will route traffic from the source IP address through the right WAN with the public IP address.
 
 If you haven't set this up yet, add a custom policy that includes only the relevant WAN.
 Then, create a rule to apply this custom policy for traffic originating from the internal IP address (source address) to any destination and protocol.
