@@ -35,7 +35,7 @@ Maintenance
 Each blocklist is maintained by its specific provider. NethSecurity already includes the URLs for downloading the feeds, which are valid at the time of the release. However, because these URLs are hardcoded, if the provider changes them, some blocklists may no longer be downloadable.
 
 Enterprise blocklists
-------------------
+---------------------
 
 .. admonition:: Enterprise subscription required
 
