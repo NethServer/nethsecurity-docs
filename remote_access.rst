@@ -174,7 +174,7 @@ NethSecurity UI administrators
 The default user for accessing the user web interface is root, but it is possible to create other administrator users with access only to the web interface.
 
 To create a user in the local database, enter the `Username` and `Display name`.
-Make sure to set a password for the user.
+Make sure to set a password for the user (it is mandatory for administrator users).
 If the user needs administrative access to the web interface, enable the `Administrator user` option.
 
 It is possible to grant or remove administrative access only to users residing in the local database.
