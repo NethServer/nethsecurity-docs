@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-24 13:40+0000\n"
+"POT-Creation-Date: 2024-06-25 13:41+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -968,7 +968,7 @@ msgstr ""
 msgid "Subscription and limitations"
 msgstr "Abbonamento e limitazioni"
 
-#: ../../controller.rst:249 ../../updates.rst:37 ../../users_databases.rst:33
+#: ../../controller.rst:249 ../../updates.rst:37 ../../users_databases.rst:36
 msgid "Subscription required"
 msgstr "Abbonamento richiesto"
 
@@ -1992,6 +1992,40 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.0.1-28-gf93490f"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-28-gf93490f/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-28-gf93490f-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-28-gf93490f/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.0.1-27-g5dc7bc2"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-27-g5dc7bc2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-27-g5dc7bc2-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-27-g5dc7bc2/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.3-ns.1.0.1-26-gf5dfdca"
 msgstr ""
 
@@ -2023,23 +2057,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-24-g76f7dcc/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-19-gff81a44"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-19-gff81a44/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-19-gff81a44-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-19-gff81a44/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -8013,8 +8030,8 @@ msgstr ""
 
 #: ../../remote_access.rst:39
 msgid ""
-"NethSecurity UI (ns-ui), the NethSecurity official web interface, is "
-"available on port ``9090`` at the following URL: "
+"NethSecurity UI (User Interface), the NethSecurity official web "
+"interface, is available on port ``9090`` at the following URL: "
 "**https://<server_ip>:9090**."
 msgstr ""
 
@@ -8281,48 +8298,95 @@ msgstr ""
 msgid "You can disable 2FA from the same page."
 msgstr ""
 
-#: ../../remote_access.rst:170
+#: ../../remote_access.rst:172
+msgid "NethSecurity UI administrators"
+msgstr ""
+
+#: ../../remote_access.rst:174
+msgid ""
+"The default user for accessing the user web interface is root, but it is "
+"possible to create other administrator users with access only to the web "
+"interface."
+msgstr ""
+
+#: ../../remote_access.rst:176
+msgid ""
+"To create a user in the local database, enter the `Username` and `Display"
+" name`. Ensure to set a password for the user; this is mandatory for "
+"administrator users. If the user needs administrative access to the web "
+"interface, enable the `Administrator user` option."
+msgstr ""
+
+#: ../../remote_access.rst:180
+msgid ""
+"It is possible to grant or remove administrative access only to users "
+"residing in the local database."
+msgstr ""
+
+#: ../../remote_access.rst:183
+msgid "Auditing user actions"
+msgstr ""
+
+#: ../../remote_access.rst:185
+msgid ""
+"Every time an administrator logs in to the NethSecurity UI, the system "
+"logs the event, inside the `/var/log/messages` file. Example of login "
+"event for user `goofy`: ::"
+msgstr ""
+
+#: ../../remote_access.rst:191
+msgid "Example of logout event for user `goofy`: ::"
+msgstr ""
+
+#: ../../remote_access.rst:196
+msgid ""
+"Also every action performed by an administrator inside the NethSecurity "
+"UI is logged inside the `/var/log/messages` file. Example of action "
+"performed by user `goofy`: ::"
+msgstr ""
+
+#: ../../remote_access.rst:202
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:172
+#: ../../remote_access.rst:204
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:174
+#: ../../remote_access.rst:206
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:179
+#: ../../remote_access.rst:211
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:181
+#: ../../remote_access.rst:213
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:183
+#: ../../remote_access.rst:215
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:185
+#: ../../remote_access.rst:217
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:189
+#: ../../remote_access.rst:221
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:194
+#: ../../remote_access.rst:226
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
@@ -9959,7 +10023,7 @@ msgstr ""
 msgid "Automatic updates"
 msgstr "rotte statiche"
 
-#: ../../updates.rst:39 ../../users_databases.rst:35
+#: ../../updates.rst:39 ../../users_databases.rst:38
 msgid "This feature is available only if the firewall has a valid subscription."
 msgstr ""
 
@@ -10037,11 +10101,18 @@ msgid ""
 "compatibility and security in the local user database."
 msgstr ""
 
-#: ../../users_databases.rst:31
+#: ../../users_databases.rst:30
+msgid ""
+"Users inside the local database can be granted :ref:`administrative "
+"privileges <admin_users-section>` on the web user interface by enabling "
+"the ``Administrator user`` option. The user must have a password set."
+msgstr ""
+
+#: ../../users_databases.rst:34
 msgid "Remote databases"
 msgstr ""
 
-#: ../../users_databases.rst:37
+#: ../../users_databases.rst:40
 msgid ""
 "The administrator can extend the capabilities of the firewall by adding "
 "new remote databases. Users in remote databases must be added directly at"
@@ -10049,47 +10120,47 @@ msgid ""
 "server to accurately reflect changes in the firewall configuration page."
 msgstr ""
 
-#: ../../users_databases.rst:41
+#: ../../users_databases.rst:44
 msgid ""
 "If the remote database is offline, VPN authentication will fail. It is "
 "crucial to ensure that the remote database is online and accessible to "
 "ensure proper user authentication through the VPN service."
 msgstr ""
 
-#: ../../users_databases.rst:44
+#: ../../users_databases.rst:47
 msgid ""
 "When configuring a remote database, click on the :guilabel:`Add remote "
 "database` button  and fill all the following fields:"
 msgstr ""
 
-#: ../../users_databases.rst:46
+#: ../../users_databases.rst:49
 msgid ""
 "``LDAP URI``: specifies the LDAP Uniform Resource Identifier (URI), "
 "including the server address and port (e.g., ``ldap://example.com:389``)."
 msgstr ""
 
-#: ../../users_databases.rst:48
+#: ../../users_databases.rst:51
 msgid ""
 "``Type``: specifies the type of LDAP server. The available options are "
 "``Active Directory`` and ``OpenLDAP``. If OpenLDAP is selected, the "
 "remote server should respect the RFC 2307 schema."
 msgstr ""
 
-#: ../../users_databases.rst:51
+#: ../../users_databases.rst:54
 msgid ""
 "``Base DN``: specifies the LDAP Base Distinguished Name (DN), "
 "representing the starting point for searches in the LDAP directory (eg. "
 "``dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:53
+#: ../../users_databases.rst:56
 msgid ""
 "``User DN``: specifies the LDAP User Distinguished Name (DN). If not "
 "present, the default value is equal to base_dn (eg. "
 "``cn=users,dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:55
+#: ../../users_databases.rst:58
 msgid ""
 "``User attribute field``: specifies the user attribute used to identify "
 "the user, this option is used by the OpenVPN road warrior server to "
@@ -10097,33 +10168,33 @@ msgid ""
 "``uid`` for OpenLDAP."
 msgstr ""
 
-#: ../../users_databases.rst:58
+#: ../../users_databases.rst:61
 msgid ""
 "``User CN field``: specifies the user attribute containing the user's "
 "complete name. For example, ``cn`` for both Active Directory and "
 "OpenLDAP."
 msgstr ""
 
-#: ../../users_databases.rst:60
+#: ../../users_databases.rst:63
 msgid ""
 "``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), "
 "representing the user used to bind to the LDAP server (eg. "
 "``cn=admin,dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:62
+#: ../../users_databases.rst:65
 msgid ""
 "``Bind password``: specifies the password of the user used to bind to the"
 " LDAP server."
 msgstr ""
 
-#: ../../users_databases.rst:64
+#: ../../users_databases.rst:67
 msgid ""
 "``StartTLS``: enables StartTLS for secure communication with the LDAP "
 "server"
 msgstr ""
 
-#: ../../users_databases.rst:66
+#: ../../users_databases.rst:69
 msgid ""
 "``Verify TLS certificate``: determines whether to enable or disable "
 "certificate validation"
@@ -14026,5 +14097,26 @@ msgstr ""
 #~ "<subscription-section>` and a valid "
 #~ "entitlement for the Threat Shield "
 #~ "service."
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-19-gff81a44"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-19-gff81a44/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-19-gff81a44-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-19-gff81a44/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity UI (ns-ui), the "
+#~ "NethSecurity official web interface, is "
+#~ "available on port ``9090`` at the "
+#~ "following URL: **https://<server_ip>:9090**."
 #~ msgstr ""
 
