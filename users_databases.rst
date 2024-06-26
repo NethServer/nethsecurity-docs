@@ -67,7 +67,7 @@ When configuring a remote database, click on the :guilabel:`Add remote database`
 
 * ``Custom user bind DN``: if this field is set, the user CN field is ignored and the custom user bind DN is used to authenticate users in the
   OpenVPN road warrior server. The field can contain a ``%u`` placeholder which is replaced with the username during the authentication process.
-  Use this setting if you do not know if the user CN field contain the user full name, like ``John Doe``, or the username, like ``jdoe``.
+  Use this setting if you do not know if the user CN field contains the user full name, like ``John Doe``, or the username, like ``jdoe``.
   If the remote server is an Active Directory server, you can use one of the following values:
 
   - ``%u@domain.local``: where `domain.local` is the domain name of the Active Directory server; inside the OpenVPN client, to authenticate the
