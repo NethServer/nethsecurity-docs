@@ -114,7 +114,7 @@ the subscription is not migrated during the in-place migration.
 If you have performed an in-place migration, you must :ref:`register the system <subscription-section>` again.
 This step is not necessary if you have performed a migration with the exported archive method.
 
-If your using a remote LDAP or Active Directory server to authenticate OpenVPN Road Warrior clients, make sure that the remote server is 
+When using a remote LDAP or Active Directory server to authenticate OpenVPN Road Warrior clients, make sure that the remote server is 
 reachable from the new NethSecurity machine by verifying also the DNS name resolution. If necessary, update the DNS configuration on the new machine.
 Also review the :ref:`remote user database page <remote_user_databases-section>` to check if all users have been correctly imported.
 
