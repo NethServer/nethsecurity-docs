@@ -74,8 +74,6 @@ When configuring a remote database, click on the :guilabel:`Add remote database`
     user use only the username like ``jdoe``
   - ``DOMAIN\%u``: where `DOMAIN` is the realm of the Active Directory server; inside the OpenVPN client, to authenticate the user use only the
     username like ``jdoe``
-  - ``%u``: the placeholder is replaced with the username; inside the OpenVPN client, to authenticate the user user just the username with the
-    domain, like ``jdoe@example.com``.
   
 * ``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), representing the user used to bind to the LDAP server (eg. ``cn=admin,dc=example,dc=com``).
 
