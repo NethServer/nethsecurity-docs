@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-25 15:24+0000\n"
+"POT-Creation-Date: 2024-07-01 13:47+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -968,7 +968,7 @@ msgstr ""
 msgid "Subscription and limitations"
 msgstr "Abbonamento e limitazioni"
 
-#: ../../controller.rst:249 ../../updates.rst:37 ../../users_databases.rst:36
+#: ../../controller.rst:249 ../../updates.rst:37 ../../users_databases.rst:38
 msgid "Subscription required"
 msgstr "Abbonamento richiesto"
 
@@ -1992,105 +1992,71 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-34-g92afcb7"
+msgid "8-23.05.3-ns.1.0.1-51-gefecda4"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-34-g92afcb7/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-34-g92afcb7-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-51-gefecda4/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-51-gefecda4-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-34-g92afcb7/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-51-gefecda4/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-33-gea7c2bf"
+msgid "8-23.05.3-ns.1.0.1-45-ge8b9d39"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-33-gea7c2bf/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-33-gea7c2bf-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-45-ge8b9d39/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-45-ge8b9d39-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-33-gea7c2bf/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-45-ge8b9d39/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-28-gf93490f"
+msgid "8-23.05.3-ns.1.0.1-44-g519b238"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-28-gf93490f/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-28-gf93490f-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-44-g519b238/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-44-g519b238-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-28-gf93490f/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-44-g519b238/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-27-g5dc7bc2"
+msgid "8-23.05.3-ns.1.0.1-43-g9089c40"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-27-g5dc7bc2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-27-g5dc7bc2-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-43-g9089c40/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-43-g9089c40-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-27-g5dc7bc2/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-26-gf5dfdca"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-26-gf5dfdca/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-26-gf5dfdca-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-26-gf5dfdca/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-24-g76f7dcc"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-24-g76f7dcc/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-24-g76f7dcc-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-24-g76f7dcc/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-43-g9089c40/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3930,16 +3896,27 @@ msgstr ""
 
 #: ../../migration.rst:117
 msgid ""
+"When using a remote LDAP or Active Directory server to authenticate "
+"OpenVPN Road Warrior clients, make sure that the remote server is "
+"reachable from the new NethSecurity machine by verifying also the DNS "
+"name resolution. If necessary, update the DNS configuration on the new "
+"machine. Also review the :ref:`remote user database page "
+"<remote_user_databases-section>` to check if all users have been "
+"correctly imported."
+msgstr ""
+
+#: ../../migration.rst:121
+msgid ""
 "Then, verify that all services are working correctly. If you encounter "
 "any issues, refer to the :ref:`troubleshooting section <troubleshooting-"
 "section>`."
 msgstr ""
 
-#: ../../migration.rst:120
+#: ../../migration.rst:124
 msgid "Migrated configurations"
 msgstr "Configurazioni migrare"
 
-#: ../../migration.rst:122
+#: ../../migration.rst:126
 msgid ""
 "During the migration, the following configurations will be imported from "
 "NethServer 7:"
@@ -3947,25 +3924,25 @@ msgstr ""
 "Durante la migrazione, saranno importate le seguenti configurazioni da "
 "NethServer 7:"
 
-#: ../../migration.rst:124
+#: ../../migration.rst:128
 msgid ""
 "Password of the *root* user: it can be used to access the system via SSH "
 "and the web interface"
 msgstr ""
 
-#: ../../migration.rst:125
+#: ../../migration.rst:129
 #, fuzzy
 msgid ""
 "Network configuration: everything should be migrated except for bridges "
 "over bonds that are not supported"
 msgstr "configurazione di rete: i bridge su bonds non sono supportati"
 
-#: ../../migration.rst:126
+#: ../../migration.rst:130
 #, fuzzy
 msgid "Date and timezone"
 msgstr "data e fuso orario"
 
-#: ../../migration.rst:127
+#: ../../migration.rst:131
 msgid ""
 "DHCP servers and reservations: DHCP server on bonds interfaces are not "
 "supported"
@@ -3973,7 +3950,7 @@ msgstr ""
 "Server DHCP e prenotazioni: i server DHCP sulle interfacce di bond non "
 "sono supportati"
 
-#: ../../migration.rst:128
+#: ../../migration.rst:132
 msgid ""
 "DNS configuration with host definition: TFTP options are migrated, but "
 "not the content of the TFTP server. To re-enable the service make sure to"
@@ -3983,17 +3960,17 @@ msgstr ""
 "migrate, ma non il contenuto del server TFTP. Per riattivare il servizio,"
 " assicurati di impostare manualmente l'opzione ``tftp_root``"
 
-#: ../../migration.rst:130
+#: ../../migration.rst:134
 #, fuzzy
 msgid "Static IPv4 routes"
 msgstr "rotte statiche"
 
-#: ../../migration.rst:131
+#: ../../migration.rst:135
 #, fuzzy
 msgid "Port forwards"
 msgstr "inoltro porte"
 
-#: ../../migration.rst:132
+#: ../../migration.rst:136
 #, fuzzy
 msgid ""
 "Firewall rules: rules using NDPI services are not supported; source and "
@@ -4006,44 +3983,46 @@ msgstr ""
 "supportati e verranno convertiti in regole con indirizzi IP/CIDR; i NAT "
 "helpers dovrebbero essere riconfigurati manualmente dopo la migrazione"
 
-#: ../../migration.rst:134
+#: ../../migration.rst:138
 msgid ""
 "MultiWAN configuration: providers will be preserved while divert rules "
 "(policy routing) are not migrated"
 msgstr ""
 
-#: ../../migration.rst:135
+#: ../../migration.rst:139
 msgid "QoS: classes with reserved bandwidth and rules are not supported"
 msgstr "QoS: classi con larghezza di banda riservata e regole non sono supportate"
 
-#: ../../migration.rst:136
+#: ../../migration.rst:140
 msgid ""
 "OpenVPN Road Warrior: all settings are migrated; the accounting database "
-"of client connections is not migrated, finally mail notification is still"
-" not supported on NethSecurity"
+"of client connections is not migrated; mail notification is still not "
+"supported on NethSecurity. If the machine was connected to a remote "
+"Active Directory and the OpenVPN server was configured to authenticate "
+"against it, please see also :ref:`remote_user_databases-section`."
 msgstr ""
 
-#: ../../migration.rst:137 ../../openvpn_tunnels.rst:5
+#: ../../migration.rst:142 ../../openvpn_tunnels.rst:5
 msgid "OpenVPN tunnels"
 msgstr "Tunnel OpenVPN"
 
-#: ../../migration.rst:138
+#: ../../migration.rst:143
 msgid "IPSec tunnels"
 msgstr "tunnel IPSec"
 
-#: ../../migration.rst:139
+#: ../../migration.rst:144
 msgid ""
 "Threat shield IP: only enterprise lists are migrated, community lists "
 "must be reconfigured manually"
 msgstr ""
 
-#: ../../migration.rst:140
+#: ../../migration.rst:145
 msgid ""
 "Subscription: the subscription is migrated only when using the exported "
 "archive method"
 msgstr ""
 
-#: ../../migration.rst:141
+#: ../../migration.rst:146
 msgid ""
 "Hotspot: if the migration has been executed on a new hardware, the "
 "hotspot interface will change MAC address and it must be registered again"
@@ -4053,57 +4032,57 @@ msgstr ""
 "l'interfaccia hotspot cambierà indirizzo MAC e dovrà essere nuovamente "
 "registrata presso il gestore hotspot remoto"
 
-#: ../../migration.rst:143
+#: ../../migration.rst:148
 msgid ""
 "Let's Encrypt certificate configuration: certificates will be regenerated"
 " after the migration"
 msgstr ""
 
-#: ../../migration.rst:144
+#: ../../migration.rst:149
 msgid ""
 "Reverse proxy configuration: the configuration is migrated, but the "
 "certificates will be regenerated after the migration"
 msgstr ""
 
-#: ../../migration.rst:145
+#: ../../migration.rst:150
 msgid "FlashStart Cloud DNS filter"
 msgstr ""
 
-#: ../../migration.rst:147
+#: ../../migration.rst:152
 msgid "The following features are not migrated to NethSecurity:"
 msgstr "Le seguenti funzionalità non vengono migrate su NethSecurity:"
 
-#: ../../migration.rst:149
+#: ../../migration.rst:154
 msgid "Web proxy (Squid) and filter (ufdbGuard)"
 msgstr "Proxy web (Squid) e filtro (ufdbGuard)"
 
-#: ../../migration.rst:150
+#: ../../migration.rst:155
 msgid "IPS (Suricata) and IPS alerts (EveBox)"
 msgstr "IPS (Suricata) e avvisi IPS (EveBox)"
 
-#: ../../migration.rst:151
+#: ../../migration.rst:156
 msgid "UPS monitoring (NUT)"
 msgstr "Monitoraggio UPS (NUT)"
 
-#: ../../migration.rst:152
+#: ../../migration.rst:157
 msgid "System statistics (Collectd)"
 msgstr "Statistiche di sistema (Collectd)"
 
-#: ../../migration.rst:153
+#: ../../migration.rst:158
 msgid "Reports (Dante)"
 msgstr "Report (Dante)"
 
-#: ../../migration.rst:154
+#: ../../migration.rst:159
 msgid "Bandwidth monitor (ntopng)"
 msgstr "Monitoraggio della larghezza di banda (ntopng)"
 
-#: ../../migration.rst:155
+#: ../../migration.rst:160
 msgid ""
 "Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block"
 " feature <brute_force-section>`"
 msgstr ""
 
-#: ../../migration.rst:156
+#: ../../migration.rst:161
 msgid ""
 "Threat shield DNS, currently :ref:`available only from command line "
 "<threat_shield-dns-section>`"
@@ -10077,7 +10056,7 @@ msgstr ""
 msgid "Automatic updates"
 msgstr "rotte statiche"
 
-#: ../../updates.rst:39 ../../users_databases.rst:38
+#: ../../updates.rst:39 ../../users_databases.rst:40
 msgid "This feature is available only if the firewall has a valid subscription."
 msgstr ""
 
@@ -10162,11 +10141,11 @@ msgid ""
 "the ``Administrator user`` option. The user must have a password set."
 msgstr ""
 
-#: ../../users_databases.rst:34
+#: ../../users_databases.rst:36
 msgid "Remote databases"
 msgstr ""
 
-#: ../../users_databases.rst:40
+#: ../../users_databases.rst:42
 msgid ""
 "The administrator can extend the capabilities of the firewall by adding "
 "new remote databases. Users in remote databases must be added directly at"
@@ -10174,47 +10153,47 @@ msgid ""
 "server to accurately reflect changes in the firewall configuration page."
 msgstr ""
 
-#: ../../users_databases.rst:44
+#: ../../users_databases.rst:46
 msgid ""
 "If the remote database is offline, VPN authentication will fail. It is "
 "crucial to ensure that the remote database is online and accessible to "
 "ensure proper user authentication through the VPN service."
 msgstr ""
 
-#: ../../users_databases.rst:47
+#: ../../users_databases.rst:49
 msgid ""
 "When configuring a remote database, click on the :guilabel:`Add remote "
 "database` button  and fill all the following fields:"
 msgstr ""
 
-#: ../../users_databases.rst:49
+#: ../../users_databases.rst:51
 msgid ""
 "``LDAP URI``: specifies the LDAP Uniform Resource Identifier (URI), "
 "including the server address and port (e.g., ``ldap://example.com:389``)."
 msgstr ""
 
-#: ../../users_databases.rst:51
+#: ../../users_databases.rst:53
 msgid ""
 "``Type``: specifies the type of LDAP server. The available options are "
 "``Active Directory`` and ``OpenLDAP``. If OpenLDAP is selected, the "
 "remote server should respect the RFC 2307 schema."
 msgstr ""
 
-#: ../../users_databases.rst:54
+#: ../../users_databases.rst:56
 msgid ""
 "``Base DN``: specifies the LDAP Base Distinguished Name (DN), "
 "representing the starting point for searches in the LDAP directory (eg. "
 "``dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:56
+#: ../../users_databases.rst:58
 msgid ""
 "``User DN``: specifies the LDAP User Distinguished Name (DN). If not "
 "present, the default value is equal to base_dn (eg. "
 "``cn=users,dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:58
+#: ../../users_databases.rst:60
 msgid ""
 "``User attribute field``: specifies the user attribute used to identify "
 "the user, this option is used by the OpenVPN road warrior server to "
@@ -10222,36 +10201,197 @@ msgid ""
 "``uid`` for OpenLDAP."
 msgstr ""
 
-#: ../../users_databases.rst:61
+#: ../../users_databases.rst:63
 msgid ""
 "``User CN field``: specifies the user attribute containing the user's "
 "complete name. For example, ``cn`` for both Active Directory and "
-"OpenLDAP."
+"OpenLDAP. This field is used to authenticate users in the OpenVPN road "
+"warrior server. The authentication process is based on a LDAP bind "
+"operation which uses the user CN field to compose the user bind DN with "
+"the user DN. Example: given a user named `jdoe` in the LDAP directory, "
+"the user bind DN is composed as `cn=jdoe,cn=users,dc=example,dc=com`."
 msgstr ""
 
-#: ../../users_databases.rst:63
+#: ../../users_databases.rst:68
+#, python-format
+msgid ""
+"``Custom user bind DN``: if this field is set, the user CN field is "
+"ignored and the custom user bind DN is used to authenticate users in the "
+"OpenVPN road warrior server. The field can contain a ``%u`` placeholder "
+"which is replaced with the username during the authentication process. "
+"Use this setting if you do not know if the user CN field contains the "
+"user full name, like ``John Doe``, or the username, like ``jdoe``. If the"
+" remote server is an Active Directory server, you can use one of the "
+"following values:"
+msgstr ""
+
+#: ../../users_databases.rst:73
+#, python-format
+msgid ""
+"``%u@domain.local``: where `domain.local` is the domain name of the "
+"Active Directory server; inside the OpenVPN client, to authenticate the "
+"user use only the username like ``jdoe``"
+msgstr ""
+
+#: ../../users_databases.rst:75
+#, python-format
+msgid ""
+"``DOMAIN\\%u``: where `DOMAIN` is the realm of the Active Directory "
+"server; inside the OpenVPN client, to authenticate the user use only the "
+"username like ``jdoe``"
+msgstr ""
+
+#: ../../users_databases.rst:78
 msgid ""
 "``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), "
 "representing the user used to bind to the LDAP server (eg. "
 "``cn=admin,dc=example,dc=com``)."
 msgstr ""
 
-#: ../../users_databases.rst:65
+#: ../../users_databases.rst:80
 msgid ""
 "``Bind password``: specifies the password of the user used to bind to the"
 " LDAP server."
 msgstr ""
 
-#: ../../users_databases.rst:67
+#: ../../users_databases.rst:82
 msgid ""
 "``StartTLS``: enables StartTLS for secure communication with the LDAP "
 "server"
 msgstr ""
 
-#: ../../users_databases.rst:69
+#: ../../users_databases.rst:84
 msgid ""
 "``Verify TLS certificate``: determines whether to enable or disable "
 "certificate validation"
+msgstr ""
+
+#: ../../users_databases.rst:88
+#, fuzzy
+msgid "Suggested configurations"
+msgstr "Configurazioni migrare"
+
+#: ../../users_databases.rst:90
+msgid ""
+"The following configurations are suggested for the most common LDAP "
+"servers. When configuring the remote database:"
+msgstr ""
+
+#: ../../users_databases.rst:93
+msgid ""
+"ensure the LDAP server is reachable from the firewall. If the LDAP URI "
+"contains a hostname, make sure the hostname is resolvable"
+msgstr ""
+
+#: ../../users_databases.rst:94
+msgid "replace the example values with the actual values of the LDAP server"
+msgstr ""
+
+#: ../../users_databases.rst:95
+msgid ""
+"for Active Directory, it's recommended to use ``Custom user bind DN`` "
+"field if you are not sure about the used LDAP schema"
+msgstr ""
+
+#: ../../users_databases.rst:98
+msgid "NethServer 7 OpenLDAP"
+msgstr ""
+
+#: ../../users_databases.rst:100
+msgid "You can access the OpenLDAP without authentication:"
+msgstr ""
+
+#: ../../users_databases.rst:102 ../../users_databases.rst:111
+msgid "LDAP URI: ``ldap://ns7ldap.nethserver.org``"
+msgstr ""
+
+#: ../../users_databases.rst:103 ../../users_databases.rst:112
+msgid "Type: ``OpenLDAP``"
+msgstr ""
+
+#: ../../users_databases.rst:104 ../../users_databases.rst:113
+msgid "Base DN: ``dc=directory,dc=nh``"
+msgstr ""
+
+#: ../../users_databases.rst:105 ../../users_databases.rst:114
+msgid "User DN: ``ou=People,dc=directory,dc=nh``"
+msgstr ""
+
+#: ../../users_databases.rst:106 ../../users_databases.rst:115
+msgid "User attribute field``: ``uid``"
+msgstr ""
+
+#: ../../users_databases.rst:107 ../../users_databases.rst:116
+#: ../../users_databases.rst:129
+msgid "User CN field: ``cn``"
+msgstr ""
+
+#: ../../users_databases.rst:109
+msgid ""
+"If you want use authentication, you must enable StartTLS and use a bind "
+"DN:"
+msgstr ""
+
+#: ../../users_databases.rst:117
+msgid "Bind DN: ``cn=ldapservice,dc=directory,dc=nh``"
+msgstr ""
+
+#: ../../users_databases.rst:118 ../../users_databases.rst:131
+#: ../../users_databases.rst:145
+msgid ""
+"Bind Password: ``<password>``, where ``<password>`` is the password of "
+"the user inserted in the Bind DN field"
+msgstr ""
+
+#: ../../users_databases.rst:119 ../../users_databases.rst:132
+msgid "StartTLS: ``enabled``"
+msgstr ""
+
+#: ../../users_databases.rst:122
+msgid "NethServer 7 Active Directory (Samba)"
+msgstr ""
+
+#: ../../users_databases.rst:124
+msgid "LDAP URI: ``ldap://nsdc-server.ad.example.com``"
+msgstr ""
+
+#: ../../users_databases.rst:125 ../../users_databases.rst:138
+msgid "Type: ``Active Directory``"
+msgstr ""
+
+#: ../../users_databases.rst:126 ../../users_databases.rst:139
+msgid "Base DN: ``dc=example,dc=com``"
+msgstr ""
+
+#: ../../users_databases.rst:127 ../../users_databases.rst:140
+msgid "User DN: ``cn=Users,dc=example,dc=com``"
+msgstr ""
+
+#: ../../users_databases.rst:128 ../../users_databases.rst:141
+msgid "User attribute field: ``cn``"
+msgstr ""
+
+#: ../../users_databases.rst:130 ../../users_databases.rst:144
+msgid ""
+"Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is "
+"the username of the user used to bind to the LDAP server"
+msgstr ""
+
+#: ../../users_databases.rst:135
+msgid "Windows Server 2022 Active Directory"
+msgstr ""
+
+#: ../../users_databases.rst:137
+msgid "LDAP URI: ``ldap://w2k22dc.example.com``"
+msgstr ""
+
+#: ../../users_databases.rst:142
+msgid "User CN field: ``sAMAccountName``"
+msgstr ""
+
+#: ../../users_databases.rst:143
+#, python-format
+msgid "Custom user bind DN: ``%u@example.com``"
 msgstr ""
 
 #~ msgid ""
@@ -14172,5 +14312,104 @@ msgstr ""
 #~ "NethSecurity official web interface, is "
 #~ "available on port ``9090`` at the "
 #~ "following URL: **https://<server_ip>:9090**."
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-34-g92afcb7"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-34-g92afcb7/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-34-g92afcb7-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-34-g92afcb7/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-33-gea7c2bf"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-33-gea7c2bf/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-33-gea7c2bf-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-33-gea7c2bf/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-28-gf93490f"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-28-gf93490f/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-28-gf93490f-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-28-gf93490f/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-27-g5dc7bc2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-27-g5dc7bc2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-27-g5dc7bc2-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-27-g5dc7bc2/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-26-gf5dfdca"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-26-gf5dfdca/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-26-gf5dfdca-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-26-gf5dfdca/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-24-g76f7dcc"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-24-g76f7dcc/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-24-g76f7dcc-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-24-g76f7dcc/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "OpenVPN Road Warrior: all settings are"
+#~ " migrated; the accounting database of "
+#~ "client connections is not migrated, "
+#~ "finally mail notification is still not"
+#~ " supported on NethSecurity"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``User CN field``: specifies the user"
+#~ " attribute containing the user's complete"
+#~ " name. For example, ``cn`` for both"
+#~ " Active Directory and OpenLDAP."
 #~ msgstr ""
 
