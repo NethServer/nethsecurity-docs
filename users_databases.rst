@@ -138,8 +138,8 @@ Windows Server 2022 Active Directory
 * Type: ``Active Directory``
 * Base DN: ``dc=example,dc=com``
 * User DN: ``cn=Users,dc=example,dc=com``
-* User attribute field: ``cn``
-* User CN field: ``sAMAccountName``
+* User attribute field: ``sAMAccountName``
+* User CN field: ``cn``
 * Custom user bind DN: ``%u@example.com``
 * Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
 * Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field
