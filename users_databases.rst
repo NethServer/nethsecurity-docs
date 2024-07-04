@@ -110,7 +110,7 @@ You can access the NethServer 7 OpenLDAP without authentication:
 * Type: ``OpenLDAP``
 * Base DN: ``dc=directory,dc=nh``
 * User DN: ``ou=People,dc=directory,dc=nh``
-* User attribute field``: ``uid``
+* User attribute field: ``uid``
 * User display name field: ``cn``
 
 If you want to use authentication by entering Bind DN and Bind Password, remember to enable StartTLS.
@@ -126,6 +126,7 @@ To access NethServer 7 Samba Active Directory or Windows Server 2012 Active Dire
 * User DN: ``cn=Users,dc=example,dc=com``
 * User attribute field: ``sAMAccountName``
 * User display name field: ``displayName``
+* Custom user bind DN: ``%u@example.com``
 * Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
 * Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field
 
