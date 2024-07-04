@@ -127,7 +127,7 @@ To access NethServer 7 Samba Active Directory or Windows Server 2012 Active Dire
 * User attribute field: ``sAMAccountName``
 * User display name field: ``displayName``
 * Custom user bind DN: ``%u@example.com``
-* Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
+* Bind DN: ``<user>@exampl.com`` or ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
 * Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field
 
 The ``StartTLS`` option should be enabled for NethServer 7 Samba Active Directory, while it should be usually disabled for Windows Server 2012 Active Directory.
