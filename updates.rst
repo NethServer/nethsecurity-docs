@@ -13,6 +13,8 @@ These updates are intended for minor updates and bugfixes.
 Typically they could be performed automatically, but at any time it is possible to check for new updates available by clicking on :guilabel:`Check for Fixes` button.
 These updates do not require a restart of NethSecurity, they are tied to a specific version and distributed using packages.
 
+When using this method, the version of the image shown inside the dashboard does not change, but the system is updated with the latest fixes.
+
 **2. System updates** (switching to a different version)
 
 These updates involve the transition to a new version of the firmware that introduces new features, improvements and wider hardware support.

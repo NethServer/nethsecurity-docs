@@ -7,6 +7,44 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-07-05
+===========================
+
+Image version: `8-23.05.3-ns.1.1.0`
+
+This releases focuses on fixing bugs and delivering new features.
+
+Detailed changelog can be found `here <https://github.com/NethServer/nethsecurity/milestone/3?closed=1>`__.
+
+.. rubric:: New features and improvements
+
+- Connections management: implemented interface for real-time monitoring and control of conntrack-tracked network connections
+- MultiWAN sticky option: added sticky configuration in multiwan rules to maintain connection persistence across sessions
+- DPI signature updates: enabled updated Deep Packet Inspection signatures for both community and enterprise subscription types
+- Admin user management: implemented API functions to elevate local users to admin status and revoke admin privileges
+- LDAP authentication enhancement: improved flexibility for Active Directory and non-standard LDAP Distinguished Name configurations
+- Subscription repository authentication: implemented system_key verification for accessing subscription-based package repositories
+
+.. rubric:: Bug fixes
+
+- NVME storage utilization: resolved issue preventing usage of unallocated NVME drive space for system logging
+- Backup restore validation: added specific error messaging for incorrect passphrase input during backup restoration process
+- MWAN metrics adjustment: modified interface metric allocation to start at 20 and increment by 10 for improved load balancing
+- Scheduled update UI consistency: corrected persistent display of completed scheduled updates in user interface
+- MultiWAN policy labeling: fixed incorrect "balance" label display for custom single-gateway policies
+- MultiWAN form validation and input handling: implemented proper input field state management and form validation in policy editor
+- MultiWAN UI/UX refinement: enhanced port input flexibility and form submission logic for rules and policies
+- Post-migration DHCP functionality: addressed DHCP address assignment failure after version 7.9 to 8 migration
+- VPN account creation side-effect: prevented unintended removal of user display names upon VPN account creation
+- Migration network configuration: implemented removal of extraneous gateway entries from non-red interfaces
+- MultiWAN migration logic: added automatic disabling of MultiWAN configurations with single provider during migration
+- IPsec configuration display: corrected UI to accurately reflect custom IPsec tunnel parameter values
+- Reverse proxy functionality: resolved proxy pass issues for WebTop access post-migration
+- Local user database integrity: fixed disappearance of local user entries following system updates
+- Inventory system robustness: improved handling of VLAN devices on bridge interfaces and DNS configuration retrieval
+- Controller configuration persistence: fixed configuration file corruption issue after saving cluster interface settings
+- Controller setup workflow: improved configuration form with advanced options and clearer user guidance
+
 Major changes on 2024-06-05
 ===========================
 
