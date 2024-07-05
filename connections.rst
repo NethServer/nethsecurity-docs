@@ -37,7 +37,7 @@ When to avoid terminating a session:
 - any issues with the connection seem to be temporary and may resolve on their own
 
 
-In a multi-ISP setup, specific traffic such as VoIP trunks is routed and NATed through designated interfaces to distinct providers. 
+In a MultiWAN setup, specific traffic such as VoIP trunks is routed and NATed through designated interfaces to distinct providers. 
 When an interface or route becomes unavailable, it is essential to drop all connections using that interface and reroute subsequent traffic through the functioning connection, 
 otherwise the trunk will not be able to register to the provider.
 
