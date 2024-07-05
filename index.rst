@@ -54,6 +54,13 @@ NethSecurity administrator manual
 
 .. toctree::
    :maxdepth: 2
+   :caption: Users and objects
+
+   users_databases
+   objects
+
+.. toctree::
+   :maxdepth: 2
    :caption: Firewall
 
    firewall
@@ -76,7 +83,6 @@ NethSecurity administrator manual
    openvpn_roadwarrior
    openvpn_tunnels
    ipsec_tunnels
-   users_databases
 
 .. toctree::
    :maxdepth: 2
