@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-05 12:41+0000\n"
+"POT-Creation-Date: 2024-07-05 12:54+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -10384,29 +10384,34 @@ msgstr ""
 
 #: ../../users_databases.rst:63
 msgid ""
-"``User CN field``: specifies the user attribute containing the user's "
-"complete name. For example, ``cn`` for both Active Directory and "
-"OpenLDAP. This field is used to authenticate users in the OpenVPN road "
-"warrior server. The authentication process is based on a LDAP bind "
-"operation which uses the user CN field to compose the user bind DN with "
-"the user DN. Example: given a user named `jdoe` in the LDAP directory, "
-"the user bind DN is composed as `cn=jdoe,cn=users,dc=example,dc=com`."
+"This field is used to authenticate users in the OpenVPN road warrior "
+"server. The authentication process is based on a LDAP bind operation "
+"which uses the user attribute field to compose the user bind DN with the "
+"user DN. Example: given a user named `jdoe` in the OpenLDAP directory, "
+"the user bind DN is composed as `uid=jdoe,ou=People,dc=directory,dc=nh`."
 msgstr ""
 
 #: ../../users_databases.rst:68
-#, python-format
 msgid ""
-"``Custom user bind DN``: if this field is set, the user CN field is "
-"ignored and the custom user bind DN is used to authenticate users in the "
-"OpenVPN road warrior server. The field can contain a ``%u`` placeholder "
-"which is replaced with the username during the authentication process. "
-"Use this setting if you do not know if the user CN field contains the "
-"user full name, like ``John Doe``, or the username, like ``jdoe``. If the"
-" remote server is an Active Directory server, you can use one of the "
-"following values:"
+"``User display name field``: specifies the user attribute containing the "
+"user's complete name like `John Doe`. Usually is ``cn`` for OpenLDAP and "
+"``displayName`` for Active Directory."
 msgstr ""
 
-#: ../../users_databases.rst:73
+#: ../../users_databases.rst:71
+#, python-format
+msgid ""
+"``Custom user bind DN``: if this field is set, it overrides the "
+"calculated user bind DN used to authenticate users in the OpenVPN road "
+"warrior server. The field can contain a ``%u`` placeholder which is "
+"replaced with the username during the authentication process. Use this "
+"setting if you do not know if the user CN field contains the user full "
+"name, like ``John Doe``, or the username, like ``jdoe``. If the remote "
+"server is an Active Directory server, you can use one of the following "
+"values:"
+msgstr ""
+
+#: ../../users_databases.rst:76
 #, python-format
 msgid ""
 "``%u@domain.local``: where `domain.local` is the domain name of the "
@@ -10414,7 +10419,7 @@ msgid ""
 "user use only the username like ``jdoe``"
 msgstr ""
 
-#: ../../users_databases.rst:75
+#: ../../users_databases.rst:78
 #, python-format
 msgid ""
 "``DOMAIN\\%u``: where `DOMAIN` is the realm of the Active Directory "
@@ -10422,157 +10427,165 @@ msgid ""
 "username like ``jdoe``"
 msgstr ""
 
-#: ../../users_databases.rst:78
+#: ../../users_databases.rst:81
+#, python-format
 msgid ""
-"``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), "
-"representing the user used to bind to the LDAP server (eg. "
-"``cn=admin,dc=example,dc=com``)."
+"If the remote server is an OpenLDAP you can leave this field empty or "
+"specify it like ``uid=%u,dc=directory,dc=nh``."
 msgstr ""
 
-#: ../../users_databases.rst:80
+#: ../../users_databases.rst:83
+msgid ""
+"``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), "
+"representing the user used to bind to the LDAP server. For an OpenLDAP "
+"server, it's usually something like "
+"``uid=ldapservice,dc=directory,dc=nh``, where for an Active Directory "
+"server, it's usually something like ``ldapservice@example.com`` or "
+"``cn=ldapservice,cn=Users,dc=example,dc=com``."
+msgstr ""
+
+#: ../../users_databases.rst:87
 msgid ""
 "``Bind password``: specifies the password of the user used to bind to the"
 " LDAP server."
 msgstr ""
 
-#: ../../users_databases.rst:82
+#: ../../users_databases.rst:89
 msgid ""
 "``StartTLS``: enables StartTLS for secure communication with the LDAP "
-"server"
+"server, it should be disabled if the LDAP URI is already using the "
+"``ldaps://`` scheme."
 msgstr ""
 
-#: ../../users_databases.rst:84
+#: ../../users_databases.rst:91
 msgid ""
 "``Verify TLS certificate``: determines whether to enable or disable "
-"certificate validation"
+"certificate validation, it must be disabled if the LDAP server is using a"
+" self-signed certificate."
 msgstr ""
 
-#: ../../users_databases.rst:88
+#: ../../users_databases.rst:95
 #, fuzzy
 msgid "Suggested configurations"
 msgstr "Configurazioni migrare"
 
-#: ../../users_databases.rst:90
+#: ../../users_databases.rst:97
 msgid ""
 "The following configurations are suggested for the most common LDAP "
 "servers. When configuring the remote database:"
 msgstr ""
 
-#: ../../users_databases.rst:93
+#: ../../users_databases.rst:100
 msgid ""
 "ensure the LDAP server is reachable from the firewall. If the LDAP URI "
 "contains a hostname, make sure the hostname is resolvable"
 msgstr ""
 
-#: ../../users_databases.rst:94
+#: ../../users_databases.rst:101
 msgid "replace the example values with the actual values of the LDAP server"
 msgstr ""
 
-#: ../../users_databases.rst:95
+#: ../../users_databases.rst:102
 msgid ""
-"for Active Directory, it's recommended to use ``Custom user bind DN`` "
-"field if you are not sure about the used LDAP schema"
+"for Active Directory, it's recommended to use ``Custom user bind DN`` to "
+"specify how the OpenVPN server should authenticate the user"
 msgstr ""
 
-#: ../../users_databases.rst:98
-msgid "NethServer 7 OpenLDAP"
+#: ../../users_databases.rst:105
+msgid "OpenLDAP (RFC 2307)"
 msgstr ""
 
-#: ../../users_databases.rst:100
-msgid "You can access the OpenLDAP without authentication:"
-msgstr ""
-
-#: ../../users_databases.rst:102 ../../users_databases.rst:111
-msgid "LDAP URI: ``ldap://ns7ldap.nethserver.org``"
-msgstr ""
-
-#: ../../users_databases.rst:103 ../../users_databases.rst:112
-msgid "Type: ``OpenLDAP``"
-msgstr ""
-
-#: ../../users_databases.rst:104 ../../users_databases.rst:113
-msgid "Base DN: ``dc=directory,dc=nh``"
-msgstr ""
-
-#: ../../users_databases.rst:105 ../../users_databases.rst:114
-msgid "User DN: ``ou=People,dc=directory,dc=nh``"
-msgstr ""
-
-#: ../../users_databases.rst:106 ../../users_databases.rst:115
-msgid "User attribute field``: ``uid``"
-msgstr ""
-
-#: ../../users_databases.rst:107 ../../users_databases.rst:116
-#: ../../users_databases.rst:129
-msgid "User CN field: ``cn``"
+#: ../../users_databases.rst:107
+msgid "You can access the NethServer 7 OpenLDAP without authentication:"
 msgstr ""
 
 #: ../../users_databases.rst:109
+msgid "LDAP URI: ``ldap://ns7ldap.nethserver.org``"
+msgstr ""
+
+#: ../../users_databases.rst:110
+msgid "Type: ``OpenLDAP``"
+msgstr ""
+
+#: ../../users_databases.rst:111
+msgid "Base DN: ``dc=directory,dc=nh``"
+msgstr ""
+
+#: ../../users_databases.rst:112
+msgid "User DN: ``ou=People,dc=directory,dc=nh``"
+msgstr ""
+
+#: ../../users_databases.rst:113
+msgid "User attribute field: ``uid``"
+msgstr ""
+
+#: ../../users_databases.rst:114
+msgid "User display name field: ``cn``"
+msgstr ""
+
+#: ../../users_databases.rst:116
 msgid ""
-"If you want use authentication, you must enable StartTLS and use a bind "
-"DN:"
+"If you want to use authentication by entering Bind DN and Bind Password, "
+"remember to enable StartTLS."
 msgstr ""
 
-#: ../../users_databases.rst:117
-msgid "Bind DN: ``cn=ldapservice,dc=directory,dc=nh``"
+#: ../../users_databases.rst:119
+msgid "Active Directory"
 msgstr ""
 
-#: ../../users_databases.rst:118 ../../users_databases.rst:131
-#: ../../users_databases.rst:145
+#: ../../users_databases.rst:121
+msgid ""
+"To access NethServer 7 Samba Active Directory or Windows Server 2012 "
+"Active Directory, use the following configuration:"
+msgstr ""
+
+#: ../../users_databases.rst:123
+msgid "LDAP URI: ``ldap://dcserver.ad.example.com``"
+msgstr ""
+
+#: ../../users_databases.rst:124
+msgid "Type: ``Active Directory``"
+msgstr ""
+
+#: ../../users_databases.rst:125
+msgid "Base DN: ``dc=example,dc=com``"
+msgstr ""
+
+#: ../../users_databases.rst:126
+msgid "User DN: ``cn=Users,dc=example,dc=com``"
+msgstr ""
+
+#: ../../users_databases.rst:127
+msgid "User attribute field: ``sAMAccountName``"
+msgstr ""
+
+#: ../../users_databases.rst:128
+msgid "User display name field: ``displayName``"
+msgstr ""
+
+#: ../../users_databases.rst:129
+#, python-format
+msgid "Custom user bind DN: ``%u@example.com``"
+msgstr ""
+
+#: ../../users_databases.rst:130
+msgid ""
+"Bind DN: ``<user>@exampl.com`` or "
+"``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the "
+"username of the user used to bind to the LDAP server"
+msgstr ""
+
+#: ../../users_databases.rst:131
 msgid ""
 "Bind Password: ``<password>``, where ``<password>`` is the password of "
 "the user inserted in the Bind DN field"
 msgstr ""
 
-#: ../../users_databases.rst:119 ../../users_databases.rst:132
-msgid "StartTLS: ``enabled``"
-msgstr ""
-
-#: ../../users_databases.rst:122
-msgid "NethServer 7 Active Directory (Samba)"
-msgstr ""
-
-#: ../../users_databases.rst:124
-msgid "LDAP URI: ``ldap://nsdc-server.ad.example.com``"
-msgstr ""
-
-#: ../../users_databases.rst:125 ../../users_databases.rst:138
-msgid "Type: ``Active Directory``"
-msgstr ""
-
-#: ../../users_databases.rst:126 ../../users_databases.rst:139
-msgid "Base DN: ``dc=example,dc=com``"
-msgstr ""
-
-#: ../../users_databases.rst:127 ../../users_databases.rst:140
-msgid "User DN: ``cn=Users,dc=example,dc=com``"
-msgstr ""
-
-#: ../../users_databases.rst:128 ../../users_databases.rst:141
-msgid "User attribute field: ``cn``"
-msgstr ""
-
-#: ../../users_databases.rst:130 ../../users_databases.rst:144
+#: ../../users_databases.rst:133
 msgid ""
-"Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is "
-"the username of the user used to bind to the LDAP server"
-msgstr ""
-
-#: ../../users_databases.rst:135
-msgid "Windows Server 2022 Active Directory"
-msgstr ""
-
-#: ../../users_databases.rst:137
-msgid "LDAP URI: ``ldap://w2k22dc.example.com``"
-msgstr ""
-
-#: ../../users_databases.rst:142
-msgid "User CN field: ``sAMAccountName``"
-msgstr ""
-
-#: ../../users_databases.rst:143
-#, python-format
-msgid "Custom user bind DN: ``%u@example.com``"
+"The ``StartTLS`` option should be enabled for NethServer 7 Samba Active "
+"Directory, while it should be usually disabled for Windows Server 2012 "
+"Active Directory."
 msgstr ""
 
 #~ msgid ""
@@ -14648,5 +14661,115 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-43-g9089c40/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``User CN field``: specifies the user"
+#~ " attribute containing the user's complete"
+#~ " name. For example, ``cn`` for both"
+#~ " Active Directory and OpenLDAP. This "
+#~ "field is used to authenticate users "
+#~ "in the OpenVPN road warrior server. "
+#~ "The authentication process is based on"
+#~ " a LDAP bind operation which uses "
+#~ "the user CN field to compose the"
+#~ " user bind DN with the user DN."
+#~ " Example: given a user named `jdoe`"
+#~ " in the LDAP directory, the user "
+#~ "bind DN is composed as "
+#~ "`cn=jdoe,cn=users,dc=example,dc=com`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Custom user bind DN``: if this "
+#~ "field is set, the user CN field"
+#~ " is ignored and the custom user "
+#~ "bind DN is used to authenticate "
+#~ "users in the OpenVPN road warrior "
+#~ "server. The field can contain a "
+#~ "``%u`` placeholder which is replaced "
+#~ "with the username during the "
+#~ "authentication process. Use this setting "
+#~ "if you do not know if the "
+#~ "user CN field contains the user "
+#~ "full name, like ``John Doe``, or "
+#~ "the username, like ``jdoe``. If the "
+#~ "remote server is an Active Directory "
+#~ "server, you can use one of the "
+#~ "following values:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Bind DN``: specifies the LDAP Bind "
+#~ "Distinguished Name (DN), representing the "
+#~ "user used to bind to the LDAP "
+#~ "server (eg. ``cn=admin,dc=example,dc=com``)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``StartTLS``: enables StartTLS for secure "
+#~ "communication with the LDAP server"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Verify TLS certificate``: determines whether"
+#~ " to enable or disable certificate "
+#~ "validation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "for Active Directory, it's recommended "
+#~ "to use ``Custom user bind DN`` "
+#~ "field if you are not sure about"
+#~ " the used LDAP schema"
+#~ msgstr ""
+
+#~ msgid "NethServer 7 OpenLDAP"
+#~ msgstr ""
+
+#~ msgid "You can access the OpenLDAP without authentication:"
+#~ msgstr ""
+
+#~ msgid "User attribute field``: ``uid``"
+#~ msgstr ""
+
+#~ msgid "User CN field: ``cn``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want use authentication, you "
+#~ "must enable StartTLS and use a "
+#~ "bind DN:"
+#~ msgstr ""
+
+#~ msgid "Bind DN: ``cn=ldapservice,dc=directory,dc=nh``"
+#~ msgstr ""
+
+#~ msgid "StartTLS: ``enabled``"
+#~ msgstr ""
+
+#~ msgid "NethServer 7 Active Directory (Samba)"
+#~ msgstr ""
+
+#~ msgid "LDAP URI: ``ldap://nsdc-server.ad.example.com``"
+#~ msgstr ""
+
+#~ msgid "User attribute field: ``cn``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, "
+#~ "where ``<user>`` is the username of "
+#~ "the user used to bind to the "
+#~ "LDAP server"
+#~ msgstr ""
+
+#~ msgid "Windows Server 2022 Active Directory"
+#~ msgstr ""
+
+#~ msgid "LDAP URI: ``ldap://w2k22dc.example.com``"
+#~ msgstr ""
+
+#~ msgid "User CN field: ``sAMAccountName``"
 #~ msgstr ""
 
