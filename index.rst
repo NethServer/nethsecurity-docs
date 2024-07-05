@@ -59,6 +59,7 @@ NethSecurity administrator manual
    firewall
    port_forward
    nat
+   connections
 
 .. toctree::
    :maxdepth: 2
