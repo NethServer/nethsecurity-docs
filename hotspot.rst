@@ -93,3 +93,39 @@ Unregister your unit
 If you made some error registering your unit (es. unit was associated to a wrong hotspot instance) or you want to remove this service, do the login in the hotspot section of NethSecurity and click to :guilabel:`Unregister unit`.
 Your unit will be removed both from the NethSecurity and from the remote hotspot manager, the interface used in your Nethsecurity will be freed up and you can use it for other purposes.
 
+Change DNS settings
+^^^^^^^^^^^^^^^^^^^
+
+By default the DNS server used by the hotspot is from OpenDNS, to change the DNS settings manual configuration is required.
+Please follow the steps below from the terminal:
+
+1. Edit the UCI configuration file with the following commands:
+
+.. code-block:: bash
+
+   uci set dedalo.config.dns1='<insert dns 1>'
+   uci set dedalo.config.dns2='<insert dns 2>'
+
+2. Save the changes with the following command:
+
+.. code-block:: bash
+
+   uci commit dedalo
+
+3. Restart the dedalo service with:
+
+.. code-block:: bash
+
+   service dedalo restart
+
+Restore default DNS settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To restore the default DNS settings, use the following commands:
+
+.. code-block:: bash
+
+   uci delete dedalo.config.dns1
+   uci delete dedalo.config.dns2
+
+Then repeat the steps 2 and 3 in the previous section to apply the changes.
