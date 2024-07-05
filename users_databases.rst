@@ -60,12 +60,15 @@ When configuring a remote database, click on the :guilabel:`Add remote database`
 * ``User attribute field``: specifies the user attribute used to identify the user, this option is used by the OpenVPN road warrior server to compose the user bind DN.
   It should be ``cn`` for Active Directory or ``uid`` for OpenLDAP.
 
-* ``User CN field``: specifies the user attribute containing the user's complete name. For example, ``cn`` for both Active Directory and OpenLDAP.
-  This field is used to authenticate users in the OpenVPN road warrior server. The authentication process is based on a LDAP bind operation which
-  uses the user CN field to compose the user bind DN with the user DN.
-  Example: given a user named `jdoe` in the LDAP directory, the user bind DN is composed as `cn=jdoe,cn=users,dc=example,dc=com`.
+  This field is used to authenticate users in the OpenVPN road warrior server.
+  The authentication process is based on a LDAP bind operation which
+  uses the user attribute field to compose the user bind DN with the user DN.
+  Example: given a user named `jdoe` in the OpenLDAP directory, the user bind DN is composed as `uid=jdoe,ou=People,dc=directory,dc=nh`.
 
-* ``Custom user bind DN``: if this field is set, the user CN field is ignored and the custom user bind DN is used to authenticate users in the
+* ``User display name field``: specifies the user attribute containing the user's complete name like `John Doe`.
+  Usually is ``cn`` for OpenLDAP and ``displayName`` for Active Directory.
+
+* ``Custom user bind DN``: if this field is set, it overrides the calculated user bind DN used to authenticate users in the
   OpenVPN road warrior server. The field can contain a ``%u`` placeholder which is replaced with the username during the authentication process.
   Use this setting if you do not know if the user CN field contains the user full name, like ``John Doe``, or the username, like ``jdoe``.
   If the remote server is an Active Directory server, you can use one of the following values:
@@ -74,14 +77,18 @@ When configuring a remote database, click on the :guilabel:`Add remote database`
     user use only the username like ``jdoe``
   - ``DOMAIN\%u``: where `DOMAIN` is the realm of the Active Directory server; inside the OpenVPN client, to authenticate the user use only the
     username like ``jdoe``
+
+  If the remote server is an OpenLDAP you can leave this field empty or specify it like ``uid=%u,dc=directory,dc=nh``.
   
-* ``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), representing the user used to bind to the LDAP server (eg. ``cn=admin,dc=example,dc=com``).
+* ``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), representing the user used to bind to the LDAP server.
+  For an OpenLDAP server, it's usually something like ``uid=ldapservice,dc=directory,dc=nh``, where for an Active Directory server,
+  it's usually something like ``ldapservice@example.com`` or ``cn=ldapservice,cn=Users,dc=example,dc=com``.
 
 * ``Bind password``: specifies the password of the user used to bind to the LDAP server.
  
-* ``StartTLS``: enables StartTLS for secure communication with the LDAP server
+* ``StartTLS``: enables StartTLS for secure communication with the LDAP server, it should be disabled if the LDAP URI is already using the ``ldaps://`` scheme.
 
-* ``Verify TLS certificate``: determines whether to enable or disable certificate validation
+* ``Verify TLS certificate``: determines whether to enable or disable certificate validation, it must be disabled if the LDAP server is using a self-signed certificate.
 
 
 Suggested configurations
@@ -92,54 +99,35 @@ When configuring the remote database:
 
 - ensure the LDAP server is reachable from the firewall. If the LDAP URI contains a hostname, make sure the hostname is resolvable
 - replace the example values with the actual values of the LDAP server
-- for Active Directory, it's recommended to use ``Custom user bind DN`` field if you are not sure about the used LDAP schema
+- for Active Directory, it's recommended to use ``Custom user bind DN`` to specify how the OpenVPN server should authenticate the user
 
-NethServer 7 OpenLDAP
----------------------
+OpenLDAP (RFC 2307)
+-------------------
 
-You can access the OpenLDAP without authentication:
-
-* LDAP URI: ``ldap://ns7ldap.nethserver.org``
-* Type: ``OpenLDAP``
-* Base DN: ``dc=directory,dc=nh``
-* User DN: ``ou=People,dc=directory,dc=nh``
-* User attribute field``: ``uid``
-* User CN field: ``cn``
-
-If you want use authentication, you must enable StartTLS and use a bind DN:
+You can access the NethServer 7 OpenLDAP without authentication:
 
 * LDAP URI: ``ldap://ns7ldap.nethserver.org``
 * Type: ``OpenLDAP``
 * Base DN: ``dc=directory,dc=nh``
 * User DN: ``ou=People,dc=directory,dc=nh``
-* User attribute field``: ``uid``
-* User CN field: ``cn``
-* Bind DN: ``cn=ldapservice,dc=directory,dc=nh``
-* Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field
-* StartTLS: ``enabled``
+* User attribute field: ``uid``
+* User display name field: ``cn``
 
-NethServer 7 Active Directory (Samba)
--------------------------------------
+If you want to use authentication by entering Bind DN and Bind Password, remember to enable StartTLS.
 
-* LDAP URI: ``ldap://nsdc-server.ad.example.com``
+Active Directory
+----------------
+
+To access NethServer 7 Samba Active Directory or Windows Server 2012 Active Directory, use the following configuration:
+
+* LDAP URI: ``ldap://dcserver.ad.example.com``
 * Type: ``Active Directory``
 * Base DN: ``dc=example,dc=com``
 * User DN: ``cn=Users,dc=example,dc=com``
-* User attribute field: ``cn``
-* User CN field: ``cn``
-* Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
-* Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field
-* StartTLS: ``enabled``
-
-Windows Server 2022 Active Directory
-------------------------------------
-
-* LDAP URI: ``ldap://w2k22dc.example.com``
-* Type: ``Active Directory``
-* Base DN: ``dc=example,dc=com``
-* User DN: ``cn=Users,dc=example,dc=com``
-* User attribute field: ``cn``
-* User CN field: ``sAMAccountName``
+* User attribute field: ``sAMAccountName``
+* User display name field: ``displayName``
 * Custom user bind DN: ``%u@example.com``
-* Bind DN: ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
+* Bind DN: ``<user>@exampl.com`` or ``cn=<user>,cn=Users,dc=example,dc=com``, where ``<user>`` is the username of the user used to bind to the LDAP server
 * Bind Password: ``<password>``, where ``<password>`` is the password of the user inserted in the Bind DN field
+
+The ``StartTLS`` option should be enabled for NethServer 7 Samba Active Directory, while it should be usually disabled for Windows Server 2012 Active Directory.
