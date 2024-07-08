@@ -164,7 +164,7 @@ Add an Host Set
 
    - In the ``Name`` field, enter a descriptive name for your host set
    - Use only letters and numbers; spaces and special characters are not allowed
-   - Choose a name that clearly identifies the purpose or group of hosts
+   - Choose a name that clearly identifies the purpose of the group of hosts
 
 3. Select IP version
 
@@ -174,7 +174,7 @@ Add an Host Set
 
 4. Add Records
 
-   - In the ``Records`` field, you can add the hosts for this set
+   - In the ``Records`` field, you can add the hosts in this set
    - Click the dropdown menu to choose from predefined options, or enter a custom value
    - You can add the following types of records:
 
@@ -234,10 +234,10 @@ Use cases for domain sets:
 
 Benefits of using domain sets:
 
-- simplifies management of rules based on web addresses
-- automatically handles IP address changes of websites
-- reduces the need for manual updates to firewall rules
-- provides a more intuitive way to control access to web-based services
+- simplify management of rules based on web addresses
+- automatically handle IP address changes of websites
+- reduce the need for manual updates to firewall rules
+- provide a more intuitive way to control access to web-based services
 
 When to use domain sets:
 
@@ -270,7 +270,7 @@ Add a Domain Set
 
    - In the ``Name`` field, enter a descriptive name for your domain set
    - Use only letters and numbers; spaces and special characters are not allowed
-   - Choose a name that clearly identifies the purpose or group of domains
+   - Choose a name that clearly identifies the purpose of the group of domains
 
 3. Select IP version: 
 
