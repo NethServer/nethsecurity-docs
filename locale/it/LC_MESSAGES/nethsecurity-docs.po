@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-05 12:54+0000\n"
+"POT-Creation-Date: 2024-07-08 06:29+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -178,6 +178,116 @@ msgstr ""
 
 #: ../../backup.rst:59 ../../qos.rst:85
 msgid "Example: ::"
+msgstr ""
+
+#: ../../connections.rst:5
+#, fuzzy
+msgid "Connections"
+msgstr "Eccezioni"
+
+#: ../../connections.rst:7
+msgid ""
+"The connection tracking (Conntrack) is a network feature used in "
+"firewalls and routers to monitor and manage the state of active network "
+"connections. It tracks the state of each connection, such as new, "
+"established, related, or expired, and maintains this information in a "
+"connection tracking table. This allows for stateful packet inspection, "
+"where packets are inspected based on their connection context, enabling "
+"more precise and secure filtering rules. Conntrack also supports Network "
+"Address Translation (NAT) by tracking internal to external IP mappings "
+"and optimizes performance by quickly dropping packets from invalid or "
+"expired connections."
+msgstr ""
+
+#: ../../connections.rst:12
+msgid "Connections can be filter by :"
+msgstr ""
+
+#: ../../connections.rst:14
+msgid "``Protocol``"
+msgstr ""
+
+#: ../../connections.rst:15
+msgid "``Status``"
+msgstr ""
+
+#: ../../connections.rst:16
+msgid "``IP``"
+msgstr ""
+
+#: ../../connections.rst:17
+msgid "``Port``"
+msgstr ""
+
+#: ../../connections.rst:19
+msgid ""
+"The list of connections is not refreshed in real time. To list new "
+"connections click the :guilabel:`Refresh page` button."
+msgstr ""
+
+#: ../../connections.rst:21
+msgid ""
+"The administrator can delete a single connection or flush the whole "
+"connection tracking table by using :guilabel:`Delete all connections` "
+"button."
+msgstr ""
+
+#: ../../connections.rst:24
+msgid "Good practices for terminating sessions"
+msgstr ""
+
+#: ../../connections.rst:26
+msgid "When to terminate a connection:"
+msgstr ""
+
+#: ../../connections.rst:28
+msgid "the connection has expired or been idle for an extended period"
+msgstr ""
+
+#: ../../connections.rst:29
+msgid "there's evidence of malicious activity associated with the session"
+msgstr ""
+
+#: ../../connections.rst:30
+msgid "the connection appears to be stale or hanging, preventing new connections"
+msgstr ""
+
+#: ../../connections.rst:31
+msgid "termination is necessary for network troubleshooting or diagnostics"
+msgstr ""
+
+#: ../../connections.rst:33
+msgid "When to avoid terminating a session:"
+msgstr ""
+
+#: ../../connections.rst:35
+msgid "the connection is active and appears to be functioning normally"
+msgstr ""
+
+#: ../../connections.rst:36
+msgid "the connection is critical for ongoing application operations"
+msgstr ""
+
+#: ../../connections.rst:37
+msgid ""
+"any issues with the connection seem to be temporary and may resolve on "
+"their own"
+msgstr ""
+
+#: ../../connections.rst:40
+msgid ""
+"In a MultiWAN setup, specific traffic such as VoIP trunks is routed and "
+"NATed through designated interfaces to distinct providers. When an "
+"interface or route becomes unavailable, it is essential to drop all "
+"connections using that interface and reroute subsequent traffic through "
+"the functioning connection, otherwise the trunk will not be able to "
+"register to the provider."
+msgstr ""
+
+#: ../../connections.rst:44
+msgid ""
+"To resolve this issue, you can remove the specific conntrack entries "
+"associated with the old external address through the user interface."
 msgstr ""
 
 #: ../../controller.rst:5
@@ -2009,71 +2119,54 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-76-g3ffc3a1"
+msgid "8-23.05.3-ns.1.1.0-27-g9c1fc4c"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-76-g3ffc3a1/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-76-g3ffc3a1-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-27-g9c1fc4c/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-27-g9c1fc4c-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-76-g3ffc3a1/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-27-g9c1fc4c/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-72-g6086c95"
+msgid "8-23.05.3-ns.1.1.0-26-g31270c6"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-72-g6086c95/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-72-g6086c95-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-26-g31270c6/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-26-g31270c6-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-72-g6086c95/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-26-g31270c6/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-71-g7211cc2"
+msgid "8-23.05.3-ns.1.1.0-25-g5158b54"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-71-g7211cc2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-71-g7211cc2-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-25-g5158b54/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-25-g5158b54-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-71-g7211cc2/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.0.1-70-g9ef0f6b"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-70-g9ef0f6b/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-70-g9ef0f6b-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-70-g9ef0f6b/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-25-g5158b54/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -2948,23 +3041,23 @@ msgstr ""
 msgid "Network"
 msgstr ""
 
-#: ../../index.rst:63
+#: ../../index.rst:64
 msgid "Security"
 msgstr ""
 
-#: ../../index.rst:71
+#: ../../index.rst:72
 msgid "VPN"
 msgstr ""
 
-#: ../../index.rst:80
+#: ../../index.rst:81
 msgid "Report"
 msgstr ""
 
-#: ../../index.rst:87
+#: ../../index.rst:88
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:96
+#: ../../index.rst:97
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -14771,5 +14864,61 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "User CN field: ``sAMAccountName``"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-76-g3ffc3a1"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-76-g3ffc3a1/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-76-g3ffc3a1-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-76-g3ffc3a1/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-72-g6086c95"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-72-g6086c95/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-72-g6086c95-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-72-g6086c95/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-71-g7211cc2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-71-g7211cc2/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-71-g7211cc2-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-71-g7211cc2/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.0.1-70-g9ef0f6b"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-70-g9ef0f6b/targets/x86/64/nethsecurity-8-23.05.3-ns.1.0.1-70-g9ef0f6b-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-70-g9ef0f6b/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
