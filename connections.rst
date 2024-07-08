@@ -11,10 +11,10 @@ Conntrack also supports Network Address Translation (NAT) by tracking internal t
 
 Connections can be filter by :
 
-- :guilabel:`Protocol`
-- :guilabel:`Status`
-- :guilabel:`IP`
-- :guilabel:`Port`
+- ``Protocol``
+- ``Status``
+- ``IP``
+- ``Port``
 
 The list of connections is not refreshed in real time. To list new connections click the :guilabel:`Refresh page` button.
 
