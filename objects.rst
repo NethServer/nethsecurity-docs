@@ -125,6 +125,10 @@ Key features of host sets:
    - create allow or deny lists for specific network segments
    - manage remote access for multiple VPN users
 
+.. note::
+
+Host sets are fully supported in their expressive completeness (IP, CIDR, range, groupings) within firewall rules. Other panels might only support a reduced subset (for example, MultiWAN only supports single IP addresses and CIDR). In such cases, only compatible host sets will be displayed.
+  
 Manage Host Sets
 ----------------
 
