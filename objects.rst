@@ -127,7 +127,9 @@ Key features of host sets:
 
 .. note::
 
-Host sets are fully supported in their expressive completeness (IP, CIDR, range, groupings) within firewall rules. Other panels might only support a reduced subset (for example, MultiWAN only supports single IP addresses and CIDR). In such cases, only compatible host sets will be displayed.
+  Host sets are fully supported in their expressive completeness (IP, CIDR, range, groupings) within firewall rules.
+  Other pages might only support a reduced subset, for example, MultiWAN only supports single IP addresses and CIDR.
+  In such cases, only compatible host sets will be displayed in the dropdowns when using the object inside the rule.
   
 Manage Host Sets
 ----------------
