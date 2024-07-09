@@ -174,7 +174,7 @@ Add an Host Set
 
 4. Add Records
 
-   - In the ``Records`` field, you can add the hosts in this set
+   - In the ``Records`` field, you can add the hosts for this set
    - Click the dropdown menu to choose from predefined options, or enter a custom value
    - You can add the following types of records:
 
