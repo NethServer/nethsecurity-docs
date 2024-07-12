@@ -25,20 +25,25 @@ It basically links 2 components : filter configuration and network configuration
 Once the account has been created and the service configured, NethSecurity can be configured.
 
 Configuration
--------------
+=============
 
 You can enable and disable the filter by changing the ``Status`` toggle.
 
+.. note:: Please use FlashStart only if you are not already using the  Threat Shield DNS service cause if used together, they may conflict.
+
 Authentication
-^^^^^^^^^^^^^^
+--------------
+
 Insert same username and password of your FlashStart account (tipically an email address), then click :guilabel:`Save` button.
 
 Zones to filter
-^^^^^^^^^^^^^^^
+---------------
+
 Choose zones to filter, only selected zones will be affected by DNS filter.
 
 Bypass source IPs or networks
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
+
 All listed IP addresses or networks here will not be affected by DNS filter.
 
 
@@ -55,4 +60,4 @@ Block certain websites
 If you need to block specific domains and FQDNs you can do it directly from the FlashStart configuration page,
 just go to the section "Protection"-> "Personal Blacklists" and add them there.
 
-If you don' have a subscription for FlashStart DNS Filter you can still make it directly on NethSecurity using :ref:`Threat Shield DNS <block_website-section>`.
+If you don' have a subscription for FlashStart DNS Filter you can use the same feature using :ref:`Threat Shield DNS <block_website-section>`.
