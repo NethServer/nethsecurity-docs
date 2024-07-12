@@ -1,8 +1,8 @@
-.. _threat_shield-section:
+.. _threat_shield_ip-section:
 
-=============
-Threat shield
-=============
+================
+Threat shield IP
+================
 
 NethSecurity is equipped with various tools and integrations useful for countering threats coming from the internet.
 One of these tools is Threat Shield, which blocks any traffic coming from compromised IP addresses or destined to them as well as any requests addressed to hostnames that could be malicious.
@@ -109,13 +109,3 @@ After changing the values, copy and paste these two commands: ::
   uci commit banip
   /etc/init.d/banip restart
 
-
-.. _threat_shield-dns-section:
-
-DNS based Threat shield
-=======================
-
-The DNS filter uses AdBlock which blocks any request to a domain that is considered malicious.
-The service can load community-maintained blocklist or use Yoroi feeds.
-
-AdBlock can be configured from the command line interface as explained in the `developer manual <https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-dns>`_.
