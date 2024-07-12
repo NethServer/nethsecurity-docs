@@ -4,7 +4,7 @@
 Threat shield IP
 ================
 
-NethSecurity is equipped with various tools and integration useful for countering threats coming from the internet.
+NethSecurity is equipped with various tools and integrations useful for countering threats coming from the internet.
 One of these tools is Threat Shield, which blocks any traffic coming from compromised IP addresses or destined to them as well as any requests addressed to hostnames that could be malicious.
 
 The service can load community-maintained blocklists or can rely on high-quality blocklists very frequently updated and maintained by `Nethesis <https://www.nethesis.it>`_ and `Yoroy <https://yoroi.company>`_

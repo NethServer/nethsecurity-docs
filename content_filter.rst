@@ -7,7 +7,7 @@ Content filtering is a crucial aspect of network security, serving two primary p
 1. Blocking malware and preventing malicious attacks
 2. Filtering unwanted sites, such as those containing adult content
 
-NethSecurity offers three distinct filtering mechanisms to address these needs:
+NethSecurity offers four distinct filtering mechanisms to address these needs:
 
 - **Threat Shield IP**: IP-based blocking system targeting malware threats
 - **Threat Shield DNS**: DNS-based blocking system for malware and basic content filtering
@@ -17,7 +17,7 @@ NethSecurity offers three distinct filtering mechanisms to address these needs:
 Threat Shield IP
 =================
 
-Threat Shield IP is an IP-based blocking system designed specifically to combat malware threats. It operates by blocking connections to known malicious 
+Threat Shield IP is an IP-based blocking system designed specifically to combat malware threats. It operates by blocking connections to or from known malicious 
 IP addresses.
 
 **Scope**: Targets malware and provides limited privacy and advertising (ads) removal features
@@ -92,7 +92,7 @@ NethSecurity employs Deep Packet Inspection (DPI) techniques for filtering netwo
 
 **Lists**:
 
-- Community signatures, free but only few available
+- Community signatures, free but limited in number and update frequency
 - Enterprise signatures, included in any subscription, offering more comprehensive coverage
 
 Advantages:

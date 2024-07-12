@@ -4,7 +4,7 @@
 Threat Shield DNS
 =================
 
-Threat Shield DNS uses AdBlock which blocks any request to a domain that is considered malicious.
+Threat Shield DNS uses Adblock which blocks any request to a domain considered malicious.
 The service can load community-maintained blocklist or use Enterprise feeds provided by Nethesis and Yoroi.
 
 While Threat Shield DNS is primarily configured from the command line, this chapter will guide you through its setup and usage.
@@ -23,7 +23,7 @@ Note that this port forwarding is not visible from the port forward page.
 
 If you want to filter other zones, replace "lan" with the desired zone name.
 
-.. note:: Please use Threat Shield DNS only if you are not already using the FlashStart service cause if used together, they may conflict.
+.. note:: Please use Threat Shield DNS only if you are not already using the FlashStart service because if used together, they may conflict.
 
 Manage blocklists
 =================
@@ -94,5 +94,5 @@ When Threat Shield DNS is enabled:
 - All DNS queries are redirected to the local machine.
 - AdBlock is configured to use the new category source file and will be started automatically.
 
-Even if not recommended, it's possible to use AdBlock without Threat Shield DNS.
+Even if not recommended, it's possible to use Adblock without Threat Shield DNS.
 For more detailed configuration options, please refer to the `developer manual <https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-dns>`_.
