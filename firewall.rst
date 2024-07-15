@@ -106,10 +106,20 @@ Fill in the following fields for the new rule:
 
 * ``Status``: enable or disable the rule based on your requirements. By default the rule is enabled during creation.
 * ``Rule name``: assign a descriptive name to identify the rule.
-* ``Source address``: enter one or more IPv4/IPv6 addresses or networks. Leave unselected for any source address.
+* ``Source address``: select the source address from three different options:
+
+  - enter one or more IPv4/IPv6 addresses/networks or IP ranges
+  - select one firewall object from the available ones
+  - any source address
+
   This field is not present for ``Output rules``, as the source address is always the firewall itself.
 * ``Source zone``: specify the traffic source zone. Choose a specific zone or select 'Any' to include traffic from any zone.
-* ``Destination address``: enter one or more IPv4/IPv6 addresses or networks. Leave unselected for any destination address.
+* ``Destination address``: select the destination address from three different options:
+
+  - enter one or more IPv4/IPv6 addresses/networks or IP ranges
+  - select one firewall object from the available ones
+  - any destination address
+
   This field is not present for ``Input rules``, as the destination address is always the firewall itself.
 * ``Destination zone``: specify the traffic destination zone. Choose a specific zone. Bear in mind that the source and destination zones can't be the same.
 * ``Destination service``: select from the list or choose 'Custom' to enter specific ports and select protocols.

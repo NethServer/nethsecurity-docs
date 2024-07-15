@@ -1,3 +1,5 @@
+.. _dns_dhcp-section:
+
 ==========
 DNS & DHCP
 ==========
@@ -43,6 +45,8 @@ Example to override the DNS passed to clients with 2 servers:
 
 - selected option: ``dns-server``
 - value: ``1.1.1.1,8.8.8.8``
+
+.. _static_leases-section:
 
 Static Leases
 -------------
@@ -127,6 +131,8 @@ More specific domains take precedence over less specific domains, so for a confi
 NethSecurity will send queries for google.com and gmail.google.com to 1.2.3.4, but www.google.com will go to 2.3.4.5
 
 This is true also for wildcards: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
+
+.. _dns_records-section:
 
 DNS records
 -----------
