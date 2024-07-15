@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 06:29+0000\n"
+"POT-Creation-Date: 2024-07-15 09:52+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1420,11 +1420,11 @@ msgstr ""
 "user/services/ddns/client#web_interface_instructions>`_ per istruzioni "
 "dettagliate sull'utilizzo di Luci per configurare il DDNS."
 
-#: ../../dns_dhcp.rst:3
+#: ../../dns_dhcp.rst:5
 msgid "DNS & DHCP"
 msgstr "DNS e DHCP"
 
-#: ../../dns_dhcp.rst:7
+#: ../../dns_dhcp.rst:9
 msgid ""
 "NethSecurity can provide DNS and DHCP services to every local network. "
 "This section is divided in 5 tabs:"
@@ -1432,27 +1432,27 @@ msgstr ""
 "NethSecurity può fornire servizi DNS e DHCP a ogni rete locale. Questa "
 "sezione è divisa in 5 schede:"
 
-#: ../../dns_dhcp.rst:10 ../../dns_dhcp.rst:17
+#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:19
 msgid "DHCP"
 msgstr "DHCP"
 
-#: ../../dns_dhcp.rst:11
+#: ../../dns_dhcp.rst:13 ../../objects.rst:143
 msgid "Static leases"
 msgstr "Lease statici"
 
-#: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:63
+#: ../../dns_dhcp.rst:14 ../../dns_dhcp.rst:67
 msgid "Dynamic leases"
 msgstr "Lease dinamici"
 
-#: ../../dns_dhcp.rst:13 ../../dns_dhcp.rst:74
+#: ../../dns_dhcp.rst:15 ../../dns_dhcp.rst:78
 msgid "DNS"
 msgstr "DNS"
 
-#: ../../dns_dhcp.rst:14 ../../dns_dhcp.rst:132
+#: ../../dns_dhcp.rst:16 ../../dns_dhcp.rst:138 ../../objects.rst:144
 msgid "DNS records"
 msgstr "Record DNS"
 
-#: ../../dns_dhcp.rst:19
+#: ../../dns_dhcp.rst:21
 msgid ""
 "This section allows you to enable and manage a DHCP server for every "
 "local network configured in your NethSecurity. Every local interface is "
@@ -1464,36 +1464,36 @@ msgstr ""
 "dotata di una scheda in cui è possibile abilitare il servizio facendo "
 "clic sul pulsante :guilabel:`Modifica`."
 
-#: ../../dns_dhcp.rst:22 ../../dns_dhcp.rst:55 ../../dns_dhcp.rst:78
-#: ../../dns_dhcp.rst:140
+#: ../../dns_dhcp.rst:24 ../../dns_dhcp.rst:59 ../../dns_dhcp.rst:82
+#: ../../dns_dhcp.rst:146
 msgid "Available fields:"
 msgstr "Campi disponibili:"
 
-#: ../../dns_dhcp.rst:24
+#: ../../dns_dhcp.rst:26
 msgid "``Enable DHCP`` : enable/disable the service"
 msgstr "``Abilita DHCP``: abilita/disabilita il servizio"
 
-#: ../../dns_dhcp.rst:25
+#: ../../dns_dhcp.rst:27
 msgid "``Range IP start`` : first IP address of DHCP range"
 msgstr "``Inizio intervallo IP``: primo indirizzo IP dell'intervallo DHCP"
 
-#: ../../dns_dhcp.rst:26
+#: ../../dns_dhcp.rst:28
 msgid "``Range IP end`` : last IP address of DHCP range"
 msgstr "``Fine intervallo IP``: ultimo indirizzo IP dell'intervallo DHCP"
 
-#: ../../dns_dhcp.rst:27
+#: ../../dns_dhcp.rst:29
 msgid "``Lease time`` :  lease time (default 1 hour)"
 msgstr "``Lease time`` : lease time (default 1 ora)"
 
-#: ../../dns_dhcp.rst:29
+#: ../../dns_dhcp.rst:31
 msgid "**Advanced settings**"
 msgstr "**Impostazioni avanzate**"
 
-#: ../../dns_dhcp.rst:31
+#: ../../dns_dhcp.rst:33
 msgid "``Force DHCP server start``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:33
+#: ../../dns_dhcp.rst:35
 msgid ""
 "Upon startup, the DHCP server checks if there are other DHCP servers on "
 "the network. With this option disabled, the DHCP server won't be "
@@ -1502,11 +1502,11 @@ msgid ""
 "servers within the network."
 msgstr ""
 
-#: ../../dns_dhcp.rst:37
+#: ../../dns_dhcp.rst:39
 msgid "``DHCP option``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:39
+#: ../../dns_dhcp.rst:41
 msgid ""
 "It is possible to declare very specific DHCP options, searching for the "
 "field to configure (e.g. DNS passed to clients, tftp IP address and so "
@@ -1518,23 +1518,23 @@ msgstr ""
 "server TFTP, ecc.) e specificando quindi il valore. Il valore può anche "
 "essere una lista di valori separati da virgola."
 
-#: ../../dns_dhcp.rst:42
+#: ../../dns_dhcp.rst:44
 msgid "Example to override the DNS passed to clients with 2 servers:"
 msgstr "Esempio per sovrascrivere i server DNS trasmessi ai client con 2 server:"
 
-#: ../../dns_dhcp.rst:44
+#: ../../dns_dhcp.rst:46
 msgid "selected option: ``dns-server``"
 msgstr "Opzione selezionata: ``dns-server``"
 
-#: ../../dns_dhcp.rst:45
+#: ../../dns_dhcp.rst:47
 msgid "value: ``1.1.1.1,8.8.8.8``"
 msgstr "Valore: ``1.1.1.1, 8.8.8.8``"
 
-#: ../../dns_dhcp.rst:48
+#: ../../dns_dhcp.rst:52 ../../objects.rst:30
 msgid "Static Leases"
 msgstr "Lease statici"
 
-#: ../../dns_dhcp.rst:50
+#: ../../dns_dhcp.rst:54
 msgid ""
 "Static leases assigns stable IP addresses and symbolic hostnames to DHCP "
 "clients. The host is identified by its MAC address, assigned a fixed IP "
@@ -1545,7 +1545,7 @@ msgstr ""
 "assegnato un indirizzo IP fisso e fornito con un nome host simbolico per "
 "un riconoscimento facile."
 
-#: ../../dns_dhcp.rst:52
+#: ../../dns_dhcp.rst:56
 msgid ""
 "Click the button :guilabel:`Add reservation` to add a new device's "
 "reservation."
@@ -1553,11 +1553,11 @@ msgstr ""
 "Clicca sul pulsante :guilabel:`Aggiungi prenotazione` per aggiungere un "
 "lease statico per un dispositivo."
 
-#: ../../dns_dhcp.rst:57
+#: ../../dns_dhcp.rst:61
 msgid "``Hostname`` : Hostname asssociated to the IP address"
 msgstr "``Nome host``: Nome host associato all'indirizzo IP"
 
-#: ../../dns_dhcp.rst:58
+#: ../../dns_dhcp.rst:62
 msgid ""
 "``IP address`` : IP adddress to assign to the specified MAC Address.The "
 "IP address must be within the DHCP range"
@@ -1566,7 +1566,7 @@ msgstr ""
 "specificato. L'indirizzo IP deve trovarsi all'interno dell'intervallo "
 "DHCP."
 
-#: ../../dns_dhcp.rst:59
+#: ../../dns_dhcp.rst:63
 msgid ""
 "``MAC address`` : MAC address of the device where you want to make the "
 "reservation"
@@ -1574,11 +1574,11 @@ msgstr ""
 "``Indirizzo MAC``: Indirizzo MAC del dispositivo per cui si desidera "
 "effettuare la reservation."
 
-#: ../../dns_dhcp.rst:60
+#: ../../dns_dhcp.rst:64
 msgid "``Reservation name`` : Optional, freely configurable filed"
 msgstr "``Nome Riservation``: Campo opzionale, liberamente configurabile"
 
-#: ../../dns_dhcp.rst:65
+#: ../../dns_dhcp.rst:69
 msgid ""
 "Dynamic leases represents IP addresses that are currently in use and have"
 " been allocated to devices on the network. This tab shows all currently "
@@ -1588,19 +1588,19 @@ msgstr ""
 " stati assegnati ai dispositivi nella rete. Questa scheda mostra tutti i "
 "lease attivi al momento."
 
-#: ../../dns_dhcp.rst:69
+#: ../../dns_dhcp.rst:73
 #, fuzzy
 msgid "Default Configuration"
 msgstr "Ripristina configurazione"
 
-#: ../../dns_dhcp.rst:71
+#: ../../dns_dhcp.rst:75
 msgid ""
 "By default, the DHCP server has a limit of 1000 concurrent leases to "
 "prevent DoS attacks. Set the dnsmasq ``dhcpleasemax`` option to change "
 "the limit."
 msgstr ""
 
-#: ../../dns_dhcp.rst:76
+#: ../../dns_dhcp.rst:80
 msgid ""
 "The system will resolve host and domain names using DNS queries to "
 "external DNS servers."
@@ -1608,147 +1608,147 @@ msgstr ""
 "Il sistema risolverà i nomi host e di dominio utilizzando query DNS a "
 "server DNS esterni."
 
-#: ../../dns_dhcp.rst:80
+#: ../../dns_dhcp.rst:84
 msgid ""
 "``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` "
 "to specify the desired upstream DNS, you can add more servers, each one "
 "is individually managed."
 msgstr ""
 
-#: ../../dns_dhcp.rst:81
+#: ../../dns_dhcp.rst:85
 msgid ""
 "``DNS Domain`` : Insert the the local DNS domain, ensuring that queries "
 "for this domain are always resolved locally."
 msgstr ""
 
-#: ../../dns_dhcp.rst:82
+#: ../../dns_dhcp.rst:86
 msgid ""
 "``Log DNS queries``: enable it if you want all the DNS queries to be "
 "logged by the system."
 msgstr ""
 
-#: ../../dns_dhcp.rst:85
+#: ../../dns_dhcp.rst:89
 msgid "Forwarding servers"
 msgstr ""
 
-#: ../../dns_dhcp.rst:87
+#: ../../dns_dhcp.rst:91
 msgid ""
 "This section explains how to configure upstream DNS servers for your "
 "system. You can use this to either:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:89
+#: ../../dns_dhcp.rst:93
 msgid ""
 "Specify a single upstream DNS server: enter the IP address of the desired"
 " server in the dedicated field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:90
+#: ../../dns_dhcp.rst:94
 msgid ""
 "Set up domain-specific DNS servers: this allows you to route queries for "
 "specific domains to different servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:93
+#: ../../dns_dhcp.rst:97
 msgid "Domain-specific DNS servers"
 msgstr ""
 
-#: ../../dns_dhcp.rst:95
+#: ../../dns_dhcp.rst:99
 msgid ""
 "To use a custom DNS server for a specific domain, use the following "
 "syntax:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:97
+#: ../../dns_dhcp.rst:101
 msgid "``/DOMAIN/IP_ADDRESS#PORT``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:99
+#: ../../dns_dhcp.rst:103
 msgid "where:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:101
+#: ../../dns_dhcp.rst:105
 msgid "IP_ADDRESS: specify the IP address of the desired server"
 msgstr ""
 
-#: ../../dns_dhcp.rst:102
+#: ../../dns_dhcp.rst:106
 msgid "PORT: append the desired port (after the IP address using `#` character)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:104
+#: ../../dns_dhcp.rst:108
 msgid ""
 "The ``PORT`` value is optional so usually the configuration appears just "
 "like:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:106
+#: ../../dns_dhcp.rst:110
 msgid "``/DOMAIN/IP_ADDRESS``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:108
+#: ../../dns_dhcp.rst:112
 msgid "These are the main supported options:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:110
+#: ../../dns_dhcp.rst:114
 msgid "Empty domain (``//``): matches unqualified names (without dots)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:111
+#: ../../dns_dhcp.rst:115
 msgid ""
 "Specific domain (``/google.com/``): matches the exact domain and all its "
 "subdomains (e.g., google.com, www.google.com, drive.google.com...)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:112
+#: ../../dns_dhcp.rst:116
 msgid ""
 "Wildcard domain (``*google.com/``): matches any domain **containing** "
 "\"google.com\" (e.g., google.com, www.google.com, supergoogle.com)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:114
+#: ../../dns_dhcp.rst:118
 msgid "Examples:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:116
+#: ../../dns_dhcp.rst:120
 msgid ""
 "Send all queries for \"google.com\" and its subdomains to 1.2.3.4:  "
 "``/google.com/1.2.3.4``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:117
+#: ../../dns_dhcp.rst:121
 msgid ""
 "Send all unqualified names (e.g., \"localhost\") to 10.0.0.1 and "
 "everything else to standard servers: ``//10.0.0.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:118
+#: ../../dns_dhcp.rst:122
 msgid ""
 "Send queries for domain \"ad.nethserver.org\" and its subdomains to "
 "192.168.1.1 and everything else to standard servers: "
 "``/ad.nethserver.org/192.168.1.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:122
+#: ../../dns_dhcp.rst:126
 msgid ""
 "More specific domains take precedence over less specific domains, so for "
 "a configuration like this:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:124
+#: ../../dns_dhcp.rst:128
 msgid "``/google.com/1.2.3.4``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:125
+#: ../../dns_dhcp.rst:129
 msgid "``/www.google.com/2.3.4.5``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:127
+#: ../../dns_dhcp.rst:131
 msgid ""
 "NethSecurity will send queries for google.com and gmail.google.com to "
 "1.2.3.4, but www.google.com will go to 2.3.4.5"
 msgstr ""
 
-#: ../../dns_dhcp.rst:129
+#: ../../dns_dhcp.rst:133
 msgid ""
 "This is true also for wildcards: if both specific and wildcard domains "
 "are defined for the same pattern, the specific one takes precedence "
@@ -1757,44 +1757,44 @@ msgid ""
 "supergoogle.com."
 msgstr ""
 
-#: ../../dns_dhcp.rst:134
+#: ../../dns_dhcp.rst:140
 msgid ""
 "The system can handle local DNS records. When the server performs a DNS "
 "lookup, first it will search inside local DNS records. If no local record"
 " is found, an external DNS query will be done."
 msgstr ""
 
-#: ../../dns_dhcp.rst:136
+#: ../../dns_dhcp.rst:142
 msgid "Local DNS records will always override records from external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:138
+#: ../../dns_dhcp.rst:144
 msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
 msgstr ""
 
-#: ../../dns_dhcp.rst:142
+#: ../../dns_dhcp.rst:148
 msgid "``Hostname`` : DNS hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:143
+#: ../../dns_dhcp.rst:149
 msgid "``IP address`` : IP address associated to hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:144
+#: ../../dns_dhcp.rst:150
 msgid "``Name`` : optional field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:145
+#: ../../dns_dhcp.rst:151
 msgid ""
 "``Wildcard DNS record``: enable it if you want this answer for any "
 "subdomain you haven't already defined"
 msgstr ""
 
-#: ../../dns_dhcp.rst:148
+#: ../../dns_dhcp.rst:154
 msgid "DNS Rebind Protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:150
+#: ../../dns_dhcp.rst:156
 msgid ""
 "DNS Rebind Protection is a security feature that safeguards against DNS "
 "rebinding attacks. It blocks the use of private IP ranges by public "
@@ -1802,7 +1802,7 @@ msgid ""
 " unauthorized requests to local network devices."
 msgstr ""
 
-#: ../../dns_dhcp.rst:152
+#: ../../dns_dhcp.rst:158
 msgid ""
 "DNS Rebind Protection is enabled by default on NethSecurity and usually "
 "does not have operational repercussions. In the presence of split DNS, "
@@ -1812,7 +1812,7 @@ msgid ""
 "may appear:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:160
+#: ../../dns_dhcp.rst:166
 msgid ""
 "To ensure maximum compatibility and prevent malfunctions in migrated "
 "installations using the dedicated tool from NethServer 7.9, DNS Rebind "
@@ -1820,39 +1820,39 @@ msgid ""
 "version."
 msgstr ""
 
-#: ../../dns_dhcp.rst:163
+#: ../../dns_dhcp.rst:169
 msgid "How to fix DNS rebind protection issues"
 msgstr ""
 
-#: ../../dns_dhcp.rst:165
+#: ../../dns_dhcp.rst:171
 msgid "You can easily fix any of these issues from the CLI."
 msgstr ""
 
-#: ../../dns_dhcp.rst:167
+#: ../../dns_dhcp.rst:173
 msgid "**Solution 1**: Whitelist the domain"
 msgstr ""
 
-#: ../../dns_dhcp.rst:169
+#: ../../dns_dhcp.rst:175
 msgid "Put the specific domain in a whitelist (suggested): ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:173
+#: ../../dns_dhcp.rst:179
 msgid "then commit and restart: ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:178
+#: ../../dns_dhcp.rst:184
 msgid "**Solution 2**: disable the DNS protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:180
+#: ../../dns_dhcp.rst:186
 msgid "Completely disable DNS rebind protection using these commands: ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:187
+#: ../../dns_dhcp.rst:193
 msgid "How to enable DNS rebind protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:189
+#: ../../dns_dhcp.rst:195
 msgid ""
 "If you have previously disabled rebind protection or if your "
 "configuration comes from a migration and you wish to enable rebind "
@@ -2119,6 +2119,74 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-31-g7aae945"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-31-g7aae945/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-31-g7aae945-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-31-g7aae945/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-30-g8280c1c"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-30-g8280c1c/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-30-g8280c1c-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-30-g8280c1c/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-29-gf4eb39f"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-29-gf4eb39f/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-29-gf4eb39f-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-29-gf4eb39f/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-28-gd4506a6"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-28-gd4506a6/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-28-gd4506a6-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-28-gd4506a6/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.3-ns.1.1.0-27-g9c1fc4c"
 msgstr ""
 
@@ -2133,40 +2201,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-27-g9c1fc4c/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.1.0-26-g31270c6"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-26-g31270c6/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-26-g31270c6-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-26-g31270c6/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.1.0-25-g5158b54"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-25-g5158b54/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-25-g5158b54-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-25-g5158b54/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -2360,7 +2394,7 @@ msgstr ""
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
 
-#: ../../firewall.rst:5 ../../index.rst:55
+#: ../../firewall.rst:5 ../../index.rst:62
 msgid "Firewall"
 msgstr "Firewall"
 
@@ -2689,16 +2723,34 @@ msgstr "``Nome regole``: assegnare un nome per identificare la regola."
 
 #: ../../firewall.rst:109
 msgid ""
-"``Source address``: enter one or more IPv4/IPv6 addresses or networks. "
-"Leave unselected for any source address. This field is not present for "
-"``Output rules``, as the source address is always the firewall itself."
+"``Source address``: select the source address from three different "
+"options:"
+msgstr ""
+
+#: ../../firewall.rst:111 ../../firewall.rst:119
+msgid "enter one or more IPv4/IPv6 addresses/networks or IP ranges"
+msgstr ""
+
+#: ../../firewall.rst:112 ../../firewall.rst:120
+msgid "select one firewall object from the available ones"
+msgstr ""
+
+#: ../../firewall.rst:113
+msgid "any source address"
+msgstr ""
+
+#: ../../firewall.rst:115
+#, fuzzy
+msgid ""
+"This field is not present for ``Output rules``, as the source address is "
+"always the firewall itself."
 msgstr ""
 "``Indirizzo sorgente`: inserire uno o più indirizzi IPv4/IPv6 o reti "
 "CIDR. Lasciare non selezionato per qualsiasi indirizzo sorgente. Questo "
 "campo non è presente per ``Regole di uscita``, in quanto l'indirizzo "
 "sorgente è sempre il firewall stesso."
 
-#: ../../firewall.rst:111
+#: ../../firewall.rst:116
 msgid ""
 "``Source zone``: specify the traffic source zone. Choose a specific zone "
 "or select 'Any' to include traffic from any zone."
@@ -2707,19 +2759,28 @@ msgstr ""
 "una zona specifica o selezionare 'Qualsiasi' per includere il traffico da"
 " qualsiasi zona."
 
-#: ../../firewall.rst:112
+#: ../../firewall.rst:117
 msgid ""
-"``Destination address``: enter one or more IPv4/IPv6 addresses or "
-"networks. Leave unselected for any destination address. This field is not"
-" present for ``Input rules``, as the destination address is always the "
-"firewall itself."
+"``Destination address``: select the destination address from three "
+"different options:"
+msgstr ""
+
+#: ../../firewall.rst:121
+msgid "any destination address"
+msgstr ""
+
+#: ../../firewall.rst:123
+#, fuzzy
+msgid ""
+"This field is not present for ``Input rules``, as the destination address"
+" is always the firewall itself."
 msgstr ""
 "``Indirizzo di destinazione`: inserire uno o più indirizzi IPv4/IPv6 o "
 "reti CIDR. Lasciare non selezionato per qualsiasi indirizzo di "
 "destinazione. Questo campo non è presente per ``Regole di input``, in "
 "quanto l'indirizzo di destinazione è sempre il firewall stesso."
 
-#: ../../firewall.rst:114
+#: ../../firewall.rst:124
 msgid ""
 "``Destination zone``: specify the traffic destination zone. Choose a "
 "specific zone. Bear in mind that the source and destination zones can't "
@@ -2729,7 +2790,7 @@ msgstr ""
 "traffico scegliendone una specifica tenendo a mente che le zone di "
 "origine e di destinazione non possono essere le stesse."
 
-#: ../../firewall.rst:115
+#: ../../firewall.rst:125
 msgid ""
 "``Destination service``: select from the list or choose 'Custom' to enter"
 " specific ports and select protocols."
@@ -2737,7 +2798,7 @@ msgstr ""
 "``Servizio di destinazione`: selezionare dall'elenco o scegliere "
 "'Personalizzato' per inserire porte o protocolli specifici."
 
-#: ../../firewall.rst:116
+#: ../../firewall.rst:126
 msgid ""
 "``Action``: define the action when the rule conditions are met: * "
 "``Accept``: accept the network traffic. * ``Reject``: block the traffic "
@@ -2750,7 +2811,7 @@ msgstr ""
 "``Drop`: bloccare il traffico, i pacchetti sono scartati e non viene "
 "inviata alcuna notifica all'host del mittente."
 
-#: ../../firewall.rst:120
+#: ../../firewall.rst:130
 msgid ""
 "``Rule position``: decide whether to add the rule to the bottom or top of"
 " the rule list."
@@ -2758,7 +2819,7 @@ msgstr ""
 "``Posizione della regola``: consente di impostare se aggiungere la regola"
 " in basso o in cima alla lista delle regole."
 
-#: ../../firewall.rst:121
+#: ../../firewall.rst:131
 msgid ""
 "``Logging``: indicate whether traffic matching this rule should be "
 "logged. The log entry will include the rule name as a prefix."
@@ -2767,7 +2828,7 @@ msgstr ""
 "essere registrato. La voce nel log includerà il nome della regola come "
 "prefisso."
 
-#: ../../firewall.rst:122
+#: ../../firewall.rst:132
 msgid ""
 "``Tags``: optionally, add tags for organizational purposes. Note that the"
 " 'automated' tag is reserved for system use."
@@ -3025,6 +3086,48 @@ msgid ""
 "your Nethsecurity will be freed up and you can use it for other purposes."
 msgstr ""
 
+#: ../../hotspot.rst:97
+#, fuzzy
+msgid "Change DNS settings"
+msgstr "**Impostazioni avanzate**"
+
+#: ../../hotspot.rst:99
+msgid ""
+"By default the DNS server used by the hotspot is from OpenDNS, to change "
+"the DNS settings manual configuration is required. Please follow the "
+"steps below from the terminal:"
+msgstr ""
+
+#: ../../hotspot.rst:102
+#, fuzzy
+msgid "Edit the UCI configuration file with the following commands:"
+msgstr ""
+"Nella modalità personalizzata della configurazione MultiWAN, si applicano"
+" i seguenti concetti:"
+
+#: ../../hotspot.rst:109
+msgid "Save the changes with the following command:"
+msgstr ""
+
+#: ../../hotspot.rst:115
+#, fuzzy
+msgid "Restart the dedalo service with:"
+msgstr "Poi riavvia il servizio DDNS::"
+
+#: ../../hotspot.rst:122
+msgid "Restore default DNS settings"
+msgstr ""
+
+#: ../../hotspot.rst:124
+msgid "To restore the default DNS settings, use the following commands:"
+msgstr ""
+
+#: ../../hotspot.rst:131
+msgid ""
+"Then repeat the steps 2 and 3 in the previous section to apply the "
+"changes."
+msgstr ""
+
 #: ../../index.rst:15
 msgid "About"
 msgstr "Informazioni"
@@ -3041,23 +3144,27 @@ msgstr ""
 msgid "Network"
 msgstr ""
 
-#: ../../index.rst:64
+#: ../../index.rst:55
+msgid "Users and objects"
+msgstr ""
+
+#: ../../index.rst:71
 msgid "Security"
 msgstr ""
 
-#: ../../index.rst:72
+#: ../../index.rst:79
 msgid "VPN"
 msgstr ""
 
-#: ../../index.rst:81
+#: ../../index.rst:87
 msgid "Report"
 msgstr ""
 
-#: ../../index.rst:88
+#: ../../index.rst:94
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:97
+#: ../../index.rst:103
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -5803,6 +5910,751 @@ msgid ""
 "an IPv6 prefix (usually a /64) from your ISP through DHCPv6-PD. This "
 "prefix will then be used to assign individual IPv6 addresses to devices "
 "on your network."
+msgstr ""
+
+#: ../../objects.rst:3
+msgid "Firewall objects"
+msgstr ""
+
+#: ../../objects.rst:5
+msgid ""
+"Firewall objects are predefined sets of network addresses that can be "
+"used to streamline and simplify your firewall configuration. These "
+"objects allow you to group related IP addresses, networks, or domain "
+"names into reusable units, making it easier to create and maintain "
+"firewall rules, port forwards, and other network policies."
+msgstr ""
+
+#: ../../objects.rst:9
+msgid "Advantages of using firewall objects include:"
+msgstr ""
+
+#: ../../objects.rst:11
+msgid "Improved organization and readability of your firewall configuration"
+msgstr ""
+
+#: ../../objects.rst:13
+msgid "reduced chance of errors when entering IP addresses or networks manually"
+msgstr ""
+
+#: ../../objects.rst:14
+msgid ""
+"easier maintenance - updating an object automatically updates all "
+"associated rules"
+msgstr ""
+
+#: ../../objects.rst:15
+msgid "more efficient rule management, especially for complex networks"
+msgstr ""
+
+#: ../../objects.rst:17
+msgid ""
+"Firewall objects are particularly useful when you have multiple rules "
+"that reference the same set of addresses or when you frequently need to "
+"modify groups of addresses. However, for simple configurations with only "
+"a few static rules, using objects may not be necessary and could add "
+"unnecessary complexity."
+msgstr ""
+
+#: ../../objects.rst:21
+msgid "The system provides several types of firewall objects:"
+msgstr ""
+
+#: ../../objects.rst:23
+msgid ""
+"static Leases (DHCP Reservations): static IP assignments for specific "
+"devices"
+msgstr ""
+
+#: ../../objects.rst:24
+msgid "DNS Records: domain names associated with specific IP addresses"
+msgstr ""
+
+#: ../../objects.rst:25
+msgid "VPN Users: users with reserved IP addresses from OpenVPN Road Warrior"
+msgstr ""
+
+#: ../../objects.rst:26
+msgid "Host Sets: groups of IP addresses, networks, or ranges"
+msgstr ""
+
+#: ../../objects.rst:27
+msgid "Domain Sets: collections of domain names that resolve to IP addresses"
+msgstr ""
+
+#: ../../objects.rst:32
+msgid ""
+":ref:`Static leases <static_leases-section>`, also known as DHCP "
+"reservations, allow you to assign fixed IP addresses to specific devices "
+"on your network. This feature combines the convenience of DHCP with the "
+"stability of static IP addressing."
+msgstr ""
+
+#: ../../objects.rst:35
+msgid "Key benefits:"
+msgstr ""
+
+#: ../../objects.rst:37
+msgid "ensures devices always receive the same IP address"
+msgstr ""
+
+#: ../../objects.rst:38
+msgid "allows you to associate easy-to-remember hostnames with devices"
+msgstr ""
+
+#: ../../objects.rst:39
+msgid "simplifies network management and troubleshooting"
+msgstr ""
+
+#: ../../objects.rst:41
+#, fuzzy
+msgid "A static lease consists of:"
+msgstr "Lease statici"
+
+#: ../../objects.rst:43
+msgid "hostname: A recognizable name for the device"
+msgstr ""
+
+#: ../../objects.rst:44
+msgid ""
+"IP address: The fixed IP you want to assign (must be within the DHCP "
+"range)"
+msgstr ""
+
+#: ../../objects.rst:45
+#, fuzzy
+msgid "MAC address: The unique hardware identifier of the device"
+msgstr "crea un identificatore univoco per l'unità"
+
+#: ../../objects.rst:48
+#, fuzzy
+msgid "DNS Records"
+msgstr "Record DNS"
+
+#: ../../objects.rst:50
+msgid ""
+":ref:`DNS records <dns_records-section>` allow you to create local "
+"hostname-to-IP address mappings. These local records take precedence over"
+" external DNS queries, giving you more control over name resolution on "
+"your network."
+msgstr ""
+
+#: ../../objects.rst:53
+msgid "A DNS record includes:"
+msgstr ""
+
+#: ../../objects.rst:55
+msgid "hostname: The domain name you want to resolve locally"
+msgstr ""
+
+#: ../../objects.rst:56
+msgid "IP address: The corresponding IP address for the hostname"
+msgstr ""
+
+#: ../../objects.rst:58
+msgid "Use cases for local DNS records:"
+msgstr ""
+
+#: ../../objects.rst:60
+msgid ""
+"create shortcuts to internal resources (e.g., "
+"\"intranet.mycompany.local\")"
+msgstr ""
+
+#: ../../objects.rst:61
+msgid "override external DNS for testing or security purposes"
+msgstr ""
+
+#: ../../objects.rst:62
+msgid "set up custom domain names for local services"
+msgstr ""
+
+#: ../../objects.rst:64
+msgid ""
+"By utilizing static leases and local DNS records, you can create a more "
+"organized and easily manageable network environment. These features work "
+"seamlessly with other firewall objects like host sets, providing you with"
+" powerful tools for network administration."
+msgstr ""
+
+#: ../../objects.rst:67
+msgid ""
+"For detailed instructions on how to create and manage static leases and "
+"DNS records, please refer to the :ref:`DHCP and DNS configuration "
+"chapters <dns_dhcp-section>`."
+msgstr ""
+
+#: ../../objects.rst:70
+msgid "VPN Users"
+msgstr ""
+
+#: ../../objects.rst:72
+msgid ""
+":ref:`OpenVPN users <openvpn_roadwarrior-section>` with IP reservations "
+"can be used as firewall objects, enabling user-specific network access "
+"control. This feature applies to both local and remote (LDAP) users "
+"configured for OpenVPN access."
+msgstr ""
+
+#: ../../objects.rst:75
+msgid "Key points:"
+msgstr ""
+
+#: ../../objects.rst:77
+msgid "each user can be assigned a specific OpenVPN IP address"
+msgstr ""
+
+#: ../../objects.rst:78
+msgid "these users can be referenced in firewall rules as source or destination"
+msgstr ""
+
+#: ../../objects.rst:79
+msgid "applies to both local and remote (LDAP) users"
+msgstr ""
+
+#: ../../objects.rst:80
+msgid "allows for creation of user-specific access policies"
+msgstr ""
+
+#: ../../objects.rst:82 ../../objects.rst:122
+msgid "Use cases:"
+msgstr ""
+
+#: ../../objects.rst:84
+msgid "restrict OpenVPN users to specific network resources"
+msgstr ""
+
+#: ../../objects.rst:85
+msgid "create user-based allow/deny lists"
+msgstr ""
+
+#: ../../objects.rst:86
+msgid "implement time-based access policies for remote users"
+msgstr ""
+
+#: ../../objects.rst:87
+msgid "monitor and control per-user bandwidth usage"
+msgstr ""
+
+#: ../../objects.rst:89
+msgid "Requirements:"
+msgstr ""
+
+#: ../../objects.rst:91
+msgid "user has OpenVPN access enabled"
+msgstr ""
+
+#: ../../objects.rst:92
+msgid "a specific IP address is reserved for the user"
+msgstr ""
+
+#: ../../objects.rst:94
+msgid ""
+"By using OpenVPN users as firewall objects, you can create a more secure "
+"network environment with access policies tied directly to user "
+"identities."
+msgstr ""
+
+#: ../../objects.rst:97
+msgid "Host Sets"
+msgstr ""
+
+#: ../../objects.rst:99
+msgid ""
+"Host sets are versatile firewall objects that allow you to group multiple"
+" IP addresses, networks, or ranges into a single, easily manageable unit."
+" These sets can be used in various firewall rules, simplifying the "
+"process of controlling traffic for multiple destinations or sources."
+msgstr ""
+
+#: ../../objects.rst:101
+#, fuzzy
+msgid "Key features of host sets:"
+msgstr "Funzionalità principali:"
+
+#: ../../objects.rst:103 ../../objects.rst:209
+#, fuzzy
+msgid "IP version support:"
+msgstr "Richiedere assistenza"
+
+#: ../../objects.rst:105
+msgid "available for both IPv4 and IPv6 addresses"
+msgstr ""
+
+#: ../../objects.rst:106
+msgid "each host set is specific to one IP version"
+msgstr ""
+
+#: ../../objects.rst:108
+msgid "Flexible content, Host sets can include:"
+msgstr ""
+
+#: ../../objects.rst:110
+msgid "individual IP addresses"
+msgstr ""
+
+#: ../../objects.rst:111
+msgid "network ranges in CIDR notation"
+msgstr ""
+
+#: ../../objects.rst:112
+msgid "IP ranges"
+msgstr ""
+
+#: ../../objects.rst:113
+msgid "DHCP reservations"
+msgstr ""
+
+#: ../../objects.rst:114
+msgid "DNS record names"
+msgstr ""
+
+#: ../../objects.rst:115
+msgid "VPN users (for IPv4 only)"
+msgstr ""
+
+#: ../../objects.rst:117 ../../objects.rst:224
+#, fuzzy
+msgid "Easy management:"
+msgstr "Gestione dei Log"
+
+#: ../../objects.rst:119
+msgid ""
+"create, modify, or delete host sets without directly editing firewall "
+"rules"
+msgstr ""
+
+#: ../../objects.rst:120
+msgid "changes to a host set automatically apply to all rules using that set"
+msgstr ""
+
+#: ../../objects.rst:124
+msgid "group company servers for access control"
+msgstr ""
+
+#: ../../objects.rst:125
+msgid "create allow or deny lists for specific network segments"
+msgstr ""
+
+#: ../../objects.rst:126
+msgid "manage remote access for multiple VPN users"
+msgstr ""
+
+#: ../../objects.rst:130
+msgid ""
+"Host sets are fully supported in their expressive completeness (IP, CIDR,"
+" range, groupings) within firewall rules. Other pages might only support "
+"a reduced subset, for example, MultiWAN only supports single IP addresses"
+" and CIDR. In such cases, only compatible host sets will be displayed in "
+"the dropdowns when using the object inside the rule."
+msgstr ""
+
+#: ../../objects.rst:135
+msgid "Manage Host Sets"
+msgstr ""
+
+#: ../../objects.rst:137
+msgid ""
+"Access the ``Objects`` page under the ``User and objects`` section from "
+"the left sidebar menu, then navigate to the ``Host sets`` tab."
+msgstr ""
+
+#: ../../objects.rst:139
+msgid ""
+"The page will display a list of existing host sets, including their "
+"names, IP versions, and the number of records in each set."
+msgstr ""
+
+#: ../../objects.rst:141
+msgid ""
+"Inside the list, you can also find hosts objects coming from other "
+"sections like:"
+msgstr ""
+
+#: ../../objects.rst:145
+msgid "VPN users"
+msgstr ""
+
+#: ../../objects.rst:147
+msgid ""
+"These objects can be used in host sets to create more complex rules, but "
+"they cannot be edited directly from the host sets page."
+msgstr ""
+
+#: ../../objects.rst:149
+msgid ""
+"When an object is not used in any host set nor in any firewall rule, it "
+"will be marked as ``unused`` in the list."
+msgstr ""
+
+#: ../../objects.rst:151
+msgid ""
+"To see where an object is used, click on the ``Show usages`` link next to"
+" the object."
+msgstr ""
+
+#: ../../objects.rst:153
+msgid ""
+"Please note that used objects cannot be deleted until they are removed "
+"from all host sets and firewall rules."
+msgstr ""
+
+#: ../../objects.rst:156
+msgid "Add an Host Set"
+msgstr ""
+
+#: ../../objects.rst:158
+msgid ""
+"Access the ``Objects`` page under the ``User and objects`` section from "
+"the left sidebar menu."
+msgstr ""
+
+#: ../../objects.rst:160
+msgid "Navigate to the ``Host sets`` tab"
+msgstr ""
+
+#: ../../objects.rst:161
+msgid "Click on :guilabel:`Add host set` button"
+msgstr ""
+
+#: ../../objects.rst:163
+msgid "Enter the Host Set name"
+msgstr ""
+
+#: ../../objects.rst:165
+msgid "In the ``Name`` field, enter a descriptive name for your host set"
+msgstr ""
+
+#: ../../objects.rst:166 ../../objects.rst:272
+msgid ""
+"Use only letters and numbers; spaces and special characters are not "
+"allowed"
+msgstr ""
+
+#: ../../objects.rst:167
+msgid "Choose a name that clearly identifies the purpose of the group of hosts"
+msgstr ""
+
+#: ../../objects.rst:169
+msgid "Select IP version"
+msgstr ""
+
+#: ../../objects.rst:171 ../../objects.rst:277
+msgid "Under ``IP version``, choose between IPv4 and IPv6"
+msgstr ""
+
+#: ../../objects.rst:172
+msgid "Select IPv4 for standard internet protocol addresses"
+msgstr ""
+
+#: ../../objects.rst:173
+msgid "Choose IPv6 if you're using the newer, expanded address format"
+msgstr ""
+
+#: ../../objects.rst:175
+#, fuzzy
+msgid "Add Records"
+msgstr "Record DNS"
+
+#: ../../objects.rst:177
+msgid "In the ``Records`` field, you can add the hosts for this set"
+msgstr ""
+
+#: ../../objects.rst:178
+msgid ""
+"Click the dropdown menu to choose from predefined options, or enter a "
+"custom value"
+msgstr ""
+
+#: ../../objects.rst:179
+msgid "You can add the following types of records:"
+msgstr ""
+
+#: ../../objects.rst:181
+msgid "Individual IP addresses (e.g., ``192.168.1.10``)"
+msgstr ""
+
+#: ../../objects.rst:182
+msgid "CIDR notation for networks (e.g., ``10.10.0.0/24``)"
+msgstr ""
+
+#: ../../objects.rst:183
+msgid "IP ranges (e.g., ``10.10.1.1-10.10.1.5``)"
+msgstr ""
+
+#: ../../objects.rst:184
+msgid "Previously created objects"
+msgstr ""
+
+#: ../../objects.rst:186
+msgid ""
+"After entering each record, click :guilabel:`Add record` to include it in"
+" the set"
+msgstr ""
+
+#: ../../objects.rst:187
+msgid "Repeat this process to add multiple records as needed"
+msgstr ""
+
+#: ../../objects.rst:189
+msgid "Finalize the Host Set"
+msgstr ""
+
+#: ../../objects.rst:191 ../../objects.rst:290
+msgid "Review all entered information for accuracy"
+msgstr ""
+
+#: ../../objects.rst:192
+msgid "If you need to remove a record, use the delete (trash can) icon next to it"
+msgstr ""
+
+#: ../../objects.rst:193
+msgid ""
+"Once you're satisfied with your host set configuration, click "
+":guilabel:`Add host set` to create it"
+msgstr ""
+
+#: ../../objects.rst:194 ../../objects.rst:293
+msgid "If you need to start over or cancel the process, click :guilabel:`Cancel`"
+msgstr ""
+
+#: ../../objects.rst:197
+msgid "Domain Sets"
+msgstr ""
+
+#: ../../objects.rst:199
+msgid ""
+"Domain sets are firewall objects that allow you to group multiple domain "
+"names into a single, manageable unit. These sets are particularly useful "
+"for creating rules based on web addresses rather than IP addresses, which"
+" can change frequently for many websites."
+msgstr ""
+
+#: ../../objects.rst:202
+msgid "Key features of domain sets:"
+msgstr ""
+
+#: ../../objects.rst:204
+msgid "DNS resolution:"
+msgstr ""
+
+#: ../../objects.rst:206
+msgid "domain names in the set are automatically resolved to IP addresses"
+msgstr ""
+
+#: ../../objects.rst:207
+msgid "resolution is periodically updated to ensure accuracy"
+msgstr ""
+
+#: ../../objects.rst:211
+msgid "can be configured for either IPv4 or IPv6"
+msgstr ""
+
+#: ../../objects.rst:212
+msgid "each domain set is specific to one IP version"
+msgstr ""
+
+#: ../../objects.rst:214
+msgid "Flexible content, domain sets can include:"
+msgstr ""
+
+#: ../../objects.rst:216
+msgid "fully qualified domain names (e.g., ``www.example.com``)"
+msgstr ""
+
+#: ../../objects.rst:217
+msgid "wildcard domains (e.g., ``example.com``, will match all subdomains)"
+msgstr ""
+
+#: ../../objects.rst:219
+#, fuzzy
+msgid "Automatic timeout:"
+msgstr "rotte statiche"
+
+#: ../../objects.rst:221
+msgid "DNS records in the set are cached for a specified duration"
+msgstr ""
+
+#: ../../objects.rst:222
+msgid "an automatic refresh process updates the resolution periodically"
+msgstr ""
+
+#: ../../objects.rst:226
+msgid ""
+"create, modify, or delete domain sets without directly editing firewall "
+"rules"
+msgstr ""
+
+#: ../../objects.rst:227
+msgid "changes to a domain set automatically apply to all rules using that set"
+msgstr ""
+
+#: ../../objects.rst:229
+msgid "Use cases for domain sets:"
+msgstr ""
+
+#: ../../objects.rst:231
+msgid ""
+"application control: manage access to cloud services or social media "
+"platforms"
+msgstr ""
+
+#: ../../objects.rst:232
+msgid "security: create allow rules for trusted domains"
+msgstr ""
+
+#: ../../objects.rst:233
+msgid "malware prevention: create deny rules for known malicious domains"
+msgstr ""
+
+#: ../../objects.rst:235
+msgid "Benefits of using domain sets:"
+msgstr ""
+
+#: ../../objects.rst:237
+msgid "simplify management of rules based on web addresses"
+msgstr ""
+
+#: ../../objects.rst:238
+msgid "automatically handle IP address changes of websites"
+msgstr ""
+
+#: ../../objects.rst:239
+msgid "reduce the need for manual updates to firewall rules"
+msgstr ""
+
+#: ../../objects.rst:240
+msgid "provide a more intuitive way to control access to web-based services"
+msgstr ""
+
+#: ../../objects.rst:242
+msgid "When to use domain sets:"
+msgstr ""
+
+#: ../../objects.rst:244
+msgid "when you need to control access to websites that may change IP addresses"
+msgstr ""
+
+#: ../../objects.rst:245
+msgid "for implementing content filtering policies"
+msgstr ""
+
+#: ../../objects.rst:246
+msgid "when managing access to cloud services or web applications"
+msgstr ""
+
+#: ../../objects.rst:247
+msgid "for creating security policies based on domain reputation"
+msgstr ""
+
+#: ../../objects.rst:251
+msgid "Manage Domain Sets"
+msgstr ""
+
+#: ../../objects.rst:253
+msgid ""
+"Access the ``Objects`` page under the ``User and objects`` section from "
+"the left sidebar menu, then navigate to the ``Domain sets`` tab."
+msgstr ""
+
+#: ../../objects.rst:255
+msgid ""
+"The page will display a list of existing domain sets, including their "
+"names, IP versions, and the number of domains in each set."
+msgstr ""
+
+#: ../../objects.rst:257
+msgid ""
+"If a domain set is not used in any firewall rule, it will be marked as "
+"``unused`` in the list. To see where a domain set is used, click on the "
+"``Show usages`` link next to the set."
+msgstr ""
+
+#: ../../objects.rst:261
+msgid "Add a Domain Set"
+msgstr ""
+
+#: ../../objects.rst:263
+msgid "Access the Add Domain Set Interface"
+msgstr ""
+
+#: ../../objects.rst:265
+msgid ""
+"Access the ``Objects`` page under the ``User and objects`` section from "
+"the left sidebar menu"
+msgstr ""
+
+#: ../../objects.rst:266
+msgid "Navigate to the ``Domain sets`` tab"
+msgstr ""
+
+#: ../../objects.rst:267
+msgid "Click on :guilabel:`Add somain set` button"
+msgstr ""
+
+#: ../../objects.rst:269
+msgid "Enter the Domain Set name:"
+msgstr ""
+
+#: ../../objects.rst:271
+msgid "In the ``Name`` field, enter a descriptive name for your domain set"
+msgstr ""
+
+#: ../../objects.rst:273
+msgid "Choose a name that clearly identifies the purpose of the group of domains"
+msgstr ""
+
+#: ../../objects.rst:275
+msgid "Select IP version:"
+msgstr ""
+
+#: ../../objects.rst:278
+msgid ""
+"Entered domains will be resolved to IPv4 or IPv6 accordingly to the "
+"selected IP version"
+msgstr ""
+
+#: ../../objects.rst:279
+msgid ""
+"If you need to create a domain set for both IP versions, you will need to"
+" create separate sets for each"
+msgstr ""
+
+#: ../../objects.rst:281
+msgid "Add domains:"
+msgstr ""
+
+#: ../../objects.rst:283
+msgid "In the ``Domains`` field, you can add the domains for this set"
+msgstr ""
+
+#: ../../objects.rst:284
+#, fuzzy
+msgid "Enter domain names in the provided field"
+msgstr "Un nome di dominio registrato con il provider DDNS."
+
+#: ../../objects.rst:285
+msgid ""
+"After entering each domain, click :guilabel:`Add domain`` to include it "
+"in the set"
+msgstr ""
+
+#: ../../objects.rst:286
+msgid "Repeat this process to add multiple domains as needed"
+msgstr ""
+
+#: ../../objects.rst:288
+msgid "Finalize the Domain Set:"
+msgstr ""
+
+#: ../../objects.rst:291
+msgid "If you need to remove a domain, use the delete (trash can) icon next to it"
+msgstr ""
+
+#: ../../objects.rst:292
+msgid ""
+"Once you're satisfied with your domain set configuration, click "
+":guilabel:`Add domain set` to create it"
 msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:5
@@ -14920,5 +15772,33 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.0.1-70-g9ef0f6b/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.1.0-26-g31270c6"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-26-g31270c6/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-26-g31270c6-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-26-g31270c6/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.1.0-25-g5158b54"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-25-g5158b54/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-25-g5158b54-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-25-g5158b54/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
