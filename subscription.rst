@@ -8,15 +8,19 @@ Subscription
 which provides additional benefits and features:
 
 - **Community subscription**: self-service registration mostly suited for IT consultant.
-  Portal is available at `my.nethserver.com <https://my.nethserver.com>`_
-- **Enterpise subscription**: service reserved to Nethesis resellers, request more info at `sales departement <mailto:info@nethesis.it>`_.
-  Portal is available at: `my.nethesis.it <https://my.nethesis.it>`_
+  For more info, see the `subscription plans <https://nethsecurity.org/subscription>`_ page.
+
+  Community subscription portal is available at `my.nethserver.com <https://my.nethserver.com>`_
+
+- **Enterprise subscription**: service reserved to Nethesis resellers, request more info at `sales departement <mailto:info@nethesis.it>`_.
+
+  Enterprise subscription portal is available at: `my.nethesis.it <https://my.nethesis.it>`_
 
 Typical benefits of the subscription service include:
 
 - **Monitoring portals**: subscribers can access monitoring portals to manage their subscription and receive :ref:`alerts <alert-section>` for registered servers.
 - **Enhanced DPI signatures**: firewalls with a valid subscription have access to a much larger database of :ref:`DPI signatures <dpi_filter-section>` (more than 1820 in total instead of 415) that are regularly updated.
-- **Enterprise Block lists**: Firewalls with a valid subscription can purchase high-quality IP and DNS blocklists. These lists are actively maintained, updated very frequently, and exhibit high effectiveness while generating a very low number of false positives, they can be used in :ref:`IP <threat_shield_dns-section>` and :ref:`DNS <threat_shield_dns-section>` block lists.
+- **Enterprise Block lists**: Firewalls with a valid subscription can purchase high-quality IP and DNS blocklists. These lists are actively maintained, updated very frequently, and exhibit high effectiveness while generating a very low number of false positives, they can be used in :ref:`IP <threat_shield_ip-section>` and :ref:`DNS <threat_shield_dns-section>` block lists.
 - **Support**: subscribers can receive priority support on stable releases. This can be crucial for businesses relying on NethSecurity for their operations. See also :ref:`remote_support-section`.
 - **Consultation and customization**: subscribers could get consultation services and assistance with customization to tailor the server's functionalities according to specific business requirements.
 

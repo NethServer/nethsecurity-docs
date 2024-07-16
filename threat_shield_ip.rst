@@ -41,9 +41,9 @@ be downloadable.
 Enterprise blocklists
 ---------------------
 
-.. admonition:: Enterprise subscription required
+.. admonition:: Subscription required
 
-   This feature is available only if the firewall has a valid enterprise subscription.
+   This feature is available only if the firewall has a valid :ref:`Community or Enterprise subscription <subscription-section>`.
 
 Enterprise blocklists are specifically focused on security and offer several advantages over community-maintained blocklists:
 
@@ -66,7 +66,7 @@ Enterprise blocklists are specifically focused on security and offer several adv
    address them effectively.
 
 Yoroi and Nethesis blocklists are Enterprise blocklists.
-These lists will be listed only if the machine has a valid Enterprise :ref:`subscription <subscription-section>` and a valid entitlement for the Threat Shield service.
+These lists will be listed only if the machine has a valid :ref:`Enterprise or Community subscription <subscription-section>` and a valid entitlement for the Threat Shield service.
 
 Allow list
 ----------
