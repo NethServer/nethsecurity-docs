@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-16 13:03+0000\n"
+"POT-Creation-Date: 2024-07-16 14:04+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -111,13 +111,11 @@ msgstr "Dopo il ripristino il sistema verrà riavviato."
 msgid "Automatic backup"
 msgstr "Backup automatico"
 
-#: ../../backup.rst:34 ../../dpi_filter.rst:35 ../../remote_support.rst:7
-#: ../../threat_shield_ip.rst:44
+#: ../../backup.rst:34 ../../remote_support.rst:7
 msgid "Enterprise subscription required"
 msgstr "E' richiesto l'abbonamento Enterprise"
 
-#: ../../backup.rst:36 ../../dpi_filter.rst:37 ../../remote_support.rst:9
-#: ../../threat_shield_ip.rst:46
+#: ../../backup.rst:36
 msgid ""
 "This feature is available only if the firewall has a valid enterprise "
 "subscription."
@@ -1488,7 +1486,9 @@ msgstr ""
 msgid "Subscription and limitations"
 msgstr "Abbonamento e limitazioni"
 
-#: ../../controller.rst:249 ../../updates.rst:39 ../../users_databases.rst:38
+#: ../../controller.rst:249 ../../dpi_filter.rst:35
+#: ../../threat_shield_ip.rst:44 ../../updates.rst:39
+#: ../../users_databases.rst:38
 msgid "Subscription required"
 msgstr "Abbonamento richiesto"
 
@@ -2366,6 +2366,23 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-50-g27d6182"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-50-g27d6182/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-50-g27d6182-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-50-g27d6182/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.3-ns.1.1.0-45-ga5c5611"
 msgstr ""
 
@@ -2587,15 +2604,22 @@ msgstr ""
 msgid "Premium application signatures"
 msgstr ""
 
-#: ../../dpi_filter.rst:40
+#: ../../dpi_filter.rst:37 ../../threat_shield_ip.rst:46
+#, fuzzy
 msgid ""
-"It's noteworthy that the number of applications that can be identified "
-"and managed by the system is influenced by the presence of an active "
-":ref:`Enterprise subscription <subscription-section>`. In the absence of "
-"a subscription, the system inherently recognizes a baseline of "
-"approximately 400 applications. However, with an active subscription, "
-"this capacity significantly expands, encompassing around 3000 "
-"applications. In this scenario, the list of recognized applications "
+"This feature is available only if the firewall has a valid "
+":ref:`Community or Enterprise subscription <subscription-section>`."
+msgstr ""
+"Questa funzione è disponibile solo se il firewall ha un abbonamento "
+"enterprise valido."
+
+#: ../../dpi_filter.rst:40
+#, fuzzy
+msgid ""
+"In the absence of a subscription, the system inherently recognizes a "
+"baseline of approximately 400 applications. However, with an active "
+"subscription, this capacity significantly expands, encompassing around "
+"3000 applications. In this scenario, the list of recognized applications "
 "undergoes daily updates, ensuring that the system stays abreast of the "
 "ever-evolving landscape of applications and digital services."
 msgstr ""
@@ -2609,11 +2633,11 @@ msgstr ""
 "aggiornato quotidianamente per garantire che il sistema sia sempre "
 "aggiornato."
 
-#: ../../dpi_filter.rst:47
+#: ../../dpi_filter.rst:45
 msgid "Exceptions"
 msgstr "Eccezioni"
 
-#: ../../dpi_filter.rst:49
+#: ../../dpi_filter.rst:47
 msgid ""
 "DPI exclusion allows for the exclusion of specific network addresses, "
 "such as the gateway or other critical infrastructure, preventing them "
@@ -2622,7 +2646,7 @@ msgstr ""
 "L'esclusione DPI consente di escludere indirizzi di rete specifici, come "
 "il gateway o server, evitando eventuali blocchi indesiderati."
 
-#: ../../dpi_filter.rst:51
+#: ../../dpi_filter.rst:49
 msgid ""
 "To add a new exception, click the ``Add exception`` button. Enter the "
 "``IP address`` that should be exempted from the filter. You can include a"
@@ -2633,7 +2657,7 @@ msgstr ""
 "filtro. È possibile includere una descrizione che spiega la ragione per "
 "l'esclusione."
 
-#: ../../dpi_filter.rst:55
+#: ../../dpi_filter.rst:53
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
 
@@ -9907,6 +9931,15 @@ msgstr ""
 msgid "Remote support"
 msgstr ""
 
+#: ../../remote_support.rst:9
+#, fuzzy
+msgid ""
+"This feature is available only if the firewall has a valid Enterprise "
+"subscription."
+msgstr ""
+"Questa funzione è disponibile solo se il firewall ha un abbonamento "
+"enterprise valido."
+
 #: ../../remote_support.rst:11
 msgid ""
 "The :ref:`Enterprise subscription <subscription-section>` allows you to "
@@ -10782,29 +10815,40 @@ msgstr ""
 #: ../../subscription.rst:10
 msgid ""
 "**Community subscription**: self-service registration mostly suited for "
-"IT consultant. Portal is available at `my.nethserver.com "
+"IT consultant. For more info, see the `subscription plans "
+"<https://nethsecurity.org/subscription>`_ page."
+msgstr ""
+
+#: ../../subscription.rst:13
+msgid ""
+"Community subscription portal is available at `my.nethserver.com "
 "<https://my.nethserver.com>`_"
 msgstr ""
 
-#: ../../subscription.rst:12
-msgid ""
-"**Enterpise subscription**: service reserved to Nethesis resellers, "
-"request more info at `sales departement <mailto:info@nethesis.it>`_. "
-"Portal is available at: `my.nethesis.it <https://my.nethesis.it>`_"
-msgstr ""
-
 #: ../../subscription.rst:15
-msgid "Typical benefits of the subscription service include:"
+msgid ""
+"**Enterprise subscription**: service reserved to Nethesis resellers, "
+"please contact the `sales department <mailto:info@nethesis.it>`_."
 msgstr ""
 
 #: ../../subscription.rst:17
+msgid ""
+"Enterprise subscription portal is available at: `my.nethesis.it "
+"<https://my.nethesis.it>`_"
+msgstr ""
+
+#: ../../subscription.rst:19
+msgid "Typical benefits of the subscription service include:"
+msgstr ""
+
+#: ../../subscription.rst:21
 msgid ""
 "**Monitoring portals**: subscribers can access monitoring portals to "
 "manage their subscription and receive :ref:`alerts <alert-section>` for "
 "registered servers."
 msgstr ""
 
-#: ../../subscription.rst:18
+#: ../../subscription.rst:22
 msgid ""
 "**Enhanced DPI signatures**: firewalls with a valid subscription have "
 "access to a much larger database of :ref:`DPI signatures <dpi_filter-"
@@ -10812,31 +10856,31 @@ msgid ""
 "updated."
 msgstr ""
 
-#: ../../subscription.rst:19
+#: ../../subscription.rst:23
 msgid ""
 "**Enterprise Block lists**: Firewalls with a valid subscription can "
 "purchase high-quality IP and DNS blocklists. These lists are actively "
 "maintained, updated very frequently, and exhibit high effectiveness while"
 " generating a very low number of false positives, they can be used in "
-":ref:`IP <threat_shield_dns-section>` and :ref:`DNS <threat_shield_dns-"
+":ref:`IP <threat_shield_ip-section>` and :ref:`DNS <threat_shield_dns-"
 "section>` block lists."
 msgstr ""
 
-#: ../../subscription.rst:20
+#: ../../subscription.rst:24
 msgid ""
 "**Support**: subscribers can receive priority support on stable releases."
 " This can be crucial for businesses relying on NethSecurity for their "
 "operations. See also :ref:`remote_support-section`."
 msgstr ""
 
-#: ../../subscription.rst:21
+#: ../../subscription.rst:25
 msgid ""
 "**Consultation and customization**: subscribers could get consultation "
 "services and assistance with customization to tailor the server's "
 "functionalities according to specific business requirements."
 msgstr ""
 
-#: ../../subscription.rst:23
+#: ../../subscription.rst:27
 msgid ""
 "It's important to note that while a subscription might not be required "
 "for normal use, businesses with specific needs or those seeking "
@@ -10844,49 +10888,49 @@ msgid ""
 "NethSecurity offer."
 msgstr ""
 
-#: ../../subscription.rst:28
+#: ../../subscription.rst:32
 msgid "Register the system"
 msgstr ""
 
-#: ../../subscription.rst:30
+#: ../../subscription.rst:34
 msgid "To register the system, follow the below steps:"
 msgstr ""
 
-#: ../../subscription.rst:32
+#: ../../subscription.rst:36
 msgid ""
 "Access the Enterprise or Community portal, add a new server and copy the "
 "token"
 msgstr ""
 
-#: ../../subscription.rst:33
+#: ../../subscription.rst:37
 msgid "Access the firewall and go to the ``Subscription`` page"
 msgstr ""
 
-#: ../../subscription.rst:34
+#: ../../subscription.rst:38
 msgid "Paste the token inside the ``Authentication token`` field"
 msgstr ""
 
-#: ../../subscription.rst:35
+#: ../../subscription.rst:39
 msgid "Click the :guilabel:`Register` button"
 msgstr ""
 
-#: ../../subscription.rst:37
+#: ../../subscription.rst:41
 msgid ""
 "The system will automatically register to the correct Enterprise or "
 "Community portal."
 msgstr ""
 
-#: ../../subscription.rst:39
+#: ../../subscription.rst:43
 msgid ""
 "Please note that the registration process requires an active internet "
 "connection."
 msgstr ""
 
-#: ../../subscription.rst:42
+#: ../../subscription.rst:46
 msgid "Remove the subscription"
 msgstr ""
 
-#: ../../subscription.rst:44
+#: ../../subscription.rst:48
 msgid ""
 "When the subscription expires, or at the end of a trial period, click the"
 " :guilabel:`Cancel registration` button."
@@ -11205,9 +11249,9 @@ msgstr ""
 #: ../../threat_shield_ip.rst:68
 msgid ""
 "Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will"
-" be listed only if the machine has a valid Enterprise :ref:`subscription "
-"<subscription-section>` and a valid entitlement for the Threat Shield "
-"service."
+" be listed only if the machine has a valid :ref:`Enterprise or Community "
+"subscription <subscription-section>` and a valid entitlement for the "
+"Threat Shield service."
 msgstr ""
 
 #: ../../threat_shield_ip.rst:72
@@ -16419,5 +16463,43 @@ msgstr ""
 #~ " the `developer manual "
 #~ "<https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-"
 #~ "dns>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Community subscription**: self-service "
+#~ "registration mostly suited for IT "
+#~ "consultant. Portal is available at "
+#~ "`my.nethserver.com <https://my.nethserver.com>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Enterpise subscription**: service reserved "
+#~ "to Nethesis resellers, request more info"
+#~ " at `sales departement "
+#~ "<mailto:info@nethesis.it>`_. Portal is available "
+#~ "at: `my.nethesis.it <https://my.nethesis.it>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Enterprise Block lists**: Firewalls with "
+#~ "a valid subscription can purchase "
+#~ "high-quality IP and DNS blocklists. "
+#~ "These lists are actively maintained, "
+#~ "updated very frequently, and exhibit "
+#~ "high effectiveness while generating a "
+#~ "very low number of false positives, "
+#~ "they can be used in :ref:`IP "
+#~ "<threat_shield_dns-section>` and :ref:`DNS "
+#~ "<threat_shield_dns-section>` block lists."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Yoroi and Nethesis blocklists are "
+#~ "Enterprise blocklists. These lists will "
+#~ "be listed only if the machine has"
+#~ " a valid Enterprise :ref:`subscription "
+#~ "<subscription-section>` and a valid "
+#~ "entitlement for the Threat Shield "
+#~ "service."
 #~ msgstr ""
 
