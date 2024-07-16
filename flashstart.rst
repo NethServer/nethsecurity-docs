@@ -1,8 +1,8 @@
-.. _dns_filter-section:
+.. _flashstart-section:
 
-==========
-DNS filter
-==========
+=====================
+FlashStart DNS filter
+=====================
 
 DNS filtering integrates with third-party DNS-based content filtering software, default supported content filter is the one provided from `FlashStart <https://www.flashstart.com>`_.
 
@@ -25,20 +25,25 @@ It basically links 2 components : filter configuration and network configuration
 Once the account has been created and the service configured, NethSecurity can be configured.
 
 Configuration
--------------
+=============
 
 You can enable and disable the filter by changing the ``Status`` toggle.
 
+.. note:: Please use FlashStart only if you are not already using the  Threat Shield DNS service cause if used together, they may conflict.
+
 Authentication
-^^^^^^^^^^^^^^
+--------------
+
 Insert same username and password of your FlashStart account (tipically an email address), then click :guilabel:`Save` button.
 
 Zones to filter
-^^^^^^^^^^^^^^^
+---------------
+
 Choose zones to filter, only selected zones will be affected by DNS filter.
 
 Bypass source IPs or networks
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
+
 All listed IP addresses or networks here will not be affected by DNS filter.
 
 
@@ -50,45 +55,9 @@ All listed IP addresses or networks here will not be affected by DNS filter.
    When content filtering is enabled, all DNS traffic from the clients will be automatically redirected to the external content filtering regardless of their configuration.
 
 Block certain websites
--------------------------
+----------------------
 
-.. _block_website-section:
+If you need to block specific domains and FQDNs you can do it directly from the FlashStart configuration page,
+just go to the section "Protection"-> "Personal Blacklists" and add them there.
 
-If you need to block specific domains and FQDNs you can do it directly from the FlashStart configuration page, just go to the section "Protection"-> "Personal Blacklists" and add them there.
-
-If you don' have a subscription for FlashStart DNS Filter you can still make it directly on NethSecurity enabling ``AdBlock`` and, optionally, activating the DNS query interception feature for LAN clients.
-
-.. note:: Please use AdBlock to block browsing only if you are not already using the FlashStart service cause if used together, they may conflict.
-
-To enable AdBlock, execute: ::
-
-  uci set adblock.global.adb_enabled='1'
-  uci del adblock.global.adb_sources
-  uci commit
-
-Enable DNS interception for the LAN: ::
-
-  uci set adblock.global.adb_forcedns='1'
-  uci add_list adblock.global.adb_zonelist='lan'
-  uci add_list adblock.global.adb_portlist='53'
-  uci commit
-
-Add the domains that you want to block to the blocklist: ::
-
-  cat << EOF > /etc/adblock/adblock.blacklist
-  domain1.com
-  domain2.com
-  domain3.net
-  EOF
-
-Start the service: ::
-
-  /etc/init.d/adblock start
-
-Changes made to the blocklist require a reload of the service: ::
-
-  /etc/init.d/adblock reload
-
-.. warning::
-
-  The DNS resolution for the names listed in the blocklist will also affect the firewall itself
+If you don' have a subscription for FlashStart DNS Filter you can use the same feature using :ref:`Threat Shield DNS <block_website-section>`.

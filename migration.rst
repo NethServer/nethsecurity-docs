@@ -158,4 +158,4 @@ The following features are not migrated to NethSecurity:
 - Reports (Dante)
 - Bandwidth monitor (ntopng)
 - Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block feature <brute_force-section>`
-- Threat shield DNS, currently :ref:`available only from command line <threat_shield-dns-section>`
+- Threat shield DNS, currently :ref:`available only from command line <threat_shield_dns-section>`

@@ -1,8 +1,8 @@
-.. _threat_shield-section:
+.. _threat_shield_ip-section:
 
-=============
-Threat shield
-=============
+================
+Threat shield IP
+================
 
 NethSecurity is equipped with various tools and integrations useful for countering threats coming from the internet.
 One of these tools is Threat Shield, which blocks any traffic coming from compromised IP addresses or destined to them as well as any requests addressed to hostnames that could be malicious.
@@ -13,8 +13,8 @@ Yoroi blacklists ensure great effectiveness and high confidence, minimizing the 
 
 Please note that to access the Nethesis and Yoroi blocklist, the machine must have a valid extra entitlement for this service.
 
-IP based Threat shield
-=======================
+Configuration
+=============
 
 The service is disabled by default, to enable it navigate to the ``Threat shield`` page under the ``Security`` section.
 Access the ``Settings`` tab and activate the ``Status`` switch.
@@ -26,13 +26,17 @@ NethSecurity 8 allows the use of Community and Enterprise blocklists.
 
 Community Blocklists
 --------------------
-Community blocklists are sourced from community contributors and cover various areas: Ads blocking, Malware blocking, Spam blocking, Tracker blocking, and so on. 
+
+Community blocklists are sourced from community contributors and cover various areas: Ads blocking, Malware blocking, Spam blocking, 
+Tracker blocking, and so on. 
 NethSecurity makes them available as they are.
 The type of usage license may vary depending on the provider, so if the use is not personal, you may need to inquire with the provider.
 
-Maintenance
-^^^^^^^^^^^
-Each blocklist is maintained by its specific provider. NethSecurity already includes the URLs for downloading the feeds, which are valid at the time of the release. However, because these URLs are hardcoded, if the provider changes them, some blocklists may no longer be downloadable.
+.. rubric:: Community lists maintenance
+
+Each blocklist is maintained by its specific provider. NethSecurity already includes the URLs for downloading the feeds, 
+which are valid at the time of the release. However, because these URLs are hard-coded, if the provider changes them, some blocklists may no longer 
+be downloadable.
 
 Enterprise blocklists
 ---------------------
@@ -109,13 +113,3 @@ After changing the values, copy and paste these two commands: ::
   uci commit banip
   /etc/init.d/banip restart
 
-
-.. _threat_shield-dns-section:
-
-DNS based Threat shield
-=======================
-
-The DNS filter uses AdBlock which blocks any request to a domain that is considered malicious.
-The service can load community-maintained blocklist or use Yoroi feeds.
-
-AdBlock can be configured from the command line interface as explained in the `developer manual <https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-dns>`_.

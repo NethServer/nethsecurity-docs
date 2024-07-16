@@ -72,9 +72,12 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Security
 
-   threat_shield
-   dns_filter
+   content_filter
+   threat_shield_ip
+   threat_shield_dns
    dpi_filter
+   flashstart
+
 
 .. toctree::
    :maxdepth: 2
