@@ -12,7 +12,7 @@ which provides additional benefits and features:
 
   Community subscription portal is available at `my.nethserver.com <https://my.nethserver.com>`_
 
-- **Enterprise subscription**: service reserved to Nethesis resellers, request more info at `sales departement <mailto:info@nethesis.it>`_.
+- **Enterprise subscription**: service reserved to Nethesis resellers, please contact the `sales department <mailto:info@nethesis.it>`_.
 
   Enterprise subscription portal is available at: `my.nethesis.it <https://my.nethesis.it>`_
 
