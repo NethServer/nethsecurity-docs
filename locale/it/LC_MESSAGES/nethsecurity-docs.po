@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-15 09:52+0000\n"
+"POT-Creation-Date: 2024-07-16 13:03+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -112,12 +112,12 @@ msgid "Automatic backup"
 msgstr "Backup automatico"
 
 #: ../../backup.rst:34 ../../dpi_filter.rst:35 ../../remote_support.rst:7
-#: ../../threat_shield.rst:40
+#: ../../threat_shield_ip.rst:44
 msgid "Enterprise subscription required"
 msgstr "E' richiesto l'abbonamento Enterprise"
 
 #: ../../backup.rst:36 ../../dpi_filter.rst:37 ../../remote_support.rst:9
-#: ../../threat_shield.rst:42
+#: ../../threat_shield_ip.rst:46
 msgid ""
 "This feature is available only if the firewall has a valid enterprise "
 "subscription."
@@ -288,6 +288,416 @@ msgstr ""
 msgid ""
 "To resolve this issue, you can remove the specific conntrack entries "
 "associated with the old external address through the user interface."
+msgstr ""
+
+#: ../../content_filter.rst:3
+msgid "Content Filtering"
+msgstr ""
+
+#: ../../content_filter.rst:5
+msgid ""
+"Content filtering is a crucial aspect of network security, serving two "
+"primary purposes:"
+msgstr ""
+
+#: ../../content_filter.rst:7
+msgid "Blocking malware and preventing malicious attacks"
+msgstr ""
+
+#: ../../content_filter.rst:8
+msgid "Filtering unwanted sites, such as those containing adult content"
+msgstr ""
+
+#: ../../content_filter.rst:10
+msgid ""
+"NethSecurity offers four distinct filtering mechanisms to address these "
+"needs:"
+msgstr ""
+
+#: ../../content_filter.rst:12
+msgid "**Threat Shield IP**: IP-based blocking system targeting malware threats"
+msgstr ""
+
+#: ../../content_filter.rst:13
+msgid ""
+"**Threat Shield DNS**: DNS-based blocking system for malware and basic "
+"content filtering"
+msgstr ""
+
+#: ../../content_filter.rst:14
+msgid ""
+"**Deep Packet Inspection (DPI) filter**: Application and protocol-"
+"specific filtering using netifyd"
+msgstr ""
+
+#: ../../content_filter.rst:15
+msgid ""
+"**FlashStart DNS filter**: Commercial DNS-based filtering solution with "
+"comprehensive content control features"
+msgstr ""
+
+#: ../../content_filter.rst:18 ../../content_filter.rst:116
+#, fuzzy
+msgid "Threat Shield IP"
+msgstr "Threat shield"
+
+#: ../../content_filter.rst:20
+msgid ""
+"Threat Shield IP is an IP-based blocking system designed specifically to "
+"combat malware threats. It operates by blocking connections to or from "
+"known malicious IP addresses."
+msgstr ""
+
+#: ../../content_filter.rst:23
+msgid ""
+"**Scope**: Targets malware and provides limited privacy and advertising "
+"(ads) removal features"
+msgstr ""
+
+#: ../../content_filter.rst:25 ../../content_filter.rst:49
+#: ../../content_filter.rst:93
+msgid "**Lists**:"
+msgstr ""
+
+#: ../../content_filter.rst:27
+msgid "Community lists, free, targeting general malware, ads and trackers"
+msgstr ""
+
+#: ../../content_filter.rst:28
+msgid "Enterprise lists, paid, focusing on high-value malware protection"
+msgstr ""
+
+#: ../../content_filter.rst:30 ../../content_filter.rst:54
+#: ../../content_filter.rst:75 ../../content_filter.rst:98
+msgid "Advantages:"
+msgstr ""
+
+#: ../../content_filter.rst:32
+msgid "Fast processing as it works at the IP level"
+msgstr ""
+
+#: ../../content_filter.rst:33
+msgid "Effective against entire malicious networks"
+msgstr ""
+
+#: ../../content_filter.rst:35 ../../content_filter.rst:59
+msgid "Limitations:"
+msgstr ""
+
+#: ../../content_filter.rst:37
+msgid "Cannot filter based on content type"
+msgstr ""
+
+#: ../../content_filter.rst:38
+msgid ""
+"May occasionally block legitimate services sharing an IP with malicious "
+"ones"
+msgstr ""
+
+#: ../../content_filter.rst:40
+msgid "To configure Threat Shield IP, see the :ref:`threat_shield_ip-section`."
+msgstr ""
+
+#: ../../content_filter.rst:43 ../../content_filter.rst:116
+#: ../../threat_shield_dns.rst:5
+#, fuzzy
+msgid "Threat Shield DNS"
+msgstr "Threat shield"
+
+#: ../../content_filter.rst:45
+msgid ""
+"Threat Shield DNS provides DNS-based blocking, offering protection "
+"against malware and basic content filtering capabilities."
+msgstr ""
+
+#: ../../content_filter.rst:47
+msgid ""
+"**Scope**: Covers malware and limited content categories (e.g., adult "
+"content, gambling)"
+msgstr ""
+
+#: ../../content_filter.rst:51
+msgid ""
+"Community lists, free, focusing on general malware and simple content "
+"filtering"
+msgstr ""
+
+#: ../../content_filter.rst:52
+msgid "Enterprise lists, paid, focus on high-value malware protection"
+msgstr ""
+
+#: ../../content_filter.rst:56
+msgid "Can block specific domains regardless of IP address"
+msgstr ""
+
+#: ../../content_filter.rst:57
+msgid "Offers basic content categorization (e.g., adult, gambling)"
+msgstr ""
+
+#: ../../content_filter.rst:61
+msgid ""
+"Could be bypassed by using alternative DNS servers, but can be mitigated "
+"with DPI filtering and by enabling special block categories"
+msgstr ""
+
+#: ../../content_filter.rst:62
+msgid "Less granular than full URL filtering"
+msgstr ""
+
+#: ../../content_filter.rst:64
+msgid "To configure Threat Shield DNS, see the :ref:`threat_shield_dns-section`."
+msgstr ""
+
+#: ../../content_filter.rst:67 ../../flashstart.rst:5
+msgid "FlashStart DNS filter"
+msgstr ""
+
+#: ../../content_filter.rst:69
+msgid ""
+"FlashStart is a commercial DNS-based filtering solution that offers "
+"comprehensive content control and reporting features."
+msgstr ""
+
+#: ../../content_filter.rst:71
+msgid ""
+"**Scope**: Comprehensive content filtering beyond just malware and adult "
+"content"
+msgstr ""
+
+#: ../../content_filter.rst:73
+msgid "**Lists**: Commercial lists maintained by FlashStart"
+msgstr ""
+
+#: ../../content_filter.rst:77
+msgid "High-quality block lists"
+msgstr ""
+
+#: ../../content_filter.rst:78
+#, fuzzy
+msgid "Customizable reports"
+msgstr "Personalizzazione del captive portal"
+
+#: ../../content_filter.rst:79
+msgid "Cloud-based configuration, no direct firewall access required"
+msgstr ""
+
+#: ../../content_filter.rst:80
+msgid "Extensive content categories"
+msgstr ""
+
+#: ../../content_filter.rst:81
+#, fuzzy
+msgid "Easy to manage"
+msgstr "Gestione dei Log"
+
+#: ../../content_filter.rst:82
+msgid "Scalable for organizations of various sizes"
+msgstr ""
+
+#: ../../content_filter.rst:84
+msgid "To configure FlashStart DNS filtering, see the :ref:`flashstart-section`."
+msgstr ""
+
+#: ../../content_filter.rst:87 ../../dpi_filter.rst:5
+msgid "Deep Packet Inspection (DPI) filter"
+msgstr ""
+
+#: ../../content_filter.rst:89
+msgid ""
+"NethSecurity employs Deep Packet Inspection (DPI) techniques for "
+"filtering network traffic using the Netify Agent."
+msgstr ""
+
+#: ../../content_filter.rst:91
+msgid "**Scope**: Application and protocol-specific filtering"
+msgstr ""
+
+#: ../../content_filter.rst:95
+msgid "Community signatures, free but limited in number and update frequency"
+msgstr ""
+
+#: ../../content_filter.rst:96
+msgid ""
+"Enterprise signatures, included in any subscription, offering more "
+"comprehensive coverage"
+msgstr ""
+
+#: ../../content_filter.rst:100
+msgid "Provides granular control over network traffic"
+msgstr ""
+
+#: ../../content_filter.rst:101
+msgid "Can identify and filter based on specific applications or protocols"
+msgstr ""
+
+#: ../../content_filter.rst:102
+msgid "Allows for dynamic traffic management based on real-time analysis"
+msgstr ""
+
+#: ../../content_filter.rst:104
+#, fuzzy
+msgid "Considerations:"
+msgstr "Configurazione"
+
+#: ../../content_filter.rst:106
+msgid "May require more processing power compared to IP or DNS-based filtering"
+msgstr ""
+
+#: ../../content_filter.rst:107
+msgid "Requires careful configuration to balance security and performance"
+msgstr ""
+
+#: ../../content_filter.rst:108
+msgid "The administrator needs to create DPI rules for each interface"
+msgstr ""
+
+#: ../../content_filter.rst:110
+msgid "To configure DPI filtering, see the :ref:`dpi_filter-section`."
+msgstr ""
+
+#: ../../content_filter.rst:113
+msgid "Comparison of filtering options"
+msgstr ""
+
+#: ../../content_filter.rst:116
+#, fuzzy
+msgid "Feature"
+msgstr "Funzionalità principali"
+
+#: ../../content_filter.rst:116 ../../release_notes.rst:444
+msgid "Flashstart DNS Filtering"
+msgstr ""
+
+#: ../../content_filter.rst:116
+msgid "DPI Filter"
+msgstr ""
+
+#: ../../content_filter.rst:118
+msgid "Blocking method"
+msgstr ""
+
+#: ../../content_filter.rst:118
+msgid "IP-based"
+msgstr ""
+
+#: ../../content_filter.rst:118
+msgid "DNS-based"
+msgstr ""
+
+#: ../../content_filter.rst:118
+msgid "Packet inspection"
+msgstr ""
+
+#: ../../content_filter.rst:120
+msgid "Primary focus"
+msgstr ""
+
+#: ../../content_filter.rst:120
+msgid "Malware"
+msgstr ""
+
+#: ../../content_filter.rst:120
+msgid "Malware + basic content"
+msgstr ""
+
+#: ../../content_filter.rst:120
+msgid "Comprehensive content"
+msgstr ""
+
+#: ../../content_filter.rst:120
+msgid "Application/Protocol specific"
+msgstr ""
+
+#: ../../content_filter.rst:123
+msgid "List types"
+msgstr ""
+
+#: ../../content_filter.rst:123
+msgid "Community, Enterprise"
+msgstr ""
+
+#: ../../content_filter.rst:123
+msgid "Commercial"
+msgstr ""
+
+#: ../../content_filter.rst:123
+msgid "N/A (real-time analysis)"
+msgstr ""
+
+#: ../../content_filter.rst:126 ../../dpi_filter.rst:21 ../../flashstart.rst:28
+#: ../../ipsec_tunnels.rst:16 ../../openvpn_tunnels.rst:19 ../../qos.rst:20
+#: ../../threat_shield_ip.rst:17
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../content_filter.rst:126 ../../firewall.rst:5 ../../index.rst:62
+msgid "Firewall"
+msgstr "Firewall"
+
+#: ../../content_filter.rst:126
+msgid "Cloud"
+msgstr ""
+
+#: ../../content_filter.rst:126
+msgid "Firewall (per interface)"
+msgstr ""
+
+#: ../../content_filter.rst:129
+msgid "Reporting"
+msgstr ""
+
+#: ../../content_filter.rst:129
+msgid "None"
+msgstr ""
+
+#: ../../content_filter.rst:129
+msgid "Advanced, customizable"
+msgstr ""
+
+#: ../../content_filter.rst:129
+msgid "Limited"
+msgstr ""
+
+#: ../../content_filter.rst:133
+msgid "Implementation strategies"
+msgstr ""
+
+#: ../../content_filter.rst:134
+msgid "For optimal security, consider a layered approach:"
+msgstr ""
+
+#: ../../content_filter.rst:136
+msgid ""
+"Use Threat Shield IP as the first line of defense against known malicious"
+" networks."
+msgstr ""
+
+#: ../../content_filter.rst:137
+msgid "Implement a DNS filter, use one of the following options:"
+msgstr ""
+
+#: ../../content_filter.rst:139
+msgid ""
+"Threat Shield DNS to catch domain-based threats and provide basic content"
+" filtering or"
+msgstr ""
+
+#: ../../content_filter.rst:140
+msgid ""
+"Flashstart DNS Filtering for comprehensive content control, especially in"
+" environments requiring detailed policy management and reporting."
+msgstr ""
+
+#: ../../content_filter.rst:141
+msgid ""
+"Utilize DPI filtering for granular control over specific applications and"
+" protocols, and to manage traffic based on real-time analysis."
+msgstr ""
+
+#: ../../content_filter.rst:143
+msgid ""
+"This combination provides defense-in-depth, addressing various threat "
+"vectors and content filtering needs."
 msgstr ""
 
 #: ../../controller.rst:5
@@ -1862,169 +2272,6 @@ msgid ""
 " DNS-based blacklist services. Execute these commands: ::"
 msgstr ""
 
-#: ../../dns_filter.rst:5
-msgid "DNS filter"
-msgstr ""
-
-#: ../../dns_filter.rst:7
-msgid ""
-"DNS filtering integrates with third-party DNS-based content filtering "
-"software, default supported content filter is the one provided from "
-"`FlashStart <https://www.flashstart.com>`_."
-msgstr ""
-
-#: ../../dns_filter.rst:9
-msgid ""
-"It basically links 2 components : filter configuration and network "
-"configuration."
-msgstr ""
-
-#: ../../dns_filter.rst:11
-msgid ""
-"Content filter configuration takes place entirely on the third-party "
-"platform, typically it is possible to block individual websites, as well "
-"as categories of sites (e.g. adult), manage exceptions, view reports and "
-"so on."
-msgstr ""
-
-#: ../../dns_filter.rst:13
-msgid ""
-"Network configuration is completely automated and is done on NethSecurity"
-" which takes care of:"
-msgstr ""
-
-#: ../../dns_filter.rst:15
-msgid "connect the firewall to the specific third party instance"
-msgstr ""
-
-#: ../../dns_filter.rst:16
-msgid "redirect all DNS requests to the external service"
-msgstr ""
-
-#: ../../dns_filter.rst:17
-msgid "automatically update IP addresses of all connectivities"
-msgstr ""
-
-#: ../../dns_filter.rst:21
-msgid ""
-"Before configuring NethSecurity you need to create an account on "
-"FlashStart and configure the service. FlashStart is a payed service that "
-"allows you to use trial licenses. Please refer to the supplier's "
-"documentation `doc "
-"<https://cloud.flashstart.com/customerarea/support/docs>`_."
-msgstr ""
-
-#: ../../dns_filter.rst:25
-msgid ""
-"Once the account has been created and the service configured, "
-"NethSecurity can be configured."
-msgstr ""
-
-#: ../../dns_filter.rst:28 ../../dpi_filter.rst:21 ../../ipsec_tunnels.rst:16
-#: ../../openvpn_tunnels.rst:19 ../../qos.rst:20
-msgid "Configuration"
-msgstr "Configurazione"
-
-#: ../../dns_filter.rst:30
-msgid "You can enable and disable the filter by changing the ``Status`` toggle."
-msgstr ""
-
-#: ../../dns_filter.rst:33
-msgid "Authentication"
-msgstr "Autenticazione"
-
-#: ../../dns_filter.rst:34
-msgid ""
-"Insert same username and password of your FlashStart account (tipically "
-"an email address), then click :guilabel:`Save` button."
-msgstr ""
-
-#: ../../dns_filter.rst:37
-msgid "Zones to filter"
-msgstr ""
-
-#: ../../dns_filter.rst:38
-msgid ""
-"Choose zones to filter, only selected zones will be affected by DNS "
-"filter."
-msgstr ""
-
-#: ../../dns_filter.rst:41
-msgid "Bypass source IPs or networks"
-msgstr ""
-
-#: ../../dns_filter.rst:42
-msgid ""
-"All listed IP addresses or networks here will not be affected by DNS "
-"filter."
-msgstr ""
-
-#: ../../dns_filter.rst:45
-msgid ""
-"To preserve the effectiveness of the content filter it is suggested "
-"blocking alternative DNS protocols (DoT, DoH) via :ref:`dpi_filter-"
-"section`."
-msgstr ""
-
-#: ../../dns_filter.rst:49
-msgid ""
-"Do not make changes to the DNS servers configured in your NethSecurity or"
-" in network clients. When content filtering is enabled, all DNS traffic "
-"from the clients will be automatically redirected to the external content"
-" filtering regardless of their configuration."
-msgstr ""
-
-#: ../../dns_filter.rst:53
-msgid "Block certain websites"
-msgstr ""
-
-#: ../../dns_filter.rst:57
-msgid ""
-"If you need to block specific domains and FQDNs you can do it directly "
-"from the FlashStart configuration page, just go to the section "
-"\"Protection\"-> \"Personal Blacklists\" and add them there."
-msgstr ""
-
-#: ../../dns_filter.rst:59
-msgid ""
-"If you don' have a subscription for FlashStart DNS Filter you can still "
-"make it directly on NethSecurity enabling ``AdBlock`` and, optionally, "
-"activating the DNS query interception feature for LAN clients."
-msgstr ""
-
-#: ../../dns_filter.rst:61
-msgid ""
-"Please use AdBlock to block browsing only if you are not already using "
-"the FlashStart service cause if used together, they may conflict."
-msgstr ""
-
-#: ../../dns_filter.rst:63
-msgid "To enable AdBlock, execute: ::"
-msgstr ""
-
-#: ../../dns_filter.rst:69
-msgid "Enable DNS interception for the LAN: ::"
-msgstr ""
-
-#: ../../dns_filter.rst:76
-msgid "Add the domains that you want to block to the blocklist: ::"
-msgstr ""
-
-#: ../../dns_filter.rst:84
-#, fuzzy
-msgid "Start the service: ::"
-msgstr "Poi riavvia il servizio DDNS::"
-
-#: ../../dns_filter.rst:88
-msgid "Changes made to the blocklist require a reload of the service: ::"
-msgstr ""
-
-#: ../../dns_filter.rst:94
-msgid ""
-"The DNS resolution for the names listed in the blocklist will also affect"
-" the firewall itself"
-msgstr ""
-
 #: ../../download.rst:5
 msgid "Download"
 msgstr ""
@@ -2119,6 +2366,74 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-45-ga5c5611"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-45-ga5c5611/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-45-ga5c5611-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-45-ga5c5611/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-42-g1656aae"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-42-g1656aae/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-42-g1656aae-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-42-g1656aae/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-41-g02d6def"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-41-g02d6def/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-41-g02d6def-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-41-g02d6def/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.3-ns.1.1.0-37-g808a6ca"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-37-g808a6ca/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-37-g808a6ca-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-37-g808a6ca/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.3-ns.1.1.0-31-g7aae945"
 msgstr ""
 
@@ -2133,74 +2448,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-31-g7aae945/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.1.0-30-g8280c1c"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-30-g8280c1c/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-30-g8280c1c-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-30-g8280c1c/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.1.0-29-gf4eb39f"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-29-gf4eb39f/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-29-gf4eb39f-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-29-gf4eb39f/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.1.0-28-gd4506a6"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-28-gd4506a6/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-28-gd4506a6-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-28-gd4506a6/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.3-ns.1.1.0-27-g9c1fc4c"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-27-g9c1fc4c/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-27-g9c1fc4c-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-27-g9c1fc4c/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -2269,10 +2516,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dpi_filter.rst:5
-msgid "Deep Packet Inspection (DPI) filter"
 msgstr ""
 
 #: ../../dpi_filter.rst:7
@@ -2393,10 +2636,6 @@ msgstr ""
 #: ../../dpi_filter.rst:55
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
-
-#: ../../firewall.rst:5 ../../index.rst:62
-msgid "Firewall"
-msgstr "Firewall"
 
 #: ../../firewall.rst:7
 msgid ""
@@ -2837,6 +3076,132 @@ msgstr ""
 "meglio le regole. Notare che il tag 'automatizzato' è riservato dall'uso "
 "del sistema."
 
+#: ../../flashstart.rst:7
+msgid ""
+"DNS filtering integrates with third-party DNS-based content filtering "
+"software, default supported content filter is the one provided from "
+"`FlashStart <https://www.flashstart.com>`_."
+msgstr ""
+
+#: ../../flashstart.rst:9
+msgid ""
+"It basically links 2 components : filter configuration and network "
+"configuration."
+msgstr ""
+
+#: ../../flashstart.rst:11
+msgid ""
+"Content filter configuration takes place entirely on the third-party "
+"platform, typically it is possible to block individual websites, as well "
+"as categories of sites (e.g. adult), manage exceptions, view reports and "
+"so on."
+msgstr ""
+
+#: ../../flashstart.rst:13
+msgid ""
+"Network configuration is completely automated and is done on NethSecurity"
+" which takes care of:"
+msgstr ""
+
+#: ../../flashstart.rst:15
+msgid "connect the firewall to the specific third party instance"
+msgstr ""
+
+#: ../../flashstart.rst:16
+msgid "redirect all DNS requests to the external service"
+msgstr ""
+
+#: ../../flashstart.rst:17
+msgid "automatically update IP addresses of all connectivities"
+msgstr ""
+
+#: ../../flashstart.rst:21
+msgid ""
+"Before configuring NethSecurity you need to create an account on "
+"FlashStart and configure the service. FlashStart is a payed service that "
+"allows you to use trial licenses. Please refer to the supplier's "
+"documentation `doc "
+"<https://cloud.flashstart.com/customerarea/support/docs>`_."
+msgstr ""
+
+#: ../../flashstart.rst:25
+msgid ""
+"Once the account has been created and the service configured, "
+"NethSecurity can be configured."
+msgstr ""
+
+#: ../../flashstart.rst:30
+msgid "You can enable and disable the filter by changing the ``Status`` toggle."
+msgstr ""
+
+#: ../../flashstart.rst:32
+msgid ""
+"Please use FlashStart only if you are not already using the  Threat "
+"Shield DNS service cause if used together, they may conflict."
+msgstr ""
+
+#: ../../flashstart.rst:35
+msgid "Authentication"
+msgstr "Autenticazione"
+
+#: ../../flashstart.rst:37
+msgid ""
+"Insert same username and password of your FlashStart account (tipically "
+"an email address), then click :guilabel:`Save` button."
+msgstr ""
+
+#: ../../flashstart.rst:40
+msgid "Zones to filter"
+msgstr ""
+
+#: ../../flashstart.rst:42
+msgid ""
+"Choose zones to filter, only selected zones will be affected by DNS "
+"filter."
+msgstr ""
+
+#: ../../flashstart.rst:45
+msgid "Bypass source IPs or networks"
+msgstr ""
+
+#: ../../flashstart.rst:47
+msgid ""
+"All listed IP addresses or networks here will not be affected by DNS "
+"filter."
+msgstr ""
+
+#: ../../flashstart.rst:50
+msgid ""
+"To preserve the effectiveness of the content filter it is suggested "
+"blocking alternative DNS protocols (DoT, DoH) via :ref:`dpi_filter-"
+"section`."
+msgstr ""
+
+#: ../../flashstart.rst:54
+msgid ""
+"Do not make changes to the DNS servers configured in your NethSecurity or"
+" in network clients. When content filtering is enabled, all DNS traffic "
+"from the clients will be automatically redirected to the external content"
+" filtering regardless of their configuration."
+msgstr ""
+
+#: ../../flashstart.rst:58 ../../threat_shield_dns.rst:68
+msgid "Block certain websites"
+msgstr ""
+
+#: ../../flashstart.rst:60
+msgid ""
+"If you need to block specific domains and FQDNs you can do it directly "
+"from the FlashStart configuration page, just go to the section "
+"\"Protection\"-> \"Personal Blacklists\" and add them there."
+msgstr ""
+
+#: ../../flashstart.rst:63
+msgid ""
+"If you don' have a subscription for FlashStart DNS Filter you can use the"
+" same feature using :ref:`Threat Shield DNS <block_website-section>`."
+msgstr ""
+
 #: ../../hotspot.rst:3
 msgid "Hotspot"
 msgstr "Hotspot"
@@ -3152,19 +3517,19 @@ msgstr ""
 msgid "Security"
 msgstr ""
 
-#: ../../index.rst:79
+#: ../../index.rst:82
 msgid "VPN"
 msgstr ""
 
-#: ../../index.rst:87
+#: ../../index.rst:90
 msgid "Report"
 msgstr ""
 
-#: ../../index.rst:94
+#: ../../index.rst:97
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:103
+#: ../../index.rst:106
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -4302,7 +4667,7 @@ msgstr ""
 #: ../../migration.rst:161
 msgid ""
 "Threat shield DNS, currently :ref:`available only from command line "
-"<threat_shield-dns-section>`"
+"<threat_shield_dns-section>`"
 msgstr ""
 
 #: ../../multiwan.rst:3
@@ -7477,7 +7842,7 @@ msgid ""
 "the measured values"
 msgstr ""
 
-#: ../../qos.rst:31
+#: ../../qos.rst:31 ../../threat_shield_dns.rst:89
 msgid "Advanced configuration"
 msgstr ""
 
@@ -9055,10 +9420,6 @@ msgstr ""
 msgid "Zones and Policies Management"
 msgstr ""
 
-#: ../../release_notes.rst:444
-msgid "Flashstart DNS Filtering"
-msgstr ""
-
 #: ../../release_notes.rst:445
 msgid "Deep Packet Inspection (DPI) Filtering"
 msgstr ""
@@ -10457,8 +10818,8 @@ msgid ""
 "purchase high-quality IP and DNS blocklists. These lists are actively "
 "maintained, updated very frequently, and exhibit high effectiveness while"
 " generating a very low number of false positives, they can be used in "
-":ref:`IP <threat_shield-section>` and :ref:`DNS <dns_filter-section>` "
-"block lists."
+":ref:`IP <threat_shield_dns-section>` and :ref:`DNS <threat_shield_dns-"
+"section>` block lists."
 msgstr ""
 
 #: ../../subscription.rst:20
@@ -10579,11 +10940,149 @@ msgid ""
 " logs"
 msgstr ""
 
-#: ../../threat_shield.rst:5
-msgid "Threat shield"
+#: ../../threat_shield_dns.rst:7
+msgid ""
+"Threat Shield DNS uses Adblock which blocks any request to a domain "
+"considered malicious. The service can load community-maintained blocklist"
+" or use Enterprise feeds provided by Nethesis and Yoroi."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:10
+msgid ""
+"While Threat Shield DNS is primarily configured from the command line, "
+"this chapter will guide you through its setup and usage."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:13
+#, fuzzy
+msgid "Enable Threat Shield DNS"
 msgstr "Threat shield"
 
-#: ../../threat_shield.rst:7
+#: ../../threat_shield_dns.rst:15
+msgid "To enable Threat Shield DNS, use the following commands: ::"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:20
+msgid ""
+"This command enables Threat Shield DNS and applies it to the \"lan\" "
+"zone. After enabling, all DNS requests from the configured zones are "
+"redirected to the firewall itself (ports 53 and 853 TCP/UDP). Note that "
+"this port forwarding is not visible from the port forward page."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:24
+msgid ""
+"If you want to filter other zones, replace \"lan\" with the desired zone "
+"name."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:26
+msgid ""
+"Please use Threat Shield DNS only if you are not already using the "
+"FlashStart service because if used together, they may conflict."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:29
+msgid "Manage blocklists"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:31
+msgid ""
+"By default, a machine has access to all community free categories, if the"
+" machine has a subscription and a valid entitlement for Enterprise lists,"
+" it will have automatically access to enterprise categories."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:34
+msgid "List available blocklists: ::"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:38
+msgid "Enable a specific blocklist (e.g., malware_lvl2): ::"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:42
+msgid "Apply changes: ::"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:46
+msgid "Check the status: ::"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:51
+#, fuzzy
+msgid "Bypass Threat Shield DNS"
+msgstr "Threat shield"
+
+#: ../../threat_shield_dns.rst:53
+msgid ""
+"Some hosts may need to bypass Threat Shield DNS filtering. To bypass "
+"filtering for specific hosts, execute: ::"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:58
+msgid ""
+"Replace ``192.168.1.22`` with the IP address of the host you want to "
+"bypass."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:62
+msgid ""
+"To preserve the effectiveness of the content filter it is suggested "
+"blocking alternative DNS protocols (DoT, DoH) via :ref:`dpi_filter-"
+"section` and by enabling the ``doh_vpn_tor_proxy`` blocklist."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:70
+msgid ""
+"To block specific domains, you can use the Threat Shield service. Add the"
+" domains that you want to block to the blocklist: ::"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:79
+msgid "Changes made to the blocklist require a reload of the service: ::"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:85
+msgid ""
+"The DNS resolution for the names listed in the blocklist will also affect"
+" the firewall itself"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:91
+msgid "When Threat Shield DNS is enabled:"
+msgstr ""
+
+#: ../../threat_shield_dns.rst:93
+msgid ""
+"A new category source file is generated based on the machine registration"
+" and entitlement."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:94
+msgid "All DNS queries are redirected to the local machine."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:95
+msgid ""
+"Adblock is configured to use the new category source file and will be "
+"started automatically."
+msgstr ""
+
+#: ../../threat_shield_dns.rst:97
+msgid ""
+"Even if not recommended, it's possible to use Adblock without Threat "
+"Shield DNS. For more detailed configuration options, please refer to the "
+"`developer manual <https://dev.nethsecurity.org/packages/ns-threat_shield"
+"/#ts-dns>`_."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:5
+#, fuzzy
+msgid "Threat shield IP"
+msgstr "Threat shield"
+
+#: ../../threat_shield_ip.rst:7
 msgid ""
 "NethSecurity is equipped with various tools and integrations useful for "
 "countering threats coming from the internet. One of these tools is Threat"
@@ -10592,7 +11091,7 @@ msgid ""
 "could be malicious."
 msgstr ""
 
-#: ../../threat_shield.rst:10
+#: ../../threat_shield_ip.rst:10
 msgid ""
 "The service can load community-maintained blocklists or can rely on high-"
 "quality blocklists very frequently updated and maintained by `Nethesis "
@@ -10603,24 +11102,20 @@ msgid ""
 "false positives."
 msgstr ""
 
-#: ../../threat_shield.rst:14
+#: ../../threat_shield_ip.rst:14
 msgid ""
 "Please note that to access the Nethesis and Yoroi blocklist, the machine "
 "must have a valid extra entitlement for this service."
 msgstr ""
 
-#: ../../threat_shield.rst:17
-msgid "IP based Threat shield"
-msgstr ""
-
-#: ../../threat_shield.rst:19
+#: ../../threat_shield_ip.rst:19
 msgid ""
 "The service is disabled by default, to enable it navigate to the ``Threat"
 " shield`` page under the ``Security`` section. Access the ``Settings`` "
 "tab and activate the ``Status`` switch."
 msgstr ""
 
-#: ../../threat_shield.rst:22
+#: ../../threat_shield_ip.rst:22
 msgid ""
 "When the service is enabled, the ``Blocklist`` tab will display all "
 "available blocklists. You can enable or disable each blocklist by using "
@@ -10629,11 +11124,11 @@ msgid ""
 " of Community and Enterprise blocklists."
 msgstr ""
 
-#: ../../threat_shield.rst:28
+#: ../../threat_shield_ip.rst:28
 msgid "Community Blocklists"
 msgstr ""
 
-#: ../../threat_shield.rst:29
+#: ../../threat_shield_ip.rst:30
 msgid ""
 "Community blocklists are sourced from community contributors and cover "
 "various areas: Ads blocking, Malware blocking, Spam blocking, Tracker "
@@ -10642,29 +11137,29 @@ msgid ""
 "is not personal, you may need to inquire with the provider."
 msgstr ""
 
-#: ../../threat_shield.rst:34
-msgid "Maintenance"
+#: ../../threat_shield_ip.rst:36
+msgid "Community lists maintenance"
 msgstr ""
 
-#: ../../threat_shield.rst:35
+#: ../../threat_shield_ip.rst:37
 msgid ""
 "Each blocklist is maintained by its specific provider. NethSecurity "
 "already includes the URLs for downloading the feeds, which are valid at "
-"the time of the release. However, because these URLs are hardcoded, if "
+"the time of the release. However, because these URLs are hard-coded, if "
 "the provider changes them, some blocklists may no longer be downloadable."
 msgstr ""
 
-#: ../../threat_shield.rst:38
+#: ../../threat_shield_ip.rst:42
 msgid "Enterprise blocklists"
 msgstr ""
 
-#: ../../threat_shield.rst:44
+#: ../../threat_shield_ip.rst:48
 msgid ""
 "Enterprise blocklists are specifically focused on security and offer "
 "several advantages over community-maintained blocklists:"
 msgstr ""
 
-#: ../../threat_shield.rst:46
+#: ../../threat_shield_ip.rst:50
 msgid ""
 "**Quality and Accuracy**: Enterprise blocklists, such as the ones "
 "provided by Nethesis and Yoroi, are curated and maintained by reputable "
@@ -10676,7 +11171,7 @@ msgid ""
 "updates."
 msgstr ""
 
-#: ../../threat_shield.rst:50
+#: ../../threat_shield_ip.rst:54
 msgid ""
 "**Timeliness**: Enterprise blocklists are frequently updated to include "
 "the latest threats and malicious IP addresses. Cybersecurity companies "
@@ -10685,7 +11180,7 @@ msgid ""
 "against the most recent and evolving threats."
 msgstr ""
 
-#: ../../threat_shield.rst:54
+#: ../../threat_shield_ip.rst:58
 msgid ""
 "**Reduced False Positives**: False positives occur when legitimate "
 "traffic is mistakenly blocked. Enterprise blocklists are designed to "
@@ -10697,7 +11192,7 @@ msgid ""
 "services."
 msgstr ""
 
-#: ../../threat_shield.rst:59
+#: ../../threat_shield_ip.rst:63
 msgid ""
 "**Enterprise Support**: Enterprise blocklists often come with additional "
 "support and services tailored for enterprise environments. This includes "
@@ -10707,7 +11202,7 @@ msgid ""
 "help you address them effectively."
 msgstr ""
 
-#: ../../threat_shield.rst:64
+#: ../../threat_shield_ip.rst:68
 msgid ""
 "Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will"
 " be listed only if the machine has a valid Enterprise :ref:`subscription "
@@ -10715,11 +11210,11 @@ msgid ""
 "service."
 msgstr ""
 
-#: ../../threat_shield.rst:68
+#: ../../threat_shield_ip.rst:72
 msgid "Allow list"
 msgstr ""
 
-#: ../../threat_shield.rst:70
+#: ../../threat_shield_ip.rst:74
 msgid ""
 "Sometimes it may be necessary to allow access to certain IP addresses, to"
 " do this you can use the ``Allowlist`` tab. Use the :guilabel:`Add "
@@ -10728,46 +11223,46 @@ msgid ""
 "fully qualified hostname (FQDN)."
 msgstr ""
 
-#: ../../threat_shield.rst:74
+#: ../../threat_shield_ip.rst:78
 msgid "For example, the address can be:"
 msgstr ""
 
-#: ../../threat_shield.rst:76
+#: ../../threat_shield_ip.rst:80
 msgid "IPv4 address: 192.168.0.1"
 msgstr ""
 
-#: ../../threat_shield.rst:77
+#: ../../threat_shield_ip.rst:81
 msgid "IPv6 address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 msgstr ""
 
-#: ../../threat_shield.rst:78
+#: ../../threat_shield_ip.rst:82
 msgid "IPv4 address with CIDR notation: 192.168.0.0/24"
 msgstr ""
 
-#: ../../threat_shield.rst:79
+#: ../../threat_shield_ip.rst:83
 msgid "MAC address: 00:0a:95:9d:68:16"
 msgstr ""
 
-#: ../../threat_shield.rst:80
+#: ../../threat_shield_ip.rst:84
 msgid "Fully qualified hostname: example.com"
 msgstr ""
 
-#: ../../threat_shield.rst:82
+#: ../../threat_shield_ip.rst:86
 msgid "A comment can be associated with each address to facilitate management."
 msgstr ""
 
-#: ../../threat_shield.rst:84
+#: ../../threat_shield_ip.rst:88
 msgid ""
 "You can add a comment to provide additional information about the "
 "address, such as its purpose or owner. This can help in organizing and "
 "managing the allowlist effectively."
 msgstr ""
 
-#: ../../threat_shield.rst:90
+#: ../../threat_shield_ip.rst:94
 msgid "Brute Force Attempt Block"
 msgstr ""
 
-#: ../../threat_shield.rst:92
+#: ../../threat_shield_ip.rst:96
 msgid ""
 "When Threat Shield is enabled, the system automatically starts checking "
 "for brute force attack attempts on firewall services. Currently, the "
@@ -10777,74 +11272,56 @@ msgid ""
 " the allowed attempts are 3, and the block lasts for 30 minutes."
 msgstr ""
 
-#: ../../threat_shield.rst:94
+#: ../../threat_shield_ip.rst:98
 msgid ""
 "You can perform further actions using the command line; these are the "
 "supported commands:"
 msgstr ""
 
-#: ../../threat_shield.rst:96
+#: ../../threat_shield_ip.rst:100
 msgid ""
 "View all IP addresses currently on the blocklist: ``/etc/init.d/banip "
 "survey blocklistv4``"
 msgstr ""
 
-#: ../../threat_shield.rst:97
+#: ../../threat_shield_ip.rst:101
 msgid ""
 "Look up a specific IP in the blocklist: ``/etc/init.d/banip search "
 "IP_ADDRESS``"
 msgstr ""
 
-#: ../../threat_shield.rst:98
+#: ../../threat_shield_ip.rst:102
 msgid ""
 "Unban an IP address: ``nft delete element inet banIP blocklistv4 { "
 "IP_ADDRESS }``"
 msgstr ""
 
-#: ../../threat_shield.rst:100
+#: ../../threat_shield_ip.rst:104
 msgid ""
 "Bear in mind that you need to specify the correct blocklist in commands "
 "when prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6)."
 msgstr ""
 
-#: ../../threat_shield.rst:102
+#: ../../threat_shield_ip.rst:106
 msgid ""
 "You can modify the default values for the number of attempts and ban time"
 " using these commands:"
 msgstr ""
 
-#: ../../threat_shield.rst:104
+#: ../../threat_shield_ip.rst:108
 msgid ""
 "To change the number of attempts before a ban: ``uci set "
 "banip.global.ban_logcount='3'``"
 msgstr ""
 
-#: ../../threat_shield.rst:105
+#: ../../threat_shield_ip.rst:109
 msgid ""
 "To change the ban duration in minutes: ``uci set "
 "banip.global.ban_nftexpiry='30m'``"
 msgstr ""
 
-#: ../../threat_shield.rst:107
+#: ../../threat_shield_ip.rst:111
 msgid "After changing the values, copy and paste these two commands: ::"
-msgstr ""
-
-#: ../../threat_shield.rst:116
-msgid "DNS based Threat shield"
-msgstr ""
-
-#: ../../threat_shield.rst:118
-msgid ""
-"The DNS filter uses AdBlock which blocks any request to a domain that is "
-"considered malicious. The service can load community-maintained blocklist"
-" or use Yoroi feeds."
-msgstr ""
-
-#: ../../threat_shield.rst:121
-msgid ""
-"AdBlock can be configured from the command line interface as explained in"
-" the `developer manual <https://dev.nethsecurity.org/packages/ns-"
-"threat_shield/#ts-dns>`_."
 msgstr ""
 
 #: ../../troubleshooting.rst:7
@@ -15800,5 +16277,147 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-25-g5158b54/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "DNS filter"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you don' have a subscription "
+#~ "for FlashStart DNS Filter you can "
+#~ "still make it directly on NethSecurity"
+#~ " enabling ``AdBlock`` and, optionally, "
+#~ "activating the DNS query interception "
+#~ "feature for LAN clients."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please use AdBlock to block browsing "
+#~ "only if you are not already using"
+#~ " the FlashStart service cause if used"
+#~ " together, they may conflict."
+#~ msgstr ""
+
+#~ msgid "To enable AdBlock, execute: ::"
+#~ msgstr ""
+
+#~ msgid "Enable DNS interception for the LAN: ::"
+#~ msgstr ""
+
+#~ msgid "Add the domains that you want to block to the blocklist: ::"
+#~ msgstr ""
+
+#~ msgid "Start the service: ::"
+#~ msgstr "Poi riavvia il servizio DDNS::"
+
+#~ msgid "8-23.05.3-ns.1.1.0-30-g8280c1c"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-30-g8280c1c/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-30-g8280c1c-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-30-g8280c1c/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.1.0-29-gf4eb39f"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-29-gf4eb39f/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-29-gf4eb39f-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-29-gf4eb39f/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.1.0-28-gd4506a6"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-28-gd4506a6/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-28-gd4506a6-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-28-gd4506a6/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.3-ns.1.1.0-27-g9c1fc4c"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-27-g9c1fc4c/targets/x86/64/nethsecurity-8-23.05.3-ns.1.1.0-27-g9c1fc4c-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.3-ns.1.1.0-27-g9c1fc4c/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Threat shield DNS, currently :ref:`available"
+#~ " only from command line <threat_shield-"
+#~ "dns-section>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Enterprise Block lists**: Firewalls with "
+#~ "a valid subscription can purchase "
+#~ "high-quality IP and DNS blocklists. "
+#~ "These lists are actively maintained, "
+#~ "updated very frequently, and exhibit "
+#~ "high effectiveness while generating a "
+#~ "very low number of false positives, "
+#~ "they can be used in :ref:`IP "
+#~ "<threat_shield-section>` and :ref:`DNS "
+#~ "<dns_filter-section>` block lists."
+#~ msgstr ""
+
+#~ msgid "IP based Threat shield"
+#~ msgstr ""
+
+#~ msgid "Maintenance"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Each blocklist is maintained by its "
+#~ "specific provider. NethSecurity already "
+#~ "includes the URLs for downloading the"
+#~ " feeds, which are valid at the "
+#~ "time of the release. However, because"
+#~ " these URLs are hardcoded, if the "
+#~ "provider changes them, some blocklists "
+#~ "may no longer be downloadable."
+#~ msgstr ""
+
+#~ msgid "DNS based Threat shield"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The DNS filter uses AdBlock which "
+#~ "blocks any request to a domain "
+#~ "that is considered malicious. The "
+#~ "service can load community-maintained "
+#~ "blocklist or use Yoroi feeds."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "AdBlock can be configured from the "
+#~ "command line interface as explained in"
+#~ " the `developer manual "
+#~ "<https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-"
+#~ "dns>`_."
 #~ msgstr ""
 
