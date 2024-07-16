@@ -92,7 +92,7 @@ When Threat Shield DNS is enabled:
 
 - A new category source file is generated based on the machine registration and entitlement.
 - All DNS queries are redirected to the local machine.
-- AdBlock is configured to use the new category source file and will be started automatically.
+- Adblock is configured to use the new category source file and will be started automatically.
 
 Even if not recommended, it's possible to use Adblock without Threat Shield DNS.
 For more detailed configuration options, please refer to the `developer manual <https://dev.nethsecurity.org/packages/ns-threat_shield/#ts-dns>`_.
