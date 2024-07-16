@@ -32,13 +32,11 @@ administrator to explore and pinpoint specific applications and application cate
 Premium application signatures
 -------------------------------
 
-.. admonition:: Enterprise subscription required
+.. admonition:: Subscription required
 
-   This feature is available only if the firewall has a valid enterprise subscription.
+   This feature is available only if the firewall has a valid :ref:`Community or Enterprise subscription <subscription-section>`.
 
 
-It's noteworthy that the number of applications that can be identified and managed by the system is influenced by the presence of an active
-:ref:`Enterprise subscription <subscription-section>`.
 In the absence of a subscription, the system inherently recognizes a baseline of approximately 400 applications.
 However, with an active subscription, this capacity significantly expands, encompassing around 3000 applications. In this scenario,
 the list of recognized applications undergoes daily updates, ensuring that the system stays abreast of the ever-evolving landscape of applications and digital services.

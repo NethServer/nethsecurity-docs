@@ -6,7 +6,7 @@ Remote support
 
 .. admonition:: Enterprise subscription required
 
-   This feature is available only if the firewall has a valid enterprise subscription.
+   This feature is available only if the firewall has a valid Enterprise subscription.
 
 The :ref:`Enterprise subscription <subscription-section>` allows you to access the Nethesis remote support.
 
