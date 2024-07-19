@@ -31,13 +31,14 @@ After the restore the system will be rebooted.
 Automatic backup
 ================
 
-.. admonition:: Enterprise subscription required
+.. admonition:: Subscription required
 
-   This feature is available only if the firewall has a valid enterprise subscription.
+   This feature is available only if the firewall has a valid subscription.
 
-If the machine has a valid :ref:`Enterprise subscription <subscription-section>`, a scheduled cron job will run every night to perform a backup.
+If the machine has a valid :ref:`subscription <subscription-section>`, a scheduled cron job will run every night to perform a backup.
 This backup is then sent to a remote server over a secure channel.
 If the backup is encrypted, only the encrypted backup will be sent to the remote server.
+It is recommended to encrypt the backup to ensure that no one can access the configuration settings stored inside it.
 
 The user can click the :guilabel:`Run backup` button: the backup will be stored on a remote server and the user will be able
 to download it by clicking the :guilabel:`Download` button.
