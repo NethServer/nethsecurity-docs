@@ -130,3 +130,20 @@ First, make sure your ISP supports DHCPv6-PD, than follow these steps:
 By enabling IPv6 for both WAN and LAN interfaces without specifying an address for the LAN, your router will automatically request
 and receive an IPv6 prefix (usually a /64) from your ISP through DHCPv6-PD.
 This prefix will then be used to assign individual IPv6 addresses to devices on your network.
+
+
+USB-to-Ethernet Adapters
+------------------------
+
+USB-to-Ethernet adapters are not considered suitable for use in a firewall device that is critical to network communication, for this reason the drivers are not included in the NethSecurity image.
+Only for experimental purposes, specific drivers can be installed via the package manager for use in a test environment.
+
+.. note::
+
+ We strongly advise to not use these adapters in production environments.
+ For Enterprise/Subscription versions: USB-to-Ethernet adapters are not covered by Nethesis support.
+
+How to install USB-to-Ethernet modules
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+These packages can be installed from the command line console (...)
