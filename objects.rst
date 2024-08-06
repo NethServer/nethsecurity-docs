@@ -282,7 +282,7 @@ Add a Domain Set
 
    - In the ``Domains`` field, you can add the domains for this set
    - Enter domain names in the provided field
-   - After entering each domain, click :guilabel:`Add domain`` to include it in the set
+   - After entering each domain, click :guilabel:`Add domain` to include it in the set
    - Repeat this process to add multiple domains as needed
 
 5. Finalize the Domain Set:
