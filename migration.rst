@@ -162,8 +162,8 @@ The following features are not migrated to NethSecurity:
 
 USB-to-Ethernet adapters
 ========================
-It may rarely happen that the NethSecurity7 being migrated has a USB to Ethernet adapter connected to add a network device. These adapters should not be used in a firewall and are **not supported on NethSecurity8**. However, it is possible to install certain specific drivers for experimental purposes, not for production environments. These drivers might be useful for temporarily managing the migrated firewall while awaiting hardware with all the necessary network cards. More information can be found in the :ref:`network section <network-section>`.
+It may rarely happen that the NethServer 7 being migrated has a USB to Ethernet adapter connected to add a network device. These adapters should not be used in a firewall and are **not supported on NethSecurity 8**. However, it is possible to install certain specific drivers for experimental purposes, not for production environments. These drivers might be useful for temporarily managing the migrated firewall while awaiting hardware with all the necessary network cards. More information can be found in the :ref:`network section <network-section>`.
 
 .. warning::
 
-  If you are using these adapters, remember that they will not work until the correct driver is installed. Keep in mind that NethSecurity8 may not have the correct driver for the adapter you are using on NethSecurity7. In this case, you will need to use a different adapter.
+  If you are using these adapters, remember that they will not work until the correct driver is installed. Keep in mind that NethSecurity 8 may not have the correct driver for the adapter you are using on NethServer 7. In this case, you will need to use a different adapter.
