@@ -140,10 +140,72 @@ Only for experimental purposes, specific drivers can be installed via the packag
 
 .. note::
 
- We strongly advise to not use these adapters in production environments.
- For Enterprise/Subscription versions: USB-to-Ethernet adapters are not covered by Nethesis support.
+ It is strongly recommended **not to use these adapters in production environments**.
+ For Enterprise/Subscription versions: USB-to-Ethernet adapters **are not covered by Nethesis support**.
 
 How to install USB-to-Ethernet modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These packages can be installed from the command line console (...)
+These packages can be installed from the command line console, just find the correct module and install it.
+
+* Verify the ethernet adapter is connected to USB using ``lsusb``.Output example: 
+::
+
+  # lsusb
+  Bus 002 Device 002: ID 0bda:8153 Realtek USB 10/100/1000 LAN
+  Bus 002 Device 001: ID 1d6b:0003 Linux 5.15.162 xhci-hcd xHCI Host Controller
+  Bus 001 Device 002: ID 0627:0001 QEMU QEMU USB Tablet
+  Bus 001 Device 001: ID 1d6b:0002 Linux 5.15.162 xhci-hcd xHCI Host Controller
+
+
+* Search for the the kernel module: 
+::
+
+  opkg update
+  opkg find kmod-usb-net-\*
+
+
+* Output example:
+::
+
+  kmod-usb-net-aqc111 - 5.15.162-1 - Support for USB-to-Ethernet Aquantia AQtion 5/2.5GbE
+  kmod-usb-net-asix-ax88179 - 5.15.162-1 - Kernel module for USB-to-Ethernet ASIX AX88179 based USB 3.0/2.0 to Gigabit Ethernet adapters.
+  kmod-usb-net-cdc-ether - 5.15.162-1 - Kernel support for USB CDC Ethernet devices
+  kmod-usb-net-cdc-ncm - 5.15.162-1 - Kernel support for CDC NCM connections
+  kmod-usb-net-dm9601-ether - 5.15.162-1 - Kernel support for USB DM9601 devices
+  kmod-usb-net-lan78xx - 5.15.162-1 - Kernel module for Microchip LAN78XX based USB 2 & USB 3 10/100/1000 Ethernet adapters.
+  kmod-usb-net-mcs7830 - 5.15.162-1 - Kernel module for USB-to-Ethernet MCS7830 convertors
+  kmod-usb-net-pegasus - 5.15.162-1 - Kernel module for USB-to-Ethernet Pegasus convertors
+  kmod-usb-net-rtl8150 - 5.15.162-1 - Kernel module for USB-to-Ethernet Realtek 8150 convertors  
+  kmod-usb-net-rtl8152 - 5.15.162-1 - Kernel module for USB-to-Ethernet Realtek 8152 USB2.0/3.0 convertors
+  kmod-usb-net-smsc95xx - 5.15.162-1 - Kernel module for SMSC LAN95XX based devices
+  kmod-usb-net-sr9700 - 5.15.162-1 - Kernel module for CoreChip-sz SR9700 based USB 1.1 10/100 ethernet devices
+
+* Install the right driver:
+::
+
+  opkg install kmod-usb-net-rtl8150
+
+* Verify a new ethX interface appears using ifconfig -a
+* Configure the ethernet from the UI
+
+USB-to-Serial Adapters
+----------------------
+USB to serial adapters are managed in the same way as USB to Ethernet adapters. 
+In this case, two packages are provided for installation, covering the vast majority of adapters available on the market.
+::
+
+  kmod-usb-serial-cp210x - 5.15.162-1 - Kernel support for Silicon Labs cp210x USB-to-Serial converters
+  kmod-usb-serial-pl2303 - 5.15.162-1 - Kernel support for Prolific PL2303 USB-to-Serial converters
+
+* To install Prolific PL2303 driver:
+::
+
+  opkg install kmod-usb-serial-pl2303
+
+* The logs will show an output similar to this:
+::
+
+  Aug  6 08:08:17 nsec8 kernel: [ 2346.359247] usb 1-6: new full-speed USB device number 3 using xhci_hcd
+  Aug  6 08:08:17 nsec8 kernel: [ 2346.543052] pl2303 1-6:1.0: pl2303 converter detected
+  Aug  6 08:08:17 nsec8 kernel: [ 2346.550401] usb 1-6: pl2303 converter now attached to ttyUSB0
