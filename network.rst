@@ -131,7 +131,6 @@ By enabling IPv6 for both WAN and LAN interfaces without specifying an address f
 and receive an IPv6 prefix (usually a /64) from your ISP through DHCPv6-PD.
 This prefix will then be used to assign individual IPv6 addresses to devices on your network.
 
-
 USB-to-Ethernet Adapters
 ------------------------
 
@@ -157,13 +156,11 @@ These packages can be installed from the command line console, just find the cor
   Bus 001 Device 002: ID 0627:0001 QEMU QEMU USB Tablet
   Bus 001 Device 001: ID 1d6b:0002 Linux 5.15.162 xhci-hcd xHCI Host Controller
 
-
 * Search for the the kernel module: 
 ::
 
   opkg update
   opkg find kmod-usb-net-\*
-
 
 * Output example:
 ::
