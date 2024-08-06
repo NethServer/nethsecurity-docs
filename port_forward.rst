@@ -20,7 +20,9 @@ When creating a port forward, certain parameters must be specified:
 - ``Source port``: the port from which the request originates.
 - ``Destination port``: the port to which the traffic is directed; this can differ from the source port.
 - ``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, ``ICMP``, ``ESP``, ``AH`` ``SCTP`` or the special value ``ALL`` for all supported protocols.
-- ``Destination address``: specifies the internal host to which the traffic should be redirected.
+- ``Destination address``: specifies the internal host to which the traffic should be redirected. This can be:
+  - a specific IP address
+  - a firewall object: a host defined by a host set, a DHCP reservation, a DNS record or an OpenVPN account
 
 By default, all port forwards are accessible only for hosts inside the WAN. Refer to the :ref:`hairpin-section` for instructions on changing this default behavior.
 
@@ -28,8 +30,8 @@ For each port forward the user can configure also the following aspects:
 
 - Enabling logging: port forwards can be configured to log incoming traffic for each rule. By enabling the ``Log`` option,
   the network administrator can keep track of the traffic passing through the port forward, allowing for monitoring and analysis
-- Access restriction: port forwards can be restricted to specific IP addresses or CIDR blocks. By adding a list of allowed IP addresses or specifying CIDR notations
-  inside the ``Restrict access to`` field,   the user can limit access to the port forward. This enhances security by controlling which external
+- Access restriction: port forwards can be restricted to specific IP addresses, CIDR blocks or a domain set object. By entering a list of allowed IP addresses and CIDR notations, or selecting a domain set object
+  inside the ``Restrict access to`` field, the user can limit access to the port forward. This enhances security by controlling which external
   devices are allowed to connect to the internal service.
 - Binding to specific public IP: port forwards can be bound to a specific public IP address using the ``WAN IP`` field.
   This means that if your router/firewall has multiple public IP addresses,
