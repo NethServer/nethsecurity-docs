@@ -183,7 +183,7 @@ These packages can be installed from the command line console, just find the cor
 
   opkg install kmod-usb-net-rtl8150
 
-* Verify a new ethX interface appears using ifconfig -a
+* Verify a new ethX interface appears using ``ifconfig -a``
 * Configure the ethernet from the UI
 
 USB-to-Serial Adapters
