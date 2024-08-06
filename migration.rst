@@ -120,7 +120,6 @@ Also review the :ref:`remote user database page <remote_user_databases-section>`
 
 Then, verify that all services are working correctly. If you encounter any issues, refer to the :ref:`troubleshooting section <troubleshooting-section>`.
 
-
 Migrated configurations
 =======================
 
@@ -160,7 +159,6 @@ The following features are not migrated to NethSecurity:
 - Bandwidth monitor (ntopng)
 - Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block feature <brute_force-section>`
 - Threat shield DNS, currently :ref:`available only from command line <threat_shield_dns-section>`
-
 
 USB-to-Ethernet adapters
 ========================
