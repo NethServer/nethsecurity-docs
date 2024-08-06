@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-06 14:05+0000\n"
+"POT-Creation-Date: 2024-08-06 14:26+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -111,25 +111,25 @@ msgstr "Dopo il ripristino il sistema verrà riavviato."
 msgid "Automatic backup"
 msgstr "Backup automatico"
 
-#: ../../backup.rst:34 ../../remote_support.rst:7
-msgid "Enterprise subscription required"
-msgstr "E' richiesto l'abbonamento Enterprise"
+#: ../../backup.rst:34 ../../controller.rst:249 ../../dpi_filter.rst:35
+#: ../../threat_shield_ip.rst:44 ../../updates.rst:39
+#: ../../users_databases.rst:38
+msgid "Subscription required"
+msgstr "Abbonamento richiesto"
 
-#: ../../backup.rst:36
-msgid ""
-"This feature is available only if the firewall has a valid enterprise "
-"subscription."
+#: ../../backup.rst:36 ../../updates.rst:41 ../../users_databases.rst:40
+msgid "This feature is available only if the firewall has a valid subscription."
 msgstr ""
-"Questa funzione è disponibile solo se il firewall ha un abbonamento "
-"enterprise valido."
 
 #: ../../backup.rst:38
+#, fuzzy
 msgid ""
-"If the machine has a valid :ref:`Enterprise subscription <subscription-"
-"section>`, a scheduled cron job will run every night to perform a backup."
-" This backup is then sent to a remote server over a secure channel. If "
-"the backup is encrypted, only the encrypted backup will be sent to the "
-"remote server."
+"If the machine has a valid :ref:`subscription <subscription-section>`, a "
+"scheduled cron job will run every night to perform a backup. This backup "
+"is then sent to a remote server over a secure channel. If the backup is "
+"encrypted, only the encrypted backup will be sent to the remote server. "
+"It is recommended to encrypt the backup to ensure that no one can access "
+"the configuration settings stored inside it."
 msgstr ""
 "Se la macchina ha un valido :ref: `Abbonamento Enterprise  < "
 "subscription-section>`, un lavoro di cron programmato verrà eseguito ogni"
@@ -137,7 +137,7 @@ msgstr ""
 "server remoto tramite un canale sicuro. Se il backup è crittografato, "
 "solo il backup crittografato verrà inviato al server remoto."
 
-#: ../../backup.rst:42
+#: ../../backup.rst:43
 msgid ""
 "The user can click the :guilabel:`Run backup` button: the backup will be "
 "stored on a remote server and the user will be able to download it by "
@@ -157,24 +157,24 @@ msgstr ""
 "creati. Ciò significa che le date potrebbero differire a seconda delle "
 "differenze di fuso orario."
 
-#: ../../backup.rst:49
+#: ../../backup.rst:50
 msgid "Backup customization"
 msgstr ""
 
-#: ../../backup.rst:51
+#: ../../backup.rst:52
 msgid ""
 "The backup includes all relevant configuration files. To list the files "
 "included in the backup, execute the following command: ::"
 msgstr ""
 
-#: ../../backup.rst:56
+#: ../../backup.rst:57
 msgid ""
 "The backup can be customized by adding files to the backup list. Just add"
 " a new line to the file ``/etc/sysupgrade.conf`` with the path of the "
 "file to be included in the backup."
 msgstr ""
 
-#: ../../backup.rst:59 ../../qos.rst:85
+#: ../../backup.rst:60 ../../qos.rst:85
 msgid "Example: ::"
 msgstr ""
 
@@ -1485,12 +1485,6 @@ msgstr ""
 #: ../../controller.rst:247
 msgid "Subscription and limitations"
 msgstr "Abbonamento e limitazioni"
-
-#: ../../controller.rst:249 ../../dpi_filter.rst:35
-#: ../../threat_shield_ip.rst:44 ../../updates.rst:39
-#: ../../users_databases.rst:38
-msgid "Subscription required"
-msgstr "Abbonamento richiesto"
 
 #: ../../controller.rst:251
 msgid ""
@@ -9897,6 +9891,10 @@ msgstr ""
 msgid "Remote support"
 msgstr ""
 
+#: ../../remote_support.rst:7
+msgid "Enterprise subscription required"
+msgstr "E' richiesto l'abbonamento Enterprise"
+
 #: ../../remote_support.rst:9
 #, fuzzy
 msgid ""
@@ -10834,19 +10832,27 @@ msgstr ""
 
 #: ../../subscription.rst:24
 msgid ""
+"**Automatic remote backup**: subscribers can benefit from automatic "
+"remote backups of the firewall configuration. This feature is crucial for"
+" businesses that need to ensure the safety of their data and "
+"configurations."
+msgstr ""
+
+#: ../../subscription.rst:25
+msgid ""
 "**Support**: subscribers can receive priority support on stable releases."
 " This can be crucial for businesses relying on NethSecurity for their "
 "operations. See also :ref:`remote_support-section`."
 msgstr ""
 
-#: ../../subscription.rst:25
+#: ../../subscription.rst:26
 msgid ""
 "**Consultation and customization**: subscribers could get consultation "
 "services and assistance with customization to tailor the server's "
 "functionalities according to specific business requirements."
 msgstr ""
 
-#: ../../subscription.rst:27
+#: ../../subscription.rst:28
 msgid ""
 "It's important to note that while a subscription might not be required "
 "for normal use, businesses with specific needs or those seeking "
@@ -10854,49 +10860,49 @@ msgid ""
 "NethSecurity offer."
 msgstr ""
 
-#: ../../subscription.rst:32
+#: ../../subscription.rst:33
 msgid "Register the system"
 msgstr ""
 
-#: ../../subscription.rst:34
+#: ../../subscription.rst:35
 msgid "To register the system, follow the below steps:"
 msgstr ""
 
-#: ../../subscription.rst:36
+#: ../../subscription.rst:37
 msgid ""
 "Access the Enterprise or Community portal, add a new server and copy the "
 "token"
 msgstr ""
 
-#: ../../subscription.rst:37
+#: ../../subscription.rst:38
 msgid "Access the firewall and go to the ``Subscription`` page"
 msgstr ""
 
-#: ../../subscription.rst:38
+#: ../../subscription.rst:39
 msgid "Paste the token inside the ``Authentication token`` field"
 msgstr ""
 
-#: ../../subscription.rst:39
+#: ../../subscription.rst:40
 msgid "Click the :guilabel:`Register` button"
 msgstr ""
 
-#: ../../subscription.rst:41
+#: ../../subscription.rst:42
 msgid ""
 "The system will automatically register to the correct Enterprise or "
 "Community portal."
 msgstr ""
 
-#: ../../subscription.rst:43
+#: ../../subscription.rst:44
 msgid ""
 "Please note that the registration process requires an active internet "
 "connection."
 msgstr ""
 
-#: ../../subscription.rst:46
+#: ../../subscription.rst:47
 msgid "Remove the subscription"
 msgstr ""
 
-#: ../../subscription.rst:48
+#: ../../subscription.rst:49
 msgid ""
 "When the subscription expires, or at the end of a trial period, click the"
 " :guilabel:`Cancel registration` button."
@@ -11668,10 +11674,6 @@ msgstr ""
 #, fuzzy
 msgid "Automatic updates"
 msgstr "rotte statiche"
-
-#: ../../updates.rst:41 ../../users_databases.rst:40
-msgid "This feature is available only if the firewall has a valid subscription."
-msgstr ""
 
 #: ../../updates.rst:43
 msgid ""
@@ -16558,4 +16560,13 @@ msgstr ""
 #~ ":guilabel:`Add domain`` to include it in"
 #~ " the set"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "This feature is available only if "
+#~ "the firewall has a valid enterprise "
+#~ "subscription."
+#~ msgstr ""
+#~ "Questa funzione è disponibile solo se"
+#~ " il firewall ha un abbonamento "
+#~ "enterprise valido."
 
