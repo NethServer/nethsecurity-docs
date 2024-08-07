@@ -142,7 +142,7 @@ If the unis has an Enterprise or Community subscription, bear in mind that USB-t
 
 .. warning::
 
- These packages/kernel modules are not preserved across image upgrades, so in the event of an upgrade, you will need to download and install them again if needed.
+ Extra packages, including kernel modules, are not preserved across image upgrades, so in the event of an upgrade, you will need to download and install them again if needed.
 
 How to install USB-to-Ethernet modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
