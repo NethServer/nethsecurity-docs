@@ -22,7 +22,7 @@ When creating a port forward, certain parameters must be specified:
 - ``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, ``ICMP``, ``ESP``, ``AH`` ``SCTP`` or the special value ``ALL`` for all supported protocols.
 - ``Destination address``: specifies the internal host to which the traffic should be redirected. This can be:
   - a specific IP address
-  - a firewall object: a host defined by a host set, a DHCP reservation, a DNS record or an OpenVPN account
+  - a firewall object: a host defined by a host set, a DHCP reservation, a DNS record or an OpenVPN account with IP reservation
 
 By default, all port forwards are accessible only for hosts inside the WAN. Refer to the :ref:`hairpin-section` for instructions on changing this default behavior.
 
