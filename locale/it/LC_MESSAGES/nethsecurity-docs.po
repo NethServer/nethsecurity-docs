@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-06 14:26+0000\n"
+"POT-Creation-Date: 2024-08-07 06:59+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2408,23 +2408,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.1.99-alpha1-35-g92bbbedc"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-35-g92bbbedc/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-35-g92bbbedc-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-35-g92bbbedc/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -7703,21 +7686,23 @@ msgstr ""
 #: ../../port_forward.rst:23
 msgid ""
 "``Destination address``: specifies the internal host to which the traffic"
-" should be redirected."
+" should be redirected. This can be: - a specific IP address - a firewall "
+"object: a host defined by a host set, a DHCP reservation, a DNS record or"
+" an OpenVPN account with IP reservation"
 msgstr ""
 
-#: ../../port_forward.rst:25
+#: ../../port_forward.rst:27
 msgid ""
 "By default, all port forwards are accessible only for hosts inside the "
 "WAN. Refer to the :ref:`hairpin-section` for instructions on changing "
 "this default behavior."
 msgstr ""
 
-#: ../../port_forward.rst:27
+#: ../../port_forward.rst:29
 msgid "For each port forward the user can configure also the following aspects:"
 msgstr ""
 
-#: ../../port_forward.rst:29
+#: ../../port_forward.rst:31
 msgid ""
 "Enabling logging: port forwards can be configured to log incoming traffic"
 " for each rule. By enabling the ``Log`` option, the network administrator"
@@ -7725,17 +7710,17 @@ msgid ""
 " for monitoring and analysis"
 msgstr ""
 
-#: ../../port_forward.rst:31
+#: ../../port_forward.rst:33
 msgid ""
 "Access restriction: port forwards can be restricted to specific IP "
-"addresses or CIDR blocks. By adding a list of allowed IP addresses or "
-"specifying CIDR notations inside the ``Restrict access to`` field,   the "
-"user can limit access to the port forward. This enhances security by "
-"controlling which external devices are allowed to connect to the internal"
-" service."
+"addresses, CIDR blocks or a domain set object. By entering a list of "
+"allowed IP addresses and CIDR notations, or selecting a domain set object"
+" inside the ``Restrict access to`` field, the user can limit access to "
+"the port forward. This enhances security by controlling which external "
+"devices are allowed to connect to the internal service."
 msgstr ""
 
-#: ../../port_forward.rst:34
+#: ../../port_forward.rst:36
 msgid ""
 "Binding to specific public IP: port forwards can be bound to a specific "
 "public IP address using the ``WAN IP`` field. This means that if your "
@@ -7745,11 +7730,11 @@ msgid ""
 "public IP is forwarded correctly to the internal server."
 msgstr ""
 
-#: ../../port_forward.rst:42
+#: ../../port_forward.rst:44
 msgid "Hairpin NAT"
 msgstr ""
 
-#: ../../port_forward.rst:44
+#: ../../port_forward.rst:46
 msgid ""
 "Hairpin NAT, also known as NAT loopback or NAT reflection, is a technique"
 " used in networking where internal hosts access a server located within "
@@ -7760,7 +7745,7 @@ msgid ""
 " the local network."
 msgstr ""
 
-#: ../../port_forward.rst:49
+#: ../../port_forward.rst:51
 msgid ""
 "To enable the hairpin, enable the ``Hairpin NAT`` option and select one "
 "or more zones where the NAT loopback should be enabled."
@@ -16569,4 +16554,38 @@ msgstr ""
 #~ "Questa funzione è disponibile solo se"
 #~ " il firewall ha un abbonamento "
 #~ "enterprise valido."
+
+#~ msgid "8-23.05.4-ns.1.1.99-alpha1-35-g92bbbedc"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-35-g92bbbedc/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-35-g92bbbedc-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-35-g92bbbedc/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Destination address``: specifies the "
+#~ "internal host to which the traffic "
+#~ "should be redirected."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Access restriction: port forwards can be"
+#~ " restricted to specific IP addresses "
+#~ "or CIDR blocks. By adding a list"
+#~ " of allowed IP addresses or "
+#~ "specifying CIDR notations inside the "
+#~ "``Restrict access to`` field,   the user"
+#~ " can limit access to the port "
+#~ "forward. This enhances security by "
+#~ "controlling which external devices are "
+#~ "allowed to connect to the internal "
+#~ "service."
+#~ msgstr ""
 
