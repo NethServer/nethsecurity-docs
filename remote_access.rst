@@ -226,3 +226,46 @@ The keyboard layout configuration can be saved by writing the keymap code inside
 To obtain the list of available keymaps, execute the following command: ::
 
   ls -1 /usr/share/keymaps/ | cut -d'.' -f1
+
+Serial console 
+==============
+
+If the machine has a serial port (RS-232, tipically available with DE-9 connector or RJ45/8P8C connector) it's possible to access the firewall directly through it using a null-modem cable and a terminal program.
+``PuTTY`` (version 0.60 or higher) is a common choice if you are using Microsoft Windows, while Linux distros offer tools as ``minicom``, ``picocom``, or ``screen``. 
+
+Default acces parameters for NethSecurity 8 are:
+
+- Baud rate: 115200,
+- Data bits:8
+- Parity :None
+- Stop bits to 1 
+
+These last three parameters are often abbreviated as 8N1
+
+USB-to-Serial Adapters
+----------------------
+
+In case of need, NethSecurity can be used to access another server via the serial console. If the hardware does not have an RS-232 port, USB-to-serial adapters can be used. 
+For this reason, it is possible to download and install drivers for the most common adapters on NethSecurity. These drivers are provided as-is and are **not supported by Nethesis** (if using an Enterprise or Subscription version).
+
+Two packages are provided for installation, covering the vast majority of adapters available on the market.
+::
+
+  kmod-usb-serial-cp210x - 5.15.162-1 - Kernel support for Silicon Labs cp210x USB-to-Serial converters
+  kmod-usb-serial-pl2303 - 5.15.162-1 - Kernel support for Prolific PL2303 USB-to-Serial converters
+
+* To install Prolific PL2303 driver:
+::
+
+  opkg install kmod-usb-serial-pl2303
+
+* The logs will show an output similar to this:
+::
+
+  Aug  6 08:08:17 nsec8 kernel: [ 2346.359247] usb 1-6: new full-speed USB device number 3 using xhci_hcd
+  Aug  6 08:08:17 nsec8 kernel: [ 2346.543052] pl2303 1-6:1.0: pl2303 converter detected
+  Aug  6 08:08:17 nsec8 kernel: [ 2346.550401] usb 1-6: pl2303 converter now attached to ttyUSB0
+
+.. warning::
+
+ These packages/kernel modules are not preserved across image upgrades, so in the event of an upgrade, you will need to download and install them again if needed.
