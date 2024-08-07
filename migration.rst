@@ -167,3 +167,7 @@ It may rarely happen that the NethServer 7 being migrated has a USB to Ethernet 
 .. warning::
 
   If you are using these adapters, remember that they will not work until the correct driver is installed. Keep in mind that NethSecurity 8 may not have the correct driver for the adapter you are using on NethServer 7. In this case, you will need to use a different adapter.
+
+.. note::
+
+ If you are using a USB to Ethernet adapter for a RED/WAN interface, be aware that you won't be able to download the necessary modules to make it work properly on NethSecurity 8 unless you have other RED/WAN interfaces running on network cards directly connected to the motherboard.
