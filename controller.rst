@@ -98,6 +98,8 @@ When a unit is disconnected, the controller will remove the unit configuration a
 After removing the unit from the controller web interface, access the unit web interface and click :guilabel:`Disconnect unit` on the ``Controller`` page:
 the unit will destroy the VPN configuration.
 
+.. _controller_logs-section:
+
 Logs management
 ===============
 
