@@ -142,6 +142,10 @@ Only for experimental purposes, specific drivers can be installed via the packag
  It is strongly recommended **not to use these adapters in production environments**.
  For Enterprise/Subscription versions: USB-to-Ethernet adapters **are not covered by Nethesis support**.
 
+.. warning::
+
+ These packages/kernel modules are not preserved across image upgrades, so in the event of an upgrade, you will need to download and install them again if needed.
+
 How to install USB-to-Ethernet modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -185,24 +189,3 @@ These packages can be installed from the command line console, just find the cor
 
 * Verify a new ethX interface appears using ``ifconfig -a``
 * Configure the ethernet from the UI
-
-USB-to-Serial Adapters
-----------------------
-USB to serial adapters are managed in the same way as USB to Ethernet adapters. 
-In this case, two packages are provided for installation, covering the vast majority of adapters available on the market.
-::
-
-  kmod-usb-serial-cp210x - 5.15.162-1 - Kernel support for Silicon Labs cp210x USB-to-Serial converters
-  kmod-usb-serial-pl2303 - 5.15.162-1 - Kernel support for Prolific PL2303 USB-to-Serial converters
-
-* To install Prolific PL2303 driver:
-::
-
-  opkg install kmod-usb-serial-pl2303
-
-* The logs will show an output similar to this:
-::
-
-  Aug  6 08:08:17 nsec8 kernel: [ 2346.359247] usb 1-6: new full-speed USB device number 3 using xhci_hcd
-  Aug  6 08:08:17 nsec8 kernel: [ 2346.543052] pl2303 1-6:1.0: pl2303 converter detected
-  Aug  6 08:08:17 nsec8 kernel: [ 2346.550401] usb 1-6: pl2303 converter now attached to ttyUSB0
