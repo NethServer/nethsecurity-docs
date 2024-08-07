@@ -7,6 +7,52 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-08-08
+===========================
+
+Image version: `8-23.05.4-ns.1.2.0`
+
+This release focuses on new features for subscriptions and improved user experience.
+
+Detailed changelog can be found `here <https://github.com/NethServer/nethsecurity/milestone/4?closed=1>`__
+
+.. rubric:: New features and improvements
+
+- Update to OpenWrt 23.05.4: update OpenWrt to version 23.05.4 with relevant package and core changes
+- Free Threat Shield lists for community: implement free Threat Shield lists for community users, enhancing overall threat protection
+- Remote backup for all subscriptions: extend remote backup access to both Enterprise and Community subscriptions with additional backup information
+- New script to update packages with logging and stable channel access: implement a new update-packages script with enhanced logging and force-stable flag
+- Firewall objects: implement host set and domain set objects for enhanced firewall management
+- Add objects support in MultiWAN rules: implement objects support in MultiWAN UI for source and destination addresses
+- Add objects support in Port Forward rules: add objects support for destination address and restricted access in Port Forward rules
+- Add objects support in Firewall rules: include objects support for source and destination addresses in Firewall rules
+- OpenVPN Road Warrior IP reservation: improve handling of reserved IPs in OpenVPN configuration to prevent conflicts
+- Backup: include installed package list in backup for easier restoration after image upgrade
+- Let's Encrypt certificate on web interface extra port: extend Let's Encrypt certificate usage to the ns-ui extra port
+- OpenVPN tunnel server: add option "remote-cert-tls" in exported file client configuration file
+- Custom DNS for hotspot: add support for changing default DNS for hotspot
+- Limited support for USB-to-Ethernet adapters: provide experimental support for USB-to-Ethernet adapters with manual driver installation
+- Limited support for USB-to-Serial adapters: add experimental support for USB-to-Serial adapters with manual driver installation
+
+.. rubric:: Bug fixes
+
+- Deny creation of certificates with already requested domains: prevent creation of duplicate certificates with the same domain
+- Visual issue with DHCP objects in OpenVPN Road Warrior: fix missing fields and display errors in DHCP options
+- Cannot create reverse proxies: fix nginx configuration validation failure when creating reverse proxies
+- Limit interface names to 13 characters: prevent mwan failure due to long interface names
+- OpenVPN, unable to remove reserved IP for Road Warrior client: fix issue where reserved IP cannot be removed for Roadwarrior clients
+- UI crash with over 3000 conntrack entries: fix UI crash and rpcd service break with large number of conntrack entries
+- MultiWAN, missing WAN disconnection/reconnection alerts: new implementation of WAN alerts to correctly handle connection and reconnection events
+- Controller, display the name of disconnected users: show the name of disconnected units instead of just the UUID
+- Controller, display VPN port: add VPN port display in the NS8 UI for easier firewall configuration
+- Controller, validate CN: add validation rule for controller name field to allow only letters and numbers
+- Controller, do not remove .info file on disconnect: preserve unit information file for disconnected units
+- Controller, units continuously toggle connected/disconnected: address issue with erratic connection status display for multiple units
+- Migration, DHCP and DNS Services for blue/guest zone: enable DHCP and DNS services for migrated blue/guest zones
+- Migration, OpenVPN reserved IP not assigned: address issue with reserved IP assignment for migrated certificates
+- Migration, FlashStart username missing: fix issue where username field is not displayed in FlashStart interface after migration
+- FlashStart, reduce number of queries: modify dnsdist configuration to optimize query handling and reduce unnecessary requests
+
 Major changes on 2024-07-05
 ===========================
 
@@ -19,7 +65,7 @@ Detailed changelog can be found `here <https://github.com/NethServer/nethsecurit
 .. rubric:: New features and improvements
 
 - Connections management: implemented interface for real-time monitoring and control of conntrack-tracked network connections
-- MultiWAN sticky option: added sticky configuration in multiwan rules to maintain connection persistence across sessions
+- MultiWAN sticky option: added sticky configuration in MultiWAN rules to maintain connection persistence across sessions
 - DPI signature updates: enabled updated Deep Packet Inspection signatures for both community and enterprise subscription types
 - Admin user management: implemented API functions to elevate local users to admin status and revoke admin privileges
 - LDAP authentication enhancement: improved flexibility for Active Directory and non-standard LDAP Distinguished Name configurations
@@ -52,7 +98,7 @@ Major changes on 2024-06-05
 
 Image version: `8-23.05.3-ns.1.0.1`
 
-Addressed security vulnerabily: `GHSA-74xv-ww67-jjpx <https://github.com/NethServer/nethsecurity/security/advisories/GHSA-74xv-ww67-jjpx>`_ (disclosure will be published on 2024-06-20)
+Addressed security vulnerability: `GHSA-74xv-ww67-jjpx <https://github.com/NethServer/nethsecurity/security/advisories/GHSA-74xv-ww67-jjpx>`_ (disclosure will be published on 2024-06-20)
 
 .. rubric:: Bug Fixes
 
