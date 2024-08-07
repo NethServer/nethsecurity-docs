@@ -102,6 +102,7 @@ NethSecurity administrator manual
    smtp
    snmp
    nat_helpers
+   logs
 
 .. toctree::
    :maxdepth: 2
