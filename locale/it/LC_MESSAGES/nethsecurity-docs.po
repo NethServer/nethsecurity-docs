@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-07 06:59+0000\n"
+"POT-Creation-Date: 2024-08-07 12:31+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1105,7 +1105,7 @@ msgstr ""
 "Il periodo di conservazione dei log deve essere configurato "
 "dall'interfaccia web NS8."
 
-#: ../../controller.rst:119 ../../metrics.rst:5
+#: ../../controller.rst:119
 msgid "Metrics"
 msgstr "Metriche"
 
@@ -2357,6 +2357,40 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.4-ns.1.1.99-alpha1-46-g74102e58"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-46-g74102e58/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-46-g74102e58-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-46-g74102e58/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -4050,6 +4084,10 @@ msgid ""
 "this case, NethSecurity always creates multiple child SAs to ensure broad"
 " compatibility with remote devices. The behavior remains the same for "
 "IKEv1 or IKEv2."
+msgstr ""
+
+#: ../../metrics.rst:5
+msgid "Metrics and alerts"
 msgstr ""
 
 #: ../../metrics.rst:7
