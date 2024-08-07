@@ -7,6 +7,9 @@ NethSecurity provides a flexible and powerful backup system to save and restore 
 Access the ``Backup & Restore`` page under the ``System`` section, then click on the :guilabel:`Download backup` button.
 If the machine has a valid Enterprise subscription, the backup is :ref:`automatic <automatic_backup-section>`.
 
+The backup includes all relevant configuration files and also the list of extra packages installed by the user.
+The list is saved in the file ``/etc/backup/installed_packages.txt``.
+
 Backup encryption
 =================
 
