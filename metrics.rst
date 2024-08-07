@@ -1,8 +1,8 @@
 .. _metrics-section:
 
-=======
-Metrics
-=======
+==================
+Metrics and alerts
+==================
 
 NethSecurity uses `netdata <https://www.netdata.cloud/>`_ as monitoring tool.
 Netdata is an open-source, real-time, performance monitoring and troubleshooting tool for systems and applications.
