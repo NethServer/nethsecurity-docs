@@ -137,10 +137,8 @@ USB-to-Ethernet Adapters
 USB-to-Ethernet adapters are not considered suitable for use in a firewall device that is critical to network communication, for this reason the drivers are not included in the NethSecurity image.
 Only for experimental purposes, specific drivers can be installed via the package manager for use in a test environment.
 
-.. note::
-
- It is strongly recommended **not to use these adapters in production environments**.
- For Enterprise/Subscription versions: USB-to-Ethernet adapters **are not covered by Nethesis support**.
+It is strongly recommended **not to use these adapters in production environments**.
+If the unis has an Enterprise or Community subscription, bear in mind that USB-to-Ethernet adapters **are not covered by Nethesis support**.
 
 .. warning::
 
