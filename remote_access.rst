@@ -250,7 +250,7 @@ For this reason, it is possible to download and install drivers for the most com
 
 .. warning::
 
- These packages/kernel modules are not preserved across image upgrades, so in the event of an upgrade, you will need to download and install them again if needed.
+ Extra packages, including kernel modules, are not preserved across image upgrades, so in the event of an upgrade, you will need to download and install them again if needed.
 
 Two packages are provided for installation, covering the vast majority of adapters available on the market.
 ::
