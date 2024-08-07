@@ -32,4 +32,10 @@ And finally, restart the service: ::
 
  /etc/init.d/rsyslog restart
 
+It is possible also to configure other parameters as the rfc using the same syntax: ::
+
+ uci set rsyslog.clm.rfc=5424
+
+The default is TraditionalFileFormat (RFC 3164).
+
 It is possible to configure multiple forwarders by repeating the operation using a different reference.
