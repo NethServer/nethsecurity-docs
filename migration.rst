@@ -21,6 +21,8 @@ Migration scenarios:
 - Migration with other installed modules: if NethServer 7 contains additional modules such as the mail server, suitable hardware is required to run NethSecurity.
   In this case you will need to :ref:`import the configuration <import_migration-section>` on a freshly installed NethSecurity.
 
+Migration from NethServer 6 is not supported. If you are running NethServer 6.x, you must first upgrade to NethServer 7 before migrating to NethSecurity.
+
 Testing the migration
 =====================
 
