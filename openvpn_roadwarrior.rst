@@ -51,6 +51,11 @@ To configure a new OpenVPN server, click :guilabel:`Create Server` button and co
 
 * ``VPN Network``: the virtual network used by clients; every client will receive an IP address taken from this network. NethSecurity already suggests an uncommon network to avoid overlaps with other networks used by the firewall
 
+* ``Dynamic range IP start``: the first IP address that will be assigned to clients connecting to the server; the address must be part of the VPN network.
+  When adding an IP reservation to client, make sure that the IP address is outside the dynamic range.
+
+* ``Dynamic range IP end``: the last IP address that will be assigned to clients connecting to the server
+
 * ``Public IP/hostname of this unit``: NethSecurity automatically fills out this field with the public IP address of each configured WAN interface.
   These IPs/hostnames will go into the client configuration.
   The order of the elements is crucial because the connecting client will start contacting the IPs/hostnames beginning with the first in the list and then progressing down the list in case of unavailability.
@@ -84,13 +89,15 @@ If needed, you can also customize some advanced options:
 
 
 VPN accounts
----------------
+------------
 
 Now that the server has been configured, it is necessary to create the accounts for the connecting clients. To do this, click on :guilabel:`Add VPN Account` and fill out the form:
 
 * ``User``: each account is associated with only one user from the chosen database, select the user for this account
 
-* ``Reserved IP``: specify an IP address that is part of the defined VPN network and will always be assigned to this specific account, this can be very useful for creating firewall rules. Leave it blank to assign a random IP address on every connection.
+* ``Reserved IP``: specify an IP address that is part of the defined VPN network but outside the dynamic range.
+  The entered IP address will always be assigned to this specific account, this can be very useful for creating firewall rules.
+  Leave it blank to assign a random IP address on every connection.
 
 * ``Certificate expiration (days)``: specify a certificate duration (default 3650 days)
 
@@ -103,7 +110,7 @@ Other available actions are:
 
 .. note:: If a client is already connected to the roadwarrior server, the ``Disable`` action on the respective account causes an immediate disconnection from the server, interrupting the communication.
 
-* ``Regenerate certificate``: recreate the personal certificate for the account; if the current certificate has not expired, it will be revoked, and it will be necessary to use the new one. After recreating the certificate, it is necessary to update it on the client by either redownloading the entire configuration or just the certificate.
+* ``Regenerate certificate``: recreate the personal certificate for the account; if the current certificate has not expired, it will be revoked, and it will be necessary to use the new one. After recreating the certificate, it is necessary to update it on the client by either re-downloading the entire configuration or just the certificate.
 
 * ``Delete``: delete the account and its certificate, this operation is irreversible and the certificate is not recoverable.
 
