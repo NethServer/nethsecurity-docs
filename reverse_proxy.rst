@@ -49,8 +49,11 @@ At the firewall's initial startup, a self-signed certificate is automatically ge
 
 The certificate management page allows users to upload custom certificates, request certificates from Let's Encrypt, and manage existing certificates.
 
-The page lists all certificates, highlighting the default certificate. The default certificate is the one automatically served when accessing the
-firewall through its FQDN or IP address.
+The page lists all certificates, highlighting the default certificate.
+To set a certificate as the default certificate, click on the :guilabel:`Set as default` button.
+The default certificate is the one automatically served when accessing the :ref:`web user interface <web_user_interface-section>`, both
+on port 443, :ref:`9090 or custom port <change_ui_port-section>`.
+
 
 Let's Encrypt
 -------------

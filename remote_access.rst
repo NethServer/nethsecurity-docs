@@ -33,6 +33,8 @@ This hostname can be modified in the System Settings section.
 
   The default password for the root user is ``Nethesis,1234``. It is recommended to change the password immediately after logging in for the first time.
 
+.. _web_user_interface-section:
+
 Web user interface
 ==================
 
