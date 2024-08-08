@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-07 12:34+0000\n"
+"POT-Creation-Date: 2024-08-08 07:51+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -111,7 +111,7 @@ msgstr "Dopo il ripristino il sistema verrà riavviato."
 msgid "Automatic backup"
 msgstr "Backup automatico"
 
-#: ../../backup.rst:34 ../../controller.rst:249 ../../dpi_filter.rst:35
+#: ../../backup.rst:34 ../../controller.rst:251 ../../dpi_filter.rst:35
 #: ../../threat_shield_ip.rst:44 ../../updates.rst:39
 #: ../../users_databases.rst:38
 msgid "Subscription required"
@@ -1063,11 +1063,11 @@ msgstr ""
 "unit` sulla pagina ``Controller``: l'unità eliminerà la configurazione "
 "VPN."
 
-#: ../../controller.rst:102
+#: ../../controller.rst:104
 msgid "Logs management"
 msgstr "Gestione dei Log"
 
-#: ../../controller.rst:104
+#: ../../controller.rst:106
 msgid ""
 "When a unit is connected, rsyslog is reconfigured to send logs using the "
 "syslog protocol (RFC 5424). It may take a few minutes before rsyslog "
@@ -1081,15 +1081,15 @@ msgstr ""
 "i collegamenti dell'interfaccia utente funzionino correttamente, "
 "assicurarsi che:"
 
-#: ../../controller.rst:108
+#: ../../controller.rst:110
 msgid "the unit FQDN is unique within the cluster"
 msgstr "FQDN dell'unità è unico all'interno del cluster"
 
-#: ../../controller.rst:109
+#: ../../controller.rst:111
 msgid "the unit's name is the same as its hostname"
 msgstr "il nome dell'unità è uguale all'hostname"
 
-#: ../../controller.rst:111
+#: ../../controller.rst:113
 msgid ""
 "Logs can be viewed by clicking on the :guilabel:`Open logs` link for each"
 " unit. The logs are displayed in a specific Grafana dashboard that also "
@@ -1099,17 +1099,17 @@ msgstr ""
 "logs` per ogni unità. I log vengono visualizzati in una specifica "
 "dashboard Grafana che consente anche la ricerca e il filtraggio."
 
-#: ../../controller.rst:115
+#: ../../controller.rst:117
 msgid "Logs retention period must be configured from the NS8 web interface."
 msgstr ""
 "Il periodo di conservazione dei log deve essere configurato "
 "dall'interfaccia web NS8."
 
-#: ../../controller.rst:119
+#: ../../controller.rst:121
 msgid "Metrics"
 msgstr "Metriche"
 
-#: ../../controller.rst:121
+#: ../../controller.rst:123
 msgid ""
 "Each unit exports its own statistics using netdata in the Prometheus "
 "format. As soon as a unit is connected, Prometheus starts scraping the "
@@ -1119,7 +1119,7 @@ msgstr ""
 " Prometheus. Non appena un'unità è collegata, Prometheus inizia ad "
 "estrarre le metriche."
 
-#: ../../controller.rst:124
+#: ../../controller.rst:126
 msgid ""
 "The metrics can be viewed within the Grafana dashboard. Users can access "
 "the dashboard by clicking on the :guilabel:`Open metrics` link for each "
@@ -1129,11 +1129,11 @@ msgstr ""
 "Grafana. Gli utenti possono accedere alla dashboard cliccando sul link "
 ":guilabel: `Open metrics` dell'unità."
 
-#: ../../controller.rst:127
+#: ../../controller.rst:129
 msgid "Each unit target has the following labels:"
 msgstr "Ogni unità ha le seguenti etichette:"
 
-#: ../../controller.rst:129
+#: ../../controller.rst:131
 msgid ""
 "`instance` the VPN IP of the connected machine with the netdata port (eg."
 " `172.19.64.3:19999`)"
@@ -1141,20 +1141,20 @@ msgstr ""
 "`instance` l'indirizzo IP VPN della macchina collegata seguito dalla "
 "porta di netdata (ad esempio `172.19.64.3:19999`)"
 
-#: ../../controller.rst:130
+#: ../../controller.rst:132
 #, fuzzy
 msgid "`job` fixed to `node`"
 msgstr "`job` fisso a `node `"
 
-#: ../../controller.rst:131
+#: ../../controller.rst:133
 msgid "`node` the VPN IP of the connected machine"
 msgstr "`nodo` indirizzo IP VPN della macchina collegata"
 
-#: ../../controller.rst:132
+#: ../../controller.rst:134
 msgid "`unit` the unit unique name of the connected machine"
 msgstr "`unità` il nome univoco dell'unità della macchina collegata"
 
-#: ../../controller.rst:134
+#: ../../controller.rst:136
 msgid ""
 "By default, only the admin user can access the metrics dashboard. If you "
 "want to allow other users to access the metrics dashboard, you can create"
@@ -1166,17 +1166,17 @@ msgstr ""
 "possibile creare un nuovo ruolo e assegnarlo all'utente direttamente "
 "dall'interfaccia web Grafana."
 
-#: ../../controller.rst:139
+#: ../../controller.rst:141
 msgid "Metrics retention period must be configured from the NS8 web interface."
 msgstr ""
 "Il periodo di conservazione delle metriche deve essere configurato "
 "dall'interfaccia web NS8."
 
-#: ../../controller.rst:142
+#: ../../controller.rst:144
 msgid "Grafana"
 msgstr "Grafana"
 
-#: ../../controller.rst:144
+#: ../../controller.rst:146
 msgid ""
 "Grafana is an open-source platform used for monitoring and visualizing "
 "time-series data. It helps users create customizable dashboards with "
@@ -1188,7 +1188,7 @@ msgstr ""
 "creare dashboard personalizzabili con grafici, grafici e tabelle per "
 "analizzare metriche di sistema, log e altri dati da varie fonti."
 
-#: ../../controller.rst:147
+#: ../../controller.rst:149
 msgid ""
 "The controller includes a pre-configured Grafana instance that is used to"
 " visualize metrics and logs from the connected units. The Grafana "
@@ -1200,7 +1200,7 @@ msgstr ""
 "L'istanza Grafana è accessibile dall'URL ``https:// <controller-"
 "fqdn>/grafana`."
 
-#: ../../controller.rst:150
+#: ../../controller.rst:152
 msgid ""
 "By default, you can access it by using default credentials set during the"
 " controller configuration. Remember to change the default password after "
@@ -1215,7 +1215,7 @@ msgstr ""
 "l'autenticazione tramite vari metodi, tra cui nome utente / password, "
 "OAuth, LDAP, e altro ancora."
 
-#: ../../controller.rst:155
+#: ../../controller.rst:157
 msgid ""
 "You can also create custom dashboards and alerts to monitor the metrics "
 "and logs from the connected units. See the `official documentation "
@@ -1227,11 +1227,11 @@ msgstr ""
 "informazioni su come utilizzare Grafana, consultare la documentazione "
 "ufficiale <https://grafana.com/docs/grafana/latest/>`_."
 
-#: ../../controller.rst:159
+#: ../../controller.rst:161
 msgid "SSH access"
 msgstr "Accesso SSH"
 
-#: ../../controller.rst:161
+#: ../../controller.rst:163
 msgid ""
 "SSH, or Secure Shell, is a cryptographic network protocol for operating "
 "network services securely over an unsecured network. SSH provides a "
@@ -1243,7 +1243,7 @@ msgstr ""
 "fornisce un canale sicuro su una rete non protetta in un'architettura "
 "client-server, collegando un'applicazione client SSH a un server SSH."
 
-#: ../../controller.rst:164
+#: ../../controller.rst:166
 msgid ""
 "It is possible to connect to the unit by clicking on the :guilabel:`Open "
 "SSH terminal` link. The connection is made through a web-based SSH client"
@@ -1253,13 +1253,13 @@ msgstr ""
 "terminal`. La connessione avviene tramite un client SSHweb based che "
 "consente l'accesso alla shell dell'unità."
 
-#: ../../controller.rst:167
+#: ../../controller.rst:169
 msgid "You can connect to units using username and password or an SSH key pair."
 msgstr ""
 "È possibile connettersi a unità utilizzando nome utente e password oppure"
 " una coppia di chiavi SSH."
 
-#: ../../controller.rst:169
+#: ../../controller.rst:171
 msgid ""
 "Once connected, the SSH session will be started inside a new browser tab."
 " Some browsers require the permission to open popups for the SSH session "
@@ -1272,11 +1272,11 @@ msgstr ""
 "sessione, basta chiudere la finestra del browser o il logout dalla shell "
 "utilizzando CTRL + D."
 
-#: ../../controller.rst:173
+#: ../../controller.rst:175
 msgid "Username and password"
 msgstr "Utente e password"
 
-#: ../../controller.rst:175
+#: ../../controller.rst:177
 msgid ""
 "The user can connect using a username and password of the unit in the "
 "following scenarios: - The logged-in user has not generated an SSH key "
@@ -1288,7 +1288,7 @@ msgstr ""
 "coppia di chiavi SSH - La chiave SSH pubblica dell'utente connesso non è "
 "stata copiata all'interno del file di chiavi autorizzate SSH dell'unità"
 
-#: ../../controller.rst:179
+#: ../../controller.rst:181
 msgid ""
 "The user interface will display a form to enter the username and "
 "password. After entering the credentials, the user can click on the "
@@ -1298,11 +1298,11 @@ msgstr ""
 " la password. Dopo aver inserito le credenziali, l'utente può cliccare "
 "sul link :guilabel: `Apri terminale` per avviare la sessione SSH."
 
-#: ../../controller.rst:183
+#: ../../controller.rst:185
 msgid "SSH key"
 msgstr "Chiave SSH"
 
-#: ../../controller.rst:185
+#: ../../controller.rst:187
 msgid ""
 "An SSH key pair is a set of two cryptographic keys that are used for "
 "authentication when establishing a secure connection using the SSH "
@@ -1314,7 +1314,7 @@ msgstr ""
 "connessione sicura utilizzando il protocollo SSH (Secure Shell). La "
 "coppia è composta da una chiave privata e da una chiave pubblica:"
 
-#: ../../controller.rst:188
+#: ../../controller.rst:190
 msgid ""
 "**Private Key**: This is kept secret and secure by the user. It should "
 "never be exposed to the outside world. It is used to decrypt data that "
@@ -1324,7 +1324,7 @@ msgstr ""
 " dovrebbe mai essere esposta al mondo esterno. Viene utilizzata per "
 "decifrare i dati che sono stati crittografati con la chiave pubblica."
 
-#: ../../controller.rst:190
+#: ../../controller.rst:192
 msgid ""
 "**Public Key**: This can be freely shared and is used to encrypt data "
 "that can only be decrypted with the private key."
@@ -1333,7 +1333,7 @@ msgstr ""
 "crittografare i dati che possono essere decifrati solo con la chiave "
 "privata."
 
-#: ../../controller.rst:192
+#: ../../controller.rst:194
 msgid ""
 "When you connect to a server using SSH with key pair authentication, you "
 "provide your public key to the server. The server then encrypts a "
@@ -1349,7 +1349,7 @@ msgstr ""
 " risultato è corretto, il server sa che è necessario avere la chiave "
 "privata corretta per permettere la connessione."
 
-#: ../../controller.rst:196
+#: ../../controller.rst:198
 msgid ""
 "This method of authentication is more secure than using a password, as it"
 " provides a form of two-factor authentication: something you have (the "
@@ -1361,7 +1361,7 @@ msgstr ""
 "hai (il file chiave privata) e qualcosa che sai (la passphrase per "
 "sbloccare la chiave privata)."
 
-#: ../../controller.rst:199
+#: ../../controller.rst:201
 msgid ""
 "To use an SSH key, generate a new key pair by accessing the ``Account "
 "settings`` page and and clicking on the :guilabel:`Generate SSH key pair`"
@@ -1377,7 +1377,7 @@ msgstr ""
 "visualizzerà la chiave pubblica, mentre la chiave privata viene "
 "conservata in sicurezza all'interno del controller."
 
-#: ../../controller.rst:203
+#: ../../controller.rst:205
 msgid ""
 "Before connecting to the unit, you must copy the public key and paste it "
 "into the unit's SSH authorized keys file. You can do it from the ``Unit "
@@ -1392,7 +1392,7 @@ msgstr ""
 "alle quali si desidera inviare la chiave e cliccare sul:guilabel: `Send "
 "SSH key` pulsante."
 
-#: ../../controller.rst:207
+#: ../../controller.rst:209
 msgid ""
 "From now on, you can connect to the unit using the SSH key pair. The user"
 " interface will display a form to enter the passphrase when clicking on "
@@ -1402,7 +1402,7 @@ msgstr ""
 "di tasti SSH. L'interfaccia utente visualizzerà un modulo per inserire la"
 " passphrase quando si fa clic su :guilabel: ` Pulsante open terminal`."
 
-#: ../../controller.rst:210
+#: ../../controller.rst:212
 msgid ""
 "You can also revoke the SSH key pair by clicking on the :guilabel:`Revoke"
 " SSH public key` button from the :guilabel:`Actions` button."
@@ -1410,11 +1410,11 @@ msgstr ""
 "È inoltre possibile revocare la coppia di tasti SSH cliccando sul tasto: "
 "`Actions` ."
 
-#: ../../controller.rst:213
+#: ../../controller.rst:215
 msgid "Accounting"
 msgstr ""
 
-#: ../../controller.rst:215
+#: ../../controller.rst:217
 msgid ""
 "All operations performed on the controller are logged in the NS8 log. "
 "Here are some examples of logged operations:"
@@ -1422,23 +1422,23 @@ msgstr ""
 "Tutte le operazioni eseguite sul controller sono registrate nel registro "
 "NS8. Alcuni esempi di operazioni registrate sono:"
 
-#: ../../controller.rst:217
+#: ../../controller.rst:219
 msgid "User login and logout"
 msgstr "Accesso utente e logout"
 
-#: ../../controller.rst:218
+#: ../../controller.rst:220
 msgid "User creation/modification/deletion/password change"
 msgstr "Creazione/modifica/eliminazione dell'utente e cambiamento delle password"
 
-#: ../../controller.rst:219
+#: ../../controller.rst:221
 msgid "Unit list/creation/removal"
 msgstr "lista/creazione/rimozione delle unità"
 
-#: ../../controller.rst:221
+#: ../../controller.rst:223
 msgid "Example of NS8 log: ::"
 msgstr "Esempio di log di NS8::"
 
-#: ../../controller.rst:226
+#: ../../controller.rst:228
 msgid ""
 "Each unit has an rpcd user specific to the controller, which is used for "
 "management operations. When a user accesses the unit's web interface from"
@@ -1451,7 +1451,7 @@ msgstr ""
 "eseguite sono registrate nel registro dell'unità, identificate "
 "dall'utente rpcd. Per esempio:"
 
-#: ../../controller.rst:232
+#: ../../controller.rst:234
 msgid ""
 "To determine who performed a specific operation, it is necessary to check"
 " the log of the unit identified by the rpcd user and correlate it with "
@@ -1461,7 +1461,7 @@ msgstr ""
 "controllare il registro dell'unità identificata dall'utente rpcd e "
 "correlare con l'azione di login eseguita sul controller."
 
-#: ../../controller.rst:235
+#: ../../controller.rst:237
 msgid ""
 "When a user connects to the unit via SSH, the login is logged in the "
 "unit's log, identified by the SSH user. Usually, the SSH user is root. "
@@ -1471,7 +1471,7 @@ msgstr ""
 "registrato nel registro dell'unità, identificato dall'utente SSH. Di "
 "solito, l'utente SSH è root. Per esempio:"
 
-#: ../../controller.rst:240
+#: ../../controller.rst:242
 msgid ""
 "If the user uses an SSH key for authentication, the log will contain the "
 "fingerprint of the SSH key used for authentication. This makes it easier "
@@ -1482,11 +1482,11 @@ msgstr ""
 "Ciò rende più facile associare l'utente SSH alle operazioni eseguite. "
 "Esempio:"
 
-#: ../../controller.rst:247
+#: ../../controller.rst:249
 msgid "Subscription and limitations"
 msgstr "Abbonamento e limitazioni"
 
-#: ../../controller.rst:251
+#: ../../controller.rst:253
 msgid ""
 "Some restrictions can only be overcomed if the firewall has a valid "
 "subscription."
@@ -1494,33 +1494,33 @@ msgstr ""
 "Alcune restrizioni possono essere rimosse solo se il firewall ha un "
 "abbonamento valido."
 
-#: ../../controller.rst:253
+#: ../../controller.rst:255
 msgid ""
 "The behavior of the controller running on a NS8 depends on its "
 "subscription status."
 msgstr ""
 
-#: ../../controller.rst:255
+#: ../../controller.rst:257
 msgid "Controller without subscription:"
 msgstr ""
 
-#: ../../controller.rst:257
+#: ../../controller.rst:259
 msgid "Allows the registration of up to 3 units."
 msgstr ""
 
-#: ../../controller.rst:258
+#: ../../controller.rst:260
 msgid "Only community firewalls can register with the controller."
 msgstr ""
 
-#: ../../controller.rst:260
+#: ../../controller.rst:262
 msgid "Controller with a valid subscription:"
 msgstr ""
 
-#: ../../controller.rst:262
+#: ../../controller.rst:264
 msgid "The number of units is unlimited."
 msgstr ""
 
-#: ../../controller.rst:263
+#: ../../controller.rst:265
 msgid "Only firewalls with a valid subscription can register with the controller."
 msgstr ""
 
@@ -2360,6 +2360,23 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.4-ns.1.1.99-alpha1-52-g3c027914"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-52-g3c027914/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-52-g3c027914-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-52-g3c027914/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.4-ns.1.1.99-alpha1-46-g74102e58"
 msgstr ""
 
@@ -2391,57 +2408,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.1.99-alpha1-40-gf56aa29f"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-40-gf56aa29f/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-40-gf56aa29f-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-40-gf56aa29f/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.1.99-alpha1-39-gef4832f6"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-39-gef4832f6/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-39-gef4832f6-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-39-gef4832f6/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3530,7 +3496,7 @@ msgstr ""
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:106
+#: ../../index.rst:107
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -4084,6 +4050,81 @@ msgid ""
 "this case, NethSecurity always creates multiple child SAs to ensure broad"
 " compatibility with remote devices. The behavior remains the same for "
 "IKEv1 or IKEv2."
+msgstr ""
+
+#: ../../logs.rst:5
+msgid "Logs"
+msgstr ""
+
+#: ../../logs.rst:7
+msgid ""
+"Logs are initially written to a temporary in-memory directory to prevent "
+"potential errors on the root file system in case of a failure."
+msgstr ""
+
+#: ../../logs.rst:9
+msgid ""
+"**Local Storage**: Logs can be written directly to storage. This can be "
+"configured from the UI, see the :ref:`storage-section`."
+msgstr ""
+
+#: ../../logs.rst:11
+msgid ""
+"**Remote Controller**: Logs can be automatically forwarded to a "
+":ref:`remote controller <controller_logs-section>`."
+msgstr ""
+
+#: ../../logs.rst:13
+msgid "**Custom Syslog Forwarder**: Logs can be sent to a remote syslog server."
+msgstr ""
+
+#: ../../logs.rst:15
+msgid "The next paragraph will explain how to configure this latter option."
+msgstr ""
+
+#: ../../logs.rst:18
+msgid "Forwarding to a remote server"
+msgstr ""
+
+#: ../../logs.rst:20
+msgid ""
+"It is sufficient to configure the UCI database with the desired options, "
+"then commit the changes, and finally restart the service. Temporary logs "
+"will continue to be visible in ``/var/log/messages`` and will also be "
+"sent to the remote server."
+msgstr ""
+
+#: ../../logs.rst:23
+msgid "Most syslog servers are configured to listen on UDP port 514 by default."
+msgstr ""
+
+#: ../../logs.rst:25
+msgid ""
+"Example configuration for sending logs to the syslog server with IP "
+"192.168.1.88 on UDP port 514. The configuration is named ``clm`` (custom "
+"log manager):"
+msgstr ""
+
+#: ../../logs.rst:36
+msgid "Once configured, simply commit the changes with the command: ::"
+msgstr ""
+
+#: ../../logs.rst:40
+#, fuzzy
+msgid "And finally, restart the service: ::"
+msgstr "Poi riavvia il servizio DDNS::"
+
+#: ../../logs.rst:44
+msgid ""
+"By default the forwarder uses the TraditionalFileFormat (RFC 3164) for "
+"the logs. It is possible also to configure RFC 5424 using the same "
+"syntax: ::"
+msgstr ""
+
+#: ../../logs.rst:49
+msgid ""
+"It is possible to configure multiple forwarders by repeating the "
+"operation using a different configuration name like ``clm2``."
 msgstr ""
 
 #: ../../metrics.rst:5
@@ -16632,5 +16673,47 @@ msgstr ""
 #~ "controlling which external devices are "
 #~ "allowed to connect to the internal "
 #~ "service."
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.1.99-alpha1-40-gf56aa29f"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-40-gf56aa29f/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-40-gf56aa29f-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-40-gf56aa29f/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.1.99-alpha1-39-gef4832f6"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-39-gef4832f6/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-39-gef4832f6-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-39-gef4832f6/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
