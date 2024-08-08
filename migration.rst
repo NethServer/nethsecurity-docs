@@ -161,3 +161,15 @@ The following features are not migrated to NethSecurity:
 - Bandwidth monitor (ntopng)
 - Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block feature <brute_force-section>`
 - Threat shield DNS, currently :ref:`available only from command line <threat_shield_dns-section>`
+
+USB-to-Ethernet adapters
+========================
+It may rarely happen that the NethServer 7 being migrated has a USB to Ethernet adapter connected to add a network device. These adapters should not be used in a firewall and are **not supported on NethSecurity 8**. However, it is possible to install certain specific drivers for experimental purposes, not for production environments. These drivers might be useful for temporarily managing the migrated firewall while awaiting hardware with all the necessary network cards. More information can be found in the :ref:`network section <network-section>`.
+
+.. warning::
+
+  If you are using these adapters, remember that they will not work until the correct driver is installed. Keep in mind that NethSecurity 8 may not have the correct driver for the adapter you are using on NethServer 7. In this case, you will need to use a different adapter.
+
+.. note::
+
+ If you are using a USB to Ethernet adapter for a RED/WAN interface, be aware that you won't be able to download the necessary modules to make it work properly on NethSecurity 8 unless you have other RED/WAN interfaces running on network cards directly connected to the motherboard.
