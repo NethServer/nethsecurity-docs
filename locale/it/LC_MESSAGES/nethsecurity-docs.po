@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-08 07:51+0000\n"
+"POT-Creation-Date: 2024-08-08 08:02+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -4723,6 +4723,38 @@ msgid ""
 "<threat_shield_dns-section>`"
 msgstr ""
 
+#: ../../migration.rst:166
+msgid "USB-to-Ethernet adapters"
+msgstr ""
+
+#: ../../migration.rst:167
+msgid ""
+"It may rarely happen that the NethServer 7 being migrated has a USB to "
+"Ethernet adapter connected to add a network device. These adapters should"
+" not be used in a firewall and are **not supported on NethSecurity 8**. "
+"However, it is possible to install certain specific drivers for "
+"experimental purposes, not for production environments. These drivers "
+"might be useful for temporarily managing the migrated firewall while "
+"awaiting hardware with all the necessary network cards. More information "
+"can be found in the :ref:`network section <network-section>`."
+msgstr ""
+
+#: ../../migration.rst:171
+msgid ""
+"If you are using these adapters, remember that they will not work until "
+"the correct driver is installed. Keep in mind that NethSecurity 8 may not"
+" have the correct driver for the adapter you are using on NethServer 7. "
+"In this case, you will need to use a different adapter."
+msgstr ""
+
+#: ../../migration.rst:175
+msgid ""
+"If you are using a USB to Ethernet adapter for a RED/WAN interface, be "
+"aware that you won't be able to download the necessary modules to make it"
+" work properly on NethSecurity 8 unless you have other RED/WAN interfaces"
+" running on network cards directly connected to the motherboard."
+msgstr ""
+
 #: ../../multiwan.rst:3
 msgid "MultiWAN"
 msgstr "MultiWAN"
@@ -6328,6 +6360,70 @@ msgid ""
 "an IPv6 prefix (usually a /64) from your ISP through DHCPv6-PD. This "
 "prefix will then be used to assign individual IPv6 addresses to devices "
 "on your network."
+msgstr ""
+
+#: ../../network.rst:135
+msgid "USB-to-Ethernet Adapters"
+msgstr ""
+
+#: ../../network.rst:137
+msgid ""
+"USB-to-Ethernet adapters are not considered suitable for use in a "
+"firewall device that is critical to network communication, for this "
+"reason the drivers are not included in the NethSecurity image. Only for "
+"experimental purposes, specific drivers can be installed via the package "
+"manager for use in a test environment."
+msgstr ""
+
+#: ../../network.rst:140
+msgid ""
+"It is strongly recommended **not to use these adapters in production "
+"environments**. If the unis has an Enterprise or Community subscription, "
+"bear in mind that USB-to-Ethernet adapters **are not covered by Nethesis "
+"support**."
+msgstr ""
+
+#: ../../network.rst:145 ../../remote_access.rst:253
+msgid ""
+"Extra packages, including kernel modules, are not preserved across image "
+"upgrades, so in the event of an upgrade, you will need to download and "
+"install them again if needed."
+msgstr ""
+
+#: ../../network.rst:148
+msgid "How to install USB-to-Ethernet modules"
+msgstr ""
+
+#: ../../network.rst:150
+msgid ""
+"These packages can be installed from the command line console, just find "
+"the correct module and install it."
+msgstr ""
+
+#: ../../network.rst:152
+msgid ""
+"Verify the ethernet adapter is connected to USB using ``lsusb``.Output "
+"example:"
+msgstr ""
+
+#: ../../network.rst:161
+msgid "Search for the the kernel module:"
+msgstr ""
+
+#: ../../network.rst:167
+msgid "Output example:"
+msgstr ""
+
+#: ../../network.rst:183
+msgid "Install the right driver:"
+msgstr ""
+
+#: ../../network.rst:188
+msgid "Verify a new ethX interface appears using ``ifconfig -a``"
+msgstr ""
+
+#: ../../network.rst:189
+msgid "Configure the ethernet from the UI"
 msgstr ""
 
 #: ../../objects.rst:3
@@ -9956,6 +10052,72 @@ msgstr ""
 
 #: ../../remote_access.rst:226
 msgid "To obtain the list of available keymaps, execute the following command: ::"
+msgstr ""
+
+#: ../../remote_access.rst:231
+msgid "Serial console"
+msgstr ""
+
+#: ../../remote_access.rst:233
+msgid ""
+"If the machine has a serial port (RS-232, tipically available with DE-9 "
+"connector or RJ45/8P8C connector) it's possible to access the firewall "
+"directly through it using a null-modem cable and a terminal program. "
+"``PuTTY`` (version 0.60 or higher) is a common choice if you are using "
+"Microsoft Windows, while Linux distros offer tools as ``minicom``, "
+"``picocom``, or ``screen``."
+msgstr ""
+
+#: ../../remote_access.rst:236
+msgid "Default acces parameters for NethSecurity 8 are:"
+msgstr ""
+
+#: ../../remote_access.rst:238
+msgid "Baud rate: 115200,"
+msgstr ""
+
+#: ../../remote_access.rst:239
+msgid "Data bits:8"
+msgstr ""
+
+#: ../../remote_access.rst:240
+msgid "Parity :None"
+msgstr ""
+
+#: ../../remote_access.rst:241
+msgid "Stop bits to 1"
+msgstr ""
+
+#: ../../remote_access.rst:243
+msgid "These last three parameters are often abbreviated as 8N1"
+msgstr ""
+
+#: ../../remote_access.rst:246
+msgid "USB-to-Serial Adapters"
+msgstr ""
+
+#: ../../remote_access.rst:248
+msgid ""
+"In case of need, NethSecurity can be used to access another server via "
+"the serial console. If the hardware does not have an RS-232 port, USB-to-"
+"serial adapters can be used. For this reason, it is possible to download "
+"and install drivers for the most common adapters on NethSecurity. These "
+"drivers are provided as-is and are **not supported by Nethesis** (if "
+"using an Enterprise or Subscription version)."
+msgstr ""
+
+#: ../../remote_access.rst:255
+msgid ""
+"Two packages are provided for installation, covering the vast majority of"
+" adapters available on the market. ::"
+msgstr ""
+
+#: ../../remote_access.rst:261
+msgid "To install Prolific PL2303 driver:"
+msgstr ""
+
+#: ../../remote_access.rst:266
+msgid "The logs will show an output similar to this:"
 msgstr ""
 
 #: ../../remote_support.rst:5
