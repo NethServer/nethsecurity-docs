@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-08 08:02+0000\n"
+"POT-Creation-Date: 2024-08-08 08:04+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -4606,6 +4606,15 @@ msgid "Port forwards"
 msgstr "inoltro porte"
 
 #: ../../migration.rst:138
+msgid ""
+"Firewall zones: zones are migrated and should retain the same behavior of"
+" the original configuration: green zones will be mapped to ``lan``, red "
+"zones to ``wan``, orange zones to ``dmz``, and blue zones to ``guest`` "
+"zones; if a blue zone was present on NethServer 7, rules for accepting "
+"DNS and DHCP requests will be automatically added"
+msgstr ""
+
+#: ../../migration.rst:141
 #, fuzzy
 msgid ""
 "Firewall rules: rules using NDPI services are not supported; source and "
@@ -4618,17 +4627,17 @@ msgstr ""
 "supportati e verranno convertiti in regole con indirizzi IP/CIDR; i NAT "
 "helpers dovrebbero essere riconfigurati manualmente dopo la migrazione"
 
-#: ../../migration.rst:140
+#: ../../migration.rst:143
 msgid ""
 "MultiWAN configuration: providers will be preserved while divert rules "
 "(policy routing) are not migrated"
 msgstr ""
 
-#: ../../migration.rst:141
+#: ../../migration.rst:144
 msgid "QoS: classes with reserved bandwidth and rules are not supported"
 msgstr "QoS: classi con larghezza di banda riservata e regole non sono supportate"
 
-#: ../../migration.rst:142
+#: ../../migration.rst:145
 msgid ""
 "OpenVPN Road Warrior: all settings are migrated; the accounting database "
 "of client connections is not migrated; mail notification is still not "
@@ -4637,27 +4646,27 @@ msgid ""
 "against it, please see also :ref:`remote_user_databases-section`."
 msgstr ""
 
-#: ../../migration.rst:144 ../../openvpn_tunnels.rst:5
+#: ../../migration.rst:147 ../../openvpn_tunnels.rst:5
 msgid "OpenVPN tunnels"
 msgstr "Tunnel OpenVPN"
 
-#: ../../migration.rst:145
+#: ../../migration.rst:148
 msgid "IPSec tunnels"
 msgstr "tunnel IPSec"
 
-#: ../../migration.rst:146
+#: ../../migration.rst:149
 msgid ""
 "Threat shield IP: only enterprise lists are migrated, community lists "
 "must be reconfigured manually"
 msgstr ""
 
-#: ../../migration.rst:147
+#: ../../migration.rst:150
 msgid ""
 "Subscription: the subscription is migrated only when using the exported "
 "archive method"
 msgstr ""
 
-#: ../../migration.rst:148
+#: ../../migration.rst:151
 msgid ""
 "Hotspot: if the migration has been executed on a new hardware, the "
 "hotspot interface will change MAC address and it must be registered again"
@@ -4667,67 +4676,67 @@ msgstr ""
 "l'interfaccia hotspot cambierà indirizzo MAC e dovrà essere nuovamente "
 "registrata presso il gestore hotspot remoto"
 
-#: ../../migration.rst:150
+#: ../../migration.rst:153
 msgid ""
 "Let's Encrypt certificate configuration: certificates will be regenerated"
 " after the migration"
 msgstr ""
 
-#: ../../migration.rst:151
+#: ../../migration.rst:154
 msgid ""
 "Reverse proxy configuration: the configuration is migrated, but the "
 "certificates will be regenerated after the migration"
 msgstr ""
 
-#: ../../migration.rst:152
+#: ../../migration.rst:155
 msgid "FlashStart Cloud DNS filter"
 msgstr ""
 
-#: ../../migration.rst:154
+#: ../../migration.rst:157
 msgid "The following features are not migrated to NethSecurity:"
 msgstr "Le seguenti funzionalità non vengono migrate su NethSecurity:"
 
-#: ../../migration.rst:156
+#: ../../migration.rst:159
 msgid "Web proxy (Squid) and filter (ufdbGuard)"
 msgstr "Proxy web (Squid) e filtro (ufdbGuard)"
 
-#: ../../migration.rst:157
+#: ../../migration.rst:160
 msgid "IPS (Suricata) and IPS alerts (EveBox)"
 msgstr "IPS (Suricata) e avvisi IPS (EveBox)"
 
-#: ../../migration.rst:158
+#: ../../migration.rst:161
 msgid "UPS monitoring (NUT)"
 msgstr "Monitoraggio UPS (NUT)"
 
-#: ../../migration.rst:159
+#: ../../migration.rst:162
 msgid "System statistics (Collectd)"
 msgstr "Statistiche di sistema (Collectd)"
 
-#: ../../migration.rst:160
+#: ../../migration.rst:163
 msgid "Reports (Dante)"
 msgstr "Report (Dante)"
 
-#: ../../migration.rst:161
+#: ../../migration.rst:164
 msgid "Bandwidth monitor (ntopng)"
 msgstr "Monitoraggio della larghezza di banda (ntopng)"
 
-#: ../../migration.rst:162
+#: ../../migration.rst:165
 msgid ""
 "Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block"
 " feature <brute_force-section>`"
 msgstr ""
 
-#: ../../migration.rst:163
+#: ../../migration.rst:166
 msgid ""
 "Threat shield DNS, currently :ref:`available only from command line "
 "<threat_shield_dns-section>`"
 msgstr ""
 
-#: ../../migration.rst:166
+#: ../../migration.rst:169
 msgid "USB-to-Ethernet adapters"
 msgstr ""
 
-#: ../../migration.rst:167
+#: ../../migration.rst:170
 msgid ""
 "It may rarely happen that the NethServer 7 being migrated has a USB to "
 "Ethernet adapter connected to add a network device. These adapters should"
@@ -4739,7 +4748,7 @@ msgid ""
 "can be found in the :ref:`network section <network-section>`."
 msgstr ""
 
-#: ../../migration.rst:171
+#: ../../migration.rst:174
 msgid ""
 "If you are using these adapters, remember that they will not work until "
 "the correct driver is installed. Keep in mind that NethSecurity 8 may not"
@@ -4747,7 +4756,7 @@ msgid ""
 "In this case, you will need to use a different adapter."
 msgstr ""
 
-#: ../../migration.rst:175
+#: ../../migration.rst:178
 msgid ""
 "If you are using a USB to Ethernet adapter for a RED/WAN interface, be "
 "aware that you won't be able to download the necessary modules to make it"
@@ -4993,12 +5002,14 @@ msgstr ""
 "facile identificazione."
 
 #: ../../multiwan.rst:57
+#, fuzzy
 msgid ""
 "Specify traffic type: define the criteria for the traffic you want to "
 "customize. This can include the source IP address, destination IP "
 "address, specific protocols, ports, or any combination of these factors. "
 "By specifying these parameters, you narrow down the scope of the rule to "
-"a specific type of traffic."
+"a specific type of traffic. With the Source Address and Destination "
+"Address fields, you can pick from the following options:"
 msgstr ""
 "Specifica il tipo di traffico: definisci i criteri per il traffico che "
 "desideri personalizzare. Ciò può includere l'indirizzo IP di origine, "
@@ -5006,7 +5017,23 @@ msgstr ""
 "combinazione di questi fattori. Specificando questi parametri, riduci "
 "l'influenza della regola a un tipo specifico di traffico."
 
-#: ../../multiwan.rst:60
+#: ../../multiwan.rst:61
+msgid ""
+"Enter an address or range: specify a single IP address or a CIDR. Only "
+"IPv4 is supported."
+msgstr ""
+
+#: ../../multiwan.rst:62
+msgid "Any address: select this option to match any address."
+msgstr ""
+
+#: ../../multiwan.rst:63
+msgid ""
+"Select a firewall object: choose from the list of predefined firewall "
+"objects."
+msgstr ""
+
+#: ../../multiwan.rst:65
 msgid ""
 "Select the created policy for this traffic type: choose the custom policy"
 " you created in the first step as the routing preference for this "
@@ -5021,7 +5048,7 @@ msgstr ""
 "definito in base alle impostazioni specificate all'interno di quella "
 "policy."
 
-#: ../../multiwan.rst:63
+#: ../../multiwan.rst:68
 msgid ""
 "``Sticky`` option: The sticky option of a rule ensures that traffic "
 "originating from the same source IP always exits through the same WAN for"
@@ -5030,31 +5057,31 @@ msgid ""
 "used for HTTPS traffic (443/TCP)."
 msgstr ""
 
-#: ../../multiwan.rst:65
+#: ../../multiwan.rst:70
 msgid "The following are the available options for defining traffic ports:"
 msgstr ""
 
-#: ../../multiwan.rst:67
+#: ../../multiwan.rst:72
 msgid "``<port>``: Single port"
 msgstr ""
 
-#: ../../multiwan.rst:68
+#: ../../multiwan.rst:73
 msgid "``<port>,<port>``: List of ports"
 msgstr ""
 
-#: ../../multiwan.rst:69
+#: ../../multiwan.rst:74
 msgid "``<port>-<endport>``: Range from <port> to <endport>"
 msgstr ""
 
-#: ../../multiwan.rst:72
+#: ../../multiwan.rst:77
 msgid "General settings"
 msgstr "Impostazioni generali"
 
-#: ../../multiwan.rst:74
+#: ../../multiwan.rst:79
 msgid "NethSecurity monitors each WAN connection using repeated ICMP tests."
 msgstr "NethSecurity monitora ogni connessione WAN utilizzando test ICMP ripetuti."
 
-#: ../../multiwan.rst:76
+#: ../../multiwan.rst:81
 msgid ""
 "The ``General settings`` page allow users to specify the following "
 "parameters:"
@@ -5062,7 +5089,7 @@ msgstr ""
 "La pagina`` Impostazioni generali`` consente agli utenti di specificare i"
 " seguenti parametri:"
 
-#: ../../multiwan.rst:78
+#: ../../multiwan.rst:83
 msgid ""
 "List of hosts to monitor: users can define a list of hosts (computers, "
 "servers, or devices) that the system will monitor for connectivity "
@@ -5074,7 +5101,7 @@ msgstr ""
 "stato della connettività. Questi host vengono controllati per assicurarsi"
 " che siano raggiungibili attraverso la rete."
 
-#: ../../multiwan.rst:80
+#: ../../multiwan.rst:85
 msgid ""
 "Number of ICMP packets (pings) to send: users can set the number of ICMP "
 "(Internet Control Message Protocol) packets to be sent during each "
@@ -5086,7 +5113,7 @@ msgstr ""
 "inviare durante ogni test di monitoraggio. Impostando il numero di "
 "pacchetti, gli utenti possono controllare l'intensità del monitoraggio."
 
-#: ../../multiwan.rst:82
+#: ../../multiwan.rst:87
 msgid ""
 "Determining unreachability after how many failed tests:  users can "
 "configure the system to determine when a WAN connection should be "
@@ -5100,11 +5127,11 @@ msgstr ""
 "specificando una soglia: dopo quanti test consecutivi falliti la "
 "connessione WAN è considerata irraggiungibile."
 
-#: ../../multiwan.rst:87
+#: ../../multiwan.rst:92
 msgid "Reset configuration"
 msgstr "Ripristina configurazione"
 
-#: ../../multiwan.rst:91
+#: ../../multiwan.rst:96
 msgid ""
 "This will effectively reset the MultiWAN configuration, with a loss of "
 "Internet connection if no WAN is configured."
@@ -5112,7 +5139,7 @@ msgstr ""
 "Ciò ripristinerà effettivamente la configurazione MultiWAN, con una "
 "perdita di connessione Internet se nessuna WAN è configurata."
 
-#: ../../multiwan.rst:93
+#: ../../multiwan.rst:98
 msgid ""
 "If your firewall was previously configured with two or more WAN "
 "interfaces and after reconfiguration there is only one WAN interface, it "
@@ -6383,7 +6410,7 @@ msgid ""
 "support**."
 msgstr ""
 
-#: ../../network.rst:145 ../../remote_access.rst:253
+#: ../../network.rst:145 ../../remote_access.rst:255
 msgid ""
 "Extra packages, including kernel modules, are not preserved across image "
 "upgrades, so in the event of an upgrade, you will need to download and "
@@ -7302,6 +7329,20 @@ msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:54
 msgid ""
+"``Dynamic range IP start``: the first IP address that will be assigned to"
+" clients connecting to the server; the address must be part of the VPN "
+"network. When adding an IP reservation to client, make sure that the IP "
+"address is outside the dynamic range."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:57
+msgid ""
+"``Dynamic range IP end``: the last IP address that will be assigned to "
+"clients connecting to the server"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:59
+msgid ""
 "``Public IP/hostname of this unit``: NethSecurity automatically fills out"
 " this field with the public IP address of each configured WAN interface. "
 "These IPs/hostnames will go into the client configuration. The order of "
@@ -7310,29 +7351,29 @@ msgid ""
 "then progressing down the list in case of unavailability."
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:58
+#: ../../openvpn_roadwarrior.rst:63
 msgid ""
 "Click on the :guilabel:`Create` button to create the server. After that, "
 "main server details will be shown in the Web UI."
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:61
+#: ../../openvpn_roadwarrior.rst:66
 msgid "Advanced settings"
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:63
+#: ../../openvpn_roadwarrior.rst:68
 msgid "If needed, you can also customize some advanced options:"
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:65
+#: ../../openvpn_roadwarrior.rst:70
 msgid "``Protocol``: UDP (default), TCP"
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:67
+#: ../../openvpn_roadwarrior.rst:72
 msgid "``Port``: 1194 (default)"
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:69
+#: ../../openvpn_roadwarrior.rst:74
 msgid ""
 "``Route all client traffic through VPN``: if enabled, all traffic from "
 "the client will be routed into the VPN tunnel, even standard internet "
@@ -7346,7 +7387,7 @@ msgstr ""
 "monitoraggio e controllo, ma di solito è disabilitato poiché introduce "
 "una maggiore latenza e consumo di banda."
 
-#: ../../openvpn_roadwarrior.rst:71
+#: ../../openvpn_roadwarrior.rst:76
 msgid ""
 "``Push network routes``: a list of networks that the client should route "
 "in the VPN tunnel; the LAN networks are automatically added, but they can"
@@ -7356,7 +7397,7 @@ msgstr ""
 "attraverso il tunnel VPN; le reti LAN vengono aggiunte automaticamente, "
 "se necessario altre reti possono essere aggiunte allo stesso modo"
 
-#: ../../openvpn_roadwarrior.rst:73
+#: ../../openvpn_roadwarrior.rst:78
 msgid ""
 "``Allow client-to-client network traffic``: allows all connected clients "
 "to exchange traffic between them; it is recommended to leave it disabled."
@@ -7364,7 +7405,7 @@ msgstr ""
 "``Consenti traffico tra client``: consente lo scambio di traffico tra i "
 "client connessi; si consiglia di lasciarlo disabilitato."
 
-#: ../../openvpn_roadwarrior.rst:75
+#: ../../openvpn_roadwarrior.rst:80
 msgid ""
 "``Compression``: compress the OpenVPN tunnel traffic to save bandwidth. "
 "However, it is now a less useful option and, in some cases, can be "
@@ -7378,17 +7419,17 @@ msgstr ""
 "disabilitata. Quando questa opzione viene modificata, è necessario "
 "scaricare nuovamente la configurazione del client."
 
-#: ../../openvpn_roadwarrior.rst:77
+#: ../../openvpn_roadwarrior.rst:82
 msgid ""
 "``Digest``: the digest authenticates data channel packets (default SHA "
 "256)"
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:79
+#: ../../openvpn_roadwarrior.rst:84
 msgid "``Cipher``: encryption cipher used (default AES-256-GCM)"
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:81
+#: ../../openvpn_roadwarrior.rst:86
 msgid ""
 "``Enforce a minimum TLS version``: allows connection only for clients "
 "using a TLS version equal to or greater than the one specified."
@@ -7397,7 +7438,7 @@ msgstr ""
 "solo per i client che uilizzano una versione TLS pari o superiore a "
 "quella specificata."
 
-#: ../../openvpn_roadwarrior.rst:83
+#: ../../openvpn_roadwarrior.rst:88
 msgid ""
 "``Custom DHCP options``: pass specific DHCP options to the client (e.g. "
 "DOMAIN, DNS, WINS and so on)"
@@ -7405,12 +7446,12 @@ msgstr ""
 "``Opzioni DHCP personalizzate``: passa specifiche opzioni DHCP al client "
 "(ad esempio DOMAIN, DNS, WINS e così via)"
 
-#: ../../openvpn_roadwarrior.rst:87
+#: ../../openvpn_roadwarrior.rst:92
 #, fuzzy
 msgid "VPN accounts"
 msgstr "Account VPN"
 
-#: ../../openvpn_roadwarrior.rst:89
+#: ../../openvpn_roadwarrior.rst:94
 msgid ""
 "Now that the server has been configured, it is necessary to create the "
 "accounts for the connecting clients. To do this, click on :guilabel:`Add "
@@ -7420,7 +7461,7 @@ msgstr ""
 "per i client. Per fare questo, clicca su :guilabel:`Aggiungi account VPN`"
 " e compila il modulo:"
 
-#: ../../openvpn_roadwarrior.rst:91
+#: ../../openvpn_roadwarrior.rst:96
 msgid ""
 "``User``: each account is associated with only one user from the chosen "
 "database, select the user for this account"
@@ -7428,19 +7469,21 @@ msgstr ""
 "``Utente``: ogni account è associato ad un solo utente dal database "
 "scelto, selezionare l'utente per questo account"
 
-#: ../../openvpn_roadwarrior.rst:93
+#: ../../openvpn_roadwarrior.rst:98
+#, fuzzy
 msgid ""
 "``Reserved IP``: specify an IP address that is part of the defined VPN "
-"network and will always be assigned to this specific account, this can be"
-" very useful for creating firewall rules. Leave it blank to assign a "
-"random IP address on every connection."
+"network but outside the dynamic range. The entered IP address will always"
+" be assigned to this specific account, this can be very useful for "
+"creating firewall rules. Leave it blank to assign a random IP address on "
+"every connection."
 msgstr ""
 "``Reserved IP``: indica un indirizzo IP che fa parte della rete VPN "
 "definita che sarà sempre assegnato a questo account specifico, questo può"
 " essere molto utile per la creazione di regole firewall. Lascialo vuoto "
 "per assegnare un indirizzo IP casuale su ogni connessione."
 
-#: ../../openvpn_roadwarrior.rst:95
+#: ../../openvpn_roadwarrior.rst:102
 msgid ""
 "``Certificate expiration (days)``: specify a certificate duration "
 "(default 3650 days)"
@@ -7448,7 +7491,7 @@ msgstr ""
 "``Scadenza certificato (giorni)``: specificare la durata del certificato "
 "(predefinito 3650 giorni)"
 
-#: ../../openvpn_roadwarrior.rst:97
+#: ../../openvpn_roadwarrior.rst:104
 #, fuzzy
 msgid ""
 "Once the account is created, it is necessary to export the configuration "
@@ -7474,11 +7517,11 @@ msgstr ""
 "autenticazione viene modificata), è necessario scaricare nuovamente il "
 "file."
 
-#: ../../openvpn_roadwarrior.rst:100
+#: ../../openvpn_roadwarrior.rst:107
 msgid "Other available actions are:"
 msgstr "Altre azioni disponibili:"
 
-#: ../../openvpn_roadwarrior.rst:102
+#: ../../openvpn_roadwarrior.rst:109
 msgid ""
 "``Disable``: disable the account; the account can be re-enabled at any "
 "time."
@@ -7486,20 +7529,21 @@ msgstr ""
 "``Disabilita``: disabilita l'account; l'account può essere riabilitato in"
 " qualsiasi momento."
 
-#: ../../openvpn_roadwarrior.rst:104
+#: ../../openvpn_roadwarrior.rst:111
 msgid ""
 "If a client is already connected to the roadwarrior server, the "
 "``Disable`` action on the respective account causes an immediate "
 "disconnection from the server, interrupting the communication."
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:106
+#: ../../openvpn_roadwarrior.rst:113
+#, fuzzy
 msgid ""
 "``Regenerate certificate``: recreate the personal certificate for the "
 "account; if the current certificate has not expired, it will be revoked, "
 "and it will be necessary to use the new one. After recreating the "
-"certificate, it is necessary to update it on the client by either "
-"redownloading the entire configuration or just the certificate."
+"certificate, it is necessary to update it on the client by either re-"
+"downloading the entire configuration or just the certificate."
 msgstr ""
 "``Rigenera certificato``: ricrea il certificato personale per l'account; "
 "se il certificato corrente non è scaduto, sarà revocato, e sarà "
@@ -7507,7 +7551,7 @@ msgstr ""
 "necessario aggiornarlo sul client ricaricando l'intera configurazione o "
 "semplicemente il certificato."
 
-#: ../../openvpn_roadwarrior.rst:108
+#: ../../openvpn_roadwarrior.rst:115
 msgid ""
 "``Delete``: delete the account and its certificate, this operation is "
 "irreversible and the certificate is not recoverable."
@@ -7515,15 +7559,15 @@ msgstr ""
 "``Elimina``: cancella l'account e il suo certificato. Questa operazione è"
 " irreversibile ed il certificato non può essere recuperato."
 
-#: ../../openvpn_roadwarrior.rst:111
+#: ../../openvpn_roadwarrior.rst:118
 msgid "Client behavior"
 msgstr "Comportamento client"
 
-#: ../../openvpn_roadwarrior.rst:113
+#: ../../openvpn_roadwarrior.rst:120
 msgid "Some information about the behavior of the clients:"
 msgstr "Alcune informazioni sul comportamento dei client:"
 
-#: ../../openvpn_roadwarrior.rst:115
+#: ../../openvpn_roadwarrior.rst:122
 msgid ""
 "Clients connected to the Road Warrior VPN are assigned to the "
 "``rwopenvpn`` zone, which is inherently trusted. By default, this zone "
@@ -7535,7 +7579,7 @@ msgstr ""
 "predefinita, questa zona ha accesso privilegiato sia alle zone LAN che "
 "WAN all'interno dell'infrastruttura di rete."
 
-#: ../../openvpn_roadwarrior.rst:118
+#: ../../openvpn_roadwarrior.rst:125
 msgid ""
 "Connection backup: in case of multiple WANs, clients will connect using "
 "the first IP/hostname of the server configuration, if it's unavailable "
@@ -7545,7 +7589,7 @@ msgstr ""
 "collegheranno utilizzando il primo IP/hostname della configurazione del "
 "server, se non è disponibile useranno il secondo IP/hostname e così via."
 
-#: ../../openvpn_roadwarrior.rst:120
+#: ../../openvpn_roadwarrior.rst:127
 msgid ""
 "For security reasons, it is not possible to connect multiple clients with"
 " the same account. Each account can be used by only one client at a time."
@@ -7557,11 +7601,11 @@ msgstr ""
 " volta. Se un nuovo client tenta il collegamento con un account già "
 "connesso al sistema, il primo account sarà disconnesso."
 
-#: ../../openvpn_roadwarrior.rst:127
+#: ../../openvpn_roadwarrior.rst:134
 msgid "Client software"
 msgstr "Software client"
 
-#: ../../openvpn_roadwarrior.rst:129
+#: ../../openvpn_roadwarrior.rst:136
 msgid ""
 "All major platforms are supported. Here are some references to download "
 "the necessary software:"
@@ -7569,7 +7613,7 @@ msgstr ""
 "Tutte le principali piattaforme sono supportate. Ecco alcuni riferimenti "
 "per scaricare il software necessario:"
 
-#: ../../openvpn_roadwarrior.rst:131
+#: ../../openvpn_roadwarrior.rst:138
 msgid ""
 "Windows Systems: `OpenVPN WebSite <https://openvpn.net/community-"
 "downloads/>`_"
@@ -7577,7 +7621,7 @@ msgstr ""
 "Sistemi Windows: `Sito Web OpenVPN <https://openvpn.net/community-"
 "downloads/>`_"
 
-#: ../../openvpn_roadwarrior.rst:133
+#: ../../openvpn_roadwarrior.rst:140
 msgid ""
 "MacOS Systems: `TunnelBlick <https://tunnelblick.net/>`_ or the `Official"
 " Client <https://openvpn.net/client-connect-vpn-for-mac-os/>`_"
@@ -7585,7 +7629,7 @@ msgstr ""
 "Sistemi MacOS : `TunnelBlick <https://tunnelblick.net/>`_ o il `Client "
 "Ufficiale <https://openvpn.net/client-connect-vpn-for-mac-os/>`_"
 
-#: ../../openvpn_roadwarrior.rst:135
+#: ../../openvpn_roadwarrior.rst:142
 msgid ""
 "Linux Systems: usually already available in most distribution software "
 "section, sources are available at `OpenVPN WebSite <https://openvpn.net"
@@ -7595,7 +7639,7 @@ msgstr ""
 "sezioni software delle distribuzioni, i sorgenti sono reperibili sul "
 "`Sito Web OpenVPN <https://openvpn.net/community-downloads/>`_"
 
-#: ../../openvpn_roadwarrior.rst:137
+#: ../../openvpn_roadwarrior.rst:144
 msgid ""
 "Android Systems: `OpenVPN Connect on Play Store "
 "<https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_"
@@ -7603,7 +7647,7 @@ msgstr ""
 "Sistemi Android: `OpenVPN Connect su Play Store "
 "<https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_"
 
-#: ../../openvpn_roadwarrior.rst:139
+#: ../../openvpn_roadwarrior.rst:146
 msgid ""
 "iOS Systems: `OpenVPN Connect on App Store <https://apps.apple.com/it/app"
 "/openvpn-connect-openvpn-app/id590379981>`_"
@@ -9688,51 +9732,51 @@ msgid ""
 "first time."
 msgstr ""
 
-#: ../../remote_access.rst:37
+#: ../../remote_access.rst:39
 msgid "Web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:39
+#: ../../remote_access.rst:41
 msgid ""
 "NethSecurity UI (User Interface), the NethSecurity official web "
 "interface, is available on port ``9090`` at the following URL: "
 "**https://<server_ip>:9090**."
 msgstr ""
 
-#: ../../remote_access.rst:41
+#: ../../remote_access.rst:43
 msgid ""
 "To ease the access, NethSecurity UI is also available on standard HTTP "
 "port ``443`` at the following URL: **https://<server_ip>** or "
 "**http://<server_fqdn>**."
 msgstr ""
 
-#: ../../remote_access.rst:43
+#: ../../remote_access.rst:45
 msgid "Both URLs are accessible from LAN and WAN by default."
 msgstr ""
 
-#: ../../remote_access.rst:46
+#: ../../remote_access.rst:48
 msgid "Restricting access to NethSecurity UI"
 msgstr ""
 
-#: ../../remote_access.rst:48
+#: ../../remote_access.rst:50
 msgid ""
 "By default, this interface is accessible on port 9090 from both your "
 "internal network (LAN) and the wider internet (WAN). While convenient, "
 "this can potentially introduce a security risk."
 msgstr ""
 
-#: ../../remote_access.rst:51
+#: ../../remote_access.rst:53
 msgid "To mitigate this risk, you have two options (remove or restrict access):"
 msgstr ""
 
-#: ../../remote_access.rst:53
+#: ../../remote_access.rst:55
 msgid ""
 "remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page, "
 "navigate to the ``Input rules`` tab, and locate the \"Allow-UI-from-WAN\""
 " rule. Click the :guilabel:`Delete` button to remove it"
 msgstr ""
 
-#: ../../remote_access.rst:55
+#: ../../remote_access.rst:57
 msgid ""
 "restrict access from specific IPs or networks: in the Firewall rules "
 "page, locate the \"Allow-UI-from-WAN\" rule and click the "
@@ -9741,7 +9785,7 @@ msgid ""
 "NethSecurity UI."
 msgstr ""
 
-#: ../../remote_access.rst:59
+#: ../../remote_access.rst:61
 msgid ""
 "For example, to allow access only from your home network, you could enter"
 " the 192.168.1.0/24 network. Only allow access from trusted IP addresses "
@@ -9749,47 +9793,47 @@ msgid ""
 "to access the NethSecurity UI."
 msgstr ""
 
-#: ../../remote_access.rst:62
+#: ../../remote_access.rst:64
 msgid "Additional security measures:"
 msgstr ""
 
-#: ../../remote_access.rst:64
+#: ../../remote_access.rst:66
 msgid "use a strong password for the admin user"
 msgstr ""
 
-#: ../../remote_access.rst:65
+#: ../../remote_access.rst:67
 msgid ""
 "enable :ref:`two-factor authentication (2FA) <2fa-section>` for the admin"
 " user"
 msgstr ""
 
-#: ../../remote_access.rst:66
+#: ../../remote_access.rst:68
 msgid "keep your firewall up to date with the latest security patches"
 msgstr ""
 
-#: ../../remote_access.rst:71
+#: ../../remote_access.rst:73
 msgid "Change web user interface port"
 msgstr ""
 
-#: ../../remote_access.rst:73
+#: ../../remote_access.rst:75
 msgid "Users can change the NethSecurity UI port."
 msgstr ""
 
-#: ../../remote_access.rst:75
+#: ../../remote_access.rst:77
 msgid "To change the NethSecurity UI port from 9090 to 8181, execute: ::"
 msgstr ""
 
-#: ../../remote_access.rst:82
+#: ../../remote_access.rst:84
 msgid ""
 "The controller uses port 9090 to communicate with the unit. Changing the "
 "port will prevent the controller from managing the NethSecurity."
 msgstr ""
 
-#: ../../remote_access.rst:85
+#: ../../remote_access.rst:87
 msgid "Disable web user interface on port 443"
 msgstr ""
 
-#: ../../remote_access.rst:87
+#: ../../remote_access.rst:89
 msgid ""
 "While exposing port 443 (HTTPS) can be necessary for certain services, "
 "directly accessing the NethSecurity UI through this port may introduce a "
@@ -9797,20 +9841,20 @@ msgid ""
 "functionality while protecting your NethSecurity UI."
 msgstr ""
 
-#: ../../remote_access.rst:90
+#: ../../remote_access.rst:92
 msgid ""
 "If you don't require accessing the NethSecurity UI through port 443, "
 "disable it to minimize attack opportunities. Execute the following "
 "commands on your NethServer system: ::"
 msgstr ""
 
-#: ../../remote_access.rst:96
+#: ../../remote_access.rst:98
 msgid ""
 "This option disables access to the NethSecurity UI through both the "
 "server IP address and FQDN on port 443."
 msgstr ""
 
-#: ../../remote_access.rst:98
+#: ../../remote_access.rst:100
 msgid ""
 "If you need port 443 for other services, configure your firewall to "
 "redirect traffic destined for port 443 to a separate web server hosting "
@@ -9818,11 +9862,11 @@ msgid ""
 "in place."
 msgstr ""
 
-#: ../../remote_access.rst:104
+#: ../../remote_access.rst:106
 msgid "Privacy policy"
 msgstr ""
 
-#: ../../remote_access.rst:106
+#: ../../remote_access.rst:108
 msgid ""
 "In some cases, it is necessary to display the privacy policy of a product"
 " before login. NethSecurity does not display any privacy policy by "
@@ -9830,74 +9874,74 @@ msgid ""
 "contains the privacy policy."
 msgstr ""
 
-#: ../../remote_access.rst:109
+#: ../../remote_access.rst:111
 msgid ""
 "To add a link to the privacy policy, access the command line and execute:"
 " ::"
 msgstr ""
 
-#: ../../remote_access.rst:113
+#: ../../remote_access.rst:115
 msgid ""
 "Substitute ``https://mysite.org/privacy_policy`` with the URL of your "
 "privacy policy."
 msgstr ""
 
-#: ../../remote_access.rst:115
+#: ../../remote_access.rst:117
 msgid ""
 "The link to the privacy policy will be displayed inside the login page "
 "after next page refresh."
 msgstr ""
 
-#: ../../remote_access.rst:120
+#: ../../remote_access.rst:122
 msgid "Legacy web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:124
+#: ../../remote_access.rst:126
 msgid ""
 "Changes done via LuCI web interface may break the official NethSecurity "
 "UI. Use at your own risk!"
 msgstr ""
 
-#: ../../remote_access.rst:128
+#: ../../remote_access.rst:130
 msgid ""
 "NethSecurity offers also LuCI, the original OpenWrt web interface, which "
 "provides a wide range of configuration options but is not officially "
 "supported. Luci is disabled by default. To enable it, execute: ::"
 msgstr ""
 
-#: ../../remote_access.rst:135
+#: ../../remote_access.rst:137
 msgid ""
 "Once enabled, Luci will be available only on port 443 at this URL: "
 "**https://<server_ip>/cgi-bin/luci**"
 msgstr ""
 
-#: ../../remote_access.rst:137
+#: ../../remote_access.rst:139
 msgid ""
 "Changes to the following LuCI pages are known to cause unpredictable "
 "behavior:"
 msgstr ""
 
-#: ../../remote_access.rst:139
+#: ../../remote_access.rst:141
 msgid ""
 "HTTP access tab: it configures uhttpd which is not present inside "
 "NethSecurity"
 msgstr ""
 
-#: ../../remote_access.rst:140
+#: ../../remote_access.rst:142
 msgid "Logging tab: it configures logd which is not present inside NethSecurity"
 msgstr ""
 
-#: ../../remote_access.rst:141
+#: ../../remote_access.rst:143
 msgid ""
 "Networking: configuration created with this page is not compatible with "
 "NethSecurity UI"
 msgstr ""
 
-#: ../../remote_access.rst:146
+#: ../../remote_access.rst:148
 msgid "NethSecurity UI 2FA"
 msgstr ""
 
-#: ../../remote_access.rst:148
+#: ../../remote_access.rst:150
 msgid ""
 "Protecting your NethSecurity administrator account is crucial, and Two-"
 "Factor Authentication (2FA) adds an extra layer of security beyond just a"
@@ -9907,73 +9951,73 @@ msgid ""
 " risk of unauthorized access even if your password is compromised."
 msgstr ""
 
-#: ../../remote_access.rst:152
+#: ../../remote_access.rst:154
 msgid "Enabling 2FA on NethSecurity UI:"
 msgstr ""
 
-#: ../../remote_access.rst:154
+#: ../../remote_access.rst:156
 msgid "Log in to your NethSecurity web interface"
 msgstr ""
 
-#: ../../remote_access.rst:155
+#: ../../remote_access.rst:157
 msgid ""
 "Click on the user icon in the top right corner and select ``Account "
 "settings``"
 msgstr ""
 
-#: ../../remote_access.rst:156
+#: ../../remote_access.rst:158
 msgid ""
 "Find the Two-factor authentication option and click :guilabel:`Configure "
 "2FA`"
 msgstr ""
 
-#: ../../remote_access.rst:158
+#: ../../remote_access.rst:160
 msgid "Setting up your authenticator app:"
 msgstr ""
 
-#: ../../remote_access.rst:160
+#: ../../remote_access.rst:162
 msgid ""
 "Download an authenticator app on your smartphone or tablet. Popular "
 "options include FreeOTP, Google Authenticator, and Microsoft "
 "Authenticator."
 msgstr ""
 
-#: ../../remote_access.rst:161
+#: ../../remote_access.rst:163
 msgid ""
 "Open the app and scan the QR code displayed on the NethSecurity web "
 "interface. This will add your NethSecurity account to the authenticator "
 "app."
 msgstr ""
 
-#: ../../remote_access.rst:162
+#: ../../remote_access.rst:164
 msgid ""
 "Enter the 6-digit code displayed by your authenticator app in the One-"
 "Time Password (OTP) field on the NethSecurity web interface."
 msgstr ""
 
-#: ../../remote_access.rst:164
+#: ../../remote_access.rst:166
 msgid ""
 "The system will also provide you with a set of backup codes. These codes "
 "can be used to log in if you lose your smartphone or authenticator app. "
 "Store these codes securely, preferably offline."
 msgstr ""
 
-#: ../../remote_access.rst:167
+#: ../../remote_access.rst:169
 msgid "You can disable 2FA from the same page."
 msgstr ""
 
-#: ../../remote_access.rst:172
+#: ../../remote_access.rst:174
 msgid "NethSecurity UI administrators"
 msgstr ""
 
-#: ../../remote_access.rst:174
+#: ../../remote_access.rst:176
 msgid ""
 "The default user for accessing the user web interface is root, but it is "
 "possible to create other administrator users with access only to the web "
 "interface."
 msgstr ""
 
-#: ../../remote_access.rst:176
+#: ../../remote_access.rst:178
 msgid ""
 "To create a user in the local database, enter the `Username` and `Display"
 " name`. Ensure to set a password for the user; this is mandatory for "
@@ -9981,84 +10025,84 @@ msgid ""
 "interface, enable the `Administrator user` option."
 msgstr ""
 
-#: ../../remote_access.rst:180
+#: ../../remote_access.rst:182
 msgid ""
 "It is possible to grant or remove administrative access only to users "
 "residing in the local database."
 msgstr ""
 
-#: ../../remote_access.rst:183
+#: ../../remote_access.rst:185
 msgid "Auditing user actions"
 msgstr ""
 
-#: ../../remote_access.rst:185
+#: ../../remote_access.rst:187
 msgid ""
 "Every time an administrator logs in to the NethSecurity UI, the system "
 "logs the event, inside the `/var/log/messages` file. Example of login "
 "event for user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:191
+#: ../../remote_access.rst:193
 msgid "Example of logout event for user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:196
+#: ../../remote_access.rst:198
 msgid ""
 "Also every action performed by an administrator inside the NethSecurity "
 "UI is logged inside the `/var/log/messages` file. Example of action "
 "performed by user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:202
+#: ../../remote_access.rst:204
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:204
+#: ../../remote_access.rst:206
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:206
+#: ../../remote_access.rst:208
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:211
+#: ../../remote_access.rst:213
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:213
+#: ../../remote_access.rst:215
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:215
+#: ../../remote_access.rst:217
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:217
+#: ../../remote_access.rst:219
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:221
+#: ../../remote_access.rst:223
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:226
+#: ../../remote_access.rst:228
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:231
+#: ../../remote_access.rst:233
 msgid "Serial console"
 msgstr ""
 
-#: ../../remote_access.rst:233
+#: ../../remote_access.rst:235
 msgid ""
 "If the machine has a serial port (RS-232, tipically available with DE-9 "
 "connector or RJ45/8P8C connector) it's possible to access the firewall "
@@ -10068,35 +10112,35 @@ msgid ""
 "``picocom``, or ``screen``."
 msgstr ""
 
-#: ../../remote_access.rst:236
+#: ../../remote_access.rst:238
 msgid "Default acces parameters for NethSecurity 8 are:"
 msgstr ""
 
-#: ../../remote_access.rst:238
+#: ../../remote_access.rst:240
 msgid "Baud rate: 115200,"
 msgstr ""
 
-#: ../../remote_access.rst:239
+#: ../../remote_access.rst:241
 msgid "Data bits:8"
 msgstr ""
 
-#: ../../remote_access.rst:240
+#: ../../remote_access.rst:242
 msgid "Parity :None"
 msgstr ""
 
-#: ../../remote_access.rst:241
+#: ../../remote_access.rst:243
 msgid "Stop bits to 1"
 msgstr ""
 
-#: ../../remote_access.rst:243
+#: ../../remote_access.rst:245
 msgid "These last three parameters are often abbreviated as 8N1"
 msgstr ""
 
-#: ../../remote_access.rst:246
+#: ../../remote_access.rst:248
 msgid "USB-to-Serial Adapters"
 msgstr ""
 
-#: ../../remote_access.rst:248
+#: ../../remote_access.rst:250
 msgid ""
 "In case of need, NethSecurity can be used to access another server via "
 "the serial console. If the hardware does not have an RS-232 port, USB-to-"
@@ -10106,17 +10150,17 @@ msgid ""
 "using an Enterprise or Subscription version)."
 msgstr ""
 
-#: ../../remote_access.rst:255
+#: ../../remote_access.rst:257
 msgid ""
 "Two packages are provided for installation, covering the vast majority of"
 " adapters available on the market. ::"
 msgstr ""
 
-#: ../../remote_access.rst:261
+#: ../../remote_access.rst:263
 msgid "To install Prolific PL2303 driver:"
 msgstr ""
 
-#: ../../remote_access.rst:266
+#: ../../remote_access.rst:268
 msgid "The logs will show an output similar to this:"
 msgstr ""
 
@@ -10501,16 +10545,19 @@ msgstr ""
 
 #: ../../reverse_proxy.rst:52
 msgid ""
-"The page lists all certificates, highlighting the default certificate. "
-"The default certificate is the one automatically served when accessing "
-"the firewall through its FQDN or IP address."
+"The page lists all certificates, highlighting the default certificate. To"
+" set a certificate as the default certificate, click on the "
+":guilabel:`Set as default` button. The default certificate is the one "
+"automatically served when accessing the :ref:`web user interface "
+"<web_user_interface-section>`, both on port 443, :ref:`9090 or custom "
+"port <change_ui_port-section>`."
 msgstr ""
 
-#: ../../reverse_proxy.rst:56
+#: ../../reverse_proxy.rst:59
 msgid "Let's Encrypt"
 msgstr ""
 
-#: ../../reverse_proxy.rst:58
+#: ../../reverse_proxy.rst:61
 msgid ""
 "Let's Encrypt is a free, automated, and open Certificate Authority (CA) "
 "that provides SSL/TLS certificates for securing websites. These "
@@ -10521,7 +10568,7 @@ msgid ""
 "administrators without significant costs or technical expertise."
 msgstr ""
 
-#: ../../reverse_proxy.rst:63
+#: ../../reverse_proxy.rst:66
 msgid ""
 "The certificate page allows users to request certificates from Let's "
 "Encrypt. The process is straightforward and requires minimal "
@@ -10530,33 +10577,33 @@ msgid ""
 "60 days."
 msgstr ""
 
-#: ../../reverse_proxy.rst:66
+#: ../../reverse_proxy.rst:69
 msgid ""
 "The Let's Encrypt certificate request process involves the following "
 "steps:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:68
+#: ../../reverse_proxy.rst:71
 msgid "click on the :guilabel:`Add Let's Encrypt certificate` button;"
 msgstr ""
 
-#: ../../reverse_proxy.rst:69
+#: ../../reverse_proxy.rst:72
 msgid "specify a meaningful name for the certificate;"
 msgstr ""
 
-#: ../../reverse_proxy.rst:70
+#: ../../reverse_proxy.rst:73
 msgid "specify one or more domains for the certificate;"
 msgstr ""
 
-#: ../../reverse_proxy.rst:71
+#: ../../reverse_proxy.rst:74
 msgid "click on the :guilabel:`Save` button."
 msgstr ""
 
-#: ../../reverse_proxy.rst:73
+#: ../../reverse_proxy.rst:76
 msgid "The validation process can be performed in two ways:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:75
+#: ../../reverse_proxy.rst:78
 msgid ""
 "Standalone mode (HTTP validation): the Standalone mode involves "
 "temporarily stopping the web server to allow the ACME client tool to bind"
@@ -10564,7 +10611,7 @@ msgid ""
 "to prove domain ownership, obtaining and installing the certificate."
 msgstr ""
 
-#: ../../reverse_proxy.rst:78
+#: ../../reverse_proxy.rst:81
 msgid ""
 "DNS validation: DNS validation requires adding a specific DNS TXT record "
 "to the domain's DNS configuration. ACME client checks for this record to "
@@ -10572,34 +10619,34 @@ msgid ""
 "modifying web server configurations is challenging or not desired."
 msgstr ""
 
-#: ../../reverse_proxy.rst:81
+#: ../../reverse_proxy.rst:84
 msgid ""
 "When standalone mode is selected, make sure the following requirements "
 "are met:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:83
+#: ../../reverse_proxy.rst:86
 msgid ""
 "The firewall must be reachable from outside on port 80. The acme client "
 "will:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:85
+#: ../../reverse_proxy.rst:88
 msgid "temporarily bind to port 80 to serve the authentication challenges"
 msgstr ""
 
-#: ../../reverse_proxy.rst:86
+#: ../../reverse_proxy.rst:89
 msgid "temporarily open port 80 to the public Internet to perform the validation."
 msgstr ""
 
-#: ../../reverse_proxy.rst:88
+#: ../../reverse_proxy.rst:91
 msgid ""
 "Once the validation is complete, port 80 is automatically closed. Please "
 "note that if port 80 is forwarded to another server, the validation will "
 "fail."
 msgstr ""
 
-#: ../../reverse_proxy.rst:91
+#: ../../reverse_proxy.rst:94
 msgid ""
 "The domains that you want the certificate for must be public domain names"
 " associated to server own public IP. Make sure you have public DNS name "
@@ -10607,7 +10654,7 @@ msgid ""
 "<http://viewdns.info/>`_)."
 msgstr ""
 
-#: ../../reverse_proxy.rst:95
+#: ../../reverse_proxy.rst:98
 msgid ""
 "Select DNS validation if your DNS provider supports API access. Choose "
 "the DNS provider from the drop-down menu and enter the API key and "
@@ -10617,57 +10664,57 @@ msgid ""
 "validation is the only one supported for wildcard certificates."
 msgstr ""
 
-#: ../../reverse_proxy.rst:100
+#: ../../reverse_proxy.rst:103
 msgid ""
 "The certificate generation process can take a few minutes. During this "
 "time, the certificate status is ``Pending``."
 msgstr ""
 
-#: ../../reverse_proxy.rst:103
+#: ../../reverse_proxy.rst:106
 msgid "Debug Let's Encrypt"
 msgstr ""
 
-#: ../../reverse_proxy.rst:105
+#: ../../reverse_proxy.rst:108
 msgid ""
 "If the Let's Encrypt certificate request fails, the user can debug the "
 "process by entering the following commands in the terminal: ::"
 msgstr ""
 
-#: ../../reverse_proxy.rst:110
+#: ../../reverse_proxy.rst:113
 msgid ""
 "The debug messages will be printed on the standard output. After the "
 "problem is solved, the user can disable debug by entering the following "
 "command in the terminal: ::"
 msgstr ""
 
-#: ../../reverse_proxy.rst:116
+#: ../../reverse_proxy.rst:119
 msgid "Custom certificate"
 msgstr ""
 
-#: ../../reverse_proxy.rst:118
+#: ../../reverse_proxy.rst:121
 msgid "The user can upload a custom certificate to the firewall."
 msgstr ""
 
-#: ../../reverse_proxy.rst:120
+#: ../../reverse_proxy.rst:123
 msgid "The process involves the following steps:"
 msgstr ""
 
-#: ../../reverse_proxy.rst:122
+#: ../../reverse_proxy.rst:125
 msgid "click on the :guilabel:`Import certificate` button"
 msgstr ""
 
-#: ../../reverse_proxy.rst:123
+#: ../../reverse_proxy.rst:126
 msgid "specify a meaningful name for the certificate"
 msgstr ""
 
-#: ../../reverse_proxy.rst:124
+#: ../../reverse_proxy.rst:127
 msgid ""
 "drag and drop the certificate, private key, and optionally, the chain "
 "certificate; ensure that all uploaded files adhere to the `PEM format "
 "<https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail>`_ standards"
 msgstr ""
 
-#: ../../reverse_proxy.rst:126
+#: ../../reverse_proxy.rst:129
 msgid "click on the :guilabel:`Save` button"
 msgstr ""
 
@@ -16877,5 +16924,14 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-38-g2c9fe2bf/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The page lists all certificates, "
+#~ "highlighting the default certificate. The "
+#~ "default certificate is the one "
+#~ "automatically served when accessing the "
+#~ "firewall through its FQDN or IP "
+#~ "address."
 #~ msgstr ""
 
