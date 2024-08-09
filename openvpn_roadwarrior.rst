@@ -88,6 +88,33 @@ If needed, you can also customize some advanced options:
 * ``Custom DHCP options``: pass specific DHCP options to the client (e.g. DOMAIN, DNS, WINS and so on)
 
 
+DHCP options
+~~~~~~~~~~~~
+
+The DHCP options are used to pass specific configuration parameters to the client.
+Available DHCP options are:
+
+1. ``DNS [addr]``: set primary and secondary DNS server addresses (IPv4 or IPv6). Repeat the option to set multiple addresses.
+
+2. ``WINS [addr]``: set primary and secondary Windows Internet Name Service Server (NetBIOS over TCP/IP Name Server) addresses.
+   Repeat the option to set multiple addresses.
+
+3. ``NBDD [addr]``: set primary and secondary NetBIOS Datagram Distribution Server (NetBIOS over TCP/IP Datagram Distribution Server) addresses.
+Repeat the option to set multiple addresses.
+
+4. ``NTP [addr]``: set primary and secondary Network Time Protocol server addresses. Repeat the option to set multiple addresses.
+
+5. ``NBT [type]``: set NetBIOS over TCP/IP ode type:
+
+   - ``1``: Broadcast
+   - ``2``: Point-to-point (uses WINS)
+   - ``4``: Mixed (broadcast, then query name server)
+   - ``8``: Hybrid (query name server, then broadcast)
+
+6. ``NBS [scope-id]``: set NetBIOS Scope ID to isolate NetBIOS traffic and allow unique computer names across different scopes.
+
+7. ``DISABLE-NBT [1]``: Turn off NetBIOS over TCP/IP. The parameter is simply ``1`` to enable the option.
+
 VPN accounts
 ------------
 
