@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-08 10:14+0000\n"
+"POT-Creation-Date: 2024-08-09 12:25+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -6077,42 +6077,42 @@ msgid ""
 "<https://www.netify.ai/resources/faq>`_"
 msgstr ""
 
-#: ../../network.rst:3
+#: ../../network.rst:5
 msgid "Network interfaces"
 msgstr ""
 
-#: ../../network.rst:5
+#: ../../network.rst:7
 msgid ""
 "The ``Interfaces and devices`` page configures how the server is "
 "connected to the local network (LAN) and/or other networks (i.e. "
 "Internet)."
 msgstr ""
 
-#: ../../network.rst:8
+#: ../../network.rst:10
 msgid ""
 "NethSecurity supports an unlimited number of network interfaces. Any "
 "network managed by the system must follow these rules:"
 msgstr ""
 
-#: ../../network.rst:11
+#: ../../network.rst:13
 msgid ""
 "networks must be logically separated: each network must have different "
 "addresses"
 msgstr ""
 
-#: ../../network.rst:12
+#: ../../network.rst:14
 msgid ""
 "private networks, like LANs, must follow address's convention from "
 ":ref:`RFC1918 <RFC1918-section>` document"
 msgstr ""
 
-#: ../../network.rst:13
+#: ../../network.rst:15
 msgid ""
 "networks should be physically separated using different switches or "
 "logically separated using VLAN (Virtual Local Area Network)"
 msgstr ""
 
-#: ../../network.rst:15
+#: ../../network.rst:17
 msgid ""
 "Every network interface has a specific zone which determines its "
 "behavior. A basic network setup for a router typically includes a minimum"
@@ -6120,19 +6120,19 @@ msgid ""
 "Network):"
 msgstr ""
 
-#: ../../network.rst:18
+#: ../../network.rst:20
 msgid ""
 "*lan*: local network, hosts on this network can access any other "
 "configured network"
 msgstr ""
 
-#: ../../network.rst:19
+#: ../../network.rst:21
 msgid ""
 "*wan*: public network, hosts on this network can access only the server "
 "itself"
 msgstr ""
 
-#: ../../network.rst:21
+#: ../../network.rst:23
 msgid ""
 "All configured network interfaces are listed at the top of the page. Each"
 " interface is displayed with its name and the assigned firewall zone. "
@@ -6141,7 +6141,7 @@ msgid ""
 "associated with specific security zones."
 msgstr ""
 
-#: ../../network.rst:26
+#: ../../network.rst:28
 msgid ""
 "In the bottom section of the page, available but unconfigured network "
 "devices are listed. To configure a device, the user clicks on the "
@@ -6150,69 +6150,69 @@ msgid ""
 "section."
 msgstr ""
 
-#: ../../network.rst:33
+#: ../../network.rst:35
 msgid "IPv4 addresses for private networks (RFC1918)"
 msgstr ""
 
-#: ../../network.rst:34
+#: ../../network.rst:36
 msgid ""
 "TCP/IP private networks not directly connected to Internet should use "
 "special addresses selected by Internet Assigned Numbers Authority (IANA)."
 msgstr ""
 
-#: ../../network.rst:38
+#: ../../network.rst:40
 msgid "Private network"
 msgstr ""
 
-#: ../../network.rst:38
+#: ../../network.rst:40
 msgid "Subnet mask"
 msgstr ""
 
-#: ../../network.rst:38
+#: ../../network.rst:40
 msgid "IP addresses interval"
 msgstr ""
 
-#: ../../network.rst:40
+#: ../../network.rst:42
 msgid "10.0.0.0"
 msgstr ""
 
-#: ../../network.rst:40
+#: ../../network.rst:42
 msgid "255.0.0.0"
 msgstr ""
 
-#: ../../network.rst:40
+#: ../../network.rst:42
 msgid "10.0.0.1 - 10.255.255.254"
 msgstr ""
 
-#: ../../network.rst:41
+#: ../../network.rst:43
 msgid "172.16.0.0"
 msgstr ""
 
-#: ../../network.rst:41
+#: ../../network.rst:43
 msgid "255.240.0.0"
 msgstr ""
 
-#: ../../network.rst:41
+#: ../../network.rst:43
 msgid "172.16.0.1 - 172.31.255.254"
 msgstr ""
 
-#: ../../network.rst:42
+#: ../../network.rst:44
 msgid "192.168.0.0"
 msgstr ""
 
-#: ../../network.rst:42
+#: ../../network.rst:44
 msgid "255.255.0.0"
 msgstr ""
 
-#: ../../network.rst:42
+#: ../../network.rst:44
 msgid "192.168.0.1 - 192.168.255.254"
 msgstr ""
 
-#: ../../network.rst:48
+#: ../../network.rst:50
 msgid "Logical interfaces"
 msgstr ""
 
-#: ../../network.rst:50
+#: ../../network.rst:52
 msgid ""
 "Logical network interfaces are virtual network interfaces that allow for "
 "additional flexibility and functionality in networking setups. Unlike "
@@ -6221,13 +6221,13 @@ msgid ""
 "managed to suit specific networking requirements."
 msgstr ""
 
-#: ../../network.rst:54
+#: ../../network.rst:56
 msgid ""
 "Click on the :guilabel:`Add logical interface` button to create a new "
 "virtual network device. The device can be a"
 msgstr ""
 
-#: ../../network.rst:57
+#: ../../network.rst:59
 msgid ""
 "*bridge*: it is a logical network interface that connects two or more "
 "different network segments, allowing communication between devices in "
@@ -6235,7 +6235,7 @@ msgid ""
 "devices to communicate as if they were on the same physical network."
 msgstr ""
 
-#: ../../network.rst:59
+#: ../../network.rst:61
 msgid ""
 "*bond*: also known as network bonding or NIC bonding, is a method of "
 "combining two or more physical network interfaces into a single logical "
@@ -6243,47 +6243,47 @@ msgid ""
 "fault tolerance."
 msgstr ""
 
-#: ../../network.rst:62
+#: ../../network.rst:64
 msgid ""
 "Bonds can be configured in multiple mode.: Modes providing load balancing"
 " and fault tolerance:"
 msgstr ""
 
-#: ../../network.rst:65
+#: ../../network.rst:67
 msgid "Balance Round Robin (recommended)"
 msgstr ""
 
-#: ../../network.rst:66
+#: ../../network.rst:68
 msgid "Balance XOR"
 msgstr ""
 
-#: ../../network.rst:67
+#: ../../network.rst:69
 msgid ""
 "802.3ad (LACP): it requires support at driver level and a switch with "
 "IEEE 802.3ad Dynamic link aggregation mode enabled"
 msgstr ""
 
-#: ../../network.rst:68
+#: ../../network.rst:70
 msgid "Balance TLB: it requires support at driver level"
 msgstr ""
 
-#: ../../network.rst:69
+#: ../../network.rst:71
 msgid "Balance ALB"
 msgstr ""
 
-#: ../../network.rst:71
+#: ../../network.rst:73
 msgid "Modes providing fault tolerance only:"
 msgstr ""
 
-#: ../../network.rst:73
+#: ../../network.rst:75
 msgid "Active backup (recommended)"
 msgstr ""
 
-#: ../../network.rst:74
+#: ../../network.rst:76
 msgid "Broadcast policy"
 msgstr ""
 
-#: ../../network.rst:76
+#: ../../network.rst:78
 msgid ""
 "When creating a bond, the UI will display a management IP address in the "
 "private network 127.x.x.1/32. This IP address is used solely for managing"
@@ -6296,11 +6296,11 @@ msgid ""
 "configuration and bond device and recreate it from scratch"
 msgstr ""
 
-#: ../../network.rst:86
+#: ../../network.rst:88
 msgid "VLAN"
 msgstr ""
 
-#: ../../network.rst:88
+#: ../../network.rst:90
 msgid ""
 "A VLAN, or Virtual Local Area Network, is a network technology that "
 "allows network administrators to create logically segmented networks "
@@ -6309,40 +6309,40 @@ msgid ""
 "connected to the same network switch."
 msgstr ""
 
-#: ../../network.rst:90
+#: ../../network.rst:92
 msgid ""
 "You can create a new VLAN device by clicking the :guilabel:`Create VLAN "
 "device` button. Select the VLAN device type:"
 msgstr ""
 
-#: ../../network.rst:93
+#: ../../network.rst:95
 msgid ""
 "VLAN 802.1q is primarily used for standard VLAN implementations within "
 "organizations"
 msgstr ""
 
-#: ../../network.rst:94
+#: ../../network.rst:96
 msgid ""
 "802.1ad (QinQ) is used in service provider networks where multiple "
 "customers require VLAN segmentation, and these segmented VLANs need to be"
 " transported across the provider's network"
 msgstr ""
 
-#: ../../network.rst:97
+#: ../../network.rst:99
 msgid ""
 "Make sure also to chose correct VLAN ID. Please bear in mind that you "
 "must setup the same VLAN ID inside the network switch."
 msgstr ""
 
-#: ../../network.rst:102
+#: ../../network.rst:104
 msgid "IP aliasing"
 msgstr ""
 
-#: ../../network.rst:104
+#: ../../network.rst:106
 msgid "Use IP aliasing to assign more IP addresses to the same network interface."
 msgstr ""
 
-#: ../../network.rst:106
+#: ../../network.rst:108
 msgid ""
 "The most common use is with a wan interface: when the ISP provides a pool"
 " of public IP addresses (within the same subnet) you can add some (or "
@@ -6350,18 +6350,18 @@ msgid ""
 " in the port forward configuration)."
 msgstr ""
 
-#: ../../network.rst:108
+#: ../../network.rst:110
 msgid ""
 "To add an alias, click the tree-dots menu :guilabel:`⋮` on right corner "
 "of the existing network interface, then select :guilabel:`Create alias "
 "interface` item."
 msgstr ""
 
-#: ../../network.rst:111
+#: ../../network.rst:113
 msgid "PPPoE"
 msgstr ""
 
-#: ../../network.rst:113
+#: ../../network.rst:115
 msgid ""
 "PPPoE (Point-to-Point Protocol over Ethernet) connects the server to "
 "Internet through a DSL modem. Users can setup a new PPPoE connection "
@@ -6369,18 +6369,18 @@ msgid ""
 "interface."
 msgstr ""
 
-#: ../../network.rst:116
+#: ../../network.rst:118
 msgid ""
 "Inside the network interface window, choose the wan zone then, select the"
 " ``PPPoE`` protocol. Then fill all required fields like ``Username`` and "
 "``Password``."
 msgstr ""
 
-#: ../../network.rst:120
+#: ../../network.rst:122
 msgid "PPPoE with DHCPv6-PD"
 msgstr ""
 
-#: ../../network.rst:122
+#: ../../network.rst:124
 msgid ""
 "DHCPv6 Prefix Delegation (DHCPv6-DP) automates the assignment of IPv6 "
 "prefixes from your internet service provider (ISP). It eliminates the "
@@ -6388,23 +6388,23 @@ msgid ""
 "simplifying IPv6 deployment."
 msgstr ""
 
-#: ../../network.rst:125
+#: ../../network.rst:127
 msgid "First, make sure your ISP supports DHCPv6-PD, than follow these steps:"
 msgstr ""
 
-#: ../../network.rst:127
+#: ../../network.rst:129
 msgid ""
 "Configure WAN Interface: set the WAN interface mode to PPPoE and enable "
 "the ``Enable IPv6`` option"
 msgstr ""
 
-#: ../../network.rst:128
+#: ../../network.rst:130
 msgid ""
 "Configure LAN interface: enable the \"Enable IPv6\" option and leave the "
 "IPv6 address field blank"
 msgstr ""
 
-#: ../../network.rst:130
+#: ../../network.rst:132
 msgid ""
 "By enabling IPv6 for both WAN and LAN interfaces without specifying an "
 "address for the LAN, your router will automatically request and receive "
@@ -6413,11 +6413,11 @@ msgid ""
 "on your network."
 msgstr ""
 
-#: ../../network.rst:135
+#: ../../network.rst:137
 msgid "USB-to-Ethernet Adapters"
 msgstr ""
 
-#: ../../network.rst:137
+#: ../../network.rst:139
 msgid ""
 "USB-to-Ethernet adapters are not considered suitable for use in a "
 "firewall device that is critical to network communication, for this "
@@ -6426,7 +6426,7 @@ msgid ""
 "manager for use in a test environment."
 msgstr ""
 
-#: ../../network.rst:140
+#: ../../network.rst:142
 msgid ""
 "It is strongly recommended **not to use these adapters in production "
 "environments**. If the unis has an Enterprise or Community subscription, "
@@ -6434,46 +6434,46 @@ msgid ""
 "support**."
 msgstr ""
 
-#: ../../network.rst:145 ../../remote_access.rst:255
+#: ../../network.rst:147 ../../remote_access.rst:255
 msgid ""
 "Extra packages, including kernel modules, are not preserved across image "
 "upgrades, so in the event of an upgrade, you will need to download and "
 "install them again if needed."
 msgstr ""
 
-#: ../../network.rst:148
+#: ../../network.rst:150
 msgid "How to install USB-to-Ethernet modules"
 msgstr ""
 
-#: ../../network.rst:150
+#: ../../network.rst:152
 msgid ""
 "These packages can be installed from the command line console, just find "
 "the correct module and install it."
 msgstr ""
 
-#: ../../network.rst:152
+#: ../../network.rst:154
 msgid ""
 "Verify the ethernet adapter is connected to USB using ``lsusb``.Output "
 "example:"
 msgstr ""
 
-#: ../../network.rst:161
+#: ../../network.rst:164
 msgid "Search for the the kernel module:"
 msgstr ""
 
-#: ../../network.rst:167
+#: ../../network.rst:171
 msgid "Output example:"
 msgstr ""
 
-#: ../../network.rst:183
+#: ../../network.rst:188
 msgid "Install the right driver:"
 msgstr ""
 
-#: ../../network.rst:188
+#: ../../network.rst:194
 msgid "Verify a new ethX interface appears using ``ifconfig -a``"
 msgstr ""
 
-#: ../../network.rst:189
+#: ../../network.rst:195
 msgid "Configure the ethernet from the UI"
 msgstr ""
 
@@ -7472,10 +7472,79 @@ msgstr ""
 
 #: ../../openvpn_roadwarrior.rst:92
 #, fuzzy
+msgid "DHCP options"
+msgstr "Eccezioni"
+
+#: ../../openvpn_roadwarrior.rst:94
+msgid ""
+"The DHCP options are used to pass specific configuration parameters to "
+"the client. Available DHCP options are:"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:97
+msgid ""
+"``DNS [addr]``: set primary and secondary DNS server addresses (IPv4 or "
+"IPv6). Repeat the option to set multiple addresses."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:99
+msgid ""
+"``WINS [addr]``: set primary and secondary Windows Internet Name Service "
+"Server (NetBIOS over TCP/IP Name Server) addresses. Repeat the option to "
+"set multiple addresses."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:102
+msgid ""
+"3. ``NBDD [addr]``: set primary and secondary NetBIOS Datagram "
+"Distribution Server (NetBIOS over TCP/IP Datagram Distribution Server) "
+"addresses. Repeat the option to set multiple addresses."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:105
+msgid ""
+"``NTP [addr]``: set primary and secondary Network Time Protocol server "
+"addresses. Repeat the option to set multiple addresses."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:107
+msgid "``NBT [type]``: set NetBIOS over TCP/IP ode type:"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:109
+msgid "``1``: Broadcast"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:110
+msgid "``2``: Point-to-point (uses WINS)"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:111
+msgid "``4``: Mixed (broadcast, then query name server)"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:112
+msgid "``8``: Hybrid (query name server, then broadcast)"
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:114
+msgid ""
+"``NBS [scope-id]``: set NetBIOS Scope ID to isolate NetBIOS traffic and "
+"allow unique computer names across different scopes."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:116
+msgid ""
+"``DISABLE-NBT [1]``: Turn off NetBIOS over TCP/IP. The parameter is "
+"simply ``1`` to enable the option."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:119
+#, fuzzy
 msgid "VPN accounts"
 msgstr "Account VPN"
 
-#: ../../openvpn_roadwarrior.rst:94
+#: ../../openvpn_roadwarrior.rst:121
 msgid ""
 "Now that the server has been configured, it is necessary to create the "
 "accounts for the connecting clients. To do this, click on :guilabel:`Add "
@@ -7485,7 +7554,7 @@ msgstr ""
 "per i client. Per fare questo, clicca su :guilabel:`Aggiungi account VPN`"
 " e compila il modulo:"
 
-#: ../../openvpn_roadwarrior.rst:96
+#: ../../openvpn_roadwarrior.rst:123
 msgid ""
 "``User``: each account is associated with only one user from the chosen "
 "database, select the user for this account"
@@ -7493,7 +7562,7 @@ msgstr ""
 "``Utente``: ogni account è associato ad un solo utente dal database "
 "scelto, selezionare l'utente per questo account"
 
-#: ../../openvpn_roadwarrior.rst:98
+#: ../../openvpn_roadwarrior.rst:125
 #, fuzzy
 msgid ""
 "``Reserved IP``: specify an IP address that is part of the defined VPN "
@@ -7507,7 +7576,7 @@ msgstr ""
 " essere molto utile per la creazione di regole firewall. Lascialo vuoto "
 "per assegnare un indirizzo IP casuale su ogni connessione."
 
-#: ../../openvpn_roadwarrior.rst:102
+#: ../../openvpn_roadwarrior.rst:129
 msgid ""
 "``Certificate expiration (days)``: specify a certificate duration "
 "(default 3650 days)"
@@ -7515,7 +7584,7 @@ msgstr ""
 "``Scadenza certificato (giorni)``: specificare la durata del certificato "
 "(predefinito 3650 giorni)"
 
-#: ../../openvpn_roadwarrior.rst:104
+#: ../../openvpn_roadwarrior.rst:131
 #, fuzzy
 msgid ""
 "Once the account is created, it is necessary to export the configuration "
@@ -7541,11 +7610,11 @@ msgstr ""
 "autenticazione viene modificata), è necessario scaricare nuovamente il "
 "file."
 
-#: ../../openvpn_roadwarrior.rst:107
+#: ../../openvpn_roadwarrior.rst:134
 msgid "Other available actions are:"
 msgstr "Altre azioni disponibili:"
 
-#: ../../openvpn_roadwarrior.rst:109
+#: ../../openvpn_roadwarrior.rst:136
 msgid ""
 "``Disable``: disable the account; the account can be re-enabled at any "
 "time."
@@ -7553,14 +7622,14 @@ msgstr ""
 "``Disabilita``: disabilita l'account; l'account può essere riabilitato in"
 " qualsiasi momento."
 
-#: ../../openvpn_roadwarrior.rst:111
+#: ../../openvpn_roadwarrior.rst:138
 msgid ""
 "If a client is already connected to the roadwarrior server, the "
 "``Disable`` action on the respective account causes an immediate "
 "disconnection from the server, interrupting the communication."
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:113
+#: ../../openvpn_roadwarrior.rst:140
 #, fuzzy
 msgid ""
 "``Regenerate certificate``: recreate the personal certificate for the "
@@ -7575,7 +7644,7 @@ msgstr ""
 "necessario aggiornarlo sul client ricaricando l'intera configurazione o "
 "semplicemente il certificato."
 
-#: ../../openvpn_roadwarrior.rst:115
+#: ../../openvpn_roadwarrior.rst:142
 msgid ""
 "``Delete``: delete the account and its certificate, this operation is "
 "irreversible and the certificate is not recoverable."
@@ -7583,15 +7652,15 @@ msgstr ""
 "``Elimina``: cancella l'account e il suo certificato. Questa operazione è"
 " irreversibile ed il certificato non può essere recuperato."
 
-#: ../../openvpn_roadwarrior.rst:118
+#: ../../openvpn_roadwarrior.rst:145
 msgid "Client behavior"
 msgstr "Comportamento client"
 
-#: ../../openvpn_roadwarrior.rst:120
+#: ../../openvpn_roadwarrior.rst:147
 msgid "Some information about the behavior of the clients:"
 msgstr "Alcune informazioni sul comportamento dei client:"
 
-#: ../../openvpn_roadwarrior.rst:122
+#: ../../openvpn_roadwarrior.rst:149
 msgid ""
 "Clients connected to the Road Warrior VPN are assigned to the "
 "``rwopenvpn`` zone, which is inherently trusted. By default, this zone "
@@ -7603,7 +7672,7 @@ msgstr ""
 "predefinita, questa zona ha accesso privilegiato sia alle zone LAN che "
 "WAN all'interno dell'infrastruttura di rete."
 
-#: ../../openvpn_roadwarrior.rst:125
+#: ../../openvpn_roadwarrior.rst:152
 msgid ""
 "Connection backup: in case of multiple WANs, clients will connect using "
 "the first IP/hostname of the server configuration, if it's unavailable "
@@ -7613,7 +7682,7 @@ msgstr ""
 "collegheranno utilizzando il primo IP/hostname della configurazione del "
 "server, se non è disponibile useranno il secondo IP/hostname e così via."
 
-#: ../../openvpn_roadwarrior.rst:127
+#: ../../openvpn_roadwarrior.rst:154
 msgid ""
 "For security reasons, it is not possible to connect multiple clients with"
 " the same account. Each account can be used by only one client at a time."
@@ -7625,11 +7694,11 @@ msgstr ""
 " volta. Se un nuovo client tenta il collegamento con un account già "
 "connesso al sistema, il primo account sarà disconnesso."
 
-#: ../../openvpn_roadwarrior.rst:134
+#: ../../openvpn_roadwarrior.rst:161
 msgid "Client software"
 msgstr "Software client"
 
-#: ../../openvpn_roadwarrior.rst:136
+#: ../../openvpn_roadwarrior.rst:163
 msgid ""
 "All major platforms are supported. Here are some references to download "
 "the necessary software:"
@@ -7637,7 +7706,7 @@ msgstr ""
 "Tutte le principali piattaforme sono supportate. Ecco alcuni riferimenti "
 "per scaricare il software necessario:"
 
-#: ../../openvpn_roadwarrior.rst:138
+#: ../../openvpn_roadwarrior.rst:165
 msgid ""
 "Windows Systems: `OpenVPN WebSite <https://openvpn.net/community-"
 "downloads/>`_"
@@ -7645,7 +7714,7 @@ msgstr ""
 "Sistemi Windows: `Sito Web OpenVPN <https://openvpn.net/community-"
 "downloads/>`_"
 
-#: ../../openvpn_roadwarrior.rst:140
+#: ../../openvpn_roadwarrior.rst:167
 msgid ""
 "MacOS Systems: `TunnelBlick <https://tunnelblick.net/>`_ or the `Official"
 " Client <https://openvpn.net/client-connect-vpn-for-mac-os/>`_"
@@ -7653,7 +7722,7 @@ msgstr ""
 "Sistemi MacOS : `TunnelBlick <https://tunnelblick.net/>`_ o il `Client "
 "Ufficiale <https://openvpn.net/client-connect-vpn-for-mac-os/>`_"
 
-#: ../../openvpn_roadwarrior.rst:142
+#: ../../openvpn_roadwarrior.rst:169
 msgid ""
 "Linux Systems: usually already available in most distribution software "
 "section, sources are available at `OpenVPN WebSite <https://openvpn.net"
@@ -7663,7 +7732,7 @@ msgstr ""
 "sezioni software delle distribuzioni, i sorgenti sono reperibili sul "
 "`Sito Web OpenVPN <https://openvpn.net/community-downloads/>`_"
 
-#: ../../openvpn_roadwarrior.rst:144
+#: ../../openvpn_roadwarrior.rst:171
 msgid ""
 "Android Systems: `OpenVPN Connect on Play Store "
 "<https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_"
@@ -7671,7 +7740,7 @@ msgstr ""
 "Sistemi Android: `OpenVPN Connect su Play Store "
 "<https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_"
 
-#: ../../openvpn_roadwarrior.rst:146
+#: ../../openvpn_roadwarrior.rst:173
 msgid ""
 "iOS Systems: `OpenVPN Connect on App Store <https://apps.apple.com/it/app"
 "/openvpn-connect-openvpn-app/id590379981>`_"
@@ -10391,7 +10460,7 @@ msgstr ""
 msgid "To install Prolific PL2303 driver:"
 msgstr ""
 
-#: ../../remote_access.rst:268
+#: ../../remote_access.rst:269
 msgid "The logs will show an output similar to this:"
 msgstr ""
 
