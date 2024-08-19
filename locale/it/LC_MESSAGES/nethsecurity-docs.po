@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 12:25+0000\n"
+"POT-Creation-Date: 2024-08-19 10:08+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1859,7 +1859,7 @@ msgstr "Lease dinamici"
 msgid "DNS"
 msgstr "DNS"
 
-#: ../../dns_dhcp.rst:16 ../../dns_dhcp.rst:138 ../../objects.rst:144
+#: ../../dns_dhcp.rst:16 ../../dns_dhcp.rst:143 ../../objects.rst:144
 msgid "DNS records"
 msgstr "Record DNS"
 
@@ -1875,8 +1875,7 @@ msgstr ""
 "dotata di una scheda in cui è possibile abilitare il servizio facendo "
 "clic sul pulsante :guilabel:`Modifica`."
 
-#: ../../dns_dhcp.rst:24 ../../dns_dhcp.rst:59 ../../dns_dhcp.rst:82
-#: ../../dns_dhcp.rst:146
+#: ../../dns_dhcp.rst:24 ../../dns_dhcp.rst:59 ../../dns_dhcp.rst:151
 msgid "Available fields:"
 msgstr "Campi disponibili:"
 
@@ -1965,13 +1964,15 @@ msgstr ""
 "lease statico per un dispositivo."
 
 #: ../../dns_dhcp.rst:61
-msgid "``Hostname`` : Hostname asssociated to the IP address"
+#, fuzzy
+msgid "``Hostname`` : Hostname associated to the IP address"
 msgstr "``Nome host``: Nome host associato all'indirizzo IP"
 
 #: ../../dns_dhcp.rst:62
+#, fuzzy
 msgid ""
-"``IP address`` : IP adddress to assign to the specified MAC Address.The "
-"IP address must be within the DHCP range"
+"``IP address`` : IP address to assign to the specified MAC Address.The IP"
+" address must be within the DHCP range"
 msgstr ""
 "``Indirizzo IP``: Indirizzo IP da assegnare all'indirizzo MAC "
 "specificato. L'indirizzo IP deve trovarsi all'interno dell'intervallo "
@@ -2013,11 +2014,13 @@ msgstr ""
 
 #: ../../dns_dhcp.rst:80
 msgid ""
-"The system will resolve host and domain names using DNS queries to "
-"external DNS servers."
+"The system employs `Dnsmasq "
+"<https://thekelleys.org.uk/dnsmasq/doc.html>`_ a as a downstream caching "
+"DNS server. Dnsmasq functions as a local caching nameserver, which by "
+"default forwards DNS queries to the upstream DNS servers provided by the "
+"DHCP server of the WAN interfaces. However, this behavior can be "
+"customized using the following configuration options:"
 msgstr ""
-"Il sistema risolverà i nomi host e di dominio utilizzando query DNS a "
-"server DNS esterni."
 
 #: ../../dns_dhcp.rst:84
 msgid ""
@@ -2044,122 +2047,130 @@ msgstr ""
 
 #: ../../dns_dhcp.rst:91
 msgid ""
-"This section explains how to configure upstream DNS servers for your "
-"system. You can use this to either:"
+"You only need to configure forwarders if your WAN interfaces are set up "
+"with static IP addresses. If your WAN interfaces are configured via DHCP,"
+" typically provided by your ISP, the system will automatically use the "
+"DNS servers supplied by the WAN interfaces. Automatically configured "
+"upstream DNS servers can be found in the "
+"`/tmp/resolv.conf.d/resolv.conf.auto` file."
 msgstr ""
 
-#: ../../dns_dhcp.rst:93
+#: ../../dns_dhcp.rst:96
+msgid "You can configure the following:"
+msgstr ""
+
+#: ../../dns_dhcp.rst:98
 msgid ""
-"Specify a single upstream DNS server: enter the IP address of the desired"
-" server in the dedicated field"
-msgstr ""
-
-#: ../../dns_dhcp.rst:94
-msgid ""
-"Set up domain-specific DNS servers: this allows you to route queries for "
-"specific domains to different servers."
-msgstr ""
-
-#: ../../dns_dhcp.rst:97
-msgid "Domain-specific DNS servers"
+"**Specify a single upstream DNS server:** enter the IP address of the "
+"desired DNS server in the designated field."
 msgstr ""
 
 #: ../../dns_dhcp.rst:99
+msgid ""
+"**Set up domain-specific DNS servers:** this allows you to route queries "
+"for specific domains to different servers."
+msgstr ""
+
+#: ../../dns_dhcp.rst:102
+msgid "Domain-specific DNS servers"
+msgstr ""
+
+#: ../../dns_dhcp.rst:104
 msgid ""
 "To use a custom DNS server for a specific domain, use the following "
 "syntax:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:101
+#: ../../dns_dhcp.rst:106
 msgid "``/DOMAIN/IP_ADDRESS#PORT``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:103
+#: ../../dns_dhcp.rst:108
 msgid "where:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:105
+#: ../../dns_dhcp.rst:110
 msgid "IP_ADDRESS: specify the IP address of the desired server"
 msgstr ""
 
-#: ../../dns_dhcp.rst:106
+#: ../../dns_dhcp.rst:111
 msgid "PORT: append the desired port (after the IP address using `#` character)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:108
+#: ../../dns_dhcp.rst:113
 msgid ""
 "The ``PORT`` value is optional so usually the configuration appears just "
 "like:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:110
+#: ../../dns_dhcp.rst:115
 msgid "``/DOMAIN/IP_ADDRESS``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:112
+#: ../../dns_dhcp.rst:117
 msgid "These are the main supported options:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:114
+#: ../../dns_dhcp.rst:119
 msgid "Empty domain (``//``): matches unqualified names (without dots)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:115
+#: ../../dns_dhcp.rst:120
 msgid ""
 "Specific domain (``/google.com/``): matches the exact domain and all its "
 "subdomains (e.g., google.com, www.google.com, drive.google.com...)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:116
+#: ../../dns_dhcp.rst:121
 msgid ""
 "Wildcard domain (``*google.com/``): matches any domain **containing** "
 "\"google.com\" (e.g., google.com, www.google.com, supergoogle.com)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:118
+#: ../../dns_dhcp.rst:123
 msgid "Examples:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:120
+#: ../../dns_dhcp.rst:125
 msgid ""
 "Send all queries for \"google.com\" and its subdomains to 1.2.3.4:  "
 "``/google.com/1.2.3.4``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:121
+#: ../../dns_dhcp.rst:126
 msgid ""
 "Send all unqualified names (e.g., \"localhost\") to 10.0.0.1 and "
 "everything else to standard servers: ``//10.0.0.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:122
+#: ../../dns_dhcp.rst:127
 msgid ""
 "Send queries for domain \"ad.nethserver.org\" and its subdomains to "
 "192.168.1.1 and everything else to standard servers: "
 "``/ad.nethserver.org/192.168.1.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:126
+#: ../../dns_dhcp.rst:131
 msgid ""
 "More specific domains take precedence over less specific domains, so for "
 "a configuration like this:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:128
+#: ../../dns_dhcp.rst:133
 msgid "``/google.com/1.2.3.4``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:129
+#: ../../dns_dhcp.rst:134
 msgid "``/www.google.com/2.3.4.5``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:131
+#: ../../dns_dhcp.rst:136
 msgid ""
 "NethSecurity will send queries for google.com and gmail.google.com to "
 "1.2.3.4, but www.google.com will go to 2.3.4.5"
 msgstr ""
 
-#: ../../dns_dhcp.rst:133
+#: ../../dns_dhcp.rst:138
 msgid ""
 "This is true also for wildcards: if both specific and wildcard domains "
 "are defined for the same pattern, the specific one takes precedence "
@@ -2168,44 +2179,44 @@ msgid ""
 "supergoogle.com."
 msgstr ""
 
-#: ../../dns_dhcp.rst:140
+#: ../../dns_dhcp.rst:145
 msgid ""
 "The system can handle local DNS records. When the server performs a DNS "
 "lookup, first it will search inside local DNS records. If no local record"
 " is found, an external DNS query will be done."
 msgstr ""
 
-#: ../../dns_dhcp.rst:142
+#: ../../dns_dhcp.rst:147
 msgid "Local DNS records will always override records from external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:144
+#: ../../dns_dhcp.rst:149
 msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
 msgstr ""
 
-#: ../../dns_dhcp.rst:148
+#: ../../dns_dhcp.rst:153
 msgid "``Hostname`` : DNS hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:149
+#: ../../dns_dhcp.rst:154
 msgid "``IP address`` : IP address associated to hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:150
+#: ../../dns_dhcp.rst:155
 msgid "``Name`` : optional field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:151
+#: ../../dns_dhcp.rst:156
 msgid ""
 "``Wildcard DNS record``: enable it if you want this answer for any "
 "subdomain you haven't already defined"
 msgstr ""
 
-#: ../../dns_dhcp.rst:154
+#: ../../dns_dhcp.rst:159
 msgid "DNS Rebind Protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:156
+#: ../../dns_dhcp.rst:161
 msgid ""
 "DNS Rebind Protection is a security feature that safeguards against DNS "
 "rebinding attacks. It blocks the use of private IP ranges by public "
@@ -2213,7 +2224,7 @@ msgid ""
 " unauthorized requests to local network devices."
 msgstr ""
 
-#: ../../dns_dhcp.rst:158
+#: ../../dns_dhcp.rst:163
 msgid ""
 "DNS Rebind Protection is enabled by default on NethSecurity and usually "
 "does not have operational repercussions. In the presence of split DNS, "
@@ -2223,7 +2234,7 @@ msgid ""
 "may appear:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:166
+#: ../../dns_dhcp.rst:171
 msgid ""
 "To ensure maximum compatibility and prevent malfunctions in migrated "
 "installations using the dedicated tool from NethServer 7.9, DNS Rebind "
@@ -2231,39 +2242,39 @@ msgid ""
 "version."
 msgstr ""
 
-#: ../../dns_dhcp.rst:169
+#: ../../dns_dhcp.rst:174
 msgid "How to fix DNS rebind protection issues"
 msgstr ""
 
-#: ../../dns_dhcp.rst:171
+#: ../../dns_dhcp.rst:176
 msgid "You can easily fix any of these issues from the CLI."
 msgstr ""
 
-#: ../../dns_dhcp.rst:173
+#: ../../dns_dhcp.rst:178
 msgid "**Solution 1**: Whitelist the domain"
 msgstr ""
 
-#: ../../dns_dhcp.rst:175
+#: ../../dns_dhcp.rst:180
 msgid "Put the specific domain in a whitelist (suggested): ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:179
+#: ../../dns_dhcp.rst:184
 msgid "then commit and restart: ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:184
+#: ../../dns_dhcp.rst:189
 msgid "**Solution 2**: disable the DNS protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:186
+#: ../../dns_dhcp.rst:191
 msgid "Completely disable DNS rebind protection using these commands: ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:193
+#: ../../dns_dhcp.rst:198
 msgid "How to enable DNS rebind protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:195
+#: ../../dns_dhcp.rst:200
 msgid ""
 "If you have previously disabled rebind protection or if your "
 "configuration comes from a migration and you wish to enable rebind "
@@ -2381,6 +2392,23 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.4-ns.1.2.0-1-g4ccef3f3"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-1-g4ccef3f3/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-1-g4ccef3f3-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-1-g4ccef3f3/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -17315,5 +17343,34 @@ msgstr ""
 #~ "new image file (it is recommended "
 #~ "to save it inside ``/tmp`` directory)"
 #~ " and run the following command: ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The system will resolve host and "
+#~ "domain names using DNS queries to "
+#~ "external DNS servers."
+#~ msgstr ""
+#~ "Il sistema risolverà i nomi host e"
+#~ " di dominio utilizzando query DNS a"
+#~ " server DNS esterni."
+
+#~ msgid ""
+#~ "This section explains how to configure"
+#~ " upstream DNS servers for your "
+#~ "system. You can use this to "
+#~ "either:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify a single upstream DNS server:"
+#~ " enter the IP address of the "
+#~ "desired server in the dedicated field"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Set up domain-specific DNS servers: "
+#~ "this allows you to route queries "
+#~ "for specific domains to different "
+#~ "servers."
 #~ msgstr ""
 
