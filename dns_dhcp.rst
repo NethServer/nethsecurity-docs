@@ -58,8 +58,8 @@ Click the button :guilabel:`Add reservation` to add a new device's reservation.
 
 Available fields:
 
-* ``Hostname`` : Hostname asssociated to the IP address
-* ``IP address`` : IP adddress to assign to the specified MAC Address.The IP address must be within the DHCP range
+* ``Hostname`` : Hostname associated to the IP address
+* ``IP address`` : IP address to assign to the specified MAC Address.The IP address must be within the DHCP range
 * ``MAC address`` : MAC address of the device where you want to make the reservation
 * ``Reservation name`` : Optional, freely configurable filed
 
@@ -77,9 +77,9 @@ By default, the DHCP server has a limit of 1000 concurrent leases to prevent DoS
 DNS
 ===
 
-The system will resolve host and domain names using DNS queries to external DNS servers.
-
-Available fields:
+The system employs `Dnsmasq <https://thekelleys.org.uk/dnsmasq/doc.html>`_ a as a downstream caching DNS server. Dnsmasq functions as a local
+caching nameserver, which by default forwards DNS queries to the upstream DNS servers provided by the DHCP server of the WAN interfaces.
+However, this behavior can be customized using the following configuration options:
 
 * ``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` to specify the desired upstream DNS, you can add more servers, each one is individually managed.
 * ``DNS Domain`` : Insert the the local DNS domain, ensuring that queries for this domain are always resolved locally.
@@ -88,10 +88,15 @@ Available fields:
 Forwarding servers
 ------------------
 
-This section explains how to configure upstream DNS servers for your system. You can use this to either:
+You only need to configure forwarders if your WAN interfaces are set up with static IP addresses.
+If your WAN interfaces are configured via DHCP, typically provided by your ISP, the system will automatically use the
+DNS servers supplied by the WAN interfaces.
+Automatically configured upstream DNS servers can be found in the `/tmp/resolv.conf.d/resolv.conf.auto` file.
 
-- Specify a single upstream DNS server: enter the IP address of the desired server in the dedicated field
-- Set up domain-specific DNS servers: this allows you to route queries for specific domains to different servers.
+You can configure the following:
+
+- **Specify a single upstream DNS server:** enter the IP address of the desired DNS server in the designated field.
+- **Set up domain-specific DNS servers:** this allows you to route queries for specific domains to different servers.
 
 Domain-specific DNS servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
