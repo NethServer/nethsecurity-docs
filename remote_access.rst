@@ -44,7 +44,7 @@ Once in this mode, you can change the password by executing the following comman
 
 Restart the firewall with the command ::
 
-  reboot -f
+  reboot
 
 .. _web_user_interface-section:
 
