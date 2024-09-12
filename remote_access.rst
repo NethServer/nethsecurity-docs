@@ -42,7 +42,7 @@ Once in this mode, you can change the password by executing the following comman
   mount_root
   passwd
 
-restart the firewall with the command ::
+Restart the firewall with the command ::
 
   reboot -f
 
