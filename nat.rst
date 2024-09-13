@@ -224,7 +224,7 @@ NAT helpers, also known as Application Layer Gateways (ALGs), operate at the app
 For example, in FTP, NAT helpers modify the IP addresses and ports inside the FTP control and data packets, enabling proper NAT traversal for FTP connections. 
 Similarly, NAT helpers for SIP and other protocols ensure that devices using these protocols can establish connections across NAT boundaries without issues.
 
-NethSecurity provides various types of NAT helpers, all of which are disabled by default. If needed, specific helpers can be enabled via the web UI, and a reboot is required after any modification to activate or deactivate the selected helper.
+NethSecurity provides various types of NAT helpers, all of which are disabled by default. If needed, specific helpers can be enabled via the web UI.
 
 During helper configuration, the interface may display certain parameters typical of the involved protocol. These parameters are pre-filled with the most commonly used default values. 
 Since the parameters depend on the protocol type, they vary in both number and type depending on the helper (some helpers do not display any parameters).
