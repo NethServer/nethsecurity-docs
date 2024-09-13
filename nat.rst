@@ -223,4 +223,7 @@ NAT helpers, also known as Application Layer Gateways (ALG), operate at the appl
 
 NethSecurity provides various types of NAT helpers, all of which are disabled by default. If needed, specific helpers can be enabled via the web UI, and a reboot is required after any modification to activate or deactivate the selected helper.
 
+During helper configuration, the interface may display certain parameters typical of the involved protocol. These parameters are pre-filled with the most commonly used default values. 
+Since the parameters depend on the protocol type, they vary in both number and type depending on the helper (some helpers do not display any parameters).
+
 .. note:: When certain helpers are enabled, related helpers are automatically activated as dependencies. In these cases, the interface shows an informational icon to notify the user.
