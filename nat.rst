@@ -219,11 +219,17 @@ NAT helpers
 NAT helpers are mechanisms designed to facilitate communication for certain protocols that may encounter issues when used with basic NAT. 
 Some common protocols, such as FTP, SIP, or H.323, embed IP addresses or port numbers within the data payload, which can create problems with standard NAT.
 
-NAT helpers, also known as Application Layer Gateways (ALG), operate at the application layer. Their main role is to modify protocol-specific data, such as embedded IP addresses or ports within packets, ensuring that these protocols (like FTP, SIP, or H.323) function properly when passing through NAT.
+NAT helpers, also known as Application Layer Gateways (ALGs), operate at the application layer. Their main role is to modify protocol-specific data, such as embedded IP addresses or ports within packets, ensuring that these protocols function properly when passing through NAT.
+
+For example, in FTP, NAT helpers modify the IP addresses and ports inside the FTP control and data packets, enabling proper NAT traversal for FTP connections. 
+Similarly, NAT helpers for SIP and other protocols ensure that devices using these protocols can establish connections across NAT boundaries without issues.
 
 NethSecurity provides various types of NAT helpers, all of which are disabled by default. If needed, specific helpers can be enabled via the web UI, and a reboot is required after any modification to activate or deactivate the selected helper.
 
 During helper configuration, the interface may display certain parameters typical of the involved protocol. These parameters are pre-filled with the most commonly used default values. 
 Since the parameters depend on the protocol type, they vary in both number and type depending on the helper (some helpers do not display any parameters).
 
-.. note:: When certain helpers are enabled, related helpers are automatically activated as dependencies. In these cases, the interface shows an informational icon to notify the user.
+After any changes, the firewall will notify you if a reboot is necessary. This typically happens when a helper is disabled or modified (if it is already active).
+
+When certain helpers are enabled, related helpers are automatically loaded in the kernel as dependencies.
+For example if ``nf_nat_ftp`` is enabled, the related helper ``nf_conntrack_ftp`` will be automatically loaded in the kernel. For that helper the web UI will display ``Loaded`` with an informational icon to notify the user.
