@@ -101,7 +101,6 @@ NethSecurity administrator manual
    ddns
    smtp
    snmp
-   nat_helpers
    logs
 
 .. toctree::
