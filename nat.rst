@@ -11,7 +11,9 @@ As default, all hosts within the local network access the WAN using the firewall
 Masquerade is a form of NAT that automatically assigns the source IP address of outgoing packets to the WAN IP address of the firewall.
 This ensures that internal hosts accessing the internet appear to external servers as if they are originating from the firewall's public IP address.
 
-Access the ``NAT`` page under the ``Firewall`` section to configure the following types of NAT rules:
+Access the ``NAT`` page under the ``Firewall`` section, this page is organized in two tabs: ``Rules and NETMAP`` and ``NAT helpers``.
+
+``Rules and NETMAP`` tab allows to configure the following types of NAT rules:
 
 - :ref:`Source NAT <snat-section>`
 - :ref:`Masquerade <masquerade-section>`
@@ -20,7 +22,11 @@ Access the ``NAT`` page under the ``Firewall`` section to configure the followin
 
 Please note that these NAT rules are applied to all network protocols.
 
-You can configure also destination NAT rules (DNAT), usually namedport forward or port rediects, from the :ref:`port forward <port_forward-section>` page.
+You can configure also destination NAT rules (DNAT), usually namedport forward or port redirects, from the :ref:`port forward <port_forward-section>` page.
+
+``NAT helpers`` tab allows to enable or disable NAT helpers:
+
+- :ref:`NAT helpers <helpers-section>`
 
 .. _snat-section:
 
@@ -204,3 +210,26 @@ Then commit and apply::
  uci commit netmap
  ns-netmap
  /etc/init.d/firewall reload
+
+.. _helpers-section:
+
+NAT helpers 
+===========
+
+NAT helpers are mechanisms designed to facilitate communication for certain protocols that may encounter issues when used with basic NAT. 
+Some common protocols, such as FTP, SIP, or H.323, embed IP addresses or port numbers within the data payload, which can create problems with standard NAT.
+
+NAT helpers, also known as Application Layer Gateways (ALGs), operate at the application layer. Their main role is to modify protocol-specific data, such as embedded IP addresses or ports within packets, ensuring that these protocols function properly when passing through NAT.
+
+For example, in FTP, NAT helpers modify the IP addresses and ports inside the FTP control and data packets, enabling proper NAT traversal for FTP connections. 
+Similarly, NAT helpers for SIP and other protocols ensure that devices using these protocols can establish connections across NAT boundaries without issues.
+
+NethSecurity provides various types of NAT helpers, all of which are disabled by default. If needed, specific helpers can be enabled via the web UI.
+
+During helper configuration, the interface may display certain parameters typical of the involved protocol. These parameters are pre-filled with the most commonly used default values. 
+Since the parameters depend on the protocol type, they vary in both number and type depending on the helper (some helpers do not display any parameters).
+
+After any changes, the firewall will notify you if a reboot is necessary. This typically happens when a helper is disabled or modified (if it is already active).
+
+When certain helpers are enabled, related helpers are automatically loaded in the kernel as dependencies.
+For example if ``nf_nat_ftp`` is enabled, the related helper ``nf_conntrack_ftp`` will be automatically loaded in the kernel. For that helper the web UI will display ``Loaded`` with an informational icon to notify the user.
