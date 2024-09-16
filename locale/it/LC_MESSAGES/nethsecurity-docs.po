@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-16 07:12+0000\n"
+"POT-Creation-Date: 2024-09-16 12:52+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -6477,7 +6477,7 @@ msgid ""
 "support**."
 msgstr ""
 
-#: ../../network.rst:147 ../../remote_access.rst:268
+#: ../../network.rst:147 ../../remote_access.rst:274
 msgid ""
 "Extra packages, including kernel modules, are not preserved across image "
 "upgrades, so in the event of an upgrade, you will need to download and "
@@ -10296,11 +10296,17 @@ msgid ""
 "NethSecurity UI"
 msgstr ""
 
-#: ../../remote_access.rst:161
+#: ../../remote_access.rst:158
+msgid ""
+"If previously enabled, the LuCI web interface can be disabled by "
+"executing: ::"
+msgstr ""
+
+#: ../../remote_access.rst:167
 msgid "NethSecurity UI 2FA"
 msgstr ""
 
-#: ../../remote_access.rst:163
+#: ../../remote_access.rst:169
 msgid ""
 "Protecting your NethSecurity administrator account is crucial, and Two-"
 "Factor Authentication (2FA) adds an extra layer of security beyond just a"
@@ -10310,73 +10316,73 @@ msgid ""
 " risk of unauthorized access even if your password is compromised."
 msgstr ""
 
-#: ../../remote_access.rst:167
+#: ../../remote_access.rst:173
 msgid "Enabling 2FA on NethSecurity UI:"
 msgstr ""
 
-#: ../../remote_access.rst:169
+#: ../../remote_access.rst:175
 msgid "Log in to your NethSecurity web interface"
 msgstr ""
 
-#: ../../remote_access.rst:170
+#: ../../remote_access.rst:176
 msgid ""
 "Click on the user icon in the top right corner and select ``Account "
 "settings``"
 msgstr ""
 
-#: ../../remote_access.rst:171
+#: ../../remote_access.rst:177
 msgid ""
 "Find the Two-factor authentication option and click :guilabel:`Configure "
 "2FA`"
 msgstr ""
 
-#: ../../remote_access.rst:173
+#: ../../remote_access.rst:179
 msgid "Setting up your authenticator app:"
 msgstr ""
 
-#: ../../remote_access.rst:175
+#: ../../remote_access.rst:181
 msgid ""
 "Download an authenticator app on your smartphone or tablet. Popular "
 "options include FreeOTP, Google Authenticator, and Microsoft "
 "Authenticator."
 msgstr ""
 
-#: ../../remote_access.rst:176
+#: ../../remote_access.rst:182
 msgid ""
 "Open the app and scan the QR code displayed on the NethSecurity web "
 "interface. This will add your NethSecurity account to the authenticator "
 "app."
 msgstr ""
 
-#: ../../remote_access.rst:177
+#: ../../remote_access.rst:183
 msgid ""
 "Enter the 6-digit code displayed by your authenticator app in the One-"
 "Time Password (OTP) field on the NethSecurity web interface."
 msgstr ""
 
-#: ../../remote_access.rst:179
+#: ../../remote_access.rst:185
 msgid ""
 "The system will also provide you with a set of backup codes. These codes "
 "can be used to log in if you lose your smartphone or authenticator app. "
 "Store these codes securely, preferably offline."
 msgstr ""
 
-#: ../../remote_access.rst:182
+#: ../../remote_access.rst:188
 msgid "You can disable 2FA from the same page."
 msgstr ""
 
-#: ../../remote_access.rst:187
+#: ../../remote_access.rst:193
 msgid "NethSecurity UI administrators"
 msgstr ""
 
-#: ../../remote_access.rst:189
+#: ../../remote_access.rst:195
 msgid ""
 "The default user for accessing the user web interface is root, but it is "
 "possible to create other administrator users with access only to the web "
 "interface."
 msgstr ""
 
-#: ../../remote_access.rst:191
+#: ../../remote_access.rst:197
 msgid ""
 "To create a user in the local database, enter the `Username` and `Display"
 " name`. Ensure to set a password for the user; this is mandatory for "
@@ -10384,84 +10390,84 @@ msgid ""
 "interface, enable the `Administrator user` option."
 msgstr ""
 
-#: ../../remote_access.rst:195
+#: ../../remote_access.rst:201
 msgid ""
 "It is possible to grant or remove administrative access only to users "
 "residing in the local database."
 msgstr ""
 
-#: ../../remote_access.rst:198
+#: ../../remote_access.rst:204
 msgid "Auditing user actions"
 msgstr ""
 
-#: ../../remote_access.rst:200
+#: ../../remote_access.rst:206
 msgid ""
 "Every time an administrator logs in to the NethSecurity UI, the system "
 "logs the event, inside the `/var/log/messages` file. Example of login "
 "event for user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:206
+#: ../../remote_access.rst:212
 msgid "Example of logout event for user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:211
+#: ../../remote_access.rst:217
 msgid ""
 "Also every action performed by an administrator inside the NethSecurity "
 "UI is logged inside the `/var/log/messages` file. Example of action "
 "performed by user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:217
+#: ../../remote_access.rst:223
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:219
+#: ../../remote_access.rst:225
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:221
+#: ../../remote_access.rst:227
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:226
+#: ../../remote_access.rst:232
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:228
+#: ../../remote_access.rst:234
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:230
+#: ../../remote_access.rst:236
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:232
+#: ../../remote_access.rst:238
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:236
+#: ../../remote_access.rst:242
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:241
+#: ../../remote_access.rst:247
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:246
+#: ../../remote_access.rst:252
 msgid "Serial console"
 msgstr ""
 
-#: ../../remote_access.rst:248
+#: ../../remote_access.rst:254
 msgid ""
 "If the machine has a serial port (RS-232, tipically available with DE-9 "
 "connector or RJ45/8P8C connector) it's possible to access the firewall "
@@ -10471,35 +10477,35 @@ msgid ""
 "``picocom``, or ``screen``."
 msgstr ""
 
-#: ../../remote_access.rst:251
+#: ../../remote_access.rst:257
 msgid "Default acces parameters for NethSecurity 8 are:"
 msgstr ""
 
-#: ../../remote_access.rst:253
+#: ../../remote_access.rst:259
 msgid "Baud rate: 115200,"
 msgstr ""
 
-#: ../../remote_access.rst:254
+#: ../../remote_access.rst:260
 msgid "Data bits:8"
 msgstr ""
 
-#: ../../remote_access.rst:255
+#: ../../remote_access.rst:261
 msgid "Parity :None"
 msgstr ""
 
-#: ../../remote_access.rst:256
+#: ../../remote_access.rst:262
 msgid "Stop bits to 1"
 msgstr ""
 
-#: ../../remote_access.rst:258
+#: ../../remote_access.rst:264
 msgid "These last three parameters are often abbreviated as 8N1"
 msgstr ""
 
-#: ../../remote_access.rst:261
+#: ../../remote_access.rst:267
 msgid "USB-to-Serial Adapters"
 msgstr ""
 
-#: ../../remote_access.rst:263
+#: ../../remote_access.rst:269
 msgid ""
 "In case of need, NethSecurity can be used to access another server via "
 "the serial console. If the hardware does not have an RS-232 port, USB-to-"
@@ -10509,17 +10515,17 @@ msgid ""
 "using an Enterprise or Subscription version)."
 msgstr ""
 
-#: ../../remote_access.rst:270
+#: ../../remote_access.rst:276
 msgid ""
 "Two packages are provided for installation, covering the vast majority of"
 " adapters available on the market. ::"
 msgstr ""
 
-#: ../../remote_access.rst:276
+#: ../../remote_access.rst:282
 msgid "To install Prolific PL2303 driver:"
 msgstr ""
 
-#: ../../remote_access.rst:282
+#: ../../remote_access.rst:288
 msgid "The logs will show an output similar to this:"
 msgstr ""
 
