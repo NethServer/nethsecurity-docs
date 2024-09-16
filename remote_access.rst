@@ -155,6 +155,12 @@ Changes to the following LuCI pages are known to cause unpredictable behavior:
 - Logging tab: it configures logd which is not present inside NethSecurity
 - Networking: configuration created with this page is not compatible with NethSecurity UI
 
+If previously enabled, the LuCI web interface can be disabled by executing: ::
+
+  uci set ns-ui.config.luci_enable=0
+  uci commit ns-ui
+  ns-ui
+
 .. _2fa-section:
 
 NethSecurity UI 2FA
