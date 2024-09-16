@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-19 10:08+0000\n"
+"POT-Creation-Date: 2024-09-16 06:56+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2395,71 +2395,54 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.2.0-1-g4ccef3f3"
+msgid "8-23.05.4-ns.1.2.0-44-ge4316aac"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-1-g4ccef3f3/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-1-g4ccef3f3-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-44-ge4316aac/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-44-ge4316aac-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-1-g4ccef3f3/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-44-ge4316aac/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.1.99-alpha1-52-g3c027914"
+msgid "8-23.05.4-ns.1.2.0-40-g53a6a8a1"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-52-g3c027914/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-52-g3c027914-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-40-g53a6a8a1/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-40-g53a6a8a1-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-52-g3c027914/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-40-g53a6a8a1/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.1.99-alpha1-46-g74102e58"
+msgid "8-23.05.4-ns.1.2.0-39-g1983cf04"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-46-g74102e58/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-46-g74102e58-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-39-g1983cf04/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-39-g1983cf04-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-46-g74102e58/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-39-g1983cf04/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -6462,7 +6445,7 @@ msgid ""
 "support**."
 msgstr ""
 
-#: ../../network.rst:147 ../../remote_access.rst:255
+#: ../../network.rst:147 ../../remote_access.rst:268
 msgid ""
 "Extra packages, including kernel modules, are not preserved across image "
 "upgrades, so in the event of an upgrade, you will need to download and "
@@ -10060,51 +10043,67 @@ msgid ""
 "first time."
 msgstr ""
 
+#: ../../remote_access.rst:37
+#, fuzzy
+msgid "Reset root password"
+msgstr "Utente e password"
+
 #: ../../remote_access.rst:39
+msgid ""
+"The ``root password`` can be reset by entering in :ref:`Failsafe mode "
+"<failsafe-section>`. Once in this mode, you can change the password by "
+"executing the following commands. ::"
+msgstr ""
+
+#: ../../remote_access.rst:45
+msgid "Restart the firewall with the command ::"
+msgstr ""
+
+#: ../../remote_access.rst:52
 msgid "Web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:41
+#: ../../remote_access.rst:54
 msgid ""
 "NethSecurity UI (User Interface), the NethSecurity official web "
 "interface, is available on port ``9090`` at the following URL: "
 "**https://<server_ip>:9090**."
 msgstr ""
 
-#: ../../remote_access.rst:43
+#: ../../remote_access.rst:56
 msgid ""
 "To ease the access, NethSecurity UI is also available on standard HTTP "
 "port ``443`` at the following URL: **https://<server_ip>** or "
 "**http://<server_fqdn>**."
 msgstr ""
 
-#: ../../remote_access.rst:45
+#: ../../remote_access.rst:58
 msgid "Both URLs are accessible from LAN and WAN by default."
 msgstr ""
 
-#: ../../remote_access.rst:48
+#: ../../remote_access.rst:61
 msgid "Restricting access to NethSecurity UI"
 msgstr ""
 
-#: ../../remote_access.rst:50
+#: ../../remote_access.rst:63
 msgid ""
 "By default, this interface is accessible on port 9090 from both your "
 "internal network (LAN) and the wider internet (WAN). While convenient, "
 "this can potentially introduce a security risk."
 msgstr ""
 
-#: ../../remote_access.rst:53
+#: ../../remote_access.rst:66
 msgid "To mitigate this risk, you have two options (remove or restrict access):"
 msgstr ""
 
-#: ../../remote_access.rst:55
+#: ../../remote_access.rst:68
 msgid ""
 "remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page, "
 "navigate to the ``Input rules`` tab, and locate the \"Allow-UI-from-WAN\""
 " rule. Click the :guilabel:`Delete` button to remove it"
 msgstr ""
 
-#: ../../remote_access.rst:57
+#: ../../remote_access.rst:70
 msgid ""
 "restrict access from specific IPs or networks: in the Firewall rules "
 "page, locate the \"Allow-UI-from-WAN\" rule and click the "
@@ -10113,7 +10112,7 @@ msgid ""
 "NethSecurity UI."
 msgstr ""
 
-#: ../../remote_access.rst:61
+#: ../../remote_access.rst:74
 msgid ""
 "For example, to allow access only from your home network, you could enter"
 " the 192.168.1.0/24 network. Only allow access from trusted IP addresses "
@@ -10121,47 +10120,47 @@ msgid ""
 "to access the NethSecurity UI."
 msgstr ""
 
-#: ../../remote_access.rst:64
+#: ../../remote_access.rst:77
 msgid "Additional security measures:"
 msgstr ""
 
-#: ../../remote_access.rst:66
+#: ../../remote_access.rst:79
 msgid "use a strong password for the admin user"
 msgstr ""
 
-#: ../../remote_access.rst:67
+#: ../../remote_access.rst:80
 msgid ""
 "enable :ref:`two-factor authentication (2FA) <2fa-section>` for the admin"
 " user"
 msgstr ""
 
-#: ../../remote_access.rst:68
+#: ../../remote_access.rst:81
 msgid "keep your firewall up to date with the latest security patches"
 msgstr ""
 
-#: ../../remote_access.rst:73
+#: ../../remote_access.rst:86
 msgid "Change web user interface port"
 msgstr ""
 
-#: ../../remote_access.rst:75
+#: ../../remote_access.rst:88
 msgid "Users can change the NethSecurity UI port."
 msgstr ""
 
-#: ../../remote_access.rst:77
+#: ../../remote_access.rst:90
 msgid "To change the NethSecurity UI port from 9090 to 8181, execute: ::"
 msgstr ""
 
-#: ../../remote_access.rst:84
+#: ../../remote_access.rst:97
 msgid ""
 "The controller uses port 9090 to communicate with the unit. Changing the "
 "port will prevent the controller from managing the NethSecurity."
 msgstr ""
 
-#: ../../remote_access.rst:87
+#: ../../remote_access.rst:100
 msgid "Disable web user interface on port 443"
 msgstr ""
 
-#: ../../remote_access.rst:89
+#: ../../remote_access.rst:102
 msgid ""
 "While exposing port 443 (HTTPS) can be necessary for certain services, "
 "directly accessing the NethSecurity UI through this port may introduce a "
@@ -10169,20 +10168,20 @@ msgid ""
 "functionality while protecting your NethSecurity UI."
 msgstr ""
 
-#: ../../remote_access.rst:92
+#: ../../remote_access.rst:105
 msgid ""
 "If you don't require accessing the NethSecurity UI through port 443, "
 "disable it to minimize attack opportunities. Execute the following "
 "commands on your NethServer system: ::"
 msgstr ""
 
-#: ../../remote_access.rst:98
+#: ../../remote_access.rst:111
 msgid ""
 "This option disables access to the NethSecurity UI through both the "
 "server IP address and FQDN on port 443."
 msgstr ""
 
-#: ../../remote_access.rst:100
+#: ../../remote_access.rst:113
 msgid ""
 "If you need port 443 for other services, configure your firewall to "
 "redirect traffic destined for port 443 to a separate web server hosting "
@@ -10190,11 +10189,11 @@ msgid ""
 "in place."
 msgstr ""
 
-#: ../../remote_access.rst:106
+#: ../../remote_access.rst:119
 msgid "Privacy policy"
 msgstr ""
 
-#: ../../remote_access.rst:108
+#: ../../remote_access.rst:121
 msgid ""
 "In some cases, it is necessary to display the privacy policy of a product"
 " before login. NethSecurity does not display any privacy policy by "
@@ -10202,74 +10201,74 @@ msgid ""
 "contains the privacy policy."
 msgstr ""
 
-#: ../../remote_access.rst:111
+#: ../../remote_access.rst:124
 msgid ""
 "To add a link to the privacy policy, access the command line and execute:"
 " ::"
 msgstr ""
 
-#: ../../remote_access.rst:115
+#: ../../remote_access.rst:128
 msgid ""
 "Substitute ``https://mysite.org/privacy_policy`` with the URL of your "
 "privacy policy."
 msgstr ""
 
-#: ../../remote_access.rst:117
+#: ../../remote_access.rst:130
 msgid ""
 "The link to the privacy policy will be displayed inside the login page "
 "after next page refresh."
 msgstr ""
 
-#: ../../remote_access.rst:122
+#: ../../remote_access.rst:135
 msgid "Legacy web user interface"
 msgstr ""
 
-#: ../../remote_access.rst:126
+#: ../../remote_access.rst:139
 msgid ""
 "Changes done via LuCI web interface may break the official NethSecurity "
 "UI. Use at your own risk!"
 msgstr ""
 
-#: ../../remote_access.rst:130
+#: ../../remote_access.rst:143
 msgid ""
 "NethSecurity offers also LuCI, the original OpenWrt web interface, which "
 "provides a wide range of configuration options but is not officially "
 "supported. Luci is disabled by default. To enable it, execute: ::"
 msgstr ""
 
-#: ../../remote_access.rst:137
+#: ../../remote_access.rst:150
 msgid ""
 "Once enabled, Luci will be available only on port 443 at this URL: "
 "**https://<server_ip>/cgi-bin/luci**"
 msgstr ""
 
-#: ../../remote_access.rst:139
+#: ../../remote_access.rst:152
 msgid ""
 "Changes to the following LuCI pages are known to cause unpredictable "
 "behavior:"
 msgstr ""
 
-#: ../../remote_access.rst:141
+#: ../../remote_access.rst:154
 msgid ""
 "HTTP access tab: it configures uhttpd which is not present inside "
 "NethSecurity"
 msgstr ""
 
-#: ../../remote_access.rst:142
+#: ../../remote_access.rst:155
 msgid "Logging tab: it configures logd which is not present inside NethSecurity"
 msgstr ""
 
-#: ../../remote_access.rst:143
+#: ../../remote_access.rst:156
 msgid ""
 "Networking: configuration created with this page is not compatible with "
 "NethSecurity UI"
 msgstr ""
 
-#: ../../remote_access.rst:148
+#: ../../remote_access.rst:161
 msgid "NethSecurity UI 2FA"
 msgstr ""
 
-#: ../../remote_access.rst:150
+#: ../../remote_access.rst:163
 msgid ""
 "Protecting your NethSecurity administrator account is crucial, and Two-"
 "Factor Authentication (2FA) adds an extra layer of security beyond just a"
@@ -10279,73 +10278,73 @@ msgid ""
 " risk of unauthorized access even if your password is compromised."
 msgstr ""
 
-#: ../../remote_access.rst:154
+#: ../../remote_access.rst:167
 msgid "Enabling 2FA on NethSecurity UI:"
 msgstr ""
 
-#: ../../remote_access.rst:156
+#: ../../remote_access.rst:169
 msgid "Log in to your NethSecurity web interface"
 msgstr ""
 
-#: ../../remote_access.rst:157
+#: ../../remote_access.rst:170
 msgid ""
 "Click on the user icon in the top right corner and select ``Account "
 "settings``"
 msgstr ""
 
-#: ../../remote_access.rst:158
+#: ../../remote_access.rst:171
 msgid ""
 "Find the Two-factor authentication option and click :guilabel:`Configure "
 "2FA`"
 msgstr ""
 
-#: ../../remote_access.rst:160
+#: ../../remote_access.rst:173
 msgid "Setting up your authenticator app:"
 msgstr ""
 
-#: ../../remote_access.rst:162
+#: ../../remote_access.rst:175
 msgid ""
 "Download an authenticator app on your smartphone or tablet. Popular "
 "options include FreeOTP, Google Authenticator, and Microsoft "
 "Authenticator."
 msgstr ""
 
-#: ../../remote_access.rst:163
+#: ../../remote_access.rst:176
 msgid ""
 "Open the app and scan the QR code displayed on the NethSecurity web "
 "interface. This will add your NethSecurity account to the authenticator "
 "app."
 msgstr ""
 
-#: ../../remote_access.rst:164
+#: ../../remote_access.rst:177
 msgid ""
 "Enter the 6-digit code displayed by your authenticator app in the One-"
 "Time Password (OTP) field on the NethSecurity web interface."
 msgstr ""
 
-#: ../../remote_access.rst:166
+#: ../../remote_access.rst:179
 msgid ""
 "The system will also provide you with a set of backup codes. These codes "
 "can be used to log in if you lose your smartphone or authenticator app. "
 "Store these codes securely, preferably offline."
 msgstr ""
 
-#: ../../remote_access.rst:169
+#: ../../remote_access.rst:182
 msgid "You can disable 2FA from the same page."
 msgstr ""
 
-#: ../../remote_access.rst:174
+#: ../../remote_access.rst:187
 msgid "NethSecurity UI administrators"
 msgstr ""
 
-#: ../../remote_access.rst:176
+#: ../../remote_access.rst:189
 msgid ""
 "The default user for accessing the user web interface is root, but it is "
 "possible to create other administrator users with access only to the web "
 "interface."
 msgstr ""
 
-#: ../../remote_access.rst:178
+#: ../../remote_access.rst:191
 msgid ""
 "To create a user in the local database, enter the `Username` and `Display"
 " name`. Ensure to set a password for the user; this is mandatory for "
@@ -10353,84 +10352,84 @@ msgid ""
 "interface, enable the `Administrator user` option."
 msgstr ""
 
-#: ../../remote_access.rst:182
+#: ../../remote_access.rst:195
 msgid ""
 "It is possible to grant or remove administrative access only to users "
 "residing in the local database."
 msgstr ""
 
-#: ../../remote_access.rst:185
+#: ../../remote_access.rst:198
 msgid "Auditing user actions"
 msgstr ""
 
-#: ../../remote_access.rst:187
+#: ../../remote_access.rst:200
 msgid ""
 "Every time an administrator logs in to the NethSecurity UI, the system "
 "logs the event, inside the `/var/log/messages` file. Example of login "
 "event for user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:193
+#: ../../remote_access.rst:206
 msgid "Example of logout event for user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:198
+#: ../../remote_access.rst:211
 msgid ""
 "Also every action performed by an administrator inside the NethSecurity "
 "UI is logged inside the `/var/log/messages` file. Example of action "
 "performed by user `goofy`: ::"
 msgstr ""
 
-#: ../../remote_access.rst:204
+#: ../../remote_access.rst:217
 msgid "SSH"
 msgstr ""
 
-#: ../../remote_access.rst:206
+#: ../../remote_access.rst:219
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22. "
 "Access with the root user and the default password."
 msgstr ""
 
-#: ../../remote_access.rst:208
+#: ../../remote_access.rst:221
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:213
+#: ../../remote_access.rst:226
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:215
+#: ../../remote_access.rst:228
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:217
+#: ../../remote_access.rst:230
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:219
+#: ../../remote_access.rst:232
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:223
+#: ../../remote_access.rst:236
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:228
+#: ../../remote_access.rst:241
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:233
+#: ../../remote_access.rst:246
 msgid "Serial console"
 msgstr ""
 
-#: ../../remote_access.rst:235
+#: ../../remote_access.rst:248
 msgid ""
 "If the machine has a serial port (RS-232, tipically available with DE-9 "
 "connector or RJ45/8P8C connector) it's possible to access the firewall "
@@ -10440,35 +10439,35 @@ msgid ""
 "``picocom``, or ``screen``."
 msgstr ""
 
-#: ../../remote_access.rst:238
+#: ../../remote_access.rst:251
 msgid "Default acces parameters for NethSecurity 8 are:"
 msgstr ""
 
-#: ../../remote_access.rst:240
+#: ../../remote_access.rst:253
 msgid "Baud rate: 115200,"
 msgstr ""
 
-#: ../../remote_access.rst:241
+#: ../../remote_access.rst:254
 msgid "Data bits:8"
 msgstr ""
 
-#: ../../remote_access.rst:242
+#: ../../remote_access.rst:255
 msgid "Parity :None"
 msgstr ""
 
-#: ../../remote_access.rst:243
+#: ../../remote_access.rst:256
 msgid "Stop bits to 1"
 msgstr ""
 
-#: ../../remote_access.rst:245
+#: ../../remote_access.rst:258
 msgid "These last three parameters are often abbreviated as 8N1"
 msgstr ""
 
-#: ../../remote_access.rst:248
+#: ../../remote_access.rst:261
 msgid "USB-to-Serial Adapters"
 msgstr ""
 
-#: ../../remote_access.rst:250
+#: ../../remote_access.rst:263
 msgid ""
 "In case of need, NethSecurity can be used to access another server via "
 "the serial console. If the hardware does not have an RS-232 port, USB-to-"
@@ -10478,17 +10477,17 @@ msgid ""
 "using an Enterprise or Subscription version)."
 msgstr ""
 
-#: ../../remote_access.rst:257
+#: ../../remote_access.rst:270
 msgid ""
 "Two packages are provided for installation, covering the vast majority of"
 " adapters available on the market. ::"
 msgstr ""
 
-#: ../../remote_access.rst:263
+#: ../../remote_access.rst:276
 msgid "To install Prolific PL2303 driver:"
 msgstr ""
 
-#: ../../remote_access.rst:269
+#: ../../remote_access.rst:282
 msgid "The logs will show an output similar to this:"
 msgstr ""
 
@@ -17372,5 +17371,61 @@ msgstr ""
 #~ "this allows you to route queries "
 #~ "for specific domains to different "
 #~ "servers."
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.2.0-1-g4ccef3f3"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-1-g4ccef3f3/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-1-g4ccef3f3-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-1-g4ccef3f3/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.1.99-alpha1-52-g3c027914"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-52-g3c027914/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-52-g3c027914-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-52-g3c027914/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.1.99-alpha1-46-g74102e58"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-46-g74102e58/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-46-g74102e58-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-46-g74102e58/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668/targets/x86/64/nethsecurity-8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.1.99-alpha1-45-g1b17b668/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
