@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-16 12:52+0000\n"
+"POT-Creation-Date: 2024-09-19 13:06+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -118,7 +118,7 @@ msgstr "Dopo il ripristino il sistema verrà riavviato."
 msgid "Automatic backup"
 msgstr "Backup automatico"
 
-#: ../../backup.rst:37 ../../controller.rst:251 ../../dpi_filter.rst:35
+#: ../../backup.rst:37 ../../controller.rst:253 ../../dpi_filter.rst:35
 #: ../../threat_shield_ip.rst:44 ../../updates.rst:62
 #: ../../users_databases.rst:38
 msgid "Subscription required"
@@ -1234,11 +1234,11 @@ msgstr ""
 "informazioni su come utilizzare Grafana, consultare la documentazione "
 "ufficiale <https://grafana.com/docs/grafana/latest/>`_."
 
-#: ../../controller.rst:161
+#: ../../controller.rst:163
 msgid "SSH access"
 msgstr "Accesso SSH"
 
-#: ../../controller.rst:163
+#: ../../controller.rst:165
 msgid ""
 "SSH, or Secure Shell, is a cryptographic network protocol for operating "
 "network services securely over an unsecured network. SSH provides a "
@@ -1250,7 +1250,7 @@ msgstr ""
 "fornisce un canale sicuro su una rete non protetta in un'architettura "
 "client-server, collegando un'applicazione client SSH a un server SSH."
 
-#: ../../controller.rst:166
+#: ../../controller.rst:168
 msgid ""
 "It is possible to connect to the unit by clicking on the :guilabel:`Open "
 "SSH terminal` link. The connection is made through a web-based SSH client"
@@ -1260,13 +1260,13 @@ msgstr ""
 "terminal`. La connessione avviene tramite un client SSHweb based che "
 "consente l'accesso alla shell dell'unità."
 
-#: ../../controller.rst:169
+#: ../../controller.rst:171
 msgid "You can connect to units using username and password or an SSH key pair."
 msgstr ""
 "È possibile connettersi a unità utilizzando nome utente e password oppure"
 " una coppia di chiavi SSH."
 
-#: ../../controller.rst:171
+#: ../../controller.rst:173
 msgid ""
 "Once connected, the SSH session will be started inside a new browser tab."
 " Some browsers require the permission to open popups for the SSH session "
@@ -1279,11 +1279,11 @@ msgstr ""
 "sessione, basta chiudere la finestra del browser o il logout dalla shell "
 "utilizzando CTRL + D."
 
-#: ../../controller.rst:175
+#: ../../controller.rst:177
 msgid "Username and password"
 msgstr "Utente e password"
 
-#: ../../controller.rst:177
+#: ../../controller.rst:179
 msgid ""
 "The user can connect using a username and password of the unit in the "
 "following scenarios: - The logged-in user has not generated an SSH key "
@@ -1295,7 +1295,7 @@ msgstr ""
 "coppia di chiavi SSH - La chiave SSH pubblica dell'utente connesso non è "
 "stata copiata all'interno del file di chiavi autorizzate SSH dell'unità"
 
-#: ../../controller.rst:181
+#: ../../controller.rst:183
 msgid ""
 "The user interface will display a form to enter the username and "
 "password. After entering the credentials, the user can click on the "
@@ -1305,11 +1305,11 @@ msgstr ""
 " la password. Dopo aver inserito le credenziali, l'utente può cliccare "
 "sul link :guilabel: `Apri terminale` per avviare la sessione SSH."
 
-#: ../../controller.rst:185
+#: ../../controller.rst:187
 msgid "SSH key"
 msgstr "Chiave SSH"
 
-#: ../../controller.rst:187
+#: ../../controller.rst:189
 msgid ""
 "An SSH key pair is a set of two cryptographic keys that are used for "
 "authentication when establishing a secure connection using the SSH "
@@ -1321,7 +1321,7 @@ msgstr ""
 "connessione sicura utilizzando il protocollo SSH (Secure Shell). La "
 "coppia è composta da una chiave privata e da una chiave pubblica:"
 
-#: ../../controller.rst:190
+#: ../../controller.rst:192
 msgid ""
 "**Private Key**: This is kept secret and secure by the user. It should "
 "never be exposed to the outside world. It is used to decrypt data that "
@@ -1331,7 +1331,7 @@ msgstr ""
 " dovrebbe mai essere esposta al mondo esterno. Viene utilizzata per "
 "decifrare i dati che sono stati crittografati con la chiave pubblica."
 
-#: ../../controller.rst:192
+#: ../../controller.rst:194
 msgid ""
 "**Public Key**: This can be freely shared and is used to encrypt data "
 "that can only be decrypted with the private key."
@@ -1340,7 +1340,7 @@ msgstr ""
 "crittografare i dati che possono essere decifrati solo con la chiave "
 "privata."
 
-#: ../../controller.rst:194
+#: ../../controller.rst:196
 msgid ""
 "When you connect to a server using SSH with key pair authentication, you "
 "provide your public key to the server. The server then encrypts a "
@@ -1356,7 +1356,7 @@ msgstr ""
 " risultato è corretto, il server sa che è necessario avere la chiave "
 "privata corretta per permettere la connessione."
 
-#: ../../controller.rst:198
+#: ../../controller.rst:200
 msgid ""
 "This method of authentication is more secure than using a password, as it"
 " provides a form of two-factor authentication: something you have (the "
@@ -1368,7 +1368,7 @@ msgstr ""
 "hai (il file chiave privata) e qualcosa che sai (la passphrase per "
 "sbloccare la chiave privata)."
 
-#: ../../controller.rst:201
+#: ../../controller.rst:203
 msgid ""
 "To use an SSH key, generate a new key pair by accessing the ``Account "
 "settings`` page and and clicking on the :guilabel:`Generate SSH key pair`"
@@ -1384,7 +1384,7 @@ msgstr ""
 "visualizzerà la chiave pubblica, mentre la chiave privata viene "
 "conservata in sicurezza all'interno del controller."
 
-#: ../../controller.rst:205
+#: ../../controller.rst:207
 msgid ""
 "Before connecting to the unit, you must copy the public key and paste it "
 "into the unit's SSH authorized keys file. You can do it from the ``Unit "
@@ -1399,7 +1399,7 @@ msgstr ""
 "alle quali si desidera inviare la chiave e cliccare sul:guilabel: `Send "
 "SSH key` pulsante."
 
-#: ../../controller.rst:209
+#: ../../controller.rst:211
 msgid ""
 "From now on, you can connect to the unit using the SSH key pair. The user"
 " interface will display a form to enter the passphrase when clicking on "
@@ -1409,7 +1409,7 @@ msgstr ""
 "di tasti SSH. L'interfaccia utente visualizzerà un modulo per inserire la"
 " passphrase quando si fa clic su :guilabel: ` Pulsante open terminal`."
 
-#: ../../controller.rst:212
+#: ../../controller.rst:214
 msgid ""
 "You can also revoke the SSH key pair by clicking on the :guilabel:`Revoke"
 " SSH public key` button from the :guilabel:`Actions` button."
@@ -1417,11 +1417,11 @@ msgstr ""
 "È inoltre possibile revocare la coppia di tasti SSH cliccando sul tasto: "
 "`Actions` ."
 
-#: ../../controller.rst:215
+#: ../../controller.rst:217
 msgid "Accounting"
 msgstr ""
 
-#: ../../controller.rst:217
+#: ../../controller.rst:219
 msgid ""
 "All operations performed on the controller are logged in the NS8 log. "
 "Here are some examples of logged operations:"
@@ -1429,23 +1429,23 @@ msgstr ""
 "Tutte le operazioni eseguite sul controller sono registrate nel registro "
 "NS8. Alcuni esempi di operazioni registrate sono:"
 
-#: ../../controller.rst:219
+#: ../../controller.rst:221
 msgid "User login and logout"
 msgstr "Accesso utente e logout"
 
-#: ../../controller.rst:220
+#: ../../controller.rst:222
 msgid "User creation/modification/deletion/password change"
 msgstr "Creazione/modifica/eliminazione dell'utente e cambiamento delle password"
 
-#: ../../controller.rst:221
+#: ../../controller.rst:223
 msgid "Unit list/creation/removal"
 msgstr "lista/creazione/rimozione delle unità"
 
-#: ../../controller.rst:223
+#: ../../controller.rst:225
 msgid "Example of NS8 log: ::"
 msgstr "Esempio di log di NS8::"
 
-#: ../../controller.rst:228
+#: ../../controller.rst:230
 msgid ""
 "Each unit has an rpcd user specific to the controller, which is used for "
 "management operations. When a user accesses the unit's web interface from"
@@ -1458,7 +1458,7 @@ msgstr ""
 "eseguite sono registrate nel registro dell'unità, identificate "
 "dall'utente rpcd. Per esempio:"
 
-#: ../../controller.rst:234
+#: ../../controller.rst:236
 msgid ""
 "To determine who performed a specific operation, it is necessary to check"
 " the log of the unit identified by the rpcd user and correlate it with "
@@ -1468,7 +1468,7 @@ msgstr ""
 "controllare il registro dell'unità identificata dall'utente rpcd e "
 "correlare con l'azione di login eseguita sul controller."
 
-#: ../../controller.rst:237
+#: ../../controller.rst:239
 msgid ""
 "When a user connects to the unit via SSH, the login is logged in the "
 "unit's log, identified by the SSH user. Usually, the SSH user is root. "
@@ -1478,7 +1478,7 @@ msgstr ""
 "registrato nel registro dell'unità, identificato dall'utente SSH. Di "
 "solito, l'utente SSH è root. Per esempio:"
 
-#: ../../controller.rst:242
+#: ../../controller.rst:244
 msgid ""
 "If the user uses an SSH key for authentication, the log will contain the "
 "fingerprint of the SSH key used for authentication. This makes it easier "
@@ -1489,11 +1489,11 @@ msgstr ""
 "Ciò rende più facile associare l'utente SSH alle operazioni eseguite. "
 "Esempio:"
 
-#: ../../controller.rst:249
+#: ../../controller.rst:251
 msgid "Subscription and limitations"
 msgstr "Abbonamento e limitazioni"
 
-#: ../../controller.rst:253
+#: ../../controller.rst:255
 msgid ""
 "Some restrictions can only be overcomed if the firewall has a valid "
 "subscription."
@@ -1501,34 +1501,193 @@ msgstr ""
 "Alcune restrizioni possono essere rimosse solo se il firewall ha un "
 "abbonamento valido."
 
-#: ../../controller.rst:255
+#: ../../controller.rst:257
 msgid ""
 "The behavior of the controller running on a NS8 depends on its "
 "subscription status."
 msgstr ""
 
-#: ../../controller.rst:257
+#: ../../controller.rst:259
 msgid "Controller without subscription:"
 msgstr ""
 
-#: ../../controller.rst:259
+#: ../../controller.rst:261
 msgid "Allows the registration of up to 3 units."
 msgstr ""
 
-#: ../../controller.rst:260
+#: ../../controller.rst:262
 msgid "Only community firewalls can register with the controller."
 msgstr ""
 
-#: ../../controller.rst:262
+#: ../../controller.rst:264
 msgid "Controller with a valid subscription:"
 msgstr ""
 
-#: ../../controller.rst:264
+#: ../../controller.rst:266
 msgid "The number of units is unlimited."
 msgstr ""
 
-#: ../../controller.rst:265
+#: ../../controller.rst:267
 msgid "Only firewalls with a valid subscription can register with the controller."
+msgstr ""
+
+#: ../../controller.rst:270
+msgid "Version awareness"
+msgstr ""
+
+#: ../../controller.rst:272
+msgid ""
+"Version awareness is a mechanism that prevents the user from performing "
+"operations that are not supported by the unit version. To do so, when "
+"connecting to the UI of a unit the controller will check the API version "
+"during the connection process. There are three possible scenarios:"
+msgstr ""
+
+#: ../../controller.rst:275
+msgid "If the versions are compatible, the connection proceeds as normal."
+msgstr ""
+
+#: ../../controller.rst:276
+msgid ""
+"If the firewall (unit) is significantly older than the controller, you'll"
+" see a popup that prevents the connection. This is to protect against "
+"potential errors."
+msgstr ""
+
+#: ../../controller.rst:277
+msgid ""
+"If the controller is slightly older than the firewall, you'll see a "
+"warning about the mismatch. However, you'll still be able to connect if "
+"you choose to proceed."
+msgstr ""
+
+#: ../../controller.rst:279
+msgid ""
+"As an administrator, you don't need to take any specific actions to "
+"enable Version awareness. It works automatically in the background. "
+"However, you should:"
+msgstr ""
+
+#: ../../controller.rst:281
+msgid ""
+"Pay attention to warnings: if you see a version mismatch warning, "
+"consider updating your system when convenient."
+msgstr ""
+
+#: ../../controller.rst:282
+msgid ""
+"Keep your system updated: regularly check for and apply updates to both "
+"your controller and firewall units to ensure the best compatibility and "
+"access to new features."
+msgstr ""
+
+#: ../../controller.rst:283
+msgid ""
+"Report issues: if you encounter any unusual behavior or errors, "
+"especially after seeing a version warning, follow the "
+":ref:`troubleshooting <troubleshooting-section>` procedure."
+msgstr ""
+
+#: ../../controller.rst:285
+msgid ""
+"Version awareness is a behind-the-scenes feature that helps keep your "
+"NethSecurity system running smoothly. By automatically checking "
+"compatibility between the controller and units, it prevents many "
+"potential issues before they can affect your network. While it doesn't "
+"require any action from you, being aware of this feature can help you "
+"better understand and manage your system."
+msgstr ""
+
+#: ../../controller.rst:289
+msgid "Bypass version awareness"
+msgstr ""
+
+#: ../../controller.rst:290
+msgid ""
+"While version awareness is a useful feature, knowing the risks and "
+"potential issues, you may want to bypass it in some cases. To do so, the "
+"procedure is as follows:"
+msgstr ""
+
+#: ../../controller.rst:293
+msgid ""
+"On the controller, go to the unit manager page and click on "
+":guilabel:`More Info` of the unit you want to connect to."
+msgstr ""
+
+#: ../../controller.rst:294
+msgid "Copy the `Unit ID` value."
+msgstr ""
+
+#: ../../controller.rst:295
+msgid "Click on :guilabel:`Open SSH terminal`"
+msgstr ""
+
+#: ../../controller.rst:296
+msgid ""
+"When the modal opens, you can safely close it. This was only needed to "
+"exchange some credentials with the unit."
+msgstr ""
+
+#: ../../controller.rst:297
+msgid ""
+"Open a new tab, and go to this URL: `https://<controller-"
+"fqdn>/#/controller/manage/<unit-id>/dashboard`. Example: "
+"`https://controller.nethsecurity.org/#/controller/manage/000000000-0000-0000-0000-000000000000/dashboard`."
+msgstr ""
+
+#: ../../controller.rst:298
+msgid "You will be able to access the unit's UI without the version check."
+msgstr ""
+
+#: ../../controller.rst:301
+msgid "Update unit with SSH"
+msgstr ""
+
+#: ../../controller.rst:302
+msgid ""
+"You can update the unit without connecting to it using the SSH terminal. "
+"Follow the steps to connect to the unit using :ref:`SSH Access "
+"<controller_ssh-section>`."
+msgstr ""
+
+#: ../../controller.rst:305
+msgid ""
+"Once connected, you can check for updates depending on what you want to "
+"update."
+msgstr ""
+
+#: ../../controller.rst:307
+msgid "Install package updates on the unit:"
+msgstr ""
+
+#: ../../controller.rst:309
+#, fuzzy
+msgid "To check for updates for packages use the following command:"
+msgstr ""
+"Nella modalità personalizzata della configurazione MultiWAN, si applicano"
+" i seguenti concetti:"
+
+#: ../../controller.rst:315
+msgid ""
+"If you're ok with the installation of the packages you can run the "
+"following command:"
+msgstr ""
+
+#: ../../controller.rst:321
+msgid ""
+"To update the image, you can simply schedule the installation, remember "
+"this is a operation that restarts the firewall (causing a downtime)"
+msgstr ""
+
+#: ../../controller.rst:323
+msgid "Check if there is an updated image available:"
+msgstr ""
+
+#: ../../controller.rst:329
+msgid ""
+"If you want to proceed with the update, this can be done through this "
+"command:"
 msgstr ""
 
 #: ../../ddns.rst:4
@@ -2395,6 +2554,57 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.4-ns.1.2.0-49-g3a71e3119"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-49-g3a71e3119/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-49-g3a71e3119-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-49-g3a71e3119/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.4-ns.1.2.0-47-g718d2a9ff"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-47-g718d2a9ff/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-47-g718d2a9ff-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-47-g718d2a9ff/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.4-ns.1.2.0-45-g23e0ba98"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-45-g23e0ba98/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-45-g23e0ba98-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-45-g23e0ba98/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.4-ns.1.2.0-44-ge4316aac"
 msgstr ""
 
@@ -2426,23 +2636,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-40-g53a6a8a1/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.2.0-39-g1983cf04"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-39-g1983cf04/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-39-g1983cf04-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-39-g1983cf04/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -17504,5 +17697,19 @@ msgstr ""
 #~ "To configure NAT helpers, follow the "
 #~ "instruction inside the `developer manual "
 #~ "<https://dev.nethsecurity.org/design/nat_helpers/>`_."
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.2.0-39-g1983cf04"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-39-g1983cf04/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-39-g1983cf04-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-39-g1983cf04/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
