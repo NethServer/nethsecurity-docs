@@ -157,6 +157,8 @@ It supports authentication via various methods including username/password, OAut
 You can also create custom dashboards and alerts to monitor the metrics and logs from the connected units.
 See the `official documentation <https://grafana.com/docs/grafana/latest/>`_ for more information on how to use Grafana.
 
+.. _controller_ssh-section:
+
 SSH access
 ==========
 
@@ -263,3 +265,69 @@ Controller with a valid subscription:
 
 - The number of units is unlimited.
 - Only firewalls with a valid subscription can register with the controller.
+
+Version awareness
+=================
+
+Version awareness is a mechanism that prevents the user from performing operations that are not supported by the unit version. To do so, when connecting to the UI
+of a unit the controller will check the API version during the connection process. There are three possible scenarios:
+
+a. If the versions are compatible, the connection proceeds as normal.
+b. If the firewall (unit) is significantly older than the controller, you'll see a popup that prevents the connection. This is to protect against potential errors.
+c. If the controller is slightly older than the firewall, you'll see a warning about the mismatch. However, you'll still be able to connect if you choose to proceed.
+
+As an administrator, you don't need to take any specific actions to enable Version awareness. It works automatically in the background. However, you should:
+
+1. Pay attention to warnings: if you see a version mismatch warning, consider updating your system when convenient.
+2. Keep your system updated: regularly check for and apply updates to both your controller and firewall units to ensure the best compatibility and access to new features.
+3. Report issues: if you encounter any unusual behavior or errors, especially after seeing a version warning, follow the :ref:`troubleshooting <troubleshooting-section>` procedure.
+
+Version awareness is a behind-the-scenes feature that helps keep your NethSecurity system running smoothly. By automatically checking compatibility between the controller
+and units, it prevents many potential issues before they can affect your network. While it doesn't require any action from you, being aware of this feature can help you better understand and manage your system.
+
+.. rubric:: Bypass version awareness
+
+While version awareness is a useful feature, knowing the risks and potential issues, you may want to bypass it in some cases.
+To do so, the procedure is as follows:
+
+1. On the controller, go to the unit manager page and click on :guilabel:`More Info` of the unit you want to connect to.
+2. Copy the `Unit ID` value.
+3. Click on :guilabel:`Open SSH terminal`
+4. When the modal opens, you can safely close it. This was only needed to exchange some credentials with the unit.
+5. Open a new tab, and go to this URL: `https://<controller-fqdn>/#/controller/manage/<unit-id>/dashboard`. Example: `https://controller.nethsecurity.org/#/controller/manage/000000000-0000-0000-0000-000000000000/dashboard`.
+6. You will be able to access the unit's UI without the version check.
+
+.. rubric:: Update unit with SSH
+
+You can update the unit without connecting to it using the SSH terminal.
+Follow the steps to connect to the unit using :ref:`SSH Access <controller_ssh-section>`.
+
+Once connected, you can check for updates depending on what you want to update.
+
+a. Install package updates on the unit:
+
+   1. To check for updates for packages use the following command:
+ 
+      .. code-block:: bash
+ 
+        /usr/libexec/rpcd/ns.update call check-package-updates
+   
+   2. If you're ok with the installation of the packages you can run the following command:
+ 
+      .. code-block:: bash
+ 
+        /usr/libexec/rpcd/ns.update call install-package-updates
+
+b. To update the image, you can simply schedule the installation, remember this is a operation that restarts the firewall (causing a downtime)
+
+   1. Check if there is an updated image available:
+ 
+      .. code-block:: bash
+ 
+        /usr/libexec/rpcd/ns.update call check-system-update
+
+   2. If you want to proceed with the update, this can be done through this command:
+
+      .. code-block:: bash
+
+        /usr/libexec/rpcd/ns.update call update-system
