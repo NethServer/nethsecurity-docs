@@ -171,7 +171,8 @@ Custom zones are rarely used in NethServer 7 and tipically for very specific tas
 They are required to define a network segment with firewall rules different from those of the primary interface or, more commonly, to correctly manage traffic coming from a network other than the one to which the interface is connected.
 These zones allow for defining specific behavior for that network segment and ensure correct routing in complex environments (e.g., a port forwarding rule with a remote host destination via MPLS or a VPN tunnel).
 
-In NethSecurity, zones work differently, offering for these cases a much simpler management.
+In NethSecurity, zones work differently from NethServer 7, offering for these cases a much simpler management.
+Typically, in NethSecurity, all previous configurations made with custom zones can be easily managed **without the need to recreate any custom zone**, thanks to the following default behavior.
 
 **1. Policy inheritance for incoming traffic**
 
@@ -183,7 +184,7 @@ A local interface named "office" is operating on the 192.168.1.0/24 network segm
 A gateway with IP 192.168.1.220 is connected to the same switch as the "office" interface, providing access to the remote network 10.10.10.0/24.
 The remote network 10.10.10.0/24 must use NethSecurity to reach the internet.
 
-In NethSecurity 8, no additional configuration is needed, all packets sent to the "office" interface are correctly routed, even if they originate from a different network segment. Masquerading is also applied to all outbound packets.
+In NethSecurity, no additional configuration is needed, all packets sent to the "office" interface are correctly routed, even if they originate from a different network segment. Masquerading is also applied to all outbound packets.
 
 **2. No need to create new zones for different segments**
 
