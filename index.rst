@@ -65,7 +65,7 @@ NethSecurity administrator manual
 
    port_forward
    nat
-   rules
+   firewall_rules
    connections
    zones_and_policies
 
