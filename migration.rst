@@ -165,6 +165,8 @@ The following features are not migrated to NethSecurity:
 - Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block feature <brute_force-section>`
 - Threat shield DNS, currently :ref:`available only from command line <threat_shield_dns-section>`
 
+.. _custom_zones_migration-section:
+
 Custom Zones
 ============
 Custom zones are rarely used in NethServer 7 and tipically for very specific tasks. 
@@ -193,7 +195,6 @@ Just like policies, standard rules can be applied to this traffic without needin
 **3. Routing works seamlessly without extra rules**
 
 Routing for this specific network segment functions correctly without any additional rules or zones. In NethServer 7, it was mandatory to create a zone to ensure proper routing for incoming packets, as mentioned in the initial port forwarding's example.
-
 
 USB-to-Ethernet adapters
 ========================
