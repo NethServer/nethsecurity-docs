@@ -63,10 +63,11 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Firewall
 
-   firewall
    port_forward
    nat
+   rules
    connections
+   zones_and_policies
 
 .. toctree::
    :maxdepth: 2
