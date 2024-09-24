@@ -138,7 +138,7 @@ During the migration, the following configurations will be imported from NethSer
 - Firewall zones: zones are migrated and should retain the same behavior of the original configuration:
   green zones will be mapped to ``lan``, red zones to ``wan``, orange zones to ``dmz``, and blue zones to ``guest`` zones;
   if a blue zone was present on NethServer 7, rules for accepting DNS and DHCP requests will be automatically added
-- Firewall rules: rules using NDPI services are not supported; source and destination objects are not currently supported and will be converted
+- Firewall rules: rules using NDPI services are not supported; source and destination objects, including zones, are not currently supported and will be converted
   to rules with IP/CIDR addresses; all NAT helpers are automatically loaded after the migration with standard kernel parameters
 - MultiWAN configuration: providers will be preserved while divert rules (policy routing) are not migrated
 - QoS: classes with reserved bandwidth and rules are not supported
