@@ -167,7 +167,7 @@ The following features are not migrated to NethSecurity:
 
 Custom Zones
 ============
-Custom zones are rarely used in NethServer 7 and usually for very specific tasks. 
+Custom zones are rarely used in NethServer 7 and tipically for very specific tasks. 
 They are required to define a network segment with firewall rules different from those of the primary interface or, more commonly, to correctly manage traffic coming from a network other than the one to which the interface is connected.
 These zones allow for defining specific behavior for that network segment and ensure correct routing in complex environments (e.g., a port forwarding rule with a remote host destination via MPLS or a VPN tunnel).
 
