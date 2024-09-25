@@ -49,3 +49,36 @@ attempt to connect to a server using the public IP address, hairpin NAT ensures 
 out to the internet and then back into the local network.
 
 To enable the hairpin, enable the ``Hairpin NAT`` option and select one or more zones where the NAT loopback should be enabled.
+
+Hairpin NAT for VPN Zones
+-------------------------
+
+To use Hairpin NAT with VPN zones such as IPsec, OpenVPN, and RWOpenVPN, additional configuration is necessary. 
+You must explicitly declare the network used by the VPN; otherwise, Hairpin NAT will not function for VPN-connected clients.
+
+This configuration can be performed via the command line. First, identify the internal reference for the zone, then add the desired network, commit the changes, and restart the service.
+
+Make sure that networks are assigned to the correct zones (IPsec tunnels to the ipsec zone, OpenVPN tunnels to the openvpn zone, and RoadWarrior to the rwopenvpn zone). 
+If multiple tunnels or networks are present, all must be included in their respective zones.
+
+To declare the OpenVPN RoadWarrior network, you can use the following example command sequence:
+
+Identify the internal reference for the **rwopenvpn** zone: ::
+
+ uci show firewall | grep ".name='rwopenvpn'"
+
+Example output: ::
+
+ firewall.ns_49d9f400.name='rwopenvpn'
+
+Set the desired network (in this case, **10.245.204.0/24**) for the **rwopenvpn** zone: ::
+ 
+ uci set firewall.ns_49d9f400.subnet=10.245.204.0/24
+
+Commit the changes and restart the firewall service: ::
+ 
+ uci commit firewall
+ /etc/init.d/firewall restart
+ 
+
+Ensure that you replace the network **subnet** with the correct one for your specific VPN setup.
