@@ -63,22 +63,22 @@ If multiple tunnels or networks are present, all must be included in their respe
 
 To declare the OpenVPN RoadWarrior network, you can use the following example command sequence:
 
-Identify the internal reference for the **rwopenvpn** zone: ::
 
- uci show firewall | grep ".name='rwopenvpn'"
+1. Identify the internal reference for the **rwopenvpn** zone: ::
 
-Example output: ::
+    uci show firewall | grep ".name='rwopenvpn'"
 
- firewall.ns_49d9f400.name='rwopenvpn'
+   Example output: ::
 
-Set the desired network (in this case, **10.245.204.0/24**) for the **rwopenvpn** zone: ::
+      firewall.ns_49d9f400.name='rwopenvpn'
+
+2. Set the desired network (in this case, **10.245.204.0/24**) for the **rwopenvpn** zone: ::
  
- uci set firewall.ns_49d9f400.subnet=10.245.204.0/24
+    uci set firewall.ns_49d9f400.subnet=10.245.204.0/24
 
-Commit the changes and restart the firewall service: ::
+3. Commit the changes and restart the firewall service: ::
  
- uci commit firewall
- /etc/init.d/firewall restart
+    uci commit firewall
+    /etc/init.d/firewall restart
  
-
 Ensure that you replace the network **subnet** with the correct one for your specific VPN setup.
