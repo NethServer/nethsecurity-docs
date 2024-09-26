@@ -53,13 +53,16 @@ To enable the hairpin, enable the ``Hairpin NAT`` option and select one or more 
 Hairpin NAT for VPN Zones
 -------------------------
 
-To use Hairpin NAT with VPN zones such as IPsec, OpenVPN, and RWOpenVPN, additional configuration is necessary. 
-You must explicitly declare the network used by the VPN; otherwise, Hairpin NAT will not function for VPN-connected clients.
+To use Hairpin NAT with VPN zones such as ipsec, openvpn, and rwopenvpn, additional configuration is necessary. 
+You must explicitly declare the subnet used by the VPN; otherwise, Hairpin NAT will not function for VPN-connected clients.
 
 This configuration can be performed via the command line. First, identify the internal reference for the zone, then add the desired network, commit the changes, and restart the service.
 
-Make sure that networks are assigned to the correct zones (IPsec tunnels to the ipsec zone, OpenVPN tunnels to the openvpn zone, and RoadWarrior to the rwopenvpn zone). 
+Make sure that subnets are assigned to the correct zones (IPsec tunnels to the **ipsec** zone, OpenVPN tunnels to the **openvpn** zone, and OpenVPN RoadWarrior to the **rwopenvpn** zone). 
 If multiple tunnels or networks are present, all must be included in their respective zones.
+
+How to declare a subnet for a VPN zone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To declare the OpenVPN RoadWarrior network, you can use the following example command sequence:
 
@@ -72,9 +75,9 @@ To declare the OpenVPN RoadWarrior network, you can use the following example co
 
       firewall.ns_49d9f400.name='rwopenvpn'
 
-2. Set the desired network (in this case, **10.245.204.0/24**) for the **rwopenvpn** zone: ::
+2. Set the desired network (in this case, **10.88.88.0/24**) for the **rwopenvpn** zone: ::
  
-    uci set firewall.ns_49d9f400.subnet=10.245.204.0/24
+    uci set firewall.ns_49d9f400.subnet=10.88.88.0/24
 
 3. Commit the changes and restart the firewall service: ::
  
@@ -82,3 +85,28 @@ To declare the OpenVPN RoadWarrior network, you can use the following example co
     /etc/init.d/firewall restart
  
 Ensure that you replace the network **subnet** with the correct one for your specific VPN setup.
+
+4. Verify the added network: ::
+
+    uci show firewall | grep subnet
+
+   Example output: ::
+
+       firewall.ns_49d9f400.subnet='10.88.88.0/24'
+
+
+
+Add or remove multiple subnets to the vpn zone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you already set a subnet for a VPN zone and want to **add** another subnet (e.g. 10.33.33.0/24) use the following command (same internal reference of previous example): ::
+
+    uci add_list firewall.ns_49d9f400.subnet=10.20.20.0/24
+
+
+
+If you already set multiple subnets for a VPN zone and want to **remove** a subnet (e.g. 10.33.33/24) use the following command (same internal reference of previous example): ::
+
+    uci del_list firewall.ns_49d9f400.subnet=10.20.20.0/24
+
+Ensure to commit and restart firewall service after modifications.
