@@ -67,7 +67,7 @@ If multiple tunnels or networks are present, all must be included in their respe
 How to declare a subnet for a VPN zone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To declare the OpenVPN RoadWarrior network, you can use the following example command sequence:
+To declare the OpenVPN Road Warrior network, you can use the following example command sequence:
 
 
 1. Identify the internal reference for the **rwopenvpn** zone: ::
