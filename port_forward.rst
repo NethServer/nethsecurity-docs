@@ -96,7 +96,7 @@ Ensure that you replace the network **subnet** with the correct one for your spe
 
 
 
-Add or remove multiple subnets to the vpn zone
+Add or remove multiple subnets to the VPN zone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you already set a subnet for a VPN zone and want to **add** another subnet (e.g. 10.33.33.0/24) use the following command (same internal reference of previous example): ::
