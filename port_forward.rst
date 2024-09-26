@@ -50,7 +50,7 @@ out to the internet and then back into the local network.
 
 To enable the hairpin, enable the ``Hairpin NAT`` option and select one or more zones where the NAT loopback should be enabled.
 
-Hairpin NAT for VPN Zones
+Hairpin NAT for VPN zones
 -------------------------
 
 To use Hairpin NAT with VPN zones such as ipsec, openvpn, and rwopenvpn, additional configuration is necessary. 
