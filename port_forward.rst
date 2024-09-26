@@ -77,7 +77,7 @@ To declare the OpenVPN RoadWarrior network, you can use the following example co
 
 2. Set the desired network (in this case, **10.88.88.0/24**) for the **rwopenvpn** zone: ::
  
-    uci set firewall.ns_49d9f400.subnet=10.88.88.0/24
+    uci add_list firewall.ns_49d9f400.subnet=10.88.88.0/24
 
 3. Commit the changes and restart the firewall service: ::
  
