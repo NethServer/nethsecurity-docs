@@ -101,12 +101,12 @@ Add or remove multiple subnets to the vpn zone
 
 If you already set a subnet for a VPN zone and want to **add** another subnet (e.g. 10.33.33.0/24) use the following command (same internal reference of previous example): ::
 
-    uci add_list firewall.ns_49d9f400.subnet=10.20.20.0/24
+    uci add_list firewall.ns_49d9f400.subnet=10.33.33.0/24
 
 
 
 If you already set multiple subnets for a VPN zone and want to **remove** a subnet (e.g. 10.33.33/24) use the following command (same internal reference of previous example): ::
 
-    uci del_list firewall.ns_49d9f400.subnet=10.20.20.0/24
+    uci del_list firewall.ns_49d9f400.subnet=10.33.33.0/24
 
 Ensure to commit and restart firewall service after modifications.
