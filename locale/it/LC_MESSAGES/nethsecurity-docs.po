@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 08:59+0000\n"
+"POT-Creation-Date: 2024-09-27 09:04+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -635,7 +635,7 @@ msgstr ""
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../content_filter.rst:126 ../../firewall.rst:5 ../../index.rst:62
+#: ../../content_filter.rst:126 ../../index.rst:62
 msgid "Firewall"
 msgstr "Firewall"
 
@@ -2815,258 +2815,11 @@ msgstr ""
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
 
-#: ../../firewall.rst:7
-msgid ""
-"Firewall zones categorize network interfaces, defining trust boundaries, "
-"while firewall rules dictate traffic handling between zones. Zones "
-"organize network segments, and rules enforce security policies by "
-"specifying conditions for permitted or denied actions. Together, they "
-"allow the definition and application of rules for network traffic within "
-"the firewall."
-msgstr ""
-"Le zone del firewall delimitano le interfacce di rete, stabilendone i "
-"confini, mentre le regole del firewall determinano il controllo del "
-"traffico tra le diverse zone. Le zone organizzano i segmenti di rete, "
-"mentre le regole definiscono le politiche di sicurezza specificando le "
-"condizioni per consentire o negare determinate azioni. Insieme, "
-"consentono la definizione e l'applicazione di regole per la gestione del "
-"traffico di rete all'interno del firewall."
-
-#: ../../firewall.rst:14
-msgid "Zones and policies"
-msgstr "Zone e regole"
-
-#: ../../firewall.rst:16
-msgid ""
-"In a firewall system, zones and policies are fundamental concepts that "
-"help manage network security by controlling the flow of traffic between "
-"different segments of a network. A zone in a firewall represents a "
-"specific network segment with its own level of trustworthiness. For "
-"instance, a common setup might include zones like WAN (Wide Area Network)"
-" representing the external, untrusted network (usually the internet) and "
-"LAN (Local Area Network) representing the internal, trusted network "
-"(devices within a private home or organization). Each zone has its own "
-"set of security rules and policies that dictate how traffic can flow to "
-"and from that zone."
-msgstr ""
-"In un sistema firewall, zone e politiche sono concetti fondamentali che "
-"aiutano a gestire la sicurezza della rete controllando il flusso di "
-"traffico tra diversi segmenti di una rete. Una zona in un firewall "
-"rappresenta un segmento di rete specifico con il proprio livello di "
-"affidabilità. Per esempio, una configurazione comune potrebbe includere "
-"zone come WAN (Wide Area Network) che rappresentano la rete esterna e non"
-" attendibile (solitamente internet) e LAN (Local Area Network) che "
-"rappresentano la rete interna e affidabile (dispositivi all'interno di "
-"una casa o organizzazione privata). Ogni zona ha una propria serie di "
-"regole di sicurezza e politiche che dettano come il traffico può scorrere"
-" da e verso quella zona."
-
-#: ../../firewall.rst:23
-msgid ""
-"Policies in a firewall define the rules and actions that determine how "
-"traffic is handled between different zones. These rules specify which "
-"type of traffic is allowed, denied, or monitored based on predefined "
-"security criteria"
-msgstr ""
-"Le Policy in un firewall definiscono le regole e le azioni che "
-"determinano come il traffico viene gestito tra diverse zone. Queste "
-"regole specificano quale tipo di traffico è consentito, negato o "
-"monitorato in base ai criteri di sicurezza predefiniti"
-
-#: ../../firewall.rst:26
-msgid "Default zones:"
-msgstr "Zone predefinite:"
-
-#: ../../firewall.rst:28
-msgid ""
-"**WAN (Wide Area Network):** represents the external, untrusted network "
-"(e.g., the internet)."
-msgstr ""
-"**WAN (Wide Area Network):** rappresenta la rete esterna e non "
-"attendibile (ad esempio internet)."
-
-#: ../../firewall.rst:29
-msgid ""
-"**LAN (Local Area Network):** represents the internal, trusted network "
-"(e.g., devices within a private home or organization)."
-msgstr ""
-"**LAN (Local Area Network):** rappresenta la rete interna e affidabile "
-"(ad esempio, dispositivi all'interno di una casa privata o "
-"organizzazione)."
-
-#: ../../firewall.rst:31
-msgid "Accepted traffic:"
-msgstr "Traffico accettato:"
-
-#: ../../firewall.rst:33
-msgid ""
-"**from LAN to WAN:** traffic from devices within the LAN zone to the WAN "
-"zone is allowed, enabling internal devices to access the internet."
-msgstr ""
-"**da LAN a WAN:** consente il traffico da dispositivi dall'interno della "
-"zona LAN alla zona WAN, permettendo ai dispositivi interni di accedere a "
-"Internet."
-
-#: ../../firewall.rst:34
-msgid ""
-"**from LAN to firewall itself:** traffic from LAN devices to the firewall"
-" itself is permitted, facilitating communication for various purposes."
-msgstr ""
-"**dalla LAN al firewall stesso:** consente il traffico LAN al firewall "
-"stesso, permettendone la comunicazione per scopi specifici."
-
-#: ../../firewall.rst:35
-msgid ""
-"**From LAN to LAN itself:** traffic between devices within the LAN zone "
-"is allowed, enabling internal devices to communicate with each other."
-msgstr ""
-"**Dalla LAN alla LAN:** consente il traffico tra i dispositivi "
-"all'interno della zona LAN, consentendo ai dispositivi interni di "
-"comunicare tra loro."
-
-#: ../../firewall.rst:37
-msgid "Denied traffic:"
-msgstr "Traffico negato:"
-
-#: ../../firewall.rst:39
-msgid ""
-"**From WAN to firewall itself:** traffic from the WAN zone to the "
-"firewall itself is denied, preventing unauthorized external access "
-"attempts."
-msgstr ""
-"**Dal WAN al firewall stesso:** nega il traffico dalla zona WAN al "
-"firewall stesso, impedendo tentativi di accesso esterno non autorizzati."
-
-#: ../../firewall.rst:40
-msgid ""
-"**From WAN to WAN itself:** direct communication between external "
-"networks (WAN to WAN) is denied, isolating different external entities "
-"for enhanced security."
-msgstr ""
-"**Da WAN a WAN stesso:** nega la comunicazione diretta tra reti esterne "
-"(WAN a WAN), isolando l'esterno per una maggiore sicurezza."
-
-#: ../../firewall.rst:42
-msgid ""
-"In this configuration, the firewall regulates traffic between the WAN and"
-" LAN zones, allowing internal devices to access the internet and "
-"communicate internally while maintaining security by blocking direct "
-"external access to the firewall and preventing communication between "
-"external networks."
-msgstr ""
-"In questa configurazione, il firewall regola il traffico tra le zone WAN "
-"e LAN, consentendo ai dispositivi interni di accedere a Internet e "
-"comunicare internamente e bloccando l'accesso diretto esterno al "
-"firewall, impedendo le comunicazioni in ingresso per una maggiore "
-"siurezza."
-
-#: ../../firewall.rst:44
-msgid ""
-"Default zones can't be deleted but the network administrator can change "
-"existing policies or create new zones."
-msgstr ""
-"Le zone di default non possono essere eliminate, ma l'amministratore di "
-"rete può cambiarne i criteri predefiniti o crearne di nuove."
-
-#: ../../firewall.rst:47
-msgid "Guests and DMZ zones"
-msgstr ""
-
-#: ../../firewall.rst:49
-msgid ""
-"In addition to the default zones, the firewall can be configured with "
-"additional zones to accommodate specific network requirements. Two common"
-" examples are the Guest and DMZ (Demilitarized Zone) zones. Sometimes the"
-" Guest zone is also known as the blue zone while the DMZ is also named as"
-" orange."
-msgstr ""
-
-#: ../../firewall.rst:54
-msgid "Guests zone (blue)"
-msgstr ""
-
-#: ../../firewall.rst:56
-msgid ""
-"The Guest zone represents a network segment for guest devices, such as "
-"visitors or temporary users. This zone is typically isolated from the LAN"
-" zone to prevent unauthorized access to internal resources. But it is "
-"allowed to access the WAN zone."
-msgstr ""
-
-#: ../../firewall.rst:60
-msgid "To create a Guest zone, follow these steps:"
-msgstr ""
-
-#: ../../firewall.rst:62 ../../firewall.rst:79
-msgid "access the ``Zones & policies`` section"
-msgstr ""
-
-#: ../../firewall.rst:63 ../../firewall.rst:80
-msgid "click on the ``Add zone`` button"
-msgstr ""
-
-#: ../../firewall.rst:64
-msgid ""
-"enter **guest** inside the ``Name`` field: plesase note that the name is "
-"case sensitive and must be in lowercase, in this case the zone will be "
-"highlighted in blue"
-msgstr ""
-
-#: ../../firewall.rst:65
-msgid "leave empty the ``Allow forwards to`` field"
-msgstr ""
-
-#: ../../firewall.rst:66
-msgid "select ``LAN`` inside the ``Allow forwards from`` field"
-msgstr ""
-
-#: ../../firewall.rst:67 ../../firewall.rst:83
-msgid "enable the ``Traffic to WAN`` option"
-msgstr ""
-
-#: ../../firewall.rst:68 ../../firewall.rst:84
-msgid ""
-"select ``Drop`` for both ``Traffic to firewall`` and ``Traffic for the "
-"same zone`` fields"
-msgstr ""
-
-#: ../../firewall.rst:69 ../../firewall.rst:85
-msgid "click on the ``Save`` button and apply the changes"
-msgstr ""
-
-#: ../../firewall.rst:73
-msgid "DMZ zone (orange)"
-msgstr ""
-
-#: ../../firewall.rst:75
-msgid ""
-"The DMZ represents a network segment for servers and services that need "
-"to be accessible from the internet but isolated from the internal "
-"network."
-msgstr ""
-
-#: ../../firewall.rst:77
-msgid "To create a DMZ, follow these steps:"
-msgstr ""
-
-#: ../../firewall.rst:81
-msgid ""
-"enter **dmz** inside the ``Name`` field: plesase note that the name is "
-"case sensitive and must be in lowercase, in this case the zone will be "
-"highlighted in orange"
-msgstr ""
-
-#: ../../firewall.rst:82
-msgid ""
-"leave empty both the ``Allow forwards to`` and ``Allow forwards from`` "
-"fields"
-msgstr ""
-
-#: ../../firewall.rst:90
+#: ../../firewall_rules.rst:5
 msgid "Rules"
 msgstr "Regole"
 
-#: ../../firewall.rst:92
+#: ../../firewall_rules.rst:8
 msgid ""
 "Firewall rules define how network traffic is segmented and controlled "
 "between different zones. Firewalls acts as barriers between trusted "
@@ -3080,7 +2833,7 @@ msgstr ""
 "specificano quale traffico è consentito, negato o monitorato in base a "
 "criteri di sicurezza predefiniti."
 
-#: ../../firewall.rst:96
+#: ../../firewall_rules.rst:12
 msgid ""
 "The order of rules is important; the first matching rule is applied, "
 "determining the fate of the network packet."
@@ -3088,11 +2841,11 @@ msgstr ""
 "L'ordine delle regole è importante; viene applicata la prima regola "
 "corrispondente, determinando il comportamento del pacchetto di rete."
 
-#: ../../firewall.rst:98
+#: ../../firewall_rules.rst:14
 msgid "The page is organized into three tabs, each serving a specific purpose:"
 msgstr "La pagina è organizzata in tre schede, ciascuna con uno scopo specifico:"
 
-#: ../../firewall.rst:100
+#: ../../firewall_rules.rst:16
 #, fuzzy
 msgid ""
 "``Forward rules`` tab: this tab is dedicated to configuring rules for "
@@ -3101,7 +2854,7 @@ msgstr ""
 "``Regole di forward``: questo tab determina il comportamento dei "
 "pacchetti che attraversano le diverse zone della rete."
 
-#: ../../firewall.rst:101
+#: ../../firewall_rules.rst:17
 msgid ""
 "``Input rules`` tab: this tab is dedicated to configuring rules for "
 "incoming packets destined for the firewall itself."
@@ -3109,7 +2862,7 @@ msgstr ""
 "``Regole di input``: questa scheda è dedicata alla configurazione delle "
 "regole per i pacchetti in entrata destinati al firewall stesso."
 
-#: ../../firewall.rst:102
+#: ../../firewall_rules.rst:18
 msgid ""
 "``Output rules`` tab: this tab is dedicated to configuring rules for "
 "packets emitted by the firewall."
@@ -3117,7 +2870,7 @@ msgstr ""
 "``Regole di output``: questa scheda è dedicata alla configurazione delle "
 "regole per i pacchetti in uscita dal firewall."
 
-#: ../../firewall.rst:104
+#: ../../firewall_rules.rst:20
 msgid ""
 "Locate the button to add a new rule, click on it to initiate the rule "
 "creation process. Fill in the following fields for the new rule:"
@@ -3125,7 +2878,7 @@ msgstr ""
 "Cliccare sul pulsante per aggiungere una nuova regola. Compilare i "
 "seguenti campi per la nuova regola:"
 
-#: ../../firewall.rst:107
+#: ../../firewall_rules.rst:23
 msgid ""
 "``Status``: enable or disable the rule based on your requirements. By "
 "default the rule is enabled during creation."
@@ -3134,29 +2887,29 @@ msgstr ""
 "voluto. Per impostazione predefinita, durante la creazione la regola è "
 "abilitata."
 
-#: ../../firewall.rst:108
+#: ../../firewall_rules.rst:24
 msgid "``Rule name``: assign a descriptive name to identify the rule."
 msgstr "``Nome regole``: assegnare un nome per identificare la regola."
 
-#: ../../firewall.rst:109
+#: ../../firewall_rules.rst:25
 msgid ""
 "``Source address``: select the source address from three different "
 "options:"
 msgstr ""
 
-#: ../../firewall.rst:111 ../../firewall.rst:119
+#: ../../firewall_rules.rst:27 ../../firewall_rules.rst:35
 msgid "enter one or more IPv4/IPv6 addresses/networks or IP ranges"
 msgstr ""
 
-#: ../../firewall.rst:112 ../../firewall.rst:120
+#: ../../firewall_rules.rst:28 ../../firewall_rules.rst:36
 msgid "select one firewall object from the available ones"
 msgstr ""
 
-#: ../../firewall.rst:113
+#: ../../firewall_rules.rst:29
 msgid "any source address"
 msgstr ""
 
-#: ../../firewall.rst:115
+#: ../../firewall_rules.rst:31
 #, fuzzy
 msgid ""
 "This field is not present for ``Output rules``, as the source address is "
@@ -3167,7 +2920,7 @@ msgstr ""
 "campo non è presente per ``Regole di uscita``, in quanto l'indirizzo "
 "sorgente è sempre il firewall stesso."
 
-#: ../../firewall.rst:116
+#: ../../firewall_rules.rst:32
 msgid ""
 "``Source zone``: specify the traffic source zone. Choose a specific zone "
 "or select 'Any' to include traffic from any zone."
@@ -3176,17 +2929,17 @@ msgstr ""
 "una zona specifica o selezionare 'Qualsiasi' per includere il traffico da"
 " qualsiasi zona."
 
-#: ../../firewall.rst:117
+#: ../../firewall_rules.rst:33
 msgid ""
 "``Destination address``: select the destination address from three "
 "different options:"
 msgstr ""
 
-#: ../../firewall.rst:121
+#: ../../firewall_rules.rst:37
 msgid "any destination address"
 msgstr ""
 
-#: ../../firewall.rst:123
+#: ../../firewall_rules.rst:39
 #, fuzzy
 msgid ""
 "This field is not present for ``Input rules``, as the destination address"
@@ -3197,7 +2950,7 @@ msgstr ""
 "destinazione. Questo campo non è presente per ``Regole di input``, in "
 "quanto l'indirizzo di destinazione è sempre il firewall stesso."
 
-#: ../../firewall.rst:124
+#: ../../firewall_rules.rst:40
 msgid ""
 "``Destination zone``: specify the traffic destination zone. Choose a "
 "specific zone. Bear in mind that the source and destination zones can't "
@@ -3207,7 +2960,7 @@ msgstr ""
 "traffico scegliendone una specifica tenendo a mente che le zone di "
 "origine e di destinazione non possono essere le stesse."
 
-#: ../../firewall.rst:125
+#: ../../firewall_rules.rst:41
 msgid ""
 "``Destination service``: select from the list or choose 'Custom' to enter"
 " specific ports and select protocols."
@@ -3215,20 +2968,25 @@ msgstr ""
 "``Servizio di destinazione`: selezionare dall'elenco o scegliere "
 "'Personalizzato' per inserire porte o protocolli specifici."
 
-#: ../../firewall.rst:126
-msgid ""
-"``Action``: define the action when the rule conditions are met: * "
-"``Accept``: accept the network traffic. * ``Reject``: block the traffic "
-"and notify the sender host. * ``Drop``: block the traffic, packets are "
-"dropped and no notification is sent to the sender host."
+#: ../../firewall_rules.rst:42
+msgid "``Action``: define the action when the rule conditions are met:"
 msgstr ""
-"``Azione`: definisce il comportamento della regola quando le sue "
-"condizioni sono validate: * ``Accept``: accettare il traffico di rete. * "
-"``Reject```: bloccare il traffico e notificare l'host del mittente. * "
-"``Drop`: bloccare il traffico, i pacchetti sono scartati e non viene "
-"inviata alcuna notifica all'host del mittente."
 
-#: ../../firewall.rst:130
+#: ../../firewall_rules.rst:44
+msgid "``Accept``: accept the network traffic."
+msgstr ""
+
+#: ../../firewall_rules.rst:45
+msgid "``Reject``: block the traffic and notify the sender host."
+msgstr ""
+
+#: ../../firewall_rules.rst:46
+msgid ""
+"``Drop``: block the traffic, packets are dropped and no notification is "
+"sent to the sender host."
+msgstr ""
+
+#: ../../firewall_rules.rst:47
 msgid ""
 "``Rule position``: decide whether to add the rule to the bottom or top of"
 " the rule list."
@@ -3236,7 +2994,7 @@ msgstr ""
 "``Posizione della regola``: consente di impostare se aggiungere la regola"
 " in basso o in cima alla lista delle regole."
 
-#: ../../firewall.rst:131
+#: ../../firewall_rules.rst:48
 msgid ""
 "``Logging``: indicate whether traffic matching this rule should be "
 "logged. The log entry will include the rule name as a prefix."
@@ -3245,7 +3003,7 @@ msgstr ""
 "essere registrato. La voce nel log includerà il nome della regola come "
 "prefisso."
 
-#: ../../firewall.rst:132
+#: ../../firewall_rules.rst:49
 msgid ""
 "``Tags``: optionally, add tags for organizational purposes. Note that the"
 " 'automated' tag is reserved for system use."
@@ -3691,23 +3449,23 @@ msgstr ""
 msgid "Users and objects"
 msgstr ""
 
-#: ../../index.rst:71
+#: ../../index.rst:72
 msgid "Security"
 msgstr ""
 
-#: ../../index.rst:82
+#: ../../index.rst:83
 msgid "VPN"
 msgstr ""
 
-#: ../../index.rst:90
+#: ../../index.rst:91
 msgid "Report"
 msgstr ""
 
-#: ../../index.rst:97
+#: ../../index.rst:98
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:106
+#: ../../index.rst:107
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -8324,71 +8082,71 @@ msgstr ""
 msgid "``rwopenvpn``: OpenVPN Road Warrior"
 msgstr ""
 
-#: ../../port_forward.rst:66
+#: ../../port_forward.rst:67
 msgid ""
 "If multiple tunnels or networks are present, all must be included in "
 "their respective zones."
 msgstr ""
 
-#: ../../port_forward.rst:69
+#: ../../port_forward.rst:70
 msgid "How to declare a subnet for a VPN zone"
 msgstr ""
 
-#: ../../port_forward.rst:71
+#: ../../port_forward.rst:72
 msgid ""
 "To declare the OpenVPN Road Warrior network, you can use the following "
 "example command sequence:"
 msgstr ""
 
-#: ../../port_forward.rst:74
+#: ../../port_forward.rst:75
 msgid "Identify the internal reference for the **rwopenvpn** zone: ::"
 msgstr ""
 
-#: ../../port_forward.rst:78 ../../port_forward.rst:97
+#: ../../port_forward.rst:79 ../../port_forward.rst:98
 #, fuzzy
 msgid "Example output: ::"
 msgstr "Esempio di log di NS8::"
 
-#: ../../port_forward.rst:82
+#: ../../port_forward.rst:83
 msgid ""
 "Set the desired network (in this case, **10.88.88.0/24**) for the "
 "**rwopenvpn** zone: ::"
 msgstr ""
 
-#: ../../port_forward.rst:86
+#: ../../port_forward.rst:87
 #, fuzzy
 msgid "Commit the changes and restart the firewall service: ::"
 msgstr "Poi riavvia il servizio DDNS::"
 
-#: ../../port_forward.rst:91
+#: ../../port_forward.rst:92
 msgid ""
 "Ensure that you replace the network **subnet** with the correct one for "
 "your specific VPN setup."
 msgstr ""
 
-#: ../../port_forward.rst:93
+#: ../../port_forward.rst:94
 msgid "Verify the added network: ::"
 msgstr ""
 
-#: ../../port_forward.rst:104
+#: ../../port_forward.rst:105
 msgid "Add or remove multiple subnets to the VPN zone"
 msgstr ""
 
-#: ../../port_forward.rst:106
+#: ../../port_forward.rst:107
 msgid ""
 "If you already set a subnet for a VPN zone and want to **add** another "
 "subnet (e.g. 10.33.33.0/24) use the following command (same internal "
 "reference of previous example): ::"
 msgstr ""
 
-#: ../../port_forward.rst:112
+#: ../../port_forward.rst:113
 msgid ""
 "If you already set multiple subnets for a VPN zone and want to **remove**"
 " a subnet (e.g. 10.33.33/24) use the following command (same internal "
 "reference of previous example): ::"
 msgstr ""
 
-#: ../../port_forward.rst:116
+#: ../../port_forward.rst:117
 msgid "Ensure to commit and restart firewall service after modifications."
 msgstr ""
 
@@ -12992,6 +12750,253 @@ msgid ""
 "The ``StartTLS`` option should be enabled for NethServer 7 Samba Active "
 "Directory, while it should be usually disabled for Windows Server 2012 "
 "Active Directory."
+msgstr ""
+
+#: ../../zones_and_policies.rst:5
+msgid "Zones and policies"
+msgstr "Zone e regole"
+
+#: ../../zones_and_policies.rst:8
+msgid ""
+"Firewall zones categorize network interfaces, defining trust boundaries, "
+"while firewall rules dictate traffic handling between zones. Zones "
+"organize network segments, and rules enforce security policies by "
+"specifying conditions for permitted or denied actions. Together, they "
+"allow the definition and application of rules for network traffic within "
+"the firewall."
+msgstr ""
+"Le zone del firewall delimitano le interfacce di rete, stabilendone i "
+"confini, mentre le regole del firewall determinano il controllo del "
+"traffico tra le diverse zone. Le zone organizzano i segmenti di rete, "
+"mentre le regole definiscono le politiche di sicurezza specificando le "
+"condizioni per consentire o negare determinate azioni. Insieme, "
+"consentono la definizione e l'applicazione di regole per la gestione del "
+"traffico di rete all'interno del firewall."
+
+#: ../../zones_and_policies.rst:13
+msgid ""
+"In a firewall system, zones and policies are fundamental concepts that "
+"help manage network security by controlling the flow of traffic between "
+"different segments of a network. A zone in a firewall represents a "
+"specific network segment with its own level of trustworthiness. For "
+"instance, a common setup might include zones like WAN (Wide Area Network)"
+" representing the external, untrusted network (usually the internet) and "
+"LAN (Local Area Network) representing the internal, trusted network "
+"(devices within a private home or organization). Each zone has its own "
+"set of security rules and policies that dictate how traffic can flow to "
+"and from that zone."
+msgstr ""
+"In un sistema firewall, zone e politiche sono concetti fondamentali che "
+"aiutano a gestire la sicurezza della rete controllando il flusso di "
+"traffico tra diversi segmenti di una rete. Una zona in un firewall "
+"rappresenta un segmento di rete specifico con il proprio livello di "
+"affidabilità. Per esempio, una configurazione comune potrebbe includere "
+"zone come WAN (Wide Area Network) che rappresentano la rete esterna e non"
+" attendibile (solitamente internet) e LAN (Local Area Network) che "
+"rappresentano la rete interna e affidabile (dispositivi all'interno di "
+"una casa o organizzazione privata). Ogni zona ha una propria serie di "
+"regole di sicurezza e politiche che dettano come il traffico può scorrere"
+" da e verso quella zona."
+
+#: ../../zones_and_policies.rst:20
+msgid ""
+"Policies in a firewall define the rules and actions that determine how "
+"traffic is handled between different zones. These rules specify which "
+"type of traffic is allowed, denied, or monitored based on predefined "
+"security criteria"
+msgstr ""
+"Le Policy in un firewall definiscono le regole e le azioni che "
+"determinano come il traffico viene gestito tra diverse zone. Queste "
+"regole specificano quale tipo di traffico è consentito, negato o "
+"monitorato in base ai criteri di sicurezza predefiniti"
+
+#: ../../zones_and_policies.rst:23
+msgid "Default zones:"
+msgstr "Zone predefinite:"
+
+#: ../../zones_and_policies.rst:25
+msgid ""
+"**WAN (Wide Area Network):** represents the external, untrusted network "
+"(e.g., the internet)."
+msgstr ""
+"**WAN (Wide Area Network):** rappresenta la rete esterna e non "
+"attendibile (ad esempio internet)."
+
+#: ../../zones_and_policies.rst:26
+msgid ""
+"**LAN (Local Area Network):** represents the internal, trusted network "
+"(e.g., devices within a private home or organization)."
+msgstr ""
+"**LAN (Local Area Network):** rappresenta la rete interna e affidabile "
+"(ad esempio, dispositivi all'interno di una casa privata o "
+"organizzazione)."
+
+#: ../../zones_and_policies.rst:28
+msgid "Accepted traffic:"
+msgstr "Traffico accettato:"
+
+#: ../../zones_and_policies.rst:30
+msgid ""
+"**from LAN to WAN:** traffic from devices within the LAN zone to the WAN "
+"zone is allowed, enabling internal devices to access the internet."
+msgstr ""
+"**da LAN a WAN:** consente il traffico da dispositivi dall'interno della "
+"zona LAN alla zona WAN, permettendo ai dispositivi interni di accedere a "
+"Internet."
+
+#: ../../zones_and_policies.rst:31
+msgid ""
+"**from LAN to firewall itself:** traffic from LAN devices to the firewall"
+" itself is permitted, facilitating communication for various purposes."
+msgstr ""
+"**dalla LAN al firewall stesso:** consente il traffico LAN al firewall "
+"stesso, permettendone la comunicazione per scopi specifici."
+
+#: ../../zones_and_policies.rst:32
+msgid ""
+"**From LAN to LAN itself:** traffic between devices within the LAN zone "
+"is allowed, enabling internal devices to communicate with each other."
+msgstr ""
+"**Dalla LAN alla LAN:** consente il traffico tra i dispositivi "
+"all'interno della zona LAN, consentendo ai dispositivi interni di "
+"comunicare tra loro."
+
+#: ../../zones_and_policies.rst:34
+msgid "Denied traffic:"
+msgstr "Traffico negato:"
+
+#: ../../zones_and_policies.rst:36
+msgid ""
+"**From WAN to firewall itself:** traffic from the WAN zone to the "
+"firewall itself is denied, preventing unauthorized external access "
+"attempts."
+msgstr ""
+"**Dal WAN al firewall stesso:** nega il traffico dalla zona WAN al "
+"firewall stesso, impedendo tentativi di accesso esterno non autorizzati."
+
+#: ../../zones_and_policies.rst:37
+msgid ""
+"**From WAN to WAN itself:** direct communication between external "
+"networks (WAN to WAN) is denied, isolating different external entities "
+"for enhanced security."
+msgstr ""
+"**Da WAN a WAN stesso:** nega la comunicazione diretta tra reti esterne "
+"(WAN a WAN), isolando l'esterno per una maggiore sicurezza."
+
+#: ../../zones_and_policies.rst:39
+msgid ""
+"In this configuration, the firewall regulates traffic between the WAN and"
+" LAN zones, allowing internal devices to access the internet and "
+"communicate internally while maintaining security by blocking direct "
+"external access to the firewall and preventing communication between "
+"external networks."
+msgstr ""
+"In questa configurazione, il firewall regola il traffico tra le zone WAN "
+"e LAN, consentendo ai dispositivi interni di accedere a Internet e "
+"comunicare internamente e bloccando l'accesso diretto esterno al "
+"firewall, impedendo le comunicazioni in ingresso per una maggiore "
+"siurezza."
+
+#: ../../zones_and_policies.rst:41
+msgid ""
+"Default zones can't be deleted but the network administrator can change "
+"existing policies or create new zones."
+msgstr ""
+"Le zone di default non possono essere eliminate, ma l'amministratore di "
+"rete può cambiarne i criteri predefiniti o crearne di nuove."
+
+#: ../../zones_and_policies.rst:44
+msgid "Guests and DMZ zones"
+msgstr ""
+
+#: ../../zones_and_policies.rst:46
+msgid ""
+"In addition to the default zones, the firewall can be configured with "
+"additional zones to accommodate specific network requirements. Two common"
+" examples are the Guest and DMZ (Demilitarized Zone) zones. Sometimes the"
+" Guest zone is also known as the blue zone while the DMZ is also named as"
+" orange."
+msgstr ""
+
+#: ../../zones_and_policies.rst:51
+msgid "Guests zone (blue)"
+msgstr ""
+
+#: ../../zones_and_policies.rst:53
+msgid ""
+"The Guest zone represents a network segment for guest devices, such as "
+"visitors or temporary users. This zone is typically isolated from the LAN"
+" zone to prevent unauthorized access to internal resources. But it is "
+"allowed to access the WAN zone."
+msgstr ""
+
+#: ../../zones_and_policies.rst:57
+msgid "To create a Guest zone, follow these steps:"
+msgstr ""
+
+#: ../../zones_and_policies.rst:59 ../../zones_and_policies.rst:76
+msgid "access the ``Zones & policies`` section"
+msgstr ""
+
+#: ../../zones_and_policies.rst:60 ../../zones_and_policies.rst:77
+msgid "click on the ``Add zone`` button"
+msgstr ""
+
+#: ../../zones_and_policies.rst:61
+msgid ""
+"enter **guest** inside the ``Name`` field: plesase note that the name is "
+"case sensitive and must be in lowercase, in this case the zone will be "
+"highlighted in blue"
+msgstr ""
+
+#: ../../zones_and_policies.rst:62
+msgid "leave empty the ``Allow forwards to`` field"
+msgstr ""
+
+#: ../../zones_and_policies.rst:63
+msgid "select ``LAN`` inside the ``Allow forwards from`` field"
+msgstr ""
+
+#: ../../zones_and_policies.rst:64 ../../zones_and_policies.rst:80
+msgid "enable the ``Traffic to WAN`` option"
+msgstr ""
+
+#: ../../zones_and_policies.rst:65 ../../zones_and_policies.rst:81
+msgid ""
+"select ``Drop`` for both ``Traffic to firewall`` and ``Traffic for the "
+"same zone`` fields"
+msgstr ""
+
+#: ../../zones_and_policies.rst:66 ../../zones_and_policies.rst:82
+msgid "click on the ``Save`` button and apply the changes"
+msgstr ""
+
+#: ../../zones_and_policies.rst:70
+msgid "DMZ zone (orange)"
+msgstr ""
+
+#: ../../zones_and_policies.rst:72
+msgid ""
+"The DMZ represents a network segment for servers and services that need "
+"to be accessible from the internet but isolated from the internal "
+"network."
+msgstr ""
+
+#: ../../zones_and_policies.rst:74
+msgid "To create a DMZ, follow these steps:"
+msgstr ""
+
+#: ../../zones_and_policies.rst:78
+msgid ""
+"enter **dmz** inside the ``Name`` field: plesase note that the name is "
+"case sensitive and must be in lowercase, in this case the zone will be "
+"highlighted in orange"
+msgstr ""
+
+#: ../../zones_and_policies.rst:79
+msgid ""
+"leave empty both the ``Allow forwards to`` and ``Allow forwards from`` "
+"fields"
 msgstr ""
 
 #~ msgid ""
@@ -17944,4 +17949,24 @@ msgstr ""
 #~ " are present, all must be included"
 #~ " in their respective zones."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "``Action``: define the action when the"
+#~ " rule conditions are met: * "
+#~ "``Accept``: accept the network traffic. "
+#~ "* ``Reject``: block the traffic and "
+#~ "notify the sender host. * ``Drop``: "
+#~ "block the traffic, packets are dropped"
+#~ " and no notification is sent to "
+#~ "the sender host."
+#~ msgstr ""
+#~ "``Azione`: definisce il comportamento della"
+#~ " regola quando le sue condizioni sono"
+#~ " validate: * ``Accept``: accettare il "
+#~ "traffico di rete. * ``Reject```: "
+#~ "bloccare il traffico e notificare l'host"
+#~ " del mittente. * ``Drop`: bloccare il"
+#~ " traffico, i pacchetti sono scartati "
+#~ "e non viene inviata alcuna notifica "
+#~ "all'host del mittente."
 
