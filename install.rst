@@ -81,7 +81,6 @@ You can use the downloaded image as a virtual machine disk:
 .. note::
    If you wish to save the logs locally, it is recommended to attach an additional virtual hard drive to the virtual machine and select it as the destination for logs in the ``Storage`` page under the ``System`` section.
 
-
 Install on Proxmox
 ------------------
 
