@@ -63,6 +63,7 @@ Make sure that subnets are assigned to the correct zones:
 - ``ipsec``: IPsec tunnels
 - ``openvpn``: OpenVPN tunnels
 - ``rwopenvpn``: OpenVPN Road Warrior
+
 If multiple tunnels or networks are present, all must be included in their respective zones.
 
 How to declare a subnet for a VPN zone
