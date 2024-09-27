@@ -141,6 +141,22 @@ Replace:
 - ``<source_image.raw>`` with the actual path to your raw disk image
 - ``<destination_image.vmdk>`` with your desired .vmdk filename
 
+Install on Hyper-V
+-----------------
+
+To ensure a smooth import on HYper-V, first decompress the image file, then convert the raw image to the Hyper-V native ``.vhdx`` format before proceeding.
+
+On Windows, you can use a software like `V2V Converter <https://www.starwindsoftware.com/starwind-v2v-converter>`_.
+
+On Linux you can use the ``qemu-img`` command. Example: ::
+
+  qemu-img convert -f raw -O vhdx <source_image.raw> <destination_image.vhdx>
+
+Replace:
+
+- ``<source_image.raw>`` with the actual path to your raw disk image
+- ``<destination_image.vhdx>`` with your desired .vhdx filename
+
 Install on VirtualBox
 ---------------------
 
