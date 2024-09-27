@@ -40,6 +40,7 @@ Fill in the following fields for the new rule:
 * ``Destination zone``: specify the traffic destination zone. Choose a specific zone. Bear in mind that the source and destination zones can't be the same.
 * ``Destination service``: select from the list or choose 'Custom' to enter specific ports and select protocols.
 * ``Action``: define the action when the rule conditions are met:
+
   * ``Accept``: accept the network traffic.
   * ``Reject``: block the traffic and notify the sender host.
   * ``Drop``: block the traffic, packets are dropped and no notification is sent to the sender host.
