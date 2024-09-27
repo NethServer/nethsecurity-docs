@@ -53,12 +53,13 @@ To enable the hairpin, enable the ``Hairpin NAT`` option and select one or more 
 Hairpin NAT for VPN zones
 -------------------------
 
-To use Hairpin NAT with VPN zones such as ``ipsec`, ``openvpn``, and ``rwopenvpn``, additional configuration is necessary. 
+To use Hairpin NAT with VPN zones such as ``ipsec``, ``openvpn``, and ``rwopenvpn``, additional configuration is necessary. 
 You must explicitly declare the subnet used by the VPN; otherwise, Hairpin NAT will not function for VPN-connected clients.
 
 This configuration can be performed via the command line. First, identify the internal reference for the zone, then add the desired network, commit the changes, and restart the service.
 
 Make sure that subnets are assigned to the correct zones:
+
 - ``ipsec``: IPsec tunnels
 - ``openvpn``: OpenVPN tunnels
 - ``rwopenvpn``: OpenVPN Road Warrior
