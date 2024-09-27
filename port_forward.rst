@@ -59,9 +59,9 @@ You must explicitly declare the subnet used by the VPN; otherwise, Hairpin NAT w
 This configuration can be performed via the command line. First, identify the internal reference for the zone, then add the desired network, commit the changes, and restart the service.
 
 Make sure that subnets are assigned to the correct zones:
-- `ipsec`: IPsec tunnels
-- `openvpn`: OpenVPN tunnels
-- `rwopenvpn`: OpenVPN Road Warrior
+- ``ipsec``: IPsec tunnels
+- ``openvpn``: OpenVPN tunnels
+- ``rwopenvpn``: OpenVPN Road Warrior
 If multiple tunnels or networks are present, all must be included in their respective zones.
 
 How to declare a subnet for a VPN zone
