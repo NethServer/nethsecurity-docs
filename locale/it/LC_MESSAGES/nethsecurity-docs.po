@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 09:54+0000\n"
+"POT-Creation-Date: 2024-09-27 06:39+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2554,71 +2554,71 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.2.0-60-g84a432cda"
+msgid "8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-60-g84a432cda/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-60-g84a432cda-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-60-g84a432cda/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.2.0-59-gee1e9ddd4"
+msgid "8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-59-gee1e9ddd4/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-59-gee1e9ddd4-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-59-gee1e9ddd4/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.2.0-57-gcc554b0ba"
+msgid "8-23.05.5-ns.1.2.99-alpha1-25-gaa3b426527"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-57-gcc554b0ba/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-57-gcc554b0ba-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-25-gaa3b426527/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-25-gaa3b426527-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-57-gcc554b0ba/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-25-gaa3b426527/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.4-ns.1.2.0-56-ge2ea8a387"
+msgid "8-23.05.5-ns.1.2.99-alpha1"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-56-ge2ea8a387/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-56-ge2ea8a387-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-56-ge2ea8a387/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -8287,6 +8287,95 @@ msgstr ""
 msgid ""
 "To enable the hairpin, enable the ``Hairpin NAT`` option and select one "
 "or more zones where the NAT loopback should be enabled."
+msgstr ""
+
+#: ../../port_forward.rst:54
+msgid "Hairpin NAT for VPN zones"
+msgstr ""
+
+#: ../../port_forward.rst:56
+msgid ""
+"To use Hairpin NAT with VPN zones such as ``ipsec`, ``openvpn``, and "
+"``rwopenvpn``, additional configuration is necessary. You must explicitly"
+" declare the subnet used by the VPN; otherwise, Hairpin NAT will not "
+"function for VPN-connected clients."
+msgstr ""
+
+#: ../../port_forward.rst:59
+msgid ""
+"This configuration can be performed via the command line. First, identify"
+" the internal reference for the zone, then add the desired network, "
+"commit the changes, and restart the service."
+msgstr ""
+
+#: ../../port_forward.rst:61
+msgid ""
+"Make sure that subnets are assigned to the correct zones: - ``ipsec``: "
+"IPsec tunnels - ``openvpn``: OpenVPN tunnels - ``rwopenvpn``: OpenVPN "
+"Road Warrior If multiple tunnels or networks are present, all must be "
+"included in their respective zones."
+msgstr ""
+
+#: ../../port_forward.rst:68
+msgid "How to declare a subnet for a VPN zone"
+msgstr ""
+
+#: ../../port_forward.rst:70
+msgid ""
+"To declare the OpenVPN Road Warrior network, you can use the following "
+"example command sequence:"
+msgstr ""
+
+#: ../../port_forward.rst:73
+msgid "Identify the internal reference for the **rwopenvpn** zone: ::"
+msgstr ""
+
+#: ../../port_forward.rst:77 ../../port_forward.rst:96
+#, fuzzy
+msgid "Example output: ::"
+msgstr "Esempio di log di NS8::"
+
+#: ../../port_forward.rst:81
+msgid ""
+"Set the desired network (in this case, **10.88.88.0/24**) for the "
+"**rwopenvpn** zone: ::"
+msgstr ""
+
+#: ../../port_forward.rst:85
+#, fuzzy
+msgid "Commit the changes and restart the firewall service: ::"
+msgstr "Poi riavvia il servizio DDNS::"
+
+#: ../../port_forward.rst:90
+msgid ""
+"Ensure that you replace the network **subnet** with the correct one for "
+"your specific VPN setup."
+msgstr ""
+
+#: ../../port_forward.rst:92
+msgid "Verify the added network: ::"
+msgstr ""
+
+#: ../../port_forward.rst:103
+msgid "Add or remove multiple subnets to the VPN zone"
+msgstr ""
+
+#: ../../port_forward.rst:105
+msgid ""
+"If you already set a subnet for a VPN zone and want to **add** another "
+"subnet (e.g. 10.33.33.0/24) use the following command (same internal "
+"reference of previous example): ::"
+msgstr ""
+
+#: ../../port_forward.rst:111
+msgid ""
+"If you already set multiple subnets for a VPN zone and want to **remove**"
+" a subnet (e.g. 10.33.33/24) use the following command (same internal "
+"reference of previous example): ::"
+msgstr ""
+
+#: ../../port_forward.rst:115
+msgid "Ensure to commit and restart firewall service after modifications."
 msgstr ""
 
 #: ../../qos.rst:3
@@ -17764,5 +17853,61 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-40-g53a6a8a1/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.2.0-60-g84a432cda"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-60-g84a432cda/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-60-g84a432cda-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-60-g84a432cda/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.2.0-59-gee1e9ddd4"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-59-gee1e9ddd4/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-59-gee1e9ddd4-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-59-gee1e9ddd4/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.2.0-57-gcc554b0ba"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-57-gcc554b0ba/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-57-gcc554b0ba-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-57-gcc554b0ba/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.4-ns.1.2.0-56-ge2ea8a387"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-56-ge2ea8a387/targets/x86/64/nethsecurity-8-23.05.4-ns.1.2.0-56-ge2ea8a387-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-56-ge2ea8a387/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
