@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 06:39+0000\n"
+"POT-Creation-Date: 2024-09-27 08:59+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -8295,7 +8295,7 @@ msgstr ""
 
 #: ../../port_forward.rst:56
 msgid ""
-"To use Hairpin NAT with VPN zones such as ``ipsec`, ``openvpn``, and "
+"To use Hairpin NAT with VPN zones such as ``ipsec``, ``openvpn``, and "
 "``rwopenvpn``, additional configuration is necessary. You must explicitly"
 " declare the subnet used by the VPN; otherwise, Hairpin NAT will not "
 "function for VPN-connected clients."
@@ -8309,72 +8309,86 @@ msgid ""
 msgstr ""
 
 #: ../../port_forward.rst:61
-msgid ""
-"Make sure that subnets are assigned to the correct zones: - ``ipsec``: "
-"IPsec tunnels - ``openvpn``: OpenVPN tunnels - ``rwopenvpn``: OpenVPN "
-"Road Warrior If multiple tunnels or networks are present, all must be "
-"included in their respective zones."
+msgid "Make sure that subnets are assigned to the correct zones:"
 msgstr ""
 
-#: ../../port_forward.rst:68
+#: ../../port_forward.rst:63
+msgid "``ipsec``: IPsec tunnels"
+msgstr ""
+
+#: ../../port_forward.rst:64
+msgid "``openvpn``: OpenVPN tunnels"
+msgstr ""
+
+#: ../../port_forward.rst:65
+msgid "``rwopenvpn``: OpenVPN Road Warrior"
+msgstr ""
+
+#: ../../port_forward.rst:66
+msgid ""
+"If multiple tunnels or networks are present, all must be included in "
+"their respective zones."
+msgstr ""
+
+#: ../../port_forward.rst:69
 msgid "How to declare a subnet for a VPN zone"
 msgstr ""
 
-#: ../../port_forward.rst:70
+#: ../../port_forward.rst:71
 msgid ""
 "To declare the OpenVPN Road Warrior network, you can use the following "
 "example command sequence:"
 msgstr ""
 
-#: ../../port_forward.rst:73
+#: ../../port_forward.rst:74
 msgid "Identify the internal reference for the **rwopenvpn** zone: ::"
 msgstr ""
 
-#: ../../port_forward.rst:77 ../../port_forward.rst:96
+#: ../../port_forward.rst:78 ../../port_forward.rst:97
 #, fuzzy
 msgid "Example output: ::"
 msgstr "Esempio di log di NS8::"
 
-#: ../../port_forward.rst:81
+#: ../../port_forward.rst:82
 msgid ""
 "Set the desired network (in this case, **10.88.88.0/24**) for the "
 "**rwopenvpn** zone: ::"
 msgstr ""
 
-#: ../../port_forward.rst:85
+#: ../../port_forward.rst:86
 #, fuzzy
 msgid "Commit the changes and restart the firewall service: ::"
 msgstr "Poi riavvia il servizio DDNS::"
 
-#: ../../port_forward.rst:90
+#: ../../port_forward.rst:91
 msgid ""
 "Ensure that you replace the network **subnet** with the correct one for "
 "your specific VPN setup."
 msgstr ""
 
-#: ../../port_forward.rst:92
+#: ../../port_forward.rst:93
 msgid "Verify the added network: ::"
 msgstr ""
 
-#: ../../port_forward.rst:103
+#: ../../port_forward.rst:104
 msgid "Add or remove multiple subnets to the VPN zone"
 msgstr ""
 
-#: ../../port_forward.rst:105
+#: ../../port_forward.rst:106
 msgid ""
 "If you already set a subnet for a VPN zone and want to **add** another "
 "subnet (e.g. 10.33.33.0/24) use the following command (same internal "
 "reference of previous example): ::"
 msgstr ""
 
-#: ../../port_forward.rst:111
+#: ../../port_forward.rst:112
 msgid ""
 "If you already set multiple subnets for a VPN zone and want to **remove**"
 " a subnet (e.g. 10.33.33/24) use the following command (same internal "
 "reference of previous example): ::"
 msgstr ""
 
-#: ../../port_forward.rst:115
+#: ../../port_forward.rst:116
 msgid "Ensure to commit and restart firewall service after modifications."
 msgstr ""
 
@@ -17909,5 +17923,25 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.4-ns.1.2.0-56-ge2ea8a387/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To use Hairpin NAT with VPN zones"
+#~ " such as ``ipsec`, ``openvpn``, and "
+#~ "``rwopenvpn``, additional configuration is "
+#~ "necessary. You must explicitly declare "
+#~ "the subnet used by the VPN; "
+#~ "otherwise, Hairpin NAT will not function"
+#~ " for VPN-connected clients."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make sure that subnets are assigned "
+#~ "to the correct zones: - ``ipsec``: "
+#~ "IPsec tunnels - ``openvpn``: OpenVPN "
+#~ "tunnels - ``rwopenvpn``: OpenVPN Road "
+#~ "Warrior If multiple tunnels or networks"
+#~ " are present, all must be included"
+#~ " in their respective zones."
 #~ msgstr ""
 
