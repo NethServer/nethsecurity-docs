@@ -21,6 +21,7 @@ When creating a port forward, certain parameters must be specified:
 - ``Destination port``: the port to which the traffic is directed; this can differ from the source port.
 - ``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, ``ICMP``, ``ESP``, ``AH`` ``SCTP`` or the special value ``ALL`` for all supported protocols.
 - ``Destination address``: specifies the internal host to which the traffic should be redirected. This can be:
+
   - a specific IP address
   - a firewall object: a host defined by a host set, a DHCP reservation, a DNS record or an OpenVPN account with IP reservation
 
