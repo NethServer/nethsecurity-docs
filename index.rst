@@ -92,7 +92,7 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Report
    
-   metrics
+   monitoring
    netify_informatics
 
 .. toctree::
