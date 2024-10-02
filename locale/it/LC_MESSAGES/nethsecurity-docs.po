@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-30 15:02+0000\n"
+"POT-Creation-Date: 2024-10-02 16:05+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2554,6 +2554,74 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-42-g0d17f3ddbd"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-42-g0d17f3ddbd/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-42-g0d17f3ddbd-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-42-g0d17f3ddbd/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-41-g0052109674"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-41-g0052109674/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-41-g0052109674-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-41-g0052109674/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe"
 msgstr ""
 
@@ -2585,40 +2653,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -4718,11 +4752,95 @@ msgid ""
 "<threat_shield_dns-section>`"
 msgstr ""
 
-#: ../../migration.rst:169
+#: ../../migration.rst:171
+#, fuzzy
+msgid "Custom Zones"
+msgstr "Zone predefinite:"
+
+#: ../../migration.rst:172
+msgid ""
+"Custom zones are rarely used in NethServer 7 and tipically for very "
+"specific tasks. They are required to define a network segment with "
+"firewall rules different from those of the primary interface or, more "
+"commonly, to correctly manage traffic coming from a network other than "
+"the one to which the interface is connected. These zones allow for "
+"defining specific behavior for that network segment and ensure correct "
+"routing in complex environments (e.g., a port forwarding rule with a "
+"remote host destination via MPLS or a VPN tunnel)."
+msgstr ""
+
+#: ../../migration.rst:176
+msgid ""
+"In NethSecurity, zones work differently from NethServer 7, offering for "
+"these cases a much simpler management. Typically, in NethSecurity, all "
+"previous configurations made with custom zones can be easily managed "
+"**without the need to recreate any custom zone**, thanks to the following"
+" default behavior."
+msgstr ""
+
+#: ../../migration.rst:179
+msgid "**1. Policy inheritance for incoming traffic**"
+msgstr ""
+
+#: ../../migration.rst:181
+msgid ""
+"All traffic incoming from a NethSecurity interface automatically inherits"
+" the same policies as the connected interface, regardless of the "
+"originating network. This includes automatic masquerading when traffic is"
+" destined for the internet."
+msgstr ""
+
+#: ../../migration.rst:183
+msgid "Let's look at an example:"
+msgstr ""
+
+#: ../../migration.rst:185
+msgid ""
+"A local interface named \"office\" is operating on the 192.168.1.0/24 "
+"network segment and is assigned to the \"lan\" zone. A gateway with IP "
+"192.168.1.220 is connected to the same switch as the \"office\" "
+"interface, providing access to the remote network 10.10.10.0/24. The "
+"remote network 10.10.10.0/24 must use NethSecurity to reach the internet."
+msgstr ""
+
+#: ../../migration.rst:189
+msgid ""
+"In NethSecurity, no additional configuration is needed, all packets sent "
+"to the \"office\" interface are correctly routed, even if they originate "
+"from a different network segment. Masquerading is also applied to all "
+"outbound packets."
+msgstr ""
+
+#: ../../migration.rst:191
+msgid "**2. No need to create new zones for different segments**"
+msgstr ""
+
+#: ../../migration.rst:193
+msgid ""
+"Just like policies, standard rules can be applied to this traffic without"
+" needing to create a new zone. If you want to apply different policies "
+"for this segment, you can simply create standard firewall rules. For "
+"convenience, you can use a host set with the CIDR network in firewall "
+"objects."
+msgstr ""
+
+#: ../../migration.rst:195
+msgid "**3. Routing works seamlessly without extra rules**"
+msgstr ""
+
+#: ../../migration.rst:197
+msgid ""
+"Routing for this specific network segment functions correctly without any"
+" additional rules or zones. In NethServer 7, it was mandatory to create a"
+" zone to ensure proper routing for incoming packets, as mentioned in the "
+"initial port forwarding's example."
+msgstr ""
+
+#: ../../migration.rst:200
 msgid "USB-to-Ethernet adapters"
 msgstr ""
 
-#: ../../migration.rst:170
+#: ../../migration.rst:201
 msgid ""
 "It may rarely happen that the NethServer 7 being migrated has a USB to "
 "Ethernet adapter connected to add a network device. These adapters should"
@@ -4734,7 +4852,7 @@ msgid ""
 "can be found in the :ref:`network section <network-section>`."
 msgstr ""
 
-#: ../../migration.rst:174
+#: ../../migration.rst:205
 msgid ""
 "If you are using these adapters, remember that they will not work until "
 "the correct driver is installed. Keep in mind that NethSecurity 8 may not"
@@ -4742,7 +4860,7 @@ msgid ""
 "In this case, you will need to use a different adapter."
 msgstr ""
 
-#: ../../migration.rst:178
+#: ../../migration.rst:209
 msgid ""
 "If you are using a USB to Ethernet adapter for a RED/WAN interface, be "
 "aware that you won't be able to download the necessary modules to make it"
@@ -18018,5 +18136,33 @@ msgstr ""
 #~ "a host set, a DHCP reservation, a"
 #~ " DNS record or an OpenVPN account "
 #~ "with IP reservation"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-29-gadbb0fcc56/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
