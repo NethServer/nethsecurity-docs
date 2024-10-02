@@ -165,6 +165,37 @@ The following features are not migrated to NethSecurity:
 - Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block feature <brute_force-section>`
 - Threat shield DNS, currently :ref:`available only from command line <threat_shield_dns-section>`
 
+.. _custom_zones_migration-section:
+
+Custom Zones
+============
+Custom zones are rarely used in NethServer 7 and tipically for very specific tasks. 
+They are required to define a network segment with firewall rules different from those of the primary interface or, more commonly, to correctly manage traffic coming from a network other than the one to which the interface is connected.
+These zones allow for defining specific behavior for that network segment and ensure correct routing in complex environments (e.g., a port forwarding rule with a remote host destination via MPLS or a VPN tunnel).
+
+In NethSecurity, zones work differently from NethServer 7, offering for these cases a much simpler management.
+Typically, in NethSecurity, all previous configurations made with custom zones can be easily managed **without the need to recreate any custom zone**, thanks to the following default behavior.
+
+**1. Policy inheritance for incoming traffic**
+
+All traffic incoming from a NethSecurity interface automatically inherits the same policies as the connected interface, regardless of the originating network. This includes automatic masquerading when traffic is destined for the internet.
+
+Let's look at an example:
+
+A local interface named "office" is operating on the 192.168.1.0/24 network segment and is assigned to the "lan" zone.
+A gateway with IP 192.168.1.220 is connected to the same switch as the "office" interface, providing access to the remote network 10.10.10.0/24.
+The remote network 10.10.10.0/24 must use NethSecurity to reach the internet.
+
+In NethSecurity, no additional configuration is needed, all packets sent to the "office" interface are correctly routed, even if they originate from a different network segment. Masquerading is also applied to all outbound packets.
+
+**2. No need to create new zones for different segments**
+
+Just like policies, standard rules can be applied to this traffic without needing to create a new zone. If you want to apply different policies for this segment, you can simply create standard firewall rules. For convenience, you can use a host set with the CIDR network in firewall objects.
+
+**3. Routing works seamlessly without extra rules**
+
+Routing for this specific network segment functions correctly without any additional rules or zones. In NethServer 7, it was mandatory to create a zone to ensure proper routing for incoming packets, as mentioned in the initial port forwarding's example.
+
 USB-to-Ethernet adapters
 ========================
 It may rarely happen that the NethServer 7 being migrated has a USB to Ethernet adapter connected to add a network device. These adapters should not be used in a firewall and are **not supported on NethSecurity 8**. However, it is possible to install certain specific drivers for experimental purposes, not for production environments. These drivers might be useful for temporarily managing the migrated firewall while awaiting hardware with all the necessary network cards. More information can be found in the :ref:`network section <network-section>`.
