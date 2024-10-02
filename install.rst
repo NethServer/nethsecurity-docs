@@ -78,6 +78,9 @@ You can use the downloaded image as a virtual machine disk:
 2. create a new virtual machine and select the uncompressed image as disk
 3. boot the virtual machine
 
+.. note::
+   If you wish to save the logs locally, it is recommended to attach an additional virtual hard drive to the virtual machine and select it as the destination for logs in the ``Storage`` page under the ``System`` section.
+
 Install on Proxmox
 ------------------
 
@@ -127,7 +130,7 @@ Install on VMWare
 `VMWare <https://www.vmware.com>`_ may encounter issues when importing raw disk images directly.
 To ensure a smooth import, first decompress the image file, then convert the raw image to the VMWare native ``.vmdk`` format before proceeding.
 
-On Windows, you can use a software like `V2V Converted <https://www.starwindsoftware.com/starwind-v2v-converter>`_.
+On Windows, you can use a software like `V2V Converter <https://www.starwindsoftware.com/starwind-v2v-converter>`_.
 
 On Linux you can use the ``qemu-img`` command. Example: ::
 
@@ -137,6 +140,39 @@ Replace:
 
 - ``<source_image.raw>`` with the actual path to your raw disk image
 - ``<destination_image.vmdk>`` with your desired .vmdk filename
+
+Install on Hyper-V
+-----------------
+
+To ensure a smooth import on HYper-V, first decompress the image file, then convert the raw image to the Hyper-V native ``.vhdx`` format before proceeding.
+
+On Windows, you can use a software like `V2V Converter <https://www.starwindsoftware.com/starwind-v2v-converter>`_.
+
+On Linux you can use the ``qemu-img`` command. Example: ::
+
+  qemu-img convert -f raw -O vhdx <source_image.raw> <destination_image.vhdx>
+
+Replace:
+
+- ``<source_image.raw>`` with the actual path to your raw disk image
+- ``<destination_image.vhdx>`` with your desired .vhdx filename
+
+Install on VirtualBox
+---------------------
+
+`VirtualBox <https://www.virtualbox.org>`_ may encounter issues when importing raw disk images directly.
+To ensure a smooth import, first decompress the image file, then convert the raw image to the VirtualBox native ``.vdi`` format before proceeding.
+
+On Windows, Linux and macOS you can use the built-in `VBoxManage` tool.
+Example: ::
+
+  VBoxManage convertfromraw <source_image.raw> <destination_image.vdi>
+
+Replace:
+
+- ``<source_image.raw>`` with the actual path to your raw disk image
+- ``<destination_image.vdi>`` with your desired .vdi filename
+
 
 Default network configuration
 =============================
