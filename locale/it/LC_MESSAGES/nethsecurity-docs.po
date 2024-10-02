@@ -3681,55 +3681,63 @@ msgid "boot the virtual machine"
 msgstr ""
 
 #: ../../install.rst:82
+msgid ""
+"If you wish to save the logs locally, it is recommended to attach an "
+"additional virtual hard drive to the virtual machine and select it as the"
+" destination for logs in the ``Storage`` page under the ``System`` "
+"section."
+msgstr ""
+
+#: ../../install.rst:85
 msgid "Install on Proxmox"
 msgstr ""
 
-#: ../../install.rst:84
+#: ../../install.rst:87
 msgid "The image can be imported inside `Proxmox <https://www.proxmox.com/>`_."
 msgstr ""
 
-#: ../../install.rst:86
+#: ../../install.rst:89
 msgid ""
 "First, make sure to have 2 different network bridges. In this example we "
 "are going to use ``vmbr0`` and ``vmbr1``. The described procedure can be "
 "also done using the Proxmox UI."
 msgstr ""
 
-#: ../../install.rst:89
+#: ../../install.rst:92
 msgid ""
 "Create the virtual machine, in this example the machine will have id "
 "``401``::"
 msgstr ""
 
-#: ../../install.rst:94
+#: ../../install.rst:97
 msgid "Download the image:"
 msgstr ""
 
-#: ../../install.rst:101
+#: ../../install.rst:104
 msgid "Extract the image:"
 msgstr ""
 
-#: ../../install.rst:107
+#: ../../install.rst:110
 msgid "Import the extracted images a virtual machine disk:"
 msgstr ""
 
-#: ../../install.rst:113
+#: ../../install.rst:116
 msgid "Attach the disk to the virtual machine: ::"
 msgstr ""
 
-#: ../../install.rst:117
+#: ../../install.rst:120
 msgid "Setup the boot order: ::"
 msgstr ""
 
-#: ../../install.rst:121
+#: ../../install.rst:124
 msgid "Finally, start the virtual machine."
 msgstr ""
 
-#: ../../install.rst:125
+#: ../../install.rst:128
 msgid "Install on VMWare"
 msgstr ""
 
-#: ../../install.rst:127
+#: ../../install.rst:130
 msgid ""
 "`VMWare <https://www.vmware.com>`_ may encounter issues when importing "
 "raw disk images directly. To ensure a smooth import, first decompress the"
@@ -3737,68 +3745,105 @@ msgid ""
 "format before proceeding."
 msgstr ""
 
-#: ../../install.rst:130
+#: ../../install.rst:133 ../../install.rst:149
 msgid ""
-"On Windows, you can use a software like `V2V Converted "
+"On Windows, you can use a software like `V2V Converter "
 "<https://www.starwindsoftware.com/starwind-v2v-converter>`_."
 msgstr ""
 
-#: ../../install.rst:132
+#: ../../install.rst:135 ../../install.rst:151
 msgid "On Linux you can use the ``qemu-img`` command. Example: ::"
 msgstr ""
 
-#: ../../install.rst:136
+#: ../../install.rst:139 ../../install.rst:155 ../../install.rst:171
 msgid "Replace:"
 msgstr ""
 
-#: ../../install.rst:138
+#: ../../install.rst:141 ../../install.rst:157 ../../install.rst:173
 msgid "``<source_image.raw>`` with the actual path to your raw disk image"
 msgstr ""
 
-#: ../../install.rst:139
+#: ../../install.rst:142
 msgid "``<destination_image.vmdk>`` with your desired .vmdk filename"
 msgstr ""
 
-#: ../../install.rst:142
+#: ../../install.rst:145
+msgid "Install on Hyper-V"
+msgstr ""
+
+#: ../../install.rst:147
+msgid ""
+"To ensure a smooth import on HYper-V, first decompress the image file, "
+"then convert the raw image to the Hyper-V native ``.vhdx`` format before "
+"proceeding."
+msgstr ""
+
+#: ../../install.rst:158
+msgid "``<destination_image.vhdx>`` with your desired .vhdx filename"
+msgstr ""
+
+#: ../../install.rst:161
+msgid "Install on VirtualBox"
+msgstr ""
+
+#: ../../install.rst:163
+msgid ""
+"`VirtualBox <https://www.virtualbox.org>`_ may encounter issues when "
+"importing raw disk images directly. To ensure a smooth import, first "
+"decompress the image file, then convert the raw image to the VirtualBox "
+"native ``.vdi`` format before proceeding."
+msgstr ""
+
+#: ../../install.rst:166
+msgid ""
+"On Windows, Linux and macOS you can use the built-in `VBoxManage` tool. "
+"Example: ::"
+msgstr ""
+
+#: ../../install.rst:174
+msgid "``<destination_image.vdi>`` with your desired .vdi filename"
+msgstr ""
+
+#: ../../install.rst:178
 msgid "Default network configuration"
 msgstr ""
 
-#: ../../install.rst:144
+#: ../../install.rst:180
 msgid ""
 "When you first boot NethSecurity, the system will try to configure the "
 "network interfaces."
 msgstr ""
 
-#: ../../install.rst:146
+#: ../../install.rst:182
 msgid "By default, the network configuration will be as follows:"
 msgstr ""
 
-#: ../../install.rst:148
+#: ../../install.rst:184
 msgid ""
 "The LAN interface will be configured with a static IP address of "
 "192.168.1.1."
 msgstr ""
 
-#: ../../install.rst:149 ../../install.rst:154
+#: ../../install.rst:185 ../../install.rst:190
 msgid ""
 "The WAN interface will be configured to use DHCP to obtain an IP address "
 "from your ISP."
 msgstr ""
 
-#: ../../install.rst:151
+#: ../../install.rst:187
 msgid ""
 "An exception to this default network configuration is virtual machines "
 "running on KVM and on Digital Ocean cloud provider (droplet). In this "
 "case, the network configuration will be as follows:"
 msgstr ""
 
-#: ../../install.rst:153
+#: ../../install.rst:189
 msgid ""
 "The LAN interface will be configured to use DHCP to obtain an IP address "
 "from the virtualization platform."
 msgstr ""
 
-#: ../../install.rst:156
+#: ../../install.rst:192
 msgid ""
 "**Note:** If you are using NethSecurity in a production environment, you "
 "may need to modify the default network configuration to meet your "
@@ -18164,5 +18209,12 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-28-g590dc05425/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On Windows, you can use a software"
+#~ " like `V2V Converted "
+#~ "<https://www.starwindsoftware.com/starwind-v2v-"
+#~ "converter>`_."
 #~ msgstr ""
 
