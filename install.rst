@@ -142,7 +142,7 @@ Replace:
 - ``<destination_image.vmdk>`` with your desired .vmdk filename
 
 Install on Hyper-V
------------------
+------------------
 
 To ensure a smooth import on HYper-V, first decompress the image file, then convert the raw image to the Hyper-V native ``.vhdx`` format before proceeding.
 
