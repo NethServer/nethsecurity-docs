@@ -48,7 +48,7 @@ Two steps are required to use the service:
 * Enable metadata sending from NethSecurity
 * Provision an agent on Netify Informatics.
 
- .. warning:: It's mandatory to configure data sending on NethSecurity **first** and then provision the agent on the platform.
+.. warning:: It's mandatory to configure data sending on NethSecurity **first** and then provision the agent on the platform.
 
 Enabling metadata sending
 =========================
