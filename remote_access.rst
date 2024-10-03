@@ -222,7 +222,8 @@ Example of action performed by user `goofy`: ::
 SSH
 ===
 
-By default, the system accepts SSH connections on the standard port 22. Access with the root user and the default password.
+By default, the system accepts SSH connections on the standard port 22 from the internal network (LAN). Root access is enabled using the default password.
+To allow SSH access from the wider internet (WAN), a firewall input rule must be added for the server's listening port.
 
 From a Linux machine, use the following command: ::
 
