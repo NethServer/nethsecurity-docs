@@ -123,6 +123,26 @@ Setup the boot order: ::
 
 Finally, start the virtual machine.
 
+QEMU guest agent
+^^^^^^^^^^^^^^^^
+
+QEMU guest agent is not part of the NethSecurity image, but it can be installed from the command line.
+The agent can work when the virtual machine is running on KVM, Proxmox, or other QEMU-based hypervisors.
+
+First, make sure the virtual machine is running, then connect to the machine using SSH or the Proxmox console and
+execute the following commands: ::
+
+  opkg update
+  opkg install qemu-ga
+
+After the installation, start the service: ::
+
+  /etc/init.d/qemu-ga start
+
+The QEMU guest agent will be available on the virtual machine and automatically started at boot.
+
+Please note that after an image upgrade the QEMU guest agent will be removed and you will need to reinstall it.
+See :ref:`restore_extra_packages-section` for more info.
 
 Install on VMWare
 -----------------
@@ -140,6 +160,27 @@ Replace:
 
 - ``<source_image.raw>`` with the actual path to your raw disk image
 - ``<destination_image.vmdk>`` with your desired .vmdk filename
+
+VMware open-vm-tools
+^^^^^^^^^^^^^^^^^^^^
+
+VMware open-vm-tools is not part of the NethSecurity image, but it can be installed from the command line.
+The tools can work only when the virtual machine is running on VMWare hypervisors.
+
+First make sure the virtual machine is running, then connect to the machine using SSH or the VMWare console and
+execute the following commands: ::
+
+  opkg update
+  opkg install open-vm-tools
+
+After the installation, start the service: ::
+
+  /etc/init.d/vmtoolsd start
+
+The VMware open-vm-tools will be available on the virtual machine and automatically started at boot.
+
+Please note that after an image upgrade the VMware open-vm-tools will be removed and you will need to reinstall it.
+See :ref:`restore_extra_packages-section` for more info.
 
 Install on Hyper-V
 ------------------
