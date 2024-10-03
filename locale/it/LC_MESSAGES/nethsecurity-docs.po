@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-02 16:05+0000\n"
+"POT-Creation-Date: 2024-10-03 13:21+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2554,6 +2554,57 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-47-g969af2f39d"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-47-g969af2f39d/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-47-g969af2f39d-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-47-g969af2f39d/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-46-g361ff301ea"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-46-g361ff301ea/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-46-g361ff301ea-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-46-g361ff301ea/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-43-gd63f624aaa"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-43-gd63f624aaa/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-43-gd63f624aaa-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-43-gd63f624aaa/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.5-ns.1.2.99-alpha1-42-g0d17f3ddbd"
 msgstr ""
 
@@ -2585,74 +2636,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-41-g0052109674/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -6591,7 +6574,7 @@ msgid ""
 "support**."
 msgstr ""
 
-#: ../../network.rst:147 ../../remote_access.rst:274
+#: ../../network.rst:147 ../../remote_access.rst:275
 msgid ""
 "Extra packages, including kernel modules, are not preserved across image "
 "upgrades, so in the event of an upgrade, you will need to download and "
@@ -10649,50 +10632,52 @@ msgstr ""
 
 #: ../../remote_access.rst:225
 msgid ""
-"By default, the system accepts SSH connections on the standard port 22. "
-"Access with the root user and the default password."
+"By default, the system accepts SSH connections on the standard port 22 "
+"from the internal network (LAN). Root access is enabled using the default"
+" password. To allow SSH access from the wider internet (WAN), a firewall "
+"input rule must be added for the server's listening port."
 msgstr ""
 
-#: ../../remote_access.rst:227
+#: ../../remote_access.rst:228
 msgid "From a Linux machine, use the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:232
+#: ../../remote_access.rst:233
 msgid "VGA console and keyboard layout"
 msgstr ""
 
-#: ../../remote_access.rst:234
+#: ../../remote_access.rst:235
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. "
 "Then, you will be able to log in to the console using the default "
 "credentials above."
 msgstr ""
 
-#: ../../remote_access.rst:236
+#: ../../remote_access.rst:237
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr ""
 
-#: ../../remote_access.rst:238
+#: ../../remote_access.rst:239
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to "
 "the system and then execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:242
+#: ../../remote_access.rst:243
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code"
 " inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
 msgstr ""
 
-#: ../../remote_access.rst:247
+#: ../../remote_access.rst:248
 msgid "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 
-#: ../../remote_access.rst:252
+#: ../../remote_access.rst:253
 msgid "Serial console"
 msgstr ""
 
-#: ../../remote_access.rst:254
+#: ../../remote_access.rst:255
 msgid ""
 "If the machine has a serial port (RS-232, tipically available with DE-9 "
 "connector or RJ45/8P8C connector) it's possible to access the firewall "
@@ -10702,35 +10687,35 @@ msgid ""
 "``picocom``, or ``screen``."
 msgstr ""
 
-#: ../../remote_access.rst:257
+#: ../../remote_access.rst:258
 msgid "Default acces parameters for NethSecurity 8 are:"
 msgstr ""
 
-#: ../../remote_access.rst:259
+#: ../../remote_access.rst:260
 msgid "Baud rate: 115200,"
 msgstr ""
 
-#: ../../remote_access.rst:260
+#: ../../remote_access.rst:261
 msgid "Data bits:8"
 msgstr ""
 
-#: ../../remote_access.rst:261
+#: ../../remote_access.rst:262
 msgid "Parity :None"
 msgstr ""
 
-#: ../../remote_access.rst:262
+#: ../../remote_access.rst:263
 msgid "Stop bits to 1"
 msgstr ""
 
-#: ../../remote_access.rst:264
+#: ../../remote_access.rst:265
 msgid "These last three parameters are often abbreviated as 8N1"
 msgstr ""
 
-#: ../../remote_access.rst:267
+#: ../../remote_access.rst:268
 msgid "USB-to-Serial Adapters"
 msgstr ""
 
-#: ../../remote_access.rst:269
+#: ../../remote_access.rst:270
 msgid ""
 "In case of need, NethSecurity can be used to access another server via "
 "the serial console. If the hardware does not have an RS-232 port, USB-to-"
@@ -10740,17 +10725,17 @@ msgid ""
 "using an Enterprise or Subscription version)."
 msgstr ""
 
-#: ../../remote_access.rst:276
+#: ../../remote_access.rst:277
 msgid ""
 "Two packages are provided for installation, covering the vast majority of"
 " adapters available on the market. ::"
 msgstr ""
 
-#: ../../remote_access.rst:282
+#: ../../remote_access.rst:283
 msgid "To install Prolific PL2303 driver:"
 msgstr ""
 
-#: ../../remote_access.rst:288
+#: ../../remote_access.rst:289
 msgid "The logs will show an output similar to this:"
 msgstr ""
 
@@ -18216,5 +18201,68 @@ msgstr ""
 #~ " like `V2V Converted "
 #~ "<https://www.starwindsoftware.com/starwind-v2v-"
 #~ "converter>`_."
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-40-gc9fdc5c229/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-35-g294b21145f/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-31-g35346f89fe/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-30-g9a201d1cab/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, the system accepts SSH "
+#~ "connections on the standard port 22. "
+#~ "Access with the root user and the"
+#~ " default password."
 #~ msgstr ""
 
