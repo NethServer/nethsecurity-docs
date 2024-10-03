@@ -164,7 +164,7 @@ Replace:
 VMware open-vm-tools
 ^^^^^^^^^^^^^^^^^^^^
 
-VMware open-vm-tools are not part of the NethSecurity image, but it can be installed from the command line.
+VMware open-vm-tools are not part of the NethSecurity image but can be installed from the command line.
 The tools can work only when the virtual machine is running on VMWare hypervisors.
 
 First make sure the virtual machine is running, then connect to the machine using SSH or the VMWare console and
