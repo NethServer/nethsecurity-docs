@@ -45,6 +45,8 @@ Then run the following command: ::
 
 The ``sysupgrade`` command flashes the new image file to the device.
 
+.. _restore_extra_packages-section:
+
 Restore extra packages
 ----------------------
 
