@@ -126,7 +126,7 @@ Finally, start the virtual machine.
 QEMU guest agent
 ^^^^^^^^^^^^^^^^
 
-QEMU guest agent is not part of the NethSecurity image, but it can be installed from the command line.
+QEMU guest agent is not part of the NethSecurity image but can be installed from the command line.
 The agent can work when the virtual machine is running on KVM, Proxmox, or other QEMU-based hypervisors.
 
 First, make sure the virtual machine is running, then connect to the machine using SSH or the Proxmox console and
