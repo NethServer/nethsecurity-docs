@@ -52,3 +52,12 @@ Multiple Networks management
 A single IPsec tunnel can handle multiple local and remote networks. 
 In this case, NethSecurity always creates multiple child SAs to ensure broad compatibility with remote devices. 
 The behavior remains the same for IKEv1 or IKEv2.
+
+
+IPsec tunnel in a MultiWAN scenario
+-----------------------------------
+In a multi-WAN scenario, it’s crucial to ensure that each tunnel's remote endpoint is reached through the same WAN interface configured for the IPsec tunnel. 
+
+To enforce this behavior, a static route must be created so that traffic to the remote IP is directed through the gateway of the specific WAN interface assigned to the tunnel.
+
+For example, if the tunnel is over WAN1 and the remote endpoint is ``11.22.33.44``, the static route would specify that traffic to ``11.22.33.44`` uses the WAN1 gateway.
