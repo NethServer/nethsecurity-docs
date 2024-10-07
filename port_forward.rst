@@ -34,7 +34,7 @@ For each port forward the user can also configure the following aspects:
   you can assign a port forward to a particular IP. This feature is valuable when dealing with complex network setups, ensuring that traffic directed to
   a specific public IP is forwarded correctly to the internal server.
 
-- **Access restriction**: Port forwards can be restricted to specific sources to enhance security. This can be done using the ``Restrict access to`` field, where IP addresses and CIDR blocks can be directly entered.
+- **Access restriction**: Port forwards can be restricted to specific sources to enhance security. This can be done using the ``Restrict access to`` field. The field accepts IP addresses, CIDR blocks or an object.
 
   Host set and domain set objects can also be used to further simplify and streamline management.
 .. note:: IP ranges are not supported, so host sets containing IP ranges cannot be used.
