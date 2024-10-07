@@ -27,7 +27,7 @@ When creating a port forward, certain parameters must be specified:
 
 By default, all port forwards are accessible only for hosts inside the WAN. Refer to the :ref:`hairpin-section` for instructions on changing this default behavior.
 
-For each port forward the user can also configure also the following aspects:
+For each port forward the user can also configure the following aspects:
 
 - **Binding to a specific public IP**: port forwards can be bound to a specific public IP address using the ``WAN IP`` field.
   This means that if your router/firewall has multiple public IP addresses,
