@@ -135,9 +135,8 @@ execute the following commands: ::
   opkg update
   opkg install qemu-ga
 
-After the installation, start the service: ::
-
-  /etc/init.d/qemu-ga start
+After the installation, reboot the firewall to start the service and setup all
+required devices.
 
 The QEMU guest agent will be available on the virtual machine and automatically started at boot.
 
@@ -173,9 +172,8 @@ execute the following commands: ::
   opkg update
   opkg install open-vm-tools
 
-After the installation, start the service: ::
-
-  /etc/init.d/vmtoolsd start
+After the installation, reboot the firewall to start the service and setup all
+required devices.
 
 The VMware open-vm-tools will be available on the virtual machine and automatically started at boot.
 
