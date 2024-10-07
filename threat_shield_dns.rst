@@ -57,6 +57,10 @@ To bypass filtering for specific hosts, execute: ::
 
 Replace ``192.168.1.22`` with the IP address of the host you want to bypass.
 
+Apply changes: ::
+
+    uci commit adblock && service adblock restart
+
 .. note:: 
   
   To preserve the effectiveness of the content filter it is suggested blocking alternative DNS protocols (DoT, DoH) 
