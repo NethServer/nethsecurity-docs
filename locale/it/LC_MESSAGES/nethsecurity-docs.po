@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 09:57+0000\n"
+"POT-Creation-Date: 2024-10-07 09:06+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2554,54 +2554,88 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-50-g0ceb3295ba"
+msgid "8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-50-g0ceb3295ba/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-50-g0ceb3295ba-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-50-g0ceb3295ba/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-49-gd35f90fee2"
+msgid "8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-49-gd35f90fee2/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-49-gd35f90fee2-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-49-gd35f90fee2/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978"
+msgid "8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3121,7 +3155,7 @@ msgid ""
 " filtering regardless of their configuration."
 msgstr ""
 
-#: ../../flashstart.rst:58 ../../threat_shield_dns.rst:68
+#: ../../flashstart.rst:58 ../../threat_shield_dns.rst:72
 msgid "Block certain websites"
 msgstr ""
 
@@ -8372,7 +8406,7 @@ msgid ""
 "the measured values"
 msgstr ""
 
-#: ../../qos.rst:31 ../../threat_shield_dns.rst:89
+#: ../../qos.rst:31 ../../threat_shield_dns.rst:93
 msgid "Advanced configuration"
 msgstr ""
 
@@ -11873,7 +11907,7 @@ msgstr ""
 msgid "Enable a specific blocklist (e.g., malware_lvl2): ::"
 msgstr ""
 
-#: ../../threat_shield_dns.rst:42
+#: ../../threat_shield_dns.rst:42 ../../threat_shield_dns.rst:60
 msgid "Apply changes: ::"
 msgstr ""
 
@@ -11898,50 +11932,50 @@ msgid ""
 "bypass."
 msgstr ""
 
-#: ../../threat_shield_dns.rst:62
+#: ../../threat_shield_dns.rst:66
 msgid ""
 "To preserve the effectiveness of the content filter it is suggested "
 "blocking alternative DNS protocols (DoT, DoH) via :ref:`dpi_filter-"
 "section` and by enabling the ``doh_vpn_tor_proxy`` blocklist."
 msgstr ""
 
-#: ../../threat_shield_dns.rst:70
+#: ../../threat_shield_dns.rst:74
 msgid ""
 "To block specific domains, you can use the Threat Shield service. Add the"
 " domains that you want to block to the blocklist: ::"
 msgstr ""
 
-#: ../../threat_shield_dns.rst:79
+#: ../../threat_shield_dns.rst:83
 msgid "Changes made to the blocklist require a reload of the service: ::"
 msgstr ""
 
-#: ../../threat_shield_dns.rst:85
+#: ../../threat_shield_dns.rst:89
 msgid ""
 "The DNS resolution for the names listed in the blocklist will also affect"
 " the firewall itself"
 msgstr ""
 
-#: ../../threat_shield_dns.rst:91
+#: ../../threat_shield_dns.rst:95
 msgid "When Threat Shield DNS is enabled:"
 msgstr ""
 
-#: ../../threat_shield_dns.rst:93
+#: ../../threat_shield_dns.rst:97
 msgid ""
 "A new category source file is generated based on the machine registration"
 " and entitlement."
 msgstr ""
 
-#: ../../threat_shield_dns.rst:94
+#: ../../threat_shield_dns.rst:98
 msgid "All DNS queries are redirected to the local machine."
 msgstr ""
 
-#: ../../threat_shield_dns.rst:95
+#: ../../threat_shield_dns.rst:99
 msgid ""
 "Adblock is configured to use the new category source file and will be "
 "started automatically."
 msgstr ""
 
-#: ../../threat_shield_dns.rst:97
+#: ../../threat_shield_dns.rst:101
 msgid ""
 "Even if not recommended, it's possible to use Adblock without Threat "
 "Shield DNS. For more detailed configuration options, please refer to the "
@@ -18325,5 +18359,47 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-41-g0052109674/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-50-g0ceb3295ba"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-50-g0ceb3295ba/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-50-g0ceb3295ba-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-50-g0ceb3295ba/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-49-gd35f90fee2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-49-gd35f90fee2/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-49-gd35f90fee2-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-49-gd35f90fee2/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
