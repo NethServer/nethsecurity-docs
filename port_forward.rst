@@ -36,8 +36,7 @@ For each port forward the user can also configure the following aspects:
 
 - **Access restriction**: Port forwards can be restricted to specific sources to enhance security. This can be done using the ``Restrict access to`` field. The field accepts IP addresses, CIDR blocks or an object.
 
-  Host set and domain set objects can also be used to further simplify and streamline management.
-.. note:: IP ranges are not supported, so host sets containing IP ranges cannot be used.
+  Any type of object is supported except for host sets containing an IP range.
 
 - **Enabling logging**: port forwards can be configured to log incoming traffic for each rule. By enabling the ``Log`` option,
   the network administrator can keep track of the traffic passing through the port forward, allowing for monitoring and analysis.
