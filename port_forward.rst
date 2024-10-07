@@ -27,17 +27,20 @@ When creating a port forward, certain parameters must be specified:
 
 By default, all port forwards are accessible only for hosts inside the WAN. Refer to the :ref:`hairpin-section` for instructions on changing this default behavior.
 
-For each port forward the user can configure also the following aspects:
+For each port forward the user can also configure also the following aspects:
 
-- Enabling logging: port forwards can be configured to log incoming traffic for each rule. By enabling the ``Log`` option,
-  the network administrator can keep track of the traffic passing through the port forward, allowing for monitoring and analysis
-- Access restriction: port forwards can be restricted to specific IP addresses, CIDR blocks or a domain set object. By entering a list of allowed IP addresses and CIDR notations, or selecting a domain set object
-  inside the ``Restrict access to`` field, the user can limit access to the port forward. This enhances security by controlling which external
-  devices are allowed to connect to the internal service.
-- Binding to specific public IP: port forwards can be bound to a specific public IP address using the ``WAN IP`` field.
+- **Binding to a specific public IP**: port forwards can be bound to a specific public IP address using the ``WAN IP`` field.
   This means that if your router/firewall has multiple public IP addresses,
   you can assign a port forward to a particular IP. This feature is valuable when dealing with complex network setups, ensuring that traffic directed to
   a specific public IP is forwarded correctly to the internal server.
+
+- **Access restriction**: Port forwards can be restricted to specific sources to enhance security. This can be done using the ``Restrict access to`` field, where IP addresses and CIDR blocks can be directly entered.
+
+  Host set and domain set objects can also be used to further simplify and streamline management.
+.. note:: IP ranges are not supported, so host sets containing IP ranges cannot be used.
+
+- **Enabling logging**: port forwards can be configured to log incoming traffic for each rule. By enabling the ``Log`` option,
+  the network administrator can keep track of the traffic passing through the port forward, allowing for monitoring and analysis.
 
 .. _hairpin-section:
 
