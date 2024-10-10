@@ -7,6 +7,71 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-10-17
+===========================
+
+Image version: `8-23.05.5-ns.1.3.0`
+
+This release focuses on monitoring, migration improvements and better NethSecurity Controller integration.
+
+Detailed changelog can be found `here <https://github.com/NethServer/nethsecurity/milestone/5?closed=1>`__
+
+.. rubric:: New features and improvements
+
+- Update to OpenWrt 23.05.5: see upstream `changelog <https://openwrt.org/releases/23.05/notes-23.05.5>`_
+- Centralized unit update management: from the controller it should be possible to update the unit seamlessly (packages and/or image)
+- Real time monitoring page: create a comprehensive dashboard for NethSecurity monitoring
+- Historical monitoring: historical monitoring allows the user to see how the firewall is behaving from the NethSecurity Controller
+- Support virtual machine tools for KVM an VMware: remove all tools from the image and provide them as optional packages
+- Port forward: support all objects inside restrict field: implement support for multiple object types in the "restrict access from" field
+- Inventory, advanced usage statistics: gather anonymous statistics on system usage
+- Improve Threat Shield UI: expose logging and brute force protection settings in the Threat Shield page
+- NAT helpers UI: new NAT helper configuration page
+- Remote support (ns-don): open netdata port (19999): add access to port 19999 from tunDON to allow viewing netdata UI from remote support sessions
+- NAT rules: add "0.0.0.0/0 any address": add "0.0.0.0/0 any address" option among destination address suggestions
+- Zoned and policies: allow to set the logging policy for each zone
+- DNS and DHCP page: search is now case insensitive
+- OpenVPN Road Warrior: add a button to download all OpenVPN certificates associated with a specific Road Warrior instance
+- UI: improves usability, navigation, layout, and visual elements on multiple pages
+- Migration: at the end of the migration, a log file is created with all the actions performed, the log is available at ``/root/migration.log``
+- MultiWAN: improve default configuration to restore the uplink after all WANs losed connectivity
+
+.. rubric:: Bug fixes
+
+- Migration: fix firewall rules that were using blue zone
+- Migration: network configuration not migrated if alias has no gateway
+- Migration: fixes firewall rules with "any" service migrate incorrectly
+- Migration: fixes root password authentication flag incorrectly displayed
+- Migration: rename VPN interfaces that caused a firewall error if the name was too long
+- Migration: fixes missing account_email in ACME that caused a certificate renewal failure
+- Migration: fixes wrong zone for OpenVPN and IPsec custom rules
+- Migration: fixes incorrect reflection zone on port forward for VPNs
+- Migration: remove custom zones on migration, zones are converted to CIDR networks
+- Migration: fixes FlashStart not enabled on guest/blue interface
+- Migration: fixes OpenVPN Road Warrior certificate not exported if CN contains the dot character
+- Migration: correctly import OpenVPN Road Warrior users without 'status' prop
+- OpenVPN Road Warrior: add client compression setting missing that was missing in .ovpn file
+- OpenVPN Road Warrior: fix IP pool management
+- OpenVPN Road Warrior: fix expired CRL that was causing a connection failure after 6 months
+- OpenVPN tunnel between NS7 and NS8 cipher: connection was failing despite showing "connected"
+- OpenVPN tunnel client: fix displayed mode
+- OpenVPN tunnel client: wrong "bridged" mode as new default, new default is now r"outed"
+- OpenVPN tunnel client resets cipher to `AES-128-CBC`: correctly set cipher without resetting it
+- OpenVPN tunnel client: correctly set "tap" and "tun" mode on client tunnel creation
+- Unable to disable legacy LuCI UI after system upgrade: fix LuCI UI disable option
+- Controller connection (ns-plug): force cleanup of package cache and sync unit status
+- Migration: improve in place migrate, add delay before image write to reduce issues when writing the kernel
+- Conntrack: make sure counters is set: Avoid error from missing counters.
+- Reverse proxy: correctly set default certificate
+- Reverse proxy: fix configuration to allow access only from the specified network
+- Netdata: mitigated issue with orphaned fping process continuing to ping removed IPs
+- Cannot logout while a toast notification is shown: prevent toast notifications from blocking the account menu
+- API server: fix restarting on package update
+- Interface page fails with QoS enabled on PPPoE: improve validator on network configuration page
+- Cannot duplicate a port forward: fix duplication of port forwarding rule
+- Report: disable "open report" button when UI is displayed from the controller
+- DPI report: fix crash on netifyd restart
+
 Major changes on 2024-08-08
 ===========================
 
