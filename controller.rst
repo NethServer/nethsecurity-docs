@@ -157,6 +157,23 @@ It supports authentication via various methods including username/password, OAut
 You can also create custom dashboards and alerts to monitor the metrics and logs from the connected units.
 See the `official documentation <https://grafana.com/docs/grafana/latest/>`_ for more information on how to use Grafana.
 
+.. _controller_updating-section:
+
+Unit updates
+============
+
+The controller allows you to update the units directly from the interface, similar to the process in :ref:`the unit web interface<updates-section>`. Two types of updates are available:
+
+- **Package updates**: Update the packages installed on the unit. List and install available updates by clicking on :guilabel:`Check packages updates` in the unit menu.
+  A modal will display the list of available updates. If updates are available, apply them by clicking on the :guilabel:`Update` button in the modal.
+- **System update**: Update the unit's system. If an image update is available, a badge will appear in the unit list.
+  Schedule an update by clicking on the :guilabel:`System update` button in the unit menu. You can schedule the update or update the unit immediately.
+  This operation is also available as a mass operation for multiple units under :guilabel:`Actions` -> :guilabel:`Update systems`.
+
+.. note::
+
+  Units with a scheduled image update will have a dedicated badge in the unit list. You can abort the scheduled update by clicking on the :guilabel:`Cancel scheduled image update` button in the unit menu.
+
 .. _controller_ssh-section:
 
 SSH access
@@ -296,38 +313,3 @@ To do so, the procedure is as follows:
 4. When the modal opens, you can safely close it. This was only needed to exchange some credentials with the unit.
 5. Open a new tab, and go to this URL: `https://<controller-fqdn>/#/controller/manage/<unit-id>/dashboard`. Example: `https://controller.nethsecurity.org/#/controller/manage/000000000-0000-0000-0000-000000000000/dashboard`.
 6. You will be able to access the unit's UI without the version check.
-
-.. rubric:: Update unit with SSH
-
-You can update the unit without connecting to it using the SSH terminal.
-Follow the steps to connect to the unit using :ref:`SSH Access <controller_ssh-section>`.
-
-Once connected, you can check for updates depending on what you want to update.
-
-a. Install package updates on the unit:
-
-   1. To check for updates for packages use the following command:
- 
-      .. code-block:: bash
- 
-        /usr/libexec/rpcd/ns.update call check-package-updates
-   
-   2. If you're ok with the installation of the packages you can run the following command:
- 
-      .. code-block:: bash
- 
-        /usr/libexec/rpcd/ns.update call install-package-updates
-
-b. To update the image, you can simply schedule the installation, remember this is a operation that restarts the firewall (causing a downtime)
-
-   1. Check if there is an updated image available:
- 
-      .. code-block:: bash
- 
-        /usr/libexec/rpcd/ns.update call check-system-update
-
-   2. If you want to proceed with the update, this can be done through this command:
-
-      .. code-block:: bash
-
-        /usr/libexec/rpcd/ns.update call update-system
