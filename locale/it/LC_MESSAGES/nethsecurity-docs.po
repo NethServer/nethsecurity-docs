@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-07 09:06+0000\n"
+"POT-Creation-Date: 2024-10-12 13:57+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -734,12 +734,13 @@ msgstr ""
 "fornisce una funzionalità di gestione e monitoraggio aggiuntive."
 
 #: ../../controller.rst:13
+#, fuzzy
 msgid ""
-"The controller works by creating a secure connection between the central "
-"server and the units. Each firewall registers with the server using a "
-"client called ns-plug. Once registered, the server generates a VPN "
-"configuration that is sent back to the firewall The VPN enables secure "
-"communication between the controller and the unit."
+"The controller creates a secure connection between the central server and"
+" the units. Each firewall registers with the server using a client called"
+" ns-plug. Once registered, the server generates a VPN configuration that "
+"is sent back to the firewall. The VPN enables secure communication "
+"between the controller and the unit."
 msgstr ""
 "Il controller funziona creando una connessione sicura tra il server "
 "centrale (il controller) e le unità (i firewall). Ogni firewall si "
@@ -904,9 +905,10 @@ msgid "The controller has two types of users:"
 msgstr "Il controller ha due tipi di utenti:"
 
 #: ../../controller.rst:53
+#, fuzzy
 msgid ""
-"**Administrator**: The administrator user is the only one that can create"
-" and manage users inside the controller."
+"**Administrator**: The administrator user is the only one who can create "
+"and manage users inside the controller."
 msgstr ""
 "**Amministratore**: L'utente amministratore è l'unico che può creare e "
 "gestire gli utenti all'interno del controller."
@@ -916,7 +918,8 @@ msgid "**User**: The user can manage the units and the firewall configurations."
 msgstr "**Utente**: L'utente può gestire le unità e le configurazioni firewall."
 
 #: ../../controller.rst:56
-msgid "The administrator user is created during the controller configuration."
+#, fuzzy
+msgid "The administrator is created during the controller configuration."
 msgstr ""
 "L'utente amministratore viene creato durante la configurazione del "
 "controller."
@@ -942,9 +945,10 @@ msgstr ""
 "eliminare gli utenti."
 
 #: ../../controller.rst:64
+#, fuzzy
 msgid ""
-"After logging in, each user can change their own password and generate an"
-" SSH key pair for accessing the unit."
+"After logging in, each user can change their password and generate an SSH"
+" key pair for accessing the unit."
 msgstr ""
 "Dopo l'accesso, ogni utente può modificare la propria password e generare"
 " una coppia di chiavi SSH per accedere all'unità."
@@ -962,10 +966,11 @@ msgstr ""
 " dal controller."
 
 #: ../../controller.rst:71
+#, fuzzy
 msgid ""
-"To connect a new unit to the controller, the user must create click on "
-"the :guilabel:`Add unit` button from the controller web interface. When a"
-" new unit is added, the controller performs the following actions:"
+"To connect a new unit to the controller, the user must click on the "
+":guilabel:`Add unit` button from the controller web interface. When a new"
+" unit is added, the controller performs the following actions:"
 msgstr ""
 "Per collegare una nuova unità al controller, cliccare su:guilabel: `Add "
 "unit` dall'interfaccia web del controller. Quando viene aggiunta una "
@@ -1026,10 +1031,11 @@ msgstr ""
 "dell'unità."
 
 #: ../../controller.rst:87
+#, fuzzy
 msgid ""
-"When the unit is connected, the user can directly access the unit web "
-"interface by clicking on the :guilabel:`Open unit` link without the need "
-"to enter the unit credentials."
+"When the unit is connected, the user can access the unit web interface by"
+" clicking on the :guilabel:`Open unit` link without needing to enter the "
+"unit credentials."
 msgstr ""
 "Quando l'unità è collegata, l'utente può accedere direttamente "
 "all'interfaccia web dell'unità facendo clic su :guilabel: ` Open unit` "
@@ -1208,11 +1214,12 @@ msgstr ""
 "fqdn>/grafana`."
 
 #: ../../controller.rst:152
+#, fuzzy
 msgid ""
-"By default, you can access it by using default credentials set during the"
-" controller configuration. Remember to change the default password after "
-"the first login. Grafana also provides features for managing users, "
-"teams, and permissions. It supports authentication via various methods "
+"By default, you can access it by using the default credentials set during"
+" the controller configuration. Remember to change the default password "
+"after the first login. Grafana also provides features for managing users,"
+" teams, and permissions. It supports authentication via various methods "
 "including username/password, OAuth, LDAP, and more."
 msgstr ""
 "Di default è possibile accedervi utilizzando le credenziali predefinite "
@@ -1261,17 +1268,19 @@ msgstr ""
 "consente l'accesso alla shell dell'unità."
 
 #: ../../controller.rst:171
-msgid "You can connect to units using username and password or an SSH key pair."
+#, fuzzy
+msgid "You can connect to units using a username and password pair or an SSH key."
 msgstr ""
 "È possibile connettersi a unità utilizzando nome utente e password oppure"
 " una coppia di chiavi SSH."
 
 #: ../../controller.rst:173
+#, fuzzy
 msgid ""
 "Once connected, the SSH session will be started inside a new browser tab."
-" Some browsers require the permission to open popups for the SSH session "
-"to work properly. To close the session, simply close the browser window "
-"or logout from the shell using CTRL + D."
+" Some browsers require permission to open popups for the SSH session to "
+"work properly. To close the session, simply close the browser window or "
+"log out from the shell using CTRL + D."
 msgstr ""
 "Una volta collegata, la sessione SSH verrà avviata all'interno di una "
 "nuova scheda del browser. Alcuni browser richiedono il permesso di aprire"
@@ -1284,11 +1293,12 @@ msgid "Username and password"
 msgstr "Utente e password"
 
 #: ../../controller.rst:179
+#, fuzzy
 msgid ""
-"The user can connect using a username and password of the unit in the "
-"following scenarios: - The logged-in user has not generated an SSH key "
-"pair - The public SSH key of the logged-in user hasn't been copied inside"
-" the SSH authorized keys file of the unit"
+"The user can connect using a username and password pair of the unit in "
+"the following scenarios: - The logged-in user has not generated an SSH "
+"key - The public SSH key of the logged-in user hasn't been copied inside "
+"the SSH authorized keys file of the unit"
 msgstr ""
 "L'utente può connettersi utilizzando un nome utente e una password "
 "dell'unità nei seguenti scenari: - L'utente connesso non ha generato una "
@@ -1538,9 +1548,9 @@ msgstr ""
 #: ../../controller.rst:272
 msgid ""
 "Version awareness is a mechanism that prevents the user from performing "
-"operations that are not supported by the unit version. To do so, when "
-"connecting to the UI of a unit the controller will check the API version "
-"during the connection process. There are three possible scenarios:"
+"operations not supported by the unit version. To do so, when connecting "
+"to the UI of a unit the controller will check the API version during the "
+"connection process. There are three possible scenarios:"
 msgstr ""
 
 #: ../../controller.rst:275
@@ -1677,7 +1687,7 @@ msgstr ""
 #: ../../controller.rst:321
 msgid ""
 "To update the image, you can simply schedule the installation, remember "
-"this is a operation that restarts the firewall (causing a downtime)"
+"this is an operation that restarts the firewall (causing a downtime)"
 msgstr ""
 
 #: ../../controller.rst:323
@@ -2554,88 +2564,54 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436"
+msgid "8-23.05.5-ns.1.2.99-alpha1-81-g9e404efdd4"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-81-g9e404efdd4/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-81-g9e404efdd4-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-81-g9e404efdd4/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce"
+msgid "8-23.05.5-ns.1.2.99-alpha1-80-gc5ce376fc2"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-80-gc5ce376fc2/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-80-gc5ce376fc2-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-80-gc5ce376fc2/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b"
+msgid "8-23.05.5-ns.1.2.99-alpha1-78-g6f063d3a89"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-78-g6f063d3a89/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-78-g6f063d3a89-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-78-g6f063d3a89/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -18401,5 +18377,93 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-48-gbf088c0978/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Version awareness is a mechanism that"
+#~ " prevents the user from performing "
+#~ "operations that are not supported by "
+#~ "the unit version. To do so, when"
+#~ " connecting to the UI of a unit"
+#~ " the controller will check the API"
+#~ " version during the connection process. "
+#~ "There are three possible scenarios:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To update the image, you can "
+#~ "simply schedule the installation, remember "
+#~ "this is a operation that restarts "
+#~ "the firewall (causing a downtime)"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-58-g5b0c146436/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-57-gece787fcce/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-56-gd8e4a81a1b/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-55-g224edf9026/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-52-g39fc07822a/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
