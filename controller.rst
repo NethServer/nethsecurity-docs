@@ -10,9 +10,9 @@ The controller allows remote control of multiple NethSecurity installations, cal
 The firewall can operate independently without the need for the controller.
 The controller is an optional component that provides additional management and monitoring capabilities for the firewall.
 
-The controller works by creating a secure connection between the central server and the units.
+The controller creates a secure connection between the central server and the units.
 Each firewall registers with the server using a client called ns-plug.
-Once registered, the server generates a VPN configuration that is sent back to the firewall
+Once registered, the server generates a VPN configuration that is sent back to the firewall.
 The VPN enables secure communication between the controller and the unit.
 
 Key features:
@@ -50,10 +50,10 @@ Users
 
 The controller has two types of users:
 
-- **Administrator**: The administrator user is the only one that can create and manage users inside the controller.
+- **Administrator**: The administrator user is the only one who can create and manage users inside the controller.
 - **User**: The user can manage the units and the firewall configurations.
 
-The administrator user is created during the controller configuration. 
+The administrator is created during the controller configuration. 
 
 It is recommended to create a user for each person who needs access to the controller.
 When creating a new user, the administrator must specify the username, the user display name, and the user password.
@@ -61,14 +61,14 @@ The username is used to log in to the controller, while the display name is used
 
 The administrator can also reset the user password and delete users.
 
-After logging in, each user can change their own password and generate an SSH key pair for accessing the unit.
+After logging in, each user can change their password and generate an SSH key pair for accessing the unit.
 
 Units
 =====
 
 All users can manage units. A unit is a firewall that is managed by the controller.
 
-To connect a new unit to the controller, the user must create click on the :guilabel:`Add unit` button from the controller web interface.
+To connect a new unit to the controller, the user must click on the :guilabel:`Add unit` button from the controller web interface.
 When a new unit is added, the controller performs the following actions:
 
 - creates a unique identifier for the unit
@@ -84,7 +84,7 @@ If the connection is successful, the unit will be displayed in the controller we
 
 Please note that if the controller does not have a valid Let's Encrypt certificate, you will need to disable the ``Verify TLS certificate`` option in the unit configuration.
 
-When the unit is connected, the user can directly access the unit web interface by clicking on the :guilabel:`Open unit` link without the need to enter the unit credentials.
+When the unit is connected, the user can access the unit web interface by clicking on the :guilabel:`Open unit` link without needing to enter the unit credentials.
 
 .. note:: 
 
@@ -149,7 +149,7 @@ It helps users create customizable dashboards with graphs, charts, and tables to
 The controller includes a pre-configured Grafana instance that is used to visualize metrics and logs from the connected units.
 The Grafana instance is accessible from the URL ``https://<controller-fqdn>/grafana``.
 
-By default, you can access it by using default credentials set during the controller configuration.
+By default, you can access it by using the default credentials set during the controller configuration.
 Remember to change the default password after the first login.
 Grafana also provides features for managing users, teams, and permissions.
 It supports authentication via various methods including username/password, OAuth, LDAP, and more.
@@ -168,16 +168,16 @@ SSH provides a secure channel over an unsecured network in a client-server archi
 It is possible to connect to the unit by clicking on the :guilabel:`Open SSH terminal` link.
 The connection is made through a web-based SSH client that allows access to the unit's shell.
 
-You can connect to units using username and password or an SSH key pair.
+You can connect to units using a username and password pair or an SSH key.
 
-Once connected, the SSH session will be started inside a new browser tab. Some browsers require the permission to open popups for the SSH session to work properly.
-To close the session, simply close the browser window or logout from the shell using CTRL + D.
+Once connected, the SSH session will be started inside a new browser tab. Some browsers require permission to open popups for the SSH session to work properly.
+To close the session, simply close the browser window or log out from the shell using CTRL + D.
 
 Username and password
 ---------------------
 
-The user can connect using a username and password of the unit in the following scenarios:
-- The logged-in user has not generated an SSH key pair
+The user can connect using a username and password pair of the unit in the following scenarios:
+- The logged-in user has not generated an SSH key
 - The public SSH key of the logged-in user hasn't been copied inside the SSH authorized keys file of the unit
 
 The user interface will display a form to enter the username and password.
@@ -269,7 +269,7 @@ Controller with a valid subscription:
 Version awareness
 =================
 
-Version awareness is a mechanism that prevents the user from performing operations that are not supported by the unit version. To do so, when connecting to the UI
+Version awareness is a mechanism that prevents the user from performing operations not supported by the unit version. To do so, when connecting to the UI
 of a unit the controller will check the API version during the connection process. There are three possible scenarios:
 
 a. If the versions are compatible, the connection proceeds as normal.
@@ -318,7 +318,7 @@ a. Install package updates on the unit:
  
         /usr/libexec/rpcd/ns.update call install-package-updates
 
-b. To update the image, you can simply schedule the installation, remember this is a operation that restarts the firewall (causing a downtime)
+b. To update the image, you can simply schedule the installation, remember this is an operation that restarts the firewall (causing a downtime)
 
    1. Check if there is an updated image available:
  
