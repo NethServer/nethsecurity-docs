@@ -172,7 +172,6 @@ All major platforms are supported. Here are some references to download the nece
 
 * iOS Systems: `OpenVPN Connect on App Store <https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_
 
-
 MTU Issue and Packet Fragmentation
 ----------------------------------
 
