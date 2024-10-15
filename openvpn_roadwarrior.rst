@@ -171,3 +171,18 @@ All major platforms are supported. Here are some references to download the nece
 * Android Systems: `OpenVPN Connect on Play Store <https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_
 
 * iOS Systems: `OpenVPN Connect on App Store <https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_
+
+
+MTU Issue and Packet Fragmentation
+----------------------------------
+
+VPN users may experience connectivity issues due to packet fragmentation. The LAN interface has an MTU of 1500, but when packets are encrypted for VPN transmission, the size increases, leading to packet drops. To resolve this, lower the MTU on the VPN server's TUN interface. No changes are required on the client side.
+
+Add these options to the Roadwarrior server configuration ::
+
+  uci set openvpn.ns_roadwarrior1.tun_mtu='1300'
+  uci set openvpn.ns_roadwarrior1.mssfix='1250'
+  uci commit openvpn.ns_roadwarrior1
+  /etc/init.d/openvpn restart ns_roadwarrior1
+
+The MTU values may need to be adjusted to fit your specific network environment. A lower MTU ensures packets fit within the limits of the VPN tunnel without fragmentation, but depending on network latency or overhead, slightly different values might be necessary.
