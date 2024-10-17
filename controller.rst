@@ -22,8 +22,8 @@ Key features:
 - **Easy Configuration**: Configure firewalls directly from the controller's user interface.
 - **Monitoring and Logging**: Collect and analyze logs from the firewalls inside `Loki <https://grafana.com/oss/loki/>`_ for troubleshooting and monitoring purposes.
 - **Metrics Visualization**: Visualize metrics from the firewalls using the built-in `Grafana <https://grafana.com/>`_ dashboard.
-  Metrics are collected using `Prometheus <https://prometheus.io/>`_.
-- **Web-based SSH**: Access the firewalls' command-line interface using a web-based SSH client.
+  Metrics are collected using `Prometheus <https://prometheus.io/>`_ and `TimescaleDB <https://www.timescale.com/>`_.
+- **Web-based SSH**: Access the firewall command-line interface using a web-based SSH client.
 
 Installation and configuration
 ===============================
@@ -116,29 +116,34 @@ Logs can be viewed by clicking on the :guilabel:`Open logs` link for each unit. 
 
   Logs retention period must be configured from the NS8 web interface.
 
+.. _controller_metrics-section:
 
 Metrics
 =======
 
-Each unit exports its own statistics using netdata in the Prometheus format.
-As soon as a unit is connected, Prometheus starts scraping the metrics.
+Each unit exports two types of metrics:
+
+- system operating metrics (CPU, memory, disk, network): these metrics are collected using `Netdata <https://www.netdata.cloud/>`_
+  and stored in `Prometheus <https://prometheus.io/>`_. As soon as a unit is connected, the controller starts scraping the metrics.
+  These metrics are available to everyone regardless of the subscription status.
+- firewall metrics (traffic, security, VPN): these metrics are sent from the unit to controller at fixed intervals.
+  The controller stores them inside a `Timescale <https://www.timescale.com/>`_ database.
+  These metrics are available only to users with a valid subscription.
+
+All data collected and stored inside the controller is timestamped using Coordinated Universal Time (UTC).
+This ensures consistency and accuracy across different time zones, making it easier to correlate events and analyze trends.
+
+Users have the flexibility to view data in their local time zone by adjusting the time settings in Grafana.
+To change the local time zone, navigate to the Grafana preferences menu and select the desired time zone.
+This adjustment can be applied to each dashboard individually, allowing users to customize the time zone display based on their preferences.
 
 The metrics can be viewed within the Grafana dashboard.
 Users can access the dashboard by clicking on the :guilabel:`Open metrics` link for each unit.
 
-Each unit target has the following labels:
-
-- `instance` the VPN IP of the connected machine with the netdata port (eg. `172.19.64.3:19999`)
-- `job` fixed to `node`
-- `node` the VPN IP of the connected machine
-- `unit` the unit unique name of the connected machine
-
 By default, only the admin user can access the metrics dashboard. If you want to allow other users to access the metrics dashboard,
 you can create a new role and assign it to the user directly from the Grafana web interface.
 
-.. note::
-
-  Metrics retention period must be configured from the NS8 web interface.
+.. _grafana-section:
 
 Grafana
 -------
@@ -156,6 +161,49 @@ It supports authentication via various methods including username/password, OAut
 
 You can also create custom dashboards and alerts to monitor the metrics and logs from the connected units.
 See the `official documentation <https://grafana.com/docs/grafana/latest/>`_ for more information on how to use Grafana.
+
+Prometheus metrics
+^^^^^^^^^^^^^^^^^^
+
+Prometheus metrics are collected using Netdata and stored in a Prometheus database.
+
+Metrics exported for each unit includes the following labels:
+
+- ``instance`` the VPN IP of the connected machine with the Netdata port (eg. ``172.19.64.3:19999``)
+- ``job`` fixed to `node`
+- ``node`` the VPN IP of the connected machine
+- ``unit`` the unit unique name of the connected machine
+
+Such metrics are visible inside the ``Operating system`` dashboard.
+
+Timescale metrics
+^^^^^^^^^^^^^^^^^
+
+.. admonition:: Subscription required
+
+   This feature is available only if the firewall and the controller have a valid subscription.
+
+The Timescale database stores the same metrics of the :ref:`real_time_monitoring-section` but as a timeseries saved in a PostgreSQL database.
+Each unit sends data to the controller every 15 minutes. The controller aggregates the data every 15 minutes, this means that data are
+available inside dashboards at best with a 15 minutes delay and at worst with a 30 minutes delay.
+
+The controller can do extra processing on the data to provide more insights. For example, the controller can geolocate the IP addresses
+of the connected clients and of the attackers.
+
+These metrics are visible inside the following dashboards:
+
+- ``Network traffic``: aggregated network traffic as seen by the unit
+- ``Network traffic by client``: network traffic for each client (local host) connected to the unit
+- ``Network traffic by host``: network traffic for each remote host
+- ``Security``: security events detected by the unit
+- ``VPN``: VPN statistics for OpenVPN Road Warrior, OpenVPN tunnels and IPsec tunnels
+
+.. note::
+
+  Metrics retention period must be configured from the NS8 web interface and is applied to both to Prometheus and Timescale databases.
+
+
+
 
 .. _controller_updating-section:
 
@@ -271,7 +319,7 @@ Subscription and limitations
 
 .. admonition:: Subscription required
 
-  Some restrictions can only be overcomed if the firewall has a valid subscription.
+  Some restrictions can only be overcame if the firewall has a valid subscription.
 
 The behavior of the controller running on a NS8 depends on its subscription status.
 
@@ -279,11 +327,13 @@ Controller without subscription:
 
 - Allows the registration of up to 3 units.
 - Only community firewalls can register with the controller.
+- Historical metrics are not accesible.
 
 Controller with a valid subscription:
 
 - The number of units is unlimited.
 - Only firewalls with a valid subscription can register with the controller.
+- Units with a valid subscription send metrics to the controller.
 
 .. _version-awareness-section:
 
