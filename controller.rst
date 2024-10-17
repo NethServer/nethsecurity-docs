@@ -157,6 +157,25 @@ It supports authentication via various methods including username/password, OAut
 You can also create custom dashboards and alerts to monitor the metrics and logs from the connected units.
 See the `official documentation <https://grafana.com/docs/grafana/latest/>`_ for more information on how to use Grafana.
 
+.. _controller_updating-section:
+
+Unit updates
+============
+
+The controller allows you to update the units directly from the interface, similar to the process in :ref:`the unit web interface<updates-section>`. Two types of updates are available:
+
+- **Package updates**: Update the packages installed on the unit. List and install available updates by clicking on :guilabel:`Check packages updates` in the unit menu.
+  A modal will display the list of available updates. If updates are available, apply them by clicking on the :guilabel:`Update` button in the modal. This is the first thing to try if
+  :ref:`version awareness<version-awareness-section>` blocks you from accessing the unit.
+- **System update**: Update the unit's system. If an image update is available, a badge will appear in the unit list.
+  Schedule an update by clicking on the :guilabel:`System update` button in the unit menu. You can schedule the update or update the unit immediately.
+  This operation is also available as a mass operation for multiple units under :guilabel:`Actions` -> :guilabel:`Update systems`.
+  Units with a scheduled image update will have a dedicated badge in the unit list. You can abort the scheduled update by clicking on the :guilabel:`Cancel scheduled image update` button in the unit menu.
+
+.. note::
+
+  Please be aware that units might not send updated information when undergoing upgrading process prior to unit version 1.3.0. To refresh manually the information use the `guilabel`:`Sync unit info` button in the unit menu.
+
 .. _controller_ssh-section:
 
 SSH access
@@ -265,6 +284,8 @@ Controller with a valid subscription:
 
 - The number of units is unlimited.
 - Only firewalls with a valid subscription can register with the controller.
+
+.. _version-awareness-section:
 
 Version awareness
 =================
