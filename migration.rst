@@ -122,6 +122,10 @@ Also review the :ref:`remote user database page <remote_user_databases-section>`
 
 Then, verify that all services are working correctly. If you encounter any issues, refer to the :ref:`troubleshooting section <troubleshooting-section>`.
 
+The migration process is logged inside a special log file located at ``/root/migration.log``.
+This file contains all the actions performed during the migration process.
+Please note that the log file is deleted after an image upgrade.
+
 Migrated configurations
 =======================
 

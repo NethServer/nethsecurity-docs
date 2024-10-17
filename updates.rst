@@ -19,6 +19,8 @@ These updates do not require a restart of NethSecurity, they are tied to a speci
 
 When using this method, the version of the image shown inside the dashboard does not change, but the system is updated with the latest fixes.
 
+.. _system_upgrades-section:
+
 System upgrades
 ===============
 
