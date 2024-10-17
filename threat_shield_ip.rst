@@ -68,10 +68,31 @@ Enterprise blocklists are specifically focused on security and offer several adv
 Yoroi and Nethesis blocklists are Enterprise blocklists.
 These lists will be listed only if the machine has a valid :ref:`Enterprise or Community subscription <subscription-section>` and a valid entitlement for the Threat Shield service.
 
-Allow list
-----------
+Logging
+-------
 
-Sometimes it may be necessary to allow access to certain IP addresses, to do this you can use the ``Allowlist`` tab.
+The Threat Shield IP feature includes advanced logging capabilities to monitor and track potential threats.
+The logging section allows you to configure which types of blocked packets are logged:
+
+1. Log packets blocked in pre-routing chain: when enabled, this option logs packets that are blocked in the pre-routing chain,
+   which processes packets before they enter the routing table.
+
+2. Log packets blocked in input chain: his option, when activated, logs packets blocked in the input chain, which handles packets destined
+   to the firewall itself. Plese not that this option can generate a large number of logs if the firewall is under heavy traffic.
+
+3. Log packets blocked in forward chain: Enabling this logs packets blocked in the forward chain, which processes packets being routed through the firewall.
+
+4. Log packets blocked forwarded from LAN: This option logs packets that are blocked when forwarded from the Local Area Network (LAN).
+
+These logging options provide granular control over which blocked packets are recorded, allowing to expose metrics inside the 
+:ref:`real-time monitoring <real_time_monitoring-section>` and :ref:`historical monitoring <historical_monitoring-section>` sections.
+
+.. _local_allowlist-section:
+
+Local allowlist
+----------------
+
+Sometimes it may be necessary to allow access to certain IP addresses, to do this you can use the ``Local allowlist`` tab.
 Use the :guilabel:`Add address` button to add a new address to the list.
 The address can be a valid IPv4/IPv6 address with optional CIDR notation, a MAC address, or a fully qualified hostname (FQDN).
 
@@ -88,12 +109,50 @@ A comment can be associated with each address to facilitate management.
 You can add a comment to provide additional information about the address, such as its purpose or owner.
 This can help in organizing and managing the allowlist effectively.
 
+.. _local_blocklist-section:
+
+Local blocklist
+---------------
+
+Threat Shield IP includes a local blocklist functionality, which allows you to manually specify addresses
+that should always be blocked. This provides an additional layer of customization to your security setup.
+
+To access and customize the blocklist, navigate to the ``Local blocklist`` tab in the Threat Shield IP interface.
+Use the :guilabel:`Add address` button to include new entries. Each entry is composed by an address and a description.
+Valid syntax for the address is the same as for the :ref:`local_allowlist-section`.
+
+When adding addresses to the local blocklist, ensure you enter them correctly to avoid accidentally blocking legitimate traffic.
+It's also a good practice to include a descriptive comment for each entry to help with future management and auditing of your blocklist.
+
 .. _brute_force-section:
 
-Brute Force Attempt Block
+Block brute force attacks
 =========================
 
-When Threat Shield is enabled, the system automatically starts checking for brute force attack attempts on firewall services. Currently, the monitored services include SSH access and the firewall's legacy web interface (Luci). The system detects login attempts and automatically blocks IPs that have failed to enter the correct credentials. By default, the allowed attempts are 3, and the block lasts for 30 minutes.
+When Threat Shield is enabled, the system automatically starts checking for brute force attack attempts on firewall services.
+By default, the monitored services include SSH access and the login to NethSecurity UI.
+The system detects login attempts and automatically blocks IPs that have failed to enter the correct credentials.
+
+To enable or disable the brute force protection, navigate to the ``Block brute force attacks`` section in the Threat Shield IP interface,
+under the ``Settings`` tab and use the switch to activate or deactivate the feature.
+
+The feature can be customized by adjusting the following settings:
+
+- ``Ban after N failed accesses``: this setting determines the number of failed login attempts allowed before an IP address is banned. 
+  The default value is typically 3, but can be adjusted as needed. A lower value increases security but may also increase the risk of false positives,
+  like blocking legitimate users who mistype their credentials.
+
+- ``Patterns to detect attacks``: this field allows you to specify patterns that the system uses to identify potential brute force attacks.
+  Common patterns include:
+
+  - *Exit before auth from*: detects bad authentication attempts to SSH service
+  - *authentication failed for user*: identifies failed authentication attempts to NethSecurity web interface
+
+  You can add additional patterns using the :guilabel:`Add pattern`` button to customize the detection mechanism.
+  Each pattern can be a valid *grep* regular expression.
+
+- ``Ban time``: this setting determines the duration for which an IP address remains banned after exceeding the allowed number of failed attempts.
+  The default is often set to 30 minutes, but can be adjusted based on your security requirements.
 
 You can perform further actions using the command line; these are the supported commands:
 
@@ -101,15 +160,22 @@ You can perform further actions using the command line; these are the supported 
 * Look up a specific IP in the blocklist: ``/etc/init.d/banip search IP_ADDRESS``
 * Unban an IP address: ``nft delete element inet banIP blocklistv4 { IP_ADDRESS }``
 
-.. note:: Bear in mind that you need to specify the correct blocklist in commands when prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6).
+Bear in mind that you need to specify the correct blocklist in commands when prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6).
 
-You can modify the default values for the number of attempts and ban time using these commands:
+Block DoS
+---------
 
-* To change the number of attempts before a ban: ``uci set banip.global.ban_logcount='3'``
-* To change the ban duration in minutes: ``uci set banip.global.ban_nftexpiry='30m'``
+Threat Shield IP also includes protection against various types of Denial of Service (DoS) attacks.
+DoS protection limits excessive suspicious requests of a certain type, blocking that kind of traffic until the situation normalizes.
 
-After changing the values, copy and paste these two commands: ::
+- ``Block ICMP DoS``: when enabled, this option protects against DoS attacks using the Internet Control Message Protocol (ICMP).
+  The limit is set to 100 packets per second for all traffic passing through the firewall.
 
-  uci commit banip
-  /etc/init.d/banip restart
+- ``Block TCP DoS``: this option, when activated, guards against TCP-based DoS attacks based on bad packets.
+  A packet could be considered bad if it is not part of an established connection or if it is part of a connection that has been closed.
+  The limit is set to 10 bad packets per second for all traffic passing through the firewall.
+
+- ``Block UDP DoS``: Enabling this protects against User Datagram Protocol (UDP) based DoS attacks.
+  The limit is set to 100 packets per second for all traffic passing through the firewall.
+
 
