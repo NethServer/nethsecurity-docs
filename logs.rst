@@ -47,3 +47,46 @@ It is possible also to configure RFC 5424 using the same syntax: ::
  uci set rsyslog.clm.rfc=5424
 
 It is possible to configure multiple forwarders by repeating the operation using a different configuration name like ``clm2``.
+
+Log rotation size
+=================
+The /var/log/messages log file is stored in RAM. Once it reaches a predefined size limit, the log is rotated and compressed to conserve space. 
+The rotated log is saved as /var/log/messages.1.gz in gzip format. The system retains only two versions of the log: the active log file and the latest rotated, compressed file. 
+By default, the log rotation threshold is set to 10% of the tmpfs filesystem mounted at /tmp.
+
+This script manages the log rotation size for the Rsyslog service. It allows to **get** and **set** the log rotation size defined in bytes for the log file located at ``/var/log/messages``. 
+
+- **Get current size**: Retrieve the current log rotation size in bytes.
+- **Set new size**: Change the log rotation size to a specified value, ensuring that the new size is a positive integer and not less than 52428800 bytes (50 MB).
+- **Configuration safety**: If the specified size is below the minimum threshold, the script warns the user and does not make any changes to the configuration.
+
+Usage
+-----
+
+To use the script, run it with the following syntax:
+
+::
+
+ ns-log-size {get|set <size>}
+
+- **get**: Outputs the current log rotation size in bytes.
+- **set <size>**: Sets the log rotation size to the specified value (in bytes).
+
+Example
+^^^^^^^
+
+To get the current log rotation size:
+
+::
+
+ ns-log-size get
+
+To set a new log rotation size to 104857600 bytes (100 MB):
+
+::
+
+ ns-log-size set 104857600
+
+The service rsyslog is restarted automatically after the size is set.
+
+All changes to the log rotation size are directly written in the Rsyslog configuration file ``/etc/rsyslog.conf``.
