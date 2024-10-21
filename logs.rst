@@ -52,7 +52,7 @@ Log rotation size
 =================
 The /var/log/messages log file is stored in RAM. Once it reaches a predefined size limit, the log is rotated and compressed to conserve space. 
 The rotated log is saved as /var/log/messages.1.gz in gzip format. The system retains only two versions of the log: the active log file and the latest rotated, compressed file. 
-By default, the log rotation threshold is set to 10% of the tmpfs filesystem mounted at /tmp.
+From version 1.4.0, by default, the log rotation threshold is set to 10% of the tmpfs filesystem mounted at /tmp.
 
 This script manages the log rotation size for the Rsyslog service. It allows to **get** and **set** the log rotation size defined in bytes for the log file located at ``/var/log/messages``. 
 
