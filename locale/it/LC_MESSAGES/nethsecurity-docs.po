@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-17 13:43+0000\n"
+"POT-Creation-Date: 2024-10-22 14:46+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2746,71 +2746,71 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-91-ge5e92a3c80"
+msgid "8-23.05.5-ns.1.3.0-21-gb5a2469e626"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-91-ge5e92a3c80/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-91-ge5e92a3c80-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-21-gb5a2469e626/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-21-gb5a2469e626-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-91-ge5e92a3c80/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-21-gb5a2469e626/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-88-g42cabe16f5"
+msgid "8-23.05.5-ns.1.3.0-20-g57d36c404b3"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-88-g42cabe16f5/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-88-g42cabe16f5-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-20-g57d36c404b3/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-20-g57d36c404b3-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-88-g42cabe16f5/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-20-g57d36c404b3/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-84-g4039bf4f7b"
+msgid "8-23.05.5-ns.1.3.0-19-g08a3ac8e370"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-84-g4039bf4f7b/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-84-g4039bf4f7b-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-19-g08a3ac8e370/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-19-g08a3ac8e370-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-84-g4039bf4f7b/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-19-g08a3ac8e370/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.2.99-alpha1-83-g34a616676f"
+msgid "8-23.05.5-ns.1.3.0-16-g3de8e46f99a"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-83-g34a616676f/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-83-g34a616676f-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-16-g3de8e46f99a/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-16-g3de8e46f99a-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-83-g34a616676f/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-16-g3de8e46f99a/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -4440,6 +4440,87 @@ msgstr ""
 msgid ""
 "It is possible to configure multiple forwarders by repeating the "
 "operation using a different configuration name like ``clm2``."
+msgstr ""
+
+#: ../../logs.rst:52
+msgid "Log rotation size"
+msgstr ""
+
+#: ../../logs.rst:53
+#, python-format
+msgid ""
+"The /var/log/messages log file is stored in RAM. Once it reaches a "
+"predefined size limit, the log is rotated and compressed to conserve "
+"space. The rotated log is saved as /var/log/messages.1.gz in gzip format."
+" The system retains only two versions of the log: the active log file and"
+" the latest rotated, compressed file. From version 1.4.0, by default, the"
+" log rotation threshold is set to 10% of the tmpfs filesystem mounted at "
+"/tmp."
+msgstr ""
+
+#: ../../logs.rst:57
+msgid ""
+"This script manages the log rotation size for the Rsyslog service. It "
+"allows to **get** and **set** the log rotation size defined in bytes for "
+"the log file located at ``/var/log/messages``."
+msgstr ""
+
+#: ../../logs.rst:59
+msgid "**Get current size**: Retrieve the current log rotation size in bytes."
+msgstr ""
+
+#: ../../logs.rst:60
+msgid ""
+"**Set new size**: Change the log rotation size to a specified value, "
+"ensuring that the new size is a positive integer and not less than "
+"52428800 bytes (50 MB)."
+msgstr ""
+
+#: ../../logs.rst:61
+msgid ""
+"**Configuration safety**: If the specified size is below the minimum "
+"threshold, the script warns the user and does not make any changes to the"
+" configuration."
+msgstr ""
+
+#: ../../logs.rst:64
+msgid "Usage"
+msgstr ""
+
+#: ../../logs.rst:66
+msgid "To use the script, run it with the following syntax:"
+msgstr ""
+
+#: ../../logs.rst:72
+msgid "**get**: Outputs the current log rotation size in bytes."
+msgstr ""
+
+#: ../../logs.rst:73
+msgid ""
+"**set <size>**: Sets the log rotation size to the specified value (in "
+"bytes)."
+msgstr ""
+
+#: ../../logs.rst:76
+msgid "Example"
+msgstr ""
+
+#: ../../logs.rst:78
+msgid "To get the current log rotation size:"
+msgstr ""
+
+#: ../../logs.rst:84
+msgid "To set a new log rotation size to 104857600 bytes (100 MB):"
+msgstr ""
+
+#: ../../logs.rst:90
+msgid "The service rsyslog is restarted automatically after the size is set."
+msgstr ""
+
+#: ../../logs.rst:92
+msgid ""
+"All changes to the log rotation size are directly written in the Rsyslog "
+"configuration file ``/etc/rsyslog.conf``."
 msgstr ""
 
 #: ../../migration.rst:5
@@ -19625,5 +19706,61 @@ msgstr ""
 #~ "go to the ``Report`` page and "
 #~ "click :guilabel:`Open report` button from "
 #~ "the ``Real time report`` tab."
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-91-ge5e92a3c80"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-91-ge5e92a3c80/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-91-ge5e92a3c80-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-91-ge5e92a3c80/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-88-g42cabe16f5"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-88-g42cabe16f5/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-88-g42cabe16f5-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-88-g42cabe16f5/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-84-g4039bf4f7b"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-84-g4039bf4f7b/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-84-g4039bf4f7b-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-84-g4039bf4f7b/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.2.99-alpha1-83-g34a616676f"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-83-g34a616676f/targets/x86/64/nethsecurity-8-23.05.5-ns.1.2.99-alpha1-83-g34a616676f-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.2.99-alpha1-83-g34a616676f/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
