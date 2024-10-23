@@ -33,15 +33,26 @@ The controller can be installed on a NethServer 8 system from the Software Cente
 After the installation, the controller must be configured. The configuration can be done using the NethServer 8 web interface.
 The following parameters need to be set:
 
-- `Controller hostname`: The fully qualified domain name for the controller, like: ``mycontroller.nethsecurity.org``.
-- `Let's Encrypt certificate`: Enable or disable Let's Encrypt certificate for the controller web interface.
-- `VPN details`: The OpenVPN network and netmask. When choosing the network, make sure it does not overlap with the existing networks inside all
-  the units that will be connected to the controller.
-- `VPN common name`: The OpenVPN certificate name which is also the name of the controller.
-- `Administrator user and password`: The default controller admin user and password. You should change the password after the first login both
-  for the controller and the Grafana interface.
-- `Log retention`: The log retention period in days, default is 180 days.
-- `Metrics retention`: The metrics retention period in days, default 15 days.
+- `Controller hostname`: The fully qualified domain name for the controller, like: ``mycontroller.nethsecurity.org``. 
+  Ensure the hostname is resolvable and reachable from the units.
+- `Let's Encrypt certificate`: Enable or disable Let's Encrypt certificate for the controller web interface. It's recommended to enable it.
+- `VPN network` and `VPN netmask`: The OpenVPN network and netmask. When choosing the network, make sure it does not overlap with the existing networks inside all
+  the units that will be connected to the controller. Use only class C networks like ``192.168.7.0`` with netmask ``255.255.255.0``.
+- `Administrator user`: The controller administrator user name. The administrator user is the only user that can create
+  and manage other users inside the controller. The same user name is used to access the Grafana interface.
+- `Administrator password`: Choose a strong password for the administrator user.
+  Note that the default password is displayed only once, please store it in a safe place. The same password is used to access the Grafana interface.
+  For security reasons, you should change the password after the first login both for the controller and the Grafana interface.
+
+The following parameters are optional:
+
+- `Controller name`: The name of the controller, used to create the VPN certification authority. You can leave it unchanged unless you have a specific requirement.
+- `Log retention`: The log retention period in days, default is 180 days. It applies to the logs stored in Loki.
+- `Metrics retention`: The metrics retention period in days, default 15 days. It applies to the metrics stored in Prometheus and Timescale.
+- `MaxMind license key`: The controller can geolocate the IP addresses of the connected VPN clients and attackers. A map with the location of the clients and attackers 
+  will be displayed inside Gradana. The license key is required to enable the feature and download the MaxMind GeoIP2 database. 
+  To obtain a free license key, signup on the  `MaxMind website <https://www.maxmind.com/en/geolite2/signup>`_, then access the `Manage License Keys` page inside the account section.
+  Generate a new license, copy the license key and paste it in the field.
 
 After completing the configuration, the controller is ready to be used and can be accessed using a web browser at the configured hostname, like ``https://mycontroller.nethsecurity.org``.
 
