@@ -50,7 +50,7 @@ The following parameters are optional:
 - `Log retention`: The log retention period in days, default is 180 days. It applies to the logs stored in Loki.
 - `Metrics retention`: The metrics retention period in days, default 15 days. It applies to the metrics stored in Prometheus and Timescale.
 - `MaxMind license key`: The controller can geolocate the IP addresses of the connected VPN clients and attackers. A map with the location of the clients and attackers 
-  will be displayed inside Gradana. The license key is required to enable the feature and download the MaxMind GeoIP2 database. 
+  will be displayed inside Grafana. The license key is required to enable the feature and download the MaxMind GeoIP2 database. 
   To obtain a free license key, signup on the  `MaxMind website <https://www.maxmind.com/en/geolite2/signup>`_, then access the `Manage License Keys` page inside the account section.
   Generate a new license, copy the license key and paste it in the field.
 
