@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-24 08:35+0000\n"
+"POT-Creation-Date: 2024-10-31 07:28+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -913,7 +913,7 @@ msgstr ""
 msgid ""
 "`MaxMind license key`: The controller can geolocate the IP addresses of "
 "the connected VPN clients and attackers. A map with the location of the "
-"clients and attackers will be displayed inside Gradana. The license key "
+"clients and attackers will be displayed inside Grafana. The license key "
 "is required to enable the feature and download the MaxMind GeoIP2 "
 "database. To obtain a free license key, signup on the  `MaxMind website "
 "<https://www.maxmind.com/en/geolite2/signup>`_, then access the `Manage "
@@ -2777,6 +2777,23 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.3.0-22-g5a80430f471"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-22-g5a80430f471/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-22-g5a80430f471-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-22-g5a80430f471/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.5-ns.1.3.0-21-gb5a2469e626"
 msgstr ""
 
@@ -2808,23 +2825,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-20-g57d36c404b3/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-19-g08a3ac8e370"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-19-g08a3ac8e370/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-19-g08a3ac8e370-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-19-g08a3ac8e370/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -19814,5 +19814,37 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-16-g3de8e46f99a/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`MaxMind license key`: The controller "
+#~ "can geolocate the IP addresses of "
+#~ "the connected VPN clients and attackers."
+#~ " A map with the location of the"
+#~ " clients and attackers will be "
+#~ "displayed inside Gradana. The license "
+#~ "key is required to enable the "
+#~ "feature and download the MaxMind GeoIP2"
+#~ " database. To obtain a free license"
+#~ " key, signup on the  `MaxMind website"
+#~ " <https://www.maxmind.com/en/geolite2/signup>`_, then "
+#~ "access the `Manage License Keys` page"
+#~ " inside the account section. Generate "
+#~ "a new license, copy the license "
+#~ "key and paste it in the field."
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-19-g08a3ac8e370"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-19-g08a3ac8e370/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-19-g08a3ac8e370-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-19-g08a3ac8e370/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
