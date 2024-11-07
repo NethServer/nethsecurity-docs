@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-07 14:38+0000\n"
+"POT-Creation-Date: 2024-11-07 15:26+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -13397,14 +13397,20 @@ msgid ""
 "attempts to NethSecurity web interface"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:151
+#: ../../threat_shield_ip.rst:150
+msgid ""
+"*TLS Auth Error*, *TLS handshake failed*, *AUTH_FAILED*: detects failed "
+"authentication attempts to OpenVPN service"
+msgstr ""
+
+#: ../../threat_shield_ip.rst:152
 msgid ""
 "You can add additional patterns using the :guilabel:`Add pattern`` button"
 " to customize the detection mechanism. Each pattern can be a valid *grep*"
 " regular expression."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:154
+#: ../../threat_shield_ip.rst:155
 msgid ""
 "``Ban time``: this setting determines the duration for which an IP "
 "address remains banned after exceeding the allowed number of failed "
@@ -13412,41 +13418,41 @@ msgid ""
 "based on your security requirements."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:157
+#: ../../threat_shield_ip.rst:158
 msgid ""
 "You can perform further actions using the command line; these are the "
 "supported commands:"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:159
+#: ../../threat_shield_ip.rst:160
 msgid ""
 "View all IP addresses currently on the blocklist: ``/etc/init.d/banip "
 "survey blocklistv4``"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:160
+#: ../../threat_shield_ip.rst:161
 msgid ""
 "Look up a specific IP in the blocklist: ``/etc/init.d/banip search "
 "IP_ADDRESS``"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:161
+#: ../../threat_shield_ip.rst:162
 msgid ""
 "Unban an IP address: ``nft delete element inet banIP blocklistv4 { "
 "IP_ADDRESS }``"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:163
+#: ../../threat_shield_ip.rst:164
 msgid ""
 "Bear in mind that you need to specify the correct blocklist in commands "
 "when prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6)."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:166
+#: ../../threat_shield_ip.rst:167
 msgid "Block DoS"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:168
+#: ../../threat_shield_ip.rst:169
 msgid ""
 "Threat Shield IP also includes protection against various types of Denial"
 " of Service (DoS) attacks. DoS protection limits excessive suspicious "
@@ -13454,7 +13460,7 @@ msgid ""
 "situation normalizes."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:171
+#: ../../threat_shield_ip.rst:172
 msgid ""
 "``Block ICMP DoS``: when enabled, this option protects against DoS "
 "attacks using the Internet Control Message Protocol (ICMP). The limit is "
@@ -13462,7 +13468,7 @@ msgid ""
 "firewall."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:174
+#: ../../threat_shield_ip.rst:175
 msgid ""
 "``Block TCP DoS``: this option, when activated, guards against TCP-based "
 "DoS attacks based on bad packets. A packet could be considered bad if it "
@@ -13471,7 +13477,7 @@ msgid ""
 "all traffic passing through the firewall."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:178
+#: ../../threat_shield_ip.rst:179
 msgid ""
 "``Block UDP DoS``: Enabling this protects against User Datagram Protocol "
 "(UDP) based DoS attacks. The limit is set to 100 packets per second for "
