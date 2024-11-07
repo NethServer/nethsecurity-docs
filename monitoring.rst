@@ -211,7 +211,7 @@ Changes are applied immediately. To remove a host from the list, click on the de
 
 You can see a graph of the ping latency by accessing Netdata from the report page.
 
-.. _historical-section:
+.. _historical_monitoring-section:
 
 Historical monitoring
 =====================
