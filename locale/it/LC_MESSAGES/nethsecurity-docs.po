@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-31 07:28+0000\n"
+"POT-Creation-Date: 2024-11-07 14:38+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2777,54 +2777,54 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-22-g5a80430f471"
+msgid "8-23.05.5-ns.1.3.0-26-g944ffe46dcc"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-22-g5a80430f471/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-22-g5a80430f471-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-26-g944ffe46dcc/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-26-g944ffe46dcc-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-22-g5a80430f471/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-26-g944ffe46dcc/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-21-gb5a2469e626"
+msgid "8-23.05.5-ns.1.3.0-25-g4783d9f0610"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-21-gb5a2469e626/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-21-gb5a2469e626-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-25-g4783d9f0610/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-25-g4783d9f0610-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-21-gb5a2469e626/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-25-g4783d9f0610/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-20-g57d36c404b3"
+msgid "8-23.05.5-ns.1.3.0-24-gf7c56de7b1d"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-20-g57d36c404b3/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-20-g57d36c404b3-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-24-gf7c56de7b1d/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-24-gf7c56de7b1d-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-20-g57d36c404b3/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-24-gf7c56de7b1d/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -13222,117 +13222,260 @@ msgid ""
 msgstr ""
 
 #: ../../threat_shield_ip.rst:72
-msgid "Allow list"
+msgid "Logging"
 msgstr ""
 
 #: ../../threat_shield_ip.rst:74
 msgid ""
+"The Threat Shield IP feature includes advanced logging capabilities to "
+"monitor and track potential threats. The logging section allows you to "
+"configure which types of blocked packets are logged:"
+msgstr ""
+
+#: ../../threat_shield_ip.rst:77
+msgid ""
+"Log packets blocked in pre-routing chain: when enabled, this option logs "
+"packets that are blocked in the pre-routing chain, which processes "
+"packets before they enter the routing table."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:80
+msgid ""
+"Log packets blocked in input chain: his option, when activated, logs "
+"packets blocked in the input chain, which handles packets destined to the"
+" firewall itself. Plese not that this option can generate a large number "
+"of logs if the firewall is under heavy traffic."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:83
+msgid ""
+"Log packets blocked in forward chain: Enabling this logs packets blocked "
+"in the forward chain, which processes packets being routed through the "
+"firewall."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:85
+msgid ""
+"Log packets blocked forwarded from LAN: This option logs packets that are"
+" blocked when forwarded from the Local Area Network (LAN)."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:87
+msgid ""
+"These logging options provide granular control over which blocked packets"
+" are recorded, allowing to expose metrics inside the :ref:`real-time "
+"monitoring <real_time_monitoring-section>` and :ref:`historical "
+"monitoring <historical_monitoring-section>` sections."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:93
+msgid "Local allowlist"
+msgstr ""
+
+#: ../../threat_shield_ip.rst:95
+msgid ""
 "Sometimes it may be necessary to allow access to certain IP addresses, to"
-" do this you can use the ``Allowlist`` tab. Use the :guilabel:`Add "
+" do this you can use the ``Local allowlist`` tab. Use the :guilabel:`Add "
 "address` button to add a new address to the list. The address can be a "
 "valid IPv4/IPv6 address with optional CIDR notation, a MAC address, or a "
 "fully qualified hostname (FQDN)."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:78
+#: ../../threat_shield_ip.rst:99
 msgid "For example, the address can be:"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:80
+#: ../../threat_shield_ip.rst:101
 msgid "IPv4 address: 192.168.0.1"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:81
+#: ../../threat_shield_ip.rst:102
 msgid "IPv6 address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:82
+#: ../../threat_shield_ip.rst:103
 msgid "IPv4 address with CIDR notation: 192.168.0.0/24"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:83
+#: ../../threat_shield_ip.rst:104
 msgid "MAC address: 00:0a:95:9d:68:16"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:84
+#: ../../threat_shield_ip.rst:105
 msgid "Fully qualified hostname: example.com"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:86
+#: ../../threat_shield_ip.rst:107
 msgid "A comment can be associated with each address to facilitate management."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:88
+#: ../../threat_shield_ip.rst:109
 msgid ""
 "You can add a comment to provide additional information about the "
 "address, such as its purpose or owner. This can help in organizing and "
 "managing the allowlist effectively."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:94
-msgid "Brute Force Attempt Block"
+#: ../../threat_shield_ip.rst:115
+msgid "Local blocklist"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:96
+#: ../../threat_shield_ip.rst:117
+msgid ""
+"Threat Shield IP includes a local blocklist functionality, which allows "
+"you to manually specify addresses that should always be blocked. This "
+"provides an additional layer of customization to your security setup."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:120
+msgid ""
+"To access and customize the blocklist, navigate to the ``Local "
+"blocklist`` tab in the Threat Shield IP interface. Use the :guilabel:`Add"
+" address` button to include new entries. Each entry is composed by an "
+"address and a description. Valid syntax for the address is the same as "
+"for the :ref:`local_allowlist-section`."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:124
+msgid ""
+"When adding addresses to the local blocklist, ensure you enter them "
+"correctly to avoid accidentally blocking legitimate traffic. It's also a "
+"good practice to include a descriptive comment for each entry to help "
+"with future management and auditing of your blocklist."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:130
+msgid "Block brute force attacks"
+msgstr ""
+
+#: ../../threat_shield_ip.rst:132
 msgid ""
 "When Threat Shield is enabled, the system automatically starts checking "
-"for brute force attack attempts on firewall services. Currently, the "
-"monitored services include SSH access and the firewall's legacy web "
-"interface (Luci). The system detects login attempts and automatically "
-"blocks IPs that have failed to enter the correct credentials. By default,"
-" the allowed attempts are 3, and the block lasts for 30 minutes."
+"for brute force attack attempts on firewall services. By default, the "
+"monitored services include SSH access and the login to NethSecurity UI. "
+"The system detects login attempts and automatically blocks IPs that have "
+"failed to enter the correct credentials."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:98
+#: ../../threat_shield_ip.rst:136
+msgid ""
+"To enable or disable the brute force protection, navigate to the ``Block "
+"brute force attacks`` section in the Threat Shield IP interface, under "
+"the ``Settings`` tab and use the switch to activate or deactivate the "
+"feature."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:139
+msgid "The feature can be customized by adjusting the following settings:"
+msgstr ""
+
+#: ../../threat_shield_ip.rst:141
+msgid ""
+"``Ban after N failed accesses``: this setting determines the number of "
+"failed login attempts allowed before an IP address is banned. The default"
+" value is typically 3, but can be adjusted as needed. A lower value "
+"increases security but may also increase the risk of false positives, "
+"like blocking legitimate users who mistype their credentials."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:145
+msgid ""
+"``Patterns to detect attacks``: this field allows you to specify patterns"
+" that the system uses to identify potential brute force attacks. Common "
+"patterns include:"
+msgstr ""
+
+#: ../../threat_shield_ip.rst:148
+msgid ""
+"*Exit before auth from*: detects bad authentication attempts to SSH "
+"service"
+msgstr ""
+
+#: ../../threat_shield_ip.rst:149
+msgid ""
+"*authentication failed for user*: identifies failed authentication "
+"attempts to NethSecurity web interface"
+msgstr ""
+
+#: ../../threat_shield_ip.rst:151
+msgid ""
+"You can add additional patterns using the :guilabel:`Add pattern`` button"
+" to customize the detection mechanism. Each pattern can be a valid *grep*"
+" regular expression."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:154
+msgid ""
+"``Ban time``: this setting determines the duration for which an IP "
+"address remains banned after exceeding the allowed number of failed "
+"attempts. The default is often set to 30 minutes, but can be adjusted "
+"based on your security requirements."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:157
 msgid ""
 "You can perform further actions using the command line; these are the "
 "supported commands:"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:100
+#: ../../threat_shield_ip.rst:159
 msgid ""
 "View all IP addresses currently on the blocklist: ``/etc/init.d/banip "
 "survey blocklistv4``"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:101
+#: ../../threat_shield_ip.rst:160
 msgid ""
 "Look up a specific IP in the blocklist: ``/etc/init.d/banip search "
 "IP_ADDRESS``"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:102
+#: ../../threat_shield_ip.rst:161
 msgid ""
 "Unban an IP address: ``nft delete element inet banIP blocklistv4 { "
 "IP_ADDRESS }``"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:104
+#: ../../threat_shield_ip.rst:163
 msgid ""
 "Bear in mind that you need to specify the correct blocklist in commands "
 "when prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6)."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:106
-msgid ""
-"You can modify the default values for the number of attempts and ban time"
-" using these commands:"
+#: ../../threat_shield_ip.rst:166
+msgid "Block DoS"
 msgstr ""
 
-#: ../../threat_shield_ip.rst:108
+#: ../../threat_shield_ip.rst:168
 msgid ""
-"To change the number of attempts before a ban: ``uci set "
-"banip.global.ban_logcount='3'``"
+"Threat Shield IP also includes protection against various types of Denial"
+" of Service (DoS) attacks. DoS protection limits excessive suspicious "
+"requests of a certain type, blocking that kind of traffic until the "
+"situation normalizes."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:109
+#: ../../threat_shield_ip.rst:171
 msgid ""
-"To change the ban duration in minutes: ``uci set "
-"banip.global.ban_nftexpiry='30m'``"
+"``Block ICMP DoS``: when enabled, this option protects against DoS "
+"attacks using the Internet Control Message Protocol (ICMP). The limit is "
+"set to 100 packets per second for all traffic passing through the "
+"firewall."
 msgstr ""
 
-#: ../../threat_shield_ip.rst:111
-msgid "After changing the values, copy and paste these two commands: ::"
+#: ../../threat_shield_ip.rst:174
+msgid ""
+"``Block TCP DoS``: this option, when activated, guards against TCP-based "
+"DoS attacks based on bad packets. A packet could be considered bad if it "
+"is not part of an established connection or if it is part of a connection"
+" that has been closed. The limit is set to 10 bad packets per second for "
+"all traffic passing through the firewall."
+msgstr ""
+
+#: ../../threat_shield_ip.rst:178
+msgid ""
+"``Block UDP DoS``: Enabling this protects against User Datagram Protocol "
+"(UDP) based DoS attacks. The limit is set to 100 packets per second for "
+"all traffic passing through the firewall."
 msgstr ""
 
 #: ../../troubleshooting.rst:7
@@ -19846,5 +19989,102 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-19-g08a3ac8e370/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-22-g5a80430f471"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-22-g5a80430f471/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-22-g5a80430f471-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-22-g5a80430f471/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-21-gb5a2469e626"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-21-gb5a2469e626/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-21-gb5a2469e626-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-21-gb5a2469e626/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-20-g57d36c404b3"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-20-g57d36c404b3/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-20-g57d36c404b3-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-20-g57d36c404b3/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "Allow list"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sometimes it may be necessary to "
+#~ "allow access to certain IP addresses,"
+#~ " to do this you can use the "
+#~ "``Allowlist`` tab. Use the :guilabel:`Add "
+#~ "address` button to add a new "
+#~ "address to the list. The address "
+#~ "can be a valid IPv4/IPv6 address "
+#~ "with optional CIDR notation, a MAC "
+#~ "address, or a fully qualified hostname"
+#~ " (FQDN)."
+#~ msgstr ""
+
+#~ msgid "Brute Force Attempt Block"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When Threat Shield is enabled, the "
+#~ "system automatically starts checking for "
+#~ "brute force attack attempts on firewall"
+#~ " services. Currently, the monitored "
+#~ "services include SSH access and the "
+#~ "firewall's legacy web interface (Luci). "
+#~ "The system detects login attempts and"
+#~ " automatically blocks IPs that have "
+#~ "failed to enter the correct credentials."
+#~ " By default, the allowed attempts are"
+#~ " 3, and the block lasts for 30"
+#~ " minutes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can modify the default values "
+#~ "for the number of attempts and ban"
+#~ " time using these commands:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To change the number of attempts "
+#~ "before a ban: ``uci set "
+#~ "banip.global.ban_logcount='3'``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To change the ban duration in "
+#~ "minutes: ``uci set "
+#~ "banip.global.ban_nftexpiry='30m'``"
+#~ msgstr ""
+
+#~ msgid "After changing the values, copy and paste these two commands: ::"
 #~ msgstr ""
 
