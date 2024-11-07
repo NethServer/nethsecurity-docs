@@ -147,6 +147,7 @@ The feature can be customized by adjusting the following settings:
 
   - *Exit before auth from*: detects bad authentication attempts to SSH service
   - *authentication failed for user*: identifies failed authentication attempts to NethSecurity web interface
+  - *TLS Auth Error*, *TLS handshake failed*, *AUTH_FAILED*: detects failed authentication attempts to OpenVPN service
 
   You can add additional patterns using the :guilabel:`Add pattern`` button to customize the detection mechanism.
   Each pattern can be a valid *grep* regular expression.
