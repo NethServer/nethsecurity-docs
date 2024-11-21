@@ -185,3 +185,17 @@ Add these options to the Roadwarrior server configuration ::
   /etc/init.d/openvpn restart ns_roadwarrior1
 
 The MTU values may need to be adjusted to fit your specific network environment. A lower MTU ensures packets fit within the limits of the VPN tunnel without fragmentation, but depending on network latency or overhead, slightly different values might be necessary.
+
+Connection history
+------------------
+
+Every time a client connects or disconnects from the server, the event is saved inside a SQLite database stored in RAM.
+Such event history can be viewed by clicking on tab ``Connection History`` available on the top of the page.
+
+By default the page will display all connections from current day, but it is possible to filter the results by date and time and account name.
+
+To download all history in CSV format, click on the button :guilabel:`Download server history`.
+The header of the CSV file explains the meaning of each column, including the units of measure.
+
+Once the server is rebooted, the local history is lost.
+If the server is connected to a :ref:`controller-section`, the history is sent to the controller and can be viewed inside the :ref:`historical_monitoring-section`.
