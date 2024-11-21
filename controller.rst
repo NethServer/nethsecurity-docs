@@ -74,6 +74,14 @@ The administrator can also reset the user password and delete users.
 
 After logging in, each user can change their password and generate an SSH key pair for accessing the unit.
 
+Two Factor Authentication (2FA)
+-------------------------------
+
+Each controller user can enable Two Factor Authentication (2FA) to increase the security of the account.
+To enable 2FA, follow the same steps documented inside the firewall web interface: :ref:`2fa-section`.
+
+The administrator can see the 2FA status of each user inside the user list.
+
 Units
 =====
 
