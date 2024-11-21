@@ -74,7 +74,7 @@ The connectivity section provides an overview of WAN connections, including stat
 
 This page shows the following information:
 
-- ``WANs``: list of the WAN connections with their current status (UP/DOWN).
+- ``WANs``: list of the WAN connections with their current status (UP/DOWN) and public IP address.
   The status information helps ensure that critical network connections are online, and any downtime are immediately addressed.
   Data are sourced from the firewall mwan3 status.
 
@@ -88,6 +88,14 @@ This page shows the following information:
 - ``WAN interface traffic``:  
   this histogram shows the traffic data for each WAN connection over the past 60 minutes, sourced from Netdata.
   It helps track real-time performance and diagnose issues such as uneven load balancing or WAN link saturation.
+
+- ``Latency to <address>``:
+  this section provides real-time latency data for a specific IP address configured inside the :ref:`ping_latency-section` module.
+  The cart helps to monitor network performance and identify potential connectivity issues.
+
+- ``Packet delivery rate to <address>``:
+  this section provides real-time packet delivery rate data for a specific IP address configured inside the :ref:`ping_latency-section` module.
+  If the rate is below 100% it could indicate network congestion or connectivity issues.
 
 VPN
 ---
@@ -196,6 +204,8 @@ and click :guilabel:`Open report` button from the ``Real time report`` tab.
 
 Netdata metrics are saved in RAM and will be reset at very machine reboot.
 If the firewall is connected to the :ref:`remote controller <controller-section>`, metrics will be stored to the controller itself and preserved across reboots.
+
+.. _ping_latency-section:
 
 Ping latency monitoring
 ------------------------
