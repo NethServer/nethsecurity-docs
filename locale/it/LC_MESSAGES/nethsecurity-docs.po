@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-07 15:26+0000\n"
+"POT-Creation-Date: 2024-11-21 11:35+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -118,8 +118,8 @@ msgstr "Dopo il ripristino il sistema verrà riavviato."
 msgid "Automatic backup"
 msgstr "Backup automatico"
 
-#: ../../backup.rst:37 ../../controller.rst:193 ../../controller.rst:331
-#: ../../dpi_filter.rst:35 ../../monitoring.rst:219
+#: ../../backup.rst:37 ../../controller.rst:201 ../../controller.rst:339
+#: ../../dpi_filter.rst:35 ../../monitoring.rst:229
 #: ../../threat_shield_ip.rst:44 ../../updates.rst:66
 #: ../../users_databases.rst:38
 msgid "Subscription required"
@@ -989,10 +989,27 @@ msgstr ""
 " una coppia di chiavi SSH per accedere all'unità."
 
 #: ../../controller.rst:78
+msgid "Two Factor Authentication (2FA)"
+msgstr ""
+
+#: ../../controller.rst:80
+msgid ""
+"Each controller user can enable Two Factor Authentication (2FA) to "
+"increase the security of the account. To enable 2FA, follow the same "
+"steps documented inside the firewall web interface: :ref:`2fa-section`."
+msgstr ""
+
+#: ../../controller.rst:83
+msgid ""
+"The administrator can see the 2FA status of each user inside the user "
+"list."
+msgstr ""
+
+#: ../../controller.rst:86
 msgid "Units"
 msgstr "Unità"
 
-#: ../../controller.rst:80
+#: ../../controller.rst:88
 msgid ""
 "All users can manage units. A unit is a firewall that is managed by the "
 "controller."
@@ -1000,7 +1017,7 @@ msgstr ""
 "Tutti gli utenti possono gestire le unità. Un'unità è un firewall gestito"
 " dal controller."
 
-#: ../../controller.rst:82
+#: ../../controller.rst:90
 #, fuzzy
 msgid ""
 "To connect a new unit to the controller, the user must click on the "
@@ -1011,25 +1028,25 @@ msgstr ""
 "unit` dall'interfaccia web del controller. Quando viene aggiunta una "
 "nuova unità, il controller esegue le seguenti azioni:"
 
-#: ../../controller.rst:85
+#: ../../controller.rst:93
 msgid "creates a unique identifier for the unit"
 msgstr "crea un identificatore univoco per l'unità"
 
-#: ../../controller.rst:86
+#: ../../controller.rst:94
 msgid "allocates an IP address inside the VPN network"
 msgstr "assegna un indirizzo IP all'interno della rete VPN"
 
-#: ../../controller.rst:87
+#: ../../controller.rst:95
 msgid "generates a VPN configuration including certificates"
 msgstr "genera una configurazione VPN con inclusi i certificati"
 
-#: ../../controller.rst:88
+#: ../../controller.rst:96
 msgid "safely stores credentials required for accessing the remote firewall"
 msgstr ""
 "memorizza in modo sicuro le credenziali necessarie per accedere al "
 "firewall remoto"
 
-#: ../../controller.rst:90
+#: ../../controller.rst:98
 msgid ""
 "A join code will be generated and displayed on the screen. The join code "
 "must be entered on the unit to establish the connection with the "
@@ -1039,7 +1056,7 @@ msgstr ""
 "deve essere inserito nell'unità per stabilire la connessione con il "
 "controller."
 
-#: ../../controller.rst:92
+#: ../../controller.rst:100
 msgid ""
 "Access the ``Controller`` page inside the unit web interface and enter "
 "the join code in the ``Join code`` field. When joining the controller, "
@@ -1055,7 +1072,7 @@ msgstr ""
 " l'unità verrà visualizzata nell'interfaccia web del controller con lo "
 "stato ``Connesso`."
 
-#: ../../controller.rst:96
+#: ../../controller.rst:104
 msgid ""
 "Please note that if the controller does not have a valid Let's Encrypt "
 "certificate, you will need to disable the ``Verify TLS certificate`` "
@@ -1065,7 +1082,7 @@ msgstr ""
 " disabilitare l'opzione ``Verify TLS certificato` nella configurazione "
 "dell'unità."
 
-#: ../../controller.rst:98
+#: ../../controller.rst:106
 #, fuzzy
 msgid ""
 "When the unit is connected, the user can access the unit web interface by"
@@ -1076,7 +1093,7 @@ msgstr ""
 "all'interfaccia web dell'unità facendo clic su :guilabel: ` Open unit` "
 "senza la necessità di inserire le credenziali dell'unità."
 
-#: ../../controller.rst:102
+#: ../../controller.rst:110
 msgid ""
 "The unit user interface :ref:`must listen on port 9090 <change_ui_port-"
 "section>` to allow the controller to access it."
@@ -1084,11 +1101,11 @@ msgstr ""
 "L'interfaccia utente dell'unità: ref: `deve ascoltare sulla porta 9090 "
 "<change_ui_port-sezione> ` per consentire al controller di accedervi."
 
-#: ../../controller.rst:105
+#: ../../controller.rst:113
 msgid "Remove a unit"
 msgstr "Rimuovere un'unità"
 
-#: ../../controller.rst:106
+#: ../../controller.rst:114
 msgid ""
 "Units can be disconnected from the controller by clicking on the "
 ":guilabel:`Remove unit` button from the controller web interface. When a "
@@ -1100,7 +1117,7 @@ msgstr ""
 "un'unità viene disconnessa, il controller rimuove la sua configurazione e"
 " la connessione VPN viene terminata."
 
-#: ../../controller.rst:109
+#: ../../controller.rst:117
 msgid ""
 "After removing the unit from the controller web interface, access the "
 "unit web interface and click :guilabel:`Disconnect unit` on the "
@@ -1111,11 +1128,11 @@ msgstr ""
 "unit` sulla pagina ``Controller``: l'unità eliminerà la configurazione "
 "VPN."
 
-#: ../../controller.rst:115
+#: ../../controller.rst:123
 msgid "Logs management"
 msgstr "Gestione dei Log"
 
-#: ../../controller.rst:117
+#: ../../controller.rst:125
 msgid ""
 "When a unit is connected, rsyslog is reconfigured to send logs using the "
 "syslog protocol (RFC 5424). It may take a few minutes before rsyslog "
@@ -1129,15 +1146,15 @@ msgstr ""
 "i collegamenti dell'interfaccia utente funzionino correttamente, "
 "assicurarsi che:"
 
-#: ../../controller.rst:121
+#: ../../controller.rst:129
 msgid "the unit FQDN is unique within the cluster"
 msgstr "FQDN dell'unità è unico all'interno del cluster"
 
-#: ../../controller.rst:122
+#: ../../controller.rst:130
 msgid "the unit's name is the same as its hostname"
 msgstr "il nome dell'unità è uguale all'hostname"
 
-#: ../../controller.rst:124
+#: ../../controller.rst:132
 msgid ""
 "Logs can be viewed by clicking on the :guilabel:`Open logs` link for each"
 " unit. The logs are displayed in a specific Grafana dashboard that also "
@@ -1147,21 +1164,21 @@ msgstr ""
 "logs` per ogni unità. I log vengono visualizzati in una specifica "
 "dashboard Grafana che consente anche la ricerca e il filtraggio."
 
-#: ../../controller.rst:128
+#: ../../controller.rst:136
 msgid "Logs retention period must be configured from the NS8 web interface."
 msgstr ""
 "Il periodo di conservazione dei log deve essere configurato "
 "dall'interfaccia web NS8."
 
-#: ../../controller.rst:133
+#: ../../controller.rst:141
 msgid "Metrics"
 msgstr "Metriche"
 
-#: ../../controller.rst:135
+#: ../../controller.rst:143
 msgid "Each unit exports two types of metrics:"
 msgstr ""
 
-#: ../../controller.rst:137
+#: ../../controller.rst:145
 msgid ""
 "system operating metrics (CPU, memory, disk, network): these metrics are "
 "collected using `Netdata <https://www.netdata.cloud/>`_ and stored in "
@@ -1170,7 +1187,7 @@ msgid ""
 "to everyone regardless of the subscription status."
 msgstr ""
 
-#: ../../controller.rst:140
+#: ../../controller.rst:148
 msgid ""
 "firewall metrics (traffic, security, VPN): these metrics are sent from "
 "the unit to controller at fixed intervals. The controller stores them "
@@ -1178,7 +1195,7 @@ msgid ""
 "metrics are available only to users with a valid subscription."
 msgstr ""
 
-#: ../../controller.rst:144
+#: ../../controller.rst:152
 msgid ""
 "All data collected and stored inside the controller is timestamped using "
 "Coordinated Universal Time (UTC). This ensures consistency and accuracy "
@@ -1186,7 +1203,7 @@ msgid ""
 "analyze trends."
 msgstr ""
 
-#: ../../controller.rst:147
+#: ../../controller.rst:155
 msgid ""
 "Users have the flexibility to view data in their local time zone by "
 "adjusting the time settings in Grafana. To change the local time zone, "
@@ -1196,7 +1213,7 @@ msgid ""
 "preferences."
 msgstr ""
 
-#: ../../controller.rst:151
+#: ../../controller.rst:159
 msgid ""
 "The metrics can be viewed within the Grafana dashboard. Users can access "
 "the dashboard by clicking on the :guilabel:`Open metrics` link for each "
@@ -1206,7 +1223,7 @@ msgstr ""
 "Grafana. Gli utenti possono accedere alla dashboard cliccando sul link "
 ":guilabel: `Open metrics` dell'unità."
 
-#: ../../controller.rst:154
+#: ../../controller.rst:162
 msgid ""
 "By default, only the admin user can access the metrics dashboard. If you "
 "want to allow other users to access the metrics dashboard, you can create"
@@ -1218,11 +1235,11 @@ msgstr ""
 "possibile creare un nuovo ruolo e assegnarlo all'utente direttamente "
 "dall'interfaccia web Grafana."
 
-#: ../../controller.rst:160
+#: ../../controller.rst:168
 msgid "Grafana"
 msgstr "Grafana"
 
-#: ../../controller.rst:162
+#: ../../controller.rst:170
 msgid ""
 "Grafana is an open-source platform used for monitoring and visualizing "
 "time-series data. It helps users create customizable dashboards with "
@@ -1234,7 +1251,7 @@ msgstr ""
 "creare dashboard personalizzabili con grafici, grafici e tabelle per "
 "analizzare metriche di sistema, log e altri dati da varie fonti."
 
-#: ../../controller.rst:165
+#: ../../controller.rst:173
 msgid ""
 "The controller includes a pre-configured Grafana instance that is used to"
 " visualize metrics and logs from the connected units. The Grafana "
@@ -1246,7 +1263,7 @@ msgstr ""
 "L'istanza Grafana è accessibile dall'URL ``https:// <controller-"
 "fqdn>/grafana`."
 
-#: ../../controller.rst:168
+#: ../../controller.rst:176
 #, fuzzy
 msgid ""
 "By default, you can access it by using the default credentials set during"
@@ -1262,7 +1279,7 @@ msgstr ""
 "l'autenticazione tramite vari metodi, tra cui nome utente / password, "
 "OAuth, LDAP, e altro ancora."
 
-#: ../../controller.rst:173
+#: ../../controller.rst:181
 msgid ""
 "You can also create custom dashboards and alerts to monitor the metrics "
 "and logs from the connected units. See the `official documentation "
@@ -1274,22 +1291,22 @@ msgstr ""
 "informazioni su come utilizzare Grafana, consultare la documentazione "
 "ufficiale <https://grafana.com/docs/grafana/latest/>`_."
 
-#: ../../controller.rst:177
+#: ../../controller.rst:185
 msgid "Prometheus metrics"
 msgstr ""
 
-#: ../../controller.rst:179
+#: ../../controller.rst:187
 msgid ""
 "Prometheus metrics are collected using Netdata and stored in a Prometheus"
 " database."
 msgstr ""
 
-#: ../../controller.rst:181
+#: ../../controller.rst:189
 #, fuzzy
 msgid "Metrics exported for each unit includes the following labels:"
 msgstr "Ogni unità ha le seguenti etichette:"
 
-#: ../../controller.rst:183
+#: ../../controller.rst:191
 #, fuzzy
 msgid ""
 "``instance`` the VPN IP of the connected machine with the Netdata port "
@@ -1298,30 +1315,30 @@ msgstr ""
 "`instance` l'indirizzo IP VPN della macchina collegata seguito dalla "
 "porta di netdata (ad esempio `172.19.64.3:19999`)"
 
-#: ../../controller.rst:184
+#: ../../controller.rst:192
 #, fuzzy
 msgid "``job`` fixed to `node`"
 msgstr "`job` fisso a `node `"
 
-#: ../../controller.rst:185
+#: ../../controller.rst:193
 #, fuzzy
 msgid "``node`` the VPN IP of the connected machine"
 msgstr "`nodo` indirizzo IP VPN della macchina collegata"
 
-#: ../../controller.rst:186
+#: ../../controller.rst:194
 #, fuzzy
 msgid "``unit`` the unit unique name of the connected machine"
 msgstr "`unità` il nome univoco dell'unità della macchina collegata"
 
-#: ../../controller.rst:188
+#: ../../controller.rst:196
 msgid "Such metrics are visible inside the ``Operating system`` dashboard."
 msgstr ""
 
-#: ../../controller.rst:191
+#: ../../controller.rst:199
 msgid "Timescale metrics"
 msgstr ""
 
-#: ../../controller.rst:195 ../../monitoring.rst:221
+#: ../../controller.rst:203 ../../monitoring.rst:231
 #, fuzzy
 msgid ""
 "This feature is available only if the firewall and the controller have a "
@@ -1330,7 +1347,7 @@ msgstr ""
 "Questa funzione è disponibile solo se il firewall ha un abbonamento "
 "enterprise valido."
 
-#: ../../controller.rst:197
+#: ../../controller.rst:205
 msgid ""
 "The Timescale database stores the same metrics of the :ref"
 ":`real_time_monitoring-section` but as a timeseries saved in a PostgreSQL"
@@ -1340,42 +1357,42 @@ msgid ""
 " with a 30 minutes delay."
 msgstr ""
 
-#: ../../controller.rst:201
+#: ../../controller.rst:209
 msgid ""
 "The controller can do extra processing on the data to provide more "
 "insights. For example, the controller can geolocate the IP addresses of "
 "the connected clients and of the attackers."
 msgstr ""
 
-#: ../../controller.rst:204
+#: ../../controller.rst:212
 msgid "These metrics are visible inside the following dashboards:"
 msgstr ""
 
-#: ../../controller.rst:206
+#: ../../controller.rst:214
 msgid "``Network traffic``: aggregated network traffic as seen by the unit"
 msgstr ""
 
-#: ../../controller.rst:207
+#: ../../controller.rst:215
 msgid ""
 "``Network traffic by client``: network traffic for each client (local "
 "host) connected to the unit"
 msgstr ""
 
-#: ../../controller.rst:208
+#: ../../controller.rst:216
 msgid "``Network traffic by host``: network traffic for each remote host"
 msgstr ""
 
-#: ../../controller.rst:209
+#: ../../controller.rst:217
 msgid "``Security``: security events detected by the unit"
 msgstr ""
 
-#: ../../controller.rst:210
+#: ../../controller.rst:218
 msgid ""
 "``VPN``: VPN statistics for OpenVPN Road Warrior, OpenVPN tunnels and "
 "IPsec tunnels"
 msgstr ""
 
-#: ../../controller.rst:214
+#: ../../controller.rst:222
 #, fuzzy
 msgid ""
 "Metrics retention period must be configured from the NS8 web interface "
@@ -1384,19 +1401,19 @@ msgstr ""
 "Il periodo di conservazione delle metriche deve essere configurato "
 "dall'interfaccia web NS8."
 
-#: ../../controller.rst:222
+#: ../../controller.rst:230
 #, fuzzy
 msgid "Unit updates"
 msgstr "rotte statiche"
 
-#: ../../controller.rst:224
+#: ../../controller.rst:232
 msgid ""
 "The controller allows you to update the units directly from the "
 "interface, similar to the process in :ref:`the unit web interface"
 "<updates-section>`. Two types of updates are available:"
 msgstr ""
 
-#: ../../controller.rst:226
+#: ../../controller.rst:234
 msgid ""
 "**Package updates**: Update the packages installed on the unit. List and "
 "install available updates by clicking on :guilabel:`Check packages "
@@ -1407,7 +1424,7 @@ msgid ""
 "accessing the unit."
 msgstr ""
 
-#: ../../controller.rst:229
+#: ../../controller.rst:237
 msgid ""
 "**System update**: Update the unit's system. If an image update is "
 "available, a badge will appear in the unit list. Schedule an update by "
@@ -1420,7 +1437,7 @@ msgid ""
 "image update` button in the unit menu."
 msgstr ""
 
-#: ../../controller.rst:236
+#: ../../controller.rst:244
 msgid ""
 "Please be aware that units might not send updated information when "
 "undergoing upgrading process prior to unit version 1.3.0. To refresh "
@@ -1428,11 +1445,11 @@ msgid ""
 "the unit menu."
 msgstr ""
 
-#: ../../controller.rst:241
+#: ../../controller.rst:249
 msgid "SSH access"
 msgstr "Accesso SSH"
 
-#: ../../controller.rst:243
+#: ../../controller.rst:251
 msgid ""
 "SSH, or Secure Shell, is a cryptographic network protocol for operating "
 "network services securely over an unsecured network. SSH provides a "
@@ -1444,7 +1461,7 @@ msgstr ""
 "fornisce un canale sicuro su una rete non protetta in un'architettura "
 "client-server, collegando un'applicazione client SSH a un server SSH."
 
-#: ../../controller.rst:246
+#: ../../controller.rst:254
 msgid ""
 "It is possible to connect to the unit by clicking on the :guilabel:`Open "
 "SSH terminal` link. The connection is made through a web-based SSH client"
@@ -1454,14 +1471,14 @@ msgstr ""
 "terminal`. La connessione avviene tramite un client SSHweb based che "
 "consente l'accesso alla shell dell'unità."
 
-#: ../../controller.rst:249
+#: ../../controller.rst:257
 #, fuzzy
 msgid "You can connect to units using a username and password pair or an SSH key."
 msgstr ""
 "È possibile connettersi a unità utilizzando nome utente e password oppure"
 " una coppia di chiavi SSH."
 
-#: ../../controller.rst:251
+#: ../../controller.rst:259
 #, fuzzy
 msgid ""
 "Once connected, the SSH session will be started inside a new browser tab."
@@ -1475,11 +1492,11 @@ msgstr ""
 "sessione, basta chiudere la finestra del browser o il logout dalla shell "
 "utilizzando CTRL + D."
 
-#: ../../controller.rst:255
+#: ../../controller.rst:263
 msgid "Username and password"
 msgstr "Utente e password"
 
-#: ../../controller.rst:257
+#: ../../controller.rst:265
 #, fuzzy
 msgid ""
 "The user can connect using a username and password pair of the unit in "
@@ -1492,7 +1509,7 @@ msgstr ""
 "coppia di chiavi SSH - La chiave SSH pubblica dell'utente connesso non è "
 "stata copiata all'interno del file di chiavi autorizzate SSH dell'unità"
 
-#: ../../controller.rst:261
+#: ../../controller.rst:269
 msgid ""
 "The user interface will display a form to enter the username and "
 "password. After entering the credentials, the user can click on the "
@@ -1502,11 +1519,11 @@ msgstr ""
 " la password. Dopo aver inserito le credenziali, l'utente può cliccare "
 "sul link :guilabel: `Apri terminale` per avviare la sessione SSH."
 
-#: ../../controller.rst:265
+#: ../../controller.rst:273
 msgid "SSH key"
 msgstr "Chiave SSH"
 
-#: ../../controller.rst:267
+#: ../../controller.rst:275
 msgid ""
 "An SSH key pair is a set of two cryptographic keys that are used for "
 "authentication when establishing a secure connection using the SSH "
@@ -1518,7 +1535,7 @@ msgstr ""
 "connessione sicura utilizzando il protocollo SSH (Secure Shell). La "
 "coppia è composta da una chiave privata e da una chiave pubblica:"
 
-#: ../../controller.rst:270
+#: ../../controller.rst:278
 msgid ""
 "**Private Key**: This is kept secret and secure by the user. It should "
 "never be exposed to the outside world. It is used to decrypt data that "
@@ -1528,7 +1545,7 @@ msgstr ""
 " dovrebbe mai essere esposta al mondo esterno. Viene utilizzata per "
 "decifrare i dati che sono stati crittografati con la chiave pubblica."
 
-#: ../../controller.rst:272
+#: ../../controller.rst:280
 msgid ""
 "**Public Key**: This can be freely shared and is used to encrypt data "
 "that can only be decrypted with the private key."
@@ -1537,7 +1554,7 @@ msgstr ""
 "crittografare i dati che possono essere decifrati solo con la chiave "
 "privata."
 
-#: ../../controller.rst:274
+#: ../../controller.rst:282
 msgid ""
 "When you connect to a server using SSH with key pair authentication, you "
 "provide your public key to the server. The server then encrypts a "
@@ -1553,7 +1570,7 @@ msgstr ""
 " risultato è corretto, il server sa che è necessario avere la chiave "
 "privata corretta per permettere la connessione."
 
-#: ../../controller.rst:278
+#: ../../controller.rst:286
 msgid ""
 "This method of authentication is more secure than using a password, as it"
 " provides a form of two-factor authentication: something you have (the "
@@ -1565,7 +1582,7 @@ msgstr ""
 "hai (il file chiave privata) e qualcosa che sai (la passphrase per "
 "sbloccare la chiave privata)."
 
-#: ../../controller.rst:281
+#: ../../controller.rst:289
 msgid ""
 "To use an SSH key, generate a new key pair by accessing the ``Account "
 "settings`` page and and clicking on the :guilabel:`Generate SSH key pair`"
@@ -1581,7 +1598,7 @@ msgstr ""
 "visualizzerà la chiave pubblica, mentre la chiave privata viene "
 "conservata in sicurezza all'interno del controller."
 
-#: ../../controller.rst:285
+#: ../../controller.rst:293
 msgid ""
 "Before connecting to the unit, you must copy the public key and paste it "
 "into the unit's SSH authorized keys file. You can do it from the ``Unit "
@@ -1596,7 +1613,7 @@ msgstr ""
 "alle quali si desidera inviare la chiave e cliccare sul:guilabel: `Send "
 "SSH key` pulsante."
 
-#: ../../controller.rst:289
+#: ../../controller.rst:297
 msgid ""
 "From now on, you can connect to the unit using the SSH key pair. The user"
 " interface will display a form to enter the passphrase when clicking on "
@@ -1606,7 +1623,7 @@ msgstr ""
 "di tasti SSH. L'interfaccia utente visualizzerà un modulo per inserire la"
 " passphrase quando si fa clic su :guilabel: ` Pulsante open terminal`."
 
-#: ../../controller.rst:292
+#: ../../controller.rst:300
 msgid ""
 "You can also revoke the SSH key pair by clicking on the :guilabel:`Revoke"
 " SSH public key` button from the :guilabel:`Actions` button."
@@ -1614,11 +1631,11 @@ msgstr ""
 "È inoltre possibile revocare la coppia di tasti SSH cliccando sul tasto: "
 "`Actions` ."
 
-#: ../../controller.rst:295
+#: ../../controller.rst:303
 msgid "Accounting"
 msgstr ""
 
-#: ../../controller.rst:297
+#: ../../controller.rst:305
 msgid ""
 "All operations performed on the controller are logged in the NS8 log. "
 "Here are some examples of logged operations:"
@@ -1626,23 +1643,23 @@ msgstr ""
 "Tutte le operazioni eseguite sul controller sono registrate nel registro "
 "NS8. Alcuni esempi di operazioni registrate sono:"
 
-#: ../../controller.rst:299
+#: ../../controller.rst:307
 msgid "User login and logout"
 msgstr "Accesso utente e logout"
 
-#: ../../controller.rst:300
+#: ../../controller.rst:308
 msgid "User creation/modification/deletion/password change"
 msgstr "Creazione/modifica/eliminazione dell'utente e cambiamento delle password"
 
-#: ../../controller.rst:301
+#: ../../controller.rst:309
 msgid "Unit list/creation/removal"
 msgstr "lista/creazione/rimozione delle unità"
 
-#: ../../controller.rst:303
+#: ../../controller.rst:311
 msgid "Example of NS8 log: ::"
 msgstr "Esempio di log di NS8::"
 
-#: ../../controller.rst:308
+#: ../../controller.rst:316
 msgid ""
 "Each unit has an rpcd user specific to the controller, which is used for "
 "management operations. When a user accesses the unit's web interface from"
@@ -1655,7 +1672,7 @@ msgstr ""
 "eseguite sono registrate nel registro dell'unità, identificate "
 "dall'utente rpcd. Per esempio:"
 
-#: ../../controller.rst:314
+#: ../../controller.rst:322
 msgid ""
 "To determine who performed a specific operation, it is necessary to check"
 " the log of the unit identified by the rpcd user and correlate it with "
@@ -1665,7 +1682,7 @@ msgstr ""
 "controllare il registro dell'unità identificata dall'utente rpcd e "
 "correlare con l'azione di login eseguita sul controller."
 
-#: ../../controller.rst:317
+#: ../../controller.rst:325
 msgid ""
 "When a user connects to the unit via SSH, the login is logged in the "
 "unit's log, identified by the SSH user. Usually, the SSH user is root. "
@@ -1675,7 +1692,7 @@ msgstr ""
 "registrato nel registro dell'unità, identificato dall'utente SSH. Di "
 "solito, l'utente SSH è root. Per esempio:"
 
-#: ../../controller.rst:322
+#: ../../controller.rst:330
 msgid ""
 "If the user uses an SSH key for authentication, the log will contain the "
 "fingerprint of the SSH key used for authentication. This makes it easier "
@@ -1686,11 +1703,11 @@ msgstr ""
 "Ciò rende più facile associare l'utente SSH alle operazioni eseguite. "
 "Esempio:"
 
-#: ../../controller.rst:329
+#: ../../controller.rst:337
 msgid "Subscription and limitations"
 msgstr "Abbonamento e limitazioni"
 
-#: ../../controller.rst:333
+#: ../../controller.rst:341
 #, fuzzy
 msgid ""
 "Some restrictions can only be overcame if the firewall has a valid "
@@ -1699,49 +1716,49 @@ msgstr ""
 "Alcune restrizioni possono essere rimosse solo se il firewall ha un "
 "abbonamento valido."
 
-#: ../../controller.rst:335
+#: ../../controller.rst:343
 msgid ""
 "The behavior of the controller running on a NS8 depends on its "
 "subscription status."
 msgstr ""
 
-#: ../../controller.rst:337
+#: ../../controller.rst:345
 msgid "Controller without subscription:"
 msgstr ""
 
-#: ../../controller.rst:339
+#: ../../controller.rst:347
 msgid "Allows the registration of up to 3 units."
 msgstr ""
 
-#: ../../controller.rst:340
+#: ../../controller.rst:348
 msgid "Only community firewalls can register with the controller."
 msgstr ""
 
-#: ../../controller.rst:341
+#: ../../controller.rst:349
 msgid "Historical metrics are not accesible."
 msgstr ""
 
-#: ../../controller.rst:343
+#: ../../controller.rst:351
 msgid "Controller with a valid subscription:"
 msgstr ""
 
-#: ../../controller.rst:345
+#: ../../controller.rst:353
 msgid "The number of units is unlimited."
 msgstr ""
 
-#: ../../controller.rst:346
+#: ../../controller.rst:354
 msgid "Only firewalls with a valid subscription can register with the controller."
 msgstr ""
 
-#: ../../controller.rst:347
+#: ../../controller.rst:355
 msgid "Units with a valid subscription send metrics to the controller."
 msgstr ""
 
-#: ../../controller.rst:352
+#: ../../controller.rst:360
 msgid "Version awareness"
 msgstr ""
 
-#: ../../controller.rst:354
+#: ../../controller.rst:362
 msgid ""
 "Version awareness is a mechanism that prevents the user from performing "
 "operations not supported by the unit version. To do so, when connecting "
@@ -1749,52 +1766,52 @@ msgid ""
 "connection process. There are three possible scenarios:"
 msgstr ""
 
-#: ../../controller.rst:357
+#: ../../controller.rst:365
 msgid "If the versions are compatible, the connection proceeds as normal."
 msgstr ""
 
-#: ../../controller.rst:358
+#: ../../controller.rst:366
 msgid ""
 "If the firewall (unit) is significantly older than the controller, you'll"
 " see a popup that prevents the connection. This is to protect against "
 "potential errors."
 msgstr ""
 
-#: ../../controller.rst:359
+#: ../../controller.rst:367
 msgid ""
 "If the controller is slightly older than the firewall, you'll see a "
 "warning about the mismatch. However, you'll still be able to connect if "
 "you choose to proceed."
 msgstr ""
 
-#: ../../controller.rst:361
+#: ../../controller.rst:369
 msgid ""
 "As an administrator, you don't need to take any specific actions to "
 "enable Version awareness. It works automatically in the background. "
 "However, you should:"
 msgstr ""
 
-#: ../../controller.rst:363
+#: ../../controller.rst:371
 msgid ""
 "Pay attention to warnings: if you see a version mismatch warning, "
 "consider updating your system when convenient."
 msgstr ""
 
-#: ../../controller.rst:364
+#: ../../controller.rst:372
 msgid ""
 "Keep your system updated: regularly check for and apply updates to both "
 "your controller and firewall units to ensure the best compatibility and "
 "access to new features."
 msgstr ""
 
-#: ../../controller.rst:365
+#: ../../controller.rst:373
 msgid ""
 "Report issues: if you encounter any unusual behavior or errors, "
 "especially after seeing a version warning, follow the "
 ":ref:`troubleshooting <troubleshooting-section>` procedure."
 msgstr ""
 
-#: ../../controller.rst:367
+#: ../../controller.rst:375
 msgid ""
 "Version awareness is a behind-the-scenes feature that helps keep your "
 "NethSecurity system running smoothly. By automatically checking "
@@ -1804,93 +1821,93 @@ msgid ""
 "better understand and manage your system."
 msgstr ""
 
-#: ../../controller.rst:371
+#: ../../controller.rst:379
 msgid "Bypass version awareness"
 msgstr ""
 
-#: ../../controller.rst:372
+#: ../../controller.rst:380
 msgid ""
 "While version awareness is a useful feature, knowing the risks and "
 "potential issues, you may want to bypass it in some cases. To do so, the "
 "procedure is as follows:"
 msgstr ""
 
-#: ../../controller.rst:375
+#: ../../controller.rst:383
 msgid ""
 "On the controller, go to the unit manager page and click on "
 ":guilabel:`More Info` of the unit you want to connect to."
 msgstr ""
 
-#: ../../controller.rst:376
+#: ../../controller.rst:384
 msgid "Copy the `Unit ID` value."
 msgstr ""
 
-#: ../../controller.rst:377
+#: ../../controller.rst:385
 msgid "Click on :guilabel:`Open SSH terminal`"
 msgstr ""
 
-#: ../../controller.rst:378
+#: ../../controller.rst:386
 msgid ""
 "When the modal opens, you can safely close it. This was only needed to "
 "exchange some credentials with the unit."
 msgstr ""
 
-#: ../../controller.rst:379
+#: ../../controller.rst:387
 msgid ""
 "Open a new tab, and go to this URL: `https://<controller-"
 "fqdn>/#/controller/manage/<unit-id>/dashboard`. Example: "
 "`https://controller.nethsecurity.org/#/controller/manage/000000000-0000-0000-0000-000000000000/dashboard`."
 msgstr ""
 
-#: ../../controller.rst:380
+#: ../../controller.rst:388
 msgid "You will be able to access the unit's UI without the version check."
 msgstr ""
 
-#: ../../controller.rst:383
+#: ../../controller.rst:391
 msgid "Update unit with SSH"
 msgstr ""
 
-#: ../../controller.rst:384
+#: ../../controller.rst:392
 msgid ""
 "You can update the unit without connecting to it using the SSH terminal. "
 "Follow the steps to connect to the unit using :ref:`SSH Access "
 "<controller_ssh-section>`."
 msgstr ""
 
-#: ../../controller.rst:387
+#: ../../controller.rst:395
 msgid ""
 "Once connected, you can check for updates depending on what you want to "
 "update."
 msgstr ""
 
-#: ../../controller.rst:389
+#: ../../controller.rst:397
 msgid "Install package updates on the unit:"
 msgstr ""
 
-#: ../../controller.rst:391
+#: ../../controller.rst:399
 #, fuzzy
 msgid "To check for updates for packages use the following command:"
 msgstr ""
 "Nella modalità personalizzata della configurazione MultiWAN, si applicano"
 " i seguenti concetti:"
 
-#: ../../controller.rst:397
+#: ../../controller.rst:405
 msgid ""
 "If you're ok with the installation of the packages you can run the "
 "following command:"
 msgstr ""
 
-#: ../../controller.rst:403
+#: ../../controller.rst:411
 msgid ""
 "To update the image, you can simply schedule the installation, remember "
 "this is an operation that restarts the firewall (causing a downtime)"
 msgstr ""
 
-#: ../../controller.rst:405
+#: ../../controller.rst:413
 msgid "Check if there is an updated image available:"
 msgstr ""
 
-#: ../../controller.rst:411
+#: ../../controller.rst:419
 msgid ""
 "If you want to proceed with the update, this can be done through this "
 "command:"
@@ -2777,54 +2794,88 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-26-g944ffe46dcc"
+msgid "8-23.05.5-ns.1.3.0-51-g0751e338"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-26-g944ffe46dcc/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-26-g944ffe46dcc-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-51-g0751e338/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-51-g0751e338-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-26-g944ffe46dcc/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-51-g0751e338/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-25-g4783d9f0610"
+msgid "8-23.05.5-ns.1.3.0-50-gc0b19684"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-25-g4783d9f0610/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-25-g4783d9f0610-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-50-gc0b19684/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-50-gc0b19684-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-25-g4783d9f0610/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-50-gc0b19684/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-24-gf7c56de7b1d"
+msgid "8-23.05.5-ns.1.3.0-49-g597f6078"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-24-gf7c56de7b1d/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-24-gf7c56de7b1d-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-49-g597f6078/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-49-g597f6078-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-24-gf7c56de7b1d/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-49-g597f6078/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.3.0-47-gb42b2fb0"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-47-gb42b2fb0/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-47-gb42b2fb0-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-47-gb42b2fb0/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.3.0-46-g66c952f"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-46-g66c952f/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-46-g66c952f-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-46-g66c952f/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3672,11 +3723,11 @@ msgstr ""
 msgid "Users and objects"
 msgstr ""
 
-#: ../../index.rst:72 ../../monitoring.rst:139
+#: ../../index.rst:72 ../../monitoring.rst:147
 msgid "Security"
 msgstr ""
 
-#: ../../index.rst:83 ../../monitoring.rst:93
+#: ../../index.rst:83 ../../monitoring.rst:101
 msgid "VPN"
 msgstr ""
 
@@ -5323,10 +5374,10 @@ msgstr ""
 
 #: ../../monitoring.rst:77
 msgid ""
-"``WANs``: list of the WAN connections with their current status "
-"(UP/DOWN). The status information helps ensure that critical network "
-"connections are online, and any downtime are immediately addressed. Data "
-"are sourced from the firewall mwan3 status."
+"``WANs``: list of the WAN connections with their current status (UP/DOWN)"
+" and public IP address. The status information helps ensure that critical"
+" network connections are online, and any downtime are immediately "
+"addressed. Data are sourced from the firewall mwan3 status."
 msgstr ""
 
 #: ../../monitoring.rst:81
@@ -5348,26 +5399,43 @@ msgid ""
 "balancing or WAN link saturation."
 msgstr ""
 
-#: ../../monitoring.rst:95
+#: ../../monitoring.rst:92
+msgid ""
+"``Latency to <address>``: this section provides real-time latency data "
+"for a specific IP address configured inside the :ref:`ping_latency-"
+"section` module. The cart helps to monitor network performance and "
+"identify potential connectivity issues."
+msgstr ""
+
+#: ../../monitoring.rst:96
+#, python-format
+msgid ""
+"``Packet delivery rate to <address>``: this section provides real-time "
+"packet delivery rate data for a specific IP address configured inside the"
+" :ref:`ping_latency-section` module. If the rate is below 100% it could "
+"indicate network congestion or connectivity issues."
+msgstr ""
+
+#: ../../monitoring.rst:103
 msgid ""
 "The VPN section provides detailed insights into OpenVPN Road Warrior "
 "servers, OpenVPN tunnels and IPsec tunnels."
 msgstr ""
 
-#: ../../monitoring.rst:97
+#: ../../monitoring.rst:105
 msgid ""
 "For each OpenVPN Road Warrior server, the following information is "
 "displayed:"
 msgstr ""
 
-#: ../../monitoring.rst:99
+#: ../../monitoring.rst:107
 msgid ""
 "``Status``: this section shows the current status of the OpenVPN server. "
 "It helps administrators monitor the availability of the VPN service and "
 "detect any issues that may impact user connectivity."
 msgstr ""
 
-#: ../../monitoring.rst:103
+#: ../../monitoring.rst:111
 msgid ""
 "``Connected clients``: this displays the total number of users currently "
 "registered on the VPN server. Monitoring registered users is crucial for "
@@ -5375,7 +5443,7 @@ msgid ""
 "system approaches maximum usage."
 msgstr ""
 
-#: ../../monitoring.rst:107
+#: ../../monitoring.rst:115
 msgid ""
 "``Total traffic by hour``: this graph shows the total data transferred by"
 " all VPN clients during each hour, providing an overview of VPN bandwidth"
@@ -5384,7 +5452,7 @@ msgid ""
 "issues."
 msgstr ""
 
-#: ../../monitoring.rst:111
+#: ../../monitoring.rst:119
 msgid ""
 "``Daily connections``: this section lists all currently connected VPN "
 "users and the time they connected. It is useful for tracking session "
@@ -5393,7 +5461,7 @@ msgid ""
 "database."
 msgstr ""
 
-#: ../../monitoring.rst:116
+#: ../../monitoring.rst:124
 msgid ""
 "``Connected clients by hour``: this chart displays the number of clients "
 "connected to the VPN over time. It allows administrators to monitor VPN "
@@ -5402,7 +5470,7 @@ msgid ""
 "connection database."
 msgstr ""
 
-#: ../../monitoring.rst:121
+#: ../../monitoring.rst:129
 msgid ""
 "``Client traffic by hour``: this chart breaks down VPN traffic by "
 "individual clients over time. It helps detect users who may be consuming "
@@ -5411,32 +5479,32 @@ msgid ""
 " SQLite connection database."
 msgstr ""
 
-#: ../../monitoring.rst:126
+#: ../../monitoring.rst:134
 msgid ""
 "The Site-to-Site VPN section provides insights into OpenVPN and IPsec "
 "tunnels:"
 msgstr ""
 
-#: ../../monitoring.rst:128
+#: ../../monitoring.rst:136
 msgid ""
 "``Connected tunnels``: this counter shows the number of active site-to-"
 "site VPN tunnels."
 msgstr ""
 
-#: ../../monitoring.rst:131
+#: ../../monitoring.rst:139
 msgid ""
 "``Configured tunnels``: this counter shows the list of all configured "
 "site-to-site VPN tunnels, including their status and type."
 msgstr ""
 
-#: ../../monitoring.rst:134
+#: ../../monitoring.rst:142
 msgid ""
 "``Tunnel traffic``: this histogram provides real-time traffic data for "
 "each site-to-site VPN tunnel over the last 60 minutes. It helps detect "
 "issues such as low throughput or connection instability."
 msgstr ""
 
-#: ../../monitoring.rst:141
+#: ../../monitoring.rst:149
 msgid ""
 "The security section provides insights into malware detection and attack "
 "monitoring, helping administrators identify and mitigate security "
@@ -5446,13 +5514,13 @@ msgid ""
 " incomplete. Results are cached for 5 minutes to improve performance."
 msgstr ""
 
-#: ../../monitoring.rst:146
+#: ../../monitoring.rst:154
 msgid ""
 "The ``Blocklist`` section provides an overview of blocked packets based "
 "on enabled blocklists. Available charts are:"
 msgstr ""
 
-#: ../../monitoring.rst:148
+#: ../../monitoring.rst:156
 msgid ""
 "``Blocked threats``: this counter shows the total number of packets "
 "blocked by the firewall due to malware detection for the current day. It "
@@ -5460,59 +5528,59 @@ msgid ""
 "administrators a measure of the firewall’s effectiveness."
 msgstr ""
 
-#: ../../monitoring.rst:152
+#: ../../monitoring.rst:160
 msgid ""
 "``Blocked threats by hour``: this chart tracks the number of packets "
 "blocked each hour. It helps identify the times of day when the network is"
 " most vulnerable to attacks, aiding in preventive measures."
 msgstr ""
 
-#: ../../monitoring.rst:156
+#: ../../monitoring.rst:164
 msgid ""
 "``Threats by direction``: a chart that shows the distribution of blocked "
 "malware by firewall chain. Depending on what logging option is enabled, "
 "the firewall can log packets from the following chains:"
 msgstr ""
 
-#: ../../monitoring.rst:160
+#: ../../monitoring.rst:168
 msgid ""
 "*inp-wan*: packets coming from the WAN interface and destined to the "
 "firewall"
 msgstr ""
 
-#: ../../monitoring.rst:161
+#: ../../monitoring.rst:169
 msgid ""
 "*fwd-wan*: packets coming from the WAN interface and destined to the LAN "
 "network"
 msgstr ""
 
-#: ../../monitoring.rst:162
+#: ../../monitoring.rst:170
 msgid ""
 "*fwd-lan*: packets coming from the LAN network and destined to the WAN "
 "interface"
 msgstr ""
 
-#: ../../monitoring.rst:163
+#: ../../monitoring.rst:171
 msgid "*pre-ct*: flooding packets that are in invalid state"
 msgstr ""
 
-#: ../../monitoring.rst:164
+#: ../../monitoring.rst:172
 msgid ""
 "*pre-syn*: flooding packets that are part of a TCP connection and are in "
 "the SYN state"
 msgstr ""
 
-#: ../../monitoring.rst:165
+#: ../../monitoring.rst:173
 msgid "*pre-udp*: flooding packets that are part of a UDP connection"
 msgstr ""
 
-#: ../../monitoring.rst:167
+#: ../../monitoring.rst:175
 msgid ""
 "``Threats by category``: a chart that breaks down the blocked malware by "
 "category, helping administrators to find the most effective blocklists."
 msgstr ""
 
-#: ../../monitoring.rst:170
+#: ../../monitoring.rst:178
 msgid ""
 "The ``Brute force attacks`` section provides insights into the number of "
 "blocked IP based on the number of failed login attempts. Data are sourced"
@@ -5521,21 +5589,21 @@ msgid ""
 "minutes to improve performance. Available charts are:"
 msgstr ""
 
-#: ../../monitoring.rst:175
+#: ../../monitoring.rst:183
 msgid ""
 "``Blocked IP addresses``: this counter shows the total number of IP "
 "addresses blocked due to malicious activity for the current day. It helps"
 " in tracking the volume of attempted intrusions."
 msgstr ""
 
-#: ../../monitoring.rst:179
+#: ../../monitoring.rst:187
 msgid ""
 "``Blocked IP addresses by hour``: this graph tracks the number of blocked"
 " IP addresses over time, helping to identify periods of increased attack "
 "activity."
 msgstr ""
 
-#: ../../monitoring.rst:182
+#: ../../monitoring.rst:190
 msgid ""
 "``Most frequently blocked IP address``: this char shows the IP addresses "
 "that have been blocked most frequently. It is useful for identifying "
@@ -5543,11 +5611,11 @@ msgid ""
 "blacklisted."
 msgstr ""
 
-#: ../../monitoring.rst:187
+#: ../../monitoring.rst:195
 msgid "Netdata"
 msgstr ""
 
-#: ../../monitoring.rst:189
+#: ../../monitoring.rst:197
 msgid ""
 "NethSecurity uses `Netdata <https://www.netdata.cloud/>`_ as real time "
 "monitoring tool. Netdata is an open-source, real-time, performance "
@@ -5557,14 +5625,14 @@ msgid ""
 "Netdata is designed to be lightweight, fast, and easy to use."
 msgstr ""
 
-#: ../../monitoring.rst:194
+#: ../../monitoring.rst:202
 msgid ""
 "Netdata is enabled by default on NethSecurity and it is accessible from "
 "the LAN network. To access it, go to the ``Monitoring`` page and click "
 ":guilabel:`Open report` button from the ``Real time report`` tab."
 msgstr ""
 
-#: ../../monitoring.rst:197
+#: ../../monitoring.rst:205
 msgid ""
 "Netdata metrics are saved in RAM and will be reset at very machine "
 "reboot. If the firewall is connected to the :ref:`remote controller "
@@ -5572,11 +5640,11 @@ msgid ""
 "and preserved across reboots."
 msgstr ""
 
-#: ../../monitoring.rst:201
+#: ../../monitoring.rst:211
 msgid "Ping latency monitoring"
 msgstr ""
 
-#: ../../monitoring.rst:203
+#: ../../monitoring.rst:213
 msgid ""
 "Configure the monitoring tool to evaluate round-trip time and packet loss"
 " by transmitting ping messages to network hosts. This tool is employed to"
@@ -5585,30 +5653,30 @@ msgid ""
 "IP addresses within a VPN for assessing tunnel quality."
 msgstr ""
 
-#: ../../monitoring.rst:207
+#: ../../monitoring.rst:217
 msgid ""
 "To monitor a new host or IP address, click on the :guilabel:`Add host` "
 "button and enter the required information, finally click on the "
 ":guilabel:`Save` button to confirm the changes."
 msgstr ""
 
-#: ../../monitoring.rst:210
+#: ../../monitoring.rst:220
 msgid ""
 "Changes are applied immediately. To remove a host from the list, click on"
 " the delete icon."
 msgstr ""
 
-#: ../../monitoring.rst:212
+#: ../../monitoring.rst:222
 msgid ""
 "You can see a graph of the ping latency by accessing Netdata from the "
 "report page."
 msgstr ""
 
-#: ../../monitoring.rst:217
+#: ../../monitoring.rst:227
 msgid "Historical monitoring"
 msgstr ""
 
-#: ../../monitoring.rst:223
+#: ../../monitoring.rst:233
 msgid ""
 "If the unit was connected to the controller before the subscription was "
 "activated, historical monitoring will not be enabled automatically. The "
@@ -5616,41 +5684,41 @@ msgid ""
 "monitoring is disabled."
 msgstr ""
 
-#: ../../monitoring.rst:226
+#: ../../monitoring.rst:236
 msgid "To enable it, follow these steps:"
 msgstr ""
 
-#: ../../monitoring.rst:228
+#: ../../monitoring.rst:238
 msgid "Disconnect the unit from the controller."
 msgstr ""
 
-#: ../../monitoring.rst:229
+#: ../../monitoring.rst:239
 msgid ""
 "Ensure that the NethServer 8 where the controller is installed has a "
 "valid subscription."
 msgstr ""
 
-#: ../../monitoring.rst:230
+#: ../../monitoring.rst:240
 msgid "Reconnect the unit to the controller."
 msgstr ""
 
-#: ../../monitoring.rst:232
+#: ../../monitoring.rst:242
 msgid ""
 "See the :ref:`controller metrics <controller_metrics-section>` for more "
 "information."
 msgstr ""
 
-#: ../../monitoring.rst:237
+#: ../../monitoring.rst:247
 msgid "Alerts"
 msgstr ""
 
-#: ../../monitoring.rst:239
+#: ../../monitoring.rst:249
 msgid ""
 "The alert system leverages the power of the Netdata engine for efficient "
 "monitoring and alerting."
 msgstr ""
 
-#: ../../monitoring.rst:241
+#: ../../monitoring.rst:251
 msgid ""
 "The alert system prioritizes only those alerts that have the potential to"
 " disrupt or compromise the firewall's functionality. By focusing on "
@@ -5658,7 +5726,7 @@ msgid ""
 "pose a genuine threat to the security and operation of the firewall."
 msgstr ""
 
-#: ../../monitoring.rst:244
+#: ../../monitoring.rst:254
 msgid ""
 "If the server has a valid :ref:`subscription-section`, alert "
 "notifications are seamlessly sent to remote servers for centralized "
@@ -5668,11 +5736,11 @@ msgid ""
 "promptly respond to any critical situations."
 msgstr ""
 
-#: ../../monitoring.rst:248
+#: ../../monitoring.rst:258
 msgid "Implemented alerts:"
 msgstr ""
 
-#: ../../monitoring.rst:250
+#: ../../monitoring.rst:260
 msgid ""
 "Disk Space: the disk space alert triggers when available disk space on "
 "the system reaches a critical level. This proactive notification helps "
@@ -5680,7 +5748,7 @@ msgid ""
 " impact firewall operations."
 msgstr ""
 
-#: ../../monitoring.rst:253
+#: ../../monitoring.rst:263
 msgid ""
 "MultiWAN Status (Up/Down): this alert notifies administrators when there "
 "are changes in the MultiWAN status, indicating whether connections are up"
@@ -8703,6 +8771,40 @@ msgid ""
 "environment. A lower MTU ensures packets fit within the limits of the VPN"
 " tunnel without fragmentation, but depending on network latency or "
 "overhead, slightly different values might be necessary."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:190
+#, fuzzy
+msgid "Connection history"
+msgstr "Eccezioni"
+
+#: ../../openvpn_roadwarrior.rst:192
+msgid ""
+"Every time a client connects or disconnects from the server, the event is"
+" saved inside a SQLite database stored in RAM. Such event history can be "
+"viewed by clicking on tab ``Connection History`` available on the top of "
+"the page."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:195
+msgid ""
+"By default the page will display all connections from current day, but it"
+" is possible to filter the results by date and time and account name."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:197
+msgid ""
+"To download all history in CSV format, click on the button "
+":guilabel:`Download server history`. The header of the CSV file explains "
+"the meaning of each column, including the units of measure."
+msgstr ""
+
+#: ../../openvpn_roadwarrior.rst:200
+msgid ""
+"Once the server is rebooted, the local history is lost. If the server is "
+"connected to a :ref:`controller-section`, the history is sent to the "
+"controller and can be viewed inside the :ref:`historical_monitoring-"
+"section`."
 msgstr ""
 
 #: ../../openvpn_tunnels.rst:7
@@ -20092,5 +20194,57 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "After changing the values, copy and paste these two commands: ::"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-26-g944ffe46dcc"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-26-g944ffe46dcc/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-26-g944ffe46dcc-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-26-g944ffe46dcc/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-25-g4783d9f0610"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-25-g4783d9f0610/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-25-g4783d9f0610-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-25-g4783d9f0610/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-24-gf7c56de7b1d"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-24-gf7c56de7b1d/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-24-gf7c56de7b1d-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-24-gf7c56de7b1d/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``WANs``: list of the WAN connections"
+#~ " with their current status (UP/DOWN). "
+#~ "The status information helps ensure that"
+#~ " critical network connections are online,"
+#~ " and any downtime are immediately "
+#~ "addressed. Data are sourced from the "
+#~ "firewall mwan3 status."
 #~ msgstr ""
 
