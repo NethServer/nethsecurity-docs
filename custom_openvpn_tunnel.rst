@@ -92,7 +92,7 @@ If you want to prevent the VPN from starting automatically when the firewall boo
 
 2. Restart the running VPN tunnels (cause it's disabled now, it will stop, while other tunnels will do a full restart): ::
 
-    /etc/init.d/openvpn stop
+    /etc/init.d/openvpn restart
 
 
 Configure authentication credentials (optional)
