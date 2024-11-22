@@ -53,7 +53,7 @@ Steps to configure the VPN
 
     uci commit openvpn
    
-4. Start the VPN Client Immediately
+4. Start the VPN client immediately
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To start the VPN client without rebooting the system, run: ::
 
