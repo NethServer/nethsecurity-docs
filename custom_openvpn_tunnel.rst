@@ -14,7 +14,7 @@ Prerequisites
 - Access to the NethSecurity terminal via SSH.
 - Basic familiarity with the UCI (Unified Configuration Interface) system in OpenWrt/NethSecurity.
 
-Additional Notes on CLI Configuration
+Additional notes on CLI configuration
 -------------------------------------
 
 - This procedure does not include any validation of the entered data. Therefore, it is intended to be performed by advanced users familiar with the NethSecurity environment and OpenVPN configurations.
