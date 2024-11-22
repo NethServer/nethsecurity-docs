@@ -21,17 +21,17 @@ Steps to Configure the VPN
 1. Place the Configuration File in the Correct Directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Copy the ``myvpn.ovpn`` file to the directory ``/etc/openvpn/``. Use SCP or a similar tool to transfer the file ::
+1. Copy the ``myvpn.ovpn`` file to the directory ``/etc/openvpn/``. Use SCP or a similar tool to transfer the file: ::
 
     scp myvpn.ovpn root@<NethSecurity_IP>:/etc/openvpn/
 
 
-2. Verify the permissions for the file, the output should look like this ::
+2. Verify the permissions for the file, the output should look like this: ::
 
     ls -l /etc/openvpn/myvpn.ovpn
     -rw-r--r--    1 root     root        <size> myvpn.ovpn
 
-If it is not so then set the correct permissions ::
+If it is not so then set the correct permissions: ::
 
     chmod 644 /etc/openvpn/myvpn.ovpn
     chown root:root /etc/openvpn/myvpn.ovpn
@@ -46,13 +46,13 @@ If it is not so then set the correct permissions ::
     uci set openvpn.myvpn.enabled='1'
     uci set openvpn.myvpn.config='/etc/openvpn/myvpn.ovpn'
 
-2. Commit the changes to save the configuration ::
+2. Commit the changes to save the configuration: ::
 
     uci commit openvpn
    
 4. Start the VPN Client Immediately
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To start the VPN client without rebooting the system, run ::
+To start the VPN client without rebooting the system, run: ::
 
     /etc/init.d/openvpn restart
 
