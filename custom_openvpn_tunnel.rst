@@ -34,12 +34,7 @@ Steps to configure the VPN
     scp myvpn.ovpn root@<NethSecurity_IP>:/etc/openvpn/
 
 
-2. Verify the permissions for the file, the output should look like this: ::
-
-    ls -l /etc/openvpn/myvpn.ovpn
-    -rw-r--r--    1 root     root        <size> myvpn.ovpn
-
-If it is not so then set the correct permissions: ::
+2. Make sure to set the correct file permissions: ::
 
     chmod 644 /etc/openvpn/myvpn.ovpn
     chown root:root /etc/openvpn/myvpn.ovpn
