@@ -23,7 +23,7 @@ Additional notes on CLI configuration
 
 For these reasons, caution and attention to detail are strongly advised when performing this procedure.
 
-Steps to Configure the VPN
+Steps to configure the VPN
 --------------------------
 
 1. Place the Configuration File in the Correct Directory
