@@ -95,7 +95,7 @@ If you want to prevent the VPN from starting automatically when the firewall boo
     /etc/init.d/openvpn stop
 
 
-Optional (2): Configure Authentication Credentials
+Configure authentication credentials (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the VPN requires a username and password, create an authentication file.
