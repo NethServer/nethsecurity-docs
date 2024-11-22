@@ -107,8 +107,8 @@ If the VPN requires a username and password, create an authentication file.
 
 2. Add the following content, replacing ``frank`` and ``frank_password`` with your username and password: ::
                                     
-    user frank
-    password frank_password
+    frank
+    frank_password
 
 3. Save and set the correct permissions: ::
 
