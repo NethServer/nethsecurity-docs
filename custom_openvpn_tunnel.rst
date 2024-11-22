@@ -14,6 +14,15 @@ Prerequisites
 - Access to the NethSecurity terminal via SSH.
 - Basic familiarity with the UCI (Unified Configuration Interface) system in OpenWrt/NethSecurity.
 
+Additional Notes on CLI Configuration
+-------------------------------------
+
+- This procedure does not include any validation of the entered data. Therefore, it is intended to be performed by advanced users familiar with the NethSecurity environment and OpenVPN configurations.
+- The VPN created using this method will not appear in the NethSecurity web interface and can only be managed through the command line interface (CLI).
+- It is critical to avoid using the same name for a VPN created via the CLI and one configured through the NethSecurity web interface. Since there are no safeguards in place to prevent naming conflicts, such overlap may cause configuration issues.
+
+For these reasons, caution and attention to detail are strongly advised when performing this procedure.
+
 Steps to Configure the VPN
 --------------------------
 
