@@ -39,7 +39,7 @@ Steps to configure the VPN
     chmod 644 /etc/openvpn/myvpn.ovpn
     chown root:root /etc/openvpn/myvpn.ovpn
 
-3. Create a New OpenVPN Client Configuration in UCI
+3. Create a new OpenVPN Client configuration in UCI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Add a new OpenVPN section in the UCI database called *myvpn*, link the configuration file to this section and enable the VPN ::
