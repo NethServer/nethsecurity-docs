@@ -59,7 +59,7 @@ To start the VPN client without rebooting the system, run: ::
 
     /etc/init.d/openvpn restart
 
-This will restart all configured openvpn tunnels.
+This will restart all configured OpenVPN tunnels.
 
 5. Verify the VPN is running
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
