@@ -26,7 +26,7 @@ For these reasons, caution and attention to detail are strongly advised when per
 Steps to configure the VPN
 --------------------------
 
-1. Place the Configuration File in the Correct Directory
+1. Place the configuration file in the correct Directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Copy the ``myvpn.ovpn`` file to the directory ``/etc/openvpn/``. Use SCP or a similar tool to transfer the file: ::
