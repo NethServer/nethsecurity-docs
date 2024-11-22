@@ -115,13 +115,10 @@ If the VPN requires a username and password, create an authentication file.
     chmod 600 /etc/openvpn/myvpn.auth
     chown root:root /etc/openvpn/myvpn.auth
                                     
-4. Update the OpenVPN configuration file (``myvpn.ovpn``) to reference the authentication file. Open the file for editing: ::
+4. Update the OpenVPN configuration file (``myvpn.ovpn``) to reference the authentication file. ::
    
-    vi /etc/openvpn/myvpn.ovpn
+    echo "auth-user-pass /etc/openvpn/myvpn.auth" >>  /etc/openvpn/myvpn.ovpn
 
-5. Add or modify the following line: ::
-                                    
-    auth-user-pass /etc/openvpn/myvpn.auth
                                     
 .. note:: 
                                     
