@@ -1,9 +1,8 @@
 .. _custom_openvpn_tunnel-section:
 
-========================================================
-OpenVPN tunnel client with a provided configuration file
-========================================================
-
+=====================
+Custom OpenVPN tunnel
+=====================
 
 This guide explains how to configure an OpenVPN client on NethSecurity using a configuration file (``myvpn.ovpn``) provided by a VPN service provider. 
 The configuration ensures the VPN starts automatically when the firewall boots.
