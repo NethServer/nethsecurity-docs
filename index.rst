@@ -102,6 +102,7 @@ NethSecurity administrator manual
    ddns
    smtp
    snmp
+   custom_openvpn_tunnel
    logs
 
 .. toctree::
