@@ -66,7 +66,7 @@ To start the VPN client without rebooting the system, run: ::
 
 This will restart all configured openvpn tunnels.
 
-5. Verify the VPN is Running
+5. Verify the VPN is running
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Check the OpenVPN logs to confirm the connection: ::
 
