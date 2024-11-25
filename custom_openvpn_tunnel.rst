@@ -23,8 +23,8 @@ Additional notes on CLI configuration
 
 For these reasons, caution and attention to detail are strongly advised when performing this procedure.
 
-Steps to configure the VPN
---------------------------
+Configure the VPN
+-----------------
 
 1. Place the configuration file in the correct Directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -130,3 +130,47 @@ If the VPN requires a username and password, create an authentication file.
 .. note:: 
                                     
   - **Authentication File:** When using an authentication file, ensure it has strict permissions (`600`) to protect sensitive information.
+
+
+
+
+Configure the firewall to allow traffic for the VPN
+-----------------------------------------------------
+
+To enable traffic through the VPN, it is necessary to configure the firewall on NethSecurity. 
+The best practice is to assign a fixed device name to the VPN, create a dedicated zone for the custom VPN, and associate the VPN device with that zone.
+
+
+1. Fix the VPN device name
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+To ensure the VPN device name remains consistent and avoids automatic assignment, it is crucial to fix the name in the OpenVPN configuration file. 
+Edit the file (``/etc/openvpn/myvpn.ovpn``) and include the following lines or modify them if they already exist (this example is made with a *routed* vpn): ::
+
+    -dev tun
+    +dev tunmyvpn
+    +dev-type tun
+
+
+2. Create a firewall zone
+^^^^^^^^^^^^^^^^^^^^^^^^^
+From the NethSecurity UI, create a new firewall zone named ``myzone``. Configure this zone to allow access to the required resources. 
+
+
+3. Associate the VPN device with the zone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To associate the VPN device with the ``myzone`` firewall zone, perform the following steps in the command line:
+
+1. Add the VPN device (``tunmyvpn``) to the firewall zone: ::
+
+    uci add_list firewall.ns_myzone.device=tunmyvpn
+    uci commit firewall
+
+2. Restart the firewall to apply the changes: ::
+   
+    /etc/init.d/firewall restart
+
+
+These changes ensure the VPN device will always be named ``tunmyvpn``, preventing potential issues with the firewall zone association.
+
+
+
