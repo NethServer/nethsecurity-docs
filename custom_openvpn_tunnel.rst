@@ -42,7 +42,7 @@ Steps to configure the VPN
 3. Create a new OpenVPN Client configuration in UCI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Add a new OpenVPN section in the UCI database called *myvpn*, link the configuration file to this section and enable the VPN ::
+1. Add a new OpenVPN section in the UCI database called ``myvpn``, link the configuration file to this section and enable the VPN ::
 
     uci add openvpn openvpn
     uci rename openvpn.@openvpn[-1]='myvpn'
@@ -63,11 +63,23 @@ This will restart all configured OpenVPN tunnels.
 
 5. Verify the VPN is running
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Check the OpenVPN logs to confirm the connection: ::
+1. To ensure OpenVPN is using the correct configuration file and is running as expected, check the active processes: ::
+
+    ps xa | grep openvpn
+
+The output should resemble the following (example configuration name ``myvpn``): ::
+
+    4913 ?        S      0:00 /usr/sbin/openvpn --syslog openvpn(myvpn) --status /var/run/openvpn.myvpn.status --cd /etc/openvpn --config myvpn.ovpn --up /usr/libexec/openvpn-hotplug up myvpn --down /usr/libexec/openvpn-hotplug down myvpn --route-up /usr/libexec/openvpn-hotplug route-up myvpn --route-pre-down /usr/libexec/openvpn-hotplug route-pre-down myvpn --script-security 2
+
+Confirm the ``--config`` parameter points to the correct configuration file (e.g., ``myvpn.ovpn``).
+Ensure all references (e.g., ``myvpn``) match your intended VPN configuration.
+
+2. Check the OpenVPN logs to confirm the connection: ::
 
     tail -f /var/log/messages | grep openvpn
 
 You should see log entries indicating a successful connection.
+
 
 .. note:: 
 
