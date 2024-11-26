@@ -65,7 +65,7 @@ This will restart all configured OpenVPN tunnels.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. To ensure OpenVPN is using the correct configuration file and is running as expected, check the active processes: ::
 
-    ps xa | grep openvpn
+    ps -ef | grep myvpn
 
 The output should resemble the following (example configuration name ``myvpn``): ::
 
