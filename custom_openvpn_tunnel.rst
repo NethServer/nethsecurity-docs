@@ -131,7 +131,7 @@ The best practice is to assign a fixed device name to the VPN, create a dedicate
 To ensure the VPN device name remains consistent and avoids automatic assignment, it is crucial to fix the name in the OpenVPN configuration file. 
 Edit the file (``/etc/openvpn/myvpn.ovpn``) to change "dev tun" to "dev tunmyvpn" and add the following line (this example is made with a *routed* vpn): ::
 
-    +dev-type tun
+    dev-type tun
 
 
 2. Create a firewall zone
