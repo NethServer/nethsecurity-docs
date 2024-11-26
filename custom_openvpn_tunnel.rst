@@ -87,21 +87,6 @@ You should see log entries indicating a successful connection.
   - **Automatic Startup:** By setting ``enabled='1'``, the VPN client will automatically start whenever the firewall boots.
 
 
-Disable the tunnel
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you want to prevent the VPN from starting automatically when the firewall boots, you can disable it using the following commands: ::
-
-1. Disable the VPN in UCI: ::
-
-    uci set openvpn.myvpn.enabled='0'
-    uci commit openvpn
-
-2. Restart the running VPN tunnels (cause it's disabled now, it will stop, while other tunnels will do a full restart): ::
-
-    /etc/init.d/openvpn restart
-
-
 Configure authentication credentials (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -171,6 +156,23 @@ To associate the VPN device with the ``myzone`` firewall zone, perform the follo
 
 
 These changes ensure the VPN device will always be named ``tunmyvpn``, preventing potential issues with the firewall zone association.
+
+Disable the tunnel
+------------------
+
+If you want to prevent the VPN from starting automatically when the firewall boots, you can disable it using the following commands.
+
+
+1. Disable the VPN in UCI: ::
+
+    uci set openvpn.myvpn.enabled='0'
+    uci commit openvpn
+
+2. Restart all active VPN tunnels. 
+This command will stop all tunnels and fully restart only those with the enabled value set to 1: ::
+
+    /etc/init.d/openvpn restart
+
 
 
 
