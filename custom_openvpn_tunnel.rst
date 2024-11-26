@@ -87,7 +87,7 @@ You should see log entries indicating a successful connection.
   - **Automatic Startup:** By setting ``enabled='1'``, the VPN client will automatically start whenever the firewall boots.
 
 
-Optional: Disable Automatic Startup
+Disable the tunnel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to prevent the VPN from starting automatically when the firewall boots, you can disable it using the following commands: ::
