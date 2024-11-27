@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-27 14:36+0000\n"
+"POT-Creation-Date: 2024-11-27 15:25+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -1983,7 +1983,7 @@ msgid "Configure the VPN"
 msgstr "Configurazione"
 
 #: ../../custom_openvpn_tunnel.rst:30
-msgid "1. Place the configuration file in the correct Directory"
+msgid "1. Place the configuration file in the correct directory"
 msgstr ""
 
 #: ../../custom_openvpn_tunnel.rst:32
@@ -1997,7 +1997,7 @@ msgid "Make sure to set the correct file permissions: ::"
 msgstr ""
 
 #: ../../custom_openvpn_tunnel.rst:43
-msgid "3. Create a new OpenVPN Client configuration in UCI"
+msgid "2. Create a new OpenVPN client configuration in UCI"
 msgstr ""
 
 #: ../../custom_openvpn_tunnel.rst:45
@@ -2012,98 +2012,98 @@ msgid "Commit the changes to save the configuration: ::"
 msgstr "Poi riavvia il servizio DDNS::"
 
 #: ../../custom_openvpn_tunnel.rst:57
-msgid "4. Start the VPN client immediately"
+msgid "3. Start the VPN client immediately"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:58
+#: ../../custom_openvpn_tunnel.rst:59
 msgid "To start the VPN client without rebooting the system, run: ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:62
+#: ../../custom_openvpn_tunnel.rst:63
 msgid "This will restart all configured OpenVPN tunnels."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:65
-msgid "5. Verify the VPN is running"
+#: ../../custom_openvpn_tunnel.rst:66
+msgid "4. Verify the VPN is running"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:66
+#: ../../custom_openvpn_tunnel.rst:68
 msgid ""
 "To ensure OpenVPN is using the correct configuration file and is running "
 "as expected, check the active processes: ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:70
+#: ../../custom_openvpn_tunnel.rst:72
 msgid ""
 "The output should resemble the following (example configuration name "
 "``myvpn``): ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:74
+#: ../../custom_openvpn_tunnel.rst:76
 msgid ""
 "Confirm the ``--config`` parameter points to the correct configuration "
 "file (e.g., ``myvpn.ovpn``). Ensure all references (e.g., ``myvpn``) "
 "match your intended VPN configuration."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:77
+#: ../../custom_openvpn_tunnel.rst:79
 msgid "Check the OpenVPN logs to confirm the connection: ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:81
+#: ../../custom_openvpn_tunnel.rst:83
 msgid "You should see log entries indicating a successful connection."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:86
+#: ../../custom_openvpn_tunnel.rst:88
 msgid ""
-"**File Name Consistency:** The configuration name ``myvpn`` must match "
+"**File name consistency:** The configuration name ``myvpn`` must match "
 "the OpenVPN section name in UCI and the configuration file's location. If"
 " you change the name, ensure all references to ``myvpn`` in commands and "
 "filenames are updated."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:87
+#: ../../custom_openvpn_tunnel.rst:89
 msgid ""
-"**Automatic Startup:** By setting ``enabled='1'``, the VPN client will "
+"**Automatic startup:** By setting ``enabled='1'``, the VPN client will "
 "automatically start whenever the firewall boots."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:91
+#: ../../custom_openvpn_tunnel.rst:93
 msgid "Configure authentication credentials (optional)"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:93
+#: ../../custom_openvpn_tunnel.rst:95
 msgid ""
 "If the VPN requires a username and password, create an authentication "
 "file."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:96
+#: ../../custom_openvpn_tunnel.rst:98
 msgid ""
 "Create a file named ``/etc/openvpn/myvpn.auth`` (replace ``myvpn`` with "
 "the VPN name if different): ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:100
+#: ../../custom_openvpn_tunnel.rst:102
 msgid ""
 "Add the following content, replacing ``frank`` and ``frank_password`` "
 "with your username and password: ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:105
+#: ../../custom_openvpn_tunnel.rst:107
 msgid "Save and set the correct permissions: ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:110
+#: ../../custom_openvpn_tunnel.rst:112
 msgid ""
 "Update the OpenVPN configuration file (``myvpn.ovpn``) to reference the "
 "authentication file. ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:117
+#: ../../custom_openvpn_tunnel.rst:119
 msgid ""
-"**Authentication File:** When using an authentication file, ensure it has"
-" strict permissions (`600`) to protect sensitive information."
+"Authentication file: when using an authentication file, ensure it has "
+"strict permissions (`600`) to protect sensitive information."
 msgstr ""
 
 #: ../../custom_openvpn_tunnel.rst:123
@@ -2122,7 +2122,7 @@ msgstr ""
 msgid "1. Fix the VPN device name"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:131
+#: ../../custom_openvpn_tunnel.rst:132
 msgid ""
 "To ensure the VPN device name remains consistent and avoids automatic "
 "assignment, it is crucial to fix the name in the OpenVPN configuration "
@@ -2131,61 +2131,61 @@ msgid ""
 " a *routed* vpn): ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:136
+#: ../../custom_openvpn_tunnel.rst:137
 msgid ""
 "Please remember that the interface name (referred to as ``tunmyvpn`` in "
 "the example) must not exceed 13 characters."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:140
+#: ../../custom_openvpn_tunnel.rst:141
 msgid "2. Create a firewall zone"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:141
+#: ../../custom_openvpn_tunnel.rst:143
 msgid ""
 "From the NethSecurity UI, create a new firewall zone named ``myzone``. "
 "Configure this zone to allow access to the required resources."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:145
+#: ../../custom_openvpn_tunnel.rst:147
 msgid "3. Associate the VPN device with the zone"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:146
+#: ../../custom_openvpn_tunnel.rst:149
 msgid ""
 "To associate the VPN device with the ``myzone`` firewall zone, perform "
 "the following steps in the command line:"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:148
+#: ../../custom_openvpn_tunnel.rst:151
 msgid "Add the VPN device (``tunmyvpn``) to the firewall zone: ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:153
+#: ../../custom_openvpn_tunnel.rst:156
 msgid "Restart the firewall to apply the changes: ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:158
+#: ../../custom_openvpn_tunnel.rst:161
 msgid ""
 "These changes ensure the VPN device will always be named ``tunmyvpn``, "
 "preventing potential issues with the firewall zone association."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:161
+#: ../../custom_openvpn_tunnel.rst:164
 msgid "Disable the tunnel"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:163
+#: ../../custom_openvpn_tunnel.rst:166
 msgid ""
 "If you want to prevent the VPN from starting automatically when the "
 "firewall boots, you can disable it using the following commands."
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:166
+#: ../../custom_openvpn_tunnel.rst:169
 msgid "Disable the VPN in UCI: ::"
 msgstr ""
 
-#: ../../custom_openvpn_tunnel.rst:171
+#: ../../custom_openvpn_tunnel.rst:174
 msgid ""
 "2. Restart all active VPN tunnels. This command will stop all tunnels and"
 " fully restart only those with the enabled value set to 1: ::"
@@ -20532,5 +20532,41 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-46-g66c952f/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "1. Place the configuration file in the correct Directory"
+#~ msgstr ""
+
+#~ msgid "3. Create a new OpenVPN Client configuration in UCI"
+#~ msgstr ""
+
+#~ msgid "4. Start the VPN client immediately"
+#~ msgstr ""
+
+#~ msgid "5. Verify the VPN is running"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**File Name Consistency:** The configuration"
+#~ " name ``myvpn`` must match the "
+#~ "OpenVPN section name in UCI and "
+#~ "the configuration file's location. If "
+#~ "you change the name, ensure all "
+#~ "references to ``myvpn`` in commands and"
+#~ " filenames are updated."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Automatic Startup:** By setting "
+#~ "``enabled='1'``, the VPN client will "
+#~ "automatically start whenever the firewall "
+#~ "boots."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Authentication File:** When using an "
+#~ "authentication file, ensure it has "
+#~ "strict permissions (`600`) to protect "
+#~ "sensitive information."
 #~ msgstr ""
 
