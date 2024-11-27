@@ -8,7 +8,7 @@ This guide explains how to configure an OpenVPN client on NethSecurity using a c
 The configuration ensures the VPN starts automatically when the firewall boots.
 
 Prerequisites
--------------
+=============
 
 - A valid OpenVPN configuration file (`myvpn.ovpn`) from your VPN provider.
 - Access to the NethSecurity terminal via SSH.
@@ -24,10 +24,10 @@ Additional notes on CLI configuration
 For these reasons, caution and attention to detail are strongly advised when performing this procedure.
 
 Configure the VPN
------------------
+=================
 
-1. Place the configuration file in the correct Directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Place the configuration file in the correct directory
+--------------------------------------------------------
 
 1. Copy the ``myvpn.ovpn`` file to the directory ``/etc/openvpn/``. Use SCP or a similar tool to transfer the file: ::
 
@@ -39,8 +39,8 @@ Configure the VPN
     chmod 644 /etc/openvpn/myvpn.ovpn
     chown root:root /etc/openvpn/myvpn.ovpn
 
-3. Create a new OpenVPN Client configuration in UCI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2. Create a new OpenVPN client configuration in UCI
+---------------------------------------------------
 
 1. Add a new OpenVPN section in the UCI database called ``myvpn``, link the configuration file to this section and enable the VPN ::
 
@@ -53,42 +53,44 @@ Configure the VPN
 
     uci commit openvpn
    
-4. Start the VPN client immediately
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3. Start the VPN client immediately
+-----------------------------------
+
 To start the VPN client without rebooting the system, run: ::
 
     /etc/init.d/openvpn restart
 
 This will restart all configured OpenVPN tunnels.
 
-5. Verify the VPN is running
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-1. To ensure OpenVPN is using the correct configuration file and is running as expected, check the active processes: ::
+4. Verify the VPN is running
+----------------------------
 
-    ps -ef | grep myvpn
+To ensure OpenVPN is using the correct configuration file and is running as expected, check the active processes: ::
+
+  ps -ef | grep myvpn
 
 The output should resemble the following (example configuration name ``myvpn``): ::
 
-    4913 ?        S      0:00 /usr/sbin/openvpn --syslog openvpn(myvpn) --status /var/run/openvpn.myvpn.status --cd /etc/openvpn --config myvpn.ovpn --up /usr/libexec/openvpn-hotplug up myvpn --down /usr/libexec/openvpn-hotplug down myvpn --route-up /usr/libexec/openvpn-hotplug route-up myvpn --route-pre-down /usr/libexec/openvpn-hotplug route-pre-down myvpn --script-security 2
+  4913 ?        S      0:00 /usr/sbin/openvpn --syslog openvpn(myvpn) --status /var/run/openvpn.myvpn.status --cd /etc/openvpn --config myvpn.ovpn --up /usr/libexec/openvpn-hotplug up myvpn --down /usr/libexec/openvpn-hotplug down myvpn --route-up /usr/libexec/openvpn-hotplug route-up myvpn --route-pre-down /usr/libexec/openvpn-hotplug route-pre-down myvpn --script-security 2
 
 Confirm the ``--config`` parameter points to the correct configuration file (e.g., ``myvpn.ovpn``).
 Ensure all references (e.g., ``myvpn``) match your intended VPN configuration.
 
-2. Check the OpenVPN logs to confirm the connection: ::
+Check the OpenVPN logs to confirm the connection: ::
 
-    tail -f /var/log/messages | grep openvpn
+  tail -f /var/log/messages | grep openvpn
 
 You should see log entries indicating a successful connection.
 
 
 .. note:: 
 
-  - **File Name Consistency:** The configuration name ``myvpn`` must match the OpenVPN section name in UCI and the configuration file's location. If you change the name, ensure all references to ``myvpn`` in commands and filenames are updated.
-  - **Automatic Startup:** By setting ``enabled='1'``, the VPN client will automatically start whenever the firewall boots.
+  - **File name consistency:** The configuration name ``myvpn`` must match the OpenVPN section name in UCI and the configuration file's location. If you change the name, ensure all references to ``myvpn`` in commands and filenames are updated.
+  - **Automatic startup:** By setting ``enabled='1'``, the VPN client will automatically start whenever the firewall boots.
 
 
 Configure authentication credentials (optional)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===============================================
 
 If the VPN requires a username and password, create an authentication file.
 
@@ -114,20 +116,19 @@ If the VPN requires a username and password, create an authentication file.
                                     
 .. note:: 
                                     
-  - **Authentication File:** When using an authentication file, ensure it has strict permissions (`600`) to protect sensitive information.
-
-
+  Authentication file: when using an authentication file, ensure it has strict permissions (`600`) to protect sensitive information.
 
 
 Configure the firewall to allow traffic for the VPN
------------------------------------------------------
+===================================================
 
 To enable traffic through the VPN, it is necessary to configure the firewall on NethSecurity. 
 The best practice is to assign a fixed device name to the VPN, create a dedicated zone for the custom VPN, and associate the VPN device with that zone.
 
 
 1. Fix the VPN device name
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
+
 To ensure the VPN device name remains consistent and avoids automatic assignment, it is crucial to fix the name in the OpenVPN configuration file. 
 Edit the file (``/etc/openvpn/myvpn.ovpn``) to change ``dev tun`` to ``dev tunmyvpn`` and add the following line (this example is made with a *routed* vpn): ::
 
@@ -137,12 +138,14 @@ Edit the file (``/etc/openvpn/myvpn.ovpn``) to change ``dev tun`` to ``dev tunmy
 
 
 2. Create a firewall zone
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
+
 From the NethSecurity UI, create a new firewall zone named ``myzone``. Configure this zone to allow access to the required resources. 
 
 
 3. Associate the VPN device with the zone
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
+
 To associate the VPN device with the ``myzone`` firewall zone, perform the following steps in the command line:
 
 1. Add the VPN device (``tunmyvpn``) to the firewall zone: ::
@@ -158,7 +161,7 @@ To associate the VPN device with the ``myzone`` firewall zone, perform the follo
 These changes ensure the VPN device will always be named ``tunmyvpn``, preventing potential issues with the firewall zone association.
 
 Disable the tunnel
-------------------
+==================
 
 If you want to prevent the VPN from starting automatically when the firewall boots, you can disable it using the following commands.
 
@@ -172,7 +175,4 @@ If you want to prevent the VPN from starting automatically when the firewall boo
 This command will stop all tunnels and fully restart only those with the enabled value set to 1: ::
 
     /etc/init.d/openvpn restart
-
-
-
 
