@@ -31,6 +31,8 @@ If the backup is encrypted, enter the passphrase, and finally, click the :guilab
 
 After the restore the system will be rebooted.
 
+If you have installed extra packages, you can restore them by following the instructions in the :ref:`restore_extra_packages-section`.
+
 Automatic backup
 ================
 
