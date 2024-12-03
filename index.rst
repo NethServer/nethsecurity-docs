@@ -99,6 +99,7 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Advanced (CLI)
 
+   ips
    ddns
    smtp
    snmp
