@@ -51,3 +51,30 @@ Enter the ``IP address`` that should be exempted from the filter.
 You can include a description explaining the reason for the exclusion.
 
 Each exception can be enabled or disabled as desired.
+
+Netify interface exclusion
+--------------------------
+
+By default, Netifyd monitors all interfaces. To exclude specific interfaces, you can define an exclusion list. Below are commands to add, modify, or remove excluded interfaces.
+
+- Add interfaces to exclusion list: ::
+
+      uci add_list netifyd.@netifyd[0].exclude='eth1'
+      uci add_list netifyd.@netifyd[0].exclude='tun'
+      uci add_list netifyd.@netifyd[0].exclude='wg'
+      uci commit netifyd
+
+- Modify exclusion list: ::
+
+      uci delete netifyd.@netifyd[0].exclude='eth1'
+      uci add_list netifyd.@netifyd[0].exclude='eth2'
+      uci commit netifyd
+
+- Clear exclusion list: ::
+
+      uci delete netifyd.@netifyd[0].exclude
+      uci commit netifyd
+
+- Return the exclusion list: ::
+
+      uci show netifyd.@netifyd[0].exclude
