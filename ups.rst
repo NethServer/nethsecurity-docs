@@ -3,30 +3,30 @@ UPS (NUT)
 =========
 
 An Uninterruptible Power Supply (UPS) is a device that provides backup power when the main power source fails.
-It is used to protect hardware such as computers, telecommunication equipment, or other electrical equipment where an unexpected power disruption could cause
+It is used to protect hardware such as computers, telecommunication equipment, or other electrical equipment where an unexpected power outage could cause
 business disruption or data loss.
 
 The `Network UPS Tools (NUT)  <https://networkupstools.org/>`_ is a collection of programs that provide a common interface for monitoring and administering UPS hardware.
 
-This guide explains how to configure an USB connected UPS with NUT on NethSecurity.
-At the end of the guide, the UPS should be monitored and the system should shut down when the battery is in a critical state.
+This guide explains how to configure a USB-connected UPS with NUT on NethSecurity.
+At the end of the guide, the UPS should be monitored and the system should shut down when the battery is low.
 
-NUT is not installed by default. It is part of NethSecurity extra packages and can be installed from command line.
+NUT is not installed by default. It is part of NethSecurity extra packages and can be installed from the command line.
 The NUT suite is composed of several packages, but the most important are:
 
-- ``nut-server``: The NUT server daemon that monitors the UPS and provides information to clients.
+- ``nut-server``: The NUT server daemon connects directly to the UPS, serving data to the client.
 - ``nut-upsc``: A command-line tool to query the UPS status.
-- ``nut-upsmon``: The NUT UPS monitor daemon that monitors the UPS and initiates a system shutdown when the UPS battery is low.
-- ``nut-upscmd``: A command-line tool to send commands to the UPS.
+- ``nut-upsmon``: The NUT UPS monitor daemon talks to nut-server and initiates a system shutdown when the UPS battery is low.
+- ``nut-upscmd``: A command-line tool to send commands to the UPS (supported only by some UPS models).
 
 Configure a local UPS
 =====================
 
-Before configuring the UPS, make sure the UPS is connected to the firewall via USB.
+Before configuring the UPS, make sure the UPS is connected to the firewall (a cable usually comes with the UPS).
 Then, follow these steps:
 
 1. Install NUT packages.
-2. Find the UPS model, install and configure the appropriate driver.
+2. Find the UPS model, then install and configure the appropriate driver.
 3. Configure the UPS server daemons.
 4. Enable the UPS monitor.
 
@@ -49,7 +49,7 @@ Step 2: setup the appropriate driver
     Bus 002 Device 001: ID 1d6b:0002 Linux 5.15.150 xhci-hcd xHCI Host Controller
     Bus 001 Device 002: ID 8087:8001
 
-   In this example, the UPS is an EATON 5E model connected on the second USB port of second USB bus.
+   In this example, the UPS is an EATON 5E model connected to the second USB port of the second USB bus.
 
 2. Select the driver from the `NUT driver page <https://networkupstools.org/stable-hcl.html>`_.
 
@@ -59,7 +59,7 @@ Step 2: setup the appropriate driver
     opkg install nut-driver-usbhid-ups
 
 4. Set up the driver inside the ``upsd`` (nut-server) server. The nut-server will connect to the UPS using the driver and the port specified.
-   It will monitor the UPS on regular intervals and provide the information to the clients like ``upsmon``. Execute: ::
+   It will monitor the UPS at regular intervals and provide the information to the clients like ``upsmon``. Execute: ::
 
     uci set nut_server.eaton5e=driver
     uci set nut_server.eaton5e.driver=usbhid-ups
@@ -75,7 +75,7 @@ Step 3: configure monitoring
 The UPS monitor (upsmon) is a daemon that monitors the UPS and initiates a system shutdown when the UPS battery is low.
 It connects to the UPS server (upsd) and queries the UPS status.
 
-In this scenario the UPS monitor is running on the same machine as the UPS server, so it will connect to the localhost.
+In this scenario the UPS monitor is running on the same machine as the UPS server, so it will connect to localhost.
 
 1. Set up the user for monitoring inside ``upsd``. Please note the password is simple because it is not sent over the network::
 
@@ -134,13 +134,13 @@ Allow remote monitoring
 =======================
 
 Multiple hardware devices can be connected to an UPS and the NUT server can share the UPS status with multiple clients.
-So, for example, another firewall powered by the same UPS can inspect the UPS status by connecting to the NUT server and
+So, for example, another system powered by the same UPS can inspect the UPS status by connecting to the NUT server and
 shutting down when the battery is low.
 
-By default, the NUT server is configured to listen only on the localhost.
+By default, the NUT server is configured to listen only on localhost.
 To allow remote monitoring, the server must be configured to listen on a specific IP address or on all interfaces.
 
-1. Listen to all interfaces: ::
+1. Listen on all interfaces: ::
 
     uci set nut_server.listen=listen_address
     uci set nut_server.listen.address=0.0.0.0
@@ -168,7 +168,7 @@ To allow remote monitoring, the server must be configured to listen on a specifi
     /etc/init.d/firewall restart
 
 You can now connect to the NUT server from a remote upsmon client.
-When the client is configured, the client will connect to the NUT server and monitor the UPS status.
+When the client is configured, it will connect to the NUT server and monitor the UPS status.
 If the battery is low, the client will initiate a system shutdown.
 
 Connect to remote NUT server
@@ -240,7 +240,7 @@ Another common error is upsd not being able to connect to the UPS, for example y
     Nov 29 10:34:51 NethSec upsd[7055]: [D1] mainloop: UPS [eaton5e] is now connected as FD -1
 
 
-Usually this happens when nut-server connects to the UPS device before the device is ready.
+Usually, this happens when nut-server connects to the UPS device before the device is ready.
 To fix this, the simplest solution is to reboot the firewall::
 
     reboot
