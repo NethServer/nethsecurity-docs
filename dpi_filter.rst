@@ -63,7 +63,9 @@ By default, Netifyd monitors all interfaces. To exclude specific interfaces, you
       uci add_list netifyd.@netifyd[0].exclude='tun'
       uci add_list netifyd.@netifyd[0].exclude='wg'
       uci commit netifyd
-In this this case the system will exclude interface ``eth1``, all WireGuard ``wgX`` interfaces and all OpenVPN routed interfaces.
+
+    In this this case the system will exclude interface ``eth1``, all WireGuard ``wgX`` interfaces and all OpenVPN routed interfaces.
+  
 - Modify exclusion list: ::
 
       uci delete netifyd.@netifyd[0].exclude='eth1'
