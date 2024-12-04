@@ -19,6 +19,11 @@ The NUT suite is composed of several packages, but the most important are:
 - ``nut-upsmon``: The NUT UPS monitor daemon talks to nut-server and initiates a system shutdown when the UPS battery is low.
 - ``nut-upscmd``: A command-line tool to send commands to the UPS (supported only by some UPS models).
 
+
+.. note::
+    NUT configuration is not supported on machines with a NethSecurity subscription.
+    The feature is meant to be used by advanced users and it is not covered by the support service.
+
 Configure a local UPS
 =====================
 
