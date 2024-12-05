@@ -56,6 +56,7 @@ Netify interface exclusion
 --------------------------
 
 By default, Netifyd monitors all interfaces. To exclude specific interfaces, you can define an exclusion list. Below are commands to add, modify, or remove excluded interfaces.
+The exclusion list is configured using the ``ns_exclude`` option that takes a list of patterns. Each entry is a shel glob pattern.
 
 - Add interfaces to exclusion list. The system will exclude all interfaces with a name starting with the configure value: ::
 
