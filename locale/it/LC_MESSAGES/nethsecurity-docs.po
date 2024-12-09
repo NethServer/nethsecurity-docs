@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-27 15:25+0000\n"
+"POT-Creation-Date: 2024-12-09 12:01+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -3072,54 +3072,105 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-52-ge672f104"
+msgid "8-23.05.5-ns.1.3.0-104-gaf4379a6"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-52-ge672f104/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-52-ge672f104-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-104-gaf4379a6/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-104-gaf4379a6-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-52-ge672f104/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-104-gaf4379a6/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-51-g0751e338"
+msgid "8-23.05.5-ns.1.3.0-103-g758b400b"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-51-g0751e338/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-51-g0751e338-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-103-g758b400b/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-103-g758b400b-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-51-g0751e338/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-103-g758b400b/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-50-gc0b19684"
+msgid "8-23.05.5-ns.1.3.0-100-gaf3f9401"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-50-gc0b19684/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-50-gc0b19684-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-100-gaf3f9401/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-100-gaf3f9401-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-50-gc0b19684/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-100-gaf3f9401/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.3.0-99-ge514e8f9"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-99-ge514e8f9/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-99-ge514e8f9-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-99-ge514e8f9/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.3.0-96-gabfe30fb"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-96-gabfe30fb/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-96-gabfe30fb-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-96-gabfe30fb/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.3.0-95-g61b7ac4d"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-95-g61b7ac4d/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-95-g61b7ac4d-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-95-g61b7ac4d/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -14716,11 +14767,11 @@ msgid ""
 " orange."
 msgstr ""
 
-#: ../../zones_and_policies.rst:51
+#: ../../zones_and_policies.rst:52
 msgid "Guests zone (blue)"
 msgstr ""
 
-#: ../../zones_and_policies.rst:53
+#: ../../zones_and_policies.rst:54
 msgid ""
 "The Guest zone represents a network segment for guest devices, such as "
 "visitors or temporary users. This zone is typically isolated from the LAN"
@@ -14728,70 +14779,68 @@ msgid ""
 "allowed to access the WAN zone."
 msgstr ""
 
-#: ../../zones_and_policies.rst:57
+#: ../../zones_and_policies.rst:58
 msgid "To create a Guest zone, follow these steps:"
 msgstr ""
 
-#: ../../zones_and_policies.rst:59 ../../zones_and_policies.rst:76
+#: ../../zones_and_policies.rst:60 ../../zones_and_policies.rst:77
 msgid "access the ``Zones & policies`` section"
 msgstr ""
 
-#: ../../zones_and_policies.rst:60 ../../zones_and_policies.rst:77
+#: ../../zones_and_policies.rst:61 ../../zones_and_policies.rst:78
 msgid "click on the ``Add zone`` button"
 msgstr ""
 
-#: ../../zones_and_policies.rst:61
+#: ../../zones_and_policies.rst:62
 msgid ""
-"enter **guest** inside the ``Name`` field: plesase note that the name is "
-"case sensitive and must be in lowercase, in this case the zone will be "
+"enter **guest** inside the ``Name`` field, in this case the zone will be "
 "highlighted in blue"
 msgstr ""
 
-#: ../../zones_and_policies.rst:62
+#: ../../zones_and_policies.rst:63
 msgid "leave empty the ``Allow forwards to`` field"
 msgstr ""
 
-#: ../../zones_and_policies.rst:63
+#: ../../zones_and_policies.rst:64
 msgid "select ``LAN`` inside the ``Allow forwards from`` field"
 msgstr ""
 
-#: ../../zones_and_policies.rst:64 ../../zones_and_policies.rst:80
+#: ../../zones_and_policies.rst:65 ../../zones_and_policies.rst:81
 msgid "enable the ``Traffic to WAN`` option"
 msgstr ""
 
-#: ../../zones_and_policies.rst:65 ../../zones_and_policies.rst:81
+#: ../../zones_and_policies.rst:66 ../../zones_and_policies.rst:82
 msgid ""
 "select ``Drop`` for both ``Traffic to firewall`` and ``Traffic for the "
 "same zone`` fields"
 msgstr ""
 
-#: ../../zones_and_policies.rst:66 ../../zones_and_policies.rst:82
+#: ../../zones_and_policies.rst:67 ../../zones_and_policies.rst:83
 msgid "click on the ``Save`` button and apply the changes"
 msgstr ""
 
-#: ../../zones_and_policies.rst:70
+#: ../../zones_and_policies.rst:71
 msgid "DMZ zone (orange)"
 msgstr ""
 
-#: ../../zones_and_policies.rst:72
+#: ../../zones_and_policies.rst:73
 msgid ""
 "The DMZ represents a network segment for servers and services that need "
 "to be accessible from the internet but isolated from the internal "
 "network."
 msgstr ""
 
-#: ../../zones_and_policies.rst:74
+#: ../../zones_and_policies.rst:75
 msgid "To create a DMZ, follow these steps:"
 msgstr ""
 
-#: ../../zones_and_policies.rst:78
+#: ../../zones_and_policies.rst:79
 msgid ""
-"enter **dmz** inside the ``Name`` field: plesase note that the name is "
-"case sensitive and must be in lowercase, in this case the zone will be "
+"enter **dmz** inside the ``Name`` field, in this case the zone will be "
 "highlighted in orange"
 msgstr ""
 
-#: ../../zones_and_policies.rst:79
+#: ../../zones_and_policies.rst:80
 msgid ""
 "leave empty both the ``Allow forwards to`` and ``Allow forwards from`` "
 "fields"
@@ -20568,5 +20617,63 @@ msgstr ""
 #~ "authentication file, ensure it has "
 #~ "strict permissions (`600`) to protect "
 #~ "sensitive information."
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-52-ge672f104"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-52-ge672f104/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-52-ge672f104-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-52-ge672f104/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-51-g0751e338"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-51-g0751e338/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-51-g0751e338-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-51-g0751e338/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-50-gc0b19684"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-50-gc0b19684/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-50-gc0b19684-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-50-gc0b19684/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "enter **guest** inside the ``Name`` "
+#~ "field: plesase note that the name "
+#~ "is case sensitive and must be in"
+#~ " lowercase, in this case the zone "
+#~ "will be highlighted in blue"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "enter **dmz** inside the ``Name`` field:"
+#~ " plesase note that the name is "
+#~ "case sensitive and must be in "
+#~ "lowercase, in this case the zone "
+#~ "will be highlighted in orange"
 #~ msgstr ""
 
