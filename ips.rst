@@ -69,9 +69,9 @@ Set the Oinkcode
 
 If you have a Snort subscription, you can use the Oinkcode to download the rules.
 The Oinkcode is a unique code that identifies your subscription and allows you to download the rules.
-To set the Oinkcode use the `ns_oinkcode` option: ::
+To set the Oinkcode use the `oinkcode` option: ::
 
-  uci set snort.snort.ns_oinkcode=your_oinkcode
+  uci set snort.snort.oinkcode=your_oinkcode
   uci commit snort
   ns-snort-rules --download
   /etc/init.d/snort restart
