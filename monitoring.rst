@@ -25,27 +25,24 @@ unauthorized access, and security breaches are identified and mitigated promptly
 Real time monitoring stores data in RAM and resets at every machine reboot.
 
 The ``Real time monitor`` page provides a comprehensive overview of the firewall's performance and status, with detailed insights into network traffic.
-It's divided into four main sections: ``Traffic``, ``Connectivity``, ``VPN``, and ``Security``.
+It's divided into four main sections: ``Traffic``, ``Connectivity``, ``VPN``,  ``Security`` and ``Instant Traffic``.
 
 Traffic
 -------
 
-The below charts reads data from `dpireport <https://dev.nethsecurity.org/packages/ns-report/>`_ daemon and Netify stats plugin:
+The below charts reads data from `dpireport <https://dev.nethsecurity.org/packages/ns-report/>`_ daemon:
 
-- ``Total daily traffic``:  
+- ``Daily total traffic``:  
   this counter shows the total volume of data transferred through the firewall for the current day.
 
 - ``Recent traffic``:  
-  the daily traffic histogram visually represents network traffic over time, updating every 2 minutes.
+  the daily traffic histogram visually represents network traffic over time, updated every 60 minutes.
   It helps identify busy periods and analyze traffic fluctuations throughout the day.
   Sudden spikes or dips could indicate potential performance issues or security threats.
 
-Today traffic is divided into four categories, each chart display only most active items:
-
-- ``Protocol``:  
-  this chart shows the breakdown of daily traffic by protocol (e.g., HTTP, HTTPS, FTP).
-  It is useful for identifying which protocols are consuming the most bandwidth and ensuring that network resources are being used appropriately.
-  High usage of unfamiliar protocols may indicate unauthorized activities.
+- ``Local Hosts``:  
+  this chart focuses on internal (local) hosts and their traffic. It helps identify the most active devices on the network,
+  aiding in bandwidth management and detection of potential internal security risks, such as compromised devices generating unexpected traffic.
 
 - ``Applications``:  
   this chart displays traffic by application, allowing you to monitor which software or services are generating the most traffic.
@@ -56,16 +53,12 @@ Today traffic is divided into four categories, each chart display only most acti
   By analyzing this data, administrators can track interactions with specific external entities,
   helping to detect malicious external sources or unusual outbound traffic patterns.
 
-- ``Local Hosts``:  
-  this chart focuses on internal (local) hosts and their traffic.It helps identify the most active devices on the network,
-  aiding in bandwidth management and detection of potential internal security risks, such as compromised devices generating unexpected traffic.
+- ``Protocol``:  
+  this chart shows the breakdown of daily traffic by protocol (e.g., HTTP, HTTPS, FTP).
+  It is useful for identifying which protocols are consuming the most bandwidth and ensuring that network resources are being used appropriately.
+  High usage of unfamiliar protocols may indicate unauthorized activities.
 
-The instant traffic section shows data updated every 60 minutes. It's divided into three categories:
-
-- ``Local Hosts``: lists all detected local hosts and their current traffic status, ordered by traffic volume.
-- ``Applications``: lists all detected applications and their current traffic status, ordered by traffic volume.
-- ``Protocols``: lists all detected protocols and their current traffic status, ordered by traffic volume.
-
+It's possible to narrow the search for a specific host, application, or protocol by clicking on the respective label in the table below the chart.
 
 Connectivity
 ------------
@@ -190,6 +183,15 @@ Available charts are:
 - ``Most frequently blocked IP address``:  
   this char shows the IP addresses that have been blocked most frequently.
   It is useful for identifying persistent threats or attack sources that should be investigated or blacklisted.
+
+Instant Traffic
+---------------
+
+The instant traffic section shows data updated every 2 minutes. It's divided into three categories:
+
+- ``Local Hosts``: lists all detected local hosts and their current traffic status, ordered by traffic volume.
+- ``Applications``: lists all detected applications and their current traffic status, ordered by traffic volume.
+- ``Protocols``: lists all detected protocols and their current traffic status, ordered by traffic volume.
 
 Netdata
 -------
