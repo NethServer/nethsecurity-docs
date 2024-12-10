@@ -104,12 +104,16 @@ To avoid this, it is possible to disable some rules.
 A disabled rule is a rule that is not include in the Snort ruleset.
 
 To disable some rules use the ``ns_disabled_rules`` option inside UCI, under the ``snort.snort`` section.
-The option is a list of rule SIDS.
+The option is a list of entries in this format: ``<gid>,<sid>,<description>``.
+
+- ``gid``: the rule GID, it is a number and usually is always `1`
+- ``sid``: the rule SID, it is a number
+- ``description``: a description of the disabled rule, it is optional and can be omitted; the following characters are not allowed: comma, space and newlines
 
 Example, disable rules with SID 24225 and 24227: ::
     
-  uci add_list snort.snort.ns_disabled_rules=24225
-  uci add_list snort.snort.ns_disabled_rules=24227
+  uci add_list snort.snort.ns_disabled_rules=1,24225,false_positive
+  uci add_list snort.snort.ns_disabled_rules=3,24227
   uci commit snort
   /etc/init.d/snort restart
 
@@ -126,7 +130,7 @@ Each suppress rule is a comma separated list of values: ``gid,sid,direction,ip,d
 - ``sid``: the rule SID, it is a number
 - ``direction``: the direction of the rule, it can be `by_src` or `by_dst`
 - ``ip``: the IPv4 address or CIDR to suppress
-- ``description``: a description of the suppress rule, it is optional and can be omitted; it must contain no commas nor no spaces and newlines
+- ``description``: a description of the suppress rule, it is optional and can be omitted; the following characters are not allowed: comma, space and newlines
 
 Example, suppress rule 1234 for source IP 1.2.3.4 and destination IP 8.8.8.8: ::
 
