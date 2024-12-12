@@ -8,7 +8,7 @@ stealth port scans, CGI attacks, SMB probes, OS fingerprinting attempts, and muc
 
 Snort uses a list of rules that help define malicious traffic. These rules are used to detect and block attacks.
 
-Rules are divided into policies, each policy is a set of rules that are optimized for a specific use case. The policies are:
+Rules are grouped into policies, each policy is a set of rules that are optimized for a specific use case. The policies are:
 
 - **connectivity**: prioritizes performance over security, minimizing false positives and ensuring high device performance while detecting common threats.
 - **balanced**: recommended for initial deployments, balancing security and performance.
