@@ -104,6 +104,7 @@ NethSecurity administrator manual
    snmp
    custom_openvpn_tunnel
    logs
+   speedtest
 
 .. toctree::
    :maxdepth: 2
