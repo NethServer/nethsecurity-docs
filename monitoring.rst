@@ -9,23 +9,23 @@ Monitoring is essential for ensuring the firewall's optimal operation and identi
 
 NethSecurity offers two types of monitoring:
 
-- **Real time monitoring**: it leverages Netdata to provide immediate insights into the firewall's performance.
+- **Real-time monitoring**: it leverages Netdata to provide immediate insights into the firewall's performance.
   It reads data from logs and local databases, storing metrics in RAM. Note that these metrics are reset upon every reboot, ensuring that only the most current data are displayed.
 - **Historical monitoring**: for a more comprehensive view over time, historical monitoring stores data on a remote controller.
   This allows metrics to be preserved across reboots and enables centralized monitoring. Please note that this feature requires a valid subscription both on the firewall and the controller.
 
 .. _real_time_monitoring-section:
 
-Real time monitoring
+Real-time monitoring
 ====================
 
-Real time monitoring is an essential feature in modern firewall systems, allowing administrators to have instant visibility into network traffic,
+Real-time monitoring is an essential feature in modern firewall systems, allowing administrators to have instant visibility into network traffic,
 VPN connections, and security threats. In NethSecurity, real-time monitoring provides live data, ensuring that issues such as network congestion,
 unauthorized access, and security breaches are identified and mitigated promptly.
-Real time monitoring stores data in RAM and resets at every machine reboot.
+Real-time monitoring stores data in RAM and resets at every machine reboot.
 
-The ``Real time monitor`` page provides a comprehensive overview of the firewall's performance and status, with detailed insights into network traffic.
-It's divided into four main sections: ``Traffic``, ``Connectivity``, ``VPN``,  ``Security`` and ``Instant Traffic``.
+The ``Real-time monitor`` page provides a comprehensive overview of the firewall's performance and status, with detailed insights into network traffic.
+It's divided into four main sections: ``Traffic``, ``WAN uplinks``, ``VPN``,  ``Security`` and ``Real-time Traffic``.
 
 Traffic
 -------
@@ -184,10 +184,10 @@ Available charts are:
   this char shows the IP addresses that have been blocked most frequently.
   It is useful for identifying persistent threats or attack sources that should be investigated or blacklisted.
 
-Instant Traffic
+Real-time Traffic
 ---------------
 
-The instant traffic section shows data updated every 2 minutes. It's divided into three categories:
+The Real-time traffic section shows data updated every 2 minutes. It's divided into three categories:
 
 - ``Local Hosts``: lists all detected local hosts and their current traffic status, ordered by traffic volume.
 - ``Applications``: lists all detected applications and their current traffic status, ordered by traffic volume.
@@ -196,13 +196,13 @@ The instant traffic section shows data updated every 2 minutes. It's divided int
 Netdata
 -------
 
-NethSecurity uses `Netdata <https://www.netdata.cloud/>`_ as real time monitoring tool.
+NethSecurity uses `Netdata <https://www.netdata.cloud/>`_ as Real-time monitoring tool.
 Netdata is an open-source, real-time, performance monitoring and troubleshooting tool for systems and applications.
 It provides comprehensive insights into the performance and health of systems and applications through visualizations and detailed metrics.
 Netdata is designed to be lightweight, fast, and easy to use.
 
 Netdata is enabled by default on NethSecurity and it is accessible from the LAN network. To access it, go to the ``Monitoring`` page
-and click :guilabel:`Open report` button from the ``Real time report`` tab.
+and click :guilabel:`Open report` button from the ``Real-time report`` tab.
 
 Netdata metrics are saved in RAM and will be reset at very machine reboot.
 If the firewall is connected to the :ref:`remote controller <controller-section>`, metrics will be stored to the controller itself and preserved across reboots.
