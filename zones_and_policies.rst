@@ -67,8 +67,8 @@ To create a Guest zone, follow these steps:
 - click on the ``Save`` button and apply the changes
 
 .. note::
-
-  If the firewall is intended to provide ``DHCP`` and ``DNS`` services, create a firewall ``input rule`` allowing traffic on ports ``53 TCP/UDP (DNS)`` as well port ``68 UDP (DHCP)`` for the ``Guest`` zone. If these services are not required or provided by another device in this network, the corresponding ports can remain blocked.
+  If the firewall is intended to provide ``DHCP`` and ``DNS`` services, create a firewall ``input rule`` allowing traffic on ports ``53 TCP/UDP (DNS)`` as well port ``68 UDP (DHCP)`` for the ``Guest`` zone.
+  If these services are not required or provided by another device in this network, the corresponding ports can remain blocked.
 
 DMZ zone (orange)
 ^^^^^^^^^^^^^^^^^
