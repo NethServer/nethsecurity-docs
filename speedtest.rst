@@ -11,6 +11,10 @@ In NethSecurity the Speedtest tool is available as a built-in feature accessible
 Usage
 =====
 
+Since the test can be influenced by QoS settings, it is better to disable it before running the test: ::
+
+  /etc/init.d/qosify stop
+
 Speedtest automatically selects the best server based on the user's location.
 To run a speed test, simply type the following command in the terminal: ::
 
@@ -22,9 +26,12 @@ Sometimes, the server selection may not be optimal, resulting in inaccurate spee
 
 To overcome this issue, users can force the selection of the server by using the ``--force-by-latency-test`` option: ::
 
-The selection of the server can be tuned using a latency check: ::
-
   speedtest --force-by-latency-test
+
+
+Remember to re-enable QoS after running the test: ::
+
+  /etc/init.d/qosify start
   
 MultiWAN
 ========
