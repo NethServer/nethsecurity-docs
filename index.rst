@@ -104,6 +104,7 @@ NethSecurity administrator manual
    snmp
    custom_openvpn_tunnel
    logs
+   wireguard
 
 .. toctree::
    :maxdepth: 2
