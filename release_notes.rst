@@ -7,7 +7,7 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
-Major changes on 2024-18-01
+Major changes on 2024-12-18
 ===========================
 
 Image version: `8-23.05.6-ns.1.4.0`
