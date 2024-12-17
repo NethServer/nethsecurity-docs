@@ -7,6 +7,46 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2024-18-01
+===========================
+
+Image version: `8-23.05.6-ns.1.4.0`
+
+This release focuses on improved local monitoring and add some experimental features.
+
+.. rubric:: New features and improvements
+
+- The Realtime monitoring feature now allows users to filter traffic data by selecting a host and one of the following options: application,
+  remote host, or protocol
+- Realtime monitoring: added latency and drop rate charts
+- Improve Netifyd network configuration: the configuration has been updated to improve network performance by limiting the number of interfaces it inspects
+- Ensure consistent hostname logging behavior in nginx logs: the nginx logs previously included the hostname twice, causing inconsistency inside Grafana
+- MultiWAN: add routing rules for router initiated traffic
+- FlashStart configuration is now automatically disabled if there is no active subscription
+- Phonehome: collect statistics on the use of threat shield DNS
+
+.. rubric:: Experimental features
+
+The following features are experimental and must be configured from the CLI:
+
+- MAC Binding: introduced MAC binding via DHCP reservation to enhance network security by associating specific MAC addresses with designated IP addresses
+- NUT support: configure UPS devices with NUT. This is not officially supported on machines with a subscription
+- WireGuard configuration: configure WireGuard through the CLI, enabling management of multiple server instances and peers
+- Intrusion Prevention System (IPS): introduced Snort configuration via the CLI, allowing users to manage rules and policies
+
+.. rubric:: Bug fixes
+
+- Firewall rules: ipset reference not removed when modifying input rule
+- Port forward: ipset reference not removed when modifying input rule
+- Firewall objects: host set modifications not reflected in nft rules
+- OpenVPN Road Warrior: fix route issue with bond management address
+- Storage: disk was not displayed in UI after system update
+- Flashstart: fixed and issue that prevented to send the heartbeat
+- Migration: VPN accounts not visible if username contains uppercase letters
+- Dashboard: incorrect error message despite successful API response
+- Monitoring: error when OpenVPN RoadWarrior has an incomplete configuration
+- Migration: PPPoE alias import fails with invalid argument error
+
 Major changes on 2024-10-17
 ===========================
 
