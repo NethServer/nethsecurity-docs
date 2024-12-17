@@ -12,7 +12,7 @@ Major changes on 2024-18-01
 
 Image version: `8-23.05.6-ns.1.4.0`
 
-This release focuses on improved local monitoring and add some experimental features.
+This release focuses on improved local monitoring and adds some experimental features.
 
 .. rubric:: New features and improvements
 
