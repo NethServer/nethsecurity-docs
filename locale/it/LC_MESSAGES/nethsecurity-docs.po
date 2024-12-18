@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-09 12:01+0000\n"
+"POT-Creation-Date: 2024-12-18 09:41+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -114,22 +114,28 @@ msgstr ""
 msgid "After the restore the system will be rebooted."
 msgstr "Dopo il ripristino il sistema verrà riavviato."
 
-#: ../../backup.rst:35
+#: ../../backup.rst:34
+msgid ""
+"If you have installed extra packages, you can restore them by following "
+"the instructions in the :ref:`restore_extra_packages-section`."
+msgstr ""
+
+#: ../../backup.rst:37
 msgid "Automatic backup"
 msgstr "Backup automatico"
 
-#: ../../backup.rst:37 ../../controller.rst:201 ../../controller.rst:339
+#: ../../backup.rst:39 ../../controller.rst:201 ../../controller.rst:339
 #: ../../dpi_filter.rst:35 ../../monitoring.rst:229
 #: ../../threat_shield_ip.rst:44 ../../updates.rst:66
 #: ../../users_databases.rst:38
 msgid "Subscription required"
 msgstr "Abbonamento richiesto"
 
-#: ../../backup.rst:39 ../../updates.rst:68 ../../users_databases.rst:40
+#: ../../backup.rst:41 ../../updates.rst:68 ../../users_databases.rst:40
 msgid "This feature is available only if the firewall has a valid subscription."
 msgstr ""
 
-#: ../../backup.rst:41
+#: ../../backup.rst:43
 #, fuzzy
 msgid ""
 "If the machine has a valid :ref:`subscription <subscription-section>`, a "
@@ -145,7 +151,7 @@ msgstr ""
 "server remoto tramite un canale sicuro. Se il backup è crittografato, "
 "solo il backup crittografato verrà inviato al server remoto."
 
-#: ../../backup.rst:46
+#: ../../backup.rst:48
 msgid ""
 "The user can click the :guilabel:`Run backup` button: the backup will be "
 "stored on a remote server and the user will be able to download it by "
@@ -165,24 +171,24 @@ msgstr ""
 "creati. Ciò significa che le date potrebbero differire a seconda delle "
 "differenze di fuso orario."
 
-#: ../../backup.rst:53
+#: ../../backup.rst:55
 msgid "Backup customization"
 msgstr ""
 
-#: ../../backup.rst:55
+#: ../../backup.rst:57
 msgid ""
 "The backup includes all relevant configuration files. To list the files "
 "included in the backup, execute the following command: ::"
 msgstr ""
 
-#: ../../backup.rst:60
+#: ../../backup.rst:62
 msgid ""
 "The backup can be customized by adding files to the backup list. Just add"
 " a new line to the file ``/etc/sysupgrade.conf`` with the path of the "
 "file to be included in the backup."
 msgstr ""
 
-#: ../../backup.rst:63 ../../qos.rst:85
+#: ../../backup.rst:65 ../../qos.rst:85
 msgid "Example: ::"
 msgstr ""
 
@@ -3072,105 +3078,54 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-104-gaf4379a6"
+msgid "8-23.05.5-ns.1.3.0-146-ge6d4f691"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-104-gaf4379a6/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-104-gaf4379a6-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-146-ge6d4f691/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-146-ge6d4f691-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-104-gaf4379a6/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-146-ge6d4f691/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-103-g758b400b"
+msgid "8-23.05.5-ns.1.3.0-140-gc034f31f"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-103-g758b400b/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-103-g758b400b-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-140-gc034f31f/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-140-gc034f31f-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-103-g758b400b/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-140-gc034f31f/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-100-gaf3f9401"
+msgid "8-23.05.5-ns.1.3.0-136-gfcaf653d"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-100-gaf3f9401/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-100-gaf3f9401-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-136-gfcaf653d/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-136-gfcaf653d-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-100-gaf3f9401/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-99-ge514e8f9"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-99-ge514e8f9/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-99-ge514e8f9-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-99-ge514e8f9/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-96-gabfe30fb"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-96-gabfe30fb/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-96-gabfe30fb-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-96-gabfe30fb/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-95-g61b7ac4d"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-95-g61b7ac4d/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-95-g61b7ac4d-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-95-g61b7ac4d/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-136-gfcaf653d/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3383,6 +3338,37 @@ msgstr ""
 #: ../../dpi_filter.rst:53
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
+
+#: ../../dpi_filter.rst:56
+msgid "Netify interface exclusion"
+msgstr ""
+
+#: ../../dpi_filter.rst:58
+msgid ""
+"By default, Netifyd monitors all interfaces. To exclude specific "
+"interfaces, you can define an exclusion list. Below are commands to add, "
+"modify, or remove excluded interfaces. The exclusion list is configured "
+"using the ``ns_exclude`` option that takes a list of patterns. Each entry"
+" is a shel glob pattern."
+msgstr ""
+
+#: ../../dpi_filter.rst:61
+msgid ""
+"Add interfaces to exclusion list. The system will exclude the `eth1` "
+"interface and all OpenVPN and WireGuard interfaces: ::"
+msgstr ""
+
+#: ../../dpi_filter.rst:71
+msgid "Modify exclusion list: ::"
+msgstr ""
+
+#: ../../dpi_filter.rst:78
+msgid "Clear exclusion list: ::"
+msgstr ""
+
+#: ../../dpi_filter.rst:84
+msgid "Return the exclusion list: ::"
+msgstr ""
 
 #: ../../firewall_rules.rst:5
 msgid "Rules"
@@ -3912,6 +3898,16 @@ msgstr ""
 
 #: ../../hotspot.rst:79
 msgid ""
+"``Network device`` : Specify a network device to be used by the hotspot "
+"service. The device can be either physical or a VLAN; however, it is "
+"crucial that the device is not already configured. The UI will display "
+"all currently available options and the hotspot will intercept all "
+"connections on this network interface, enforcing authentication for "
+"connected clients."
+msgstr ""
+
+#: ../../hotspot.rst:82
+msgid ""
 "``Network address`` : clients will receive an IP address belonging to "
 "this network (use CIDR format). The first address of the network class is"
 " always assigned to the NethSecurity hotspot interface. The total number "
@@ -3921,20 +3917,21 @@ msgid ""
 "be sure to have an appropriate range."
 msgstr ""
 
-#: ../../hotspot.rst:84
+#: ../../hotspot.rst:87
 msgid ""
-"``DHCP range start/end`` : by default the system use the whole network "
-"range, you can specify a narrower one acting on start and end IP "
-"addresses."
+"``DHCP limit`` : by default, the system uses the entire network range. "
+"However, you can define a more specific range by adjusting the maximum "
+"number of leases. The first address of DHCP range is automatically "
+"calculated"
 msgstr ""
 
-#: ../../hotspot.rst:86
+#: ../../hotspot.rst:89
 msgid ""
 "After having fulfilled the form click :guilabel:`Save` button to register"
 " the unit."
 msgstr ""
 
-#: ../../hotspot.rst:88
+#: ../../hotspot.rst:91
 msgid ""
 "Please verify in the hotspot manager-> Units that your unit has been "
 "properly registered. Each properly registered unit must show its MAC "
@@ -3942,11 +3939,11 @@ msgid ""
 "unregister the unit and try to do the registration again."
 msgstr ""
 
-#: ../../hotspot.rst:91
+#: ../../hotspot.rst:94
 msgid "Unregister your unit"
 msgstr ""
 
-#: ../../hotspot.rst:93
+#: ../../hotspot.rst:96
 msgid ""
 "If you made some error registering your unit (es. unit was associated to "
 "a wrong hotspot instance) or you want to remove this service, do the "
@@ -3956,43 +3953,43 @@ msgid ""
 "your Nethsecurity will be freed up and you can use it for other purposes."
 msgstr ""
 
-#: ../../hotspot.rst:97
+#: ../../hotspot.rst:100
 #, fuzzy
 msgid "Change DNS settings"
 msgstr "**Impostazioni avanzate**"
 
-#: ../../hotspot.rst:99
+#: ../../hotspot.rst:102
 msgid ""
 "By default the DNS server used by the hotspot is from OpenDNS, to change "
 "the DNS settings manual configuration is required. Please follow the "
 "steps below from the terminal:"
 msgstr ""
 
-#: ../../hotspot.rst:102
+#: ../../hotspot.rst:105
 #, fuzzy
 msgid "Edit the UCI configuration file with the following commands:"
 msgstr ""
 "Nella modalità personalizzata della configurazione MultiWAN, si applicano"
 " i seguenti concetti:"
 
-#: ../../hotspot.rst:109
+#: ../../hotspot.rst:112
 msgid "Save the changes with the following command:"
 msgstr ""
 
-#: ../../hotspot.rst:115
+#: ../../hotspot.rst:118
 #, fuzzy
 msgid "Restart the dedalo service with:"
 msgstr "Poi riavvia il servizio DDNS::"
 
-#: ../../hotspot.rst:122
+#: ../../hotspot.rst:125
 msgid "Restore default DNS settings"
 msgstr ""
 
-#: ../../hotspot.rst:124
+#: ../../hotspot.rst:127
 msgid "To restore the default DNS settings, use the following commands:"
 msgstr ""
 
-#: ../../hotspot.rst:131
+#: ../../hotspot.rst:134
 msgid ""
 "Then repeat the steps 2 and 3 in the previous section to apply the "
 "changes."
@@ -4034,7 +4031,7 @@ msgstr ""
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:108
+#: ../../index.rst:112
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -4568,6 +4565,305 @@ msgid ""
 " at `GitHub <https://github.com/NethServer/nethsecurity/issues>`_."
 msgstr ""
 
+#: ../../ips.rst:3
+msgid "Intrustion Prevention System (Snort)"
+msgstr ""
+
+#: ../../ips.rst:5
+msgid ""
+"Snort 3 is an open-source network Intrusion Prevention System that is "
+"capable of performing real-time traffic analysis and packet logging on IP"
+" networks. It can perform protocol analysis, content searching/matching, "
+"and can be used to detect a variety of attacks and probes, such as buffer"
+" overflows, stealth port scans, CGI attacks, SMB probes, OS "
+"fingerprinting attempts, and much more."
+msgstr ""
+
+#: ../../ips.rst:9
+msgid ""
+"Snort uses a list of rules that help define malicious traffic. These "
+"rules are used to detect and block attacks."
+msgstr ""
+
+#: ../../ips.rst:11
+msgid ""
+"Rules are grouped into policies, each policy is a set of rules that are "
+"optimized for a specific use case. The policies are:"
+msgstr ""
+
+#: ../../ips.rst:13
+msgid ""
+"**connectivity**: prioritizes performance over security, minimizing false"
+" positives and ensuring high device performance while detecting common "
+"threats."
+msgstr ""
+
+#: ../../ips.rst:14
+msgid ""
+"**balanced**: recommended for initial deployments, balancing security and"
+" performance. and relatively high performance rate with evaluation and "
+"testing tools."
+msgstr ""
+
+#: ../../ips.rst:16
+msgid ""
+"**security**: for high-security environments with lower bandwidth and "
+"higher false positive tolerance. It provides the maximum protection while"
+" minimizing the risk of bringing the network down."
+msgstr ""
+
+#: ../../ips.rst:18
+msgid ""
+"**max-detect**: this policy is for testing environments, not optimized "
+"for performance, and not suitable for production."
+msgstr ""
+
+#: ../../ips.rst:21
+msgid "Enable and start the IPS"
+msgstr ""
+
+#: ../../ips.rst:23
+msgid ""
+"Before configuring Snort 3 you need to select a policy, then download the"
+" rules. The module supports the following rulesets:"
+msgstr ""
+
+#: ../../ips.rst:26
+msgid "Snort `Community Rules <https://www.snort.org/downloads/#rule-downloads>`_"
+msgstr ""
+
+#: ../../ips.rst:27
+msgid ""
+"Snort `Subscription Rules "
+"<https://www.snort.org/products#rule_subscriptions>`_ using the "
+":ref:`Oinkcode <oinkcode-section>`"
+msgstr ""
+
+#: ../../ips.rst:29
+msgid ""
+"Rules are automatically updated once a day, during the night. They are "
+"not part of the backup to avoid large backups and generating a new remote"
+" backup every time rules are updated."
+msgstr ""
+
+#: ../../ips.rst:32
+msgid "Enable Snort using `security` rule policy: ::"
+msgstr ""
+
+#: ../../ips.rst:39
+msgid ""
+"When enabled, the IPS will analyze all traffic that goes through the "
+"firewall, specifically the traffic that goes through the ``forward`` "
+"chain."
+msgstr ""
+
+#: ../../ips.rst:41
+msgid ""
+"In this configuration, the system will automatically identify the home "
+"network and use it as the network to protect. VPN are considered as part "
+"of the external network. If the VPN should be considered as part of the "
+"home network, set `include_vpn` to `true`."
+msgstr ""
+
+#: ../../ips.rst:45
+msgid ""
+"You can change the policy to `balanced` or `connectivity` by changing the"
+" `ns_policy` option."
+msgstr ""
+
+#: ../../ips.rst:47
+msgid "To change the policy to `balanced` and download the rules: ::"
+msgstr ""
+
+#: ../../ips.rst:54
+msgid "Enable extra alert rules"
+msgstr ""
+
+#: ../../ips.rst:56
+msgid ""
+"Rules that are not part of any policy are excluded by default. It is "
+"possible to include them as alert rules by setting the "
+"`ns_alert_excluded` option to `1`: ::"
+msgstr ""
+
+#: ../../ips.rst:63
+msgid "Traffic matching these rules will generate alerts but will not be blocked."
+msgstr ""
+
+#: ../../ips.rst:68
+msgid "Set the Oinkcode"
+msgstr ""
+
+#: ../../ips.rst:70
+msgid ""
+"If you have a Snort subscription, you can use the Oinkcode to download "
+"the rules. The Oinkcode is a unique code that identifies your "
+"subscription and allows you to download the rules. To set the Oinkcode "
+"use the `oinkcode` option: ::"
+msgstr ""
+
+#: ../../ips.rst:80
+msgid "Source and destination bypass"
+msgstr ""
+
+#: ../../ips.rst:82
+msgid ""
+"All traffic that goes through the firewall is analyzed by the IPS. To "
+"bypass the IPS for specific source or destination IP addresses, the "
+"system supports bypass rules both for IPv4 and IPv6 addresses."
+msgstr ""
+
+#: ../../ips.rst:85
+msgid "The following options are supported inside ``snort.nfq`` section:"
+msgstr ""
+
+#: ../../ips.rst:87
+msgid "``bypass_dst_v4``: bypass IPS for destination IPv4 addresses"
+msgstr ""
+
+#: ../../ips.rst:88
+msgid "``bypass_src_v4``: bypass IPS for source IPv4 addresses"
+msgstr ""
+
+#: ../../ips.rst:89
+msgid "``bypass_dst_v6``: bypass IPS for destination IPv6 addresses"
+msgstr ""
+
+#: ../../ips.rst:90
+msgid "``bypass_src_v6``: bypass IPS for source IPv6 addresses"
+msgstr ""
+
+#: ../../ips.rst:92
+msgid ""
+"Example, the traffic generated by 192.168.100.23 and 192.168.100.28 IPs "
+"will not be analyzed by Snort: ::"
+msgstr ""
+
+#: ../../ips.rst:100
+msgid "Disable rules"
+msgstr ""
+
+#: ../../ips.rst:102
+msgid ""
+"In some environments, rules can be too restrictive or generate too many "
+"false positives. To avoid this, it is possible to disable some rules. A "
+"disabled rule is a rule that is not include in the Snort ruleset."
+msgstr ""
+
+#: ../../ips.rst:106
+msgid ""
+"To disable some rules use the ``ns_disabled_rules`` option inside UCI, "
+"under the ``snort.snort`` section. The option is a list of entries in "
+"this format: ``<gid>,<sid>,<description>``."
+msgstr ""
+
+#: ../../ips.rst:109
+msgid "``gid``: the rule GID, it is a number and usually is always `1`"
+msgstr ""
+
+#: ../../ips.rst:110 ../../ips.rst:130
+msgid "``sid``: the rule SID, it is a number"
+msgstr ""
+
+#: ../../ips.rst:111
+msgid ""
+"``description``: a description of the disabled rule, it is optional and "
+"can be omitted; the following characters are not allowed: comma, space "
+"and newlines"
+msgstr ""
+
+#: ../../ips.rst:113
+msgid "Example, disable rules with SID 24225 and 24227: ::"
+msgstr ""
+
+#: ../../ips.rst:121
+msgid "Suppress rules"
+msgstr ""
+
+#: ../../ips.rst:123
+msgid ""
+"A suppression rule is a rule that is ignored by Snort for a specific IP "
+"address or CIDR. The rule is still evaluated for all other IP addresses."
+msgstr ""
+
+#: ../../ips.rst:126
+msgid ""
+"To add a suppress rule use the ``ns_suppress`` option inside UCI "
+"``snort.snort`` section. Each suppress rule is a comma separated list of "
+"values: ``gid,sid,direction,ip,description``:"
+msgstr ""
+
+#: ../../ips.rst:129
+msgid "``gid``: the rule GID, it is a number and usually is always ``1``"
+msgstr ""
+
+#: ../../ips.rst:131
+msgid "``direction``: the direction of the rule, it can be `by_src` or `by_dst`"
+msgstr ""
+
+#: ../../ips.rst:132
+msgid "``ip``: the IPv4 address or CIDR to suppress"
+msgstr ""
+
+#: ../../ips.rst:133
+msgid ""
+"``description``: a description of the suppress rule, it is optional and "
+"can be omitted; the following characters are not allowed: comma, space "
+"and newlines"
+msgstr ""
+
+#: ../../ips.rst:135
+msgid ""
+"Example, suppress rule 1234 for source IP 1.2.3.4 and destination IP "
+"8.8.8.8: ::"
+msgstr ""
+
+#: ../../ips.rst:143
+msgid "Alerts and logs"
+msgstr ""
+
+#: ../../ips.rst:145
+msgid ""
+"Snort generates alerts when a rule is matched, not matter if the traffic "
+"is blocked or not. The alerts are logged in the system log and can be "
+"viewed using ``less /var/log/messages``."
+msgstr ""
+
+#: ../../ips.rst:148
+#, fuzzy
+msgid "An example of an alert is: ::"
+msgstr "Esempio di log di NS8::"
+
+#: ../../ips.rst:152
+msgid ""
+"Alerts are also stored in JSON format in the ``/var/log/snort`` "
+"directory. Snort will create a file for each queue and store the alerts "
+"in the file. Example of a file name: ``1_alert_json.txt``."
+msgstr ""
+
+#: ../../ips.rst:156
+msgid "To inspect the file use: ::"
+msgstr ""
+
+#: ../../ips.rst:160
+msgid "To get a report about what has been blocked or alerted, use: ::"
+msgstr ""
+
+#: ../../ips.rst:164
+msgid ""
+"Each alert is generated by a rule, the rule is identified by a GID and "
+"SID. To see more info about the rule that generated the alert, use this "
+"URL: ``https://www.snort.org/rule_docs/<GID>-<SID>``."
+msgstr ""
+
+#: ../../ips.rst:168
+msgid "Disable and stop the IPS"
+msgstr ""
+
+#: ../../ips.rst:170
+msgid "To disable Snort: ::"
+msgstr ""
+
 #: ../../ipsec_tunnels.rst:5
 msgid "IPsec tunnels"
 msgstr ""
@@ -4843,7 +5139,7 @@ msgid ""
 " configuration."
 msgstr ""
 
-#: ../../logs.rst:64
+#: ../../logs.rst:64 ../../speedtest.rst:12
 msgid "Usage"
 msgstr ""
 
@@ -6051,7 +6347,7 @@ msgid ""
 "maintaining continuous and reliable internet connectivity."
 msgstr ""
 
-#: ../../multiwan.rst:3
+#: ../../multiwan.rst:3 ../../speedtest.rst:37
 msgid "MultiWAN"
 msgstr "MultiWAN"
 
@@ -9776,7 +10072,7 @@ msgid ""
 "zero."
 msgstr ""
 
-#: ../../qos.rst:92 ../../troubleshooting.rst:5
+#: ../../qos.rst:92 ../../troubleshooting.rst:5 ../../ups.rst:236
 msgid "Troubleshooting"
 msgstr ""
 
@@ -13010,6 +13306,76 @@ msgid ""
 "access to authorized IP addresses only."
 msgstr ""
 
+#: ../../speedtest.rst:3
+msgid "Speedtest"
+msgstr ""
+
+#: ../../speedtest.rst:5
+msgid ""
+"The Speedtest tool is a widely used application for measuring the speed "
+"and performance of an internet connection. It provides users with "
+"detailed information about their download and upload speeds, as well as "
+"their ping and jitter. This tool is essential for diagnosing network "
+"issues, verifying service provider claims, and ensuring optimal "
+"performance for various online activities."
+msgstr ""
+
+#: ../../speedtest.rst:9
+msgid ""
+"In NethSecurity the Speedtest tool is available as a built-in feature "
+"accessible only from the command line."
+msgstr ""
+
+#: ../../speedtest.rst:14
+msgid ""
+"Since the test can be influenced by QoS settings, it is better to disable"
+" it before running the test: ::"
+msgstr ""
+
+#: ../../speedtest.rst:18
+msgid ""
+"Speedtest automatically selects the best server based on the user's "
+"location. To run a speed test, simply type the following command in the "
+"terminal: ::"
+msgstr ""
+
+#: ../../speedtest.rst:23
+msgid ""
+"This command will perform a full test, including latency, download, and "
+"upload speed tests. The selection of the server is based on the user's "
+"location and the server's availability. Sometimes, the server selection "
+"may not be optimal, resulting in inaccurate speed test results."
+msgstr ""
+
+#: ../../speedtest.rst:27
+msgid ""
+"To overcome this issue, users can force the selection of the server by "
+"using the ``--force-by-latency-test`` option: ::"
+msgstr ""
+
+#: ../../speedtest.rst:32
+msgid "Remember to re-enable QoS after running the test: ::"
+msgstr ""
+
+#: ../../speedtest.rst:39
+msgid ""
+"The speedtest tool randomly selects a server to perform the test. In a "
+"MultiWAN environment, the server selection can be influenced by the WAN "
+"interface used to reach the server."
+msgstr ""
+
+#: ../../speedtest.rst:42
+msgid ""
+"It is possible to force the selection of the WAN interface using mwan3 "
+"wrapper."
+msgstr ""
+
+#: ../../speedtest.rst:44
+msgid ""
+"Given a WAN device named ``wan1``, the following command will run the "
+"speedtest using the selected interface: ::"
+msgstr ""
+
 #: ../../storage.rst:5
 msgid "Storage"
 msgstr ""
@@ -14262,6 +14628,372 @@ msgid ""
 "and installed."
 msgstr ""
 
+#: ../../ups.rst:3
+msgid "UPS (NUT)"
+msgstr ""
+
+#: ../../ups.rst:5
+msgid ""
+"An Uninterruptible Power Supply (UPS) is a device that provides backup "
+"power when the main power source fails. It is used to protect hardware "
+"such as computers, telecommunication equipment, or other electrical "
+"equipment where an unexpected power outage could cause business "
+"disruption or data loss."
+msgstr ""
+
+#: ../../ups.rst:9
+msgid ""
+"The `Network UPS Tools (NUT)  <https://networkupstools.org/>`_ is a "
+"collection of programs that provide a common interface for monitoring and"
+" administering UPS hardware."
+msgstr ""
+
+#: ../../ups.rst:11
+msgid ""
+"This guide explains how to configure a USB-connected UPS with NUT on "
+"NethSecurity. At the end of the guide, the UPS should be monitored and "
+"the system should shut down when the battery is low."
+msgstr ""
+
+#: ../../ups.rst:14
+msgid ""
+"NUT is not installed by default. It is part of NethSecurity extra "
+"packages and can be installed from the command line. The NUT suite is "
+"composed of several packages, but the most important are:"
+msgstr ""
+
+#: ../../ups.rst:17
+msgid ""
+"``nut-server``: The NUT server daemon connects directly to the UPS, "
+"serving data to the client."
+msgstr ""
+
+#: ../../ups.rst:18
+msgid "``nut-upsc``: A command-line tool to query the UPS status."
+msgstr ""
+
+#: ../../ups.rst:19
+msgid ""
+"``nut-upsmon``: The NUT UPS monitor daemon talks to nut-server and "
+"initiates a system shutdown when the UPS battery is low."
+msgstr ""
+
+#: ../../ups.rst:20
+msgid ""
+"``nut-upscmd``: A command-line tool to send commands to the UPS "
+"(supported only by some UPS models)."
+msgstr ""
+
+#: ../../ups.rst:24
+msgid ""
+"NUT configuration is not supported on machines with a NethSecurity "
+"subscription. The feature is meant to be used by advanced users and it is"
+" not covered by the support service."
+msgstr ""
+
+#: ../../ups.rst:28
+msgid "Configure a local UPS"
+msgstr ""
+
+#: ../../ups.rst:30
+msgid ""
+"Before configuring the UPS, make sure the UPS is connected to the "
+"firewall (a cable usually comes with the UPS). Then, follow these steps:"
+msgstr ""
+
+#: ../../ups.rst:33
+msgid "Install NUT packages."
+msgstr ""
+
+#: ../../ups.rst:34
+msgid "Find the UPS model, then install and configure the appropriate driver."
+msgstr ""
+
+#: ../../ups.rst:35
+msgid "Configure the UPS server daemons."
+msgstr ""
+
+#: ../../ups.rst:36
+msgid "Enable the UPS monitor."
+msgstr ""
+
+#: ../../ups.rst:39
+msgid "Step 1: install the required packages"
+msgstr ""
+
+#: ../../ups.rst:41
+msgid "Install the required packages::"
+msgstr ""
+
+#: ../../ups.rst:46 ../../ups.rst:190
+msgid ""
+"These packages are not preserved during a system upgrade. For more info "
+"see :ref:`restore_extra_packages-section`."
+msgstr ""
+
+#: ../../ups.rst:49
+msgid "Step 2: setup the appropriate driver"
+msgstr ""
+
+#: ../../ups.rst:51
+msgid "Use ``lsusb`` to list USB devices::"
+msgstr ""
+
+#: ../../ups.rst:57
+msgid ""
+"In this example, the UPS is an EATON 5E model connected to the second USB"
+" port of the second USB bus."
+msgstr ""
+
+#: ../../ups.rst:59
+msgid ""
+"Select the driver from the `NUT driver page <https://networkupstools.org"
+"/stable-hcl.html>`_."
+msgstr ""
+
+#: ../../ups.rst:61
+msgid ""
+"All driver packages start with ``nut-driver-`` prefix. Some UPS models "
+"may require a specific driver, but most of them work with the ``usbhid-"
+"ups`` driver. Install the selected driver package, in this case the "
+"``usbhid-ups`` driver: ::"
+msgstr ""
+
+#: ../../ups.rst:66
+msgid ""
+"Set up the driver inside the ``upsd`` (nut-server) server. The nut-server"
+" will connect to the UPS using the driver and the port specified. It will"
+" monitor the UPS at regular intervals and provide the information to the "
+"clients like ``upsmon``. Execute: ::"
+msgstr ""
+
+#: ../../ups.rst:75
+msgid ""
+"Remember the name of the UPS, in this case ``eaton5e``, as it will be "
+"used in the next steps."
+msgstr ""
+
+#: ../../ups.rst:78
+msgid "Step 3: configure monitoring"
+msgstr ""
+
+#: ../../ups.rst:80
+msgid ""
+"The UPS monitor (upsmon) is a daemon that monitors the UPS and initiates "
+"a system shutdown when the UPS battery is low. It connects to the UPS "
+"server (upsd) and queries the UPS status."
+msgstr ""
+
+#: ../../ups.rst:83
+msgid ""
+"In this scenario the UPS monitor is running on the same machine as the "
+"UPS server, so it will connect to localhost."
+msgstr ""
+
+#: ../../ups.rst:85
+msgid ""
+"Set up the user for monitoring inside ``upsd``. Please note the password "
+"is simple because it is not sent over the network::"
+msgstr ""
+
+#: ../../ups.rst:92
+msgid "Set up the monitor::"
+msgstr ""
+
+#: ../../ups.rst:101
+#, fuzzy
+msgid "Commit and restart the services::"
+msgstr "Poi riavvia il servizio DDNS::"
+
+#: ../../ups.rst:109
+msgid "Step 4: verify the UPS status"
+msgstr ""
+
+#: ../../ups.rst:111
+msgid "Check the UPS status::"
+msgstr ""
+
+#: ../../ups.rst:115
+msgid "The output should look like this: ::"
+msgstr ""
+
+#: ../../ups.rst:124
+msgid ""
+"If the output is empty or an error is displayed, review the content of "
+"``/var/log/messages``."
+msgstr ""
+
+#: ../../ups.rst:126
+msgid "A good server log for connected UPS::"
+msgstr ""
+
+#: ../../ups.rst:130
+msgid "A good log for upsmon::"
+msgstr ""
+
+#: ../../ups.rst:134
+msgid "If an error is displayed, please see :ref:`troubleshooting_ups-section`."
+msgstr ""
+
+#: ../../ups.rst:136
+msgid ""
+"If everything is working, the UPS should be monitored and the system "
+"should shut down when the battery is in a critical state, usually below "
+"20%."
+msgstr ""
+
+#: ../../ups.rst:139
+msgid "Allow remote monitoring"
+msgstr ""
+
+#: ../../ups.rst:141
+msgid ""
+"Multiple hardware devices can be connected to an UPS and the NUT server "
+"can share the UPS status with multiple clients. So, for example, another "
+"system powered by the same UPS can inspect the UPS status by connecting "
+"to the NUT server and shutting down when the battery is low."
+msgstr ""
+
+#: ../../ups.rst:145
+msgid ""
+"By default, the NUT server is configured to listen only on localhost. To "
+"allow remote monitoring, the server must be configured to listen on a "
+"specific IP address or on all interfaces."
+msgstr ""
+
+#: ../../ups.rst:148
+msgid "Listen on all interfaces: ::"
+msgstr ""
+
+#: ../../ups.rst:153
+msgid ""
+"Add a user for remote monitoring. Please make sure to select a strong "
+"password:  ::"
+msgstr ""
+
+#: ../../ups.rst:161
+msgid "Check the status of the server::"
+msgstr ""
+
+#: ../../ups.rst:165
+msgid ""
+"Create a firewall rule to allow remote monitoring from LAN, the service "
+"listen on TCP port 3493: ::"
+msgstr ""
+
+#: ../../ups.rst:175
+msgid ""
+"You can now connect to the NUT server from a remote upsmon client. When "
+"the client is configured, it will connect to the NUT server and monitor "
+"the UPS status. If the battery is low, the client will initiate a system "
+"shutdown."
+msgstr ""
+
+#: ../../ups.rst:180
+msgid "Connect to remote NUT server"
+msgstr ""
+
+#: ../../ups.rst:182
+msgid ""
+"This is the case where a secondary firewall is connected to the same UPS "
+"and the NUT server is running on the primary firewall. The secondary "
+"firewall will connect to the primary firewall and monitor the UPS status."
+msgstr ""
+
+#: ../../ups.rst:185
+msgid "First, install the NUT services on the client machine::"
+msgstr ""
+
+#: ../../ups.rst:192
+msgid "Then, configure the client to connect to the remote server::"
+msgstr ""
+
+#: ../../ups.rst:203
+msgid "Check if the client is connected to the remote server::"
+msgstr ""
+
+#: ../../ups.rst:207
+msgid "The output should be the same as the local server."
+msgstr ""
+
+#: ../../ups.rst:209
+msgid ""
+"Now the client is connected to the remote server and will monitor the UPS"
+" status. If the battery is low, the client will initiate a system "
+"shutdown."
+msgstr ""
+
+#: ../../ups.rst:213
+#, fuzzy
+msgid "Extra UPS settings"
+msgstr "Impostazioni generali"
+
+#: ../../ups.rst:215
+msgid ""
+"Some UPS models have additional settings that can be configured using the"
+" ``upscmd`` command. To execute the command, the user must have the "
+"appropriate permissions."
+msgstr ""
+
+#: ../../ups.rst:218
+msgid "Grant permissions to the user::"
+msgstr ""
+
+#: ../../ups.rst:225
+#, fuzzy
+msgid "Check available commands::"
+msgstr "Altre azioni disponibili:"
+
+#: ../../ups.rst:229
+msgid "Example to disable the beep::"
+msgstr ""
+
+#: ../../ups.rst:238
+msgid ""
+"A common error is the permission denied when accessing the UPS device, "
+"for example you may see this error inside ``/var/log/messages``::"
+msgstr ""
+
+#: ../../ups.rst:242
+msgid ""
+"Another common error is upsd not being able to connect to the UPS, for "
+"example you may see this error inside ``/var/log/messages``::"
+msgstr ""
+
+#: ../../ups.rst:248
+msgid ""
+"Usually, this happens when nut-server connects to the UPS device before "
+"the device is ready. To fix this, the simplest solution is to reboot the "
+"firewall::"
+msgstr ""
+
+#: ../../ups.rst:253
+msgid "If you can't reboot the firewall, you can try to stop the nut-server: ::"
+msgstr ""
+
+#: ../../ups.rst:257
+msgid "Then check if the driver can connect to the UPS device: ::"
+msgstr ""
+
+#: ../../ups.rst:261
+#, fuzzy
+msgid "Expected output: ::"
+msgstr "Esempio di log di NS8::"
+
+#: ../../ups.rst:267
+msgid "In case of error, you may see something like this: ::"
+msgstr ""
+
+#: ../../ups.rst:271
+msgid "You could then try to reset the USB device: ::"
+msgstr ""
+
+#: ../../ups.rst:275
+msgid ""
+"Where ``002/003`` is the USB device ID found with ``lsusb``, ``002`` is "
+"the bus number and ``003`` is the device number."
+msgstr ""
+
 #: ../../users_databases.rst:5
 msgid "Users databases"
 msgstr ""
@@ -14601,6 +15333,365 @@ msgid ""
 "Active Directory."
 msgstr ""
 
+#: ../../wireguard.rst:3
+msgid "WireGuard VPN"
+msgstr ""
+
+#: ../../wireguard.rst:5
+msgid ""
+"WireGuard is a modern VPN (Virtual Private Network) technology that "
+"utilizes state-of-the-art cryptography. It is designed to be faster, "
+"simpler, and more functional than IPsec and OpenVPN. WireGuard is a "
+"secure, fast, and easy-to-configure VPN solution that uses cutting-edge "
+"cryptography. It is designed to be simpler to configure than OpenVPN and "
+"to offer a lower attack surface."
+msgstr ""
+
+#: ../../wireguard.rst:10
+msgid ""
+"NethSecurity provides a WireGuard server and client that can be "
+"configured from the command line interface."
+msgstr ""
+
+#: ../../wireguard.rst:12
+#, fuzzy
+msgid "Features:"
+msgstr "Funzionalità principali:"
+
+#: ../../wireguard.rst:14
+msgid "Multiple WireGuard server instances can run simultaneously"
+msgstr ""
+
+#: ../../wireguard.rst:15
+msgid "Each instance operates in its own isolated network zone"
+msgstr ""
+
+#: ../../wireguard.rst:16
+msgid "Static IP address allocation for each peer (client account)"
+msgstr ""
+
+#: ../../wireguard.rst:17
+msgid "Client configuration available as text file or QR code"
+msgstr ""
+
+#: ../../wireguard.rst:18
+msgid "Site-to-site (net2net) connections supported"
+msgstr ""
+
+#: ../../wireguard.rst:19
+msgid "Enhanced security with optional pre-shared keys"
+msgstr ""
+
+#: ../../wireguard.rst:20
+msgid "Standard WireGuard configuration file import capability"
+msgstr ""
+
+#: ../../wireguard.rst:22
+#, fuzzy
+msgid "Current limitations:"
+msgstr "Abbonamento e limitazioni"
+
+#: ../../wireguard.rst:24
+msgid "Supported networks are restricted to /24 subnet masks"
+msgstr ""
+
+#: ../../wireguard.rst:25
+msgid "Peer IP addresses are fixed and cannot be modified after creation"
+msgstr ""
+
+#: ../../wireguard.rst:26
+msgid "WireGuard interfaces appear as \"unknown interface\" in the Network page"
+msgstr ""
+
+#: ../../wireguard.rst:29
+msgid "Quickstart"
+msgstr ""
+
+#: ../../wireguard.rst:31
+#, fuzzy
+msgid "The configuration is composed by the following steps:"
+msgstr ""
+"Nella modalità personalizzata della configurazione MultiWAN, si applicano"
+" i seguenti concetti:"
+
+#: ../../wireguard.rst:33
+msgid "Get good defaults to avoid conflicts with existing configurations"
+msgstr ""
+
+#: ../../wireguard.rst:34
+msgid "Create the server instance"
+msgstr ""
+
+#: ../../wireguard.rst:35 ../../wireguard.rst:105
+msgid "Add a new account (peer)"
+msgstr ""
+
+#: ../../wireguard.rst:37
+msgid ""
+"The following examples use the ``ns.wireguard`` API to configure the "
+"WireGuard server and peers."
+msgstr ""
+
+#: ../../wireguard.rst:40
+msgid "Get good defaults"
+msgstr ""
+
+#: ../../wireguard.rst:42
+msgid ""
+"Before creating an instance, retrieve some valid defaults. Use the "
+"calculated defaults to create the instance:"
+msgstr ""
+
+#: ../../wireguard.rst:48 ../../wireguard.rst:86
+msgid "Response example:"
+msgstr ""
+
+#: ../../wireguard.rst:60
+msgid "The response contains the following fields:"
+msgstr ""
+
+#: ../../wireguard.rst:62
+msgid ""
+"``listen_port``: the port on which the WireGuard server listens for "
+"incoming connections, a firewall rule will be automatically created to "
+"accept the traffic on this port"
+msgstr ""
+
+#: ../../wireguard.rst:64
+msgid ""
+"``instance``: the name of the WireGuard server instance, this is also the"
+" name of the network interface"
+msgstr ""
+
+#: ../../wireguard.rst:65
+msgid ""
+"``network``: the network CIDR that will be used by the WireGuard server, "
+"the server will automatically get the first IP of the network"
+msgstr ""
+
+#: ../../wireguard.rst:66
+msgid "``routes``: a list of network CIDR that will be pushed to the clients"
+msgstr ""
+
+#: ../../wireguard.rst:67
+msgid ""
+"``public_endpoint``: the public IP address of the server, this is used to"
+" create the firewall rule to accept the traffic on the WireGuard port; "
+"the command will try to automatically detect the public IP address"
+msgstr ""
+
+#: ../../wireguard.rst:70
+msgid ""
+"Before creating the instance, verify that the calculated defaults are "
+"correct:"
+msgstr ""
+
+#: ../../wireguard.rst:72
+msgid ""
+"verify the public IP address, use a custom value if the automatic "
+"detection fails; a FQDN is supported too"
+msgstr ""
+
+#: ../../wireguard.rst:73
+msgid "verify the network field does not overlap with existing networks"
+msgstr ""
+
+#: ../../wireguard.rst:76
+msgid "Create an instance"
+msgstr ""
+
+#: ../../wireguard.rst:78
+msgid "Create the WireGuard server instance using the calculated defaults:"
+msgstr ""
+
+#: ../../wireguard.rst:84
+msgid ""
+"The server will automatically get the first IP of the `network`, in this "
+"case `10.98.95.1`."
+msgstr ""
+
+#: ../../wireguard.rst:92
+msgid ""
+"This is the public key of the server, it is used to create the client "
+"configuration."
+msgstr ""
+
+#: ../../wireguard.rst:94 ../../wireguard.rst:125 ../../wireguard.rst:191
+#: ../../wireguard.rst:233
+msgid "Save and apply:"
+msgstr ""
+
+#: ../../wireguard.rst:102
+msgid ""
+"You can use the same API to change the configuration of the server "
+"instance."
+msgstr ""
+
+#: ../../wireguard.rst:107
+msgid ""
+"Create a new account, ensuring the ``account`` field is unique within the"
+" same instance:"
+msgstr ""
+
+#: ../../wireguard.rst:113
+#, fuzzy
+msgid "Options:"
+msgstr "Eccezioni"
+
+#: ../../wireguard.rst:115
+msgid ""
+"``route_all_traffic``: if set to ``true``, when the client connects, it "
+"will send all the traffic to the server. This is useful for ensuring all "
+"client traffic is encrypted and routed through the VPN. This flag should "
+"be set only if the client must access the internet through the VPN."
+msgstr ""
+
+#: ../../wireguard.rst:118
+msgid ""
+"``client_to_client``: if set to ``true``, the client will be able to "
+"communicate with all other peers and not only with the server. This is "
+"useful for enabling communication between clients in a mesh network "
+"configuration."
+msgstr ""
+
+#: ../../wireguard.rst:120
+msgid ""
+"``preshared_key``: if set to ``true``, automatically create a pre-shared "
+"key that will be used in the peer downloaded configuration. This adds an "
+"additional layer of security by requiring a shared secret for "
+"communication."
+msgstr ""
+
+#: ../../wireguard.rst:122
+msgid ""
+"``ns_routes``: a list of network CIDR, automatically routes the networks "
+"to this peer; this is used for site-to-site (net2net) connections, "
+"allowing the server to access multiple remote networks through the VPN."
+msgstr ""
+
+#: ../../wireguard.rst:135
+#, fuzzy
+msgid "Download the account configuration"
+msgstr "Ripristina configurazione"
+
+#: ../../wireguard.rst:137
+msgid ""
+"The account configuration can be downloaded both in text format or a QR "
+"code and is suitable to be imported in a WireGuard client."
+msgstr ""
+
+#: ../../wireguard.rst:139
+msgid ""
+"Download the text format if you want to configure a Linux machine or "
+"another NethSecurity:"
+msgstr ""
+
+#: ../../wireguard.rst:145
+msgid "Output example: ::"
+msgstr ""
+
+#: ../../wireguard.rst:162
+msgid "Configure a mobile device"
+msgstr ""
+
+#: ../../wireguard.rst:164
+msgid ""
+"Many mobile WireGuard clients allows to import the configuration using a "
+"QR code:"
+msgstr ""
+
+#: ../../wireguard.rst:166
+msgid "`iOS <https://apps.apple.com/it/app/wireguard/id1441195209>`_"
+msgstr ""
+
+#: ../../wireguard.rst:167
+msgid ""
+"`Android "
+"<https://play.google.com/store/apps/details?id=com.wireguard.android&hl=it&pli=1>`_"
+msgstr ""
+
+#: ../../wireguard.rst:169
+msgid ""
+"Once the app is installed, open it and import the configuration using the"
+" QR code:"
+msgstr ""
+
+#: ../../wireguard.rst:176
+msgid "Import the configuration to another NethSecurity"
+msgstr ""
+
+#: ../../wireguard.rst:178
+msgid ""
+"When importing the configuration to another NethSecurity, the file must "
+"be base64 encoded. Print the configuration file in base64 to the console:"
+msgstr ""
+
+#: ../../wireguard.rst:185
+msgid "Copy the base64 string, than go the the other NethSecurity and execute:"
+msgstr ""
+
+#: ../../wireguard.rst:200
+#, fuzzy
+msgid "Remove an instance"
+msgstr "Rimuovere un'unità"
+
+#: ../../wireguard.rst:202
+#, fuzzy
+msgid "To remove an instance, use the following command:"
+msgstr ""
+"Nella modalità personalizzata della configurazione MultiWAN, si applicano"
+" i seguenti concetti:"
+
+#: ../../wireguard.rst:208
+msgid "This command will remove:"
+msgstr ""
+
+#: ../../wireguard.rst:210
+msgid "The WireGuard server instance"
+msgstr ""
+
+#: ../../wireguard.rst:211
+msgid "The firewall rules that allow traffic from the WAN"
+msgstr ""
+
+#: ../../wireguard.rst:212
+#, fuzzy
+msgid "The VPN zone"
+msgstr "data e fuso orario"
+
+#: ../../wireguard.rst:213
+msgid "All associated accounts"
+msgstr ""
+
+#: ../../wireguard.rst:215
+msgid "Save and apply the changes:"
+msgstr ""
+
+#: ../../wireguard.rst:223
+#, fuzzy
+msgid "Remove a peer"
+msgstr "Rimuovere un'unità"
+
+#: ../../wireguard.rst:225
+msgid "To remove a peer use:"
+msgstr ""
+
+#: ../../wireguard.rst:231
+msgid ""
+"The command will remove the peer and its configuration inside the users "
+"database, if present."
+msgstr ""
+
+#: ../../wireguard.rst:241
+msgid "Debug"
+msgstr ""
+
+#: ../../wireguard.rst:243
+msgid ""
+"By default, WireGuard does not log anything. To enable logging on "
+"`/var/log/messages`, use the following:"
+msgstr ""
+
 #: ../../zones_and_policies.rst:5
 msgid "Zones and policies"
 msgstr "Zone e regole"
@@ -14783,11 +15874,11 @@ msgstr ""
 msgid "To create a Guest zone, follow these steps:"
 msgstr ""
 
-#: ../../zones_and_policies.rst:60 ../../zones_and_policies.rst:77
+#: ../../zones_and_policies.rst:60 ../../zones_and_policies.rst:80
 msgid "access the ``Zones & policies`` section"
 msgstr ""
 
-#: ../../zones_and_policies.rst:61 ../../zones_and_policies.rst:78
+#: ../../zones_and_policies.rst:61 ../../zones_and_policies.rst:81
 msgid "click on the ``Add zone`` button"
 msgstr ""
 
@@ -14805,42 +15896,51 @@ msgstr ""
 msgid "select ``LAN`` inside the ``Allow forwards from`` field"
 msgstr ""
 
-#: ../../zones_and_policies.rst:65 ../../zones_and_policies.rst:81
+#: ../../zones_and_policies.rst:65 ../../zones_and_policies.rst:84
 msgid "enable the ``Traffic to WAN`` option"
 msgstr ""
 
-#: ../../zones_and_policies.rst:66 ../../zones_and_policies.rst:82
+#: ../../zones_and_policies.rst:66 ../../zones_and_policies.rst:85
 msgid ""
 "select ``Drop`` for both ``Traffic to firewall`` and ``Traffic for the "
 "same zone`` fields"
 msgstr ""
 
-#: ../../zones_and_policies.rst:67 ../../zones_and_policies.rst:83
+#: ../../zones_and_policies.rst:67 ../../zones_and_policies.rst:86
 msgid "click on the ``Save`` button and apply the changes"
 msgstr ""
 
-#: ../../zones_and_policies.rst:71
+#: ../../zones_and_policies.rst:70
+msgid ""
+"If the firewall is intended to provide ``DHCP`` and ``DNS`` services, "
+"create a firewall ``input rule`` allowing traffic on ports ``53 TCP/UDP "
+"(DNS)`` as well port ``67 UDP (DHCP)`` for the ``Guest`` zone. If these "
+"services are not required or provided by another device in this network, "
+"the corresponding ports can remain blocked."
+msgstr ""
+
+#: ../../zones_and_policies.rst:74
 msgid "DMZ zone (orange)"
 msgstr ""
 
-#: ../../zones_and_policies.rst:73
+#: ../../zones_and_policies.rst:76
 msgid ""
 "The DMZ represents a network segment for servers and services that need "
 "to be accessible from the internet but isolated from the internal "
 "network."
 msgstr ""
 
-#: ../../zones_and_policies.rst:75
+#: ../../zones_and_policies.rst:78
 msgid "To create a DMZ, follow these steps:"
 msgstr ""
 
-#: ../../zones_and_policies.rst:79
+#: ../../zones_and_policies.rst:82
 msgid ""
 "enter **dmz** inside the ``Name`` field, in this case the zone will be "
 "highlighted in orange"
 msgstr ""
 
-#: ../../zones_and_policies.rst:80
+#: ../../zones_and_policies.rst:83
 msgid ""
 "leave empty both the ``Allow forwards to`` and ``Allow forwards from`` "
 "fields"
@@ -20675,5 +21775,111 @@ msgstr ""
 #~ "case sensitive and must be in "
 #~ "lowercase, in this case the zone "
 #~ "will be highlighted in orange"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-104-gaf4379a6"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-104-gaf4379a6/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-104-gaf4379a6-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-104-gaf4379a6/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-103-g758b400b"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-103-g758b400b/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-103-g758b400b-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-103-g758b400b/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-100-gaf3f9401"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-100-gaf3f9401/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-100-gaf3f9401-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-100-gaf3f9401/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-99-ge514e8f9"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-99-ge514e8f9/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-99-ge514e8f9-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-99-ge514e8f9/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-96-gabfe30fb"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-96-gabfe30fb/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-96-gabfe30fb-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-96-gabfe30fb/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-95-g61b7ac4d"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-95-g61b7ac4d/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-95-g61b7ac4d-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-95-g61b7ac4d/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-135-ge307e56e"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-135-ge307e56e/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-135-ge307e56e-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-135-ge307e56e/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``DHCP range start/end`` : by default"
+#~ " the system use the whole network "
+#~ "range, you can specify a narrower "
+#~ "one acting on start and end IP "
+#~ "addresses."
 #~ msgstr ""
 

@@ -99,12 +99,16 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Advanced (CLI)
 
+   ips
    ddns
    smtp
    snmp
    custom_openvpn_tunnel
    logs
    mac_ip_binding
+   wireguard
+   speedtest
+   ups
 
 .. toctree::
    :maxdepth: 2
