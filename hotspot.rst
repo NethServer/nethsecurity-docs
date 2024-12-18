@@ -76,12 +76,15 @@ Register your unit
 
 ``Unit description`` : insert a brief description so that you can identify your unit more easily
 
+``Network device`` : Specify a network device to be used by the hotspot service. The device can be either physical or a VLAN; however, it is crucial that the device is not already configured. 
+The UI will display all currently available options and the hotspot will intercept all connections on this network interface, enforcing authentication for connected clients.
+
 ``Network address`` : clients will receive an IP address belonging to this network (use CIDR format).
 The first address of the network class is always assigned to the NethSecurity hotspot interface.
 The total number of clients that can be managed at the same time depends on the DHCP range you specified.
 If you need to provide hotspot service for more than 253 devices, consider using a larger netmask (/23 or /22 or even larger) and be sure to have an appropriate range.
 
-``DHCP range start/end`` : by default the system use the whole network range, you can specify a narrower one acting on start and end IP addresses.
+``DHCP limit`` : by default, the system uses the entire network range. However, you can define a more specific range by adjusting the maximum number of leases. The first address of DHCP range is automatically calculated
 
 After having fulfilled the form click :guilabel:`Save` button to register the unit.
 
