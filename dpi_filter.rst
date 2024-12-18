@@ -51,3 +51,36 @@ Enter the ``IP address`` that should be exempted from the filter.
 You can include a description explaining the reason for the exclusion.
 
 Each exception can be enabled or disabled as desired.
+
+Netify interface exclusion
+--------------------------
+
+By default, Netifyd monitors all interfaces. To exclude specific interfaces, you can define an exclusion list. Below are commands to add, modify, or remove excluded interfaces.
+The exclusion list is configured using the ``ns_exclude`` option that takes a list of patterns. Each entry is a shel glob pattern.
+
+- Add interfaces to exclusion list. The system will exclude the `eth1` interface and all OpenVPN and WireGuard interfaces: ::
+
+      uci add_list netifyd.@netifyd[0].ns_exclude='eth1'
+      uci add_list netifyd.@netifyd[0].ns_exclude='tun*'
+      uci add_list netifyd.@netifyd[0].ns_exclude='wg*'
+      uci commit netifyd
+      echo '{"changes": {"network": {}}}' | /usr/libexec/rpcd/ns.commit call commit
+
+    In this this case the system will exclude interface ``eth1``, all WireGuard ``wgX`` interfaces and all OpenVPN routed interfaces.
+  
+- Modify exclusion list: ::
+
+      uci delete netifyd.@netifyd[0].ns_exclude='eth1'
+      uci add_list netifyd.@netifyd[0].ns_exclude='eth2'
+      uci commit netifyd
+      echo '{"changes": {"network": {}}}' | /usr/libexec/rpcd/ns.commit call commit
+
+- Clear exclusion list: ::
+
+      uci delete netifyd.@netifyd[0].ns_exclude
+      uci commit netifyd
+      echo '{"changes": {"network": {}}}' | /usr/libexec/rpcd/ns.commit call commit
+
+- Return the exclusion list: ::
+
+      uci show netifyd.@netifyd[0].ns_exclude
