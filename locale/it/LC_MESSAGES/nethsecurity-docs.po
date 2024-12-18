@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 09:34+0000\n"
+"POT-Creation-Date: 2024-12-18 09:35+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -3338,6 +3338,37 @@ msgstr ""
 #: ../../dpi_filter.rst:53
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
+
+#: ../../dpi_filter.rst:56
+msgid "Netify interface exclusion"
+msgstr ""
+
+#: ../../dpi_filter.rst:58
+msgid ""
+"By default, Netifyd monitors all interfaces. To exclude specific "
+"interfaces, you can define an exclusion list. Below are commands to add, "
+"modify, or remove excluded interfaces. The exclusion list is configured "
+"using the ``ns_exclude`` option that takes a list of patterns. Each entry"
+" is a shel glob pattern."
+msgstr ""
+
+#: ../../dpi_filter.rst:61
+msgid ""
+"Add interfaces to exclusion list. The system will exclude the `eth1` "
+"interface and all OpenVPN and WireGuard interfaces: ::"
+msgstr ""
+
+#: ../../dpi_filter.rst:71
+msgid "Modify exclusion list: ::"
+msgstr ""
+
+#: ../../dpi_filter.rst:78
+msgid "Clear exclusion list: ::"
+msgstr ""
+
+#: ../../dpi_filter.rst:84
+msgid "Return the exclusion list: ::"
+msgstr ""
 
 #: ../../firewall_rules.rst:5
 msgid "Rules"
