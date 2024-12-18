@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 13:00+0000\n"
+"POT-Creation-Date: 2024-12-18 09:34+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -114,22 +114,28 @@ msgstr ""
 msgid "After the restore the system will be rebooted."
 msgstr "Dopo il ripristino il sistema verrà riavviato."
 
-#: ../../backup.rst:35
+#: ../../backup.rst:34
+msgid ""
+"If you have installed extra packages, you can restore them by following "
+"the instructions in the :ref:`restore_extra_packages-section`."
+msgstr ""
+
+#: ../../backup.rst:37
 msgid "Automatic backup"
 msgstr "Backup automatico"
 
-#: ../../backup.rst:37 ../../controller.rst:201 ../../controller.rst:339
+#: ../../backup.rst:39 ../../controller.rst:201 ../../controller.rst:339
 #: ../../dpi_filter.rst:35 ../../monitoring.rst:229
 #: ../../threat_shield_ip.rst:44 ../../updates.rst:66
 #: ../../users_databases.rst:38
 msgid "Subscription required"
 msgstr "Abbonamento richiesto"
 
-#: ../../backup.rst:39 ../../updates.rst:68 ../../users_databases.rst:40
+#: ../../backup.rst:41 ../../updates.rst:68 ../../users_databases.rst:40
 msgid "This feature is available only if the firewall has a valid subscription."
 msgstr ""
 
-#: ../../backup.rst:41
+#: ../../backup.rst:43
 #, fuzzy
 msgid ""
 "If the machine has a valid :ref:`subscription <subscription-section>`, a "
@@ -145,7 +151,7 @@ msgstr ""
 "server remoto tramite un canale sicuro. Se il backup è crittografato, "
 "solo il backup crittografato verrà inviato al server remoto."
 
-#: ../../backup.rst:46
+#: ../../backup.rst:48
 msgid ""
 "The user can click the :guilabel:`Run backup` button: the backup will be "
 "stored on a remote server and the user will be able to download it by "
@@ -165,24 +171,24 @@ msgstr ""
 "creati. Ciò significa che le date potrebbero differire a seconda delle "
 "differenze di fuso orario."
 
-#: ../../backup.rst:53
+#: ../../backup.rst:55
 msgid "Backup customization"
 msgstr ""
 
-#: ../../backup.rst:55
+#: ../../backup.rst:57
 msgid ""
 "The backup includes all relevant configuration files. To list the files "
 "included in the backup, execute the following command: ::"
 msgstr ""
 
-#: ../../backup.rst:60
+#: ../../backup.rst:62
 msgid ""
 "The backup can be customized by adding files to the backup list. Just add"
 " a new line to the file ``/etc/sysupgrade.conf`` with the path of the "
 "file to be included in the backup."
 msgstr ""
 
-#: ../../backup.rst:63 ../../qos.rst:85
+#: ../../backup.rst:65 ../../qos.rst:85
 msgid "Example: ::"
 msgstr ""
 
@@ -3072,6 +3078,23 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.3.0-146-ge6d4f691"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-146-ge6d4f691/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-146-ge6d4f691-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-146-ge6d4f691/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
 msgid "8-23.05.5-ns.1.3.0-140-gc034f31f"
 msgstr ""
 
@@ -3103,23 +3126,6 @@ msgstr ""
 msgid ""
 "`sha256sum "
 "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-136-gfcaf653d/targets/x86/64/sha256sums>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid "8-23.05.5-ns.1.3.0-135-ge307e56e"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`image "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-135-ge307e56e/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-135-ge307e56e-x86-64"
-"-generic-squashfs-combined-efi.img.gz>`__"
-msgstr ""
-
-#: ../../dev.csv:1
-msgid ""
-"`sha256sum "
-"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-135-ge307e56e/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3983,7 +3989,7 @@ msgstr ""
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:108
+#: ../../index.rst:109
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -9725,7 +9731,7 @@ msgid ""
 "zero."
 msgstr ""
 
-#: ../../qos.rst:92 ../../troubleshooting.rst:5
+#: ../../qos.rst:92 ../../troubleshooting.rst:5 ../../ups.rst:236
 msgid "Troubleshooting"
 msgstr ""
 
@@ -14209,6 +14215,372 @@ msgid ""
 "``System`` menu, by enabling the ``Automatic updates`` option. Updates "
 "are checked daily and, if available, they are automatically downloaded "
 "and installed."
+msgstr ""
+
+#: ../../ups.rst:3
+msgid "UPS (NUT)"
+msgstr ""
+
+#: ../../ups.rst:5
+msgid ""
+"An Uninterruptible Power Supply (UPS) is a device that provides backup "
+"power when the main power source fails. It is used to protect hardware "
+"such as computers, telecommunication equipment, or other electrical "
+"equipment where an unexpected power outage could cause business "
+"disruption or data loss."
+msgstr ""
+
+#: ../../ups.rst:9
+msgid ""
+"The `Network UPS Tools (NUT)  <https://networkupstools.org/>`_ is a "
+"collection of programs that provide a common interface for monitoring and"
+" administering UPS hardware."
+msgstr ""
+
+#: ../../ups.rst:11
+msgid ""
+"This guide explains how to configure a USB-connected UPS with NUT on "
+"NethSecurity. At the end of the guide, the UPS should be monitored and "
+"the system should shut down when the battery is low."
+msgstr ""
+
+#: ../../ups.rst:14
+msgid ""
+"NUT is not installed by default. It is part of NethSecurity extra "
+"packages and can be installed from the command line. The NUT suite is "
+"composed of several packages, but the most important are:"
+msgstr ""
+
+#: ../../ups.rst:17
+msgid ""
+"``nut-server``: The NUT server daemon connects directly to the UPS, "
+"serving data to the client."
+msgstr ""
+
+#: ../../ups.rst:18
+msgid "``nut-upsc``: A command-line tool to query the UPS status."
+msgstr ""
+
+#: ../../ups.rst:19
+msgid ""
+"``nut-upsmon``: The NUT UPS monitor daemon talks to nut-server and "
+"initiates a system shutdown when the UPS battery is low."
+msgstr ""
+
+#: ../../ups.rst:20
+msgid ""
+"``nut-upscmd``: A command-line tool to send commands to the UPS "
+"(supported only by some UPS models)."
+msgstr ""
+
+#: ../../ups.rst:24
+msgid ""
+"NUT configuration is not supported on machines with a NethSecurity "
+"subscription. The feature is meant to be used by advanced users and it is"
+" not covered by the support service."
+msgstr ""
+
+#: ../../ups.rst:28
+msgid "Configure a local UPS"
+msgstr ""
+
+#: ../../ups.rst:30
+msgid ""
+"Before configuring the UPS, make sure the UPS is connected to the "
+"firewall (a cable usually comes with the UPS). Then, follow these steps:"
+msgstr ""
+
+#: ../../ups.rst:33
+msgid "Install NUT packages."
+msgstr ""
+
+#: ../../ups.rst:34
+msgid "Find the UPS model, then install and configure the appropriate driver."
+msgstr ""
+
+#: ../../ups.rst:35
+msgid "Configure the UPS server daemons."
+msgstr ""
+
+#: ../../ups.rst:36
+msgid "Enable the UPS monitor."
+msgstr ""
+
+#: ../../ups.rst:39
+msgid "Step 1: install the required packages"
+msgstr ""
+
+#: ../../ups.rst:41
+msgid "Install the required packages::"
+msgstr ""
+
+#: ../../ups.rst:46 ../../ups.rst:190
+msgid ""
+"These packages are not preserved during a system upgrade. For more info "
+"see :ref:`restore_extra_packages-section`."
+msgstr ""
+
+#: ../../ups.rst:49
+msgid "Step 2: setup the appropriate driver"
+msgstr ""
+
+#: ../../ups.rst:51
+msgid "Use ``lsusb`` to list USB devices::"
+msgstr ""
+
+#: ../../ups.rst:57
+msgid ""
+"In this example, the UPS is an EATON 5E model connected to the second USB"
+" port of the second USB bus."
+msgstr ""
+
+#: ../../ups.rst:59
+msgid ""
+"Select the driver from the `NUT driver page <https://networkupstools.org"
+"/stable-hcl.html>`_."
+msgstr ""
+
+#: ../../ups.rst:61
+msgid ""
+"All driver packages start with ``nut-driver-`` prefix. Some UPS models "
+"may require a specific driver, but most of them work with the ``usbhid-"
+"ups`` driver. Install the selected driver package, in this case the "
+"``usbhid-ups`` driver: ::"
+msgstr ""
+
+#: ../../ups.rst:66
+msgid ""
+"Set up the driver inside the ``upsd`` (nut-server) server. The nut-server"
+" will connect to the UPS using the driver and the port specified. It will"
+" monitor the UPS at regular intervals and provide the information to the "
+"clients like ``upsmon``. Execute: ::"
+msgstr ""
+
+#: ../../ups.rst:75
+msgid ""
+"Remember the name of the UPS, in this case ``eaton5e``, as it will be "
+"used in the next steps."
+msgstr ""
+
+#: ../../ups.rst:78
+msgid "Step 3: configure monitoring"
+msgstr ""
+
+#: ../../ups.rst:80
+msgid ""
+"The UPS monitor (upsmon) is a daemon that monitors the UPS and initiates "
+"a system shutdown when the UPS battery is low. It connects to the UPS "
+"server (upsd) and queries the UPS status."
+msgstr ""
+
+#: ../../ups.rst:83
+msgid ""
+"In this scenario the UPS monitor is running on the same machine as the "
+"UPS server, so it will connect to localhost."
+msgstr ""
+
+#: ../../ups.rst:85
+msgid ""
+"Set up the user for monitoring inside ``upsd``. Please note the password "
+"is simple because it is not sent over the network::"
+msgstr ""
+
+#: ../../ups.rst:92
+msgid "Set up the monitor::"
+msgstr ""
+
+#: ../../ups.rst:101
+#, fuzzy
+msgid "Commit and restart the services::"
+msgstr "Poi riavvia il servizio DDNS::"
+
+#: ../../ups.rst:109
+msgid "Step 4: verify the UPS status"
+msgstr ""
+
+#: ../../ups.rst:111
+msgid "Check the UPS status::"
+msgstr ""
+
+#: ../../ups.rst:115
+msgid "The output should look like this: ::"
+msgstr ""
+
+#: ../../ups.rst:124
+msgid ""
+"If the output is empty or an error is displayed, review the content of "
+"``/var/log/messages``."
+msgstr ""
+
+#: ../../ups.rst:126
+msgid "A good server log for connected UPS::"
+msgstr ""
+
+#: ../../ups.rst:130
+msgid "A good log for upsmon::"
+msgstr ""
+
+#: ../../ups.rst:134
+msgid "If an error is displayed, please see :ref:`troubleshooting_ups-section`."
+msgstr ""
+
+#: ../../ups.rst:136
+msgid ""
+"If everything is working, the UPS should be monitored and the system "
+"should shut down when the battery is in a critical state, usually below "
+"20%."
+msgstr ""
+
+#: ../../ups.rst:139
+msgid "Allow remote monitoring"
+msgstr ""
+
+#: ../../ups.rst:141
+msgid ""
+"Multiple hardware devices can be connected to an UPS and the NUT server "
+"can share the UPS status with multiple clients. So, for example, another "
+"system powered by the same UPS can inspect the UPS status by connecting "
+"to the NUT server and shutting down when the battery is low."
+msgstr ""
+
+#: ../../ups.rst:145
+msgid ""
+"By default, the NUT server is configured to listen only on localhost. To "
+"allow remote monitoring, the server must be configured to listen on a "
+"specific IP address or on all interfaces."
+msgstr ""
+
+#: ../../ups.rst:148
+msgid "Listen on all interfaces: ::"
+msgstr ""
+
+#: ../../ups.rst:153
+msgid ""
+"Add a user for remote monitoring. Please make sure to select a strong "
+"password:  ::"
+msgstr ""
+
+#: ../../ups.rst:161
+msgid "Check the status of the server::"
+msgstr ""
+
+#: ../../ups.rst:165
+msgid ""
+"Create a firewall rule to allow remote monitoring from LAN, the service "
+"listen on TCP port 3493: ::"
+msgstr ""
+
+#: ../../ups.rst:175
+msgid ""
+"You can now connect to the NUT server from a remote upsmon client. When "
+"the client is configured, it will connect to the NUT server and monitor "
+"the UPS status. If the battery is low, the client will initiate a system "
+"shutdown."
+msgstr ""
+
+#: ../../ups.rst:180
+msgid "Connect to remote NUT server"
+msgstr ""
+
+#: ../../ups.rst:182
+msgid ""
+"This is the case where a secondary firewall is connected to the same UPS "
+"and the NUT server is running on the primary firewall. The secondary "
+"firewall will connect to the primary firewall and monitor the UPS status."
+msgstr ""
+
+#: ../../ups.rst:185
+msgid "First, install the NUT services on the client machine::"
+msgstr ""
+
+#: ../../ups.rst:192
+msgid "Then, configure the client to connect to the remote server::"
+msgstr ""
+
+#: ../../ups.rst:203
+msgid "Check if the client is connected to the remote server::"
+msgstr ""
+
+#: ../../ups.rst:207
+msgid "The output should be the same as the local server."
+msgstr ""
+
+#: ../../ups.rst:209
+msgid ""
+"Now the client is connected to the remote server and will monitor the UPS"
+" status. If the battery is low, the client will initiate a system "
+"shutdown."
+msgstr ""
+
+#: ../../ups.rst:213
+#, fuzzy
+msgid "Extra UPS settings"
+msgstr "Impostazioni generali"
+
+#: ../../ups.rst:215
+msgid ""
+"Some UPS models have additional settings that can be configured using the"
+" ``upscmd`` command. To execute the command, the user must have the "
+"appropriate permissions."
+msgstr ""
+
+#: ../../ups.rst:218
+msgid "Grant permissions to the user::"
+msgstr ""
+
+#: ../../ups.rst:225
+#, fuzzy
+msgid "Check available commands::"
+msgstr "Altre azioni disponibili:"
+
+#: ../../ups.rst:229
+msgid "Example to disable the beep::"
+msgstr ""
+
+#: ../../ups.rst:238
+msgid ""
+"A common error is the permission denied when accessing the UPS device, "
+"for example you may see this error inside ``/var/log/messages``::"
+msgstr ""
+
+#: ../../ups.rst:242
+msgid ""
+"Another common error is upsd not being able to connect to the UPS, for "
+"example you may see this error inside ``/var/log/messages``::"
+msgstr ""
+
+#: ../../ups.rst:248
+msgid ""
+"Usually, this happens when nut-server connects to the UPS device before "
+"the device is ready. To fix this, the simplest solution is to reboot the "
+"firewall::"
+msgstr ""
+
+#: ../../ups.rst:253
+msgid "If you can't reboot the firewall, you can try to stop the nut-server: ::"
+msgstr ""
+
+#: ../../ups.rst:257
+msgid "Then check if the driver can connect to the UPS device: ::"
+msgstr ""
+
+#: ../../ups.rst:261
+#, fuzzy
+msgid "Expected output: ::"
+msgstr "Esempio di log di NS8::"
+
+#: ../../ups.rst:267
+msgid "In case of error, you may see something like this: ::"
+msgstr ""
+
+#: ../../ups.rst:271
+msgid "You could then try to reset the USB device: ::"
+msgstr ""
+
+#: ../../ups.rst:275
+msgid ""
+"Where ``002/003`` is the USB device ID found with ``lsusb``, ``002`` is "
+"the bus number and ``003`` is the device number."
 msgstr ""
 
 #: ../../users_databases.rst:5
@@ -20717,5 +21089,19 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-95-g61b7ac4d/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-23.05.5-ns.1.3.0-135-ge307e56e"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`image "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-135-ge307e56e/targets/x86/64/nethsecurity-8-23.05.5-ns.1.3.0-135-ge307e56e-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`sha256sum "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.3.0-135-ge307e56e/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
