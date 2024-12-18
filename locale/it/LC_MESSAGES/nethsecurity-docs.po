@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 09:41+0000\n"
+"POT-Creation-Date: 2024-12-18 09:44+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -125,7 +125,7 @@ msgid "Automatic backup"
 msgstr "Backup automatico"
 
 #: ../../backup.rst:39 ../../controller.rst:201 ../../controller.rst:339
-#: ../../dpi_filter.rst:35 ../../monitoring.rst:229
+#: ../../dpi_filter.rst:35 ../../monitoring.rst:231
 #: ../../threat_shield_ip.rst:44 ../../updates.rst:66
 #: ../../users_databases.rst:38
 msgid "Subscription required"
@@ -1344,7 +1344,7 @@ msgstr ""
 msgid "Timescale metrics"
 msgstr ""
 
-#: ../../controller.rst:203 ../../monitoring.rst:231
+#: ../../controller.rst:203 ../../monitoring.rst:233
 #, fuzzy
 msgid ""
 "This feature is available only if the firewall and the controller have a "
@@ -2989,6 +2989,23 @@ msgid "Hash"
 msgstr ""
 
 #: ../../stable.csv:1
+msgid "8-23.05.5-ns.1.4.0"
+msgstr ""
+
+#: ../../stable.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.5-ns.1.4.0/targets/x86/64/nethsecurity-8-23.05.5-ns.1.4.0-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../stable.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.5-ns.1.4.0/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../stable.csv:1
 msgid "8-23.05.5-ns.1.3.0"
 msgstr ""
 
@@ -4015,11 +4032,11 @@ msgstr ""
 msgid "Users and objects"
 msgstr ""
 
-#: ../../index.rst:72 ../../monitoring.rst:147
+#: ../../index.rst:72 ../../monitoring.rst:140
 msgid "Security"
 msgstr ""
 
-#: ../../index.rst:83 ../../monitoring.rst:101
+#: ../../index.rst:83 ../../monitoring.rst:94
 msgid "VPN"
 msgstr ""
 
@@ -4031,7 +4048,7 @@ msgstr ""
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:112
+#: ../../index.rst:113
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -5179,6 +5196,140 @@ msgid ""
 "configuration file ``/etc/rsyslog.conf``."
 msgstr ""
 
+#: ../../mac_ip_binding.rst:5
+msgid "MAC-IP Binding"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:7
+msgid ""
+"MAC-IP binding is a security feature that allows the firewall to enforce "
+"strict control over which devices can communicate on the network. By "
+"associating a specific IP address with a specific MAC address, the "
+"firewall can ensure that only known devices are allowed to send and "
+"receive traffic. This helps to prevent unauthorized devices from "
+"accessing the network and can be particularly useful in environments "
+"where security is a high priority."
+msgstr ""
+
+#: ../../mac_ip_binding.rst:11
+msgid ""
+"The firewall can use the list of DHCP reservations to strictly check all "
+"traffic generated from hosts inside local networks. DHCP server could be "
+"disabled but the administrator must still create reservations to "
+"associate the IP with a MAC address. See :ref:`static_leases-section` for"
+" more details."
+msgstr ""
+
+#: ../../mac_ip_binding.rst:16
+msgid "Enable MAC-IP binding"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:18
+msgid ""
+"Once configured a DHCP server through the UI, you can create bindings for"
+" the interface by setting a `ns_binding` option in the DHCP server "
+"configuration. The IP/MAC bindings will be created based on the static "
+"leases defined in the configuration."
+msgstr ""
+
+#: ../../mac_ip_binding.rst:22
+msgid ""
+"For instance, if the DHCP server is named ``lan``, to add the necessary "
+"rules for the interface you must:"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:30
+msgid ""
+"This will create the necessary rules to enable `soft` binding mode for "
+"the `lan` interface. From now on, the IP/MAC bindings will be "
+"automatically generated and updated whenever the dhcp configuration is "
+"changed."
+msgstr ""
+
+#: ../../mac_ip_binding.rst:34
+msgid "Binding mode"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:36
+msgid ""
+"When IP/MAC binding is enabled, the administrator will choose what policy"
+" will be applied to hosts without a DHCP reservation. There are two "
+"modes:"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:39
+msgid ""
+"The `soft` mode will allow hosts without a reservation to access the "
+"firewall and the external network, but it will block the traffic if the "
+"IP/MAC in the static leases mismatch."
+msgstr ""
+
+#: ../../mac_ip_binding.rst:40
+msgid ""
+"The `hard` mode will block all traffic from hosts without a reservation, "
+"please note that DHCP traffic will be allowed to reach the server. In "
+"this case, hosts without a reservation will not be able to access the "
+"firewall nor the external network."
+msgstr ""
+
+#: ../../mac_ip_binding.rst:45
+msgid ""
+"When using the `hard` mode, remember to create at least one DHCP "
+"reservation before enabling the IP/MAC binding mode, otherwise, no hosts "
+"will be able to manage the server using the web interface or SSH."
+msgstr ""
+
+#: ../../mac_ip_binding.rst:49
+msgid "The `ns_binding` option can take the following values:"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:54
+msgid "Binding value"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:55
+#, fuzzy
+msgid "Description"
+msgstr "Subscription"
+
+#: ../../mac_ip_binding.rst:56
+msgid "`0`"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:57
+msgid "Disables the binding"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:58
+msgid "`1`"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:59
+msgid ""
+"Enables the soft binding, enforces the block only if the IP/MAC in the "
+"static leases mismatch"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:60
+msgid "`2`"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:61
+msgid ""
+"Enables the hard binding, enforces block if the client is not registered "
+"in the static leases"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:65
+msgid "Disable MAC-IP binding"
+msgstr ""
+
+#: ../../mac_ip_binding.rst:67
+msgid ""
+"To disable the binding, you can either remove the ``ns_binding`` option "
+"or set it to ``0``:"
+msgstr ""
+
 #: ../../migration.rst:5
 msgid "NethServer 7 migration"
 msgstr "Migrazione da NethServer 7"
@@ -5818,7 +5969,7 @@ msgstr ""
 
 #: ../../monitoring.rst:12
 msgid ""
-"**Real time monitoring**: it leverages Netdata to provide immediate "
+"**Real-time monitoring**: it leverages Netdata to provide immediate "
 "insights into the firewall's performance. It reads data from logs and "
 "local databases, storing metrics in RAM. Note that these metrics are "
 "reset upon every reboot, ensuring that only the most current data are "
@@ -5835,26 +5986,27 @@ msgid ""
 msgstr ""
 
 #: ../../monitoring.rst:20
-msgid "Real time monitoring"
-msgstr ""
+#, fuzzy
+msgid "Real-time monitoring"
+msgstr "Monitoraggio UPS (NUT)"
 
 #: ../../monitoring.rst:22
 msgid ""
-"Real time monitoring is an essential feature in modern firewall systems, "
+"Real-time monitoring is an essential feature in modern firewall systems, "
 "allowing administrators to have instant visibility into network traffic, "
 "VPN connections, and security threats. In NethSecurity, real-time "
 "monitoring provides live data, ensuring that issues such as network "
 "congestion, unauthorized access, and security breaches are identified and"
-" mitigated promptly. Real time monitoring stores data in RAM and resets "
+" mitigated promptly. Real-time monitoring stores data in RAM and resets "
 "at every machine reboot."
 msgstr ""
 
 #: ../../monitoring.rst:27
 msgid ""
-"The ``Real time monitor`` page provides a comprehensive overview of the "
+"The ``Real-time monitor`` page provides a comprehensive overview of the "
 "firewall's performance and status, with detailed insights into network "
-"traffic. It's divided into four main sections: ``Traffic``, "
-"``Connectivity``, ``VPN``, and ``Security``."
+"traffic. It's divided into four main sections: ``Traffic``, ``WAN "
+"uplinks``, ``VPN``,  ``Security`` and ``Real-time Traffic``."
 msgstr ""
 
 #: ../../monitoring.rst:31
@@ -5865,20 +6017,19 @@ msgstr "Traffico negato:"
 #: ../../monitoring.rst:33
 msgid ""
 "The below charts reads data from `dpireport "
-"<https://dev.nethsecurity.org/packages/ns-report/>`_ daemon and Netify "
-"stats plugin:"
+"<https://dev.nethsecurity.org/packages/ns-report/>`_ daemon:"
 msgstr ""
 
 #: ../../monitoring.rst:35
 msgid ""
-"``Total daily traffic``: this counter shows the total volume of data "
+"``Daily total traffic``: this counter shows the total volume of data "
 "transferred through the firewall for the current day."
 msgstr ""
 
 #: ../../monitoring.rst:38
 msgid ""
 "``Recent traffic``: the daily traffic histogram visually represents "
-"network traffic over time, updating every 2 minutes. It helps identify "
+"network traffic over time, updated every 60 minutes. It helps identify "
 "busy periods and analyze traffic fluctuations throughout the day. Sudden "
 "spikes or dips could indicate potential performance issues or security "
 "threats."
@@ -5886,20 +6037,13 @@ msgstr ""
 
 #: ../../monitoring.rst:43
 msgid ""
-"Today traffic is divided into four categories, each chart display only "
-"most active items:"
+"``Local Hosts``: this chart focuses on internal (local) hosts and their "
+"traffic. It helps identify the most active devices on the network, aiding"
+" in bandwidth management and detection of potential internal security "
+"risks, such as compromised devices generating unexpected traffic."
 msgstr ""
 
-#: ../../monitoring.rst:45
-msgid ""
-"``Protocol``: this chart shows the breakdown of daily traffic by protocol"
-" (e.g., HTTP, HTTPS, FTP). It is useful for identifying which protocols "
-"are consuming the most bandwidth and ensuring that network resources are "
-"being used appropriately. High usage of unfamiliar protocols may indicate"
-" unauthorized activities."
-msgstr ""
-
-#: ../../monitoring.rst:50
+#: ../../monitoring.rst:47
 msgid ""
 "``Applications``: this chart displays traffic by application, allowing "
 "you to monitor which software or services are generating the most "
@@ -5907,7 +6051,7 @@ msgid ""
 "bandwidth hogs, and monitoring compliance with usage policies."
 msgstr ""
 
-#: ../../monitoring.rst:54
+#: ../../monitoring.rst:51
 msgid ""
 "``Remote Hosts``: this chart lists the external (remote) hosts that have "
 "exchanged the most data with the network. By analyzing this data, "
@@ -5916,54 +6060,38 @@ msgid ""
 "patterns."
 msgstr ""
 
-#: ../../monitoring.rst:59
+#: ../../monitoring.rst:56
 msgid ""
-"``Local Hosts``: this chart focuses on internal (local) hosts and their "
-"traffic.It helps identify the most active devices on the network, aiding "
-"in bandwidth management and detection of potential internal security "
-"risks, such as compromised devices generating unexpected traffic."
+"``Protocol``: this chart shows the breakdown of daily traffic by protocol"
+" (e.g., HTTP, HTTPS, FTP). It is useful for identifying which protocols "
+"are consuming the most bandwidth and ensuring that network resources are "
+"being used appropriately. High usage of unfamiliar protocols may indicate"
+" unauthorized activities."
 msgstr ""
 
-#: ../../monitoring.rst:63
+#: ../../monitoring.rst:61
 msgid ""
-"The instant traffic section shows data updated every 60 minutes. It's "
-"divided into three categories:"
+"It's possible to narrow the search for a specific host, application, or "
+"protocol by clicking on the respective label in the table below the "
+"chart."
 msgstr ""
 
-#: ../../monitoring.rst:65
-msgid ""
-"``Local Hosts``: lists all detected local hosts and their current traffic"
-" status, ordered by traffic volume."
-msgstr ""
-
-#: ../../monitoring.rst:66
-msgid ""
-"``Applications``: lists all detected applications and their current "
-"traffic status, ordered by traffic volume."
-msgstr ""
-
-#: ../../monitoring.rst:67
-msgid ""
-"``Protocols``: lists all detected protocols and their current traffic "
-"status, ordered by traffic volume."
-msgstr ""
-
-#: ../../monitoring.rst:71
+#: ../../monitoring.rst:64
 #, fuzzy
 msgid "Connectivity"
 msgstr "Eccezioni"
 
-#: ../../monitoring.rst:73
+#: ../../monitoring.rst:66
 msgid ""
 "The connectivity section provides an overview of WAN connections, "
 "including status, bandwidth allocation, and traffic data."
 msgstr ""
 
-#: ../../monitoring.rst:75
+#: ../../monitoring.rst:68
 msgid "This page shows the following information:"
 msgstr ""
 
-#: ../../monitoring.rst:77
+#: ../../monitoring.rst:70
 msgid ""
 "``WANs``: list of the WAN connections with their current status (UP/DOWN)"
 " and public IP address. The status information helps ensure that critical"
@@ -5971,7 +6099,7 @@ msgid ""
 "addressed. Data are sourced from the firewall mwan3 status."
 msgstr ""
 
-#: ../../monitoring.rst:81
+#: ../../monitoring.rst:74
 msgid ""
 "``WAN events``: this section lists recent WAN connection and "
 "disconnection events from the last 24 hours, providing insight into "
@@ -5982,7 +6110,7 @@ msgid ""
 "incomplete. The results are cached for 5 minutes."
 msgstr ""
 
-#: ../../monitoring.rst:88
+#: ../../monitoring.rst:81
 msgid ""
 "``WAN interface traffic``: this histogram shows the traffic data for each"
 " WAN connection over the past 60 minutes, sourced from Netdata. It helps "
@@ -5990,7 +6118,7 @@ msgid ""
 "balancing or WAN link saturation."
 msgstr ""
 
-#: ../../monitoring.rst:92
+#: ../../monitoring.rst:85
 msgid ""
 "``Latency to <address>``: this section provides real-time latency data "
 "for a specific IP address configured inside the :ref:`ping_latency-"
@@ -5998,7 +6126,7 @@ msgid ""
 "identify potential connectivity issues."
 msgstr ""
 
-#: ../../monitoring.rst:96
+#: ../../monitoring.rst:89
 #, python-format
 msgid ""
 "``Packet delivery rate to <address>``: this section provides real-time "
@@ -6007,26 +6135,26 @@ msgid ""
 "indicate network congestion or connectivity issues."
 msgstr ""
 
-#: ../../monitoring.rst:103
+#: ../../monitoring.rst:96
 msgid ""
 "The VPN section provides detailed insights into OpenVPN Road Warrior "
 "servers, OpenVPN tunnels and IPsec tunnels."
 msgstr ""
 
-#: ../../monitoring.rst:105
+#: ../../monitoring.rst:98
 msgid ""
 "For each OpenVPN Road Warrior server, the following information is "
 "displayed:"
 msgstr ""
 
-#: ../../monitoring.rst:107
+#: ../../monitoring.rst:100
 msgid ""
 "``Status``: this section shows the current status of the OpenVPN server. "
 "It helps administrators monitor the availability of the VPN service and "
 "detect any issues that may impact user connectivity."
 msgstr ""
 
-#: ../../monitoring.rst:111
+#: ../../monitoring.rst:104
 msgid ""
 "``Connected clients``: this displays the total number of users currently "
 "registered on the VPN server. Monitoring registered users is crucial for "
@@ -6034,7 +6162,7 @@ msgid ""
 "system approaches maximum usage."
 msgstr ""
 
-#: ../../monitoring.rst:115
+#: ../../monitoring.rst:108
 msgid ""
 "``Total traffic by hour``: this graph shows the total data transferred by"
 " all VPN clients during each hour, providing an overview of VPN bandwidth"
@@ -6043,7 +6171,7 @@ msgid ""
 "issues."
 msgstr ""
 
-#: ../../monitoring.rst:119
+#: ../../monitoring.rst:112
 msgid ""
 "``Daily connections``: this section lists all currently connected VPN "
 "users and the time they connected. It is useful for tracking session "
@@ -6052,7 +6180,7 @@ msgid ""
 "database."
 msgstr ""
 
-#: ../../monitoring.rst:124
+#: ../../monitoring.rst:117
 msgid ""
 "``Connected clients by hour``: this chart displays the number of clients "
 "connected to the VPN over time. It allows administrators to monitor VPN "
@@ -6061,7 +6189,7 @@ msgid ""
 "connection database."
 msgstr ""
 
-#: ../../monitoring.rst:129
+#: ../../monitoring.rst:122
 msgid ""
 "``Client traffic by hour``: this chart breaks down VPN traffic by "
 "individual clients over time. It helps detect users who may be consuming "
@@ -6070,32 +6198,32 @@ msgid ""
 " SQLite connection database."
 msgstr ""
 
-#: ../../monitoring.rst:134
+#: ../../monitoring.rst:127
 msgid ""
 "The Site-to-Site VPN section provides insights into OpenVPN and IPsec "
 "tunnels:"
 msgstr ""
 
-#: ../../monitoring.rst:136
+#: ../../monitoring.rst:129
 msgid ""
 "``Connected tunnels``: this counter shows the number of active site-to-"
 "site VPN tunnels."
 msgstr ""
 
-#: ../../monitoring.rst:139
+#: ../../monitoring.rst:132
 msgid ""
 "``Configured tunnels``: this counter shows the list of all configured "
 "site-to-site VPN tunnels, including their status and type."
 msgstr ""
 
-#: ../../monitoring.rst:142
+#: ../../monitoring.rst:135
 msgid ""
 "``Tunnel traffic``: this histogram provides real-time traffic data for "
 "each site-to-site VPN tunnel over the last 60 minutes. It helps detect "
 "issues such as low throughput or connection instability."
 msgstr ""
 
-#: ../../monitoring.rst:149
+#: ../../monitoring.rst:142
 msgid ""
 "The security section provides insights into malware detection and attack "
 "monitoring, helping administrators identify and mitigate security "
@@ -6105,13 +6233,13 @@ msgid ""
 " incomplete. Results are cached for 5 minutes to improve performance."
 msgstr ""
 
-#: ../../monitoring.rst:154
+#: ../../monitoring.rst:147
 msgid ""
 "The ``Blocklist`` section provides an overview of blocked packets based "
 "on enabled blocklists. Available charts are:"
 msgstr ""
 
-#: ../../monitoring.rst:156
+#: ../../monitoring.rst:149
 msgid ""
 "``Blocked threats``: this counter shows the total number of packets "
 "blocked by the firewall due to malware detection for the current day. It "
@@ -6119,59 +6247,59 @@ msgid ""
 "administrators a measure of the firewall’s effectiveness."
 msgstr ""
 
-#: ../../monitoring.rst:160
+#: ../../monitoring.rst:153
 msgid ""
 "``Blocked threats by hour``: this chart tracks the number of packets "
 "blocked each hour. It helps identify the times of day when the network is"
 " most vulnerable to attacks, aiding in preventive measures."
 msgstr ""
 
-#: ../../monitoring.rst:164
+#: ../../monitoring.rst:157
 msgid ""
 "``Threats by direction``: a chart that shows the distribution of blocked "
 "malware by firewall chain. Depending on what logging option is enabled, "
 "the firewall can log packets from the following chains:"
 msgstr ""
 
-#: ../../monitoring.rst:168
+#: ../../monitoring.rst:161
 msgid ""
 "*inp-wan*: packets coming from the WAN interface and destined to the "
 "firewall"
 msgstr ""
 
-#: ../../monitoring.rst:169
+#: ../../monitoring.rst:162
 msgid ""
 "*fwd-wan*: packets coming from the WAN interface and destined to the LAN "
 "network"
 msgstr ""
 
-#: ../../monitoring.rst:170
+#: ../../monitoring.rst:163
 msgid ""
 "*fwd-lan*: packets coming from the LAN network and destined to the WAN "
 "interface"
 msgstr ""
 
-#: ../../monitoring.rst:171
+#: ../../monitoring.rst:164
 msgid "*pre-ct*: flooding packets that are in invalid state"
 msgstr ""
 
-#: ../../monitoring.rst:172
+#: ../../monitoring.rst:165
 msgid ""
 "*pre-syn*: flooding packets that are part of a TCP connection and are in "
 "the SYN state"
 msgstr ""
 
-#: ../../monitoring.rst:173
+#: ../../monitoring.rst:166
 msgid "*pre-udp*: flooding packets that are part of a UDP connection"
 msgstr ""
 
-#: ../../monitoring.rst:175
+#: ../../monitoring.rst:168
 msgid ""
 "``Threats by category``: a chart that breaks down the blocked malware by "
 "category, helping administrators to find the most effective blocklists."
 msgstr ""
 
-#: ../../monitoring.rst:178
+#: ../../monitoring.rst:171
 msgid ""
 "The ``Brute force attacks`` section provides insights into the number of "
 "blocked IP based on the number of failed login attempts. Data are sourced"
@@ -6180,21 +6308,21 @@ msgid ""
 "minutes to improve performance. Available charts are:"
 msgstr ""
 
-#: ../../monitoring.rst:183
+#: ../../monitoring.rst:176
 msgid ""
 "``Blocked IP addresses``: this counter shows the total number of IP "
 "addresses blocked due to malicious activity for the current day. It helps"
 " in tracking the volume of attempted intrusions."
 msgstr ""
 
-#: ../../monitoring.rst:187
+#: ../../monitoring.rst:180
 msgid ""
 "``Blocked IP addresses by hour``: this graph tracks the number of blocked"
 " IP addresses over time, helping to identify periods of increased attack "
 "activity."
 msgstr ""
 
-#: ../../monitoring.rst:190
+#: ../../monitoring.rst:183
 msgid ""
 "``Most frequently blocked IP address``: this char shows the IP addresses "
 "that have been blocked most frequently. It is useful for identifying "
@@ -6202,13 +6330,42 @@ msgid ""
 "blacklisted."
 msgstr ""
 
-#: ../../monitoring.rst:195
-msgid "Netdata"
+#: ../../monitoring.rst:188
+#, fuzzy
+msgid "Real-time Traffic"
+msgstr "Traffico negato:"
+
+#: ../../monitoring.rst:190
+msgid ""
+"The Real-time traffic section shows data updated every 2 minutes. It's "
+"divided into three categories:"
+msgstr ""
+
+#: ../../monitoring.rst:192
+msgid ""
+"``Local Hosts``: lists all detected local hosts and their current traffic"
+" status, ordered by traffic volume."
+msgstr ""
+
+#: ../../monitoring.rst:193
+msgid ""
+"``Applications``: lists all detected applications and their current "
+"traffic status, ordered by traffic volume."
+msgstr ""
+
+#: ../../monitoring.rst:194
+msgid ""
+"``Protocols``: lists all detected protocols and their current traffic "
+"status, ordered by traffic volume."
 msgstr ""
 
 #: ../../monitoring.rst:197
+msgid "Netdata"
+msgstr ""
+
+#: ../../monitoring.rst:199
 msgid ""
-"NethSecurity uses `Netdata <https://www.netdata.cloud/>`_ as real time "
+"NethSecurity uses `Netdata <https://www.netdata.cloud/>`_ as Real-time "
 "monitoring tool. Netdata is an open-source, real-time, performance "
 "monitoring and troubleshooting tool for systems and applications. It "
 "provides comprehensive insights into the performance and health of "
@@ -6216,14 +6373,14 @@ msgid ""
 "Netdata is designed to be lightweight, fast, and easy to use."
 msgstr ""
 
-#: ../../monitoring.rst:202
+#: ../../monitoring.rst:204
 msgid ""
 "Netdata is enabled by default on NethSecurity and it is accessible from "
 "the LAN network. To access it, go to the ``Monitoring`` page and click "
-":guilabel:`Open report` button from the ``Real time report`` tab."
+":guilabel:`Open report` button from the ``Real-time report`` tab."
 msgstr ""
 
-#: ../../monitoring.rst:205
+#: ../../monitoring.rst:207
 msgid ""
 "Netdata metrics are saved in RAM and will be reset at very machine "
 "reboot. If the firewall is connected to the :ref:`remote controller "
@@ -6231,11 +6388,11 @@ msgid ""
 "and preserved across reboots."
 msgstr ""
 
-#: ../../monitoring.rst:211
+#: ../../monitoring.rst:213
 msgid "Ping latency monitoring"
 msgstr ""
 
-#: ../../monitoring.rst:213
+#: ../../monitoring.rst:215
 msgid ""
 "Configure the monitoring tool to evaluate round-trip time and packet loss"
 " by transmitting ping messages to network hosts. This tool is employed to"
@@ -6244,30 +6401,30 @@ msgid ""
 "IP addresses within a VPN for assessing tunnel quality."
 msgstr ""
 
-#: ../../monitoring.rst:217
+#: ../../monitoring.rst:219
 msgid ""
 "To monitor a new host or IP address, click on the :guilabel:`Add host` "
 "button and enter the required information, finally click on the "
 ":guilabel:`Save` button to confirm the changes."
 msgstr ""
 
-#: ../../monitoring.rst:220
+#: ../../monitoring.rst:222
 msgid ""
 "Changes are applied immediately. To remove a host from the list, click on"
 " the delete icon."
 msgstr ""
 
-#: ../../monitoring.rst:222
+#: ../../monitoring.rst:224
 msgid ""
 "You can see a graph of the ping latency by accessing Netdata from the "
 "report page."
 msgstr ""
 
-#: ../../monitoring.rst:227
+#: ../../monitoring.rst:229
 msgid "Historical monitoring"
 msgstr ""
 
-#: ../../monitoring.rst:233
+#: ../../monitoring.rst:235
 msgid ""
 "If the unit was connected to the controller before the subscription was "
 "activated, historical monitoring will not be enabled automatically. The "
@@ -6275,41 +6432,41 @@ msgid ""
 "monitoring is disabled."
 msgstr ""
 
-#: ../../monitoring.rst:236
+#: ../../monitoring.rst:238
 msgid "To enable it, follow these steps:"
 msgstr ""
 
-#: ../../monitoring.rst:238
+#: ../../monitoring.rst:240
 msgid "Disconnect the unit from the controller."
 msgstr ""
 
-#: ../../monitoring.rst:239
+#: ../../monitoring.rst:241
 msgid ""
 "Ensure that the NethServer 8 where the controller is installed has a "
 "valid subscription."
 msgstr ""
 
-#: ../../monitoring.rst:240
+#: ../../monitoring.rst:242
 msgid "Reconnect the unit to the controller."
 msgstr ""
 
-#: ../../monitoring.rst:242
+#: ../../monitoring.rst:244
 msgid ""
 "See the :ref:`controller metrics <controller_metrics-section>` for more "
 "information."
 msgstr ""
 
-#: ../../monitoring.rst:247
+#: ../../monitoring.rst:249
 msgid "Alerts"
 msgstr ""
 
-#: ../../monitoring.rst:249
+#: ../../monitoring.rst:251
 msgid ""
 "The alert system leverages the power of the Netdata engine for efficient "
 "monitoring and alerting."
 msgstr ""
 
-#: ../../monitoring.rst:251
+#: ../../monitoring.rst:253
 msgid ""
 "The alert system prioritizes only those alerts that have the potential to"
 " disrupt or compromise the firewall's functionality. By focusing on "
@@ -6317,7 +6474,7 @@ msgid ""
 "pose a genuine threat to the security and operation of the firewall."
 msgstr ""
 
-#: ../../monitoring.rst:254
+#: ../../monitoring.rst:256
 msgid ""
 "If the server has a valid :ref:`subscription-section`, alert "
 "notifications are seamlessly sent to remote servers for centralized "
@@ -6327,11 +6484,11 @@ msgid ""
 "promptly respond to any critical situations."
 msgstr ""
 
-#: ../../monitoring.rst:258
+#: ../../monitoring.rst:260
 msgid "Implemented alerts:"
 msgstr ""
 
-#: ../../monitoring.rst:260
+#: ../../monitoring.rst:262
 msgid ""
 "Disk Space: the disk space alert triggers when available disk space on "
 "the system reaches a critical level. This proactive notification helps "
@@ -6339,7 +6496,7 @@ msgid ""
 " impact firewall operations."
 msgstr ""
 
-#: ../../monitoring.rst:263
+#: ../../monitoring.rst:265
 msgid ""
 "MultiWAN Status (Up/Down): this alert notifies administrators when there "
 "are changes in the MultiWAN status, indicating whether connections are up"
@@ -21881,5 +22038,115 @@ msgstr ""
 #~ "range, you can specify a narrower "
 #~ "one acting on start and end IP "
 #~ "addresses."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Real time monitoring**: it leverages "
+#~ "Netdata to provide immediate insights "
+#~ "into the firewall's performance. It "
+#~ "reads data from logs and local "
+#~ "databases, storing metrics in RAM. Note"
+#~ " that these metrics are reset upon"
+#~ " every reboot, ensuring that only the"
+#~ " most current data are displayed."
+#~ msgstr ""
+
+#~ msgid "Real time monitoring"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Real time monitoring is an essential "
+#~ "feature in modern firewall systems, "
+#~ "allowing administrators to have instant "
+#~ "visibility into network traffic, VPN "
+#~ "connections, and security threats. In "
+#~ "NethSecurity, real-time monitoring provides"
+#~ " live data, ensuring that issues such"
+#~ " as network congestion, unauthorized "
+#~ "access, and security breaches are "
+#~ "identified and mitigated promptly. Real "
+#~ "time monitoring stores data in RAM "
+#~ "and resets at every machine reboot."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``Real time monitor`` page provides"
+#~ " a comprehensive overview of the "
+#~ "firewall's performance and status, with "
+#~ "detailed insights into network traffic. "
+#~ "It's divided into four main sections:"
+#~ " ``Traffic``, ``Connectivity``, ``VPN``, and "
+#~ "``Security``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The below charts reads data from "
+#~ "`dpireport <https://dev.nethsecurity.org/packages/ns-"
+#~ "report/>`_ daemon and Netify stats "
+#~ "plugin:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Total daily traffic``: this counter "
+#~ "shows the total volume of data "
+#~ "transferred through the firewall for the"
+#~ " current day."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Recent traffic``: the daily traffic "
+#~ "histogram visually represents network traffic"
+#~ " over time, updating every 2 minutes."
+#~ " It helps identify busy periods and"
+#~ " analyze traffic fluctuations throughout "
+#~ "the day. Sudden spikes or dips "
+#~ "could indicate potential performance issues"
+#~ " or security threats."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Today traffic is divided into four "
+#~ "categories, each chart display only most"
+#~ " active items:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Local Hosts``: this chart focuses on"
+#~ " internal (local) hosts and their "
+#~ "traffic.It helps identify the most "
+#~ "active devices on the network, aiding"
+#~ " in bandwidth management and detection "
+#~ "of potential internal security risks, "
+#~ "such as compromised devices generating "
+#~ "unexpected traffic."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The instant traffic section shows data"
+#~ " updated every 60 minutes. It's "
+#~ "divided into three categories:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NethSecurity uses `Netdata "
+#~ "<https://www.netdata.cloud/>`_ as real time "
+#~ "monitoring tool. Netdata is an open-"
+#~ "source, real-time, performance monitoring "
+#~ "and troubleshooting tool for systems and"
+#~ " applications. It provides comprehensive "
+#~ "insights into the performance and health"
+#~ " of systems and applications through "
+#~ "visualizations and detailed metrics. Netdata"
+#~ " is designed to be lightweight, fast,"
+#~ " and easy to use."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Netdata is enabled by default on "
+#~ "NethSecurity and it is accessible from"
+#~ " the LAN network. To access it, "
+#~ "go to the ``Monitoring`` page and "
+#~ "click :guilabel:`Open report` button from "
+#~ "the ``Real time report`` tab."
 #~ msgstr ""
 
