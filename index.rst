@@ -105,6 +105,7 @@ NethSecurity administrator manual
    snmp
    custom_openvpn_tunnel
    logs
+   speedtest
    ups
 
 .. toctree::
