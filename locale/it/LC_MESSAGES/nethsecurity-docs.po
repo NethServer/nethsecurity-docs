@@ -3989,7 +3989,7 @@ msgstr ""
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:109
+#: ../../index.rst:110
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -4521,6 +4521,305 @@ msgid ""
 "Bugs can be discussed and reported inside the `community forum "
 "<https://community.nethserver.org>`_. A public issue tracker is available"
 " at `GitHub <https://github.com/NethServer/nethsecurity/issues>`_."
+msgstr ""
+
+#: ../../ips.rst:3
+msgid "Intrustion Prevention System (Snort)"
+msgstr ""
+
+#: ../../ips.rst:5
+msgid ""
+"Snort 3 is an open-source network Intrusion Prevention System that is "
+"capable of performing real-time traffic analysis and packet logging on IP"
+" networks. It can perform protocol analysis, content searching/matching, "
+"and can be used to detect a variety of attacks and probes, such as buffer"
+" overflows, stealth port scans, CGI attacks, SMB probes, OS "
+"fingerprinting attempts, and much more."
+msgstr ""
+
+#: ../../ips.rst:9
+msgid ""
+"Snort uses a list of rules that help define malicious traffic. These "
+"rules are used to detect and block attacks."
+msgstr ""
+
+#: ../../ips.rst:11
+msgid ""
+"Rules are grouped into policies, each policy is a set of rules that are "
+"optimized for a specific use case. The policies are:"
+msgstr ""
+
+#: ../../ips.rst:13
+msgid ""
+"**connectivity**: prioritizes performance over security, minimizing false"
+" positives and ensuring high device performance while detecting common "
+"threats."
+msgstr ""
+
+#: ../../ips.rst:14
+msgid ""
+"**balanced**: recommended for initial deployments, balancing security and"
+" performance. and relatively high performance rate with evaluation and "
+"testing tools."
+msgstr ""
+
+#: ../../ips.rst:16
+msgid ""
+"**security**: for high-security environments with lower bandwidth and "
+"higher false positive tolerance. It provides the maximum protection while"
+" minimizing the risk of bringing the network down."
+msgstr ""
+
+#: ../../ips.rst:18
+msgid ""
+"**max-detect**: this policy is for testing environments, not optimized "
+"for performance, and not suitable for production."
+msgstr ""
+
+#: ../../ips.rst:21
+msgid "Enable and start the IPS"
+msgstr ""
+
+#: ../../ips.rst:23
+msgid ""
+"Before configuring Snort 3 you need to select a policy, then download the"
+" rules. The module supports the following rulesets:"
+msgstr ""
+
+#: ../../ips.rst:26
+msgid "Snort `Community Rules <https://www.snort.org/downloads/#rule-downloads>`_"
+msgstr ""
+
+#: ../../ips.rst:27
+msgid ""
+"Snort `Subscription Rules "
+"<https://www.snort.org/products#rule_subscriptions>`_ using the "
+":ref:`Oinkcode <oinkcode-section>`"
+msgstr ""
+
+#: ../../ips.rst:29
+msgid ""
+"Rules are automatically updated once a day, during the night. They are "
+"not part of the backup to avoid large backups and generating a new remote"
+" backup every time rules are updated."
+msgstr ""
+
+#: ../../ips.rst:32
+msgid "Enable Snort using `security` rule policy: ::"
+msgstr ""
+
+#: ../../ips.rst:39
+msgid ""
+"When enabled, the IPS will analyze all traffic that goes through the "
+"firewall, specifically the traffic that goes through the ``forward`` "
+"chain."
+msgstr ""
+
+#: ../../ips.rst:41
+msgid ""
+"In this configuration, the system will automatically identify the home "
+"network and use it as the network to protect. VPN are considered as part "
+"of the external network. If the VPN should be considered as part of the "
+"home network, set `include_vpn` to `true`."
+msgstr ""
+
+#: ../../ips.rst:45
+msgid ""
+"You can change the policy to `balanced` or `connectivity` by changing the"
+" `ns_policy` option."
+msgstr ""
+
+#: ../../ips.rst:47
+msgid "To change the policy to `balanced` and download the rules: ::"
+msgstr ""
+
+#: ../../ips.rst:54
+msgid "Enable extra alert rules"
+msgstr ""
+
+#: ../../ips.rst:56
+msgid ""
+"Rules that are not part of any policy are excluded by default. It is "
+"possible to include them as alert rules by setting the "
+"`ns_alert_excluded` option to `1`: ::"
+msgstr ""
+
+#: ../../ips.rst:63
+msgid "Traffic matching these rules will generate alerts but will not be blocked."
+msgstr ""
+
+#: ../../ips.rst:68
+msgid "Set the Oinkcode"
+msgstr ""
+
+#: ../../ips.rst:70
+msgid ""
+"If you have a Snort subscription, you can use the Oinkcode to download "
+"the rules. The Oinkcode is a unique code that identifies your "
+"subscription and allows you to download the rules. To set the Oinkcode "
+"use the `oinkcode` option: ::"
+msgstr ""
+
+#: ../../ips.rst:80
+msgid "Source and destination bypass"
+msgstr ""
+
+#: ../../ips.rst:82
+msgid ""
+"All traffic that goes through the firewall is analyzed by the IPS. To "
+"bypass the IPS for specific source or destination IP addresses, the "
+"system supports bypass rules both for IPv4 and IPv6 addresses."
+msgstr ""
+
+#: ../../ips.rst:85
+msgid "The following options are supported inside ``snort.nfq`` section:"
+msgstr ""
+
+#: ../../ips.rst:87
+msgid "``bypass_dst_v4``: bypass IPS for destination IPv4 addresses"
+msgstr ""
+
+#: ../../ips.rst:88
+msgid "``bypass_src_v4``: bypass IPS for source IPv4 addresses"
+msgstr ""
+
+#: ../../ips.rst:89
+msgid "``bypass_dst_v6``: bypass IPS for destination IPv6 addresses"
+msgstr ""
+
+#: ../../ips.rst:90
+msgid "``bypass_src_v6``: bypass IPS for source IPv6 addresses"
+msgstr ""
+
+#: ../../ips.rst:92
+msgid ""
+"Example, the traffic generated by 192.168.100.23 and 192.168.100.28 IPs "
+"will not be analyzed by Snort: ::"
+msgstr ""
+
+#: ../../ips.rst:100
+msgid "Disable rules"
+msgstr ""
+
+#: ../../ips.rst:102
+msgid ""
+"In some environments, rules can be too restrictive or generate too many "
+"false positives. To avoid this, it is possible to disable some rules. A "
+"disabled rule is a rule that is not include in the Snort ruleset."
+msgstr ""
+
+#: ../../ips.rst:106
+msgid ""
+"To disable some rules use the ``ns_disabled_rules`` option inside UCI, "
+"under the ``snort.snort`` section. The option is a list of entries in "
+"this format: ``<gid>,<sid>,<description>``."
+msgstr ""
+
+#: ../../ips.rst:109
+msgid "``gid``: the rule GID, it is a number and usually is always `1`"
+msgstr ""
+
+#: ../../ips.rst:110 ../../ips.rst:130
+msgid "``sid``: the rule SID, it is a number"
+msgstr ""
+
+#: ../../ips.rst:111
+msgid ""
+"``description``: a description of the disabled rule, it is optional and "
+"can be omitted; the following characters are not allowed: comma, space "
+"and newlines"
+msgstr ""
+
+#: ../../ips.rst:113
+msgid "Example, disable rules with SID 24225 and 24227: ::"
+msgstr ""
+
+#: ../../ips.rst:121
+msgid "Suppress rules"
+msgstr ""
+
+#: ../../ips.rst:123
+msgid ""
+"A suppression rule is a rule that is ignored by Snort for a specific IP "
+"address or CIDR. The rule is still evaluated for all other IP addresses."
+msgstr ""
+
+#: ../../ips.rst:126
+msgid ""
+"To add a suppress rule use the ``ns_suppress`` option inside UCI "
+"``snort.snort`` section. Each suppress rule is a comma separated list of "
+"values: ``gid,sid,direction,ip,description``:"
+msgstr ""
+
+#: ../../ips.rst:129
+msgid "``gid``: the rule GID, it is a number and usually is always ``1``"
+msgstr ""
+
+#: ../../ips.rst:131
+msgid "``direction``: the direction of the rule, it can be `by_src` or `by_dst`"
+msgstr ""
+
+#: ../../ips.rst:132
+msgid "``ip``: the IPv4 address or CIDR to suppress"
+msgstr ""
+
+#: ../../ips.rst:133
+msgid ""
+"``description``: a description of the suppress rule, it is optional and "
+"can be omitted; the following characters are not allowed: comma, space "
+"and newlines"
+msgstr ""
+
+#: ../../ips.rst:135
+msgid ""
+"Example, suppress rule 1234 for source IP 1.2.3.4 and destination IP "
+"8.8.8.8: ::"
+msgstr ""
+
+#: ../../ips.rst:143
+msgid "Alerts and logs"
+msgstr ""
+
+#: ../../ips.rst:145
+msgid ""
+"Snort generates alerts when a rule is matched, not matter if the traffic "
+"is blocked or not. The alerts are logged in the system log and can be "
+"viewed using ``less /var/log/messages``."
+msgstr ""
+
+#: ../../ips.rst:148
+#, fuzzy
+msgid "An example of an alert is: ::"
+msgstr "Esempio di log di NS8::"
+
+#: ../../ips.rst:152
+msgid ""
+"Alerts are also stored in JSON format in the ``/var/log/snort`` "
+"directory. Snort will create a file for each queue and store the alerts "
+"in the file. Example of a file name: ``1_alert_json.txt``."
+msgstr ""
+
+#: ../../ips.rst:156
+msgid "To inspect the file use: ::"
+msgstr ""
+
+#: ../../ips.rst:160
+msgid "To get a report about what has been blocked or alerted, use: ::"
+msgstr ""
+
+#: ../../ips.rst:164
+msgid ""
+"Each alert is generated by a rule, the rule is identified by a GID and "
+"SID. To see more info about the rule that generated the alert, use this "
+"URL: ``https://www.snort.org/rule_docs/<GID>-<SID>``."
+msgstr ""
+
+#: ../../ips.rst:168
+msgid "Disable and stop the IPS"
+msgstr ""
+
+#: ../../ips.rst:170
+msgid "To disable Snort: ::"
 msgstr ""
 
 #: ../../ipsec_tunnels.rst:5
