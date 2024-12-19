@@ -10,7 +10,7 @@ NethSecurity releases changelogs.
 Major changes on 2024-12-18
 ===========================
 
-Image version: `8-23.05.6-ns.1.4.0`
+Image version: `8-23.05.6-ns.1.4.1`
 
 This release focuses on improved local monitoring and adds some experimental features.
 
