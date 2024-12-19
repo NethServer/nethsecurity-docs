@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 09:52+0000\n"
+"POT-Creation-Date: 2024-12-19 10:42+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2989,6 +2989,23 @@ msgid "Hash"
 msgstr ""
 
 #: ../../stable.csv:1
+msgid "8-23.05.5-ns.1.4.1"
+msgstr ""
+
+#: ../../stable.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.5-ns.1.4.1/targets/x86/64/nethsecurity-8-23.05.5-ns.1.4.1-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../stable.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/stable/8-23.05.5-ns.1.4.1/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../stable.csv:1
 msgid "8-23.05.5-ns.1.4.0"
 msgstr ""
 
@@ -3092,6 +3109,23 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-23.05.5-ns.1.4.0-1-gee52d04e"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.4.0-1-gee52d04e/targets/x86/64/nethsecurity-8-23.05.5-ns.1.4.0-1-gee52d04e-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-23.05.5-ns.1.4.0-1-gee52d04e/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -10267,7 +10301,7 @@ msgid "Major changes on 2024-12-18"
 msgstr ""
 
 #: ../../release_notes.rst:13
-msgid "Image version: `8-23.05.6-ns.1.4.0`"
+msgid "Image version: `8-23.05.6-ns.1.4.1`"
 msgstr ""
 
 #: ../../release_notes.rst:15
@@ -22278,5 +22312,8 @@ msgstr ""
 #~ "go to the ``Monitoring`` page and "
 #~ "click :guilabel:`Open report` button from "
 #~ "the ``Real time report`` tab."
+#~ msgstr ""
+
+#~ msgid "Image version: `8-23.05.6-ns.1.4.0`"
 #~ msgstr ""
 
