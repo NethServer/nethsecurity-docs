@@ -56,7 +56,7 @@ Access the ``Netify Informatics`` page under the ``Monitoring`` section in the N
 Enable the ``Send metadata to Netify Informatics`` option and click on ``Save``.
 
 Each NethSecurity is associated with a unique Agent UUID, something like this `B3-GV-WQ-SD`.
-The code will be visible in the same page after enabling the send metadata option.
+The code will be visible on the same page after enabling the send metadata option.
                       
 2. Provision the agent
 -----------------------
