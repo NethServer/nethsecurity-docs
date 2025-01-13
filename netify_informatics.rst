@@ -17,7 +17,7 @@ The solution provides insights into various aspects of network activity, includi
 
 The service receives data from netifyd, the NethSecurity DPI engine which is enabled by default on the firewall.
 
-You can try the service for free for 7 day. 
+You can try the service for free for 7 days. 
 After this period, you can choose the plan that best fits your needs.
 
 See `Netify Informatics Pricing <https://www.netify.ai/products/netify-informatics/pricing>`_ and `Netify Informatics FAQ <https://www.netify.ai/resources/faq>`_ for more information.
