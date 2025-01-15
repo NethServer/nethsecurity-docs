@@ -184,8 +184,8 @@ Available charts are:
   this char shows the IP addresses that have been blocked most frequently.
   It is useful for identifying persistent threats or attack sources that should be investigated or blacklisted.
 
-Real-time Traffic
----------------
+Real-time traffic
+-----------------
 
 The Real-time traffic section shows data updated every 2 minutes. It's divided into three categories:
 
