@@ -9,6 +9,9 @@ python:
    install:
    - requirements: requirements.txt
 
+sphinx:
+  configuration: conf.py
+
 formats:
   - epub
   - pdf
