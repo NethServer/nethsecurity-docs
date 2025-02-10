@@ -15,7 +15,7 @@ Please note that to access the Nethesis and Yoroi blocklists, the unit must have
 Configuration
 =============
 
-.. note:: Please use Threat shield DNS only if you are not already using the FlashStart service because if used together, they may conflict.
+.. note:: Please use Threat shield DNS only if you are not already using the FlashStart service. Both services operate at the DNS level and cannot be used together. The UI prevents enabling them simultaneously to avoid conflicts.
 
 The service is disabled by default, to enable it navigate to the ``Threat shield DNS`` page under the ``Security`` section.
 Access the ``Settings`` tab and activate the ``Status`` switch.
