@@ -16,7 +16,7 @@ IPS is disabled by default, to enable it, navigate to the ``IPS`` page under the
 The interface will prompt that the service is disabled and will provide a quick link to browse directly to the
 ``Settings`` tab.
 
-Once toggled the :guilabel:`Status` switch the you'll need to pick a policy for your rules. Rules are grouped into
+Once toggled the :guilabel:`Status` switch, you'll need to pick a policy for your rules. Rules are grouped into
 policies, each policy is a set of rules that are optimized for a specific use case. The policies are:
 
 - **connectivity**: prioritizes performance over security, minimizing false positives and ensuring high device
