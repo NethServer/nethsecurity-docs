@@ -78,7 +78,7 @@ The logging section allows you to configure which types of blocked packets are l
    which processes packets before they enter the routing table.
 
 2. Log packets blocked in input chain: his option, when activated, logs packets blocked in the input chain, which handles packets destined
-   to the firewall itself. Please not that this option can generate a large number of logs if the firewall is under heavy traffic.
+   to the firewall itself. Please note that this option can generate a large number of logs if the firewall is under heavy traffic.
 
 3. Log packets blocked in forward chain: Enabling this logs packets blocked in the forward chain, which processes packets being routed through the firewall.
 
