@@ -91,7 +91,7 @@ Local blocklist
 ===============
 
 To block specific domains not included in the blocklists, you can navigate to the ``Local blocklist`` tab of Threat shield DNS.
-Use the :guilabel:`Add domain` button to add a domain to the list; you can adda description to the domain to help you remember why it was added.
+Use the :guilabel:`Add domain` button to add a domain to the list; you can add a description to the domain to help you remember why it was added.
 
 .. warning::
 
