@@ -78,7 +78,7 @@ NethSecurity administrator manual
    threat_shield_dns
    dpi_filter
    flashstart
-
+   ips
 
 .. toctree::
    :maxdepth: 2
@@ -99,7 +99,6 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Advanced (CLI)
 
-   ips
    ddns
    smtp
    snmp

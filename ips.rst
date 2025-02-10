@@ -1,174 +1,94 @@
-====================================
-Intrustion Prevention System (Snort)
-====================================
+.. _intrusion_prevention_system-section:
 
-Snort 3 is an open-source network Intrusion Prevention System that is capable of performing real-time traffic analysis and packet logging on IP networks.
-It can perform protocol analysis, content searching/matching, and can be used to detect a variety of attacks and probes, such as buffer overflows,
-stealth port scans, CGI attacks, SMB probes, OS fingerprinting attempts, and much more.
+===================================
+Intrusion Prevention System (Snort)
+===================================
 
-Snort uses a list of rules that help define malicious traffic. These rules are used to detect and block attacks.
+Snort 3 is an open-source network Intrusion Prevention System that is capable of performing real-time traffic analysis
+and packet logging on IP networks. It can perform protocol analysis, content searching/matching, and can be used to
+detect a variety of attacks and probes, such as buffer overflows, stealth port scans, CGI attacks, SMB probes, OS
+fingerprinting attempts, and much more.
 
-Rules are grouped into policies, each policy is a set of rules that are optimized for a specific use case. The policies are:
+Enable IPS
+==========
 
-- **connectivity**: prioritizes performance over security, minimizing false positives and ensuring high device performance while detecting common threats.
+IPS is disabled by default, to enable it, navigate to the ``IPS`` page under the ``Security`` section.
+The interface will prompt that the service is disabled and will provide a quick link to browse directly to the
+``Settings`` tab.
+
+Once toggled the :guilabel:`Status` switch, you'll need to pick a policy for your rules. Rules are grouped into
+policies, each policy is a set of rules that are optimized for a specific use case. The policies are:
+
+- **connectivity**: prioritizes performance over security, minimizing false positives and ensuring high device
+  performance while detecting common threats.
 - **balanced**: recommended for initial deployments, balancing security and performance.
   and relatively high performance rate with evaluation and testing tools.
 - **security**: for high-security environments with lower bandwidth and higher false positive tolerance.
   It provides the maximum protection while minimizing the risk of bringing the network down.
-- **max-detect**: this policy is for testing environments, not optimized for performance, and not suitable for production.
 
-Enable and start the IPS
-========================
-
-Before configuring Snort 3 you need to select a policy, then download the rules.
-The module supports the following rulesets:
-
-- Snort `Community Rules <https://www.snort.org/downloads/#rule-downloads>`_
-- Snort `Subscription Rules <https://www.snort.org/products#rule_subscriptions>`_ using the :ref:`Oinkcode <oinkcode-section>`
-
-Rules are automatically updated once a day, during the night.
-They are not part of the backup to avoid large backups and generating a new remote backup every time rules are updated.
-
-Enable Snort using `security` rule policy: ::
-
-  echo '{"enabled": true, "set_home_net": true, "include_vpn": false, "ns_policy": "security", "ns_disabled_rules": []}' | /usr/libexec/rpcd/ns.snort call setup
-  ns-snort-rules --download
-  uci commit snort
-  /etc/init.d/snort restart
-
-When enabled, the IPS will analyze all traffic that goes through the firewall, specifically the traffic that goes through the ``forward`` chain.
-
-In this configuration, the system will automatically identify the home network and use it as the network to protect.
-VPN are considered as part of the external network.
-If the VPN should be considered as part of the home network, set `include_vpn` to `true`.
-
-You can change the policy to `balanced` or `connectivity` by changing the `ns_policy` option.
-
-To change the policy to `balanced` and download the rules: ::
-
-  echo '{"enabled": true, "set_home_net": true, "include_vpn": false, "ns_policy": "balanced", "ns_disabled_rules": []}' | /usr/libexec/rpcd/ns.snort call setup
-  uci commit snort
-  ns-snort-rules --restart
-
-Enable extra alert rules
-------------------------
-
-Rules that are not part of any policy are excluded by default.
-It is possible to include them as alert rules by setting the `ns_alert_excluded` option to `1`: ::
-
-  uci set snort.snort.ns_alert_excluded=1
-  uci commit snort
-  /etc/init.d/snort restart
-
-Traffic matching these rules will generate alerts but will not be blocked.
+Once the policy is selected, click on the :guilabel:`Save` button to save the changes.
 
 .. _oinkcode-section:
 
 Set the Oinkcode
 ----------------
 
-If you have a Snort subscription, you can use the Oinkcode to download the rules.
-The Oinkcode is a unique code that identifies your subscription and allows you to download the rules.
-To set the Oinkcode use the `oinkcode` option: ::
+NethSecurity supports the usage of the paid Snort subscription, to enable it, you need to add the licence code in the
+`Oinkcode` field. You can verify if the code is valid by clicking on the :guilabel:`Test code` button.
 
-  uci set snort.snort.oinkcode=your_oinkcode
-  uci commit snort
-  ns-snort-rules --download
-  /etc/init.d/snort restart
+Today event list
+================
+
+The IPS automatically checks traffic inside the network and generates alerts or blocks traffic based on the ruleset.
+A browsable list can be found under the ``Today event list`` tab.
+While browsing the list, you can see the rules that triggered the alert, the source and destination IP addresses, the
+protocol and the action taken by the system.
+
+This list can be filtered using the filter box at the top of the page. Additionally, for every record shown, it's
+possible to jump right to the rule documentation by clicking on the rule ID.
+
+By clicking on the menu icon on the right side of the record, it's possible to open a pre-filled form to suppress or
+disable the rule that generated the alert.
 
 Source and destination bypass
 =============================
 
 All traffic that goes through the firewall is analyzed by the IPS.
-To bypass the IPS for specific source or destination IP addresses, the system supports bypass rules both for IPv4 and IPv6 addresses.
+To bypass the IPS for specific source or destination IP addresses, the system supports bypass rules both for IPv4 and
+IPv6 addresses.
 
-The following options are supported inside ``snort.nfq`` section:
+To do so, browse to the `Filter bypass` tab and press the :guilabel:`Add bypass` button. A form will be provided to
+add the bypass rule based of the source or destination IP address with the following fields:
 
-- ``bypass_dst_v4``: bypass IPS for destination IPv4 addresses
-- ``bypass_src_v4``: bypass IPS for source IPv4 addresses
-- ``bypass_dst_v6``: bypass IPS for destination IPv6 addresses
-- ``bypass_src_v6``: bypass IPS for source IPv6 addresses
-
-Example, the traffic generated by 192.168.100.23 and 192.168.100.28 IPs will not be analyzed by Snort: ::
-
-  uci add_list snort.nfq.bypass_src_v4=192.168.100.23
-  uci add_list snort.nfq.bypass_src_v4=192.168.100.28
-  uci commit snort
-  /etc/init.d/snort restart
+- ``Address type``: if the ip provided is IPv4 or IPv6
+- ``IP address``: the IP address to bypass
+- ``Direction``: if the bypass is for the source or destination IP address
+- ``Description``: a description of the bypass rule, it is optional and can be omitted
 
 Disable rules
 =============
 
-In some environments, rules can be too restrictive or generate too many false positives.
-To avoid this, it is possible to disable some rules.
-A disabled rule is a rule that is not include in the Snort ruleset.
+In some environments, rules can be too restrictive or generate too many false positives. To avoid this, it is possible
+to disable some rules. A disabled rule is a rule that is not included in the Snort ruleset.
 
-To disable some rules use the ``ns_disabled_rules`` option inside UCI, under the ``snort.snort`` section.
-The option is a list of entries in this format: ``<gid>,<sid>,<description>``.
+Browse to the `Disabled Rules` tab and press the :guilabel:`Disable rule` button. The system will prompt for the
+following fields:
 
-- ``gid``: the rule GID, it is a number and usually is always `1`
-- ``sid``: the rule SID, it is a number
-- ``description``: a description of the disabled rule, it is optional and can be omitted; the following characters are not allowed: comma, space and newlines
+- ``GID``: the rule GID, it is a number and usually is always `1`
+- ``SID``: the rule SID, it is a number
+- ``Description``: a description of the disabled rule, it is optional and can be omitted
 
-Example, disable rules with SID 24225 and 24227: ::
-    
-  uci add_list snort.snort.ns_disabled_rules=1,24225,false_positive
-  uci add_list snort.snort.ns_disabled_rules=3,24227
-  uci commit snort
-  /etc/init.d/snort restart
-
-Suppress rules
-==============
+Suppressed alerts
+=================
 
 A suppression rule is a rule that is ignored by Snort for a specific IP address or CIDR.
 The rule is still evaluated for all other IP addresses.
 
-To add a suppress rule use the ``ns_suppress`` option inside UCI ``snort.snort`` section.
-Each suppress rule is a comma separated list of values: ``gid,sid,direction,ip,description``:
+To add a suppression rule, browse to the `Suppressed alerts` tab and press the :guilabel:`Suppress alert` button.
+Fill the fields with the following information:
 
-- ``gid``: the rule GID, it is a number and usually is always ``1``
-- ``sid``: the rule SID, it is a number
-- ``direction``: the direction of the rule, it can be `by_src` or `by_dst`
-- ``ip``: the IPv4 address or CIDR to suppress
-- ``description``: a description of the suppress rule, it is optional and can be omitted; the following characters are not allowed: comma, space and newlines
-
-Example, suppress rule 1234 for source IP 1.2.3.4 and destination IP 8.8.8.8: ::
-
-  uci add_list snort.snort.ns_suppress='1,1234,by_src,1.2.3.4,very_bad'
-  uci add_list snort.snort.ns_suppress='1,1234,by_dst,8.8.8.8,noisy_rule'
-  uci commit snort
-  /etc/init.d/snort restart
-
-Alerts and logs
-===============
-
-Snort generates alerts when a rule is matched, not matter if the traffic is blocked or not.
-The alerts are logged in the system log and can be viewed using ``less /var/log/messages``.
-
-An example of an alert is: ::
-
-  Dec  4 12:06:00 fw.example.com snort: [1:1852:11] "SERVER-WEBAPP robots.txt access" [Classification: Access to a potentially vulnerable web application] [Priority: 2] {TCP} 203.0.113.1:24455 -> 192.0.2.1:80
-
-Alerts are also stored in JSON format in the ``/var/log/snort`` directory.
-Snort will create a file for each queue and store the alerts in the file.
-Example of a file name: ``1_alert_json.txt``.
-
-To inspect the file use: ::
-
-  cat /var/log/snort/1_alert_json.txt | jq .
-
-To get a report about what has been blocked or alerted, use: ::
-
-  snort-mgr report
-
-Each alert is generated by a rule, the rule is identified by a GID and SID.
-To see more info about the rule that generated the alert, use this URL: ``https://www.snort.org/rule_docs/<GID>-<SID>``.
-
-Disable and stop the IPS
-========================
-
-To disable Snort: ::
-
-  echo '{"enabled": false}' | /usr/libexec/rpcd/ns.snort call setup
-  uci commit snort
-  /etc/init.d/snort stop
+- ``GID``: the rule GID, it is a number and usually is always `1`
+- ``SID``: the rule SID, it is a number
+- ``Direction``: if the suppression is for the source or destination IP address
+- ``IP address``: the IP address to suppress the alert for, can be a CIDR range
+- ``Description``: a description of the suppression rule, it is optional and can be omitted
