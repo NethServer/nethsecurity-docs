@@ -85,7 +85,7 @@ Adding a ``+`` in front of the value tells qosify to only override the DSCP valu
 Example: ::
 
   tcp:80		+voice
-  192.168.1.2	video
+  216.58.204.238	video
   dns:nethesis.it	+CS7
 
 Troubleshooting
