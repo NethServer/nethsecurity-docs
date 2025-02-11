@@ -5,26 +5,26 @@ Threat shield IP
 ================
 
 NethSecurity is equipped with various tools and integrations useful for countering threats coming from the internet.
-One of these tools is Threat Shield, which blocks any traffic coming from compromised IP addresses or destined to them as well as any requests addressed to hostnames that could be malicious.
+One of these tools is Threat Shield IP, which blocks any traffic coming from compromised IP addresses or destined to them as well as any requests addressed to hostnames that could be malicious.
 
 The service can load community-maintained blocklists or can rely on high-quality blocklists very frequently updated and maintained by `Nethesis <https://www.nethesis.it>`_ and `Yoroy <https://yoroi.company>`_
 a leading company focused on CyberSecurity and member of `Cyber Threat Alliance <https://www.cyberthreatalliance.org>`_.
 Yoroi blacklists ensure great effectiveness and high confidence, minimizing the possibility of false positives.
 
-Please note that to access the Nethesis and Yoroi blocklist, the machine must have a valid extra entitlement for this service.
+Please note that to access the Nethesis and Yoroi blocklists, the machine must have a valid extra entitlement for this service.
 
 Configuration
 =============
 
-The service is disabled by default, to enable it navigate to the ``Threat shield`` page under the ``Security`` section.
+The service is disabled by default, to enable it navigate to the ``Threat shield IP`` page under the ``Security`` section.
 Access the ``Settings`` tab and activate the ``Status`` switch.
 
-When the service is enabled, the ``Blocklist`` tab will display all available blocklists.
+When the service is enabled, the ``Blocklist feeds`` tab will display all available blocklists.
 You can enable or disable each blocklist by using the switch on the right side of the list.
-Enabled blocklist will be automatically updated at regular intervals.
+Enabled blocklists will be automatically updated at regular intervals.
 NethSecurity 8 allows the use of Community and Enterprise blocklists.
 
-Community Blocklists
+Community blocklists
 --------------------
 
 Community blocklists are sourced from community contributors and cover various areas: Ads blocking, Malware blocking, Spam blocking, 
@@ -47,7 +47,7 @@ Enterprise blocklists
 
 Enterprise blocklists are specifically focused on security and offer several advantages over community-maintained blocklists:
 
-1. **Quality and Accuracy**: Enterprise blocklists, such as the ones provided by Nethesis and Yoroi, are curated and maintained by reputable cybersecurity companies.
+1. **Quality and accuracy**: Enterprise blocklists, such as the ones provided by Nethesis and Yoroi, are curated and maintained by reputable cybersecurity companies.
    These companies have dedicated teams that continuously monitor and update the blocklists to ensure they are accurate and effective in blocking malicious traffic.
    This results in a higher level of quality and accuracy compared to community-maintained blocklists, which may not receive the same level of attention and updates.
 
@@ -55,18 +55,18 @@ Enterprise blocklists are specifically focused on security and offer several adv
    Cybersecurity companies like Nethesis and Yoroi actively track emerging threats and promptly add them to their blocklists. 
    This ensures that your system is protected against the most recent and evolving threats. 
    
-3. **Reduced False Positives**: False positives occur when legitimate traffic is mistakenly blocked. 
+3. **Reduced false positives**: False positives occur when legitimate traffic is mistakenly blocked. 
    Enterprise blocklists are designed to minimize false positives by carefully curating and verifying the listed IP addresses and hostnames.
    The companies behind Enterprise blocklists have robust processes in place to ensure that only malicious entities are included in the blocklists.
    This reduces the chances of legitimate traffic being blocked, minimizing disruptions to your network or services.
 
-4. **Enterprise Support**: Enterprise blocklists often come with additional support and services tailored for enterprise environments.
+4. **Enterprise support**: Enterprise blocklists often come with additional support and services tailored for enterprise environments.
    This includes access to technical support, documentation, and integration assistance.
    If any issues or questions arise while using the Enterprise blocklists, you can rely on the support provided by the cybersecurity companies to help you
    address them effectively.
 
 Yoroi and Nethesis blocklists are Enterprise blocklists.
-These lists will be listed only if the machine has a valid :ref:`Enterprise or Community subscription <subscription-section>` and a valid entitlement for the Threat Shield service.
+These lists will be listed only if the machine has a valid :ref:`Enterprise or Community subscription <subscription-section>` and a valid entitlement for the Threat Shield IP service.
 
 Logging
 -------
@@ -78,7 +78,7 @@ The logging section allows you to configure which types of blocked packets are l
    which processes packets before they enter the routing table.
 
 2. Log packets blocked in input chain: his option, when activated, logs packets blocked in the input chain, which handles packets destined
-   to the firewall itself. Plese not that this option can generate a large number of logs if the firewall is under heavy traffic.
+   to the firewall itself. Please note that this option can generate a large number of logs if the firewall is under heavy traffic.
 
 3. Log packets blocked in forward chain: Enabling this logs packets blocked in the forward chain, which processes packets being routed through the firewall.
 
@@ -129,7 +129,7 @@ It's also a good practice to include a descriptive comment for each entry to hel
 Block brute force attacks
 =========================
 
-When Threat Shield is enabled, the system automatically starts checking for brute force attack attempts on firewall services.
+When Threat Shield IP is enabled, the system automatically starts checking for brute force attack attempts on firewall services.
 By default, the monitored services include SSH access and the login to NethSecurity UI.
 The system detects login attempts and automatically blocks IPs that have failed to enter the correct credentials.
 
