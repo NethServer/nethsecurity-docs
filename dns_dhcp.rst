@@ -28,6 +28,8 @@ Available fields:
 * ``Range IP end`` : last IP address of DHCP range
 * ``Lease time`` :  lease time (default 1 hour)
 
+.. note:: The IP address of NethSecurity on the selected interface must be outside the specified DHCP range, otherwise, the service may not start correctly.
+
 **Advanced settings**
 
 ``Force DHCP server start`` 
