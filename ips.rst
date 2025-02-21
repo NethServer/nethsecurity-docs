@@ -37,7 +37,7 @@ NethSecurity supports the use of a Snort subscription to obtain ``Registered`` a
 The `Oinkcode` is a unique code assigned to registered users on Snort.org, this code is required to authenticate the download of Snort rules.
 
 
-Available Rule Categories
+Available rule categories
 -------------------------
 
 - **Community Rules (Free rules)**:
