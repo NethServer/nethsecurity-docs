@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-21 12:03+0000\n"
+"POT-Creation-Date: 2025-02-21 12:07+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -4724,11 +4724,7 @@ msgid ""
 "these rules."
 msgstr ""
 
-#: ../../ips.rst:53
-msgid "``"
-msgstr ""
-
-#: ../../ips.rst:55
+#: ../../ips.rst:54
 msgid ""
 "**Subscriber Rules (Paid rules, real-time updates)** Immediate access to "
 "the most up-to-date rules without any delay. Available only to users with"
@@ -4736,30 +4732,30 @@ msgid ""
 " these rules."
 msgstr ""
 
-#: ../../ips.rst:61
+#: ../../ips.rst:60
 msgid "How to obtain and use the Oinkcode"
 msgstr ""
 
-#: ../../ips.rst:63
+#: ../../ips.rst:62
 msgid "Register on Snort.org"
 msgstr ""
 
-#: ../../ips.rst:64
+#: ../../ips.rst:63
 msgid "Retrieve your Oinkcode from the account profile section"
 msgstr ""
 
-#: ../../ips.rst:65
+#: ../../ips.rst:64
 msgid ""
 "On NethSecurity, paste your personal code into the `Oinkcode` field. You "
 "can verify if the code is valid by clicking on the :guilabel:`Test code` "
 "button"
 msgstr ""
 
-#: ../../ips.rst:69
+#: ../../ips.rst:68
 msgid "Today event list"
 msgstr ""
 
-#: ../../ips.rst:71
+#: ../../ips.rst:70
 msgid ""
 "The IPS automatically checks traffic inside the network and generates "
 "alerts or blocks traffic based on the ruleset. A browsable list can be "
@@ -4768,117 +4764,117 @@ msgid ""
 " addresses, the protocol and the action taken by the system."
 msgstr ""
 
-#: ../../ips.rst:76
+#: ../../ips.rst:75
 msgid ""
 "This list can be filtered using the filter box at the top of the page. "
 "Additionally, for every record shown, it's possible to jump right to the "
 "rule documentation by clicking on the rule ID."
 msgstr ""
 
-#: ../../ips.rst:79
+#: ../../ips.rst:78
 msgid ""
 "By clicking on the menu icon on the right side of the record, it's "
 "possible to open a pre-filled form to suppress or disable the rule that "
 "generated the alert."
 msgstr ""
 
-#: ../../ips.rst:83
+#: ../../ips.rst:82
 msgid "Source and destination bypass"
 msgstr ""
 
-#: ../../ips.rst:85
+#: ../../ips.rst:84
 msgid ""
 "All traffic that goes through the firewall is analyzed by the IPS. To "
 "bypass the IPS for specific source or destination IP addresses, the "
 "system supports bypass rules both for IPv4 and IPv6 addresses."
 msgstr ""
 
-#: ../../ips.rst:89
+#: ../../ips.rst:88
 msgid ""
 "To do so, browse to the `Filter bypass` tab and press the :guilabel:`Add "
 "bypass` button. A form will be provided to add the bypass rule based of "
 "the source or destination IP address with the following fields:"
 msgstr ""
 
-#: ../../ips.rst:92
+#: ../../ips.rst:91
 msgid "``Address type``: if the ip provided is IPv4 or IPv6"
 msgstr ""
 
-#: ../../ips.rst:93
+#: ../../ips.rst:92
 msgid "``IP address``: the IP address to bypass"
 msgstr ""
 
-#: ../../ips.rst:94
+#: ../../ips.rst:93
 msgid "``Direction``: if the bypass is for the source or destination IP address"
 msgstr ""
 
-#: ../../ips.rst:95
+#: ../../ips.rst:94
 msgid ""
 "``Description``: a description of the bypass rule, it is optional and can"
 " be omitted"
 msgstr ""
 
-#: ../../ips.rst:98
+#: ../../ips.rst:97
 msgid "Disable rules"
 msgstr ""
 
-#: ../../ips.rst:100
+#: ../../ips.rst:99
 msgid ""
 "In some environments, rules can be too restrictive or generate too many "
 "false positives. To avoid this, it is possible to disable some rules. A "
 "disabled rule is a rule that is not included in the Snort ruleset."
 msgstr ""
 
-#: ../../ips.rst:103
+#: ../../ips.rst:102
 msgid ""
 "Browse to the `Disabled Rules` tab and press the :guilabel:`Disable rule`"
 " button. The system will prompt for the following fields:"
 msgstr ""
 
-#: ../../ips.rst:106 ../../ips.rst:119
+#: ../../ips.rst:105 ../../ips.rst:118
 msgid "``GID``: the rule GID, it is a number and usually is always `1`"
 msgstr ""
 
-#: ../../ips.rst:107 ../../ips.rst:120
+#: ../../ips.rst:106 ../../ips.rst:119
 msgid "``SID``: the rule SID, it is a number"
 msgstr ""
 
-#: ../../ips.rst:108
+#: ../../ips.rst:107
 msgid ""
 "``Description``: a description of the disabled rule, it is optional and "
 "can be omitted"
 msgstr ""
 
-#: ../../ips.rst:111
+#: ../../ips.rst:110
 msgid "Suppressed alerts"
 msgstr ""
 
-#: ../../ips.rst:113
+#: ../../ips.rst:112
 msgid ""
 "A suppression rule is a rule that is ignored by Snort for a specific IP "
 "address or CIDR. The rule is still evaluated for all other IP addresses."
 msgstr ""
 
-#: ../../ips.rst:116
+#: ../../ips.rst:115
 msgid ""
 "To add a suppression rule, browse to the `Suppressed alerts` tab and "
 "press the :guilabel:`Suppress alert` button. Fill the fields with the "
 "following information:"
 msgstr ""
 
-#: ../../ips.rst:121
+#: ../../ips.rst:120
 msgid ""
 "``Direction``: if the suppression is for the source or destination IP "
 "address"
 msgstr ""
 
-#: ../../ips.rst:122
+#: ../../ips.rst:121
 msgid ""
 "``IP address``: the IP address to suppress the alert for, can be a CIDR "
 "range"
 msgstr ""
 
-#: ../../ips.rst:123
+#: ../../ips.rst:122
 msgid ""
 "``Description``: a description of the suppression rule, it is optional "
 "and can be omitted"
@@ -23118,5 +23114,8 @@ msgstr ""
 #~ " can verify if the code is "
 #~ "valid by clicking on the :guilabel:`Test"
 #~ " code` button."
+#~ msgstr ""
+
+#~ msgid "``"
 #~ msgstr ""
 
