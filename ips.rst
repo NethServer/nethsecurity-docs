@@ -50,7 +50,6 @@ Available rule categories
   Official rules updated by the Snort team.
   Available for free to registered users, but with a 30-day delay compared to the latest version.
   Oinkcode is required to access these rules.
-``
 
 - **Subscriber Rules (Paid rules, real-time updates)**
   Immediate access to the most up-to-date rules without any delay.
