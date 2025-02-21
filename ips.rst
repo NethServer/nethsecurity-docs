@@ -55,6 +55,7 @@ Available rule categories
 - **Subscriber Rules (Paid rules, real-time updates)**
   Immediate access to the most up-to-date rules without any delay.
   Available only to users with a Snort Subscriber Rule Set subscription.
+  Oinkcode is required to access these rules.
 
 How to obtain and use the Oinkcode
 ----------------------------------
