@@ -44,6 +44,7 @@ Available rule categories
   Available to all registered users without restrictions.
   Maintained by the Snort community.
   Provide basic protection but receive less frequent updates compared to official rules.
+  No Oinkcode is required to access these rules.
 
 - **Registered Rules (Free rules with delay)**:
   Official rules updated by the Snort team.
