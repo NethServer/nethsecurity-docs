@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-21 12:07+0000\n"
+"POT-Creation-Date: 2025-02-21 15:37+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -2297,7 +2297,7 @@ msgstr "Un nome di dominio registrato con il provider DDNS."
 msgid "General configuration steps"
 msgstr "Procedura di configurazione generale"
 
-#: ../../ddns.rst:38 ../../snmp.rst:16 ../../snmp.rst:56
+#: ../../ddns.rst:38 ../../snmp.rst:21 ../../snmp.rst:60
 msgid "Open a terminal window on your firewall."
 msgstr "Apri una finestra terminale sul tuo firewall."
 
@@ -13452,74 +13452,77 @@ msgstr ""
 
 #: ../../snmp.rst:9
 msgid ""
-"The SNMP server is **enabled by default** on your firewall, allowing "
+"The SNMP server is **disabled by default** on your firewall, allowing "
 "access from within your local area network (LAN) on all IPv4 and IPv6 "
 "addresses."
 msgstr ""
 
-#: ../../snmp.rst:12
+#: ../../snmp.rst:13
+msgid ""
+"If the system has been updated from v1.4.1 or earlier, the SNMP server "
+"will be **enabled by default**. To disable it, follow the steps in the "
+":ref:`Disabling the SNMP Server <snmp-server-disabling>` section."
+msgstr ""
+
+#: ../../snmp.rst:17
 msgid "Configuring the SNMP Server"
 msgstr ""
 
-#: ../../snmp.rst:14
+#: ../../snmp.rst:19
 msgid ""
 "It's crucial to configure essential information that identifies your "
 "device. Here's how to do it through the command line:"
 msgstr ""
 
-#: ../../snmp.rst:17
+#: ../../snmp.rst:22
 msgid ""
 "Use the following commands to set the desired values for `sysLocation`, "
 "`sysContact`, and `sysName`:"
 msgstr ""
 
-#: ../../snmp.rst:25
+#: ../../snmp.rst:31
 msgid "Replace `<string>` with the relevant information. For example:"
 msgstr ""
 
-#: ../../snmp.rst:33
+#: ../../snmp.rst:40
 msgid "After making changes, apply them using:"
 msgstr ""
 
-#: ../../snmp.rst:39
-msgid "Restart the SNMP server to ensure the configurations take effect:"
-msgstr ""
-
-#: ../../snmp.rst:45
+#: ../../snmp.rst:47
 msgid "The SNMP server configuration is stored in the `/etc/config/snmpd` file."
 msgstr ""
 
-#: ../../snmp.rst:47
+#: ../../snmp.rst:49
 msgid ""
 "You can test the configuration by using an SNMP client like `snmpwalk` or"
 " `snmpget` from a remote machine. For example: ::"
 msgstr ""
 
-#: ../../snmp.rst:52
+#: ../../snmp.rst:56
 msgid "Disabling the SNMP Server"
 msgstr ""
 
-#: ../../snmp.rst:54
+#: ../../snmp.rst:58
 msgid ""
 "If you don't require remote access to the SNMP server, you can disable it"
 " for additional security. Follow these steps:"
 msgstr ""
 
-#: ../../snmp.rst:57
+#: ../../snmp.rst:61
 msgid "Use the following commands to disable the server:"
 msgstr ""
 
-#: ../../snmp.rst:65
+#: ../../snmp.rst:69
 msgid ""
 "**Remember:** Disabling the SNMP server might impact monitoring tools or "
 "applications relying on it."
 msgstr ""
 
-#: ../../snmp.rst:68
+#: ../../snmp.rst:72
 msgid "Enabling remote access"
 msgstr ""
 
-#: ../../snmp.rst:70
+#: ../../snmp.rst:74
 msgid ""
 "If you need to access the SNMP server from outside your LAN, create a "
 "firewall rule that allows incoming UDP traffic on port ``161`` to the "
@@ -13528,21 +13531,21 @@ msgid ""
 "addresses."
 msgstr ""
 
-#: ../../snmp.rst:75
+#: ../../snmp.rst:79
 msgid "Security considerations"
 msgstr ""
 
-#: ../../snmp.rst:77
+#: ../../snmp.rst:81
 msgid "Prioritize security before enabling remote access:"
 msgstr ""
 
-#: ../../snmp.rst:79
+#: ../../snmp.rst:83
 msgid ""
 "**Strong Community String:** Replace the default \"public\" community "
 "string with a complex and unique one."
 msgstr ""
 
-#: ../../snmp.rst:80
+#: ../../snmp.rst:84
 msgid ""
 "**Access Control:** Implement Access Control Lists (ACLs) to restrict "
 "access to authorized IP addresses only."
@@ -23117,5 +23120,16 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The SNMP server is **enabled by "
+#~ "default** on your firewall, allowing "
+#~ "access from within your local area "
+#~ "network (LAN) on all IPv4 and IPv6"
+#~ " addresses."
+#~ msgstr ""
+
+#~ msgid "Restart the SNMP server to ensure the configurations take effect:"
 #~ msgstr ""
 
