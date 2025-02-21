@@ -30,11 +30,36 @@ Once the policy is selected, click on the :guilabel:`Save` button to save the ch
 
 .. _oinkcode-section:
 
-Set the Oinkcode
-----------------
+Access to Snort rules via Oinkcode
+==================================
 
-NethSecurity supports the usage of the paid Snort subscription, to enable it, you need to add the licence code in the
-`Oinkcode` field. You can verify if the code is valid by clicking on the :guilabel:`Test code` button.
+NethSecurity supports the use of a Snort subscription to obtain ``Registered`` and ``Subscriber`` rules through the Oinkcode.
+The `Oinkcode` is a unique code assigned to registered users on Snort.org, this code is required to authenticate the download of Snort rules.
+
+
+Available Rule Categories
+-------------------------
+
+- **Community Rules (Free rules)**:
+  Available to all registered users without restrictions.
+  Maintained by the Snort community.
+  Provide basic protection but receive less frequent updates compared to official rules.
+
+- **Registered Rules (Free rules with delay)**:
+  Official rules updated by the Snort team.
+  Available for free to registered users, but with a 30-day delay compared to the latest version.
+
+- **Subscriber Rules (Paid rules, real-time updates)**
+  Immediate access to the most up-to-date rules without any delay.
+  Available only to users with a Snort Subscriber Rule Set subscription.
+
+How to Obtain and Use the Oinkcode
+----------------------------------
+
+- Register on Snort.org
+- Retrieve your Oinkcode from the account profile section
+- On NethSecurity, paste your personal code into the `Oinkcode` field. You can verify if the code is valid by clicking on the :guilabel:`Test code` button
+
 
 Today event list
 ================
