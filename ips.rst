@@ -53,7 +53,7 @@ Available rule categories
   Immediate access to the most up-to-date rules without any delay.
   Available only to users with a Snort Subscriber Rule Set subscription.
 
-How to Obtain and Use the Oinkcode
+How to obtain and use the Oinkcode
 ----------------------------------
 
 - Register on Snort.org
