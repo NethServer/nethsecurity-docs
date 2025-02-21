@@ -6,7 +6,12 @@ SNMP Server
 Simple Network Management Protocol (SNMP) provides a standardized way to monitor and manage network devices like your firewall remotely.
 It allows authorized users to retrieve essential information like device status, performance metrics, and configuration settings.
 
-The SNMP server is **enabled by default** on your firewall, allowing access from within your local area network (LAN) on all IPv4 and IPv6 addresses.
+The SNMP server is **disabled by default** on your firewall, allowing access from within your local area network (LAN) on all IPv4 and IPv6 addresses.
+
+.. note::
+
+    If the system has been updated from v1.4.1 or earlier, the SNMP server will be **enabled by default**. To disable
+    it, follow the steps in the :ref:`Disabling the SNMP Server <snmp-server-disabling>` section.
 
 Configuring the SNMP Server
 ---------------------------
@@ -18,6 +23,7 @@ It's crucial to configure essential information that identifies your device. Her
 
 .. code-block:: bash
 
+    uci set snmpd.general.enabled=1
     uci set snmpd.@system[0].sysLocation='<string>'
     uci set snmpd.@system[0].sysContact='<string>'
     uci set snmpd.@system[0].sysName='<string>'
@@ -25,7 +31,8 @@ It's crucial to configure essential information that identifies your device. Her
 Replace `<string>` with the relevant information. For example:
 
 .. code-block:: bash
-    
+
+    uci set snmpd.general.enabled=1
     uci set snmpd.@system[0].sysLocation='MyOffice'
     uci set snmpd.@system[0].sysContact='admin@nethsecurity.org'
     uci set snmpd.@system[0].sysName='firewall.nethsecurity.org'
@@ -35,18 +42,15 @@ Replace `<string>` with the relevant information. For example:
 .. code-block:: bash
 
     uci commit snmpd
-
-4. Restart the SNMP server to ensure the configurations take effect:
-
-.. code-block:: bash
-
-    /etc/init.d/snmpd restart
+    reload_config
 
 The SNMP server configuration is stored in the `/etc/config/snmpd` file.
 
 You can test the configuration by using an SNMP client like `snmpwalk` or `snmpget` from a remote machine. For example: ::
 
     snmpwalk -v 2c -c public 127.0.0.1
+
+.. _snmp-server-disabling:
 
 Disabling the SNMP Server
 -------------------------
@@ -60,7 +64,7 @@ If you don't require remote access to the SNMP server, you can disable it for ad
 
     uci set snmpd.general.enabled=0
     uci commit snmpd
-    /etc/init.d/snmpd stop
+    reload_config
 
 **Remember:** Disabling the SNMP server might impact monitoring tools or applications relying on it.
 
