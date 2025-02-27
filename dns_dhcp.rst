@@ -9,26 +9,36 @@ DNS & DHCP
 NethSecurity can provide DNS and DHCP services to every local network.
 This section is divided in 5 tabs:
 
-* DHCP
+* DHCP and MAC binding
 * Static leases
 * Dynamic leases
 * DNS
 * DNS records
 
-DHCP
-====
+DHCP and MAC binding
+====================
 
 This section allows you to enable and manage a DHCP server for every local network configured in your NethSecurity.
 Every local interface is provided with a card where you can enable the service clicking on button :guilabel:`Edit`.
 
 Available fields:
 
-* ``Enable DHCP`` : enable/disable the service
-* ``Range IP start`` : first IP address of DHCP range
-* ``Range IP end`` : last IP address of DHCP range
-* ``Lease time`` :  lease time (default 1 hour)
+* ``Mac binding``:
 
-**Advanced settings**
+  * ``Status``: enable/disable the MAC-IP binding feature for this interface
+  * ``Type``: it's possible to choose between two types of MAC-IP binding:
+
+    * ``Soft binding``: allows hosts without a reservation, blocks mismatched IP/MAC
+    * ``Hard binding``: Only hosts with a reservation allowed, others are blocked
+
+* ``DHCP``:
+
+  * ``Enable DHCP`` : enable/disable the service
+  * ``Range IP start`` : first IP address of DHCP range
+  * ``Range IP end`` : last IP address of DHCP range
+  * ``Lease time`` :  lease time (default 1 hour)
+
+**DHCP Advanced settings**
 
 ``Force DHCP server start`` 
 
