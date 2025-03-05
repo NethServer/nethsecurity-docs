@@ -40,6 +40,7 @@ For each port forward the user can also configure the following aspects:
 
 - **Enabling logging**: port forwards can be configured to log incoming traffic for each rule. By enabling the ``Log`` option,
   the network administrator can keep track of the traffic passing through the port forward, allowing for monitoring and analysis.
+  By default, logging is limited to 1 entry per second. To change this limit, refer to the :ref:`logging-limits` section.
 
 .. _hairpin-section:
 

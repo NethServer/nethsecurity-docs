@@ -46,4 +46,46 @@ Fill in the following fields for the new rule:
   * ``Drop``: block the traffic, packets are dropped and no notification is sent to the sender host.
 * ``Rule position``: decide whether to add the rule to the bottom or top of the rule list.
 * ``Logging``: indicate whether traffic matching this rule should be logged. The log entry will include the rule name as a prefix.
+  By default, logging is limited to 1 entry per second. See the :ref:`logging-limits` section for instructions on changing this limit.
 * ``Tags``: optionally, add tags for organizational purposes. Note that the 'automated' tag is reserved for system use.
+
+.. _logging-limits:
+
+Logging limits
+==============
+
+Logging can be enabled on the following objects:
+
+- zones
+- firewall rules
+- redirect rules (port-forwarding)
+
+When the logging is enabled, the firewall will add logging limits to various rules.
+This ensures that logging does not overwhelm the system by setting a limit on the logging rate.
+
+By default, the following logging limits are applied:
+
+- 1 log entry per second for firewall rules
+- 5 log entries per second for zones
+- 1 log entry per second for redirect rules
+
+Changing the default logging limits
+-----------------------------------
+
+.. warning::
+   Changing the default logging limits can impact system performance. Use caution when changing these limits.
+
+Default limits are saved in the `ns_defaults` section of the firewall configuration:
+
+- ``zone_log_limit``: the default limit for zones
+- ``rule_log_limit``: the default limit for firewall rules
+- ``redirect_log_limit``: the default limit for redirect rules
+
+1. Set the desired log limit for the firewall rules using the `uci` command: ::
+
+     uci set firewall.ns_defaults.zone_log_limit="10/s"
+     uci commit firewall
+  
+2. Run the `firewall-apply-default-logging` script to apply the new log limit: ::
+
+     firewall-apply-default-logging

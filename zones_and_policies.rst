@@ -38,7 +38,12 @@ Denied traffic:
 
 In this configuration, the firewall regulates traffic between the WAN and LAN zones, allowing internal devices to access the internet and communicate internally while maintaining security by blocking direct external access to the firewall and preventing communication between external networks.
 
-Default zones can't be deleted but the network administrator can change existing policies or create new zones. 
+Default zones can't be deleted but the network administrator can change existing policies or create new zones.
+
+Logging can be enabled for zones using the :guilabel:`Logging` option inside the ``Zones and policies`` page.
+By enabling logging, the network administrator can track network activity, identify potential threats,
+and analyze traffic patterns.
+Logging is limited to 5 entry per second by default. To change this limit, refer to the :ref:`logging-limits` section.
 
 Guests and DMZ zones
 --------------------
