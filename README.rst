@@ -119,10 +119,13 @@ On Fedora 37 or later use: ::
 
   sudo dnf install python3-sphinx python3-pip make
 
-Then clone the repository, change into the cloned directory and install all required extra modules ::
+The local build uses a Python virtual environment.
+First clone the repository, change into the cloned directory and setup the virtual env ::
 
   git clone https://github.com/NethServer/nethsecurity-docs.git
   cd nethsecurity-docs
+  python3 -m venv venv
+  source venv/bin/activate
   pip install -r requirements.txt
 
 Finally, build the doc: ::
