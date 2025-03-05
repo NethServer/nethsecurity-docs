@@ -29,7 +29,16 @@ Available fields:
   * ``Type``: it's possible to choose between two types of MAC-IP binding:
 
     * ``Soft binding``: allows hosts without a reservation, blocks mismatched IP/MAC
+
+      **Example**: An office network where employees frequently bring their own devices (BYOD). In this case Soft binding
+      allows devices without a reservation to access the network, but ensures that any device with a mismatched IP/MAC
+      address is blocked. This provides flexibility for employees while maintaining a level of security.
+
     * ``Hard binding``: Only hosts with a reservation allowed, others are blocked
+
+      **Example**: A corporate network with strict security policies. Here hard binding ensures that only devices with
+      a pre-configured reservation can access the network. This prevents any unauthorized device from connecting,
+      providing a high level of security.
 
 * ``DHCP``:
 
