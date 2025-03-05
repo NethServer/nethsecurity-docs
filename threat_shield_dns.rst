@@ -85,7 +85,7 @@ Some hosts or subnets may need to bypass Threat shield DNS filtering. To configu
 Use the :guilabel:`Add bypass` button to add a new address to the list.
 The address can be a valid IPv4/IPv6 address with optional CIDR notation.
 
-.. _local_blocklist-section:
+.. _local_blocklist_dns-section:
 
 Local blocklist
 ===============

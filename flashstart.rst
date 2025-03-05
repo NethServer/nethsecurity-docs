@@ -60,4 +60,4 @@ Block certain websites
 If you need to block specific domains and FQDNs you can do it directly from the FlashStart configuration page,
 just go to the section "Protection"-> "Personal Blacklists" and add them there.
 
-If you don' have a subscription for FlashStart DNS Filter you can use the same feature using :ref:`Threat Shield DNS <block_website-section>`.
+If you don' have a subscription for FlashStart DNS Filter you can use the same feature using :ref:`Threat Shield DNS <local_blocklist_dns-section>`.

@@ -1,1 +1,4 @@
 _build/
+bin/
+lib/
+lib64/

@@ -109,7 +109,7 @@ A comment can be associated with each address to facilitate management.
 You can add a comment to provide additional information about the address, such as its purpose or owner.
 This can help in organizing and managing the allowlist effectively.
 
-.. _local_blocklist-section:
+.. _local_blocklist_ip-section:
 
 Local blocklist
 ---------------
