@@ -104,7 +104,6 @@ NethSecurity administrator manual
    snmp
    custom_openvpn_tunnel
    logs
-   mac_ip_binding
    wireguard
    speedtest
    ups
