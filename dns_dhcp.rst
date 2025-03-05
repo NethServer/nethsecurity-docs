@@ -37,8 +37,8 @@ Available fields:
     * ``Hard binding``: Only hosts with a reservation allowed, others are blocked
 
       **Example**: A corporate network with strict security policies. Here hard binding ensures that only devices with
-      a pre-configured reservation can access the network. This prevents any unauthorized device from connecting,
-      providing a high level of security.
+      a pre-configured reservation can access the network. This prevents that employees steal an IP with higher
+      authorizations.
 
 * ``DHCP``:
 
