@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-05 09:27+0000\n"
+"POT-Creation-Date: 2025-03-05 10:26+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -3108,6 +3108,40 @@ msgstr ""
 
 #: ../../download.rst:23
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-24.10.0-ns.1.4.99-alpha1-18-g5e71d1c9"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.4.99-alpha1-18-g5e71d1c9/targets/x86/64/nethsecurity-8-24.10.0-ns.1.4.99-alpha1-18-g5e71d1c9-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.4.99-alpha1-18-g5e71d1c9/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-24.10.0-ns.1.4.99-alpha1-17-g3baea05c"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`image "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.4.99-alpha1-17-g3baea05c/targets/x86/64/nethsecurity-8-24.10.0-ns.1.4.99-alpha1-17-g3baea05c-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`sha256sum "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.4.99-alpha1-17-g3baea05c/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
