@@ -7,6 +7,38 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2025-03-27
+===========================
+
+Image version: `8-24.10-ns.1.5.0.rc`
+
+This release highlights new UI implementations for services previously accessible only via CLI, along with security enhancements and bug fixes.
+
+.. rubric:: New features and improvements
+
+- IPS: UI has been released 
+- Threat Shield DNS: UI has been released 
+- IP/MAC Binding: UI has been released 
+- Netify Informatics: UI has been released released for service registration
+- FlashStart DNS: Implementation Improvements. NethSecurity’s DNS management is now completely separate from the DNS used for FlashStart to avoid any interaction with firewall services.External DNS servers are no longer required for unfiltered networks.
+- Various modifications have been made to strengthen the system, including: API hardening, SNMP service is now disabled by default, Backup management modifications (subscription only)
+
+
+.. rubric:: Bug fixes (this is a limited list of the most reported ones)
+
+- Migration: OpenVPN device name issue when exceeding 16 characters
+- Migration: Loss of configuration for OpenVPN tunnels with similar names
+- Migration: Road Warrior client migration interruption if a user certificate is missing
+- MultiWAN does not allow the firewall to send traffic outside if the lowest metric route is unavailable
+- OpenVPN Tunnel JSON export includes only the first remote endpoint, omitting others
+- Enabling logging in firewall rules can overload the CPU
+- Netmap rules not loaded after a version update
+- OpenVPN server web interface crashes if the user database is removed
+- Firewall: “any” zone displayed as inactive
+- Port forward: error when assigning an object with an IP range
+
+-------------
+
 Major changes on 2024-12-18
 ===========================
 
