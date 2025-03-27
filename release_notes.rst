@@ -20,7 +20,7 @@ This release contains new User Interfaces for services previously accessible onl
 - Threat Shield DNS: UI has been released 
 - IP/MAC Binding: UI has been released 
 - Netify Informatics: UI has been released released for service registration
-- FlashStart DNS: Implementation Improvements. NethSecurity’s DNS management is now completely separate from the DNS used for FlashStart to avoid any interaction with firewall services.External DNS servers are no longer required for unfiltered networks.
+- FlashStart DNS: Implementation improvements. NethSecurity’s DNS management is now independent from the DNS used for FlashStart to avoid any interaction with firewall services. External DNS servers are no longer required for unfiltered networks.
 - Various modifications have been made to strengthen the system, including: API hardening, SNMP service is now disabled by default, Backup management modifications (subscription only)
 
 
