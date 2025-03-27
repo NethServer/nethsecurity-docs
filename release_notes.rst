@@ -12,7 +12,7 @@ Major changes on 2025-03-28
 
 Image version: `8-24.10-ns.1.5.0.rc`
 
-This release highlights new UI implementations for services previously accessible only via CLI, along with security enhancements and bug fixes.
+This release contains new User Interfaces for services previously accessible only via Command Line, along with security enhancements and bug fixes.
 
 .. rubric:: New features and improvements
 
