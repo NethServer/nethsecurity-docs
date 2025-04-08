@@ -7,6 +7,17 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2025-04.08
+===========================
+
+Image version: `8-24.10.0-ns.1.5.0`
+
+This release addresses a bug spotted in the previous release due to strengthening of the API backend.
+
+No additional changes have been made from the 1.5.0-rc1 to this release.
+
+-------------
+
 Major changes on 2025-03-28
 ===========================
 
