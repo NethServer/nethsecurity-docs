@@ -4,7 +4,7 @@ Release notes
 
 NethSecurity releases changelogs.
 
-- List of `known bugs <https://github.com/NethServer/nethsecurity/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug>`_
+- List of `known bugs <https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
 Major changes on 2025-04.08
