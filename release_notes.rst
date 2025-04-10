@@ -7,6 +7,17 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2025-04.10
+===========================
+
+Image version: `8-24.10.0-ns.1.5.1`
+
+This release fixes an issue with the management of network interface bonding.
+
+No additional changes have been made from the 1.5.0 to this release.
+
+-------------
+
 Major changes on 2025-04.08
 ===========================
 
