@@ -18,6 +18,7 @@ Image version: `8-24.10.0-ns.1.5.1`
 - Real-time traffic: adjusted traffic values to be more accurate across tables
 - Threat Shield DNS/IP: removed graphic issue where more lists appears to have been enabled than the actual ones
 - Monitoring: removed WAN ip display if the interface is offline
+- UI: doubled the speed of the UI compressing the data sent to the browser
 
 -------------
 
