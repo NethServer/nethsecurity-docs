@@ -65,6 +65,9 @@ Example to override the DNS passed to clients with 2 servers:
 - selected option: ``dns-server``
 - value: ``1.1.1.1,8.8.8.8``
 
+See also :ref:`dns_dhcp_custom-section` for more information on non-standard options.
+
+
 .. _static_leases-section:
 
 Static Leases
@@ -92,6 +95,28 @@ Default Configuration
 ---------------------
 
 By default, the DHCP server has a limit of 1000 concurrent leases to prevent DoS attacks. Set the dnsmasq ``dhcpleasemax`` option to change the limit.
+
+
+.. _dns_dhcp_custom-section:
+
+Non-standard custom options
+---------------------------
+
+In addition to the standard DHCP options, NethSecurity allows you to configure non-standard custom options,
+such as option 82 (DHCP Relay Agent Information). These options can be useful for advanced configurations or specific network requirements.
+
+To set a custom option from the command line, use the following commands:
+
+.. code-block:: bash
+
+  uci add_list dhcp.lan.dhcp_option='82,myvalue'
+  uci commit dhcp
+  reload_config
+
+Custom options configured via the command line are preserved even when changes are made through the UI.
+Custom options can be safely removed from the UI.
+
+However, users should avoid modifying these custom options directly from the UI to prevent unexpected behavior.
 
 DNS
 ===
