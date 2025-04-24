@@ -129,6 +129,8 @@ However, this behavior can be customized using the following configuration optio
 * ``DNS Domain`` : Insert the the local DNS domain, ensuring that queries for this domain are always resolved locally.
 * ``Log DNS queries``: enable it if you want all the DNS queries to be logged by the system.
 
+.. _forwarding_servers-section:
+
 Forwarding servers
 ------------------
 
