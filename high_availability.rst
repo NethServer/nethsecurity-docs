@@ -173,6 +173,12 @@ Proper network cabling is essential to ensure high availability and seamless fai
 
 This setup ensures that if any single firewall or switch fails, network connectivity is maintained through the backup node and the remaining switch.
 
+The below diagram illustrates the recommended redundant network setup, switches are omitted for clarity.
+
+.. image:: _static/high_availability.png
+   :alt: High Availability network diagram showing proper cabling
+   :align: center
+
 LAN interfaces
 --------------
 
@@ -236,7 +242,7 @@ Initialize the primary node::
 
    ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip>
 
-Where the ``primary_node_ip`` is the static IP of the primary node alredy set for the LAN interface,
+Where the ``primary_node_ip`` is the static IP of the primary node already set for the LAN interface,
 and ``backup_node_ip`` is the static LAN IP of the backup node
 The ``virtual_ip`` is the virtual IP address for the LAN interface where all LAN hosts should point to.
 
@@ -261,7 +267,7 @@ WAN interfaces
 --------------
 
 The WAN interface is the first interface to be added to the HA cluster.
-Rememeber that the WAN interface must be configured with a static IP address, so make sure also to setup
+Remember that the WAN interface must be configured with a static IP address, so make sure also to setup
 an :ref:`DNS forwarders <forwarding_servers-section>`.
 
 Configure the WAN interface::
@@ -271,7 +277,7 @@ Configure the WAN interface::
 Where ``<interface>`` is the name of the WAN interface (e.g., `wan`, `eth1`, etc.),
 Ensure you provide the virtual IP in CIDR notation (e.g., `192.168.1.100/24`) and the gateway IP.
 The script configures the interface on both nodes using fake IP addresses from the `169.254.0.0/16` range and sets up the virtual IP in `keepalived`.
-If you do not enter a gatewat, nodes will not be able to reach the internet.
+If you do not enter a gateway, nodes will not be able to reach the internet.
 
 Verify the configuration
 ------------------------
@@ -417,7 +423,7 @@ Troubleshooting
 
 Troubleshooting the HA setup can be challenging, especially if the backup node is not reachable or the primary node is not responding as expected.
 
-Remembet the backup node does not have direct internet access in its normal standby state. Therefore:
+Remember the backup node does not have direct internet access in its normal standby state. Therefore:
 
 - It cannot resolve external DNS names.
 - It cannot reach the Controller or other external portals.
