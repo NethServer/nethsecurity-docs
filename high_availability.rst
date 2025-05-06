@@ -214,8 +214,9 @@ This checks:
 - WAN interface is not PPPoE.
 - If DHCP server is running:
 
-  - `Force DHCP server start` option is enabled.
-  - `router` option is set (should be the virtual IP).
+  - ``Force DHCP server start`` option is enabled.
+  - ``3: router`` DHCP option is set (should be the virtual IP).
+  - ``6: DNS server`` DHCP option is set.
 - Hotspot is disabled.
 
 On the backup node::
