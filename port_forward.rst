@@ -17,9 +17,13 @@ When creating a port forward, certain parameters must be specified:
 
 - ``Name``: assigning a name to a port forward rule is beneficial for future reference and management.
   By providing a descriptive and meaningful name, network administrators can easily identify the purpose and context of each port forward.
-- ``Source port``: the port from which the request originates.
+- ``Source port``: the port from which the request originates. 
+  Note that not all protocols require a port. For example, protocols like ``GRE`` do not use ports.
 - ``Destination port``: the port to which the traffic is directed; this can differ from the source port.
-- ``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, ``ICMP``, ``ESP``, ``AH`` ``SCTP`` or the special value ``ALL`` for all supported protocols.
+- ``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, ``ICMP``, ``ESP``, ``AH``, ``SCTP``, ``GRE``.
+  Leave empty for any source protocol
+  If left empty, all traffic, regardless of the protocol, will be forwarded.
+  Use this setting with caution, as it may expose the system to unintended or potentially harmful traffic.
 - ``Destination address``: specifies the internal host to which the traffic should be redirected. This can be:
 
   - a specific IP address
