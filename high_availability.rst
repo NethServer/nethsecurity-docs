@@ -313,8 +313,9 @@ Network aliases
 
 You can add IP aliases to the primary node on relevant interfaces.
 This is useful for services that require multiple IP addresses on the same interface, such as virtual servers or load balancing.
+First, on the primary node, access the web interface and add the alias to the network interface.
 
-After adding an alias, you must also register this alias within the HA cluster configuration using the `ns-ha-config` command.
+Then, use the `ns-ha-config` command to register the alias in the HA cluster configuration.
 
 Aliases must be explicitly set on the primary node. ::
 
