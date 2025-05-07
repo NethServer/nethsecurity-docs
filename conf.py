@@ -126,9 +126,15 @@ for prefix in ['dev', 'stable']:
     # Sort by NethSecurity release
     sorted_dev = sorted(owrt_sorted, key=lambda v: ns_version(v[13:]), reverse=True)
     fp = open(f'{prefix}.csv', 'w')
-    fp.write("Version,Image,Hash\n")
+    fp.write("Version,Image,Hash,SBOM\n")
     for entry in sorted_dev:
-        image = f'`image <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic-squashfs-combined-efi.img.gz>`__'
-        hash = f'`sha256sum <{base_url}/{prefix}/{entry}/targets/x86/64/sha256sums>`__'
-        fp.write(f'{entry},{image},{hash}\n')
+        image = f'`x86-64 <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic-squashfs-combined-efi.img.gz>`__'
+        hash = f'`SHA256 <{base_url}/{prefix}/{entry}/targets/x86/64/sha256sums>`__'
+        entry_v = ns_version(entry[13:])
+        # SBOM is available since only 1.5.1-15 prerelease and 1.5.2 stable
+        if (entry_v.prerelease and entry_v >= semver.VersionInfo.parse('1.5.1-15') or (not entry_v.prerelease and entry_v > semver.VersionInfo.parse('1.5.1'))):
+            sbom = f'`CDX <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic.bom.cdx.json>`__'
+        else:
+            sbom = ""
+        fp.write(f'{entry},{image},{hash},{sbom}\n')
     fp.close()
