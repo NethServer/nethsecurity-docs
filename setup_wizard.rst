@@ -84,7 +84,7 @@ Step 4: Web interface and WAN access on TCP port 443
 
 Set up access controls for the web interface and WAN connections on port 443.
 
-- **Web interface service on TCP port 443**: this options controls if the web interface service on port 443 is disabled (recommended) or enabled. By default, the web interface is accessible on port 9090. If this option is enabled, the web interface will be accessible on port 443.
+- **Web interface service on TCP port 443**: this option controls if the web interface service on port 443 is disabled (recommended) or enabled. By default, the web interface is accessible on port 9090. If this option is enabled, the web interface will be accessible on port 443.
 - **WAN access on TCP port 443**: this option controls if WAN access on port 443 is disabled (recommended) or enabled.
 
 .. _summary-section:
