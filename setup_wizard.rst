@@ -77,6 +77,8 @@ You can choose from the following access options for WAN connectivity:
   - CIDR-formatted networks (e.g., 192.168.1.0/24)
   - IP address ranges (e.g., 203.0.113.10-203.0.113.20)
 
+If you choose the **Limited** option, the IP addresses you configured will appear at the end of the wizard under **Firewall > Rules > Input rules**.
+
 .. _port_443-section:
 
 Step 4: Web interface and WAN access on TCP port 443
@@ -84,7 +86,7 @@ Step 4: Web interface and WAN access on TCP port 443
 
 Set up access controls for the web interface and WAN connections on port 443.
 
-- **Web interface service on TCP port 443**: this option controls if the web interface service on port 443 is disabled (recommended) or enabled. By default, the web interface is accessible on port 9090. If this option is enabled, the web interface will be accessible on port 443.
+- **Web interface service on TCP port 443**: by default, the web user interface is available on TCP port 9090. Enabling this option also makes it accessible on TCP port 443. It is recommended to keep this additional access disabled and always use TCP port 9090 to access the web UI.
 - **WAN access on TCP port 443**: this option controls if WAN access on port 443 is disabled (recommended) or enabled.
 
 .. _summary-section:
