@@ -390,10 +390,33 @@ Execute the following commands on the **primary node**:
 
       ns-ha-config add-interface wan 192.168.122.49/24 192.168.122.1
 
+Alerting
+========
+
+.. admonition:: Subscription required
+
+   This feature is available only if the firewall and the controller have a valid subscription.
+
+The HA cluster provides automated monitoring and notifications to help administrators respond quickly to failover events or synchronization issues.
+
+The following alerts are available:
+
+- **ha:sync:failed**: Triggered when the configuration synchronization between primary and backup nodes fails.
+  This usually indicates that the backup node is unreachable due to network issues, hardware failure, or service interruption.
+
+- **ha:primary:failed**: Triggered during failover events when the primary node becomes unavailable.
+  
+
 Maintenance
 ===========
 
-Maintenance of the backup node:
+The HA cluster is designed to be highly available and requires minimal maintenance.
+However, there are times when you may need to perform maintenance on either the primary or backup node.
+
+Backup node
+-----------
+
+The backup node can be switched off for maintenance without affecting the primary node.
 
 1. Stop `keepalived` on the **backup node**: ::
 
@@ -404,8 +427,12 @@ Maintenance of the backup node:
 
      /etc/init.d/keepalived start
 
-When the primary node is stopped, the backup node will take over.
-Maintenance of the primary node:
+
+Primary node
+------------
+
+The primary node can be switched off for maintenance, the backup node will take over the virtual IP addresses
+and all services.
 
 1. Stop `keepalived` on the **primary node**: ::
 
@@ -416,7 +443,29 @@ Maintenance of the primary node:
 
    /etc/init.d/keepalived start
 
-   The primary node will take over the virtual IP addresses again.
+Remote access
+-------------
+
+The primary node is accessibile both from the LAN and WAN interfaces.
+Therefore, yhe backup node is accessible from the LAN interface only.
+When connecting to thhe backup node from a remote network, you need to access the primary node first and then connect to the backup node using SSH.
+
+After connecting to the primary node, use the following command to access the backup node: ::
+
+   ns-ha-config ssh-remote
+
+This command will establish an SSH connection to the backup node using the SSH key generated during the HA setup.
+
+Upgrade
+-------
+
+The backup node does not receive system updates automatically because it does not have direct Internet access.
+To update the backup node, you need to connect to the primary node and run the update command on the backup node: ::
+
+  ns-ha-config upgrade-remote
+
+This command will download the latest image, upload it to the backup node, and install it.
+As a normal upgrade, the backup node will reboot after the installation.
 
 .. _troubleshooting-section:
 
