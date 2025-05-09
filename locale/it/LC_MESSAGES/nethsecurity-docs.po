@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 07:53+0000\n"
+"POT-Creation-Date: 2025-05-09 07:18+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -641,7 +641,7 @@ msgstr ""
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../content_filter.rst:126 ../../index.rst:62
+#: ../../content_filter.rst:126 ../../index.rst:63
 msgid "Firewall"
 msgstr "Firewall"
 
@@ -3215,60 +3215,72 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-24.10.0-ns.1.5.1-15-g3af36fd7"
+msgid "8-24.10.0-ns.1.5.1-20-g40052f05"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`x86-64 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-15-g3af36fd7/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-15-g3af36fd7-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-20-g40052f05/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-20-g40052f05-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`SHA256 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-15-g3af36fd7/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-20-g40052f05/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`CDX "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-15-g3af36fd7/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-15-g3af36fd7-x86-64-generic.bom.cdx.json>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-20-g40052f05/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-20-g40052f05-x86-64-generic.bom.cdx.json>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-24.10.0-ns.1.5.1-14-g4f0699f7"
+msgid "8-24.10.0-ns.1.5.1-19-g24b5b3d4"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`x86-64 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-14-g4f0699f7/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-14-g4f0699f7-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-19-g24b5b3d4/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-19-g24b5b3d4-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`SHA256 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-14-g4f0699f7/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-19-g24b5b3d4/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-24.10.0-ns.1.5.1-13-gb4993a57"
+msgid ""
+"`CDX "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-19-g24b5b3d4/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-19-g24b5b3d4-x86-64-generic.bom.cdx.json>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-24.10.0-ns.1.5.1-18-ga5a06839"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`x86-64 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-13-gb4993a57/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-13-gb4993a57-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-18-ga5a06839/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-18-ga5a06839-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`SHA256 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-13-gb4993a57/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-18-ga5a06839/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`CDX "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-18-ga5a06839/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-18-ga5a06839-x86-64-generic.bom.cdx.json>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -4082,7 +4094,7 @@ msgid ""
 "hotspot manager."
 msgstr ""
 
-#: ../../hotspot.rst:55
+#: ../../hotspot.rst:55 ../../setup_wizard.rst:48 ../../setup_wizard.rst:68
 msgid "Settings"
 msgstr ""
 
@@ -4251,35 +4263,35 @@ msgstr "Informazioni"
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../index.rst:31
+#: ../../index.rst:32
 msgid "System"
 msgstr ""
 
-#: ../../index.rst:44
+#: ../../index.rst:45
 msgid "Network"
 msgstr ""
 
-#: ../../index.rst:55
+#: ../../index.rst:56
 msgid "Users and objects"
 msgstr ""
 
-#: ../../index.rst:72 ../../monitoring.rst:140
+#: ../../index.rst:73 ../../monitoring.rst:140
 msgid "Security"
 msgstr ""
 
-#: ../../index.rst:83 ../../monitoring.rst:94
+#: ../../index.rst:84 ../../monitoring.rst:94
 msgid "VPN"
 msgstr ""
 
-#: ../../index.rst:91
+#: ../../index.rst:92
 msgid "Report"
 msgstr ""
 
-#: ../../index.rst:98
+#: ../../index.rst:99
 msgid "Advanced (CLI)"
 msgstr ""
 
-#: ../../index.rst:111
+#: ../../index.rst:112
 msgid "Best practices"
 msgstr "Consigli pratici"
 
@@ -13587,6 +13599,243 @@ msgid ""
 "an existing route click on the :guilabel:`Edit` button on the table "
 "record. To delete a route, click the three-dots menu :guilabel:`⋮` on the"
 " table record and press the :guilabel:`Delete` button."
+msgstr ""
+
+#: ../../setup_wizard.rst:5
+msgid "Setup wizard"
+msgstr ""
+
+#: ../../setup_wizard.rst:7
+msgid ""
+"The first time the web user interface is accessed, a setup wizard is "
+"launched. This guided process can assist you in establishing a secure "
+"initial configuration for the firewall and ensures that the unit is ready"
+" for deployment in a production environment."
+msgstr ""
+
+#: ../../setup_wizard.rst:9
+msgid ""
+"For optimal security and to ensure a controlled configuration "
+"environment, it is strongly recommended that you complete the setup "
+"wizard before connecting the device to the internet."
+msgstr ""
+
+#: ../../setup_wizard.rst:14
+msgid "Welcome to the setup wizard"
+msgstr ""
+
+#: ../../setup_wizard.rst:16
+msgid ""
+"On the first page of the setup wizard, you are presented with three "
+"options:"
+msgstr ""
+
+#: ../../setup_wizard.rst:18
+msgid "**New configuration**: this option initiates the guided setup process."
+msgstr ""
+
+#: ../../setup_wizard.rst:19
+msgid ""
+"**Restore a backup**: this option allows you to restore the unit "
+"configuration from a previous backup. If selected, the setup wizard is "
+"skipped."
+msgstr ""
+
+#: ../../setup_wizard.rst:20
+msgid ""
+"**Factory reset**: this option resets the firewall unit to its default "
+"factory settings. This is useful if you suspect unauthorized access to "
+"the firewall."
+msgstr ""
+
+#: ../../setup_wizard.rst:25
+#, fuzzy
+msgid "Step 1: Change root password"
+msgstr "Utente e password"
+
+#: ../../setup_wizard.rst:27
+msgid ""
+"You are required to define a new, secure password for the root account. "
+"This measure significantly reduces the risk of compromise by eliminating "
+"reliance on publicly known default credentials."
+msgstr ""
+
+#: ../../setup_wizard.rst:30
+msgid "The updated root password will be applied immediately upon confirmation."
+msgstr ""
+
+#: ../../setup_wizard.rst:31
+msgid ""
+"Ensure the new credentials are securely stored before proceeding to the "
+"next configuration step."
+msgstr ""
+
+#: ../../setup_wizard.rst:32
+msgid ""
+"If you restart the setup wizard after changing root password (e.g., by "
+"closing and reopening the browser tab), you will need to use the new "
+"password to access the web interface."
+msgstr ""
+
+#: ../../setup_wizard.rst:37
+msgid "Step 2: SSH Access"
+msgstr ""
+
+#: ../../setup_wizard.rst:39
+msgid ""
+"You can customize SSH access to suit your security and operational "
+"requirements."
+msgstr ""
+
+#: ../../setup_wizard.rst:42
+#, fuzzy
+msgid "Default access configuration"
+msgstr "Ripristina configurazione"
+
+#: ../../setup_wizard.rst:44
+msgid ""
+"LAN Access is enabled by default to allow administrative access from "
+"within the trusted local network."
+msgstr ""
+
+#: ../../setup_wizard.rst:45
+msgid ""
+"WAN Access is disabled by default to prevent exposure to external threats"
+" from untrusted networks."
+msgstr ""
+
+#: ../../setup_wizard.rst:50
+msgid ""
+"**TCP port**: the listening port for SSH can be changed if needed. The "
+"default value is 22."
+msgstr ""
+
+#: ../../setup_wizard.rst:51
+msgid ""
+"**Root login with password**: it is advised to disable password-based "
+"root login for SSH. Disabling this option significantly reduces the risk "
+"of unauthorized access by limiting the potential for brute-force password"
+" attacks."
+msgstr ""
+
+#: ../../setup_wizard.rst:53
+msgid ""
+"If password-based login for the root user is disabled, it is essential to"
+" upload the root user's SSH public key to the device to ensure continued "
+"remote access."
+msgstr ""
+
+#: ../../setup_wizard.rst:58
+msgid "Step 3: Web interface access on TCP port 9090"
+msgstr ""
+
+#: ../../setup_wizard.rst:60
+msgid ""
+"Configure access parameters for the web user interface, which operates on"
+" port 9090."
+msgstr ""
+
+#: ../../setup_wizard.rst:63
+#, fuzzy
+msgid "Default configuration"
+msgstr "Ripristina configurazione"
+
+#: ../../setup_wizard.rst:65
+msgid ""
+"By default, web interface access is enabled from the LAN, allowing "
+"administrative management from within the trusted local network."
+msgstr ""
+
+#: ../../setup_wizard.rst:70
+msgid "You can choose from the following access options for WAN connectivity:"
+msgstr ""
+
+#: ../../setup_wizard.rst:72
+msgid ""
+"**Disabled** (recommended): this option disables web interface access "
+"from the WAN, preventing exposure to external threats."
+msgstr ""
+
+#: ../../setup_wizard.rst:73
+msgid ""
+"**Enabled**: full access to the web interface is permitted from any WAN "
+"source. This mode should only be used in secure environments or when "
+"necessary for remote management, and must be protected with strong "
+"credentials"
+msgstr ""
+
+#: ../../setup_wizard.rst:74
+msgid ""
+"**Limited**: web interface access from WAN is restricted to specified IP "
+"addresses or networks. You have to define one or more of the following:"
+msgstr ""
+
+#: ../../setup_wizard.rst:76
+msgid "IP address"
+msgstr ""
+
+#: ../../setup_wizard.rst:77
+#, fuzzy
+msgid "CIDR-formatted networks (e.g., 192.168.1.0/24)"
+msgstr "**Rete di origine**: la rete di origine, ad esempio, 192.168.1.0/24"
+
+#: ../../setup_wizard.rst:78
+msgid "IP address ranges (e.g., 203.0.113.10-203.0.113.20)"
+msgstr ""
+
+#: ../../setup_wizard.rst:80
+msgid ""
+"If you choose the **Limited** option, the IP addresses you configured "
+"will appear at the end of the wizard under **Firewall > Rules > Input "
+"rules**."
+msgstr ""
+
+#: ../../setup_wizard.rst:85
+msgid "Step 4: Web interface and WAN access on TCP port 443"
+msgstr ""
+
+#: ../../setup_wizard.rst:87
+msgid ""
+"Set up access controls for the web interface and WAN connections on port "
+"443."
+msgstr ""
+
+#: ../../setup_wizard.rst:89
+msgid ""
+"**Web interface service on TCP port 443**: by default, the web user "
+"interface is available on TCP port 9090. Enabling this option also makes "
+"it accessible on TCP port 443. It is recommended to keep this additional "
+"access disabled and always use TCP port 9090 to access the web UI."
+msgstr ""
+
+#: ../../setup_wizard.rst:90
+msgid ""
+"**WAN access on TCP port 443**: this option controls if WAN access on "
+"port 443 is disabled (recommended) or enabled."
+msgstr ""
+
+#: ../../setup_wizard.rst:95
+msgid "Step 5: Summary"
+msgstr ""
+
+#: ../../setup_wizard.rst:97
+msgid ""
+"The summary page provides an opportunity to review the unit configuration"
+" before applying changes."
+msgstr ""
+
+#: ../../setup_wizard.rst:99
+msgid ""
+"WAN access to the web interface may be restricted by your current "
+"settings. Applying the changes while connected via port 443 could result "
+"in loss of access. Verify your configuration meets your remote access "
+"needs, particularly when using reverse proxies."
+msgstr ""
+
+#: ../../setup_wizard.rst:101
+msgid ""
+"Use the 'Previous' button to go back and make adjustments if needed. "
+"Click 'Finish setup' to apply the changes and complete the setup wizard."
 msgstr ""
 
 #: ../../smtp.rst:3
@@ -23934,5 +24183,52 @@ msgstr ""
 #~ msgid ""
 #~ "`sha256sum "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-23.05.2-ns.0.0.1-beta1/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-24.10.0-ns.1.5.1-15-g3af36fd7"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`x86-64 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-15-g3af36fd7/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-15-g3af36fd7-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SHA256 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-15-g3af36fd7/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`CDX "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-15-g3af36fd7/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-15-g3af36fd7-x86-64-generic.bom.cdx.json>`__"
+#~ msgstr ""
+
+#~ msgid "8-24.10.0-ns.1.5.1-14-g4f0699f7"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`x86-64 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-14-g4f0699f7/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-14-g4f0699f7-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SHA256 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-14-g4f0699f7/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid "8-24.10.0-ns.1.5.1-13-gb4993a57"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`x86-64 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-13-gb4993a57/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-13-gb4993a57-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SHA256 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-13-gb4993a57/targets/x86/64/sha256sums>`__"
 #~ msgstr ""
 
