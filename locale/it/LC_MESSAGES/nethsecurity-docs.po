@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-09 07:55+0000\n"
+"POT-Creation-Date: 2025-05-12 10:18+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -151,7 +151,16 @@ msgstr ""
 "server remoto tramite un canale sicuro. Se il backup è crittografato, "
 "solo il backup crittografato verrà inviato al server remoto."
 
-#: ../../backup.rst:48
+#: ../../backup.rst:50
+msgid ""
+"Backup without encryption has been deprecated. In the near future, non-"
+"encrypted backups will not be sent to the remote server. If you have a "
+"valid subscription, please enable encryption to ensure the security of "
+"your backup. See also :ref:`backup_encryption-alert` for more "
+"information."
+msgstr ""
+
+#: ../../backup.rst:55
 msgid ""
 "The user can click the :guilabel:`Run backup` button: the backup will be "
 "stored on a remote server and the user will be able to download it by "
@@ -171,24 +180,58 @@ msgstr ""
 "creati. Ciò significa che le date potrebbero differire a seconda delle "
 "differenze di fuso orario."
 
-#: ../../backup.rst:55
+#: ../../backup.rst:64
+#, fuzzy
+msgid "Backup encryption alert"
+msgstr "Crittografia del backup"
+
+#: ../../backup.rst:66
+msgid ""
+"Not encrypting the backup is a security risk. If the backup is not "
+"encrypted, anyone with access to the backup file can read the "
+"configuration settings stored inside it."
+msgstr ""
+
+#: ../../backup.rst:69
+msgid ""
+"Every night a script will check if the backup is encrypted. If the backup"
+" is not encrypted, the script will create an alert inside the remote "
+"portal my.nethesis.it or my.nethserver.com. To resolve the alert, the "
+"user must enable encryption by clicking on the :guilabel:`Configure "
+"passphrase` button and setting a strong password. The alert will be "
+"resolved automatically during the nightly cron job."
+msgstr ""
+
+#: ../../backup.rst:74
+msgid "To disable the alert, access the shell and execute: ::"
+msgstr ""
+
+#: ../../backup.rst:80
+msgid ""
+"Disabling the alert will result in silent failures when the sending of "
+"non-encrypted backups is blocked in the future. The administrator will "
+"not be notified of these failures, potentially leading to unnoticed "
+"backup issues."
+msgstr ""
+
+#: ../../backup.rst:84
 msgid "Backup customization"
 msgstr ""
 
-#: ../../backup.rst:57
+#: ../../backup.rst:86
 msgid ""
 "The backup includes all relevant configuration files. To list the files "
 "included in the backup, execute the following command: ::"
 msgstr ""
 
-#: ../../backup.rst:62
+#: ../../backup.rst:91
 msgid ""
 "The backup can be customized by adding files to the backup list. Just add"
 " a new line to the file ``/etc/sysupgrade.conf`` with the path of the "
 "file to be included in the backup."
 msgstr ""
 
-#: ../../backup.rst:65 ../../qos.rst:85
+#: ../../backup.rst:94 ../../qos.rst:85
 msgid "Example: ::"
 msgstr ""
 
@@ -2516,15 +2559,15 @@ msgstr ""
 msgid "Static leases"
 msgstr "Lease statici"
 
-#: ../../dns_dhcp.rst:14 ../../dns_dhcp.rst:86
+#: ../../dns_dhcp.rst:14 ../../dns_dhcp.rst:89
 msgid "Dynamic leases"
 msgstr "Lease dinamici"
 
-#: ../../dns_dhcp.rst:15 ../../dns_dhcp.rst:97
+#: ../../dns_dhcp.rst:15 ../../dns_dhcp.rst:122
 msgid "DNS"
 msgstr "DNS"
 
-#: ../../dns_dhcp.rst:16 ../../dns_dhcp.rst:162 ../../objects.rst:144
+#: ../../dns_dhcp.rst:16 ../../dns_dhcp.rst:187 ../../objects.rst:144
 msgid "DNS records"
 msgstr "Record DNS"
 
@@ -2540,7 +2583,7 @@ msgstr ""
 "dotata di una scheda in cui è possibile abilitare il servizio facendo "
 "clic sul pulsante :guilabel:`Modifica`."
 
-#: ../../dns_dhcp.rst:24 ../../dns_dhcp.rst:78 ../../dns_dhcp.rst:170
+#: ../../dns_dhcp.rst:24 ../../dns_dhcp.rst:81 ../../dns_dhcp.rst:195
 msgid "Available fields:"
 msgstr "Campi disponibili:"
 
@@ -2651,11 +2694,17 @@ msgstr "Opzione selezionata: ``dns-server``"
 msgid "value: ``1.1.1.1,8.8.8.8``"
 msgstr "Valore: ``1.1.1.1, 8.8.8.8``"
 
-#: ../../dns_dhcp.rst:71 ../../objects.rst:30
+#: ../../dns_dhcp.rst:68
+msgid ""
+"See also :ref:`dns_dhcp_custom-section` for more information on non-"
+"standard options."
+msgstr ""
+
+#: ../../dns_dhcp.rst:74 ../../objects.rst:30
 msgid "Static Leases"
 msgstr "Lease statici"
 
-#: ../../dns_dhcp.rst:73
+#: ../../dns_dhcp.rst:76
 msgid ""
 "Static leases assigns stable IP addresses and symbolic hostnames to DHCP "
 "clients. The host is identified by its MAC address, assigned a fixed IP "
@@ -2666,7 +2715,7 @@ msgstr ""
 "assegnato un indirizzo IP fisso e fornito con un nome host simbolico per "
 "un riconoscimento facile."
 
-#: ../../dns_dhcp.rst:75
+#: ../../dns_dhcp.rst:78
 msgid ""
 "Click the button :guilabel:`Add reservation` to add a new device's "
 "reservation."
@@ -2674,12 +2723,12 @@ msgstr ""
 "Clicca sul pulsante :guilabel:`Aggiungi prenotazione` per aggiungere un "
 "lease statico per un dispositivo."
 
-#: ../../dns_dhcp.rst:80
+#: ../../dns_dhcp.rst:83
 #, fuzzy
 msgid "``Hostname`` : Hostname associated to the IP address"
 msgstr "``Nome host``: Nome host associato all'indirizzo IP"
 
-#: ../../dns_dhcp.rst:81
+#: ../../dns_dhcp.rst:84
 #, fuzzy
 msgid ""
 "``IP address`` : IP address to assign to the specified MAC Address.The IP"
@@ -2689,7 +2738,7 @@ msgstr ""
 "specificato. L'indirizzo IP deve trovarsi all'interno dell'intervallo "
 "DHCP."
 
-#: ../../dns_dhcp.rst:82
+#: ../../dns_dhcp.rst:85
 msgid ""
 "``MAC address`` : MAC address of the device where you want to make the "
 "reservation"
@@ -2697,11 +2746,11 @@ msgstr ""
 "``Indirizzo MAC``: Indirizzo MAC del dispositivo per cui si desidera "
 "effettuare la reservation."
 
-#: ../../dns_dhcp.rst:83
+#: ../../dns_dhcp.rst:86
 msgid "``Reservation name`` : Optional, freely configurable filed"
 msgstr "``Nome Riservation``: Campo opzionale, liberamente configurabile"
 
-#: ../../dns_dhcp.rst:88
+#: ../../dns_dhcp.rst:91
 msgid ""
 "Dynamic leases represents IP addresses that are currently in use and have"
 " been allocated to devices on the network. This tab shows all currently "
@@ -2711,19 +2760,51 @@ msgstr ""
 " stati assegnati ai dispositivi nella rete. Questa scheda mostra tutti i "
 "lease attivi al momento."
 
-#: ../../dns_dhcp.rst:92
+#: ../../dns_dhcp.rst:95
 #, fuzzy
 msgid "Default Configuration"
 msgstr "Ripristina configurazione"
 
-#: ../../dns_dhcp.rst:94
+#: ../../dns_dhcp.rst:97
 msgid ""
 "By default, the DHCP server has a limit of 1000 concurrent leases to "
 "prevent DoS attacks. Set the dnsmasq ``dhcpleasemax`` option to change "
 "the limit."
 msgstr ""
 
-#: ../../dns_dhcp.rst:99
+#: ../../dns_dhcp.rst:103
+msgid "Non-standard custom options"
+msgstr ""
+
+#: ../../dns_dhcp.rst:105
+msgid ""
+"In addition to the standard DHCP options, NethSecurity allows you to "
+"configure non-standard custom options, such as option 82 (DHCP Relay "
+"Agent Information). These options can be useful for advanced "
+"configurations or specific network requirements."
+msgstr ""
+
+#: ../../dns_dhcp.rst:108
+#, fuzzy
+msgid "To set a custom option from the command line, use the following commands:"
+msgstr ""
+"Nella modalità personalizzata della configurazione MultiWAN, si applicano"
+" i seguenti concetti:"
+
+#: ../../dns_dhcp.rst:116
+msgid ""
+"Custom options configured via the command line are preserved even when "
+"changes are made through the UI. Custom options can be safely removed "
+"from the UI."
+msgstr ""
+
+#: ../../dns_dhcp.rst:119
+msgid ""
+"However, users should avoid modifying these custom options directly from "
+"the UI to prevent unexpected behavior."
+msgstr ""
+
+#: ../../dns_dhcp.rst:124
 msgid ""
 "The system employs `Dnsmasq "
 "<https://thekelleys.org.uk/dnsmasq/doc.html>`_ a as a downstream caching "
@@ -2733,30 +2814,30 @@ msgid ""
 "customized using the following configuration options:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:103
+#: ../../dns_dhcp.rst:128
 msgid ""
 "``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` "
 "to specify the desired upstream DNS, you can add more servers, each one "
 "is individually managed."
 msgstr ""
 
-#: ../../dns_dhcp.rst:104
+#: ../../dns_dhcp.rst:129
 msgid ""
 "``DNS Domain`` : Insert the the local DNS domain, ensuring that queries "
 "for this domain are always resolved locally."
 msgstr ""
 
-#: ../../dns_dhcp.rst:105
+#: ../../dns_dhcp.rst:130
 msgid ""
 "``Log DNS queries``: enable it if you want all the DNS queries to be "
 "logged by the system."
 msgstr ""
 
-#: ../../dns_dhcp.rst:108
+#: ../../dns_dhcp.rst:133
 msgid "Forwarding servers"
 msgstr ""
 
-#: ../../dns_dhcp.rst:110
+#: ../../dns_dhcp.rst:135
 msgid ""
 "You only need to configure forwarders if your WAN interfaces are set up "
 "with static IP addresses. If your WAN interfaces are configured via DHCP,"
@@ -2766,122 +2847,122 @@ msgid ""
 "`/tmp/resolv.conf.d/resolv.conf.auto` file."
 msgstr ""
 
-#: ../../dns_dhcp.rst:115
+#: ../../dns_dhcp.rst:140
 msgid "You can configure the following:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:117
+#: ../../dns_dhcp.rst:142
 msgid ""
 "**Specify a single upstream DNS server:** enter the IP address of the "
 "desired DNS server in the designated field."
 msgstr ""
 
-#: ../../dns_dhcp.rst:118
+#: ../../dns_dhcp.rst:143
 msgid ""
 "**Set up domain-specific DNS servers:** this allows you to route queries "
 "for specific domains to different servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:121
+#: ../../dns_dhcp.rst:146
 msgid "Domain-specific DNS servers"
 msgstr ""
 
-#: ../../dns_dhcp.rst:123
+#: ../../dns_dhcp.rst:148
 msgid ""
 "To use a custom DNS server for a specific domain, use the following "
 "syntax:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:125
+#: ../../dns_dhcp.rst:150
 msgid "``/DOMAIN/IP_ADDRESS#PORT``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:127
+#: ../../dns_dhcp.rst:152
 msgid "where:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:129
+#: ../../dns_dhcp.rst:154
 msgid "IP_ADDRESS: specify the IP address of the desired server"
 msgstr ""
 
-#: ../../dns_dhcp.rst:130
+#: ../../dns_dhcp.rst:155
 msgid "PORT: append the desired port (after the IP address using `#` character)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:132
+#: ../../dns_dhcp.rst:157
 msgid ""
 "The ``PORT`` value is optional so usually the configuration appears just "
 "like:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:134
+#: ../../dns_dhcp.rst:159
 msgid "``/DOMAIN/IP_ADDRESS``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:136
+#: ../../dns_dhcp.rst:161
 msgid "These are the main supported options:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:138
+#: ../../dns_dhcp.rst:163
 msgid "Empty domain (``//``): matches unqualified names (without dots)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:139
+#: ../../dns_dhcp.rst:164
 msgid ""
 "Specific domain (``/google.com/``): matches the exact domain and all its "
 "subdomains (e.g., google.com, www.google.com, drive.google.com...)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:140
+#: ../../dns_dhcp.rst:165
 msgid ""
 "Wildcard domain (``*google.com/``): matches any domain **containing** "
 "\"google.com\" (e.g., google.com, www.google.com, supergoogle.com)."
 msgstr ""
 
-#: ../../dns_dhcp.rst:142
+#: ../../dns_dhcp.rst:167
 msgid "Examples:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:144
+#: ../../dns_dhcp.rst:169
 msgid ""
 "Send all queries for \"google.com\" and its subdomains to 1.2.3.4:  "
 "``/google.com/1.2.3.4``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:145
+#: ../../dns_dhcp.rst:170
 msgid ""
 "Send all unqualified names (e.g., \"localhost\") to 10.0.0.1 and "
 "everything else to standard servers: ``//10.0.0.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:146
+#: ../../dns_dhcp.rst:171
 msgid ""
 "Send queries for domain \"ad.nethserver.org\" and its subdomains to "
 "192.168.1.1 and everything else to standard servers: "
 "``/ad.nethserver.org/192.168.1.1``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:150
+#: ../../dns_dhcp.rst:175
 msgid ""
 "More specific domains take precedence over less specific domains, so for "
 "a configuration like this:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:152
+#: ../../dns_dhcp.rst:177
 msgid "``/google.com/1.2.3.4``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:153
+#: ../../dns_dhcp.rst:178
 msgid "``/www.google.com/2.3.4.5``"
 msgstr ""
 
-#: ../../dns_dhcp.rst:155
+#: ../../dns_dhcp.rst:180
 msgid ""
 "NethSecurity will send queries for google.com and gmail.google.com to "
 "1.2.3.4, but www.google.com will go to 2.3.4.5"
 msgstr ""
 
-#: ../../dns_dhcp.rst:157
+#: ../../dns_dhcp.rst:182
 msgid ""
 "This is true also for wildcards: if both specific and wildcard domains "
 "are defined for the same pattern, the specific one takes precedence "
@@ -2890,44 +2971,44 @@ msgid ""
 "supergoogle.com."
 msgstr ""
 
-#: ../../dns_dhcp.rst:164
+#: ../../dns_dhcp.rst:189
 msgid ""
 "The system can handle local DNS records. When the server performs a DNS "
 "lookup, first it will search inside local DNS records. If no local record"
 " is found, an external DNS query will be done."
 msgstr ""
 
-#: ../../dns_dhcp.rst:166
+#: ../../dns_dhcp.rst:191
 msgid "Local DNS records will always override records from external DNS servers."
 msgstr ""
 
-#: ../../dns_dhcp.rst:168
+#: ../../dns_dhcp.rst:193
 msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
 msgstr ""
 
-#: ../../dns_dhcp.rst:172
+#: ../../dns_dhcp.rst:197
 msgid "``Hostname`` : DNS hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:173
+#: ../../dns_dhcp.rst:198
 msgid "``IP address`` : IP address associated to hostname"
 msgstr ""
 
-#: ../../dns_dhcp.rst:174
+#: ../../dns_dhcp.rst:199
 msgid "``Name`` : optional field"
 msgstr ""
 
-#: ../../dns_dhcp.rst:175
+#: ../../dns_dhcp.rst:200
 msgid ""
 "``Wildcard DNS record``: enable it if you want this answer for any "
 "subdomain you haven't already defined"
 msgstr ""
 
-#: ../../dns_dhcp.rst:178
+#: ../../dns_dhcp.rst:203
 msgid "DNS Rebind Protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:180
+#: ../../dns_dhcp.rst:205
 msgid ""
 "DNS Rebind Protection is a security feature that safeguards against DNS "
 "rebinding attacks. It blocks the use of private IP ranges by public "
@@ -2935,7 +3016,7 @@ msgid ""
 " unauthorized requests to local network devices."
 msgstr ""
 
-#: ../../dns_dhcp.rst:182
+#: ../../dns_dhcp.rst:207
 msgid ""
 "DNS Rebind Protection is enabled by default on NethSecurity and usually "
 "does not have operational repercussions. In the presence of split DNS, "
@@ -2945,7 +3026,7 @@ msgid ""
 "may appear:"
 msgstr ""
 
-#: ../../dns_dhcp.rst:190
+#: ../../dns_dhcp.rst:215
 msgid ""
 "To ensure maximum compatibility and prevent malfunctions in migrated "
 "installations using the dedicated tool from NethServer 7.9, DNS Rebind "
@@ -2953,39 +3034,39 @@ msgid ""
 "version."
 msgstr ""
 
-#: ../../dns_dhcp.rst:193
+#: ../../dns_dhcp.rst:218
 msgid "How to fix DNS rebind protection issues"
 msgstr ""
 
-#: ../../dns_dhcp.rst:195
+#: ../../dns_dhcp.rst:220
 msgid "You can easily fix any of these issues from the CLI."
 msgstr ""
 
-#: ../../dns_dhcp.rst:197
+#: ../../dns_dhcp.rst:222
 msgid "**Solution 1**: Whitelist the domain"
 msgstr ""
 
-#: ../../dns_dhcp.rst:199
+#: ../../dns_dhcp.rst:224
 msgid "Put the specific domain in a whitelist (suggested): ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:203
+#: ../../dns_dhcp.rst:228
 msgid "then commit and restart: ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:208
+#: ../../dns_dhcp.rst:233
 msgid "**Solution 2**: disable the DNS protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:210
+#: ../../dns_dhcp.rst:235
 msgid "Completely disable DNS rebind protection using these commands: ::"
 msgstr ""
 
-#: ../../dns_dhcp.rst:217
+#: ../../dns_dhcp.rst:242
 msgid "How to enable DNS rebind protection"
 msgstr ""
 
-#: ../../dns_dhcp.rst:219
+#: ../../dns_dhcp.rst:244
 msgid ""
 "If you have previously disabled rebind protection or if your "
 "configuration comes from a migration and you wish to enable rebind "
@@ -3212,6 +3293,29 @@ msgstr ""
 
 #: ../../download.rst:29
 msgid "Development releases"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-24.10.0-ns.1.5.1-26-g01563afb"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`x86-64 "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-26-g01563afb/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-26-g01563afb-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`SHA256 "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-26-g01563afb/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`CDX "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-26-g01563afb/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-26-g01563afb-x86-64-generic.bom.cdx.json>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -9829,50 +9933,55 @@ msgid ""
 msgstr ""
 
 #: ../../port_forward.rst:20
-msgid "``Source port``: the port from which the request originates."
+msgid ""
+"``Source port``: the port from which the request originates. Note that "
+"not all protocols require a port. For example, protocols like ``GRE`` do "
+"not use ports."
 msgstr ""
 
-#: ../../port_forward.rst:21
+#: ../../port_forward.rst:22
 msgid ""
 "``Destination port``: the port to which the traffic is directed; this can"
 " differ from the source port."
 msgstr ""
 
-#: ../../port_forward.rst:22
+#: ../../port_forward.rst:23
 msgid ""
 "``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, "
-"``UDPLITE``, ``ICMP``, ``ESP``, ``AH`` ``SCTP`` or the special value "
-"``ALL`` for all supported protocols."
+"``UDPLITE``, ``ICMP``, ``ESP``, ``AH``, ``SCTP``, ``GRE``. Leave empty "
+"for any source protocol If left empty, all traffic, regardless of the "
+"protocol, will be forwarded. Use this setting with caution, as it may "
+"expose the system to unintended or potentially harmful traffic."
 msgstr ""
 
-#: ../../port_forward.rst:23
+#: ../../port_forward.rst:27
 msgid ""
 "``Destination address``: specifies the internal host to which the traffic"
 " should be redirected. This can be:"
 msgstr ""
 
-#: ../../port_forward.rst:25
+#: ../../port_forward.rst:29
 msgid "a specific IP address"
 msgstr ""
 
-#: ../../port_forward.rst:26
+#: ../../port_forward.rst:30
 msgid ""
 "a firewall object: a host defined by a host set, a DHCP reservation, a "
 "DNS record or an OpenVPN account with IP reservation"
 msgstr ""
 
-#: ../../port_forward.rst:28
+#: ../../port_forward.rst:32
 msgid ""
 "By default, all port forwards are accessible only for hosts inside the "
 "WAN. Refer to the :ref:`hairpin-section` for instructions on changing "
 "this default behavior."
 msgstr ""
 
-#: ../../port_forward.rst:30
+#: ../../port_forward.rst:34
 msgid "For each port forward the user can also configure the following aspects:"
 msgstr ""
 
-#: ../../port_forward.rst:32
+#: ../../port_forward.rst:36
 msgid ""
 "**Binding to a specific public IP**: port forwards can be bound to a "
 "specific public IP address using the ``WAN IP`` field. This means that if"
@@ -9882,20 +9991,20 @@ msgid ""
 " public IP is forwarded correctly to the internal server."
 msgstr ""
 
-#: ../../port_forward.rst:37
+#: ../../port_forward.rst:41
 msgid ""
 "**Access restriction**: Port forwards can be restricted to specific "
 "sources to enhance security. This can be done using the ``Restrict access"
 " to`` field. The field accepts IP addresses, CIDR blocks or an object."
 msgstr ""
 
-#: ../../port_forward.rst:39
+#: ../../port_forward.rst:43
 msgid ""
 "Any type of object is supported except for host sets containing an IP "
 "range."
 msgstr ""
 
-#: ../../port_forward.rst:41
+#: ../../port_forward.rst:45
 msgid ""
 "**Enabling logging**: port forwards can be configured to log incoming "
 "traffic for each rule. By enabling the ``Log`` option, the network "
@@ -9905,11 +10014,11 @@ msgid ""
 ":`logging-limits` section."
 msgstr ""
 
-#: ../../port_forward.rst:48
+#: ../../port_forward.rst:52
 msgid "Hairpin NAT"
 msgstr ""
 
-#: ../../port_forward.rst:50
+#: ../../port_forward.rst:54
 msgid ""
 "Hairpin NAT, also known as NAT loopback or NAT reflection, is a technique"
 " used in networking where internal hosts access a server located within "
@@ -9920,17 +10029,17 @@ msgid ""
 " the local network."
 msgstr ""
 
-#: ../../port_forward.rst:55
+#: ../../port_forward.rst:59
 msgid ""
 "To enable the hairpin, enable the ``Hairpin NAT`` option and select one "
 "or more zones where the NAT loopback should be enabled."
 msgstr ""
 
-#: ../../port_forward.rst:58
+#: ../../port_forward.rst:62
 msgid "Hairpin NAT for VPN zones"
 msgstr ""
 
-#: ../../port_forward.rst:60
+#: ../../port_forward.rst:64
 msgid ""
 "To use Hairpin NAT with VPN zones such as ``ipsec``, ``openvpn``, and "
 "``rwopenvpn``, additional configuration is necessary. You must explicitly"
@@ -9938,94 +10047,94 @@ msgid ""
 "function for VPN-connected clients."
 msgstr ""
 
-#: ../../port_forward.rst:63
+#: ../../port_forward.rst:67
 msgid ""
 "This configuration can be performed via the command line. First, identify"
 " the internal reference for the zone, then add the desired network, "
 "commit the changes, and restart the service."
 msgstr ""
 
-#: ../../port_forward.rst:65
+#: ../../port_forward.rst:69
 msgid "Make sure that subnets are assigned to the correct zones:"
 msgstr ""
 
-#: ../../port_forward.rst:67
+#: ../../port_forward.rst:71
 msgid "``ipsec``: IPsec tunnels"
 msgstr ""
 
-#: ../../port_forward.rst:68
+#: ../../port_forward.rst:72
 msgid "``openvpn``: OpenVPN tunnels"
 msgstr ""
 
-#: ../../port_forward.rst:69
+#: ../../port_forward.rst:73
 msgid "``rwopenvpn``: OpenVPN Road Warrior"
 msgstr ""
 
-#: ../../port_forward.rst:71
+#: ../../port_forward.rst:75
 msgid ""
 "If multiple tunnels or networks are present, all must be included in "
 "their respective zones."
 msgstr ""
 
-#: ../../port_forward.rst:74
+#: ../../port_forward.rst:78
 msgid "How to declare a subnet for a VPN zone"
 msgstr ""
 
-#: ../../port_forward.rst:76
+#: ../../port_forward.rst:80
 msgid ""
 "To declare the OpenVPN Road Warrior network, you can use the following "
 "example command sequence:"
 msgstr ""
 
-#: ../../port_forward.rst:79
+#: ../../port_forward.rst:83
 msgid "Identify the internal reference for the **rwopenvpn** zone: ::"
 msgstr ""
 
-#: ../../port_forward.rst:83 ../../port_forward.rst:102
+#: ../../port_forward.rst:87 ../../port_forward.rst:106
 #, fuzzy
 msgid "Example output: ::"
 msgstr "Esempio di log di NS8::"
 
-#: ../../port_forward.rst:87
+#: ../../port_forward.rst:91
 msgid ""
 "Set the desired network (in this case, **10.88.88.0/24**) for the "
 "**rwopenvpn** zone: ::"
 msgstr ""
 
-#: ../../port_forward.rst:91
+#: ../../port_forward.rst:95
 #, fuzzy
 msgid "Commit the changes and restart the firewall service: ::"
 msgstr "Poi riavvia il servizio DDNS::"
 
-#: ../../port_forward.rst:96
+#: ../../port_forward.rst:100
 msgid ""
 "Ensure that you replace the network **subnet** with the correct one for "
 "your specific VPN setup."
 msgstr ""
 
-#: ../../port_forward.rst:98
+#: ../../port_forward.rst:102
 msgid "Verify the added network: ::"
 msgstr ""
 
-#: ../../port_forward.rst:109
+#: ../../port_forward.rst:113
 msgid "Add or remove multiple subnets to the VPN zone"
 msgstr ""
 
-#: ../../port_forward.rst:111
+#: ../../port_forward.rst:115
 msgid ""
 "If you already set a subnet for a VPN zone and want to **add** another "
 "subnet (e.g. 10.33.33.0/24) use the following command (same internal "
 "reference of previous example): ::"
 msgstr ""
 
-#: ../../port_forward.rst:117
+#: ../../port_forward.rst:121
 msgid ""
 "If you already set multiple subnets for a VPN zone and want to **remove**"
 " a subnet (e.g. 10.33.33/24) use the following command (same internal "
 "reference of previous example): ::"
 msgstr ""
 
-#: ../../port_forward.rst:121
+#: ../../port_forward.rst:125
 msgid "Ensure to commit and restart firewall service after modifications."
 msgstr ""
 
@@ -24242,5 +24351,16 @@ msgstr ""
 #~ "back and make adjustments if needed. "
 #~ "Click 'Finish setup' to apply the "
 #~ "changes and complete the setup wizard."
+#~ msgstr ""
+
+#~ msgid "``Source port``: the port from which the request originates."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``Protocol``: specifies the protocol such "
+#~ "as ``TCP``, ``UDP``, ``UDPLITE``, ``ICMP``,"
+#~ " ``ESP``, ``AH`` ``SCTP`` or the "
+#~ "special value ``ALL`` for all supported"
+#~ " protocols."
 #~ msgstr ""
 
