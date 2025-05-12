@@ -1,0 +1,84 @@
+digraph HA_Connectivity {
+    rankdir=TB;
+    bgcolor="#f8fafc"; // Tailwind slate-50
+    fontname="Inter";
+    fontsize=12;
+
+    node [
+        shape=box,
+        style="filled,rounded",
+        fontname="Inter",
+        fontsize=12,
+        color="#e5e7eb", // Tailwind gray-200
+        fillcolor="#f1f5f9", // Tailwind slate-100
+        penwidth=2
+    ];
+
+    edge [
+        fontname="Inter",
+        fontsize=11,
+        color="#94a3b8", // Tailwind slate-400
+        arrowsize=0.8,
+        penwidth=2
+    ];
+
+    // 1) Hosts in LAN (top)
+    { rank=source; LANHost }
+
+    // 2) Virtual IP LAN
+    { rank=1; VirtualIP_LAN }
+
+    // 3) HA Nodes
+    subgraph cluster_ha_nodes {
+        label = "HA Nodes";
+        style = "filled,rounded";
+        color = "#e0e7ff"; // Tailwind indigo-100
+        fillcolor = "#f1f5f9"; // Tailwind slate-100
+        fontcolor = "#6366f1"; // Tailwind indigo-500
+        fontsize=13;
+
+        subgraph cluster_primary {
+            label = "Primary Node";
+            color = "#a5b4fc"; // Tailwind indigo-300
+            fillcolor = "#dbeafe"; // Tailwind blue-100
+            style = "filled,rounded";
+            fontcolor = "#2563eb"; // Tailwind blue-600
+            PrimaryLAN [label="LAN\n192.168.100.238", shape=ellipse, color="#bbf7d0", fillcolor="#f0fdf4", fontcolor="#166534"]; // Tailwind green
+            PrimaryWAN [label="WAN\n169.254.0.1", shape=ellipse, color="#fca5a5", fillcolor="#fef2f2", fontcolor="#b91c1c"]; // Tailwind red
+        }
+
+        subgraph cluster_backup {
+            label = "Backup Node";
+            color = "#a5b4fc";
+            fillcolor = "#dbeafe";
+            style = "filled,rounded";
+            fontcolor = "#2563eb";
+            BackupLAN [label="LAN\n192.168.100.239", shape=ellipse, color="#bbf7d0", fillcolor="#f0fdf4", fontcolor="#166534"];
+            BackupWAN [label="WAN\n169.254.0.2", shape=ellipse, color="#fca5a5", fillcolor="#fef2f2", fontcolor="#b91c1c"];
+        }
+
+        { rank=2; PrimaryLAN; BackupLAN; PrimaryWAN; BackupWAN }
+    }
+
+    // 4) Virtual IP WAN
+    { rank=3; VirtualIP_WAN }
+
+    // 5) Internet (bottom)
+    { rank=sink; Internet }
+
+    // EXTRA NODE DEFINITIONS
+    VirtualIP_LAN [label="LAN GW- Virtual IP\n192.168.100.240", shape=ellipse, color="#fde68a", fillcolor="#fefce8", fontcolor="#b45309"]; // Tailwind yellow
+    VirtualIP_WAN [label="Virtual IP WAN\n1.2.3.4", shape=ellipse, color="#fde68a", fillcolor="#fefce8", fontcolor="#b45309"];
+    LANHost [label="LAN Host", color="#bbf7d0", fillcolor="#f0fdf4", fontcolor="#166534"];
+    Internet [label="Internet", shape=ellipse, color="#fdba74", fillcolor="#fff7ed", fontcolor="#c2410c"]; // Tailwind orange
+
+    // EDGES
+    LANHost -> VirtualIP_LAN [label="Traffic", color="#38bdf8", fontcolor="#0ea5e9"]; // Tailwind sky
+    VirtualIP_LAN -> PrimaryLAN [label="Active", color="#22d3ee", fontcolor="#0891b2"]; // Tailwind cyan
+    VirtualIP_LAN -> BackupLAN [label="Failover", style=dashed, color="#a3a3a3", fontcolor="#525252"]; // Tailwind neutral
+    PrimaryWAN -> VirtualIP_WAN [label="Active", color="#22d3ee", fontcolor="#0891b2"];
+    BackupWAN -> VirtualIP_WAN [label="Failover", style=dashed, color="#a3a3a3", fontcolor="#525252"];
+    VirtualIP_WAN -> Internet [label="Traffic", color="#f59e42", fontcolor="#ea580c"]; // Tailwind orange
+    PrimaryLAN -> BackupLAN [label="HA sync", color="#818cf8", fontcolor="#6366f1"]; // Tailwind indigo
+    PrimaryWAN -> BackupWAN [label="HA sync", color="#818cf8", fontcolor="#6366f1"];
+}
