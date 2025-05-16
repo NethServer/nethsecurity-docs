@@ -38,7 +38,7 @@ The storage is then:
 
 * Formatted with the ``ext4`` filesystem
 * Mounted at ``/mnt/data``
-* Used by ``rsyslog`` to write logs to ``/mnt/data/logs/messages``
+* Used by ``rsyslog`` to write logs to ``/mnt/data/log/messages``
 * Rotated weekly by ``logrotate``
 * Synced daily (at night) for additional data like metrics
 
