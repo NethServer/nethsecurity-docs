@@ -4,36 +4,64 @@
 Storage
 =======
 
-As default, logs are written in a volatile in-memory directory to prevent errors on the root file system in case of failure.
-The memory storage capacity is limited and the oldest logs are automatically removed as time passes to limit memory occupancy. However, if you reboot the system or your system fails, you may lose all of your logs.
+Starting from version 8.6, NethSecurity automatically ensures that system logs are saved to a persistent storage partition.  
+This guarantees that logs remain available across reboots or unexpected shutdowns, even if the storage has not been manually configured.
+The default log retention period is 52 weeks.
 
-NethSecurity allows you to save a copy of system logs to a storage device other than the one it's currently on, like a USB stick or an additional hard drive.
-Additionally, if the disk containing the operating system has unallocated space,
-NethSecurity allows you to leverage this space as data storage.
-This provides a convenient and efficient way to utilize existing resources for expanding storage capacity without the need for additional external devices.
+For **new installations** the system automatically creates a dedicated partition on the main disk to store logs.  
 
-This configuration can be useful for troubleshooting or keeping a system activity log.
+For **upgrades**:
 
-To configure the additional storage, follow these steps:
+* if no storage had previously been configured, the system automatically sets it up using unallocated space on the primary disk.  
+* If storage was already configured, it remains unchanged
 
-* If you're willing to use an external device, attach your storage device
-* Access the ``Storage`` page under the ``System`` section on the right menu
-* Select the desired storage where logs will be written to
-* Click on button :guilabel:`Format and configure storage`
+.. note::
 
-If the chosen device is the primary disk, the system will generate a new partition utilizing any unallocated space. In the case of an additional disk selection,
-the system will undertake the preparation process, 
-which involves erasing all existing partitions and data on the selected device, resulting in the creation of a one single partition.
+   This behavior improves reliability and does not require manual intervention. However, users can still manage storage settings from the web interface.  
 
-In both cases, the partition will be formatted using the ext4 filesystem and mounted as storage at ``/mnt/data``.
+Persistent log storage can be disabled (not recommended), or moved to a different disk if needed.  
+If disabled, the system will automatically reconfigure it during a future upgrade.
 
-The system will then be reconfigured as follows:
+Manual configuration
+^^^^^^^^^^^^^^^^^^^^
 
-- rsyslog will write logs also inside ``/mnt/data/logs/messages`` file
-- logrotate will rotate ``/mnt/data/logs/messages`` once a week
+Manual configuration of additional storage is still available and works as follows:
 
-Extra generated data like metrics, will be synced from in-memory filesystem to persistent storage once a day during the night.
-To remove the data storage and restore in-memory log retention only, click on button :guilabel:`Remove storage`.
+* If using an additional device, connect it to the system.
+* Access the ``Storage`` page under the ``System`` section in the right-hand menu.
+* Select the storage device where logs should be saved.
+* Click on the button :guilabel:`Format and configure storage`.
+* If the selected device is the **primary disk**, the system will generate a new partition using any unallocated space.
+* If an **additional disk** is selected, the system will erase all existing partitions and data and create a single new partition.
+
+The storage is then:
+
+* Formatted with the ``ext4`` filesystem
+* Mounted at ``/mnt/data``
+* Used by ``rsyslog`` to write logs to ``/mnt/data/logs/messages``
+* Rotated weekly by ``logrotate``
+* Synced daily (at night) for additional data like metrics
+
+To remove persistent storage and return to in-memory logging, click on the button :guilabel:`Remove storage`.
+
+Virtual Machines
+----------------
+When installing NethSecurity on a virtual machine, the recommended method is to generate the virtual disk from the official image.
+In this mode, logs are not stored persistently by default.
+To enable persistent log storage, you must attach a second virtual disk to the virtual machine.
+The automatic internal partitioning method is not supported on virtual disks.
+
+Behavior in versions prior to 8.6
+---------------------------------
+
+In earlier versions of NethSecurity, logs were written by default to a **volatile in-memory directory** to avoid stressing the root filesystem in case of failure.
+
+* Memory-based storage had **limited capacity**
+* Old logs were automatically removed as space filled up
+* **All logs were lost** after a reboot or system failure
+
+To persist logs, storage had to be configured **manually**, either by using unallocated space on the system disk or by attaching a secondary disk.  
+This step was necessary to avoid log loss, but required explicit action by the user.
 
 Log Partition Management
 ========================
