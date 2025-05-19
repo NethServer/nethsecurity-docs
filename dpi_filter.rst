@@ -66,7 +66,7 @@ The exclusion list is configured using the ``ns_exclude`` option that takes a li
       uci commit netifyd
       echo '{"changes": {"network": {}}}' | /usr/libexec/rpcd/ns.commit call commit
 
-    In this this case the system will exclude interface ``eth1``, all WireGuard ``wgX`` interfaces and all OpenVPN routed interfaces.
+In this case the system will exclude interface ``eth1``, all WireGuard ``wgX`` interfaces and all OpenVPN routed interfaces.
   
 - Modify exclusion list: ::
 
