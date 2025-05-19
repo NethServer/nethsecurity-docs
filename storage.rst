@@ -54,14 +54,8 @@ The automatic internal partitioning method is not supported on virtual disks.
 Behavior in versions prior to 8.6
 ---------------------------------
 
-In earlier versions of NethSecurity, logs were written by default to a **volatile in-memory directory** to avoid stressing the root filesystem in case of failure.
-
-* Memory-based storage had **limited capacity**
-* Old logs were automatically removed as space filled up
-* **All logs were lost** after a reboot or system failure
-
+In earlier versions of NethSecurity, logs were written by default to a **volatile in-memory directory**.
 To persist logs, storage had to be configured **manually**, either by using unallocated space on the system disk or by attaching a secondary disk.  
-This step was necessary to avoid log loss, but required explicit action by the user.
 
 Log Partition Management
 ========================
