@@ -13,7 +13,7 @@ For **new installations** the system automatically creates a dedicated partition
 
 For **upgrades**:
 
-* if no storage had previously been configured, the system automatically sets it up using unallocated space on the primary disk.  
+* if no storage had previously been configured, the system automatically sets it up using unallocated space on the primary disk
 * if storage was already configured, it remains unchanged
 
 .. note::
