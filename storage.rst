@@ -4,7 +4,7 @@
 Storage
 =======
 
-Starting from version 8.6, NethSecurity automatically saves system logs to a persistent storage partition in bare metal installations (*refer to the dedicated section below for virtual machines*).
+Starting from version 8.6, NethSecurity automatically saves system logs to a persistent storage partition on bare metal installations (*refer to the dedicated section below for virtual machines*).
 
 This guarantees that logs remain available across reboots or unexpected shutdowns, even if the storage has not been manually configured.
 The default log retention period is 52 weeks.
