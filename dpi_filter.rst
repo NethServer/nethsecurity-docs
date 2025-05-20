@@ -38,8 +38,15 @@ Premium application signatures
 
 
 In the absence of a subscription, the system inherently recognizes a baseline of approximately 400 applications.
-However, with an active subscription, this capacity significantly expands, encompassing around 3000 applications. In this scenario,
+However, with an active subscription, this capacity significantly expands, encompassing more than 2300 applications. In this scenario,
 the list of recognized applications undergoes daily updates, ensuring that the system stays abreast of the ever-evolving landscape of applications and digital services.
+
+Applications and protocols list 
+------------------------------
+The full list of all applications and protocols supported by the Enterprise version is available here:
+
+- `Applications <https://www.netify.ai/resources/applications_reference>`_
+- `Protocols <https://www.netify.ai/resources/protocols>`_
 
 Exceptions
 ----------
