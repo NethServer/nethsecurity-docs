@@ -26,7 +26,7 @@ Most configurations, such as firewall rules, VPN settings, or Threat Shield rule
 
 This is how the HA system works:
 
-- **Heartbeat**: The primary and backup firewalls continuously check each other's status using VRRP protocol. If the primary fails, the backup takes over.
+- **Heartbeat**: The primary and backup firewalls continuously check each other's status using the VRRP protocol. If the primary fails, the backup takes over.
 - **Settings synchronization**: The primary firewall securely sends its settings, including details about active connections like VPNs and network routes,
   to the backup firewall.
 - The system automatically adjusts what each firewall does based on whether it's the active (primary) or standby (backup) unit:
@@ -74,7 +74,7 @@ The HA cluster supports synchronization for a wide range of features, including:
 - Controller connection and subscription (ns-plug)
 - Active connections tracking (conntrackd)
 
-Be aware of the following limitations:
+Be aware of the following current limitations:
 
 - IPv4 only (IPv6 is not supported).
 - VLANs are supported only on physical interfaces.
@@ -82,6 +82,7 @@ Be aware of the following limitations:
   interface will be different.
 - Extra packages such as NUT are not supported.
 - Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
+- PPPoE WAN is not supported (see Static IP requirement)
 
 Also note that after the first synchronization, the backup node will have the same hostname as the primary node.
 The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or backup).
@@ -94,7 +95,7 @@ Requirements
 Before setting up HA, ensure the following requirements are met:
 
 - Two firewall with identical network devices.
-- Both nodes must be connected to the same LAN; connect the LAN interfaces to the same switch.
+- Both nodes must be connected to the same LAN; connect the LAN interfaces to the same broadcast domain (usually the same switch).
 - Static IP addresses for all interfaces that will host a virtual IP.
 
 Setup and configuration
@@ -198,12 +199,12 @@ Use the `ns-ha-config` script to simplify the process.
 
 Before diving into the actual setup, it's important to ensure that both nodes are properly configured and meet the necessary requirements.
 
-Access the monitor console or SSH into the primary node and run the following commands.
+Access the console or SSH into the primary node and run the following commands.
 
 Check requirements
 ^^^^^^^^^^^^^^^^^^
 
-On the primary node::
+For the primary node::
 
   ns-ha-config check-primary-node
 
@@ -219,7 +220,7 @@ This checks:
   - ``6: DNS server`` DHCP option is set.
 - Hotspot is disabled.
 
-On the backup node::
+For the backup node::
 
   ns-ha-config check-backup-node <backup_node_ip>
 
@@ -447,8 +448,8 @@ Remote access
 -------------
 
 The primary node is accessibile both from the LAN and WAN interfaces.
-Therefore, yhe backup node is accessible from the LAN interface only.
-When connecting to thhe backup node from a remote network, you need to access the primary node first and then connect to the backup node using SSH.
+Therefore, the backup node is accessible from the LAN interface only.
+When connecting to the backup node from a remote network, you need to access the primary node first and then connect to the backup node using SSH.
 
 After connecting to the primary node, use the following command to access the backup node: ::
 
