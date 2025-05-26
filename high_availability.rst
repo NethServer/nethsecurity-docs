@@ -206,12 +206,12 @@ Check requirements
 
 For the primary node::
 
-  ns-ha-config check-primary-node
+  ns-ha-config check-primary-node [lan_interface] [wan_interface]
 
 This checks:
 
-- LAN interface has a static IP.
-- At least one WAN interface exists.
+- LAN interface has a static IP. If the ``lan_interface`` parameter is not provided, it searches for a LAN interface named ``lan``.
+- At least one WAN interface exists. If the ``wan_interface`` parameter is not provided, it searches for a WAN interface named ``wan``.
 - WAN interface is not PPPoE.
 - If DHCP server is running:
 
@@ -222,14 +222,17 @@ This checks:
 
 For the backup node::
 
-  ns-ha-config check-backup-node <backup_node_ip>
+  ns-ha-config check-backup-node <backup_node_ip> [lan_interface]
 
 This checks:
 
 - Backup node is reachable via SSH on port 22 with root user.
-- LAN interface has a static IP.
+- LAN interface has a static IP. If the ``lan_interface`` parameter is not provided, it searches for a LAN interface named ``lan``.
 - At least one WAN interface exists.
-- WAN interface is not PPPoE.
+
+WAN interface can be omitted on the backup node, but bear in minde that in case of failover, the UI of the backup node
+will show an unknown interface.
+It's recommended to configure the WAN interface on the backup node as well, even if it does not have a static IP address.
 
 The script will request the root password for the backup node. You can also pipe the password: ::
 
@@ -242,11 +245,12 @@ Initialize nodes
 
 Initialize the primary node::
 
-   ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip>
+   ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip> [lan_interface]
 
 Where the ``primary_node_ip`` is the static IP of the primary node already set for the LAN interface,
 and ``backup_node_ip`` is the static LAN IP of the backup node
 The ``virtual_ip`` is the virtual IP address for the LAN interface where all LAN hosts should point to.
+The ``lan_interface`` parameter is optional and specifies the LAN interface name (default is `lan`).
 
 This script will:
 
