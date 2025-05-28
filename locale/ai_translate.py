@@ -65,13 +65,13 @@ def translate_labels(message, flat_labels_en, flat_labels_it):
     # Replace English labels with Italian ones
     for key, value in flat_labels_en.items():
         if value in message:
-            it_value = flat_labels_it.get(key, value)  # Fallback to English if not found
+            it_value = flat_labels_it.get(key)
             if it_value:
                 print(f"Translating local label: {value} -> {it_value}")
                 # Replace only if value is inside double backticks
-                pattern = re.compile(rf"``({re.escape(value)})``")
-                message = pattern.sub(f"``{it_value}``", message)
-    
+                message = re.sub(rf"``{re.escape(value)}``", f"``{it_value}``", message)
+                message = re.sub(rf"(:guilabel:`){re.escape(value)}(`)", rf"\1{it_value}\2", message)
+
     return message
 
 def translate(llm, prompt, text):
@@ -100,7 +100,7 @@ def process_pot_files(llm, prompt, pot_dir):
                 print(f"No new untranslated entries in {pot_file}, skipping translation.")
                 continue
             for entry in it_po.untranslated_entries():
-                msgid_translated = translate_labels(entry.msgid, labels_en, labels_it)               
+                msgid_translated = translate_labels(entry.msgid, labels_en, labels_it)
                 translation = translate(llm, prompt, msgid_translated)
                 # Update the entry with the translation
                 new_entry = polib.POEntry(
@@ -169,5 +169,3 @@ if __name__ == "__main__":
     )
 
     process_pot_files(llm, prompt, "pot")
-
-
