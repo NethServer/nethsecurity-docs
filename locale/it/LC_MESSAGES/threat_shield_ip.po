@@ -1,0 +1,588 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../threat_shield_ip.rst:5 1a4daa30b6524a158cfbb6da3694fe1f
+msgid "Threat shield IP"
+msgstr "Threat shield IP"
+
+#: ../../threat_shield_ip.rst:7 ae4f5fa61afc4e87932ab8493af2697d
+msgid ""
+"NethSecurity is equipped with various tools and integrations useful for "
+"countering threats coming from the internet. One of these tools is Threat "
+"Shield IP, which blocks any traffic coming from compromised IP addresses or "
+"destined to them as well as any requests addressed to hostnames that could "
+"be malicious."
+msgstr ""
+"NethSecurity è dotato di vari strumenti e integrazioni utili per contrastare"
+" le minacce provenienti da Internet. Uno di questi strumenti è Threat Shield"
+" IP, che blocca qualsiasi traffico proveniente da indirizzi IP compromessi o"
+" a essi destinato, così come qualsiasi richiesta indirizzata a nomi host che"
+" potrebbero essere dannosi."
+
+#: ../../threat_shield_ip.rst:10 d3542487f7c54a1fbcfcf9d70888ac6c
+msgid ""
+"The service can load community-maintained blocklists or can rely on high-"
+"quality blocklists very frequently updated and maintained by `Nethesis "
+"<https://www.nethesis.it>`_ and `Yoroy <https://yoroi.company>`_ a leading "
+"company focused on CyberSecurity and member of `Cyber Threat Alliance "
+"<https://www.cyberthreatalliance.org>`_. Yoroi blacklists ensure great "
+"effectiveness and high confidence, minimizing the possibility of false "
+"positives."
+msgstr ""
+"Il servizio può caricare blocklist mantenute dalla comunità oppure può fare "
+"affidamento su blocklist di alta qualità, aggiornate e mantenute molto "
+"frequentemente da `Nethesis <https://www.nethesis.it>`_ e `Yoroy "
+"<https://yoroi.company>`_, un'azienda leader nel settore della CyberSecurity"
+" e membro della `Cyber Threat Alliance "
+"<https://www.cyberthreatalliance.org>`_. Le blacklist di Yoroy garantiscono "
+"grande efficacia e un elevato livello di affidabilità, riducendo al minimo "
+"la possibilità di falsi positivi."
+
+#: ../../threat_shield_ip.rst:14 2416f0135c594d88b0973e95d3e43656
+msgid ""
+"Please note that to access the Nethesis and Yoroi blocklists, the machine "
+"must have a valid extra entitlement for this service."
+msgstr ""
+"Si noti che, per accedere alle blocklist di Nethesis e Yoroi, la macchina "
+"deve disporre di un extra entitlement valido per questo servizio."
+
+#: ../../threat_shield_ip.rst:17 7b287c8857dc46eca32297b151f58be4
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../threat_shield_ip.rst:19 6557ffca72ed44ffa1dccae2fdaa9aab
+msgid ""
+"The service is disabled by default, to enable it navigate to the ``Threat "
+"shield IP`` page under the ``Security`` section. Access the ``Settings`` tab"
+" and activate the ``Status`` switch."
+msgstr ""
+"Il servizio è disabilitato per impostazione predefinita; per abilitarlo, "
+"navigare alla pagina ``Threat shield IP`` nella sezione ``Sicurezza``. "
+"Accedere alla scheda ``Impostazioni`` e attivare l'interruttore ``Stato``."
+
+#: ../../threat_shield_ip.rst:22 595d325040564cdea27c5d874dc0622a
+msgid ""
+"When the service is enabled, the ``Blocklist feeds`` tab will display all "
+"available blocklists. You can enable or disable each blocklist by using the "
+"switch on the right side of the list. Enabled blocklists will be "
+"automatically updated at regular intervals. NethSecurity 8 allows the use of"
+" Community and Enterprise blocklists."
+msgstr ""
+"Quando il servizio è abilitato, la scheda ``Blocklist feed`` mostrerà tutte "
+"le blocklist disponibili. È possibile abilitare o disabilitare ciascuna "
+"blocklist utilizzando l'interruttore sul lato destro dell'elenco. Le "
+"blocklist abilitate verranno aggiornate automaticamente a intervalli "
+"regolari. NethSecurity 8 consente l'utilizzo di blocklist Community ed "
+"Enterprise."
+
+#: ../../threat_shield_ip.rst:28 9d8414b978c34dea880a61abea19fbb8
+msgid "Community blocklists"
+msgstr "Blocklist della community"
+
+#: ../../threat_shield_ip.rst:30 7fd51400662246ee842a8b877fe649af
+msgid ""
+"Community blocklists are sourced from community contributors and cover "
+"various areas: Ads blocking, Malware blocking, Spam blocking, Tracker "
+"blocking, and so on. NethSecurity makes them available as they are. The type"
+" of usage license may vary depending on the provider, so if the use is not "
+"personal, you may need to inquire with the provider."
+msgstr ""
+"Le blocklist della community sono fornite da contributori della community e "
+"coprono diverse aree: blocco delle pubblicità, blocco di malware, blocco "
+"dello spam, blocco dei tracker e così via. NethSecurity le rende disponibili"
+" così come sono. Il tipo di licenza d'uso può variare a seconda del "
+"fornitore, quindi, se l'utilizzo non è personale, potrebbe essere necessario"
+" informarsi presso il fornitore."
+
+#: ../../threat_shield_ip.rst:36 b255fd751f294e329330ca8f1da4e318
+msgid "Community lists maintenance"
+msgstr "Manutenzione delle liste della community"
+
+#: ../../threat_shield_ip.rst:37 fd6d759922a34a1dbf289043c8e4ea97
+msgid ""
+"Each blocklist is maintained by its specific provider. NethSecurity already "
+"includes the URLs for downloading the feeds, which are valid at the time of "
+"the release. However, because these URLs are hard-coded, if the provider "
+"changes them, some blocklists may no longer be downloadable."
+msgstr ""
+"Ogni blocklist è gestita dal relativo provider specifico. NethSecurity "
+"include già gli URL per il download dei feed, validi al momento del "
+"rilascio. Tuttavia, poiché questi URL sono codificati all'interno del "
+"sistema, se il provider dovesse modificarli, alcune blocklist potrebbero non"
+" essere più scaricabili."
+
+#: ../../threat_shield_ip.rst:42 3b7fe1cc0c564989b5393610ff6bffdf
+msgid "Enterprise blocklists"
+msgstr "Blocklist aziendali"
+
+#: ../../threat_shield_ip.rst:44 80781e662a0f4f738232f88b2e3ce692
+msgid "Subscription required"
+msgstr "Abbonamento richiesto"
+
+#: ../../threat_shield_ip.rst:46 abede772ab9240ef8ab909edaddd0da9
+msgid ""
+"This feature is available only if the firewall has a valid :ref:`Community "
+"or Enterprise subscription <subscription-section>`."
+msgstr ""
+"Questa funzionalità è disponibile solo se il firewall dispone di un "
+"abbonamento :ref:`Community o Enterprise <subscription-section>` valido."
+
+#: ../../threat_shield_ip.rst:48 1b522dc951854c53a29aadbfa1593e43
+msgid ""
+"Enterprise blocklists are specifically focused on security and offer several"
+" advantages over community-maintained blocklists:"
+msgstr ""
+"Le blocklist aziendali sono specificamente focalizzate sulla sicurezza e "
+"offrono diversi vantaggi rispetto alle blocklist mantenute dalla comunità:"
+
+#: ../../threat_shield_ip.rst:50 ce6c8d3bfee64373923147a49ab03cc8
+msgid ""
+"**Quality and accuracy**: Enterprise blocklists, such as the ones provided "
+"by Nethesis and Yoroi, are curated and maintained by reputable cybersecurity"
+" companies. These companies have dedicated teams that continuously monitor "
+"and update the blocklists to ensure they are accurate and effective in "
+"blocking malicious traffic. This results in a higher level of quality and "
+"accuracy compared to community-maintained blocklists, which may not receive "
+"the same level of attention and updates."
+msgstr ""
+"**Qualità e accuratezza**: Le blocklist aziendali, come quelle fornite da "
+"Nethesis e Yoroi, sono curate e mantenute da aziende di cybersecurity "
+"affidabili. Queste aziende dispongono di team dedicati che monitorano e "
+"aggiornano continuamente le blocklist per garantire che siano accurate ed "
+"efficaci nel bloccare il traffico dannoso. Questo si traduce in un livello "
+"superiore di qualità e accuratezza rispetto alle blocklist mantenute dalla "
+"comunità, che potrebbero non ricevere la stessa attenzione e frequenza di "
+"aggiornamenti."
+
+#: ../../threat_shield_ip.rst:54 d8d72706ff414992a4ae3cc8273676d7
+msgid ""
+"**Timeliness**: Enterprise blocklists are frequently updated to include the "
+"latest threats and malicious IP addresses. Cybersecurity companies like "
+"Nethesis and Yoroi actively track emerging threats and promptly add them to "
+"their blocklists. This ensures that your system is protected against the "
+"most recent and evolving threats."
+msgstr ""
+"**Tempestività**: Le blocklist aziendali vengono aggiornate frequentemente "
+"per includere le minacce più recenti e gli indirizzi IP dannosi. Aziende di "
+"cybersecurity come Nethesis e Yoroi monitorano attivamente le minacce "
+"emergenti e le aggiungono tempestivamente alle loro blocklist. Questo "
+"garantisce che il sistema sia protetto contro le minacce più recenti e in "
+"evoluzione."
+
+#: ../../threat_shield_ip.rst:58 0c159dfd86dc4d38b082cb81b85ad834
+msgid ""
+"**Reduced false positives**: False positives occur when legitimate traffic "
+"is mistakenly blocked. Enterprise blocklists are designed to minimize false "
+"positives by carefully curating and verifying the listed IP addresses and "
+"hostnames. The companies behind Enterprise blocklists have robust processes "
+"in place to ensure that only malicious entities are included in the "
+"blocklists. This reduces the chances of legitimate traffic being blocked, "
+"minimizing disruptions to your network or services."
+msgstr ""
+"**Riduzione dei falsi positivi**: I falsi positivi si verificano quando il "
+"traffico legittimo viene bloccato per errore. Le blocklist Enterprise sono "
+"progettate per ridurre al minimo i falsi positivi attraverso una selezione e"
+" una verifica accurata degli indirizzi IP e dei nomi host elencati. Le "
+"aziende che gestiscono le blocklist Enterprise adottano processi rigorosi "
+"per garantire che solo entità malevole vengano incluse nelle blocklist. "
+"Questo riduce la possibilità che il traffico legittimo venga bloccato, "
+"minimizzando le interruzioni alla rete o ai servizi."
+
+#: ../../threat_shield_ip.rst:63 db8eda4a6bb141808145e31a50bd8d36
+msgid ""
+"**Enterprise support**: Enterprise blocklists often come with additional "
+"support and services tailored for enterprise environments. This includes "
+"access to technical support, documentation, and integration assistance. If "
+"any issues or questions arise while using the Enterprise blocklists, you can"
+" rely on the support provided by the cybersecurity companies to help you "
+"address them effectively."
+msgstr ""
+"**Supporto Enterprise**: Le blocklist Enterprise spesso includono supporto "
+"aggiuntivo e servizi pensati per ambienti aziendali. Questo comprende "
+"l’accesso al supporto tecnico, alla documentazione e all’assistenza per "
+"l’integrazione. In caso di problemi o domande durante l’utilizzo delle "
+"blocklist Enterprise, è possibile fare affidamento sul supporto fornito "
+"dalle aziende di cybersecurity per affrontarli in modo efficace."
+
+#: ../../threat_shield_ip.rst:68 8f8457d52b0d47ca950f7c57b31c1fec
+msgid ""
+"Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will be"
+" listed only if the machine has a valid :ref:`Enterprise or Community "
+"subscription <subscription-section>` and a valid entitlement for the Threat "
+"Shield IP service."
+msgstr ""
+"Le blocklist Yoroi e Nethesis sono blocklist Enterprise. Queste liste "
+"saranno visualizzate solo se la macchina dispone di un abbonamento "
+":ref:`Enterprise o Community <subscription-section>` valido e di un diritto "
+"valido per il servizio Threat Shield IP."
+
+#: ../../threat_shield_ip.rst:72 c35540dcc9ce4b67bed35a5e0e8a5f62
+msgid "Logging"
+msgstr "Registrazione"
+
+#: ../../threat_shield_ip.rst:74 484b2aa64a9c42d8b21db1cdf8ed0e2f
+msgid ""
+"The Threat Shield IP feature includes advanced logging capabilities to "
+"monitor and track potential threats. The logging section allows you to "
+"configure which types of blocked packets are logged:"
+msgstr ""
+"La funzionalità Threat Shield IP include capacità avanzate di registrazione "
+"per monitorare e tracciare potenziali minacce. La sezione di registrazione "
+"consente di configurare quali tipi di pacchetti bloccati vengono registrati:"
+
+#: ../../threat_shield_ip.rst:77 6d7726db157d4003bcf23da690fbbc1c
+msgid ""
+"Log packets blocked in pre-routing chain: when enabled, this option logs "
+"packets that are blocked in the pre-routing chain, which processes packets "
+"before they enter the routing table."
+msgstr ""
+"Registrare i pacchetti bloccati nella catena di pre-routing: quando "
+"abilitata, questa opzione registra i pacchetti che vengono bloccati nella "
+"catena di pre-routing, che elabora i pacchetti prima che entrino nella "
+"tabella di routing."
+
+#: ../../threat_shield_ip.rst:80 36a9878726724da8814a1e37050a6428
+msgid ""
+"Log packets blocked in input chain: his option, when activated, logs packets"
+" blocked in the input chain, which handles packets destined to the firewall "
+"itself. Please note that this option can generate a large number of logs if "
+"the firewall is under heavy traffic."
+msgstr ""
+"Registrare i pacchetti bloccati nella catena di input: questa opzione, "
+"quando attivata, registra i pacchetti bloccati nella catena di input, che "
+"gestisce i pacchetti destinati direttamente al firewall stesso. Si noti che "
+"questa opzione può generare un numero elevato di log se il firewall è "
+"sottoposto a traffico intenso."
+
+#: ../../threat_shield_ip.rst:83 eee399dc08be49abb1cb28128320f7f9
+msgid ""
+"Log packets blocked in forward chain: Enabling this logs packets blocked in "
+"the forward chain, which processes packets being routed through the "
+"firewall."
+msgstr ""
+"Registrare i pacchetti bloccati nella catena forward: Abilitando questa "
+"opzione vengono registrati i pacchetti bloccati nella catena forward, che "
+"elabora i pacchetti instradati attraverso il firewall."
+
+#: ../../threat_shield_ip.rst:85 f6733e0a91a14702a21efc201f8639b7
+msgid ""
+"Log packets blocked forwarded from LAN: This option logs packets that are "
+"blocked when forwarded from the Local Area Network (LAN)."
+msgstr ""
+"Registra i pacchetti bloccati inoltrati dalla LAN: Questa opzione registra i"
+" pacchetti che vengono bloccati quando vengono inoltrati dalla rete locale "
+"(LAN)."
+
+#: ../../threat_shield_ip.rst:87 fbf6764b531f461ab701503b3ba663a7
+msgid ""
+"These logging options provide granular control over which blocked packets "
+"are recorded, allowing to expose metrics inside the :ref:`real-time "
+"monitoring <real_time_monitoring-section>` and :ref:`historical monitoring "
+"<historical_monitoring-section>` sections."
+msgstr ""
+"Queste opzioni di logging offrono un controllo granulare su quali pacchetti "
+"bloccati vengono registrati, consentendo di esporre metriche all'interno "
+"delle sezioni :ref:`monitoraggio in tempo reale <real_time_monitoring-"
+"section>` e :ref:`monitoraggio storico <historical_monitoring-section>`."
+
+#: ../../threat_shield_ip.rst:93 e20b65d965e94728bfac0f96404e98f6
+msgid "Local allowlist"
+msgstr "Allowlist locale"
+
+#: ../../threat_shield_ip.rst:95 2dd9eaf90ee8411e9b44347a78509e50
+msgid ""
+"Sometimes it may be necessary to allow access to certain IP addresses, to do"
+" this you can use the ``Local allowlist`` tab. Use the :guilabel:`Add "
+"address` button to add a new address to the list. The address can be a valid"
+" IPv4/IPv6 address with optional CIDR notation, a MAC address, or a fully "
+"qualified hostname (FQDN)."
+msgstr ""
+"A volte può essere necessario consentire l'accesso a determinati indirizzi "
+"IP; per farlo è possibile utilizzare la scheda ``Allowlist locale``. "
+"Utilizzare il pulsante :guilabel:`Aggiungi indirizzo` per aggiungere un "
+"nuovo indirizzo all'elenco. L'indirizzo può essere un indirizzo IPv4/IPv6 "
+"valido con notazione CIDR opzionale, un indirizzo MAC oppure un hostname "
+"completamente qualificato (FQDN)."
+
+#: ../../threat_shield_ip.rst:99 b52b777e4c9248a3a3de050e937ea0a8
+msgid "For example, the address can be:"
+msgstr "Ad esempio, l'indirizzo può essere:"
+
+#: ../../threat_shield_ip.rst:101 dc104fd245cd48278c867c0c4a0821cd
+msgid "IPv4 address: 192.168.0.1"
+msgstr "Indirizzo IPv4: 192.168.0.1"
+
+#: ../../threat_shield_ip.rst:102 a226e93a5c18459eb288024c0ceca2e9
+msgid "IPv6 address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+msgstr "Indirizzo IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+
+#: ../../threat_shield_ip.rst:103 a184b735465d4569a888d39a86c4417e
+msgid "IPv4 address with CIDR notation: 192.168.0.0/24"
+msgstr "Indirizzo IPv4 con notazione CIDR: 192.168.0.0/24"
+
+#: ../../threat_shield_ip.rst:104 997fa01ce6ac4fdfbba2971a2b3a9731
+msgid "MAC address: 00:0a:95:9d:68:16"
+msgstr "Indirizzo MAC: 00:0a:95:9d:68:16"
+
+#: ../../threat_shield_ip.rst:105 955f59d2f6c044a4a38c00f9b0ec4a8b
+msgid "Fully qualified hostname: example.com"
+msgstr "Nome host completamente qualificato: example.com"
+
+#: ../../threat_shield_ip.rst:107 dd8d7fa0e5e541bda15a31aae773407b
+msgid ""
+"A comment can be associated with each address to facilitate management."
+msgstr ""
+"È possibile associare un commento a ciascun indirizzo per facilitarne la "
+"gestione."
+
+#: ../../threat_shield_ip.rst:109 aa87ce3ec5134baabb998a39fdd4e5dd
+msgid ""
+"You can add a comment to provide additional information about the address, "
+"such as its purpose or owner. This can help in organizing and managing the "
+"allowlist effectively."
+msgstr ""
+"È possibile aggiungere un commento per fornire informazioni aggiuntive "
+"sull'indirizzo, come ad esempio il suo scopo o il proprietario. Questo può "
+"aiutare a organizzare e gestire la allowlist in modo efficace."
+
+#: ../../threat_shield_ip.rst:115 1ccbdfd1e9be43fd935fab4d29903404
+msgid "Local blocklist"
+msgstr "Blocklist locale"
+
+#: ../../threat_shield_ip.rst:117 cd2398bd22314f6da85eda25a4643ee6
+msgid ""
+"Threat Shield IP includes a local blocklist functionality, which allows you "
+"to manually specify addresses that should always be blocked. This provides "
+"an additional layer of customization to your security setup."
+msgstr ""
+"Threat Shield IP include una funzionalità di blocklist locale, che consente "
+"di specificare manualmente gli indirizzi che devono essere sempre bloccati. "
+"Questo offre un ulteriore livello di personalizzazione alla configurazione "
+"della sicurezza."
+
+#: ../../threat_shield_ip.rst:120 144a0b67deea4ed5991684c72273a4ed
+msgid ""
+"To access and customize the blocklist, navigate to the ``Local blocklist`` "
+"tab in the Threat Shield IP interface. Use the :guilabel:`Add address` "
+"button to include new entries. Each entry is composed by an address and a "
+"description. Valid syntax for the address is the same as for the "
+":ref:`local_allowlist-section`."
+msgstr ""
+"Per accedere e personalizzare la blocklist, navigare nella scheda "
+"``Blocklist locale`` nell'interfaccia Threat Shield IP. Utilizzare il "
+"pulsante :guilabel:`Aggiungi indirizzo` per includere nuove voci. Ogni voce "
+"è composta da un indirizzo e una descrizione. La sintassi valida per "
+"l'indirizzo è la stessa indicata per la :ref:`local_allowlist-section`."
+
+#: ../../threat_shield_ip.rst:124 b438b723a8bc414291006dba90b5811d
+msgid ""
+"When adding addresses to the local blocklist, ensure you enter them "
+"correctly to avoid accidentally blocking legitimate traffic. It's also a "
+"good practice to include a descriptive comment for each entry to help with "
+"future management and auditing of your blocklist."
+msgstr ""
+"Quando si aggiungono indirizzi alla blocklist locale, assicurarsi di "
+"inserirli correttamente per evitare di bloccare accidentalmente traffico "
+"legittimo. È inoltre buona pratica includere un commento descrittivo per "
+"ogni voce, in modo da facilitare la gestione e la verifica futura della "
+"propria blocklist."
+
+#: ../../threat_shield_ip.rst:130 d3a4708c78a84810b50806191e74588b
+msgid "Block brute force attacks"
+msgstr "Bloccare gli attacchi brute force"
+
+#: ../../threat_shield_ip.rst:132 f4c334f6b0f24d5e83b4da4ec75ced57
+msgid ""
+"When Threat Shield IP is enabled, the system automatically starts checking "
+"for brute force attack attempts on firewall services. By default, the "
+"monitored services include SSH access and the login to NethSecurity UI. The "
+"system detects login attempts and automatically blocks IPs that have failed "
+"to enter the correct credentials."
+msgstr ""
+"Quando Threat Shield IP è abilitato, il sistema avvia automaticamente il "
+"controllo dei tentativi di attacco brute force sui servizi del firewall. Per"
+" impostazione predefinita, i servizi monitorati includono l'accesso SSH e il"
+" login all'interfaccia utente di NethSecurity. Il sistema rileva i tentativi"
+" di accesso e blocca automaticamente gli IP che non sono riusciti a inserire"
+" le credenziali corrette."
+
+#: ../../threat_shield_ip.rst:136 be4b5e0daff6435b960fcadc0402e3c1
+msgid ""
+"To enable or disable the brute force protection, navigate to the ``Block "
+"brute force attacks`` section in the Threat Shield IP interface, under the "
+"``Settings`` tab and use the switch to activate or deactivate the feature."
+msgstr ""
+"Per abilitare o disabilitare la protezione contro gli attacchi brute force, "
+"accedere alla sezione ``Blocca attacchi brute force`` nell'interfaccia "
+"Threat Shield IP, sotto la scheda ``Impostazioni`` e utilizzare "
+"l'interruttore per attivare o disattivare la funzionalità."
+
+#: ../../threat_shield_ip.rst:139 9ce121449dec49c5ba89745594aac94f
+msgid "The feature can be customized by adjusting the following settings:"
+msgstr ""
+"La funzionalità può essere personalizzata modificando le seguenti "
+"impostazioni:"
+
+#: ../../threat_shield_ip.rst:141 8a1d1cdf07a3431c84e8e90e5050d0a3
+msgid ""
+"``Ban after N failed accesses``: this setting determines the number of "
+"failed login attempts allowed before an IP address is banned. The default "
+"value is typically 3, but can be adjusted as needed. A lower value increases"
+" security but may also increase the risk of false positives, like blocking "
+"legitimate users who mistype their credentials."
+msgstr ""
+"``Ban dopo N accessi falliti``: questa impostazione determina il numero di "
+"tentativi di accesso non riusciti consentiti prima che un indirizzo IP venga"
+" bannato. Il valore predefinito è tipicamente 3, ma può essere modificato "
+"secondo necessità. Un valore più basso aumenta la sicurezza ma può anche "
+"aumentare il rischio di falsi positivi, come il blocco di utenti legittimi "
+"che digitano erroneamente le proprie credenziali."
+
+#: ../../threat_shield_ip.rst:145 bc596d0600364ecb9248d4f28f62ee60
+msgid ""
+"``Patterns to detect attacks``: this field allows you to specify patterns "
+"that the system uses to identify potential brute force attacks. Common "
+"patterns include:"
+msgstr ""
+"``Pattern per rilevare gli attacchi``: questo campo consente di specificare "
+"i pattern che il sistema utilizza per identificare potenziali attacchi di "
+"forza bruta. I pattern comuni includono:"
+
+#: ../../threat_shield_ip.rst:148 64f6129c40ae4028b31bece8bb67991d
+msgid ""
+"*Exit before auth from*: detects bad authentication attempts to SSH service"
+msgstr ""
+"*Exit before auth from*: rileva tentativi di autenticazione non riusciti al "
+"servizio SSH"
+
+#: ../../threat_shield_ip.rst:149 209aa27404514646ae3f57cdc890cff8
+msgid ""
+"*authentication failed for user*: identifies failed authentication attempts "
+"to NethSecurity web interface"
+msgstr ""
+"*authentication failed for user*: identifica i tentativi di autenticazione "
+"non riusciti all'interfaccia web di NethSecurity"
+
+#: ../../threat_shield_ip.rst:150 c47aba9a295d4e4a849fdc21b522dc2d
+msgid ""
+"*TLS Auth Error*, *TLS handshake failed*, *AUTH_FAILED*: detects failed "
+"authentication attempts to OpenVPN service"
+msgstr ""
+"*Errore di autenticazione TLS*, *Handshake TLS non riuscito*, *AUTH_FAILED*:"
+" rileva tentativi di autenticazione non riusciti al servizio OpenVPN"
+
+#: ../../threat_shield_ip.rst:152 be260d6526cf41d48265a00eddebe1e0
+msgid ""
+"You can add additional patterns using the :guilabel:`Add pattern`` button to"
+" customize the detection mechanism. Each pattern can be a valid *grep* "
+"regular expression."
+msgstr ""
+"È possibile aggiungere ulteriori pattern utilizzando il pulsante "
+":guilabel:`Aggiungi pattern` per personalizzare il meccanismo di "
+"rilevamento. Ogni pattern può essere una valida espressione regolare *grep*."
+
+#: ../../threat_shield_ip.rst:155 54e2e59232bd41d69f967fc458cab844
+msgid ""
+"``Ban time``: this setting determines the duration for which an IP address "
+"remains banned after exceeding the allowed number of failed attempts. The "
+"default is often set to 30 minutes, but can be adjusted based on your "
+"security requirements."
+msgstr ""
+"``Tempo di ban``: questa impostazione determina la durata per cui un "
+"indirizzo IP rimane bannato dopo aver superato il numero consentito di "
+"tentativi falliti. Il valore predefinito è spesso impostato a 30 minuti, ma "
+"può essere modificato in base alle proprie esigenze di sicurezza."
+
+#: ../../threat_shield_ip.rst:158 8e4d2f53fab348b89b52fe43a3002ffc
+msgid ""
+"You can perform further actions using the command line; these are the "
+"supported commands:"
+msgstr ""
+"È possibile eseguire ulteriori azioni utilizzando la riga di comando; questi"
+" sono i comandi supportati:"
+
+#: ../../threat_shield_ip.rst:160 8475dc7a164943a0ab552d53642cb3b7
+msgid ""
+"View all IP addresses currently on the blocklist: ``/etc/init.d/banip survey"
+" blocklistv4``"
+msgstr ""
+"Visualizzare tutti gli indirizzi IP attualmente presenti nella blocklist: "
+"``/etc/init.d/banip survey blocklistv4``"
+
+#: ../../threat_shield_ip.rst:161 80e815a24acc46f48bb97c1195b10066
+msgid ""
+"Look up a specific IP in the blocklist: ``/etc/init.d/banip search "
+"IP_ADDRESS``"
+msgstr ""
+"Cercare un IP specifico nella blocklist: ``/etc/init.d/banip search "
+"IP_ADDRESS``"
+
+#: ../../threat_shield_ip.rst:162 4b7eecd17ca94a73aef9fd6d5a3ade0d
+msgid ""
+"Unban an IP address: ``nft delete element inet banIP blocklistv4 { "
+"IP_ADDRESS }``"
+msgstr ""
+"Rimuovere il ban da un indirizzo IP: ``nft delete element inet banIP "
+"blocklistv4 { IP_ADDRESS }``"
+
+#: ../../threat_shield_ip.rst:164 b7f58ac4bd5b4a7db505531670f002c7
+msgid ""
+"Bear in mind that you need to specify the correct blocklist in commands when"
+" prompted (``blocklistv4`` for IPv4, ``blocklistv6`` for IPv6)."
+msgstr ""
+"Tenere presente che è necessario specificare la blocklist corretta nei "
+"comandi quando richiesto (``blocklistv4`` per IPv4, ``blocklistv6`` per "
+"IPv6)."
+
+#: ../../threat_shield_ip.rst:167 4200ac9db79947c29053592fa2c22e38
+msgid "Block DoS"
+msgstr "Bloccare DoS"
+
+#: ../../threat_shield_ip.rst:169 4c47d6490b384256982563d13478c928
+msgid ""
+"Threat Shield IP also includes protection against various types of Denial of"
+" Service (DoS) attacks. DoS protection limits excessive suspicious requests "
+"of a certain type, blocking that kind of traffic until the situation "
+"normalizes."
+msgstr ""
+"Threat Shield IP include anche la protezione contro vari tipi di attacchi "
+"Denial of Service (DoS). La protezione DoS limita le richieste sospette "
+"eccessive di un certo tipo, bloccando quel tipo di traffico fino a quando la"
+" situazione non si normalizza."
+
+#: ../../threat_shield_ip.rst:172 daac324bd28d420c8cdaac2e2e3146de
+msgid ""
+"``Block ICMP DoS``: when enabled, this option protects against DoS attacks "
+"using the Internet Control Message Protocol (ICMP). The limit is set to 100 "
+"packets per second for all traffic passing through the firewall."
+msgstr ""
+"``Blocca DoS ICMP``: quando abilitata, questa opzione protegge dagli "
+"attacchi DoS che utilizzano il protocollo Internet Control Message Protocol "
+"(ICMP). Il limite è impostato a 100 pacchetti al secondo per tutto il "
+"traffico che passa attraverso il firewall."
+
+#: ../../threat_shield_ip.rst:175 86069984114e4dd1a909d7298d6bd96d
+msgid ""
+"``Block TCP DoS``: this option, when activated, guards against TCP-based DoS"
+" attacks based on bad packets. A packet could be considered bad if it is not"
+" part of an established connection or if it is part of a connection that has"
+" been closed. The limit is set to 10 bad packets per second for all traffic "
+"passing through the firewall."
+msgstr ""
+"``Block TCP DoS``: questa opzione, quando attivata, protegge da attacchi DoS"
+" basati su TCP che utilizzano pacchetti non validi. Un pacchetto può essere "
+"considerato non valido se non fa parte di una connessione stabilita o se "
+"appartiene a una connessione che è stata chiusa. Il limite è impostato a 10 "
+"pacchetti non validi al secondo per tutto il traffico che attraversa il "
+"firewall."
+
+#: ../../threat_shield_ip.rst:179 3c48e5f978564e8e8952685b22724f95
+msgid ""
+"``Block UDP DoS``: Enabling this protects against User Datagram Protocol "
+"(UDP) based DoS attacks. The limit is set to 100 packets per second for all "
+"traffic passing through the firewall."
+msgstr ""
+"``Blocca DoS UDP``: L'abilitazione di questa opzione protegge da attacchi "
+"DoS basati su User Datagram Protocol (UDP). Il limite è impostato a 100 "
+"pacchetti al secondo per tutto il traffico che attraversa il firewall."
