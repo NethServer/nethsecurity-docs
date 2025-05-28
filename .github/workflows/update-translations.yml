@@ -1,4 +1,4 @@
-name: Update po files
+name: Update Italian Translation
 
 on:
   push:
@@ -10,24 +10,57 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
       contents: write
+      pull-requests: write
+
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Sphinx
-        run: pip install -r requirements.txt
-
-      - name: Update po files
-        id: update-po
+      - name: Install dependencies
         run: |
-          make gettext
-          sphinx-intl update -p _build/gettext -l it
-          rm -f *.csv || true # remove csv files
+          pip install -r requirements.txt
+          pip install -r locale/requirements.txt
 
-      # Commit all changed files back to the repository
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Generate POT files
+        run: |
+          sphinx-build -b gettext . locale/pot/
+          # DEV: to remove
+          find locale/pot -type f ! -name 'routing.pot' -delete
+
+      - name: Translate using AI
+        run: |
+          cd locale
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} ./ai_translate.py
+          rm -rf pot *.csv
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
         with:
-          commit_message: Update po files
+          commit-message: "chore(i18n): update Italian translation"
+          committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: update-ai-translations
+          title: '[BOT] Update Italian translation'
+          body: |
+            This PR updates po files using AI translation for Italian language.
+
+            [Download Italian docs artifact](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          draft: false
+
+      - name: Build Italian docs
+        run: |
+          git checkout update-ai-translations
+          sphinx-build -b html -D language=it . _build/html/it
+
+      - name: Upload Italian docs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: italian-docs
+          path: _build/html/it
+
+

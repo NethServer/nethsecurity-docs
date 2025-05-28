@@ -169,5 +169,3 @@ if __name__ == "__main__":
     )
 
     process_pot_files(llm, prompt, "pot")
-
-
