@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  NethSecurity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-27 14:23+0000\n"
+"POT-Creation-Date: 2025-06-03 12:37+0000\n"
 "PO-Revision-Date: 2024-03-01 13:49+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-"
 "translation-memory@weblate.org>\n"
@@ -3296,72 +3296,118 @@ msgid "Development releases"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-24.10.0-ns.1.5.1-48-g908ae9d0"
+msgid "8-24.10.0-ns.1.5.1-60-g3dd4c1f17"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`x86-64 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-48-g908ae9d0/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-48-g908ae9d0-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-60-g3dd4c1f17/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-60-g3dd4c1f17-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`SHA256 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-48-g908ae9d0/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-60-g3dd4c1f17/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`CDX "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-48-g908ae9d0/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-48-g908ae9d0-x86-64-generic.bom.cdx.json>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-60-g3dd4c1f17/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-60-g3dd4c1f17-x86-64-generic.bom.cdx.json>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-24.10.0-ns.1.5.1-47-g3981d0f2"
+msgid "8-24.10.0-ns.1.5.1-59-g6194e7700"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`x86-64 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-47-g3981d0f2/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-47-g3981d0f2-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-59-g6194e7700/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-59-g6194e7700-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`SHA256 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-47-g3981d0f2/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-59-g6194e7700/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`CDX "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-47-g3981d0f2/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-47-g3981d0f2-x86-64-generic.bom.cdx.json>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-59-g6194e7700/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-59-g6194e7700-x86-64-generic.bom.cdx.json>`__"
 msgstr ""
 
 #: ../../dev.csv:1
-msgid "8-24.10.0-ns.1.5.1-46-g149594b3"
+msgid "8-24.10.0-ns.1.5.1-58-gbaf7ff90"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`x86-64 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-46-g149594b3/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-46-g149594b3-x86-64"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-58-gbaf7ff90/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-58-gbaf7ff90-x86-64"
 "-generic-squashfs-combined-efi.img.gz>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`SHA256 "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-46-g149594b3/targets/x86/64/sha256sums>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-58-gbaf7ff90/targets/x86/64/sha256sums>`__"
 msgstr ""
 
 #: ../../dev.csv:1
 msgid ""
 "`CDX "
-"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-46-g149594b3/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-46-g149594b3-x86-64-generic.bom.cdx.json>`__"
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-58-gbaf7ff90/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-58-gbaf7ff90-x86-64-generic.bom.cdx.json>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-24.10.0-ns.1.5.1-57-ged21e8eb"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`x86-64 "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-57-ged21e8eb/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-57-ged21e8eb-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`SHA256 "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-57-ged21e8eb/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`CDX "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-57-ged21e8eb/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-57-ged21e8eb-x86-64-generic.bom.cdx.json>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid "8-24.10.0-ns.1.5.1-56-g390b14ca"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`x86-64 "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-56-g390b14ca/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-56-g390b14ca-x86-64"
+"-generic-squashfs-combined-efi.img.gz>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`SHA256 "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-56-g390b14ca/targets/x86/64/sha256sums>`__"
+msgstr ""
+
+#: ../../dev.csv:1
+msgid ""
+"`CDX "
+"<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-56-g390b14ca/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-56-g390b14ca-x86-64-generic.bom.cdx.json>`__"
 msgstr ""
 
 #: ../../dev.csv:1
@@ -3568,25 +3614,25 @@ msgstr ""
 msgid "Applications and protocols list"
 msgstr ""
 
-#: ../../dpi_filter.rst:46
+#: ../../dpi_filter.rst:47
 msgid ""
 "The full list of all applications and protocols supported by the "
 "Enterprise version is available here:"
 msgstr ""
 
-#: ../../dpi_filter.rst:48
+#: ../../dpi_filter.rst:49
 msgid "`Applications <https://www.netify.ai/resources/applications_reference>`_"
 msgstr ""
 
-#: ../../dpi_filter.rst:49
+#: ../../dpi_filter.rst:50
 msgid "`Protocols <https://www.netify.ai/resources/protocols>`_"
 msgstr ""
 
-#: ../../dpi_filter.rst:52
+#: ../../dpi_filter.rst:53
 msgid "Exceptions"
 msgstr "Eccezioni"
 
-#: ../../dpi_filter.rst:54
+#: ../../dpi_filter.rst:55
 msgid ""
 "DPI exclusion allows for the exclusion of specific network addresses, "
 "such as the gateway or other critical infrastructure, preventing them "
@@ -3595,7 +3641,7 @@ msgstr ""
 "L'esclusione DPI consente di escludere indirizzi di rete specifici, come "
 "il gateway o server, evitando eventuali blocchi indesiderati."
 
-#: ../../dpi_filter.rst:56
+#: ../../dpi_filter.rst:57
 msgid ""
 "To add a new exception, click the ``Add exception`` button. Enter the "
 "``IP address`` that should be exempted from the filter. You can include a"
@@ -3606,15 +3652,15 @@ msgstr ""
 "filtro. È possibile includere una descrizione che spiega la ragione per "
 "l'esclusione."
 
-#: ../../dpi_filter.rst:60
+#: ../../dpi_filter.rst:61
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Qualsiasi eccezione può essere abilitata o disabilitata individualmente."
 
-#: ../../dpi_filter.rst:63
+#: ../../dpi_filter.rst:64
 msgid "Netify interface exclusion"
 msgstr ""
 
-#: ../../dpi_filter.rst:65
+#: ../../dpi_filter.rst:66
 msgid ""
 "By default, Netifyd monitors all interfaces. To exclude specific "
 "interfaces, you can define an exclusion list. Below are commands to add, "
@@ -3623,27 +3669,27 @@ msgid ""
 " is a shel glob pattern."
 msgstr ""
 
-#: ../../dpi_filter.rst:68
+#: ../../dpi_filter.rst:69
 msgid ""
 "Add interfaces to exclusion list. The system will exclude the `eth1` "
 "interface and all OpenVPN and WireGuard interfaces: ::"
 msgstr ""
 
-#: ../../dpi_filter.rst:76
+#: ../../dpi_filter.rst:77
 msgid ""
 "In this case the system will exclude interface ``eth1``, all WireGuard "
 "``wgX`` interfaces and all OpenVPN routed interfaces."
 msgstr ""
 
-#: ../../dpi_filter.rst:78
+#: ../../dpi_filter.rst:79
 msgid "Modify exclusion list: ::"
 msgstr ""
 
-#: ../../dpi_filter.rst:85
+#: ../../dpi_filter.rst:86
 msgid "Clear exclusion list: ::"
 msgstr ""
 
-#: ../../dpi_filter.rst:91
+#: ../../dpi_filter.rst:92
 msgid "Return the exclusion list: ::"
 msgstr ""
 
@@ -24496,5 +24542,62 @@ msgstr ""
 #~ msgid ""
 #~ "`CDX "
 #~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-30-g54221e52/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-30-g54221e52-x86-64-generic.bom.cdx.json>`__"
+#~ msgstr ""
+
+#~ msgid "8-24.10.0-ns.1.5.1-48-g908ae9d0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`x86-64 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-48-g908ae9d0/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-48-g908ae9d0-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SHA256 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-48-g908ae9d0/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`CDX "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-48-g908ae9d0/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-48-g908ae9d0-x86-64-generic.bom.cdx.json>`__"
+#~ msgstr ""
+
+#~ msgid "8-24.10.0-ns.1.5.1-47-g3981d0f2"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`x86-64 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-47-g3981d0f2/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-47-g3981d0f2-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SHA256 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-47-g3981d0f2/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`CDX "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-47-g3981d0f2/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-47-g3981d0f2-x86-64-generic.bom.cdx.json>`__"
+#~ msgstr ""
+
+#~ msgid "8-24.10.0-ns.1.5.1-46-g149594b3"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`x86-64 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-46-g149594b3/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-46-g149594b3-x86-64"
+#~ "-generic-squashfs-combined-efi.img.gz>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`SHA256 "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-46-g149594b3/targets/x86/64/sha256sums>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`CDX "
+#~ "<https://updates.nethsecurity.nethserver.org/dev/8-24.10.0-ns.1.5.1-46-g149594b3/targets/x86/64/nethsecurity-8-24.10.0-ns.1.5.1-46-g149594b3-x86-64-generic.bom.cdx.json>`__"
 #~ msgstr ""
 
