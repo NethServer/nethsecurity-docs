@@ -73,12 +73,12 @@ The HA cluster supports synchronization for a wide range of features, including:
 - Backup encryption password
 - Controller connection and subscription (ns-plug)
 - Active connections tracking (conntrackd)
+- Hotspot (dedalo)
 
 Be aware of the following current limitations:
 
 - IPv4 only (IPv6 is not supported).
 - VLANs are supported only on physical interfaces.
-- Hotspot is not supported since it requires a new registration when the primary node goes down because the MAC address associated with the hotspot
   interface will be different.
 - Extra packages such as NUT are not supported.
 - Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
@@ -87,7 +87,7 @@ Be aware of the following current limitations:
 Also note that after the first synchronization, the backup node will have the same hostname as the primary node.
 The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or backup).
 Also, when accessing the SSH console, the prompt will change to indicate the node's role.
-See the :ref:`troubleshooting-section` section for more details.
+See the :ref:`troubleshooting_ha-section` section for more details.
 
 Requirements
 ============
@@ -132,6 +132,7 @@ The setup process is as follows:
 7. **Configure additional interfaces** for the cluster as needed (optional).
    This step is optional and depends on your network setup. You can add any additional interfaces that require HA support.
    See `Additional interfaces`_ section below for detailed instructions.
+   If you need to configure an hotspot, see `Hotspot support`_ section below for specific requirements.
 
 8. **Add IP aliases** to the primary node on relevant interfaces (optional).
    This step is optional and allows you to add additional IP addresses to the primary node for services that require multiple IPs.
@@ -218,7 +219,6 @@ This checks:
   - ``Force DHCP server start`` option is enabled.
   - ``3: router`` DHCP option is set (should be the virtual IP).
   - ``6: DNS server`` DHCP option is set.
-- Hotspot is disabled.
 
 For the backup node::
 
@@ -312,6 +312,18 @@ Add additional interfaces as needed::
    ns-ha-config add-interface <interface> <virtual_ip_address>
 
 The gateway is usually not required for non-WAN interfaces.
+
+Hotspot support
+---------------
+
+The hotspot feature is supported in HA clusters, but there are important requirements:
+
+- The backup node must have the exact same network devices as the primary node. For example, if the primary node has a
+  VLAN interface named ``eth1.1``, the backup node must also have a ``eth1.1`` interface with the same name and configuration.
+  If the interfaces do not match, the hotspot will not function correctly after a failover.
+- The hotspot can only operate on a physical interface or a VLAN interface.
+- To maintain hotspot functionality during failover, the MAC address of the interface running the hotspot on the primary node is automatically
+  copied to the corresponding interface on the backup node when a switchover occurs.
 
 Network aliases
 ----------------
@@ -472,7 +484,7 @@ To update the backup node, you need to connect to the primary node and run the u
 This command will download the latest image, upload it to the backup node, and install it.
 As a normal upgrade, the backup node will reboot after the installation.
 
-.. _troubleshooting-section:
+.. _troubleshooting_ha-section:
 
 Troubleshooting
 ===============
