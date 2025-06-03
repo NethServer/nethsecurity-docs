@@ -4,7 +4,7 @@ msgstr ""
 
 #: ../../routing.rst:5 0ba521c357094645b933d215bd8654f8
 msgid "Static routes"
-msgstr "Route statiche"
+msgstr "Rotte statiche"
 
 #: ../../routing.rst:7 45317dc5ba3c4f0e92eae43c1f527e32
 msgid ""
