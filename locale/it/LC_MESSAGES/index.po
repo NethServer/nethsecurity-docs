@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
 # This file is distributed under the same license as the NethSecurity
@@ -80,3 +81,69 @@ msgstr ""
 msgid "Help on `Community <http://community.nethserver.org>`_"
 msgstr ""
 
+=======
+#
+msgid ""
+msgstr ""
+
+#: ../../index.rst:15
+msgid "About"
+msgstr "Informazioni"
+
+#: ../../index.rst:22
+msgid "Installation"
+msgstr "Installazione"
+
+#: ../../index.rst:31
+msgid "System"
+msgstr "Sistema"
+
+#: ../../index.rst:44
+msgid "Network"
+msgstr "Rete"
+
+#: ../../index.rst:55
+msgid "Users and objects"
+msgstr "Utenti e oggetti"
+
+#: ../../index.rst:62
+msgid "Firewall"
+msgstr "Firewall"
+
+#: ../../index.rst:72
+msgid "Security"
+msgstr "Sicurezza"
+
+#: ../../index.rst:83
+msgid "VPN"
+msgstr "VPN"
+
+#: ../../index.rst:91
+msgid "Report"
+msgstr "Report"
+
+#: ../../index.rst:98
+msgid "Advanced (CLI)"
+msgstr "Avanzate (CLI)"
+
+#: ../../index.rst:111
+msgid "Best practices"
+msgstr "Best practice"
+
+#: ../../index.rst:5 0f14a4fb9c35465d831accae97f40bcd
+msgid "NethSecurity administrator manual"
+msgstr "Manuale dell'amministratore di NethSecurity"
+
+#: ../../index.rst:9 dd31ee09d9944c77a5d733592746a6a8
+msgid "`Official site <https://www.nethsecurity.org>`_"
+msgstr "`Sito ufficiale <https://www.nethsecurity.org>`_"
+
+#: ../../index.rst:11 27528c9072d642b280f767d141561802
+msgid "`Developer manual <https://nethserver.github.io/nethsecurity/>`_"
+msgstr ""
+"`Manuale sviluppatori <https://nethserver.github.io/nethsecurity/>`_"
+
+#: ../../index.rst:13 07672a0c0189437da715bfecee68c472
+msgid "Help on `Community <http://community.nethserver.org>`_"
+msgstr "Aiuto su `Community <http://community.nethserver.org>`_"
+>>>>>>> f529cb3 (feat: add first AI translated content)
