@@ -43,7 +43,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst', "venv"]
 
 # -- Options for translations ------------------------------------------------
 locale_dirs = ['locale/']
-gettext_compact = 'nethsecurity-docs'
+gettext_compact = False
+gettext_uuid = True
+gettext_location = True
+gettext_additional_targets = ['index']
 
 # -- Options for HTML output -------------------------------------------------
 
