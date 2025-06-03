@@ -45,7 +45,7 @@ msgid ""
 "must have a valid extra entitlement for this service."
 msgstr ""
 "Si noti che, per accedere alle blocklist di Nethesis e Yoroi, la macchina "
-"deve disporre di un extra entitlement valido per questo servizio."
+"deve disporre di un abbonamento addizionale valido per questo servizio."
 
 #: ../../threat_shield_ip.rst:17 7b287c8857dc46eca32297b151f58be4
 msgid "Configuration"
@@ -214,7 +214,7 @@ msgid ""
 msgstr ""
 "Le blocklist Yoroi e Nethesis sono blocklist Enterprise. Queste liste "
 "saranno visualizzate solo se la macchina dispone di un :ref:`abbonamento "
-"Enterprise o Community valido <subscription-section>` e di un diritto valido"
+"Enterprise o Community valido <subscription-section>` e di un abbonamento valido"
 " per il servizio Threat Shield IP."
 
 #: ../../threat_shield_ip.rst:72 c35540dcc9ce4b67bed35a5e0e8a5f62
@@ -303,7 +303,7 @@ msgstr ""
 "Utilizzare il pulsante :guilabel:`Aggiungi indirizzo` per aggiungere un "
 "nuovo indirizzo all'elenco. L'indirizzo può essere un indirizzo IPv4/IPv6 "
 "valido con notazione CIDR opzionale, un indirizzo MAC oppure un hostname "
-"completamente qualificato (FQDN)."
+"completo di dominio (FQDN)."
 
 #: ../../threat_shield_ip.rst:99 b52b777e4c9248a3a3de050e937ea0a8
 msgid "For example, the address can be:"
@@ -327,7 +327,7 @@ msgstr "Indirizzo MAC: 00:0a:95:9d:68:16"
 
 #: ../../threat_shield_ip.rst:105 955f59d2f6c044a4a38c00f9b0ec4a8b
 msgid "Fully qualified hostname: example.com"
-msgstr "Nome host completamente qualificato: example.com"
+msgstr "FQDN: example.com"
 
 #: ../../threat_shield_ip.rst:107 dd8d7fa0e5e541bda15a31aae773407b
 msgid ""
@@ -461,7 +461,7 @@ msgid ""
 "*authentication failed for user*: identifies failed authentication attempts "
 "to NethSecurity web interface"
 msgstr ""
-"*autenticazione non riuscita per l'utente*: identifica i tentativi di "
+"*authentication failed for user*: identifica i tentativi di "
 "autenticazione non riusciti all'interfaccia web di NethSecurity"
 
 #: ../../threat_shield_ip.rst:150 c47aba9a295d4e4a849fdc21b522dc2d
@@ -469,7 +469,7 @@ msgid ""
 "*TLS Auth Error*, *TLS handshake failed*, *AUTH_FAILED*: detects failed "
 "authentication attempts to OpenVPN service"
 msgstr ""
-"*Errore di autenticazione TLS*, *Handshake TLS non riuscito*, *AUTH_FAILED*:"
+"*TLS Auth Error*, *TLS handshake failed*, *AUTH_FAILED*: "
 " rileva tentativi di autenticazione non riusciti al servizio OpenVPN"
 
 #: ../../threat_shield_ip.rst:152 be260d6526cf41d48265a00eddebe1e0
