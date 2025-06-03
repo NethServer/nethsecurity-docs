@@ -42,7 +42,8 @@ However, with an active subscription, this capacity significantly expands, encom
 the list of recognized applications undergoes daily updates, ensuring that the system stays abreast of the ever-evolving landscape of applications and digital services.
 
 Applications and protocols list 
-------------------------------
+-------------------------------
+
 The full list of all applications and protocols supported by the Enterprise version is available here:
 
 - `Applications <https://www.netify.ai/resources/applications_reference>`_
