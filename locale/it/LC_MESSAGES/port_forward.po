@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity 8-24.10.0-ns.1.5.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../port_forward.rst:5 b84963a810794834baa5b27d729cefee
+msgid "Port forward"
+msgstr ""
+
+#: ../../port_forward.rst:7 e36141013dc44289b82c99459bb0793b
+msgid ""
+"The firewall prevents requests from public networks to access private "
+"ones. For instance, if there's a web server operating within the LAN, "
+"only computers within the local network can access this service. Any "
+"attempts made by external users from outside the local network are "
+"denied."
+msgstr ""
+
+#: ../../port_forward.rst:11 a009d2468cc24112b17e8c424addfde8
+msgid ""
+"A port forward is a networking technique used in firewalls to redirect "
+"specific network traffic from one IP address and port number combination "
+"to another. It is typically employed to enable external users to access "
+"services or applications hosted on devices within a private local "
+"network."
+msgstr ""
+
+#: ../../port_forward.rst:15 fa397370a3cd422b8bf97ec7a97da56d
+msgid ""
+"For web servers, common listening ports include port 80 (HTTP) and port "
+"443 (HTTPS). When creating a port forward, certain parameters must be "
+"specified:"
+msgstr ""
+
+#: ../../port_forward.rst:18 540484737e204ab6b5907af35425c090
+msgid ""
+"``Name``: assigning a name to a port forward rule is beneficial for "
+"future reference and management. By providing a descriptive and "
+"meaningful name, network administrators can easily identify the purpose "
+"and context of each port forward."
+msgstr ""
+
+#: ../../port_forward.rst:20 282a76825a3549a4b63e2dd902839b64
+msgid ""
+"``Source port``: the port from which the request originates. Note that "
+"not all protocols require a port. For example, protocols like ``GRE`` do "
+"not use ports."
+msgstr ""
+
+#: ../../port_forward.rst:22 5695d308131740df9200eca3db588f43
+msgid ""
+"``Destination port``: the port to which the traffic is directed; this can"
+" differ from the source port."
+msgstr ""
+
+#: ../../port_forward.rst:23 65def960e14c40329b5694a83ca56ed8
+msgid ""
+"``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, "
+"``UDPLITE``, ``ICMP``, ``ESP``, ``AH``, ``SCTP``, ``GRE``. Leave empty "
+"for any source protocol If left empty, all traffic, regardless of the "
+"protocol, will be forwarded. Use this setting with caution, as it may "
+"expose the system to unintended or potentially harmful traffic."
+msgstr ""
+
+#: ../../port_forward.rst:27 353dad5823974973b5e04442e71e95f9
+msgid ""
+"``Destination address``: specifies the internal host to which the traffic"
+" should be redirected. This can be:"
+msgstr ""
+
+#: ../../port_forward.rst:29 d58ac144631947c7b94c737709c1de27
+msgid "a specific IP address"
+msgstr ""
+
+#: ../../port_forward.rst:30 b4c69ba422054b87bce5f1cbbb1db504
+msgid ""
+"a firewall object: a host defined by a host set, a DHCP reservation, a "
+"DNS record or an OpenVPN account with IP reservation"
+msgstr ""
+
+#: ../../port_forward.rst:32 cd07cbf8f25e458394761ed8eca98cf3
+msgid ""
+"By default, all port forwards are accessible only for hosts inside the "
+"WAN. Refer to the :ref:`hairpin-section` for instructions on changing "
+"this default behavior."
+msgstr ""
+
+#: ../../port_forward.rst:34 0cf30fbf4c55422baf9be773a9dda50b
+msgid "For each port forward the user can also configure the following aspects:"
+msgstr ""
+
+#: ../../port_forward.rst:36 80bfe801f7d34700af9b2b6c2d1386f9
+msgid ""
+"**Binding to a specific public IP**: port forwards can be bound to a "
+"specific public IP address using the ``WAN IP`` field. This means that if"
+" your router/firewall has multiple public IP addresses, you can assign a "
+"port forward to a particular IP. This feature is valuable when dealing "
+"with complex network setups, ensuring that traffic directed to a specific"
+" public IP is forwarded correctly to the internal server."
+msgstr ""
+
+#: ../../port_forward.rst:41 29dc04d813a0435c9e9a6fad6fd82fcd
+msgid ""
+"**Access restriction**: Port forwards can be restricted to specific "
+"sources to enhance security. This can be done using the ``Restrict access"
+" to`` field. The field accepts IP addresses, CIDR blocks or an object."
+msgstr ""
+
+#: ../../port_forward.rst:43 4647ec41eb4b4df6be79ba5f3fc04d1c
+msgid ""
+"Any type of object is supported except for host sets containing an IP "
+"range."
+msgstr ""
+
+#: ../../port_forward.rst:45 4c4457520a344d01bc7b6aef02d9da0a
+msgid ""
+"**Enabling logging**: port forwards can be configured to log incoming "
+"traffic for each rule. By enabling the ``Log`` option, the network "
+"administrator can keep track of the traffic passing through the port "
+"forward, allowing for monitoring and analysis. By default, logging is "
+"limited to 1 entry per second. To change this limit, refer to the :ref"
+":`logging-limits` section."
+msgstr ""
+
+#: ../../port_forward.rst:52 6fa42462bcb74cc7a7945db1f90a0449
+msgid "Hairpin NAT"
+msgstr ""
+
+#: ../../port_forward.rst:54 fe077aab0de743ae91a8abf4fc5f7abc
+msgid ""
+"Hairpin NAT, also known as NAT loopback or NAT reflection, is a technique"
+" used in networking where internal hosts access a server located within "
+"the same local network using the external IP address of the router or "
+"firewall. In other words, when internal devices attempt to connect to a "
+"server using the public IP address, hairpin NAT ensures that the traffic "
+"is routed internally without going out to the internet and then back into"
+" the local network."
+msgstr ""
+
+#: ../../port_forward.rst:59 0064316f7a57443893598a8f5980c6c6
+msgid ""
+"To enable the hairpin, enable the ``Hairpin NAT`` option and select one "
+"or more zones where the NAT loopback should be enabled."
+msgstr ""
+
+#: ../../port_forward.rst:62 35c26d78fc75460ca1e47dce65a284e6
+msgid "Hairpin NAT for VPN zones"
+msgstr ""
+
+#: ../../port_forward.rst:64 1f3e73a6700b4d09b2918fd702d8a470
+msgid ""
+"To use Hairpin NAT with VPN zones such as ``ipsec``, ``openvpn``, and "
+"``rwopenvpn``, additional configuration is necessary. You must explicitly"
+" declare the subnet used by the VPN; otherwise, Hairpin NAT will not "
+"function for VPN-connected clients."
+msgstr ""
+
+#: ../../port_forward.rst:67 3dfef209289c49fabd3f57a5cb9f3c5c
+msgid ""
+"This configuration can be performed via the command line. First, identify"
+" the internal reference for the zone, then add the desired network, "
+"commit the changes, and restart the service."
+msgstr ""
+
+#: ../../port_forward.rst:69 15865ff7a56d4bc696c5134a3ab0a591
+msgid "Make sure that subnets are assigned to the correct zones:"
+msgstr ""
+
+#: ../../port_forward.rst:71 dccc39b9bde0401a87c5709a67499528
+msgid "``ipsec``: IPsec tunnels"
+msgstr ""
+
+#: ../../port_forward.rst:72 f891a0c77b2449ab95ab365aea031997
+msgid "``openvpn``: OpenVPN tunnels"
+msgstr ""
+
+#: ../../port_forward.rst:73 22e05e34d2904928ba3c9249aadc5073
+msgid "``rwopenvpn``: OpenVPN Road Warrior"
+msgstr ""
+
+#: ../../port_forward.rst:75 5cbf515a0dca4382a60d5a1c127c9371
+msgid ""
+"If multiple tunnels or networks are present, all must be included in "
+"their respective zones."
+msgstr ""
+
+#: ../../port_forward.rst:78 8956ca7c72d74565a44afac141438833
+msgid "How to declare a subnet for a VPN zone"
+msgstr ""
+
+#: ../../port_forward.rst:80 0c068881b4b5460d88c2a634266e67ab
+msgid ""
+"To declare the OpenVPN Road Warrior network, you can use the following "
+"example command sequence:"
+msgstr ""
+
+#: ../../port_forward.rst:83 2e5cf06b6930468e959e4cc0a38ca342
+msgid "Identify the internal reference for the **rwopenvpn** zone: ::"
+msgstr ""
+
+#: ../../port_forward.rst:87 ../../port_forward.rst:106
+#: 4a91f447486148fb94d3aa9a84c05e68 ef002d66bf4c4889890095475cb584d5
+msgid "Example output: ::"
+msgstr ""
+
+#: ../../port_forward.rst:91 6cccda388c7845d8904e8f771a3458bb
+msgid ""
+"Set the desired network (in this case, **10.88.88.0/24**) for the "
+"**rwopenvpn** zone: ::"
+msgstr ""
+
+#: ../../port_forward.rst:95 4756ffe3bf4f47869eb39155bb0a8c2c
+msgid "Commit the changes and restart the firewall service: ::"
+msgstr ""
+
+#: ../../port_forward.rst:100 0e4d914e24cf407ea20a2f1ea0ce9e05
+msgid ""
+"Ensure that you replace the network **subnet** with the correct one for "
+"your specific VPN setup."
+msgstr ""
+
+#: ../../port_forward.rst:102 cad47e0078d545639c746118beff66c1
+msgid "Verify the added network: ::"
+msgstr ""
+
+#: ../../port_forward.rst:113 f172dd7ce8554a10af8822b93b77692a
+msgid "Add or remove multiple subnets to the VPN zone"
+msgstr ""
+
+#: ../../port_forward.rst:115 0408e4def965498abe1c2dd1a5faf15f
+msgid ""
+"If you already set a subnet for a VPN zone and want to **add** another "
+"subnet (e.g. 10.33.33.0/24) use the following command (same internal "
+"reference of previous example): ::"
+msgstr ""
+
+#: ../../port_forward.rst:121 bd625d9054c2466ebead3a025ceb7fc8
+msgid ""
+"If you already set multiple subnets for a VPN zone and want to **remove**"
+" a subnet (e.g. 10.33.33/24) use the following command (same internal "
+"reference of previous example): ::"
+msgstr ""
+
+#: ../../port_forward.rst:125 10fa5d7ea7a1429095e9dc7f1fb2a7cd
+msgid "Ensure to commit and restart firewall service after modifications."
+msgstr ""
+

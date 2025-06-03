@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity 8-24.10.0-ns.1.5.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../connections.rst:5 ff87dccd849a4927833c052db9f8cac4
+msgid "Connections"
+msgstr ""
+
+#: ../../connections.rst:7 273f90a280be43fb9711a06d41e0ca53
+msgid ""
+"The connection tracking (Conntrack) is a network feature used in "
+"firewalls and routers to monitor and manage the state of active network "
+"connections. It tracks the state of each connection, such as new, "
+"established, related, or expired, and maintains this information in a "
+"connection tracking table. This allows for stateful packet inspection, "
+"where packets are inspected based on their connection context, enabling "
+"more precise and secure filtering rules. Conntrack also supports Network "
+"Address Translation (NAT) by tracking internal to external IP mappings "
+"and optimizes performance by quickly dropping packets from invalid or "
+"expired connections."
+msgstr ""
+
+#: ../../connections.rst:12 3d995a560ab44f67a434db4141ab54e6
+msgid "Connections can be filter by :"
+msgstr ""
+
+#: ../../connections.rst:14 045ab488a8434f8dab1bcdfab80a738f
+msgid "``Protocol``"
+msgstr ""
+
+#: ../../connections.rst:15 635c7a5361cf4ef0a8dc2c2226086915
+msgid "``Status``"
+msgstr ""
+
+#: ../../connections.rst:16 f77faafc201947dca409cfed9cc82fd8
+msgid "``IP``"
+msgstr ""
+
+#: ../../connections.rst:17 5e63e0fd01d4427d857fe635eb25d29b
+msgid "``Port``"
+msgstr ""
+
+#: ../../connections.rst:19 d4d1bba2235b4c41b24f50b639e06354
+msgid ""
+"The list of connections is not refreshed in real time. To list new "
+"connections click the :guilabel:`Refresh page` button."
+msgstr ""
+
+#: ../../connections.rst:21 765af8000b5743f29e2e77a542c2eac1
+msgid ""
+"The administrator can delete a single connection or flush the whole "
+"connection tracking table by using :guilabel:`Delete all connections` "
+"button."
+msgstr ""
+
+#: ../../connections.rst:24 d54fca0b91ee481fb930e9069302e34f
+msgid "Good practices for terminating sessions"
+msgstr ""
+
+#: ../../connections.rst:26 41145743537e45738ff22bdc767915f9
+msgid "When to terminate a connection:"
+msgstr ""
+
+#: ../../connections.rst:28 a99da9b182f64df8972206062584fee7
+msgid "the connection has expired or been idle for an extended period"
+msgstr ""
+
+#: ../../connections.rst:29 babe8d7441404625a6112f0bec99b27f
+msgid "there's evidence of malicious activity associated with the session"
+msgstr ""
+
+#: ../../connections.rst:30 7d5a82c8433e4501bf25fcb918226c65
+msgid "the connection appears to be stale or hanging, preventing new connections"
+msgstr ""
+
+#: ../../connections.rst:31 d8e0f15e7c3c4ca2955ab53412ed9b35
+msgid "termination is necessary for network troubleshooting or diagnostics"
+msgstr ""
+
+#: ../../connections.rst:33 336957159301430584c007e6b9a452bc
+msgid "When to avoid terminating a session:"
+msgstr ""
+
+#: ../../connections.rst:35 33912a82630243bfb1f1a254273c0df1
+msgid "the connection is active and appears to be functioning normally"
+msgstr ""
+
+#: ../../connections.rst:36 e663b60b390743fe85cc5c52cd278015
+msgid "the connection is critical for ongoing application operations"
+msgstr ""
+
+#: ../../connections.rst:37 8b58d480371b4d3d9144d9ab6f413db8
+msgid ""
+"any issues with the connection seem to be temporary and may resolve on "
+"their own"
+msgstr ""
+
+#: ../../connections.rst:40 d8a4bc76568149218220f42039077a12
+msgid ""
+"In a MultiWAN setup, specific traffic such as VoIP trunks is routed and "
+"NATed through designated interfaces to distinct providers. When an "
+"interface or route becomes unavailable, it is essential to drop all "
+"connections using that interface and reroute subsequent traffic through "
+"the functioning connection, otherwise the trunk will not be able to "
+"register to the provider."
+msgstr ""
+
+#: ../../connections.rst:44 c3e622cd93334c47aa69555afc391b05
+msgid ""
+"To resolve this issue, you can remove the specific conntrack entries "
+"associated with the old external address through the user interface."
+msgstr ""
+

@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity 8-24.10.0-ns.1.5.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../snmp.rst:4 5f63bcc38e274791a86e72c858764e41
+msgid "SNMP Server"
+msgstr ""
+
+#: ../../snmp.rst:6 7010e6796b9f41e7a412bd8aa5632b5f
+msgid ""
+"Simple Network Management Protocol (SNMP) provides a standardized way to "
+"monitor and manage network devices like your firewall remotely. It allows"
+" authorized users to retrieve essential information like device status, "
+"performance metrics, and configuration settings."
+msgstr ""
+
+#: ../../snmp.rst:9 e3ccf9275e7643449730b446a94977c4
+msgid ""
+"The SNMP server is **disabled by default** on your firewall, allowing "
+"access from within your local area network (LAN) on all IPv4 and IPv6 "
+"addresses."
+msgstr ""
+
+#: ../../snmp.rst:13 6c3acd91ce514a59974153792563f604
+msgid ""
+"If the system has been updated from v1.4.1 or earlier, the SNMP server "
+"will be **enabled by default**. To disable it, follow the steps in the "
+":ref:`Disabling the SNMP Server <snmp-server-disabling>` section."
+msgstr ""
+
+#: ../../snmp.rst:17 63bb321e148b4a48a83ebeb4fc564a39
+msgid "Configuring the SNMP Server"
+msgstr ""
+
+#: ../../snmp.rst:19 a79da21268fb4306b0598a5e8c419434
+msgid ""
+"It's crucial to configure essential information that identifies your "
+"device. Here's how to do it through the command line:"
+msgstr ""
+
+#: ../../snmp.rst:21 ../../snmp.rst:60 1e3dff614f5946e49e9394b8e666c7f0
+#: 9af70a041df846ce9d77d6c091b86cf2
+msgid "Open a terminal window on your firewall."
+msgstr ""
+
+#: ../../snmp.rst:22 397f7b80c6244493b625e98c0b929e7e
+msgid ""
+"Use the following commands to set the desired values for `sysLocation`, "
+"`sysContact`, and `sysName`:"
+msgstr ""
+
+#: ../../snmp.rst:31 617f00f6a74a4d4d9ad22186e1ea0c3b
+msgid "Replace `<string>` with the relevant information. For example:"
+msgstr ""
+
+#: ../../snmp.rst:40 f3194dbcbc8d4ca89fccdaa67fd36091
+msgid "After making changes, apply them using:"
+msgstr ""
+
+#: ../../snmp.rst:47 26d7e90e64b048b49a63dac733c0992b
+msgid "The SNMP server configuration is stored in the `/etc/config/snmpd` file."
+msgstr ""
+
+#: ../../snmp.rst:49 6a434314204640a68da948e9eceb2f88
+msgid ""
+"You can test the configuration by using an SNMP client like `snmpwalk` or"
+" `snmpget` from a remote machine. For example: ::"
+msgstr ""
+
+#: ../../snmp.rst:56 b0b8342b7df540a2979ed5f0c04bc451
+msgid "Disabling the SNMP Server"
+msgstr ""
+
+#: ../../snmp.rst:58 07658c63e3c643ca973084a21f6441ba
+msgid ""
+"If you don't require remote access to the SNMP server, you can disable it"
+" for additional security. Follow these steps:"
+msgstr ""
+
+#: ../../snmp.rst:61 58d4a81e1b5741e783f5ba77868c6d16
+msgid "Use the following commands to disable the server:"
+msgstr ""
+
+#: ../../snmp.rst:69 128e6a25b77e421ebeb2bc26c2c382cf
+msgid ""
+"**Remember:** Disabling the SNMP server might impact monitoring tools or "
+"applications relying on it."
+msgstr ""
+
+#: ../../snmp.rst:72 a46765eddc24457285ff0422a26b547e
+msgid "Enabling remote access"
+msgstr ""
+
+#: ../../snmp.rst:74 56e0f58494d7449b9e2f372aad7711e2
+msgid ""
+"If you need to access the SNMP server from outside your LAN, create a "
+"firewall rule that allows incoming UDP traffic on port ``161`` to the "
+"firewall itself. Remember, opening this port increases risk, so proceed "
+"with caution and make sure to restict the access only from selected IP "
+"addresses."
+msgstr ""
+
+#: ../../snmp.rst:79 e7a8cfb089b249618c2832a7ff6339c0
+msgid "Security considerations"
+msgstr ""
+
+#: ../../snmp.rst:81 b0f9e3e37a744208b956d6b674553c4b
+msgid "Prioritize security before enabling remote access:"
+msgstr ""
+
+#: ../../snmp.rst:83 19b07ec617ce484baab5bcae06f89a87
+msgid ""
+"**Strong Community String:** Replace the default \"public\" community "
+"string with a complex and unique one."
+msgstr ""
+
+#: ../../snmp.rst:84 eac5d64b239b49f398d966a5edad21ad
+msgid ""
+"**Access Control:** Implement Access Control Lists (ACLs) to restrict "
+"access to authorized IP addresses only."
+msgstr ""
+

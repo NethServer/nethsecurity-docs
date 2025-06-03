@@ -1,0 +1,2277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity 8-24.10.0-ns.1.5.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../release_notes.rst:3 cc9f604b5a1a4cfaa6b65a9138c58b71
+msgid "Release notes"
+msgstr ""
+
+#: ../../release_notes.rst:5 4ee82629d95942d7bd81502f99264657
+msgid "NethSecurity releases changelogs."
+msgstr ""
+
+#: ../../release_notes.rst:7 abcab4578f7c405da1b4baa234f4b34d
+#, python-format
+msgid ""
+"List of `known bugs "
+"<https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20>`_"
+msgstr ""
+
+#: ../../release_notes.rst:8 367122bdebb3409a8aedf4a36c62b97f
+msgid ""
+"Discussions around `possible bugs "
+"<http://community.nethserver.org/c/bug>`_"
+msgstr ""
+
+#: ../../release_notes.rst:11 67e6c9f9faea45dea14c28f9a90e22ec
+msgid "Major changes on 2025-04-10"
+msgstr ""
+
+#: ../../release_notes.rst:13 16ee6d9bdf4b4959b314f4717909acc3
+msgid "Image version: `8-24.10.0-ns.1.5.1`"
+msgstr ""
+
+#: ../../release_notes.rst:16 ../../release_notes.rst:96
+#: ../../release_notes.rst:138 ../../release_notes.rst:201
+#: ../../release_notes.rst:238 ../../release_notes.rst:308
+#: ../../release_notes.rst:362 ../../release_notes.rst:409
+#: ../../release_notes.rst:502 051ba9f61e124518aeb7fc23ac7e848a
+#: 2a8d89cc3c8f4346a72cc4659eb4900a 5605895be7364ad99936c827412c6c41
+#: 5f7cadc452434fb78abc98497bccffb4 848da9fd6d2e4b2eb4602610b064b1cb
+#: 8e624fd7ba5143fbbfb604d1c606a025 a1ec0166d4f04e378d9f92cc6efffc1e
+#: ce89157c762c44a2a89cdbe0c3605b35 d4373e16626c468fb549ae4ba9d293c2
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../release_notes.rst:17 c12ca75f0ba14bd29d43ed0602b8a7a9
+msgid ""
+"Bond: fixed issue with bond interfaces not having proper kernel module "
+"loaded"
+msgstr ""
+
+#: ../../release_notes.rst:18 7f3ef89d9f9b410b876d121870e7fc0a
+msgid ""
+"Real-time traffic: adjusted traffic values to be more accurate across "
+"tables"
+msgstr ""
+
+#: ../../release_notes.rst:19 7e3879694bf34204ba54fbe01a1e7763
+msgid ""
+"Threat Shield DNS/IP: removed graphic issue where more lists appears to "
+"have been enabled than the actual ones"
+msgstr ""
+
+#: ../../release_notes.rst:20 4a250140d49c4daaaae7764d57739e50
+msgid "Monitoring: removed WAN ip display if the interface is offline"
+msgstr ""
+
+#: ../../release_notes.rst:21 b7dd3d6b40b2433fac63b56bbf99920a
+msgid "UI: doubled the speed of the UI compressing the data sent to the browser"
+msgstr ""
+
+#: ../../release_notes.rst:26 460359d7138e41658c71d1ea9e8e9077
+msgid "Major changes on 2025-04-08"
+msgstr ""
+
+#: ../../release_notes.rst:28 9741929e8cfc456fa1ee596dbb7324d1
+msgid "Image version: `8-24.10.0-ns.1.5.0`"
+msgstr ""
+
+#: ../../release_notes.rst:30 7cd11358fbf74b6e865611d0509bcf79
+msgid ""
+"This release addresses a bug spotted in the previous release due to "
+"strengthening of the API backend."
+msgstr ""
+
+#: ../../release_notes.rst:32 45e91ffac8994e50b00ae63f8fea71ad
+msgid "No additional changes have been made from the 1.5.0-rc1 to this release."
+msgstr ""
+
+#: ../../release_notes.rst:37 91bac2c882cc4f51baccf02456af1f7a
+msgid "Major changes on 2025-03-28"
+msgstr ""
+
+#: ../../release_notes.rst:39 173fb6099ffb4e80ab50e23225543674
+msgid "Image version: `8-24.10.0-ns.1.5.0-rc1`"
+msgstr ""
+
+#: ../../release_notes.rst:41 f7bafb9e04a84a0e85bfb851d93f4755
+msgid ""
+"This release contains new User Interfaces for services previously "
+"accessible only via Command Line, along with security enhancements and "
+"bug fixes."
+msgstr ""
+
+#: ../../release_notes.rst:44 ../../release_notes.rst:76
+#: ../../release_notes.rst:118 ../../release_notes.rst:183
+#: ../../release_notes.rst:229 ../../release_notes.rst:289
+#: ../../release_notes.rst:348 ../../release_notes.rst:393
+#: 032d177ebb224c04be0642fa420fee2f 1fa65a0c6eb34feeacadb725aca72a18
+#: 4da18ca7690b4dd8a1fd27af47c08a98 58df6d944b354406ba8bbbc3aab7c5f3
+#: 84c17a1286ae4c2f9176af1a37e0edb2 a6a99ed05ed4485eb95ec044b85005eb
+#: da127cecd3aa4f73a111503a1807f645 ed75c45804c74263926fb0723413a605
+msgid "New features and improvements"
+msgstr ""
+
+#: ../../release_notes.rst:45 079b939ca508437b86dc5af6bcae545f
+msgid "IPS: UI has been released"
+msgstr ""
+
+#: ../../release_notes.rst:46 320f83a10a4f4f9f924040fedfaf40b7
+msgid "Threat Shield DNS: UI has been released"
+msgstr ""
+
+#: ../../release_notes.rst:47 0e04acc24dfc4643b5795c195f78c56b
+msgid "IP/MAC Binding: UI has been released"
+msgstr ""
+
+#: ../../release_notes.rst:48 cff80fbd5f7d4abcb36e75388ff0a51a
+msgid "Netify Informatics: UI has been released released for service registration"
+msgstr ""
+
+#: ../../release_notes.rst:49 9027044ad3a3467da4cb829565d23870
+msgid ""
+"FlashStart DNS: Implementation improvements. NethSecurity’s DNS "
+"management is now independent from the DNS used for FlashStart to avoid "
+"any interaction with firewall services. External DNS servers are no "
+"longer required for unfiltered networks."
+msgstr ""
+
+#: ../../release_notes.rst:50 2d39375d510044758b55c34993800c9e
+msgid ""
+"Various modifications have been made to strengthen the system, including:"
+" API hardening, SNMP service is now disabled by default, Backup "
+"management modifications (subscription only)"
+msgstr ""
+
+#: ../../release_notes.rst:54 7de76e66c48c4f7da04336bb51a85379
+msgid "Bug fixes (this is a limited list of the most reported ones)"
+msgstr ""
+
+#: ../../release_notes.rst:55 4d88c927d56e4727aa0182e4fd64624a
+msgid "Migration: OpenVPN device name issue when exceeding 16 characters"
+msgstr ""
+
+#: ../../release_notes.rst:56 d18942e47bc84d89973255c93a1cfea1
+msgid "Migration: Loss of configuration for OpenVPN tunnels with similar names"
+msgstr ""
+
+#: ../../release_notes.rst:57 7969b50eecaf4d5f88ef9606ee7878b0
+msgid ""
+"Migration: Road Warrior client migration interruption if a user "
+"certificate is missing"
+msgstr ""
+
+#: ../../release_notes.rst:58 ea1866148f2c4a8584bbe7b836ea560d
+msgid ""
+"MultiWAN does not allow the firewall to send traffic outside if the "
+"lowest metric route is unavailable"
+msgstr ""
+
+#: ../../release_notes.rst:59 cbc52a76348c434e9650b6921efa3915
+msgid ""
+"OpenVPN Tunnel JSON export includes only the first remote endpoint, "
+"omitting others"
+msgstr ""
+
+#: ../../release_notes.rst:60 f8ba380e6f48429db93fc2cf555aab6e
+msgid "Enabling logging in firewall rules can overload the CPU"
+msgstr ""
+
+#: ../../release_notes.rst:61 e9deb9b9958b4f78bea263e06a2a176d
+msgid "Netmap rules not loaded after a version update"
+msgstr ""
+
+#: ../../release_notes.rst:62 3c981e3501b141bfa22659654b2fc963
+msgid "OpenVPN server web interface crashes if the user database is removed"
+msgstr ""
+
+#: ../../release_notes.rst:63 07c28194942944d69d70c0e0273f4922
+msgid "Firewall: “any” zone displayed as inactive"
+msgstr ""
+
+#: ../../release_notes.rst:64 539b2524108845de95e68731a685bdf5
+msgid "Port forward: error when assigning an object with an IP range"
+msgstr ""
+
+#: ../../release_notes.rst:69 618b6e7b322240f1aa65f01f54fed79b
+msgid "Major changes on 2024-12-18"
+msgstr ""
+
+#: ../../release_notes.rst:71 47d9a77db518490aae97bb13314868ae
+msgid "Image version: `8-23.05.6-ns.1.4.1`"
+msgstr ""
+
+#: ../../release_notes.rst:73 c370a7af5979445792d01c6a20c8bbac
+msgid ""
+"This release focuses on improved local monitoring and adds some "
+"experimental features."
+msgstr ""
+
+#: ../../release_notes.rst:77 bf0fbc5c9cdb468c8640b86e65d9557a
+msgid ""
+"The Realtime monitoring feature now allows users to filter traffic data "
+"by selecting a host and one of the following options: application, remote"
+" host, or protocol"
+msgstr ""
+
+#: ../../release_notes.rst:79 0ba8b6b5c83644f7bd38d27a2103d8bb
+msgid "Realtime monitoring: added latency and drop rate charts"
+msgstr ""
+
+#: ../../release_notes.rst:80 9f39f3bd75cb4ae38c162bdbb6a45c0b
+msgid ""
+"Improve Netifyd network configuration: the configuration has been updated"
+" to improve network performance by limiting the number of interfaces it "
+"inspects"
+msgstr ""
+
+#: ../../release_notes.rst:81 52a410485b1143138c1048280b0d90e0
+msgid ""
+"Ensure consistent hostname logging behavior in nginx logs: the nginx logs"
+" previously included the hostname twice, causing inconsistency inside "
+"Grafana"
+msgstr ""
+
+#: ../../release_notes.rst:82 39af92e2d77141fbb27346af35d61ced
+msgid "MultiWAN: add routing rules for router initiated traffic"
+msgstr ""
+
+#: ../../release_notes.rst:83 5de1d97f22ef4109831e2732b859fe63
+msgid ""
+"FlashStart configuration is now automatically disabled if there is no "
+"active subscription"
+msgstr ""
+
+#: ../../release_notes.rst:84 4bb52246babb43dea633b46487d8a8ad
+msgid "Phonehome: collect statistics on the use of threat shield DNS"
+msgstr ""
+
+#: ../../release_notes.rst:87 841401d5b6f64eea9b890f31a8191b22
+msgid "Experimental features"
+msgstr ""
+
+#: ../../release_notes.rst:88 7cdf1a2851804f058e9650b4b9bf231b
+msgid ""
+"The following features are experimental and must be configured from the "
+"CLI:"
+msgstr ""
+
+#: ../../release_notes.rst:90 2d5f19909d774b06b52b20d356ea4b81
+msgid ""
+"MAC Binding: introduced MAC binding via DHCP reservation to enhance "
+"network security by associating specific MAC addresses with designated IP"
+" addresses"
+msgstr ""
+
+#: ../../release_notes.rst:91 e6fab5cff26a448ea835688c721da8ad
+msgid ""
+"NUT support: configure UPS devices with NUT. This is not officially "
+"supported on machines with a subscription"
+msgstr ""
+
+#: ../../release_notes.rst:92 ce113a7270684e56870712ad74aec6ca
+msgid ""
+"WireGuard configuration: configure WireGuard through the CLI, enabling "
+"management of multiple server instances and peers"
+msgstr ""
+
+#: ../../release_notes.rst:93 13cec650a77741669ffed9a3d8569e32
+msgid ""
+"Intrusion Prevention System (IPS): introduced Snort configuration via the"
+" CLI, allowing users to manage rules and policies"
+msgstr ""
+
+#: ../../release_notes.rst:97 6e654b1b64f6488e9ff86207ab02daae
+msgid "Firewall rules: ipset reference not removed when modifying input rule"
+msgstr ""
+
+#: ../../release_notes.rst:98 5a127b316dac4761b7d5fe17975ad70a
+msgid "Port forward: ipset reference not removed when modifying input rule"
+msgstr ""
+
+#: ../../release_notes.rst:99 2578acd47887435cb97c41f5aa9a0992
+msgid "Firewall objects: host set modifications not reflected in nft rules"
+msgstr ""
+
+#: ../../release_notes.rst:100 b2998de7ee844105929cf2134a424eef
+msgid "OpenVPN Road Warrior: fix route issue with bond management address"
+msgstr ""
+
+#: ../../release_notes.rst:101 76690bcb11ee4dbb8a0332fdacde3408
+msgid "Storage: disk was not displayed in UI after system update"
+msgstr ""
+
+#: ../../release_notes.rst:102 c8462696440142a390525d8c1482f61c
+msgid "Flashstart: fixed and issue that prevented to send the heartbeat"
+msgstr ""
+
+#: ../../release_notes.rst:103 313b361a7f044b03b4cbef295d61d00d
+msgid "Migration: VPN accounts not visible if username contains uppercase letters"
+msgstr ""
+
+#: ../../release_notes.rst:104 4eb751d763114efba500a085118c8ec7
+msgid "Dashboard: incorrect error message despite successful API response"
+msgstr ""
+
+#: ../../release_notes.rst:105 86ec587a147a47d4b93a94dd1052f141
+msgid "Monitoring: error when OpenVPN RoadWarrior has an incomplete configuration"
+msgstr ""
+
+#: ../../release_notes.rst:106 0629420a6355486ba351c06e892fbaf9
+msgid "Migration: PPPoE alias import fails with invalid argument error"
+msgstr ""
+
+#: ../../release_notes.rst:109 f5c6dce1ab8449aab910e0055fec7253
+msgid "Major changes on 2024-10-17"
+msgstr ""
+
+#: ../../release_notes.rst:111 977f6563c12a4c9ba3ba90a3e39b7aa9
+msgid "Image version: `8-23.05.5-ns.1.3.0`"
+msgstr ""
+
+#: ../../release_notes.rst:113 cb22e745232245ffb5784b6ae9c2d614
+msgid ""
+"This release focuses on monitoring, migration improvements and better "
+"NethSecurity Controller integration."
+msgstr ""
+
+#: ../../release_notes.rst:115 98a1701f54444f11b0f8e6e1ae68114a
+msgid ""
+"Detailed changelog can be found `here "
+"<https://github.com/NethServer/nethsecurity/milestone/5?closed=1>`__"
+msgstr ""
+
+#: ../../release_notes.rst:119 5e888ceb3cc249f98ffd32352ad29442
+msgid ""
+"Update to OpenWrt 23.05.5: see upstream `changelog "
+"<https://openwrt.org/releases/23.05/notes-23.05.5>`_"
+msgstr ""
+
+#: ../../release_notes.rst:120 946f6f24d2d4416d8655f8e37c004b79
+msgid ""
+"Centralized unit update management: from the controller it should be "
+"possible to update the unit seamlessly (packages and/or image)"
+msgstr ""
+
+#: ../../release_notes.rst:121 cd219e542c74468cb808577c6dec73c4
+msgid ""
+"Real time monitoring page: create a comprehensive dashboard for "
+"NethSecurity monitoring"
+msgstr ""
+
+#: ../../release_notes.rst:122 029f0f715acf4fe68fc060b265c199f5
+msgid ""
+"Historical monitoring: historical monitoring allows the user to see how "
+"the firewall is behaving from the NethSecurity Controller"
+msgstr ""
+
+#: ../../release_notes.rst:123 8cd670048da543d497e5c69baf008f94
+msgid ""
+"Support virtual machine tools for KVM an VMware: remove all tools from "
+"the image and provide them as optional packages"
+msgstr ""
+
+#: ../../release_notes.rst:124 125b205c6cb44c95bc5dcbed75fc8c50
+msgid ""
+"Port forward: support all objects inside restrict field: implement "
+"support for multiple object types in the \"restrict access from\" field"
+msgstr ""
+
+#: ../../release_notes.rst:125 2f93b1a915124c20a66e45712c0488bf
+msgid ""
+"Inventory, advanced usage statistics: gather anonymous statistics on "
+"system usage"
+msgstr ""
+
+#: ../../release_notes.rst:126 9bd51bc325d143b5ab46f0d5f12c458d
+msgid ""
+"Improve Threat Shield UI: expose logging and brute force protection "
+"settings in the Threat Shield page"
+msgstr ""
+
+#: ../../release_notes.rst:127 9dacf2261262418295fb08250a166baa
+msgid "NAT helpers UI: new NAT helper configuration page"
+msgstr ""
+
+#: ../../release_notes.rst:128 1c723bd8d81a4fb59336d2a2b78b48a0
+msgid ""
+"Remote support (ns-don): open netdata port (19999): add access to port "
+"19999 from tunDON to allow viewing netdata UI from remote support "
+"sessions"
+msgstr ""
+
+#: ../../release_notes.rst:129 0bc54abc948b46a7be86fe8d340d06a1
+msgid ""
+"NAT rules: add \"0.0.0.0/0 any address\": add \"0.0.0.0/0 any address\" "
+"option among destination address suggestions"
+msgstr ""
+
+#: ../../release_notes.rst:130 301c5762dab146a588550fbb5da740b5
+msgid "Zoned and policies: allow to set the logging policy for each zone"
+msgstr ""
+
+#: ../../release_notes.rst:131 938ea217f84e4ab193e0515a4e6f79a4
+msgid "DNS and DHCP page: search is now case insensitive"
+msgstr ""
+
+#: ../../release_notes.rst:132 775da2e051134122b64570c373cf0fde
+msgid ""
+"OpenVPN Road Warrior: add a button to download all OpenVPN certificates "
+"associated with a specific Road Warrior instance"
+msgstr ""
+
+#: ../../release_notes.rst:133 6f8dd54b82a046189d78e806f8f407ea
+msgid ""
+"UI: improves usability, navigation, layout, and visual elements on "
+"multiple pages"
+msgstr ""
+
+#: ../../release_notes.rst:134 7619e2353ab04147a11834fefe0fc677
+msgid ""
+"Migration: at the end of the migration, a log file is created with all "
+"the actions performed, the log is available at ``/root/migration.log``"
+msgstr ""
+
+#: ../../release_notes.rst:135 d0baf3cd138147e08575f4ae4ffe7b7e
+msgid ""
+"MultiWAN: improve default configuration to restore the uplink after all "
+"WANs losed connectivity"
+msgstr ""
+
+#: ../../release_notes.rst:139 ca19b1726c6d4500981ac31e60a0b622
+msgid "Migration: fix firewall rules that were using blue zone"
+msgstr ""
+
+#: ../../release_notes.rst:140 be3e2b884e1c46f897652952a29c9786
+msgid "Migration: network configuration not migrated if alias has no gateway"
+msgstr ""
+
+#: ../../release_notes.rst:141 a8a92132d3d94300b0b778950bfc17b4
+msgid "Migration: fixes firewall rules with \"any\" service migrate incorrectly"
+msgstr ""
+
+#: ../../release_notes.rst:142 cf1ac3dd92eb401e9c2e70c434ab1e22
+msgid "Migration: fixes root password authentication flag incorrectly displayed"
+msgstr ""
+
+#: ../../release_notes.rst:143 0cd1e3b44acf4e5a88af3557308c9f93
+msgid ""
+"Migration: rename VPN interfaces that caused a firewall error if the name"
+" was too long"
+msgstr ""
+
+#: ../../release_notes.rst:144 0840f73f3a9f4f80b65e8d3395ff15d0
+msgid ""
+"Migration: fixes missing account_email in ACME that caused a certificate "
+"renewal failure"
+msgstr ""
+
+#: ../../release_notes.rst:145 863bb226de6645e8a96b0f2aa9992470
+msgid "Migration: fixes wrong zone for OpenVPN and IPsec custom rules"
+msgstr ""
+
+#: ../../release_notes.rst:146 509b4d09ef354268b11d75851686448f
+msgid "Migration: fixes incorrect reflection zone on port forward for VPNs"
+msgstr ""
+
+#: ../../release_notes.rst:147 fa8631dfd85644fbafcdeabe0c070ae8
+msgid ""
+"Migration: remove custom zones on migration, zones are converted to CIDR "
+"networks"
+msgstr ""
+
+#: ../../release_notes.rst:148 f988c1a2585f4170876faec4d2bfe733
+msgid "Migration: fixes FlashStart not enabled on guest/blue interface"
+msgstr ""
+
+#: ../../release_notes.rst:149 b06a0338939c4a35bafbcdee98d0274a
+msgid ""
+"Migration: fixes OpenVPN Road Warrior certificate not exported if CN "
+"contains the dot character"
+msgstr ""
+
+#: ../../release_notes.rst:150 571035d8783d403cbb0a2c3e37c494d1
+msgid ""
+"Migration: correctly import OpenVPN Road Warrior users without 'status' "
+"prop"
+msgstr ""
+
+#: ../../release_notes.rst:151 7cae1d437f2b4f4692d0a313e4117509
+msgid ""
+"OpenVPN Road Warrior: add client compression setting missing that was "
+"missing in .ovpn file"
+msgstr ""
+
+#: ../../release_notes.rst:152 7b1b05635b0645b09b3e77831b4b3288
+msgid "OpenVPN Road Warrior: fix IP pool management"
+msgstr ""
+
+#: ../../release_notes.rst:153 7648a349044f4cb3aee402075f50aad1
+msgid ""
+"OpenVPN Road Warrior: fix expired CRL that was causing a connection "
+"failure after 6 months"
+msgstr ""
+
+#: ../../release_notes.rst:154 0868919f9ccf4dd29a26f30077d923cd
+msgid ""
+"OpenVPN tunnel between NS7 and NS8 cipher: connection was failing despite"
+" showing \"connected\""
+msgstr ""
+
+#: ../../release_notes.rst:155 d73bd877ceaf4d2cb2c4ec388e3916c0
+msgid "OpenVPN tunnel client: fix displayed mode"
+msgstr ""
+
+#: ../../release_notes.rst:156 d0cb86bcb0964c87953d0d4febc9cf01
+msgid ""
+"OpenVPN tunnel client: wrong \"bridged\" mode as new default, new default"
+" is now r\"outed\""
+msgstr ""
+
+#: ../../release_notes.rst:157 936a155a07fd4b44a56f32f264625893
+msgid ""
+"OpenVPN tunnel client resets cipher to `AES-128-CBC`: correctly set "
+"cipher without resetting it"
+msgstr ""
+
+#: ../../release_notes.rst:158 d6fc9320ccbc45058a50a80eb9649231
+msgid ""
+"OpenVPN tunnel client: correctly set \"tap\" and \"tun\" mode on client "
+"tunnel creation"
+msgstr ""
+
+#: ../../release_notes.rst:159 9decd59fec9045eab3da3ef0225a0428
+msgid ""
+"Unable to disable legacy LuCI UI after system upgrade: fix LuCI UI "
+"disable option"
+msgstr ""
+
+#: ../../release_notes.rst:160 892a49fb193d48c09308f2f5da66e8b3
+msgid ""
+"Controller connection (ns-plug): force cleanup of package cache and sync "
+"unit status"
+msgstr ""
+
+#: ../../release_notes.rst:161 8658659d4f974261a3739af1bed4f024
+msgid ""
+"Migration: improve in place migrate, add delay before image write to "
+"reduce issues when writing the kernel"
+msgstr ""
+
+#: ../../release_notes.rst:162 b3e700a17868435a9e0ae580bdca374c
+msgid "Conntrack: make sure counters is set: Avoid error from missing counters."
+msgstr ""
+
+#: ../../release_notes.rst:163 76f7f900281b4260ae4933fa59849922
+msgid "Reverse proxy: correctly set default certificate"
+msgstr ""
+
+#: ../../release_notes.rst:164 71856ecc8a164aeebcd8e6474b1ffc33
+msgid ""
+"Reverse proxy: fix configuration to allow access only from the specified "
+"network"
+msgstr ""
+
+#: ../../release_notes.rst:165 e3acabada13d4a528e5d8760595beaaf
+msgid ""
+"Netdata: mitigated issue with orphaned fping process continuing to ping "
+"removed IPs"
+msgstr ""
+
+#: ../../release_notes.rst:166 6e014503be494c3ebdc4ea8e9575e0e4
+msgid ""
+"Cannot logout while a toast notification is shown: prevent toast "
+"notifications from blocking the account menu"
+msgstr ""
+
+#: ../../release_notes.rst:167 c0a086fafe7c49059e1d927cf3aa2c0e
+msgid "API server: fix restarting on package update"
+msgstr ""
+
+#: ../../release_notes.rst:168 e3b4d0a2fd334de7994a766dcd595e76
+msgid ""
+"Interface page fails with QoS enabled on PPPoE: improve validator on "
+"network configuration page"
+msgstr ""
+
+#: ../../release_notes.rst:169 44e76e2d1c9644c3b7334b470661948e
+msgid "Cannot duplicate a port forward: fix duplication of port forwarding rule"
+msgstr ""
+
+#: ../../release_notes.rst:170 b248c3121fe9415d8b8f01f7534522e2
+msgid ""
+"Report: disable \"open report\" button when UI is displayed from the "
+"controller"
+msgstr ""
+
+#: ../../release_notes.rst:171 d3dfec2107984115b44d691083d28a35
+msgid "DPI report: fix crash on netifyd restart"
+msgstr ""
+
+#: ../../release_notes.rst:174 3e33be2b4bad40da979a2075ebeba33b
+msgid "Major changes on 2024-08-08"
+msgstr ""
+
+#: ../../release_notes.rst:176 5a6d46f7a556421ca80c17ee70f47989
+msgid "Image version: `8-23.05.4-ns.1.2.0`"
+msgstr ""
+
+#: ../../release_notes.rst:178 43faddb531fb4df6921ec8dadb8b4cef
+msgid ""
+"This release focuses on new features for subscriptions and improved user "
+"experience."
+msgstr ""
+
+#: ../../release_notes.rst:180 b8aecc2863964adf9785fa9603c446ac
+msgid ""
+"Detailed changelog can be found `here "
+"<https://github.com/NethServer/nethsecurity/milestone/4?closed=1>`__"
+msgstr ""
+
+#: ../../release_notes.rst:184 a055a0f1d783410ab6b5801f67833adc
+msgid ""
+"Update to OpenWrt 23.05.4: update OpenWrt to version 23.05.4 with "
+"relevant package and core changes"
+msgstr ""
+
+#: ../../release_notes.rst:185 354def35dab547179cf20f60f628e1fe
+msgid ""
+"Free Threat Shield lists for community: implement free Threat Shield "
+"lists for community users, enhancing overall threat protection"
+msgstr ""
+
+#: ../../release_notes.rst:186 d6d10e444563439e8914a56776581cee
+msgid ""
+"Remote backup for all subscriptions: extend remote backup access to both "
+"Enterprise and Community subscriptions with additional backup information"
+msgstr ""
+
+#: ../../release_notes.rst:187 c103b0d0464146bba48a181343f63b61
+msgid ""
+"New script to update packages with logging and stable channel access: "
+"implement a new update-packages script with enhanced logging and force-"
+"stable flag"
+msgstr ""
+
+#: ../../release_notes.rst:188 6b5a8af0607f4053850b68b293c4126e
+msgid ""
+"Firewall objects: implement host set and domain set objects for enhanced "
+"firewall management"
+msgstr ""
+
+#: ../../release_notes.rst:189 ff6e263006954115885a85295fd86d70
+msgid ""
+"Add objects support in MultiWAN rules: implement objects support in "
+"MultiWAN UI for source and destination addresses"
+msgstr ""
+
+#: ../../release_notes.rst:190 12bfbdab7fe847448cc7d6e34df26597
+msgid ""
+"Add objects support in Port Forward rules: add objects support for "
+"destination address and restricted access in Port Forward rules"
+msgstr ""
+
+#: ../../release_notes.rst:191 3b3a67c8ef0148cbb54b9cc635b2cc79
+msgid ""
+"Add objects support in Firewall rules: include objects support for source"
+" and destination addresses in Firewall rules"
+msgstr ""
+
+#: ../../release_notes.rst:192 148741cb3d234e6e8159aea1547827d8
+msgid ""
+"OpenVPN Road Warrior IP reservation: improve handling of reserved IPs in "
+"OpenVPN configuration to prevent conflicts"
+msgstr ""
+
+#: ../../release_notes.rst:193 dbe490d17c634a2a8ad7e0fd6236786a
+msgid ""
+"Backup: include installed package list in backup for easier restoration "
+"after image upgrade"
+msgstr ""
+
+#: ../../release_notes.rst:194 69c25977c88845859413b6fe1cfb0908
+msgid ""
+"Let's Encrypt certificate on web interface extra port: extend Let's "
+"Encrypt certificate usage to the ns-ui extra port"
+msgstr ""
+
+#: ../../release_notes.rst:195 e8bf2893e14e44f3b268d9cf81abdf79
+msgid ""
+"OpenVPN tunnel server: add option \"remote-cert-tls\" in exported file "
+"client configuration file"
+msgstr ""
+
+#: ../../release_notes.rst:196 2f070871c6034463bec27428efa6c219
+msgid "Custom DNS for hotspot: add support for changing default DNS for hotspot"
+msgstr ""
+
+#: ../../release_notes.rst:197 9c61e10d07c04d84a069bc4eeaf82691
+msgid ""
+"Limited support for USB-to-Ethernet adapters: provide experimental "
+"support for USB-to-Ethernet adapters with manual driver installation"
+msgstr ""
+
+#: ../../release_notes.rst:198 4576d16f972d4468b0532c445e999098
+msgid ""
+"Limited support for USB-to-Serial adapters: add experimental support for "
+"USB-to-Serial adapters with manual driver installation"
+msgstr ""
+
+#: ../../release_notes.rst:202 9aabdd232b1d44c19a7d42d0c989a138
+msgid ""
+"Deny creation of certificates with already requested domains: prevent "
+"creation of duplicate certificates with the same domain"
+msgstr ""
+
+#: ../../release_notes.rst:203 bf5d053173a8479587b2aa4592c5861f
+msgid ""
+"Visual issue with DHCP objects in OpenVPN Road Warrior: fix missing "
+"fields and display errors in DHCP options"
+msgstr ""
+
+#: ../../release_notes.rst:204 32ec252c3e5f4ea4b9e82e76828b1373
+msgid ""
+"Cannot create reverse proxies: fix nginx configuration validation failure"
+" when creating reverse proxies"
+msgstr ""
+
+#: ../../release_notes.rst:205 07f424ed3a8a4629b8de4fe0559fdcec
+msgid ""
+"Limit interface names to 13 characters: prevent mwan failure due to long "
+"interface names"
+msgstr ""
+
+#: ../../release_notes.rst:206 44d640ed775d4567983569011f879952
+msgid ""
+"OpenVPN, unable to remove reserved IP for Road Warrior client: fix issue "
+"where reserved IP cannot be removed for Roadwarrior clients"
+msgstr ""
+
+#: ../../release_notes.rst:207 790b369e0c724ee9a9b5a3d3db988e0e
+msgid ""
+"UI crash with over 3000 conntrack entries: fix UI crash and rpcd service "
+"break with large number of conntrack entries"
+msgstr ""
+
+#: ../../release_notes.rst:208 33141e43277b4ff68bdd8cafac192e3c
+msgid ""
+"MultiWAN, missing WAN disconnection/reconnection alerts: new "
+"implementation of WAN alerts to correctly handle connection and "
+"reconnection events"
+msgstr ""
+
+#: ../../release_notes.rst:209 5051a7e6c95146498b83e562d5982de9
+msgid ""
+"Controller, display the name of disconnected users: show the name of "
+"disconnected units instead of just the UUID"
+msgstr ""
+
+#: ../../release_notes.rst:210 61d1ae9311fc4efeb1ff4f9ae77859f5
+msgid ""
+"Controller, display VPN port: add VPN port display in the NS8 UI for "
+"easier firewall configuration"
+msgstr ""
+
+#: ../../release_notes.rst:211 cd31bd0202ab4a258b3ee656a5c53fad
+msgid ""
+"Controller, validate CN: add validation rule for controller name field to"
+" allow only letters and numbers"
+msgstr ""
+
+#: ../../release_notes.rst:212 ec443878c0f14ece9d78df8ab14eab97
+msgid ""
+"Controller, do not remove .info file on disconnect: preserve unit "
+"information file for disconnected units"
+msgstr ""
+
+#: ../../release_notes.rst:213 97a30cf67fe4474a9770ef42eed32b03
+msgid ""
+"Controller, units continuously toggle connected/disconnected: address "
+"issue with erratic connection status display for multiple units"
+msgstr ""
+
+#: ../../release_notes.rst:214 6f9519cf2182458baae2e89e7b91a4c4
+msgid ""
+"Migration, DHCP and DNS Services for blue/guest zone: enable DHCP and DNS"
+" services for migrated blue/guest zones"
+msgstr ""
+
+#: ../../release_notes.rst:215 d47a316175f541be93fbd396152b5188
+msgid ""
+"Migration, OpenVPN reserved IP not assigned: address issue with reserved "
+"IP assignment for migrated certificates"
+msgstr ""
+
+#: ../../release_notes.rst:216 6dba19b14ed343119e29c0ef4089c976
+msgid ""
+"Migration, FlashStart username missing: fix issue where username field is"
+" not displayed in FlashStart interface after migration"
+msgstr ""
+
+#: ../../release_notes.rst:217 25273615d5bb4b5e8d661c58e9f12875
+msgid ""
+"FlashStart, reduce number of queries: modify dnsdist configuration to "
+"optimize query handling and reduce unnecessary requests"
+msgstr ""
+
+#: ../../release_notes.rst:220 2630890476614a63b38af30f96ccab9c
+msgid "Major changes on 2024-07-05"
+msgstr ""
+
+#: ../../release_notes.rst:222 474de265655c403fbc82f01260de660e
+msgid "Image version: `8-23.05.3-ns.1.1.0`"
+msgstr ""
+
+#: ../../release_notes.rst:224 a93a4749a16b42e7bf5b3274ff9b5ca9
+msgid "This releases focuses on fixing bugs and delivering new features."
+msgstr ""
+
+#: ../../release_notes.rst:226 8767c3d20cbd4f53b2396cab01df2cdc
+msgid ""
+"Detailed changelog can be found `here "
+"<https://github.com/NethServer/nethsecurity/milestone/3?closed=1>`__."
+msgstr ""
+
+#: ../../release_notes.rst:230 58859493932e4b7fbb958cef3ce983eb
+msgid ""
+"Connections management: implemented interface for real-time monitoring "
+"and control of conntrack-tracked network connections"
+msgstr ""
+
+#: ../../release_notes.rst:231 9085c68b0b084af4999f41d1e26fe5e7
+msgid ""
+"MultiWAN sticky option: added sticky configuration in MultiWAN rules to "
+"maintain connection persistence across sessions"
+msgstr ""
+
+#: ../../release_notes.rst:232 c05be86fa77447b2be19dd2c8b0e2ada
+msgid ""
+"DPI signature updates: enabled updated Deep Packet Inspection signatures "
+"for both community and enterprise subscription types"
+msgstr ""
+
+#: ../../release_notes.rst:233 5e85b895f5f642f9be78b3e0fcfe53f2
+msgid ""
+"Admin user management: implemented API functions to elevate local users "
+"to admin status and revoke admin privileges"
+msgstr ""
+
+#: ../../release_notes.rst:234 0f52027b150d4f0c96a00d60325356dc
+msgid ""
+"LDAP authentication enhancement: improved flexibility for Active "
+"Directory and non-standard LDAP Distinguished Name configurations"
+msgstr ""
+
+#: ../../release_notes.rst:235 50a8486f51f544e9b0f4fcfe1a8818e6
+msgid ""
+"Subscription repository authentication: implemented system_key "
+"verification for accessing subscription-based package repositories"
+msgstr ""
+
+#: ../../release_notes.rst:239 9a76158a67144e5f85a6963713bfcf44
+msgid ""
+"NVME storage utilization: resolved issue preventing usage of unallocated "
+"NVME drive space for system logging"
+msgstr ""
+
+#: ../../release_notes.rst:240 6faa2e7d05bf4b0283b24dbb22119f0a
+msgid ""
+"Backup restore validation: added specific error messaging for incorrect "
+"passphrase input during backup restoration process"
+msgstr ""
+
+#: ../../release_notes.rst:241 bb97e1a0bad445fab4c46f7ec8f04495
+msgid ""
+"MWAN metrics adjustment: modified interface metric allocation to start at"
+" 20 and increment by 10 for improved load balancing"
+msgstr ""
+
+#: ../../release_notes.rst:242 64abbd2720484eba906b024ef190b7be
+msgid ""
+"Scheduled update UI consistency: corrected persistent display of "
+"completed scheduled updates in user interface"
+msgstr ""
+
+#: ../../release_notes.rst:243 1559ad3bc2db4dffadef037d3a4cac11
+msgid ""
+"MultiWAN policy labeling: fixed incorrect \"balance\" label display for "
+"custom single-gateway policies"
+msgstr ""
+
+#: ../../release_notes.rst:244 b974c2cdce0c4cdda7ef2fb589457778
+msgid ""
+"MultiWAN form validation and input handling: implemented proper input "
+"field state management and form validation in policy editor"
+msgstr ""
+
+#: ../../release_notes.rst:245 fe8cbadbe8af48459d21d5cbfaa195b5
+msgid ""
+"MultiWAN UI/UX refinement: enhanced port input flexibility and form "
+"submission logic for rules and policies"
+msgstr ""
+
+#: ../../release_notes.rst:246 d4d8b3f4b95f464396d876155e03e962
+msgid ""
+"Post-migration DHCP functionality: addressed DHCP address assignment "
+"failure after version 7.9 to 8 migration"
+msgstr ""
+
+#: ../../release_notes.rst:247 0d3a8992397d4341aed7b36cad4591ef
+msgid ""
+"VPN account creation side-effect: prevented unintended removal of user "
+"display names upon VPN account creation"
+msgstr ""
+
+#: ../../release_notes.rst:248 3372715255c34100b18485f654ac5228
+msgid ""
+"Migration network configuration: implemented removal of extraneous "
+"gateway entries from non-red interfaces"
+msgstr ""
+
+#: ../../release_notes.rst:249 2b79e4bbbbe54926badb665fbeb2823d
+msgid ""
+"MultiWAN migration logic: added automatic disabling of MultiWAN "
+"configurations with single provider during migration"
+msgstr ""
+
+#: ../../release_notes.rst:250 53d1c25f33f642fa8ef63f5d588c041d
+msgid ""
+"IPsec configuration display: corrected UI to accurately reflect custom "
+"IPsec tunnel parameter values"
+msgstr ""
+
+#: ../../release_notes.rst:251 0027cadbfc8949fb983353298ceee970
+msgid ""
+"Reverse proxy functionality: resolved proxy pass issues for WebTop access"
+" post-migration"
+msgstr ""
+
+#: ../../release_notes.rst:252 4386827410d44216a6ec5c23dee1fca1
+msgid ""
+"Local user database integrity: fixed disappearance of local user entries "
+"following system updates"
+msgstr ""
+
+#: ../../release_notes.rst:253 2c909cabc7074dffaf305ee44e04ed35
+msgid ""
+"Inventory system robustness: improved handling of VLAN devices on bridge "
+"interfaces and DNS configuration retrieval"
+msgstr ""
+
+#: ../../release_notes.rst:254 5c5c25876b74423b9753420648738052
+msgid ""
+"Controller configuration persistence: fixed configuration file corruption"
+" issue after saving cluster interface settings"
+msgstr ""
+
+#: ../../release_notes.rst:255 426a1a1e66b04b38af76509904938978
+msgid ""
+"Controller setup workflow: improved configuration form with advanced "
+"options and clearer user guidance"
+msgstr ""
+
+#: ../../release_notes.rst:258 689848e6e12c41c2ae00452b0ebf0cdf
+msgid "Major changes on 2024-06-05"
+msgstr ""
+
+#: ../../release_notes.rst:260 2f30925c4ce24a69aa4c74c811867449
+msgid "**This is a security release**"
+msgstr ""
+
+#: ../../release_notes.rst:262 8ec50ca0fb384d6a873970d6eadae0b0
+msgid "Image version: `8-23.05.3-ns.1.0.1`"
+msgstr ""
+
+#: ../../release_notes.rst:264 ae2581571c8644ed8f202b21ac1245e4
+msgid ""
+"Addressed security vulnerability: `GHSA-74xv-ww67-jjpx "
+"<https://github.com/NethServer/nethsecurity/security/advisories/GHSA-"
+"74xv-ww67-jjpx>`_ (disclosure will be published on 2024-06-20)"
+msgstr ""
+
+#: ../../release_notes.rst:267 c34c01e8cbba47f6ba793b02087a0c5a
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../release_notes.rst:268 e00343a96fa04c96b9e967ca07ba4883
+msgid "Security fix for GHSA-74xv-ww67-jjpx"
+msgstr ""
+
+#: ../../release_notes.rst:270 6232afb49d8942b49e63ed2050b4bb1a
+msgid "Ipsec: fix non working tunnel if selected WAN is a PPPoE over vlan"
+msgstr ""
+
+#: ../../release_notes.rst:271 49e009cfe7d241a4a6c2c99dc9ed046d
+msgid "MultiWAN: force maximum length for rules and policies names"
+msgstr ""
+
+#: ../../release_notes.rst:272 bd164a6530c34dddb5a2482d8a3f694f
+msgid "OpenVPN Road Warrior: prevent creation of users with trailing spaces"
+msgstr ""
+
+#: ../../release_notes.rst:273 4ec72621e851453cabff2ffa95a89db7
+msgid "Inventory: improve data collection for subscriptions and network"
+msgstr ""
+
+#: ../../release_notes.rst:274 40db53e093cd43688d4ff6f7b13deff5
+msgid ""
+"Migration: fix OpenVPN Road Warrior users not visible in UI after "
+"migration"
+msgstr ""
+
+#: ../../release_notes.rst:275 0519ee54575c4baea83057d135ff926a
+msgid ""
+"API server: improved stability and performance by optimizing boot order "
+"for proper startup at boot time"
+msgstr ""
+
+#: ../../release_notes.rst:278 1bf5722e7ba24a348eaa0352038bc04c
+msgid "Major changes on 2024-05-22"
+msgstr ""
+
+#: ../../release_notes.rst:280 e775fdf5296d4ff4bc8639084fbd76bb
+msgid "**Stable**"
+msgstr ""
+
+#: ../../release_notes.rst:282 f35a9d0218394cb48403b8da90029681
+msgid "Image version: `8-23.05.3-ns.1.0.0`"
+msgstr ""
+
+#: ../../release_notes.rst:284 7de98765acfb4bd69b105bf2e57121ac
+msgid ""
+"The Stable release focuses on fixing bugs and improving the overall user "
+"experience."
+msgstr ""
+
+#: ../../release_notes.rst:286 67bff237b5af44be8c9f90ad155f3e48
+msgid ""
+"Detailed changelog can be found `here "
+"<https://github.com/NethServer/nethsecurity/milestone/2?closed=1>`__."
+msgstr ""
+
+#: ../../release_notes.rst:290 3131a84200074a609547460a243095f5
+msgid "Routes: IPsec rules are now non-editable"
+msgstr ""
+
+#: ../../release_notes.rst:291 c130c7e6206943719ce1ed446b92f393
+msgid "IPsec: added a validator for remote and local networks"
+msgstr ""
+
+#: ../../release_notes.rst:292 69c7b83d76484e33b223b8439d108c3e
+msgid "Autoreload VPN pages: VPN pages now automatically reload"
+msgstr ""
+
+#: ../../release_notes.rst:293 c9a2d0289bd64e61b8ebaf9f83dd9a51
+msgid "DHCP: added network scanning feature"
+msgstr ""
+
+#: ../../release_notes.rst:294 e599687758284fc9b5e0fd77189f71ed
+msgid "IPsec: improved handling of multiple networks within a single tunnel"
+msgstr ""
+
+#: ../../release_notes.rst:295 67f721ada4614e3ba82ba960d205d067
+msgid "DHCP: force option for DHCP is now available in the UI"
+msgstr ""
+
+#: ../../release_notes.rst:296 9779f1e9c51a4d32ad3084283c1f8ed4
+msgid "Threat shield: remove enterprise list on subscription removal"
+msgstr ""
+
+#: ../../release_notes.rst:297 86402d8fca1845e6a80b9c90bca643a6
+msgid "DPI: remove premium signatures on unregister"
+msgstr ""
+
+#: ../../release_notes.rst:298 ad4b790926f848aaad58c52dccd0fef4
+msgid "Subscription: improve unregister modal"
+msgstr ""
+
+#: ../../release_notes.rst:299 a37f6dc6a1af42d1acb07c3e9ad8abab
+msgid "Inventory: collect basic usage statistics"
+msgstr ""
+
+#: ../../release_notes.rst:300 d7d6832cf5f24ecbadc074e04db1c68a
+msgid "IPsec: better expose PFS option"
+msgstr ""
+
+#: ../../release_notes.rst:301 122352871fb34e6c95f99decdb7bb798
+msgid "Dashboard: add a notification of new available version"
+msgstr ""
+
+#: ../../release_notes.rst:302 2ca2966178fe40e3bda488a879160758
+msgid "Firewall rules: improve overall page readability"
+msgstr ""
+
+#: ../../release_notes.rst:303 b04fd7f8e38d4e27b44e23ca8eaebe27
+msgid "Zones and policies: improved drawer for WAN zone"
+msgstr ""
+
+#: ../../release_notes.rst:304 9ad216333e2d4c29a89f6c8365567896
+msgid "Dashboard: show a warning if DNS is not configured"
+msgstr ""
+
+#: ../../release_notes.rst:305 d3f35c7d29c84b989a9e0f00cc69bd88
+msgid ""
+"NAT helpers: all NAT helpers are now included in the image but disabled "
+"by default"
+msgstr ""
+
+#: ../../release_notes.rst:309 0f4eebd3e7a745a7ab95ca1671d54d8e
+msgid "FlashStart: DNS resolution fails after disabling the service"
+msgstr ""
+
+#: ../../release_notes.rst:310 a76204521e97484b9379ec348c62ea1b
+msgid "FlashStart: fix first configuratin"
+msgstr ""
+
+#: ../../release_notes.rst:311 55086f948a494bd8a368d4e26769802b
+msgid "Let’s Encrypt: certificates are not created"
+msgstr ""
+
+#: ../../release_notes.rst:312 f64778388b3847ba9e5570fc773d1e95
+msgid "FlashStart: redirect rule is ineffective"
+msgstr ""
+
+#: ../../release_notes.rst:313 0c66c4965f5b421f890ce42af4197cd3
+msgid "Firewall: ipset is not updated after removing an address"
+msgstr ""
+
+#: ../../release_notes.rst:314 24cd77ab3e6b4f219e27411e32dc67dc
+msgid "Migration: host groups are not imported correctly in firewall rules"
+msgstr ""
+
+#: ../../release_notes.rst:315 bda263dfdaae4433a930aa2161144b95
+msgid "Firewall rules: unable to insert custom IP address"
+msgstr ""
+
+#: ../../release_notes.rst:316 8d78365c3cd941e5a1660d1343e90948
+msgid "Threat shield: changes to allowlist are not immediately applied"
+msgstr ""
+
+#: ../../release_notes.rst:317 ca187b2dad8543e4b358e77908402c20
+msgid "Migration: unable to edit imported IPsec tunnel"
+msgstr ""
+
+#: ../../release_notes.rst:318 e537ea4b6ff74e54a00ebcb271c542ff
+msgid ""
+"OpenVPN road warrior: unable to re-create a previously created user from "
+"LDAP database"
+msgstr ""
+
+#: ../../release_notes.rst:319 4710785355e54a20ae438249505909b3
+msgid "OpenVPN RW: hosts are unreachable with bridged configuration"
+msgstr ""
+
+#: ../../release_notes.rst:320 99758e2991374d0aa1caa218fdcb3744
+msgid "MultiWAN: track IP is not updated"
+msgstr ""
+
+#: ../../release_notes.rst:321 fb38e001620f428f85c99073f5e6b1f4
+msgid "Reverse Proxy: allow IP list should not be mandatory"
+msgstr ""
+
+#: ../../release_notes.rst:322 c6349deae4024644b4b5269b671eb854
+msgid "Controller: unable to connect unit if UI is disabled on port 443"
+msgstr ""
+
+#: ../../release_notes.rst:323 9950a985a16947e8b4367e23912cb2eb
+msgid "Subscription: unable to register a community subscription"
+msgstr ""
+
+#: ../../release_notes.rst:324 3d40c1185b31454b8d24f1b31135491c
+msgid "Install from USB: bad partition table"
+msgstr ""
+
+#: ../../release_notes.rst:325 b2c46e085ff34667af3e253443b0e4ad
+msgid "Migration: unable to start PPPoE interface"
+msgstr ""
+
+#: ../../release_notes.rst:326 a13823ad4a41417095f43499910f76e1
+msgid "Threat shield: empty subscription feed"
+msgstr ""
+
+#: ../../release_notes.rst:327 beb3a937d2004c6e961ca47f252e08fb
+msgid "Auto updates: cron job is not started during night"
+msgstr ""
+
+#: ../../release_notes.rst:328 78612f0ca61444ba961c389a3f23230c
+msgid "Threat shield not started from the UI"
+msgstr ""
+
+#: ../../release_notes.rst:329 d7bf4e2f773147158d9569dac0b0eb71
+msgid "Migration: threat shield IP is not migrated"
+msgstr ""
+
+#: ../../release_notes.rst:330 35c9c955969445a09867c04f4a27c169
+msgid "EFI: unable to use free space as extra storage"
+msgstr ""
+
+#: ../../release_notes.rst:331 bf1959554c91473194b8c79f7dd49b3e
+msgid "Zone: force creation in lowercase"
+msgstr ""
+
+#: ../../release_notes.rst:332 6d99f1c58f434a5d8981f75c22de613e
+msgid "OpenVPN Road Warrior: OTP authentication, VPN disconnects after one hour"
+msgstr ""
+
+#: ../../release_notes.rst:333 d6e8d14bb3cf430b997cd8a4f9d8d9e3
+msgid "ns-api: threatshield, set ban_nftexpiry and ban_logcount"
+msgstr ""
+
+#: ../../release_notes.rst:334 3673ea6287344c3682cad6c2e40657ac
+msgid "NAT helpers: active FTP sessions do not transfer files"
+msgstr ""
+
+#: ../../release_notes.rst:338 511e5b22f8ce448c89928e01677828eb
+msgid "Major changes on 2024-04-29"
+msgstr ""
+
+#: ../../release_notes.rst:340 5287476fb60346cd8d8c10c876331bed
+msgid "**Relase Candidate 2**"
+msgstr ""
+
+#: ../../release_notes.rst:342 9d70c7d0a0d949cf9d3d6eaf2e419427
+msgid "Image version: `8-23.05.3-ns.0.0.5-rc2`"
+msgstr ""
+
+#: ../../release_notes.rst:344 8e020c6cb3924c629127102f87d94f09
+msgid ""
+"The Release Candidate 2 release focuses on fixing bugs and improving the "
+"overall user experience. Detailed changelog can be found `here "
+"<https://github.com/NethServer/nethsecurity/milestone/1?closed=1>`__."
+msgstr ""
+
+#: ../../release_notes.rst:349 e9d4a3e439d04cd3a53ed81b1569e304
+msgid "Firewall rules: improved display of rules section."
+msgstr ""
+
+#: ../../release_notes.rst:350 15abef1cde254c189954315d5f6129e0
+msgid "FlashStart: added DNS resolution functionality after service disabling."
+msgstr ""
+
+#: ../../release_notes.rst:351 c651a481529344b6a58e6ce7d5206328
+msgid "Dashboard: enhanced card organization and added links."
+msgstr ""
+
+#: ../../release_notes.rst:352 37540a0f2c5d49ae908bf69555b81f6b
+msgid "Routes: enabled creation of routes without gateway."
+msgstr ""
+
+#: ../../release_notes.rst:353 403dd49924b94aaf9df67eda1216abe4
+msgid "Autoreload VPN pages: implemented automatic data reload every 10 seconds."
+msgstr ""
+
+#: ../../release_notes.rst:354 d7f23b44728d4fac986e1340ec9953d5
+msgid ""
+"Migration to vue-components lib: migrated components and utils to vue-"
+"components."
+msgstr ""
+
+#: ../../release_notes.rst:355 65f967e531fe42f2a4c8ed735a2fc4df
+msgid "UI: set rpcd timeout to 300 seconds to support long running tasks."
+msgstr ""
+
+#: ../../release_notes.rst:356 03dcfc7c74534ae5b541e55d01dba8e6
+msgid "DHCP: introduced network scanning feature."
+msgstr ""
+
+#: ../../release_notes.rst:357 b8ff16bf5a7b4a6087b0daf712a02838
+msgid ""
+"User database: sorted users by username and ensured consistent execution "
+"of LDAP queries."
+msgstr ""
+
+#: ../../release_notes.rst:358 6389d304b04e49688c0fd6eeb318c3d9
+msgid ""
+"DHCP: enabled force option by default for DHCP servers, exposed the "
+"option in the UI."
+msgstr ""
+
+#: ../../release_notes.rst:359 f5272efefdf342a3b7ec1e979658404a
+msgid ""
+"OpenVPN road warrior: implemented sorting of OpenVPN road warrior users "
+"by username."
+msgstr ""
+
+#: ../../release_notes.rst:363 6e4db62744aa475ebcc0249b3fa6590d
+msgid "Firewall rules: resolved glitch displaying incorrect content."
+msgstr ""
+
+#: ../../release_notes.rst:364 5934e1da148e4d01a9225c8c401caa80
+msgid "FlashStart: fixed DNS resolution failure post service disabling."
+msgstr ""
+
+#: ../../release_notes.rst:365 e5f40bdc22e949e5a2cea973a66b4774
+msgid "Routes: prevented editing of IPsec rules."
+msgstr ""
+
+#: ../../release_notes.rst:366 659181803466457ba314f376b6daf7df
+msgid "IPsec: validated remote/local networks to avoid duplicates."
+msgstr ""
+
+#: ../../release_notes.rst:367 19d0cf64c5964b5ba6704b66466c15b4
+msgid "Port forward: corrected reflection option label."
+msgstr ""
+
+#: ../../release_notes.rst:368 4032eec03aa94cfb8703409d8c7ae643
+msgid "Migration: ensured proper import of host groups into firewall rules."
+msgstr ""
+
+#: ../../release_notes.rst:369 69c0c31615d943e5be678617528cacb8
+msgid "Firewall rules: allowed insertion of custom IP addresses."
+msgstr ""
+
+#: ../../release_notes.rst:370 2b2a93890bfa454f84974759ff255490
+msgid "Threat shield: apply changes to allowlist immediately."
+msgstr ""
+
+#: ../../release_notes.rst:371 1cbc0686b47d48de9af2285bec540fac
+msgid ""
+"Migration: improve IPSec option migration and allow editing of imported "
+"IPsec tunnel."
+msgstr ""
+
+#: ../../release_notes.rst:372 83b3f8b4bb26482c849b2340138a2d7d
+msgid "OpenVPN road warrior: resolved issue with user recreation from LDAP."
+msgstr ""
+
+#: ../../release_notes.rst:373 26bfcefc38b043c7b115285c25c3b4f0
+msgid "Fixed axios error when committing changes."
+msgstr ""
+
+#: ../../release_notes.rst:374 c340ec4acb454bbbafa223ce6d65b4e6
+msgid "OpenVPN road warrior: fixed issue with bridged configuration."
+msgstr ""
+
+#: ../../release_notes.rst:375 448146e40458417d9f051a4cde725d01
+msgid "IPsec: improved handling of multiple networks with a single tunnel."
+msgstr ""
+
+#: ../../release_notes.rst:376 847af23b0d7448a6bedf5c7f0ae3901a
+msgid "Zones: fixed radio buttons IDs in Zones page."
+msgstr ""
+
+#: ../../release_notes.rst:377 182da4787bdd497cacaa48a580cb20af
+msgid "FlashStart: fixed ineffective redirect rule."
+msgstr ""
+
+#: ../../release_notes.rst:378 3aacd7dc9f62473484e2d591bf3470ed
+msgid "Controller: refined behavior based on subscription presence."
+msgstr ""
+
+#: ../../release_notes.rst:379 d850151661b34d0f911f253570ee1bc8
+msgid "Firewall: updated ipset after IP address removal."
+msgstr ""
+
+#: ../../release_notes.rst:382 a016e92ccbba49e9b35f0f0a7841a953
+msgid "Major changes on 2024-04-10"
+msgstr ""
+
+#: ../../release_notes.rst:384 3c0e30b1c1f3439e8c4868161b743484
+msgid "**Release Candidate 1**"
+msgstr ""
+
+#: ../../release_notes.rst:386 6c08c06fad0b44ec8ecadcc4773095e4
+msgid "Image version: `8-23.05.3-ns.0.0.3-rc1`"
+msgstr ""
+
+#: ../../release_notes.rst:388 90f57bc09adc40b1ae7a5ec1fa98993a
+msgid ""
+"The Release Candidate 1 release focuses on fixing bugs, adding the "
+"centralized controller, and improving the migration process from "
+"NethServer 7."
+msgstr ""
+
+#: ../../release_notes.rst:390 a930f7105ca74721a820d0b66fcc0df2
+msgid ""
+"The issue tracker has been moved to GitHub. The new URL is: "
+"`https://github.com/NethServer/nethsecurity/issues "
+"<https://github.com/NethServer/nethsecurity/issues>`_."
+msgstr ""
+
+#: ../../release_notes.rst:394 03895756cd8543fca213bbba1ffd2c04
+msgid ""
+"NethSecurity has been rebased on `OpenWrt 23.05.3 "
+"<https://forum.openwrt.org/t/openwrt-23-05-3-service-release/192587>`_."
+msgstr ""
+
+#: ../../release_notes.rst:395 0127f1e0689941efbb890d41aa4897bd
+msgid ""
+"Added the :ref:`centralized controller <controller-section>` to manage "
+"multiple NethSecurity instances from a single interface."
+msgstr ""
+
+#: ../../release_notes.rst:396 f4f547159df54c2cb67ec2779e382f8b
+msgid "Port forwards: support port ranges in the source port field."
+msgstr ""
+
+#: ../../release_notes.rst:397 d077d4c095a640eda2180b600a7faced
+msgid "Firewall rules: support IP ranges as destination rules."
+msgstr ""
+
+#: ../../release_notes.rst:398 8949f6ba1c614dbd897c9391cd3832f8
+msgid ""
+"Backup: allow download of the backup file from the UI even if the machine"
+" has an enterprise subscription and remote backup server is not "
+"available."
+msgstr ""
+
+#: ../../release_notes.rst:399 fb785bc24f1141d4b3a91fed2283ae46
+msgid ""
+"Threat shield: improve visualization of the threat shield page if the "
+"firewall does not have Internet access."
+msgstr ""
+
+#: ../../release_notes.rst:400 c8a5f8b51cbf4884a3d4b55d6662c294
+msgid ""
+"Subscription: show subscription even if the machine has no Internet "
+"access."
+msgstr ""
+
+#: ../../release_notes.rst:401 b8a011631a9748dc88c5644b2a0791dc
+msgid "MultiWAN: improved management of the balance policy configuration."
+msgstr ""
+
+#: ../../release_notes.rst:402 41394a0497834c949c86ba22dc08d65d
+msgid ""
+"Network page: the up/down status of network interfaces now accurately "
+"reflects the cable status instead of the kernel status."
+msgstr ""
+
+#: ../../release_notes.rst:403 d1ceeab8bfe24e309ece91f99583741e
+msgid "Firewall rules: improve the visualization of the disabled firewall rules."
+msgstr ""
+
+#: ../../release_notes.rst:404 9c0e2ac333574989aa4f3290680d0543
+msgid "Added an option to enable the privacy policy link during login."
+msgstr ""
+
+#: ../../release_notes.rst:405 d7fe1100dc1a4bf58d6741a80dcb558e
+msgid ""
+"Remote support (don): allow access to UI and preserve the session after a"
+" firewall restart."
+msgstr ""
+
+#: ../../release_notes.rst:406 84131ee2f93045e6b4e77f46bba1a026
+msgid "Users: support bind on remote LDAP user datbases."
+msgstr ""
+
+#: ../../release_notes.rst:410 d51619e31eff41adb24ca4a3b2bf66bb
+msgid "2FA: enable 2FA for user only after OTP verification."
+msgstr ""
+
+#: ../../release_notes.rst:411 9cf241beb9cc4d45a5c4426230f8ed2e
+msgid ""
+"IPsec tunnels: correctly associate the ipsecX interface to the selected "
+"WAN."
+msgstr ""
+
+#: ../../release_notes.rst:412 c45da1bb28514104a153c108800848e9
+msgid ""
+"IPsec: make sure to start after a migration even if the associated WAN is"
+" not available."
+msgstr ""
+
+#: ../../release_notes.rst:413 a6b6a0554cf4463c9a2538f867e35d9b
+msgid ""
+"Migration: rework the network migration process to avoid issues with "
+"bonds, bridges, and aliases configuration."
+msgstr ""
+
+#: ../../release_notes.rst:414 2248defbae9a4917a66777a06183b747
+msgid ""
+"Migration: display bonds and bridges in the remapping page during the "
+"migration."
+msgstr ""
+
+#: ../../release_notes.rst:415 56421375171a4b339e1a6d1487c222e7
+msgid ""
+"Migration, update and backup: implement new upload and download methods "
+"to avoid issues with large files."
+msgstr ""
+
+#: ../../release_notes.rst:416 dece8d60717146fbaf5fc590702f0b36
+msgid ""
+"Migration: fixed an issue that prevented the DHCP server from starting "
+"when DHCP options were present in the configuration."
+msgstr ""
+
+#: ../../release_notes.rst:417 9283a81452ff4c13b30947728cfc8dff
+msgid "DPI: prevent loss of Enterprise signatures after an upgrade."
+msgstr ""
+
+#: ../../release_notes.rst:418 0ec220d91c7c48579a5806cbf1bc8968
+msgid "Storage: added the ability to recreate a deleted storage partition."
+msgstr ""
+
+#: ../../release_notes.rst:419 ab24fb426d984dda95cd579067f36ed5
+msgid "Network: fix creation of VLANs over bridges."
+msgstr ""
+
+#: ../../release_notes.rst:420 37f22baf47464389a079c5214d852e23
+msgid ""
+"Port forward and IPsec tunnels: fixed the visualization of WAN IPs, the "
+"page now displays all aliases and avoids duplicates even if the WAN is "
+"not available."
+msgstr ""
+
+#: ../../release_notes.rst:421 e762910492414e399eb11e4d4ee88c20
+msgid "Port forward: list LAN zone inside hairpin NAT destinations."
+msgstr ""
+
+#: ../../release_notes.rst:422 9a27acc8c13e4e749a48343ed01ddc0c
+msgid ""
+"OpenVPN tunnel: fixed an issue that prevented the modification of a P2P "
+"tunnel."
+msgstr ""
+
+#: ../../release_notes.rst:423 3ea543b9908c4866954bb24608976728
+msgid "MultiWAN page: correctly sort WAN interfaces by priority."
+msgstr ""
+
+#: ../../release_notes.rst:424 bf74fb08c2c44662a0b4ec724d24dd98
+msgid "MultiWAN page: do not show WAN aliases inside the policy page."
+msgstr ""
+
+#: ../../release_notes.rst:425 111eb08c0f44483cafcbf8bf49c0b3ab
+msgid "DHCP: hide static leases inside the dynamic leases tab."
+msgstr ""
+
+#: ../../release_notes.rst:426 5e669eeb667a4e3388ee9e7d6272520e
+msgid ""
+"Proxy pass: fix an issue that was preventing the modification of a proxy "
+"pass rule."
+msgstr ""
+
+#: ../../release_notes.rst:427 58c3708d90794fd0a5fd088a57fbea7b
+msgid "OpenVPN tunnel: fix default cipher selection for P2P tunnels."
+msgstr ""
+
+#: ../../release_notes.rst:428 b3b0a3ca9479425ba6e8b5706694dcdd
+msgid "DPI: restart netifyd after a network configuration change."
+msgstr ""
+
+#: ../../release_notes.rst:429 fd53cfd6aec54c01ad974ebc938dd749
+msgid "FlashStart: fix firewall registration to the FlashStart service."
+msgstr ""
+
+#: ../../release_notes.rst:430 f17c5470f15e47fdafc60d786d03a601
+msgid "FlashStart: fix secondary DNS address."
+msgstr ""
+
+#: ../../release_notes.rst:431 d2141442e3e64742858be6276ab864a4
+msgid "Firewall rules: fix duplicated host in source and destination address."
+msgstr ""
+
+#: ../../release_notes.rst:432 eb4f9042e3a4482e951428d16b69a9a1
+msgid "OpenVPN Road Warrior: fix bulk user creation for large user lists."
+msgstr ""
+
+#: ../../release_notes.rst:435 ../../release_notes.rst:564
+#: 8bae22af5ee84af886db478e7176bdcd bf5ec872c09e45f491eed4a9db93ad96
+msgid "Known bugs"
+msgstr ""
+
+#: ../../release_notes.rst:436 d85a5f2c4b46467ca75f272e631bf042
+msgid ""
+"Network bonds still suffer from some issues. If you're migrating from "
+"NethServer 7, please be aware of the following:"
+msgstr ""
+
+#: ../../release_notes.rst:438 ade99af2420c4c41ae003c09ead3d556
+msgid "VLAN over a bond interface is not created if bond hasn't a role"
+msgstr ""
+
+#: ../../release_notes.rst:439 bfa32381b1b645c39a2923826a552e80
+msgid ""
+"During bond creation, sometimes, the web UI doesn't show the devices to "
+"add to the bond"
+msgstr ""
+
+#: ../../release_notes.rst:440 7979c2c530b34da09c28c339b0ec6312
+msgid ""
+"The newly created bond shows a button saying \"Configure bond\", but then"
+" it does not configure the bond itself but the interface member of the "
+"bond"
+msgstr ""
+
+#: ../../release_notes.rst:443 202cd407261c481bb0618cfd42fa96e6
+msgid "Upgrade notes"
+msgstr ""
+
+#: ../../release_notes.rst:444 a668e1cf0eac49d2ba5817e915bfa706
+msgid ""
+"If you are upgrading from a previous beta version and have any IPsec "
+"tunnels configured, you must run the following commands after the "
+"upgrade:"
+msgstr ""
+
+#: ../../release_notes.rst:454 9b428083c9644f0c8573766e0ae23688
+msgid "Major changes on 2024-02-29"
+msgstr ""
+
+#: ../../release_notes.rst:456 13e1e950daec424da448986b91a14afd
+msgid "**Beta 2**"
+msgstr ""
+
+#: ../../release_notes.rst:458 f22a4c2d44ab45afbf01a0aa48aeee51
+msgid "Image version: `8-23.05.2-ns.0.0.2-beta2`"
+msgstr ""
+
+#: ../../release_notes.rst:460 0de543958eb04a1aaf24f65accf3ed0d
+msgid ""
+"The Beta2 release focuses on improving the new UI and enhancing the "
+"overall user experience."
+msgstr ""
+
+#: ../../release_notes.rst:463 e4bdc42559494b3eb41080db39bca996
+msgid "New features"
+msgstr ""
+
+#: ../../release_notes.rst:464 3869564319ce42d78199965938adc9dd
+msgid "New packages included in the image:"
+msgstr ""
+
+#: ../../release_notes.rst:466 ab2d5a5933db4dc68f2f695e91ae92c3
+msgid "Added SNMPD package for network monitoring and management."
+msgstr ""
+
+#: ../../release_notes.rst:467 eeb50aac98a941689e353753f7f62019
+msgid "Dyndns package included for dynamic DNS services."
+msgstr ""
+
+#: ../../release_notes.rst:468 befb36859ed4415c90aaba5c96a49c0a
+msgid ""
+"Expanded driver support for older network interfaces and vmnet "
+"environments."
+msgstr ""
+
+#: ../../release_notes.rst:470 4eadefecb45d43478e606a56920b9d3d
+msgid "User interface (UI):"
+msgstr ""
+
+#: ../../release_notes.rst:472 91c5411fc0a24f6f8d90216872f1e540
+msgid ""
+"Default UI port changed to 9090, accessible from WAN. The UI is also "
+"accessible from LAN and WAN on port 443."
+msgstr ""
+
+#: ../../release_notes.rst:473 ac3e21a949514b4d86b19e874a9e6019
+msgid "LuCI interface disabled by default for streamlined experience."
+msgstr ""
+
+#: ../../release_notes.rst:474 7a5937693f61463eb4d004ff40023025
+msgid "New page configure Source NAT, Masquerading, No-NAT and netmap rules."
+msgstr ""
+
+#: ../../release_notes.rst:475 1c6efe2d46a8471a89508910cf47d49c
+msgid "Improved readability of network packet counts on the network page."
+msgstr ""
+
+#: ../../release_notes.rst:477 ../../release_notes.rst:531
+#: 238d5b0612b1496ba84285c47f7af204 e8560a3159084cb285c9331b2dfc4c37
+msgid "Network:"
+msgstr ""
+
+#: ../../release_notes.rst:479 e4f034aa2c0043709d1b369881e6b6ed
+msgid "PPPoE with DHCPv6-PD support implemented."
+msgstr ""
+
+#: ../../release_notes.rst:480 f92982307ce6417d936259b6b5027c20
+msgid "It's now possible to configure bond network interfaces from the UI."
+msgstr ""
+
+#: ../../release_notes.rst:482 ../../release_notes.rst:527
+#: 09a94a390863472d87cba3b2857ae90a 7caf51475a2f40828fefdbde0ebae026
+msgid "DPI:"
+msgstr ""
+
+#: ../../release_notes.rst:484 f2df761ff2714463b41965c857cf6cff
+msgid "Automatic network change reconfiguration enabled."
+msgstr ""
+
+#: ../../release_notes.rst:485 cec17ed558214ca59513da6a574fca44
+msgid ""
+"All non-WAN interfaces displayed on the DPI page. To upgrade the DPI "
+"configuration on existing installations, execute:"
+msgstr ""
+
+#: ../../release_notes.rst:491 db082f312b624e23b623554bc0768cba
+msgid "Additional features:"
+msgstr ""
+
+#: ../../release_notes.rst:493 07df9a2d999a4731a3094ce3065011af
+msgid ""
+"Improved the installation script ``ns-install``: installation is now "
+"faster and it halts the system at the end of the installation process."
+msgstr ""
+
+#: ../../release_notes.rst:494 05e34ab4d0784b8bb6f7cd725f312637
+msgid "Improved migration UI for smoother upgrade experience."
+msgstr ""
+
+#: ../../release_notes.rst:495 3c5f325ce5fb4167aedc994ae174d3fe
+msgid "DHCP static lease creation from existing dynamic leases."
+msgstr ""
+
+#: ../../release_notes.rst:496 f166f48180e94145a9a008a470f33a40
+msgid "Two-factor authentication (2FA) for administrator accounts."
+msgstr ""
+
+#: ../../release_notes.rst:497 3984912f7cdd442da1b1449008e874e4
+msgid ""
+"Redesigned login experience with a more integrated and admin-oriented "
+"look and feel."
+msgstr ""
+
+#: ../../release_notes.rst:498 de04355c1fad4c9b84b710d2fd46d0f8
+msgid "Pre and post commit hooks added for enhanced API control."
+msgstr ""
+
+#: ../../release_notes.rst:499 b64cb54c000b46a695eba635cdf1aafc
+msgid ""
+"Subscription-based opt-in feature for automatic updates, accessible only "
+"to users with active subscriptions."
+msgstr ""
+
+#: ../../release_notes.rst:503 e645fde026a54e479667f9ab09bfe995
+msgid "MultiWAN:"
+msgstr ""
+
+#: ../../release_notes.rst:505 f33f932374834f8885a6453e9717ace6
+msgid ""
+"Improved rule flexibility: now allows specifying single IP addresses (not"
+" just CIDR format) in source/destination fields for rules."
+msgstr ""
+
+#: ../../release_notes.rst:506 5e1a83bc36f04fc28aeb0f918c77937c
+msgid ""
+"Policy protection: prevents accidental deletion of policies already used "
+"in rules."
+msgstr ""
+
+#: ../../release_notes.rst:507 d08f7f0f97af47418799093fb6e75fb1
+msgid ""
+"Fixed mwan chart display: mwan chart within Netdata now shows correctly "
+"after multi-WAN configuration."
+msgstr ""
+
+#: ../../release_notes.rst:509 ea8f1bbeeec640e48c424b22cd6077a9
+msgid "Firewall:"
+msgstr ""
+
+#: ../../release_notes.rst:511 59f2f9814eed446b9f376505ab173f7d
+msgid ""
+"Enhanced protocol handling: creates rules for all protocols (not just "
+"TCP/UDP) when \"any\" is selected."
+msgstr ""
+
+#: ../../release_notes.rst:512 87e14c2df7c0467fb173e76de9a64353
+msgid ""
+"Improved rule readability: in rules with 2 or more source/destination "
+"addresses, only the second address was readily visible in the tooltip."
+msgstr ""
+
+#: ../../release_notes.rst:514 b52984ea4c0449739e57899dcc3cb446
+msgid "Port Forwarding:"
+msgstr ""
+
+#: ../../release_notes.rst:516 54b386ca83154b1a8151f3d55e1eb4a3
+msgid ""
+"Streamlined configuration: source and destination ports are only required"
+" for TCP/UDP protocols."
+msgstr ""
+
+#: ../../release_notes.rst:517 93299d348b4840c68721176444406ac0
+msgid ""
+"Simplified ALL protocol selection: when \"ALL\" protocol is chosen, other"
+" protocol options are disabled as they are redundant."
+msgstr ""
+
+#: ../../release_notes.rst:519 b51c4f25904a4a839e805e88772f5bbd
+msgid "Certificates:"
+msgstr ""
+
+#: ../../release_notes.rst:521 2481627dc006435da00e1ac27860dec0
+msgid ""
+"Fixed issue: custom certificate being overwritten with self-generated "
+"certificate when set as default certificate for the firewall FQDN."
+msgstr ""
+
+#: ../../release_notes.rst:522 32e3ae8c72404db8b2384851f6e6a846
+msgid ""
+"Correctly display certificate domain: on the certificate list, the "
+"subject displayed now corresponds to the client certificate instead of "
+"the first certificate in the chain."
+msgstr ""
+
+#: ../../release_notes.rst:523 d55f8b3a07e74910a466e7acf245618b
+msgid ""
+"Fix Let's Encrypt certificate deletion: forced acme.sh to generate a new "
+"configuration when recreating a Let's Encrypt certificate for the same "
+"domain, instead of reusing the existing one."
+msgstr ""
+
+#: ../../release_notes.rst:525 36c8ecaa628e4185b23b40b1a37617b5
+msgid ""
+"Let's Encrypt certificate request: disabled automatic redirection from "
+"port 80 to 443 to avoid conflicts with acme.sh."
+msgstr ""
+
+#: ../../release_notes.rst:529 dd65b54d25184d1bb0487743014208e0
+msgid ""
+"Fixed configuration loss: resolved issue where saved DPI filter "
+"configurations were deleted during upgrade from previous versions"
+msgstr ""
+
+#: ../../release_notes.rst:533 a1d6a3e1239b484ca1ef766c04d2d6b4
+msgid ""
+"Improved interface management: enabled editing of interfaces even after "
+"their associated zone is deleted."
+msgstr ""
+
+#: ../../release_notes.rst:535 90a249ba9b3544b1b3df2632740923b1
+msgid "API:"
+msgstr ""
+
+#: ../../release_notes.rst:537 008e86664dfb4eafa1acadc3ec606d5b
+msgid ""
+"Log consistency: standardized API server logs for NethSecurity API server"
+" to match objects passed to scripts."
+msgstr ""
+
+#: ../../release_notes.rst:539 51b69eba99a04f288484ccbadc2805e5
+msgid "OpenVPN:"
+msgstr ""
+
+#: ../../release_notes.rst:541 8f139ac2521049ae88dd8c8b706ae7fa
+msgid ""
+"Resolved port update issue: changing OpenVPN Road Warrior service port "
+"through the UI now correctly reflects the update in the service "
+"configuration and associated firewall rule."
+msgstr ""
+
+#: ../../release_notes.rst:542 5c2680b50676480fa9c77e7bf63ecf2a
+msgid ""
+"Configuration protection: fixed issue where RoadWarrior configuration was"
+" lost when changing a user's password."
+msgstr ""
+
+#: ../../release_notes.rst:543 4b1f472198a244afa048e8fd1c5470cd
+msgid ""
+"Enhanced authentication: addressed OpenVPN Roadwarrior authentication "
+"failures using local users in NethSecurity beta1."
+msgstr ""
+
+#: ../../release_notes.rst:544 bbec3b4329ae40e8b1174f1467aadbf1
+msgid ""
+"Resolved tunnel server status: fixed issue where the tunnel server status"
+" was not correctly displayed in the UI."
+msgstr ""
+
+#: ../../release_notes.rst:546 13d792e4f0b2468f99331e4b74123e2a
+msgid "Hotspot:"
+msgstr ""
+
+#: ../../release_notes.rst:548 cd31f2c64a7f4a309fea370e4e5904f9
+msgid ""
+"MAC address inclusion: resolved problem where MAC addresses were missing "
+"in the \"unit\" section of the Hotspot Manager when the hotspot relied on"
+" a VLAN."
+msgstr ""
+
+#: ../../release_notes.rst:549 a478e5db327b461491124c02d7e95ecb
+msgid ""
+"VLAN deletion: fixed issue preventing deletion of VLANs previously used "
+"by unregistered hotspots, even after the VLAN was freed."
+msgstr ""
+
+#: ../../release_notes.rst:550 95e8e9c8c5c74cddb65ea5b73b372e0d
+msgid ""
+"Enhanced status visibility: added enabled/disabled status to the main tab"
+" for quick reference."
+msgstr ""
+
+#: ../../release_notes.rst:552 7570faa8edd5408791db3fa5fb291836
+msgid "DHCP:"
+msgstr ""
+
+#: ../../release_notes.rst:554 8ab091df6e6a4b9a81f41ae70ec858d1
+msgid ""
+"Fixed missing key value for a preconfigured advanced option, ensuring "
+"proper functionality."
+msgstr ""
+
+#: ../../release_notes.rst:555 50bf92ee26684b07b459d5b137a42d49
+msgid "Improved display of multiple options by removing redundant label."
+msgstr ""
+
+#: ../../release_notes.rst:557 ../../release_notes.rst:565
+#: 7f5f61a44d7a444fafc5b6a74dd41668 a6fa68db98394d3585c36c6f0c752b82
+msgid "IPsec:"
+msgstr ""
+
+#: ../../release_notes.rst:559 962cfcae3e1c46ad9f7250ab9e7c5927
+msgid ""
+"IPsec rule NAT port: corrected port for Allow-IPsec-NAT rule, changed "
+"from 500 to 4500 (UDP)"
+msgstr ""
+
+#: ../../release_notes.rst:560 149e344ee8d2421ea49938e5e2b788b3
+msgid ""
+"Duplicate rules: prevented duplicate firewall rule creation on tunnel "
+"creations"
+msgstr ""
+
+#: ../../release_notes.rst:561 e47d88b47ab9431aaa54a826633a3f51
+msgid "Fix spelling of IPsec rule names"
+msgstr ""
+
+#: ../../release_notes.rst:567 9637d4dcd1a04990bfa77014b4ab5e4d
+msgid ""
+"Only the first subnet in the IPSec tunnel is functional: when defining "
+"more than one network in an IPSec tunnel between different devices, only "
+"the first network works; traffic destined to other subnets in the tunnel "
+"is not routed correctly. A workaround is to create multiple tunnels with "
+"individual subnets. This issue does not occur between two NethSecurity 8 "
+"devices (as they use the same daemon), but it can occur between, for "
+"example, a NethSecurity 8 and a NethServer 7.9."
+msgstr ""
+
+#: ../../release_notes.rst:574 6a444de8765f4d8fabb080349397f71e
+msgid "Major changes on 2024-02-01"
+msgstr ""
+
+#: ../../release_notes.rst:576 39fbc359af894520a7e95c0d4c592481
+msgid "**Beta 1**"
+msgstr ""
+
+#: ../../release_notes.rst:578 9e56a559619d4faf8387d28f362ebaea
+msgid "Image version: `8-23.05.2-ns.0.0.1-beta1`"
+msgstr ""
+
+#: ../../release_notes.rst:580 bf71b1348ccd4583ab2e4401bad0e042
+msgid ""
+"The Beta1 release marks the transition to the new UI as the primary "
+"configuration interface. Luci remains active by default for "
+"configurations not yet available in the new UI and for verification "
+"purposes. Known bugs in the new interface can be found `here "
+"<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
+msgstr ""
+
+#: ../../release_notes.rst:584 6adc3b860237483e8b47cbbb94b87080
+msgid "Main changes:"
+msgstr ""
+
+#: ../../release_notes.rst:586 cf4c63374d2e4192a9a0957ec2a62bc6
+msgid ""
+"Added a dedicated page for managing certificates and reverse proxy "
+"settings. Improved the import process for both configurations."
+msgstr ""
+
+#: ../../release_notes.rst:587 462c48455f98422ca2d2781bc186435a
+msgid ""
+"Introduced a new page for configuring firewall rules. Users are advised "
+"to use this page instead of Luci's, as using both may lead to "
+"incompatibilities."
+msgstr ""
+
+#: ../../release_notes.rst:588 63d918edadc746b18204555469e63da9
+msgid ""
+"Added a page for Quality of Service (QoS) configuration to enhance "
+"network traffic management."
+msgstr ""
+
+#: ../../release_notes.rst:589 3ba683d7ecee49699a0176d14dca3124
+msgid ""
+"Added a page for configuring OpenVPN Roadwarrior. Updated the migration "
+"process for the new implementation."
+msgstr ""
+
+#: ../../release_notes.rst:590 9fbd7fa3f4cd4998a93e847b10b58faf
+msgid ""
+"Introduced the option to use a partition of the main disk as storage for "
+"logs."
+msgstr ""
+
+#: ../../release_notes.rst:591 98cf8a34389d45d8bddb46bdd0539348
+msgid ""
+"Improved the migration process for multiwan and OpenVPN tunnels, "
+"enhancing overall system compatibility."
+msgstr ""
+
+#: ../../release_notes.rst:592 7fa312e1535f4929b557c23f113b8a86
+msgid ""
+"Streamlined the management of upgrades and migrations, focusing on a "
+"smoother transition."
+msgstr ""
+
+#: ../../release_notes.rst:593 5744d162f5a542a6875f80ae5bbbe7ff
+msgid ""
+"Implemented a new versioning system to uniquely identify each image, "
+"enhancing clarity in tracking releases."
+msgstr ""
+
+#: ../../release_notes.rst:594 8873b02181eb4e27b403fab4044bb98e
+msgid ""
+"Incorporated numerous usability improvements and fixed issues across "
+"existing pages, ensuring a more user-friendly experience."
+msgstr ""
+
+#: ../../release_notes.rst:597 6d0fb812592e4b53b4bee591394ac791
+msgid "Major changes on 2023-12-11"
+msgstr ""
+
+#: ../../release_notes.rst:599 e92014b5bc15467bbdd58305405c2361
+msgid "**Alpha 2**"
+msgstr ""
+
+#: ../../release_notes.rst:601 3517cdb6246c4ebf90ce35312aab4bc8
+msgid ""
+"This alpha release is specifically crafted for evaluation purposes, "
+"focusing on testing the functionalities of the new system's user "
+"interface. Users are provided with the option to experience either the "
+"ongoing development of the new interface or stick with the established "
+"LuCI interface. Known bugs in the new interface can be found `here "
+"<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
+msgstr ""
+
+#: ../../release_notes.rst:605 9c3fca8210c94c538b667ba585a10cc1
+msgid "**UI Enhancements**"
+msgstr ""
+
+#: ../../release_notes.rst:607 9d6cd4f3d5934be5b7444f594d8ef51f
+msgid ""
+"Resolved numerous bugs across various pages, including DHCP and DPI "
+"filter, enhancing overall pages stability."
+msgstr ""
+
+#: ../../release_notes.rst:608 01eda4ab609a47eebc1b0c6122042345
+msgid "Introduced the OpenVPN tunnel configuration page."
+msgstr ""
+
+#: ../../release_notes.rst:609 080664386d234861b260330acaaa1672
+msgid "Added the IPsec tunnel configuration page."
+msgstr ""
+
+#: ../../release_notes.rst:610 17e259bb618a45329ffb215880023e46
+msgid "Incorporated the Hotspot (Dedalo) configuration page."
+msgstr ""
+
+#: ../../release_notes.rst:611 8c778029c4934b4cb217d3153f393f96
+msgid "Implemented the Backup and Restore page."
+msgstr ""
+
+#: ../../release_notes.rst:612 42991f258ebc4bc9acafd72c6f7d18f8
+msgid "Introduced exclusion functionality to the DPI filter page."
+msgstr ""
+
+#: ../../release_notes.rst:613 bf77bc76fc0c4241b89d88ad1535e4ea
+msgid ""
+"Exposed netdata reports within the UI, featuring a configurable ping "
+"latency monitor."
+msgstr ""
+
+#: ../../release_notes.rst:614 5ccf8bd7658e4548b25cada2974aa77e
+msgid "Addressed the default language issue for non-translated languages."
+msgstr ""
+
+#: ../../release_notes.rst:615 42f3ea3355ec4bea97130caca3c07a6f
+msgid "Refactored and improved the Network page."
+msgstr ""
+
+#: ../../release_notes.rst:616 d670e67f51894515a5cb2a0773a63006
+msgid "Added a page to manage System Updates."
+msgstr ""
+
+#: ../../release_notes.rst:617 8c6bc6b5c49e4c28b67094af0f6a7365
+msgid "Included a migration page from NethServer 7."
+msgstr ""
+
+#: ../../release_notes.rst:618 e9d0109808894b7085af55b7eba32ebb
+msgid "Enabled factory reset functionality directly from the UI."
+msgstr ""
+
+#: ../../release_notes.rst:619 bb11197ddb1c411784e321ffd55cf1b3
+msgid ""
+"Implemented a VPN Users page in preparation for the upcoming OpenVPN Road"
+" Warrior server."
+msgstr ""
+
+#: ../../release_notes.rst:621 651c045b339d43a48cc749b11fc3668f
+msgid "**General Improvements**"
+msgstr ""
+
+#: ../../release_notes.rst:623 eae61115183144219361e839fcfd9f91
+msgid "Updated the base OpenWrt to version 23.05.2."
+msgstr ""
+
+#: ../../release_notes.rst:624 6866329d4b134f68b4a51b5f450c0123
+msgid ""
+"Established a mechanism to send alerts to remote portals, including "
+"my.nethesis.it and my.nethserver.com."
+msgstr ""
+
+#: ../../release_notes.rst:625 d05eea4d3caa4184a673948253a3b72d
+msgid ""
+"Added support for One-Time Passwords (OTP) in future OpenVPN Road Warrior"
+" server configurations."
+msgstr ""
+
+#: ../../release_notes.rst:627 66f8f7d8fa4e43fd99b8e859fc2b42be
+msgid ""
+"**Note**: the bond configuration is still in progress, and as a result, "
+"bond-type network interfaces are currently non-functional in this "
+"release."
+msgstr ""
+
+#: ../../release_notes.rst:630 e5458701fa77456d91ea99df5baa47a6
+msgid "Major changes on 2023-10-31"
+msgstr ""
+
+#: ../../release_notes.rst:632 feb10ff4dacc4b18b4ae3005bedd6c91
+msgid "**Alpha 1**"
+msgstr ""
+
+#: ../../release_notes.rst:634 2747931e39544bd8bce70332e9c66140
+msgid ""
+"This is an alpha release, designed for evaluation purposes to explore the"
+" functionalities of the new system. Users have the option to use the new "
+"interface, which is currently under development or the legacy LuCI "
+"interface. Please note that some features available on the old LuCI "
+"interface will be removed once the corresponding page on the new "
+"interface is completed."
+msgstr ""
+
+#: ../../release_notes.rst:638 ade6f2e4bbfd4f0ba1bf920c03e06915
+msgid ""
+"While the entire backend functionality is already operational and "
+"thoroughly tested, the new interface is not yet complete. Some bugs in "
+"the new interface are already known and can be found `here "
+"<https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG>`_."
+msgstr ""
+
+#: ../../release_notes.rst:641 9c3f39e3405640e6810a35cd4fe3bfe6
+msgid "The new interface includes the following features:"
+msgstr ""
+
+#: ../../release_notes.rst:643 f885dc200f1d408e90075d997de33b24
+msgid "Dashboard"
+msgstr ""
+
+#: ../../release_notes.rst:644 a64635d1148342f88b21cf2c13c8405d
+msgid "Subscription Management"
+msgstr ""
+
+#: ../../release_notes.rst:645 a813abceeaad46479e39ad30a592a1c2
+msgid "Hostname and Timezone Configuration"
+msgstr ""
+
+#: ../../release_notes.rst:646 00860a3db8ee484e9d4af0eef79c8cfc
+msgid "Additional Storage Setup"
+msgstr ""
+
+#: ../../release_notes.rst:647 ef97bf825f524ace989254092140a832
+msgid "Network Interface Configuration"
+msgstr ""
+
+#: ../../release_notes.rst:648 ff97f5ed9c084cae88ef338bdaa0496b
+msgid "DNS and DHCP Settings"
+msgstr ""
+
+#: ../../release_notes.rst:649 4784d0bec0fe42e1a3dc329dca397615
+msgid "Routing Configuration"
+msgstr ""
+
+#: ../../release_notes.rst:650 3765b1c07a9f4c1093618db45aeb9d62
+msgid "Multi-WAN Support"
+msgstr ""
+
+#: ../../release_notes.rst:651 27e7d885272c4dd7a698c050186f5bc5
+msgid "Port Forwarding Options"
+msgstr ""
+
+#: ../../release_notes.rst:652 f085bf71deab44ac870dea63574f13fa
+msgid "Zones and Policies Management"
+msgstr ""
+
+#: ../../release_notes.rst:653 291995d4f97d43669e826e6ed72ead94
+msgid "Flashstart DNS Filtering"
+msgstr ""
+
+#: ../../release_notes.rst:654 0bccf9ac0bd746a8a7e6f2ce89e84823
+msgid "Deep Packet Inspection (DPI) Filtering"
+msgstr ""
+
+#: ../../release_notes.rst:655 5e7e4425a68f49b7a35fe646d5700f66
+msgid "Root User Password Change"
+msgstr ""
+
+#: ../../release_notes.rst:656 f5e2cf52c9d44a779771c221b1c63734
+msgid "Access to System Logs"
+msgstr ""
+
+#: ../../release_notes.rst:661 dcf57a5fb98647bea8e48d290d34f27e
+msgid "Releases glossary"
+msgstr ""
+
+#: ../../release_notes.rst:663 adfe5d2730dc4d79bc79ee58a3f67574
+msgid ""
+"The software release cycle includes four stages: Alpha, Beta, Release "
+"Candidate (RC), and Stable."
+msgstr ""
+
+#: ../../release_notes.rst:665 ecaf9e9bf4e44099ae5479dac0757d59
+msgid ""
+"During the **Alpha** stage, the software is not thoroughly tested and may"
+" not include all planned features. This release is not suitable for "
+"production environments. However, it can be used to preview what's coming"
+" in the upcoming version. Please note that updates from an Alpha release "
+"to other releases are not supported."
+msgstr ""
+
+#: ../../release_notes.rst:669 c1b6074f2ac2454ba1d88a8442a3c139
+msgid ""
+"The **Beta** stage indicates that the software is mostly feature "
+"complete, but it may still contain many known and unknown bugs. This "
+"release should not be used on production environments. However, it can be"
+" used to test the software before deploying it to production. Updates "
+"from a Beta release to an RC or Stable release are supported but may "
+"require a manual procedure."
+msgstr ""
+
+#: ../../release_notes.rst:673 f861b813fa614c748e601b684e0bb457
+msgid ""
+"During the **Release Candidate (RC)** stage, the software is feature "
+"complete, and it contains no known bugs. If no major issues arise, it can"
+" be promoted to Stable. Updates from an RC release to a Stable release "
+"are supported and should be almost automatic. However, if you're new to "
+"the software, it's best to use it in production only if you already have "
+"some experience with it."
+msgstr ""
+
+#: ../../release_notes.rst:678 0bd869fd1898442dbaeda20f342d12de
+msgid ""
+"The **Stable** release is the most reliable and safe to use in production"
+" environments. It has been thoroughly tested and is considered to be free"
+" of major bugs."
+msgstr ""
+

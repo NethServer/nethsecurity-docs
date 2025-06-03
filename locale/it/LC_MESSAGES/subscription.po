@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity 8-24.10.0-ns.1.5.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../subscription.rst:5 c5649d84a2aa466ebf0c2d5788d5ff52
+msgid "Subscription"
+msgstr ""
+
+#: ../../subscription.rst:7 676ec51b66f14f0b8c11f524c6e80b8e
+msgid ""
+"`Nethesis <https://www.nethesis.it>`_ offers two types of subscription "
+"services for NethSecurity, which provides additional benefits and "
+"features:"
+msgstr ""
+
+#: ../../subscription.rst:10 ea0165c703c94515ae44d5dc97734a56
+msgid ""
+"**Community subscription**: self-service registration mostly suited for "
+"IT consultant. For more info, see the `subscription plans "
+"<https://nethsecurity.org/subscription>`_ page."
+msgstr ""
+
+#: ../../subscription.rst:13 d3b8a8407725445c881f07d4ef409be0
+msgid ""
+"Community subscription portal is available at `my.nethserver.com "
+"<https://my.nethserver.com>`_"
+msgstr ""
+
+#: ../../subscription.rst:15 5e92437f61934f50acb82441eda0e378
+msgid ""
+"**Enterprise subscription**: service reserved to Nethesis resellers, "
+"please contact the `sales department <mailto:info@nethesis.it>`_."
+msgstr ""
+
+#: ../../subscription.rst:17 2f5dbfe405b44507865d659b694f44a6
+msgid ""
+"Enterprise subscription portal is available at: `my.nethesis.it "
+"<https://my.nethesis.it>`_"
+msgstr ""
+
+#: ../../subscription.rst:19 ea0e87d75d934ea9b0e93708db362719
+msgid "Typical benefits of the subscription service include:"
+msgstr ""
+
+#: ../../subscription.rst:21 b69e07df20fa414499ce41d05718b442
+msgid ""
+"**Monitoring portals**: subscribers can access monitoring portals to "
+"manage their subscription and receive :ref:`alerts <alert-section>` for "
+"registered servers."
+msgstr ""
+
+#: ../../subscription.rst:22 55934f2b35654f0aa67ace2d8c00d3cd
+msgid ""
+"**Enhanced DPI signatures**: firewalls with a valid subscription have "
+"access to a much larger database of :ref:`DPI signatures <dpi_filter-"
+"section>` (more than 1820 in total instead of 415) that are regularly "
+"updated."
+msgstr ""
+
+#: ../../subscription.rst:23 2070cb7517014a7fb9ddeed932f3e2a6
+msgid ""
+"**Enterprise Block lists**: Firewalls with a valid subscription can "
+"purchase high-quality IP and DNS blocklists. These lists are actively "
+"maintained, updated very frequently, and exhibit high effectiveness while"
+" generating a very low number of false positives, they can be used in "
+":ref:`IP <threat_shield_ip-section>` and :ref:`DNS <threat_shield_dns-"
+"section>` block lists."
+msgstr ""
+
+#: ../../subscription.rst:24 f74d4e4f5e0a4aa4a661cb964aaef43b
+msgid ""
+"**Automatic remote backup**: subscribers can benefit from automatic "
+"remote backups of the firewall configuration. This feature is crucial for"
+" businesses that need to ensure the safety of their data and "
+"configurations."
+msgstr ""
+
+#: ../../subscription.rst:25 9dbe179aea684d898e9bb48669e512f4
+msgid ""
+"**Support**: subscribers can receive priority support on stable releases."
+" This can be crucial for businesses relying on NethSecurity for their "
+"operations. See also :ref:`remote_support-section`."
+msgstr ""
+
+#: ../../subscription.rst:26 38bad231c6b84bb98f5445b95c640c44
+msgid ""
+"**Consultation and customization**: subscribers could get consultation "
+"services and assistance with customization to tailor the server's "
+"functionalities according to specific business requirements."
+msgstr ""
+
+#: ../../subscription.rst:28 be2bd7482d584bf7aa73a47f9e33d5dd
+msgid ""
+"It's important to note that while a subscription might not be required "
+"for normal use, businesses with specific needs or those seeking "
+"additional support and features might find value in subscribing to "
+"NethSecurity offer."
+msgstr ""
+
+#: ../../subscription.rst:33 feb6a98948494827b472f956d6c5ed9a
+msgid "Register the system"
+msgstr ""
+
+#: ../../subscription.rst:35 f3cb7528cac64f5283e108aff9c1d33b
+msgid "To register the system, follow the below steps:"
+msgstr ""
+
+#: ../../subscription.rst:37 d9bee6a18d7f4e40b4ba573a80304e1a
+msgid ""
+"Access the Enterprise or Community portal, add a new server and copy the "
+"token"
+msgstr ""
+
+#: ../../subscription.rst:38 6b36fbf07e2045c98b882be216208f93
+msgid "Access the firewall and go to the ``Subscription`` page"
+msgstr ""
+
+#: ../../subscription.rst:39 a77bf47c83a14c16b654ba4ee7ec9075
+msgid "Paste the token inside the ``Authentication token`` field"
+msgstr ""
+
+#: ../../subscription.rst:40 aa2ea0b0683f42c88e047494e5ab7e42
+msgid "Click the :guilabel:`Register` button"
+msgstr ""
+
+#: ../../subscription.rst:42 7f7ae25b786a4c4299b7c18b4f2ebca1
+msgid ""
+"The system will automatically register to the correct Enterprise or "
+"Community portal."
+msgstr ""
+
+#: ../../subscription.rst:44 16b624167e0f43559173c4697200f1f0
+msgid ""
+"Please note that the registration process requires an active internet "
+"connection."
+msgstr ""
+
+#: ../../subscription.rst:47 f1d9cb28a267461d8f4827a15e0b778c
+msgid "Remove the subscription"
+msgstr ""
+
+#: ../../subscription.rst:49 75b6065d83b94100bab0448ee7fee654
+msgid ""
+"When the subscription expires, or at the end of a trial period, click the"
+" :guilabel:`Cancel registration` button."
+msgstr ""
+

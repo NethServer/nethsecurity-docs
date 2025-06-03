@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity 8-24.10.0-ns.1.5.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../logs.rst:5 faac940eec1d4fed9d1ad174e4ecf44a
+msgid "Logs"
+msgstr ""
+
+#: ../../logs.rst:7 e21dfc95a2af459c969497d4063c8b99
+msgid ""
+"Logs are initially written to a temporary in-memory directory to prevent "
+"potential errors on the root file system in case of a failure."
+msgstr ""
+
+#: ../../logs.rst:9 4e5d920826544e52bd80c032d8efdbfe
+msgid ""
+"**Local Storage**: Logs can be written directly to storage. This can be "
+"configured from the UI, see the :ref:`storage-section`."
+msgstr ""
+
+#: ../../logs.rst:11 193103fb89954c52b5778200504b5f71
+msgid ""
+"**Remote Controller**: Logs can be automatically forwarded to a "
+":ref:`remote controller <controller_logs-section>`."
+msgstr ""
+
+#: ../../logs.rst:13 04619a6d23674a42b6cde9115158464c
+msgid "**Custom Syslog Forwarder**: Logs can be sent to a remote syslog server."
+msgstr ""
+
+#: ../../logs.rst:15 f2640b96e122442c854e17d015b2add8
+msgid "The next paragraph will explain how to configure this latter option."
+msgstr ""
+
+#: ../../logs.rst:18 8dff2293bc57469f9b7443dda114d0a9
+msgid "Forwarding to a remote server"
+msgstr ""
+
+#: ../../logs.rst:20 91212a92070547b8ba4f472c5c9552f0
+msgid ""
+"It is sufficient to configure the UCI database with the desired options, "
+"then commit the changes, and finally restart the service. Temporary logs "
+"will continue to be visible in ``/var/log/messages`` and will also be "
+"sent to the remote server."
+msgstr ""
+
+#: ../../logs.rst:23 a68d39892a8e42f29b8ceb1ab177a212
+msgid "Most syslog servers are configured to listen on UDP port 514 by default."
+msgstr ""
+
+#: ../../logs.rst:25 0aed762eaad14d99b8aedef5946bbe28
+msgid ""
+"Example configuration for sending logs to the syslog server with IP "
+"192.168.1.88 on UDP port 514. The configuration is named ``clm`` (custom "
+"log manager):"
+msgstr ""
+
+#: ../../logs.rst:36 703ec93d8c474e1ba5103fcc38b89254
+msgid "Once configured, simply commit the changes with the command: ::"
+msgstr ""
+
+#: ../../logs.rst:40 841501c07db44bffa8a307ae2a96af26
+msgid "And finally, restart the service: ::"
+msgstr ""
+
+#: ../../logs.rst:44 d47e7afba9f24cda8dc715fc3d310ffa
+msgid ""
+"By default the forwarder uses the TraditionalFileFormat (RFC 3164) for "
+"the logs. It is possible also to configure RFC 5424 using the same "
+"syntax: ::"
+msgstr ""
+
+#: ../../logs.rst:49 b5f382527ef84d488d8d86e747d99d05
+msgid ""
+"It is possible to configure multiple forwarders by repeating the "
+"operation using a different configuration name like ``clm2``."
+msgstr ""
+
+#: ../../logs.rst:52 c62e25dc63ab4d9493806472e96a0a7b
+msgid "Log rotation size"
+msgstr ""
+
+#: ../../logs.rst:53 bc776a525887464cabee53a7fab04eb6
+#, python-format
+msgid ""
+"The /var/log/messages log file is stored in RAM. Once it reaches a "
+"predefined size limit, the log is rotated and compressed to conserve "
+"space. The rotated log is saved as /var/log/messages.1.gz in gzip format."
+" The system retains only two versions of the log: the active log file and"
+" the latest rotated, compressed file. From version 1.4.0, by default, the"
+" log rotation threshold is set to 10% of the tmpfs filesystem mounted at "
+"/tmp."
+msgstr ""
+
+#: ../../logs.rst:57 94ebfa4be9f949b5957ffd321fba908d
+msgid ""
+"This script manages the log rotation size for the Rsyslog service. It "
+"allows to **get** and **set** the log rotation size defined in bytes for "
+"the log file located at ``/var/log/messages``."
+msgstr ""
+
+#: ../../logs.rst:59 72d0433c0ce84a6a97f9dcf5a1db827e
+msgid "**Get current size**: Retrieve the current log rotation size in bytes."
+msgstr ""
+
+#: ../../logs.rst:60 315c2c75cca14509852d56e971238c3c
+msgid ""
+"**Set new size**: Change the log rotation size to a specified value, "
+"ensuring that the new size is a positive integer and not less than "
+"52428800 bytes (50 MB)."
+msgstr ""
+
+#: ../../logs.rst:61 fb08beec31744428812947f2e7fb71cf
+msgid ""
+"**Configuration safety**: If the specified size is below the minimum "
+"threshold, the script warns the user and does not make any changes to the"
+" configuration."
+msgstr ""
+
+#: ../../logs.rst:64 44520cd4dfa247b18c1a97f04d997a0c
+msgid "Usage"
+msgstr ""
+
+#: ../../logs.rst:66 cb54c8f80efd471582486d016987ecd3
+msgid "To use the script, run it with the following syntax:"
+msgstr ""
+
+#: ../../logs.rst:72 a60210fa56be4620b259e75d497dcc77
+msgid "**get**: Outputs the current log rotation size in bytes."
+msgstr ""
+
+#: ../../logs.rst:73 e0626e2ed6864128994006a930f05cd2
+msgid ""
+"**set <size>**: Sets the log rotation size to the specified value (in "
+"bytes)."
+msgstr ""
+
+#: ../../logs.rst:76 476c0b62fa704b258e5c84a0f5174d67
+msgid "Example"
+msgstr ""
+
+#: ../../logs.rst:78 2f710876b18f4443a7357ea5e33e2454
+msgid "To get the current log rotation size:"
+msgstr ""
+
+#: ../../logs.rst:84 df7336b10aa4429b8a2583ded0054702
+msgid "To set a new log rotation size to 104857600 bytes (100 MB):"
+msgstr ""
+
+#: ../../logs.rst:90 bf037c9378aa4714a9e1ccd3d26a8d63
+msgid "The service rsyslog is restarted automatically after the size is set."
+msgstr ""
+
+#: ../../logs.rst:92 d0371dd8bf26495a8c291139f1772b53
+msgid ""
+"All changes to the log rotation size are directly written in the Rsyslog "
+"configuration file ``/etc/rsyslog.conf``."
+msgstr ""
+

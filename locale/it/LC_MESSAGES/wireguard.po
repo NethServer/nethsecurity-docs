@@ -1,0 +1,372 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity 8-24.10.0-ns.1.5.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../wireguard.rst:3 c6d932272c424219887d078561215299
+msgid "WireGuard VPN"
+msgstr ""
+
+#: ../../wireguard.rst:5 75ee74a6ca624df2a96d3b921897d3af
+msgid ""
+"WireGuard is a modern VPN (Virtual Private Network) technology that "
+"utilizes state-of-the-art cryptography. It is designed to be faster, "
+"simpler, and more functional than IPsec and OpenVPN. WireGuard is a "
+"secure, fast, and easy-to-configure VPN solution that uses cutting-edge "
+"cryptography. It is designed to be simpler to configure than OpenVPN and "
+"to offer a lower attack surface."
+msgstr ""
+
+#: ../../wireguard.rst:10 738e29fc31dd49f59f7a8448b92c24fd
+msgid ""
+"NethSecurity provides a WireGuard server and client that can be "
+"configured from the command line interface."
+msgstr ""
+
+#: ../../wireguard.rst:12 00c69fe452d04b2abd704e516280609b
+msgid "Features:"
+msgstr ""
+
+#: ../../wireguard.rst:14 0f40cf77deb04a6d94dd58891100e2a7
+msgid "Multiple WireGuard server instances can run simultaneously"
+msgstr ""
+
+#: ../../wireguard.rst:15 d89b3bbc957848c88ae810eac23e1c88
+msgid "Each instance operates in its own isolated network zone"
+msgstr ""
+
+#: ../../wireguard.rst:16 da92556f28ca487bbc41766a7f8f9fcd
+msgid "Static IP address allocation for each peer (client account)"
+msgstr ""
+
+#: ../../wireguard.rst:17 414284660eb3466dbe6f7cce3f1b4c41
+msgid "Client configuration available as text file or QR code"
+msgstr ""
+
+#: ../../wireguard.rst:18 a82b148ef278490c9c8f7e8814373c8e
+msgid "Site-to-site (net2net) connections supported"
+msgstr ""
+
+#: ../../wireguard.rst:19 6cb44f4d44134bf3a96236cf400612ee
+msgid "Enhanced security with optional pre-shared keys"
+msgstr ""
+
+#: ../../wireguard.rst:20 4394231d76e7409bb963674dc8f989eb
+msgid "Standard WireGuard configuration file import capability"
+msgstr ""
+
+#: ../../wireguard.rst:22 db026ae918d74c099fca9ef5e6d443ae
+msgid "Current limitations:"
+msgstr ""
+
+#: ../../wireguard.rst:24 d423af07c86946d6890a9b589b6b954e
+msgid "Supported networks are restricted to /24 subnet masks"
+msgstr ""
+
+#: ../../wireguard.rst:25 d920caa9be294ded86e2ca0d2b6d3774
+msgid "Peer IP addresses are fixed and cannot be modified after creation"
+msgstr ""
+
+#: ../../wireguard.rst:26 ca1a043695dc4eabb30cb24ec28758c4
+msgid "WireGuard interfaces appear as \"unknown interface\" in the Network page"
+msgstr ""
+
+#: ../../wireguard.rst:29 dab78b9810a54a88a7db6453387fb359
+msgid "Quickstart"
+msgstr ""
+
+#: ../../wireguard.rst:31 a8f217b261204d75a8e73b58fcaf0aa5
+msgid "The configuration is composed by the following steps:"
+msgstr ""
+
+#: ../../wireguard.rst:33 73c17bef8cfd48119040e50070fe1379
+msgid "Get good defaults to avoid conflicts with existing configurations"
+msgstr ""
+
+#: ../../wireguard.rst:34 6162eb5712c347d48cdab30fcba0d2b2
+msgid "Create the server instance"
+msgstr ""
+
+#: ../../wireguard.rst:35 ../../wireguard.rst:105
+#: 239b09dc97ef4fed8e167b1239f9c924 37a95fac59a64365a1b3f0c3ddbd2318
+msgid "Add a new account (peer)"
+msgstr ""
+
+#: ../../wireguard.rst:37 c99e3db160ba438b91425fa339720cee
+msgid ""
+"The following examples use the ``ns.wireguard`` API to configure the "
+"WireGuard server and peers."
+msgstr ""
+
+#: ../../wireguard.rst:40 0d63bbf4a2364c3184597777c79fa405
+msgid "Get good defaults"
+msgstr ""
+
+#: ../../wireguard.rst:42 5e5cf501788f4e348aa9e349f62f4b4f
+msgid ""
+"Before creating an instance, retrieve some valid defaults. Use the "
+"calculated defaults to create the instance:"
+msgstr ""
+
+#: ../../wireguard.rst:48 ../../wireguard.rst:86
+#: 8b4d236d39324f778bea926f4a39267e b5131ba1e00f4f6f80de12298732cdf2
+msgid "Response example:"
+msgstr ""
+
+#: ../../wireguard.rst:60 729f201909ba482eafdb285bec21318b
+msgid "The response contains the following fields:"
+msgstr ""
+
+#: ../../wireguard.rst:62 ed66d91e124c42acb6afda71a44ff18a
+msgid ""
+"``listen_port``: the port on which the WireGuard server listens for "
+"incoming connections, a firewall rule will be automatically created to "
+"accept the traffic on this port"
+msgstr ""
+
+#: ../../wireguard.rst:64 553695080d3741148b80d3fc4ac76e4f
+msgid ""
+"``instance``: the name of the WireGuard server instance, this is also the"
+" name of the network interface"
+msgstr ""
+
+#: ../../wireguard.rst:65 ffb558bfbc0e4ba1941279c065deb5cd
+msgid ""
+"``network``: the network CIDR that will be used by the WireGuard server, "
+"the server will automatically get the first IP of the network"
+msgstr ""
+
+#: ../../wireguard.rst:66 518e4e01967844aab93599753587efef
+msgid "``routes``: a list of network CIDR that will be pushed to the clients"
+msgstr ""
+
+#: ../../wireguard.rst:67 235ead50ff1e4fb9a72e3ad87be425a4
+msgid ""
+"``public_endpoint``: the public IP address of the server, this is used to"
+" create the firewall rule to accept the traffic on the WireGuard port; "
+"the command will try to automatically detect the public IP address"
+msgstr ""
+
+#: ../../wireguard.rst:70 b2d94836426f4ed19bbb62f8b5e916c3
+msgid ""
+"Before creating the instance, verify that the calculated defaults are "
+"correct:"
+msgstr ""
+
+#: ../../wireguard.rst:72 3d53bf14e37340b8b33c79b5db52a707
+msgid ""
+"verify the public IP address, use a custom value if the automatic "
+"detection fails; a FQDN is supported too"
+msgstr ""
+
+#: ../../wireguard.rst:73 f24bf86928a643b0886c791da5144d2d
+msgid "verify the network field does not overlap with existing networks"
+msgstr ""
+
+#: ../../wireguard.rst:76 524bfa8ce119435a8a905ad13f9a3327
+msgid "Create an instance"
+msgstr ""
+
+#: ../../wireguard.rst:78 c7289642a99e4a92b683aadee3838bd3
+msgid "Create the WireGuard server instance using the calculated defaults:"
+msgstr ""
+
+#: ../../wireguard.rst:84 4a893941c4a84936888b28c7f660f57e
+msgid ""
+"The server will automatically get the first IP of the `network`, in this "
+"case `10.98.95.1`."
+msgstr ""
+
+#: ../../wireguard.rst:92 cfd7bfaef6704905bf65270a2fe3acf0
+msgid ""
+"This is the public key of the server, it is used to create the client "
+"configuration."
+msgstr ""
+
+#: ../../wireguard.rst:94 ../../wireguard.rst:125 ../../wireguard.rst:191
+#: ../../wireguard.rst:233 23464f98531140b5b4c090b045900432
+#: 5bce3cdc332b40f699d3c2750315e4e1 dc4dcf81b6fc4fa9a74203c18cd96893
+#: e3e16d72c44e4c54be36167fa568b178
+msgid "Save and apply:"
+msgstr ""
+
+#: ../../wireguard.rst:102 b936e5bfa8b2428384da3d1a9c64af8d
+msgid ""
+"You can use the same API to change the configuration of the server "
+"instance."
+msgstr ""
+
+#: ../../wireguard.rst:107 5eb062b31db34dabab70736c1a4a9280
+msgid ""
+"Create a new account, ensuring the ``account`` field is unique within the"
+" same instance:"
+msgstr ""
+
+#: ../../wireguard.rst:113 8030413d42fe4b008e31d1fa6ac1b1f8
+msgid "Options:"
+msgstr ""
+
+#: ../../wireguard.rst:115 24c9ee6044a747148467056726ec1de6
+msgid ""
+"``route_all_traffic``: if set to ``true``, when the client connects, it "
+"will send all the traffic to the server. This is useful for ensuring all "
+"client traffic is encrypted and routed through the VPN. This flag should "
+"be set only if the client must access the internet through the VPN."
+msgstr ""
+
+#: ../../wireguard.rst:118 36e87332ecb74c8794b9c2709bf5def3
+msgid ""
+"``client_to_client``: if set to ``true``, the client will be able to "
+"communicate with all other peers and not only with the server. This is "
+"useful for enabling communication between clients in a mesh network "
+"configuration."
+msgstr ""
+
+#: ../../wireguard.rst:120 3fc0709765184944847894e8d5212686
+msgid ""
+"``preshared_key``: if set to ``true``, automatically create a pre-shared "
+"key that will be used in the peer downloaded configuration. This adds an "
+"additional layer of security by requiring a shared secret for "
+"communication."
+msgstr ""
+
+#: ../../wireguard.rst:122 264ee0768ebc4bd0b4fd13d17410baa2
+msgid ""
+"``ns_routes``: a list of network CIDR, automatically routes the networks "
+"to this peer; this is used for site-to-site (net2net) connections, "
+"allowing the server to access multiple remote networks through the VPN."
+msgstr ""
+
+#: ../../wireguard.rst:135 0117694e79c44fe5937bfaf5ed2f3098
+msgid "Download the account configuration"
+msgstr ""
+
+#: ../../wireguard.rst:137 258efbddba454148bcb452ff09cfb255
+msgid ""
+"The account configuration can be downloaded both in text format or a QR "
+"code and is suitable to be imported in a WireGuard client."
+msgstr ""
+
+#: ../../wireguard.rst:139 585fbf6ba3af430c9f3e5e90ff7c86ea
+msgid ""
+"Download the text format if you want to configure a Linux machine or "
+"another NethSecurity:"
+msgstr ""
+
+#: ../../wireguard.rst:145 a9ac8b4c9af94f2c8a61dc709ddcade8
+msgid "Output example: ::"
+msgstr ""
+
+#: ../../wireguard.rst:162 b9ee0995a7034b299e011adff54a99a7
+msgid "Configure a mobile device"
+msgstr ""
+
+#: ../../wireguard.rst:164 b1f33418ea254fa093db18e5e0ad5779
+msgid ""
+"Many mobile WireGuard clients allows to import the configuration using a "
+"QR code:"
+msgstr ""
+
+#: ../../wireguard.rst:166 421a2407b7da40669327284d0b91d41b
+msgid "`iOS <https://apps.apple.com/it/app/wireguard/id1441195209>`_"
+msgstr ""
+
+#: ../../wireguard.rst:167 89541b8b62f24734ba86f93c627d2b15
+msgid ""
+"`Android "
+"<https://play.google.com/store/apps/details?id=com.wireguard.android&hl=it&pli=1>`_"
+msgstr ""
+
+#: ../../wireguard.rst:169 30768c513a944f43a62def3b57f8505e
+msgid ""
+"Once the app is installed, open it and import the configuration using the"
+" QR code:"
+msgstr ""
+
+#: ../../wireguard.rst:176 1d2deaa922974225bde1265ea0e6da08
+msgid "Import the configuration to another NethSecurity"
+msgstr ""
+
+#: ../../wireguard.rst:178 de403b8178f84a4f91e27bb049d53ea6
+msgid ""
+"When importing the configuration to another NethSecurity, the file must "
+"be base64 encoded. Print the configuration file in base64 to the console:"
+msgstr ""
+
+#: ../../wireguard.rst:185 a0d136ca595a4fb1b869f5183a08bb6c
+msgid "Copy the base64 string, than go the the other NethSecurity and execute:"
+msgstr ""
+
+#: ../../wireguard.rst:200 698781592d834679abd9ad839aba4e04
+msgid "Remove an instance"
+msgstr ""
+
+#: ../../wireguard.rst:202 5bd7efdba95e402eaba151d7b42477cb
+msgid "To remove an instance, use the following command:"
+msgstr ""
+
+#: ../../wireguard.rst:208 af4c8b2ad4ce4449b1356b957423a82c
+msgid "This command will remove:"
+msgstr ""
+
+#: ../../wireguard.rst:210 8c284b42e7234b3cbe68f57b89925b42
+msgid "The WireGuard server instance"
+msgstr ""
+
+#: ../../wireguard.rst:211 1e513fe7296f470bb4fec971af9805d1
+msgid "The firewall rules that allow traffic from the WAN"
+msgstr ""
+
+#: ../../wireguard.rst:212 76cca6b62da3444380124e09b92ada87
+msgid "The VPN zone"
+msgstr ""
+
+#: ../../wireguard.rst:213 73b14020869b4b0db29513154fe30f75
+msgid "All associated accounts"
+msgstr ""
+
+#: ../../wireguard.rst:215 d3edbbfd3b0a48f59f72acff05f069ca
+msgid "Save and apply the changes:"
+msgstr ""
+
+#: ../../wireguard.rst:223 46c4efed870a417a87abbbe7fa1b06d0
+msgid "Remove a peer"
+msgstr ""
+
+#: ../../wireguard.rst:225 0fb0e8df24a34bc8857975d6b67a719e
+msgid "To remove a peer use:"
+msgstr ""
+
+#: ../../wireguard.rst:231 373207f9225a4719887a80dc0c7da322
+msgid ""
+"The command will remove the peer and its configuration inside the users "
+"database, if present."
+msgstr ""
+
+#: ../../wireguard.rst:241 7f856bd798a74482b142d1ba234d67f6
+msgid "Debug"
+msgstr ""
+
+#: ../../wireguard.rst:243 8755f204ff20451e9be4284c5e1fa670
+msgid ""
+"By default, WireGuard does not log anything. To enable logging on "
+"`/var/log/messages`, use the following:"
+msgstr ""
+

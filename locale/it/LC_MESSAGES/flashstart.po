@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Nethesis Srl and the NethSecurity project contributors
+# This file is distributed under the same license as the NethSecurity
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NethSecurity 8-24.10.0-ns.1.5.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 12:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flashstart.rst:5 0d0fe4a1b19440fd91d40affb6976eb7
+msgid "FlashStart DNS filter"
+msgstr ""
+
+#: ../../flashstart.rst:7 678b7220c1054c6abd529f108c60b689
+msgid ""
+"DNS filtering integrates with third-party DNS-based content filtering "
+"software, default supported content filter is the one provided from "
+"`FlashStart <https://www.flashstart.com>`_."
+msgstr ""
+
+#: ../../flashstart.rst:9 6f2461eb643645f7a711de49c5eecfcf
+msgid ""
+"It basically links 2 components : filter configuration and network "
+"configuration."
+msgstr ""
+
+#: ../../flashstart.rst:11 ca06ce0d8fc343b6bafd0e165b5e1cc1
+msgid ""
+"Content filter configuration takes place entirely on the third-party "
+"platform, typically it is possible to block individual websites, as well "
+"as categories of sites (e.g. adult), manage exceptions, view reports and "
+"so on."
+msgstr ""
+
+#: ../../flashstart.rst:13 232b982be8e645d793e1a94bd7764a44
+msgid ""
+"Network configuration is completely automated and is done on NethSecurity"
+" which takes care of:"
+msgstr ""
+
+#: ../../flashstart.rst:15 7659b7dde9e2452eb7b364f68755783d
+msgid "connect the firewall to the specific third party instance"
+msgstr ""
+
+#: ../../flashstart.rst:16 9b1aa3be46314cf894e219c8f959d1d2
+msgid "redirect all DNS requests to the external service"
+msgstr ""
+
+#: ../../flashstart.rst:17 4a2f498a5b2b49b19e872be8972d87ba
+msgid "automatically update IP addresses of all connectivities"
+msgstr ""
+
+#: ../../flashstart.rst:21 7e4cd74edfd74a3e89c4a7b340760b42
+msgid ""
+"Before configuring NethSecurity you need to create an account on "
+"FlashStart and configure the service. FlashStart is a payed service that "
+"allows you to use trial licenses. Please refer to the supplier's "
+"documentation `doc "
+"<https://cloud.flashstart.com/customerarea/support/docs>`_."
+msgstr ""
+
+#: ../../flashstart.rst:25 a154feb0089c4ac8947e0f5a467d46ec
+msgid ""
+"Once the account has been created and the service configured, "
+"NethSecurity can be configured."
+msgstr ""
+
+#: ../../flashstart.rst:28 3f42d5ceeb6a4783a7d1ffbceccb8c42
+msgid "Configuration"
+msgstr ""
+
+#: ../../flashstart.rst:30 8d5035aeeee64b469c5b2346b8e0564f
+msgid "You can enable and disable the filter by changing the ``Status`` toggle."
+msgstr ""
+
+#: ../../flashstart.rst:32 b78b9c99d4a548f481ab9fb512abb302
+msgid ""
+"Please use FlashStart only if you are not already using the  Threat "
+"Shield DNS service cause if used together, they may conflict."
+msgstr ""
+
+#: ../../flashstart.rst:35 6f1fe75c7b4d45daa4d7992fe6a80961
+msgid "Authentication"
+msgstr ""
+
+#: ../../flashstart.rst:37 ad80a014e5cf4ac2b71afc4c96eb5fbc
+msgid ""
+"Insert same username and password of your FlashStart account (tipically "
+"an email address), then click :guilabel:`Save` button."
+msgstr ""
+
+#: ../../flashstart.rst:40 3a2ee8cec03448c5ad761079c0729d87
+msgid "Zones to filter"
+msgstr ""
+
+#: ../../flashstart.rst:42 57bf0a3ce63f4fc09a7bdb0c345a4fe2
+msgid ""
+"Choose zones to filter, only selected zones will be affected by DNS "
+"filter."
+msgstr ""
+
+#: ../../flashstart.rst:45 5b0c20162cce4b0cbd2f171e2141311a
+msgid "Bypass source IPs or networks"
+msgstr ""
+
+#: ../../flashstart.rst:47 a53d6130f59c4aafabc646eb23c2045f
+msgid ""
+"All listed IP addresses or networks here will not be affected by DNS "
+"filter."
+msgstr ""
+
+#: ../../flashstart.rst:50 0ee1f6962ac4489fa8d9c6248772ae9b
+msgid ""
+"To preserve the effectiveness of the content filter it is suggested "
+"blocking alternative DNS protocols (DoT, DoH) via :ref:`dpi_filter-"
+"section`."
+msgstr ""
+
+#: ../../flashstart.rst:54 e905ae3b720b4c8c9ed88b56ed7c19ae
+msgid ""
+"Do not make changes to the DNS servers configured in your NethSecurity or"
+" in network clients. When content filtering is enabled, all DNS traffic "
+"from the clients will be automatically redirected to the external content"
+" filtering regardless of their configuration."
+msgstr ""
+
+#: ../../flashstart.rst:58 7e2eb642008d402c832826c314912929
+msgid "Block certain websites"
+msgstr ""
+
+#: ../../flashstart.rst:60 cb27397c0c7d406b859d74e635cc73c2
+msgid ""
+"If you need to block specific domains and FQDNs you can do it directly "
+"from the FlashStart configuration page, just go to the section "
+"\"Protection\"-> \"Personal Blacklists\" and add them there."
+msgstr ""
+
+#: ../../flashstart.rst:63 24058be4d2434409adc405801dbc128b
+msgid ""
+"If you don' have a subscription for FlashStart DNS Filter you can use the"
+" same feature using :ref:`Threat Shield DNS <local_blocklist_dns-"
+"section>`."
+msgstr ""
+
