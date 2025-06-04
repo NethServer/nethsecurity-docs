@@ -35,8 +35,8 @@ The system will then be reconfigured as follows:
 Extra generated data like metrics, will be synced from in-memory filesystem to persistent storage once a day during the night.
 To remove the data storage and restore in-memory log retention only, click on button :guilabel:`Remove storage`.
 
-Log Partition Management
-========================
+Troubleshooting
+===============
 
 In certain instances, you may encounter challenges utilizing the primary disk for log storage, as the user interface may not present any options. 
 In such cases, the issue typically stems from a pre-existing partition on the disk, which must be removed beforehand to ensure proper utilization by the system.
