@@ -1,0 +1,198 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../storage.rst:5 ee57068afed7487cbd60fe50901924c7
+msgid "Storage"
+msgstr "Storage"
+
+#: ../../storage.rst:7 de2da909eace441298fab8e18d0e0d00
+msgid ""
+"As default, logs are written in a volatile in-memory directory to prevent "
+"errors on the root file system in case of failure. The memory storage "
+"capacity is limited and the oldest logs are automatically removed as time "
+"passes to limit memory occupancy. However, if you reboot the system or your "
+"system fails, you may lose all of your logs."
+msgstr ""
+"Per impostazione predefinita, i log vengono scritti in una directory "
+"volatile in memoria per prevenire errori sul file system root in caso di "
+"guasto. La capacità di archiviazione in memoria è limitata e i log più "
+"vecchi vengono automaticamente rimossi col passare del tempo per limitare "
+"l’occupazione della memoria. Tuttavia, se il sistema viene riavviato o si "
+"verifica un guasto, è possibile perdere tutti i log."
+
+#: ../../storage.rst:10 31915def797e470a83f4f8c7cfc11e5f
+msgid ""
+"NethSecurity allows you to save a copy of system logs to a storage device "
+"other than the one it's currently on, like a USB stick or an additional hard"
+" drive. Additionally, if the disk containing the operating system has "
+"unallocated space, NethSecurity allows you to leverage this space as data "
+"storage. This provides a convenient and efficient way to utilize existing "
+"resources for expanding storage capacity without the need for additional "
+"external devices."
+msgstr ""
+"NethSecurity consente di salvare una copia dei log di sistema su un "
+"dispositivo di archiviazione diverso da quello attualmente in uso, come una "
+"chiavetta USB o un disco rigido aggiuntivo. Inoltre, se il disco che "
+"contiene il sistema operativo dispone di spazio non allocato, NethSecurity "
+"permette di sfruttare questo spazio come area di archiviazione dati. Questo "
+"offre un modo pratico ed efficiente per utilizzare le risorse esistenti al "
+"fine di espandere la capacità di archiviazione senza la necessità di "
+"dispositivi esterni aggiuntivi."
+
+#: ../../storage.rst:15 0e7048a155f14c1c99e19c4522dad024
+msgid ""
+"This configuration can be useful for troubleshooting or keeping a system "
+"activity log."
+msgstr ""
+"Questa configurazione può essere utile per la risoluzione dei problemi o per"
+" mantenere un registro delle attività di sistema."
+
+#: ../../storage.rst:17 755fcdceafde48c380e6c67359c9c686
+msgid "To configure the additional storage, follow these steps:"
+msgstr "Per configurare lo storage aggiuntivo, seguire questi passaggi:"
+
+#: ../../storage.rst:19 942d7557dcbb4240bd66ed820ca194a0
+msgid ""
+"If you're willing to use an external device, attach your storage device"
+msgstr ""
+"Se si è disposti a utilizzare un dispositivo esterno, collegare il proprio "
+"dispositivo di archiviazione"
+
+#: ../../storage.rst:20 b9f93130e6a64dd59e7d51de3cf75573
+msgid ""
+"Access the ``Storage`` page under the ``System`` section on the right menu"
+msgstr ""
+"Accedere alla pagina ``Storage`` nella sezione ``Sistema`` dal menu a destra"
+
+#: ../../storage.rst:21 9b5dd2c092f84211a496ef0fd90448da
+msgid "Select the desired storage where logs will be written to"
+msgstr "Selezionare l'archivio desiderato dove verranno scritti i log"
+
+#: ../../storage.rst:22 3e1452b766d94d4d9a0517d97263f681
+msgid "Click on button :guilabel:`Format and configure storage`"
+msgstr "Fare clic sul pulsante :guilabel:`Formatta e configura lo storage`"
+
+#: ../../storage.rst:24 29a9875bec2c495e8eb65a34b73253ca
+msgid ""
+"If the chosen device is the primary disk, the system will generate a new "
+"partition utilizing any unallocated space. In the case of an additional disk"
+" selection, the system will undertake the preparation process, which "
+"involves erasing all existing partitions and data on the selected device, "
+"resulting in the creation of a one single partition."
+msgstr ""
+"Se il dispositivo scelto è il disco primario, il sistema genererà una nuova "
+"partizione utilizzando lo spazio non allocato. Nel caso venga "
+"selezionato un disco aggiuntivo, il sistema procederà con il processo di "
+"preparazione, che comporta la cancellazione di tutte le partizioni e i dati "
+"esistenti sul dispositivo selezionato, con la conseguente creazione di "
+"un'unica partizione."
+
+#: ../../storage.rst:28 e9c801c9391b4579b13665bd451af517
+msgid ""
+"In both cases, the partition will be formatted using the ext4 filesystem and"
+" mounted as storage at ``/mnt/data``."
+msgstr ""
+"In entrambi i casi, la partizione verrà formattata utilizzando il filesystem"
+" ext4 e montata come spazio di archiviazione in ``/mnt/data``."
+
+#: ../../storage.rst:30 43184117d61e42e7b91453735d4d96cc
+msgid "The system will then be reconfigured as follows:"
+msgstr "Il sistema verrà quindi riconfigurato come segue:"
+
+#: ../../storage.rst:32 c38f3eac1cf942a1bb4476f2a110081a
+msgid "rsyslog will write logs also inside ``/mnt/data/logs/messages`` file"
+msgstr ""
+"rsyslog scriverà i log anche all'interno del file "
+"``/mnt/data/logs/messages``"
+
+#: ../../storage.rst:33 29e50edf4e364537b3e8c5365410da76
+msgid "logrotate will rotate ``/mnt/data/logs/messages`` once a week"
+msgstr "logrotate ruoterà ``/mnt/data/logs/messages`` una volta a settimana"
+
+#: ../../storage.rst:35 c9b05d321c6747a28f0d0e319afc3c94
+msgid ""
+"Extra generated data like metrics, will be synced from in-memory filesystem "
+"to persistent storage once a day during the night. To remove the data "
+"storage and restore in-memory log retention only, click on button "
+":guilabel:`Remove storage`."
+msgstr ""
+"I dati extra generati, come le metriche, verranno sincronizzati dal "
+"filesystem in memoria allo storage persistente una volta al giorno durante "
+"la notte. Per rimuovere lo storage dei dati e ripristinare solo la "
+"conservazione dei log in memoria, fare clic sul pulsante :guilabel:`Rimuovi "
+"storage`."
+
+#: ../../storage.rst:39 3e566cb1a19247f784ec346637c8ea79
+msgid "Log Partition Management"
+msgstr "Gestione delle partizioni dei log"
+
+#: ../../storage.rst:41 94844f7c28294b45874186e7635bfabc
+msgid ""
+"In certain instances, you may encounter challenges utilizing the primary "
+"disk for log storage, as the user interface may not present any options. In "
+"such cases, the issue typically stems from a pre-existing partition on the "
+"disk, which must be removed beforehand to ensure proper utilization by the "
+"system."
+msgstr ""
+"In alcune circostanze, potrebbero verificarsi difficoltà nell'utilizzo del "
+"disco principale per l'archiviazione dei log, poiché l'interfaccia utente "
+"potrebbe non presentare alcuna opzione. In questi casi, il problema deriva "
+"solitamente dalla presenza di una partizione preesistente sul disco, che "
+"deve essere rimossa preventivamente per garantirne il corretto utilizzo da "
+"parte del sistema."
+
+#: ../../storage.rst:44 47bf3005deb248f19403cb298833d484
+msgid ""
+"This typically occurs even after performing a default reset using failsafe "
+"mode (which does not remove the log partition), in order to allow the system"
+" to use again the storage to save new logs you need to remove the old "
+"partition."
+msgstr ""
+"Questo si verifica tipicamente anche dopo aver eseguito un ripristino alle "
+"impostazioni predefinite utilizzando la modalità failsafe (che non rimuove "
+"la partizione dei log); per consentire al sistema di utilizzare nuovamente "
+"lo storage per salvare nuovi log è necessario rimuovere la vecchia "
+"partizione."
+
+#: ../../storage.rst:46 18bc693ca7d94642b0fa47dc51d320f7
+msgid "This can be easily done this way."
+msgstr "Questo può essere fatto facilmente in questo modo."
+
+#: ../../storage.rst:48 9fe90704a6204309a084414e7734ddc6
+msgid "Verify if the log partition is present with the command:"
+msgstr "Verificare se la partizione di log è presente con il comando:"
+
+#: ../../storage.rst:50 af0229356da2485fab00e9fa63c71ca2
+msgid "``parted /dev/sda print``::"
+msgstr "``parted /dev/sda print``::"
+
+#: ../../storage.rst:65 c3970761172347439904db91089cf320
+msgid "Partition 3 is the one used for logs."
+msgstr "La partizione 3 è quella utilizzata per i log."
+
+#: ../../storage.rst:67 babc303bb3b944d19c27bb623a819afc
+msgid "to remove partition 3 execute the command:"
+msgstr "per rimuovere la partizione 3 eseguire il comando:"
+
+#: ../../storage.rst:69 896800b023f7495e958a29f2798ae629
+msgid "``parted /dev/sda rm 3``"
+msgstr "``parted /dev/sda rm 3``"
+
+#: ../../storage.rst:71 27b9775e1cdc466b9837041a66e9b5a1
+msgid "Now verify again the partition table with the command:"
+msgstr "Ora verificare nuovamente la tabella delle partizioni con il comando:"
+
+#: ../../storage.rst:73 3490d0334f7e47fdb87165ac573b9606
+msgid "``parted /dev/sda print``"
+msgstr "``parted /dev/sda print``"
+
+#: ../../storage.rst:75 b481c21969764914b84e5743e7820e3d
+msgid "Partition 3 should not be visible."
+msgstr "La partizione 3 non dovrebbe essere visibile."
+
+#: ../../storage.rst:77 9a359bf67ff143d8bfb28379bcb6bf4d
+msgid "Now the storage is ready to be configured for logs from the Web UI."
+msgstr ""
+"Ora lo storage è pronto per essere configurato per i log dall'interfaccia "
+"Web."
