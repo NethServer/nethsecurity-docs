@@ -82,7 +82,7 @@ Be aware of the following current limitations:
   interface will be different.
 - Extra packages such as NUT are not supported.
 - Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
-- PPPoE WAN is not supported (see Static IP requirement)
+- PPPoE or DHCP WAN is not supported (see Static IP requirement)
 
 Also note that after the first synchronization, the backup node will have the same hostname as the primary node.
 The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or backup).
