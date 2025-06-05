@@ -171,7 +171,7 @@ If the filtering is not effective immediately after configuration:
 - Be aware that FlashStart may require a few minutes to propagate the applied settings across its infrastructure.
 - Also consider the impact of browser DNS cache, which may delay visible effects.
 
-To verify whether filtering is actually in place and working, you can perform a manual DNS query using the `dig` command:
+To verify whether filtering is actually in place and working, you can perform a manual DNS query **in your local client** using the `dig` command:
 
 .. code-block:: bash
 
@@ -180,5 +180,11 @@ To verify whether filtering is actually in place and working, you can perform a 
 Replace `www.mydomain.com` with the actual domain you're testing.
 
 If the domain is still being resolved and should be blocked, double-check the active profile and block settings on the FlashStart dashboard.
+
+.. note::
+
+   This ``dig`` test must always be performed from the **client** and **never from the firewall**.  
+   The firewall is **never** filtered by FlashStart's DNS servers, as this could potentially conflict with some of the services it provides.
+
 
 
