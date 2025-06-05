@@ -378,8 +378,8 @@ Example: ::
    
    ns-ha-config remove-interface guest
 
-This removes the interface from `keepalived` but not from the backup node's network configuration.
-Then, proceed to remove the the interface using the primary node's web interface.
+This removes the interface from `keepalived` and from the backup node's network configuration.
+Also, the virtual IP address associated with the interface will be moved to the network interface of the primary node.
 
 
 Remove an alias from HA configuration: ::
