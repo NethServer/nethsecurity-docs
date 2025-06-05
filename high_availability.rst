@@ -213,7 +213,7 @@ This checks:
 
 - LAN interface has a static IP. If the ``lan_interface`` parameter is not provided, it searches for a LAN interface named ``lan``.
 - At least one WAN interface exists. If the ``wan_interface`` parameter is not provided, it searches for a WAN interface named ``wan``.
-- WAN interface is not PPPoE.
+The WAN interface must be configured with a static IP address; PPPoE and DHCP are not supported.
 - If DHCP server is running:
 
   - ``Force DHCP server start`` option is enabled.
