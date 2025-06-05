@@ -44,7 +44,7 @@ While the HA system is designed to be as automatic as possible, some configurati
 For example, if you add a new network interface or change an existing one, you need to inform the HA system about these changes.
 Specific actions are needed to ensure the backup node is aware of the new network configuration:
 
-- Beside the firsta LAN and WAN configured in the initiliza setup, all other interfaces must be explicitly added to the HA cluster.
+- Beside the first LAN and WAN configured in the initial setup, all other interfaces must be explicitly added to the HA cluster.
   This is done using the ``ns-ha-config add-lan-interface`` or ``ns-ha-config add-wan-interface`` command.
   This command registers the new interface in the HA cluster configuration and associates a Virtual IP (VIP) with it for failover.
 - Similarly, when adding an IP alias to an interface on the primary node, you must also register this alias within the HA cluster configuration
@@ -274,7 +274,7 @@ WAN interfaces
 
 The WAN interface is the first interface to be added to the HA cluster.
 Remember that the WAN interface must be configured with a static IP address, so make sure also to setup
-an :ref:`DNS forwarders <forwarding_servers-section>`.
+ :ref:`DNS forwarders <forwarding_servers-section>`.
 
 Configure the WAN interface::
 
