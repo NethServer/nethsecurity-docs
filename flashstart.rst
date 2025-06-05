@@ -62,7 +62,7 @@ FlashStart Pro Plus extends functionality with support for multiple independent 
 
 
 - **Multi-profile support:**  
-  Up to 4 independent profiles can be defined, each with its own filtering configuration.
+  Up to 5 independent profiles can be defined, each with its own filtering configuration.
 
 - **Independent profile configuration:**  
   Each profile can be customized individually (categories, safe search, YouTube restrictions, etc.).
