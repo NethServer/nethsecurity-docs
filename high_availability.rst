@@ -44,9 +44,9 @@ While the HA system is designed to be as automatic as possible, some configurati
 For example, if you add a new network interface or change an existing one, you need to inform the HA system about these changes.
 Specific actions are needed to ensure the backup node is aware of the new network configuration:
 
-- After configuring a network interface (e.g., creating a guest interface) on the primary node, you must explicitly add it to the HA cluster
-  using ``ns-ha-config add-interface``.
-  This command informs the cluster about the new interface and associates a Virtual IP (VIP) with it for failover.
+- Beside the firsta LAN and WAN configured in the initiliza setup, all other interfaces must be explicitly added to the HA cluster.
+  This is done using the ``ns-ha-config add-lan-interface`` or ``ns-ha-config add-wan-interface`` command.
+  This command registers the new interface in the HA cluster configuration and associates a Virtual IP (VIP) with it for failover.
 - Similarly, when adding an IP alias to an interface on the primary node, you must also register this alias within the HA cluster configuration
   using ``ns-ha-config add-alias``.
 
@@ -213,7 +213,7 @@ This checks:
 
 - LAN interface has a static IP. If the ``lan_interface`` parameter is not provided, it searches for a LAN interface named ``lan``.
 - At least one WAN interface exists. If the ``wan_interface`` parameter is not provided, it searches for a WAN interface named ``wan``.
-The WAN interface must be configured with a static IP address; PPPoE and DHCP are not supported.
+  The WAN interface must be configured with a static IP address; PPPoE and DHCP are not supported.
 - If DHCP server is running:
 
   - ``Force DHCP server start`` option is enabled.
@@ -278,12 +278,11 @@ an :ref:`DNS forwarders <forwarding_servers-section>`.
 
 Configure the WAN interface::
 
-   ns-ha-config add-interface <interface> <virtual_ip_address> <gateway>
+   ns-ha-config add-wan-interface <interface> <virtual_ip_address> <gateway>
 
 Where ``<interface>`` is the name of the WAN interface (e.g., `wan`, `eth1`, etc.),
 Ensure you provide the virtual IP in CIDR notation (e.g., `192.168.1.100/24`) and the gateway IP.
-The script configures the interface on both nodes using fake IP addresses from the `169.254.0.0/16` range and sets up the virtual IP in `keepalived`.
-If you do not enter a gateway, nodes will not be able to reach the internet.
+The script configures the interface on both nodes using fake IP addresses from the `169.254.x.0/24` range and sets up the virtual IP in `keepalived`.
 
 Verify the configuration
 ------------------------
@@ -304,14 +303,30 @@ Additional interfaces
 ---------------------
 
 It's possible to add additional interfaces to the HA cluster after the initial setup.
-Before adding an interface, ensure that the interface is configured with a static IP address on the primary node.
+Before adding an interface, ensure that the interface is configured with a static IP address on the primary node
+and on the secondary node, much like the LAN interface configured during the initial setup.
 Interfaces can be ethernets, bridges, VLANs, or bonds. Please note that VLANs over logical interfaces are not supported.
+
+You can use this command to add any non-WAN interface, like a second LAN, DMZ or GUEST interface to the HA cluster.
 
 Add additional interfaces as needed::
 
-   ns-ha-config add-interface <interface> <virtual_ip_address>
+   ns-ha-config add-lan-interface <primary_node_ip> <backup_node_ip> <virtual_ip_address>
 
-The gateway is usually not required for non-WAN interfaces.
+The following checks are perfomed:
+
+- make sure a device with given static IP address exists on the node
+- If DHCP server is running, the following
+
+  - ``Force DHCP server start`` option is enabled.
+  - ``3: router`` DHCP option is set (should be the virtual IP).
+  - ``6: DNS server`` DHCP option is set.
+
+
+Example: ::
+
+   ns-ha-config add-lan-interface 192.168.200.1 192.168.200.2 192.168.200.253/24
+
 
 Hotspot support
 ---------------
@@ -324,6 +339,8 @@ The hotspot feature is supported in HA clusters, but there are important require
 - The hotspot can only operate on a physical interface or a VLAN interface.
 - To maintain hotspot functionality during failover, the MAC address of the interface running the hotspot on the primary node is automatically
   copied to the corresponding interface on the backup node when a switchover occurs.
+
+Note that active sessions are stored in RAM and will be lost during a switchover; clients must re-authenticate unless auto-login is enabled.
 
 Network aliases
 ----------------
@@ -405,7 +422,7 @@ Execute the following commands on the **primary node**:
 
 2. Add WAN interface: ::
 
-      ns-ha-config add-interface wan 192.168.122.49/24 192.168.122.1
+      ns-ha-config add-wan-interface wan 192.168.122.49/24 192.168.122.1
 
 Alerting
 ========
