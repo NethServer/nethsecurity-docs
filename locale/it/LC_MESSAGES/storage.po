@@ -82,11 +82,11 @@ msgid ""
 "resulting in the creation of a one single partition."
 msgstr ""
 "Se il dispositivo scelto è il disco primario, il sistema genererà una nuova "
-"partizione utilizzando lo spazio non allocato. Nel caso venga "
-"selezionato un disco aggiuntivo, il sistema procederà con il processo di "
-"preparazione, che comporta la cancellazione di tutte le partizioni e i dati "
-"esistenti sul dispositivo selezionato, con la conseguente creazione di "
-"un'unica partizione."
+"partizione utilizzando lo spazio non allocato. Nel caso venga selezionato un"
+" disco aggiuntivo, il sistema procederà con il processo di preparazione, che"
+" comporta la cancellazione di tutte le partizioni e i dati esistenti sul "
+"dispositivo selezionato, con la conseguente creazione di un'unica "
+"partizione."
 
 #: ../../storage.rst:28 e9c801c9391b4579b13665bd451af517
 msgid ""
@@ -122,10 +122,6 @@ msgstr ""
 "la notte. Per rimuovere lo storage dei dati e ripristinare solo la "
 "conservazione dei log in memoria, fare clic sul pulsante :guilabel:`Rimuovi "
 "storage`."
-
-#: ../../storage.rst:39 3e566cb1a19247f784ec346637c8ea79
-msgid "Log Partition Management"
-msgstr "Gestione delle partizioni dei log"
 
 #: ../../storage.rst:41 94844f7c28294b45874186e7635bfabc
 msgid ""
@@ -196,3 +192,8 @@ msgid "Now the storage is ready to be configured for logs from the Web UI."
 msgstr ""
 "Ora lo storage è pronto per essere configurato per i log dall'interfaccia "
 "Web."
+
+#: ../../storage.rst:39 b9b5f7afa2774925aefa0b28c85ef28b
+msgid "Troubleshooting"
+msgstr "Risoluzione dei problemi"
+
