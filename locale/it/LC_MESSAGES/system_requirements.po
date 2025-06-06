@@ -1,0 +1,55 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../system_requirements.rst:5 4286a0e801e94deeb1e8ade0e5a98870
+msgid "System requirements"
+msgstr "Requisiti di sistema"
+
+#: ../../system_requirements.rst:7 c41303aa71614722806761a13fd8d8d6
+msgid ""
+"NethSecurity is currently available only for `x86-64 architecture "
+"<https://en.wikipedia.org/wiki/X86-64>`_."
+msgstr ""
+"NethSecurity è attualmente disponibile solo per l'`architettura x86-64 "
+"<https://en.wikipedia.org/wiki/X86-64>`_."
+
+#: ../../system_requirements.rst:9 3f5d3095a4144b71aeff44771647b8ca
+msgid "Minimum hardware requirements:"
+msgstr "Requisiti hardware minimi:"
+
+#: ../../system_requirements.rst:11 aec3f6d8533b4e35a1f5cbbdd14f3fd2
+msgid "1 vCPU/cores"
+msgstr "1 vCPU/core"
+
+#: ../../system_requirements.rst:12 93e4fd5ec2eb491881a97c51dc35b164
+msgid "1GB of RAM"
+msgstr "1 GB di RAM"
+
+#: ../../system_requirements.rst:13 11912eb0afca48d88454ce08c7df0d5f
+msgid "1GB of disk space"
+msgstr "1 GB di spazio su disco"
+
+#: ../../system_requirements.rst:14 abdda0edafeb4f50a84f46e7c507ea9e
+msgid "2 Ethernet network cards"
+msgstr "2 schede di rete Ethernet"
+
+#: ../../system_requirements.rst:16 dce34c55a8a349cfa49d366ed697b6d8
+msgid "Recommended hardware requirements:"
+msgstr "Requisiti hardware consigliati:"
+
+#: ../../system_requirements.rst:18 ee6b6563502e4c8d81534fcdc5ef543a
+msgid "2 vCPU/cores"
+msgstr "2 vCPU/core"
+
+#: ../../system_requirements.rst:19 4bd20abc8ec04f13afd5162a03853dd9
+msgid "2GB of RAM"
+msgstr "2 GB di RAM"
+
+#: ../../system_requirements.rst:20 462fc326174e4925a2b54ea778c4c420
+msgid ""
+"1GB if disk space plus an additional USB storage for persistent data like "
+"logs"
+msgstr ""
+"1 GB di spazio su disco più una memoria USB aggiuntiva per dati persistenti "
+"come i log"

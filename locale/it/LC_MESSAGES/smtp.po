@@ -1,0 +1,62 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../smtp.rst:3 61378d3abc254647a09976e0570940d2
+msgid "Mail notifications (SMTP)"
+msgstr "Notifiche e-mail (SMTP)"
+
+#: ../../smtp.rst:7 ee9d22770d834cdbbc787b2a2b225cdb
+msgid ""
+"This feature is still under development and does not have a user interface "
+"yet. It can currently only be configured through the command line."
+msgstr ""
+"Questa funzionalità è ancora in fase di sviluppo e non dispone ancora di "
+"un'interfaccia utente. Attualmente può essere configurata solo tramite la "
+"riga di comando."
+
+#: ../../smtp.rst:9 2f5edc9b3b774379a43265410b24564f
+msgid ""
+"This section provides instructions for configuring the SMTP client (msmpt) "
+"on NethSecurity firewall for sending email notifications. The SMTP client is"
+" used exclusively for sending notification emails and relies on an external "
+"SMTP server for delivery."
+msgstr ""
+"Questa sezione fornisce istruzioni per la configurazione del client SMTP "
+"(msmtp) sul firewall NethSecurity per l'invio di notifiche email. Il client "
+"SMTP viene utilizzato esclusivamente per l'invio di email di notifica e si "
+"appoggia a un server SMTP esterno per la consegna."
+
+#: ../../smtp.rst:12 b4b13d0f077347bf9e60530d019689d8
+msgid ""
+"The `msmpt <https://marlam.de/msmtp/>`_ SMTP client offers advanced features"
+" to enhance security and reliability:"
+msgstr ""
+"Il client SMTP `msmtp <https://marlam.de/msmtp/>`_ offre funzionalità "
+"avanzate per migliorare la sicurezza e l'affidabilità:"
+
+#: ../../smtp.rst:14 c1b6d2d8c4094eca91ddac53df08331a
+msgid ""
+"**TLS/SSL Support:** msmpt supports TLS/SSL encryption for secure "
+"communication between the firewall and the external SMTP server"
+msgstr ""
+"**Supporto TLS/SSL:** msmtp supporta la crittografia TLS/SSL per una "
+"comunicazione sicura tra il firewall e il server SMTP esterno"
+
+#: ../../smtp.rst:15 bcd2be42ea634e7894096acd7f24e861
+msgid ""
+"**Authentication:** some SMTP servers require authentication to identify the"
+" user sending the email"
+msgstr ""
+"**Autenticazione:** alcuni server SMTP richiedono l'autenticazione per "
+"identificare l'utente che invia l'email"
+
+#: ../../smtp.rst:17 3c60b4069fc14c93b4fbeb00d5b1a624
+msgid ""
+"See the `developer manual <https://dev.nethsecurity.org/packages/ns-"
+"api/#nssmtp>`_ for the commands on how to configure it from the command "
+"line."
+msgstr ""
+"Consultare il `manuale per sviluppatori "
+"<https://dev.nethsecurity.org/packages/ns-api/#nssmtp>`_ per i comandi su "
+"come configurarlo dalla riga di comando."

@@ -1,0 +1,714 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../ups.rst:3 0a467595d1384d8090e4ff70810a0080
+msgid "UPS (NUT)"
+msgstr "UPS (NUT)"
+
+#: ../../ups.rst:5 ebe81ddfc24d403995f5aaddef15bcf3
+msgid ""
+"An Uninterruptible Power Supply (UPS) is a device that provides backup power"
+" when the main power source fails. It is used to protect hardware such as "
+"computers, telecommunication equipment, or other electrical equipment where "
+"an unexpected power outage could cause business disruption or data loss."
+msgstr ""
+"Un gruppo di continuità (UPS, Uninterruptible Power Supply) è un dispositivo"
+" che fornisce alimentazione di riserva quando la fonte di alimentazione "
+"principale viene meno. Viene utilizzato per proteggere hardware come "
+"computer, apparecchiature di telecomunicazione o altri dispositivi elettrici"
+" in cui un'interruzione improvvisa dell'alimentazione potrebbe causare "
+"interruzioni operative o perdita di dati."
+
+#: ../../ups.rst:9 f98aa72df54542a29b8cf3f84fd0300f
+msgid ""
+"The `Network UPS Tools (NUT)  <https://networkupstools.org/>`_ is a "
+"collection of programs that provide a common interface for monitoring and "
+"administering UPS hardware."
+msgstr ""
+"`Network UPS Tools (NUT) <https://networkupstools.org/>`_ è una raccolta di "
+"programmi che fornisce un'interfaccia comune per il monitoraggio e "
+"l'amministrazione dell'hardware UPS."
+
+#: ../../ups.rst:11 5b5221e49cd7401d9c15e4c1fc878c8b
+msgid ""
+"This guide explains how to configure a USB-connected UPS with NUT on "
+"NethSecurity. At the end of the guide, the UPS should be monitored and the "
+"system should shut down when the battery is low."
+msgstr ""
+"Questa guida spiega come configurare un UPS collegato via USB con NUT su "
+"NethSecurity. Al termine della guida, l'UPS dovrebbe essere monitorato e il "
+"sistema dovrebbe spegnersi quando la batteria è scarica."
+
+#: ../../ups.rst:14 5ebee1bc714b4ffd87059a74591d3685
+msgid ""
+"NUT is not installed by default. It is part of NethSecurity extra packages "
+"and can be installed from the command line. The NUT suite is composed of "
+"several packages, but the most important are:"
+msgstr ""
+"NUT non è installato di default. Fa parte dei pacchetti extra di "
+"NethSecurity e può essere installato dalla riga di comando. La suite NUT è "
+"composta da diversi pacchetti, ma i più importanti sono:"
+
+#: ../../ups.rst:17 00de50dcc8544537922fc8ce2d4c5ffc
+msgid ""
+"``nut-server``: The NUT server daemon connects directly to the UPS, serving "
+"data to the client."
+msgstr ""
+"``nut-server``: Il demone NUT server si connette direttamente all'UPS, "
+"fornendo i dati al client."
+
+#: ../../ups.rst:18 501024b704ed4c24b218e243b662ba45
+msgid "``nut-upsc``: A command-line tool to query the UPS status."
+msgstr ""
+"``nut-upsc``: Uno strumento da riga di comando per interrogare lo stato "
+"dell'UPS."
+
+#: ../../ups.rst:19 d0bb723559c245d4af65b654ccf57164
+msgid ""
+"``nut-upsmon``: The NUT UPS monitor daemon talks to nut-server and initiates"
+" a system shutdown when the UPS battery is low."
+msgstr ""
+"``nut-upsmon``: Il demone di monitoraggio NUT UPS comunica con nut-server e "
+"avvia lo spegnimento del sistema quando la batteria dell'UPS è scarica."
+
+#: ../../ups.rst:20 93ac088d3d1a4280be424930d1645867
+msgid ""
+"``nut-upscmd``: A command-line tool to send commands to the UPS (supported "
+"only by some UPS models)."
+msgstr ""
+"``nut-upscmd``: Uno strumento da riga di comando per inviare comandi all'UPS"
+" (supportato solo da alcuni modelli di UPS)."
+
+#: ../../ups.rst:24 167de20ebe01470fa8a667c6a0faee9b
+msgid ""
+"NUT configuration is not supported on machines with a NethSecurity "
+"subscription. The feature is meant to be used by advanced users and it is "
+"not covered by the support service."
+msgstr ""
+"La configurazione di NUT non è supportata sulle macchine con un abbonamento "
+"NethSecurity. La funzionalità è destinata a utenti avanzati e non è coperta "
+"dal servizio di supporto."
+
+#: ../../ups.rst:28 15c67937aea3462bb33c9541eefabe09
+msgid "Configure a local UPS"
+msgstr "Configurare un UPS locale"
+
+#: ../../ups.rst:30 9d4b464f5616493990d166448cd06a7b
+msgid ""
+"Before configuring the UPS, make sure the UPS is connected to the firewall "
+"(a cable usually comes with the UPS). Then, follow these steps:"
+msgstr ""
+"Prima di configurare l'UPS, assicurarsi che l'UPS sia collegato al firewall "
+"(un cavo è solitamente fornito con l'UPS). Quindi, seguire questi passaggi:"
+
+#: ../../ups.rst:33 189bf918dac84d8da17a234457238397
+msgid "Install NUT packages."
+msgstr "Installare i pacchetti NUT."
+
+#: ../../ups.rst:34 08ec3787e4fc4d92b3ecd775dc45f6e4
+msgid "Find the UPS model, then install and configure the appropriate driver."
+msgstr ""
+"Individuare il modello di UPS, quindi installare e configurare il driver "
+"appropriato."
+
+#: ../../ups.rst:35 69a46af9d83e46d7b8e0646e63e50339
+msgid "Configure the UPS server daemons."
+msgstr "Configurare i demoni del server UPS."
+
+#: ../../ups.rst:36 f507651bfaab4098b33b5b18b2c70a43
+msgid "Enable the UPS monitor."
+msgstr "Abilitare il monitor UPS."
+
+#: ../../ups.rst:39 b5313ccbc8234938a2d6533b9306b625
+msgid "Step 1: install the required packages"
+msgstr "Passaggio 1: installare i pacchetti richiesti"
+
+#: ../../ups.rst:41 d8fdf72a7b924d2e82c1c508ed88725d
+msgid "Install the required packages::"
+msgstr "Installare i pacchetti richiesti::"
+
+#: ../../ups.rst:46 ../../ups.rst:190 9dea2a337c8e4dc8aaa435976ef9257f
+#: dff94b77e5cf4111a3d620a9f5fc7490
+msgid ""
+"These packages are not preserved during a system upgrade. For more info see "
+":ref:`restore_extra_packages-section`."
+msgstr ""
+"Questi pacchetti non vengono conservati durante un aggiornamento del "
+"sistema. Per ulteriori informazioni, consultare "
+":ref:`restore_extra_packages-section`."
+
+#: ../../ups.rst:49 a7784d67666d4f5b9373ebbd12d72dfc
+msgid "Step 2: setup the appropriate driver"
+msgstr "Passaggio 2: configurare il driver appropriato"
+
+#: ../../ups.rst:51 6fd0e391f19544028bab24b3bf99faca
+msgid "Use ``lsusb`` to list USB devices::"
+msgstr "Usare ``lsusb`` per elencare i dispositivi USB::"
+
+#: ../../ups.rst:57 6274a7c60f944993a76f44f0b5348d14
+msgid ""
+"In this example, the UPS is an EATON 5E model connected to the second USB "
+"port of the second USB bus."
+msgstr ""
+"In questo esempio, l'UPS è un modello EATON 5E collegato alla seconda porta "
+"USB del secondo bus USB."
+
+#: ../../ups.rst:59 555e0a4d2ded46cfa4c07b7e53c9d51d
+msgid ""
+"Select the driver from the `NUT driver page "
+"<https://networkupstools.org/stable-hcl.html>`_."
+msgstr ""
+"Selezionare il driver dalla `pagina dei driver NUT "
+"<https://networkupstools.org/stable-hcl.html>`_."
+
+#: ../../ups.rst:61 e647403898a64e899b97f2f93915871d
+msgid ""
+"All driver packages start with ``nut-driver-`` prefix. Some UPS models may "
+"require a specific driver, but most of them work with the ``usbhid-ups`` "
+"driver. Install the selected driver package, in this case the ``usbhid-ups``"
+" driver: ::"
+msgstr ""
+"Tutti i pacchetti driver iniziano con il prefisso ``nut-driver-``. Alcuni "
+"modelli di UPS possono richiedere un driver specifico, ma la maggior parte "
+"di essi funziona con il driver ``usbhid-ups``. Installare il pacchetto "
+"driver selezionato, in questo caso il driver ``usbhid-ups``: ::"
+
+#: ../../ups.rst:66 10b5222920d44d30b8251b7c8aa6aec5
+msgid ""
+"Set up the driver inside the ``upsd`` (nut-server) server. The nut-server "
+"will connect to the UPS using the driver and the port specified. It will "
+"monitor the UPS at regular intervals and provide the information to the "
+"clients like ``upsmon``. Execute: ::"
+msgstr ""
+"Configurare il driver all'interno del server ``upsd`` (nut-server). Il nut-"
+"server si collegherà all'UPS utilizzando il driver e la porta specificati. "
+"Monitorerà l'UPS a intervalli regolari e fornirà le informazioni ai client "
+"come ``upsmon``. Eseguire: ::"
+
+#: ../../ups.rst:75 0e9ebdf0499344a590feb4c5a07bef6a
+msgid ""
+"Remember the name of the UPS, in this case ``eaton5e``, as it will be used "
+"in the next steps."
+msgstr ""
+"Ricordare il nome dell'UPS, in questo caso ``eaton5e``, poiché verrà "
+"utilizzato nei passaggi successivi."
+
+#: ../../ups.rst:78 60bfe25e9d774db6a1b2560e342ea215
+msgid "Step 3: configure monitoring"
+msgstr "Passaggio 3: configurare il monitoraggio"
+
+#: ../../ups.rst:80 0b59f71517df4751b9e3d571fbcd22d0
+msgid ""
+"The UPS monitor (upsmon) is a daemon that monitors the UPS and initiates a "
+"system shutdown when the UPS battery is low. It connects to the UPS server "
+"(upsd) and queries the UPS status."
+msgstr ""
+"Il monitor UPS (upsmon) è un demone che monitora l'UPS e avvia l'arresto del"
+" sistema quando la batteria dell'UPS è scarica. Si connette al server UPS "
+"(upsd) e interroga lo stato dell'UPS."
+
+#: ../../ups.rst:83 3c07fa0d2a1c454883c1fe686686fad4
+msgid ""
+"In this scenario the UPS monitor is running on the same machine as the UPS "
+"server, so it will connect to localhost."
+msgstr ""
+"In questo scenario il monitor UPS è in esecuzione sulla stessa macchina del "
+"server UPS, quindi si connetterà a localhost."
+
+#: ../../ups.rst:85 159455d747bb49f19f8b4754c2c6c826
+msgid ""
+"Set up the user for monitoring inside ``upsd``. Please note the password is "
+"simple because it is not sent over the network::"
+msgstr ""
+"Configurare l'utente per il monitoraggio all'interno di ``upsd``. Si noti "
+"che la password è semplice perché non viene inviata attraverso la rete::"
+
+#: ../../ups.rst:92 70269cc08763462da2cedd00882ba73a
+msgid "Set up the monitor::"
+msgstr "Configurare il monitor::"
+
+#: ../../ups.rst:101 bd00796242e24cb9b4727bf478dcbd95
+msgid "Commit and restart the services::"
+msgstr ""
+
+#: ../../ups.rst:109 4ecdb12954b641d7893f731f77caec4a
+msgid "Step 4: verify the UPS status"
+msgstr ""
+
+#: ../../ups.rst:111 cd61a9f299094a3090d77fe88279c42d
+msgid "Check the UPS status::"
+msgstr ""
+
+#: ../../ups.rst:115 29275cbcdc91486ba82f88d33bb10d16
+msgid "The output should look like this: ::"
+msgstr ""
+
+#: ../../ups.rst:124 180e05102ecf4f0986cd5ec359bd5293
+msgid ""
+"If the output is empty or an error is displayed, review the content of "
+"``/var/log/messages``."
+msgstr ""
+
+#: ../../ups.rst:126 558055513209492aa575a3c454e31b1c
+msgid "A good server log for connected UPS::"
+msgstr ""
+
+#: ../../ups.rst:130 8d65ad4b349e4df8ba2aa7c7468f9c3b
+msgid "A good log for upsmon::"
+msgstr ""
+
+#: ../../ups.rst:134 c85a404a8e6540fcb7e7ff4aa14aa29c
+msgid ""
+"If an error is displayed, please see :ref:`troubleshooting_ups-section`."
+msgstr ""
+
+#: ../../ups.rst:136 ab9aa3802a2f4e918e427d05007419ab
+msgid ""
+"If everything is working, the UPS should be monitored and the system should "
+"shut down when the battery is in a critical state, usually below 20%."
+msgstr ""
+
+#: ../../ups.rst:139 6ea63d499cb0492ba35cf4156b1f484e
+msgid "Allow remote monitoring"
+msgstr ""
+
+#: ../../ups.rst:141 0aebe8ef36504b7f89d5af3051565235
+msgid ""
+"Multiple hardware devices can be connected to an UPS and the NUT server can "
+"share the UPS status with multiple clients. So, for example, another system "
+"powered by the same UPS can inspect the UPS status by connecting to the NUT "
+"server and shutting down when the battery is low."
+msgstr ""
+
+#: ../../ups.rst:145 0cf731d794414108adc01d9e9db40d1e
+msgid ""
+"By default, the NUT server is configured to listen only on localhost. To "
+"allow remote monitoring, the server must be configured to listen on a "
+"specific IP address or on all interfaces."
+msgstr ""
+
+#: ../../ups.rst:148 c772f5ba38e54d51af5b952b70b8769d
+msgid "Listen on all interfaces: ::"
+msgstr ""
+
+#: ../../ups.rst:153 0bb3b1aaa52646cf88eae3a3695d005f
+msgid ""
+"Add a user for remote monitoring. Please make sure to select a strong "
+"password:  ::"
+msgstr ""
+
+#: ../../ups.rst:161 96b3bd76ab33465093cee15b3d3f345f
+msgid "Check the status of the server::"
+msgstr ""
+
+#: ../../ups.rst:165 c385d0678f3f4a4b84c827cd2e9c0690
+msgid ""
+"Create a firewall rule to allow remote monitoring from LAN, the service "
+"listen on TCP port 3493: ::"
+msgstr ""
+
+#: ../../ups.rst:175 2489a58257e141d0ad47129cc31eb73e
+msgid ""
+"You can now connect to the NUT server from a remote upsmon client. When the "
+"client is configured, it will connect to the NUT server and monitor the UPS "
+"status. If the battery is low, the client will initiate a system shutdown."
+msgstr ""
+
+#: ../../ups.rst:180 84f5268aade443398356c790462a5cd1
+msgid "Connect to remote NUT server"
+msgstr ""
+
+#: ../../ups.rst:182 3fc8c679265944909dabbdec557306cb
+msgid ""
+"This is the case where a secondary firewall is connected to the same UPS and"
+" the NUT server is running on the primary firewall. The secondary firewall "
+"will connect to the primary firewall and monitor the UPS status."
+msgstr ""
+
+#: ../../ups.rst:185 b3e97d596f794ba2a2666e986f5ca803
+msgid "First, install the NUT services on the client machine::"
+msgstr ""
+
+#: ../../ups.rst:192 987b9b37caef4850a8b4e1a44c452a78
+msgid "Then, configure the client to connect to the remote server::"
+msgstr ""
+
+#: ../../ups.rst:203 0f7105b77b234215bbd77d449f424c5c
+msgid "Check if the client is connected to the remote server::"
+msgstr ""
+
+#: ../../ups.rst:207 abf37514f9c245c48d88aaaa5afec11f
+msgid "The output should be the same as the local server."
+msgstr ""
+
+#: ../../ups.rst:209 c908cafa8193406f8fa9cadca8019355
+msgid ""
+"Now the client is connected to the remote server and will monitor the UPS "
+"status. If the battery is low, the client will initiate a system shutdown."
+msgstr ""
+
+#: ../../ups.rst:213 b72815a2652844929648032362dbbd8e
+msgid "Extra UPS settings"
+msgstr ""
+
+#: ../../ups.rst:215 825abcec0e8a46eeb6d1ef18ab23af79
+msgid ""
+"Some UPS models have additional settings that can be configured using the "
+"``upscmd`` command. To execute the command, the user must have the "
+"appropriate permissions."
+msgstr ""
+
+#: ../../ups.rst:218 9041613974f444c589f9e706d14e71ee
+msgid "Grant permissions to the user::"
+msgstr ""
+
+#: ../../ups.rst:225 d8448a87229144baac8ef70b4317e681
+msgid "Check available commands::"
+msgstr ""
+
+#: ../../ups.rst:229 d793de350819434f81cdcf2a9ba3d7fc
+msgid "Example to disable the beep::"
+msgstr ""
+
+#: ../../ups.rst:236 fb7a5749f5de462892cc669077e7c358
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../ups.rst:238 da795ca878e54074a7ecc3a893ce9f96
+msgid ""
+"A common error is the permission denied when accessing the UPS device, for "
+"example you may see this error inside ``/var/log/messages``::"
+msgstr ""
+
+#: ../../ups.rst:242 10d99dc34ce346669b925b5f553b1564
+msgid ""
+"Another common error is upsd not being able to connect to the UPS, for "
+"example you may see this error inside ``/var/log/messages``::"
+msgstr ""
+
+#: ../../ups.rst:248 735aff00cd154e519dc212280ef5230f
+msgid ""
+"Usually, this happens when nut-server connects to the UPS device before the "
+"device is ready. To fix this, the simplest solution is to reboot the "
+"firewall::"
+msgstr ""
+
+#: ../../ups.rst:253 7dcd8eaa9a9248488889f7cfda905850
+msgid ""
+"If you can't reboot the firewall, you can try to stop the nut-server: ::"
+msgstr ""
+
+#: ../../ups.rst:257 a3b10c4b27174f4db5c929330f048bcb
+msgid "Then check if the driver can connect to the UPS device: ::"
+msgstr ""
+
+#: ../../ups.rst:261 fb391cf4128b4873b06209da86d309b5
+msgid "Expected output: ::"
+msgstr ""
+
+#: ../../ups.rst:267 14cf9a42ff5e41a381f9dd5523c6f13a
+msgid "In case of error, you may see something like this: ::"
+msgstr ""
+
+#: ../../ups.rst:271 21936cd4cce04107aef9872c554ca92c
+msgid "You could then try to reset the USB device: ::"
+msgstr ""
+
+#: ../../ups.rst:275 2ad9a37c23c74a4d8052c40f0e8540ec
+msgid ""
+"Where ``002/003`` is the USB device ID found with ``lsusb``, ``002`` is the "
+"bus number and ``003`` is the device number."
+msgstr ""
+
+#: ../../ups.rst:101 bd00796242e24cb9b4727bf478dcbd95
+msgid "Commit and restart the services::"
+msgstr "Eseguire il commit e riavviare i servizi::"
+
+#: ../../ups.rst:109 4ecdb12954b641d7893f731f77caec4a
+msgid "Step 4: verify the UPS status"
+msgstr "Passaggio 4: verificare lo stato dell'UPS"
+
+#: ../../ups.rst:111 cd61a9f299094a3090d77fe88279c42d
+msgid "Check the UPS status::"
+msgstr "Verificare lo stato dell'UPS::"
+
+#: ../../ups.rst:115 29275cbcdc91486ba82f88d33bb10d16
+msgid "The output should look like this: ::"
+msgstr "L'output dovrebbe apparire così: ::"
+
+#: ../../ups.rst:124 180e05102ecf4f0986cd5ec359bd5293
+msgid ""
+"If the output is empty or an error is displayed, review the content of "
+"``/var/log/messages``."
+msgstr ""
+"Se l'output è vuoto o viene visualizzato un errore, verificare il contenuto "
+"di ``/var/log/messages``."
+
+#: ../../ups.rst:126 558055513209492aa575a3c454e31b1c
+msgid "A good server log for connected UPS::"
+msgstr "Un buon log del server per UPS collegato::"
+
+#: ../../ups.rst:130 8d65ad4b349e4df8ba2aa7c7468f9c3b
+msgid "A good log for upsmon::"
+msgstr "Un buon log per upsmon::"
+
+#: ../../ups.rst:134 c85a404a8e6540fcb7e7ff4aa14aa29c
+msgid ""
+"If an error is displayed, please see :ref:`troubleshooting_ups-section`."
+msgstr ""
+"Se viene visualizzato un errore, consultare :ref:`troubleshooting_ups-"
+"section`."
+
+#: ../../ups.rst:136 ab9aa3802a2f4e918e427d05007419ab
+msgid ""
+"If everything is working, the UPS should be monitored and the system should "
+"shut down when the battery is in a critical state, usually below 20%."
+msgstr ""
+"Se tutto funziona correttamente, l'UPS dovrebbe essere monitorato e il "
+"sistema dovrebbe spegnersi quando la batteria si trova in uno stato critico,"
+" solitamente al di sotto del 20%."
+
+#: ../../ups.rst:139 6ea63d499cb0492ba35cf4156b1f484e
+msgid "Allow remote monitoring"
+msgstr "Consenti monitoraggio remoto"
+
+#: ../../ups.rst:101 bd00796242e24cb9b4727bf478dcbd95
+msgid "Commit and restart the services::"
+msgstr "Eseguire il commit e riavviare i servizi::"
+
+#: ../../ups.rst:109 4ecdb12954b641d7893f731f77caec4a
+msgid "Step 4: verify the UPS status"
+msgstr "Passaggio 4: verificare lo stato dell'UPS"
+
+#: ../../ups.rst:111 cd61a9f299094a3090d77fe88279c42d
+msgid "Check the UPS status::"
+msgstr "Controllare lo stato dell'UPS::"
+
+#: ../../ups.rst:115 29275cbcdc91486ba82f88d33bb10d16
+msgid "The output should look like this: ::"
+msgstr "L'output dovrebbe apparire così: ::"
+
+#: ../../ups.rst:124 180e05102ecf4f0986cd5ec359bd5293
+msgid ""
+"If the output is empty or an error is displayed, review the content of "
+"``/var/log/messages``."
+msgstr ""
+"Se l'output è vuoto o viene visualizzato un errore, verificare il contenuto "
+"di ``/var/log/messages``."
+
+#: ../../ups.rst:126 558055513209492aa575a3c454e31b1c
+msgid "A good server log for connected UPS::"
+msgstr "Un buon log del server per un UPS collegato::"
+
+#: ../../ups.rst:130 8d65ad4b349e4df8ba2aa7c7468f9c3b
+msgid "A good log for upsmon::"
+msgstr "Un buon log per upsmon::"
+
+#: ../../ups.rst:134 c85a404a8e6540fcb7e7ff4aa14aa29c
+msgid ""
+"If an error is displayed, please see :ref:`troubleshooting_ups-section`."
+msgstr ""
+"Se viene visualizzato un errore, consultare :ref:`troubleshooting_ups-"
+"section`."
+
+#: ../../ups.rst:136 ab9aa3802a2f4e918e427d05007419ab
+msgid ""
+"If everything is working, the UPS should be monitored and the system should "
+"shut down when the battery is in a critical state, usually below 20%."
+msgstr ""
+"Se tutto funziona correttamente, l'UPS dovrebbe essere monitorato e il "
+"sistema dovrebbe spegnersi quando la batteria si trova in uno stato critico,"
+" solitamente al di sotto del 20%."
+
+#: ../../ups.rst:139 6ea63d499cb0492ba35cf4156b1f484e
+msgid "Allow remote monitoring"
+msgstr "Consenti monitoraggio remoto"
+
+#: ../../ups.rst:141 0aebe8ef36504b7f89d5af3051565235
+msgid ""
+"Multiple hardware devices can be connected to an UPS and the NUT server can "
+"share the UPS status with multiple clients. So, for example, another system "
+"powered by the same UPS can inspect the UPS status by connecting to the NUT "
+"server and shutting down when the battery is low."
+msgstr ""
+"È possibile collegare più dispositivi hardware a un UPS e il server NUT può "
+"condividere lo stato dell'UPS con più client. Ad esempio, un altro sistema "
+"alimentato dallo stesso UPS può ispezionare lo stato dell'UPS collegandosi "
+"al server NUT e spegnersi quando la batteria è scarica."
+
+#: ../../ups.rst:145 0cf731d794414108adc01d9e9db40d1e
+msgid ""
+"By default, the NUT server is configured to listen only on localhost. To "
+"allow remote monitoring, the server must be configured to listen on a "
+"specific IP address or on all interfaces."
+msgstr ""
+"Per impostazione predefinita, il server NUT è configurato per ascoltare solo"
+" su localhost. Per consentire il monitoraggio remoto, il server deve essere "
+"configurato per ascoltare su un indirizzo IP specifico o su tutte le "
+"interfacce."
+
+#: ../../ups.rst:148 c772f5ba38e54d51af5b952b70b8769d
+msgid "Listen on all interfaces: ::"
+msgstr "Ascolta su tutte le interfacce: ::"
+
+#: ../../ups.rst:153 0bb3b1aaa52646cf88eae3a3695d005f
+msgid ""
+"Add a user for remote monitoring. Please make sure to select a strong "
+"password:  ::"
+msgstr ""
+"Aggiungere un utente per il monitoraggio remoto. Assicurarsi di selezionare "
+"una password sicura:  ::"
+
+#: ../../ups.rst:161 96b3bd76ab33465093cee15b3d3f345f
+msgid "Check the status of the server::"
+msgstr "Verificare lo stato del server::"
+
+#: ../../ups.rst:165 c385d0678f3f4a4b84c827cd2e9c0690
+msgid ""
+"Create a firewall rule to allow remote monitoring from LAN, the service "
+"listen on TCP port 3493: ::"
+msgstr ""
+"Creare una regola firewall per consentire il monitoraggio remoto dalla LAN, "
+"il servizio ascolta sulla porta TCP 3493: ::"
+
+#: ../../ups.rst:175 2489a58257e141d0ad47129cc31eb73e
+msgid ""
+"You can now connect to the NUT server from a remote upsmon client. When the "
+"client is configured, it will connect to the NUT server and monitor the UPS "
+"status. If the battery is low, the client will initiate a system shutdown."
+msgstr ""
+"Ora è possibile connettersi al server NUT da un client upsmon remoto. Quando"
+" il client è configurato, si collegherà al server NUT e monitorerà lo stato "
+"dell'UPS. Se la batteria è scarica, il client avvierà lo spegnimento del "
+"sistema."
+
+#: ../../ups.rst:180 84f5268aade443398356c790462a5cd1
+msgid "Connect to remote NUT server"
+msgstr "Connettersi a server NUT remoto"
+
+#: ../../ups.rst:182 3fc8c679265944909dabbdec557306cb
+msgid ""
+"This is the case where a secondary firewall is connected to the same UPS and"
+" the NUT server is running on the primary firewall. The secondary firewall "
+"will connect to the primary firewall and monitor the UPS status."
+msgstr ""
+"Questo è il caso in cui un firewall secondario è collegato allo stesso UPS e"
+" il server NUT è in esecuzione sul firewall primario. Il firewall secondario"
+" si collegherà al firewall primario e monitorerà lo stato dell'UPS."
+
+#: ../../ups.rst:185 b3e97d596f794ba2a2666e986f5ca803
+msgid "First, install the NUT services on the client machine::"
+msgstr "Per prima cosa, installare i servizi NUT sulla macchina client::"
+
+#: ../../ups.rst:192 987b9b37caef4850a8b4e1a44c452a78
+msgid "Then, configure the client to connect to the remote server::"
+msgstr "Quindi, configurare il client per connettersi al server remoto::"
+
+#: ../../ups.rst:203 0f7105b77b234215bbd77d449f424c5c
+msgid "Check if the client is connected to the remote server::"
+msgstr "Verificare se il client è connesso al server remoto::"
+
+#: ../../ups.rst:207 abf37514f9c245c48d88aaaa5afec11f
+msgid "The output should be the same as the local server."
+msgstr "L'output dovrebbe essere lo stesso del server locale."
+
+#: ../../ups.rst:209 c908cafa8193406f8fa9cadca8019355
+msgid ""
+"Now the client is connected to the remote server and will monitor the UPS "
+"status. If the battery is low, the client will initiate a system shutdown."
+msgstr ""
+"Ora il client è connesso al server remoto e monitorerà lo stato dell'UPS. Se"
+" la batteria è scarica, il client avvierà l'arresto del sistema."
+
+#: ../../ups.rst:213 b72815a2652844929648032362dbbd8e
+msgid "Extra UPS settings"
+msgstr "Impostazioni UPS extra"
+
+#: ../../ups.rst:215 825abcec0e8a46eeb6d1ef18ab23af79
+msgid ""
+"Some UPS models have additional settings that can be configured using the "
+"``upscmd`` command. To execute the command, the user must have the "
+"appropriate permissions."
+msgstr ""
+"Alcuni modelli di UPS dispongono di impostazioni aggiuntive che possono "
+"essere configurate utilizzando il comando ``upscmd``. Per eseguire il "
+"comando, l'utente deve disporre delle autorizzazioni appropriate."
+
+#: ../../ups.rst:218 9041613974f444c589f9e706d14e71ee
+msgid "Grant permissions to the user::"
+msgstr "Concedere i permessi all'utente::"
+
+#: ../../ups.rst:225 d8448a87229144baac8ef70b4317e681
+msgid "Check available commands::"
+msgstr "Controllare i comandi disponibili:"
+
+#: ../../ups.rst:229 d793de350819434f81cdcf2a9ba3d7fc
+msgid "Example to disable the beep::"
+msgstr "Esempio per disabilitare il beep::"
+
+#: ../../ups.rst:236 fb7a5749f5de462892cc669077e7c358
+msgid "Troubleshooting"
+msgstr "Risoluzione dei problemi"
+
+#: ../../ups.rst:238 da795ca878e54074a7ecc3a893ce9f96
+msgid ""
+"A common error is the permission denied when accessing the UPS device, for "
+"example you may see this error inside ``/var/log/messages``::"
+msgstr ""
+"Un errore comune è il permesso negato durante l'accesso al dispositivo UPS, "
+"ad esempio si può vedere questo errore all'interno di "
+"``/var/log/messages``::"
+
+#: ../../ups.rst:242 10d99dc34ce346669b925b5f553b1564
+msgid ""
+"Another common error is upsd not being able to connect to the UPS, for "
+"example you may see this error inside ``/var/log/messages``::"
+msgstr ""
+"Un altro errore comune è che upsd non riesce a connettersi all'UPS; ad "
+"esempio, è possibile vedere questo errore all'interno di "
+"``/var/log/messages``::"
+
+#: ../../ups.rst:248 735aff00cd154e519dc212280ef5230f
+msgid ""
+"Usually, this happens when nut-server connects to the UPS device before the "
+"device is ready. To fix this, the simplest solution is to reboot the "
+"firewall::"
+msgstr ""
+"Di solito, questo accade quando nut-server si connette al dispositivo UPS "
+"prima che il dispositivo sia pronto. Per risolvere il problema, la soluzione"
+" più semplice è riavviare il firewall::"
+
+#: ../../ups.rst:253 7dcd8eaa9a9248488889f7cfda905850
+msgid ""
+"If you can't reboot the firewall, you can try to stop the nut-server: ::"
+msgstr ""
+"Se non è possibile riavviare il firewall, è possibile provare a fermare il "
+"nut-server: ::"
+
+#: ../../ups.rst:257 a3b10c4b27174f4db5c929330f048bcb
+msgid "Then check if the driver can connect to the UPS device: ::"
+msgstr ""
+"Quindi verificare se il driver riesce a connettersi al dispositivo UPS: ::"
+
+#: ../../ups.rst:261 fb391cf4128b4873b06209da86d309b5
+msgid "Expected output: ::"
+msgstr "Output previsto: ::"
+
+#: ../../ups.rst:267 14cf9a42ff5e41a381f9dd5523c6f13a
+msgid "In case of error, you may see something like this: ::"
+msgstr ""
+"In caso di errore, potrebbe essere visualizzato un messaggio simile al "
+"seguente: ::"
+
+#: ../../ups.rst:271 21936cd4cce04107aef9872c554ca92c
+msgid "You could then try to reset the USB device: ::"
+msgstr "Si potrebbe quindi provare a reimpostare il dispositivo USB: ::"
+
+#: ../../ups.rst:275 2ad9a37c23c74a4d8052c40f0e8540ec
+msgid ""
+"Where ``002/003`` is the USB device ID found with ``lsusb``, ``002`` is the "
+"bus number and ``003`` is the device number."
+msgstr ""
+"Dove ``002/003`` è l'ID del dispositivo USB trovato con ``lsusb``, ``002`` è"
+" il numero del bus e ``003`` è il numero del dispositivo."
