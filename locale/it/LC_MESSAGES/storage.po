@@ -197,5 +197,3 @@ msgstr ""
 msgid "Troubleshooting"
 msgstr "Risoluzione dei problemi"
 
-#~ msgid "Log Partition Management"
-#~ msgstr "Gestione delle partizioni dei log"
