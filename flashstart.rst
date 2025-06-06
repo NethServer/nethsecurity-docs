@@ -215,7 +215,7 @@ You will see multiple entries like this:
    dhcp.ns_56e6071cbd=dnsmasq
    dhcp.ns_56e6071cbd.ns_flashstart='1'
    dhcp.ns_56e6071cbd.ns_tag='automated'
-   dhcp.ns_56e6071cbd.ns_flashstart_profile='Nuovo 2'
+   dhcp.ns_56e6071cbd.ns_flashstart_profile='Guests'
    dhcp.ns_56e6071cbd.ns_flashstart_dns_code='143'
    dhcp.ns_56e6071cbd.port='5301'
    dhcp.ns_56e6071cbd.noresolv='1'
@@ -223,7 +223,7 @@ You will see multiple entries like this:
    dhcp.ns_56e6071cbd.max_cache_ttl='60'
    dhcp.ns_56e6071cbd.server='185.236.104.124' '185.236.105.125'
 
-In this example, the profile **"Nuovo 2"** is associated with port **5301**, so you would run:
+In this example, the profile **"Guests"** is associated with port **5301**, so you would run:
 
 .. code-block:: bash
 
