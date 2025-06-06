@@ -93,7 +93,7 @@ Requirements
 
 Before setting up HA, ensure the following requirements are met:
 
-- Two firewall with identical network devices.
+- Two firewalls with identical network devices. Each device must have the exact same name and numbering (e.g., eth0, eth1, eth2, eth3)
 - Both nodes must be connected to the same LAN; connect the LAN interfaces to the same broadcast domain (usually the same switch).
 - Static IP addresses for all interfaces that will host a virtual IP.
 
