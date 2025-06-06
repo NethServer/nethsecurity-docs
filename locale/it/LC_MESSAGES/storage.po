@@ -195,10 +195,6 @@ msgstr ""
 
 #: ../../storage.rst:39 b9b5f7afa2774925aefa0b28c85ef28b
 msgid "Troubleshooting"
-msgstr ""
-
-#: ../../storage.rst:39 b9b5f7afa2774925aefa0b28c85ef28b
-msgid "Troubleshooting"
 msgstr "Risoluzione dei problemi"
 
 #~ msgid "Log Partition Management"
