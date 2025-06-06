@@ -230,7 +230,7 @@ This checks:
 - LAN interface has a static IP. If the ``lan_interface`` parameter is not provided, it searches for a LAN interface named ``lan``.
 - At least one WAN interface exists.
 
-WAN interface can be omitted on the backup node, but bear in minde that in case of failover, the UI of the backup node
+WAN interface can be omitted on the backup node, but bear in mind that in case of failover, the UI of the backup node
 will show an unknown interface.
 It's recommended to configure the WAN interface on the backup node as well, even if it does not have a static IP address.
 
@@ -313,7 +313,7 @@ Add additional interfaces as needed::
 
    ns-ha-config add-lan-interface <primary_node_ip> <backup_node_ip> <virtual_ip_address>
 
-The following checks are perfomed:
+The following checks are performed:
 
 - make sure a device with given static IP address exists on the node
 - If DHCP server is running, the following
@@ -480,7 +480,7 @@ and all services.
 Remote access
 -------------
 
-The primary node is accessibile both from the LAN and WAN interfaces.
+The primary node is accessible both from the LAN and WAN interfaces.
 Therefore, the backup node is accessible from the LAN interface only.
 When connecting to the backup node from a remote network, you need to access the primary node first and then connect to the backup node using SSH.
 
@@ -524,6 +524,35 @@ Since the backup node hostname syncs with the primary, the bash prompt changes t
 
 - Primary node prompt: ``root@NethSec [P]:~#``
 - Backup node prompt: ``root@NethSec [B]:~#``
+
+Keepalived status
+-----------------
+
+Execute ``ns-ha-config status`` to check Keepalived statistics.
+Extract from the output:
+```
+Keepalived Statistics:
+  master.advertisements.received: 0
+  master.advertisements.sent: 2544
+  master.became_master: 1
+  master.released_master: 0
+  master.packet_errors.length: 0
+  master.packet_errors.ttl: 0
+  master.packet_errors.invalid_type: 0
+  master.packet_errors.advertisement_interval: 0
+  master.packet_errors.address_list: 0
+  master.authentication_errors.invalid_type: 0
+  master.authentication_errors.type_mismatch: 0
+  master.authentication_errors.failure: 0
+  master.priority_zero.received: 0
+  master.priority_zero.sent: 0
+```
+
+On a primary node, the `master.became_master` should be `1` or more, indicating it has successfully taken over as the master.
+Also the `master.advertisements.sent` should be greater than `0`, indicating it is actively sending advertisements to the backup node.
+
+On a backup node, the `master.advertisements.received` should be greater than `0`, indicating it is receiving advertisements from the primary node.
+If the `master.became_master` is `0`, it means the node has not taken over as the master, which is expected for a backup node.
 
 Logs
 ----
