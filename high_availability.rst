@@ -79,7 +79,6 @@ Be aware of the following current limitations:
 
 - IPv4 only (IPv6 is not supported).
 - VLANs are supported only on physical interfaces.
-  interface will be different.
 - Extra packages such as NUT are not supported.
 - Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
 - PPPoE or DHCP WAN is not supported (see Static IP requirement)
