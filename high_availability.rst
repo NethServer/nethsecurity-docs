@@ -118,6 +118,8 @@ The setup process is as follows:
 
 4. **Initialize the cluster** using the `ns-ha-config` commands to establish the HA cluster foundation.
    The initialization process configures the necessary services and prepares both nodes for synchronization.
+   During the first configuration, all network interfaces that will be used in the HA cluster must must have the cable connected on both nodes,
+   otherwise the node may enter a fault state and the HA cluster will not work properly.
    See `Cluster initialization`_ section below for detailed instructions.
 
 5. **Add WAN interface** to cluster configuration to ensure proper failover for internet connectivity.
@@ -314,6 +316,7 @@ Add additional interfaces as needed::
 
 The following checks are performed:
 
+- virtual IP address must be in CIDR notation (e.g., `192.168.100.1/24`)
 - make sure a device with given static IP address exists on the node
 - If DHCP server is running, the following
 
@@ -552,6 +555,24 @@ Also the `master.advertisements.sent` should be greater than `0`, indicating it 
 
 On a backup node, the `master.advertisements.received` should be greater than `0`, indicating it is receiving advertisements from the primary node.
 If the `master.became_master` is `0`, it means the node has not taken over as the master, which is expected for a backup node.
+
+VRRP traffic
+------------
+
+The primary node sends VRRP advertisements to the backup node every second.
+You can check the VRRP traffic using the following command on the primary node: ::
+
+  tcpdump -vnnpi <lan_interface> vrrp
+
+Replace `<lan_interface>` with the name of the LAN interface (e.g., `eth0`).
+
+The output should show VRRP packets being sent from the primary node to the backup node. Some example output: ::
+
+   tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+13:54:16.629467 IP (tos 0xc0, ttl 255, id 19404, offset 0, flags [none], proto VRRP (112), length 44)
+    192.168.100.238 > 192.168.100.239: VRRPv2, Advertisement, vrid 100, prio 200, authtype simple, intvl 1s, length 24, addrs(2): 192.168.122.49,192.168.100.240 auth "1655e3d3"
+
+If the same command is run on the backup node, it should show VRRP packets being received from the primary node.
 
 Logs
 ----
