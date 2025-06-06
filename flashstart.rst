@@ -99,20 +99,17 @@ Common Features (Pro and Pro Plus)
    * - Feature
      - FlashStart Pro
      - FlashStart Pro Plus
-   * - Number of filter profiles
-     - 1
-     - Up to 5
-   * - Filtering per IP
-     - Yes
-     - Yes
-   * - Filtering per AD user
-     - No
-     - Yes
    * - Zone-based filtering
      - Yes
      - Yes
    * - Profile exclusions (IP/CIDR)
      - Yes
+     - Yes
+   * - Number of filter profiles
+     - 1
+     - Up to 5
+   * - Filtering per AD user
+     - No
      - Yes
    * - Firewall object integration
      - No
@@ -186,5 +183,50 @@ If the domain is still being resolved and should be blocked, double-check the ac
    This ``dig`` test must always be performed from the **client** and **never from the firewall**.  
    The firewall is **never** filtered by FlashStart's DNS servers, as this could potentially conflict with some of the services it provides.
 
+3. Testing DNS Filtering with dig directly from the firewall
+---------------------------------------------------------
+
+If you want to perform tests using ``dig`` directly from the firewall, you can do so by specifying the port. Each port corresponds to a different filtering profile.
+
+FlashStart Pro
+^^^^^^^^^^^^^^
+
+If you are using **FlashStart Pro**, the port is always **5300**. You can check if the request is correctly filtered with the following command:
+
+.. code-block:: bash
+
+   dig @127.0.0.1 -p 5300 mydomain.com
+
+FlashStart Pro Plus
+^^^^^^^^^^^^^^^^^^^
+
+If you are using **FlashStart Pro Plus**, each profile is associated with a different port. You can send a request per profile to verify that the filtering behaves as expected.
+
+First, you need to identify the correct port for each profile. Use the following command to view the configuration:
+
+.. code-block:: bash
+
+   uci show dhcp
+
+You will see multiple entries like this:
+
+.. code-block:: bash
+
+   dhcp.ns_56e6071cbd=dnsmasq
+   dhcp.ns_56e6071cbd.ns_flashstart='1'
+   dhcp.ns_56e6071cbd.ns_tag='automated'
+   dhcp.ns_56e6071cbd.ns_flashstart_profile='Nuovo 2'
+   dhcp.ns_56e6071cbd.ns_flashstart_dns_code='143'
+   dhcp.ns_56e6071cbd.port='5301'
+   dhcp.ns_56e6071cbd.noresolv='1'
+   dhcp.ns_56e6071cbd.max_ttl='60'
+   dhcp.ns_56e6071cbd.max_cache_ttl='60'
+   dhcp.ns_56e6071cbd.server='185.236.104.124' '185.236.105.125'
+
+In this example, the profile **"Nuovo 2"** is associated with port **5301**, so you would run:
+
+.. code-block:: bash
+
+   dig @127.0.0.1 -p 5301 mydomain.com
 
 
