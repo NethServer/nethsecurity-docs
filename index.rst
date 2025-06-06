@@ -27,6 +27,7 @@ NethSecurity administrator manual
    download
    install
    remote_access
+   setup_wizard
 
 .. toctree::
    :maxdepth: 2
