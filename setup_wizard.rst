@@ -13,11 +13,7 @@ The first time the web user interface is accessed, a setup wizard is launched. T
 Welcome to the setup wizard
 ===========================
 
-On the first page of the setup wizard, you are presented with three options:
-
-- **New configuration**: this option initiates the guided setup process.
-- **Restore a backup**: this option allows you to restore the unit configuration from a previous backup. If selected, the setup wizard is skipped.
-- **Factory reset**: this option resets the firewall unit to its default factory settings. This is useful if you suspect unauthorized access to the firewall.
+On the first page of the setup wizard, you can click :guilabel:`Start setup` to initiate the guided setup process. Alternatively, you can click :guilabel:`Skip wizard` to bypass the wizard and access the web user interface directly. However, it is highly recommended to complete the setup wizard to ensure a secure and functional configuration.
 
 .. _change_password-section:
 
@@ -87,7 +83,7 @@ Step 4: Web interface and WAN access on TCP port 443
 Set up access controls for the web interface and WAN connections on port 443.
 
 - **Web interface service on TCP port 443**: by default, the web user interface is available on TCP port 9090. Enabling this option also makes it accessible on TCP port 443. It is recommended to keep this additional access disabled and always use TCP port 9090 to access the web UI.
-- **WAN access on TCP port 443**: this option controls if WAN access on port 443 is disabled (recommended) or enabled.
+- **WAN access on TCP port 443**: this option controls if WAN access on port 443 is disabled (recommended) or enabled. Beware, by leaving this option disabled, reverse proxies will not function.
 
 .. _summary-section:
 
