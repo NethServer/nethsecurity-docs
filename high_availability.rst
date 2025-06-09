@@ -1,8 +1,13 @@
 .. _high_availability:
 
-======================
-High Availability (HA)
-======================
+========================
+High Availability (Beta)
+========================
+
+.. warning::
+
+   This feature is in beta and may not be fully functional or stable.
+   Use it at your own risk, and ensure you have backups of your configuration.
 
 NethSecurity High Availability (HA) ensures continuous network operation by providing redundancy through a cluster of two firewalls.
 If the primary firewall fails due to hardware issues, software problems, or maintenance, a backup firewall automatically takes over all network services and
