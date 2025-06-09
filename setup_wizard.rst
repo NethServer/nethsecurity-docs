@@ -24,7 +24,7 @@ You are required to define a new, secure password for the root account. This mea
 
 .. note::
    - The updated root password will be applied immediately upon confirmation.
-   - Ensure the new credentials are securely stored before proceeding to the next configuration step.
+   - Ensure the new credentials are securely stored (e.g., by using a password manager) before proceeding to the next configuration step.
    - If you restart the setup wizard after changing root password (e.g., by closing and reopening the browser tab), you will need to use the new password to access the web interface.
 
 .. _ssh-section:
