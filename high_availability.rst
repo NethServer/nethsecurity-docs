@@ -534,20 +534,20 @@ Execute ``ns-ha-config status`` to check Keepalived statistics.
 Extract from the output:
 ```
 Keepalived Statistics:
-  master.advertisements.received: 0
-  master.advertisements.sent: 2544
-  master.became_master: 1
-  master.released_master: 0
-  master.packet_errors.length: 0
-  master.packet_errors.ttl: 0
-  master.packet_errors.invalid_type: 0
-  master.packet_errors.advertisement_interval: 0
-  master.packet_errors.address_list: 0
-  master.authentication_errors.invalid_type: 0
-  master.authentication_errors.type_mismatch: 0
-  master.authentication_errors.failure: 0
-  master.priority_zero.received: 0
-  master.priority_zero.sent: 0
+  advert_rcvd: 249
+  advert_sent: 0
+  become_master: 1
+  release_master: 0
+  packet_len_err: 0
+  advert_interval_err: 0
+  ip_ttl_err: 0
+  invalid_type_rcvd: 0
+  addr_list_err: 0
+  invalid_authtype: 0
+  authtype_mismatch: 0
+  auth_failure: 0
+  pri_zero_rcvd: 1
+  pri_zero_sent: 0
 ```
 
 On a primary node, the `master.became_master` should be `1` or more, indicating it has successfully taken over as the master.
