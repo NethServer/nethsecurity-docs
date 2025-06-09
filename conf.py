@@ -141,3 +141,21 @@ for prefix in ['dev', 'stable']:
             sbom = ""
         fp.write(f'{entry},{image},{hash},{sbom}\n')
     fp.close()
+
+# Generate PNG from graphviz files
+import os
+import subprocess
+# Directory containing dot files
+dot_dir = '_static'
+
+# Find all dot files in the directory
+dot_files = [f for f in os.listdir(dot_dir) if f.endswith('.dot')]
+
+# Convert each dot file to PNG
+for dot_file in dot_files:
+    input_path = os.path.join(dot_dir, dot_file)
+    output_path = os.path.join(dot_dir, dot_file.replace('.dot', '.png'))
+    
+    # Run dot command to convert to PNG
+    subprocess.run(['dot', '-Tpng', input_path, '-o', output_path], check=True)
+    print(f"Generated {output_path}")
