@@ -60,12 +60,12 @@ After the upgrade, make sure the system can access the internet, then restore pr
   opkg update
   grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs opkg install
 
-Automatic updates
-=================
+Automatic package updates
+=========================
 
 .. admonition:: Subscription required
 
    This feature is available only if the firewall has a valid subscription.
 
-Automatic updates can be enabled from the ``Update`` section under the ``System`` menu, by enabling the ``Automatic updates`` option.
+Automatic updates for packages can be enabled from the ``Update`` section under the ``System`` menu, by enabling the ``Automatic updates`` option.
 Updates are checked daily and, if available, they are automatically downloaded and installed.

@@ -1,0 +1,197 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../updates.rst:5 6d88d57d31474ffa82ac804a0f3fe455
+msgid "Updates"
+msgstr "Aggiornamenti"
+
+#: ../../updates.rst:7 dcf7c5b45c5a4138bb89f412b15b744d
+msgid ""
+"NethSecurity allows two types of updates, both available from the ``Update``"
+" section under the ``System`` menu:"
+msgstr ""
+"NethSecurity consente due tipi di aggiornamenti, entrambi disponibili dalla "
+"sezione ``Aggiorna`` nel menu ``Sistema``:"
+
+#: ../../updates.rst:9 5c73bd8eb6b3436eac36e879c52c0d5d
+msgid "normal updates for bugfixes and security patches"
+msgstr "aggiornamenti normali per correzioni di bug e patch di sicurezza"
+
+#: ../../updates.rst:10 dc33ac8bdc2d4e35b65e66367ff665e9
+msgid "system upgrades to switch to a different version"
+msgstr "aggiornamenti di sistema per passare a una versione diversa"
+
+#: ../../updates.rst:13 3f2c4664e345416a8083231e78d22a24
+msgid "Bug & security fixes"
+msgstr "Correzioni di bug e di sicurezza"
+
+#: ../../updates.rst:15 da4e95735e6e428ca7813ee3a752cdcd
+msgid "These updates are intended for minor updates and bugfixes."
+msgstr ""
+"Questi aggiornamenti sono destinati ad aggiornamenti minori e correzioni di "
+"bug."
+
+#: ../../updates.rst:17 ee232d1dc5f1476fb74951a4a2c9c865
+msgid ""
+"Typically they could be performed automatically, but at any time it is "
+"possible to check for new updates available by clicking on :guilabel:`Check "
+"for Fixes` button. These updates do not require a restart of NethSecurity, "
+"they are tied to a specific version and distributed using packages."
+msgstr ""
+"Tipicamente potrebbero essere eseguiti automaticamente, ma in qualsiasi "
+"momento è possibile verificare la presenza di nuovi aggiornamenti "
+"disponibili facendo clic sul pulsante :guilabel:`Verifica correzioni`. "
+"Questi aggiornamenti non richiedono il riavvio di NethSecurity, sono legati "
+"a una versione specifica e distribuiti tramite pacchetti."
+
+#: ../../updates.rst:20 07d87e7f2ff64117b61d50396dae64f7
+msgid ""
+"When using this method, the version of the image shown inside the dashboard "
+"does not change, but the system is updated with the latest fixes."
+msgstr ""
+"Quando si utilizza questo metodo, la versione dell'immagine visualizzata "
+"all'interno della dashboard non cambia, ma il sistema viene aggiornato con "
+"le ultime correzioni."
+
+#: ../../updates.rst:25 8c0cd224ad3a4aefb8fea915bb819429
+msgid "System upgrades"
+msgstr "Aggiornamenti di sistema"
+
+#: ../../updates.rst:27 53c1317d23bc436faeb31888cbef644f
+msgid ""
+"This types of upgrages involve the transition to a new version of the "
+"firmware that introduces new features, improvements and wider hardware "
+"support."
+msgstr ""
+"Questi tipi di aggiornamenti comportano la transizione a una nuova versione "
+"del firmware che introduce nuove funzionalità, miglioramenti e un supporto "
+"hardware più ampio."
+
+#: ../../updates.rst:31 b0fa479843474c688012144069b6fce1
+msgid ""
+"The upgrade will preserve all the configurations and settings, but it will "
+"not preserve extra packages installed by the user."
+msgstr ""
+"L'aggiornamento preserverà tutte le configurazioni e le impostazioni, ma non"
+" manterrà i pacchetti aggiuntivi installati dall'utente."
+
+#: ../../updates.rst:33 4ae4306f72bf48fcb0f4c8a5118404b1
+msgid ""
+"This type of update will reboot the device (which will therefore not be "
+"reachable for a few dozen seconds) and then completely rewrites the "
+"firmware, preserving all the configurations. However it is recommended to "
+"save a configuration backup before proceeding with the upgrade."
+msgstr ""
+"Questo tipo di aggiornamento riavvierà il dispositivo (che quindi non sarà "
+"raggiungibile per alcune decine di secondi) e poi riscriverà completamente "
+"il firmware, preservando tutte le configurazioni. Tuttavia, si consiglia di "
+"salvare un backup della configurazione prima di procedere con "
+"l'aggiornamento."
+
+#: ../../updates.rst:36 1afca5efe7e84f729f72b1859199b273
+msgid ""
+"If a new version is available, the user interface will display an "
+"information banner and a dedicated button :guilabel:`Update System` that "
+"will allow you to perform the update."
+msgstr ""
+"Se è disponibile una nuova versione, l'interfaccia utente mostrerà un banner"
+" informativo e un pulsante dedicato :guilabel:`Aggiorna sistema` che "
+"permetterà di eseguire l'aggiornamento."
+
+#: ../../updates.rst:38 a4d2c19a2f7043fa8f3b53de77db5a0b
+msgid ""
+"Alternatively, it is always possible to manually upload a compatible image "
+"using the :guilabel:`Update with image file` button and proceed with the "
+"update."
+msgstr ""
+"In alternativa, è sempre possibile caricare manualmente un'immagine "
+"compatibile utilizzando il pulsante :guilabel:`Aggiorna con file immagine` e"
+" procedere con l'aggiornamento."
+
+#: ../../updates.rst:41 82e8dcf79d7a4c9a8f6f8b5d791d35f1
+msgid "Update from command line"
+msgstr "Aggiornamento da riga di comando"
+
+#: ../../updates.rst:42 c11ca3a9f37741a99ff29aadd37b734b
+msgid ""
+"You can also perform a ``System update`` from the command line. To do this, "
+"simply download the new image file, it is recommended to save it inside "
+"``/tmp`` directory. Then run the following command: ::"
+msgstr ""
+"È inoltre possibile eseguire un ``Aggiornamento di sistema`` dalla riga di "
+"comando. Per farlo, è sufficiente scaricare il nuovo file immagine; si "
+"consiglia di salvarlo all'interno della directory ``/tmp``. Successivamente,"
+" eseguire il seguente comando: ::"
+
+#: ../../updates.rst:48 c3a9e7107e14465babcf423b8480423b
+msgid "The ``sysupgrade`` command flashes the new image file to the device."
+msgstr ""
+"Il comando ``sysupgrade`` scrive il nuovo file immagine sul dispositivo."
+
+#: ../../updates.rst:53 3aabf3b8babe4361aff13ad9dc177956
+msgid "Restore extra packages"
+msgstr "Ripristinare pacchetti aggiuntivi"
+
+#: ../../updates.rst:55 4e5757d78cbe40fcb96166792380a682
+msgid ""
+"During the upgrade, the system will be completely rewritten, so all the "
+"extra packages installed by the user will be lost. Still, the list of "
+"installed packages is saved in the configuration backup, so it is possible "
+"to restore them after the upgrade."
+msgstr ""
+"Durante l'aggiornamento, il sistema verrà completamente riscritto, quindi "
+"tutti i pacchetti aggiuntivi installati dall'utente andranno persi. "
+"Tuttavia, l'elenco dei pacchetti installati viene salvato nel backup della "
+"configurazione, quindi sarà possibile ripristinarli dopo l'aggiornamento."
+
+#: ../../updates.rst:58 e9bfc5aa437243ffbcf0df89ac1acce4
+msgid ""
+"After the upgrade, make sure the system can access the internet, then "
+"restore previously installed packages using the following commands: ::"
+msgstr ""
+"Dopo l'aggiornamento, assicurarsi che il sistema possa accedere a Internet, "
+"quindi ripristinare i pacchetti precedentemente installati utilizzando i "
+"seguenti comandi: ::"
+
+#: ../../updates.rst:66 fde85e3cb0c946e68b78fe4fabc78aa0
+msgid "Subscription required"
+msgstr "Subscription richiesta"
+
+#: ../../updates.rst:68 02595f0d9396491183a8053e0fc89083
+msgid ""
+"This feature is available only if the firewall has a valid subscription."
+msgstr ""
+"Questa funzionalità è disponibile solo se il firewall dispone di una "
+"subscription valida."
+
+#: ../../updates.rst:64 9dd6ce690db74a68a43734201297bd65
+msgid "Automatic package updates"
+msgstr "Aggiornamenti automatici dei pacchetti"
+
+#: ../../updates.rst:70 04ef2f37a22b43b8b784af9fd6c87cba
+msgid ""
+"Automatic updates for packages can be enabled from the ``Update`` section "
+"under the ``System`` menu, by enabling the ``Automatic updates`` option. "
+"Updates are checked daily and, if available, they are automatically "
+"downloaded and installed."
+msgstr ""
+"Gli aggiornamenti automatici per i pacchetti possono essere abilitati dalla "
+"sezione ``Aggiorna`` nel menu ``Sistema``, attivando l'opzione "
+"``Aggiornamenti automatici``. Gli aggiornamenti vengono verificati "
+"quotidianamente e, se disponibili, vengono scaricati e installati "
+"automaticamente."
+
+#~ msgid "Automatic updates"
+#~ msgstr "Aggiornamenti automatici"
+
+#~ msgid ""
+#~ "Automatic updates can be enabled from the ``Update`` section under the "
+#~ "``System`` menu, by enabling the ``Automatic updates`` option. Updates are "
+#~ "checked daily and, if available, they are automatically downloaded and "
+#~ "installed."
+#~ msgstr ""
+#~ "Gli aggiornamenti automatici possono essere abilitati dalla sezione "
+#~ "``Aggiorna`` nel menu ``Sistema``, attivando l'opzione ``Aggiornamenti "
+#~ "automatici``. Gli aggiornamenti vengono verificati quotidianamente e, se "
+#~ "disponibili, vengono scaricati e installati automaticamente."
