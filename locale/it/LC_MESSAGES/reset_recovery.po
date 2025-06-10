@@ -1,0 +1,304 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../reset_recovery.rst:3 ../../reset_recovery.rst:17
+#: 6bf2877785e740678bffe3a9739e05f4 aaf6931c039d45dfa24395ec72faaaa9
+msgid "Factory reset"
+msgstr "Factory reset"
+
+#: ../../reset_recovery.rst:5 b7ea2b8dd0874285a081da5a1a4b5179
+msgid ""
+"NethSecurity provides multiple options to reset your firewall and restore "
+"its functionality:"
+msgstr ""
+"NethSecurity offre diverse opzioni per reimpostare il firewall e "
+"ripristinarne la funzionalità:"
+
+#: ../../reset_recovery.rst:7 a08fdd3ecd09408ab8bffe90d89ed004
+msgid ""
+":ref:`Factory reset <factory_reset-section>`: choosing this method erases "
+"all your installed packages and customized settings, reverting the firewall "
+"back to its original state as it was after NethSecurity installation."
+msgstr ""
+":ref:`Ripristino delle impostazioni di fabbrica <factory_reset-section>`: "
+"scegliendo questo metodo vengono cancellati tutti i pacchetti installati e "
+"le impostazioni personalizzate, riportando il firewall allo stato originale "
+"come dopo l’installazione di NethSecurity."
+
+#: ../../reset_recovery.rst:9 3c5d4bcb0c7944a886b1e1584cc2bdbd
+msgid ""
+":ref:`Failsafe mode <failsafe-section>`: this option is useful if you have "
+"lost control of your device, making it inaccessible due to a configuration "
+"error. Failsafe mode allows you to reboot the firewall into a basic "
+"operating state while retaining most of your packages and settings."
+msgstr ""
+":ref:`Modalità failsafe <failsafe-section>`: questa opzione è utile se si è "
+"perso il controllo del dispositivo, rendendolo inaccessibile a causa di un "
+"errore di configurazione. La modalità failsafe consente di riavviare il "
+"firewall in uno stato operativo di base, mantenendo la maggior parte dei "
+"pacchetti e delle impostazioni."
+
+#: ../../reset_recovery.rst:11 ef62aa678187460797a33680cd97cebf
+msgid ""
+":ref:`Recovery mode <recovery-section>`: if your firewall's firmware becomes"
+" corrupted, recovery mode comes to the rescue. It enables you to install new"
+" firmware and unbrick a faulty machine."
+msgstr ""
+":ref:`Modalità di ripristino <recovery-section>`: se il firmware del "
+"firewall si danneggia, la modalità di ripristino viene in soccorso. Consente"
+" di installare un nuovo firmware e di ripristinare una macchina non "
+"funzionante."
+
+#: ../../reset_recovery.rst:19 8e62518a90af4651b5f1ee8768c26602
+msgid ""
+"In NethSecurity, a factory reset refers to the process of reverting the "
+"firewall device back to its original settings and configuration as it was "
+"when it was first installed. This procedure erases all the customized "
+"settings, configurations, installed packages, and user data on the device, "
+"effectively restoring it to a pristine state."
+msgstr ""
+"In NethSecurity, un ripristino alle impostazioni di fabbrica si riferisce al"
+" processo di riportare il dispositivo firewall alle impostazioni e "
+"configurazioni originali, come quando è stato installato per la prima volta."
+" Questa procedura cancella tutte le impostazioni personalizzate, le "
+"configurazioni, i pacchetti installati e i dati utente presenti sul "
+"dispositivo, riportandolo di fatto a uno stato iniziale."
+
+#: ../../reset_recovery.rst:23 59fa15451820408eb2af11906505f86b
+msgid ""
+"This procedure relies on the completion of the boot process. If the factory "
+"reset doesn't work, consider using failsafe mode instead."
+msgstr ""
+"Questa procedura si basa sul completamento del processo di boot. Se il "
+"ripristino delle impostazioni di fabbrica non funziona, si consiglia di "
+"utilizzare la modalità failsafe."
+
+#: ../../reset_recovery.rst:25 e228ec451258483ba38987903b851c9c
+msgid ""
+"To start fresh without reinstalling the firmware, access the ``Factory "
+"reset`` page under the ``System`` section. Click the :guilabel:`Perform "
+"factory reset` button to reset the firewall to its original state. The "
+"factory reset process will take a few seconds to complete. Once the process "
+"is complete, the firewall will reboot automatically."
+msgstr ""
+"Per iniziare da zero senza reinstallare il firmware, accedere alla pagina "
+"``Factory reset`` nella sezione ``Sistema``. Fare clic sul pulsante "
+":guilabel:`Esegui factory reset` per ripristinare il firewall allo stato "
+"originale. Il processo di factory reset richiederà alcuni secondi per essere"
+" completato. Una volta terminato il processo, il firewall si riavvierà "
+"automaticamente."
+
+#: ../../reset_recovery.rst:29 52a86c577cab49948624fa09cf0e5788
+msgid ""
+"The factory reset restores the currently installed version. For instance, if"
+" the firewall was initially installed with version 23.05.0 and then updated "
+"to 23.05.1, after the factory reset, you will have a clean installation of "
+"version 23.05.1."
+msgstr ""
+"Il ripristino alle impostazioni di fabbrica reinstalla la versione "
+"attualmente installata. Ad esempio, se il firewall è stato inizialmente "
+"installato con la versione 23.05.0 e poi aggiornato alla 23.05.1, dopo il "
+"ripristino alle impostazioni di fabbrica si avrà un'installazione pulita "
+"della versione 23.05.1."
+
+#: ../../reset_recovery.rst:33 7e6aa4ad4c2b48f2ba156d22d1aca38c
+msgid ""
+"If the storage on which NethSecurity is running has been configured with a "
+"partition to save logs, the 'Factory reset' done from the Web UI will also "
+"remove the log partition and all its data."
+msgstr ""
+"Se lo storage su cui è in esecuzione NethSecurity è stato configurato con "
+"una partizione per salvare i log, il comando ``Factory reset`` eseguito "
+"dall'interfaccia Web rimuoverà anche la partizione dei log e tutti i suoi "
+"dati."
+
+#: ../../reset_recovery.rst:35 cfc5311211e74134a59700082f6468ed
+msgid ""
+"If NethSecurity was installed through an in-place migration from NethServer "
+"7, the factory reset will not restore the default configuration. Instead, "
+"the system will restart with all configurations migrated from NethServer 7."
+msgstr ""
+"Se NethSecurity è stato installato tramite una migrazione in-place da "
+"NethServer 7, il ripristino alle impostazioni di fabbrica non ripristinerà "
+"la configurazione predefinita. Invece, il sistema verrà riavviato con tutte "
+"le configurazioni migrate da NethServer 7."
+
+#: ../../reset_recovery.rst:37 b4cf93d202c24871917deae4b37a6e41
+msgid ""
+"If you prefer a clean start, you can proceed with a new :ref:`installation "
+"<install-section>` rather than using the factory reset."
+msgstr ""
+"Se si preferisce un nuovo inizio, è possibile procedere con una nuova "
+":ref:`installazione <install-section>` invece di utilizzare il ripristino "
+"delle impostazioni di fabbrica."
+
+#: ../../reset_recovery.rst:39 d58e7f56aca348fcb8650036a984c424
+msgid "Alternatively, you can follow these steps:"
+msgstr "In alternativa, è possibile seguire questi passaggi:"
+
+#: ../../reset_recovery.rst:41 5ea094594bc64261b63bab9bd01e1f69
+msgid ""
+"Update your NethSecurity with a newer image (if present) or using a standard"
+" image downloaded from :ref:`downloading <download-section>`.This will "
+"rewrite the ROM of your NethSecurity with a standard one, removing any "
+"migration files."
+msgstr ""
+"Aggiornare NethSecurity con una nuova immagine (se presente) oppure "
+"utilizzando un'immagine standard scaricata da :ref:`downloading <download-"
+"section>`. Questa operazione sovrascriverà la ROM di NethSecurity con una "
+"versione standard, rimuovendo eventuali file di migrazione."
+
+#: ../../reset_recovery.rst:42 46c3903fe32d4b8e8c26460facb3434e
+msgid ""
+"Now you can perform the Factory Reset, which will lead you to a clean start."
+msgstr ""
+"Ora è possibile eseguire il ripristino alle impostazioni di fabbrica, che "
+"porterà a una nuova partenza pulita."
+
+#: ../../reset_recovery.rst:45 bb33bb3845504363a0daf581f0d672ec
+msgid ""
+"If you want to execute the factory reset from command line, just execute the"
+" following command. ::"
+msgstr ""
+"Se si desidera eseguire il ripristino alle impostazioni di fabbrica da riga "
+"di comando, è sufficiente eseguire il seguente comando. ::"
+
+#: ../../reset_recovery.rst:52 d40ddac714c1465ebf7ae95d8003d562
+msgid "Failsafe mode"
+msgstr "Modalità failsafe"
+
+#: ../../reset_recovery.rst:54 3aa355b8b595444a89ba90ffb187fb7b
+msgid ""
+"NethSecurity provides a failsafe mode that can override the current "
+"configuration of your device. If your device becomes inaccessible due to a "
+"configuration error, failsafe mode comes to your rescue. When you boot into "
+"failsafe mode, the device initializes in a basic operating state, using a "
+"set of predefined defaults, allowing you to address the issue manually."
+msgstr ""
+"NethSecurity fornisce una modalità failsafe che può sovrascrivere la "
+"configurazione corrente del dispositivo. Se il dispositivo diventa "
+"inaccessibile a causa di un errore di configurazione, la modalità failsafe "
+"interviene in soccorso. Quando si avvia il dispositivo in modalità failsafe,"
+" esso si inizializza in uno stato operativo di base, utilizzando un insieme "
+"di valori predefiniti, permettendo di risolvere manualmente il problema."
+
+#: ../../reset_recovery.rst:58 d8eca8252ec54bd1b598ee5a5a4da80a
+msgid ""
+"However, it's important to note that failsafe mode cannot resolve more "
+"complex issues such as faulty hardware or a damaged kernel. While it "
+"resembles a reset, failsafe mode enables you to access your device and "
+"restore settings if necessary, whereas a reset would simply erase all "
+"configurations."
+msgstr ""
+"Tuttavia, è importante notare che la modalità failsafe non può risolvere "
+"problemi più complessi come hardware difettoso o un kernel danneggiato. "
+"Sebbene assomigli a un ripristino, la modalità failsafe consente di accedere"
+" al dispositivo e ripristinare le impostazioni se necessario, mentre un "
+"ripristino cancellerebbe semplicemente tutte le configurazioni."
+
+#: ../../reset_recovery.rst:61 91da0fb3315d457384879efc05997403
+msgid ""
+"The simplest way to activate failsafe mode is to connect directly to the "
+"firewall using a VGA/HDMI monitor or a serial cable. To do this, boot the "
+"machine, wait for the Grub boot menu to appear, and select ``NethSecurity "
+"(failsafe)``."
+msgstr ""
+"Il modo più semplice per attivare la modalità failsafe è collegarsi "
+"direttamente al firewall utilizzando un monitor VGA/HDMI o un cavo seriale. "
+"Per farlo, avviare la macchina, attendere che appaia il menu di avvio Grub e"
+" selezionare ``NethSecurity (failsafe)``."
+
+#: ../../reset_recovery.rst:64 f9be36ccee2045deacd6388ae2db00dc
+msgid ""
+"You can access the firewall directly through the serial port using a null-"
+"modem cable and a common terminal program. For Windows, you can use "
+"``PuTTY`` version 0.60 or higher. For Linux, options include ``minicom`` and"
+" ``picocom``. Set the baud rate to 115200, data bits to 8, parity to None, "
+"and stop bits to 1 (abbreviated as 8N1)."
+msgstr ""
+"È possibile accedere direttamente al firewall tramite la porta seriale "
+"utilizzando un cavo null-modem e un comune programma terminale. Per Windows,"
+" è possibile utilizzare ``PuTTY`` versione 0.60 o superiore. Per Linux, le "
+"opzioni includono ``minicom`` e ``picocom``. Impostare la velocità di "
+"trasmissione (baud rate) a 115200, i bit di dati a 8, la parità su Nessuna e"
+" i bit di stop a 1 (abbreviato come 8N1)."
+
+#: ../../reset_recovery.rst:68 b7593579aab04677be3d95a554157dcd
+msgid ""
+"After entering failsafe mode, the firewall will start with a network address"
+" of 192.168.1.1/24, usually on the eth0 network interface, and only "
+"essential services will be operational. It's important to note that the DHCP"
+" server will be inactive in failsafe mode. Follow the instructions displayed"
+" on the screen to mount the root filesystem and access other utilities as "
+"needed."
+msgstr ""
+"Dopo l'accesso alla modalità failsafe, il firewall si avvierà con "
+"l'indirizzo di rete 192.168.1.1/24, solitamente sull'interfaccia di rete "
+"eth0, e saranno operativi solo i servizi essenziali. È importante notare che"
+" il server DHCP sarà inattivo in modalità failsafe. Seguire le istruzioni "
+"visualizzate sullo schermo per montare il filesystem root e accedere ad "
+"altre utilità secondo necessità."
+
+#: ../../reset_recovery.rst:72 7d262318dbd8439584417ea8930bfc7a
+msgid ""
+"If you want to execute the factory reset in failsafe mode, just execute the "
+"following commands. ::"
+msgstr ""
+"Se si desidera eseguire il ripristino alle impostazioni di fabbrica in "
+"modalità failsafe, è sufficiente eseguire i seguenti comandi. ::"
+
+#: ../../reset_recovery.rst:76 f951f75d30a6448aac06a751c40561c3
+msgid ""
+"This commands will not delete the log partition from disk if it exists. If "
+"you need to delete the old partition please refer to the :ref:`storage-"
+"section` for more details."
+msgstr ""
+"Questo comando non eliminerà la partizione di log dal disco se esiste. Se è "
+"necessario eliminare la vecchia partizione, fare riferimento alla "
+":ref:`storage-section` per maggiori dettagli."
+
+#: ../../reset_recovery.rst:81 545597f25c524e79bbce86cf11ae875b
+msgid "Emergency recovery"
+msgstr "Recupero di emergenza"
+
+#: ../../reset_recovery.rst:83 5684a3218379462e846e9429381b3559
+msgid ""
+"Emergency recovery in NethSecurity, also known as unbricking, is a feature "
+"enabling users to restore their firewall device in cases of severe "
+"malfunctions. Unbricking ensures that even the most critical issues can be "
+"resolved, restoring the device to full functionality, unless there are "
+"hardware failures."
+msgstr ""
+"Il ripristino d'emergenza in NethSecurity, noto anche come unbricking, è una"
+" funzionalità che consente di ripristinare il dispositivo firewall in caso "
+"di malfunzionamenti gravi. L'unbricking garantisce che anche i problemi più "
+"critici possano essere risolti, riportando il dispositivo alla piena "
+"funzionalità, salvo guasti hardware."
+
+#: ../../reset_recovery.rst:86 135b868c4ab04eeb9362d7b8c1120181
+msgid ""
+"If you still have access to the system, you can use the following commands "
+"to download and write the image: ::"
+msgstr ""
+"Se si ha ancora accesso al sistema, è possibile utilizzare i seguenti "
+"comandi per scaricare e scrivere l'immagine: ::"
+
+#: ../../reset_recovery.rst:90 c96cab65ed4743eebf040c0d045508eb
+msgid ""
+"This command will display the path of the downloaded image. Use this path in"
+" the following command: ::"
+msgstr ""
+"Questo comando visualizzerà il percorso dell'immagine scaricata. Utilizzare "
+"questo percorso nel comando seguente: ::"
+
+#: ../../reset_recovery.rst:94 8b0fad40c9b842d6bb90abf3dc30227a
+msgid ""
+"If you can't access the system, :ref:`download the latest image <download-"
+"section>`, then follow :ref:`installation instructions <install_bare_metal-"
+"section>` to write the image directly into the storage media."
+msgstr ""
+"Se non è possibile accedere al sistema, :ref:`scaricare l'immagine più "
+"recente <download-section>`, quindi seguire le :ref:`istruzioni di "
+"installazione <install_bare_metal-section>` per scrivere direttamente "
+"l'immagine sul supporto di memorizzazione."
