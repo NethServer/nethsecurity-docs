@@ -1,0 +1,70 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../remote_support.rst:5 870b3be96145444ba9ae3ef904b33a56
+msgid "Remote support"
+msgstr "Supporto remoto"
+
+#: ../../remote_support.rst:7 cf05f7195be94d40b0160660d497fc50
+msgid "Enterprise subscription required"
+msgstr "È necessaria una subscription Enterprise"
+
+#: ../../remote_support.rst:9 4a4715b02c5b453db9fdbbed499148a1
+msgid ""
+"This feature is available only if the firewall has a valid Enterprise "
+"subscription."
+msgstr ""
+"Questa funzionalità è disponibile solo se il firewall dispone di un "
+"abbonamento Enterprise valido."
+
+#: ../../remote_support.rst:11 211fb692e422412f828da1163905fb45
+msgid ""
+"The :ref:`Enterprise subscription <subscription-section>` allows you to "
+"access the Nethesis remote support."
+msgstr ""
+"L'abbonamento :ref:`Enterprise <subscription-section>` consente di accedere "
+"al supporto remoto Nethesis."
+
+#: ../../remote_support.rst:13 a23a8fa3794e487895cbb42aa0f362bf
+msgid ""
+"The remote support session will connect the firewall to a `WindMill instance"
+" <https://github.com/nethesis/windmill>`_ hosted by Nethesis at "
+"``sos.nethesis.it``. The firewall must be able to connect to the above host "
+"on port ``1194`` UDP. If port ``1194`` is closed, the system will try to "
+"fallback on port ``443`` TCP."
+msgstr ""
+"La sessione di supporto remoto collegherà il firewall ad una `istanza di WindMill "
+" <https://github.com/nethesis/windmill>`_ ospitato da Nethesis su "
+"``sos.nethesis.it``. Il firewall deve poter connettersi all'host sopra "
+"indicato sulla porta ``1194`` UDP. Se la porta ``1194`` è chiusa, il sistema"
+" tenterà di utilizzare come alternativa la porta ``443`` TCP."
+
+#: ../../remote_support.rst:18 660412728c024b6197ff65212dc34138
+msgid ""
+"The remote support must be started and stopped by the firewall "
+"administrator. To start a session:"
+msgstr ""
+"Il supporto remoto deve essere avviato e interrotto dall'amministratore del "
+"firewall. Per avviare una sessione:"
+
+#: ../../remote_support.rst:21 853357eba23241aa8dc8543dfe5e1341
+msgid ""
+"access the ``Subscription`` page and go to the ``Remote support`` section"
+msgstr ""
+"Accedere alla pagina ``Subscription`` e andare alla sezione ``Supporto "
+"remoto``"
+
+#: ../../remote_support.rst:22 6e0042f8ea72477899a71c1a96ff4024
+msgid "click the :guilabel:`Start session` button"
+msgstr "fare clic sul pulsante :guilabel:`Avvia sessione`"
+
+#: ../../remote_support.rst:23 3bb69a80e06644029fd6515d36aa796e
+msgid "copy the ``Session ID`` and share it with the support team"
+msgstr "Copiare ``ID sessione`` e condividerlo con il team di supporto."
+
+#: ../../remote_support.rst:25 756d5da2d59d4e7f9c768eb69ced9d53
+msgid "To terminate the session, click the :guilabel:`End session` button."
+msgstr ""
+"Per terminare la sessione, fare clic sul pulsante :guilabel:`Termina "
+"sessione`."
