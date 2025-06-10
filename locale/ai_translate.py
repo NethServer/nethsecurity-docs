@@ -102,18 +102,8 @@ def process_pot_files(llm, prompt, pot_dir):
             for entry in it_po.untranslated_entries():
                 msgid_translated = translate_labels(entry.msgid, labels_en, labels_it)
                 translation = translate(llm, prompt, msgid_translated)
-                # Update the entry with the translation
-                new_entry = polib.POEntry(
-                    msgid=entry.msgid,
-                    msgstr=translation,
-                    occurrences=entry.occurrences,
-                    comment=entry.comment,
-                    tcomment=entry.tcomment,
-                    flags=entry.flags,
-                )
-                it_po.append(new_entry)
+                entry.msgstr=translation
                 it_po.save(it_file)
-
             print(f"Updated {it_file} with new translations from {pot_file}")
         else:
             pot = polib.pofile(pot_file)
