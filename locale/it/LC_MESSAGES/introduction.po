@@ -1,0 +1,220 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../introduction.rst:3 44ea5e6f08a74ccb83fa5a796d4e4026
+msgid "Introduction"
+msgstr "Introduzione"
+
+#: ../../introduction.rst:6 561fbeee764a441180eba1083fef28fd
+msgid "About NethSecurity"
+msgstr "Informazioni su NethSecurity"
+
+#: ../../introduction.rst:11 3090b6d712ed4cddb341d636c2687d77
+msgid ""
+"NethSecurity is based on `OpenWrt <https://openwrt.org>`_, a popular Linux "
+"distribution for embedded devices. This gives it a number of advantages, "
+"including:"
+msgstr ""
+"NethSecurity è basato su `OpenWrt <https://openwrt.org>`_, una popolare "
+"distribuzione Linux per dispositivi embedded. Questo offre numerosi "
+"vantaggi, tra cui:"
+
+#: ../../introduction.rst:13 0c831a1cfdfd489faeec2fafe0d58e34
+msgid "flexibility: it can be installed on a wide range of hardware"
+msgstr "flessibilità: può essere installato su un'ampia gamma di hardware"
+
+#: ../../introduction.rst:14 7b13238cd67b44a484df70d1a44d34f7
+msgid ""
+"customization: it can be customized to meet the specific needs of each "
+"organization"
+msgstr ""
+"personalizzazione: può essere personalizzato per soddisfare le esigenze "
+"specifiche di ciascuna organizzazione"
+
+#: ../../introduction.rst:15 bbd6389886294afea8a309f441377d3a
+msgid ""
+"community support: it benefits from the large and active `NethServer "
+"community <https://community.nethserver.org>`_"
+msgstr ""
+"supporto della community: beneficia della grande e attiva `community "
+"NethServer <https://community.nethserver.org>`_"
+
+#: ../../introduction.rst:17 4f707a85107a467dba7eb347d040877a
+msgid "NethSecurity includes a variety of security features, including:"
+msgstr ""
+"NethSecurity include una varietà di funzionalità di sicurezza, tra cui:"
+
+#: ../../introduction.rst:19 b4e770052bd048de991ae384409b016b
+msgid ""
+"Firewall: NethSecurity's firewall provides stateful packet inspection and "
+"filtering to protect networks from unauthorized access"
+msgstr ""
+"Firewall: il firewall di NethSecurity offre la stateful inspection dei "
+"pacchetti e il filtraggio per proteggere le reti da accessi non autorizzati"
+
+#: ../../introduction.rst:20 0120d90d5adf413ca12aafa13615f10b
+msgid ""
+"DNS content filtering: NethSecurity's content filtering feature blocks users"
+" from accessing inappropriate or malicious websites"
+msgstr ""
+"Filtraggio dei contenuti DNS: la funzionalità di filtraggio dei contenuti di"
+" NethSecurity blocca l’accesso degli utenti a siti web inappropriati o "
+"dannosi"
+
+#: ../../introduction.rst:21 104f81c815bb4ac79e6ff111af91d04d
+msgid ""
+"Deep Packet Inspection (DPI): NethSecurity uses Netifyd to perform DPI, "
+"which allows it to inspect the contents of packets and identify malicious or"
+" unwanted traffic"
+msgstr ""
+"Deep Packet Inspection (DPI): NethSecurity utilizza Netifyd per eseguire la "
+"DPI, che consente di ispezionare il contenuto dei pacchetti e identificare "
+"il traffico dannoso o indesiderato."
+
+#: ../../introduction.rst:22 57ebae13070f46e3bd85349d3dec6f46
+msgid ""
+"`Icaro hotspot <https://nethesis.github.io/icaro/>`_: Iedalo hotspot is a "
+"captive portal solution that can be used to manage and authenticate users on"
+" wireless networks."
+msgstr ""
+"`Icaro hotspot <https://nethesis.github.io/icaro/>`_: Icaro hotspot è una "
+"soluzione di captive portal che può essere utilizzata per gestire e "
+"autenticare gli utenti sulle reti wireless."
+
+#: ../../introduction.rst:27 902600f5a893470e8b8cc6f1e5477fec
+msgid ""
+"In addition to these security features, NethSecurity also includes a number "
+"of other features, such as:"
+msgstr ""
+"Oltre a queste funzionalità di sicurezza, NethSecurity include anche una "
+"serie di altre funzionalità, come:"
+
+#: ../../introduction.rst:29 cb2f86cd86b74223993e2e4b4605edcc
+msgid ""
+"quality of service (QoS): NethSecurity's QoS feature allows administrators "
+"to prioritize traffic and ensure that critical applications always have the "
+"bandwidth they need."
+msgstr ""
+"qualità del servizio (QoS): la funzionalità QoS di NethSecurity consente "
+"agli amministratori di dare priorità al traffico e garantire che le "
+"applicazioni critiche dispongano sempre della larghezza di banda necessaria."
+
+#: ../../introduction.rst:30 4f2239adac304e43af0aa126e04eb009
+msgid ""
+"IPv6 support: NethSecurity supports IPv6, the next-generation internet "
+"protocol"
+msgstr ""
+"Supporto IPv6: NethSecurity supporta IPv6, il protocollo Internet di nuova "
+"generazione"
+
+#: ../../introduction.rst:33 6d68e577fd284b63bc23381b2ce38400
+msgid "Get support"
+msgstr "Ottenere supporto"
+
+#: ../../introduction.rst:35 d231332fd3f94eea84d64c748e0605e6
+msgid ""
+"You want to know more or look for some help? Check out our great `community "
+"<https://community.nethserver.org>`_!"
+msgstr ""
+"Vuoi saperne di più o cerchi aiuto? Dai un'occhiata alla nostra fantastica "
+"`community <https://community.nethserver.org>`_!"
+
+#: ../../introduction.rst:38 bc015af4244b4535b50e802c8f5a7603
+msgid ""
+"If you're looking for more technical details, take a look to the `developer "
+"manual <https://nethserver.github.io/nethsecurity/>`_."
+msgstr ""
+"Se si desiderano ulteriori dettagli tecnici, consultare il `manuale per "
+"sviluppatori <https://nethserver.github.io/nethsecurity/>`_."
+
+#: ../../introduction.rst:40 873c1e89f6354a22b6f4524b2a6c20a6
+msgid ""
+"Bugs can be discussed and reported inside the `community forum "
+"<https://community.nethserver.org>`_. A public issue tracker is available at"
+" `GitHub <https://github.com/NethServer/nethsecurity/issues>`_."
+msgstr ""
+"I bug possono essere discussi e segnalati all'interno del `forum della "
+"community <https://community.nethserver.org>`_. Un sistema pubblico di "
+"tracciamento delle segnalazioni è disponibile su `GitHub "
+"<https://github.com/NethServer/nethsecurity/issues>`_."
+
+#: ../../introduction.rst:8 a9694d02250545beb88db30360bcb72e
+msgid ""
+"NethSecurity is an Unified Threat Management (UTM) solution that provides a "
+"comprehensive suite of security features, including firewall, content "
+"filtering, deep packet inspection (DPI) using Netifyd, hotspot, VPN, and an "
+"optional remote controller. It is designed to be easy to install and "
+"configure, making it a good choice for both small and medium-sized "
+"businesses (SMBs) as well as enterprise organizations."
+msgstr ""
+"NethSecurity è una soluzione di Unified Threat Management (UTM) che offre "
+"una suite completa di funzionalità di sicurezza, tra cui firewall, "
+"filtraggio dei contenuti, ispezione approfondita dei pacchetti (DPI) tramite"
+" Netifyd, hotspot, VPN e un controller remoto opzionale. È progettato per "
+"essere facile da installare e configurare, rendendola una scelta adatta sia "
+"per piccole e medie imprese (PMI) che per organizzazioni di livello "
+"enterprise."
+
+#: ../../introduction.rst:23 e4ebe61718744e52a19a333fe9700d4c
+msgid ""
+"VPN: OpenVPN, IPSec and Wireguard are popular open-source VPN protocol that "
+"can be used to create secure tunnels between networks."
+msgstr ""
+"VPN: OpenVPN, IPSec e Wireguard sono protocolli VPN open-source popolari che"
+" possono essere utilizzati per creare tunnel sicuri tra reti."
+
+#: ../../introduction.rst:24 9a93d5c37ba54991a93b2934aaae0739
+msgid ""
+"Remote controller: NethSecurity offers a remote controller feature, enabling"
+" administrators to centrally manage multiple NethSecurity installations from"
+" a single interface."
+msgstr ""
+"Controller remoto: NethSecurity offre una funzionalità di controller remoto,"
+" che consente agli amministratori di gestire centralmente più installazioni "
+"di NethSecurity da un'unica interfaccia."
+
+#: ../../introduction.rst:25 6cc39c09e57f4dc3950e899613033274
+msgid ""
+"Privacy Policy: to address privacy requirements, use this :ref:`command "
+"<privacy_policy-section>` to enable a Privacy Policy link on the homepage."
+msgstr ""
+"Informativa sulla privacy: per soddisfare i requisiti di privacy, utilizzare"
+" questo :ref:`comando <privacy_policy-section>` per abilitare un "
+"collegamento all'Informativa sulla privacy nella pagina principale."
+
+#~ msgid ""
+#~ "Remote controller: NethSecurity includes a remote controller that allows "
+#~ "administrators to manage their NethSecurity devices remotely."
+#~ msgstr ""
+#~ "Controller remoto: NethSecurity include un controller remoto che consente "
+#~ "agli amministratori di gestire i propri dispositivi NethSecurity da remoto."
+
+#~ msgid ""
+#~ "For your needs of a Privacy Policy, this :ref:`command <privacy_policy-"
+#~ "section>` enables a link in homepage."
+#~ msgstr ""
+#~ "Per le esigenze relative a una Privacy Policy, questo :ref:`comando "
+#~ "<privacy_policy-section>` abilita un collegamento nella homepage."
+
+#~ msgid ""
+#~ "NethSecurity is an Unified Threat Management (UTM) solution that provides a "
+#~ "comprehensive suite of security features, including firewall, content "
+#~ "filtering, deep packet inspection (DPI) using Netifyd, Dedalo hotspot, "
+#~ "OpenVPN, and an optional remote controller. It is designed to be easy to "
+#~ "install and configure, making it a good choice for both small and medium-"
+#~ "sized businesses (SMBs) as well as enterprise organizations."
+#~ msgstr ""
+#~ "NethSecurity è una soluzione Unified Threat Management (UTM) che offre una "
+#~ "suite completa di funzionalità di sicurezza, tra cui firewall, filtraggio "
+#~ "dei contenuti, deep packet inspection (DPI) tramite Netifyd, hotspot Dedalo,"
+#~ " OpenVPN e un controller remoto opzionale. È progettata per essere facile da"
+#~ " installare e configurare, risultando una scelta adatta sia per piccole e "
+#~ "medie imprese (PMI) che per organizzazioni di livello enterprise."
+
+#~ msgid ""
+#~ "VPN: OpenVPN and IPSec are popular open-source VPN protocol that can be used"
+#~ " to create secure tunnels between networks."
+#~ msgstr ""
+#~ "VPN: OpenVPN e IPSec sono protocolli VPN open-source molto diffusi che "
+#~ "possono essere utilizzati per creare tunnel sicuri tra reti."
