@@ -237,7 +237,7 @@ msgstr "Scaricare l'immagine:"
 
 #: ../../install.rst:104 dcef59d9508c4273bdcf6ef32a7a7cad
 msgid "Extract the image:"
-msgstr "Estrai l'immagine:"
+msgstr "Estrarre l'immagine:"
 
 #: ../../install.rst:110 f1d430f1ab5d4c1cbe0bba671bc9cea1
 msgid "Import the extracted images a virtual machine disk:"
