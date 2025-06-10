@@ -1,0 +1,1353 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../controller.rst:5 616e1db6c5ec417b99c562c917c3844d
+msgid "Controller"
+msgstr "Controller"
+
+#: ../../controller.rst:7 336b200a6217439e9a9ed0f4d7e6c5c2
+msgid ""
+"The NethSecurity controller is an application that can run on `NethServer 8 "
+"<https://docs.nethserver.org/projects/ns8/en/latest/nethsecurity_controller.html>`_"
+" (NS8). The controller allows remote control of multiple NethSecurity "
+"installations, called units."
+msgstr ""
+"Il controller NethSecurity è un'applicazione che può essere eseguita su "
+"`NethServer 8 "
+"<https://docs.nethserver.org/projects/ns8/en/latest/nethsecurity_controller.html>`_"
+" (NS8). Il controller consente il controllo remoto di più installazioni "
+"NethSecurity, chiamate unità."
+
+#: ../../controller.rst:10 aca98ed614b84f41b19b2c8403fb094c
+msgid ""
+"The firewall can operate independently without the need for the controller. "
+"The controller is an optional component that provides additional management "
+"and monitoring capabilities for the firewall."
+msgstr ""
+"Il firewall può funzionare in modo indipendente senza la necessità del "
+"controller. Il controller è un componente opzionale che fornisce "
+"funzionalità aggiuntive di gestione e monitoraggio per il firewall."
+
+#: ../../controller.rst:13 9f7e2a7d4cc94f3cade3458c454bdf55
+msgid ""
+"The controller creates a secure connection between the central server and "
+"the units. Each firewall registers with the server using a client called ns-"
+"plug. Once registered, the server generates a VPN configuration that is sent"
+" back to the firewall. The VPN enables secure communication between the "
+"controller and the unit."
+msgstr ""
+"Il controller crea una connessione sicura tra il server centrale e le unità."
+" Ogni firewall si registra presso il server utilizzando un client chiamato "
+"ns-plug. Una volta registrato, il server genera una configurazione VPN che "
+"viene inviata al firewall. La VPN consente una comunicazione sicura tra il "
+"controller e l'unità."
+
+#: ../../controller.rst:18 9a08046d2e3840aba0ff7125ba08cf85
+msgid "Key features:"
+msgstr "Funzionalità principali:"
+
+#: ../../controller.rst:20 62735a9bf9a84c7495b2f4d04ef19b42
+msgid ""
+"**Centralized Management**: Manage multiple firewalls from a single server."
+msgstr "**Gestione centralizzata**: Gestire più firewall da un unico server."
+
+#: ../../controller.rst:21 b3706d47711840beb773046bba151897
+msgid ""
+"**Secure Communication**: Establish a secure `OpenVPN "
+"<https://openvpn.net/>`_ connection between the server and the firewalls."
+msgstr ""
+"**Comunicazione sicura**: Stabilire una connessione `OpenVPN "
+"<https://openvpn.net/>`_ sicura tra il server e i firewall."
+
+#: ../../controller.rst:22 05d8fca7288b46d39e0098b5f3cfac5a
+msgid ""
+"**Easy Configuration**: Configure firewalls directly from the controller's "
+"user interface."
+msgstr ""
+"**Configurazione semplice**: Configurare i firewall direttamente "
+"dall'interfaccia utente del controller."
+
+#: ../../controller.rst:23 98e2fe214bf0455ea214e282abbd9f34
+msgid ""
+"**Monitoring and Logging**: Collect and analyze logs from the firewalls "
+"inside `Loki <https://grafana.com/oss/loki/>`_ for troubleshooting and "
+"monitoring purposes."
+msgstr ""
+"**Monitoraggio e registrazione**: Raccogliere e analizzare i log dai "
+"firewall all'interno di `Loki <https://grafana.com/oss/loki/>`_ per scopi di"
+" risoluzione dei problemi e monitoraggio."
+
+#: ../../controller.rst:24 ee38d2e54c2b4cd1b6305b93badb2144
+msgid ""
+"**Metrics Visualization**: Visualize metrics from the firewalls using the "
+"built-in `Grafana <https://grafana.com/>`_ dashboard. Metrics are collected "
+"using `Prometheus <https://prometheus.io/>`_ and `TimescaleDB "
+"<https://www.timescale.com/>`_."
+msgstr ""
+"**Visualizzazione delle metriche**: Visualizzare le metriche dai firewall "
+"utilizzando la dashboard integrata di `Grafana <https://grafana.com/>`_. Le "
+"metriche vengono raccolte tramite `Prometheus <https://prometheus.io/>`_ e "
+"`TimescaleDB <https://www.timescale.com/>`_."
+
+#: ../../controller.rst:26 46f444ae64e04666a9a59eb9ea0ce69c
+msgid ""
+"**Web-based SSH**: Access the firewall command-line interface using a web-"
+"based SSH client."
+msgstr ""
+"**Accesso SSH via web**: Accedere all'interfaccia a riga di comando del "
+"firewall utilizzando un client SSH basato su web."
+
+#: ../../controller.rst:29 cc889257970c426ca4dc480af924901c
+msgid "Installation and configuration"
+msgstr "Installazione e configurazione"
+
+#: ../../controller.rst:31 57920b6099534b2484e881e553e7e171
+msgid ""
+"The controller can be installed on a NethServer 8 system from the Software "
+"Center. The module is named `NethSecurity Controller`."
+msgstr ""
+"Il controller può essere installato su un sistema NethServer 8 dal Software "
+"Center. Il modulo si chiama ``NethSecurity Controller``."
+
+#: ../../controller.rst:33 f171f9f9e0534aaca4e7bb7ac07abf2b
+msgid ""
+"After the installation, the controller must be configured. The configuration"
+" can be done using the NethServer 8 web interface. The following parameters "
+"need to be set:"
+msgstr ""
+"Dopo l'installazione, è necessario configurare il controller. La "
+"configurazione può essere effettuata utilizzando l'interfaccia web di "
+"NethServer 8. È necessario impostare i seguenti parametri:"
+
+#: ../../controller.rst:36 4a825207007940648bad22cbdd3bba71
+msgid ""
+"`Controller hostname`: The fully qualified domain name for the controller, "
+"like: ``mycontroller.nethsecurity.org``. Ensure the hostname is resolvable "
+"and reachable from the units."
+msgstr ""
+"`Controller hostname`: Il nome di dominio completo per il controller, ad "
+"esempio: ``mycontroller.nethsecurity.org``. Assicurarsi che il nome host sia"
+" risolvibile e raggiungibile dalle unità."
+
+#: ../../controller.rst:38 9647971c3e704ba3b0f666fbb0fbf421
+msgid ""
+"`Let's Encrypt certificate`: Enable or disable Let's Encrypt certificate for"
+" the controller web interface. It's recommended to enable it."
+msgstr ""
+"`Let's Encrypt certificate`: Abilitare o disabilitare il certificato Let's "
+"Encrypt per l'interfaccia web del controller. Si consiglia di abilitarlo."
+
+#: ../../controller.rst:39 5e86b64512cd4fbd980e7ab9e805d99c
+msgid ""
+"`VPN network` and `VPN netmask`: The OpenVPN network and netmask. When "
+"choosing the network, make sure it does not overlap with the existing "
+"networks inside all the units that will be connected to the controller. Use "
+"only class C networks like ``192.168.7.0`` with netmask ``255.255.255.0``."
+msgstr ""
+"`VPN network` e `VPN netmask`: la rete e la netmask di OpenVPN. Quando si "
+"sceglie la rete, assicurarsi che non si sovrapponga alle reti esistenti "
+"all'interno di tutte le unità che saranno collegate al controller. "
+"Utilizzare solo reti di classe C come ``192.168.7.0`` con netmask "
+"``255.255.255.0``."
+
+#: ../../controller.rst:41 c9fe6d376c0b4a228a15667e85c82c89
+msgid ""
+"`Administrator user`: The controller administrator user name. The "
+"administrator user is the only user that can create and manage other users "
+"inside the controller. The same user name is used to access the Grafana "
+"interface."
+msgstr ""
+"`Utente amministratore`: Il nome utente dell'amministratore del controller. "
+"L'utente amministratore è l'unico utente che può creare e gestire altri "
+"utenti all'interno del controller. Lo stesso nome utente viene utilizzato "
+"per accedere all'interfaccia Grafana."
+
+#: ../../controller.rst:43 6fcdc3f04b3f49ad9611f928f1a66e6a
+msgid ""
+"`Administrator password`: Choose a strong password for the administrator "
+"user. Note that the default password is displayed only once, please store it"
+" in a safe place. The same password is used to access the Grafana interface."
+" For security reasons, you should change the password after the first login "
+"both for the controller and the Grafana interface."
+msgstr ""
+"`Password amministratore`: Scegliere una password robusta per l'utente "
+"amministratore. Si noti che la password predefinita viene visualizzata solo "
+"una volta; conservarla in un luogo sicuro. La stessa password viene "
+"utilizzata per accedere all'interfaccia di Grafana. Per motivi di sicurezza,"
+" è consigliabile cambiare la password dopo il primo accesso sia per il "
+"controller che per l'interfaccia Grafana."
+
+#: ../../controller.rst:47 d1ad214667b543c4876f01e0b0568cd6
+msgid "The following parameters are optional:"
+msgstr "I seguenti parametri sono opzionali:"
+
+#: ../../controller.rst:49 3eebf2ed46d248c9a8f02d688cd6cb07
+msgid ""
+"`Controller name`: The name of the controller, used to create the VPN "
+"certification authority. You can leave it unchanged unless you have a "
+"specific requirement."
+msgstr ""
+"`Nome del controller`: Il nome del controller, utilizzato per creare "
+"l'autorità di certificazione VPN. È possibile lasciarlo invariato a meno che"
+" non vi sia un requisito specifico."
+
+#: ../../controller.rst:50 1e2b5594b74542ef9027da9314cffe66
+msgid ""
+"`Log retention`: The log retention period in days, default is 180 days. It "
+"applies to the logs stored in Loki."
+msgstr ""
+"`Conservazione dei log`: Il periodo di conservazione dei log in giorni, il "
+"valore predefinito è 180 giorni. Si applica ai log memorizzati in Loki."
+
+#: ../../controller.rst:51 8e4dec341c5746e890741ea4fc87bbc3
+msgid ""
+"`Metrics retention`: The metrics retention period in days, default 15 days. "
+"It applies to the metrics stored in Prometheus and Timescale."
+msgstr ""
+"`Conservazione delle metriche`: Il periodo di conservazione delle metriche "
+"in giorni, predefinito a 15 giorni. Si applica alle metriche memorizzate in "
+"Prometheus e Timescale."
+
+#: ../../controller.rst:52 d2176254ac1849a6b882bc0bdfb577fd
+msgid ""
+"`MaxMind license key`: The controller can geolocate the IP addresses of the "
+"connected VPN clients and attackers. A map with the location of the clients "
+"and attackers will be displayed inside Grafana. The license key is required "
+"to enable the feature and download the MaxMind GeoIP2 database. To obtain a "
+"free license key, signup on the  `MaxMind website "
+"<https://www.maxmind.com/en/geolite2/signup>`_, then access the `Manage "
+"License Keys` page inside the account section. Generate a new license, copy "
+"the license key and paste it in the field."
+msgstr ""
+"`MaxMind license key`: Il controller può geolocalizzare gli indirizzi IP dei"
+" client VPN connessi e degli aggressori. Una mappa con la posizione dei "
+"client e degli aggressori verrà visualizzata all'interno di Grafana. La "
+"chiave di licenza è necessaria per abilitare la funzionalità e scaricare il "
+"database MaxMind GeoIP2. Per ottenere una chiave di licenza gratuita, "
+"registrarsi sul `sito web di MaxMind "
+"<https://www.maxmind.com/en/geolite2/signup>`_, quindi accedere alla pagina "
+"`Manage License Keys` nella sezione dell'account. Generare una nuova "
+"licenza, copiare la chiave di licenza e incollarla nel campo."
+
+#: ../../controller.rst:57 3de2046dad3e46429c11267a572bc4d2
+msgid ""
+"After completing the configuration, the controller is ready to be used and "
+"can be accessed using a web browser at the configured hostname, like "
+"``https://mycontroller.nethsecurity.org``."
+msgstr ""
+"Dopo aver completato la configurazione, il controller è pronto per essere "
+"utilizzato e può essere accessibile tramite un browser web all'hostname "
+"configurato, ad esempio ``https://mycontroller.nethsecurity.org``."
+
+#: ../../controller.rst:60 c3b10154dbf9462794a34c8402dc172b
+msgid "Users"
+msgstr "Utenti"
+
+#: ../../controller.rst:62 f86fd3739428474cb2ef19aa815678a4
+msgid "The controller has two types of users:"
+msgstr "Il controller ha due tipi di utenti:"
+
+#: ../../controller.rst:64 b20959e6d0d94fd2ab11ceb498af25d6
+msgid ""
+"**Administrator**: The administrator user is the only one who can create and"
+" manage users inside the controller."
+msgstr ""
+"**Amministratore**: L'utente amministratore è l'unico che può creare e "
+"gestire gli utenti all'interno del controller."
+
+#: ../../controller.rst:65 b959cbe49da94b7d9cc2d85642fbc458
+msgid ""
+"**User**: The user can manage the units and the firewall configurations."
+msgstr ""
+"**Utente**: È possibile gestire le unità e le configurazioni del firewall."
+
+#: ../../controller.rst:67 84e1a492fdba460dbd673f9926437592
+msgid "The administrator is created during the controller configuration."
+msgstr ""
+"L'amministratore viene creato durante la configurazione del controller."
+
+#: ../../controller.rst:69 8556eb8d554340c3afd3f46e11c344ef
+msgid ""
+"It is recommended to create a user for each person who needs access to the "
+"controller. When creating a new user, the administrator must specify the "
+"username, the user display name, and the user password. The username is used"
+" to log in to the controller, while the display name is used to identify the"
+" user in the controller."
+msgstr ""
+"Si consiglia di creare un utente per ogni persona che necessita di accesso "
+"al controller. Quando si crea un nuovo utente, l'amministratore deve "
+"specificare il nome utente, il nome visualizzato dell'utente e la password "
+"dell'utente. Il nome utente viene utilizzato per accedere al controller, "
+"mentre il nome visualizzato viene utilizzato per identificare l'utente nel "
+"controller."
+
+#: ../../controller.rst:73 d3c3c2dbc6764b12bee7ab240047d24e
+msgid "The administrator can also reset the user password and delete users."
+msgstr ""
+"L'amministratore può anche reimpostare la password dell'utente ed eliminare "
+"gli utenti."
+
+#: ../../controller.rst:75 afe7f47451874db7b1bf33721295c2fb
+msgid ""
+"After logging in, each user can change their password and generate an SSH "
+"key pair for accessing the unit."
+msgstr ""
+"Dopo aver effettuato l'accesso, ogni utente può cambiare la propria password"
+" e generare una coppia di chiavi SSH per accedere all'unità."
+
+#: ../../controller.rst:78 4d8b7f28b7e34136be16e2d9efc04332
+msgid "Two Factor Authentication (2FA)"
+msgstr "Autenticazione a due fattori (2FA)"
+
+#: ../../controller.rst:80 a7f1ef35bc4e4f7b8ece5d7cc3d586b3
+msgid ""
+"Each controller user can enable Two Factor Authentication (2FA) to increase "
+"the security of the account. To enable 2FA, follow the same steps documented"
+" inside the firewall web interface: :ref:`2fa-section`."
+msgstr ""
+"Ogni utente del controller può abilitare l’Autenticazione a Due Fattori "
+"(2FA) per aumentare la sicurezza dell’account. Per abilitare la 2FA, seguire"
+" gli stessi passaggi documentati all’interno dell’interfaccia web del "
+"firewall: :ref:`2fa-section`."
+
+#: ../../controller.rst:83 76204cc4c87c45fb9a5029e97fb34759
+msgid ""
+"The administrator can see the 2FA status of each user inside the user list."
+msgstr ""
+"L'amministratore può visualizzare lo stato 2FA di ciascun utente all'interno"
+" dell'elenco utenti."
+
+#: ../../controller.rst:86 3fba10bc1d874f03bc622da42ae3a462
+msgid "Units"
+msgstr "Unità"
+
+#: ../../controller.rst:88 ffdc872176dd4192b0fea312b08ac60a
+msgid ""
+"All users can manage units. A unit is a firewall that is managed by the "
+"controller."
+msgstr ""
+"Tutti gli utenti possono gestire le unità. Un'unità è un firewall gestito "
+"dal controller."
+
+#: ../../controller.rst:90 ccec7f266af64505a48d817f606172ab
+msgid ""
+"To connect a new unit to the controller, the user must click on the "
+":guilabel:`Add unit` button from the controller web interface. When a new "
+"unit is added, the controller performs the following actions:"
+msgstr ""
+"Per collegare una nuova unità al controller, è necessario fare clic sul "
+"pulsante :guilabel:`Aggiungi unità` dall'interfaccia web del controller. "
+"Quando viene aggiunta una nuova unità, il controller esegue le seguenti "
+"azioni:"
+
+#: ../../controller.rst:93 68204a4c44be4ca7b9e1940ee222501e
+msgid "creates a unique identifier for the unit"
+msgstr "crea un identificatore univoco per l'unità"
+
+#: ../../controller.rst:94 ea65b02701594ecc8d0c7d813db7428e
+msgid "allocates an IP address inside the VPN network"
+msgstr "assegna un indirizzo IP all'interno della rete VPN"
+
+#: ../../controller.rst:95 343d75aedce94ee4b24a43dc45c5f721
+msgid "generates a VPN configuration including certificates"
+msgstr "genera una configurazione VPN inclusi i certificati"
+
+#: ../../controller.rst:96 d7eee1344fa64f11bd111167c72baf14
+msgid "safely stores credentials required for accessing the remote firewall"
+msgstr ""
+"memorizza in modo sicuro le credenziali necessarie per accedere al firewall "
+"remoto"
+
+#: ../../controller.rst:98 5acf9aeeae0a451fb8913b9665b8b4c6
+msgid ""
+"A join code will be generated and displayed on the screen. The join code "
+"must be entered on the unit to establish the connection with the controller."
+msgstr ""
+"Un codice di accesso verrà generato e visualizzato sullo schermo. Il codice "
+"di accesso deve essere inserito sull'unità per stabilire la connessione con "
+"il controller."
+
+#: ../../controller.rst:100 83c9617622cd4c7abfab27e23ad04b67
+msgid ""
+"Access the ``Controller`` page inside the unit web interface and enter the "
+"join code in the ``Join code`` field. When joining the controller, the unit "
+"will download the VPN configuration and establish a secure connection with "
+"the controller. If the connection is successful, the unit will be displayed "
+"in the controller web interface with the status ``Connected``."
+msgstr ""
+"Accedere alla pagina ``Controller`` all'interno dell'interfaccia web "
+"dell'unità ed inserire il codice di join nel campo ``Join code``. Durante la"
+" procedura di join al controller, l'unità scaricherà la configurazione VPN e"
+" stabilirà una connessione sicura con il controller. Se la connessione "
+"avviene con successo, l'unità verrà visualizzata nell'interfaccia web del "
+"controller con lo stato ``Connesso``."
+
+#: ../../controller.rst:104 018d234c63ef42e89f9f0a56be6d1a5f
+msgid ""
+"Please note that if the controller does not have a valid Let's Encrypt "
+"certificate, you will need to disable the ``Verify TLS certificate`` option "
+"in the unit configuration."
+msgstr ""
+"Si noti che, se il controller non dispone di un certificato Let's Encrypt "
+"valido, sarà necessario disabilitare l'opzione ``Verifica certificato TLS`` "
+"nella configurazione dell'unità."
+
+#: ../../controller.rst:106 c93b251c7c2f48b6b9f9c1066458ea14
+msgid ""
+"When the unit is connected, the user can access the unit web interface by "
+"clicking on the :guilabel:`Open unit` link without needing to enter the unit"
+" credentials."
+msgstr ""
+"Quando l'unità è collegata, è possibile accedere all'interfaccia web "
+"dell'unità facendo clic sul collegamento :guilabel:`Apri unità` senza dover "
+"inserire le credenziali dell'unità."
+
+#: ../../controller.rst:110 ae782ec9ebda43eea2c7cc5a050adc61
+msgid ""
+"The unit user interface :ref:`must listen on port 9090 <change_ui_port-"
+"section>` to allow the controller to access it."
+msgstr ""
+"L'interfaccia utente dell'unità :ref:`deve ascoltare sulla porta 9090 "
+"<change_ui_port-section>` per consentire al controller di accedervi."
+
+#: ../../controller.rst:113 81129ae058a94df6aa7146afe9fbc986
+msgid "Remove a unit"
+msgstr "Rimuovere un'unità"
+
+#: ../../controller.rst:114 f65736392fe041bd824722d50bd9c3b1
+msgid ""
+"Units can be disconnected from the controller by clicking on the "
+":guilabel:`Remove unit` button from the controller web interface. When a "
+"unit is disconnected, the controller will remove the unit configuration and "
+"the VPN connection will be terminated."
+msgstr ""
+"Le unità possono essere disconnesse dal controller facendo clic sul pulsante"
+" :guilabel:`Rimuovi unità` dall'interfaccia web del controller. Quando "
+"un'unità viene disconnessa, il controller rimuoverà la configurazione "
+"dell'unità e la connessione VPN verrà terminata."
+
+#: ../../controller.rst:117 373f0ccd60804975b236efa9bde2a510
+msgid ""
+"After removing the unit from the controller web interface, access the unit "
+"web interface and click :guilabel:`Disconnect unit` on the ``Controller`` "
+"page: the unit will destroy the VPN configuration."
+msgstr ""
+"Dopo aver rimosso l'unità dall'interfaccia web del controller, accedere "
+"all'interfaccia web dell'unità e fare clic su :guilabel:`Disconnetti unità` "
+"nella pagina ``Controller``: l'unità eliminerà la configurazione VPN."
+
+#: ../../controller.rst:123 912a5bfb49f44b1792578e54af16ddb5
+msgid "Logs management"
+msgstr "Gestione dei log"
+
+#: ../../controller.rst:125 ac2d392caa6c4f1ba6a33b592920fb81
+msgid ""
+"When a unit is connected, rsyslog is reconfigured to send logs using the "
+"syslog protocol (RFC 5424). It may take a few minutes before rsyslog starts "
+"sending the data. The logs are labeled using the unit's hostname: to ensure "
+"that the user interface links work properly, make sure that:"
+msgstr ""
+"Quando un'unità viene collegata, rsyslog viene riconfigurato per inviare i "
+"log utilizzando il protocollo syslog (RFC 5424). Potrebbero essere necessari"
+" alcuni minuti prima che rsyslog inizi a inviare i dati. I log sono "
+"etichettati utilizzando l'hostname dell'unità: per garantire il corretto "
+"funzionamento dei collegamenti nell'interfaccia utente, assicurarsi che:"
+
+#: ../../controller.rst:129 aab6c874b6494914888f80e86fbe38c8
+msgid "the unit FQDN is unique within the cluster"
+msgstr "il FQDN dell'unità è univoco all'interno del cluster"
+
+#: ../../controller.rst:130 51703e3239d94c288b58278ba33c165e
+msgid "the unit's name is the same as its hostname"
+msgstr "il nome dell'unità è lo stesso del suo hostname"
+
+#: ../../controller.rst:132 570bdd5168f840d68033805c1056f91f
+msgid ""
+"Logs can be viewed by clicking on the :guilabel:`Open logs` link for each "
+"unit. The logs are displayed in a specific Grafana dashboard that also "
+"allows for searching and filtering."
+msgstr ""
+"I log possono essere visualizzati facendo clic sul collegamento "
+":guilabel:`Apri log` per ciascuna unità. I log vengono mostrati in una "
+"specifica dashboard di Grafana che consente anche la ricerca e il "
+"filtraggio."
+
+#: ../../controller.rst:136 123afe88f231485fa6efeacc8b2c532f
+msgid "Logs retention period must be configured from the NS8 web interface."
+msgstr ""
+"Il periodo di conservazione dei log deve essere configurato dall'interfaccia"
+" web di NS8."
+
+#: ../../controller.rst:141 1c876860908843589f9150d0733987a2
+msgid "Metrics"
+msgstr "Metriche"
+
+#: ../../controller.rst:143 15352f64e10f48d1aa06ee22aa6044f4
+msgid "Each unit exports two types of metrics:"
+msgstr "Ogni unità esporta due tipi di metriche:"
+
+#: ../../controller.rst:145 cf89f87466d3416e9eb3258b7351758b
+msgid ""
+"system operating metrics (CPU, memory, disk, network): these metrics are "
+"collected using `Netdata <https://www.netdata.cloud/>`_ and stored in "
+"`Prometheus <https://prometheus.io/>`_. As soon as a unit is connected, the "
+"controller starts scraping the metrics. These metrics are available to "
+"everyone regardless of the subscription status."
+msgstr ""
+"metriche operative di sistema (CPU, memoria, disco, rete): queste metriche "
+"vengono raccolte utilizzando `Netdata <https://www.netdata.cloud/>`_ e "
+"memorizzate in `Prometheus <https://prometheus.io/>`_. Non appena un'unità "
+"viene connessa, il controller inizia a raccogliere le metriche. Queste "
+"metriche sono disponibili a tutti indipendentemente dallo stato "
+"dell'abbonamento."
+
+#: ../../controller.rst:148 474a2d4e460d41179ce69c47894924b3
+msgid ""
+"firewall metrics (traffic, security, VPN): these metrics are sent from the "
+"unit to controller at fixed intervals. The controller stores them inside a "
+"`Timescale <https://www.timescale.com/>`_ database. These metrics are "
+"available only to users with a valid subscription."
+msgstr ""
+"metriche del firewall (traffico, sicurezza, VPN): queste metriche vengono "
+"inviate dall'unità al controller a intervalli fissi. Il controller le "
+"memorizza all'interno di un database `Timescale "
+"<https://www.timescale.com/>`_. Queste metriche sono disponibili solo per "
+"gli utenti con un ."
+
+#: ../../controller.rst:152 2c5d6fc93f7e4480a58884f6242ce667
+msgid ""
+"All data collected and stored inside the controller is timestamped using "
+"Coordinated Universal Time (UTC). This ensures consistency and accuracy "
+"across different time zones, making it easier to correlate events and "
+"analyze trends."
+msgstr ""
+"Tutti i dati raccolti e memorizzati all'interno del controller sono "
+"contrassegnati da un timestamp utilizzando il Tempo Coordinato Universale "
+"(UTC). Questo garantisce coerenza e accuratezza tra diversi fusi orari, "
+"facilitando la correlazione degli eventi e l'analisi delle tendenze."
+
+#: ../../controller.rst:155 75a136ae80f644878e6432a861b45dca
+msgid ""
+"Users have the flexibility to view data in their local time zone by "
+"adjusting the time settings in Grafana. To change the local time zone, "
+"navigate to the Grafana preferences menu and select the desired time zone. "
+"This adjustment can be applied to each dashboard individually, allowing "
+"users to customize the time zone display based on their preferences."
+msgstr ""
+"Gli utenti hanno la possibilità di visualizzare i dati nel proprio fuso "
+"orario locale modificando le impostazioni dell'ora in Grafana. Per cambiare "
+"il fuso orario locale, accedere al menu delle preferenze di Grafana e "
+"selezionare il fuso orario desiderato. Questa modifica può essere applicata "
+"a ciascuna dashboard individualmente, consentendo di personalizzare la "
+"visualizzazione del fuso orario in base alle proprie preferenze."
+
+#: ../../controller.rst:159 b9abfed4d3634f418f9ad1d6a12e778d
+msgid ""
+"The metrics can be viewed within the Grafana dashboard. Users can access the"
+" dashboard by clicking on the :guilabel:`Open metrics` link for each unit."
+msgstr ""
+"Le metriche possono essere visualizzate all'interno della dashboard di "
+"Grafana. È possibile accedere alla dashboard facendo clic sul collegamento "
+":guilabel:`Apri metriche` per ciascuna unità."
+
+#: ../../controller.rst:162 733026d597bc4aeaba18842223a11997
+msgid ""
+"By default, only the admin user can access the metrics dashboard. If you "
+"want to allow other users to access the metrics dashboard, you can create a "
+"new role and assign it to the user directly from the Grafana web interface."
+msgstr ""
+"Per impostazione predefinita, solo l'utente admin può accedere al dashboard "
+"delle metriche. Se si desidera consentire ad altri utenti di accedere al "
+"dashboard delle metriche, è possibile creare un nuovo ruolo e assegnarlo "
+"all'utente direttamente dall'interfaccia web di Grafana."
+
+#: ../../controller.rst:168 9a702c77fd6241f0b22b2e953f905215
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../controller.rst:170 773f2ee104764ba5b31b75d08632a513
+msgid ""
+"Grafana is an open-source platform used for monitoring and visualizing time-"
+"series data. It helps users create customizable dashboards with graphs, "
+"charts, and tables to analyze system metrics, logs, and other data from "
+"various sources."
+msgstr ""
+"Grafana è una piattaforma open-source utilizzata per il monitoraggio e la "
+"visualizzazione di dati time-series. Consente di creare dashboard "
+"personalizzabili con grafici, diagrammi e tabelle per analizzare metriche di"
+" sistema, log e altri dati provenienti da diverse fonti."
+
+#: ../../controller.rst:173 e31ac389da6b4327a90a4b79323dd7cb
+msgid ""
+"The controller includes a pre-configured Grafana instance that is used to "
+"visualize metrics and logs from the connected units. The Grafana instance is"
+" accessible from the URL ``https://<controller-fqdn>/grafana``."
+msgstr ""
+"Il controller include un'istanza preconfigurata di Grafana che viene "
+"utilizzata per visualizzare metriche e log provenienti dalle unità "
+"collegate. L'istanza di Grafana è accessibile dall'URL "
+"``https://<controller-fqdn>/grafana``."
+
+#: ../../controller.rst:176 09e26914d618431db8c95d62ddf3cdb5
+msgid ""
+"By default, you can access it by using the default credentials set during "
+"the controller configuration. Remember to change the default password after "
+"the first login. Grafana also provides features for managing users, teams, "
+"and permissions. It supports authentication via various methods including "
+"username/password, OAuth, LDAP, and more."
+msgstr ""
+"Per impostazione predefinita, è possibile accedervi utilizzando le "
+"credenziali predefinite impostate durante la configurazione del controller. "
+"Si consiglia di cambiare la password predefinita dopo il primo accesso. "
+"Grafana offre anche funzionalità per la gestione di utenti, team e permessi."
+" Supporta l'autenticazione tramite diversi metodi, inclusi nome "
+"utente/password, OAuth, LDAP e altri."
+
+#: ../../controller.rst:181 62e54fab04074444ac6f006406830f0e
+msgid ""
+"You can also create custom dashboards and alerts to monitor the metrics and "
+"logs from the connected units. See the `official documentation "
+"<https://grafana.com/docs/grafana/latest/>`_ for more information on how to "
+"use Grafana."
+msgstr ""
+"È inoltre possibile creare dashboard personalizzate e avvisi per monitorare "
+"le metriche e i log delle unità collegate. Consultare la `documentazione "
+"ufficiale <https://grafana.com/docs/grafana/latest/>`_ per ulteriori "
+"informazioni su come utilizzare Grafana."
+
+#: ../../controller.rst:185 e5e1b32c219642c8b66e605b6429c76a
+msgid "Prometheus metrics"
+msgstr "Metriche Prometheus"
+
+#: ../../controller.rst:187 41d98d1407ee4a1ea6e41707dc545b9f
+msgid ""
+"Prometheus metrics are collected using Netdata and stored in a Prometheus "
+"database."
+msgstr ""
+"Le metriche Prometheus vengono raccolte utilizzando Netdata e memorizzate in"
+" un database Prometheus."
+
+#: ../../controller.rst:189 590dbcfaab2747b2827fe41f3baec2ff
+msgid "Metrics exported for each unit includes the following labels:"
+msgstr ""
+"Le metriche esportate per ciascuna unità includono le seguenti etichette:"
+
+#: ../../controller.rst:191 b765ddefd37d4049b73c198432ec4602
+msgid ""
+"``instance`` the VPN IP of the connected machine with the Netdata port (eg. "
+"``172.19.64.3:19999``)"
+msgstr ""
+"``instance`` l'IP VPN della macchina connessa con la porta Netdata (es. "
+"``172.19.64.3:19999``)"
+
+#: ../../controller.rst:192 46030a37e8604af3a7c015eec2dafcd1
+msgid "``job`` fixed to `node`"
+msgstr "``job`` corretto in `node`"
+
+#: ../../controller.rst:193 278f9e58efa645ad96fe0c270f72883b
+msgid "``node`` the VPN IP of the connected machine"
+msgstr "``node`` l'IP VPN della macchina connessa"
+
+#: ../../controller.rst:194 e5585b5a8d2548ada252db96a042b3fd
+msgid "``unit`` the unit unique name of the connected machine"
+msgstr "``unit`` il nome univoco dell'unità della macchina collegata"
+
+#: ../../controller.rst:196 b0d30bbb351f4e01906d0e2951fffdf2
+msgid "Such metrics are visible inside the ``Operating system`` dashboard."
+msgstr ""
+"Tali metriche sono visibili all'interno della dashboard ``Operating "
+"system``."
+
+#: ../../controller.rst:199 de398157394944e9b573ea333b4bf66c
+msgid "Timescale metrics"
+msgstr "Metriche di Timescale"
+
+#: ../../controller.rst:201 ../../controller.rst:340
+#: a39986ccaa2e4f668a536701d8aed62f 3d001035321444caa0f5ee3368a42f0b
+msgid "Subscription required"
+msgstr "Subscription necessaria"
+
+#: ../../controller.rst:203 0785c045e74c4566be634c5f8264481a
+msgid ""
+"This feature is available only if the firewall and the controller have a "
+"valid subscription."
+msgstr ""
+"Questa funzionalità è disponibile solo se il firewall e il controller "
+"dispongono di una subscription valida."
+
+#: ../../controller.rst:205 47d1f9ec8402435dad27e387786d2911
+msgid ""
+"The Timescale database stores the same metrics of the "
+":ref:`real_time_monitoring-section` but as a timeseries saved in a "
+"PostgreSQL database. Each unit sends data to the controller every 15 "
+"minutes. The controller aggregates the data every 15 minutes, this means "
+"that data are available inside dashboards at best with a 15 minutes delay "
+"and at worst with a 30 minutes delay."
+msgstr ""
+"Il database Timescale memorizza le stesse metriche della "
+":ref:`real_time_monitoring-section`, ma come serie temporali salvate in un "
+"database PostgreSQL. Ogni unità invia i dati al controller ogni 15 minuti. "
+"Il controller aggrega i dati ogni 15 minuti, il che significa che i dati "
+"sono disponibili all'interno delle dashboard al meglio con un ritardo di 15 "
+"minuti e al massimo con un ritardo di 30 minuti."
+
+#: ../../controller.rst:209 6e3c0ddb55464f8e8b28849ede3e81f2
+msgid ""
+"The controller can do extra processing on the data to provide more insights."
+" For example, the controller can geolocate the IP addresses of the connected"
+" clients and of the attackers."
+msgstr ""
+"Il controller può eseguire elaborazioni aggiuntive sui dati per fornire "
+"ulteriori approfondimenti. Ad esempio, il controller può geolocalizzare gli "
+"indirizzi IP dei client connessi e degli aggressori."
+
+#: ../../controller.rst:212 a291b221f8c94b999a0ef33595e9696c
+msgid "These metrics are visible inside the following dashboards:"
+msgstr "Queste metriche sono visibili all'interno delle seguenti dashboard:"
+
+#: ../../controller.rst:214 5990598752f14d0d9ee9ece5aa1d0d8b
+msgid "``Network traffic``: aggregated network traffic as seen by the unit"
+msgstr ""
+"``Traffico di rete``: traffico di rete aggregato come rilevato dall'unità"
+
+#: ../../controller.rst:215 15d84aa1c65f436cbc606a322f287955
+msgid ""
+"``Network traffic by client``: network traffic for each client (local host) "
+"connected to the unit"
+msgstr ""
+"``Traffico di rete per client``: traffico di rete per ogni client (host "
+"locale) connesso all'unità"
+
+#: ../../controller.rst:216 8c08a8d4946f423c82850c0b3b737c53
+msgid "``Network traffic by host``: network traffic for each remote host"
+msgstr ""
+"``Traffico di rete per host``: traffico di rete per ciascun host remoto"
+
+#: ../../controller.rst:217 e7a97d6354e049bbb2ce31dd4393ed7f
+msgid "``Security``: security events detected by the unit"
+msgstr "``Sicurezza``: eventi di sicurezza rilevati dall'unità"
+
+#: ../../controller.rst:218 71147591a603427bbdcc4faa030c1e03
+msgid ""
+"``VPN``: VPN statistics for OpenVPN Road Warrior, OpenVPN tunnels and IPsec "
+"tunnels"
+msgstr ""
+"``VPN``: Statistiche VPN per OpenVPN Road Warrior, tunnel OpenVPN e tunnel "
+"IPsec"
+
+#: ../../controller.rst:222 83da619fe11d455e96c9a17aee8564d2
+msgid ""
+"Metrics retention period must be configured from the NS8 web interface and "
+"is applied to both to Prometheus and Timescale databases."
+msgstr ""
+"Il periodo di conservazione delle metriche deve essere configurato "
+"dall'interfaccia web di NS8 e viene applicato sia ai database Prometheus che"
+" Timescale."
+
+#: ../../controller.rst:230 5698e862f66749ecb96a7da212e7b595
+msgid "Unit updates"
+msgstr "Aggiornamenti delle unità"
+
+#: ../../controller.rst:232 291195f3bf554247a8b3c0b6cb60635d
+msgid ""
+"The controller allows you to update the units directly from the interface, "
+"similar to the process in :ref:`the unit web interface<updates-section>`. "
+"Two types of updates are available:"
+msgstr ""
+"Il controller consente di aggiornare le unità direttamente dall'interfaccia,"
+" in modo simile al processo descritto in :ref:`l'interfaccia web "
+"dell'unità<updates-section>`. Sono disponibili due tipi di aggiornamenti:"
+
+#: ../../controller.rst:234 c6f69279ec3d4da5b7b788ae530b73cb
+msgid ""
+"**Package updates**: Update the packages installed on the unit. List and "
+"install available updates by clicking on :guilabel:`Check packages updates` "
+"in the unit menu. A modal will display the list of available updates. If "
+"updates are available, apply them by clicking on the :guilabel:`Update` "
+"button in the modal. This is the first thing to try if :ref:`version "
+"awareness<version-awareness-section>` blocks you from accessing the unit."
+msgstr ""
+"**Aggiornamenti dei pacchetti**: Aggiornare i pacchetti installati "
+"sull'unità. Elencare e installare gli aggiornamenti disponibili facendo clic"
+" su :guilabel:`Controlla gli aggiornamenti dei pacchetti` nel menu "
+"dell'unità. Verrà visualizzata una finestra modale con l'elenco degli "
+"aggiornamenti disponibili. Se sono presenti aggiornamenti, applicarli "
+"facendo clic sul pulsante :guilabel:`Aggiorna` nella finestra modale. Questa"
+" è la prima operazione da provare se :ref:`version awareness<version-"
+"awareness-section>` impedisce l'accesso all'unità."
+
+#: ../../controller.rst:237 b1a10e3924404907801c95bb2b3094f8
+msgid ""
+"**System update**: Update the unit's system. If an image update is "
+"available, a badge will appear in the unit list. Schedule an update by "
+"clicking on the :guilabel:`System update` button in the unit menu. You can "
+"schedule the update or update the unit immediately. This operation is also "
+"available as a mass operation for multiple units under :guilabel:`Actions` "
+"-> :guilabel:`Update systems`. Units with a scheduled image update will have"
+" a dedicated badge in the unit list. You can abort the scheduled update by "
+"clicking on the :guilabel:`Cancel scheduled image update` button in the unit"
+" menu."
+msgstr ""
+"**Aggiornamento del sistema**: Aggiorna il sistema dell'unità. Se è "
+"disponibile un aggiornamento dell'immagine, verrà visualizzato un badge "
+"nell'elenco delle unità. È possibile programmare un aggiornamento facendo "
+"clic sul pulsante :guilabel:`Aggiornamenti di sistema` nel menu dell'unità. "
+"Si può programmare l'aggiornamento oppure aggiornare immediatamente l'unità."
+" Questa operazione è disponibile anche come operazione di massa per più "
+"unità tramite :guilabel:`Azioni` -> :guilabel:`Aggiorna sistemi`. Le unità "
+"con un aggiornamento dell'immagine programmato avranno un badge dedicato "
+"nell'elenco delle unità. È possibile annullare l'aggiornamento programmato "
+"facendo clic sul pulsante :guilabel:`Cancella l'aggiornamento programmato "
+"dell'immagine` nel menu dell'unità."
+
+#: ../../controller.rst:244 a5fa5f0c929a4e3c8d979d5adc1e16a1
+msgid ""
+"Please be aware that units might not send updated information when "
+"undergoing upgrading process prior to unit version 1.3.0. To refresh "
+"manually the information use the `guilabel`:`Sync unit info` button in the "
+"unit menu."
+msgstr ""
+"Si prega di notare che le unità potrebbero non inviare informazioni "
+"aggiornate durante il processo di aggiornamento se la versione dell'unità è "
+"precedente alla 1.3.0. Per aggiornare manualmente le informazioni, "
+"utilizzare il pulsante :guilabel:`Sincronizza info unità` nel menu "
+"dell'unità."
+
+#: ../../controller.rst:249 de7d51bd99e547d1902326441a29ac03
+msgid "SSH access"
+msgstr "Accesso SSH"
+
+#: ../../controller.rst:251 a61b412bbf9e425aad59a5fab4f858c6
+msgid ""
+"SSH, or Secure Shell, is a cryptographic network protocol for operating "
+"network services securely over an unsecured network. SSH provides a secure "
+"channel over an unsecured network in a client-server architecture, "
+"connecting an SSH client application to an SSH server."
+msgstr ""
+"SSH, o Secure Shell, è un protocollo di rete crittografico per l'esecuzione "
+"sicura di servizi di rete su una rete non sicura. SSH fornisce un canale "
+"sicuro su una rete non protetta in un'architettura client-server, collegando"
+" un'applicazione client SSH a un server SSH."
+
+#: ../../controller.rst:254 a1e2810e34a1430bb3b56e777a5842f4
+msgid ""
+"It is possible to connect to the unit by clicking on the :guilabel:`Open SSH"
+" terminal` link. The connection is made through a web-based SSH client that "
+"allows access to the unit's shell."
+msgstr ""
+"È possibile connettersi all'unità facendo clic sul collegamento "
+":guilabel:`Apri terminale SSH`. La connessione avviene tramite un client SSH"
+" basato su web che consente l'accesso alla shell dell'unità."
+
+#: ../../controller.rst:257 a35c82e2f40246829246c85922c9007c
+msgid ""
+"You can connect to units using a username and password pair or an SSH key."
+msgstr ""
+"È possibile connettersi alle unità utilizzando una coppia di nome utente e "
+"password oppure una chiave SSH."
+
+#: ../../controller.rst:259 1d9755ad095c42f4937784afbbf6952b
+msgid ""
+"Once connected, the SSH session will be started inside a new browser tab. "
+"Some browsers require permission to open popups for the SSH session to work "
+"properly. To close the session, simply close the browser window or log out "
+"from the shell using CTRL + D."
+msgstr ""
+"Una volta connessi, la sessione SSH verrà avviata in una nuova scheda del "
+"browser. Alcuni browser richiedono l'autorizzazione per aprire popup "
+"affinché la sessione SSH funzioni correttamente. Per chiudere la sessione, è"
+" sufficiente chiudere la finestra del browser oppure disconnettersi dalla "
+"shell utilizzando CTRL + D."
+
+#: ../../controller.rst:263 718cf4c3d0f14003891edd5aaf6ddb50
+msgid "Username and password"
+msgstr "Nome utente e password"
+
+#: ../../controller.rst:270 95850ef76f1a4e0c8ec4020173b18e39
+msgid ""
+"The user interface will display a form to enter the username and password. "
+"After entering the credentials, the user can click on the :guilabel:`Open "
+"terminal` button to start the SSH session."
+msgstr ""
+"L'interfaccia utente visualizzerà un modulo per inserire nome utente e "
+"password. Dopo aver inserito le credenziali, è possibile fare clic sul "
+"pulsante :guilabel:`Apri terminale` per avviare la sessione SSH."
+
+#: ../../controller.rst:274 60444ea191e349ff886de2b68b0496b0
+msgid "SSH key"
+msgstr "Chiave SSH"
+
+#: ../../controller.rst:276 a60fdbc685d9458192711ff3a99ac334
+msgid ""
+"An SSH key pair is a set of two cryptographic keys that are used for "
+"authentication when establishing a secure connection using the SSH (Secure "
+"Shell) protocol. The pair consists of a private key and a public key:"
+msgstr ""
+"Una coppia di chiavi SSH è un insieme di due chiavi crittografiche "
+"utilizzate per l'autenticazione durante la creazione di una connessione "
+"sicura tramite il protocollo SSH (Secure Shell). La coppia è composta da una"
+" chiave privata e una chiave pubblica:"
+
+#: ../../controller.rst:279 647c33c1bf95410dbab8faa494cf6e95
+msgid ""
+"**Private Key**: This is kept secret and secure by the user. It should never"
+" be exposed to the outside world. It is used to decrypt data that has been "
+"encrypted with the public key."
+msgstr ""
+"**Chiave privata**: Questa viene mantenuta segreta e sicura dall'utente. Non"
+" dovrebbe mai essere esposta all'esterno. Viene utilizzata per decriptare i "
+"dati che sono stati criptati con la chiave pubblica."
+
+#: ../../controller.rst:281 025e95b0c80345578c5e14b4e062460d
+msgid ""
+"**Public Key**: This can be freely shared and is used to encrypt data that "
+"can only be decrypted with the private key."
+msgstr ""
+"**Chiave pubblica**: Questa può essere condivisa liberamente ed è utilizzata"
+" per crittografare i dati che possono essere decifrati solo con la chiave "
+"privata."
+
+#: ../../controller.rst:283 cca70a3424944184b9a9d814b17649d1
+msgid ""
+"When you connect to a server using SSH with key pair authentication, you "
+"provide your public key to the server. The server then encrypts a challenge "
+"message with your public key. Your client then decrypts the message with "
+"your private key and sends the result back to the server. If the result is "
+"correct, the server knows that you must have the correct private key and "
+"allows you to connect."
+msgstr ""
+"Quando ci si connette a un server utilizzando l'autenticazione SSH con "
+"coppia di chiavi, si fornisce la propria chiave pubblica al server. Il "
+"server quindi cifra un messaggio di sfida con la chiave pubblica fornita. Il"
+" client decifra il messaggio utilizzando la propria chiave privata e invia "
+"il risultato al server. Se il risultato è corretto, il server riconosce che "
+"si possiede la chiave privata corretta e consente la connessione."
+
+#: ../../controller.rst:287 2309c5d02bea4b448da376b87371662b
+msgid ""
+"This method of authentication is more secure than using a password, as it "
+"provides a form of two-factor authentication: something you have (the "
+"private key file) and something you know (the passphrase to unlock the "
+"private key)."
+msgstr ""
+"Questo metodo di autenticazione è più sicuro rispetto all'utilizzo di una "
+"password, poiché fornisce una forma di autenticazione a due fattori: "
+"qualcosa che si possiede (il file della chiave privata) e qualcosa che si "
+"conosce (la passphrase per sbloccare la chiave privata)."
+
+#: ../../controller.rst:290 441a6a80914c46fc8e140b6fda51766d
+msgid ""
+"To use an SSH key, generate a new key pair by accessing the ``Account "
+"settings`` page and and clicking on the :guilabel:`Generate SSH key pair` "
+"button. Enter a passphrase to protect the private key and click on the "
+":guilabel:`Generate SSH key` button. The user interface will display the "
+"public key, while the private key is preserved safely inside the controller."
+msgstr ""
+"Per utilizzare una chiave SSH, è necessario generare una nuova coppia di "
+"chiavi accedendo alla pagina ``Impostazioni account`` e facendo clic sul "
+"pulsante :guilabel:`Genera coppia di chiavi SSH`. Inserire una passphrase "
+"per proteggere la chiave privata e fare clic sul pulsante :guilabel:`Genera "
+"chiave SSH`. L'interfaccia utente mostrerà la chiave pubblica, mentre la "
+"chiave privata viene conservata in modo sicuro all'interno del controller."
+
+#: ../../controller.rst:294 975dab62cf3b4fc98220ca8c3018aad3
+msgid ""
+"Before connecting to the unit, you must copy the public key and paste it "
+"into the unit's SSH authorized keys file. You can do it from the ``Unit "
+"manager`` page, by clicking on the :guilabel:`Actions` button and selecting "
+":guilabel:`Send SSH public key`. Choose the units you want to send the key "
+"to and click on the :guilabel:`Send SSH key` button."
+msgstr ""
+"Prima di connettersi all'unità, è necessario copiare la chiave pubblica e "
+"incollarla nel file delle chiavi autorizzate SSH dell'unità. È possibile "
+"farlo dalla pagina ``Gestione unità``, facendo clic sul pulsante "
+":guilabel:`Azioni` e selezionando :guilabel:`Invia la chiave pubblica SSH`. "
+"Selezionare le unità a cui si desidera inviare la chiave e fare clic sul "
+"pulsante :guilabel:`Invia la chiave SSH`."
+
+#: ../../controller.rst:298 88bf81effc2e4b07a487c2b1bd667bf2
+msgid ""
+"From now on, you can connect to the unit using the SSH key pair. The user "
+"interface will display a form to enter the passphrase when clicking on the "
+":guilabel:`Open terminal` button."
+msgstr ""
+"D'ora in poi, sarà possibile connettersi all'unità utilizzando la coppia di "
+"chiavi SSH. L'interfaccia utente mostrerà un modulo per inserire la "
+"passphrase quando si fa clic sul pulsante :guilabel:`Apri terminale`."
+
+#: ../../controller.rst:301 aceee9e832894d6ea0d9f9c0d61cdf86
+msgid ""
+"You can also revoke the SSH key pair by clicking on the :guilabel:`Revoke "
+"SSH public key` button from the :guilabel:`Actions` button."
+msgstr ""
+"È anche possibile revocare la coppia di chiavi SSH facendo clic sul pulsante"
+" :guilabel:`Revoca la chiave pubblica SSH` dal pulsante :guilabel:`Azioni`."
+
+#: ../../controller.rst:304 2976b9112c7f4271aedde2220fd19696
+msgid "Accounting"
+msgstr "Accounting"
+
+#: ../../controller.rst:306 779be344572c4202a164a43f56aa87a7
+msgid ""
+"All operations performed on the controller are logged in the NS8 log. Here "
+"are some examples of logged operations:"
+msgstr ""
+"Tutte le operazioni eseguite sul controller vengono registrate nel log di "
+"NS8. Ecco alcuni esempi di operazioni registrate:"
+
+#: ../../controller.rst:308 a057e50f2385419da561292a8addb0fd
+msgid "User login and logout"
+msgstr "Accesso e disconnessione dell'utente"
+
+#: ../../controller.rst:309 bf33ba76aae24ecb9c76715ca27576dd
+msgid "User creation/modification/deletion/password change"
+msgstr "Creazione/modifica/eliminazione utente/cambio password"
+
+#: ../../controller.rst:310 0dcdfce3de704bd49e1a09c0807a2d56
+msgid "Unit list/creation/removal"
+msgstr "Elenco/creazione/rimozione delle unità"
+
+#: ../../controller.rst:312 fb2a531daa0c4be5823077ec80266714
+msgid "Example of NS8 log: ::"
+msgstr "Esempio di log NS8: ::"
+
+#: ../../controller.rst:317 5ebb7d2b0d4f4a6d81fdcaaff3b3cc5e
+msgid ""
+"Each unit has an rpcd user specific to the controller, which is used for "
+"management operations. When a user accesses the unit's web interface from "
+"the controller, all operations performed are logged in the unit's log, "
+"identified by the rpcd user. For example: ::"
+msgstr ""
+"Ogni unità dispone di un utente rpcd specifico per il controller, utilizzato"
+" per le operazioni di gestione. Quando un utente accede all'interfaccia web "
+"dell'unità dal controller, tutte le operazioni eseguite vengono registrate "
+"nel log dell'unità, identificate dall'utente rpcd. Ad esempio: ::"
+
+#: ../../controller.rst:323 1a204f688a314faa81ddb19df708b0c1
+msgid ""
+"To determine who performed a specific operation, it is necessary to check "
+"the log of the unit identified by the rpcd user and correlate it with the "
+"login action performed on the controller."
+msgstr ""
+"Per determinare chi ha eseguito una specifica operazione, è necessario "
+"controllare il log dell'unità identificata dall'utente rpcd e correlare tale"
+" informazione con l'azione di accesso effettuata sul controller."
+
+#: ../../controller.rst:326 36655a463f0540c6b5ebd0d779a44632
+msgid ""
+"When a user connects to the unit via SSH, the login is logged in the unit's "
+"log, identified by the SSH user. Usually, the SSH user is root. For example:"
+" ::"
+msgstr ""
+"Quando un utente si connette all'unità tramite SSH, l'accesso viene "
+"registrato nel log dell'unità, identificato dall'utente SSH. Solitamente, "
+"l'utente SSH è root. Ad esempio: ::"
+
+#: ../../controller.rst:331 cdea1532c5854a82849990cda8122316
+msgid ""
+"If the user uses an SSH key for authentication, the log will contain the "
+"fingerprint of the SSH key used for authentication. This makes it easier to "
+"associate the SSH user with the operations performed. Example: ::"
+msgstr ""
+"Se l'utente utilizza una chiave SSH per l'autenticazione, il log conterrà "
+"l'impronta digitale della chiave SSH utilizzata per l'autenticazione. Questo"
+" rende più semplice associare l'utente SSH alle operazioni eseguite. "
+"Esempio: ::"
+
+#: ../../controller.rst:338 a915017be1da4e54a925d777762a368d
+msgid "Subscription and limitations"
+msgstr "Subscription e limitazioni"
+
+#: ../../controller.rst:342 3d2c0d57600f4b40b5103fccb4ae3b77
+msgid ""
+"Some restrictions can only be overcame if the firewall has a valid "
+"subscription."
+msgstr ""
+"Alcune restrizioni possono essere superate solo se il firewall dispone di un"
+" ."
+
+#: ../../controller.rst:344 dda16320ce4043dd8a554f4da38998b8
+msgid ""
+"The behavior of the controller running on a NS8 depends on its subscription "
+"status."
+msgstr ""
+"Il comportamento del controller in esecuzione su un NS8 dipende dal suo "
+"stato di sottoscrizione."
+
+#: ../../controller.rst:346 d21ed05c9186426384f6a4d00cec9d6a
+msgid "Controller without subscription:"
+msgstr "Controller senza subscription:"
+
+#: ../../controller.rst:348 5cb45a4d202242a7acad667e5d4cd407
+msgid "Allows the registration of up to 3 units."
+msgstr "Consente la registrazione di un massimo di 3 unità."
+
+#: ../../controller.rst:349 e327fee4f1cd4717bb9e0f153b4cd7e3
+msgid "Only community firewalls can register with the controller."
+msgstr ""
+"Solo i firewall della community possono registrarsi con il controller."
+
+#: ../../controller.rst:350 70808e31e76e4a169d36338918cd7e78
+msgid "Historical metrics are not accesible."
+msgstr "Le metriche storiche non sono accessibili."
+
+#: ../../controller.rst:352 45c5a971dc324a0b9e36c61660b7766e
+msgid "Controller with a valid subscription:"
+msgstr "Controller con una subscription valida:"
+
+#: ../../controller.rst:354 cbdcdbb7921a4249bd98220913f0e21d
+msgid "The number of units is unlimited."
+msgstr "Il numero di unità è illimitato."
+
+#: ../../controller.rst:355 6fcc2999f1f144d18693b3c2b0cb84de
+msgid ""
+"Only firewalls with a valid subscription can register with the controller."
+msgstr ""
+"Solo i firewall con una subscription valida possono registrarsi con il "
+"controller."
+
+#: ../../controller.rst:356 427cc701db8c475dadca546b7f2c063c
+msgid "Units with a valid subscription send metrics to the controller."
+msgstr "Le unità con un subscription valida inviano metriche al controller."
+
+#: ../../controller.rst:361 1be0a6994dd841d8a1b2a5a0ffcb4c8d
+msgid "Version awareness"
+msgstr "Version awareness"
+
+#: ../../controller.rst:363 45c238040bb6412fb331741354906a60
+msgid ""
+"Version awareness is a mechanism that prevents the user from performing "
+"operations not supported by the unit version. To do so, when connecting to "
+"the UI of a unit the controller will check the API version during the "
+"connection process. There are three possible scenarios:"
+msgstr ""
+"La version awareness è un meccanismo che impedisce all'utente di"
+" eseguire operazioni non supportate dalla versione dell'unità. A tal fine, "
+"durante la connessione all'interfaccia utente di un'unità, il controller "
+"verificherà la versione delle API durante il processo di connessione. "
+"Esistono tre possibili scenari:"
+
+#: ../../controller.rst:366 2312a02d0cde446286bd97a3b012a926
+msgid "If the versions are compatible, the connection proceeds as normal."
+msgstr "Se le versioni sono compatibili, la connessione procede normalmente."
+
+#: ../../controller.rst:367 6e7d81a4d6134ecd8ca0a29f64496b0f
+msgid ""
+"If the firewall (unit) is significantly older than the controller, you'll "
+"see a popup that prevents the connection. This is to protect against "
+"potential errors."
+msgstr ""
+"Se il firewall (unità) è significativamente più vecchio del controller, "
+"verrà visualizzato un popup che impedisce la connessione. Questo serve a "
+"proteggere da potenziali errori."
+
+#: ../../controller.rst:368 3ae681f6bcf04407893da4c27b61cbff
+msgid ""
+"If the controller is slightly older than the firewall, you'll see a warning "
+"about the mismatch. However, you'll still be able to connect if you choose "
+"to proceed."
+msgstr ""
+"Se il controller è leggermente più vecchio del firewall, verrà visualizzato "
+"un avviso relativo alla mancata corrispondenza. Tuttavia, sarà comunque "
+"possibile connettersi se si sceglie di procedere."
+
+#: ../../controller.rst:370 38f2d2ec1ed54513b53e625e7db40f42
+msgid ""
+"As an administrator, you don't need to take any specific actions to enable "
+"Version awareness. It works automatically in the background. However, you "
+"should:"
+msgstr ""
+"In qualità di amministratore, non è necessario eseguire alcuna azione "
+"specifica per abilitare la version awareness. Questa funziona "
+"automaticamente in background. Tuttavia, è consigliabile:"
+
+#: ../../controller.rst:372 5eab155a5fc34e6e9f4ebc2571b058bf
+msgid ""
+"Pay attention to warnings: if you see a version mismatch warning, consider "
+"updating your system when convenient."
+msgstr ""
+"Prestare attenzione agli avvisi: se viene visualizzato un avviso di "
+"incompatibilità di versione, valutare l'aggiornamento del sistema quando "
+"conveniente."
+
+#: ../../controller.rst:373 4dea0aeda7134a4d94b56a9798ef1b1b
+msgid ""
+"Keep your system updated: regularly check for and apply updates to both your"
+" controller and firewall units to ensure the best compatibility and access "
+"to new features."
+msgstr ""
+"Mantenere il sistema aggiornato: verificare regolarmente la presenza di "
+"aggiornamenti e applicarli sia al controller che alle unità firewall per "
+"garantire la migliore compatibilità e l’accesso alle nuove funzionalità."
+
+#: ../../controller.rst:374 784d8790884d47afa452f1a91f7bac83
+msgid ""
+"Report issues: if you encounter any unusual behavior or errors, especially "
+"after seeing a version warning, follow the :ref:`troubleshooting "
+"<troubleshooting-section>` procedure."
+msgstr ""
+"Segnalare problemi: se si riscontrano comportamenti insoliti o errori, "
+"soprattutto dopo aver visualizzato un avviso di versione, seguire la "
+"procedura di :ref:`risoluzione dei problemi <troubleshooting-section>`."
+
+#: ../../controller.rst:376 ddfad4b3d2af4a2ab8f48eb0665927cb
+msgid ""
+"Version awareness is a behind-the-scenes feature that helps keep your "
+"NethSecurity system running smoothly. By automatically checking "
+"compatibility between the controller and units, it prevents many potential "
+"issues before they can affect your network. While it doesn't require any "
+"action from you, being aware of this feature can help you better understand "
+"and manage your system."
+msgstr ""
+"La version awareness è una funzionalità in background che "
+"contribuisce a mantenere il sistema NethSecurity operativo senza intoppi. "
+"Verificando automaticamente la compatibilità tra il controller e le unità, "
+"previene molti potenziali problemi prima che possano influire sulla rete. "
+"Anche se non richiede alcuna azione da parte dell’utente, essere a "
+"conoscenza di questa funzionalità può aiutare a comprendere e gestire meglio"
+" il sistema."
+
+#: ../../controller.rst:380 c1ea799b7ade4fda9128747fbaa40e30
+msgid "Bypass version awareness"
+msgstr "Ignorare la version awareness"
+
+#: ../../controller.rst:381 5f083f4d83a64a97800b07a3113a487b
+msgid ""
+"While version awareness is a useful feature, knowing the risks and potential"
+" issues, you may want to bypass it in some cases. To do so, the procedure is"
+" as follows:"
+msgstr ""
+"Sebbene la version awareness sia una funzionalità utile, "
+"conoscendo i rischi e i potenziali problemi, potrebbe essere necessario "
+"ignorarla in alcuni casi. Per farlo, la procedura è la seguente:"
+
+#: ../../controller.rst:384 c7f5c3e2e67b4927adea89f05c09b3dd
+msgid ""
+"On the controller, go to the unit manager page and click on :guilabel:`More "
+"Info` of the unit you want to connect to."
+msgstr ""
+"Sul controller, andare alla pagina del gestore delle unità e fare clic su "
+":guilabel:`Ulteriori informazioni` dell'unità a cui si desidera connettersi."
+
+#: ../../controller.rst:385 2b5b1db507fe49549de1933a7929da04
+msgid "Copy the `Unit ID` value."
+msgstr "Copia il valore di ``Unit ID``."
+
+#: ../../controller.rst:386 b520fab3b8294c4f87e3040e6d7cbf51
+msgid "Click on :guilabel:`Open SSH terminal`"
+msgstr "Fare clic su :guilabel:`Apri terminale SSH`"
+
+#: ../../controller.rst:387 ffa43288819746308c65161aecbce41a
+msgid ""
+"When the modal opens, you can safely close it. This was only needed to "
+"exchange some credentials with the unit."
+msgstr ""
+"Quando si apre la finestra modale, è possibile chiuderla in sicurezza. "
+"Questo era necessario solo per scambiare alcune credenziali con l'unità."
+
+#: ../../controller.rst:388 06a73536259a48ce8578773d54afbbca
+msgid ""
+"Open a new tab, and go to this URL: `https://<controller-"
+"fqdn>/#/controller/manage/<unit-id>/dashboard`. Example: "
+"`https://controller.nethsecurity.org/#/controller/manage/000000000-0000-0000-0000-000000000000/dashboard`."
+msgstr ""
+"Aprire una nuova scheda e andare a questo URL: ``https://<controller-fqdn>/#/controller/manage/<unit-id>/dashboard``.  \n"
+"Esempio: ``https://controller.nethsecurity.org/#/controller/manage/000000000-0000-0000-0000-000000000000/dashboard``."
+
+#: ../../controller.rst:389 d1e3488860364db393311b822ad920f2
+msgid "You will be able to access the unit's UI without the version check."
+msgstr ""
+"Sarà possibile accedere all'interfaccia utente dell'unità senza il controllo"
+" della versione."
+
+#: ../../controller.rst:392 f900eeb89c05470294c516889639425f
+msgid "Update unit with SSH"
+msgstr "Aggiornare l'unità con SSH"
+
+#: ../../controller.rst:393 e135ce9387a7409e8780f52188d2da75
+msgid ""
+"You can update the unit without connecting to it using the SSH terminal. "
+"Follow the steps to connect to the unit using :ref:`SSH Access "
+"<controller_ssh-section>`."
+msgstr ""
+"È possibile aggiornare l'unità senza collegarsi ad essa utilizzando il "
+"terminale SSH. Seguire i passaggi per connettersi all'unità utilizzando "
+":ref:`SSH Access <controller_ssh-section>`."
+
+#: ../../controller.rst:396 b8333eb041b243b7a30c6547c58f55cc
+msgid ""
+"Once connected, you can check for updates depending on what you want to "
+"update."
+msgstr ""
+"Una volta connessi, è possibile verificare la presenza di aggiornamenti a "
+"seconda di ciò che si desidera aggiornare."
+
+#: ../../controller.rst:398 1ee3da0dced44a2fa2c460868647a2de
+msgid "Install package updates on the unit:"
+msgstr "Installare gli aggiornamenti dei pacchetti sull'unità:"
+
+#: ../../controller.rst:400 597cb85b276342918088ad5dee4284c6
+msgid "To check for updates for packages use the following command:"
+msgstr ""
+"Per verificare la presenza di aggiornamenti per i pacchetti, utilizzare il "
+"seguente comando:"
+
+#: ../../controller.rst:406 7287a3f114b444d38959a6c4d917426e
+msgid ""
+"If you're ok with the installation of the packages you can run the following"
+" command:"
+msgstr ""
+"Se si è d'accordo con l'installazione dei pacchetti, è possibile eseguire il"
+" seguente comando:"
+
+#: ../../controller.rst:412 a4ee2e38b53c4a78a2808b0d050af5a8
+msgid ""
+"To update the image, you can simply schedule the installation, remember this"
+" is an operation that restarts the firewall (causing a downtime)"
+msgstr ""
+"Per aggiornare l'immagine, è possibile semplicemente pianificare "
+"l'installazione; si ricorda che questa operazione riavvia il firewall "
+"(causando un periodo di inattività)."
+
+#: ../../controller.rst:414 d4e76bcbe28c4ff180a6a2fe99305046
+msgid "Check if there is an updated image available:"
+msgstr "Verificare se è disponibile un'immagine aggiornata:"
+
+#: ../../controller.rst:420 8d119cc3a8994d1abd44443602340403
+msgid ""
+"If you want to proceed with the update, this can be done through this "
+"command:"
+msgstr ""
+"Se si desidera procedere con l'aggiornamento, è possibile farlo tramite "
+"questo comando:"
+
+#: ../../controller.rst:265 799caedd40144d4a96e5bfaec25b58a0
+msgid ""
+"The user can connect using a username and password pair of the unit in the "
+"following scenarios:"
+msgstr ""
+"L'utente può connettersi utilizzando una coppia di nome utente e password "
+"dell'unità nei seguenti scenari:"
+
+#: ../../controller.rst:267 7ef9a3eb4024498896431ad5e6fd0baa
+msgid "The logged-in user has not generated an SSH key"
+msgstr "L'utente connesso non ha generato una chiave SSH"
+
+#: ../../controller.rst:268 799caedd40144d4a96e5bfaec25b58a0
+msgid ""
+"The public SSH key of the logged-in user hasn't been copied inside the SSH "
+"authorized keys file of the unit"
+msgstr ""
+"La chiave pubblica SSH dell'utente connesso non è stata copiata all'interno "
+"del file delle chiavi autorizzate SSH dell'unità"
+
+#~ msgid ""
+#~ "The user can connect using a username and password pair of the unit in the "
+#~ "following scenarios: - The logged-in user has not generated an SSH key - The"
+#~ " public SSH key of the logged-in user hasn't been copied inside the SSH "
+#~ "authorized keys file of the unit"
+#~ msgstr ""
+#~ "L'utente può connettersi utilizzando una coppia di nome utente e password dell'unità nei seguenti scenari:\n"
+#~ "- L'utente connesso non ha generato una chiave SSH\n"
+#~ "- La chiave pubblica SSH dell'utente connesso non è stata copiata all'interno del file delle chiavi autorizzate SSH dell'unità"

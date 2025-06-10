@@ -263,6 +263,7 @@ Username and password
 ---------------------
 
 The user can connect using a username and password pair of the unit in the following scenarios:
+
 - The logged-in user has not generated an SSH key
 - The public SSH key of the logged-in user hasn't been copied inside the SSH authorized keys file of the unit
 
