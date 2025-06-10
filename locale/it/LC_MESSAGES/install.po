@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Installazione diretta su disco: scrivere l'immagine scaricata direttamente "
 "sul disco del computer. Questo metodo consente un processo di installazione "
-"semplice e diretto sulla memoria di sistema."
+"semplice e diretto sul dispositivo di memorizzazione."
 
 #: ../../install.rst:15 ac0cac5184cf4acab02b7efc9863d9c9
 msgid ""
