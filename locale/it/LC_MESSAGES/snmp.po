@@ -1,0 +1,154 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../snmp.rst:4 98371f979aa04844afd1b1c28aea284f
+msgid "SNMP Server"
+msgstr "Server SNMP"
+
+#: ../../snmp.rst:6 1486028964d949428606b9bbb47a5ec7
+msgid ""
+"Simple Network Management Protocol (SNMP) provides a standardized way to "
+"monitor and manage network devices like your firewall remotely. It allows "
+"authorized users to retrieve essential information like device status, "
+"performance metrics, and configuration settings."
+msgstr ""
+"Il Simple Network Management Protocol (SNMP) fornisce un metodo "
+"standardizzato per monitorare e gestire dispositivi di rete come il firewall"
+" da remoto. Consente agli utenti autorizzati di recuperare informazioni "
+"essenziali come lo stato del dispositivo, metriche sulle prestazioni e "
+"impostazioni di configurazione."
+
+#: ../../snmp.rst:9 a83fa38e380c49ec8ec0eaca56175c0e
+msgid ""
+"The SNMP server is **disabled by default** on your firewall, allowing access"
+" from within your local area network (LAN) on all IPv4 and IPv6 addresses."
+msgstr ""
+"Il server SNMP è **disabilitato per impostazione predefinita** sul firewall,"
+" consentendo l'accesso dalla rete locale (LAN) su tutti gli indirizzi IPv4 e"
+" IPv6."
+
+#: ../../snmp.rst:13 50dab6b118ac4a38913f9a264e68fdb0
+msgid ""
+"If the system has been updated from v1.4.1 or earlier, the SNMP server will "
+"be **enabled by default**. To disable it, follow the steps in the "
+":ref:`Disabling the SNMP Server <snmp-server-disabling>` section."
+msgstr ""
+"Se il sistema è stato aggiornato dalla versione v1.4.1 o precedente, il "
+"server SNMP sarà **abilitato per impostazione predefinita**. Per "
+"disabilitarlo, seguire i passaggi nella sezione :ref:`Disabilitazione del "
+"server SNMP <snmp-server-disabling>`."
+
+#: ../../snmp.rst:17 6b2b52830c5b46e6a09bedca06550c5a
+msgid "Configuring the SNMP Server"
+msgstr "Configurazione del server SNMP"
+
+#: ../../snmp.rst:19 9bc0848b6b694b23b8bf8e67cbf8b443
+msgid ""
+"It's crucial to configure essential information that identifies your device."
+" Here's how to do it through the command line:"
+msgstr ""
+"È fondamentale configurare le informazioni essenziali che identificano il "
+"dispositivo. Ecco come farlo tramite la riga di comando:"
+
+#: ../../snmp.rst:21 ../../snmp.rst:60 7ff9af782ce14591ac0d3325f43d77ff
+#: aba3a1a0bcf44fdf88cafc513d994023
+msgid "Open a terminal window on your firewall."
+msgstr "Aprire una finestra del terminale sul firewall."
+
+#: ../../snmp.rst:22 cb7b3d7c269d4ed59e7c4422538e2421
+msgid ""
+"Use the following commands to set the desired values for `sysLocation`, "
+"`sysContact`, and `sysName`:"
+msgstr ""
+"Utilizzare i seguenti comandi per impostare i valori desiderati per "
+"``sysLocation``, ``sysContact`` e ``sysName``:"
+
+#: ../../snmp.rst:31 a4cda016f83b4f1cb51f4db9167347a4
+msgid "Replace `<string>` with the relevant information. For example:"
+msgstr "Sostituire `<string>` con le informazioni pertinenti. Ad esempio:"
+
+#: ../../snmp.rst:40 17d1a106332c4998829d4bac9dac0401
+msgid "After making changes, apply them using:"
+msgstr "Dopo aver apportato le modifiche, applicarle utilizzando:"
+
+#: ../../snmp.rst:47 9088849e32894524a7575229c8cd9608
+msgid ""
+"The SNMP server configuration is stored in the `/etc/config/snmpd` file."
+msgstr ""
+"La configurazione del server SNMP è memorizzata nel file "
+"`/etc/config/snmpd`."
+
+#: ../../snmp.rst:49 a34451c96a1942f6821907beff82952c
+msgid ""
+"You can test the configuration by using an SNMP client like `snmpwalk` or "
+"`snmpget` from a remote machine. For example: ::"
+msgstr ""
+"È possibile testare la configurazione utilizzando un client SNMP come "
+"``snmpwalk`` o ``snmpget`` da una macchina remota. Ad esempio: ::"
+
+#: ../../snmp.rst:56 fed84dd2a6d240b69129710a6e60e801
+msgid "Disabling the SNMP Server"
+msgstr "Disabilitazione del server SNMP"
+
+#: ../../snmp.rst:58 7b81214448034bfd800b273a5461ad4a
+msgid ""
+"If you don't require remote access to the SNMP server, you can disable it "
+"for additional security. Follow these steps:"
+msgstr ""
+"Se non è necessario l'accesso remoto al server SNMP, è possibile "
+"disabilitarlo per una maggiore sicurezza. Seguire questi passaggi:"
+
+#: ../../snmp.rst:61 eea36b413b8c4af38e12fc3f4d7e8cef
+msgid "Use the following commands to disable the server:"
+msgstr "Utilizzare i seguenti comandi per disabilitare il server:"
+
+#: ../../snmp.rst:69 e9a53b143ff246d1825df45783b94e1f
+msgid ""
+"**Remember:** Disabling the SNMP server might impact monitoring tools or "
+"applications relying on it."
+msgstr ""
+"**Nota:** La disattivazione del server SNMP potrebbe influire sugli "
+"strumenti di monitoraggio o sulle applicazioni che ne fanno affidamento."
+
+#: ../../snmp.rst:72 727548383dad41a89ad4bc973a7dd874
+msgid "Enabling remote access"
+msgstr "Abilitazione dell'accesso remoto"
+
+#: ../../snmp.rst:74 6f0c1128bf6340e0aafa8ab0cd1585ba
+msgid ""
+"If you need to access the SNMP server from outside your LAN, create a "
+"firewall rule that allows incoming UDP traffic on port ``161`` to the "
+"firewall itself. Remember, opening this port increases risk, so proceed with"
+" caution and make sure to restict the access only from selected IP "
+"addresses."
+msgstr ""
+"Se è necessario accedere al server SNMP dall'esterno della propria LAN, "
+"creare una regola firewall che consenta il traffico UDP in ingresso sulla "
+"porta ``161`` verso il firewall stesso. Ricordare che l'apertura di questa "
+"porta aumenta il rischio, quindi procedere con cautela e assicurarsi di "
+"limitare l'accesso solo da indirizzi IP selezionati."
+
+#: ../../snmp.rst:79 210635981d4c4ea89a2ddc1e944c6a16
+msgid "Security considerations"
+msgstr "Considerazioni sulla sicurezza"
+
+#: ../../snmp.rst:81 7d92f3d4625d4a5283131ed3e5bb39e7
+msgid "Prioritize security before enabling remote access:"
+msgstr "Dare priorità alla sicurezza prima di abilitare l'accesso remoto:"
+
+#: ../../snmp.rst:83 c6330ad3a3044d57afbc3a3ff85a8a25
+msgid ""
+"**Strong Community String:** Replace the default \"public\" community string"
+" with a complex and unique one."
+msgstr ""
+"**Stringa di community robusta:** Sostituire la stringa di community "
+"predefinita \"public\" con una complessa e unica."
+
+#: ../../snmp.rst:84 c714c8d683cb4d7eb78751f253901c19
+msgid ""
+"**Access Control:** Implement Access Control Lists (ACLs) to restrict access"
+" to authorized IP addresses only."
+msgstr ""
+"**Controllo accessi:** Implementare le Access Control List (ACL) per "
+"limitare l'accesso esclusivamente agli indirizzi IP autorizzati."
