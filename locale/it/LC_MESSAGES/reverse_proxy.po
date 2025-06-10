@@ -1,0 +1,405 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../reverse_proxy.rst:3 b7815b78302346359529f915cf7ec9af
+msgid "Certificates and reverse proxy"
+msgstr "Certificati e reverse proxy"
+
+#: ../../reverse_proxy.rst:8 78d23bf30266465f8187bb3741627096
+msgid "Reverse proxy"
+msgstr "Reverse proxy"
+
+#: ../../reverse_proxy.rst:10 5af40fed17094083a00254e0b1684110
+msgid ""
+"NethSecurity provides a reverse proxy using `nginx <https://nginx.org>`_. A "
+"reverse proxy, sometimes called also proxy pass, is a server that sits in "
+"front of one or more web servers and forwards requests to them. It can be "
+"used to improve performance, security, and reliability."
+msgstr ""
+"NethSecurity fornisce un reverse proxy utilizzando `nginx "
+"<https://nginx.org>`_. Un reverse proxy, talvolta chiamato anche proxy pass,"
+" è un server che si trova davanti a uno o più web server e inoltra le "
+"richieste verso di essi. Può essere utilizzato per migliorare le "
+"prestazioni, la sicurezza e l'affidabilità."
+
+#: ../../reverse_proxy.rst:14 c138115799bd459383980b0be03264a3
+msgid ""
+"In simpler terms, a reverse proxy is like a traffic cop for web servers. It "
+"directs incoming requests to the appropriate server and sends back the "
+"responses."
+msgstr ""
+"In termini più semplici, un reverse proxy è come un vigile del traffico per "
+"i server web. Instrada le richieste in arrivo al server appropriato e "
+"restituisce le risposte."
+
+#: ../../reverse_proxy.rst:16 9c139a23383a48408297aa04abdaa31a
+msgid ""
+"Reverse proxies are often used to improve performance by caching static "
+"content and distributing traffic across multiple servers. They can also be "
+"used to increase security by implementing the TLS endpoint."
+msgstr ""
+"I reverse proxy sono spesso utilizzati per migliorare le prestazioni "
+"memorizzando nella cache i contenuti statici e distribuendo il traffico su "
+"più server. Possono anche essere utilizzati per aumentare la sicurezza "
+"implementando l'endpoint TLS."
+
+#: ../../reverse_proxy.rst:20 aadad09e365e4da9a6106bc5b193c0c7
+msgid ""
+"The reverse proxy is only available on port 443 (HTTPS) and *not* on port 80"
+" (HTTP)."
+msgstr ""
+"Il reverse proxy è disponibile solo sulla porta 443 (HTTPS) e *non* sulla "
+"porta 80 (HTTP)."
+
+#: ../../reverse_proxy.rst:22 4d830975f16c4198b1fa152418da4aeb
+msgid ""
+"This page allows users to configure proxy pass settings, specifying whether "
+"the rule applies to a domain or a path. For domain configurations, users can"
+" select a certificate. The destination URL determines where incoming "
+"requests are forwarded, and the allowed network field provides the option to"
+" restrict access to specific CIDR-formatted networks. A description can be "
+"added for clarity."
+msgstr ""
+"Questa pagina consente di configurare le impostazioni di proxy pass, "
+"specificando se la regola si applica a un dominio o a un percorso. Per le "
+"configurazioni di dominio, è possibile selezionare un certificato. L'URL di "
+"destinazione determina dove vengono inoltrate le richieste in ingresso e il "
+"campo rete consentita offre la possibilità di limitare l'accesso a "
+"specifiche reti in formato CIDR. È possibile aggiungere una descrizione per "
+"maggiore chiarezza."
+
+#: ../../reverse_proxy.rst:27 0aaadf3e9e524a769a763d19e6543a5c
+msgid ""
+"To configure a new proxy pass, click on the :guilabel:`Add reverse proxy` "
+"and customize the following options:"
+msgstr ""
+"Per configurare un nuovo proxy pass, fare clic su :guilabel:`Aggiungi "
+"reverse proxy` e personalizzare le seguenti opzioni:"
+
+#: ../../reverse_proxy.rst:29 c7a8b5818bac4fa7be92cd8deb3872f3
+msgid ""
+"``Type``: choose between Domain or Path. If type is ``Path``, enter the "
+"resource path starting with a '/' for matching rules (e.g., ``/resource-"
+"path``). If type is ``Domain``, enter the fully qualified domain name for "
+"website matching rules. Select also an associated :ref:`certificate "
+"<certificates-section>`."
+msgstr ""
+"``Tipo``: scegliere tra Dominio o Percorso. Se il tipo è ``Percorso``, "
+"inserire il percorso della risorsa iniziando con una '/' per le regole di "
+"corrispondenza (ad esempio, ``/resource-path``). Se il tipo è ``Dominio``, "
+"inserire il nome di dominio completo per le regole di corrispondenza del "
+"sito web. Selezionare anche un :ref:`certificato <certificates-section>` "
+"associato."
+
+#: ../../reverse_proxy.rst:32 e3b2f716ca9b4b25a9580b0642ac691f
+msgid ""
+"``Destination URL``: specify the forwarding location for incoming requests "
+"(e.g., ``http://destination-server:port/path``)."
+msgstr ""
+"``URL di destinazione``: specificare la posizione di inoltro per le "
+"richieste in arrivo (ad esempio, ``http://destination-server:port/path``)."
+
+#: ../../reverse_proxy.rst:33 e9c37db243eb428696d20b8a3141f30a
+msgid ""
+"``Allowed networks``: define allowed IPv4/IPv6 networks in CIDR format. By "
+"default, accessible from anywhere."
+msgstr ""
+"``Reti permesse``: definire le reti IPv4/IPv6 consentite in formato CIDR. "
+"Per impostazione predefinita, accessibile da qualsiasi luogo."
+
+#: ../../reverse_proxy.rst:34 5be83c0a5c2940178cb9d2790042f5fe
+msgid "``Description``: optionally, add a description for clarity."
+msgstr ""
+"``Descrizione``: facoltativamente, aggiungere una descrizione per maggiore "
+"chiarezza."
+
+#: ../../reverse_proxy.rst:36 97e358e02f174e37ac198cc801296099
+msgid "Additional information:"
+msgstr "Informazioni aggiuntive:"
+
+#: ../../reverse_proxy.rst:38 72ea6fa38cb346889200dc45f60d2fa7
+msgid ""
+"Headers sent to destination server: X-Forwarded-Proto, X-Forwarded-For, "
+"X-Real-IP are always sent."
+msgstr ""
+"Header verso il server di destinazione: X-Forwarded-Proto, "
+"X-Forwarded-For, X-Real-IP sono sempre inviati."
+
+#: ../../reverse_proxy.rst:39 6d626592a8c241629c0184631088cb47
+msgid ""
+"Certificate validation: if the destination uses HTTPS, the certificate is "
+"not validated to avoid errors on misconfigured servers."
+msgstr ""
+"Validazione del certificato: se la destinazione utilizza HTTPS, il "
+"certificato non viene validato per evitare errori su server configurati in "
+"modo errato."
+
+#: ../../reverse_proxy.rst:40 1dca2b7bb38f42eebb2fedd91ad36d08
+msgid ""
+"WebSocket support: all reverse proxies automatically support WebSockets."
+msgstr ""
+"Supporto WebSocket: tutti i reverse proxy supportano automaticamente i "
+"WebSocket."
+
+#: ../../reverse_proxy.rst:45 f1c639e356b14e3e960763e77a76cec7
+msgid "Certificates"
+msgstr "Certificati"
+
+#: ../../reverse_proxy.rst:47 6eed826ba2f44ba6979490f84884c7a8
+msgid ""
+"The ``Certificates`` page centralizes certificate management "
+"functionalities, facilitating the handling of certificates on the firewall. "
+"At the firewall's initial startup, a self-signed certificate is "
+"automatically generated. This certificate serves as a default secure option."
+msgstr ""
+"La pagina ``Certificati`` centralizza le funzionalità di gestione dei "
+"certificati, facilitando la gestione dei certificati sul firewall. Al primo "
+"avvio del firewall, viene generato automaticamente un certificato "
+"autofirmato. Questo certificato funge da opzione sicura predefinita."
+
+#: ../../reverse_proxy.rst:50 d4106898326845a9941d364e85aa5c24
+msgid ""
+"The certificate management page allows users to upload custom certificates, "
+"request certificates from Let's Encrypt, and manage existing certificates."
+msgstr ""
+"La pagina di gestione dei certificati consente di caricare certificati "
+"personalizzati, richiedere certificati da Let's Encrypt e gestire i "
+"certificati esistenti."
+
+#: ../../reverse_proxy.rst:52 840b3dccf9c64e91a786711e67f61e9a
+msgid ""
+"The page lists all certificates, highlighting the default certificate. To "
+"set a certificate as the default certificate, click on the :guilabel:`Set as"
+" default` button. The default certificate is the one automatically served "
+"when accessing the :ref:`web user interface <web_user_interface-section>`, "
+"both on port 443, :ref:`9090 or custom port <change_ui_port-section>`."
+msgstr ""
+"La pagina elenca tutti i certificati, evidenziando il certificato "
+"predefinito. Per impostare un certificato come certificato predefinito, fare"
+" clic sul pulsante :guilabel:`Imposta come predefinito`. Il certificato "
+"predefinito è quello servito automaticamente quando si accede "
+"all':ref:`interfaccia web utente <web_user_interface-section>`, sia sulla "
+"porta 443, sia sulla :ref:`9090 o su una porta personalizzata "
+"<change_ui_port-section>`."
+
+#: ../../reverse_proxy.rst:59 89423be9ad014b158ef691d7b5e73c0b
+msgid "Let's Encrypt"
+msgstr "Let's Encrypt"
+
+#: ../../reverse_proxy.rst:61 224cc1c295ba498095bde7c9c84d59f9
+msgid ""
+"Let's Encrypt is a free, automated, and open Certificate Authority (CA) that"
+" provides SSL/TLS certificates for securing websites. These certificates "
+"ensure encrypted communication between web servers and users' browsers, "
+"enhancing security and privacy on the internet. Unlike traditional CAs, "
+"Let's Encrypt offers SSL certificates through an automated system, making it"
+" accessible to website owners and administrators without significant costs "
+"or technical expertise."
+msgstr ""
+"Let's Encrypt è una Certificate Authority (CA) gratuita, automatizzata e "
+"aperta che fornisce certificati SSL/TLS per la protezione dei siti web. "
+"Questi certificati garantiscono una comunicazione crittografata tra i server"
+" web e i browser degli utenti, migliorando la sicurezza e la privacy su "
+"Internet. A differenza delle CA tradizionali, Let's Encrypt offre "
+"certificati SSL tramite un sistema automatizzato, rendendoli accessibili ai "
+"proprietari e agli amministratori di siti web senza costi significativi o "
+"particolari competenze tecniche."
+
+#: ../../reverse_proxy.rst:66 f7d00b68a93940b9b4335dad0652e7f2
+msgid ""
+"The certificate page allows users to request certificates from Let's "
+"Encrypt. The process is straightforward and requires minimal configuration. "
+"Users can specify a meaningful name for the certificate and one or more "
+"domains. The certificate is automatically renewed every 60 days."
+msgstr ""
+"La pagina del certificato consente di richiedere certificati da Let's "
+"Encrypt. Il processo è semplice e richiede una configurazione minima. È "
+"possibile specificare un nome significativo per il certificato e uno o più "
+"domini. Il certificato viene rinnovato automaticamente ogni 60 giorni."
+
+#: ../../reverse_proxy.rst:69 8507b317ee7246fda99d8881a3316222
+msgid ""
+"The Let's Encrypt certificate request process involves the following steps:"
+msgstr ""
+"Il processo di richiesta del certificato Let's Encrypt prevede i seguenti "
+"passaggi:"
+
+#: ../../reverse_proxy.rst:71 4a4df36bb4714241bc8f15c781d5e846
+msgid "click on the :guilabel:`Add Let's Encrypt certificate` button;"
+msgstr ""
+"fare clic sul pulsante :guilabel:`Aggiungi certificato Let's Encrypt`;"
+
+#: ../../reverse_proxy.rst:72 7ca111bafd604bab93908932ef679384
+msgid "specify a meaningful name for the certificate;"
+msgstr "specificare un nome significativo per il certificato;"
+
+#: ../../reverse_proxy.rst:73 9b00fc95e8144d28b6788bfa1dd768ab
+msgid "specify one or more domains for the certificate;"
+msgstr "specificare uno o più domini per il certificato;"
+
+#: ../../reverse_proxy.rst:74 e1800f1f045b4695aa746ad08778629b
+msgid "click on the :guilabel:`Save` button."
+msgstr "fare clic sul pulsante :guilabel:`Salva`."
+
+#: ../../reverse_proxy.rst:76 644cceef2573482bb3ae984f7a0eaebe
+msgid "The validation process can be performed in two ways:"
+msgstr "Il processo di validazione può essere eseguito in due modi:"
+
+#: ../../reverse_proxy.rst:78 ba8a6fef5b324498ac6f636845f568d9
+msgid ""
+"Standalone mode (HTTP validation): the Standalone mode involves temporarily "
+"stopping the web server to allow the ACME client tool to bind to the "
+"required ports directly. It serves the authentication challenges to prove "
+"domain ownership, obtaining and installing the certificate."
+msgstr ""
+"Modalità standalone (validazione HTTP): la modalità standalone prevede "
+"l'arresto temporaneo del server web per consentire allo strumento client "
+"ACME di collegarsi direttamente alle porte richieste. Serve le challenge di "
+"autenticazione per dimostrare la proprietà del dominio, ottenendo e "
+"installando il certificato."
+
+#: ../../reverse_proxy.rst:81 0c3f134a40794dd692d554bc6919b875
+msgid ""
+"DNS validation: DNS validation requires adding a specific DNS TXT record to "
+"the domain's DNS configuration. ACME client checks for this record to verify"
+" domain ownership. This method is useful in situations where modifying web "
+"server configurations is challenging or not desired."
+msgstr ""
+"Validazione DNS: la validazione DNS richiede l'aggiunta di uno specifico "
+"record DNS TXT alla configurazione DNS del dominio. Il client ACME verifica "
+"la presenza di questo record per confermare la proprietà del dominio. Questo"
+" metodo è utile in situazioni in cui modificare la configurazione del server"
+" web risulta difficile o non è desiderato."
+
+#: ../../reverse_proxy.rst:84 15296f552e114617bd02018d38c47159
+msgid ""
+"When standalone mode is selected, make sure the following requirements are "
+"met:"
+msgstr ""
+"Quando viene selezionata la modalità standalone, assicurarsi che siano "
+"soddisfatti i seguenti requisiti:"
+
+#: ../../reverse_proxy.rst:86 364c76a532fc4138ba1926438a4d1290
+msgid ""
+"The firewall must be reachable from outside on port 80. The acme client "
+"will:"
+msgstr ""
+"Il firewall deve essere raggiungibile dall'esterno sulla porta 80. Il client"
+" acme:"
+
+#: ../../reverse_proxy.rst:88 d1c75c1f9b914d72af528149b734a5ee
+msgid "temporarily bind to port 80 to serve the authentication challenges"
+msgstr ""
+"associare temporaneamente alla porta 80 per servire le sfide di "
+"autenticazione"
+
+#: ../../reverse_proxy.rst:89 65a4473dac1745149d1e570ed2821ce3
+msgid ""
+"temporarily open port 80 to the public Internet to perform the validation."
+msgstr ""
+"apri temporaneamente la porta 80 verso Internet pubblico per eseguire la "
+"convalida."
+
+#: ../../reverse_proxy.rst:91 f55d1591125a45d3924a30ff0c7a2c74
+msgid ""
+"Once the validation is complete, port 80 is automatically closed. Please "
+"note that if port 80 is forwarded to another server, the validation will "
+"fail."
+msgstr ""
+"Una volta completata la convalida, la porta 80 viene chiusa automaticamente."
+" Si noti che, se la porta 80 è inoltrata a un altro server, la convalida non"
+" andrà a buon fine."
+
+#: ../../reverse_proxy.rst:94 2550b90da7c74400b91d7261d2515f5a
+msgid ""
+"The domains that you want the certificate for must be public domain names "
+"associated to server own public IP. Make sure you have public DNS name "
+"pointing to your server (you can check with sites like `VDNS "
+"<http://viewdns.info/>`_)."
+msgstr ""
+"I domini per cui si desidera il certificato devono essere nomi di dominio "
+"pubblici associati all'indirizzo IP pubblico del server. Assicurarsi di "
+"avere un nome DNS pubblico che punti al proprio server (è possibile "
+"verificare con siti come `VDNS <http://viewdns.info/>`_)."
+
+#: ../../reverse_proxy.rst:98 cf74bf485ebe4ffdb8d188045a557744
+msgid ""
+"Select DNS validation if your DNS provider supports API access. Choose the "
+"DNS provider from the drop-down menu and enter the API key and secret. "
+"Follow the `acme.sh DNS providers documentation <https://github.com/acmesh-"
+"official/acme.sh/wiki/dnsapi>`_) to know which API key and secret are "
+"required for your DNS provider. The DNS validation is the only one supported"
+" for wildcard certificates."
+msgstr ""
+"Selezionare la convalida DNS se il proprio provider DNS supporta l'accesso "
+"tramite API. Scegliere il provider DNS dal menu a discesa e inserire la "
+"chiave API e il segreto. Consultare la `documentazione dei provider DNS di "
+"acme.sh <https://github.com/acmesh-official/acme.sh/wiki/dnsapi>`_ per "
+"sapere quale chiave API e quale segreto sono richiesti dal proprio provider "
+"DNS. La convalida DNS è l'unica supportata per i certificati wildcard."
+
+#: ../../reverse_proxy.rst:103 a5555c14e2974c1e8f417cc72b68cc99
+msgid ""
+"The certificate generation process can take a few minutes. During this time,"
+" the certificate status is ``Pending``."
+msgstr ""
+"Il processo di generazione del certificato può richiedere alcuni minuti. "
+"Durante questo periodo, lo stato del certificato è ``In attesa``."
+
+#: ../../reverse_proxy.rst:106 aa56530b891f49368344ac60b7b4c513
+msgid "Debug Let's Encrypt"
+msgstr "Debug Let's Encrypt"
+
+#: ../../reverse_proxy.rst:108 a37a7917a49745389fad82cee0670095
+msgid ""
+"If the Let's Encrypt certificate request fails, the user can debug the "
+"process by entering the following commands in the terminal: ::"
+msgstr ""
+"Se la richiesta del certificato Let's Encrypt fallisce, è possibile eseguire"
+" il debug del processo inserendo i seguenti comandi nel terminale: ::"
+
+#: ../../reverse_proxy.rst:113 f3d6b6b436ad4a069334557104650582
+msgid ""
+"The debug messages will be printed on the standard output. After the problem"
+" is solved, the user can disable debug by entering the following command in "
+"the terminal: ::"
+msgstr ""
+"I messaggi di debug verranno stampati sull'output standard. Dopo che il "
+"problema è stato risolto, è possibile disabilitare il debug inserendo il "
+"seguente comando nel terminale: ::"
+
+#: ../../reverse_proxy.rst:119 25fff07201394caf9da3e2853b2b950a
+msgid "Custom certificate"
+msgstr "Certificato personalizzato"
+
+#: ../../reverse_proxy.rst:121 59b579ffb9af480b8b0403d95c418190
+msgid "The user can upload a custom certificate to the firewall."
+msgstr "L'utente può caricare un certificato personalizzato nel firewall."
+
+#: ../../reverse_proxy.rst:123 f696122972d7427ba6e55d28253f42b3
+msgid "The process involves the following steps:"
+msgstr "Il processo prevede i seguenti passaggi:"
+
+#: ../../reverse_proxy.rst:125 4222614ad9f44b79b90bf67dfdc55897
+msgid "click on the :guilabel:`Import certificate` button"
+msgstr "fare clic sul pulsante :guilabel:`Importa certificato`"
+
+#: ../../reverse_proxy.rst:126 47f9be84062943649a7cf7333b563020
+msgid "specify a meaningful name for the certificate"
+msgstr "specificare un nome significativo per il certificato"
+
+#: ../../reverse_proxy.rst:127 cf0cbcd385cc42c3b594480968edf263
+msgid ""
+"drag and drop the certificate, private key, and optionally, the chain "
+"certificate; ensure that all uploaded files adhere to the `PEM format "
+"<https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail>`_ standards"
+msgstr ""
+"trascinare e rilasciare il certificato, la chiave privata e, "
+"facoltativamente, il certificato della catena; assicurarsi che tutti i file "
+"caricati rispettino gli standard del formato `PEM "
+"<https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail>`_"
+
+#: ../../reverse_proxy.rst:129 87c1f38e68bf45c78a27905f3383c053
+msgid "click on the :guilabel:`Save` button"
+msgstr "fare clic sul pulsante :guilabel:`Salva`"
