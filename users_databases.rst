@@ -13,8 +13,9 @@ Users without a password can connect to VPN by authenticating with a certificate
 Local database
 ==============
 
-The local user database is an inherent component of the firewall,
-ensuring seamless user authentication for VPN services. It is present by default, offering a foundation for user management.
+The local user database is an inherent component of the firewall, it's available by default and does not require any additional configuration.
+It serves as a built-in user management system, allowing administrators to create and manage users directly on the firewall.
+It also integrates seamlessly with the VPN services, particularly the OpenVPN Road Warrior server,
 
 To create a new user, click on the :guilabel:`Add user` button to initiate the process.
 When configuring a local user, you should fill all the following fields:
@@ -40,10 +41,13 @@ Remote databases
    This feature is available only if the firewall has a valid subscription.
 
 The administrator can extend the capabilities of the firewall by adding new remote databases.
-Users in remote databases must be added directly at the source.
-User modifications should be made on the underlying LDAP server to accurately reflect changes in the firewall configuration page.
+Remote databases allow the firewall to authenticate users against an external LDAP server, such as Active Directory or OpenLDAP.
 
-If the remote database is offline, VPN authentication will fail.
+Unlike local users, users in remote databases must be managed directly on the source LDAP server.
+Any additions, deletions, or modifications to user accounts should be performed on the LDAP server itself,
+as these changes will be reflected in the firewall configuration page but cannot be made from the firewall interface.
+
+Also note that if the remote database is offline, VPN authentication will fail.
 It is crucial to ensure that the remote database is online and accessible to ensure proper user authentication through the VPN service.
 
 When configuring a remote database, click on the :guilabel:`Add remote database` button  and fill all the following fields:
