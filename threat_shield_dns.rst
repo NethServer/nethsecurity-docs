@@ -5,7 +5,7 @@ Threat shield DNS
 =================
 
 Threat shield DNS uses Adblock which blocks any request to domains considered malicious.
-The service can load community-maintained blocklists or use Enterprise feeds provided by `Nethesis <https://www.nethesis.it>`_ and `Yoroy <https://yoroi.company>`_
+The service can load community-maintained blocklists or use Enterprise feeds provided by `Nethesis <https://www.nethesis.it>`_ and `Yoroi <https://yoroi.company>`_
 a leading company focused on CyberSecurity and member of `Cyber Threat Alliance <https://www.cyberthreatalliance.org>`_.
 
 Please note that to access the Nethesis and Yoroi blocklists, the unit must have a valid extra entitlement for this service.
