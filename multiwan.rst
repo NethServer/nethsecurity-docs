@@ -56,7 +56,7 @@ Here's how you can create a custom rule:
 
 4. Specify traffic type: define the criteria for the traffic you want to customize. This can include the source IP address, destination IP address,
    specific protocols, ports, or any combination of these factors. By specifying these parameters, you narrow down the scope of the rule to a specific type of traffic.
-   With the Source Address and Destination Address fields, you can pick from the following options:
+   With the ``Source address`` and ``Destination address`` fields, you can pick from the following options:
 
    - Enter an address or range: specify a single IP address or a CIDR. Only IPv4 is supported.
    - Any address: select this option to match any address.

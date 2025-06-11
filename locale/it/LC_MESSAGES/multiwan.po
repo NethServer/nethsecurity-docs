@@ -1,0 +1,413 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../multiwan.rst:3 b25254f64f7c4a48a765a1e05372261f
+msgid "MultiWAN"
+msgstr "MultiWAN"
+
+#: ../../multiwan.rst:5 c826cc636c1442628bf6ca9122bc2d61
+msgid ""
+"MultiWAN (Wide Area Network) configuration is a setup in which the firewall "
+"utilizes multiple internet connections from different internet service "
+"providers (ISPs) simultaneously. This configuration aims to enhance network "
+"reliability, increase bandwidth, and improve internet speed by distributing "
+"network traffic across multiple links. It can provide failover protection, "
+"ensuring that if one connection fails, the network traffic is automatically "
+"redirected to the functional connection, minimizing downtime and ensuring "
+"continuous internet access. MultiWAN configurations are often used in "
+"businesses and organizations that require a highly available and stable "
+"internet connection for their operations."
+msgstr ""
+"La configurazione MultiWAN (Wide Area Network) è un'impostazione in cui il "
+"firewall utilizza contemporaneamente più connessioni Internet provenienti da"
+" diversi provider di servizi Internet (ISP). Questa configurazione ha "
+"l'obiettivo di aumentare l'affidabilità della rete, incrementare la "
+"larghezza di banda e migliorare la velocità di connessione distribuendo il "
+"traffico di rete su più collegamenti. Può offrire protezione da failover, "
+"garantendo che, in caso di guasto di una connessione, il traffico di rete "
+"venga automaticamente reindirizzato verso la connessione funzionante, "
+"riducendo al minimo i tempi di inattività e assicurando un accesso continuo "
+"a Internet. Le configurazioni MultiWAN sono spesso utilizzate da aziende e "
+"organizzazioni che necessitano di una connessione Internet altamente "
+"disponibile e stabile per le proprie operazioni."
+
+#: ../../multiwan.rst:12 f0d46f7115354f7d8a7eec52dbb3e34c
+msgid ""
+"MultiWAN configuration requires at least two network interfaces in the WAN "
+"zone of the system. This is the fundamental requirement for implementing a "
+"MultiWAN connection."
+msgstr ""
+"La configurazione MultiWAN richiede almeno due interfacce di rete nella zona"
+" WAN del sistema. Questo è il requisito fondamentale per implementare una "
+"connessione MultiWAN."
+
+#: ../../multiwan.rst:14 970db8ef653f426d966e2adc0e7acb05
+msgid ""
+"The first time you access the configuration page, it is mandatory to create "
+"a default policy. This policy is essential and cannot be deleted. The "
+"default policy defines the basic behavior of the MultiWAN system. It's "
+"necessary to specify its behavior. There are two available main options:"
+msgstr ""
+"La prima volta che si accede alla pagina di configurazione, è obbligatorio "
+"creare una policy predefinita. Questa policy è essenziale e non può essere "
+"eliminata. La policy predefinita definisce il comportamento di base del "
+"sistema MultiWAN. È necessario specificarne il comportamento. Sono "
+"disponibili due opzioni principali:"
+
+#: ../../multiwan.rst:17 7d0ecb7e953a4fc28636d76f32f4ccc2
+msgid ""
+"``Balanced``: In this mode, WAN connections are utilized simultaneously, and"
+" traffic is balanced based on the weight assigned to each WAN. The WAN "
+"weight can vary from 1 to 1000."
+msgstr ""
+"``Bilanciato``: In questa modalità, le connessioni WAN vengono utilizzate "
+"simultaneamente e il traffico viene bilanciato in base al peso assegnato a "
+"ciascuna WAN. Il peso della WAN può variare da 1 a 1000."
+
+#: ../../multiwan.rst:18 bc66b38fdda7440fbded2062ce945640
+msgid ""
+"``Backup``: In backup mode, the secondary WAN connection comes into play "
+"only if the primary connection fails. This ensures a backup connectivity if "
+"the primary WAN fails."
+msgstr ""
+"``Backup``: In modalità backup, la connessione WAN secondaria entra in "
+"funzione solo se la connessione primaria fallisce. Questo garantisce una "
+"connettività di riserva in caso di guasto della WAN primaria."
+
+#: ../../multiwan.rst:20 f85478276a7d4e14b479a4e1d9c164b7
+msgid ""
+"There is also a ``Custom mode`` that allows more detailed configuration, "
+"especially useful when dealing with three or more WAN connections. This mode"
+" provides greater flexibility in managing traffic between different WAN "
+"connections."
+msgstr ""
+"Esiste anche una modalità ``Personalizzato`` che consente una configurazione"
+" più dettagliata, particolarmente utile quando si gestiscono tre o più "
+"connessioni WAN. Questa modalità offre una maggiore flessibilità nella "
+"gestione del traffico tra le diverse connessioni WAN."
+
+#: ../../multiwan.rst:23 74980fb53243483dbc7537a53d63c6a1
+msgid ""
+"In the custom mode of Multi-WAN configuration, the following concepts apply:"
+msgstr ""
+"Nella modalità personalizzata della configurazione Multi-WAN, si applicano i"
+" seguenti concetti:"
+
+#: ../../multiwan.rst:25 fc4f5827fa6a4740879a04bc5db18aca
+msgid ""
+"Independent priority levels: each priority level operates independently of "
+"others. WAN interfaces within a particular priority level do not affect or "
+"depend on interfaces in other levels."
+msgstr ""
+"Livelli di priorità indipendenti: ogni livello di priorità funziona in modo "
+"indipendente dagli altri. Le interfacce WAN all'interno di un determinato "
+"livello di priorità non influenzano e non dipendono dalle interfacce "
+"presenti in altri livelli."
+
+#: ../../multiwan.rst:27 d7fbe079500444bd8dd7cb8ee672be5a
+msgid ""
+"Multiple WAN interfaces within a priority level: each priority level can "
+"contain two or more WAN interfaces. These interfaces are grouped together "
+"for specific configuration settings."
+msgstr ""
+"Più interfacce WAN all'interno di un livello di priorità: ogni livello di "
+"priorità può contenere due o più interfacce WAN. Queste interfacce sono "
+"raggruppate insieme per impostazioni di configurazione specifiche."
+
+#: ../../multiwan.rst:29 43dad94c2ef2435b961f8e6d28c8539c
+msgid ""
+"Weights determine traffic distribution: the weights assigned to WAN "
+"interfaces within a priority level determine how traffic is distributed "
+"among these interfaces. Higher weights indicate a higher proportion of "
+"traffic allocation."
+msgstr ""
+"I pesi determinano la distribuzione del traffico: i pesi assegnati alle "
+"interfacce WAN all'interno di un livello di priorità determinano come il "
+"traffico viene distribuito tra queste interfacce. Pesi più alti indicano una"
+" maggiore proporzione di allocazione del traffico."
+
+#: ../../multiwan.rst:31 f4d55f7ff0ae4303bb52120f6d7c9644
+msgid ""
+"Priority decreases with new levels: adding a new priority level results in "
+"interfaces within this level having lower priority. They are only utilized "
+"if all interfaces in the previous level fail."
+msgstr ""
+"La priorità diminuisce con i nuovi livelli: aggiungere un nuovo livello di "
+"priorità comporta che le interfacce all'interno di questo livello abbiano "
+"una priorità inferiore. Esse vengono utilizzate solo se tutte le interfacce "
+"nel livello precedente falliscono."
+
+#: ../../multiwan.rst:34 26227986ef1d45bcb7d861441f589d9f
+msgid ""
+"Consider a scenario where the first two WAN interfaces are configured in "
+"balance mode, and the last interface serves as a backup if both the first "
+"two interfaces fail:"
+msgstr ""
+"Si consideri uno scenario in cui le prime due interfacce WAN sono "
+"configurate in modalità bilanciamento, e l'ultima interfaccia funge da "
+"backup nel caso in cui entrambe le prime due interfacce risultino non "
+"disponibili."
+
+#: ../../multiwan.rst:36 e532fe055999456993e6e7a5852d642a
+msgid ""
+"select the first two WAN interfaces and set them to balance mode by "
+"assigning weights to both depending on internet connection performances"
+msgstr ""
+"Selezionare le prime due interfacce WAN e impostarle in modalità "
+"bilanciamento assegnando dei pesi a entrambe in base alle prestazioni della "
+"connessione Internet."
+
+#: ../../multiwan.rst:37 d1673cb88d2f4e4daa45dcf7874acda6
+msgid ""
+"add a new priority level by clicking on :guilabel:`Add priority level` "
+"button"
+msgstr ""
+"aggiungere un nuovo livello di priorità facendo clic sul pulsante "
+":guilabel:`Aggiungi livello di priorità`"
+
+#: ../../multiwan.rst:38 42b92934f6e346fb99cbc9e678f8f027
+msgid ""
+"select the third WAN interface and assign a weight. However, in this "
+"scenario, the weight does not influence the traffic distribution as it is "
+"the only interface at this level. It acts as a backup, coming into play only"
+" if both interfaces in the previous level fail."
+msgstr ""
+"selezionare la terza interfaccia WAN e assegnare un peso. Tuttavia, in "
+"questo scenario, il peso non influenza la distribuzione del traffico poiché "
+"è l'unica interfaccia a questo livello. Funziona come backup, entrando in "
+"gioco solo se entrambe le interfacce del livello precedente falliscono."
+
+#: ../../multiwan.rst:42 a861091b9fd34fd59f7078187296b1d2
+msgid "Routing rules"
+msgstr "Regole di instradamento"
+
+#: ../../multiwan.rst:44 a3fef82871fc481280d6d070af5ce66b
+msgid ""
+"Users can create outbound traffic rules based on specific criteria such as "
+"source IP, destination IP, source port(s), destination port(s), and IP "
+"protocol types. This policy-based routing feature enables users to customize"
+" which outbound connections use specific WAN interfaces, allowing for a "
+"fine-tuned network setup."
+msgstr ""
+"Gli utenti possono creare regole di traffico in uscita basate su criteri "
+"specifici come IP sorgente, IP di destinazione, porta(e) sorgente, porta(e) "
+"di destinazione e tipi di protocollo IP. Questa funzionalità di routing "
+"basato su policy consente di personalizzare quali connessioni in uscita "
+"utilizzano specifiche interfacce WAN, permettendo una configurazione di rete"
+" altamente personalizzata."
+
+#: ../../multiwan.rst:47 56dc3352a4c2445ea40eb06666d4175b
+msgid "Here's how you can create a custom rule:"
+msgstr "Ecco come è possibile creare una regola personalizzata:"
+
+#: ../../multiwan.rst:49 b7644d7e892b42b78c489a804cdea31f
+msgid ""
+"Create a new policy: to begin customizing traffic routing, start by creating"
+" a new policy. Click on the :guilabel:`Create policy` button to initiate the"
+" process."
+msgstr ""
+"Creare una nuova policy: per iniziare a personalizzare l'instradamento del "
+"traffico, iniziare creando una nuova policy. Fare clic sul pulsante "
+":guilabel:`Crea policy` per avviare il processo."
+
+#: ../../multiwan.rst:51 cc93aee2c76141518de22ada18935a46
+msgid ""
+"Create a new rule: then click on the :guilabel:`Create rule` button. This "
+"step allows you to define specific conditions under which the traffic will "
+"be routed differently from the default policy."
+msgstr ""
+"Crea una nuova regola: quindi fare clic sul pulsante :guilabel:`Crea "
+"regola`. Questo passaggio consente di definire condizioni specifiche in base"
+" alle quali il traffico verrà instradato in modo diverso rispetto alla "
+"policy predefinita."
+
+#: ../../multiwan.rst:54 19563a3590164321a1f8d04d40b632a7
+msgid ""
+"Give the rule a meaningful name: assign a descriptive and meaningful name to"
+" the rule. This name should reflect the purpose or conditions of the traffic"
+" routing rule for easy identification."
+msgstr ""
+"Assegnare un nome significativo alla regola: assegnare un nome descrittivo e"
+" significativo alla regola. Questo nome dovrebbe riflettere lo scopo o le "
+"condizioni della regola di instradamento del traffico per facilitarne "
+"l'identificazione."
+
+#: ../../multiwan.rst:61 d1a6775f5451488287023b374032eedc
+msgid ""
+"Enter an address or range: specify a single IP address or a CIDR. Only IPv4 "
+"is supported."
+msgstr ""
+"Immettere un indirizzo o un intervallo: specificare un singolo indirizzo IP "
+"o un CIDR. È supportato solo IPv4."
+
+#: ../../multiwan.rst:62 3a08e34bfcc848fab854cd94298809fa
+msgid "Any address: select this option to match any address."
+msgstr ""
+"Qualsiasi indirizzo: selezionare questa opzione per corrispondere a "
+"qualsiasi indirizzo."
+
+#: ../../multiwan.rst:63 c75b4938dbea46d78975f8a9ddb8e843
+msgid ""
+"Select a firewall object: choose from the list of predefined firewall "
+"objects."
+msgstr ""
+"Selezionare un oggetto firewall: scegliere dall'elenco degli oggetti "
+"firewall predefiniti."
+
+#: ../../multiwan.rst:65 858e761cebf445a196593a07fb359c02
+msgid ""
+"Select the created policy for this traffic type: choose the custom policy "
+"you created in the first step as the routing preference for this specific "
+"type of traffic. By associating the rule with a particular policy, you are "
+"instructing the system to route the defined traffic according to the "
+"settings specified within that policy."
+msgstr ""
+"Selezionare la policy creata per questo tipo di traffico: scegliere la "
+"policy personalizzata creata nel primo passaggio come preferenza di "
+"instradamento per questo specifico tipo di traffico. Associando la regola a "
+"una determinata policy, si indica al sistema di instradare il traffico "
+"definito secondo le impostazioni specificate all'interno di quella policy."
+
+#: ../../multiwan.rst:68 8353f6793e0249d9a58d2535ebccb714
+msgid ""
+"``Sticky`` option: The sticky option of a rule ensures that traffic "
+"originating from the same source IP always exits through the same WAN for a "
+"duration of 10 minutes. This can prevent issues when connecting to websites "
+"of banks, insurance companies, etc. This option is typically used for HTTPS "
+"traffic (443/TCP)."
+msgstr ""
+"Opzione ``Sticky``: L'opzione sticky di una regola garantisce che il "
+"traffico proveniente dallo stesso IP di origine esca sempre attraverso la "
+"stessa WAN per una durata di 10 minuti. Questo può prevenire problemi "
+"durante la connessione a siti web di banche, compagnie assicurative, ecc. "
+"Questa opzione viene tipicamente utilizzata per il traffico HTTPS (443/TCP)."
+
+#: ../../multiwan.rst:70 d23bf6d0aacf4c8182ad44acb0492bca
+msgid "The following are the available options for defining traffic ports:"
+msgstr ""
+"Le seguenti sono le opzioni disponibili per definire le porte di traffico:"
+
+#: ../../multiwan.rst:72 02a45719e873481d8fa588ef00530a47
+msgid "``<port>``: Single port"
+msgstr "``<port>``: Porta singola"
+
+#: ../../multiwan.rst:73 2d61cc23cc6e469ab4f8a40999675873
+msgid "``<port>,<port>``: List of ports"
+msgstr "``<porta>,<porta>``: Elenco di porte"
+
+#: ../../multiwan.rst:74 3b306b438bc3427ea5dfe5595e72bfb4
+msgid "``<port>-<endport>``: Range from <port> to <endport>"
+msgstr "``<port>-<endport>``: Intervallo da <port> a <endport>"
+
+#: ../../multiwan.rst:77 f8ecb932d4fe45ddbe0a4523223fbb37
+msgid "General settings"
+msgstr "Impostazioni generali"
+
+#: ../../multiwan.rst:79 d874cae0638b4a3c8e9218dbb0827e2e
+msgid "NethSecurity monitors each WAN connection using repeated ICMP tests."
+msgstr ""
+"NethSecurity monitora ciascuna connessione WAN utilizzando test ICMP "
+"ripetuti."
+
+#: ../../multiwan.rst:81 8687f7250cdd41139643399d0e75e994
+msgid ""
+"The ``General settings`` page allow users to specify the following "
+"parameters:"
+msgstr ""
+"La pagina ``Impostazioni generali`` consente di specificare i seguenti "
+"parametri:"
+
+#: ../../multiwan.rst:83 8bd917bb9183408292b465e22d74120d
+msgid ""
+"List of hosts to monitor: users can define a list of hosts (computers, "
+"servers, or devices) that the system will monitor for connectivity status. "
+"These hosts are checked to ensure they are reachable via the network."
+msgstr ""
+"Elenco degli host da monitorare: è possibile definire un elenco di host "
+"(computer, server o dispositivi) che il sistema monitorerà per lo stato di "
+"connettività. Questi host vengono controllati per garantire che siano "
+"raggiungibili tramite la rete."
+
+#: ../../multiwan.rst:85 e84e49caca584015936d620cdd74c52f
+msgid ""
+"Number of ICMP packets (pings) to send: users can set the number of ICMP "
+"(Internet Control Message Protocol) packets to be sent during each "
+"monitoring test. By setting the number of packets, users can control the "
+"intensity of the monitoring."
+msgstr ""
+"Numero di pacchetti ICMP (ping) da inviare: è possibile impostare il numero "
+"di pacchetti ICMP (Internet Control Message Protocol) da inviare durante "
+"ciascun test di monitoraggio. Impostando il numero di pacchetti, si può "
+"controllare l'intensità del monitoraggio."
+
+#: ../../multiwan.rst:87 562c9d2650b34ef6a18d1272c9b25fc5
+msgid ""
+"Determining unreachability after how many failed tests:  users can configure"
+" the system to determine when a WAN connection should be considered "
+"unreachable. This is done by specifying a threshold - after how many "
+"consecutive failed tests the WAN connection is deemed unreachable."
+msgstr ""
+"Determinazione dell'irraggiungibilità dopo quanti test falliti: è possibile "
+"configurare il sistema per stabilire quando una connessione WAN deve essere "
+"considerata irraggiungibile. Questo viene fatto specificando una soglia, "
+"ovvero dopo quanti test consecutivi falliti la connessione WAN viene "
+"considerata irraggiungibile."
+
+#: ../../multiwan.rst:92 697f06d6a03c4dc19b2908d23df70518
+msgid "Reset configuration"
+msgstr "Reset configurazione"
+
+#: ../../multiwan.rst:96 f92e8c41af1f4686a8cca3194aeb1dd6
+msgid ""
+"This will effectively reset the MultiWAN configuration, with a loss of "
+"Internet connection if no WAN is configured."
+msgstr ""
+"Questo reimposterà effettivamente la configurazione MultiWAN, con una "
+"perdita della connessione Internet se nessuna WAN è configurata."
+
+#: ../../multiwan.rst:98 b79763c573ab46f884ae84d47c4f2e46
+msgid ""
+"If your firewall was previously configured with two or more WAN interfaces "
+"and after reconfiguration there is only one WAN interface, it is recommended"
+" to reset the MultiWAN configuration. This will ensure that your firewall is"
+" properly configured and functioning as intended."
+msgstr ""
+"Se il firewall era stato precedentemente configurato con due o più "
+"interfacce WAN e, dopo la riconfigurazione, è presente solo una interfaccia "
+"WAN, si consiglia di reimpostare la configurazione MultiWAN. In questo modo "
+"si garantirà che il firewall sia configurato correttamente e funzioni come "
+"previsto."
+
+#: ../../multiwan.rst:57 d8940a6b3c78478d818e113caa397470
+msgid ""
+"Specify traffic type: define the criteria for the traffic you want to "
+"customize. This can include the source IP address, destination IP address, "
+"specific protocols, ports, or any combination of these factors. By "
+"specifying these parameters, you narrow down the scope of the rule to a "
+"specific type of traffic. With the ``Source address`` and ``Destination "
+"address`` fields, you can pick from the following options:"
+msgstr ""
+"Specificare il tipo di traffico: definire i criteri per il traffico che si "
+"desidera personalizzare. Questo può includere l'indirizzo IP sorgente, "
+"l'indirizzo IP di destinazione, protocolli specifici, porte o qualsiasi "
+"combinazione di questi fattori. Specificando questi parametri, si restringe "
+"l'ambito della regola a uno specifico tipo di traffico. Con i campi "
+"``Indirizzo sorgente`` e ``Indirizzo di destinazione``, è possibile "
+"scegliere tra le seguenti opzioni:"
+
+#~ msgid ""
+#~ "Specify traffic type: define the criteria for the traffic you want to "
+#~ "customize. This can include the source IP address, destination IP address, "
+#~ "specific protocols, ports, or any combination of these factors. By "
+#~ "specifying these parameters, you narrow down the scope of the rule to a "
+#~ "specific type of traffic. With the Source Address and Destination Address "
+#~ "fields, you can pick from the following options:"
+#~ msgstr ""
+#~ "Specificare il tipo di traffico: definire i criteri per il traffico che si "
+#~ "desidera personalizzare. Questo può includere l'indirizzo IP di origine, "
+#~ "l'indirizzo IP di destinazione, protocolli specifici, porte o qualsiasi "
+#~ "combinazione di questi fattori. Specificando questi parametri, si restringe "
+#~ "l'ambito della regola a un tipo specifico di traffico. Con i campi "
+#~ "``Indirizzo sorgente`` e ``Indirizzo di destinazione``, è possibile "
+#~ "scegliere tra le seguenti opzioni:"
