@@ -1,0 +1,682 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../nat.rst:5 c36a122e458741958fb6609138bfbb7c
+msgid "NAT"
+msgstr "NAT"
+
+#: ../../nat.rst:7 630dca6b1bb6431c89b687a8eabd0d3b
+msgid ""
+"Network Address Translation (NAT) is used to modify network address "
+"information in packet headers while in transit. NAT primarily enables the "
+"translation of private IP addresses used within a local network to a public "
+"IP address, allowing multiple devices within the local network to share a "
+"single public IP when accessing the internet. As default, all hosts within "
+"the local network access the WAN using the firewall are using masquerade. "
+"Masquerade is a form of NAT that automatically assigns the source IP address"
+" of outgoing packets to the WAN IP address of the firewall. This ensures "
+"that internal hosts accessing the internet appear to external servers as if "
+"they are originating from the firewall's public IP address."
+msgstr ""
+"Il Network Address Translation (NAT) viene utilizzata per modificare le "
+"informazioni sugli indirizzi di rete negli header dei pacchetti durante il "
+"transito. Il NAT consente principalmente la traduzione degli indirizzi IP "
+"privati utilizzati all'interno di una rete locale in un indirizzo IP "
+"pubblico, permettendo a più dispositivi all'interno della rete locale di "
+"condividere un unico IP pubblico quando accedono a Internet. Per "
+"impostazione predefinita, tutti gli host all'interno della rete locale che "
+"accedono alla WAN tramite il firewall utilizzano il masquerade. Il "
+"masquerade è una forma di NAT che assegna automaticamente l'indirizzo IP di "
+"origine dei pacchetti in uscita all'indirizzo IP WAN del firewall. Questo "
+"garantisce che gli host interni che accedono a Internet appaiano ai server "
+"esterni come se provenissero dall'indirizzo IP pubblico del firewall."
+
+#: ../../nat.rst:14 1de87347c8fa4b759a3d0b018882162f
+msgid ""
+"Access the ``NAT`` page under the ``Firewall`` section, this page is "
+"organized in two tabs: ``Rules and NETMAP`` and ``NAT helpers``."
+msgstr ""
+"Accedere alla pagina ``NAT`` nella sezione ``Firewall``; questa pagina è "
+"organizzata in due schede: ``Regole e NETMAP`` e ``NAT helper``."
+
+#: ../../nat.rst:16 828a094044494b4b91ae1fa4e4f4f41e
+msgid ""
+"``Rules and NETMAP`` tab allows to configure the following types of NAT "
+"rules:"
+msgstr ""
+"La scheda ``Regole e NETMAP`` consente di configurare i seguenti tipi di "
+"regole NAT:"
+
+#: ../../nat.rst:18 1f14786664dc4fd388fc82d59118f401
+msgid ":ref:`Source NAT <snat-section>`"
+msgstr ":ref:`Source NAT <snat-section>`"
+
+#: ../../nat.rst:19 0c870c98ddc1427f8042c19713e0084a
+msgid ":ref:`Masquerade <masquerade-section>`"
+msgstr ":ref:`Masquerade <masquerade-section>`"
+
+#: ../../nat.rst:20 c56edc34f23c42baa7ea676f08e7c78d
+msgid ":ref:`Accept (disable NAT) <disable_nat-section>`"
+msgstr ":ref:`Accetta (disabilita NAT) <disable_nat-section>`"
+
+#: ../../nat.rst:21 c6584b0ffcb348c4b8eaa3f84ac69d9a
+msgid ":ref:`Netmap <netmap-section>`"
+msgstr ":ref:`Netmap <netmap-section>`"
+
+#: ../../nat.rst:23 8d0b395e4e5d4bdb8438f74ea4083bf7
+msgid "Please note that these NAT rules are applied to all network protocols."
+msgstr ""
+"Si noti che queste regole NAT vengono applicate a tutti i protocolli di "
+"rete."
+
+#: ../../nat.rst:25 708c387385324f6cba6fb19a6db67ed8
+msgid ""
+"You can configure also destination NAT rules (DNAT), usually namedport "
+"forward or port redirects, from the :ref:`port forward <port_forward-"
+"section>` page."
+msgstr ""
+"È possibile configurare anche le regole di NAT di destinazione (DNAT), "
+"solitamente chiamate port forward o port redirects, dalla pagina :ref:`port "
+"forward <port_forward-section>`."
+
+#: ../../nat.rst:27 303e99237f204b82a880c2e8735124b9
+msgid "``NAT helpers`` tab allows to enable or disable NAT helpers:"
+msgstr ""
+"La scheda ``NAT helper`` consente di abilitare o disabilitare i NAT helper:"
+
+#: ../../nat.rst:29 4fdbfc18b8b84b6d94baf1c84bfcdc6e
+msgid ":ref:`NAT helpers <helpers-section>`"
+msgstr ":ref:`NAT helper <helpers-section>`"
+
+#: ../../nat.rst:34 5f27f09b918a405aa27510f357f71bbf
+msgid "SNAT"
+msgstr "SNAT"
+
+#: ../../nat.rst:36 f8be3710b0b94fd58b187b369f2609c5
+msgid ""
+"Source NAT, often referred to as SNAT, modifies the source IP address of "
+"outgoing packets. It is commonly used in networks where private IP addresses"
+" are translated into a single public IP address when communicating with "
+"external networks. SNAT ensures that responses from external servers are "
+"routed back to the correct internal device by modifying the source IP "
+"address of outgoing packets to the public IP address. This allows multiple "
+"internal devices to access the internet using a shared public IP address, "
+"enhancing security and scalability."
+msgstr ""
+"Il Source NAT, spesso indicato come SNAT, modifica l'indirizzo IP di origine"
+" dei pacchetti in uscita. Viene comunemente utilizzato nelle reti in cui gli"
+" indirizzi IP privati vengono tradotti in un singolo indirizzo IP pubblico "
+"durante la comunicazione con reti esterne. SNAT garantisce che le risposte "
+"dai server esterni vengano instradate correttamente al dispositivo interno "
+"appropriato modificando l'indirizzo IP di origine dei pacchetti in uscita "
+"con l'indirizzo IP pubblico. Questo consente a più dispositivi interni di "
+"accedere a Internet utilizzando un indirizzo IP pubblico condiviso, "
+"migliorando la sicurezza e la scalabilità."
+
+#: ../../nat.rst:41 e7b12fc6c8c04b508a3b59fa1169c495
+msgid ""
+"**Example** You have a small business with two public IP addresses provided "
+"by your internet service provider (ISP). You want to use one of these IPs "
+"(1.2.3.4) specifically for your internal mail server (192.168.1.33) to "
+"improve its reputation and sender authentication. The other IP address will "
+"be used for general internet access."
+msgstr ""
+"**Esempio** Si dispone di una piccola azienda con due indirizzi IP pubblici "
+"forniti dal proprio provider di servizi Internet (ISP). Si desidera "
+"utilizzare uno di questi IP (1.2.3.4) specificamente per il server di posta "
+"interno (192.168.1.33) al fine di migliorarne la reputazione e "
+"l'autenticazione del mittente. L'altro indirizzo IP verrà utilizzato per "
+"l'accesso generale a Internet."
+
+#: ../../nat.rst:45 7a1c55c0d91b427c8c3f42339d20798e
+msgid ""
+"**Problem** By default, all outgoing traffic from your network uses the same"
+" WAN IP, including your mail server This can negatively impact the "
+"reputation of your mail server, as spammers often use shared IPs. "
+"Additionally, you might require specific configurations for the mail server "
+"that differ from other internet traffic."
+msgstr ""
+"**Problema** Per impostazione predefinita, tutto il traffico in uscita dalla"
+" rete utilizza lo stesso IP WAN, incluso il mail server. Questo può influire"
+" negativamente sulla reputazione del mail server, poiché gli spammer spesso "
+"utilizzano IP condivisi. Inoltre, potrebbero essere necessarie "
+"configurazioni specifiche per il mail server diverse da quelle per il resto "
+"del traffico internet."
+
+#: ../../nat.rst:49 9a897e3bfbbe4c8a810a658fc121c498
+msgid ""
+"**Solution** Configure the alias IP (1.2.3.4) on your WAN interface, then "
+"create a SNAT (Static Network Address Translation) rule in your firewall to "
+"direct all outgoing traffic from your mail server to the dedicated public IP"
+" address. The rule should contain the internal IP address of your mail "
+"server (192.168.1.33) as the source and the dedicated public IP (1.2.3.4) "
+"address as the translation address, outbound zone must be set to WAN; select"
+" SNAT as action."
+msgstr ""
+"**Soluzione** Configurare l'IP alias (1.2.3.4) sull'interfaccia WAN, quindi "
+"creare una regola SNAT (Static Network Address Translation) nel firewall per"
+" indirizzare tutto il traffico in uscita dal mail server verso l'indirizzo "
+"IP pubblico dedicato. La regola deve contenere l'indirizzo IP interno del "
+"mail server (192.168.1.33) come sorgente e l'indirizzo IP pubblico dedicato "
+"(1.2.3.4) come indirizzo di traduzione; la zona di uscita deve essere "
+"impostata su WAN; selezionare SNAT come azione."
+
+#: ../../nat.rst:53 5e248d27f1064d33908e7de9190cf0ea
+msgid ""
+"**Result** All outbound traffic originating from your mail server will now "
+"be translated to the dedicated public IP address. This improves the "
+"reputation of your mail server and allows for specific configurations "
+"tailored to its needs. General internet traffic will continue to use the "
+"other public IP address."
+msgstr ""
+"**Risultato** Tutto il traffico in uscita proveniente dal server di posta "
+"verrà ora tradotto sull'indirizzo IP pubblico dedicato. Questo migliora la "
+"reputazione del server di posta e consente configurazioni specifiche "
+"adattate alle sue esigenze. Il traffico internet generale continuerà a "
+"utilizzare l'altro indirizzo IP pubblico."
+
+#: ../../nat.rst:57 d2132cf0bddd453ba3b494e09a5656fc
+msgid "Source NAT in a MultiWAN scenario"
+msgstr "Source NAT in uno scenario MultiWAN"
+
+#: ../../nat.rst:59 46030180d9764a8da92c8b510548e65e
+msgid ""
+"If you have multiple WANs and your SNAT rule rewrites to one of the public "
+"WAN IPs, you need to create a MultiWAN rule in addition to the SNAT rule. "
+"This rule will route traffic from the source IP address through the right "
+"WAN with the public IP address."
+msgstr ""
+"Se sono presenti più WAN e la regola SNAT riscrive su uno degli IP pubblici "
+"WAN, è necessario creare una regola MultiWAN oltre alla regola SNAT. Questa "
+"regola instraderà il traffico dall'indirizzo IP sorgente attraverso la WAN "
+"corretta con l'indirizzo IP pubblico."
+
+#: ../../nat.rst:61 6e167f188d1946d19f1da7c2d0fb8f1f
+msgid ""
+"If you haven't set this up yet, add a custom policy that includes only the "
+"relevant WAN. Then, create a rule to apply this custom policy for traffic "
+"originating from the internal IP address (source address) to any destination"
+" and protocol."
+msgstr ""
+"Se non è stato ancora configurato, aggiungere una policy personalizzata che "
+"includa solo la WAN pertinente. Successivamente, creare una regola per "
+"applicare questa policy personalizzata al traffico proveniente "
+"dall'indirizzo IP interno (indirizzo sorgente) verso qualsiasi destinazione "
+"e protocollo."
+
+#: ../../nat.rst:67 902311e026d84d58a8131fb53f82a252
+msgid "MASQUERADE"
+msgstr "MASQUERADE"
+
+#: ../../nat.rst:69 ca24448268f34cdf9f57a43ad0af1dfa
+msgid ""
+"The masquerade rule masks all outgoing traffic with the IP address of the "
+"firewall's outbound interface. Traffic from internal hosts to the Internet "
+"are automatically masqueraded by the firewall. Masquerade can also be used "
+"to mask traffic originating from a remote network (e.g., VPN) with the "
+"firewall's IP to avoid any routing issues."
+msgstr ""
+"La regola di masquerade maschera tutto il traffico in uscita con l'indirizzo"
+" IP dell'interfaccia di uscita del firewall. Il traffico proveniente dagli "
+"host interni verso Internet viene automaticamente mascherato dal firewall. "
+"Masquerade può anche essere utilizzato per mascherare il traffico "
+"proveniente da una rete remota (ad esempio, VPN) con l'IP del firewall per "
+"evitare eventuali problemi di routing."
+
+#: ../../nat.rst:73 3f9098468aa248f6babfe215ae4be7a5
+msgid ""
+"**Example** You need to reach a host on the local network (routed) from the "
+"VPN network (e.g. 192.168.7.0/24), but the host doesn't have a configured "
+"gateway or has a different gateway than the firewall."
+msgstr ""
+"**Esempio** È necessario raggiungere un host sulla rete locale (instradata) "
+"dalla rete VPN (ad es. 192.168.7.0/24), ma l'host non ha un gateway "
+"configurato oppure ha un gateway diverso dal firewall."
+
+#: ../../nat.rst:75 1091c40c211a4e6c91f079d7b7ef2f1c
+msgid ""
+"**Problem** The host cannot reach the local device due to the lack of a "
+"gateway."
+msgstr ""
+"**Problema** L'host non può raggiungere il dispositivo locale a causa "
+"dell'assenza di un gateway."
+
+#: ../../nat.rst:77 2fb04e40c6af44c09d4f3bfab0163c4a
+msgid ""
+"**Solution** Create a NAT rule with masquerade action for the traffic coming"
+" from the VPN Network. This masks the traffic from the VPN network "
+"(192.168.7.0/24) to the local network with the firewall's IP of the "
+"destination interface. The rule should contain the VPN network "
+"(192.168.7.0/24) as the source and the internal host network "
+"(192.168.1.0/24) as the destination address, outbound zone can be left "
+"empty; select MASQUERADE as action."
+msgstr ""
+"**Soluzione** Creare una regola NAT con azione di mascheramento per il "
+"traffico proveniente dalla VPN Network. Questo maschera il traffico dalla "
+"VPN network (192.168.7.0/24) verso la rete locale utilizzando l'indirizzo IP"
+" del firewall dell'interfaccia di destinazione. La regola deve contenere la "
+"VPN network (192.168.7.0/24) come sorgente e la rete interna degli host "
+"(192.168.1.0/24) come indirizzo di destinazione; la zona di uscita può "
+"essere lasciata vuota; selezionare MASQUERADE come azione."
+
+#: ../../nat.rst:81 2680afe770bb4f24b4ada87455a2e186
+msgid ""
+"**Result** The host can reach the local device (e.g. 192.168.1.78) as if it "
+"originated from the firewall."
+msgstr ""
+"**Risultato** L'host può raggiungere il dispositivo locale (ad esempio "
+"192.168.1.78) come se la connessione provenisse dal firewall."
+
+#: ../../nat.rst:86 e9facc934c99448e9800d6a09dc3c6bd
+msgid "ACCEPT (disable NAT)"
+msgstr "ACCEPT (disabilita NAT)"
+
+#: ../../nat.rst:88 44032eed325b4444bfa78fcac918dc07
+msgid ""
+"An ACCEPT rule disables the NAT (no-NAT) and allows you to bypass the NAT "
+"process for specific traffic. This is particularly useful when it comes to "
+"avoiding WAN masquerading for specific destinations."
+msgstr ""
+"Una regola ACCEPT disabilita il NAT (no-NAT) e consente di bypassare il "
+"processo NAT per traffico specifico. Questo è particolarmente utile quando "
+"si desidera evitare il masquerading WAN per destinazioni specifiche."
+
+#: ../../nat.rst:91 ae6207f843ef493dabc9001818444cc7
+msgid ""
+"**Example** Your firewall is connected to a router that, in addition to "
+"allowing internet access, also enables reaching private networks through CDN"
+" connections or IPsec tunnels. In order to reach private remote networks, "
+"traffic from local network must come out with its original IP address (no "
+"masquerade rewriting)."
+msgstr ""
+"**Esempio** Il firewall è collegato a un router che, oltre a consentire "
+"l'accesso a Internet, permette anche di raggiungere reti private tramite "
+"connessioni CDN o tunnel IPsec. Per poter raggiungere le reti private "
+"remote, il traffico proveniente dalla rete locale deve uscire con il proprio"
+" indirizzo IP originale (senza riscrittura tramite masquerade)."
+
+#: ../../nat.rst:94 5b96d5c265184f4e87cef4686ff1ec2c
+msgid ""
+"**Problem** The router tunnel policies only allow traffic between the "
+"NethSecurity local network and the destination networks, but all traffic "
+"comes out of the firewall with the masked IP (NethSecurity WAN IP). Due to "
+"masquerading, direct communication between the NethSecurity LAN and the "
+"remote network is not possible."
+msgstr ""
+"**Problema** Le policy dei tunnel del router consentono il traffico solo tra"
+" la rete locale di NethSecurity e le reti di destinazione, ma tutto il "
+"traffico esce dal firewall con l’IP mascherato (IP WAN di NethSecurity). A "
+"causa del masquerading, la comunicazione diretta tra la LAN di NethSecurity "
+"e la rete remota non è possibile."
+
+#: ../../nat.rst:97 76dcae268e304450b958b961e2ed6a7f
+msgid ""
+"**Solution**: Create a NAT (Network Address Translation) rule with ACCEPT in"
+" your firewall. This rule avoid masquerading for all the traffic towards the"
+" CDN network, keeping the local source IP address unchanged. The rule should"
+" contain the internal network (192.168.1.0./24) as the source and the CDN "
+"network (192.168.50.0/24) as the destination address."
+msgstr ""
+"**Soluzione**: Creare una regola NAT (Network Address Translation) con "
+"ACCEPT nel firewall. Questa regola evita il masquerading per tutto il "
+"traffico verso la rete CDN, mantenendo invariato l'indirizzo IP sorgente "
+"locale. La regola dovrebbe includere la rete interna (192.168.1.0/24) come "
+"sorgente e la rete CDN (192.168.50.0/24) come indirizzo di destinazione."
+
+#: ../../nat.rst:104 65fd5071480a4831aba873f14362c678
+msgid "Netmap"
+msgstr "Netmap"
+
+#: ../../nat.rst:106 a7451ab07fd2474ca5348549ec1c3aba
+msgid ""
+"Netmap is a NAT technique that offers 1:1 network-wide translation without "
+"changing the individual host addresses. This means it could map an entire "
+"private network (e.g., 192.168.1.0/24) to a another network (e.g., "
+"10.5.6.0/24) at once, eliminating the need to manually configure individual "
+"NAT rules for each device."
+msgstr ""
+"Netmap è una tecnica NAT che offre una traduzione 1:1 a livello di rete "
+"senza modificare gli indirizzi dei singoli host. Questo significa che può "
+"mappare un'intera rete privata (ad esempio, 192.168.1.0/24) su un'altra rete"
+" (ad esempio, 10.5.6.0/24) in un'unica operazione, eliminando la necessità "
+"di configurare manualmente regole NAT individuali per ogni dispositivo."
+
+#: ../../nat.rst:110 418da09c515e4464a4e70d779252e01f
+msgid ""
+"**Example** 2 firewalls, FW-A and FW-B holding a VPN tunnel between networks"
+" A and B, local and remote networks are overlapping (192.168.1.0/24), so "
+"this makes it impossible to route traffic between them. Translate A and B "
+"networks onto two alternative networks can solve the problem so that there "
+"are no overlapping networks."
+msgstr ""
+"**Esempio** 2 firewall, FW-A e FW-B, mantengono un tunnel VPN tra le reti A "
+"e B; le reti locali e remote si sovrappongono (192.168.1.0/24), il che rende"
+" impossibile instradare il traffico tra di esse. Tradurre le reti A e B su "
+"due reti alternative può risolvere il problema, evitando così la "
+"sovrapposizione delle reti."
+
+#: ../../nat.rst:113 3d64c7b0a5c144689db15b0dec04d423
+msgid "Let's use this translation scheme."
+msgstr "Utilizziamo questo schema di traduzione."
+
+#: ../../nat.rst:115 2cc4c9765bcd4e07b721b13cd86f7fc3
+msgid ""
+"Network A: 192.168.1.0/24 -> is translated to -> Network ALT_A: 10.1.1.0/24"
+msgstr ""
+"Rete A: 192.168.1.0/24 -> viene tradotta in -> Rete ALT_A: 10.1.1.0/24"
+
+#: ../../nat.rst:116 02bb94ee17cb4bea95966e177f2d5afd
+msgid ""
+"Network B: 192.168.1.0/24 -> is translated to -> Network ALT_B: 10.2.2.0/24"
+msgstr ""
+"Rete B: 192.168.1.0/24 -> viene tradotta in -> Rete ALT_B: 10.2.2.0/24"
+
+#: ../../nat.rst:118 0f0527764a0a4ca0b3a011316c4231b9
+msgid ""
+"A host in network A trying to reach a host in network B must not contact the"
+" real IP but its translated network (only the last octet remains the same). "
+"For example, the host 192.168.1.10 from the network A wanting to reach "
+"192.168.0.20 in network B must contact the IP 10.2.2.20 instead. Before the "
+"request exits firewall  FW-A, the source of the packet will be rewritten by "
+"FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. "
+"The inverse process will occur for the returning packets."
+msgstr ""
+"Un host nella rete A che tenta di raggiungere un host nella rete B non deve "
+"contattare il vero IP, ma il suo indirizzo di rete tradotto (solo l’ultimo "
+"ottetto rimane invariato). Ad esempio, l’host 192.168.1.10 della rete A che "
+"vuole raggiungere 192.168.0.20 nella rete B deve invece contattare l’IP "
+"10.2.2.20. Prima che la richiesta esca dal firewall FW-A, la sorgente del "
+"pacchetto verrà riscritta da FW-A come ALT_IP 10.1.1.10 per eliminare "
+"qualsiasi problema di routing nella rete B. Il processo inverso avverrà per "
+"i pacchetti di ritorno."
+
+#: ../../nat.rst:123 401a1c5513c2450ba05046d77d5771a6
+msgid ""
+"**Solution** The problem can be solved by using netmap to translate the "
+"traffic to a different private network. This allows the traffic to be routed"
+" correctly."
+msgstr ""
+"**Soluzione** Il problema può essere risolto utilizzando netmap per tradurre"
+" il traffico verso una rete privata diversa. Questo consente al traffico di "
+"essere instradato correttamente."
+
+#: ../../nat.rst:125 0d8fb7f529914ae4bffa48875a3547bd
+msgid "**How to do it**"
+msgstr "**Come fare**"
+
+#: ../../nat.rst:127 f839660ec2e54a1389a2e1d77810b126
+msgid ""
+"To allow network A to access a resource in network B, two rules are "
+"necessary: one for source netmap and one for destination netmap."
+msgstr ""
+"Per consentire alla rete A di accedere a una risorsa nella rete B, sono "
+"necessarie due regole: una per il netmap di origine e una per il netmap di "
+"destinazione."
+
+#: ../../nat.rst:129 51054d9375d94c7387b3b47be12a21dd
+msgid ""
+"The first rule, acting as a source netmap, specifies that all traffic "
+"directed towards the network 10.2.2.0/24 (destination network) and "
+"originating from the network 192.168.1.0/24 (source network) will be mapped "
+"onto the network 10.1.1.0/24 (mapped source network)."
+msgstr ""
+"La prima regola, che agisce come una source netmap, specifica che tutto il "
+"traffico diretto verso la rete 10.2.2.0/24 (rete di destinazione) e "
+"proveniente dalla rete 192.168.1.0/24 (rete sorgente) verrà mappato sulla "
+"rete 10.1.1.0/24 (rete sorgente mappata)."
+
+#: ../../nat.rst:131 af9b8d25418c48c6b4c9af92b3c6d389
+msgid ""
+"The second rule functions as a destination netmap, playing a crucial role in"
+" correctly receiving responses. It necessitates that traffic originating "
+"from the network 10.2.2.0/24 (source network) and destined for the network "
+"10.1.1.0/24 (destination network) will be mapped onto the network "
+"192.168.1.0/24 (mapped destination network)."
+msgstr ""
+"La seconda regola funziona come una destination netmap, svolgendo un ruolo "
+"cruciale nel ricevere correttamente le risposte. È necessario che il "
+"traffico proveniente dalla rete 10.2.2.0/24 (rete sorgente) e destinato alla"
+" rete 10.1.1.0/24 (rete di destinazione) venga mappato sulla rete "
+"192.168.1.0/24 (rete di destinazione mappata)."
+
+#: ../../nat.rst:134 f16b32350ff049799736b48c6f593b54
+msgid ""
+"**Result** All traffic requests (and their responses) from network A to "
+"network B will be routed correctly."
+msgstr ""
+"**Risultato** Tutte le richieste di traffico (e le relative risposte) dalla "
+"rete A alla rete B verranno instradate correttamente."
+
+#: ../../nat.rst:136 d562bafe829c47ceaedd133247087a1a
+msgid ""
+"If you need to allow requests starting from network B toward network A you "
+"must do the same in the firewall B."
+msgstr ""
+"Se è necessario consentire le richieste dalla rete B verso la rete A, è "
+"necessario fare lo stesso nel firewall B."
+
+#: ../../nat.rst:139 ff8398b822944d279fcaf2e169c9d84b
+msgid "Source netmap"
+msgstr "Netmap sorgente"
+
+#: ../../nat.rst:141 ec847a804aa64798a7a8eb473e612557
+msgid ""
+"The \"source netmap\" allows us to determine how the source should change "
+"when traffic is directed towards a specific destination. E.g., destination "
+"network 10.2.2.0/24, source network: 192.168.0.0/24, natted source network: "
+"10.1.1.0/24."
+msgstr ""
+"La \"source netmap\" consente di determinare come deve cambiare la sorgente "
+"quando il traffico è diretto verso una destinazione specifica. Ad esempio, "
+"rete di destinazione 10.2.2.0/24, rete sorgente: 192.168.0.0/24, rete "
+"sorgente nattata: 10.1.1.0/24."
+
+#: ../../nat.rst:144 47d5d1da887f431d80e1fc276ace40ad
+msgid ""
+"You can create a source netmap rule from the web interface inside the "
+"``NAT`` page. On the lower part of the page, click on the :guilabel:`Add "
+"source NETMAP` button to create a new rule. Inside the drawer, fill the "
+"fields as follows:"
+msgstr ""
+"È possibile creare una regola di source netmap dall'interfaccia web "
+"all'interno della pagina ``NAT``. Nella parte inferiore della pagina, fare "
+"clic sul pulsante :guilabel:`Aggiungi NETMAP sorgente` per creare una nuova "
+"regola. All'interno del drawer, compilare i campi come segue:"
+
+#: ../../nat.rst:148 ../../nat.rst:166 81ec1f4b22be437c97cd5036a4ab7a7f
+#: be43713ff5454d71a1b2e3e598945b92
+msgid "**Name**: a name for the rule"
+msgstr "**Nome**: un nome per la regola"
+
+#: ../../nat.rst:149 d8cdd328776349429605fa8ba38060e0
+msgid ""
+"**Destination network**: the destination network in CIDR notation, e.g., "
+"10.2.2.0/24 for the example above"
+msgstr ""
+"**Rete di destinazione**: la rete di destinazione in notazione CIDR, ad "
+"esempio 10.2.2.0/24 per l'esempio sopra"
+
+#: ../../nat.rst:150 f2c8738e73864453afbc25f4e770cd38
+msgid "**Source network**: the source network, e.g., 192.168.1.0/24"
+msgstr "**Rete di origine**: la rete di origine, ad esempio 192.168.1.0/24"
+
+#: ../../nat.rst:151 500d151f50e34151b98d785c607a8679
+msgid "**Mapped network**: the translated source network, e.g., 10.1.1.0/24"
+msgstr "**Rete mappata**: la rete di origine tradotta, ad esempio 10.1.1.0/24"
+
+#: ../../nat.rst:153 ../../nat.rst:171 944e036c977c43b889fae18578bda8e7
+#: da03b9c87c05405ea29bebd3786c3ea7
+msgid ""
+"Under the ``Advanced settings`` section, you can specify the input and "
+"output devices for the rule. If the device is not specified, the rule will "
+"be applied to all devices."
+msgstr ""
+"Nella sezione ``Impostazioni avanzate``, è possibile specificare i "
+"dispositivi di input e output per la regola. Se il dispositivo non viene "
+"specificato, la regola verrà applicata a tutti i dispositivi."
+
+#: ../../nat.rst:157 6e4129da350e4005a4f5479592125786
+msgid "Destination Netmap"
+msgstr "Netmap destinazione"
+
+#: ../../nat.rst:159 e36f7cd2fdf64939b1b1281eb1a0686a
+msgid ""
+"The \"destination netmap\" allows us to determine how the destination IP "
+"should change when traffic comes from a specific network. E.g., source "
+"network 10.2.2.0/24, destination network: 10.1.1.0/24, natted destination "
+"network: 192.168.0.0/24."
+msgstr ""
+"La \"destination netmap\" consente di determinare come deve cambiare l'IP di"
+" destinazione quando il traffico proviene da una rete specifica. Ad esempio,"
+" rete sorgente 10.2.2.0/24, rete di destinazione: 10.1.1.0/24, rete di "
+"destinazione natted: 192.168.0.0/24."
+
+#: ../../nat.rst:162 58770dfbd3ab4acf88cdf98c3be5e704
+msgid ""
+"You can create a destination netmap rule from the web interface inside the "
+"``NAT`` page. On the lower part of the page, click on the :guilabel:`Add "
+"destination NETMAP` button to create a new rule. Inside the drawer, fill the"
+" fields as follows:"
+msgstr ""
+"È possibile creare una regola di destination netmap dall'interfaccia web "
+"all'interno della pagina ``NAT``. Nella parte inferiore della pagina, fare "
+"clic sul pulsante :guilabel:`Aggiungi NETMAP destinazione` per creare una "
+"nuova regola. All'interno del drawer, compilare i campi come segue:"
+
+#: ../../nat.rst:167 903fba7b0cda4e0c859b601eda63ce32
+msgid ""
+"**Source network**: the source network in CIDR notation, e.g., 10.2.2.0/24"
+msgstr ""
+"**Rete di origine**: la rete di origine in notazione CIDR, ad esempio "
+"10.2.2.0/24"
+
+#: ../../nat.rst:168 e3df073f11de48caa9fc89bdf8a56a13
+msgid "**Destination network**: the destination network, e.g., 10.1.1.0/24"
+msgstr ""
+"**Rete di destinazione**: la rete di destinazione, ad esempio 10.1.1.0/24"
+
+#: ../../nat.rst:169 39add993bbeb4627b6b16bf4f81632a4
+msgid ""
+"**Mapped network**: the translated destination network, e.g., 192.168.1.0/24"
+msgstr ""
+"**Rete mappata**: la rete di destinazione tradotta, ad esempio "
+"192.168.1.0/24"
+
+#: ../../nat.rst:175 846d9e7e44514e838d8a483fbc462dd8
+msgid "CLI commands"
+msgstr "Comandi CLI"
+
+#: ../../nat.rst:177 5b32b994d6404104bbd0b93b85fdc159
+msgid "To create a SOURCE netmap rule from CLI ::"
+msgstr "Per creare una regola netmap SOURCE dalla CLI ::"
+
+#: ../../nat.rst:185 ../../nat.rst:203 9c703b97479a43a6b0db82ce98bff21a
+#: ee944f8cb5284c7499a596dd15e42c02
+msgid "you can also specify optional in/out devices this way::"
+msgstr ""
+"è anche possibile specificare dispositivi di input/output opzionali in "
+"questo modo::"
+
+#: ../../nat.rst:190 ../../nat.rst:208 b038bdb456734d86ab627cee7e49b5c2
+#: f4bb6e452bc94b4db04c9705133be345
+msgid "Then commit and apply::"
+msgstr "Quindi eseguire il commit e applicare::"
+
+#: ../../nat.rst:195 48350fcae90b4f74a4793c66904c6f3c
+msgid "To create a DESTINATION netmap rule from CLI ::"
+msgstr "Per creare una regola netmap DESTINATION dalla CLI ::"
+
+#: ../../nat.rst:217 2c96c01440b0467caf23e8992ddf1457
+msgid "NAT helpers"
+msgstr "Helper NAT"
+
+#: ../../nat.rst:219 1a800c86884443c9b2ce90510d2a1cbf
+msgid ""
+"NAT helpers are mechanisms designed to facilitate communication for certain "
+"protocols that may encounter issues when used with basic NAT. Some common "
+"protocols, such as FTP, SIP, or H.323, embed IP addresses or port numbers "
+"within the data payload, which can create problems with standard NAT."
+msgstr ""
+"I NAT helper sono meccanismi progettati per facilitare la comunicazione di "
+"alcuni protocolli che possono incontrare problemi quando utilizzati con il "
+"NAT di base. Alcuni protocolli comuni, come FTP, SIP o H.323, inseriscono "
+"indirizzi IP o numeri di porta all'interno del payload dei dati, il che può "
+"creare problemi con il NAT standard."
+
+#: ../../nat.rst:222 91234c19f8ed4c51af0fe87195aad5de
+msgid ""
+"NAT helpers, also known as Application Layer Gateways (ALGs), operate at the"
+" application layer. Their main role is to modify protocol-specific data, "
+"such as embedded IP addresses or ports within packets, ensuring that these "
+"protocols function properly when passing through NAT."
+msgstr ""
+"I NAT helper, noti anche come Application Layer Gateway (ALG), operano a "
+"livello applicativo. Il loro ruolo principale è modificare i dati specifici "
+"del protocollo, come indirizzi IP o porte incorporati nei pacchetti, "
+"garantendo che questi protocolli funzionino correttamente durante il "
+"transito attraverso il NAT."
+
+#: ../../nat.rst:224 4ddc11d14ed74beaa0aa019e8a02753d
+msgid ""
+"For example, in FTP, NAT helpers modify the IP addresses and ports inside "
+"the FTP control and data packets, enabling proper NAT traversal for FTP "
+"connections. Similarly, NAT helpers for SIP and other protocols ensure that "
+"devices using these protocols can establish connections across NAT "
+"boundaries without issues."
+msgstr ""
+"Ad esempio, in FTP, i NAT helper modificano gli indirizzi IP e le porte "
+"all'interno dei pacchetti di controllo e dati FTP, consentendo una corretta "
+"attraversamento NAT per le connessioni FTP. Allo stesso modo, i NAT helper "
+"per SIP e altri protocolli garantiscono che i dispositivi che utilizzano "
+"questi protocolli possano stabilire connessioni attraverso i confini NAT "
+"senza problemi."
+
+#: ../../nat.rst:227 9f65a44abc3b4c209beaea498113d991
+msgid ""
+"NethSecurity provides various types of NAT helpers, all of which are "
+"disabled by default. If needed, specific helpers can be enabled via the web "
+"UI."
+msgstr ""
+"NethSecurity fornisce diversi tipi di NAT helper, tutti disabilitati per "
+"impostazione predefinita. Se necessario, è possibile abilitare specifici "
+"helper tramite l'interfaccia web."
+
+#: ../../nat.rst:229 02a7370b6e7d452da145f4628f172c42
+msgid ""
+"During helper configuration, the interface may display certain parameters "
+"typical of the involved protocol. These parameters are pre-filled with the "
+"most commonly used default values. Since the parameters depend on the "
+"protocol type, they vary in both number and type depending on the helper "
+"(some helpers do not display any parameters)."
+msgstr ""
+"Durante la configurazione dell'helper, l'interfaccia può mostrare alcuni "
+"parametri tipici del protocollo coinvolto. Questi parametri sono "
+"precompilati con i valori predefiniti più comunemente utilizzati. Poiché i "
+"parametri dipendono dal tipo di protocollo, variano sia per numero che per "
+"tipologia a seconda dell'helper (alcuni helper non mostrano alcun "
+"parametro)."
+
+#: ../../nat.rst:232 7b59636958944815bec869e27a9c86e2
+msgid ""
+"After any changes, the firewall will notify you if a reboot is necessary. "
+"This typically happens when a helper is disabled or modified (if it is "
+"already active)."
+msgstr ""
+"Dopo qualsiasi modifica, il firewall notificherà se è necessario un riavvio."
+" Questo avviene tipicamente quando un helper viene disabilitato o modificato"
+" (se è già attivo)."
+
+#: ../../nat.rst:234 fe5eff5463734e84ba2a8d12987efd55
+msgid ""
+"When certain helpers are enabled, related helpers are automatically loaded "
+"in the kernel as dependencies. For example if ``nf_nat_ftp`` is enabled, the"
+" related helper ``nf_conntrack_ftp`` will be automatically loaded in the "
+"kernel. For that helper the web UI will display ``Loaded`` with an "
+"informational icon to notify the user."
+msgstr ""
+"Quando alcuni helper sono abilitati, gli helper correlati vengono caricati "
+"automaticamente nel kernel come dipendenze. Ad esempio, se ``nf_nat_ftp`` è "
+"abilitato, l'helper correlato ``nf_conntrack_ftp`` verrà caricato "
+"automaticamente nel kernel. Per quell'helper, l'interfaccia web mostrerà "
+"``Caricato`` con un'icona informativa per notificare l'utente."
