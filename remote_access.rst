@@ -23,7 +23,7 @@ Such credentials can be used to log in to the web interface or using SSH:
 NethSecurity's default hostname is: ``NethSec``
 
 If your client has received an IP address from NethSecurity's DHCP, it will use NethSecurity as both gateway and DNS server. 
-Under these conditions you can contact NethSecurity using its hostame **nethsec** instead of the **server_ip** e.g.
+Under these conditions you can contact NethSecurity using its hostname **nethsec** instead of the **server_ip** e.g.
 
 https://nethsec:9090
 
