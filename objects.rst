@@ -8,8 +8,7 @@ making it easier to create and maintain firewall rules, port forwards, and other
 
 Advantages of using firewall objects include:
 
-Improved organization and readability of your firewall configuration
-
+- improved organization and readability of your firewall configuration
 - reduced chance of errors when entering IP addresses or networks manually
 - easier maintenance - updating an object automatically updates all associated rules
 - more efficient rule management, especially for complex networks

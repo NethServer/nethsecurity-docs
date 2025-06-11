@@ -1,0 +1,910 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../objects.rst:3 1cb718171312444caad207fc87a6ca83
+msgid "Firewall objects"
+msgstr "Oggetti firewall"
+
+#: ../../objects.rst:5 2356e65bc10a4ecdaff4a269caa460e7
+msgid ""
+"Firewall objects are predefined sets of network addresses that can be used "
+"to streamline and simplify your firewall configuration. These objects allow "
+"you to group related IP addresses, networks, or domain names into reusable "
+"units, making it easier to create and maintain firewall rules, port "
+"forwards, and other network policies."
+msgstr ""
+"Gli oggetti firewall sono insiemi predefiniti di indirizzi di rete che "
+"possono essere utilizzati per semplificare e ottimizzare la configurazione "
+"del firewall. Questi oggetti consentono di raggruppare indirizzi IP, reti o "
+"nomi di dominio correlati in unità riutilizzabili, facilitando la creazione "
+"e la gestione di regole firewall, port forwarding e altre policy di rete."
+
+#: ../../objects.rst:9 00c8409534114816b1a1cdd6d91ac466
+msgid "Advantages of using firewall objects include:"
+msgstr "I vantaggi dell'utilizzo degli oggetti firewall includono:"
+
+#: ../../objects.rst:12 20fd120ede874420b58d3091d55dae97
+msgid ""
+"reduced chance of errors when entering IP addresses or networks manually"
+msgstr ""
+"probabilità ridotta di errori durante l'inserimento manuale di indirizzi IP "
+"o reti"
+
+#: ../../objects.rst:13 ddae316703cd41bc9f7663cdbc3a001b
+msgid ""
+"easier maintenance - updating an object automatically updates all associated"
+" rules"
+msgstr ""
+"manutenzione più semplice - l'aggiornamento di un oggetto aggiorna "
+"automaticamente tutte le regole associate"
+
+#: ../../objects.rst:14 bbd1f0e3988843478c3f3591e5b42d89
+msgid "more efficient rule management, especially for complex networks"
+msgstr "gestione delle regole più efficiente, soprattutto per reti complesse"
+
+#: ../../objects.rst:16 70b3cf4a7a6e41e5a3dcd0e2029d6d26
+msgid ""
+"Firewall objects are particularly useful when you have multiple rules that "
+"reference the same set of addresses or when you frequently need to modify "
+"groups of addresses. However, for simple configurations with only a few "
+"static rules, using objects may not be necessary and could add unnecessary "
+"complexity."
+msgstr ""
+"Gli oggetti firewall sono particolarmente utili quando sono presenti più "
+"regole che fanno riferimento allo stesso insieme di indirizzi o quando è "
+"necessario modificare frequentemente gruppi di indirizzi. Tuttavia, per "
+"configurazioni semplici con solo alcune regole statiche, l'utilizzo degli "
+"oggetti potrebbe non essere necessario e potrebbe aggiungere complessità non"
+" necessaria."
+
+#: ../../objects.rst:20 26077fce19434d5baa71ca7b52cd2150
+msgid "The system provides several types of firewall objects:"
+msgstr "Il sistema fornisce diversi tipi di oggetti firewall:"
+
+#: ../../objects.rst:22 e45455302fe6420c8e64e7fa77f44240
+msgid ""
+"static Leases (DHCP Reservations): static IP assignments for specific "
+"devices"
+msgstr ""
+"Lease statici (DHCP Reservation): assegnazioni IP statiche per dispositivi "
+"specifici"
+
+#: ../../objects.rst:23 2f5e380f90d9480dabeb4fca2da15efa
+msgid "DNS Records: domain names associated with specific IP addresses"
+msgstr "Record DNS: nomi di dominio associati a indirizzi IP specifici"
+
+#: ../../objects.rst:24 b52b5e5ae50b4820b5681bcdaee1d07d
+msgid "VPN Users: users with reserved IP addresses from OpenVPN Road Warrior"
+msgstr "Utenti VPN: utenti con indirizzi IP riservati da OpenVPN Road Warrior"
+
+#: ../../objects.rst:25 571f30ac50074975908a106719bc1806
+msgid "Host Sets: groups of IP addresses, networks, or ranges"
+msgstr "Sost set: gruppi di indirizzi IP, reti o intervalli"
+
+#: ../../objects.rst:26 b9ce6ecc514f42c785e7bbd039489853
+msgid "Domain Sets: collections of domain names that resolve to IP addresses"
+msgstr ""
+"Domain set: raccolte di nomi di dominio che si risolvono in indirizzi IP"
+
+#: ../../objects.rst:29 5523192cdb3047e3b1bda56db957db9d
+msgid "Static Leases"
+msgstr "Lease statici"
+
+#: ../../objects.rst:31 1ff3791e83fc4d13942e8e629202a8e7
+msgid ""
+":ref:`Static leases <static_leases-section>`, also known as DHCP "
+"reservations, allow you to assign fixed IP addresses to specific devices on "
+"your network. This feature combines the convenience of DHCP with the "
+"stability of static IP addressing."
+msgstr ""
+":ref:`Lease statici <static_leases-section>`, note anche come DHCP reservations, "
+"permettono di assegnare indirizzi IP fissi a dispositivi specifici "
+"sulla rete. Questa funzionalità unisce la comodità del DHCP con la stabilità"
+" dell’assegnazione statica degli indirizzi IP."
+
+#: ../../objects.rst:34 59017f4a4f22482294b435852a040dd3
+msgid "Key benefits:"
+msgstr "Vantaggi principali:"
+
+#: ../../objects.rst:36 d6ba5eaf491a4e238a2ad6ad9a51b63e
+msgid "ensures devices always receive the same IP address"
+msgstr "garantisce che i dispositivi ricevano sempre lo stesso indirizzo IP"
+
+#: ../../objects.rst:37 daa3f66a99c9449188b5199a4e7d1c86
+msgid "allows you to associate easy-to-remember hostnames with devices"
+msgstr "consente di associare nomi host facili da ricordare ai dispositivi"
+
+#: ../../objects.rst:38 7063fa940c854271b4f6cd23bd25d32e
+msgid "simplifies network management and troubleshooting"
+msgstr "semplifica la gestione e la risoluzione dei problemi della rete"
+
+#: ../../objects.rst:40 95d7dfbad6cd4f1bade8eb6bb7f5a754
+msgid "A static lease consists of:"
+msgstr "Un lease statico consiste in:"
+
+#: ../../objects.rst:42 68b558d1138b49bd9a2599bf08fd578a
+msgid "hostname: A recognizable name for the device"
+msgstr "hostname: Un nome riconoscibile per il dispositivo"
+
+#: ../../objects.rst:43 5010548b96fc4a69b0a25cb2df54b1e3
+msgid ""
+"IP address: The fixed IP you want to assign (must be within the DHCP range)"
+msgstr ""
+"Indirizzo IP: L'IP fisso che si desidera assegnare (deve essere all'interno "
+"dell'intervallo DHCP)"
+
+#: ../../objects.rst:44 05a7ef242b944552ae826322d496e73a
+msgid "MAC address: The unique hardware identifier of the device"
+msgstr "Indirizzo MAC: L'identificatore hardware univoco del dispositivo"
+
+#: ../../objects.rst:47 8b9430ab78864be9a2005c87acaf195e
+msgid "DNS Records"
+msgstr "Record DNS"
+
+#: ../../objects.rst:49 04a3caa3a5814ffaa2ca410d68c13b60
+msgid ""
+":ref:`DNS records <dns_records-section>` allow you to create local hostname-"
+"to-IP address mappings. These local records take precedence over external "
+"DNS queries, giving you more control over name resolution on your network."
+msgstr ""
+":ref:`Record DNS <dns_records-section>` consentono di creare associazioni "
+"locali tra nomi host e indirizzi IP. Questi record locali hanno la "
+"precedenza sulle query DNS esterne, offrendo un maggiore controllo sulla "
+"risoluzione dei nomi nella rete."
+
+#: ../../objects.rst:52 06308e1cb043410fa2cd4ed7b2d975f7
+msgid "A DNS record includes:"
+msgstr "Un record DNS include:"
+
+#: ../../objects.rst:54 8c79d1be2dd841c8b9d07bd9905706d5
+msgid "hostname: The domain name you want to resolve locally"
+msgstr "hostname: Il nome di dominio che si desidera risolvere localmente"
+
+#: ../../objects.rst:55 ba44b882e717430fb83e09168ea25041
+msgid "IP address: The corresponding IP address for the hostname"
+msgstr "Indirizzo IP: L'indirizzo IP corrispondente per il nome host"
+
+#: ../../objects.rst:57 4983efbc022540a4becb190e3e38cf66
+msgid "Use cases for local DNS records:"
+msgstr "Casi d'uso per i record DNS locali:"
+
+#: ../../objects.rst:59 95b39654ce7a4b3f9ef3b04804647179
+msgid ""
+"create shortcuts to internal resources (e.g., \"intranet.mycompany.local\")"
+msgstr ""
+"creare collegamenti rapidi a risorse interne (ad esempio, "
+"``intranet.mycompany.local``)"
+
+#: ../../objects.rst:60 844c11eafac34b8b93c78325bafc9c8c
+msgid "override external DNS for testing or security purposes"
+msgstr "ignorare il DNS esterno per scopi di test o di sicurezza"
+
+#: ../../objects.rst:61 d97e7849abc0452d8cb518e356d3a6ad
+msgid "set up custom domain names for local services"
+msgstr "impostare nomi di dominio personalizzati per i servizi locali"
+
+#: ../../objects.rst:63 c2a0cbd164964c1c84bc73bf9a335f79
+msgid ""
+"By utilizing static leases and local DNS records, you can create a more "
+"organized and easily manageable network environment. These features work "
+"seamlessly with other firewall objects like host sets, providing you with "
+"powerful tools for network administration."
+msgstr ""
+"Utilizzando lease statici e record DNS locali, è possibile creare un "
+"ambiente di rete più organizzato e facilmente gestibile. Queste funzionalità"
+" funzionano perfettamente con altri oggetti del firewall come gli host set, "
+"offrendo strumenti potenti per l'amministrazione della rete."
+
+#: ../../objects.rst:66 b4a32ab36118422aabaccbd3bd14c63e
+msgid ""
+"For detailed instructions on how to create and manage static leases and DNS "
+"records, please refer to the :ref:`DHCP and DNS configuration chapters "
+"<dns_dhcp-section>`."
+msgstr ""
+"Per istruzioni dettagliate su come creare e gestire lease statici e record "
+"DNS, fare riferimento ai :ref:`capitoli di configurazione DHCP e DNS "
+"<dns_dhcp-section>`."
+
+#: ../../objects.rst:69 238af19ad2424fd2a24ff6d1c16e2f68
+msgid "VPN Users"
+msgstr "Utenti VPN"
+
+#: ../../objects.rst:71 7be664ca81d343afa81911b81886e238
+msgid ""
+":ref:`OpenVPN users <openvpn_roadwarrior-section>` with IP reservations can "
+"be used as firewall objects, enabling user-specific network access control. "
+"This feature applies to both local and remote (LDAP) users configured for "
+"OpenVPN access."
+msgstr ""
+"Gli utenti :ref:`OpenVPN <openvpn_roadwarrior-section>` con riserva di IP "
+"possono essere utilizzati come oggetti firewall, consentendo il controllo "
+"dell’accesso alla rete specifico per utente. Questa funzionalità si applica "
+"sia agli utenti locali che remoti (LDAP) configurati per l’accesso OpenVPN."
+
+#: ../../objects.rst:74 e3f83e46b2274fa6bd18684bac92778d
+msgid "Key points:"
+msgstr "Punti chiave:"
+
+#: ../../objects.rst:76 2f8306d0c3654af89ab31e623656e3c6
+msgid "each user can be assigned a specific OpenVPN IP address"
+msgstr ""
+"a ciascun utente può essere assegnato un indirizzo IP OpenVPN specifico"
+
+#: ../../objects.rst:77 38681723068349dc9da808d740d07d80
+msgid ""
+"these users can be referenced in firewall rules as source or destination"
+msgstr ""
+"questi utenti possono essere referenziati nelle regole del firewall come "
+"origine o destinazione"
+
+#: ../../objects.rst:78 734d3a0327684cc98cb6ee2a2e4fd4af
+msgid "applies to both local and remote (LDAP) users"
+msgstr "si applica sia agli utenti locali che a quelli remoti (LDAP)"
+
+#: ../../objects.rst:79 7c8cb6b5186040939df98263730cbf6b
+msgid "allows for creation of user-specific access policies"
+msgstr "consente la creazione di politiche di accesso specifiche per l'utente"
+
+#: ../../objects.rst:81 ../../objects.rst:121 98c4bac7c45a4a3890d39a0b7d92f7ce
+#: fbb997d72d044c8eab6884d82bc99472
+msgid "Use cases:"
+msgstr "Casi d'uso:"
+
+#: ../../objects.rst:83 d2f8ee45ee68479d933b6dd4d782fdd0
+msgid "restrict OpenVPN users to specific network resources"
+msgstr "limitare gli utenti OpenVPN a specifiche risorse di rete"
+
+#: ../../objects.rst:84 bbe1e86999ed41d6bb8ee0b6625a0bf2
+msgid "create user-based allow/deny lists"
+msgstr "creare elenchi di autorizzazione/negazione basati sull'utente"
+
+#: ../../objects.rst:85 3fd6e194835446268ec8ef825b4cb389
+msgid "implement time-based access policies for remote users"
+msgstr "implementare politiche di accesso basate sul tempo per utenti remoti"
+
+#: ../../objects.rst:86 386d126151804d6abe31e686bcbac38e
+msgid "monitor and control per-user bandwidth usage"
+msgstr ""
+"monitorare e controllare l'utilizzo della banda per utente"
+
+#: ../../objects.rst:88 6366db8ee3554bbea48a413204b2021f
+msgid "Requirements:"
+msgstr "Requisiti:"
+
+#: ../../objects.rst:90 b6cca95c73bf46eaa9ebffdddd9d830a
+msgid "user has OpenVPN access enabled"
+msgstr "l'utente ha l'accesso OpenVPN abilitato"
+
+#: ../../objects.rst:91 529ff54f4e7e4bd6af5110559be8457e
+msgid "a specific IP address is reserved for the user"
+msgstr "un indirizzo IP specifico è riservato per l'utente"
+
+#: ../../objects.rst:93 038d75d8c3834b4da72315ced6f7267e
+msgid ""
+"By using OpenVPN users as firewall objects, you can create a more secure "
+"network environment with access policies tied directly to user identities."
+msgstr ""
+"Utilizzando gli utenti OpenVPN come oggetti firewall, è possibile creare un "
+"ambiente di rete più sicuro con politiche di accesso direttamente collegate "
+"alle identità degli utenti."
+
+#: ../../objects.rst:96 6fbae9b1569a40d68b7bfc92ed6e6e6e
+msgid "Host Sets"
+msgstr "Host set"
+
+#: ../../objects.rst:98 56050427a12644d3840eb97593fe0ce2
+msgid ""
+"Host sets are versatile firewall objects that allow you to group multiple IP"
+" addresses, networks, or ranges into a single, easily manageable unit. These"
+" sets can be used in various firewall rules, simplifying the process of "
+"controlling traffic for multiple destinations or sources."
+msgstr ""
+"I set host sono oggetti firewall versatili che consentono di raggruppare più"
+" indirizzi IP, reti o intervalli in un'unica unità facilmente gestibile. "
+"Questi set possono essere utilizzati in diverse regole firewall, "
+"semplificando il processo di controllo del traffico per più destinazioni o "
+"sorgenti."
+
+#: ../../objects.rst:100 6a225204ddbf43b5b2bbcf99bb8d23fc
+msgid "Key features of host sets:"
+msgstr "Caratteristiche principali dei host set:"
+
+#: ../../objects.rst:102 ../../objects.rst:208
+#: b2a468c56ff841c98d976d4e1cdcdd0e 0a82e01d7d5b4ac7b3d3d42a29a02745
+msgid "IP version support:"
+msgstr "Supporto versione IP:"
+
+#: ../../objects.rst:104 4910e8a44f9246e294010b679961eb37
+msgid "available for both IPv4 and IPv6 addresses"
+msgstr "disponibile sia per indirizzi IPv4 che IPv6"
+
+#: ../../objects.rst:105 1ef0a936a24945f38512e46ea53c16df
+msgid "each host set is specific to one IP version"
+msgstr "ogni host set è specifico per una versione IP"
+
+#: ../../objects.rst:107 249c352fb23246a98e454be7fe457c49
+msgid "Flexible content, Host sets can include:"
+msgstr "Contenuto flessibile, i host set possono includere:"
+
+#: ../../objects.rst:109 a0a4c9acd34945ce9f542396416e621d
+msgid "individual IP addresses"
+msgstr "indirizzi IP individuali"
+
+#: ../../objects.rst:110 27f3c52591c343458ebf5f541e609b19
+msgid "network ranges in CIDR notation"
+msgstr "intervalli di rete in notazione CIDR"
+
+#: ../../objects.rst:111 0eab3d2cd6b7495d899c7ea8e4600e7d
+msgid "IP ranges"
+msgstr "Intervalli IP"
+
+#: ../../objects.rst:112 de44fecaac9c449f86f80b6640c60e6e
+msgid "DHCP reservations"
+msgstr "Prenotazioni DHCP"
+
+#: ../../objects.rst:113 08e263b9a932419da76255ab856d86c3
+msgid "DNS record names"
+msgstr "Nomi dei record DNS"
+
+#: ../../objects.rst:114 5430febf32484e08ba8e63e7e0576e97
+msgid "VPN users (for IPv4 only)"
+msgstr "Utenti VPN (solo per IPv4)"
+
+#: ../../objects.rst:116 ../../objects.rst:223
+#: 283974f5b000484c8289ce2ec0e33b53 92399524dbe549bcbabd1d68381659f5
+msgid "Easy management:"
+msgstr "Gestione semplice:"
+
+#: ../../objects.rst:118 f43c44181ea24433b7feb7e232358354
+msgid ""
+"create, modify, or delete host sets without directly editing firewall rules"
+msgstr ""
+"creare, modificare o eliminare host set senza modificare direttamente le "
+"regole del firewall"
+
+#: ../../objects.rst:119 342522819ce54666bb1c844f4c5ec1ef
+msgid "changes to a host set automatically apply to all rules using that set"
+msgstr ""
+"le modifiche a un host set si applicano automaticamente a tutte le regole "
+"che utilizzano quel set"
+
+#: ../../objects.rst:123 23df2bf1290e478a973d2a03a9506054
+msgid "group company servers for access control"
+msgstr "raggruppare i server aziendali per il controllo degli accessi"
+
+#: ../../objects.rst:124 d252f1f9e35b42288b71abb7154a0061
+msgid "create allow or deny lists for specific network segments"
+msgstr ""
+"creare elenchi di autorizzazione o negazione per segmenti di rete specifici"
+
+#: ../../objects.rst:125 477c810f870647e7a560ca8496674647
+msgid "manage remote access for multiple VPN users"
+msgstr "gestire l'accesso remoto per più utenti VPN"
+
+#: ../../objects.rst:129 a958ae59209f4e9f9ea7d54f687c2c5f
+msgid ""
+"Host sets are fully supported in their expressive completeness (IP, CIDR, "
+"range, groupings) within firewall rules. Other pages might only support a "
+"reduced subset, for example, MultiWAN only supports single IP addresses and "
+"CIDR. In such cases, only compatible host sets will be displayed in the "
+"dropdowns when using the object inside the rule."
+msgstr ""
+"Gli host set sono pienamente supportati nella loro completezza espressiva "
+"(IP, CIDR, intervallo, raggruppamenti) all'interno delle regole del "
+"firewall. Altre pagine potrebbero supportare solo un sottoinsieme ridotto; "
+"ad esempio, MultiWAN supporta solo indirizzi IP singoli e CIDR. In questi "
+"casi, nei menu a discesa verranno visualizzati solo gli host set "
+"compatibili quando si utilizza l'oggetto all'interno della regola."
+
+#: ../../objects.rst:134 d15fd0ec4b874411bc7d89797d2984a2
+msgid "Manage Host Sets"
+msgstr "Gestione degli host set"
+
+#: ../../objects.rst:136 3c1c717016054442a8ef19c0c5d349b9
+msgid ""
+"Access the ``Objects`` page under the ``User and objects`` section from the "
+"left sidebar menu, then navigate to the ``Host sets`` tab."
+msgstr ""
+"Accedere alla pagina ``Oggetti`` nella sezione ``Utenti e oggetti`` dal menu"
+" laterale sinistro, quindi navigare nella scheda ``Host set``."
+
+#: ../../objects.rst:138 4d159b77a03d4f57b681de102c46ce88
+msgid ""
+"The page will display a list of existing host sets, including their names, "
+"IP versions, and the number of records in each set."
+msgstr ""
+"La pagina visualizzerà un elenco degli host set esistenti, inclusi i loro "
+"nomi, le versioni IP e il numero di record in ciascun set."
+
+#: ../../objects.rst:140 96d01bd18d8446cb880ae64ad63ff5f9
+msgid ""
+"Inside the list, you can also find hosts objects coming from other sections "
+"like:"
+msgstr ""
+"All'interno dell'elenco, è possibile trovare anche oggetti host provenienti "
+"da altre sezioni come:"
+
+#: ../../objects.rst:142 b6b953a02417497abb68fe3d63eb2301
+msgid "Static leases"
+msgstr "Lease statici"
+
+#: ../../objects.rst:143 c4639ad13aaf4e0da0af963cf647869c
+msgid "DNS records"
+msgstr "Record DNS"
+
+#: ../../objects.rst:144 1b1a19b3e3ee4c7ab2bd77a38daa38e1
+msgid "VPN users"
+msgstr "Utenti VPN"
+
+#: ../../objects.rst:146 464176bcf5e34e9281263c3d438a7cc3
+msgid ""
+"These objects can be used in host sets to create more complex rules, but "
+"they cannot be edited directly from the host sets page."
+msgstr ""
+"Questi oggetti possono essere utilizzati negli host set per creare regole "
+"più complesse, ma non possono essere modificati direttamente dalla pagina "
+"degli host set."
+
+#: ../../objects.rst:148 d01c5c6351854a50bab16547ecb7c5d4
+msgid ""
+"When an object is not used in any host set nor in any firewall rule, it will"
+" be marked as ``unused`` in the list."
+msgstr ""
+"Quando un oggetto non viene utilizzato in alcun set host né in alcuna regola"
+" del firewall, verrà contrassegnato come ``non utilizzato`` nell'elenco."
+
+#: ../../objects.rst:150 454e57ea13d44486ba68679d5c088d22
+msgid ""
+"To see where an object is used, click on the ``Show usages`` link next to "
+"the object."
+msgstr ""
+"Per vedere dove viene utilizzato un oggetto, fare clic sul collegamento "
+"``Mostra utilizzi`` accanto all'oggetto."
+
+#: ../../objects.rst:152 154b290d212442e781f0165328edeb26
+msgid ""
+"Please note that used objects cannot be deleted until they are removed from "
+"all host sets and firewall rules."
+msgstr ""
+"Si noti che gli oggetti utilizzati non possono essere eliminati finché non "
+"vengono rimossi da tutti gli host set e dalle regole del firewall."
+
+#: ../../objects.rst:155 5f10cfcf7dc24d4eb27602ab54cf6f00
+msgid "Add an Host Set"
+msgstr "Aggiungere un Host Set"
+
+#: ../../objects.rst:157 fab1834fde0947f2980fe77228e839a6
+msgid ""
+"Access the ``Objects`` page under the ``User and objects`` section from the "
+"left sidebar menu."
+msgstr ""
+"Accedere alla pagina ``Oggetti`` nella sezione ``Uteenti ed oggetti`` dal menu"
+" laterale sinistro."
+
+#: ../../objects.rst:159 543f681cc67e4cac9372a50f8042aed4
+msgid "Navigate to the ``Host sets`` tab"
+msgstr "Passare alla scheda ``Host set``"
+
+#: ../../objects.rst:160 f8e2e8c41feb4015999048da8f89c202
+msgid "Click on :guilabel:`Add host set` button"
+msgstr "Fare clic sul pulsante :guilabel:`Aggiungi host set`"
+
+#: ../../objects.rst:162 2a08f17c05144efb958e0c9877072968
+msgid "Enter the Host Set name"
+msgstr "Immettere il nome dell'Host Set"
+
+#: ../../objects.rst:164 5807bb0986574adfa90f85c8ce0ccf57
+msgid "In the ``Name`` field, enter a descriptive name for your host set"
+msgstr "Nel campo ``Nome``, inserire un nome descrittivo per il host set"
+
+#: ../../objects.rst:165 ../../objects.rst:271
+#: 3660f939d3a544488800af0cd780bdf9 70b18607499045c58276afbcfb91467b
+msgid ""
+"Use only letters and numbers; spaces and special characters are not allowed"
+msgstr ""
+"Utilizzare solo lettere e numeri; spazi e caratteri speciali non sono "
+"consentiti"
+
+#: ../../objects.rst:166 3f74fb4295bd491b9ae011c47391529d
+msgid ""
+"Choose a name that clearly identifies the purpose of the group of hosts"
+msgstr ""
+"Scegliere un nome che identifichi chiaramente lo scopo del gruppo di host"
+
+#: ../../objects.rst:168 e858bc171ac841c68f0b5ca03fa121e6
+msgid "Select IP version"
+msgstr "Selezionare la versione IP"
+
+#: ../../objects.rst:170 ../../objects.rst:276
+#: 650950ec82374573a75f48e342787bb9 cffd430751384a6994203cbc7984b7a0
+msgid "Under ``IP version``, choose between IPv4 and IPv6"
+msgstr "In ``Versione IP``, scegliere tra IPv4 e IPv6"
+
+#: ../../objects.rst:171 e6024d677f0f49738c5fc9d22c6f081b
+msgid "Select IPv4 for standard internet protocol addresses"
+msgstr "Selezionare IPv4 per gli indirizzi standard del protocollo Internet"
+
+#: ../../objects.rst:172 73c80a1924f14eff85b33dd181292398
+msgid "Choose IPv6 if you're using the newer, expanded address format"
+msgstr ""
+"Scegliere IPv6 se si utilizza il formato di indirizzo più recente ed esteso"
+
+#: ../../objects.rst:174 7bb31ede9954432b81324dd946515b30
+msgid "Add Records"
+msgstr "Aggiungere record"
+
+#: ../../objects.rst:176 7ceac6f8e10b47dd8a783b1d4778c952
+msgid "In the ``Records`` field, you can add the hosts for this set"
+msgstr "Nel campo ``Record``, è possibile aggiungere gli host per questo set"
+
+#: ../../objects.rst:177 718f1309ee5e4482a38f9df085acefb5
+msgid ""
+"Click the dropdown menu to choose from predefined options, or enter a custom"
+" value"
+msgstr ""
+"Fare clic sul menu a discesa per scegliere tra le opzioni predefinite oppure"
+" inserire un valore personalizzato."
+
+#: ../../objects.rst:178 4aaba35347b347cca531a999c99113ba
+msgid "You can add the following types of records:"
+msgstr "È possibile aggiungere i seguenti tipi di record:"
+
+#: ../../objects.rst:180 752c9683f6ca42d9a852c6db15324616
+msgid "Individual IP addresses (e.g., ``192.168.1.10``)"
+msgstr "Indirizzi IP individuali (ad es., ``192.168.1.10``)"
+
+#: ../../objects.rst:181 6e0c12c9d98c42ca83afeb1a704a85b5
+msgid "CIDR notation for networks (e.g., ``10.10.0.0/24``)"
+msgstr "Notazione CIDR per le reti (ad es., ``10.10.0.0/24``)"
+
+#: ../../objects.rst:182 b9fdc619216546fc9346c84eb5f437a0
+msgid "IP ranges (e.g., ``10.10.1.1-10.10.1.5``)"
+msgstr "Intervalli IP (ad es., ``10.10.1.1-10.10.1.5``)"
+
+#: ../../objects.rst:183 2eb31839422644df9af16c6daaf03730
+msgid "Previously created objects"
+msgstr "Oggetti creati in precedenza"
+
+#: ../../objects.rst:185 92619814a8584966bf5df1fcbc05b3f5
+msgid ""
+"After entering each record, click :guilabel:`Add record` to include it in "
+"the set"
+msgstr ""
+"Dopo aver inserito ciascun record, fare clic su :guilabel:`Aggiungi record` "
+"per includerlo nell'insieme"
+
+#: ../../objects.rst:186 16c8bb2c3df74e8794af191d980623f4
+msgid "Repeat this process to add multiple records as needed"
+msgstr "Ripetere questo processo per aggiungere più record secondo necessità"
+
+#: ../../objects.rst:188 3ea2f8cba7f740cab37118ac0ec8638d
+msgid "Finalize the Host Set"
+msgstr "Finalizzare gli Host set"
+
+#: ../../objects.rst:190 ../../objects.rst:289
+#: 19b937d21e084420a9b6b2e407826f30 11f13a42c6104b348c37b15f2132af33
+msgid "Review all entered information for accuracy"
+msgstr "Verificare che tutte le informazioni inserite siano corrette"
+
+#: ../../objects.rst:191 07f40680c8aa423d8746f2a39b7aa75a
+msgid ""
+"If you need to remove a record, use the delete (trash can) icon next to it"
+msgstr ""
+"Se è necessario rimuovere un record, utilizzare l'icona di eliminazione "
+"(cestino) accanto ad esso"
+
+#: ../../objects.rst:192 7814e60352904f32ba61742963990317
+msgid ""
+"Once you're satisfied with your host set configuration, click :guilabel:`Add"
+" host set` to create it"
+msgstr ""
+"Una volta soddisfatti della configurazione dell'host set, fare clic su "
+":guilabel:`Aggiungi host set` per crearlo."
+
+#: ../../objects.rst:193 ../../objects.rst:292
+#: 89e2634e40d540389ea9f3f38986ffd0 03802645ce6f4cb1b440eba37b2ea465
+msgid ""
+"If you need to start over or cancel the process, click :guilabel:`Cancel`"
+msgstr ""
+"Se è necessario ricominciare da capo o annullare il processo, fare clic su "
+":guilabel:`Annulla`"
+
+#: ../../objects.rst:196 1956def90faf450fa4642985e07d584f
+msgid "Domain Sets"
+msgstr "Domain set"
+
+#: ../../objects.rst:198 36e56c83d41a4b22b25a07cadeee8311
+msgid ""
+"Domain sets are firewall objects that allow you to group multiple domain "
+"names into a single, manageable unit. These sets are particularly useful for"
+" creating rules based on web addresses rather than IP addresses, which can "
+"change frequently for many websites."
+msgstr ""
+"I domain set sono oggetti del firewall che consentono di raggruppare più "
+"nomi di dominio in un'unica unità gestibile. Questi set sono particolarmente"
+" utili per creare regole basate sugli indirizzi web anziché sugli indirizzi "
+"IP, che possono cambiare frequentemente per molti siti web."
+
+#: ../../objects.rst:201 f53d7f879fd54b0ea4e8e462ce57dff0
+msgid "Key features of domain sets:"
+msgstr "Caratteristiche principali dei domain set:"
+
+#: ../../objects.rst:203 3369e85f9dd1428e84926e71cdf0d269
+msgid "DNS resolution:"
+msgstr "Risoluzione DNS:"
+
+#: ../../objects.rst:205 c514b074d5f344458ca02862b38a5a25
+msgid "domain names in the set are automatically resolved to IP addresses"
+msgstr ""
+"i nomi di dominio presenti nell'insieme vengono automaticamente risolti in "
+"indirizzi IP"
+
+#: ../../objects.rst:206 6c68c9644883491c91feb9c68a13eef6
+msgid "resolution is periodically updated to ensure accuracy"
+msgstr ""
+"la risoluzione viene aggiornata periodicamente per garantire l'accuratezza"
+
+#: ../../objects.rst:210 54c69566fbbc4a6f885ba75aba48fd05
+msgid "can be configured for either IPv4 or IPv6"
+msgstr "può essere configurato sia per IPv4 che per IPv6"
+
+#: ../../objects.rst:211 60578322d4f04b8e9612061366aeb441
+msgid "each domain set is specific to one IP version"
+msgstr "ogni domain set è specifico per una versione IP"
+
+#: ../../objects.rst:213 22bb8f8421014a18a0b1cd1f99c7112a
+msgid "Flexible content, domain sets can include:"
+msgstr "Contenuto flessibile, i domain set possono includere:"
+
+#: ../../objects.rst:215 0255609b014c4cdca612ad0d7729dd1d
+msgid "fully qualified domain names (e.g., ``www.example.com``)"
+msgstr ""
+"nomi di dominio completamente qualificati (ad es., ``www.example.com``)"
+
+#: ../../objects.rst:216 5aa9d5cd35764ff48991c817b38e159d
+msgid "wildcard domains (e.g., ``example.com``, will match all subdomains)"
+msgstr ""
+"domini wildcard (ad esempio, ``example.com``, corrisponderà a tutti i "
+"sottodomini)"
+
+#: ../../objects.rst:218 93c735bda2534f9d9acd479e9389e192
+msgid "Automatic timeout:"
+msgstr "Timeout automatico:"
+
+#: ../../objects.rst:220 1d7cc2d056a64bcfa5bd4b5667e419e2
+msgid "DNS records in the set are cached for a specified duration"
+msgstr ""
+"I record DNS nel set vengono memorizzati nella cache per una durata "
+"specificata"
+
+#: ../../objects.rst:221 01d50c0660ed4558b3ffaade0bb1354e
+msgid "an automatic refresh process updates the resolution periodically"
+msgstr ""
+"un processo di aggiornamento automatico aggiorna periodicamente la "
+"risoluzione"
+
+#: ../../objects.rst:225 9f7fb1763c074b178b386c227bc476ed
+msgid ""
+"create, modify, or delete domain sets without directly editing firewall "
+"rules"
+msgstr ""
+"creare, modificare o eliminare insiemi di domini senza modificare "
+"direttamente le regole del firewall"
+
+#: ../../objects.rst:226 470fdd819a374030b61063913fb2cc2e
+msgid ""
+"changes to a domain set automatically apply to all rules using that set"
+msgstr ""
+"le modifiche apportate a un domain set vengono applicate automaticamente "
+"a tutte le regole che utilizzano quel set"
+
+#: ../../objects.rst:228 00cd881f31de4e368f8b0c603c48ad14
+msgid "Use cases for domain sets:"
+msgstr "Casi d'uso per i domain set:"
+
+#: ../../objects.rst:230 1406391c8f174f198af226f64deabb80
+msgid ""
+"application control: manage access to cloud services or social media "
+"platforms"
+msgstr ""
+"controllo delle applicazioni: gestire l'accesso ai servizi cloud o alle "
+"piattaforme di social media"
+
+#: ../../objects.rst:231 62adca9df6ea4653be7ed3e8348bfcba
+msgid "security: create allow rules for trusted domains"
+msgstr "sicurezza: creare regole di autorizzazione per domini attendibili"
+
+#: ../../objects.rst:232 b0ec5f63cf974474b58cd5516f2c6834
+msgid "malware prevention: create deny rules for known malicious domains"
+msgstr ""
+"prevenzione malware: creare regole di negazione per domini noti come dannosi"
+
+#: ../../objects.rst:234 21fe4ff2324d4ad3bd35abbfb19eec2f
+msgid "Benefits of using domain sets:"
+msgstr "Vantaggi dell'utilizzo dei domain set:"
+
+#: ../../objects.rst:236 8c4b426878bc4519839715dec0ccda7c
+msgid "simplify management of rules based on web addresses"
+msgstr "semplificare la gestione delle regole basate sugli indirizzi web"
+
+#: ../../objects.rst:237 1b3686fbd11c4209bf78fb5a8d17eb02
+msgid "automatically handle IP address changes of websites"
+msgstr "gestire automaticamente le modifiche degli indirizzi IP dei siti web"
+
+#: ../../objects.rst:238 de0399a7c2c14215a9bc4e7f3f371376
+msgid "reduce the need for manual updates to firewall rules"
+msgstr ""
+"ridurre la necessità di aggiornamenti manuali alle regole del firewall"
+
+#: ../../objects.rst:239 880e37cf5ff142d187cfe463d6c66f3c
+msgid "provide a more intuitive way to control access to web-based services"
+msgstr ""
+"fornire un modo più intuitivo per controllare l'accesso ai servizi basati "
+"sul web"
+
+#: ../../objects.rst:241 1ed5424d6d94469c9f1cbf95fc6d3fa6
+msgid "When to use domain sets:"
+msgstr "Quando utilizzare i domain set:"
+
+#: ../../objects.rst:243 eeca3ea6e75843cf90ee5d8dae5dd7b7
+msgid ""
+"when you need to control access to websites that may change IP addresses"
+msgstr ""
+"quando è necessario controllare l'accesso a siti web che potrebbero cambiare"
+" indirizzo IP"
+
+#: ../../objects.rst:244 8caab03be1404cd7920414b10df9651e
+msgid "for implementing content filtering policies"
+msgstr "per l'implementazione di politiche di filtraggio dei contenuti"
+
+#: ../../objects.rst:245 8e4d99b20fd94c85bb632436abb74b33
+msgid "when managing access to cloud services or web applications"
+msgstr "quando si gestisce l'accesso ai servizi cloud o alle applicazioni web"
+
+#: ../../objects.rst:246 4850293b9a1346d2b2f3634b14765665
+msgid "for creating security policies based on domain reputation"
+msgstr ""
+"per la creazione di criteri di sicurezza basati sulla reputazione del "
+"dominio"
+
+#: ../../objects.rst:250 40ffe781726b48c8b926f36ea1cc5d27
+msgid "Manage Domain Sets"
+msgstr "Gestire i domain set"
+
+#: ../../objects.rst:252 7cd9ab0e634d49cf9ad619a3a2c0d9f8
+msgid ""
+"Access the ``Objects`` page under the ``User and objects`` section from the "
+"left sidebar menu, then navigate to the ``Domain sets`` tab."
+msgstr ""
+"Accedere alla pagina ``Oggetti`` nella sezione ``Utenti e oggetti`` dal menu"
+" laterale sinistro, quindi navigare nella scheda ``Domain set``."
+
+#: ../../objects.rst:254 8722fb4dffc94f49b9088db55635e548
+msgid ""
+"The page will display a list of existing domain sets, including their names,"
+" IP versions, and the number of domains in each set."
+msgstr ""
+"La pagina visualizzerà un elenco dei domain set esistenti, inclusi i loro"
+" nomi, le versioni IP e il numero di domini in ciascun set."
+
+#: ../../objects.rst:256 8124b4600d2f496e8c6468056091b13c
+msgid ""
+"If a domain set is not used in any firewall rule, it will be marked as "
+"``unused`` in the list. To see where a domain set is used, click on the "
+"``Show usages`` link next to the set."
+msgstr ""
+"Se un insieme di domini non viene utilizzato in nessuna regola del firewall,"
+" verrà contrassegnato come ``non utilizzato`` nell'elenco. Per vedere dove "
+"viene utilizzato un insieme di domini, fare clic sul link ``Mostra "
+"utilizzi`` accanto all'insieme."
+
+#: ../../objects.rst:260 a04cbf0f1eaa4304a5407f53d94dab09
+msgid "Add a Domain Set"
+msgstr "Aggiungere un Domain Set"
+
+#: ../../objects.rst:262 f781b6a32c364d87b9ea18075d711b32
+msgid "Access the Add Domain Set Interface"
+msgstr "Accedere all'interfaccia Aggiungi insieme di domini"
+
+#: ../../objects.rst:264 61ba60325e134b669f411f874b7247c6
+msgid ""
+"Access the ``Objects`` page under the ``User and objects`` section from the "
+"left sidebar menu"
+msgstr ""
+"Accedere alla pagina ``Oggetti`` nella sezione ``Utenti e oggetti`` dal menu"
+" laterale sinistro"
+
+#: ../../objects.rst:265 73896d7cecfe45ec908f24bad29a1a9a
+msgid "Navigate to the ``Domain sets`` tab"
+msgstr "Passare alla scheda ``Domain set``"
+
+#: ../../objects.rst:266 134095fadb424219a35e590a050aa7a6
+msgid "Click on :guilabel:`Add somain set` button"
+msgstr "Fare clic sul pulsante :guilabel:`Aggiungi domain set`"
+
+#: ../../objects.rst:268 6f83802cc9ca471bad82ab7fb85625b2
+msgid "Enter the Domain Set name:"
+msgstr "Inserire il nome del Domain Set:"
+
+#: ../../objects.rst:270 71156c01f4b149f7b4848066a658544e
+msgid "In the ``Name`` field, enter a descriptive name for your domain set"
+msgstr "Nel campo ``Nome``, inserire un nome descrittivo per il domain set"
+
+#: ../../objects.rst:272 140964906bd2465c829f0f1f6d4e4a12
+msgid ""
+"Choose a name that clearly identifies the purpose of the group of domains"
+msgstr ""
+"Scegliere un nome che identifichi chiaramente lo scopo del gruppo di domini"
+
+#: ../../objects.rst:274 164b0805da6e404e8c19ae77a55cb19b
+msgid "Select IP version:"
+msgstr "Selezionare la versione IP:"
+
+#: ../../objects.rst:277 d5b16970923b46068518d1caa34d18cb
+msgid ""
+"Entered domains will be resolved to IPv4 or IPv6 accordingly to the selected"
+" IP version"
+msgstr ""
+"I domini inseriti verranno risolti in IPv4 o IPv6 in base alla versione IP "
+"selezionata."
+
+#: ../../objects.rst:278 28d8a933c3e24ceca4746fcda06a6074
+msgid ""
+"If you need to create a domain set for both IP versions, you will need to "
+"create separate sets for each"
+msgstr ""
+"Se è necessario creare un domain set per entrambe le versioni IP, sarà "
+"necessario creare set separati per ciascuna."
+
+#: ../../objects.rst:280 c4def24229e64dd184cd31a8a2e0e5bb
+msgid "Add domains:"
+msgstr "Aggiungere domini:"
+
+#: ../../objects.rst:282 369ef7388a1145a18ecc8a5f522d7e8d
+msgid "In the ``Domains`` field, you can add the domains for this set"
+msgstr "Nel campo ``Domini``, è possibile aggiungere i domini per questo set"
+
+#: ../../objects.rst:283 ddcd8b32b80c4776912a8bbc2da2a1da
+msgid "Enter domain names in the provided field"
+msgstr "Inserire i nomi di dominio nel campo fornito"
+
+#: ../../objects.rst:284 e57899bd5b9c46c79f1734241fb9ccae
+msgid ""
+"After entering each domain, click :guilabel:`Add domain` to include it in "
+"the set"
+msgstr ""
+"Dopo aver inserito ciascun dominio, fare clic su :guilabel:`Aggiungi "
+"dominio` per includerlo nell'insieme."
+
+#: ../../objects.rst:285 1371655d165c4d6b832f8addb1b7cdb2
+msgid "Repeat this process to add multiple domains as needed"
+msgstr "Ripetere questo processo per aggiungere più domini secondo necessità"
+
+#: ../../objects.rst:287 e61170f9f1104543a6493d1d7cc594af
+msgid "Finalize the Domain Set:"
+msgstr "Finalizzare il Domain Set:"
+
+#: ../../objects.rst:290 6900d14ecf8c40339a20bede618999ed
+msgid ""
+"If you need to remove a domain, use the delete (trash can) icon next to it"
+msgstr ""
+"Se è necessario rimuovere un dominio, utilizzare l'icona di eliminazione "
+"(cestino) accanto ad esso"
+
+#: ../../objects.rst:291 5860866d2f6e41379dc4e845753c4c58
+msgid ""
+"Once you're satisfied with your domain set configuration, click "
+":guilabel:`Add domain set` to create it"
+msgstr ""
+"Una volta soddisfatti della configurazione del domain set, fare clic su "
+":guilabel:`Aggiungi domain set` per crearlo"
+
+#: ../../objects.rst:11 1910eac4c4744cc4aebfee61cb4c47d0
+msgid "improved organization and readability of your firewall configuration"
+msgstr ""
+"organizzazione e leggibilità migliorate della configurazione del firewall"
+
+#~ msgid "Improved organization and readability of your firewall configuration"
+#~ msgstr ""
+#~ "Organizzazione e leggibilità migliorate della configurazione del firewall"
