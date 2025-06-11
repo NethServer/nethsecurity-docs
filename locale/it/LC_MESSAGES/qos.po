@@ -1,0 +1,307 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../qos.rst:3 24580eabbcef41eb8f2f6ed4c2760590
+msgid "Quality of Service (QoS)"
+msgstr "Quality of Service (QoS)"
+
+#: ../../qos.rst:5 4e0f92567b99453e855f84e07266e17e
+msgid ""
+"NethSecurity QoS provides Active Queue Management (AQM) and Flow Queuing "
+"(FQ) capabilities to help ensure that your network resources are used "
+"efficiently and fairly."
+msgstr ""
+"NethSecurity QoS fornisce funzionalità di Active Queue Management (AQM) e "
+"Flow Queuing (FQ) per garantire che le risorse di rete vengano utilizzate in"
+" modo efficiente ed equo."
+
+#: ../../qos.rst:8 66e382b95e644265a5a3e2546d255670
+msgid "Operating principles"
+msgstr "Principi di funzionamento"
+
+#: ../../qos.rst:10 025303b9e8284bb2ac3287469c07fefd
+msgid ""
+"NethSecurity QoS is designed to make the best use of available bandwidth, "
+"without imposing strict limits or shaping traffic by default. It operates on"
+" the following principles:"
+msgstr ""
+"NethSecurity QoS è progettato per sfruttare al meglio la banda "
+"disponibile, senza imporre limiti rigidi o shaping del traffico come "
+"impostazione predefinita. Funziona secondo i seguenti principi:"
+
+#: ../../qos.rst:13 1dfe8bb19e5842cba5cb238406c5ac11
+msgid ""
+"*Bandwidth usage*: QoS strives to utilize the available bandwidth to its "
+"fullest potential. By default, it does not impose strict bandwidth "
+"limitations on your network. Instead, it dynamically adjusts to network "
+"conditions, ensuring that unused bandwidth is efficiently utilized."
+msgstr ""
+"*Utilizzo della larghezza di banda*: QoS si impegna a sfruttare al massimo "
+"la banda disponibile. Per impostazione predefinita, non impone "
+"limiti rigorosi alla larghezza di banda della rete. Invece, si adatta "
+"dinamicamente alle condizioni della rete, garantendo che la "
+"banda non utilizzata venga sfruttata in modo efficiente."
+
+#: ../../qos.rst:16 9e0faf427e744bfebff7a057a5b78e01
+msgid ""
+"*Flow management*: QoS actively manages network flows to prevent any single "
+"client or application from monopolizing the available bandwidth. This "
+"ensures fair and equitable access to network resources for all users."
+msgstr ""
+"*Gestione dei flussi*: QoS gestisce attivamente i flussi di rete per evitare"
+" che un singolo client o applicazione monopolizzi la banda "
+"disponibile. Questo garantisce un accesso equo e imparziale alle risorse di "
+"rete per tutti gli utenti."
+
+#: ../../qos.rst:20 d788364d7a4c4f9faa2e9b94aaeab86c
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../qos.rst:22 8abedee958194e5ba91177d2b8b2fbd9
+msgid ""
+"Bandwidth management is handled dynamically and automatically by the system."
+" Configuration is straightforward, involving specifying upload and download "
+"bandwidth values for each interface under QoS."
+msgstr ""
+"La gestione della banda viene gestita in modo dinamico e "
+"automatico dal sistema. La configurazione è semplice e consiste "
+"nell'impostare i valori di larghezza di banda in upload e download per "
+"ciascuna interfaccia sotto QoS."
+
+#: ../../qos.rst:24 cf9b1e2177804fbeba8a38bf674f79d5
+msgid ""
+"While QoS can be set up on any interface, it typically functions optimally "
+"on WAN-type interfaces, setting upload and download speeds to the internet "
+"connection data rates."
+msgstr ""
+"Sebbene il QoS possa essere configurato su qualsiasi interfaccia, "
+"generalmente funziona in modo ottimale sulle interfacce di tipo WAN, "
+"impostando le velocità di upload e download ai valori della connessione dati"
+" a Internet."
+
+#: ../../qos.rst:26 5a9e5d89b5c74226acaf17b9fc235227
+msgid ""
+"To ensure resilience against service fluctuations, it is advisable to "
+"maintain a safety margin by configuring these parameters 10% lower than the "
+"measured values"
+msgstr ""
+"Per garantire la resilienza contro le fluttuazioni del servizio, è "
+"consigliabile mantenere un margine di sicurezza configurando questi "
+"parametri al 10% in meno rispetto ai valori misurati."
+
+#: ../../qos.rst:31 f0532622368d47c78902207fed225854
+msgid "Advanced configuration"
+msgstr "Configurazione avanzata"
+
+#: ../../qos.rst:33 11fb6515dcdc43e9900b8466b2b59b2d
+msgid ""
+"QoS relies on an eBPF (Extended Berkeley Packet Filter) based classifier to "
+"set Differentiated Services Code Point (DSCP) fields in packets. This "
+"classification helps prioritize and manage network traffic efficiently. To "
+"maximize efficiency, QoS operates in the kernel space using eBPF technology."
+" This ensures minimal overhead and minimal impact on system performance. In "
+"addition to IP and port-based rules, QoS allows you to define traffic rules "
+"based on DNS names, providing granular control over how traffic is "
+"classified and treated."
+msgstr ""
+"QoS si basa su un classificatore eBPF (Extended Berkeley Packet Filter) per "
+"impostare i campi Differentiated Services Code Point (DSCP) nei pacchetti. "
+"Questa classificazione aiuta a dare priorità e a gestire il traffico di rete"
+" in modo efficiente. Per massimizzare l'efficienza, QoS opera nello spazio "
+"kernel utilizzando la tecnologia eBPF. Questo garantisce un overhead minimo "
+"e un impatto minimo sulle prestazioni del sistema. Oltre alle regole basate "
+"su IP e porta, QoS consente di definire regole di traffico basate su nomi "
+"DNS, offrendo un controllo granulare su come il traffico viene classificato "
+"e gestito."
+
+#: ../../qos.rst:37 1686973ae9ca40bcb709f71a3ba2014a
+msgid ""
+"While Qosify works effectively without extensive configuration, it can be "
+"further optimized by setting bandwidth limits and rules. Fine-tuning QoS "
+"parameters can result in even better network performance."
+msgstr ""
+"Sebbene Qosify funzioni efficacemente senza una configurazione approfondita,"
+" può essere ulteriormente ottimizzato impostando limiti di banda e regole. "
+"Una regolazione fine dei parametri QoS può portare a prestazioni di rete "
+"ancora migliori."
+
+#: ../../qos.rst:40 dbc270500894421cbb2426ae174af531
+msgid ""
+"The modifications to the standard behavior however can be useful in very "
+"limited scenarios, for which, currently, it is only possible to act directly"
+" through the command line."
+msgstr ""
+"Le modifiche al comportamento standard, tuttavia, possono essere utili solo "
+"in scenari molto limitati, per i quali, attualmente, è possibile intervenire"
+" esclusivamente tramite la riga di comando."
+
+#: ../../qos.rst:44 d9310b6fd93d4a5e93077b8389d4d070
+msgid "Priority classes"
+msgstr "Classi di priorità"
+
+#: ../../qos.rst:46 ea577b9b7b0549ca88da0f1e18a6a160
+msgid ""
+"QoS uses four classes of priority, each class can use a maximum percentage "
+"of bandwidth defined by its threshold."
+msgstr ""
+"QoS utilizza quattro classi di priorità, ciascuna delle quali può utilizzare"
+" una percentuale massima di banda definita dalla propria soglia."
+
+#: ../../qos.rst:48 3b67ba9643414bdfb51979c90af0b525
+msgid ""
+"**Bulk (CS1, LE in kernel v5.9+):** This class is designed for low-priority "
+"traffic, with a 6.25% threshold."
+msgstr ""
+"**Bulk (CS1, LE nel kernel v5.9+):** Questa classe è progettata per il "
+"traffico a bassa priorità, con una soglia del 6,25%."
+
+#: ../../qos.rst:49 0926b0bf2d5b49c293d080870732d499
+msgid ""
+"**Best Effort (General):** This class has a 100% threshold and is used for "
+"typical, non-prioritized traffic."
+msgstr ""
+"**Best Effort (Generale):** Questa classe ha una soglia del 100% ed è "
+"utilizzata per il traffico tipico, non prioritario."
+
+#: ../../qos.rst:50 ba05f229805f4daf8f1514cfe8ab9b15
+msgid ""
+"**Video (AF4x, AF3x, CS3, AF2x, CS2, TOS4, TOS1):** Video traffic falls "
+"under this class, with a 50% threshold."
+msgstr ""
+"**Video (AF4x, AF3x, CS3, AF2x, CS2, TOS4, TOS1):** Il traffico video "
+"rientra in questa classe, con una soglia del 50%."
+
+#: ../../qos.rst:51 ebf8e81f472a4a18bac742b0639823dd
+msgid ""
+"**Voice (CS7, CS6, EF, VA, CS5, CS4):** Voice traffic is given the highest "
+"priority, with a 25% threshold."
+msgstr ""
+"**Voce (CS7, CS6, EF, VA, CS5, CS4):** Il traffico voce riceve la massima "
+"priorità, con una soglia del 25%."
+
+#: ../../qos.rst:54 f3bead94b8fb463bb383f21284c13bfa
+msgid ""
+"QoS can temporarily reduce the priority of a flow if it generates a "
+"significant amount of traffic, which is configurable. For example, a flow "
+"might be temporarily shifted to the \"Bulk\" priority if it sends a high "
+"number of packets within a short time. QoS can also prioritize small packets"
+" to ensure low-latency transmission of time-sensitive data."
+msgstr ""
+"QoS può temporaneamente ridurre la priorità di un flusso se questo genera "
+"una quantità significativa di traffico, parametro che è configurabile. Ad "
+"esempio, un flusso potrebbe essere temporaneamente spostato alla priorità "
+"``Bulk`` se invia un numero elevato di pacchetti in un breve periodo di "
+"tempo. QoS può anche dare priorità ai pacchetti di piccole dimensioni per "
+"garantire una trasmissione a bassa latenza dei dati sensibili al tempo."
+
+#: ../../qos.rst:58 6639a384818848a2b43cfdf22361b39f
+msgid ""
+"In addition to IP and port-based rules, QoS allows you to define traffic "
+"rules based on DNS names, providing granular control over how traffic is "
+"classified and treated."
+msgstr ""
+"Oltre alle regole basate su IP e porta, QoS consente di definire regole di "
+"traffico basate su nomi DNS, offrendo un controllo granulare su come il "
+"traffico viene classificato e gestito."
+
+#: ../../qos.rst:60 26fb973b8d35499da2e50fad74756e46
+msgid ""
+"To override DSCP classification, create a file "
+"``/etc/qosify/10-custom.conf`` with mappings: Each line has two whitespace "
+"separated fields, match and dscp."
+msgstr ""
+"Per eseguire l'override della classificazione DSCP, creare un file "
+"``/etc/qosify/10-custom.conf`` con le mappature: ogni riga contiene due "
+"campi separati da uno spazio, match e dscp."
+
+#: ../../qos.rst:63 64b63db311354d0184ca16a6216540e3
+msgid "Match is one of:"
+msgstr "La corrispondenza è una delle seguenti:"
+
+#: ../../qos.rst:65 ef15a496241b4eab973d3b24fe7ce355
+msgid "``tcp:<port>[-<endport>]``"
+msgstr "``tcp:<porta>[-<porta-finale>]``"
+
+#: ../../qos.rst:66 f7ea5b443c1146dd95206cd2e6fb34c1
+msgid "TCP single port, or range from <port> to <endport>"
+msgstr "Porta TCP singola, o intervallo da <port> a <endport>"
+
+#: ../../qos.rst:67 081908b3c2954a48ab1d0e7004205183
+msgid "``udp:<port>[-<endport>]``"
+msgstr "``udp:<porta>[-<portafine>]``"
+
+#: ../../qos.rst:68 f42e7aa8f18b44979f9b5669036ef5eb
+msgid "UDP single port, or range from <port> to <endport>"
+msgstr "Porta UDP singola, o intervallo da <port> a <endport>"
+
+#: ../../qos.rst:69 0c0433e3cc9f4d89b76002e67ab19c8a
+msgid "``<ipaddr>``"
+msgstr "``<ipaddr>``"
+
+#: ../../qos.rst:70 0a7cf0441a3445308c442503c5605c44
+msgid "IPv4 address, e.g. 1.1.1.1"
+msgstr "Indirizzo IPv4, ad esempio 1.1.1.1"
+
+#: ../../qos.rst:71 f4d8ca0ef56c4709b8b8a756078f32d8
+msgid "``<ipv6addr>``"
+msgstr "``<ipv6addr>``"
+
+#: ../../qos.rst:72 6d154ef957a848948dff0c9be189fb6d
+msgid "IPv6 address, e.g. ff01::1"
+msgstr "Indirizzo IPv6, ad es. ff01::1"
+
+#: ../../qos.rst:73 2b9d321d3079459e9006e336c61316f6
+msgid "``dns:<pattern>``"
+msgstr "``dns:<pattern>``"
+
+#: ../../qos.rst:74 7eaa7fff89854e1e96bbec94a6f0047d
+msgid "fnmatch() pattern supporting * and ? as wildcard characters"
+msgstr "Modello fnmatch() che supporta * e ? come caratteri jolly"
+
+#: ../../qos.rst:76 23020d572c3b48189671efc0ab59f75e
+msgid "``dns:/<regex>``"
+msgstr "``dns:/<regex>``"
+
+#: ../../qos.rst:76 f161611802d644e3a707d549bb5ac010
+msgid ""
+"POSIX.2 extended regular expression for matching hostnames Only works, if "
+"dns lookups are passed to qosify via the add_dns_host ubus call."
+msgstr ""
+"Espressione regolare estesa POSIX.2 per la corrispondenza dei nomi host. "
+"Funziona solo se le ricerche DNS vengono passate a qosify tramite la "
+"chiamata ubus add_dns_host."
+
+#: ../../qos.rst:79 fd7132ad5fed4261bc6ee06cc2668068
+msgid "``dns_c:...``"
+msgstr "``dns_c:...``"
+
+#: ../../qos.rst:79 a19d41a31a0849538afc2377f0dd7203
+msgid "Like dns, but only matches cname entries"
+msgstr "Come dns, ma corrisponde solo alle voci cname"
+
+#: ../../qos.rst:81 83b662c7a03d4143aa0b6dabc1fff11d
+msgid ""
+"The dscp can be a raw value, or a codepoint like CS0. Adding a ``+`` in "
+"front of the value tells qosify to only override the DSCP value if it is "
+"zero."
+msgstr ""
+"Il dscp può essere un valore grezzo oppure un codepoint come CS0. "
+"Aggiungendo un ``+`` davanti al valore si indica a qosify di sovrascrivere "
+"il valore DSCP solo se è zero."
+
+#: ../../qos.rst:85 a564923b56824d4592695a2dbba16eb1
+msgid "Example: ::"
+msgstr "Esempio: ::"
+
+#: ../../qos.rst:92 dde3296407f643d794a68dbc56b70ee4
+msgid "Troubleshooting"
+msgstr "Risoluzione dei problemi"
+
+#: ../../qos.rst:94 1e400fddafef493e890b93b4b76e7dd3
+msgid ""
+"Inspect qosify status with ``qosify-status``, look for pkts in the 4 "
+"classes."
+msgstr ""
+"Ispezionare lo stato di qosify con ``qosify-status``, verificare i pacchetti"
+" nelle 4 classi."
