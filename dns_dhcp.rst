@@ -34,7 +34,7 @@ Available fields:
       allows devices without a reservation to access the network, but ensures that any device with a mismatched IP/MAC
       address is blocked. This provides flexibility for employees while maintaining a level of security.
 
-    * ``Hard binding``: Only hosts with a reservation allowed, others are blocked
+    * ``Strict binding``: Only hosts with a reservation allowed, others are blocked
 
       **Example**: A corporate network with strict security policies. Here hard binding ensures that only devices with
       a pre-configured reservation can access the network. This prevents that employees steal an IP with higher
