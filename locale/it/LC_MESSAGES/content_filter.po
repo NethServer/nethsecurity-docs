@@ -1,0 +1,495 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../content_filter.rst:3 31a09b7514254473ae7508fec128ad11
+msgid "Content Filtering"
+msgstr "Filtro contenuti"
+
+#: ../../content_filter.rst:5 f37539e574f04af0a915c2cfb3311d6e
+msgid ""
+"Content filtering is a crucial aspect of network security, serving two "
+"primary purposes:"
+msgstr ""
+"Il filtraggio dei contenuti è un aspetto cruciale della sicurezza di rete e "
+"svolge due scopi principali:"
+
+#: ../../content_filter.rst:7 57f3492807f04afe957baa749b638c29
+msgid "Blocking malware and preventing malicious attacks"
+msgstr "Blocco di malware e prevenzione di attacchi dannosi"
+
+#: ../../content_filter.rst:8 ae40e94f90e14e18940a9d0c61acb855
+msgid "Filtering unwanted sites, such as those containing adult content"
+msgstr ""
+"Filtraggio di siti indesiderati, come quelli che contengono contenuti per "
+"adulti"
+
+#: ../../content_filter.rst:10 9b95455c36c14307a4bd98a3050b10aa
+msgid ""
+"NethSecurity offers four distinct filtering mechanisms to address these "
+"needs:"
+msgstr ""
+"NethSecurity offre quattro distinti meccanismi di filtraggio per soddisfare "
+"queste esigenze:"
+
+#: ../../content_filter.rst:12 e669381a919a4c1b85da567919d6c370
+msgid ""
+"**Threat Shield IP**: IP-based blocking system targeting malware threats"
+msgstr ""
+"**Threat Shield IP**: sistema di blocco basato su IP che prende di mira le "
+"minacce malware"
+
+#: ../../content_filter.rst:13 3258e9960a004ae488ea4345f2fc2031
+msgid ""
+"**Threat Shield DNS**: DNS-based blocking system for malware and basic "
+"content filtering"
+msgstr ""
+"**Threat Shield DNS**: sistema di blocco basato su DNS per malware e "
+"filtraggio di contenuti di base"
+
+#: ../../content_filter.rst:14 f35fd72cc64d4c299d2923da4bd6e287
+msgid ""
+"**Deep Packet Inspection (DPI) filter**: Application and protocol-specific "
+"filtering using netifyd"
+msgstr ""
+"**Filtro Deep Packet Inspection (DPI)**: Filtraggio specifico per "
+"applicazione e protocollo utilizzando netifyd"
+
+#: ../../content_filter.rst:15 86f161d8b64b4e12afec06214b4521d6
+msgid ""
+"**FlashStart DNS filter**: Commercial DNS-based filtering solution with "
+"comprehensive content control features"
+msgstr ""
+"**FlashStart DNS filter**: Soluzione commerciale di filtraggio DNS con "
+"funzionalità complete di controllo dei contenuti"
+
+#: ../../content_filter.rst:18 ../../content_filter.rst:116
+#: fded73e9dcfb41648dbe27d3411993f8 20010ecfb84642519cbff3987a9f35c6
+msgid "Threat Shield IP"
+msgstr "Threat Shield IP"
+
+#: ../../content_filter.rst:20 e0231dc1bc0d41bf9b3801c4d2df6d89
+msgid ""
+"Threat Shield IP is an IP-based blocking system designed specifically to "
+"combat malware threats. It operates by blocking connections to or from known"
+" malicious IP addresses."
+msgstr ""
+"Threat Shield IP è un sistema di blocco basato su IP progettato "
+"specificamente per contrastare le minacce malware. Funziona bloccando le "
+"connessioni verso o da indirizzi IP noti come dannosi."
+
+#: ../../content_filter.rst:23 6205dce8fe4b4519a94f29ee8839e616
+msgid ""
+"**Scope**: Targets malware and provides limited privacy and advertising "
+"(ads) removal features"
+msgstr ""
+"**Ambito**: Prende di mira il malware e offre funzionalità limitate di "
+"rimozione della privacy e della pubblicità (ads)"
+
+#: ../../content_filter.rst:25 ../../content_filter.rst:49
+#: ../../content_filter.rst:93 08c1adffaddb4c8891155029a4ea9adf
+#: 0f25aebdcbd24a1487c529c57db1ec29 240eb3953f494db58684e1fcebd95022
+msgid "**Lists**:"
+msgstr "**Elenchi**:"
+
+#: ../../content_filter.rst:27 31f90c64348048e4b8eff987eee16330
+msgid "Community lists, free, targeting general malware, ads and trackers"
+msgstr ""
+"Liste della community, gratuite, che mirano a malware generico, pubblicità e"
+" tracker"
+
+#: ../../content_filter.rst:28 e5f913ee452b42e1a74379f01033a3ca
+msgid "Enterprise lists, paid, focusing on high-value malware protection"
+msgstr ""
+"Liste Enterprise, a pagamento, focalizzate sulla protezione da malware di "
+"alto valore"
+
+#: ../../content_filter.rst:30 ../../content_filter.rst:54
+#: ../../content_filter.rst:75 ../../content_filter.rst:98
+#: fc1f07b54ae54361b2b037cbb81aff7a b81816919d2444f6b9949aef70e840ed
+#: 88c209ad7e4248859b5e9dd04e5f9082 ec73b008ac504e21b20b825ba84d066c
+msgid "Advantages:"
+msgstr "Vantaggi:"
+
+#: ../../content_filter.rst:32 26c5ff1cc36e478481279f55753ed127
+msgid "Fast processing as it works at the IP level"
+msgstr "Elaborazione veloce in quanto funziona a livello IP"
+
+#: ../../content_filter.rst:33 36a78cd318824c508d87b05fe54fea6b
+msgid "Effective against entire malicious networks"
+msgstr "Efficace contro intere reti dannose"
+
+#: ../../content_filter.rst:35 ../../content_filter.rst:59
+#: 1950f92f466d410aadd9cdd02a12a617 dcb746cf59254aa8bb23ab1135073f6d
+msgid "Limitations:"
+msgstr "Limitazioni:"
+
+#: ../../content_filter.rst:37 38abfaac57b745aba287fb0cd0fd01da
+msgid "Cannot filter based on content type"
+msgstr "Impossibile filtrare in base al tipo di contenuto"
+
+#: ../../content_filter.rst:38 d65df17d3da345daaab117a87bd6156b
+msgid ""
+"May occasionally block legitimate services sharing an IP with malicious ones"
+msgstr ""
+"Può occasionalmente bloccare servizi legittimi che condividono un IP con "
+"quelli dannosi"
+
+#: ../../content_filter.rst:40 ae634b00b97a43578591c60e795b45ff
+msgid ""
+"To configure Threat Shield IP, see the :ref:`threat_shield_ip-section`."
+msgstr ""
+"Per configurare Threat Shield IP, consultare la sezione "
+":ref:`threat_shield_ip-section`."
+
+#: ../../content_filter.rst:43 ../../content_filter.rst:116
+#: d076b369efbe4ecf9ac802eedf62e9df 112354452a824a6389fb92f7afd8ad94
+msgid "Threat Shield DNS"
+msgstr "Threat Shield DNS"
+
+#: ../../content_filter.rst:45 b06ee0a3987b4c2d9de73337139c6968
+msgid ""
+"Threat Shield DNS provides DNS-based blocking, offering protection against "
+"malware and basic content filtering capabilities."
+msgstr ""
+"Threat Shield DNS fornisce il blocco basato su DNS, offrendo protezione "
+"contro malware e funzionalità di filtraggio dei contenuti di base."
+
+#: ../../content_filter.rst:47 264689e1035641b3ab04f31e329a437a
+msgid ""
+"**Scope**: Covers malware and limited content categories (e.g., adult "
+"content, gambling)"
+msgstr ""
+"**Ambito**: Copre malware e categorie di contenuti limitate (ad esempio, "
+"contenuti per adulti, gioco d'azzardo)"
+
+#: ../../content_filter.rst:51 ab74c0ad80384b1e82d8f01776f01267
+msgid ""
+"Community lists, free, focusing on general malware and simple content "
+"filtering"
+msgstr ""
+"Liste della community, gratuite, focalizzate su malware generico e "
+"filtraggio semplice dei contenuti"
+
+#: ../../content_filter.rst:52 32d25fc351524a61a9e732504c3eab5a
+msgid "Enterprise lists, paid, focus on high-value malware protection"
+msgstr ""
+"Liste Enterprise, a pagamento, focalizzate sulla protezione da malware di "
+"alto valore"
+
+#: ../../content_filter.rst:56 02710ae02d89441788d5d8069718a353
+msgid "Can block specific domains regardless of IP address"
+msgstr "Può bloccare domini specifici indipendentemente dall'indirizzo IP"
+
+#: ../../content_filter.rst:57 33f8dd1be0a9446fa5a57dc6f65a7bb9
+msgid "Offers basic content categorization (e.g., adult, gambling)"
+msgstr ""
+"Offre una categorizzazione di base dei contenuti (ad esempio, contenuti per "
+"adulti, gioco d'azzardo)"
+
+#: ../../content_filter.rst:61 b2ff776a961c43fe80e7e0a76b3ff48b
+msgid ""
+"Could be bypassed by using alternative DNS servers, but can be mitigated "
+"with DPI filtering and by enabling special block categories"
+msgstr ""
+"Potrebbe essere aggirato utilizzando server DNS alternativi, ma può essere "
+"mitigato con il filtraggio DPI e abilitando categorie di blocco speciali."
+
+#: ../../content_filter.rst:62 535a15fbb68a4a6a92863f114dcb6a2e
+msgid "Less granular than full URL filtering"
+msgstr "Meno granulare rispetto al filtraggio completo degli URL"
+
+#: ../../content_filter.rst:64 eb7a5e6a7bde4f76b2e3cc1dee67e204
+msgid ""
+"To configure Threat Shield DNS, see the :ref:`threat_shield_dns-section`."
+msgstr ""
+"Per configurare Threat Shield DNS, consultare la sezione "
+":ref:`threat_shield_dns-section`."
+
+#: ../../content_filter.rst:67 efaaf2c44eb54f9c95ab088a603715da
+msgid "FlashStart DNS filter"
+msgstr "Filtro DNS FlashStart"
+
+#: ../../content_filter.rst:69 0b53c07e8c0f4522ad76fd5b0a7ee9f9
+msgid ""
+"FlashStart is a commercial DNS-based filtering solution that offers "
+"comprehensive content control and reporting features."
+msgstr ""
+"FlashStart è una soluzione commerciale di filtraggio basata su DNS che offre"
+" funzionalità complete di controllo dei contenuti e di reportistica."
+
+#: ../../content_filter.rst:71 a38c7fd2b5c0479287249ca101b0d3c5
+msgid ""
+"**Scope**: Comprehensive content filtering beyond just malware and adult "
+"content"
+msgstr ""
+"**Ambito**:  contenuti completo che va oltre il solo malware e"
+" i contenuti per adulti"
+
+#: ../../content_filter.rst:73 d63c185f1e2e4b7181f4fd7395b14b0c
+msgid "**Lists**: Commercial lists maintained by FlashStart"
+msgstr "**Liste**: Liste commerciali gestite da FlashStart"
+
+#: ../../content_filter.rst:77 21be6b8730024c308ea9ed14951b0557
+msgid "High-quality block lists"
+msgstr "Liste di blocco di alta qualità"
+
+#: ../../content_filter.rst:78 e003396da22d479398f214049c0a447b
+msgid "Customizable reports"
+msgstr "Report personalizzabili"
+
+#: ../../content_filter.rst:79 9fd6752a76a045d9836e683ca812a461
+msgid "Cloud-based configuration, no direct firewall access required"
+msgstr ""
+"Configurazione basata su cloud, non è necessario l'accesso diretto al "
+"firewall"
+
+#: ../../content_filter.rst:80 75872090ea2b4bdfa252bbdaf09d103d
+msgid "Extensive content categories"
+msgstr "Categorie di contenuti estese"
+
+#: ../../content_filter.rst:81 95cc084300144f1e8120379c42b42f96
+msgid "Easy to manage"
+msgstr "Facile da gestire"
+
+#: ../../content_filter.rst:82 12cf18c6671047e8a60a3504ba632ab4
+msgid "Scalable for organizations of various sizes"
+msgstr "Scalabile per organizzazioni di diverse dimensioni"
+
+#: ../../content_filter.rst:84 24f9aa7058d3457591e7b09a12323cff
+msgid ""
+"To configure FlashStart DNS filtering, see the :ref:`flashstart-section`."
+msgstr ""
+"Per configurare il filtro DNS di FlashStart, consultare la sezione "
+":ref:`flashstart-section`."
+
+#: ../../content_filter.rst:87 d0c8984c64d54ec3960513c875dbf870
+msgid "Deep Packet Inspection (DPI) filter"
+msgstr "Filtro Deep Packet Inspection (DPI)"
+
+#: ../../content_filter.rst:89 d84ba76de8774e64a776835d3e0e99f8
+msgid ""
+"NethSecurity employs Deep Packet Inspection (DPI) techniques for filtering "
+"network traffic using the Netify Agent."
+msgstr ""
+"NethSecurity utilizza tecniche di Deep Packet Inspection (DPI) per filtrare "
+"il traffico di rete tramite Netify Agent."
+
+#: ../../content_filter.rst:91 ba6e725b847141f89f14e539f34889bd
+msgid "**Scope**: Application and protocol-specific filtering"
+msgstr "**Ambito**: Filtro specifico per applicazione e protocollo"
+
+#: ../../content_filter.rst:95 c3880fc245304d64a1709df19a892648
+msgid "Community signatures, free but limited in number and update frequency"
+msgstr ""
+"Firme della community, gratuite ma limitate nel numero e nella frequenza di "
+"aggiornamento"
+
+#: ../../content_filter.rst:96 ed5f7cc623294c88bd32d45840c7df48
+msgid ""
+"Enterprise signatures, included in any subscription, offering more "
+"comprehensive coverage"
+msgstr ""
+"Firme Enterprise, incluse in qualsiasi abbonamento, offrono una copertura "
+"più completa"
+
+#: ../../content_filter.rst:100 edccf726526746c9a48f8ea46d7359ba
+msgid "Provides granular control over network traffic"
+msgstr "Fornisce un controllo granulare sul traffico di rete"
+
+#: ../../content_filter.rst:101 a34e22cb2bbb40429d510416202196b0
+msgid "Can identify and filter based on specific applications or protocols"
+msgstr ""
+"Può identificare e filtrare in base ad applicazioni o protocolli specifici"
+
+#: ../../content_filter.rst:102 de3b013dee2942aa8fe7b7f4f3e43b5a
+msgid "Allows for dynamic traffic management based on real-time analysis"
+msgstr ""
+"Consente la gestione dinamica del traffico basata sull'analisi in tempo "
+"reale"
+
+#: ../../content_filter.rst:104 c8716e6e3787441fb7303a52eb50b636
+msgid "Considerations:"
+msgstr "Considerazioni:"
+
+#: ../../content_filter.rst:106 d4569801efc14de59627859da5861cd4
+msgid ""
+"May require more processing power compared to IP or DNS-based filtering"
+msgstr ""
+"Potrebbe richiedere una maggiore potenza di elaborazione rispetto al "
+"filtraggio basato su IP o DNS"
+
+#: ../../content_filter.rst:107 e938c7cd7cdb4fb7b6cb85c49071981b
+msgid "Requires careful configuration to balance security and performance"
+msgstr ""
+"Richiede una configurazione accurata per bilanciare sicurezza e prestazioni"
+
+#: ../../content_filter.rst:108 539117536f20482188a9c1856c21d45f
+msgid "The administrator needs to create DPI rules for each interface"
+msgstr "L'amministratore deve creare regole DPI per ciascuna interfaccia"
+
+#: ../../content_filter.rst:110 425fa55f16f547ec858e350765d2c4fd
+msgid "To configure DPI filtering, see the :ref:`dpi_filter-section`."
+msgstr ""
+"Per configurare il filtraggio DPI, consultare la sezione :ref:`dpi_filter-"
+"section`."
+
+#: ../../content_filter.rst:113 832bbc8090de40deabab5c6697797412
+msgid "Comparison of filtering options"
+msgstr "Confronto delle opzioni di filtraggio"
+
+#: ../../content_filter.rst:116 8db6b26f60ab4606a2cab51954fe4a50
+msgid "Feature"
+msgstr "Funzionalità"
+
+#: ../../content_filter.rst:116 247baa52f31942f3a6d9f7dcfd6f95b6
+msgid "Flashstart DNS Filtering"
+msgstr "Filtro DNS Flashstart"
+
+#: ../../content_filter.rst:116 46e2c33e503249408435d6c1d122785f
+msgid "DPI Filter"
+msgstr "Filtro DPI"
+
+#: ../../content_filter.rst:118 7336c2d02be945988dfb4d294bf5b4c3
+msgid "Blocking method"
+msgstr "Metodo di blocco"
+
+#: ../../content_filter.rst:118 3646ab6052f84027970517bb5a2a14f2
+msgid "IP-based"
+msgstr "Basato su IP"
+
+#: ../../content_filter.rst:118 8a22f1c42080485b9d192fb5e4e15d03
+#: db8c2118348e4a94a12c875e1d541bbc
+msgid "DNS-based"
+msgstr "Basato su DNS"
+
+#: ../../content_filter.rst:118 84481f3532ec49cc96a3471a9b0cc6c7
+msgid "Packet inspection"
+msgstr "Ispezione dei pacchetti"
+
+#: ../../content_filter.rst:120 9bb44ffa9352462cbf269427ae298780
+msgid "Primary focus"
+msgstr "Focus principale"
+
+#: ../../content_filter.rst:120 ca03d82fdf714fa3a83b059ef67937e5
+msgid "Malware"
+msgstr "Malware"
+
+#: ../../content_filter.rst:120 99c53c6af0cf4c7d88a40475f568c98d
+msgid "Malware + basic content"
+msgstr "Malware + contenuto di base"
+
+#: ../../content_filter.rst:120 10ba6c12c17d4b21bce97b32c57b7550
+msgid "Comprehensive content"
+msgstr "Contenuto completo"
+
+#: ../../content_filter.rst:120 edb759e4f878495e9a157839247e4f33
+msgid "Application/Protocol specific"
+msgstr "Specifico per applicazione/protocollo"
+
+#: ../../content_filter.rst:123 3dd4e50660d1451aaa8039332e3ed581
+msgid "List types"
+msgstr "Tipi di elenco"
+
+#: ../../content_filter.rst:123 2ab3f9d63e13450a82c7549e6c51d450
+#: dd28ab55a7934478a09838e65973b4e0
+msgid "Community, Enterprise"
+msgstr "Community, Enterprise"
+
+#: ../../content_filter.rst:123 84df19ec5057414c94d8725ce812f59c
+msgid "Commercial"
+msgstr "Commerciale"
+
+#: ../../content_filter.rst:123 8d67876f7dd94ecd8a2ec029adf89591
+msgid "N/A (real-time analysis)"
+msgstr "N/D (analisi in tempo reale)"
+
+#: ../../content_filter.rst:126 2c6509b0dc1b4a02a1ebd9d3bc67bdaa
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../content_filter.rst:126 3d1efcb3870d4ae6b6cbe36248c90e8a
+#: 27dac5bd836e4015aefbf3aa9e91631c
+msgid "Firewall"
+msgstr "Firewall"
+
+#: ../../content_filter.rst:126 2fed13ea3e8f408cbcaad2e0e4f26334
+msgid "Cloud"
+msgstr "Cloud"
+
+#: ../../content_filter.rst:126 dc6d0361736342509ce2d6a70403b46b
+msgid "Firewall (per interface)"
+msgstr "Firewall (per interfaccia)"
+
+#: ../../content_filter.rst:129 bdc5d6a762804898a6e16598f2c3941e
+msgid "Reporting"
+msgstr "Reportistica"
+
+#: ../../content_filter.rst:129 a15c0b53ee644d3a9409206e6941c87e
+#: b8154721563a49cb9c6a53393b860de1
+msgid "None"
+msgstr "Nessuno"
+
+#: ../../content_filter.rst:129 d65c4f0a1d7b4a5fb1147a132b8d8dd5
+msgid "Advanced, customizable"
+msgstr "Avanzato, personalizzabile"
+
+#: ../../content_filter.rst:129 06730f9218bd41d3a5d1729bc83dbfdc
+msgid "Limited"
+msgstr "Limitato"
+
+#: ../../content_filter.rst:133 0b37310b7a0e40bf9b6f5facb9bfe4fc
+msgid "Implementation strategies"
+msgstr "Strategie di implementazione"
+
+#: ../../content_filter.rst:134 396fdac3429a4df08be541db60267519
+msgid "For optimal security, consider a layered approach:"
+msgstr ""
+"Per una sicurezza ottimale, si consiglia di adottare un approccio a più "
+"livelli:"
+
+#: ../../content_filter.rst:136 2e653752eec14e2683c3934e793f4de0
+msgid ""
+"Use Threat Shield IP as the first line of defense against known malicious "
+"networks."
+msgstr ""
+"Utilizzare Threat Shield IP come prima linea di difesa contro le reti "
+"dannose conosciute."
+
+#: ../../content_filter.rst:137 ab945f702f054597bf9e6bad880dd3cd
+msgid "Implement a DNS filter, use one of the following options:"
+msgstr "Implementare un filtro DNS, utilizzare una delle seguenti opzioni:"
+
+#: ../../content_filter.rst:139 955f1abe7ee34fdfae773ffe25ef7d1c
+msgid ""
+"Threat Shield DNS to catch domain-based threats and provide basic content "
+"filtering or"
+msgstr ""
+"Threat Shield DNS per rilevare minacce basate su dominio e fornire un filtro"
+" dei contenuti di base"
+
+#: ../../content_filter.rst:140 50e93280450843529e879364dc863fff
+msgid ""
+"Flashstart DNS Filtering for comprehensive content control, especially in "
+"environments requiring detailed policy management and reporting."
+msgstr ""
+"Flashstart DNS Filtering per un controllo completo dei contenuti, "
+"particolarmente indicato in ambienti che richiedono una gestione dettagliata"
+" delle policy e reportistica avanzata."
+
+#: ../../content_filter.rst:141 26e52b02535e4e25b8a9f8cc017aa2d8
+msgid ""
+"Utilize DPI filtering for granular control over specific applications and "
+"protocols, and to manage traffic based on real-time analysis."
+msgstr ""
+"Utilizzare il filtraggio DPI per un controllo granulare su applicazioni e "
+"protocolli specifici, e per gestire il traffico in base all'analisi in tempo"
+" reale."
+
+#: ../../content_filter.rst:143 378eeb8880584db5a1c21af8cd2d96f7
+msgid ""
+"This combination provides defense-in-depth, addressing various threat "
+"vectors and content filtering needs."
+msgstr ""
+"Questa combinazione offre una difesa stratificata, affrontando diversi "
+"vettori di minaccia ed esigenze di filtraggio dei contenuti."
