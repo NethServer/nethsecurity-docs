@@ -1,0 +1,503 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../install.rst:5 4980a16dfda94061af571401f74ec9d3
+msgid "Installation"
+msgstr "Installazione"
+
+#: ../../install.rst:9 ad746a6148544c92b2d2ad8a98faf9fa
+msgid ""
+"To begin the installation process, start by :ref:`downloading <download-"
+"section>` the latest image. Once the download is complete, you have two "
+"methods to install NethSecurity:"
+msgstr ""
+"Per iniziare il processo di installazione, per prima cosa :ref:`scaricare "
+"<download-section>` l'immagine più recente. Una volta completato il "
+"download, sono disponibili due metodi per installare NethSecurity:"
+
+#: ../../install.rst:12 83757071a00a4d9885570720c7d30094
+msgid ""
+"Direct disk installation: write the downloaded image directly to your "
+"computer's disk. This method allows for a straightforward installation "
+"process directly onto your system's storage."
+msgstr ""
+"Installazione diretta su disco: scrivere l'immagine scaricata direttamente "
+"sul disco del computer. Questo metodo consente un processo di installazione "
+"semplice e diretto sul dispositivo di memorizzazione."
+
+#: ../../install.rst:15 ac0cac5184cf4acab02b7efc9863d9c9
+msgid ""
+"USB boot installation: alternatively, you can create a bootable USB stick "
+"using the downloaded image. Boot the system from the USB stick and type a "
+"command to initiate the installation process."
+msgstr ""
+"Installazione tramite avvio da USB: in alternativa, è possibile creare una "
+"chiavetta USB avviabile utilizzando l'immagine scaricata. Avviare il sistema"
+" dalla chiavetta USB e digitare un comando per avviare il processo di "
+"installazione."
+
+#: ../../install.rst:18 164c93622a9c496c9543561843ebcdad
+msgid ""
+"Choose the method that best suits your needs and proceed with the "
+"installation process for NethSecurity."
+msgstr ""
+"Scegliere il metodo che meglio si adatta alle proprie esigenze e procedere "
+"con il processo di installazione di NethSecurity."
+
+#: ../../install.rst:23 231d12e02a0445e69268726fc6ab9c8d
+msgid "Install on bare metal"
+msgstr "Installazione su bare metal"
+
+#: ../../install.rst:25 f2d14eb30f2a4225a6c8c96f482c3663
+msgid ""
+"NethSecurity can be run from a USB stick or installed directly to any "
+"bootable device like hard disks or SD cards."
+msgstr ""
+"NethSecurity può essere eseguito da una chiavetta USB o installato "
+"direttamente su qualsiasi dispositivo avviabile come dischi rigidi o schede "
+"SD."
+
+#: ../../install.rst:28 040501d4b0aa4fea9afb6f40a90dae7d
+msgid "attach the target disk/stick/card to a desktop Linux machine"
+msgstr ""
+"collegare il disco/chiavetta/scheda di destinazione a una macchina Linux desktop"
+
+#: ../../install.rst:29 febd4b246f5242b4b5904b5525b55e41
+msgid ""
+"find the disk/stick/card device name, in this example the device is named "
+"``/dev/sdd``"
+msgstr ""
+"trovare il nome del dispositivo disco/chiavetta/scheda, in questo esempio il"
+" dispositivo è denominato ``/dev/sdd``"
+
+#: ../../install.rst:30 df11f0f086ab42afa72aa13707803eb7
+msgid "as ``root`` user, write the downloaded image to the device:"
+msgstr "come utente ``root``, scrivere l'immagine scaricata sul dispositivo:"
+
+#: ../../install.rst:36 6e57fe1b9b4c47b280d915767cc2a708
+msgid ""
+"unplug the disk/stick/card from the desktop and plug it into the server"
+msgstr ""
+"scollegare il disco/chiavetta/scheda dal desktop e collegarlo al server"
+
+#: ../../install.rst:37 843ab442f74b4712b016cba4bb3353d1
+msgid ""
+"boot the server, select the correct device (USB, SD card or hard disk) from "
+"boot menu"
+msgstr ""
+"avviare il server, selezionare il dispositivo corretto (USB, scheda SD o "
+"disco rigido) dal menu di avvio"
+
+#: ../../install.rst:38 056fb2c5769849cc8c9ff29195b270cd
+msgid "the server is installed and ready to be used"
+msgstr "il server è installato ed è pronto per essere utilizzato"
+
+#: ../../install.rst:41 1205d004ffd24533ae95395cc4e7f6f7
+msgid "Writing the image on Windows"
+msgstr "Scrittura dell'immagine su Windows"
+
+#: ../../install.rst:43 e84a868a14904ed0bce44ce700562f86
+msgid ""
+"Writing the image on a Windows machine is not recommended because it may "
+"mess up the disk partitioning."
+msgstr ""
+"Scrivere l'immagine su una macchina Windows non è consigliato perché "
+"potrebbe compromettere la partizione del disco."
+
+#: ../../install.rst:45 4e28ddb5525744c29f0cd4b716e53fbb
+msgid ""
+"If you're running a desktop Windows machine, you will need extra software "
+"for point 2. First, make sure to format the USB drive then unmount it. Use "
+"one of the following tools to write the USB stick:"
+msgstr ""
+"Se si utilizza una macchina desktop Windows, sarà necessario un software "
+"aggiuntivo per il punto 2. Prima di tutto, assicurarsi di formattare l'unità"
+" USB e poi smontarla. Utilizzare uno dei seguenti strumenti per scrivere "
+"sulla chiavetta USB:"
+
+#: ../../install.rst:49 bd52f78fa39746a79116e2c2c23a0aab
+msgid "`Etcher <https://etcher.io/>`_"
+msgstr "`Etcher <https://etcher.io/>`_"
+
+#: ../../install.rst:50 0f2895eb59314c34abfc0733e0d3bda2
+msgid ""
+"`Win32 Disk Imager <http://sourceforge.net/projects/win32diskimager/>`_"
+msgstr ""
+"`Win32 Disk Imager <http://sourceforge.net/projects/win32diskimager/>`_"
+
+#: ../../install.rst:51 d6c5fd896d8743a399242ec129b52d71
+msgid "`Rawrite32 <http://www.netbsd.org/~martin/rawrite32/>`_"
+msgstr "`Rawrite32 <http://www.netbsd.org/~martin/rawrite32/>`_"
+
+#: ../../install.rst:54 12d708ea5d3e44959e9979ae01f405c0
+msgid "Install from USB to disk"
+msgstr "Installare da USB su disco"
+
+#: ../../install.rst:56 c40c8d856d1d42de892ce915acebdcce
+msgid ""
+"Since running from the USB stick does not guarantee best performances, you "
+"can also install NethSecurity to the hard disk while running it from the USB"
+" stick itself:"
+msgstr ""
+"Poiché l'esecuzione da una chiavetta USB non garantisce le migliori "
+"prestazioni, è anche possibile installare NethSecurity sul disco rigido "
+"mentre lo si esegue direttamente dalla chiavetta USB:"
+
+#: ../../install.rst:59 c59589e74697431cab82ab02caebfd3b
+msgid "connect to the server using VGA, serial console or SSH"
+msgstr "connettersi al server utilizzando VGA, console seriale o SSH"
+
+#: ../../install.rst:60 444bfe43426c449187df55687ab8a971
+msgid "login with :ref:`default credentials <default_credentials-section>`"
+msgstr ""
+"accedere con :ref:`credenziali predefinite <default_credentials-section>`"
+
+#: ../../install.rst:61 efbf9d6c3779471aadd02e9de75e3c77
+msgid "execute ``ns-install`` and follow the instructions"
+msgstr "Eseguire ``ns-install`` e seguire le istruzioni"
+
+#: ../../install.rst:63 2dcb8cf7d11545aaafb039e2220ecc4c
+msgid ""
+"The firewall will be halted at the end of the installation. Once the "
+"firewall has been shutdown, you can safely remove the USB stick and boot the"
+" server again."
+msgstr ""
+"Il firewall verrà arrestato al termine dell'installazione. Una volta che il "
+"firewall è stato spento, è possibile rimuovere in sicurezza la chiavetta USB"
+" e riavviare nuovamente il server."
+
+#: ../../install.rst:68 1c20f5e61b6445c5af324975fe448da1
+msgid "Install on virtual machines"
+msgstr "Installazione su macchine virtuali"
+
+#: ../../install.rst:70 5eb1d8c42d2f4d6e869ab9160b282f3c
+msgid "You can use the downloaded image as a virtual machine disk:"
+msgstr ""
+"È possibile utilizzare l'immagine scaricata come disco per una macchina "
+"virtuale:"
+
+#: ../../install.rst:72 f70c7c34fb8d43a3ac6bd8ce1bb870cb
+msgid "extract the downloaded image:"
+msgstr "estrarre l'immagine scaricata:"
+
+#: ../../install.rst:78 aab70dfdcac64e79865fdd0054f05ee7
+msgid "create a new virtual machine and select the uncompressed image as disk"
+msgstr ""
+"creare una nuova macchina virtuale e selezionare l'immagine non compressa "
+"come disco"
+
+#: ../../install.rst:79 87d5314a83b64ab280318ba1f2e8007b
+msgid "boot the virtual machine"
+msgstr "avviare la macchina virtuale"
+
+#: ../../install.rst:82 1c9f3f5545594cb48aee998b219410f5
+msgid ""
+"If you wish to save the logs locally, it is recommended to attach an "
+"additional virtual hard drive to the virtual machine and select it as the "
+"destination for logs in the ``Storage`` page under the ``System`` section."
+msgstr ""
+"Se si desidera salvare i log localmente, è consigliato collegare un disco "
+"rigido virtuale aggiuntivo alla macchina virtuale e selezionarlo come "
+"destinazione per i log nella pagina ``Storage`` sotto la sezione "
+"``Sistema``."
+
+#: ../../install.rst:85 8d03275cd89f4bbc80595d227e009ab0
+msgid "Install on Proxmox"
+msgstr "Installazione su Proxmox"
+
+#: ../../install.rst:87 a12515c06a684373b97c6febb1b3dbfd
+msgid ""
+"The image can be imported inside `Proxmox <https://www.proxmox.com/>`_."
+msgstr ""
+"L'immagine può essere importata all'interno di `Proxmox "
+"<https://www.proxmox.com/>`_."
+
+#: ../../install.rst:89 69fedc7939a94348bb946f5160e0fd39
+msgid ""
+"First, make sure to have 2 different network bridges. In this example we are"
+" going to use ``vmbr0`` and ``vmbr1``. The described procedure can be also "
+"done using the Proxmox UI."
+msgstr ""
+"Per prima cosa, assicurarsi di avere 2 bridge di rete differenti. In questo "
+"esempio verranno utilizzati ``vmbr0`` e ``vmbr1``. La procedura descritta "
+"può essere eseguita anche tramite l'interfaccia utente di Proxmox."
+
+#: ../../install.rst:92 49807c90a12d4651b35138954294d59d
+msgid ""
+"Create the virtual machine, in this example the machine will have id "
+"``401``::"
+msgstr ""
+"Creare la macchina virtuale, in questo esempio la macchina avrà l'id "
+"``401``::"
+
+#: ../../install.rst:97 45ceca0bd71748f2a2882295ffda8fa0
+msgid "Download the image:"
+msgstr "Scaricare l'immagine:"
+
+#: ../../install.rst:104 dcef59d9508c4273bdcf6ef32a7a7cad
+msgid "Extract the image:"
+msgstr "Estrarre l'immagine:"
+
+#: ../../install.rst:110 f1d430f1ab5d4c1cbe0bba671bc9cea1
+msgid "Import the extracted images a virtual machine disk:"
+msgstr "Importare le immagini estratte come disco della macchina virtuale:"
+
+#: ../../install.rst:116 94512525c9f4418a8e02e8c950da19dd
+msgid "Attach the disk to the virtual machine: ::"
+msgstr "Collegare il disco alla macchina virtuale: ::"
+
+#: ../../install.rst:120 a64a59756c58467787fc31fcb87b1665
+msgid "Setup the boot order: ::"
+msgstr "Impostare l'ordine di avvio: ::"
+
+#: ../../install.rst:124 a5697a8a7a9a4577bd165aa2abd81d53
+msgid "Finally, start the virtual machine."
+msgstr "Infine, avviare la macchina virtuale."
+
+#: ../../install.rst:127 44247a26a5c34dc38f01557c639c227c
+msgid "QEMU guest agent"
+msgstr "Agente guest QEMU"
+
+#: ../../install.rst:129 da9e9b22a9bf416e88a8650655d6eb36
+msgid ""
+"QEMU guest agent is not part of the NethSecurity image but can be installed "
+"from the command line. The agent can work when the virtual machine is "
+"running on KVM, Proxmox, or other QEMU-based hypervisors."
+msgstr ""
+"L'agente guest QEMU non fa parte dell'immagine NethSecurity ma può essere "
+"installato dalla riga di comando. L'agente può funzionare quando la macchina"
+" virtuale è in esecuzione su KVM, Proxmox o altri hypervisor basati su QEMU."
+
+#: ../../install.rst:132 5213c6de5fb349039de6244b01ac0821
+msgid ""
+"First, make sure the virtual machine is running, then connect to the machine"
+" using SSH or the Proxmox console and execute the following commands: ::"
+msgstr ""
+"Per prima cosa, assicurarsi che la macchina virtuale sia in esecuzione, "
+"quindi connettersi alla macchina utilizzando SSH o la console di Proxmox ed "
+"eseguire i seguenti comandi: ::"
+
+#: ../../install.rst:138 ../../install.rst:176
+#: d213bd18f1014cd398c9cd53898a4b2e b6d1baf94c4a49f5b1428cff8ebf16c7
+msgid "After the installation, start the service: ::"
+msgstr "Dopo l'installazione, avviare il servizio: ::"
+
+#: ../../install.rst:142 5e6916e721244ffd8004a8c0a927facd
+msgid ""
+"The QEMU guest agent will be available on the virtual machine and "
+"automatically started at boot."
+msgstr ""
+"Il QEMU guest agent sarà disponibile sulla macchina virtuale e verrà avviato"
+" automaticamente all'avvio."
+
+#: ../../install.rst:144 5cfc3200f8a241d7bd547dc87e566087
+msgid ""
+"Please note that after an image upgrade the QEMU guest agent will be removed"
+" and you will need to reinstall it. See :ref:`restore_extra_packages-"
+"section` for more info."
+msgstr ""
+"Si noti che dopo un aggiornamento dell'immagine il QEMU guest agent verrà "
+"rimosso e sarà necessario reinstallarlo. Consultare "
+":ref:`restore_extra_packages-section` per ulteriori informazioni."
+
+#: ../../install.rst:148 9ecfaa4c88ee4a3aa3d9e956460766aa
+msgid "Install on VMWare"
+msgstr "Installazione su VMWare"
+
+#: ../../install.rst:150 2a42c9c4705b427a9a639d09ecd83973
+msgid ""
+"`VMWare <https://www.vmware.com>`_ may encounter issues when importing raw "
+"disk images directly. To ensure a smooth import, first decompress the image "
+"file, then convert the raw image to the VMWare native ``.vmdk`` format "
+"before proceeding."
+msgstr ""
+"`VMWare <https://www.vmware.com>`_ può riscontrare problemi durante "
+"l'importazione diretta di immagini disco raw. Per garantire un'importazione "
+"senza problemi, decomprimere prima il file immagine, quindi convertire "
+"l'immagine raw nel formato nativo ``.vmdk`` di VMWare prima di procedere."
+
+#: ../../install.rst:153 ../../install.rst:190
+#: 93d21767f70245e0a3d04e46b24a6385 3772ae1be7464664ac2a3fa03fd2fbc6
+msgid ""
+"On Windows, you can use a software like `V2V Converter "
+"<https://www.starwindsoftware.com/starwind-v2v-converter>`_."
+msgstr ""
+"Su Windows, è possibile utilizzare un software come `V2V Converter "
+"<https://www.starwindsoftware.com/starwind-v2v-converter>`_."
+
+#: ../../install.rst:155 ../../install.rst:192
+#: c0ebc3c6182a40a1aadbcc684ab684b3 08a41acd87fb4d278782c12fdd593de2
+msgid "On Linux you can use the ``qemu-img`` command. Example: ::"
+msgstr "Su Linux è possibile utilizzare il comando ``qemu-img``. Esempio: ::"
+
+#: ../../install.rst:159 ../../install.rst:196 ../../install.rst:212
+#: 5ed847a8e49c4b29bbab63e8146e1eb0 07c1b84d2fc44a5eba22ac528783ff9a
+#: aad33503f78f4c8faba6302849585927
+msgid "Replace:"
+msgstr "Sostituire:"
+
+#: ../../install.rst:161 ../../install.rst:198 ../../install.rst:214
+#: 00af5ab03d36424e82efa84dd275ae9f ae8c6373b72a4c97ac932ba8c3bb21b6
+#: c4adebffc01f408fbb08fec62051028f
+msgid "``<source_image.raw>`` with the actual path to your raw disk image"
+msgstr ""
+"``<source_image.raw>`` con il percorso effettivo della propria immagine "
+"disco raw"
+
+#: ../../install.rst:162 88db9bdd65f9452cb81b6ed4b2bd7746
+msgid "``<destination_image.vmdk>`` with your desired .vmdk filename"
+msgstr "``<destination_image.vmdk>`` con il nome file .vmdk desiderato"
+
+#: ../../install.rst:165 7c08e2dd399741f2bf9c424a23772ee0
+msgid "VMware open-vm-tools"
+msgstr "VMware open-vm-tools"
+
+#: ../../install.rst:167 8738658081ad4269a201354aae096fef
+msgid ""
+"VMware open-vm-tools are not part of the NethSecurity image but can be "
+"installed from the command line. The tools can work only when the virtual "
+"machine is running on VMWare hypervisors."
+msgstr ""
+"Gli open-vm-tools di VMware non fanno parte dell'immagine di NethSecurity, "
+"ma possono essere installati dalla riga di comando. Gli strumenti funzionano"
+" solo quando la macchina virtuale è in esecuzione su hypervisor VMware."
+
+#: ../../install.rst:170 1ca1b59108e242caa92ddead236eb3fc
+msgid ""
+"First make sure the virtual machine is running, then connect to the machine "
+"using SSH or the VMWare console and execute the following commands: ::"
+msgstr ""
+"Per prima cosa, assicurarsi che la macchina virtuale sia in esecuzione, "
+"quindi connettersi alla macchina utilizzando SSH o la console VMWare ed "
+"eseguire i seguenti comandi: ::"
+
+#: ../../install.rst:180 ba13258783b0405180bf809dabdf91c9
+msgid ""
+"The VMware open-vm-tools will be available on the virtual machine and "
+"automatically started at boot."
+msgstr ""
+"Gli open-vm-tools di VMware saranno disponibili sulla macchina virtuale e "
+"verranno avviati automaticamente all'avvio."
+
+#: ../../install.rst:182 9c2b077a18d241e49f17bf9b335fbe08
+msgid ""
+"Please note that after an image upgrade the VMware open-vm-tools will be "
+"removed and you will need to reinstall it. See :ref:`restore_extra_packages-"
+"section` for more info."
+msgstr ""
+"Si noti che dopo un aggiornamento dell'immagine, il pacchetto VMware open-"
+"vm-tools verrà rimosso e sarà necessario reinstallarlo. Consultare "
+":ref:`restore_extra_packages-section` per ulteriori informazioni."
+
+#: ../../install.rst:186 318ea73214d046c1b7bb73ba2ec5ad99
+msgid "Install on Hyper-V"
+msgstr "Installazione su Hyper-V"
+
+#: ../../install.rst:188 69a0a125d72a43cda923c709ea40f1fa
+msgid ""
+"To ensure a smooth import on HYper-V, first decompress the image file, then "
+"convert the raw image to the Hyper-V native ``.vhdx`` format before "
+"proceeding."
+msgstr ""
+"Per garantire un'importazione senza problemi su Hyper-V, decomprimere prima "
+"il file immagine, quindi convertire l'immagine raw nel formato nativo di "
+"Hyper-V ``.vhdx`` prima di procedere."
+
+#: ../../install.rst:199 5c13e5e77ed943b7a56e7f3cbf926250
+msgid "``<destination_image.vhdx>`` with your desired .vhdx filename"
+msgstr "``<destination_image.vhdx>`` con il nome file .vhdx desiderato"
+
+#: ../../install.rst:202 d62286af53484bcaa25cbde2263edae1
+msgid "Install on VirtualBox"
+msgstr "Installazione su VirtualBox"
+
+#: ../../install.rst:204 483e332323bb45689b21226db311685a
+msgid ""
+"`VirtualBox <https://www.virtualbox.org>`_ may encounter issues when "
+"importing raw disk images directly. To ensure a smooth import, first "
+"decompress the image file, then convert the raw image to the VirtualBox "
+"native ``.vdi`` format before proceeding."
+msgstr ""
+"`VirtualBox <https://www.virtualbox.org>`_ può riscontrare problemi durante "
+"l'importazione diretta di immagini disco raw. Per garantire un'importazione "
+"senza problemi, decomprimere prima il file immagine, quindi convertire "
+"l'immagine raw nel formato nativo ``.vdi`` di VirtualBox prima di procedere."
+
+#: ../../install.rst:207 98c27beee42b44e48549998e5643537c
+msgid ""
+"On Windows, Linux and macOS you can use the built-in `VBoxManage` tool. "
+"Example: ::"
+msgstr ""
+"Su Windows, Linux e macOS è possibile utilizzare lo strumento integrato "
+"`VBoxManage`. Esempio: ::"
+
+#: ../../install.rst:215 4fa83a83c5c648e7905445558181d9ed
+msgid "``<destination_image.vdi>`` with your desired .vdi filename"
+msgstr "``<destination_image.vdi>`` con il nome file .vdi desiderato"
+
+#: ../../install.rst:219 b4611f6665ce4d59b66bca77c7455c54
+msgid "Default network configuration"
+msgstr "Configurazione di rete predefinita"
+
+#: ../../install.rst:221 407313d3e8ec4edaacd738cbbfd08e10
+msgid ""
+"When you first boot NethSecurity, the system will try to configure the "
+"network interfaces."
+msgstr ""
+"Al primo avvio di NethSecurity, il sistema tenterà di configurare le "
+"interfacce di rete."
+
+#: ../../install.rst:223 394e201730f44e3e88debe9ea2de8e3b
+msgid "By default, the network configuration will be as follows:"
+msgstr ""
+"Per impostazione predefinita, la configurazione di rete sarà la seguente:"
+
+#: ../../install.rst:225 aaebb43050b24e60a93986874c47c06d
+msgid ""
+"The LAN interface will be configured with a static IP address of "
+"192.168.1.1."
+msgstr ""
+"L'interfaccia LAN verrà configurata con un indirizzo IP statico di "
+"192.168.1.1."
+
+#: ../../install.rst:226 ../../install.rst:231
+#: f3a83afcfaf24d09a94d22c474fa71a0 b89a39958e3e461590169672d7a571a1
+msgid ""
+"The WAN interface will be configured to use DHCP to obtain an IP address "
+"from your ISP."
+msgstr ""
+"L'interfaccia WAN sarà configurata per utilizzare DHCP al fine di ottenere "
+"un indirizzo IP dal proprio ISP."
+
+#: ../../install.rst:228 93da03f211934a9e81963a523ad11674
+msgid ""
+"An exception to this default network configuration is virtual machines "
+"running on KVM and on Digital Ocean cloud provider (droplet). In this case, "
+"the network configuration will be as follows:"
+msgstr ""
+"Un'eccezione a questa configurazione di rete predefinita riguarda le "
+"macchine virtuali in esecuzione su KVM e sul provider cloud Digital Ocean "
+"(droplet). In questo caso, la configurazione di rete sarà la seguente:"
+
+#: ../../install.rst:230 e31e9608f3594fc5ab3ae277f3333154
+msgid ""
+"The LAN interface will be configured to use DHCP to obtain an IP address "
+"from the virtualization platform."
+msgstr ""
+"L'interfaccia LAN sarà configurata per utilizzare DHCP al fine di ottenere "
+"un indirizzo IP dalla piattaforma di virtualizzazione."
+
+#: ../../install.rst:233 1562b6ca6f474d0aafd67438e0c54615
+msgid ""
+"**Note:** If you are using NethSecurity in a production environment, you may"
+" need to modify the default network configuration to meet your specific "
+"needs. For example, you may need to configure the LAN interface with a "
+"different IP address or configure the WAN interface to use a static IP "
+"address."
+msgstr ""
+"**Nota:** Se si utilizza NethSecurity in un ambiente di produzione, potrebbe"
+" essere necessario modificare la configurazione di rete predefinita per "
+"soddisfare esigenze specifiche. Ad esempio, potrebbe essere necessario "
+"configurare l'interfaccia LAN con un indirizzo IP diverso oppure configurare"
+" l'interfaccia WAN per utilizzare un indirizzo IP statico."
