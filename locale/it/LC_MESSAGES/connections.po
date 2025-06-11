@@ -1,0 +1,146 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../connections.rst:5 a9cc640910e94305b2faddd175dd2b3d
+msgid "Connections"
+msgstr "Connessioni"
+
+#: ../../connections.rst:7 95fa5f7603a348b38c88a0cbf6ece7cc
+msgid ""
+"The connection tracking (Conntrack) is a network feature used in firewalls "
+"and routers to monitor and manage the state of active network connections. "
+"It tracks the state of each connection, such as new, established, related, "
+"or expired, and maintains this information in a connection tracking table. "
+"This allows for stateful packet inspection, where packets are inspected "
+"based on their connection context, enabling more precise and secure "
+"filtering rules. Conntrack also supports Network Address Translation (NAT) "
+"by tracking internal to external IP mappings and optimizes performance by "
+"quickly dropping packets from invalid or expired connections."
+msgstr ""
+"Il connection tracking (Conntrack) è una funzionalità di rete utilizzata in "
+"firewall e router per monitorare e gestire lo stato delle connessioni di "
+"rete attive. Tiene traccia dello stato di ciascuna connessione, come nuova, "
+"stabilita, correlata o scaduta, e mantiene queste informazioni in una "
+"tabella di connection tracking. Questo consente un'ispezione stateful dei "
+"pacchetti, in cui i pacchetti vengono analizzati in base al contesto della "
+"connessione, permettendo regole di filtraggio più precise e sicure. "
+"Conntrack supporta inoltre la Network Address Translation (NAT) tracciando "
+"le associazioni tra indirizzi IP interni ed esterni e ottimizza le "
+"prestazioni scartando rapidamente i pacchetti provenienti da connessioni non"
+" valide o scadute."
+
+#: ../../connections.rst:12 7844d2d2ecb8459cae57c30feae4611d
+msgid "Connections can be filter by :"
+msgstr "Le connessioni possono essere filtrate tramite:"
+
+#: ../../connections.rst:14 36e89f6ea9e54b18a6eba58168676fcb
+msgid "``Protocol``"
+msgstr "``Protocollo``"
+
+#: ../../connections.rst:15 b662d4d4311145bfbf7b141250009934
+msgid "``Status``"
+msgstr "``Stato``"
+
+#: ../../connections.rst:16 adfa5fa1ee5f4d39984f9a2aabc23e01
+msgid "``IP``"
+msgstr "``IP``"
+
+#: ../../connections.rst:17 fd92553d14db4499a8b4339cadc98f8b
+msgid "``Port``"
+msgstr "``Porta``"
+
+#: ../../connections.rst:19 710110b0f6db465ebd94a87f0709ba92
+msgid ""
+"The list of connections is not refreshed in real time. To list new "
+"connections click the :guilabel:`Refresh page` button."
+msgstr ""
+"L'elenco delle connessioni non viene aggiornato in tempo reale. Per elencare"
+" le nuove connessioni, fare clic sul pulsante :guilabel:`Aggiorna pagina`."
+
+#: ../../connections.rst:21 d823d0c1a08a42eb9fdbc4ae7ac5f3fa
+msgid ""
+"The administrator can delete a single connection or flush the whole "
+"connection tracking table by using :guilabel:`Delete all connections` "
+"button."
+msgstr ""
+"L'amministratore può eliminare una singola connessione o svuotare l'intera "
+"tabella di tracciamento delle connessioni utilizzando il pulsante "
+":guilabel:`Elimina tutte le connessioni`."
+
+#: ../../connections.rst:24 ba5bd8bbe292429f83c701a6e0023a5e
+msgid "Good practices for terminating sessions"
+msgstr "Buone pratiche per la terminazione delle sessioni"
+
+#: ../../connections.rst:26 43b046af811c431abbe5f53b187bd6ba
+msgid "When to terminate a connection:"
+msgstr "Quando terminare una connessione:"
+
+#: ../../connections.rst:28 68ea24ceb3404127b679719afa2cf959
+msgid "the connection has expired or been idle for an extended period"
+msgstr ""
+"la connessione è scaduta o è rimasta inattiva per un periodo prolungato"
+
+#: ../../connections.rst:29 a5f96d4bf0da4371a7fbc963578a21b8
+msgid "there's evidence of malicious activity associated with the session"
+msgstr "ci sono prove di attività dannosa associate alla sessione"
+
+#: ../../connections.rst:30 f1bbace0eb68470fac721a9b7ec60703
+msgid ""
+"the connection appears to be stale or hanging, preventing new connections"
+msgstr ""
+"la connessione sembra essere inattiva o bloccata, impedendo nuove "
+"connessioni"
+
+#: ../../connections.rst:31 b15069e52763495ba1c0b0dbb289915d
+msgid "termination is necessary for network troubleshooting or diagnostics"
+msgstr ""
+"la terminazione è necessaria per la risoluzione dei problemi di rete o per "
+"la diagnostica"
+
+#: ../../connections.rst:33 4090acf19a2a46d7b8f6a42f60c76226
+msgid "When to avoid terminating a session:"
+msgstr "Quando evitare di terminare una sessione:"
+
+#: ../../connections.rst:35 d4864dd560fd49d1a60a8f403fcc7c26
+msgid "the connection is active and appears to be functioning normally"
+msgstr "la connessione è attiva e sembra funzionare normalmente"
+
+#: ../../connections.rst:36 6432030dbc7c4971a475e21c9e14c417
+msgid "the connection is critical for ongoing application operations"
+msgstr ""
+"la connessione è fondamentale per il funzionamento continuo "
+"dell'applicazione"
+
+#: ../../connections.rst:37 79fd662fccb940f795358ad59d1ef1ef
+msgid ""
+"any issues with the connection seem to be temporary and may resolve on their"
+" own"
+msgstr ""
+"eventuali problemi con la connessione sembrano essere temporanei e "
+"potrebbero risolversi da soli"
+
+#: ../../connections.rst:40 d9f2cbfc3541483f97540cc463a40da3
+msgid ""
+"In a MultiWAN setup, specific traffic such as VoIP trunks is routed and "
+"NATed through designated interfaces to distinct providers. When an interface"
+" or route becomes unavailable, it is essential to drop all connections using"
+" that interface and reroute subsequent traffic through the functioning "
+"connection, otherwise the trunk will not be able to register to the "
+"provider."
+msgstr ""
+"In una configurazione MultiWAN, il traffico specifico come i trunk VoIP "
+"viene instradato e NATtato attraverso interfacce designate verso provider "
+"distinti. Quando un'interfaccia o una rotta diventa non disponibile, è "
+"essenziale interrompere tutte le connessioni che utilizzano tale interfaccia"
+" e instradare il traffico successivo attraverso la connessione funzionante, "
+"altrimenti il trunk non sarà in grado di registrarsi presso il provider."
+
+#: ../../connections.rst:44 eafb00870bfd4d5d9269bab7850b9bb5
+msgid ""
+"To resolve this issue, you can remove the specific conntrack entries "
+"associated with the old external address through the user interface."
+msgstr ""
+"Per risolvere questo problema, è possibile rimuovere le voci conntrack "
+"specifiche associate al vecchio indirizzo esterno tramite l'interfaccia "
+"utente."
