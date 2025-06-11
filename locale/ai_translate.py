@@ -69,8 +69,12 @@ def translate_labels(message, flat_labels_en, flat_labels_it):
             if it_value:
                 print(f"Translating local label: {value} -> {it_value}")
                 # Replace only if value is inside double backticks
-                message = re.sub(rf"``{re.escape(value)}``", f"``{it_value}``", message)
-                message = re.sub(rf"(:guilabel:`){re.escape(value)}(`)", rf"\1{it_value}\2", message)
+                try:
+                   message = re.sub(rf"``{re.escape(value)}``", f"``{it_value}``", message)
+                   message = re.sub(rf"(:guilabel:`){re.escape(value)}(`)", rf"\1{it_value}\2", message)
+                except:
+                    # If the regex fails, just ignore the error (it can happen with string containing special chars)
+                    pass
 
     return message
 
