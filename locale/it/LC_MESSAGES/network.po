@@ -1,0 +1,546 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../network.rst:5 261d69eb686149ddad0f6292cbd329e7
+msgid "Network interfaces"
+msgstr "Interfacce di rete"
+
+#: ../../network.rst:7 aba109d9bc6c42008ece43021957dd8b
+msgid ""
+"The ``Interfaces and devices`` page configures how the server is connected "
+"to the local network (LAN) and/or other networks (i.e. Internet)."
+msgstr ""
+"La pagina ``Interfacce e dispositivi`` configura come il server è collegato "
+"alla rete locale (LAN) e/o ad altre reti (ad esempio Internet)."
+
+#: ../../network.rst:10 8e9584c6c371449b884c4a957c379149
+msgid ""
+"NethSecurity supports an unlimited number of network interfaces. Any network"
+" managed by the system must follow these rules:"
+msgstr ""
+"NethSecurity supporta un numero illimitato di interfacce di rete. Qualsiasi "
+"rete gestita dal sistema deve seguire queste regole:"
+
+#: ../../network.rst:13 4cdc10fe0af440dfad62e0a61b2647fa
+msgid ""
+"networks must be logically separated: each network must have different "
+"addresses"
+msgstr ""
+"le reti devono essere separate logicamente: ogni rete deve avere indirizzi "
+"diversi"
+
+#: ../../network.rst:14 800020a9fab6437a85bd9032d6df55a4
+msgid ""
+"private networks, like LANs, must follow address's convention from "
+":ref:`RFC1918 <RFC1918-section>` document"
+msgstr ""
+"le reti private, come le LAN, devono seguire la convenzione degli indirizzi "
+"dal documento :ref:`RFC1918 <RFC1918-section>`"
+
+#: ../../network.rst:15 636aa8e05e7946ca96b01e242f284a6e
+msgid ""
+"networks should be physically separated using different switches or "
+"logically separated using VLAN (Virtual Local Area Network)"
+msgstr ""
+"le reti devono essere separate fisicamente utilizzando switch diversi oppure"
+" separate logicamente utilizzando VLAN (Virtual Local Area Network)"
+
+#: ../../network.rst:17 c7012bcdd24a45e19e15efedb0e0c9e9
+msgid ""
+"Every network interface has a specific zone which determines its behavior. A"
+" basic network setup for a router typically includes a minimum of two "
+"interfaces, namely LAN (Local Area Network) and WAN (Wide Area Network):"
+msgstr ""
+"Ogni interfaccia di rete ha una zona specifica che ne determina il "
+"comportamento. Una configurazione di rete di base per un router include "
+"tipicamente almeno due interfacce, ovvero LAN (Local Area Network) e WAN "
+"(Wide Area Network):"
+
+#: ../../network.rst:20 60991fe9429b4e33b03a8876582a3871
+msgid ""
+"*lan*: local network, hosts on this network can access any other configured "
+"network"
+msgstr ""
+"*lan*: rete locale, gli host su questa rete possono accedere a qualsiasi "
+"altra rete configurata"
+
+#: ../../network.rst:21 63c915d49dca49918bca3b9d9bfc59bb
+msgid ""
+"*wan*: public network, hosts on this network can access only the server "
+"itself"
+msgstr ""
+"*wan*: rete pubblica, gli host su questa rete possono accedere solo al "
+"server stesso"
+
+#: ../../network.rst:23 e1b46b34eb7f4958884520325491c9e2
+msgid ""
+"All configured network interfaces are listed at the top of the page. Each "
+"interface is displayed with its name and the assigned firewall zone. This "
+"section offers an immediate overview of the current configurations, allowing"
+" users to quickly see which networks are already set up and associated with "
+"specific security zones."
+msgstr ""
+"Tutte le interfacce di rete configurate sono elencate nella parte superiore "
+"della pagina. Ogni interfaccia viene visualizzata con il proprio nome e la "
+"zona firewall assegnata. Questa sezione offre una panoramica immediata delle"
+" configurazioni attuali, permettendo di vedere rapidamente quali reti sono "
+"già configurate e associate a specifiche zone di sicurezza."
+
+#: ../../network.rst:28 c56487a0a0844f419f86eb1459d026ff
+msgid ""
+"In the bottom section of the page, available but unconfigured network "
+"devices are listed. To configure a device, the user clicks on the "
+":guilabel:`Configure` button corresponding to the desired device. The newly "
+"created :ref:`VLAN devices <vlan-section>` are visible in this section."
+msgstr ""
+"Nella sezione inferiore della pagina sono elencati i dispositivi di rete "
+"disponibili ma non configurati. Per configurare un dispositivo, si fa clic "
+"sul pulsante :guilabel:`Configura` corrispondente al dispositivo desiderato."
+" I nuovi :ref:`dispositivi VLAN <vlan-section>` creati sono visibili in "
+"questa sezione."
+
+#: ../../network.rst:35 520cbee9ea584cd9bdf16ef675eee690
+msgid "IPv4 addresses for private networks (RFC1918)"
+msgstr "Indirizzi IPv4 per reti private (RFC1918)"
+
+#: ../../network.rst:36 4986b63d0b8c44d68e06a661f736a58e
+msgid ""
+"TCP/IP private networks not directly connected to Internet should use "
+"special addresses selected by Internet Assigned Numbers Authority (IANA)."
+msgstr ""
+"Le reti private TCP/IP non direttamente connesse a Internet dovrebbero "
+"utilizzare indirizzi speciali selezionati dall'Internet Assigned Numbers "
+"Authority (IANA)."
+
+#: ../../network.rst:40 3d43e653d0ca4e8ebed8c76e74303bc6
+msgid "Private network"
+msgstr "Rete privata"
+
+#: ../../network.rst:40 54d919fd53ae447380d11fb1209958bb
+msgid "Subnet mask"
+msgstr "Maschera di sottorete"
+
+#: ../../network.rst:40 fbff0fe824674f3395a4bd88417c1d57
+msgid "IP addresses interval"
+msgstr "Intervallo di indirizzi IP"
+
+#: ../../network.rst:42 a4872104d1214837aa4f7d616ffd03d7
+msgid "10.0.0.0"
+msgstr "10.0.0.0"
+
+#: ../../network.rst:42 ce2259acf4cf4af39a08886c41f42d3f
+msgid "255.0.0.0"
+msgstr "255.0.0.0"
+
+#: ../../network.rst:42 fa40140bf2e94a85b626216360480d95
+msgid "10.0.0.1 - 10.255.255.254"
+msgstr "10.0.0.1 - 10.255.255.254"
+
+#: ../../network.rst:43 76fa2722bfe4421e9ee9551b8f4d17b4
+msgid "172.16.0.0"
+msgstr "172.16.0.0"
+
+#: ../../network.rst:43 f7ade004620c4a2aadb7ba4363101d16
+msgid "255.240.0.0"
+msgstr "255.240.0.0"
+
+#: ../../network.rst:43 6b0c757ec5714a93b19e1904261cc373
+msgid "172.16.0.1 - 172.31.255.254"
+msgstr "172.16.0.1 - 172.31.255.254"
+
+#: ../../network.rst:44 c319818f068b489f832d9feea814b2d7
+msgid "192.168.0.0"
+msgstr "192.168.0.0"
+
+#: ../../network.rst:44 dc1c959dc7644d93b4a5d626b7f98caf
+msgid "255.255.0.0"
+msgstr "255.255.0.0"
+
+#: ../../network.rst:44 41e8f0522f4948f39f15b4ea9b8a4857
+msgid "192.168.0.1 - 192.168.255.254"
+msgstr "192.168.0.1 - 192.168.255.254"
+
+#: ../../network.rst:50 27fd1db139504c6c85a3c0c052dee55e
+msgid "Logical interfaces"
+msgstr "Interfacce logiche"
+
+#: ../../network.rst:52 1d6ed2f441f24323a7929256f350f3e2
+msgid ""
+"Logical network interfaces are virtual network interfaces that allow for "
+"additional flexibility and functionality in networking setups. Unlike "
+"physical network interfaces, which correspond to actual hardware ports, "
+"logical network interfaces are software-based and can be configured and "
+"managed to suit specific networking requirements."
+msgstr ""
+"Le interfacce di rete logiche sono interfacce di rete virtuali che "
+"consentono una maggiore flessibilità e funzionalità nelle configurazioni di "
+"rete. A differenza delle interfacce di rete fisiche, che corrispondono a "
+"porte hardware reali, le interfacce di rete logiche sono basate su software "
+"e possono essere configurate e gestite per soddisfare requisiti di rete "
+"specifici."
+
+#: ../../network.rst:56 03e4053363ca4ebf85faea71b6a27123
+msgid ""
+"Click on the :guilabel:`Add logical interface` button to create a new "
+"virtual network device. The device can be a"
+msgstr ""
+"Fare clic sul pulsante :guilabel:`Aggiungi interfaccia logica` per creare un"
+" nuovo dispositivo di rete virtuale. Il dispositivo può essere un"
+
+#: ../../network.rst:59 55d50ac9cc7b4eb5abb564e91c87b6e5
+msgid ""
+"*bridge*: it is a logical network interface that connects two or more "
+"different network segments, allowing communication between devices in these "
+"segments. A bridge effectively extends the local network, enabling devices "
+"to communicate as if they were on the same physical network."
+msgstr ""
+"*bridge*: è un'interfaccia di rete logica che collega due o più segmenti di "
+"rete differenti, consentendo la comunicazione tra dispositivi presenti in "
+"questi segmenti. Un bridge estende di fatto la rete locale, permettendo ai "
+"dispositivi di comunicare come se fossero sulla stessa rete fisica."
+
+#: ../../network.rst:61 1f84be74666a4db397564c441bf4a6ab
+msgid ""
+"*bond*: also known as network bonding or NIC bonding, is a method of "
+"combining two or more physical network interfaces into a single logical "
+"interface. It provides two primary benefits: increased bandwidth and fault "
+"tolerance."
+msgstr ""
+"*bond*: noto anche come network bonding o NIC bonding, è un metodo che "
+"consente di combinare due o più interfacce di rete fisiche in un'unica "
+"interfaccia logica. Offre due vantaggi principali: aumento della larghezza "
+"di banda e tolleranza ai guasti."
+
+#: ../../network.rst:68 778397894fe54b5c89e43ddcb756955a
+msgid "Balance Round Robin (recommended)"
+msgstr "Round Robin bilanciato (consigliato)"
+
+#: ../../network.rst:69 7e80b4bc7bea420a955cd071bb5a03c3
+msgid "Balance XOR"
+msgstr "Bilanciamento XOR"
+
+#: ../../network.rst:70 4929c6cfd9f04eaab969f1ee235dda75
+msgid ""
+"802.3ad (LACP): it requires support at driver level and a switch with IEEE "
+"802.3ad Dynamic link aggregation mode enabled"
+msgstr ""
+"802.3ad (LACP): richiede il supporto a livello di driver e uno switch con la"
+" modalità di aggregazione dinamica dei collegamenti IEEE 802.3ad abilitata"
+
+#: ../../network.rst:71 11dd98e70477401aac9e0fe276caf1b6
+msgid "Balance TLB: it requires support at driver level"
+msgstr "Bilancia TLB: richiede il supporto a livello di driver"
+
+#: ../../network.rst:72 67813cebb7a743c08bdee09f7136fff8
+msgid "Balance ALB"
+msgstr "Bilanciare ALB"
+
+#: ../../network.rst:74 8fd142d562a24c499ec5d9b0d5fbcfe5
+msgid "Modes providing fault tolerance only:"
+msgstr "Modalità che forniscono solo tolleranza ai guasti:"
+
+#: ../../network.rst:76 35ed4fa1cfdd499dbd011d422e495bd6
+msgid "Active backup (recommended)"
+msgstr "Backup attivo (consigliato)"
+
+#: ../../network.rst:77 22f9353228274e868bdf21991c081b56
+msgid "Broadcast policy"
+msgstr "Politica di trasmissione"
+
+#: ../../network.rst:79 0348be5580eb46f78494998f5c1665e5
+msgid ""
+"When creating a bond, the UI will display a management IP address in the "
+"private network 127.x.x.1/32. This IP address is used solely for managing "
+"the bond and is not involved in traffic forwarding. Once the bond device is "
+"created, you can assign an IP address and a firewall zone to it. Please note"
+" that bond configuration is not editable after creation. If you need to "
+"modify the bond's IP address or zone, you'll have to remove its "
+"configuration and reconfigure it again. If you need to change bond devices, "
+"bond mode or management IP you'll have to remove bond configuration and bond"
+" device and recreate it from scratch"
+msgstr ""
+"Durante la creazione di un bond, l'interfaccia utente mostrerà un indirizzo "
+"IP di gestione nella rete privata 127.x.x.1/32. Questo indirizzo IP viene "
+"utilizzato esclusivamente per la gestione del bond e non è coinvolto "
+"nell'inoltro del traffico. Una volta creato il dispositivo bond, è possibile"
+" assegnargli un indirizzo IP e una zona firewall. Si noti che la "
+"configurazione del bond non è modificabile dopo la creazione. Se è "
+"necessario modificare l'indirizzo IP o la zona del bond, sarà necessario "
+"rimuovere la sua configurazione e riconfigurarla nuovamente. Se è necessario"
+" modificare i dispositivi del bond, la modalità del bond o l'IP di gestione,"
+" sarà necessario rimuovere la configurazione del bond e il dispositivo bond "
+"e ricrearlo da zero."
+
+#: ../../network.rst:89 ec57e7ab81454935a900f4ca8f413d87
+msgid "VLAN"
+msgstr "VLAN"
+
+#: ../../network.rst:91 a2adb7fae27748ffafc5ca6708c87227
+msgid ""
+"A VLAN, or Virtual Local Area Network, is a network technology that allows "
+"network administrators to create logically segmented networks within a "
+"physical network infrastructure. VLANs enable the creation of multiple "
+"broadcast domains in a network, even though they are physically connected to"
+" the same network switch."
+msgstr ""
+"Una VLAN, o Virtual Local Area Network, è una tecnologia di rete che "
+"consente agli amministratori di rete di creare reti logicamente segmentate "
+"all'interno di un'infrastruttura di rete fisica. Le VLAN permettono la "
+"creazione di più domini di broadcast in una rete, anche se sono fisicamente "
+"collegati allo stesso switch di rete."
+
+#: ../../network.rst:93 1a715420e13746e6bcaa3fcd21609afa
+msgid ""
+"You can create a new VLAN device by clicking the :guilabel:`Create VLAN "
+"device` button. Select the VLAN device type:"
+msgstr ""
+"È possibile creare un nuovo dispositivo VLAN facendo clic sul pulsante "
+":guilabel:`Crea dispositivo VLAN`. Selezionare il tipo di dispositivo VLAN:"
+
+#: ../../network.rst:96 971b1ad1e56d434ba4726ace6e73c4cd
+msgid ""
+"VLAN 802.1q is primarily used for standard VLAN implementations within "
+"organizations"
+msgstr ""
+"VLAN 802.1q è utilizzato principalmente per implementazioni VLAN standard "
+"all'interno delle organizzazioni"
+
+#: ../../network.rst:97 fcc8a61c4ebb4f86a5146cea40930640
+msgid ""
+"802.1ad (QinQ) is used in service provider networks where multiple customers"
+" require VLAN segmentation, and these segmented VLANs need to be transported"
+" across the provider's network"
+msgstr ""
+"802.1ad (QinQ) viene utilizzato nelle reti dei provider di servizi dove più "
+"clienti richiedono la segmentazione VLAN, e queste VLAN segmentate devono "
+"essere supportate anche nella rete del provider"
+
+#: ../../network.rst:100 a6f9404e84f5400ba0fcd8f39c8e15fd
+msgid ""
+"Make sure also to chose correct VLAN ID. Please bear in mind that you must "
+"setup the same VLAN ID inside the network switch."
+msgstr ""
+"Assicurarsi inoltre di scegliere l'ID VLAN corretto. Si ricorda che è "
+"necessario configurare lo stesso ID VLAN anche all'interno dello switch di "
+"rete."
+
+#: ../../network.rst:105 db1103ded933436fa8997766de18797f
+msgid "IP aliasing"
+msgstr "Alias IP"
+
+#: ../../network.rst:107 1998d302c3c24d01a56157745966a585
+msgid ""
+"Use IP aliasing to assign more IP addresses to the same network interface."
+msgstr ""
+"Utilizzare l'IP aliasing per assegnare più indirizzi IP alla stessa "
+"interfaccia di rete."
+
+#: ../../network.rst:109 94d18b48b2314d959950c60cbfb5d2a1
+msgid ""
+"The most common use is with a wan interface: when the ISP provides a pool of"
+" public IP addresses (within the same subnet) you can add some (or all) of "
+"them to the same wan interface and manage them individually (e.g. in the "
+"port forward configuration)."
+msgstr ""
+"L'uso più comune è con un'interfaccia wan: quando l'ISP fornisce un pool di "
+"indirizzi IP pubblici (all'interno della stessa subnet), è possibile "
+"aggiungerne alcuni (o tutti) alla stessa interfaccia wan e gestirli "
+"individualmente (ad esempio nella configurazione dell'inoltro porte)."
+
+#: ../../network.rst:111 56eccbca4d1a4938bdaa2f1ac3ebfe0d
+msgid ""
+"To add an alias, click the tree-dots menu :guilabel:`⋮` on right corner of "
+"the existing network interface, then select :guilabel:`Create alias "
+"interface` item."
+msgstr ""
+"Per aggiungere un alias, fare clic sul menu con i tre puntini :guilabel:`⋮` "
+"nell'angolo destro dell'interfaccia di rete esistente, quindi selezionare la"
+" voce :guilabel:`Crea interfaccia alias`."
+
+#: ../../network.rst:114 ebd39808e9654acea45dd3760229818c
+msgid "PPPoE"
+msgstr "PPPoE"
+
+#: ../../network.rst:116 0d4b75ebf11d4fb188b06f4ad151be06
+msgid ""
+"PPPoE (Point-to-Point Protocol over Ethernet) connects the server to "
+"Internet through a DSL modem. Users can setup a new PPPoE connection using "
+"an unassigned Ethernet network interface or creating a new logical "
+"interface."
+msgstr ""
+"PPPoE (Point-to-Point Protocol over Ethernet) collega il server a Internet "
+"tramite un modem DSL. È possibile configurare una nuova connessione PPPoE "
+"utilizzando un'interfaccia di rete Ethernet non assegnata oppure creando una"
+" nuova interfaccia logica."
+
+#: ../../network.rst:119 3143877e01c54e1eb32504619095711c
+msgid ""
+"Inside the network interface window, choose the wan zone then, select the "
+"``PPPoE`` protocol. Then fill all required fields like ``Username`` and "
+"``Password``."
+msgstr ""
+"All'interno della finestra dell'interfaccia di rete, scegliere la zona wan, "
+"quindi selezionare il protocollo ``PPPoE``. Successivamente, compilare tutti"
+" i campi richiesti come ``Nome utente`` e ``Password``."
+
+#: ../../network.rst:123 77822c08f10d423b84e7debc5fe432ca
+msgid "PPPoE with DHCPv6-PD"
+msgstr "PPPoE con DHCPv6-PD"
+
+#: ../../network.rst:125 0b8521bc61f3422c844ab1c82494dcc6
+msgid ""
+"DHCPv6 Prefix Delegation (DHCPv6-DP) automates the assignment of IPv6 "
+"prefixes from your internet service provider (ISP). It eliminates the need "
+"for manual configuration or Network Address Translation (NAT), simplifying "
+"IPv6 deployment."
+msgstr ""
+"La DHCPv6 Prefix Delegation (DHCPv6-PD) automatizza l'assegnazione dei "
+"prefissi IPv6 da parte del proprio provider di servizi Internet (ISP). "
+"Elimina la necessità di configurazione manuale o di Network Address "
+"Translation (NAT), semplificando la distribuzione di IPv6."
+
+#: ../../network.rst:128 2c1b2f13334d40f28ba5d6aa2afafa4d
+msgid "First, make sure your ISP supports DHCPv6-PD, than follow these steps:"
+msgstr ""
+"Per prima cosa, assicurarsi che il proprio ISP supporti DHCPv6-PD, quindi "
+"seguire questi passaggi:"
+
+#: ../../network.rst:130 fd7fbfa6ec51485183a5eef84e8573eb
+msgid ""
+"Configure WAN Interface: set the WAN interface mode to PPPoE and enable the "
+"``Enable IPv6`` option"
+msgstr ""
+"Configurare l'interfaccia WAN: impostare la modalità dell'interfaccia WAN su"
+" PPPoE e abilitare l'opzione ``Abilita IPv6``"
+
+#: ../../network.rst:131 060753fe7fcc4b32a1559e956bb7b99f
+msgid ""
+"Configure LAN interface: enable the \"Enable IPv6\" option and leave the "
+"IPv6 address field blank"
+msgstr ""
+"Configurare l'interfaccia LAN: abilitare l'opzione :guilabel:`Enable IPv6` e"
+" lasciare vuoto il campo dell'indirizzo IPv6"
+
+#: ../../network.rst:133 2d1b4b326cf5406cad95147347923eb9
+msgid ""
+"By enabling IPv6 for both WAN and LAN interfaces without specifying an "
+"address for the LAN, your router will automatically request and receive an "
+"IPv6 prefix (usually a /64) from your ISP through DHCPv6-PD. This prefix "
+"will then be used to assign individual IPv6 addresses to devices on your "
+"network."
+msgstr ""
+"Abilitando IPv6 sia per le interfacce WAN che LAN senza specificare un "
+"indirizzo per la LAN, il router richiederà e riceverà automaticamente un "
+"prefisso IPv6 (di solito un /64) dal proprio ISP tramite DHCPv6-PD. Questo "
+"prefisso verrà poi utilizzato per assegnare indirizzi IPv6 individuali ai "
+"dispositivi sulla rete."
+
+#: ../../network.rst:138 eaa1d2eda7464d8ea2df6bf9d7336b6c
+msgid "USB-to-Ethernet Adapters"
+msgstr "Adattatori USB-Ethernet"
+
+#: ../../network.rst:140 a44089a4335e44c58d9898769b026a68
+msgid ""
+"USB-to-Ethernet adapters are not considered suitable for use in a firewall "
+"device that is critical to network communication, for this reason the "
+"drivers are not included in the NethSecurity image. Only for experimental "
+"purposes, specific drivers can be installed via the package manager for use "
+"in a test environment."
+msgstr ""
+"Gli adattatori USB-Ethernet non sono considerati adatti all'uso in un "
+"dispositivo firewall critico per la comunicazione di rete; per questo motivo"
+" i driver non sono inclusi nell'immagine di NethSecurity. Solo a scopo "
+"sperimentale, è possibile installare driver specifici tramite il gestore dei"
+" pacchetti per l'utilizzo in un ambiente di test."
+
+#: ../../network.rst:148 241bab1da88a40d7bf255896f06c8f38
+msgid ""
+"Extra packages, including kernel modules, are not preserved across image "
+"upgrades, so in the event of an upgrade, you will need to download and "
+"install them again if needed."
+msgstr ""
+"I pacchetti aggiuntivi, inclusi i moduli del kernel, non vengono mantenuti "
+"durante gli aggiornamenti dell'immagine; pertanto, in caso di aggiornamento,"
+" sarà necessario scaricarli e installarli nuovamente se necessario."
+
+#: ../../network.rst:151 95e0f1b87b03460aad061dbe0e6c825c
+msgid "How to install USB-to-Ethernet modules"
+msgstr "Come installare moduli USB-to-Ethernet"
+
+#: ../../network.rst:153 f29574db59e04f72890cdd9535f012eb
+msgid ""
+"These packages can be installed from the command line console, just find the"
+" correct module and install it."
+msgstr ""
+"Questi pacchetti possono essere installati dalla console della riga di "
+"comando, è sufficiente individuare il modulo corretto e installarlo."
+
+#: ../../network.rst:155 986b53bc2106400fa80548aaeef7f8b9
+msgid ""
+"Verify the ethernet adapter is connected to USB using ``lsusb``.Output "
+"example:"
+msgstr ""
+"Verificare che l'adattatore ethernet sia collegato alla porta USB "
+"utilizzando ``lsusb``. Esempio di output:"
+
+#: ../../network.rst:165 a2cbe2891f4148b9aecce4eba6a942c7
+msgid "Search for the the kernel module:"
+msgstr "Cercare il modulo kernel:"
+
+#: ../../network.rst:172 0dbf320f733344e8b7bef45a18196286
+msgid "Output example:"
+msgstr "Esempio di output:"
+
+#: ../../network.rst:189 2737ececee324d4cbda8f54fbee6d3fb
+msgid "Install the right driver:"
+msgstr "Installare il driver corretto:"
+
+#: ../../network.rst:195 d4937a7b6c6f487c919d20d45a466ae2
+msgid "Verify a new ethX interface appears using ``ifconfig -a``"
+msgstr ""
+"Verificare che venga visualizzata una nuova interfaccia ethX utilizzando "
+"``ifconfig -a``"
+
+#: ../../network.rst:196 957525da28954729956256c3ad14d10c
+msgid "Configure the ethernet from the UI"
+msgstr "Configurare l'ethernet dall'interfaccia utente"
+
+#: ../../network.rst:64 39dba2ac7cc348cda88a41850939b3fc
+msgid "Bonds can be configured in multiple modes."
+msgstr "I bond possono essere configurati in modalità multiple."
+
+#: ../../network.rst:66 39dba2ac7cc348cda88a41850939b3fc
+msgid "Modes providing load balancing and fault tolerance:"
+msgstr ""
+"Modalità che forniscono bilanciamento del carico e tolleranza ai guasti:"
+
+#: ../../network.rst:143 8c78fd3723e04373a7db04074d7f9269
+msgid ""
+"It is strongly recommended **not to use these adapters in production "
+"environments**. If the unit has an Enterprise or Community subscription, "
+"bear in mind that USB-to-Ethernet adapters **are not covered by Nethesis "
+"support**."
+msgstr ""
+"Si raccomanda vivamente **di non utilizzare questi adattatori in ambienti di"
+" produzione**. Se l'unità dispone di un abbonamento Enterprise o Community, "
+"si tenga presente che gli adattatori USB-to-Ethernet **non sono coperti dal "
+"supporto Nethesis**."
+
+#~ msgid ""
+#~ "It is strongly recommended **not to use these adapters in production "
+#~ "environments**. If the unis has an Enterprise or Community subscription, "
+#~ "bear in mind that USB-to-Ethernet adapters **are not covered by Nethesis "
+#~ "support**."
+#~ msgstr ""
+#~ "Si raccomanda vivamente **di non utilizzare questi adattatori in ambienti di"
+#~ " produzione**. Se l'unis dispone di un abbonamento Enterprise o Community, "
+#~ "si tenga presente che gli adattatori USB-to-Ethernet **non sono coperti dal "
+#~ "supporto Nethesis**."
+
+#~ msgid ""
+#~ "Bonds can be configured in multiple mode.: Modes providing load balancing "
+#~ "and fault tolerance:"
+#~ msgstr ""
+#~ "I bond possono essere configurati in più modalità.: Modalità che forniscono "
+#~ "bilanciamento del carico e tolleranza ai guasti:"

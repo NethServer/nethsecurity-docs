@@ -61,7 +61,8 @@ The device can be a
 * *bond*: also known as network bonding or NIC bonding, is a method of combining two or more physical network interfaces into a single logical interface.
   It provides two primary benefits: increased bandwidth and fault tolerance.
 
-Bonds can be configured in multiple mode.:
+Bonds can be configured in multiple modes.
+
 Modes providing load balancing and fault tolerance:
 
 * Balance Round Robin (recommended)
@@ -140,7 +141,7 @@ USB-to-Ethernet adapters are not considered suitable for use in a firewall devic
 Only for experimental purposes, specific drivers can be installed via the package manager for use in a test environment.
 
 It is strongly recommended **not to use these adapters in production environments**.
-If the unis has an Enterprise or Community subscription, bear in mind that USB-to-Ethernet adapters **are not covered by Nethesis support**.
+If the unit has an Enterprise or Community subscription, bear in mind that USB-to-Ethernet adapters **are not covered by Nethesis support**.
 
 .. warning::
 
