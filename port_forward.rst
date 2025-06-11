@@ -8,7 +8,7 @@ The firewall prevents requests from public networks to access private ones.
 For instance, if there's a web server operating within the LAN, only computers within the local network can access this service.
 Any attempts made by external users from outside the local network are denied.
 
-A port forward is a networking technique used in firewalls to redirect specific network traffic from one IP address
+A port forward, also known as port redirect or port forwarding, is a networking technique used in firewalls to redirect specific network traffic from one IP address
 and port number combination to another. It is typically employed to enable external users to access services or applications 
 hosted on devices within a private local network.
 
@@ -28,6 +28,7 @@ When creating a port forward, certain parameters must be specified:
 
   - a specific IP address
   - a firewall object: a host defined by a host set, a DHCP reservation, a DNS record or an OpenVPN account with IP reservation
+  - empty: in this case the port will be redirected to the router/firewall itself
 
 By default, all port forwards are accessible only for hosts inside the WAN. Refer to the :ref:`hairpin-section` for instructions on changing this default behavior.
 
@@ -39,7 +40,6 @@ For each port forward the user can also configure the following aspects:
   a specific public IP is forwarded correctly to the internal server.
 
 - **Access restriction**: Port forwards can be restricted to specific sources to enhance security. This can be done using the ``Restrict access to`` field. The field accepts IP addresses, CIDR blocks or an object.
-
   Any type of object is supported except for host sets containing an IP range.
 
 - **Enabling logging**: port forwards can be configured to log incoming traffic for each rule. By enabling the ``Log`` option,

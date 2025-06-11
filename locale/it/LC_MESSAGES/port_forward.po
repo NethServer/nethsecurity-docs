@@ -1,0 +1,365 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../port_forward.rst:5 906451087aae4b5ab8f3796a2a18196b
+msgid "Port forward"
+msgstr "Port forward"
+
+#: ../../port_forward.rst:7 dcc2ae82d1ca4dd4a23e94930d74e2ca
+msgid ""
+"The firewall prevents requests from public networks to access private ones. "
+"For instance, if there's a web server operating within the LAN, only "
+"computers within the local network can access this service. Any attempts "
+"made by external users from outside the local network are denied."
+msgstr ""
+"Il firewall impedisce che le richieste provenienti da reti pubbliche "
+"accedano a quelle private. Ad esempio, se è presente un server web che opera"
+" all'interno della LAN, solo i computer della rete locale possono accedere a"
+" questo servizio. Qualsiasi tentativo effettuato da utenti esterni, al di "
+"fuori della rete locale, viene negato."
+
+#: ../../port_forward.rst:15 1f2d61f41798440bb01fd87764983f4f
+msgid ""
+"For web servers, common listening ports include port 80 (HTTP) and port 443 "
+"(HTTPS). When creating a port forward, certain parameters must be specified:"
+msgstr ""
+"Per i server web, le porte di ascolto comuni includono la porta 80 (HTTP) e "
+"la porta 443 (HTTPS). Quando si crea un port forwarding, è necessario "
+"specificare determinati parametri:"
+
+#: ../../port_forward.rst:18 6274474447b544418f56aaada39f8feb
+msgid ""
+"``Name``: assigning a name to a port forward rule is beneficial for future "
+"reference and management. By providing a descriptive and meaningful name, "
+"network administrators can easily identify the purpose and context of each "
+"port forward."
+msgstr ""
+"``Nome``: assegnare un nome a una regola di port forwarding è utile per "
+"riferimenti e gestione futuri. Fornendo un nome descrittivo e significativo,"
+" gli amministratori di rete possono identificare facilmente lo scopo e il "
+"contesto di ogni port forwarding."
+
+#: ../../port_forward.rst:20 66ce5180e5474dbd9e407ba2e0c894f7
+msgid ""
+"``Source port``: the port from which the request originates. Note that not "
+"all protocols require a port. For example, protocols like ``GRE`` do not use"
+" ports."
+msgstr ""
+"``Porta sorgente``: la porta da cui ha origine la richiesta. Si noti che non"
+" tutti i protocolli richiedono una porta. Ad esempio, protocolli come "
+"``GRE`` non utilizzano porte."
+
+#: ../../port_forward.rst:22 b59bcfed62fc4f12be3bd9b79d14aa53
+msgid ""
+"``Destination port``: the port to which the traffic is directed; this can "
+"differ from the source port."
+msgstr ""
+"``Porta di destinazione``: la porta a cui è diretto il traffico; questa può "
+"differire dalla porta di origine."
+
+#: ../../port_forward.rst:23 94099c72c120488295443bdc57939a34
+msgid ""
+"``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, "
+"``ICMP``, ``ESP``, ``AH``, ``SCTP``, ``GRE``. Leave empty for any source "
+"protocol If left empty, all traffic, regardless of the protocol, will be "
+"forwarded. Use this setting with caution, as it may expose the system to "
+"unintended or potentially harmful traffic."
+msgstr ""
+"``Protocollo``: specifica il protocollo come ``TCP``, ``UDP``, ``UDPLITE``, "
+"``ICMP``, ``ESP``, ``AH``, ``SCTP``, ``GRE``. Lasciare vuoto per qualsiasi "
+"protocollo sorgente. Se lasciato vuoto, tutto il traffico, indipendentemente"
+" dal protocollo, verrà inoltrato. Utilizzare questa impostazione con "
+"cautela, poiché potrebbe esporre il sistema a traffico indesiderato o "
+"potenzialmente dannoso."
+
+#: ../../port_forward.rst:27 ef3e47a2fc0843e9b52ab0f463ea4d00
+msgid ""
+"``Destination address``: specifies the internal host to which the traffic "
+"should be redirected. This can be:"
+msgstr ""
+"``Indirizzo di destinazione``: specifica l'host interno verso cui il "
+"traffico deve essere reindirizzato. Questo può essere:"
+
+#: ../../port_forward.rst:29 3a63926802314c48988d127f3b5ffd18
+msgid "a specific IP address"
+msgstr "un indirizzo IP specifico"
+
+#: ../../port_forward.rst:30 b009af1cc60e41ae9e0c606c0d896f0b
+msgid ""
+"a firewall object: a host defined by a host set, a DHCP reservation, a DNS "
+"record or an OpenVPN account with IP reservation"
+msgstr ""
+"un oggetto firewall: un host definito da un insieme di host, una "
+"prenotazione DHCP, un record DNS o un account OpenVPN con prenotazione IP"
+
+#: ../../port_forward.rst:33 f2fdb8f24ce24696be8d6bd82fbf76bd
+msgid ""
+"By default, all port forwards are accessible only for hosts inside the WAN. "
+"Refer to the :ref:`hairpin-section` for instructions on changing this "
+"default behavior."
+msgstr ""
+"Per impostazione predefinita, tutti i port forwarding sono accessibili solo "
+"dagli host all'interno della WAN. Fare riferimento alla :ref:`hairpin-"
+"section` per le istruzioni su come modificare questo comportamento "
+"predefinito."
+
+#: ../../port_forward.rst:35 e0b2f3e3f9f54e27917794dbc0c46c8d
+msgid ""
+"For each port forward the user can also configure the following aspects:"
+msgstr ""
+"Per ogni inoltro di porta è inoltre possibile configurare i seguenti "
+"aspetti:"
+
+#: ../../port_forward.rst:37 5aa5129fc5b64143bbcc06723bd96938
+msgid ""
+"**Binding to a specific public IP**: port forwards can be bound to a "
+"specific public IP address using the ``WAN IP`` field. This means that if "
+"your router/firewall has multiple public IP addresses, you can assign a port"
+" forward to a particular IP. This feature is valuable when dealing with "
+"complex network setups, ensuring that traffic directed to a specific public "
+"IP is forwarded correctly to the internal server."
+msgstr ""
+"**Associazione a un IP pubblico specifico**: gli inoltri di porta possono "
+"essere associati a un indirizzo IP pubblico specifico utilizzando il campo "
+"``IP WAN``. Questo significa che, se il router/firewall dispone di più "
+"indirizzi IP pubblici, è possibile assegnare un inoltro di porta a un "
+"determinato IP. Questa funzionalità è utile in presenza di configurazioni di"
+" rete complesse, garantendo che il traffico indirizzato a uno specifico IP "
+"pubblico venga inoltrato correttamente al server interno."
+
+#: ../../port_forward.rst:45 7f863c54fd344587a14b6e63de4698ac
+msgid ""
+"**Enabling logging**: port forwards can be configured to log incoming "
+"traffic for each rule. By enabling the ``Log`` option, the network "
+"administrator can keep track of the traffic passing through the port "
+"forward, allowing for monitoring and analysis. By default, logging is "
+"limited to 1 entry per second. To change this limit, refer to the "
+":ref:`logging-limits` section."
+msgstr ""
+"**Abilitazione del logging**: i port forward possono essere configurati per "
+"registrare il traffico in ingresso per ogni regola. Abilitando l'opzione "
+"``Log``, l'amministratore di rete può tenere traccia del traffico che passa "
+"attraverso il port forward, consentendo il monitoraggio e l'analisi. Per "
+"impostazione predefinita, la registrazione è limitata a 1 voce al secondo. "
+"Per modificare questo limite, consultare la sezione :ref:`logging-limits`."
+
+#: ../../port_forward.rst:52 665635b585a847f4b63a7f77ff2dfe9c
+msgid "Hairpin NAT"
+msgstr "Hairpin NAT"
+
+#: ../../port_forward.rst:54 a301bd2b32aa4c2989c23c72c7b48f23
+msgid ""
+"Hairpin NAT, also known as NAT loopback or NAT reflection, is a technique "
+"used in networking where internal hosts access a server located within the "
+"same local network using the external IP address of the router or firewall. "
+"In other words, when internal devices attempt to connect to a server using "
+"the public IP address, hairpin NAT ensures that the traffic is routed "
+"internally without going out to the internet and then back into the local "
+"network."
+msgstr ""
+"Hairpin NAT, noto anche come NAT loopback o NAT reflection, è una tecnica "
+"utilizzata nel networking in cui host interni accedono a un server situato "
+"all'interno della stessa rete locale utilizzando l'indirizzo IP esterno del "
+"router o del firewall. In altre parole, quando dispositivi interni tentano "
+"di connettersi a un server utilizzando l'indirizzo IP pubblico, hairpin NAT "
+"garantisce che il traffico venga instradato internamente senza uscire su "
+"internet e poi rientrare nella rete locale."
+
+#: ../../port_forward.rst:59 82cc5e2d54b241beba636f1c87c44c19
+msgid ""
+"To enable the hairpin, enable the ``Hairpin NAT`` option and select one or "
+"more zones where the NAT loopback should be enabled."
+msgstr ""
+"Per abilitare l'hairpin, attivare l'opzione ``Hairpin NAT`` e selezionare "
+"una o più zone in cui il NAT loopback deve essere abilitato."
+
+#: ../../port_forward.rst:62 a0cd38a7cb184bb4901d0cad8e10aef0
+msgid "Hairpin NAT for VPN zones"
+msgstr "Hairpin NAT per le zone VPN"
+
+#: ../../port_forward.rst:64 d08b42d3043d4a9aaa8e06188ecfa564
+msgid ""
+"To use Hairpin NAT with VPN zones such as ``ipsec``, ``openvpn``, and "
+"``rwopenvpn``, additional configuration is necessary. You must explicitly "
+"declare the subnet used by the VPN; otherwise, Hairpin NAT will not function"
+" for VPN-connected clients."
+msgstr ""
+"Per utilizzare Hairpin NAT con zone VPN come ``ipsec``, ``openvpn`` e "
+"``rwopenvpn``, è necessaria una configurazione aggiuntiva. È necessario "
+"dichiarare esplicitamente la subnet utilizzata dalla VPN; in caso contrario,"
+" Hairpin NAT non funzionerà per i client connessi tramite VPN."
+
+#: ../../port_forward.rst:67 24d510b22de048768888e151304c939e
+msgid ""
+"This configuration can be performed via the command line. First, identify "
+"the internal reference for the zone, then add the desired network, commit "
+"the changes, and restart the service."
+msgstr ""
+"Questa configurazione può essere eseguita tramite la riga di comando. Per "
+"prima cosa, identificare il riferimento interno per la zona, quindi "
+"aggiungere la rete desiderata, confermare le modifiche e riavviare il "
+"servizio."
+
+#: ../../port_forward.rst:69 e788edfdd467429ba70fda7d3d1c206c
+msgid "Make sure that subnets are assigned to the correct zones:"
+msgstr "Assicurarsi che le subnet siano assegnate alle zone corrette:"
+
+#: ../../port_forward.rst:71 7c0608dfd3a647f88234c9e551570587
+msgid "``ipsec``: IPsec tunnels"
+msgstr "``ipsec``: tunnel IPsec"
+
+#: ../../port_forward.rst:72 5fed910f33f440b9bc496ea4407402b3
+msgid "``openvpn``: OpenVPN tunnels"
+msgstr "``openvpn``: tunnel OpenVPN"
+
+#: ../../port_forward.rst:73 764d913c273a4deebfa94256ab7c3d4f
+msgid "``rwopenvpn``: OpenVPN Road Warrior"
+msgstr "``rwopenvpn``: OpenVPN Road Warrior"
+
+#: ../../port_forward.rst:75 1722b914fcaa429eb696e97a2f541906
+msgid ""
+"If multiple tunnels or networks are present, all must be included in their "
+"respective zones."
+msgstr ""
+"Se sono presenti più tunnel o reti, tutti devono essere inclusi nelle "
+"rispettive zone."
+
+#: ../../port_forward.rst:78 11b56cedcb904b779b99eb0436e78245
+msgid "How to declare a subnet for a VPN zone"
+msgstr "Come dichiarare una subnet per una zona VPN"
+
+#: ../../port_forward.rst:80 24f25385955a4ffd98fdb75404f7d62f
+msgid ""
+"To declare the OpenVPN Road Warrior network, you can use the following "
+"example command sequence:"
+msgstr ""
+"Per dichiarare la rete OpenVPN Road Warrior, è possibile utilizzare la "
+"seguente sequenza di comandi di esempio:"
+
+#: ../../port_forward.rst:83 baf33a808aba444e87fbca5d809ef826
+msgid "Identify the internal reference for the **rwopenvpn** zone: ::"
+msgstr "Identificare il riferimento interno per la zona **rwopenvpn**: ::"
+
+#: ../../port_forward.rst:87 ../../port_forward.rst:106
+#: 5650358a22094d2990ec49a19e7941fc 1b35880a21bb4f2bb5a6aac443351894
+msgid "Example output: ::"
+msgstr "Esempio di output: ::"
+
+#: ../../port_forward.rst:91 b48fcd8fed864113adf16353b3a1a528
+msgid ""
+"Set the desired network (in this case, **10.88.88.0/24**) for the "
+"**rwopenvpn** zone: ::"
+msgstr ""
+"Impostare la rete desiderata (in questo caso, **10.88.88.0/24**) per la zona"
+" **rwopenvpn**: ::"
+
+#: ../../port_forward.rst:95 833db75600314b6897d61403026ff607
+msgid "Commit the changes and restart the firewall service: ::"
+msgstr ""
+"Eseguire il commit delle modifiche e riavviare il servizio firewall: ::"
+
+#: ../../port_forward.rst:100 32a3bb3e7af5418ea886faaacee36d98
+msgid ""
+"Ensure that you replace the network **subnet** with the correct one for your"
+" specific VPN setup."
+msgstr ""
+"Assicurarsi di sostituire la **subnet** di rete con quella corretta per la "
+"propria configurazione VPN specifica."
+
+#: ../../port_forward.rst:102 4d558c7bb2834922a74e11387d119d05
+msgid "Verify the added network: ::"
+msgstr "Verificare la rete aggiunta: ::"
+
+#: ../../port_forward.rst:113 b55fa7dc79234807a978509d954ba484
+msgid "Add or remove multiple subnets to the VPN zone"
+msgstr "Aggiungere o rimuovere più subnet alla zona VPN"
+
+#: ../../port_forward.rst:115 8d9422b9bc534a569e00293176e627d0
+msgid ""
+"If you already set a subnet for a VPN zone and want to **add** another "
+"subnet (e.g. 10.33.33.0/24) use the following command (same internal "
+"reference of previous example): ::"
+msgstr ""
+"Se è già stata impostata una subnet per una zona VPN e si desidera "
+"**aggiungere** un'altra subnet (ad esempio 10.33.33.0/24), utilizzare il "
+"seguente comando (stesso riferimento interno dell'esempio precedente): ::"
+
+#: ../../port_forward.rst:121 b9f49905569949e4bb0d926cdc1f9ff7
+msgid ""
+"If you already set multiple subnets for a VPN zone and want to **remove** a "
+"subnet (e.g. 10.33.33/24) use the following command (same internal reference"
+" of previous example): ::"
+msgstr ""
+"Se sono già state impostate più subnet per una zona VPN e si desidera "
+"**rimuovere** una subnet (ad esempio 10.33.33/24), utilizzare il seguente "
+"comando (stesso riferimento interno dell'esempio precedente): ::"
+
+#: ../../port_forward.rst:125 2f45d10b16264ec3b7f0c0e7f1635074
+msgid "Ensure to commit and restart firewall service after modifications."
+msgstr ""
+"Assicurarsi di eseguire il commit e riavviare il servizio firewall dopo le "
+"modifiche."
+
+#: ../../port_forward.rst:11 531252d25744420bba29c97b2842a90f
+msgid ""
+"A port forward, also known as port redirect or port forwarding, is a "
+"networking technique used in firewalls to redirect specific network traffic "
+"from one IP address and port number combination to another. It is typically "
+"employed to enable external users to access services or applications hosted "
+"on devices within a private local network."
+msgstr ""
+"Un port forward, noto anche come port redirect o port forwarding, è una "
+"tecnica di rete utilizzata nei firewall per reindirizzare traffico di rete "
+"specifico da una combinazione di indirizzo IP e numero di porta a un'altra. "
+"Viene tipicamente impiegata per consentire agli utenti esterni di accedere a"
+" servizi o applicazioni ospitati su dispositivi all'interno di una rete "
+"locale privata."
+
+#: ../../port_forward.rst:31 9ff9bd2ab1ac409ba02aa59e3799aea1
+msgid ""
+"empty: in this case the port will be redirected to the router/firewall "
+"itself"
+msgstr ""
+"vuoto: in questo caso la porta verrà reindirizzata al router/firewall stesso"
+
+#: ../../port_forward.rst:42 88198ab2126a42268dd400d704dc38e4
+msgid ""
+"**Access restriction**: Port forwards can be restricted to specific sources "
+"to enhance security. This can be done using the ``Restrict access to`` "
+"field. The field accepts IP addresses, CIDR blocks or an object. Any type of"
+" object is supported except for host sets containing an IP range."
+msgstr ""
+"**Restrizione dell'accesso**: Gli inoltri di porta possono essere limitati a"
+" fonti specifiche per aumentare la sicurezza. Questo può essere fatto "
+"utilizzando il campo ``Limita accesso a``. Il campo accetta indirizzi IP, "
+"blocchi CIDR o un oggetto. Sono supportati tutti i tipi di oggetti tranne i "
+"set di host che contengono un intervallo IP."
+
+#~ msgid ""
+#~ "A port forward is a networking technique used in firewalls to redirect "
+#~ "specific network traffic from one IP address and port number combination to "
+#~ "another. It is typically employed to enable external users to access "
+#~ "services or applications hosted on devices within a private local network."
+#~ msgstr ""
+#~ "Un port forward è una tecnica di rete utilizzata nei firewall per "
+#~ "reindirizzare traffico di rete specifico da una combinazione di indirizzo IP"
+#~ " e numero di porta a un'altra. Viene tipicamente impiegata per consentire "
+#~ "agli utenti esterni di accedere a servizi o applicazioni ospitati su "
+#~ "dispositivi all'interno di una rete locale privata."
+
+#~ msgid ""
+#~ "**Access restriction**: Port forwards can be restricted to specific sources "
+#~ "to enhance security. This can be done using the ``Restrict access to`` "
+#~ "field. The field accepts IP addresses, CIDR blocks or an object."
+#~ msgstr ""
+#~ "**Restrizione dell'accesso**: Gli inoltri di porta possono essere limitati a"
+#~ " fonti specifiche per aumentare la sicurezza. Questo può essere fatto "
+#~ "utilizzando il campo ``Limita accesso a``. Il campo accetta indirizzi IP, "
+#~ "blocchi CIDR o un oggetto."
+
+#~ msgid ""
+#~ "Any type of object is supported except for host sets containing an IP range."
+#~ msgstr ""
+#~ "È supportato qualsiasi tipo di oggetto, ad eccezione dei set di host che "
+#~ "contengono un intervallo IP."
