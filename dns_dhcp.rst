@@ -96,6 +96,11 @@ Default Configuration
 
 By default, the DHCP server has a limit of 1000 concurrent leases to prevent DoS attacks. Set the dnsmasq ``dhcpleasemax`` option to change the limit.
 
+Execute these commands: ::
+
+  uci set dhcp.@dnsmasq[0].dhcpleasemax='2500'
+  uci commit dhcp
+  reload_config
 
 .. _dns_dhcp_custom-section:
 
