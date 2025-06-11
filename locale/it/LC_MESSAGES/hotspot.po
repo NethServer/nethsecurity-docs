@@ -1,0 +1,354 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../hotspot.rst:3 28aa659f53e94f08aba8bb44280e773d
+msgid "Hotspot"
+msgstr "Hotspot"
+
+#: ../../hotspot.rst:5 3c3de4831c7348b888afc04360e0a81d
+msgid ""
+"Hotspot main goal is to provide internet connectivity via wi-fi to casual "
+"users. Users are sent to a captive portal from which they can access the "
+"network by authenticating themselves via social login, sms, email or a "
+"voucher code. The hotspot service allows the regulation, accountability and "
+"pricing of Internet access in public places, like squares, hotels, stations "
+"and many others."
+msgstr ""
+"L'obiettivo principale dell'Hotspot è fornire connettività Internet tramite "
+"wi-fi agli utenti occasionali. Gli utenti vengono reindirizzati a un captive"
+" portal dal quale possono accedere alla rete autenticandosi tramite social "
+"login, sms, email o un codice voucher. Il servizio hotspot consente la "
+"regolamentazione, la tracciabilità e la tariffazione dell'accesso a Internet"
+" in luoghi pubblici, come piazze, hotel, stazioni e molti altri."
+
+#: ../../hotspot.rst:9 62ac70eaf459428a96c587e908e750b5
+msgid "Main features"
+msgstr "Funzionalità principali"
+
+#: ../../hotspot.rst:11 bae467a334384c30bb028dfbd9649cae
+msgid "Network isolation between corporate and guests"
+msgstr "Isolamento della rete tra azienda e ospiti"
+
+#: ../../hotspot.rst:13 8664f4f6f16143e381d44199a9b551ca
+msgid "Customizable captive portal page"
+msgstr "Pagina del captive portal personalizzabile"
+
+#: ../../hotspot.rst:15 5364a14c7f4b4df7a4cb9bbe60754cbc
+msgid ""
+"Many authentication modes supported (Social Login, SMS, Email or Voucher "
+"code)"
+msgstr ""
+"Sono supportate molte modalità di autenticazione (Social Login, SMS, Email o"
+" codice Voucher)"
+
+#: ../../hotspot.rst:17 c6ba633e85e14c0dad1e3eeb6ae8c481
+msgid "AutoLogin support"
+msgstr "Supporto AutoLogin"
+
+#: ../../hotspot.rst:19 a79c9751c4644948b2f59eebf5aa57e3
+msgid "Hotspot manager with different accesses type (admin, customer, desk)"
+msgstr "Gestore hotspot con diversi tipi di accesso (admin, cliente, desk)"
+
+#: ../../hotspot.rst:21 f71e1ebe7a204b47882ae8f399031175
+msgid "Export of accounts and connections report"
+msgstr "Esportazione del report di account e connessioni"
+
+#: ../../hotspot.rst:24 986e92f32c8540ea89a2141a72c840b3
+msgid "How it works?"
+msgstr "Come funziona?"
+
+#: ../../hotspot.rst:26 71bcddad1ec1422eba4266624527f797
+msgid "The implementation is based on 2 components:"
+msgstr "L'implementazione si basa su 2 componenti:"
+
+#: ../../hotspot.rst:28 a2a11adf8b5f4182af715f00bb4fff6b
+msgid ""
+"A hotspot manager section running on a cloud server, a dedicated WebUI "
+"allows you to perform tasks as:"
+msgstr ""
+"Una sezione del gestore hotspot in esecuzione su un server cloud, una WebUI "
+"dedicata consente di eseguire attività quali:"
+
+#: ../../hotspot.rst:30 bb437fbd32c64512afc8e1d8f92b15d3
+msgid ""
+"create a hotspot instance: usually each instance is referred to a specific "
+"location (e.g. Art Cafè, Ritz Hotel and so on)"
+msgstr ""
+"creare un'istanza hotspot: di solito ogni istanza fa riferimento a una "
+"posizione specifica (ad esempio, Art Cafè, Ritz Hotel e così via)"
+
+#: ../../hotspot.rst:32 cbb7557baa334a20b26fbfcfa52c8071
+msgid "edit the captive portal page"
+msgstr "modificare la pagina del captive portal"
+
+#: ../../hotspot.rst:34 65a7f1f28c98485286eaa1942cd9744a
+msgid "choose what type of login to use"
+msgstr "scegliere quale tipo di accesso utilizzare"
+
+#: ../../hotspot.rst:36 321c41e7dcb449d98427d4927885c6cc
+msgid "see session and users logged"
+msgstr "vedere sessione e utenti connessi"
+
+#: ../../hotspot.rst:38 e2bfe9dce3394bba9c620f6b5af0594c
+msgid ""
+"A client part running on NethSecurity (in nethspot terminology this client "
+"is called \"unit\") ."
+msgstr ""
+"Una parte client in esecuzione su NethSecurity (in terminologia nethspot "
+"questo client è chiamato \"unità\")."
+
+#: ../../hotspot.rst:40 925c914811b24128a46c0f7e4be17e0d
+msgid "It has to be physically connected to the Access Points network"
+msgstr "Deve essere fisicamente connesso alla rete degli Access Points"
+
+#: ../../hotspot.rst:41 a6ec37e36a894810a4a112b0f94f1984
+msgid "It assigns IP addresses to devices"
+msgstr "Assegna indirizzi IP ai dispositivi"
+
+#: ../../hotspot.rst:42 d64724bb96144e53b5f1148e7cba2b0c
+msgid "It redirects devices to the captive portal"
+msgstr "Reindirizza i dispositivi al captive portal"
+
+#: ../../hotspot.rst:45 8ac84161bff94debb06a85e1a59d580e
+msgid ""
+"This manual only cover the client part. If you're interested on the hotspot "
+"manager section please refer to `Icaro project "
+"<https://nethesis.github.io/icaro>`_ if you want to create your own instance"
+" of Icaro or contact info@nethesis.it if you want to use SaaS provided by "
+"Nethesis and located at `my.nethspot.com <https://my.nethspot.com>`_."
+msgstr ""
+"Questo manuale copre solo la parte client. Se si è interessati alla sezione "
+"hotspot manager, fare riferimento al `progetto Icaro "
+"<https://nethesis.github.io/icaro>`_ per creare una propria istanza di Icaro"
+" oppure contattare info@nethesis.it se si desidera utilizzare il servizio "
+"SaaS fornito da Nethesis e disponibile su `my.nethspot.com "
+"<https://my.nethspot.com>`_."
+
+#: ../../hotspot.rst:49 1cc54ce2fcb4426da59d70476d501f31
+msgid "Status"
+msgstr "Stato"
+
+#: ../../hotspot.rst:51 7de272afda1a450a83376a51e1e8dafd
+msgid ""
+"This section shows all users connected to the system, distinguishing those "
+"who have authenticated from those who have simply received an IP address, it"
+" provides further information such as MAC address, traffic carried out and "
+"so on. More detailed informations are available in the hotspot manager."
+msgstr ""
+"Questa sezione mostra tutti gli utenti connessi al sistema, distinguendo tra"
+" coloro che si sono autenticati e coloro che hanno semplicemente ricevuto un"
+" indirizzo IP; vengono fornite ulteriori informazioni come l'indirizzo MAC, "
+"il traffico effettuato e così via. Informazioni più dettagliate sono "
+"disponibili nel gestore hotspot."
+
+#: ../../hotspot.rst:55 b72df49a9d674273bb2e70b1c68d8a53
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: ../../hotspot.rst:56 d19eeb5ed4a9478b98a40546842db4d3
+msgid ""
+"This section allows you to associate a unit with a specific hotspot instance"
+" created in the hotspot manager."
+msgstr ""
+"Questa sezione consente di associare un'unità a una specifica istanza di "
+"hotspot creata nel gestore degli hotspot."
+
+#: ../../hotspot.rst:58 128827faacc8463b823c67663942705d
+msgid ""
+"Before associating the unit you must create an instance in the hotspot "
+"manager."
+msgstr ""
+"Prima di associare l'unità è necessario creare un'istanza nel gestore degli "
+"hotspot."
+
+#: ../../hotspot.rst:60 dc5cf4f2035c4eb0970f301cd9822049
+msgid ""
+"Multiple geographically separated units (NethSecurity) can be connected to "
+"the same centralized hotspot instance, creating a conference in which all "
+"users access the same captive portal and in which they can reuse the same "
+"login in all connected units."
+msgstr ""
+"Più unità geograficamente separate (NethSecurity) possono essere collegate "
+"alla stessa istanza centralizzata di hotspot, creando una conferenza in cui "
+"tutti gli utenti accedono allo stesso captive portal e possono riutilizzare "
+"le stesse credenziali di accesso in tutte le unità collegate."
+
+#: ../../hotspot.rst:63 361e3d3c7eb14555b8827ade85d104c3
+msgid "Login to your hotspot manager"
+msgstr "Accedere al proprio gestore hotspot"
+
+#: ../../hotspot.rst:65 3753037d7da447e6a186e79f131f48b1
+msgid ""
+"This operation is mandatory to associate your unit with the created hotspot "
+"instance, use the same user and password of your hotspot manager, the "
+"``Hostname`` field at default points to my.nethspot.com."
+msgstr ""
+"Questa operazione è obbligatoria per associare l'unità all'istanza hotspot "
+"creata; utilizzare lo stesso utente e la stessa password del proprio hotspot"
+" manager. Il campo ``Nome host`` per impostazione predefinita punta a "
+"my.nethspot.com."
+
+#: ../../hotspot.rst:67 5dd8106cd216440a91d2092ec387724f
+msgid ""
+"Once you have logged in you can continue to fill in the following fields. "
+"This login access will remain active for 24 hours without any need to login "
+"again."
+msgstr ""
+"Una volta effettuato l'accesso, è possibile continuare a compilare i "
+"seguenti campi. Questo accesso rimarrà attivo per 24 ore senza la necessità "
+"di effettuare nuovamente il login."
+
+#: ../../hotspot.rst:71 9ea0b9144477423f8e11694ae594aff1
+msgid "Register your unit"
+msgstr "Registrare l'unità"
+
+#: ../../hotspot.rst:73 5a18e460e1654442b9f47601087bbecf
+msgid ""
+"``Parent Hotspot`` : choose which instance you want to connect your unit to"
+msgstr ""
+"``Hotspot parent`` : scegliere a quale istanza si desidera collegare l'unità"
+
+#: ../../hotspot.rst:75 63e00473de7343fb80cc7ec1f7883df2
+msgid "``Unit name`` : your NethSecurity's name"
+msgstr "``Nome unità`` : il nome del proprio NethSecurity"
+
+#: ../../hotspot.rst:77 374fb8c70fbc4b68af9ba9d38899b823
+msgid ""
+"``Unit description`` : insert a brief description so that you can identify "
+"your unit more easily"
+msgstr ""
+"``Descrizione unità`` : inserire una breve descrizione per identificare più "
+"facilmente l'unità"
+
+#: ../../hotspot.rst:79 b5402aabcb5b411b94453f1ed73e5ef1
+msgid ""
+"``Network device`` : Specify a network device to be used by the hotspot "
+"service. The device can be either physical or a VLAN; however, it is crucial"
+" that the device is not already configured. The UI will display all "
+"currently available options and the hotspot will intercept all connections "
+"on this network interface, enforcing authentication for connected clients."
+msgstr ""
+"``Dispositivo di rete`` : Specificare un dispositivo di rete da utilizzare "
+"per il servizio hotspot. Il dispositivo può essere sia fisico che una VLAN; "
+"tuttavia, è fondamentale che il dispositivo non sia già configurato. "
+"L'interfaccia utente mostrerà tutte le opzioni attualmente disponibili e "
+"l'hotspot intercetterà tutte le connessioni su questa interfaccia di rete, "
+"imponendo l'autenticazione per i client connessi."
+
+#: ../../hotspot.rst:82 271abdf999f147158f1d4a682e3b278f
+msgid ""
+"``Network address`` : clients will receive an IP address belonging to this "
+"network (use CIDR format). The first address of the network class is always "
+"assigned to the NethSecurity hotspot interface. The total number of clients "
+"that can be managed at the same time depends on the DHCP range you "
+"specified. If you need to provide hotspot service for more than 253 devices,"
+" consider using a larger netmask (/23 or /22 or even larger) and be sure to "
+"have an appropriate range."
+msgstr ""
+"``Indirizzo di rete`` : i client riceveranno un indirizzo IP appartenente a "
+"questa rete (utilizzare il formato CIDR). Il primo indirizzo della classe di"
+" rete viene sempre assegnato all'interfaccia hotspot di NethSecurity. Il "
+"numero totale di client che possono essere gestiti contemporaneamente "
+"dipende dall'intervallo DHCP specificato. Se è necessario fornire il "
+"servizio hotspot per più di 253 dispositivi, considerare l'utilizzo di una "
+"netmask più ampia (/23 o /22 o anche superiore) e assicurarsi di avere un "
+"intervallo appropriato."
+
+#: ../../hotspot.rst:87 47d4cf901e7246b68ad153538ee380db
+msgid ""
+"``DHCP limit`` : by default, the system uses the entire network range. "
+"However, you can define a more specific range by adjusting the maximum "
+"number of leases. The first address of DHCP range is automatically "
+"calculated"
+msgstr ""
+"``Limite DHCP`` : per impostazione predefinita, il sistema utilizza l'intera"
+" gamma della rete. Tuttavia, è possibile definire un intervallo più "
+"specifico regolando il numero massimo di lease. Il primo indirizzo "
+"dell'intervallo DHCP viene calcolato automaticamente."
+
+#: ../../hotspot.rst:89 a37b897de2c749ef90dcd5809246d258
+msgid ""
+"After having fulfilled the form click :guilabel:`Save` button to register "
+"the unit."
+msgstr ""
+"Dopo aver compilato il modulo, fare clic sul pulsante :guilabel:`Salva` per "
+"registrare l'unità."
+
+#: ../../hotspot.rst:91 880b02aa663d41f28c61c5a6255c6b9a
+msgid ""
+"Please verify in the hotspot manager-> Units that your unit has been "
+"properly registered. Each properly registered unit must show its MAC address"
+" in the hotspot manager. If the MAC address is missing please unregister the"
+" unit and try to do the registration again."
+msgstr ""
+"Verificare in Hotspot manager -> Units che l'unità "
+"sia stata registrata correttamente. Ogni unità registrata correttamente deve"
+" mostrare il proprio indirizzo MAC nel Hotspot manager`. Se "
+"l'indirizzo MAC è assente, annullare la registrazione dell'unità e ripetere "
+"la procedura di registrazione."
+
+#: ../../hotspot.rst:94 887ecd8ba7be49d2a02fb1f72014847b
+msgid "Unregister your unit"
+msgstr "Annullare la registrazione dell'unità"
+
+#: ../../hotspot.rst:96 78c69c969e7b4bbca474c2a3eafb5bcf
+msgid ""
+"If you made some error registering your unit (es. unit was associated to a "
+"wrong hotspot instance) or you want to remove this service, do the login in "
+"the hotspot section of NethSecurity and click to :guilabel:`Unregister "
+"unit`. Your unit will be removed both from the NethSecurity and from the "
+"remote hotspot manager, the interface used in your Nethsecurity will be "
+"freed up and you can use it for other purposes."
+msgstr ""
+"Se è stato commesso un errore durante la registrazione dell'unità (ad "
+"esempio, l'unità è stata associata a un'istanza hotspot errata) oppure si "
+"desidera rimuovere questo servizio, effettuare l'accesso nella sezione "
+"hotspot di NethSecurity e fare clic su :guilabel:`Rimuovi registrazione unità hotspot`. L'unità "
+"verrà rimossa sia da NethSecurity sia dal gestore hotspot remoto, "
+"l'interfaccia utilizzata in NethSecurity verrà liberata e potrà essere "
+"utilizzata per altri scopi."
+
+#: ../../hotspot.rst:100 843bee962db5418b97251e242e63a056
+msgid "Change DNS settings"
+msgstr "Modificare le impostazioni DNS"
+
+#: ../../hotspot.rst:102 8d44b9ac8a11492b933fa47d1f98ccd8
+msgid ""
+"By default the DNS server used by the hotspot is from OpenDNS, to change the"
+" DNS settings manual configuration is required. Please follow the steps "
+"below from the terminal:"
+msgstr ""
+"Per impostazione predefinita, il server DNS utilizzato dall'hotspot è quello"
+" di OpenDNS; per modificare le impostazioni DNS è necessaria una "
+"configurazione manuale. Seguire i passaggi riportati di seguito dal "
+"terminale:"
+
+#: ../../hotspot.rst:105 96d6c52fc81746608a14aa1555f0da7e
+msgid "Edit the UCI configuration file with the following commands:"
+msgstr "Modificare il file di configurazione UCI con i seguenti comandi:"
+
+#: ../../hotspot.rst:112 879e4842d74b47549eb1b99421bdddd3
+msgid "Save the changes with the following command:"
+msgstr "Salvare le modifiche con il seguente comando:"
+
+#: ../../hotspot.rst:118 91e5725dbe83418aadaf7e8ef191fa17
+msgid "Restart the dedalo service with:"
+msgstr "Riavviare il servizio dedalo con:"
+
+#: ../../hotspot.rst:125 7a8dba7a52c14c9f8f9bbcc60e621ef6
+msgid "Restore default DNS settings"
+msgstr "Ripristinare le impostazioni DNS predefinite"
+
+#: ../../hotspot.rst:127 91d38e4d6ad54892885c30d0cdc5c11a
+msgid "To restore the default DNS settings, use the following commands:"
+msgstr ""
+"Per ripristinare le impostazioni DNS predefinite, utilizzare i seguenti "
+"comandi:"
+
+#: ../../hotspot.rst:134 7ec2e93ef48d4ad7bf937fd7ebdfc3d3
+msgid ""
+"Then repeat the steps 2 and 3 in the previous section to apply the changes."
+msgstr ""
+"Quindi ripetere i passaggi 2 e 3 della sezione precedente per applicare le "
+"modifiche."
