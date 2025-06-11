@@ -1,0 +1,294 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../zones_and_policies.rst:5 11d16bd84a2b4ee4b9a149998ad991c9
+msgid "Zones and policies"
+msgstr "Zone e policy"
+
+#: ../../zones_and_policies.rst:8 b7e4b2e68db94ee2b46f0398331b7d10
+msgid ""
+"Firewall zones categorize network interfaces, defining trust boundaries, "
+"while firewall rules dictate traffic handling between zones. Zones organize "
+"network segments, and rules enforce security policies by specifying "
+"conditions for permitted or denied actions. Together, they allow the "
+"definition and application of rules for network traffic within the firewall."
+msgstr ""
+"Le zone del firewall categorizzano le interfacce di rete, definendo i "
+"confini sicuri, mentre le regole del firewall determinano la gestione "
+"del traffico tra le zone. Le zone organizzano i segmenti di rete e le regole"
+" applicano le politiche di sicurezza specificando le condizioni per le "
+"azioni consentite o negate. Insieme, consentono di definire e applicare "
+"regole per il traffico di rete all'interno del firewall."
+
+#: ../../zones_and_policies.rst:13 4b499326eed74b4a8d7fe190d85b0f2a
+msgid ""
+"In a firewall system, zones and policies are fundamental concepts that help "
+"manage network security by controlling the flow of traffic between different"
+" segments of a network. A zone in a firewall represents a specific network "
+"segment with its own level of trustworthiness. For instance, a common setup "
+"might include zones like WAN (Wide Area Network) representing the external, "
+"untrusted network (usually the internet) and LAN (Local Area Network) "
+"representing the internal, trusted network (devices within a private home or"
+" organization). Each zone has its own set of security rules and policies "
+"that dictate how traffic can flow to and from that zone."
+msgstr ""
+"In un sistema firewall, le zone e le policy sono concetti fondamentali che "
+"aiutano a gestire la sicurezza della rete controllando il flusso del "
+"traffico tra diversi segmenti della rete. Una zona in un firewall "
+"rappresenta uno specifico segmento di rete con il proprio livello di "
+"affidabilità. Ad esempio, una configurazione comune può includere zone come "
+"WAN (Wide Area Network), che rappresenta la rete esterna e non affidabile "
+"(di solito Internet), e LAN (Local Area Network), che rappresenta la rete "
+"interna e affidabile (i dispositivi all'interno di una rete privata "
+"domestica o aziendale). Ogni zona ha il proprio insieme di regole di "
+"sicurezza e policy che determinano come il traffico può fluire da e verso "
+"quella zona."
+
+#: ../../zones_and_policies.rst:20 9fa5f183b31e4088810b473d493c35a0
+msgid ""
+"Policies in a firewall define the rules and actions that determine how "
+"traffic is handled between different zones. These rules specify which type "
+"of traffic is allowed, denied, or monitored based on predefined security "
+"criteria"
+msgstr ""
+"Le policy in un firewall definiscono le regole e le azioni che determinano "
+"come il traffico viene gestito tra le diverse zone. Queste regole "
+"specificano quale tipo di traffico è consentito, negato o monitorato in base"
+" a criteri di sicurezza predefiniti."
+
+#: ../../zones_and_policies.rst:23 65d4d28ec8f746dbb4fc3c2a4cffa9c5
+msgid "Default zones:"
+msgstr "Zone predefinite:"
+
+#: ../../zones_and_policies.rst:25 fc53eae4b2ad4a6292f4c46ea5054209
+msgid ""
+"**WAN (Wide Area Network):** represents the external, untrusted network "
+"(e.g., the internet)."
+msgstr ""
+"**WAN (Wide Area Network):** rappresenta la rete esterna e non affidabile "
+"(ad esempio, Internet)."
+
+#: ../../zones_and_policies.rst:26 7e2224e18913432b988d9f6f6b735d0e
+msgid ""
+"**LAN (Local Area Network):** represents the internal, trusted network "
+"(e.g., devices within a private home or organization)."
+msgstr ""
+"**LAN (Local Area Network):** rappresenta la rete interna e affidabile (ad "
+"esempio, dispositivi all'interno di una casa privata o di "
+"un'organizzazione)."
+
+#: ../../zones_and_policies.rst:28 c73488e3440f4c5682b2f8bf13ab8fc2
+msgid "Accepted traffic:"
+msgstr "Traffico accettato:"
+
+#: ../../zones_and_policies.rst:30 4e44f454e6a54633b3677a94b029e2c3
+msgid ""
+"**from LAN to WAN:** traffic from devices within the LAN zone to the WAN "
+"zone is allowed, enabling internal devices to access the internet."
+msgstr ""
+"**da LAN a WAN:** il traffico dai dispositivi all'interno della zona LAN "
+"verso la zona WAN è consentito, permettendo ai dispositivi interni di "
+"accedere a Internet."
+
+#: ../../zones_and_policies.rst:31 e99c6983f3684c5e8e793bc10df351a3
+msgid ""
+"**from LAN to firewall itself:** traffic from LAN devices to the firewall "
+"itself is permitted, facilitating communication for various purposes."
+msgstr ""
+"**da LAN al firewall stesso:** il traffico dai dispositivi LAN verso il "
+"firewall stesso è consentito, facilitando la comunicazione per vari scopi."
+
+#: ../../zones_and_policies.rst:32 10643be6d8804256b2275e21b0579026
+msgid ""
+"**From LAN to LAN itself:** traffic between devices within the LAN zone is "
+"allowed, enabling internal devices to communicate with each other."
+msgstr ""
+"**Da LAN a LAN stessa:** il traffico tra dispositivi all'interno della zona "
+"LAN è consentito, permettendo ai dispositivi interni di comunicare tra loro."
+
+#: ../../zones_and_policies.rst:34 6182e9ec25e443c6b57d142a405b6673
+msgid "Denied traffic:"
+msgstr "Traffico negato:"
+
+#: ../../zones_and_policies.rst:36 14ef2f88fc1f4ae99dfb285a4643f6c5
+msgid ""
+"**From WAN to firewall itself:** traffic from the WAN zone to the firewall "
+"itself is denied, preventing unauthorized external access attempts."
+msgstr ""
+"**Dal WAN al firewall stesso:** il traffico dalla zona WAN verso il firewall"
+" stesso è negato, impedendo tentativi di accesso esterni non autorizzati."
+
+#: ../../zones_and_policies.rst:37 56fd21c3aff8459b93fb4ecf6b37528d
+msgid ""
+"**From WAN to WAN itself:** direct communication between external networks "
+"(WAN to WAN) is denied, isolating different external entities for enhanced "
+"security."
+msgstr ""
+"**Da WAN a WAN stessa:** la comunicazione diretta tra reti esterne (da WAN a"
+" WAN) è negata, isolando le diverse entità esterne per una maggiore "
+"sicurezza."
+
+#: ../../zones_and_policies.rst:39 928c77219efa493e83b0676157ed4272
+msgid ""
+"In this configuration, the firewall regulates traffic between the WAN and "
+"LAN zones, allowing internal devices to access the internet and communicate "
+"internally while maintaining security by blocking direct external access to "
+"the firewall and preventing communication between external networks."
+msgstr ""
+"In questa configurazione, il firewall regola il traffico tra le zone WAN e "
+"LAN, consentendo ai dispositivi interni di accedere a Internet e di "
+"comunicare internamente, mantenendo la sicurezza tramite il blocco "
+"dell'accesso diretto esterno al firewall e impedendo la comunicazione tra "
+"reti esterne."
+
+#: ../../zones_and_policies.rst:41 17211b7b2df044cfb0a6f85069d13f85
+msgid ""
+"Default zones can't be deleted but the network administrator can change "
+"existing policies or create new zones."
+msgstr ""
+"Le zone predefinite non possono essere eliminate, ma l'amministratore di "
+"rete può modificare le policy esistenti o creare nuove zone."
+
+#: ../../zones_and_policies.rst:43 78185ffe696846a89275d3f52389d178
+msgid ""
+"Logging can be enabled for zones using the :guilabel:`Logging` option inside"
+" the ``Zones and policies`` page. By enabling logging, the network "
+"administrator can track network activity, identify potential threats, and "
+"analyze traffic patterns. Logging is limited to 5 entry per second by "
+"default. To change this limit, refer to the :ref:`logging-limits` section."
+msgstr ""
+"Il logging può essere abilitata per le zone utilizzando l'opzione "
+":guilabel:`Log` all'interno della pagina ``Zone e policy``. Abilitando il "
+"logging, l'amministratore di rete può monitorare l'attività di rete, "
+"identificare potenziali minacce e analizzare i modelli di traffico. Il "
+"logging è limitata a 5 voci al secondo per impostazione predefinita. "
+"Per modificare questo limite, consultare la sezione :ref:`logging-limits`."
+
+#: ../../zones_and_policies.rst:49 55dac3cf3b454568adb439df6d30c40f
+msgid "Guests and DMZ zones"
+msgstr "Zone guest e DMZ"
+
+#: ../../zones_and_policies.rst:51 db81eebc39f1439090473a3fc8d2154e
+msgid ""
+"In addition to the default zones, the firewall can be configured with "
+"additional zones to accommodate specific network requirements. Two common "
+"examples are the Guest and DMZ (Demilitarized Zone) zones. Sometimes the "
+"Guest zone is also known as the blue zone while the DMZ is also named as "
+"orange."
+msgstr ""
+"Oltre alle zone predefinite, il firewall può essere configurato con zone "
+"aggiuntive per soddisfare requisiti di rete specifici. Due esempi comuni "
+"sono le zone Guest e DMZ (Demilitarized Zone). Talvolta la zona Guest è "
+"anche conosciuta come zona blu, mentre la DMZ è anche chiamata arancione."
+
+#: ../../zones_and_policies.rst:57 2fb01646b9a5487b9f0e7fb049a5bf84
+msgid "Guests zone (blue)"
+msgstr "Zona guest (blu)"
+
+#: ../../zones_and_policies.rst:59 79edc2244af44174ac05310b8c06a016
+msgid ""
+"The Guest zone represents a network segment for guest devices, such as "
+"visitors or temporary users. This zone is typically isolated from the LAN "
+"zone to prevent unauthorized access to internal resources. But it is allowed"
+" to access the WAN zone."
+msgstr ""
+"La zona Guest rappresenta un segmento di rete per dispositivi degli ospiti, "
+"come visitatori o utenti temporanei. Questa zona è tipicamente isolata dalla"
+" zona LAN per prevenire accessi non autorizzati alle risorse interne. "
+"Tuttavia, è consentito l’accesso alla zona WAN."
+
+#: ../../zones_and_policies.rst:63 668ad6cde2774496ae97ec4e83d8b48b
+msgid "To create a Guest zone, follow these steps:"
+msgstr "Per creare una zona Guest, seguire questi passaggi:"
+
+#: ../../zones_and_policies.rst:65 ../../zones_and_policies.rst:85
+#: c1a23cb3d30947c5b18b522da3de32d2 efd88ebc152a491eb4a6300d7f0a5a24
+msgid "access the ``Zones & policies`` section"
+msgstr "accedere alla sezione ``Zones & policies``"
+
+#: ../../zones_and_policies.rst:66 ../../zones_and_policies.rst:86
+#: 9f28fddd0dc5429f810c7c1ba73ff21d 44bdf5b8e7b140378f14d5338df7c12d
+msgid "click on the ``Add zone`` button"
+msgstr "fare clic sul pulsante ``Aggiungi zona``"
+
+#: ../../zones_and_policies.rst:67 f11a01691fbb484db5a04e192a5fd8eb
+msgid ""
+"enter **guest** inside the ``Name`` field, in this case the zone will be "
+"highlighted in blue"
+msgstr ""
+"inserire **guest** nel campo ``Nome``, in questo caso la zona verrà "
+"evidenziata in blu"
+
+#: ../../zones_and_policies.rst:68 ef197967cbc648c1b5d50c36ec7af215
+msgid "leave empty the ``Allow forwards to`` field"
+msgstr "lascia vuoto il campo ``Consenti traffico verso``"
+
+#: ../../zones_and_policies.rst:69 b66d6db162eb41ce82128e401944f592
+msgid "select ``LAN`` inside the ``Allow forwards from`` field"
+msgstr "selezionare ``LAN`` all'interno del campo ``Consenti traffico da``"
+
+#: ../../zones_and_policies.rst:70 ../../zones_and_policies.rst:89
+#: e177ffa5cfa548e6a0a332fc828aaacb 97e1af7685214d08a9168a062cdc6627
+msgid "enable the ``Traffic to WAN`` option"
+msgstr "abilitare l'opzione ``Traffico verso WAN``"
+
+#: ../../zones_and_policies.rst:71 ../../zones_and_policies.rst:90
+#: 71ed8452276d48b5aae00eede133e1e3 251615bc912040b0a2f93b3239724ac8
+msgid ""
+"select ``Drop`` for both ``Traffic to firewall`` and ``Traffic for the same "
+"zone`` fields"
+msgstr ""
+"selezionare ``Drop`` sia per i campi ``Traffico verso firewall`` che "
+"``Traffico verso la stessa zona``"
+
+#: ../../zones_and_policies.rst:72 ../../zones_and_policies.rst:91
+#: da2c3d41bb8044a8915580b8dfbf033c 2a7d560f0497455f891660da7c0f22e6
+msgid "click on the ``Save`` button and apply the changes"
+msgstr "fare clic sul pulsante ``Salva`` e applicare le modifiche"
+
+#: ../../zones_and_policies.rst:75 1799b3dbe97643f8a204c8f05307de90
+msgid ""
+"If the firewall is intended to provide ``DHCP`` and ``DNS`` services, create"
+" a firewall ``input rule`` allowing traffic on ports ``53 TCP/UDP (DNS)`` as"
+" well port ``67 UDP (DHCP)`` for the ``Guest`` zone. If these services are "
+"not required or provided by another device in this network, the "
+"corresponding ports can remain blocked."
+msgstr ""
+"Se il firewall è destinato a fornire i servizi ``DHCP`` e ``DNS``, creare "
+"una ``regola di input`` del firewall che consenta il traffico sulle porte "
+"``53 TCP/UDP (DNS)`` e ``67 UDP (DHCP)`` per la zona ``Guest``. Se questi "
+"servizi non sono necessari o sono forniti da un altro dispositivo in questa "
+"rete, le porte corrispondenti possono rimanere bloccate."
+
+#: ../../zones_and_policies.rst:79 35ddd98903ef4ca4b62d6a062fa7356d
+msgid "DMZ zone (orange)"
+msgstr "Zona DMZ (arancione)"
+
+#: ../../zones_and_policies.rst:81 8cf9eb21fe4444e7b4ac58aab347d6b6
+msgid ""
+"The DMZ represents a network segment for servers and services that need to "
+"be accessible from the internet but isolated from the internal network."
+msgstr ""
+"La DMZ rappresenta un segmento di rete per server e servizi che devono "
+"essere accessibili da internet ma isolati dalla rete interna."
+
+#: ../../zones_and_policies.rst:83 cf7b889e549b444e9c5451500b2f8e18
+msgid "To create a DMZ, follow these steps:"
+msgstr "Per creare una DMZ, seguire questi passaggi:"
+
+#: ../../zones_and_policies.rst:87 c259f8e1a2d144bb9bcc46ebc23c9be2
+msgid ""
+"enter **dmz** inside the ``Name`` field, in this case the zone will be "
+"highlighted in orange"
+msgstr ""
+"inserire **dmz** nel campo ``Nome``, in questo caso la zona verrà "
+"evidenziata in arancione"
+
+#: ../../zones_and_policies.rst:88 a3e388913cd941c5bf441ed21ed3a461
+msgid ""
+"leave empty both the ``Allow forwards to`` and ``Allow forwards from`` "
+"fields"
+msgstr ""
+"lasciare vuoti sia i campi ``Consenti traffico verso`` che ``Consenti "
+"traffico da``"
