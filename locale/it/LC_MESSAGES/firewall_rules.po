@@ -1,0 +1,306 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../firewall_rules.rst:5 f9d0cdd4d4a0478b9a2803fcc937249a
+msgid "Rules"
+msgstr "Regole"
+
+#: ../../firewall_rules.rst:8 d47393d3cc8a400f826970bbf4e24640
+msgid ""
+"Firewall rules define how network traffic is segmented and controlled "
+"between different zones. Firewalls acts as barriers between trusted internal"
+" networks and untrusted external networks, such as the internet. These rules"
+" specify which traffic is allowed, denied, or monitored based on predefined "
+"security policies."
+msgstr ""
+"Le regole del firewall definiscono come il traffico di rete viene segmentato"
+" e controllato tra le diverse zone. I firewall agiscono come barriere tra "
+"reti interne affidabili e reti esterne non affidabili, come Internet. Queste"
+" regole specificano quale traffico è consentito, negato o monitorato in base"
+" a politiche di sicurezza predefinite."
+
+#: ../../firewall_rules.rst:12 8c589505af3a4652aa4d651919db6dde
+msgid ""
+"The order of rules is important; the first matching rule is applied, "
+"determining the fate of the network packet."
+msgstr ""
+"L'ordine delle regole è importante; viene applicata la prima regola "
+"corrispondente, determinando il destino del pacchetto di rete."
+
+#: ../../firewall_rules.rst:14 39722b378c534c0f889a60998e692eca
+msgid ""
+"The page is organized into three tabs, each serving a specific purpose:"
+msgstr ""
+"La pagina è organizzata in tre schede, ciascuna con una funzione specifica:"
+
+#: ../../firewall_rules.rst:16 b8473ef32e43486e83ee50e99dba9167
+msgid ""
+"``Forward rules`` tab: this tab is dedicated to configuring rules for data "
+"packets moving between different zones in the network."
+msgstr ""
+"Scheda ``Regole di forward``: questa scheda è dedicata alla configurazione "
+"delle regole per i pacchetti di dati che si spostano tra diverse zone nella "
+"rete."
+
+#: ../../firewall_rules.rst:17 6293a38d02744087b222bb5bcf35aee9
+msgid ""
+"``Input rules`` tab: this tab is dedicated to configuring rules for incoming"
+" packets destined for the firewall itself."
+msgstr ""
+"Scheda ``Regole di input``: questa scheda è dedicata alla configurazione "
+"delle regole per i pacchetti in ingresso destinati al firewall stesso."
+
+#: ../../firewall_rules.rst:18 aff3602709d84d52bb9dd41c2d38b10c
+msgid ""
+"``Output rules`` tab: this tab is dedicated to configuring rules for packets"
+" emitted by the firewall."
+msgstr ""
+"Scheda ``Regole di output``: questa scheda è dedicata alla configurazione "
+"delle regole per i pacchetti emessi dal firewall."
+
+#: ../../firewall_rules.rst:20 226a31dc157d4799abb8bff31fb76fca
+msgid ""
+"Locate the button to add a new rule, click on it to initiate the rule "
+"creation process. Fill in the following fields for the new rule:"
+msgstr ""
+"Individuare il pulsante per aggiungere una nuova regola e fare clic su di "
+"esso per avviare il processo di creazione della regola. Compilare i seguenti"
+" campi per la nuova regola:"
+
+#: ../../firewall_rules.rst:23 5f0909cfbb774707bd8c15b5a1d0e985
+msgid ""
+"``Status``: enable or disable the rule based on your requirements. By "
+"default the rule is enabled during creation."
+msgstr ""
+"``Stato``: abilitare o disabilitare la regola in base alle proprie esigenze."
+" Per impostazione predefinita, la regola è abilitata durante la creazione."
+
+#: ../../firewall_rules.rst:24 970c631c75004166a889241615adbec5
+msgid "``Rule name``: assign a descriptive name to identify the rule."
+msgstr ""
+"``Nome regola``: assegnare un nome descrittivo per identificare la regola."
+
+#: ../../firewall_rules.rst:25 7d246729af5e49379596487499ddf6d7
+msgid ""
+"``Source address``: select the source address from three different options:"
+msgstr ""
+"``Indirizzo sorgente``: selezionare l'indirizzo sorgente tra tre diverse "
+"opzioni:"
+
+#: ../../firewall_rules.rst:27 ../../firewall_rules.rst:35
+#: 2a901acbcd8847b7abb4cf20ca38dcd1 cb09dc787f344d45bc5fee54eaf6fad9
+msgid "enter one or more IPv4/IPv6 addresses/networks or IP ranges"
+msgstr "inserire uno o più indirizzi/reti IPv4/IPv6 o intervalli di IP"
+
+#: ../../firewall_rules.rst:28 ../../firewall_rules.rst:36
+#: 092b2af7d1474ee3b85bc6dde6e2cb2c 95d1f1315ee74ebeb908e2cbc5005d99
+msgid "select one firewall object from the available ones"
+msgstr "selezionare un oggetto firewall tra quelli disponibili"
+
+#: ../../firewall_rules.rst:29 c761a680789b4beaadbb4fbdc75c3ea5
+msgid "any source address"
+msgstr "qualsiasi indirizzo sorgente"
+
+#: ../../firewall_rules.rst:31 bfe45ff102364e60abf2f72978b54fd1
+msgid ""
+"This field is not present for ``Output rules``, as the source address is "
+"always the firewall itself."
+msgstr ""
+"Questo campo non è presente per ``Regole di output``, poiché l'indirizzo "
+"sorgente è sempre il firewall stesso."
+
+#: ../../firewall_rules.rst:32 b91bac7722e54ea6b6bed887c81e70e1
+msgid ""
+"``Source zone``: specify the traffic source zone. Choose a specific zone or "
+"select 'Any' to include traffic from any zone."
+msgstr ""
+"``Zona sorgente``: specificare la zona di origine del traffico. Scegliere "
+"una zona specifica oppure selezionare ``Qualsiasi`` per includere il "
+"traffico proveniente da qualsiasi zona."
+
+#: ../../firewall_rules.rst:33 f6eef7c11ad143019b46055c96ae4121
+msgid ""
+"``Destination address``: select the destination address from three different"
+" options:"
+msgstr ""
+"``Indirizzo di destinazione``: selezionare l'indirizzo di destinazione tra "
+"tre diverse opzioni:"
+
+#: ../../firewall_rules.rst:37 dc08260ebb1c43c5a641542fa070fb12
+msgid "any destination address"
+msgstr "qualsiasi indirizzo di destinazione"
+
+#: ../../firewall_rules.rst:39 fd7c7a1357ec454aabe4705c125883a6
+msgid ""
+"This field is not present for ``Input rules``, as the destination address is"
+" always the firewall itself."
+msgstr ""
+"Questo campo non è presente per ``Regole di input``, poiché l'indirizzo di "
+"destinazione è sempre il firewall stesso."
+
+#: ../../firewall_rules.rst:40 721504339ac3469a991e9175a3846ab8
+msgid ""
+"``Destination zone``: specify the traffic destination zone. Choose a "
+"specific zone. Bear in mind that the source and destination zones can't be "
+"the same."
+msgstr ""
+"``Zona di destinazione``: specificare la zona di destinazione del traffico. "
+"Scegliere una zona specifica. Tenere presente che le zone di origine e di "
+"destinazione non possono essere uguali."
+
+#: ../../firewall_rules.rst:41 513c45babfc24668965cb6f2921776d7
+msgid ""
+"``Destination service``: select from the list or choose 'Custom' to enter "
+"specific ports and select protocols."
+msgstr ""
+"``Servizio di destinazione``: selezionare dall'elenco oppure scegliere "
+"``Personalizzato`` per inserire porte specifiche e selezionare i protocolli."
+
+#: ../../firewall_rules.rst:42 95a7df68ed834276ad17c04dfda54483
+msgid "``Action``: define the action when the rule conditions are met:"
+msgstr ""
+"``Azione``: definire l'azione quando le condizioni della regola sono "
+"soddisfatte:"
+
+#: ../../firewall_rules.rst:44 393e3d2317e7483480e8c763da9250ab
+msgid "``Accept``: accept the network traffic."
+msgstr "``Accept``: accetta il traffico di rete."
+
+#: ../../firewall_rules.rst:45 ba1a1865bba74a35a3254c5bde874b71
+msgid "``Reject``: block the traffic and notify the sender host."
+msgstr "``Rifiuta``: blocca il traffico e notifica l'host mittente."
+
+#: ../../firewall_rules.rst:46 6a97b576df074ce983b36621eeb6d176
+msgid ""
+"``Drop``: block the traffic, packets are dropped and no notification is sent"
+" to the sender host."
+msgstr ""
+"``Drop``: blocca il traffico, i pacchetti vengono scartati e nessuna "
+"notifica viene inviata all'host mittente."
+
+#: ../../firewall_rules.rst:47 cf78f06dca194b19945240c259114744
+msgid ""
+"``Rule position``: decide whether to add the rule to the bottom or top of "
+"the rule list."
+msgstr ""
+"``Posizione della regola``: consente di decidere se aggiungere la regola in "
+"fondo o all'inizio dell'elenco delle regole."
+
+#: ../../firewall_rules.rst:48 b2809ae1929b42bdb299764c39cbabf0
+msgid ""
+"``Logging``: indicate whether traffic matching this rule should be logged. "
+"The log entry will include the rule name as a prefix. By default, logging is"
+" limited to 1 entry per second. See the :ref:`logging-limits` section for "
+"instructions on changing this limit."
+msgstr ""
+"``Log``: indica se il traffico che corrisponde a questa regola deve essere "
+"registrato nei log. La voce di log includerà il nome della regola come "
+"prefisso. Per impostazione predefinita, la registrazione nei log è limitata "
+"a 1 voce al secondo. Consultare la sezione :ref:`logging-limits` per le "
+"istruzioni su come modificare questo limite."
+
+#: ../../firewall_rules.rst:50 9030e7620a20472a9a0185be760308ba
+msgid ""
+"``Tags``: optionally, add tags for organizational purposes. Note that the "
+"'automated' tag is reserved for system use."
+msgstr ""
+"``Tag``: facoltativamente, aggiungere tag per scopi organizzativi. Si noti "
+"che il tag 'automated' è riservato all'uso di sistema."
+
+#: ../../firewall_rules.rst:55 566a59622f314e9293b147f33d314fcd
+msgid "Logging limits"
+msgstr "Limiti di logging"
+
+#: ../../firewall_rules.rst:57 752924fc695e429c9ae7a274b70b5be7
+msgid "Logging can be enabled on the following objects:"
+msgstr "La registrazione può essere abilitata sui seguenti oggetti:"
+
+#: ../../firewall_rules.rst:59 09187b6d1a2542edafcc8743ddb15fe8
+msgid "zones"
+msgstr "zone"
+
+#: ../../firewall_rules.rst:60 8fe095f094e145efbe0598fca5c9ad46
+msgid "firewall rules"
+msgstr "regole del firewall"
+
+#: ../../firewall_rules.rst:61 764660105d6a4ed58a38b9d386f0de00
+msgid "redirect rules (port-forwarding)"
+msgstr "regole di reindirizzamento (port-forwarding)"
+
+#: ../../firewall_rules.rst:63 89a4a5d890a042cb99b420f3dcee839e
+msgid ""
+"When the logging is enabled, the firewall will add logging limits to various"
+" rules. This ensures that logging does not overwhelm the system by setting a"
+" limit on the logging rate."
+msgstr ""
+"Quando la registrazione è abilitata, il firewall aggiungerà dei limiti di "
+"registrazione a varie regole. Questo garantisce che la registrazione non "
+"sovraccarichi il sistema impostando un limite al tasso di registrazione."
+
+#: ../../firewall_rules.rst:66 5361962a006045d2bc8e245f1bc682f7
+msgid "By default, the following logging limits are applied:"
+msgstr ""
+"Per impostazione predefinita, vengono applicati i seguenti limiti di "
+"registrazione:"
+
+#: ../../firewall_rules.rst:68 cba97d652ec44d91aa8b4038befd3cb2
+msgid "1 log entry per second for firewall rules"
+msgstr "1 voce di log al secondo per le regole del firewall"
+
+#: ../../firewall_rules.rst:69 25a9f2d037be49239a868f5fc6eb6d7d
+msgid "5 log entries per second for zones"
+msgstr "5 voci di log al secondo per zone"
+
+#: ../../firewall_rules.rst:70 bc344afc2fe44f21848556fbdcf9cd65
+msgid "1 log entry per second for redirect rules"
+msgstr "1 voce di log al secondo per le regole di reindirizzamento"
+
+#: ../../firewall_rules.rst:73 e718cc0132654ec0aa67f1ce39799298
+msgid "Changing the default logging limits"
+msgstr "Modifica dei limiti predefiniti di logging"
+
+#: ../../firewall_rules.rst:76 6253db24f9c742bf9ea0342d5b939f6e
+msgid ""
+"Changing the default logging limits can impact system performance. Use "
+"caution when changing these limits."
+msgstr ""
+"La modifica dei limiti predefiniti di logging può influire sulle prestazioni"
+" del sistema. Prestare attenzione quando si modificano questi limiti."
+
+#: ../../firewall_rules.rst:78 5af21a1b01fc4bcd9b40662963508d7d
+msgid ""
+"Default limits are saved in the `ns_defaults` section of the firewall "
+"configuration:"
+msgstr ""
+"I limiti predefiniti sono salvati nella sezione `ns_defaults` della "
+"configurazione del firewall:"
+
+#: ../../firewall_rules.rst:80 f180f1d163ef4f01b1bd5832e060ee08
+msgid "``zone_log_limit``: the default limit for zones"
+msgstr "``zone_log_limit``: il limite predefinito per le zone"
+
+#: ../../firewall_rules.rst:81 ba27db526be4401badd2b7313befa28a
+msgid "``rule_log_limit``: the default limit for firewall rules"
+msgstr "``rule_log_limit``: il limite predefinito per le regole del firewall"
+
+#: ../../firewall_rules.rst:82 fae5ac2cb6094336b37997eea9e99c1f
+msgid "``redirect_log_limit``: the default limit for redirect rules"
+msgstr ""
+"``redirect_log_limit``: il limite predefinito per le regole di "
+"reindirizzamento"
+
+#: ../../firewall_rules.rst:84 b7d8cebdbaca4428bcf31417ada67f5b
+msgid ""
+"Set the desired log limit for the firewall rules using the `uci` command: ::"
+msgstr ""
+"Impostare il limite di log desiderato per le regole del firewall utilizzando"
+" il comando `uci`: ::"
+
+#: ../../firewall_rules.rst:89 7961eaceabe44241a7d26f80625b24e2
+msgid ""
+"Run the `firewall-apply-default-logging` script to apply the new log limit: "
+"::"
+msgstr ""
+"Eseguire lo script `firewall-apply-default-logging` per applicare il nuovo "
+"limite di log: ::"
