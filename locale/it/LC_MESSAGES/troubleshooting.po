@@ -1,0 +1,349 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../troubleshooting.rst:5 9ff11c1eea254416b33d84663f786145
+msgid "Troubleshooting"
+msgstr "Risoluzione dei problemi"
+
+#: ../../troubleshooting.rst:7 8c39051ed4714a95bb62d48d8b97a9d1
+msgid ""
+"NethSecurity is a sophisticated firewall system with numerous interconnected"
+" components. While the system automates many configurations seamlessly, "
+"occasional breakdowns can occur."
+msgstr ""
+"NethSecurity è un sistema firewall sofisticato con numerosi componenti "
+"interconnessi. Sebbene il sistema automatizzi molte configurazioni in modo "
+"trasparente, possono occasionalmente verificarsi dei malfunzionamenti."
+
+#: ../../troubleshooting.rst:10 6caf24ac4d884c72a5ac968de71d32da
+msgid ""
+"You can create a support request and report issues to the Nethesis support "
+"team or the NethServer community forum."
+msgstr ""
+"È possibile creare una richiesta di supporto e segnalare problemi al team di"
+" supporto Nethesis o al forum della community NethServer."
+
+#: ../../troubleshooting.rst:12 d8b14eec9c8b48369716d71d35281d54
+msgid ""
+"For stable releases, you can open a ticket on the `Nethesis helpdesk portal "
+"<https://helpdesk.nethesis.it>`_ if your machine has a subscription."
+msgstr ""
+"Per le versioni stabili, è possibile aprire un ticket sul `portale helpdesk "
+"di Nethesis <https://helpdesk.nethesis.it>`_ se la macchina dispone di una "
+"sottoscrizione."
+
+#: ../../troubleshooting.rst:14 ff7b4d470fbc4e28975b9166114f8d69
+msgid ""
+"For unstable releases, you can open a new thread on the `NethServer "
+"community English-only forum <https://community.nethserver.org>`_ in the "
+"NethSecurity category. If you are a Nethesis partner, you can open a new "
+"Italian thread on the `Nethesis partner community "
+"<https://partner.nethesis.it>`_ in the NethSecurity category."
+msgstr ""
+"Per le release instabili, è possibile aprire una nuova discussione sul "
+"`forum della community NethServer solo in inglese "
+"<https://community.nethserver.org>`_ nella categoria NethSecurity. Se si è "
+"partner Nethesis, è possibile aprire una nuova discussione in italiano sulla"
+" `community partner Nethesis <https://partner.nethesis.it>`_ nella categoria"
+" NethSecurity."
+
+#: ../../troubleshooting.rst:17 b8c8a77a7b0047238226fb823caf5248
+msgid ""
+"When opening a support request or reporting an issue, you should follow "
+"these guidelines to ensure a quick and effective resolution:"
+msgstr ""
+"Quando si apre una richiesta di supporto o si segnala un problema, è "
+"necessario seguire queste linee guida per garantire una risoluzione rapida "
+"ed efficace:"
+
+#: ../../troubleshooting.rst:19 f9b1f5e1512849c28985abeae7cd7dc0
+msgid "Assign clear and descriptive titles to each ticket or discussion."
+msgstr "Assegnare titoli chiari e descrittivi a ciascun ticket o discussione."
+
+#: ../../troubleshooting.rst:20 cda26170df914a5f8c2dd98dc6029633
+msgid "Provide complete and detailed information in each request."
+msgstr "Fornire informazioni complete e dettagliate in ogni richiesta."
+
+#: ../../troubleshooting.rst:21 4671131872ee4705890d9ada00ea2a54
+msgid ""
+"Include screenshots, logs, and any other relevant information to aid in "
+"troubleshooting."
+msgstr ""
+"Includere screenshot, log e qualsiasi altra informazione rilevante per "
+"facilitare la risoluzione dei problemi."
+
+#: ../../troubleshooting.rst:22 5fc9b38944cd44aa9a7866f71ac6490f
+msgid ""
+"Collaborate with the support team by providing feedback and responding to "
+"their inquiries."
+msgstr ""
+"Collaborare con il team di supporto fornendo feedback e rispondendo alle "
+"loro richieste."
+
+#: ../../troubleshooting.rst:25 5b23f88f16c44407897d44f31250858a
+msgid "**1. Gather information**"
+msgstr "**1. Raccogliere informazioni**"
+
+#: ../../troubleshooting.rst:27 39a34d70995f46c0ac37bbb4afc85e5b
+msgid ""
+"Before creating a support request, it's crucial to gather as much "
+"information as possible about the issue you're facing. This helps the "
+"support team identify and resolve the problem quickly."
+msgstr ""
+"Prima di creare una richiesta di supporto, è fondamentale raccogliere quante"
+" più informazioni possibili sul problema riscontrato. Questo aiuta il team "
+"di supporto a identificare e risolvere il problema rapidamente."
+
+#: ../../troubleshooting.rst:29 521d171dfdfe4eb6aa61338ffa9c5a18
+msgid "Your support request should include the following:"
+msgstr "La richiesta di assistenza dovrebbe includere quanto segue:"
+
+#: ../../troubleshooting.rst:31 3249e01e653141e18a13581af10ac774
+msgid ""
+"**Your system configuration:** This includes the version of NethSecurity "
+"you're using; you can find the information inside the Dashboard page. Please"
+" report the full version like ``8 23.05.2-ns.0.0.1-beta1-96-ga759afb``"
+msgstr ""
+"**Configurazione del sistema:** Questa include la versione di NethSecurity "
+"in uso; l'informazione è disponibile all'interno della pagina Dashboard. Si "
+"prega di riportare la versione completa, ad esempio ``8 "
+"23.05.2-ns.0.0.1-beta1-96-ga759afb``"
+
+#: ../../troubleshooting.rst:33 79814582e0594079a4a0543af7635454
+msgid ""
+"**The problem you're encountering:** Describe the problem in detail, "
+"including the steps you took to reproduce it."
+msgstr ""
+"**Il problema riscontrato:** Descrivere il problema in dettaglio, includendo"
+" i passaggi eseguiti per riprodurlo."
+
+#: ../../troubleshooting.rst:34 0e2b8f63aef145858a8389b3f9758a5b
+msgid ""
+"**Any error messages:** If you receive any error messages, include them in "
+"your request. You can use the :ref:`user interface <troubleshooting_ui-"
+"section>` to gather this information, or access the command line and use "
+"``less /var/log/messages`` to find the relevant logs."
+msgstr ""
+"**Eventuali messaggi di errore:** Se vengono visualizzati messaggi di "
+"errore, includerli nella richiesta. È possibile utilizzare "
+"l\':ref:`interfaccia utente <troubleshooting_ui-section>` per raccogliere "
+"queste informazioni, oppure accedere alla riga di comando e utilizzare "
+"``less /var/log/messages`` per trovare i log rilevanti."
+
+#: ../../troubleshooting.rst:37 a99a6c6d80854f29b52f529610ab63ab
+msgid ""
+"**Any changes you made:** If you made any changes to your system "
+"configuration, list them in your request."
+msgstr ""
+"**Eventuali modifiche apportate:** Se sono state apportate modifiche alla "
+"configurazione del sistema, elencarle nella richiesta."
+
+#: ../../troubleshooting.rst:38 2b15367765da4adfbf55d89476ebb14d
+msgid ""
+"**Your desired outcome:** What do you hope to achieve by contacting support?"
+msgstr ""
+"**Risultato desiderato:** Qual è l'obiettivo che si intende raggiungere "
+"contattando il supporto?"
+
+#: ../../troubleshooting.rst:40 7e98cc2b37744640a7aeb89a4ddbf5a2
+msgid "**2. Describe the problem objectively**"
+msgstr "**2. Descrivere il problema in modo oggettivo**"
+
+#: ../../troubleshooting.rst:42 cc2d4ac4002c47e4a94d5d52e3582c9c
+msgid ""
+"When describing the problem, focus on objective symptoms. Avoid subjective "
+"statements like \"it's not working\" or \"it's slow.\" Instead, describe "
+"what happens when you perform specific actions."
+msgstr ""
+"Quando si descrive il problema, concentrarsi su sintomi oggettivi. Evitare "
+"affermazioni soggettive come \"non funziona\" o \"è lento\". Invece, "
+"descrivere cosa accade quando si eseguono azioni specifiche."
+
+#: ../../troubleshooting.rst:44 50c28a1ae56a4f5a81236187102c809c
+msgid ""
+"Example: instead of saying \"The firewall isn't working,\" you could say "
+"\"When I try to access a website, I receive this error message.\""
+msgstr ""
+"Esempio: invece di dire \"Il firewall non funziona\", si potrebbe dire "
+"\"Quando si tenta di accedere a un sito web, viene visualizzato questo "
+"messaggio di errore.\""
+
+#: ../../troubleshooting.rst:46 8ee6e2ca54084f1aad5e2619b7300696
+msgid "**3. Respond to requests for information**"
+msgstr "**3. Rispondere alle richieste di informazioni**"
+
+#: ../../troubleshooting.rst:48 01a1770380824507bb221f3501d084f8
+msgid ""
+"If the support team asks you to perform tests or provide additional details,"
+" do so promptly and thoroughly. The more information you provide, the easier"
+" it is for them to solve the issue."
+msgstr ""
+"Se il team di supporto richiede di eseguire dei test o di fornire ulteriori "
+"dettagli, è necessario farlo tempestivamente e in modo accurato. Più "
+"informazioni vengono fornite, più sarà semplice per loro risolvere il "
+"problema."
+
+#: ../../troubleshooting.rst:50 9b346a89eef54488885a9efda31cb8cb
+msgid "**4. Communicate the outcome of the solution**"
+msgstr "**4. Comunicare l'esito della soluzione**"
+
+#: ../../troubleshooting.rst:52 d37f56b464bd4b80b62cc4d45c78a606
+msgid ""
+"Once the support team offers a solution, test it and communicate the "
+"outcome. If it resolved the problem, let them know. If not, provide "
+"additional information so they can continue investigating."
+msgstr ""
+"Una volta che il team di supporto propone una soluzione, è necessario "
+"testarla e comunicare l'esito. Se il problema è stato risolto, informare il "
+"team. In caso contrario, fornire ulteriori informazioni affinché possano "
+"proseguire con l'indagine."
+
+#: ../../troubleshooting.rst:54 2c5765ba85cd43dbb5f3dc7eb53b3787
+msgid "**5. Don't reboot if the problem is blocking**"
+msgstr "**5. Non riavviare se il problema è bloccante**"
+
+#: ../../troubleshooting.rst:56 3bb502d86642443e8dc6fa6872b251c7
+msgid ""
+"Avoid rebooting the system if the problem is blocking. Rebooting can "
+"sometimes worsen the issue. Instead, contact support and work with them to "
+"resolve it."
+msgstr ""
+"Evitare di riavviare il sistema se il problema è bloccante. Il riavvio può "
+"talvolta peggiorare la situazione. Invece, contattare il supporto e "
+"collaborare con esso per risolvere il problema."
+
+#: ../../troubleshooting.rst:58 c646f06f62b44acbba16656bcdc61a63
+msgid "**6. Multiple tickets or discussions for the same issue**"
+msgstr "**6. Ticket o discussioni multiple per lo stesso problema**"
+
+#: ../../troubleshooting.rst:60 b93d18029c8e4475b9e82a59099cbe0f
+msgid ""
+"It is recommended to open \"n\" tickets or discussions for \"n\" different "
+"requests, even if they relate to the same underlying problem. While it may "
+"seem rigid and inconvenient, this approach offers significant advantages:"
+msgstr ""
+"Si consiglia di aprire \"n\" ticket o discussioni per \"n\" richieste "
+"diverse, anche se queste sono correlate allo stesso problema di base. Anche "
+"se può sembrare rigido e scomodo, questo approccio offre vantaggi "
+"significativi:"
+
+#: ../../troubleshooting.rst:63 fbb8f71209f94a2c949da96bb6edcd1b
+msgid ""
+"**Improved workload parallelization:** Allows the support team to work on "
+"multiple aspects of the problem simultaneously."
+msgstr ""
+"**Parallelizzazione migliorata del carico di lavoro:** Consente al team di "
+"supporto di lavorare su più aspetti del problema simultaneamente."
+
+#: ../../troubleshooting.rst:64 72413fcd86234e2b8bcd27daf7bd39e7
+msgid ""
+"**Faster resolution by specialists:** Different requests can be assigned to "
+"different specialists with relevant expertise, accelerating resolution."
+msgstr ""
+"**Risoluzione più rapida da parte degli specialisti:** Diverse richieste "
+"possono essere assegnate a specialisti differenti con competenze specifiche,"
+" accelerando la risoluzione."
+
+#: ../../troubleshooting.rst:65 2f1e1b21706b47c688ed9f15fed0f785
+msgid ""
+"**More effective problem-solving:** Focuses attention on each individual "
+"request, avoiding confusion and disorientation."
+msgstr ""
+"**Risoluzione dei problemi più efficace:** Consente di concentrarsi su ogni "
+"singola richiesta, evitando confusione e disorientamento."
+
+#: ../../troubleshooting.rst:66 fe75ffa0a6074e1ea48e0db7a26d3f2b
+msgid ""
+"**Enhanced priority management:** Enables assigning different priorities to "
+"each request based on urgency and impact."
+msgstr ""
+"**Gestione avanzata delle priorità:** Consente di assegnare priorità diverse"
+" a ciascuna richiesta in base all'urgenza e all'impatto."
+
+#: ../../troubleshooting.rst:67 cc979440d45d4d71a8b7d6e2b98a44ba
+msgid ""
+"**Better communication:** Facilitates clear communication between the "
+"support team and you, ensuring dedicated discussion for each issue."
+msgstr ""
+"**Comunicazione migliorata:** Facilita una comunicazione chiara tra il team "
+"di supporto e l’utente, garantendo una discussione dedicata per ciascun "
+"problema."
+
+#: ../../troubleshooting.rst:73 9aa748e1e4684385b62e4a556feada81
+msgid "Gathering information from the user interface"
+msgstr "Raccolta di informazioni dall'interfaccia utente"
+
+#: ../../troubleshooting.rst:75 026194dc1c2b4eee9fbdc470ba4f753b
+msgid ""
+"When issues arise, the user interface (UI) displays an error message "
+"capturing the nature of the problem."
+msgstr ""
+"Quando si verificano problemi, l'interfaccia utente (UI) visualizza un "
+"messaggio di errore che descrive la natura del problema."
+
+#: ../../troubleshooting.rst:77 bfa4d101ce23490ea6040042cfe4de15
+msgid ""
+"The error message provides valuable information, presenting the details of "
+"the request and the encountered error in JSON format. To assist in "
+"diagnosing and resolving the issue, users can utilize the ``Copy command`` "
+"button. Clicking this button allows you to retrieve the command that "
+"resulted in the error. Simply paste this copied command into a shell to "
+"obtain more detailed information."
+msgstr ""
+"Il messaggio di errore fornisce informazioni preziose, presentando i "
+"dettagli della richiesta e l'errore riscontrato in formato JSON. Per "
+"facilitare la diagnosi e la risoluzione del problema, è possibile utilizzare"
+" il pulsante ``Copia comando``. Facendo clic su questo pulsante, si può "
+"recuperare il comando che ha generato l'errore. Basta incollare questo "
+"comando copiato in una shell per ottenere informazioni più dettagliate."
+
+#: ../../troubleshooting.rst:82 a07361c1872949988aedfdb835c1c59f
+msgid ""
+"When reporting an error to the support team, it's crucial to provide the "
+"following essential information:"
+msgstr ""
+"Quando si segnala un errore al team di supporto, è fondamentale fornire le "
+"seguenti informazioni essenziali:"
+
+#: ../../troubleshooting.rst:84 f866eff1374e4e70b23891295cc1eb43
+msgid ""
+"**Request and Response Contents:** Include the content of the ``Request`` "
+"and ``Response`` sections found in the error message."
+msgstr ""
+"**Contenuti della richiesta e della risposta:** Includere il contenuto delle"
+" sezioni ``Request`` e ``Response`` presenti nel messaggio di errore."
+
+#: ../../troubleshooting.rst:87 eb9cfed6dd5d4570b6e09b0beaf44404
+msgid ""
+"**Copied Command:** Paste the command copied using the ``Copy command`` "
+"button."
+msgstr ""
+"**Comando copiato:** Incollare il comando copiato utilizzando il pulsante "
+"``Copia comando``."
+
+#: ../../troubleshooting.rst:90 24782e7e0c354e4eb77798c11edc911a
+msgid ""
+"**Execution Output:** For further assistance, execute the copied command and"
+" report the output."
+msgstr ""
+"**Output dell'esecuzione:** Per ulteriore assistenza, eseguire il comando "
+"copiato e riportare l'output."
+
+#: ../../troubleshooting.rst:93 c565c8d0adda4dd0a314c073b899e509
+msgid ""
+"If the provided information is insufficient, in extreme cases, it may be "
+"necessary to share the content of the JavaScript console if the error is "
+"present. Follow your browser's instructions (usually accessed by pressing "
+"``F12``), copy the entire console content, and paste it for a more in-depth "
+"analysis. Your collaboration in providing accurate and detailed information "
+"ensures a more effective and timely resolution to any issues encountered "
+"with NethSecurity."
+msgstr ""
+"Se le informazioni fornite non sono sufficienti, in casi estremi potrebbe "
+"essere necessario condividere il contenuto della console JavaScript se "
+"l'errore è presente. Seguire le istruzioni del proprio browser (di solito "
+"accessibili premendo ``F12``), copiare l'intero contenuto della console e "
+"incollarlo per un'analisi più approfondita. La collaborazione nel fornire "
+"informazioni accurate e dettagliate garantisce una risoluzione più efficace "
+"e tempestiva di eventuali problemi riscontrati con NethSecurity."
