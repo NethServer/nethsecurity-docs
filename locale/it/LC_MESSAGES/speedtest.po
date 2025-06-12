@@ -1,0 +1,108 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../speedtest.rst:3 af190f20397a444fafd0109572d590fc
+msgid "Speedtest"
+msgstr "Speedtest"
+
+#: ../../speedtest.rst:5 30fc89b0b17e4b1bbdbbfd54cabcf17a
+msgid ""
+"The Speedtest tool is a widely used application for measuring the speed and "
+"performance of an internet connection. It provides users with detailed "
+"information about their download and upload speeds, as well as their ping "
+"and jitter. This tool is essential for diagnosing network issues, verifying "
+"service provider claims, and ensuring optimal performance for various online"
+" activities."
+msgstr ""
+"Lo strumento Speedtest è un'applicazione ampiamente utilizzata per misurare "
+"la velocità e le prestazioni di una connessione Internet. Fornisce "
+"informazioni dettagliate sulle velocità di download e upload, oltre che su "
+"ping e jitter. Questo strumento è essenziale per diagnosticare problemi di "
+"rete, verificare le affermazioni dei fornitori di servizi e garantire "
+"prestazioni ottimali per varie attività online."
+
+#: ../../speedtest.rst:9 513bd8f119f1476aa4a38bc65b7edbb8
+msgid ""
+"In NethSecurity the Speedtest tool is available as a built-in feature "
+"accessible only from the command line."
+msgstr ""
+"In NethSecurity lo strumento Speedtest è disponibile come funzionalità "
+"integrata accessibile solo dalla riga di comando."
+
+#: ../../speedtest.rst:12 8c3c9624e21f4cc78dc8f0f5a9e570a2
+msgid "Usage"
+msgstr "Utilizzo"
+
+#: ../../speedtest.rst:14 3d683dbaf238459dadabf6e64e41d8ef
+msgid ""
+"Since the test can be influenced by QoS settings, it is better to disable it"
+" before running the test: ::"
+msgstr ""
+"Poiché il test può essere influenzato dalle impostazioni QoS, è preferibile "
+"disabilitarle prima di eseguire il test: ::"
+
+#: ../../speedtest.rst:18 9079b2c4246742f896d095d64a41de45
+msgid ""
+"Speedtest automatically selects the best server based on the user's "
+"location. To run a speed test, simply type the following command in the "
+"terminal: ::"
+msgstr ""
+"Speedtest seleziona automaticamente il server migliore in base alla "
+"posizione dell'utente. Per eseguire un test di velocità, è sufficiente "
+"digitare il seguente comando nel terminale: ::"
+
+#: ../../speedtest.rst:23 1252356b7e294e26961dc8c056485c82
+msgid ""
+"This command will perform a full test, including latency, download, and "
+"upload speed tests. The selection of the server is based on the user's "
+"location and the server's availability. Sometimes, the server selection may "
+"not be optimal, resulting in inaccurate speed test results."
+msgstr ""
+"Questo comando eseguirà un test completo, includendo test di latenza, "
+"velocità di download e upload. La selezione del server si basa sulla "
+"posizione dell'utente e sulla disponibilità del server. A volte, la "
+"selezione del server potrebbe non essere ottimale, con conseguenti risultati"
+" inaccurati del test di velocità."
+
+#: ../../speedtest.rst:27 d9512feaa85a499c82caf36f46f5487b
+msgid ""
+"To overcome this issue, users can force the selection of the server by using"
+" the ``--force-by-latency-test`` option: ::"
+msgstr ""
+"Per superare questo problema, è possibile forzare la selezione del server "
+"utilizzando l'opzione ``--force-by-latency-test``: ::"
+
+#: ../../speedtest.rst:32 871bd69e8702478db136278f8d3dd7db
+msgid "Remember to re-enable QoS after running the test: ::"
+msgstr "Ricordarsi di riabilitare QoS dopo aver eseguito il test: ::"
+
+#: ../../speedtest.rst:37 9970e25ad5974dfc948c617f501a9533
+msgid "MultiWAN"
+msgstr "MultiWAN"
+
+#: ../../speedtest.rst:39 2a4dbfc0f8514e8099907f27e6e37219
+msgid ""
+"The speedtest tool randomly selects a server to perform the test. In a "
+"MultiWAN environment, the server selection can be influenced by the WAN "
+"interface used to reach the server."
+msgstr ""
+"Lo strumento speedtest seleziona casualmente un server per eseguire il test."
+" In un ambiente MultiWAN, la selezione del server può essere influenzata "
+"dall'interfaccia WAN utilizzata per raggiungere il server."
+
+#: ../../speedtest.rst:42 80873b07657248849a563a5e267cbf49
+msgid ""
+"It is possible to force the selection of the WAN interface using mwan3 "
+"wrapper."
+msgstr ""
+"È possibile forzare la selezione dell'interfaccia WAN utilizzando il wrapper"
+" mwan3."
+
+#: ../../speedtest.rst:44 0b575090680f4e3e92c604cb95268037
+msgid ""
+"Given a WAN device named ``wan1``, the following command will run the "
+"speedtest using the selected interface: ::"
+msgstr ""
+"Dato un dispositivo WAN chiamato ``wan1``, il seguente comando eseguirà lo "
+"speedtest utilizzando l'interfaccia selezionata: ::"
