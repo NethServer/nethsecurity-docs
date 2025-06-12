@@ -1,0 +1,298 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../ddns.rst:4 9c59760130744e7d88aa23d26e43685c
+msgid "Dynamic DNS"
+msgstr "DNS dinamico"
+
+#: ../../ddns.rst:6 64999e35046b40419ed586d4b2f171fa
+msgid ""
+"Dynamic DNS (DDNS) automatically updates your domain name's DNS record with "
+"your current IP address, even if it changes dynamically. This allows you to "
+"access your firewall remotely using a consistent domain name instead of "
+"remembering a potentially changing IP address."
+msgstr ""
+"Il Dynamic DNS (DDNS) aggiorna automaticamente il record DNS del proprio "
+"nome di dominio con l'indirizzo IP attuale, anche se questo cambia "
+"dinamicamente. Questo consente di accedere al firewall da remoto utilizzando"
+" un nome di dominio costante invece di dover ricordare un indirizzo IP che "
+"potrebbe cambiare."
+
+#: ../../ddns.rst:10 43aaade328824443b583fcb675cd412d
+msgid "Supported Providers"
+msgstr "Provider supportati"
+
+#: ../../ddns.rst:12 b32395a257b54ef0877ca3dd616eb627
+msgid "NethSecurity supports the following DDNS providers:"
+msgstr "NethSecurity supporta i seguenti provider DDNS:"
+
+#: ../../ddns.rst:14 149a612b279f4d81813b6b5ce6ff94e6
+msgid "`Cloudflare <https://www.cloudflare.com>`_"
+msgstr "`Cloudflare <https://www.cloudflare.com>`_"
+
+#: ../../ddns.rst:15 7526d7e249fd4369902b575bee0731d3
+msgid "`DigitalOcean <https://www.digitalocean.com>`_"
+msgstr "`DigitalOcean <https://www.digitalocean.com>`_"
+
+#: ../../ddns.rst:16 6d8a3ac137d24db18e6763e226e75766
+msgid "`DNSpod <https://www.dnspod.com>`_"
+msgstr "`DNSpod <https://www.dnspod.com>`_"
+
+#: ../../ddns.rst:17 32a63452687049e29ac6ef846999de19
+msgid "`Freedns <https://freedns.afraid.org>`_"
+msgstr "`Freedns <https://freedns.afraid.org>`_"
+
+#: ../../ddns.rst:18 1727f5a059cb4d19ac9ea0793897b965
+msgid "`Gandi <https://www.gandi.net>`_"
+msgstr "`Gandi <https://www.gandi.net>`_"
+
+#: ../../ddns.rst:19 10e45bd58fc3468d98935e11de574ef2
+msgid "`GCP (Google Cloud Platform) <https://cloud.google.com>`_"
+msgstr "`GCP (Google Cloud Platform) <https://cloud.google.com>`_"
+
+#: ../../ddns.rst:20 b1c1710575ad4fc4a93e79d3221da8f7
+msgid "`GoDaddy <https://www.godaddy.com>`_"
+msgstr "`GoDaddy <https://www.godaddy.com>`_"
+
+#: ../../ddns.rst:21 749ecf90857d494da15e7e9bff12c727
+msgid "`Luadns <https://luadns.com>`_"
+msgstr "`Luadns <https://luadns.com>`_"
+
+#: ../../ddns.rst:22 12e8f4cc82c8448f8dcad57fcdce4623
+msgid "`No-IP <https://www.noip.com>`_"
+msgstr "`No-IP <https://www.noip.com>`_"
+
+#: ../../ddns.rst:23 42014b536b7d4ab39342e29d5520640e
+msgid "`NS1 <https://ns1.com>`_"
+msgstr "`NS1 <https://ns1.com>`_"
+
+#: ../../ddns.rst:24 f9e530fc634641aea35f18dbfa53a59d
+msgid "`One.com <https://www.one.com>`_"
+msgstr "`One.com <https://www.one.com>`_"
+
+#: ../../ddns.rst:25 027b928072494a128465d811c270e4c5
+msgid "`Pdns <https://www.powerdns.com>`_"
+msgstr "`Pdns <https://www.powerdns.com>`_"
+
+#: ../../ddns.rst:26 3f989b22322b4d0e94be6840009ca500
+msgid "`Route53 <https://aws.amazon.com/route53>`_"
+msgstr "`Route53 <https://aws.amazon.com/route53>`_"
+
+#: ../../ddns.rst:27 9b287a938dec43b8ba5873e385e5653e
+msgid "`TransIP <https://www.transip.nl>`_"
+msgstr "`TransIP <https://www.transip.nl>`_"
+
+#: ../../ddns.rst:29 430d4057e37349999ef813726be41842
+msgid "Prerequisites:"
+msgstr "Prerequisiti:"
+
+#: ../../ddns.rst:31 5576ed54541441d1aebb9d36efb4f886
+msgid "A NethSecurity firewall with internet access."
+msgstr "Un firewall NethSecurity con accesso a Internet."
+
+#: ../../ddns.rst:32 83f4fc6a80244a78853cbd5cc164ffa9
+msgid "An account with your chosen DDNS provider."
+msgstr "Un account presso il provider DDNS scelto."
+
+#: ../../ddns.rst:33 427013b73f014f85abc733191c25861f
+msgid "A registered domain name with your DDNS provider."
+msgstr "Un nome di dominio registrato presso il proprio provider DDNS."
+
+#: ../../ddns.rst:36 54b2eef921664508abd44d88a9fe123c
+msgid "General configuration steps"
+msgstr "Passaggi generali di configurazione"
+
+#: ../../ddns.rst:38 ffa08b7af8d94dd19da40c96c294c8fe
+msgid "Open a terminal window on your firewall."
+msgstr "Aprire una finestra del terminale sul firewall."
+
+#: ../../ddns.rst:39 e52233496b0642b4ae87cc7fd9c4f6df
+msgid ""
+"Select your chosen DDNS provider from the list of supported providers. To "
+"obtain the list of supported providers, run the following command: ::"
+msgstr ""
+"Selezionare il provider DDNS desiderato dall'elenco dei provider supportati."
+" Per ottenere l'elenco dei provider supportati, eseguire il seguente "
+"comando: ::"
+
+#: ../../ddns.rst:44 5c9d8bbb95ba41a592f032d466307ebb
+msgid ""
+"Enter your DDNS configuration details, including your provider credentials "
+"in the designated fields. These may include:"
+msgstr ""
+"Inserire i dettagli di configurazione DDNS, inclusi le credenziali del "
+"provider nei campi designati. Questi possono includere:"
+
+#: ../../ddns.rst:46 329efabf01d14d27b58783d943a13fea
+msgid ""
+"The DDNS provider's service name, from the above list: use the "
+"``service_name`` field."
+msgstr ""
+"Il nome del servizio del provider DDNS, dall'elenco sopra: utilizzare il "
+"campo ``service_name``."
+
+#: ../../ddns.rst:47 18ad7099a8eb42d0b16d5794de906cc3
+msgid "Username or client ID: use the ``username`` field."
+msgstr "Nome utente o ID client: utilizzare il campo ``username``."
+
+#: ../../ddns.rst:48 d82a9ed7994248b6ae1d949a2e605a78
+msgid "Password or API key: use the ``password`` field."
+msgstr "Password o chiave API: utilizzare il campo ``password``."
+
+#: ../../ddns.rst:49 c4b1192108dd4d279bd574038087a4a6
+msgid ""
+"Domain name to be associated with your dynamic IP address: use the "
+"``domain`` field, you can also use the ``lookup_host`` field."
+msgstr ""
+"Nome di dominio da associare al proprio indirizzo IP dinamico: utilizzare il"
+" campo ``domain``, è anche possibile utilizzare il campo ``lookup_host``."
+
+#: ../../ddns.rst:50 aaf595b67501487ead3467b22fc2b8a8
+msgid ""
+"Interface to monitor for IP address changes (e.g., \"wan\"): use the "
+"``interface`` field."
+msgstr ""
+"Interfaccia da monitorare per le modifiche dell'indirizzo IP (ad esempio, "
+"\"wan\"): utilizzare il campo ``interface``."
+
+#: ../../ddns.rst:52 d4ea82c9315341edb7b9d0730218c188
+msgid ""
+"While the general steps remain consistent, specific configuration details "
+"may vary slightly depending on your chosen provider. It's recommended to "
+"consult your provider's documentation for detailed instructions and any "
+"additional settings required."
+msgstr ""
+"Sebbene i passaggi generali siano simili, i dettagli specifici della "
+"configurazione possono variare leggermente a seconda del provider scelto. Si"
+" consiglia di consultare la documentazione del provider per istruzioni "
+"dettagliate e per eventuali impostazioni aggiuntive richieste."
+
+#: ../../ddns.rst:55 c631bc39ba734c2c84ee25f4245775a8
+msgid ""
+"Due to the variety of supported providers, including their unique interfaces"
+" and authentication methods, it's not possible to provide specific "
+"configuration steps for each provider within this guide."
+msgstr ""
+"A causa della varietà di provider supportati, inclusi le loro interfacce "
+"uniche e i metodi di autenticazione specifici, non è possibile fornire in "
+"questa guida istruzioni di configurazione dettagliate per ciascun provider."
+
+#: ../../ddns.rst:58 93032312ddcd4d5f873c2d7bdeca322b
+msgid ""
+"If your provider is not listed, you may still be able to configure it using "
+"a :ref:`custom configuration <custom-ddns-section>`."
+msgstr ""
+"Se il proprio provider non è elencato, è comunque possibile configurarlo "
+"utilizzando una :ref:`configurazione personalizzata <custom-ddns-section>`."
+
+#: ../../ddns.rst:61 d25cc3a6eaea405cb94d9902a2bc108d
+msgid "Using the UCI command line"
+msgstr "Utilizzo della riga di comando UCI"
+
+#: ../../ddns.rst:63 9aaa1e6385ea48a39e5afe50d1ff3753
+msgid "Use uci commands to set and commit configuration options: ::"
+msgstr ""
+"Utilizzare i comandi uci per impostare e confermare le opzioni di "
+"configurazione: ::"
+
+#: ../../ddns.rst:73 9e0fe3fc20f444e8b7bc18af3eb48041
+msgid "Remember to replace placeholders with your values."
+msgstr "Ricordarsi di sostituire i segnaposto con i propri valori."
+
+#: ../../ddns.rst:75 418ca574cfdc42429cfe3711690c1d35
+msgid "Then, restart the DDNS service: ::"
+msgstr "Quindi, riavviare il servizio DDNS: ::"
+
+#: ../../ddns.rst:79 f2a4d7d3dee14090bb7671c285722de5
+msgid ""
+"See the `UCI documentation <https://openwrt.org/docs/guide-user/base-"
+"system/ddns>`_ for a full list of supported settings."
+msgstr ""
+"Consultare la `documentazione UCI <https://openwrt.org/docs/guide-user/base-"
+"system/ddns>`_ per un elenco completo delle impostazioni supportate."
+
+#: ../../ddns.rst:81 b41a94b2c35e4cf78a76ed62a515e306
+msgid "Additional notes:"
+msgstr "Note aggiuntive:"
+
+#: ../../ddns.rst:83 ce2b909e01ab4dd8b400173a75bcdb55
+msgid ""
+"Ensure your chosen DDNS provider plan supports API access and dynamic "
+"updates."
+msgstr ""
+"Assicurarsi che il piano del provider DDNS scelto supporti l'accesso API e "
+"gli aggiornamenti dinamici."
+
+#: ../../ddns.rst:84 beab6f9bd3e84974b22492c6fa99e254
+msgid ""
+"Double-check all entered credentials for accuracy to avoid update failures."
+msgstr ""
+"Verificare attentamente tutte le credenziali inserite per garantirne "
+"l'accuratezza ed evitare errori durante l'aggiornamento."
+
+#: ../../ddns.rst:85 245de9a33b4441579852fb779ba1297f
+msgid ""
+"Consider enabling logging for the DDNS service to monitor updates and "
+"troubleshoot any issues."
+msgstr ""
+"Considerare l'abilitazione della registrazione (logging) per il servizio "
+"DDNS per monitorare gli aggiornamenti e risolvere eventuali problemi."
+
+#: ../../ddns.rst:86 5577f17cd3c04c1c93ed386056bd5001
+msgid ""
+"Some providers may offer advanced features like wildcards and subdomain "
+"updates. Explore these options based on your specific needs."
+msgstr ""
+"Alcuni provider possono offrire funzionalità avanzate come i caratteri jolly"
+" e l'aggiornamento dei sottodomini. Esplorare queste opzioni in base alle "
+"proprie esigenze specifiche."
+
+#: ../../ddns.rst:89 09f7599d850844999f63e72a06a6e957
+msgid "Example: afraid.org (FreeDNS)"
+msgstr "Esempio: afraid.org (FreeDNS)"
+
+#: ../../ddns.rst:91 85d668d72dd048b6914efe96bda698ec
+msgid ""
+"Configure a domain with FreeDNS (afraid.org) using the UCI command line. The"
+" domain is named \"sanchio.crabdance.com\" and the username and password are"
+" \"myuser\" and \"mypass\", respectively. ::"
+msgstr ""
+"Configurare un dominio con FreeDNS (afraid.org) utilizzando la riga di "
+"comando UCI. Il dominio si chiama \"sanchio.crabdance.com\" e il nome utente"
+" e la password sono \"myuser\" e \"mypass\", rispettivamente. ::"
+
+#: ../../ddns.rst:115 33b3a5c14a3543d6ad13c9b6eb7a530e
+msgid "Custom example: dyndns.it (DynDNS)"
+msgstr "Esempio personalizzato: dyndns.it (DynDNS)"
+
+#: ../../ddns.rst:117 94048cfad8784b578c0a46df57954001
+msgid ""
+"You can also configure some custom DDNS providers using the UCI command "
+"line. Configure a domain with DynDNS using the UCI command line. The domain "
+"is named \"nstest1.freeddns.it\" and the username and password are "
+"\"nstest1\" and \"nstest\", respectively. ::"
+msgstr ""
+"È inoltre possibile configurare alcuni provider DDNS personalizzati "
+"utilizzando la riga di comando UCI. Configurare un dominio con DynDNS "
+"utilizzando la riga di comando UCI. Il dominio si chiama "
+"\"nstest1.freeddns.it\" e il nome utente e la password sono rispettivamente "
+"\"nstest1\" e \"nstest\". ::"
+
+#: ../../ddns.rst:139 e67845359b42403eb5eabb507d4f04de
+msgid "Using Luci"
+msgstr "Utilizzo di Luci"
+
+#: ../../ddns.rst:141 62a28b3818bb407e9253bdffb21df12d
+msgid ""
+"The :ref:`Luci <luci-section>` web interface offers a simplified way to "
+"configure DDNS on NethSecurity. Refer to the `official documentation "
+"<https://openwrt.org/docs/guide-"
+"user/services/ddns/client#web_interface_instructions>`_ for detailed "
+"instructions on using Luci to configure DDNS."
+msgstr ""
+"L'interfaccia web :ref:`Luci <luci-section>` offre un modo semplificato per "
+"configurare DDNS su NethSecurity. Consultare la `documentazione ufficiale "
+"<https://openwrt.org/docs/guide-"
+"user/services/ddns/client#web_interface_instructions>`_ per istruzioni "
+"dettagliate sull'utilizzo di Luci per configurare DDNS."

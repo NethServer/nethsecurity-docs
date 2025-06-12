@@ -172,7 +172,7 @@ If you want to prevent the VPN from starting automatically when the firewall boo
     uci commit openvpn
 
 2. Restart all active VPN tunnels. 
-This command will stop all tunnels and fully restart only those with the enabled value set to 1: ::
+   This command will stop all tunnels and fully restart only those with the enabled value set to 1: ::
 
     /etc/init.d/openvpn restart
 
