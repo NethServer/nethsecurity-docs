@@ -1,0 +1,339 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../netify_informatics.rst:5 1969868f07d746cd9ec03d8c9dc3b02e
+msgid "Netify Informatics"
+msgstr "Netify Informatics"
+
+#: ../../netify_informatics.rst:7 8d6f11a0c4524771afa4c16ae3cfd6e0
+msgid ""
+"`Netify Informatics <https://www.netify.ai/products/netify-informatics>`_ is"
+" a third-party cloud service that utilizes analytics and AI to convert local"
+" DPI metadata obtained from NethSecurity into high-level network "
+"intelligence. The solution provides insights into various aspects of network"
+" activity, including:"
+msgstr ""
+"`Netify Informatics <https://www.netify.ai/products/netify-informatics>`_ è "
+"un servizio cloud di terze parti che utilizza l'analisi e l'intelligenza "
+"artificiale per convertire i metadati DPI locali ottenuti da NethSecurity in"
+" informazioni di rete di alto livello. La soluzione fornisce approfondimenti"
+" su vari aspetti dell'attività di rete, tra cui:"
+
+#: ../../netify_informatics.rst:11 546ffa84ea8745fe9669375febe742d9
+msgid ""
+"`Device Discovery <https://www.netify.ai/products/netify-informatics/device-"
+"discovery>`_"
+msgstr ""
+"`Device Discovery <https://www.netify.ai/products/netify-informatics/device-"
+"discovery>`_"
+
+#: ../../netify_informatics.rst:12 010dd2c0098f4ac7887ea7e7c810a32a
+msgid ""
+"`Bandwidth Monitoring <https://www.netify.ai/products/netify-"
+"informatics/bandwidth-monitoring>`_"
+msgstr ""
+"`Monitoraggio della larghezza di banda "
+"<https://www.netify.ai/products/netify-informatics/bandwidth-monitoring>`_"
+
+#: ../../netify_informatics.rst:13 79c3975dfd0648d49d0c1bf704b63361
+msgid ""
+"`Risk and Reputation Analysis <https://www.netify.ai/products/netify-"
+"informatics/risk-and-reputation>`_"
+msgstr ""
+"`Analisi del Rischio e della Reputazione "
+"<https://www.netify.ai/products/netify-informatics/risk-and-reputation>`_"
+
+#: ../../netify_informatics.rst:14 5ef9791caec647efbff2125bc38d25c4
+msgid ""
+"`Regulatory Compliance <https://www.netify.ai/products/netify-"
+"informatics/regulatory-compliance>`_"
+msgstr ""
+"`Regulatory Compliance <https://www.netify.ai/products/netify-"
+"informatics/regulatory-compliance>`_"
+
+#: ../../netify_informatics.rst:15 fa47a63b9ec1440ba512b08c59ee698b
+msgid "Geolocation"
+msgstr "Geolocalizzazione"
+
+#: ../../netify_informatics.rst:16 29b4a3450722418c8ff98231375771b4
+msgid "Audit and Forensics"
+msgstr "Audit e Forensics"
+
+#: ../../netify_informatics.rst:18 2459e3f5765f4ffbbc83f0ade642f3c9
+msgid ""
+"The service receives data from netifyd, the NethSecurity DPI engine which is"
+" enabled by default on the firewall."
+msgstr ""
+"Il servizio riceve dati da netifyd, il motore DPI di NethSecurity che è "
+"abilitato per impostazione predefinita sul firewall."
+
+#: ../../netify_informatics.rst:20 210923d1e05944bba2afa44db57cd74a
+msgid ""
+"You can try the service for free for 7 days. After this period, you can "
+"choose the plan that best fits your needs."
+msgstr ""
+"È possibile provare il servizio gratuitamente per 7 giorni. Al termine di "
+"questo periodo, si può scegliere il piano che meglio si adatta alle proprie "
+"esigenze."
+
+#: ../../netify_informatics.rst:23 fba3de4f5468435bad45b1015c683537
+msgid ""
+"See `Netify Informatics Pricing <https://www.netify.ai/products/netify-"
+"informatics/pricing>`_ and `Netify Informatics FAQ "
+"<https://www.netify.ai/resources/faq>`_ for more information."
+msgstr ""
+"Consultare `Netify Informatics Pricing "
+"<https://www.netify.ai/products/netify-informatics/pricing>`_ e `Netify "
+"Informatics FAQ <https://www.netify.ai/resources/faq>`_ per ulteriori "
+"informazioni."
+
+#: ../../netify_informatics.rst:26 3b1e059081d8465fb95c56d75ea0c73b
+msgid "Before getting started"
+msgstr "Prima di iniziare"
+
+#: ../../netify_informatics.rst:28 746f3e6e73a94cc08411132f3edfece1
+msgid ""
+"Make sure to create an account on the Netify Informatics website, you can "
+"try the service for free for 7 days. Register here: `Netify Registration "
+"<https://portal.netify.ai/register>`_"
+msgstr ""
+"Assicurarsi di creare un account sul sito web di Netify Informatics; è "
+"possibile provare il servizio gratuitamente per 7 giorni. Registrarsi qui: "
+"`Netify Registration <https://portal.netify.ai/register>`_"
+
+#: ../../netify_informatics.rst:31 7bcd50a053aa49cc9aaf272b3e04df6a
+msgid ""
+"You can granularly manage different customers, different locations of the "
+"same customer, and even different firewalls within the same location. The "
+"platform is organized with these elements."
+msgstr ""
+"È possibile gestire in modo granulare clienti diversi, sedi diverse dello "
+"stesso cliente e persino firewall diversi all'interno della stessa sede. La "
+"piattaforma è organizzata con questi elementi."
+
+#: ../../netify_informatics.rst:34 a969260f171f44e98f1d8160aa3e837c
+msgid ""
+"**Organization** : an organization is essentially a customer where we have "
+"at least one NethSecurity firewall, multiple organizations are supported."
+msgstr ""
+"**Organizzazione** : un'organizzazione è essenzialmente un cliente presso "
+"cui è presente almeno un firewall NethSecurity; sono supportate più "
+"organizzazioni."
+
+#: ../../netify_informatics.rst:35 49f43360663340f1a462afb7278e5e4a
+msgid ""
+"**Site**: the same organization (customer) might have an office in Rome, "
+"Florence, and Paris. A site is defined for each physical location to isolate"
+" the data, multiple sites are supported."
+msgstr ""
+"**Sito**: la stessa organizzazione (cliente) potrebbe avere un ufficio a "
+"Roma, Firenze e Parigi. Un sito è definito per ciascuna sede fisica per "
+"isolare i dati; sono supportati più siti."
+
+#: ../../netify_informatics.rst:37 a0e3ad42c5cd4536861988c68a18b38e
+msgid ""
+"**Agent**: the agent represents your customer's NethSecurity unit. Netify "
+"supports multiple agents per site. If you have a simple network, one agent "
+"will likely see all traffic flows on a site's network."
+msgstr ""
+"**Agente**: l'agente rappresenta l'unità NethSecurity del cliente. Netify "
+"supporta più agenti per sito. In una rete semplice, è probabile che un solo "
+"agente rilevi tutti i flussi di traffico sulla rete di un sito."
+
+#: ../../netify_informatics.rst:42 e1cf688dd62a4c2fa99a248d2f85dfe5
+msgid "Connect NethSecurity to Netify Informatics"
+msgstr "Collegare NethSecurity a Netify Informatics"
+
+#: ../../netify_informatics.rst:44 c25f10b28b524ffb876c2e840e734711
+msgid "Two steps are required to use the service:"
+msgstr "Sono necessari due passaggi per utilizzare il servizio:"
+
+#: ../../netify_informatics.rst:46 a7f217fc19f0401c9979a40462e937e7
+msgid "Enable metadata sending from NethSecurity"
+msgstr "Abilitare l'invio dei metadati da NethSecurity"
+
+#: ../../netify_informatics.rst:47 7f086161952047cea05aa6588120c450
+msgid "Provision an agent on Netify Informatics."
+msgstr "Effettuare il provisioning di un agente su Netify Informatics."
+
+#: ../../netify_informatics.rst:49 f8791896108d48b1b59ee812920b130f
+msgid ""
+"It's mandatory to configure data sending on NethSecurity **first** and then "
+"provision the agent on the platform."
+msgstr ""
+"È obbligatorio configurare prima l'invio dei dati su NethSecurity **e solo "
+"successivamente** effettuare il provisioning dell'agente sulla piattaforma."
+
+#: ../../netify_informatics.rst:52 62dedfcd39dd48489de55b10dd5c3bfe
+msgid "1. Enable metadata sending"
+msgstr "1. Abilitare l'invio dei metadati"
+
+#: ../../netify_informatics.rst:54 638fe97b4820420b9b9a2d7effbab3b3
+msgid ""
+"Access the ``Netify Informatics`` page under the ``Monitoring`` section in "
+"the NethSecurity web interface."
+msgstr ""
+"Accedere alla pagina ``Netify Informatics`` nella sezione ``Monitoraggio`` "
+"dell'interfaccia web di NethSecurity."
+
+#: ../../netify_informatics.rst:56 3a029a38916348acaded6b7efe77a5b7
+msgid ""
+"Enable the ``Send metadata to Netify Informatics`` option and click on "
+"``Save``."
+msgstr ""
+"Abilitare l'opzione ``Invia i metadati dei flussi di rete a Netify Informatics`` e fare clic su "
+"``Salva``."
+
+#: ../../netify_informatics.rst:58 088eafc07215489283cee70e96935d02
+msgid ""
+"Each NethSecurity is associated with a unique Agent UUID, something like "
+"this `B3-GV-WQ-SD`. The code will be visible on the same page after enabling"
+" the send metadata option."
+msgstr ""
+"Ogni NethSecurity è associato a un UUID univoco dell'Agent, simile a questo "
+"`B3-GV-WQ-SD`. Il codice sarà visibile nella stessa pagina dopo aver "
+"abilitato l'opzione :guilabel:`Invia metadati`."
+
+#: ../../netify_informatics.rst:62 6d47ec03769040c781c6e443438168f4
+msgid "2. Provision the agent"
+msgstr "2. Effettuare il provisioning dell'agente"
+
+#: ../../netify_informatics.rst:64 8c9b95beb1844a35af12b75c286a1580
+msgid ""
+"Once you have a registered account and enabled the metadata sending on "
+"NethSecurity, you can provision the agent on the Netify Informatics "
+"platform:"
+msgstr ""
+"Una volta che si dispone di un account registrato e si è abilitato l'invio "
+"dei metadati su NethSecurity, è possibile effettuare il provisioning "
+"dell'agente sulla piattaforma Netify Informatics:"
+
+#: ../../netify_informatics.rst:66 02a22a91a424423ea5e0099d242e65d7
+msgid ""
+"Copy the code obtained in the previous step and login to the Netify "
+"Informatics website."
+msgstr ""
+"Copia il codice ottenuto nel passaggio precedente ed effettua l'accesso al "
+"sito web di Netify Informatics."
+
+#: ../../netify_informatics.rst:67 35e63e45148040a68c811af3802bbe7b
+msgid "Access the ``Provision Agent Wizard`` inside ``Deployment`` section."
+msgstr ""
+"Accedere alla ``Provision Agent Wizard`` all'interno della sezione "
+"``Deployment``."
+
+#: ../../netify_informatics.rst:68 cc27ed04a50446649674d57d5f7952af
+msgid ""
+"Follow the instructions to create the organization (the customer) and paste "
+"the Agent UUID in the appropriate field to enable the agent using the code "
+"obtained on NethSecurity."
+msgstr ""
+"Seguire le istruzioni per creare l'organizzazione (il cliente) e incollare "
+"l'UUID dell'Agent nel campo appropriato per abilitare l'agent utilizzando il"
+" codice ottenuto su NethSecurity."
+
+#: ../../netify_informatics.rst:71 9e133fc6b75d43a4b1a2bf0cdb4df2a0
+msgid ""
+"From this moment, Netify Informatics will start showing the data. You can "
+"then connect other firewalls of the same customer (same organization, same "
+"site or a different one) or create a new organization for a different "
+"customer."
+msgstr ""
+"Da questo momento, Netify Informatics inizierà a mostrare i dati. È "
+"possibile quindi collegare altri firewall dello stesso cliente (stessa "
+"organizzazione, stesso sito o uno diverso) oppure creare una nuova "
+"organizzazione per un cliente differente."
+
+#: ../../netify_informatics.rst:75 4ffb809192fb4709b00a798febabdf50
+msgid "Deployment Manager"
+msgstr "Deployment Manager"
+
+#: ../../netify_informatics.rst:77 1be07cafbe5d4807901fb0d71a7d34ac
+msgid ""
+"The ``Deployment`` section inside Netify Informatics allows you to manage "
+"Agents, Sites, and Organizations. While the management of Agents and Sites "
+"is relatively straightforward, the ``Organization Access`` section enables "
+"you to add additional members to your organization. This feature allows "
+"others to access the Netify panel and view all relevant data."
+msgstr ""
+"La sezione ``Deployment`` all'interno di Netify Informatics consente di "
+"gestire Agent, Site e Organization. Mentre la gestione di Agent e Site è "
+"relativamente semplice, la sezione ``Organization Access`` permette di "
+"aggiungere ulteriori membri all'organizzazione. Questa funzionalità consente"
+" ad altri utenti di accedere al pannello Netify e visualizzare tutti i dati "
+"pertinenti."
+
+#: ../../netify_informatics.rst:80 67008a8555084d25807a1f0c05d565bd
+msgid "There are three available profiles:"
+msgstr "Sono disponibili tre profili:"
+
+#: ../../netify_informatics.rst:82 69749567549b4999b680d0bbc34aa887
+msgid "Administrator"
+msgstr "Amministratore"
+
+#: ../../netify_informatics.rst:83 ed74cd1b36664ca591673f508ce31a6f
+msgid "Manager"
+msgstr "Manager"
+
+#: ../../netify_informatics.rst:84 0fca99189f464e0ba30a831813bdd578
+msgid "Viewer"
+msgstr "Visualizzatore"
+
+#: ../../netify_informatics.rst:86 51c43f851f1043d1a720bf5f87d00d96
+msgid ""
+"The ``Administrator`` profile, typically reserved for colleagues within your"
+" company, grants the highest level of permissions, allowing them to view, "
+"create, and modify configurations within Netify Informatics."
+msgstr ""
+"Il profilo ``Administrator``, tipicamente riservato ai colleghi all'interno "
+"della propria azienda, concede il livello più alto di permessi, consentendo "
+"di visualizzare, creare e modificare le configurazioni all'interno di Netify"
+" Informatics."
+
+#: ../../netify_informatics.rst:88 5428c79b715843dda2a1dfcfd365d197
+msgid ""
+"The ``Manager`` profile is dedicated to individuals who belong to the same "
+"organization (the customer company). It grants them permission to view all "
+"sections inside Netify Informatics, see the deployment dashboard and edit "
+"the Identity manager section, but not to add other organizations or "
+"provision new agents."
+msgstr ""
+"Il profilo ``Manager`` è dedicato agli individui che appartengono alla "
+"stessa organizzazione (l'azienda cliente). Consente di visualizzare tutte le"
+" sezioni all'interno di Netify Informatics, vedere la dashboard di "
+"distribuzione e modificare la sezione :guilabel:`Identity manager`, ma non "
+"permette di aggiungere altre organizzazioni o effettuare il provisioning di "
+"nuovi agent."
+
+#: ../../netify_informatics.rst:90 379c5c96b8134e8085a092d6a5d6cc99
+msgid ""
+"The ``Viewer`` profile, likely the most commonly used, is for someone (e.g.,"
+" an IT technician from your customer’s organization) who can view all data "
+"within their organization but does not have the ability to modify any Netify"
+" configurations."
+msgstr ""
+"Il profilo ``Viewer``, probabilmente il più comunemente utilizzato, è "
+"destinato a chi (ad esempio, un tecnico IT dell'organizzazione del cliente) "
+"può visualizzare tutti i dati all'interno della propria organizzazione ma "
+"non ha la possibilità di modificare alcuna configurazione di Netify."
+
+#: ../../netify_informatics.rst:92 d7e1a0e1d30746b2bb3f93b7bcdd0edc
+msgid ""
+"To invite someone, simply click on ``Manage Organization``, enter their "
+"email address, and choose the desired profile. The person will receive an "
+"invite from Netify by email and will be able to create their own account."
+msgstr ""
+"Per invitare qualcuno, è sufficiente fare clic su ``Manage "
+"Organization``, inserire il loro indirizzo email e scegliere il profilo "
+"desiderato. La persona riceverà un invito da Netify tramite email e potrà "
+"creare il proprio account."
+
+#: ../../netify_informatics.rst:94 97129c9954b649acb6f7c6f57c4cd121
+msgid ""
+"The profile type can be changed at any time by an administrator, allowing "
+"you to switch a person from Manager to Viewer, for example."
+msgstr ""
+"Il tipo di profilo può essere modificato in qualsiasi momento da un "
+"amministratore, consentendo ad esempio di passare una persona da ``Manager``"
+" a ``Viewer``."
