@@ -1,0 +1,238 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../logs.rst:5 e5adb1ecf6724a3bb326241aacbebcdc
+msgid "Logs"
+msgstr "Log"
+
+#: ../../logs.rst:7 109d9883ed3b485bac301e66e62ec31e
+msgid ""
+"Logs are initially written to a temporary in-memory directory to prevent "
+"potential errors on the root file system in case of a failure."
+msgstr ""
+"I log vengono inizialmente scritti in una directory temporanea in memoria "
+"per prevenire potenziali errori sul file system root in caso di un guasto."
+
+#: ../../logs.rst:9 ffda9f1b31a74206a4d93fbecdcb03aa
+msgid ""
+"**Local Storage**: Logs can be written directly to storage. This can be "
+"configured from the UI, see the :ref:`storage-section`."
+msgstr ""
+"**Archiviazione locale**: I log possono essere scritti direttamente "
+"nell'archiviazione. Questa opzione può essere configurata dall'interfaccia "
+"utente, vedere la sezione :ref:`storage-section`."
+
+#: ../../logs.rst:11 89b15e29426845fe80052fc888a2cfcc
+msgid ""
+"**Remote Controller**: Logs can be automatically forwarded to a :ref:`remote"
+" controller <controller_logs-section>`."
+msgstr ""
+"**Controller remoto**: I log possono essere inoltrati automaticamente a un "
+":ref:`controller remoto <controller_logs-section>`."
+
+#: ../../logs.rst:13 0c527aa827c44ec08589e618ca97e77e
+msgid ""
+"**Custom Syslog Forwarder**: Logs can be sent to a remote syslog server."
+msgstr ""
+"**Syslog Forwarder personalizzato**: I log possono essere inviati a un "
+"server syslog remoto."
+
+#: ../../logs.rst:15 88415fd4e6264db393ed45de8aad6674
+msgid "The next paragraph will explain how to configure this latter option."
+msgstr ""
+"Il paragrafo seguente spiegherà come configurare quest'ultima opzione."
+
+#: ../../logs.rst:18 2f4450b2502a42d8b29f16f5f42ca335
+msgid "Forwarding to a remote server"
+msgstr "Inoltro a un server remoto"
+
+#: ../../logs.rst:20 6afa6356163c443a83dfb8051e0c0622
+msgid ""
+"It is sufficient to configure the UCI database with the desired options, "
+"then commit the changes, and finally restart the service. Temporary logs "
+"will continue to be visible in ``/var/log/messages`` and will also be sent "
+"to the remote server."
+msgstr ""
+"È sufficiente configurare il database UCI con le opzioni desiderate, quindi "
+"confermare le modifiche e infine riavviare il servizio. I log temporanei "
+"continueranno a essere visibili in ``/var/log/messages`` e saranno anche "
+"inviati al server remoto."
+
+#: ../../logs.rst:23 2462337de08242ef81221f4e6f6e4f6a
+msgid ""
+"Most syslog servers are configured to listen on UDP port 514 by default."
+msgstr ""
+"La maggior parte dei server syslog sono configurati per ascoltare sulla "
+"porta UDP 514 per impostazione predefinita."
+
+#: ../../logs.rst:25 59c47b3433c44f76a1f8c10eed85c380
+msgid ""
+"Example configuration for sending logs to the syslog server with IP "
+"192.168.1.88 on UDP port 514. The configuration is named ``clm`` (custom log"
+" manager):"
+msgstr ""
+"Esempio di configurazione per l'invio dei log al server syslog con IP "
+"192.168.1.88 sulla porta UDP 514. La configurazione è denominata ``clm`` "
+"(custom log manager):"
+
+#: ../../logs.rst:36 1868b510651f4ae1839532710783ac5e
+msgid "Once configured, simply commit the changes with the command: ::"
+msgstr ""
+"Una volta configurato, è sufficiente confermare le modifiche con il comando:"
+" ::"
+
+#: ../../logs.rst:40 554bce44e2724f39b90b0ea45eb2a895
+msgid "And finally, restart the service: ::"
+msgstr "E infine, riavviare il servizio: ::"
+
+#: ../../logs.rst:44 184d5e7d0ad54ebba3a7da6c73d8494b
+msgid ""
+"By default the forwarder uses the TraditionalFileFormat (RFC 3164) for the "
+"logs. It is possible also to configure RFC 5424 using the same syntax: ::"
+msgstr ""
+"Per impostazione predefinita, il forwarder utilizza il TraditionalFileFormat"
+" (RFC 3164) per i log. È anche possibile configurare RFC 5424 utilizzando la"
+" stessa sintassi: ::"
+
+#: ../../logs.rst:49 c0e00455e69b4d6f835789992d47a130
+msgid ""
+"It is possible to configure multiple forwarders by repeating the operation "
+"using a different configuration name like ``clm2``."
+msgstr ""
+"È possibile configurare più forwarder ripetendo l'operazione utilizzando un "
+"nome di configurazione diverso come ``clm2``."
+
+#: ../../logs.rst:52 95faf5d9732641ab9f28e7c252fd2e80
+msgid "Log rotation size"
+msgstr "Dimensione rotazione log"
+
+#: ../../logs.rst:60 de9161f335c24f919ef567263f91bc09
+msgid "**Get current size**: Retrieve the current log rotation size in bytes."
+msgstr ""
+"**Ottieni dimensione attuale**: Recupera la dimensione attuale della "
+"rotazione del log in byte."
+
+#: ../../logs.rst:61 64f9961edba14dd989e4e950715d3bb5
+msgid ""
+"**Set new size**: Change the log rotation size to a specified value, "
+"ensuring that the new size is a positive integer and not less than 52428800 "
+"bytes (50 MB)."
+msgstr ""
+"**Imposta nuova dimensione**: Modificare la dimensione di rotazione dei log "
+"a un valore specificato, assicurandosi che la nuova dimensione sia un intero"
+" positivo e non inferiore a 52428800 byte (50 MB)."
+
+#: ../../logs.rst:62 19c3b4dc6c3b49f0a877053caedada9e
+msgid ""
+"**Configuration safety**: If the specified size is below the minimum "
+"threshold, the script warns the user and does not make any changes to the "
+"configuration."
+msgstr ""
+"**Sicurezza della configurazione**: Se la dimensione specificata è inferiore"
+" alla soglia minima, lo script avvisa l'utente e non apporta alcuna modifica"
+" alla configurazione."
+
+#: ../../logs.rst:65 32ee39d4539d449b866674d907458e3e
+msgid "Usage"
+msgstr "Utilizzo"
+
+#: ../../logs.rst:67 3eb1b3f79a8346fca44c6db639dd072a
+msgid "To use the script, run it with the following syntax:"
+msgstr "Per utilizzare lo script, eseguirlo con la seguente sintassi:"
+
+#: ../../logs.rst:73 d49428b3229e4e4e89d58a3541fd520a
+msgid "**get**: Outputs the current log rotation size in bytes."
+msgstr ""
+"**get**: Restituisce la dimensione attuale della rotazione dei log in byte."
+
+#: ../../logs.rst:74 c717309ef0af4fc2b1f9c457033c08f7
+msgid ""
+"**set <size>**: Sets the log rotation size to the specified value (in "
+"bytes)."
+msgstr ""
+"**set <size>**: Imposta la dimensione di rotazione del log al valore "
+"specificato (in byte)."
+
+#: ../../logs.rst:77 dee968a6f96e49f886267169da745f0e
+msgid "Example"
+msgstr "Esempio"
+
+#: ../../logs.rst:79 611c928c1bfc4c8497e31f32dec006b7
+msgid "To get the current log rotation size:"
+msgstr "Per ottenere la dimensione attuale della rotazione dei log:"
+
+#: ../../logs.rst:85 573c313546f2497287512e7b98af60bf
+msgid "To set a new log rotation size to 104857600 bytes (100 MB):"
+msgstr ""
+"Per impostare una nuova dimensione di rotazione dei log a 104857600 byte "
+"(100 MB):"
+
+#: ../../logs.rst:91 69b9805c361b44beb907e002be9f2891
+msgid "The service rsyslog is restarted automatically after the size is set."
+msgstr ""
+"Il servizio rsyslog viene riavviato automaticamente dopo che la dimensione è"
+" stata impostata."
+
+#: ../../logs.rst:93 10fc52d72eab4c2c855b32707ca4e006
+msgid ""
+"All changes to the log rotation size are directly written in the Rsyslog "
+"configuration file ``/etc/rsyslog.conf``."
+msgstr ""
+"Tutte le modifiche alla dimensione della rotazione dei log vengono scritte "
+"direttamente nel file di configurazione di Rsyslog ``/etc/rsyslog.conf``."
+
+#: ../../logs.rst:54 8ff7c9f9cf274cc585b4bdb5f128bac7
+msgid ""
+"The ``/var/log/messages`` log file is stored in RAM. Once it reaches a "
+"predefined size limit, the log is rotated and compressed to conserve space. "
+"The rotated log is saved as ``/var/log/messages.1.gz`` in gzip format. The "
+"system retains only two versions of the log: the active log file and the "
+"latest rotated, compressed file. From version 1.4.0, by default, the log "
+"rotation threshold is set to 10% of the tmpfs filesystem mounted at "
+"``/tmp``."
+msgstr ""
+"Il file di log ``/var/log/messages`` è memorizzato nella RAM. Una volta "
+"raggiunto un limite di dimensione predefinito, il log viene ruotato e "
+"compresso per risparmiare spazio. Il log ruotato viene salvato come "
+"``/var/log/messages.1.gz`` in formato gzip. Il sistema mantiene solo due "
+"versioni del log: il file di log attivo e l'ultimo file ruotato e compresso."
+" Dalla versione 1.4.0, per impostazione predefinita, la soglia di rotazione "
+"del log è impostata al 10% del filesystem tmpfs montato su ``/tmp``."
+
+#: ../../logs.rst:58 276fb9c62bef4d9fb830dc7a18fe0bd5
+msgid ""
+"The ``ns-log-size`` script manages the log rotation size for the Rsyslog "
+"service. It allows to **get** and **set** the log rotation size defined in "
+"bytes for the log file located at ``/var/log/messages``."
+msgstr ""
+"Lo script ``ns-log-size`` gestisce la dimensione di rotazione dei log per il"
+" servizio Rsyslog. Consente di **ottenere** e **impostare** la dimensione di"
+" rotazione dei log, definita in byte, per il file di log situato in "
+"``/var/log/messages``."
+
+#~ msgid ""
+#~ "The /var/log/messages log file is stored in RAM. Once it reaches a "
+#~ "predefined size limit, the log is rotated and compressed to conserve space. "
+#~ "The rotated log is saved as /var/log/messages.1.gz in gzip format. The "
+#~ "system retains only two versions of the log: the active log file and the "
+#~ "latest rotated, compressed file. From version 1.4.0, by default, the log "
+#~ "rotation threshold is set to 10% of the tmpfs filesystem mounted at /tmp."
+#~ msgstr ""
+#~ "Il file di log /var/log/messages viene memorizzato nella RAM. Una volta "
+#~ "raggiunto un limite di dimensione predefinito, il log viene ruotato e "
+#~ "compresso per risparmiare spazio. Il log ruotato viene salvato come "
+#~ "/var/log/messages.1.gz in formato gzip. Il sistema mantiene solo due "
+#~ "versioni del log: il file di log attivo e l'ultimo file ruotato e compresso."
+#~ " Dalla versione 1.4.0, per impostazione predefinita, la soglia di rotazione "
+#~ "del log è impostata al 10% del filesystem tmpfs montato su /tmp."
+
+#~ msgid ""
+#~ "This script manages the log rotation size for the Rsyslog service. It allows"
+#~ " to **get** and **set** the log rotation size defined in bytes for the log "
+#~ "file located at ``/var/log/messages``."
+#~ msgstr ""
+#~ "Questo script gestisce la dimensione della rotazione dei log per il servizio"
+#~ " Rsyslog. Permette di **ottenere** e **impostare** la dimensione della "
+#~ "rotazione dei log, definita in byte, per il file di log situato in "
+#~ "``/var/log/messages``."
