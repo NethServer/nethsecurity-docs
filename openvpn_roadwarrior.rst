@@ -17,7 +17,7 @@ OpenVPN is a protocol supported by the most widely used platforms, with :ref:`fr
 Server configuration
 --------------------
 
-An OpenVPN server is running on NethSecurity waiting for remote clients to contact it and establish a connection. It must be reachable from the internet on its specific port (default: 1194 UDP).
+An OpenVPN server is running on NethSecurity waiting for remote clients to contact it and establish a connection. It must be reachable from the internet on its specific port (default: ``1194/UDP``).
 Multiple clients can connect to the server, authenticate themselves and gain access to the private network; however, the clients do not need to be reachable on the internet. Each connecting client, after authentication, receives an IP address with which it will present itself to the remote network.
 
 An OpenVPN server on NethSecurity is closely tied to a user database, which can be local or remote.
@@ -47,7 +47,7 @@ To configure a new OpenVPN server, click :guilabel:`Create Server` button and co
 
   * ``Username password and certificate``: the connecting client must provide a valid username, password and certificate 
 
-  * ``Username OTP and certificate``: the connecting client must provide a valid username, certificate and also an OTP code used as a password. This mode requires additional configuration in the client to receive to OTP code
+  * ``Username, certificate and OTP``: the connecting client must provide a valid username, certificate and also an OTP code used as a password. This mode requires additional configuration in the client to receive to OTP code
 
 * ``VPN Network``: the virtual network used by clients; every client will receive an IP address taken from this network. NethSecurity already suggests an uncommon network to avoid overlaps with other networks used by the firewall
 
@@ -100,7 +100,7 @@ Available DHCP options are:
    Repeat the option to set multiple addresses.
 
 3. ``NBDD [addr]``: set primary and secondary NetBIOS Datagram Distribution Server (NetBIOS over TCP/IP Datagram Distribution Server) addresses.
-Repeat the option to set multiple addresses.
+   Repeat the option to set multiple addresses.
 
 4. ``NTP [addr]``: set primary and secondary Network Time Protocol server addresses. Repeat the option to set multiple addresses.
 
