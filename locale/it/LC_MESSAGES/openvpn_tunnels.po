@@ -1,0 +1,306 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../openvpn_tunnels.rst:5 3fadf1b3f9e64c7991f6f093890f1457
+msgid "OpenVPN tunnels"
+msgstr "Tunnel OpenVPN"
+
+#: ../../openvpn_tunnels.rst:7 6f9ee63f76b641238a80f67c37a37ce0
+msgid ""
+"OpenVPN net-to-net tunnels establish secure connections between two separate"
+" networks, such as branch offices of a company, over the internet. These "
+"connections use SSL/TLS protocols for encryption and authentication, "
+"ensuring data confidentiality and integrity."
+msgstr ""
+"I tunnel net-to-net di OpenVPN stabiliscono connessioni sicure tra due reti "
+"separate, come ad esempio le filiali di un'azienda, tramite internet. Queste"
+" connessioni utilizzano i protocolli SSL/TLS per la cifratura e "
+"l'autenticazione, garantendo la riservatezza e l'integrità dei dati."
+
+#: ../../openvpn_tunnels.rst:10 202274147d1848408d13d77475bb6611
+msgid ""
+"The connection is handled by 2 NethSecurity firewalls, each one has a "
+"specific role. When creating an OpenVPN net2net connection a firewall will "
+"have the server role whereas the other NethSecurity will connect to it as a "
+"client. One NethSecurity can be the same time server and client for "
+"different tunnels, all tunnels use OpenVPN routed mode."
+msgstr ""
+"La connessione è gestita da 2 firewall NethSecurity, ciascuno con un ruolo "
+"specifico. Quando si crea una connessione OpenVPN net2net, un firewall avrà "
+"il ruolo di server mentre l'altro NethSecurity si collegherà come client. Un"
+" NethSecurity può essere contemporaneamente server e client per tunnel "
+"differenti; tutti i tunnel utilizzano la modalità routed di OpenVPN."
+
+#: ../../openvpn_tunnels.rst:15 c2511b588c3f47fc85378660217621b3
+msgid ""
+"The OpenVPN tunnels interface has been crafted for straightforward "
+"connection between two NethSecuirty devices. For this reason, it is "
+"deliberately limited and does not expose all the parameters that can be "
+"configured with OpenVPN to connect to any third-party device. To connect to "
+"a third-party device, it's recommended to use the IPsec protocol."
+msgstr ""
+"L'interfaccia dei tunnel OpenVPN è stata progettata per una connessione "
+"semplice tra due dispositivi NethSecurity. Per questo motivo, è volutamente "
+"limitata e non espone tutti i parametri che possono essere configurati con "
+"OpenVPN per collegarsi a un dispositivo di terze parti. Per connettersi a un"
+" dispositivo di terze parti, si consiglia di utilizzare il protocollo IPsec."
+
+#: ../../openvpn_tunnels.rst:19 413460a86f2a4068b19bc0c2f6d6325e
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../openvpn_tunnels.rst:20 ac804e069b354227bc7561a4d8d48cc4
+msgid ""
+"To connect two firewalls via an OpenVPN tunnel, first configure the server "
+"firewall, then configure the client one. The server needs at least one "
+"public IP address to be reachable by the client, while the client may not "
+"even have public IPs. The configuration of the firewall server requires only"
+" a very few parameters, where possible all the parameters are already filled"
+" in automatically to avoid errors and speed up the process. Once the server "
+"firewall has been configured, it will be possible to download the client "
+"configuration to import onto the other firewall."
+msgstr ""
+"Per collegare due firewall tramite un tunnel OpenVPN, è necessario prima "
+"configurare il firewall server e successivamente quello client. Il server "
+"deve disporre di almeno un indirizzo IP pubblico per essere raggiungibile "
+"dal client, mentre il client può anche non avere indirizzi IP pubblici. La "
+"configurazione del firewall server richiede solo pochissimi parametri; ove "
+"possibile, tutti i parametri sono già compilati automaticamente per evitare "
+"errori e velocizzare il processo. Una volta configurato il firewall server, "
+"sarà possibile scaricare la configurazione client da importare sull’altro "
+"firewall."
+
+#: ../../openvpn_tunnels.rst:26 8e43610bff6c4f6b99fdad9a72a4ffe6
+msgid "Proceed as follows:"
+msgstr "Procedere come segue:"
+
+#: ../../openvpn_tunnels.rst:27 8e9d8390ea0c48c1ba7a39ae243a3999
+msgid ""
+"Access the OpenVPN tunnels page, move to ``Server tunnel`` tab and click on "
+":guilabel:`Add server tunnel`."
+msgstr ""
+"Accedere alla pagina dei tunnel OpenVPN, spostarsi sulla scheda ``Tunnel "
+"server`` e fare clic su :guilabel:`Aggiungi tunnel server`."
+
+#: ../../openvpn_tunnels.rst:29 7bb18fd4357e4e91bfc336445feef670
+msgid "Insert all required fields, but please note:"
+msgstr "Inserire tutti i campi obbligatori, ma si noti:"
+
+#: ../../openvpn_tunnels.rst:31 7d8ce795546c475c96d8e99944c5df36
+msgid ""
+"``Public endpoints`` it's a list of IP addresses or hostnames that clients "
+"can use to reach the OpenVPN tunnel server"
+msgstr ""
+"``Endpoint pubblici`` è un elenco di indirizzi IP o nomi host che i client "
+"possono utilizzare per raggiungere il server tunnel OpenVPN"
+
+#: ../../openvpn_tunnels.rst:32 257610f2d263431f968a1f51ffdbde9e
+msgid ""
+"``Local networks`` it's a list of local networks that will be accessible "
+"from the remote server. If topology is set to p2p, the same list will be "
+"reported inside the client ``Remote networks`` field"
+msgstr ""
+"``Reti locali`` è un elenco di reti locali che saranno accessibili dal "
+"server remoto. Se la topologia è impostata su p2p, lo stesso elenco verrà "
+"riportato nel campo ``Reti remote`` del client."
+
+#: ../../openvpn_tunnels.rst:33 5609ba1730a5455eafb8371717385b09
+msgid ""
+"``Remote networks``, it’s a list of networks behind the remote server which "
+"will be accessible from hosts in the local network"
+msgstr ""
+"``Reti remote``, è un elenco di reti dietro il server remoto che saranno "
+"accessibili dagli host nella rete locale"
+
+#: ../../openvpn_tunnels.rst:34 e23fb17afd7c4882b2178a1dc05a1870
+msgid ""
+"After the configuration is saved, click on the :guilabel:`Download` action "
+"and select ``Client configuration``"
+msgstr ""
+"Dopo che la configurazione è stata salvata, fare clic sull'azione "
+":guilabel:`Scarica` e selezionare ``Client configuration``"
+
+#: ../../openvpn_tunnels.rst:35 e8cf22fbd50440689387ca47cdb71089
+msgid ""
+"Access the client firewall, OpenVPN tunnel, move to ``Client tunnel`` tab, "
+"click on :guilabel:`Import configuration`"
+msgstr ""
+"Accedere al firewall client, al tunnel OpenVPN, spostarsi nella scheda "
+"``Tunnel client``, fare clic su :guilabel:`Importa configurazione`"
+
+#: ../../openvpn_tunnels.rst:38 4941525f8aab4d23a0bee6ed30809a70
+msgid "Topology"
+msgstr "Topologia"
+
+#: ../../openvpn_tunnels.rst:39 9441f02dc40a44d58aaab44e1211c62b
+msgid ""
+"Tunnels can have two kinds of topologies: ``subnet`` and ``p2p`` (Point to "
+"Point)."
+msgstr ""
+"I tunnel possono avere due tipi di topologie: ``subnet`` e ``p2p`` (Point to"
+" Point)."
+
+#: ../../openvpn_tunnels.rst:42 78759d35fb08455b8a4c5fcff2de424c
+msgid "Subnet"
+msgstr "Subnet"
+
+#: ../../openvpn_tunnels.rst:43 c798ed4174fd4d8397ef2c58c0eb2134
+msgid ""
+"``Subnet`` is the default topology and the recommended one: in ``subnet`` "
+"topology, the server will accept connections and will act as a DHCP server "
+"for every connected client."
+msgstr ""
+"``Subnet`` è la topologia predefinita e quella consigliata: nella topologia "
+"``subnet``, il server accetterà le connessioni e agirà come server DHCP per "
+"ogni client connesso."
+
+#: ../../openvpn_tunnels.rst:45 4410e814190041edb7546bb708306e76
+msgid ""
+"In this scenario the server will authenticate clients using TLS certificates"
+" and will push local routes to remote client."
+msgstr ""
+"In questo scenario il server autenticherà i client utilizzando certificati "
+"TLS e invierà le route locali al client remoto."
+
+#: ../../openvpn_tunnels.rst:48 2569d939413b4badbe3bbe9dded8dceb
+msgid "P2P"
+msgstr "P2P"
+
+#: ../../openvpn_tunnels.rst:50 70574788cb5f416aa8e79fdf433c9b53
+msgid ""
+"In a ``p2p`` topology, the administrator must configure one server for each "
+"client, in this scenario the only supported authentication method is the PSK"
+" (Pre-Shared Key)."
+msgstr ""
+"In una topologia ``p2p``, l'amministratore deve configurare un server per "
+"ciascun client; in questo scenario, l'unico metodo di autenticazione "
+"supportato è il PSK (Pre-Shared Key)."
+
+#: ../../openvpn_tunnels.rst:52 49f8334b3d7b40cea203f1de9395f5d9
+msgid ""
+"make sure to exchange the PSK using a secure channel (like SSH or HTTPS)"
+msgstr ""
+"assicurarsi di scambiare il PSK utilizzando un canale sicuro (come SSH o "
+"HTTPS)"
+
+#: ../../openvpn_tunnels.rst:53 5a2677e1b1b1468f80b04cfbcec5ae81
+msgid "the administrator must select an IP for both endpoints"
+msgstr "l'amministratore deve selezionare un IP per entrambi gli endpoint"
+
+#: ../../openvpn_tunnels.rst:54 9cf5420bf2814daa930579ce24adec4c
+msgid "routes to remote networks must be configured on each endpoint"
+msgstr ""
+"le route verso le reti remote devono essere configurate su ciascun endpoint"
+
+#: ../../openvpn_tunnels.rst:58 73c0545ef766485fb09f371adba78f34
+msgid "Advanced features"
+msgstr "Funzionalità avanzate"
+
+#: ../../openvpn_tunnels.rst:59 cead7a872fe64c049a5d674e1af34e25
+msgid "The web interface allows the configuration of advanced features like:"
+msgstr ""
+"L'interfaccia web consente la configurazione di funzionalità avanzate come:"
+
+#: ../../openvpn_tunnels.rst:61 efe5abfe14a44e8e963a2fe42c161511
+msgid ""
+"``Multiple remote host``: multiple remote server addresses can be specified "
+"for redundancy; the OpenVPN client will try to connect to each host in the "
+"given order"
+msgstr ""
+"``Host remoto multipli``: è possibile specificare più indirizzi di server "
+"remoti per la ridondanza; il client OpenVPN tenterà di connettersi a ciascun"
+" host nell'ordine indicato"
+
+#: ../../openvpn_tunnels.rst:63 787c5d1bc73e4eaba2c1f3ea558f1173
+msgid ""
+"``Protocol``: OpenVPN is designed to operate optimally over UDP, but TCP "
+"capability is provided for situations where UDP cannot be used"
+msgstr ""
+"``Protocollo``: OpenVPN è progettato per funzionare in modo ottimale su UDP,"
+" ma la compatibilità con TCP è prevista per situazioni in cui UDP non può "
+"essere utilizzato."
+
+#: ../../openvpn_tunnels.rst:65 6d237d33381e47e2bb898e580dc1abd8
+msgid ""
+"``Compression``: if enabled, data to be sent through the VPN tunnel will be "
+"compressed. This option is disabled by default both for security reasons. "
+"Compression is rarely essential nowadays, as internet traffic is typically "
+"already highly compressed and optimized"
+msgstr ""
+"``Compressione``: se abilitata, i dati inviati attraverso il tunnel VPN "
+"verranno compressi. Questa opzione è disabilitata per impostazione "
+"predefinita anche per motivi di sicurezza. La compressione è raramente "
+"essenziale al giorno d'oggi, poiché il traffico internet è generalmente già "
+"altamente compresso e ottimizzato."
+
+#: ../../openvpn_tunnels.rst:67 291b1cf52d854886b905840092cfe469
+msgid ""
+"``Digest``: the digest algorithm used to transform an arbitrarily large "
+"block of data into a fixed-size output. If not explicitly selected, the "
+"server and client will try to negotiate the best digest available on both "
+"sides"
+msgstr ""
+"``Digest``: l'algoritmo di digest utilizzato per trasformare un blocco di "
+"dati di dimensione arbitraria in un output di dimensione fissa. Se non viene"
+" selezionato esplicitamente, il server e il client tenteranno di negoziare "
+"il miglior digest disponibile su entrambi i lati."
+
+#: ../../openvpn_tunnels.rst:69 fd5b4523261d42acae82e95047328779
+msgid ""
+"``Cipher``: the cryptographic algorithm used to encrypt all the traffic. If "
+"not explicitly selected, the server and client will try to negotiate the "
+"best cipher available on both sides"
+msgstr ""
+"``Cipher``: l'algoritmo crittografico utilizzato per cifrare tutto il "
+"traffico. Se non viene selezionato esplicitamente, il server e il client "
+"tenteranno di negoziare il miglior cipher disponibile su entrambi i lati."
+
+#: ../../openvpn_tunnels.rst:71 01dc878f31a44d8d833bbdb8f4da2be1
+msgid ""
+"``Enforce a minimum TLS version``: Allows you to choose a minimum version of"
+" TLS, in which case connections will only be allowed from devices that use a"
+" version greater than or equal to the one selected"
+msgstr ""
+"``Imporre una versione minima di TLS``: Consente di scegliere una versione "
+"minima di TLS; in tal caso, saranno consentite solo le connessioni "
+"provenienti da dispositivi che utilizzano una versione uguale o superiore a "
+"quella selezionata."
+
+#: ../../openvpn_tunnels.rst:74 e77b18346d36412389eff9be9b47628e
+msgid "MTU Issue and Packet Fragmentation"
+msgstr "Problema MTU e Frammentazione dei Pacchetti"
+
+#: ../../openvpn_tunnels.rst:76 9349a5e3fd8d4986b08e7afeec3cbc40
+msgid ""
+"VPN users may experience connectivity issues due to packet fragmentation. "
+"The LAN interface has an MTU of 1500, but when packets are encrypted for VPN"
+" transmission, the size increases, leading to packet drops. To resolve this,"
+" the MTU on the OpenVPN tunnel must be lowered. No changes are required on "
+"the client side."
+msgstr ""
+"Gli utenti VPN possono riscontrare problemi di connettività a causa della "
+"frammentazione dei pacchetti. L'interfaccia LAN ha un MTU di 1500, ma quando"
+" i pacchetti vengono criptati per la trasmissione tramite VPN, la dimensione"
+" aumenta, causando la perdita di pacchetti. Per risolvere questo problema, è"
+" necessario abbassare l'MTU sul tunnel OpenVPN. Non sono richieste modifiche"
+" lato client."
+
+#: ../../openvpn_tunnels.rst:78 1e55e2cca7544c2a872e728820213194
+msgid "Add the following option to the Roadwarrior server configuration::"
+msgstr ""
+"Aggiungere la seguente opzione alla configurazione del server Roadwarrior::"
+
+#: ../../openvpn_tunnels.rst:84 8bfd3aede0e747e8887a31b5bab31ddc
+msgid ""
+"The `tun_mtu` value may need to be adjusted based on your specific network "
+"environment. A lower MTU ensures that packets fit within the limits of the "
+"OpenVPN tunnel without fragmentation. Depending on factors like network "
+"latency or overhead, you might find that slightly different values work "
+"better for your setup."
+msgstr ""
+"Il valore di `tun_mtu` potrebbe dover essere regolato in base al proprio "
+"ambiente di rete specifico. Un MTU più basso garantisce che i pacchetti "
+"rientrino nei limiti del tunnel OpenVPN senza frammentazione. A seconda di "
+"fattori come la latenza di rete o l'overhead, potrebbe risultare che valori "
+"leggermente diversi funzionino meglio per la propria configurazione."

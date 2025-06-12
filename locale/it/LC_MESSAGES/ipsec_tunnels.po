@@ -1,0 +1,221 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../ipsec_tunnels.rst:5 44900291957e4527bd1ba6548679f9fc
+msgid "IPsec tunnels"
+msgstr "Tunnel IPsec"
+
+#: ../../ipsec_tunnels.rst:7 2ef2c36371ce422ca267b6ee485f119b
+msgid ""
+"IPsec tunnels, are a crucial component of modern network security. These "
+"tunnels provide a secure and encrypted communication pathway over the "
+"internet or any untrusted network, ensuring the confidentiality and "
+"integrity of data in transit."
+msgstr ""
+"I tunnel IPsec sono una componente cruciale della sicurezza delle reti "
+"moderne. Questi tunnel forniscono un percorso di comunicazione sicuro e "
+"cifrato attraverso Internet o qualsiasi rete non affidabile, garantendo la "
+"riservatezza e l'integrità dei dati in transito."
+
+#: ../../ipsec_tunnels.rst:10 215542a10a484d21971d0a18d5ee43cc
+msgid ""
+"IPsec (IP Security) protocol is the ‘de facto’ standard in VPN tunnels, it’s"
+" typically used to create net to net tunnels and it’s supported from all "
+"manufacturers. You can use this protocol to create VPN tunnels between a "
+"NethSecurity and a device from another manufacturer as well as VPN tunnels "
+"between 2 NethSecurity."
+msgstr ""
+"Il protocollo IPsec (IP Security) è lo standard ‘de facto’ nei tunnel VPN, "
+"viene tipicamente utilizzato per creare tunnel net-to-net ed è supportato da"
+" tutti i produttori. Questo protocollo può essere utilizzato per creare "
+"tunnel VPN tra un NethSecurity e un dispositivo di un altro produttore, così"
+" come tunnel VPN tra due NethSecurity."
+
+#: ../../ipsec_tunnels.rst:13 7066e8e97b5b4897b9febff1d116b8b7
+msgid ""
+"NethSecurity by default uses Route-Based VPNs, so each tunnel rely on a "
+"specific tun type device."
+msgstr ""
+"NethSecurity per impostazione predefinita utilizza VPN basate su routing "
+"(Route-Based VPN), quindi ogni tunnel utilizza un proprio device tun "
+"specifico."
+
+#: ../../ipsec_tunnels.rst:16 141e625f46ca4b2f89fc031a76ed9e53
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../ipsec_tunnels.rst:17 43424d692a7b4604bd5a187f542e6275
+msgid ""
+"The configuration of an IPsec tunnel includes 2 peers which we will call A "
+"and B which can be:"
+msgstr ""
+"La configurazione di un tunnel IPsec include 2 peer che chiameremo A e B, i "
+"quali possono essere:"
+
+#: ../../ipsec_tunnels.rst:19 ee0ea7e365cb41b88c807e7798f4fb31
+msgid "1 Nethsecurity and 1 third-party firewall"
+msgstr "1 Nethsecurity e 1 firewall di terze parti"
+
+#: ../../ipsec_tunnels.rst:20 250cf9edd0a1461a9afdc9d55075378e
+msgid "2 Nethsecurity"
+msgstr "2 Nethsecurity"
+
+#: ../../ipsec_tunnels.rst:22 96f4aedb3ff44e04b2e3817b7bdf1053
+msgid ""
+"Devices A and B must be configured with parameters which, depending on the "
+"specific section, will be identical or mirrored."
+msgstr ""
+"I dispositivi A e B devono essere configurati con parametri che, a seconda "
+"della sezione specifica, saranno identici o speculari."
+
+#: ../../ipsec_tunnels.rst:24 145fd105c9e949e292c3f36437e11306
+msgid ""
+"The parameters that must be configured in a mirrored way between the 2 "
+"devices are typically those linked to the network:"
+msgstr ""
+"I parametri che devono essere configurati in modo speculare tra i 2 "
+"dispositivi sono tipicamente quelli legati alla rete:"
+
+#: ../../ipsec_tunnels.rst:26 13538a0e45904c1989a06e7dcace73d3
+msgid "the WAN interface used by the tunnel"
+msgstr "l'interfaccia WAN utilizzata dal tunnel"
+
+#: ../../ipsec_tunnels.rst:27 4cb0fb01b8fc4adf89510855400329f0
+msgid ""
+"the 2 (or more) networks we want to connect (local network, remote network)"
+msgstr ""
+"le 2 (o più) reti che si desidera connettere (rete locale, rete remota)"
+
+#: ../../ipsec_tunnels.rst:28 7c8b6cb66d45498a89eb11aeefe2dd0b
+msgid ""
+"the local and remote identifiers (typically the public IPs of the WANs of "
+"the 2 firewalls, but others can also be used)"
+msgstr ""
+"gli identificatori locali e remoti (tipicamente gli IP pubblici delle WAN "
+"dei 2 firewall, ma possono essere utilizzati anche altri)"
+
+#: ../../ipsec_tunnels.rst:30 6921451de8b448668f81e6daa1964383
+msgid "Therefore:"
+msgstr "Pertanto:"
+
+#: ../../ipsec_tunnels.rst:32 ebcf3052087544ee949b87f5912fbe5b
+msgid ""
+"The WAN IP address of firewall A must coincide with the Remote IP address of"
+" firewall B"
+msgstr ""
+"L'indirizzo IP WAN del firewall A deve coincidere con l'indirizzo IP remoto "
+"del firewall B"
+
+#: ../../ipsec_tunnels.rst:33 40a0906fb3a243088741157689e2702f
+msgid ""
+"the local network of firewall A must coincide with the remote network of "
+"firewall B"
+msgstr ""
+"la rete locale del firewall A deve coincidere con la rete remota del "
+"firewall B"
+
+#: ../../ipsec_tunnels.rst:34 888a4ac9dc444a3e9d017dc34c1ef95d
+msgid ""
+"the local ID of firewall A must coincide with the remote ID of firewall B"
+msgstr ""
+"l'ID locale del firewall A deve coincidere con l'ID remoto del firewall B"
+
+#: ../../ipsec_tunnels.rst:36 ebb120b96e30447da6228f56b2901472
+msgid ""
+"All other parameters, however, must be identical in both firewalls to allow "
+"correct communication (encryption key, IKE and ESP configuration, etc.). "
+"NethSecurity uses a shared key as the only method to encrypt data."
+msgstr ""
+"Tutti gli altri parametri, tuttavia, devono essere identici su entrambi i "
+"firewall per consentire una comunicazione corretta (chiave di cifratura, "
+"configurazione IKE ed ESP, ecc.). NethSecurity utilizza una chiave condivisa"
+" come unico metodo per cifrare i dati."
+
+#: ../../ipsec_tunnels.rst:40 e795305c8909456eb1b7a42cb577ef2d
+msgid "How to create a new IPsec tunnel"
+msgstr "Come creare un nuovo tunnel IPsec"
+
+#: ../../ipsec_tunnels.rst:41 8cc4ddd37a0c47838267df9c716e4b8c
+msgid ""
+"Click :guilabel:`Add IPsec tunnel` button to configure a new tunnel. Assign "
+"a name to this tunnel then configure it, the configuration is split in 3 "
+"steps. The first step contains only network-related parameters, while the "
+"others contain all the remaining parameters that must be identical in both "
+"firewalls to allow correct communication."
+msgstr ""
+"Fare clic sul pulsante :guilabel:`Aggiungi tunnel IPsec` per configurare un "
+"nuovo tunnel. Assegnare un nome a questo tunnel e poi configurarlo; la "
+"configurazione è suddivisa in 3 passaggi. Il primo passaggio contiene solo i"
+" parametri relativi alla rete, mentre gli altri contengono tutti i restanti "
+"parametri che devono essere identici su entrambi i firewall per consentire "
+"una comunicazione corretta."
+
+#: ../../ipsec_tunnels.rst:44 b6cb24c312674cb8a45ae8c84dd0f70d
+msgid ""
+"Once you completed the configuration a new tunnel will be shown in the IPSec"
+" page."
+msgstr ""
+"Una volta completata la configurazione, un nuovo tunnel verrà visualizzato "
+"nella pagina IPSec."
+
+#: ../../ipsec_tunnels.rst:47 828575b024f44a31b54f531d69c41f33
+msgid ""
+"If an endpoint is behind a NAT, we suggest to set the values for Local and "
+"Remote identifier fields to custom unique names with an \"email like\" "
+"syntax, e.g. nsec@site-a and otherdevice@site-b."
+msgstr ""
+"Se un endpoint si trova dietro NAT, si consiglia di impostare i valori "
+"dei campi Identificatore locale e Identificatore remoto su nomi univoci "
+"personalizzati con una sintassi simile a quella di un indirizzo email, ad "
+"esempio nsec@site-a e otherdevice@site-b."
+
+#: ../../ipsec_tunnels.rst:51 ce5f5ba1a99f4c0a8a5577f64a19db2c
+msgid "Multiple Networks management"
+msgstr "Gestione di più reti"
+
+#: ../../ipsec_tunnels.rst:52 ad48120ab257416d97e303ded83ac4ea
+msgid ""
+"A single IPsec tunnel can handle multiple local and remote networks. In this"
+" case, NethSecurity always creates multiple child SAs to ensure broad "
+"compatibility with remote devices. The behavior remains the same for IKEv1 "
+"or IKEv2."
+msgstr ""
+"Un singolo tunnel IPsec può gestire più reti locali e remote. In questo "
+"caso, NethSecurity crea sempre più child SA per garantire un'ampia "
+"compatibilità con i dispositivi remoti. Il comportamento rimane invariato "
+"sia per IKEv1 che per IKEv2."
+
+#: ../../ipsec_tunnels.rst:58 7eb2e967b2574730851a55afa99c4e84
+msgid "IPsec tunnel in a MultiWAN scenario"
+msgstr "Tunnel IPsec in uno scenario MultiWAN"
+
+#: ../../ipsec_tunnels.rst:59 1385c849ed6e492abf16eece7f778d6c
+msgid ""
+"In a multi-WAN scenario, it’s crucial to ensure that each tunnel's remote "
+"endpoint is reached through the same WAN interface configured for the IPsec "
+"tunnel."
+msgstr ""
+"In uno scenario multi-WAN, è fondamentale garantire che ciascun endpoint "
+"remoto del tunnel venga raggiunto attraverso la stessa interfaccia WAN "
+"configurata per il tunnel IPsec."
+
+#: ../../ipsec_tunnels.rst:61 24ad01b1254b42de9d7b529a5a57ab41
+msgid ""
+"To enforce this behavior, a static route must be created so that traffic to "
+"the remote IP is directed through the gateway of the specific WAN interface "
+"assigned to the tunnel."
+msgstr ""
+"Per imporre questo comportamento, è necessario creare una rotta statica "
+"affinché il traffico verso l'IP remoto venga instradato attraverso il "
+"gateway dell'interfaccia WAN specifica assegnata al tunnel."
+
+#: ../../ipsec_tunnels.rst:63 d0cb7d37c8de4e43976386cf675995f0
+msgid ""
+"For example, if the tunnel is over WAN1 and the remote endpoint is "
+"``11.22.33.44``, the static route would specify that traffic to "
+"``11.22.33.44`` uses the WAN1 gateway."
+msgstr ""
+"Ad esempio, se il tunnel è su WAN1 e l'endpoint remoto è ``11.22.33.44``, la"
+" rotta statica specificherà che il traffico verso ``11.22.33.44`` utilizza "
+"il gateway WAN1."
