@@ -1,0 +1,351 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../custom_openvpn_tunnel.rst:5 05242d893c0c46a3a2671d71ff0ac358
+msgid "Custom OpenVPN tunnel"
+msgstr "Tunnel OpenVPN personalizzato"
+
+#: ../../custom_openvpn_tunnel.rst:7 4126d3efd516416094ad8644afbddfb3
+msgid ""
+"This guide explains how to configure an OpenVPN client on NethSecurity using"
+" a configuration file (``myvpn.ovpn``) provided by a VPN service provider. "
+"The configuration ensures the VPN starts automatically when the firewall "
+"boots."
+msgstr ""
+"Questa guida spiega come configurare un client OpenVPN su NethSecurity "
+"utilizzando un file di configurazione (``myvpn.ovpn``) fornito da un "
+"provider di servizi VPN. La configurazione garantisce che la VPN si avvii "
+"automaticamente all'avvio del firewall."
+
+#: ../../custom_openvpn_tunnel.rst:11 2503f7d40feb4e709b9a82c12635897e
+msgid "Prerequisites"
+msgstr "Prerequisiti"
+
+#: ../../custom_openvpn_tunnel.rst:13 73f3c255a64a48829f4209c3ce1ea741
+msgid ""
+"A valid OpenVPN configuration file (`myvpn.ovpn`) from your VPN provider."
+msgstr ""
+"Un file di configurazione OpenVPN valido (`myvpn.ovpn`) fornito dal proprio "
+"provider VPN."
+
+#: ../../custom_openvpn_tunnel.rst:14 5976b39d1be34d8c952909012412837c
+msgid "Access to the NethSecurity terminal via SSH."
+msgstr "Accesso al terminale NethSecurity tramite SSH."
+
+#: ../../custom_openvpn_tunnel.rst:15 62fdb5a0547f4950ae9db63e64395c0a
+msgid ""
+"Basic familiarity with the UCI (Unified Configuration Interface) system in "
+"OpenWrt/NethSecurity."
+msgstr ""
+"Familiarità di base con il sistema UCI (Unified Configuration Interface) in "
+"OpenWrt/NethSecurity."
+
+#: ../../custom_openvpn_tunnel.rst:18 e576c04a29474ff7ae0ab75bc2af009a
+msgid "Additional notes on CLI configuration"
+msgstr "Note aggiuntive sulla configurazione della CLI"
+
+#: ../../custom_openvpn_tunnel.rst:20 0740c7300c0a418f8cb584205be4cb38
+msgid ""
+"This procedure does not include any validation of the entered data. "
+"Therefore, it is intended to be performed by advanced users familiar with "
+"the NethSecurity environment and OpenVPN configurations."
+msgstr ""
+"Questa procedura non include alcuna validazione dei dati inseriti. Pertanto,"
+" è destinata a essere eseguita da utenti avanzati che hanno familiarità con "
+"l'ambiente NethSecurity e le configurazioni di OpenVPN."
+
+#: ../../custom_openvpn_tunnel.rst:21 539706ad2ee348d8bf4984735138bd30
+msgid ""
+"The VPN created using this method will not appear in the NethSecurity web "
+"interface and can only be managed through the command line interface (CLI)."
+msgstr ""
+"La VPN creata utilizzando questo metodo non apparirà nell'interfaccia web di"
+" NethSecurity e potrà essere gestita solo tramite l'interfaccia a riga di "
+"comando (CLI)."
+
+#: ../../custom_openvpn_tunnel.rst:22 8a831357e20e4f76b8761ef45ea30c1f
+msgid ""
+"It is critical to avoid using the same name for a VPN created via the CLI "
+"and one configured through the NethSecurity web interface. Since there are "
+"no safeguards in place to prevent naming conflicts, such overlap may cause "
+"configuration issues."
+msgstr ""
+"È fondamentale evitare di utilizzare lo stesso nome per una VPN creata "
+"tramite CLI e una configurata attraverso l'interfaccia web di NethSecurity. "
+"Poiché non sono presenti meccanismi di protezione per prevenire conflitti di"
+" denominazione, tale sovrapposizione potrebbe causare problemi di "
+"configurazione."
+
+#: ../../custom_openvpn_tunnel.rst:24 93fa1092287349e2851aa183b9961c25
+msgid ""
+"For these reasons, caution and attention to detail are strongly advised when"
+" performing this procedure."
+msgstr ""
+"Per questi motivi, si raccomanda vivamente cautela e attenzione ai dettagli "
+"durante l'esecuzione di questa procedura."
+
+#: ../../custom_openvpn_tunnel.rst:27 25fa088f4dde47689627e0b91201b007
+msgid "Configure the VPN"
+msgstr "Configurare la VPN"
+
+#: ../../custom_openvpn_tunnel.rst:30 d7f2dfecc9d642ebb7e6f860dcae3131
+msgid "1. Place the configuration file in the correct directory"
+msgstr "1. Posizionare il file di configurazione nella directory corretta"
+
+#: ../../custom_openvpn_tunnel.rst:32 29307cd2fda44401aa9d9d67834f2b70
+msgid ""
+"Copy the ``myvpn.ovpn`` file to the directory ``/etc/openvpn/``. Use SCP or "
+"a similar tool to transfer the file: ::"
+msgstr ""
+"Copiare il file ``myvpn.ovpn`` nella directory ``/etc/openvpn/``. Utilizzare"
+" SCP o uno strumento simile per trasferire il file: ::"
+
+#: ../../custom_openvpn_tunnel.rst:37 324f07b760d04ffb9a5380fa7f369ebe
+msgid "Make sure to set the correct file permissions: ::"
+msgstr "Assicurarsi di impostare i permessi corretti per il file: ::"
+
+#: ../../custom_openvpn_tunnel.rst:43 6c56215613664c0dbf8174628c9a30f0
+msgid "2. Create a new OpenVPN client configuration in UCI"
+msgstr "2. Creare una nuova configurazione client OpenVPN in UCI"
+
+#: ../../custom_openvpn_tunnel.rst:45 d246df24cf7b48d88862f6d015f2c62a
+msgid ""
+"Add a new OpenVPN section in the UCI database called ``myvpn``, link the "
+"configuration file to this section and enable the VPN ::"
+msgstr ""
+"Aggiungere una nuova sezione OpenVPN nel database UCI chiamata ``myvpn``, "
+"collegare il file di configurazione a questa sezione e abilitare la VPN ::"
+
+#: ../../custom_openvpn_tunnel.rst:52 d2b0f5621d97480caf1334299642a729
+msgid "Commit the changes to save the configuration: ::"
+msgstr "Eseguire il commit delle modifiche per salvare la configurazione: ::"
+
+#: ../../custom_openvpn_tunnel.rst:57 ec10e05981e642f192757e9e1b143c53
+msgid "3. Start the VPN client immediately"
+msgstr "3. Avviare immediatamente il client VPN"
+
+#: ../../custom_openvpn_tunnel.rst:59 d09b37e5c4fd467aac8d5c20d094b4ac
+msgid "To start the VPN client without rebooting the system, run: ::"
+msgstr "Per avviare il client VPN senza riavviare il sistema, eseguire: ::"
+
+#: ../../custom_openvpn_tunnel.rst:63 7ed671d86786448b9ba56ab11944c291
+msgid "This will restart all configured OpenVPN tunnels."
+msgstr "Questo riavvierà tutti i tunnel OpenVPN configurati."
+
+#: ../../custom_openvpn_tunnel.rst:66 9b2797bc00ca4206973f085aa1e76841
+msgid "4. Verify the VPN is running"
+msgstr "4. Verificare che la VPN sia in esecuzione"
+
+#: ../../custom_openvpn_tunnel.rst:68 4734c08e5f29413e9d9b65a091623024
+msgid ""
+"To ensure OpenVPN is using the correct configuration file and is running as "
+"expected, check the active processes: ::"
+msgstr ""
+"Per assicurarsi che OpenVPN stia utilizzando il file di configurazione "
+"corretto e stia funzionando come previsto, verificare i processi attivi: ::"
+
+#: ../../custom_openvpn_tunnel.rst:72 9d6f66afa0174e8fbd4f138073e22587
+msgid ""
+"The output should resemble the following (example configuration name "
+"``myvpn``): ::"
+msgstr ""
+"L'output dovrebbe essere simile al seguente (nome di configurazione di "
+"esempio ``myvpn``): ::"
+
+#: ../../custom_openvpn_tunnel.rst:76 d5c84559b01846d2be14874bfdfa97cb
+msgid ""
+"Confirm the ``--config`` parameter points to the correct configuration file "
+"(e.g., ``myvpn.ovpn``). Ensure all references (e.g., ``myvpn``) match your "
+"intended VPN configuration."
+msgstr ""
+"Confermare che il parametro ``--config`` punti al file di configurazione "
+"corretto (ad esempio, ``myvpn.ovpn``). Assicurarsi che tutti i riferimenti "
+"(ad esempio, ``myvpn``) corrispondano alla configurazione VPN desiderata."
+
+#: ../../custom_openvpn_tunnel.rst:79 3ccba965aef24a6f9b4d3ba1011b6968
+msgid "Check the OpenVPN logs to confirm the connection: ::"
+msgstr "Controllare i log di OpenVPN per confermare la connessione: ::"
+
+#: ../../custom_openvpn_tunnel.rst:83 a7b7ca86e24046b7a69bd6b3a0923777
+msgid "You should see log entries indicating a successful connection."
+msgstr ""
+"Dovrebbero comparire voci di log che indicano una connessione riuscita."
+
+#: ../../custom_openvpn_tunnel.rst:88 739da875510b4943ab3c73ba879f5d31
+msgid ""
+"**File name consistency:** The configuration name ``myvpn`` must match the "
+"OpenVPN section name in UCI and the configuration file's location. If you "
+"change the name, ensure all references to ``myvpn`` in commands and "
+"filenames are updated."
+msgstr ""
+"**Coerenza del nome del file:** Il nome della configurazione ``myvpn`` deve "
+"corrispondere al nome della sezione OpenVPN in UCI e alla posizione del file"
+" di configurazione. Se si modifica il nome, assicurarsi che tutti i "
+"riferimenti a ``myvpn`` nei comandi e nei nomi dei file siano aggiornati."
+
+#: ../../custom_openvpn_tunnel.rst:89 d29924ce190d4014891076ff5e4f2b84
+msgid ""
+"**Automatic startup:** By setting ``enabled='1'``, the VPN client will "
+"automatically start whenever the firewall boots."
+msgstr ""
+"**Avvio automatico:** Impostando ``enabled='1'``, il client VPN si avvierà "
+"automaticamente ogni volta che il firewall viene avviato."
+
+#: ../../custom_openvpn_tunnel.rst:93 76e0b25e952b4a42990094bbc80250b3
+msgid "Configure authentication credentials (optional)"
+msgstr "Configurare le credenziali di autenticazione (opzionale)"
+
+#: ../../custom_openvpn_tunnel.rst:95 018aefd6cebf42218cc7375d1399b4d1
+msgid ""
+"If the VPN requires a username and password, create an authentication file."
+msgstr ""
+"Se la VPN richiede un nome utente e una password, creare un file di "
+"autenticazione."
+
+#: ../../custom_openvpn_tunnel.rst:98 fa8349e9803f4b80bc414fd584f49f81
+msgid ""
+"Create a file named ``/etc/openvpn/myvpn.auth`` (replace ``myvpn`` with the "
+"VPN name if different): ::"
+msgstr ""
+"Creare un file denominato ``/etc/openvpn/myvpn.auth`` (sostituire ``myvpn`` "
+"con il nome della VPN se diverso): ::"
+
+#: ../../custom_openvpn_tunnel.rst:102 bcfb7f152da6479e8a80bc212a9be97d
+msgid ""
+"Add the following content, replacing ``frank`` and ``frank_password`` with "
+"your username and password: ::"
+msgstr ""
+"Aggiungere il seguente contenuto, sostituendo ``frank`` e ``frank_password``"
+" con il proprio nome utente e la propria password: ::"
+
+#: ../../custom_openvpn_tunnel.rst:107 d57455139fdb4cb1b6694982e82e8f06
+msgid "Save and set the correct permissions: ::"
+msgstr "Salvare e impostare i permessi corretti: ::"
+
+#: ../../custom_openvpn_tunnel.rst:112 f4c3b633efde46cab956aa018567cff9
+msgid ""
+"Update the OpenVPN configuration file (``myvpn.ovpn``) to reference the "
+"authentication file. ::"
+msgstr ""
+"Aggiornare il file di configurazione OpenVPN (``myvpn.ovpn``) per fare "
+"riferimento al file di autenticazione. ::"
+
+#: ../../custom_openvpn_tunnel.rst:119 67d420f708cb4624b39bd153086878ec
+msgid ""
+"Authentication file: when using an authentication file, ensure it has strict"
+" permissions (`600`) to protect sensitive information."
+msgstr ""
+"File di autenticazione: quando si utilizza un file di autenticazione, "
+"assicurarsi che abbia permessi restrittivi (``600``) per proteggere le "
+"informazioni sensibili."
+
+#: ../../custom_openvpn_tunnel.rst:123 5d7e87b38988423aa99d920729457331
+msgid "Configure the firewall to allow traffic for the VPN"
+msgstr "Configurare il firewall per consentire il traffico per la VPN"
+
+#: ../../custom_openvpn_tunnel.rst:125 7cc4b0d427604b9788d830ae5256ae30
+msgid ""
+"To enable traffic through the VPN, it is necessary to configure the firewall"
+" on NethSecurity. The best practice is to assign a fixed device name to the "
+"VPN, create a dedicated zone for the custom VPN, and associate the VPN "
+"device with that zone."
+msgstr ""
+"Per abilitare il traffico attraverso la VPN, è necessario configurare il "
+"firewall su NethSecurity. La pratica consigliata è assegnare un nome "
+"dispositivo fisso alla VPN, creare una zona dedicata per la VPN "
+"personalizzata e associare il dispositivo VPN a quella zona."
+
+#: ../../custom_openvpn_tunnel.rst:130 4dedef2330b0463f9be3f38b39c0f180
+msgid "1. Fix the VPN device name"
+msgstr "1. Correggere il nome del dispositivo VPN"
+
+#: ../../custom_openvpn_tunnel.rst:132 04b088d0f5214461ae029c84d5356258
+msgid ""
+"To ensure the VPN device name remains consistent and avoids automatic "
+"assignment, it is crucial to fix the name in the OpenVPN configuration file."
+" Edit the file (``/etc/openvpn/myvpn.ovpn``) to change ``dev tun`` to ``dev "
+"tunmyvpn`` and add the following line (this example is made with a *routed* "
+"vpn): ::"
+msgstr ""
+"Per garantire che il nome del dispositivo VPN rimanga coerente ed evitare "
+"l'assegnazione automatica, è fondamentale fissare il nome nel file di "
+"configurazione di OpenVPN. Modificare il file (``/etc/openvpn/myvpn.ovpn``) "
+"per cambiare ``dev tun`` in ``dev tunmyvpn`` e aggiungere la seguente riga "
+"(questo esempio è realizzato con una VPN *routed*): ::"
+
+#: ../../custom_openvpn_tunnel.rst:137 14cd6dadbac943d3a6e2654f7e438a0d
+msgid ""
+"Please remember that the interface name (referred to as ``tunmyvpn`` in the "
+"example) must not exceed 13 characters."
+msgstr ""
+"Si ricorda che il nome dell'interfaccia (indicato come ``tunmyvpn`` "
+"nell'esempio) non deve superare i 13 caratteri."
+
+#: ../../custom_openvpn_tunnel.rst:141 f58acfc237a645949fd139547c198355
+msgid "2. Create a firewall zone"
+msgstr "2. Creare una zona firewall"
+
+#: ../../custom_openvpn_tunnel.rst:143 52c49b547e084840903dc9e089631c46
+msgid ""
+"From the NethSecurity UI, create a new firewall zone named ``myzone``. "
+"Configure this zone to allow access to the required resources."
+msgstr ""
+"Dall'interfaccia utente di NethSecurity, creare una nuova zona firewall "
+"denominata ``myzone``. Configurare questa zona per consentire l'accesso alle"
+" risorse necessarie."
+
+#: ../../custom_openvpn_tunnel.rst:147 a91a55d6d49b428f904ef85f19fcd3fa
+msgid "3. Associate the VPN device with the zone"
+msgstr "3. Associare il dispositivo VPN alla zona"
+
+#: ../../custom_openvpn_tunnel.rst:149 4e40ca2903274a91a0edceb61946a8fc
+msgid ""
+"To associate the VPN device with the ``myzone`` firewall zone, perform the "
+"following steps in the command line:"
+msgstr ""
+"Per associare il dispositivo VPN alla zona firewall ``myzone``, eseguire i "
+"seguenti passaggi dalla riga di comando:"
+
+#: ../../custom_openvpn_tunnel.rst:151 7e40b742ab264cada94e53972cb7dfef
+msgid "Add the VPN device (``tunmyvpn``) to the firewall zone: ::"
+msgstr ""
+"Aggiungere il dispositivo VPN (``tunmyvpn``) alla zona del firewall: ::"
+
+#: ../../custom_openvpn_tunnel.rst:156 3d10665dd4fc4168978c3df96dae7de0
+msgid "Restart the firewall to apply the changes: ::"
+msgstr "Riavviare il firewall per applicare le modifiche: ::"
+
+#: ../../custom_openvpn_tunnel.rst:161 726dc00c1fde4a5195f7a408a196e6c2
+msgid ""
+"These changes ensure the VPN device will always be named ``tunmyvpn``, "
+"preventing potential issues with the firewall zone association."
+msgstr ""
+"Queste modifiche garantiscono che il dispositivo VPN venga sempre denominato"
+" ``tunmyvpn``, prevenendo potenziali problemi con l'associazione alla zona "
+"del firewall."
+
+#: ../../custom_openvpn_tunnel.rst:164 489b14ae781a47319b4538360e4fb829
+msgid "Disable the tunnel"
+msgstr "Disabilitare il tunnel"
+
+#: ../../custom_openvpn_tunnel.rst:166 c7dcf806e8a34777884a1400498208f6
+msgid ""
+"If you want to prevent the VPN from starting automatically when the firewall"
+" boots, you can disable it using the following commands."
+msgstr ""
+"Se si desidera impedire l'avvio automatico della VPN all'avvio del firewall,"
+" è possibile disabilitarla utilizzando i seguenti comandi."
+
+#: ../../custom_openvpn_tunnel.rst:169 06849c014860467797aa85b9b3374866
+msgid "Disable the VPN in UCI: ::"
+msgstr "Disabilitare la VPN in UCI: ::"
+
+#: ../../custom_openvpn_tunnel.rst:174 7c828001a47e4b0faedce2d1b96bc63e
+msgid ""
+"2. Restart all active VPN tunnels. This command will stop all tunnels and "
+"fully restart only those with the enabled value set to 1: ::"
+msgstr ""
+"2. Riavviare tutti i tunnel VPN attivi. Questo comando interromperà tutti i "
+"tunnel e riavvierà completamente solo quelli con il valore enabled impostato"
+" a 1: ::"
