@@ -1,0 +1,828 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../monitoring.rst:5 69539071e770494094400bd8671cfc6c
+msgid "Monitoring"
+msgstr "Monitoraggio"
+
+#: ../../monitoring.rst:7 a618a14bfcd34a12808acf8c207a73ac
+msgid ""
+"NethSecurity provides comprehensive monitoring capabilities to help "
+"administrators track the performance and health of the firewall. Monitoring "
+"is essential for ensuring the firewall's optimal operation and identifying "
+"potential issues that may impact its functionality."
+msgstr ""
+"NethSecurity offre funzionalità di monitoraggio complete per aiutare gli "
+"amministratori a tenere traccia delle prestazioni e dello stato di salute "
+"del firewall. Il monitoraggio è essenziale per garantire il funzionamento "
+"ottimale del firewall e individuare eventuali problemi che potrebbero "
+"comprometterne la funzionalità."
+
+#: ../../monitoring.rst:10 d1f6e9cf7b304ef7b1c3bfc5be95749e
+msgid "NethSecurity offers two types of monitoring:"
+msgstr "NethSecurity offre due tipi di monitoraggio:"
+
+#: ../../monitoring.rst:14 90b47a7f17c746f88687320a2f6ea0fc
+msgid ""
+"**Historical monitoring**: for a more comprehensive view over time, "
+"historical monitoring stores data on a remote controller. This allows "
+"metrics to be preserved across reboots and enables centralized monitoring. "
+"Please note that this feature requires a valid subscription both on the "
+"firewall and the controller."
+msgstr ""
+"**Monitoraggio storico**: per una visione più completa nel tempo, il "
+"monitoraggio storico memorizza i dati su un controller remoto. Questo "
+"consente di preservare le metriche anche dopo i riavvii e permette un "
+"monitoraggio centralizzato. Si noti che questa funzionalità richiede un "
+"abbonamento valido sia sul firewall che sul controller."
+
+#: ../../monitoring.rst:20 75b6fd317d4b43c7a1f513378db59348
+msgid "Real-time monitoring"
+msgstr "Monitoraggio in tempo reale"
+
+#: ../../monitoring.rst:22 41d300222f3242a3aab0d75097dde5ce
+msgid ""
+"Real-time monitoring is an essential feature in modern firewall systems, "
+"allowing administrators to have instant visibility into network traffic, VPN"
+" connections, and security threats. In NethSecurity, real-time monitoring "
+"provides live data, ensuring that issues such as network congestion, "
+"unauthorized access, and security breaches are identified and mitigated "
+"promptly. Real-time monitoring stores data in RAM and resets at every "
+"machine reboot."
+msgstr ""
+"Il monitoraggio in tempo reale è una funzionalità essenziale nei moderni "
+"sistemi firewall, che consente agli amministratori di avere una visibilità "
+"immediata sul traffico di rete, sulle connessioni VPN e sulle minacce alla "
+"sicurezza. In NethSecurity, il monitoraggio in tempo reale fornisce dati "
+"aggiornati in tempo reale, garantendo che problematiche come congestione "
+"della rete, accessi non autorizzati e violazioni della sicurezza vengano "
+"individuate e mitigate tempestivamente. Il monitoraggio in tempo reale "
+"memorizza i dati in RAM e si azzera a ogni riavvio della macchina."
+
+#: ../../monitoring.rst:27 7538b2237b314bbf9fd515ba2ef4977a
+msgid ""
+"The ``Real-time monitor`` page provides a comprehensive overview of the "
+"firewall's performance and status, with detailed insights into network "
+"traffic. It's divided into four main sections: ``Traffic``, ``WAN uplinks``,"
+" ``VPN``,  ``Security`` and ``Real-time Traffic``."
+msgstr ""
+"La pagina ``Monitor in tempo reale`` offre una panoramica completa delle "
+"prestazioni e dello stato del firewall, con approfondimenti dettagliati sul "
+"traffico di rete. È suddivisa in quattro sezioni principali: ``Traffico``, "
+"``Connettività WAN``, ``VPN``, ``Sicurezza`` e ``Traffico in tempo realse``."
+
+#: ../../monitoring.rst:31 d1307567111c4fc9922f878ac1778cc8
+msgid "Traffic"
+msgstr "Traffico"
+
+#: ../../monitoring.rst:33 e0378fb8022c452c8f915a2f75e2d38e
+msgid ""
+"The below charts reads data from `dpireport "
+"<https://dev.nethsecurity.org/packages/ns-report/>`_ daemon:"
+msgstr ""
+"Il grafico sottostante legge i dati dal demone `dpireport "
+"<https://dev.nethsecurity.org/packages/ns-report/>`_:"
+
+#: ../../monitoring.rst:35 f14e4d1d0e8342079ad3731c9823e7df
+msgid ""
+"``Daily total traffic``: this counter shows the total volume of data "
+"transferred through the firewall for the current day."
+msgstr ""
+"``Traffico totale giornaliero``: questo contatore mostra il volume totale di"
+" dati trasferiti attraverso il firewall per la giornata corrente."
+
+#: ../../monitoring.rst:38 a7a20a64a689467a9bf1c6c45a6df03f
+msgid ""
+"``Recent traffic``: the daily traffic histogram visually represents network "
+"traffic over time, updated every 60 minutes. It helps identify busy periods "
+"and analyze traffic fluctuations throughout the day. Sudden spikes or dips "
+"could indicate potential performance issues or security threats."
+msgstr ""
+"``Traffico recente``: l'istogramma del traffico giornaliero rappresenta "
+"visivamente il traffico di rete nel tempo, aggiornato ogni 60 minuti. Aiuta "
+"a identificare i periodi di maggiore attività e ad analizzare le "
+"fluttuazioni del traffico durante la giornata. Picchi improvvisi o cali "
+"potrebbero indicare potenziali problemi di prestazioni o minacce alla "
+"sicurezza."
+
+#: ../../monitoring.rst:43 b2ed8fb4d7954873aced484e62a1790a
+msgid ""
+"``Local Hosts``: this chart focuses on internal (local) hosts and their "
+"traffic. It helps identify the most active devices on the network, aiding in"
+" bandwidth management and detection of potential internal security risks, "
+"such as compromised devices generating unexpected traffic."
+msgstr ""
+"``Host locali``: questo grafico si concentra sugli host interni (locali) e "
+"sul loro traffico. Aiuta a identificare i dispositivi più attivi sulla rete,"
+" facilitando la gestione della larghezza di banda e il rilevamento di "
+"potenziali rischi di sicurezza interni, come dispositivi compromessi che "
+"generano traffico inatteso."
+
+#: ../../monitoring.rst:47 d4dc875cd70b4185bd73eb58de192370
+msgid ""
+"``Applications``: this chart displays traffic by application, allowing you "
+"to monitor which software or services are generating the most traffic. It is"
+" useful for understanding application behavior, detecting bandwidth hogs, "
+"and monitoring compliance with usage policies."
+msgstr ""
+"``Applicazioni``: questo grafico mostra il traffico suddiviso per "
+"applicazione, consentendo di monitorare quali software o servizi stanno "
+"generando la maggior parte del traffico. È utile per comprendere il "
+"comportamento delle applicazioni, rilevare i maggiori consumatori di banda e"
+" monitorare la conformità alle policy di utilizzo."
+
+#: ../../monitoring.rst:51 f765a230a17d4ecfbd71e7c624cce71a
+msgid ""
+"``Remote Hosts``: this chart lists the external (remote) hosts that have "
+"exchanged the most data with the network. By analyzing this data, "
+"administrators can track interactions with specific external entities, "
+"helping to detect malicious external sources or unusual outbound traffic "
+"patterns."
+msgstr ""
+"``Host remoti``: questo grafico elenca gli host esterni (remoti) che hanno "
+"scambiato la maggior quantità di dati con la rete. Analizzando questi dati, "
+"gli amministratori possono monitorare le interazioni con specifiche entità "
+"esterne, aiutando a rilevare fonti esterne malevole o modelli insoliti di "
+"traffico in uscita."
+
+#: ../../monitoring.rst:56 91a4f6f3840b48f8b4bab654f191d134
+msgid ""
+"``Protocol``: this chart shows the breakdown of daily traffic by protocol "
+"(e.g., HTTP, HTTPS, FTP). It is useful for identifying which protocols are "
+"consuming the most bandwidth and ensuring that network resources are being "
+"used appropriately. High usage of unfamiliar protocols may indicate "
+"unauthorized activities."
+msgstr ""
+"``Protocollo``: questo grafico mostra la ripartizione del traffico "
+"giornaliero per protocollo (ad esempio, HTTP, HTTPS, FTP). È utile per "
+"identificare quali protocolli stanno consumando la maggior parte della banda"
+" e per assicurarsi che le risorse di rete vengano utilizzate in modo "
+"appropriato. Un utilizzo elevato di protocolli non familiari può indicare "
+"attività non autorizzate."
+
+#: ../../monitoring.rst:61 f387aed31d6542d7820c4c6aceb273e2
+msgid ""
+"It's possible to narrow the search for a specific host, application, or "
+"protocol by clicking on the respective label in the table below the chart."
+msgstr ""
+"È possibile restringere la ricerca a un host, un'applicazione o un "
+"protocollo specifico facendo clic sull'etichetta corrispondente nella "
+"tabella sotto il grafico."
+
+#: ../../monitoring.rst:64 9a7e8ffe93f44af39627f4e6b07747c8
+msgid "Connectivity"
+msgstr "Connettività"
+
+#: ../../monitoring.rst:66 dc1a6f3615e1447a94484bb2691b8749
+msgid ""
+"The connectivity section provides an overview of WAN connections, including "
+"status, bandwidth allocation, and traffic data."
+msgstr ""
+"La sezione connettività fornisce una panoramica delle connessioni WAN, "
+"inclusi stato, allocazione della banda e dati sul traffico."
+
+#: ../../monitoring.rst:68 dc2e5ec4b3bb44229f613e22c3f01081
+msgid "This page shows the following information:"
+msgstr "Questa pagina mostra le seguenti informazioni:"
+
+#: ../../monitoring.rst:70 1a8963eeb0bc4e3aa55dea70761f4c42
+msgid ""
+"``WANs``: list of the WAN connections with their current status (UP/DOWN) "
+"and public IP address. The status information helps ensure that critical "
+"network connections are online, and any downtime are immediately addressed. "
+"Data are sourced from the firewall mwan3 status."
+msgstr ""
+"``WAN``: elenco delle connessioni WAN con il loro stato attuale (UP/DOWN) e "
+"l'indirizzo IP pubblico. Le informazioni sullo stato aiutano a garantire che"
+" le connessioni di rete critiche siano online e che eventuali interruzioni "
+"vengano affrontate immediatamente. I dati provengono dallo stato mwan3 del "
+"firewall."
+
+#: ../../monitoring.rst:74 7af5ad889a9245e0bf10c246042c916d
+msgid ""
+"``WAN events``: this section lists recent WAN connection and disconnection "
+"events from the last 24 hours, providing insight into network stability and "
+"outages. It helps administrators understand the frequency and duration of "
+"network disruptions, aiding in troubleshooting and capacity planning. Data "
+"are retrieved from the logs for the past 24 hours. If the logs do not cover "
+"the full 24-hour period, the data may be incomplete. The results are cached "
+"for 5 minutes."
+msgstr ""
+"``Eventi WAN``: questa sezione elenca i recenti eventi di connessione e "
+"disconnessione WAN delle ultime 24 ore, fornendo informazioni sulla "
+"stabilità della rete e sulle interruzioni. Aiuta gli amministratori a "
+"comprendere la frequenza e la durata delle interruzioni di rete, facilitando"
+" la risoluzione dei problemi e la pianificazione della capacità. I dati "
+"vengono recuperati dai log delle ultime 24 ore. Se i log non coprono "
+"l'intero periodo di 24 ore, i dati potrebbero essere incompleti. I risultati"
+" vengono memorizzati nella cache per 5 minuti."
+
+#: ../../monitoring.rst:81 b6a20b3c80764cf9b0337087740037e8
+msgid ""
+"``WAN interface traffic``: this histogram shows the traffic data for each "
+"WAN connection over the past 60 minutes, sourced from Netdata. It helps "
+"track real-time performance and diagnose issues such as uneven load "
+"balancing or WAN link saturation."
+msgstr ""
+"``Traffico interfaccia WAN``: questo istogramma mostra i dati di traffico "
+"per ciascuna connessione WAN negli ultimi 60 minuti, provenienti da Netdata."
+" Aiuta a monitorare le prestazioni in tempo reale e a diagnosticare problemi"
+" come il bilanciamento del carico non uniforme o la saturazione del "
+"collegamento WAN."
+
+#: ../../monitoring.rst:85 74d88de91f0f4de6b635175e02439367
+msgid ""
+"``Latency to <address>``: this section provides real-time latency data for a"
+" specific IP address configured inside the :ref:`ping_latency-section` "
+"module. The cart helps to monitor network performance and identify potential"
+" connectivity issues."
+msgstr ""
+"``Latenza verso <indirizzo>``: questa sezione fornisce dati in tempo reale "
+"sulla latenza per un indirizzo IP specifico configurato all'interno del "
+"modulo :ref:`ping_latency-section`. Il grafico aiuta a monitorare le "
+"prestazioni della rete e a identificare potenziali problemi di connettività."
+
+#: ../../monitoring.rst:89 91164337ad9349ac8154adfd6b091c8a
+msgid ""
+"``Packet delivery rate to <address>``: this section provides real-time "
+"packet delivery rate data for a specific IP address configured inside the "
+":ref:`ping_latency-section` module. If the rate is below 100% it could "
+"indicate network congestion or connectivity issues."
+msgstr ""
+"``Tasso di consegna dei pacchetti verso <indirizzo>``: questa sezione fornisce"
+" dati in tempo reale sul tasso di consegna dei pacchetti per un indirizzo IP"
+" specifico configurato all'interno del modulo :ref:`ping_latency-section`. "
+"Se il tasso è inferiore al 100%, ciò potrebbe indicare congestione di rete o"
+" problemi di connettività."
+
+#: ../../monitoring.rst:94 b4d1c8e827c940d4b509bdeb8b7f417b
+msgid "VPN"
+msgstr "VPN"
+
+#: ../../monitoring.rst:96 be04b4c83bf048c8a219cf14822b168e
+msgid ""
+"The VPN section provides detailed insights into OpenVPN Road Warrior "
+"servers, OpenVPN tunnels and IPsec tunnels."
+msgstr ""
+"La sezione VPN fornisce approfondimenti dettagliati sui server OpenVPN Road "
+"Warrior, sui tunnel OpenVPN e sui tunnel IPsec."
+
+#: ../../monitoring.rst:98 7e2ec072dbf7426c836921367b4a98f2
+msgid ""
+"For each OpenVPN Road Warrior server, the following information is "
+"displayed:"
+msgstr ""
+"Per ogni server OpenVPN Road Warrior, vengono visualizzate le seguenti "
+"informazioni:"
+
+#: ../../monitoring.rst:100 b2447717d03044b3b61b1607abb87fbd
+msgid ""
+"``Status``: this section shows the current status of the OpenVPN server. It "
+"helps administrators monitor the availability of the VPN service and detect "
+"any issues that may impact user connectivity."
+msgstr ""
+"``Stato``: questa sezione mostra lo stato attuale del server OpenVPN. Aiuta "
+"gli amministratori a monitorare la disponibilità del servizio VPN e a "
+"rilevare eventuali problemi che potrebbero influire sulla connettività degli"
+" utenti."
+
+#: ../../monitoring.rst:104 45c66d60804e48299b8358d87754340f
+msgid ""
+"``Connected clients``: this displays the total number of users currently "
+"registered on the VPN server. Monitoring registered users is crucial for "
+"ensuring capacity planning and VPN performance, particularly when the system"
+" approaches maximum usage."
+msgstr ""
+"``Client connessi``: questo visualizza il numero totale di utenti "
+"attualmente registrati sul server VPN. Monitorare gli utenti registrati è "
+"fondamentale per garantire una corretta pianificazione della capacità e le "
+"prestazioni della VPN, soprattutto quando il sistema si avvicina al limite "
+"massimo di utilizzo."
+
+#: ../../monitoring.rst:108 3462880d3091460eb9a692dd9eceefb4
+msgid ""
+"``Total traffic by hour``: this graph shows the total data transferred by "
+"all VPN clients during each hour, providing an overview of VPN bandwidth "
+"usage. It helps in tracking how much network traffic the VPN generates and "
+"identifying hours with heavy usage, which could lead to performance issues."
+msgstr ""
+"``Traffico totale per ore``: questo grafico mostra il totale dei dati "
+"trasferiti da tutti i client VPN durante ciascuna ora, fornendo una "
+"panoramica dell'utilizzo della banda VPN. Aiuta a monitorare la quantità di "
+"traffico di rete generato dalla VPN e a identificare le ore di maggiore "
+"utilizzo, che potrebbero causare problemi di prestazioni."
+
+#: ../../monitoring.rst:112 33d49611667f472a9f59e8eb7638ed64
+msgid ""
+"``Daily connections``: this section lists all currently connected VPN users "
+"and the time they connected. It is useful for tracking session duration and "
+"detecting potential misuse of the VPN, such as connections that last "
+"unusually long. Data are sourced from local SQLite connection database."
+msgstr ""
+"``Connessioni giornaliere``: questa sezione elenca tutti gli utenti VPN "
+"attualmente connessi e l'orario in cui si sono collegati. È utile per "
+"monitorare la durata delle sessioni e rilevare eventuali usi impropri della "
+"VPN, come connessioni che durano insolitamente a lungo. I dati provengono "
+"dal database locale delle connessioni SQLite."
+
+#: ../../monitoring.rst:117 e26133bab2cb454487d94ab11780a5c0
+msgid ""
+"``Connected clients by hour``: this chart displays the number of clients "
+"connected to the VPN over time. It allows administrators to monitor VPN "
+"activity throughout the day, helping to identify peak times and plan for "
+"increased capacity when necessary. Data are sourced from local SQLite "
+"connection database."
+msgstr ""
+"``Clienti collegati per ora``: questo grafico mostra il numero di client "
+"connessi alla VPN nel tempo. Consente agli amministratori di monitorare "
+"l'attività della VPN durante la giornata, aiutando a identificare i periodi "
+"di picco e a pianificare un aumento della capacità quando necessario. I dati"
+" provengono dal database locale delle connessioni SQLite."
+
+#: ../../monitoring.rst:122 5fc529672c174d76bfb01299a6fea4bd
+msgid ""
+"``Client traffic by hour``: this chart breaks down VPN traffic by individual"
+" clients over time. It helps detect users who may be consuming excessive "
+"bandwidth or engaging in unauthorized activities, aiding in the "
+"identification of potential insider threats. Data are sourced from local "
+"SQLite connection database."
+msgstr ""
+"``Traffico cliente per ora``: questo grafico suddivide il traffico VPN per "
+"singolo client nel tempo. Aiuta a rilevare utenti che potrebbero consumare "
+"una quantità eccessiva di banda o svolgere attività non autorizzate, "
+"facilitando l'identificazione di potenziali minacce interne. I dati "
+"provengono dal database locale delle connessioni SQLite."
+
+#: ../../monitoring.rst:127 c05a6f4447cc4cf58b1a2878d5de58b8
+msgid ""
+"The Site-to-Site VPN section provides insights into OpenVPN and IPsec "
+"tunnels:"
+msgstr ""
+"La sezione Site-to-Site VPN fornisce informazioni su tunnel OpenVPN e IPsec:"
+
+#: ../../monitoring.rst:129 31595c9b7e3f4a1aa984d978edfed1a8
+msgid ""
+"``Connected tunnels``: this counter shows the number of active site-to-site "
+"VPN tunnels."
+msgstr ""
+"``Tunnel connessi``: questo contatore mostra il numero di tunnel VPN site-"
+"to-site attivi."
+
+#: ../../monitoring.rst:132 166ebe22ac8542ceb7cd4df71453691d
+msgid ""
+"``Configured tunnels``: this counter shows the list of all configured site-"
+"to-site VPN tunnels, including their status and type."
+msgstr ""
+"``Tunnel configurati``: questo contatore mostra l'elenco di tutti i tunnel "
+"VPN site-to-site configurati, inclusi il loro stato e il tipo."
+
+#: ../../monitoring.rst:135 45896de9988744798e97b9c7415cda26
+msgid ""
+"``Tunnel traffic``: this histogram provides real-time traffic data for each "
+"site-to-site VPN tunnel over the last 60 minutes. It helps detect issues "
+"such as low throughput or connection instability."
+msgstr ""
+"``Traffico tunnel``: questo istogramma fornisce dati sul traffico in tempo "
+"reale per ciascun tunnel VPN site-to-site negli ultimi 60 minuti. Aiuta a "
+"rilevare problemi come bassa velocità di trasferimento o instabilità della "
+"connessione."
+
+#: ../../monitoring.rst:140 793207996dee41ae89c4633200177014
+msgid "Security"
+msgstr "Sicurezza"
+
+#: ../../monitoring.rst:142 36ff110a2fbc42f9a9b3b1f4be05207c
+msgid ""
+"The security section provides insights into malware detection and attack "
+"monitoring, helping administrators identify and mitigate security threats. "
+"To enable this section, the :ref:`threat_shield_ip-section` module must be "
+"enabled. Data are sourced from logs covering the past 24 hours. If the logs "
+"do not span the entire 24-hour period, the data may be incomplete. Results "
+"are cached for 5 minutes to improve performance."
+msgstr ""
+"La sezione sicurezza fornisce informazioni sulla rilevazione di malware e "
+"sul monitoraggio degli attacchi, aiutando gli amministratori a identificare "
+"e mitigare le minacce alla sicurezza. Per abilitare questa sezione, è "
+"necessario abilitare il modulo :ref:`threat_shield_ip-section`. I dati "
+"provengono dai log relativi alle ultime 24 ore. Se i log non coprono "
+"l'intero periodo di 24 ore, i dati potrebbero essere incompleti. I risultati"
+" vengono memorizzati nella cache per 5 minuti per migliorare le prestazioni."
+
+#: ../../monitoring.rst:147 30181911b4a548dda86c445ca11fc7d6
+msgid ""
+"The ``Blocklist`` section provides an overview of blocked packets based on "
+"enabled blocklists. Available charts are:"
+msgstr ""
+"La sezione ``Blocklist`` fornisce una panoramica dei pacchetti bloccati in "
+"base alle blocklist abilitate. I grafici disponibili sono:"
+
+#: ../../monitoring.rst:149 a46aadd4e64246b0904ba73a0fdb499d
+msgid ""
+"``Blocked threats``: this counter shows the total number of packets blocked "
+"by the firewall due to malware detection for the current day. It provides a "
+"clear overview of the volume of threats intercepted, giving administrators a"
+" measure of the firewall’s effectiveness."
+msgstr ""
+"``Minacce bloccate``: questo contatore mostra il numero totale di pacchetti "
+"bloccati dal firewall a causa del rilevamento di malware per la giornata "
+"corrente. Fornisce una panoramica chiara del volume delle minacce "
+"intercettate, offrendo agli amministratori una misura dell’efficacia del "
+"firewall."
+
+#: ../../monitoring.rst:153 f8cbcae8ecde489fa68c199a415665cc
+msgid ""
+"``Blocked threats by hour``: this chart tracks the number of packets blocked"
+" each hour. It helps identify the times of day when the network is most "
+"vulnerable to attacks, aiding in preventive measures."
+msgstr ""
+"``Minacce bloccate per ora``: questo grafico tiene traccia del numero di "
+"pacchetti bloccati ogni ora. Aiuta a identificare i momenti della giornata "
+"in cui la rete è più vulnerabile agli attacchi, facilitando l'adozione di "
+"misure preventive."
+
+#: ../../monitoring.rst:157 7f3fcde885e444adb75e2adfca70f8fd
+msgid ""
+"``Threats by direction``: a chart that shows the distribution of blocked "
+"malware by firewall chain. Depending on what logging option is enabled, the "
+"firewall can log packets from the following chains:"
+msgstr ""
+"``Minacce per direzione``: un grafico che mostra la distribuzione del "
+"malware bloccato per catena del firewall. A seconda dell'opzione di "
+"registrazione abilitata, il firewall può registrare i pacchetti provenienti "
+"dalle seguenti catene:"
+
+#: ../../monitoring.rst:161 6405f2871ce14d3b9ff17d23a0a800a8
+msgid ""
+"*inp-wan*: packets coming from the WAN interface and destined to the "
+"firewall"
+msgstr ""
+"*inp-wan*: pacchetti provenienti dall'interfaccia WAN e destinati al "
+"firewall"
+
+#: ../../monitoring.rst:162 48571163c1ff449d93bfa31b40c2b57c
+msgid ""
+"*fwd-wan*: packets coming from the WAN interface and destined to the LAN "
+"network"
+msgstr ""
+"*fwd-wan*: pacchetti provenienti dall'interfaccia WAN e destinati alla rete "
+"LAN"
+
+#: ../../monitoring.rst:163 06a51e65d6784c18adabc3675b72de53
+msgid ""
+"*fwd-lan*: packets coming from the LAN network and destined to the WAN "
+"interface"
+msgstr ""
+"*fwd-lan*: pacchetti provenienti dalla rete LAN e destinati all'interfaccia "
+"WAN"
+
+#: ../../monitoring.rst:164 2d173e7983804557b83081bcc0457be4
+msgid "*pre-ct*: flooding packets that are in invalid state"
+msgstr ""
+"*pre-ct*: invio in flooding dei pacchetti che si trovano in stato non valido"
+
+#: ../../monitoring.rst:165 cd6866e0452d4a05b3875750200ffc4c
+msgid ""
+"*pre-syn*: flooding packets that are part of a TCP connection and are in the"
+" SYN state"
+msgstr ""
+"*pre-syn*: invio massiccio di pacchetti che fanno parte di una connessione "
+"TCP e si trovano nello stato SYN"
+
+#: ../../monitoring.rst:166 7306215c11164a119dd8c7aa230fea4d
+msgid "*pre-udp*: flooding packets that are part of a UDP connection"
+msgstr ""
+"*pre-udp*: invio massiccio di pacchetti che fanno parte di una connessione "
+"UDP"
+
+#: ../../monitoring.rst:168 57a5de4fcbaa476bbd67d5de7fe35990
+msgid ""
+"``Threats by category``: a chart that breaks down the blocked malware by "
+"category, helping administrators to find the most effective blocklists."
+msgstr ""
+"``Minacce per categoria``: un grafico che suddivide il malware bloccato per "
+"categoria, aiutando gli amministratori a individuare le blocklist più "
+"efficaci."
+
+#: ../../monitoring.rst:171 a5be7c31b7e845d4aa81291c924d72a8
+msgid ""
+"The ``Brute force attacks`` section provides insights into the number of "
+"blocked IP based on the number of failed login attempts. Data are sourced "
+"from logs covering the past 24 hours. If the logs do not span the entire "
+"24-hour period, the data may be incomplete. Results are cached for 5 minutes"
+" to improve performance. Available charts are:"
+msgstr ""
+"La sezione ``Attacchi brute force`` fornisce informazioni sul numero di IP "
+"bloccati in base al numero di tentativi di accesso non riusciti. I dati "
+"provengono dai log relativi alle ultime 24 ore. Se i log non coprono "
+"l'intero periodo di 24 ore, i dati potrebbero essere incompleti. I risultati"
+" vengono memorizzati nella cache per 5 minuti per migliorare le prestazioni."
+" I grafici disponibili sono:"
+
+#: ../../monitoring.rst:176 e63a9b14a3a64c1092f271d17729142e
+msgid ""
+"``Blocked IP addresses``: this counter shows the total number of IP "
+"addresses blocked due to malicious activity for the current day. It helps in"
+" tracking the volume of attempted intrusions."
+msgstr ""
+"``Indirizzi IP Bloccati``: questo contatore mostra il numero totale di "
+"indirizzi IP bloccati a causa di attività dannose per la giornata corrente. "
+"Aiuta a monitorare il volume dei tentativi di intrusione."
+
+#: ../../monitoring.rst:180 8ae7841eb8d94f458774a202ad9dc17b
+msgid ""
+"``Blocked IP addresses by hour``: this graph tracks the number of blocked IP"
+" addresses over time, helping to identify periods of increased attack "
+"activity."
+msgstr ""
+"``Indirizzi IP bloccati per ora``: questo grafico tiene traccia del numero "
+"di indirizzi IP bloccati nel tempo, aiutando a identificare i periodi di "
+"maggiore attività di attacco."
+
+#: ../../monitoring.rst:183 ee0cb817be604c868f24c2c0d3df7f79
+msgid ""
+"``Most frequently blocked IP address``: this char shows the IP addresses "
+"that have been blocked most frequently. It is useful for identifying "
+"persistent threats or attack sources that should be investigated or "
+"blacklisted."
+msgstr ""
+"``Indirizzo IP bloccato più frequentemente``: questo carattere mostra gli "
+"indirizzi IP che sono stati bloccati più frequentemente. È utile per "
+"identificare minacce persistenti o fonti di attacco che dovrebbero essere "
+"investigate o inserite in blacklist."
+
+#: ../../monitoring.rst:188 568daffdbf9644ff902b67084c301516
+msgid "Real-time traffic"
+msgstr "Traffico in tempo reale"
+
+#: ../../monitoring.rst:190 e550bd364b654c65a5d0e878a72dc257
+msgid ""
+"The Real-time traffic section shows data updated every 2 minutes. It's "
+"divided into three categories:"
+msgstr ""
+"La sezione Traffico in tempo reale mostra dati aggiornati ogni 2 minuti. È "
+"suddivisa in tre categorie:"
+
+#: ../../monitoring.rst:192 956fd1b211bc40e28584829736d682f9
+msgid ""
+"``Local Hosts``: lists all detected local hosts and their current traffic "
+"status, ordered by traffic volume."
+msgstr ""
+"``Host locali``: elenca tutti gli host locali rilevati e il loro stato "
+"attuale del traffico, ordinati per volume di traffico."
+
+#: ../../monitoring.rst:193 398504a9d83240b480e7c8d838516ad8
+msgid ""
+"``Applications``: lists all detected applications and their current traffic "
+"status, ordered by traffic volume."
+msgstr ""
+"``Applicazioni``: elenca tutte le applicazioni rilevate e il loro stato "
+"attuale del traffico, ordinate per volume di traffico."
+
+#: ../../monitoring.rst:194 88d6e0b7db4d4e55a2d345512725ab52
+msgid ""
+"``Protocols``: lists all detected protocols and their current traffic "
+"status, ordered by traffic volume."
+msgstr ""
+"``Protocolli``: elenca tutti i protocolli rilevati e il loro stato attuale "
+"del traffico, ordinati per volume di traffico."
+
+#: ../../monitoring.rst:197 c120674f098a4267b886b082ca737b3f
+msgid "Netdata"
+msgstr "Netdata"
+
+#: ../../monitoring.rst:199 c9ecd0353e4a4f8586a62de5f420a72d
+msgid ""
+"NethSecurity uses `Netdata <https://www.netdata.cloud/>`_ as Real-time "
+"monitoring tool. Netdata is an open-source, real-time, performance "
+"monitoring and troubleshooting tool for systems and applications. It "
+"provides comprehensive insights into the performance and health of systems "
+"and applications through visualizations and detailed metrics. Netdata is "
+"designed to be lightweight, fast, and easy to use."
+msgstr ""
+"NethSecurity utilizza `Netdata <https://www.netdata.cloud/>`_ come strumento"
+" di monitoraggio in tempo reale. Netdata è uno strumento open-source per il "
+"monitoraggio delle prestazioni e la risoluzione dei problemi di sistemi e "
+"applicazioni in tempo reale. Fornisce approfondimenti completi sulle "
+"prestazioni e sullo stato di salute di sistemi e applicazioni tramite "
+"visualizzazioni e metriche dettagliate. Netdata è progettato per essere "
+"leggero, veloce e facile da usare."
+
+#: ../../monitoring.rst:204 1fea06d192e647f2a342a5192cdcb5b2
+msgid ""
+"Netdata is enabled by default on NethSecurity and it is accessible from the "
+"LAN network. To access it, go to the ``Monitoring`` page and click "
+":guilabel:`Open report` button from the ``Real-time report`` tab."
+msgstr ""
+"Netdata è abilitato di default su NethSecurity ed è accessibile dalla rete "
+"LAN. Per accedervi, andare alla pagina ``Monitoraggio`` e fare clic sul "
+"pulsante :guilabel:`Apri report` dalla scheda ``Report in tempo reale``."
+
+#: ../../monitoring.rst:207 def4e84bcf184519853cce27c5d38606
+msgid ""
+"Netdata metrics are saved in RAM and will be reset at very machine reboot. "
+"If the firewall is connected to the :ref:`remote controller <controller-"
+"section>`, metrics will be stored to the controller itself and preserved "
+"across reboots."
+msgstr ""
+"Le metriche di Netdata vengono salvate in RAM e saranno azzerate a ogni "
+"riavvio della macchina. Se il firewall è connesso al :ref:`controller remoto"
+" <controller-section>`, le metriche verranno memorizzate direttamente sul "
+"controller e saranno preservate anche dopo i riavvii."
+
+#: ../../monitoring.rst:213 c8d52b676db84b74b713a18b2000383c
+msgid "Ping latency monitoring"
+msgstr "Monitoraggio latenza del ping"
+
+#: ../../monitoring.rst:215 43798c287ed04bb2ac3377d5fa4bf6d9
+msgid ""
+"Configure the monitoring tool to evaluate round-trip time and packet loss by"
+" transmitting ping messages to network hosts. This tool is employed to "
+"monitor the quality of network connectivity. You have the option to include "
+"one or more hosts for monitoring, and it's also feasible to add IP addresses"
+" within a VPN for assessing tunnel quality."
+msgstr ""
+"Configurare lo strumento di monitoraggio per valutare il tempo di andata e "
+"ritorno (round-trip time) e la perdita di pacchetti trasmettendo messaggi "
+"ping agli host di rete. Questo strumento viene utilizzato per monitorare la "
+"qualità della connettività di rete. È possibile includere uno o più host da "
+"monitorare ed è anche possibile aggiungere indirizzi IP all'interno di una "
+"VPN per valutare la qualità del tunnel."
+
+#: ../../monitoring.rst:219 08c94a894eb945c5b6588e0cabfbe272
+msgid ""
+"To monitor a new host or IP address, click on the :guilabel:`Add host` "
+"button and enter the required information, finally click on the "
+":guilabel:`Save` button to confirm the changes."
+msgstr ""
+"Per monitorare un nuovo host o indirizzo IP, fare clic sul pulsante "
+":guilabel:`Aggiungi host` e inserire le informazioni richieste, quindi fare "
+"clic sul pulsante :guilabel:`Salva` per confermare le modifiche."
+
+#: ../../monitoring.rst:222 9b9a5660f33d43dc8302f2667bd7bcd7
+msgid ""
+"Changes are applied immediately. To remove a host from the list, click on "
+"the delete icon."
+msgstr ""
+"Le modifiche vengono applicate immediatamente. Per rimuovere un host "
+"dall'elenco, fare clic sull'icona di eliminazione."
+
+#: ../../monitoring.rst:224 290fa38d712f48ea8450e100b8bc724c
+msgid ""
+"You can see a graph of the ping latency by accessing Netdata from the report"
+" page."
+msgstr ""
+"È possibile visualizzare un grafico della latenza del ping accedendo a "
+"Netdata dalla pagina del report."
+
+#: ../../monitoring.rst:229 efaa7371f89a449eae1cb28a8a87c632
+msgid "Historical monitoring"
+msgstr "Storico monitoraggio"
+
+#: ../../monitoring.rst:231 f213ed341ea04e9fa3a86b2e7aab7929
+msgid "Subscription required"
+msgstr "Subscription richiesta"
+
+#: ../../monitoring.rst:233 12137a0082ca48fba89158f8193d33de
+msgid ""
+"This feature is available only if the firewall and the controller have a "
+"valid subscription."
+msgstr ""
+"Questa funzionalità è disponibile solo se il firewall e il controller "
+"dispongono di una subscription valida."
+
+#: ../../monitoring.rst:235 3f1e6a4851c3465abf634824cfd83917
+msgid ""
+"If the unit was connected to the controller before the subscription was "
+"activated, historical monitoring will not be enabled automatically. The "
+"``Controller`` page will show a message indicating that historical "
+"monitoring is disabled."
+msgstr ""
+"Se l'unità è stata collegata al controller prima che la subscription fosse "
+"attiva, lo storico del monitoraggio non verrà abilitato automaticamente. La "
+"pagina ``Controller`` mostrerà un messaggio che indica che il monitoraggio "
+"storico è disabilitato."
+
+#: ../../monitoring.rst:238 dc7f5c3b5de644cb931925c128dc5a12
+msgid "To enable it, follow these steps:"
+msgstr "Per abilitarlo, seguire questi passaggi:"
+
+#: ../../monitoring.rst:240 8b0f6bda7add4013ad085af7828a233b
+msgid "Disconnect the unit from the controller."
+msgstr "Disconnettere l'unità dal controller."
+
+#: ../../monitoring.rst:241 dd0dc832a7f6425fa27dbbfc1e92e429
+msgid ""
+"Ensure that the NethServer 8 where the controller is installed has a valid "
+"subscription."
+msgstr ""
+"Assicurarsi che il NethServer 8 su cui è installato il controller disponga "
+"di una subscription valida."
+
+#: ../../monitoring.rst:242 35fa5d789a4f4498bc7acedeef8e1705
+msgid "Reconnect the unit to the controller."
+msgstr "Ricollegare l'unità al controller."
+
+#: ../../monitoring.rst:244 34c781ac3a2446e49aabf6df8ea7fa5e
+msgid ""
+"See the :ref:`controller metrics <controller_metrics-section>` for more "
+"information."
+msgstr ""
+"Consultare :ref:`controller metrics <controller_metrics-section>` per "
+"ulteriori informazioni."
+
+#: ../../monitoring.rst:249 81608bb00f4648cc981efa2bbac36e17
+msgid "Alerts"
+msgstr "Allarmi"
+
+#: ../../monitoring.rst:251 a301042a5faf484ea6f051ea6f35b4a1
+msgid ""
+"The alert system leverages the power of the Netdata engine for efficient "
+"monitoring and alerting."
+msgstr ""
+"Il sistema di allarmi sfrutta la potenza del motore Netdata per un "
+"monitoraggio e una segnalazione efficienti."
+
+#: ../../monitoring.rst:253 1a43d2dd34af4832a51a8368e79416af
+msgid ""
+"The alert system prioritizes only those alerts that have the potential to "
+"disrupt or compromise the firewall's functionality. By focusing on critical "
+"indicators, administrators can efficiently address issues that pose a "
+"genuine threat to the security and operation of the firewall."
+msgstr ""
+"Il sistema di allarmi dà priorità solo a quegli allarmi che hanno il "
+"potenziale di interrompere o compromettere la funzionalità del firewall. "
+"Concentrandosi su indicatori critici, gli amministratori possono affrontare "
+"in modo efficiente i problemi che rappresentano una reale minaccia per la "
+"sicurezza e il funzionamento del firewall."
+
+#: ../../monitoring.rst:256 58e4bcf8f42242318b9b9d4d3a58f77e
+msgid ""
+"If the server has a valid :ref:`subscription-section`, alert notifications "
+"are seamlessly sent to remote servers for centralized monitoring and "
+"management. Both ``my.nethesis.it`` and ``my.nethserver.com`` serve as "
+"central hubs for receiving alerts, allowing administrators to stay informed "
+"about the firewall's status and promptly respond to any critical situations."
+msgstr ""
+"Se il server dispone di una :ref:`subscription-section` valida, le notifiche"
+" di allerta vengono inviate automaticamente ai server remoti per il "
+"monitoraggio e la gestione centralizzata. Sia ``my.nethesis.it`` che "
+"``my.nethserver.com`` fungono da hub centrali per la ricezione degli avvisi,"
+" consentendo agli amministratori di rimanere informati sullo stato del "
+"firewall e di rispondere tempestivamente a eventuali situazioni critiche."
+
+#: ../../monitoring.rst:260 b04ebc986a754755aaa26df33034113a
+msgid "Implemented alerts:"
+msgstr "Allarmi implementati:"
+
+#: ../../monitoring.rst:262 61309a27e44c4758bf40d841d260c02a
+msgid ""
+"Disk Space: the disk space alert triggers when available disk space on the "
+"system reaches a critical level. This proactive notification helps prevent "
+"potential disruptions by addressing disk space issues before they impact "
+"firewall operations."
+msgstr ""
+"Spazio su disco: l'avviso relativo allo spazio su disco viene attivato "
+"quando lo spazio disponibile sul disco del sistema raggiunge un livello "
+"critico. Questa notifica proattiva aiuta a prevenire potenziali interruzioni"
+" affrontando i problemi di spazio su disco prima che possano influire sul "
+"funzionamento del firewall."
+
+#: ../../monitoring.rst:265 d4fc0e7524b048ae8007ec53f7053985
+msgid ""
+"MultiWAN Status (Up/Down): this alert notifies administrators when there are"
+" changes in the MultiWAN status, indicating whether connections are up or "
+"down. Timely awareness of MultiWAN status changes is crucial for maintaining"
+" continuous and reliable internet connectivity."
+msgstr ""
+"Stato MultiWAN (Attivo/Non attivo): questo avviso notifica agli "
+"amministratori quando ci sono cambiamenti nello stato del MultiWAN, "
+"indicando se le connessioni sono attive o non attive. Una consapevolezza "
+"tempestiva dei cambiamenti di stato del MultiWAN è fondamentale per "
+"mantenere una connettività Internet continua e affidabile."
+
+#: ../../monitoring.rst:12 ae15984535954bc99c4eb531634bec82
+msgid ""
+"**Real-time monitoring**: it leverages Netdata, Netify agent and logs to "
+"provide immediate insights into the firewall's performance. It reads data "
+"from logs and local databases, storing metrics in RAM. Note that these "
+"metrics are reset upon every reboot, ensuring that only the most current "
+"data are displayed."
+msgstr ""
+"**Monitoraggio in tempo reale**: sfrutta Netdata, Netify agent e i log per "
+"fornire informazioni immediate sulle prestazioni del firewall. Legge i dati "
+"dai log e dai database locali, memorizzando le metriche nella RAM. Si noti "
+"che queste metriche vengono azzerate a ogni riavvio, garantendo che vengano "
+"visualizzati solo i dati più recenti."
+
+#~ msgid ""
+#~ "**Real-time monitoring**: it leverages Netdata to provide immediate insights"
+#~ " into the firewall's performance. It reads data from logs and local "
+#~ "databases, storing metrics in RAM. Note that these metrics are reset upon "
+#~ "every reboot, ensuring that only the most current data are displayed."
+#~ msgstr ""
+#~ "**Monitoraggio in tempo reale**: sfrutta Netdata per fornire informazioni "
+#~ "immediate sulle prestazioni del firewall. I dati vengono letti dai log e dai"
+#~ " database locali, memorizzando le metriche nella RAM. Si noti che queste "
+#~ "metriche vengono azzerate a ogni riavvio, garantendo che vengano "
+#~ "visualizzati solo i dati più recenti."

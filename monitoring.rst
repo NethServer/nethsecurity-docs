@@ -9,7 +9,7 @@ Monitoring is essential for ensuring the firewall's optimal operation and identi
 
 NethSecurity offers two types of monitoring:
 
-- **Real-time monitoring**: it leverages Netdata to provide immediate insights into the firewall's performance.
+- **Real-time monitoring**: it leverages Netdata, Netify agent and logs to provide immediate insights into the firewall's performance.
   It reads data from logs and local databases, storing metrics in RAM. Note that these metrics are reset upon every reboot, ensuring that only the most current data are displayed.
 - **Historical monitoring**: for a more comprehensive view over time, historical monitoring stores data on a remote controller.
   This allows metrics to be preserved across reboots and enables centralized monitoring. Please note that this feature requires a valid subscription both on the firewall and the controller.
