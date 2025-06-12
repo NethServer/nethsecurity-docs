@@ -46,19 +46,22 @@ msgstr "Avanzate (CLI)"
 msgid "Best practices"
 msgstr "Best practice"
 
-#: ../../index.rst:5 0f14a4fb9c35465d831accae97f40bcd
+#: ../../index.rst:5 816220246b3f4167bcce838c9183158b
 msgid "NethSecurity administrator manual"
 msgstr "Manuale dell'amministratore di NethSecurity"
 
-#: ../../index.rst:9 dd31ee09d9944c77a5d733592746a6a8
+#: ../../index.rst:9 6fa6ff4088194f61b35cbf609bc32d5e
 msgid "`Official site <https://www.nethsecurity.org>`_"
 msgstr "`Sito ufficiale <https://www.nethsecurity.org>`_"
 
-#: ../../index.rst:11 27528c9072d642b280f767d141561802
+#: ../../index.rst:11 9ed1220364c347ae8ca565e483fd8bf8
 msgid "`Developer manual <https://nethserver.github.io/nethsecurity/>`_"
-msgstr ""
-"`Manuale sviluppatori <https://nethserver.github.io/nethsecurity/>`_"
+msgstr "`Manuale sviluppatori <https://nethserver.github.io/nethsecurity/>`_"
 
-#: ../../index.rst:13 07672a0c0189437da715bfecee68c472
+#: ../../index.rst:13 333fa6d9be854a2d87c017d7af4a1212
 msgid "Help on `Community <http://community.nethserver.org>`_"
 msgstr "Aiuto su `Community <http://community.nethserver.org>`_"
+
+#: ../../index.rst:5 c1294ad3551c40dd93c84d4cb835fae3
+msgid "External links"
+msgstr "Collegamenti esterni"

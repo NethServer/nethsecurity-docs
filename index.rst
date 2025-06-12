@@ -4,7 +4,7 @@
 NethSecurity administrator manual
 =================================
 
-.. sidebar:: Looking for ...
+.. topic:: External links
 
         * `Official site <https://www.nethsecurity.org>`_
 
