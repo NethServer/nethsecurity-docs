@@ -108,6 +108,12 @@ def process_pot_files(llm, prompt, pot_dir):
                 translation = translate(llm, prompt, msgid_translated)
                 entry.msgstr=translation
                 it_po.save(it_file)
+            clean_po = polib.POFile()
+            # Remove obsolete entries
+            for entry in it_po:
+                if not entry.obsolete:
+                    clean_po.append(entry)
+            clean_po.save(it_file)
             print(f"Updated {it_file} with new translations from {pot_file}")
         else:
             pot = polib.pofile(pot_file)
