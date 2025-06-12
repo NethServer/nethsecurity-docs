@@ -27,6 +27,7 @@ jobs:
       - name: Generate POT files
         run: |
           sphinx-build -b gettext . locale/pot/
+          rm -f locale/pot/download.pot
 
       - name: Translate using AI
         run: |
