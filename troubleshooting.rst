@@ -81,13 +81,10 @@ Simply paste this copied command into a shell to obtain more detailed informatio
 
 When reporting an error to the support team, it's crucial to provide the following essential information:
 
-1. **Request and Response Contents:**
-   Include the content of the ``Request`` and ``Response`` sections found in the error message.
-
-2. **Copied Command:**
+1. **Copied Command:**
    Paste the command copied using the ``Copy command`` button.
 
-3. **Execution Output:**
+2. **Execution Output:**
    For further assistance, execute the copied command and report the output.
 
 If the provided information is insufficient, in extreme cases, it may be necessary to share the content of the JavaScript console if the error is present.
