@@ -4,7 +4,7 @@ msgstr ""
 
 #: ../../release_notes.rst:3 cf660a2d615848c79d474c68cdb4ab6b
 msgid "Release notes"
-msgstr "Release notes"
+msgstr "Note di rilascio"
 
 #: ../../release_notes.rst:5 3fc496c809a3471299bfb948e5b8ed82
 msgid "NethSecurity releases changelogs."

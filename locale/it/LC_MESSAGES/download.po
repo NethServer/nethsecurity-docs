@@ -4,7 +4,7 @@ msgstr ""
 
 #: ../../download.rst:5 dc3a6659957341a0aabda2fcbc343d64
 msgid "Download"
-msgstr "Scarica"
+msgstr "Download"
 
 #: ../../download.rst:7 4fddb1561953404c99b94af39f51f11f
 msgid "The table contains the following links for each release:"
