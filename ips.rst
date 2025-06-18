@@ -89,7 +89,7 @@ To do so, browse to the `Filter bypass` tab and press the :guilabel:`Add bypass`
 add the bypass rule based of the source or destination IP address with the following fields:
 
 - ``Address type``: if the ip provided is IPv4 or IPv6
-- ``IP address``: the IP address to bypass
+- ``IP address``: the IP address or CIDR to bypass
 - ``Direction``: if the bypass is for the source or destination IP address
 - ``Description``: a description of the bypass rule, it is optional and can be omitted
 

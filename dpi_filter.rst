@@ -55,7 +55,7 @@ Exceptions
 DPI exclusion allows for the exclusion of specific network addresses, such as the gateway or other critical infrastructure, preventing them from being blocked.
 
 To add a new exception, click the ``Add exception`` button.
-Enter the ``IP address`` that should be exempted from the filter.
+Enter the ``IP address or CIDR`` that should be exempted from the filter.
 You can include a description explaining the reason for the exclusion.
 
 Each exception can be enabled or disabled as desired.
