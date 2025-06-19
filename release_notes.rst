@@ -7,6 +7,35 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+
+Major changes on 2025-06-23
+===========================
+
+Image version: `8-24.10.0-ns.1.6.0`
+
+.. rubric:: New Features
+
+- High Availability: added support for two-node clusters in backup mode. automatic failover within seconds. configured via command line.
+- Flashstarto ProPLus: added support for multi-profile configurations, dynamic blocklists, and improved dns client management.
+- Security wizard: assists with initial security setup (password, ssh, and ui). appears after login if not yet completed and can be skipped.
+- Automatic persistent storage for logs: free disk space is auto-assigned to logs by default, preventing log loss during reboot. admins can change the destination.
+- Threat Shield: blocked ip management from the ui: added interface to view, search, and unblock ips. ipv4 and ipv6 blocklists manageable from the ui.
+- Service center sync status: subscription page now shows connection status, last sync time, and a "sync now" button.
+- SNAT limited by interface: allows SNAT rules on specific network interfaces. simplifies advanced routing and failover setups. manageable via ui.
+- Static leases filtering: added filter for dhcp static leases by interface for easier management of complex setups.
+- Version in migration logs: migration logs and exports now include migration tool and destination system versions.
+
+.. rubric:: Bug Fixes
+
+- OpenVPN: fixed issue where renamed/deleted ad users could still access with old credentials. access tracking now updates correctly.
+- Firewall: prevented firewall zone names starting with numbers: avoids rule application issues.
+- Port forward: allows port forwarding without specifying a destination address.
+- Certificates: possible to delete let's encrypt requests even if still pending.
+- OpenVPN: net-to-net openvpn tunnels with hyphens in the name can now be modified after migration.
+- Logs: fixed issue where logs could occupy root filesystem after a restore.
+- OpenVPN RW: adjusted renegotiation to prevent unexpected disconnections for certain authentication methods.
+
+
 Major changes on 2025-04-10
 ===========================
 
