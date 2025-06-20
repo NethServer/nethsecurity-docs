@@ -360,17 +360,12 @@ Then, use the `ns-ha-config` command to register the alias in the HA cluster con
 
 Aliases must be explicitly set on the primary node. ::
 
-   ns-ha-config add-alias <interface> <alias_ip_cidr> [<gateway>]
+   ns-ha-config add-alias <interface> <alias_ip_cidr>
 
-Provide the gateway only if the alias is for a WAN interface.
-
-Example of a LAN alias: ::
-
-   ns-ha-config add-alias lan 192.168.100.66/24
 
 Example of a WAN alias: ::
 
-   ns-ha-config add-alias wan 192.168.122.66/24 192.168.122.1
+   ns-ha-config add-alias wan 192.168.122.66/24
 
 **Note:** the alias will not appear in the network configuration page of the backup node.
 
