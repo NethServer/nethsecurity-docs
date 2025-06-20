@@ -55,8 +55,8 @@ FlashStart Pro enables content filtering using a single filter profile, applied 
 - **Exclusions:**  
   Exceptions can be configured using IP addresses or CIDR blocks.
 
-FlashStart Pro Plus
--------------------
+FlashStart Pro Plus (Beta)
+--------------------------
 
 FlashStart Pro Plus extends functionality with support for multiple independent filtering profiles, allowing greater flexibility and user-level policy enforcement.
 
@@ -78,6 +78,10 @@ FlashStart Pro Plus extends functionality with support for multiple independent 
 
 - **Combined assignment (objects + users):**  
   It is possible to use both methods in parallel.In case of conflicts, firewall object assignments take precedence over user-based assignments.
+
+.. note::
+
+  Although no known bugs have been reported at this time, the Pro Plus feature is currently released as a **Beta**. We recommend testing it in a non-critical environment before deploying it in production.
 
 Common Features (Pro and Pro Plus)
 ----------------------------------
