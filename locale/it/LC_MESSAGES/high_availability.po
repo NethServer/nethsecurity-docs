@@ -239,7 +239,7 @@ msgstr "Configurazione Netifyd informatics"
 
 #: ../../high_availability.rst:69 2cae7a9ba3c04a2a8d6a2b1f8f9be27f
 msgid "Threat shield IP (banip)"
-msgstr "Protezione dalle minacce IP (banip)"
+msgstr "Threat shield IP (banip))"
 
 #: ../../high_availability.rst:70 ee011339295a4b1eac8496dbc4aead25
 msgid "Threat shield DNS (adblock)"
