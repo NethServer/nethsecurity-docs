@@ -1228,7 +1228,7 @@ msgid ""
 "valid subscription."
 msgstr ""
 "Questa funzionalità è disponibile solo se il firewall e il controller "
-"dispongono di un abbonamento valido."
+"dispongono di una subscription valida."
 
 #: ../../high_availability.rst:436 091a74a0537b436da9f7fd266f0051be
 msgid ""
