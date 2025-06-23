@@ -120,7 +120,7 @@ msgid ""
 "it's the active (primary) or standby (backup) unit:"
 msgstr ""
 "Il sistema regola automaticamente il comportamento di ciascun firewall in "
-"base al fatto che sia l'unità attiva (primaria) o di standby (di backup):"
+"base al fatto che sia l'unità attiva (primaria) o in standby (backup):"
 
 #: ../../high_availability.rst:39 0d326978cbf3458a9759d8e7b7b4aa7d
 msgid ""
