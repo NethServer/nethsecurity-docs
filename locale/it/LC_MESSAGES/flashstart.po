@@ -82,7 +82,7 @@ msgstr "Configurazione"
 
 #: ../../flashstart.rst:19 24c79e70be5847d58fa98119eab97e53
 msgid "Subscription required"
-msgstr "Abbonamento richiesto"
+msgstr "Richiesta subscription"
 
 #: ../../flashstart.rst:21 443fcc61431a4f0986b1c654bc43003a
 msgid ""
