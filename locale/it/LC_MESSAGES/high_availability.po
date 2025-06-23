@@ -112,7 +112,7 @@ msgid ""
 msgstr ""
 "**Sincronizzazione delle configurazione**: Il firewall primario invia in modo "
 "sicuro le proprie impostazioni, inclusi i dettagli sulle connessioni attive "
-"come VPN e route di rete, al firewall di backup."
+"come VPN e rotte di rete, al firewall di backup."
 
 #: ../../high_availability.rst:37 9bffa93249a14b87b828e1bc5432d99e
 msgid ""
