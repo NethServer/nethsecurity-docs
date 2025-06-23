@@ -35,7 +35,7 @@ jobs:
         run: |
           cd locale
           OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} ./ai_translate.py
-          rm -rf pot ../*.csv
+          rm -rf pot ../*.csv ../_static/high_availability.png
 
       - name: Create Pull Request
         id: cpr
