@@ -1220,7 +1220,7 @@ msgstr "Avvisi"
 
 #: ../../high_availability.rst:432 4a4ee18f1659489d8b5f8397558c41c1
 msgid "Subscription required"
-msgstr "Abbonamento richiesto"
+msgstr "Subscription richiesta"
 
 #: ../../high_availability.rst:434 589986d8f91742c8bb620b551150c733
 msgid ""
