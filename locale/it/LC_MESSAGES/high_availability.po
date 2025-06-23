@@ -279,7 +279,7 @@ msgstr "Password di cifratura del backup"
 
 #: ../../high_availability.rst:79 3fd0308c813345a98f7a6415368bf618
 msgid "Controller connection and subscription (ns-plug)"
-msgstr "Connessione e sottoscrizione del controller (ns-plug)"
+msgstr "Connessione al controller e subscription (ns-plug)"
 
 #: ../../high_availability.rst:80 c54b4c112f354f27b7019c65c3afcaf9
 msgid "Active connections tracking (conntrackd)"
