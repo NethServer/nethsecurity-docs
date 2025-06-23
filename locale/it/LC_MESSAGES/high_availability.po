@@ -110,7 +110,7 @@ msgid ""
 "settings, including details about active connections like VPNs and network "
 "routes, to the backup firewall."
 msgstr ""
-"**Sincronizzazione delle impostazioni**: Il firewall primario invia in modo "
+"**Sincronizzazione delle configurazione**: Il firewall primario invia in modo "
 "sicuro le proprie impostazioni, inclusi i dettagli sulle connessioni attive "
 "come VPN e route di rete, al firewall di backup."
 
