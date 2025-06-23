@@ -1,0 +1,308 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../setup_wizard.rst:5 1e6a433fa92243909b37e3c25f7660aa
+msgid "Setup wizard"
+msgstr "Procedura guidata di configurazione"
+
+#: ../../setup_wizard.rst:7 58d677c9c7414df292cb56caa3c414fa
+msgid ""
+"The first time the web user interface is accessed, a setup wizard is "
+"launched. This guided process can assist you in establishing a secure "
+"initial configuration for the firewall and ensures that the unit is ready "
+"for deployment in a production environment."
+msgstr ""
+"La prima volta che si accede all'interfaccia utente web, viene avviata una "
+"procedura guidata di configurazione. Questo processo guidato può assistere "
+"nella creazione di una configurazione iniziale sicura per il firewall e "
+"garantisce che l'unità sia pronta per essere distribuita in un ambiente di "
+"produzione."
+
+#: ../../setup_wizard.rst:9 c09d20262761424590798543619f0149
+msgid ""
+"For optimal security and to ensure a controlled configuration environment, "
+"it is strongly recommended that you complete the setup wizard before "
+"connecting the device to the internet."
+msgstr ""
+"Per una sicurezza ottimale e per garantire un ambiente di configurazione "
+"controllato, si raccomanda vivamente di completare la procedura guidata di "
+"configurazione prima di collegare il dispositivo a Internet."
+
+#: ../../setup_wizard.rst:14 fefee2d6e3424815acf47bdff7ffeb1a
+msgid "Welcome to the setup wizard"
+msgstr "Benvenuti nella procedura guidata di configurazione"
+
+#: ../../setup_wizard.rst:16 981a0dad90ce4bb3a89a524d20b94c14
+msgid ""
+"On the first page of the setup wizard, you can click :guilabel:`Start setup`"
+" to initiate the guided setup process. Alternatively, you can click "
+":guilabel:`Skip wizard` to bypass the wizard and access the web user "
+"interface directly. However, it is highly recommended to complete the setup "
+"wizard to ensure a secure and functional configuration."
+msgstr ""
+"Nella prima pagina della procedura guidata di configurazione, è possibile "
+"fare clic su :guilabel:`Inizia il setup` per avviare il processo di "
+"configurazione guidata. In alternativa, è possibile fare clic su "
+":guilabel:`Salta procedura guidata` per saltare la procedura guidata e "
+"accedere direttamente all'interfaccia web utente. Tuttavia, è fortemente "
+"consigliato completare la procedura guidata di configurazione per garantire "
+"una configurazione sicura e funzionale."
+
+#: ../../setup_wizard.rst:21 798d3f865a8740509eea1f5c9521c7ec
+msgid "Step 1: Change root password"
+msgstr "Passaggio 1: Cambiare la password di root"
+
+#: ../../setup_wizard.rst:23 5f73286dc22e4e289fbb47ff43e07328
+msgid ""
+"You are required to define a new, secure password for the root account. This"
+" measure significantly reduces the risk of compromise by eliminating "
+"reliance on publicly known default credentials."
+msgstr ""
+"È necessario definire una nuova password sicura per l'account root. Questa "
+"misura riduce significativamente il rischio di compromissione eliminando la "
+"dipendenza da credenziali predefinite pubblicamente note."
+
+#: ../../setup_wizard.rst:26 b1882738cd1042d7abb11e6913d2442c
+msgid ""
+"The updated root password will be applied immediately upon confirmation."
+msgstr ""
+"La password di root aggiornata verrà applicata immediatamente al momento "
+"della conferma."
+
+#: ../../setup_wizard.rst:27 2092e4f185e14df8abe14cf7a8cc8f23
+msgid ""
+"Ensure the new credentials are securely stored (e.g., by using a password "
+"manager) before proceeding to the next configuration step."
+msgstr ""
+"Assicurarsi che le nuove credenziali siano archiviate in modo sicuro (ad "
+"esempio, utilizzando un password manager) prima di procedere con il "
+"passaggio successivo della configurazione."
+
+#: ../../setup_wizard.rst:28 b46e7c2599984d7188243f7006a24889
+msgid ""
+"If you restart the setup wizard after changing root password (e.g., by "
+"closing and reopening the browser tab), you will need to use the new "
+"password to access the web interface."
+msgstr ""
+"Se si riavvia la procedura guidata di configurazione dopo aver cambiato la "
+"password di root (ad esempio, chiudendo e riaprendo la scheda del browser), "
+"sarà necessario utilizzare la nuova password per accedere all'interfaccia "
+"web."
+
+#: ../../setup_wizard.rst:33 357e5dde66464eaaa19a270bcec7a1c8
+msgid "Step 2: SSH Access"
+msgstr "Passaggio 2: Accesso SSH"
+
+#: ../../setup_wizard.rst:35 1d7f5d01e2c141768afb0a673b1ef232
+msgid ""
+"You can customize SSH access to suit your security and operational "
+"requirements."
+msgstr ""
+"È possibile personalizzare l'accesso SSH per soddisfare i requisiti di "
+"sicurezza e operativi."
+
+#: ../../setup_wizard.rst:38 4b4e0451525a424b9c66a0019e9038db
+msgid "Default access configuration"
+msgstr "Configurazione di accesso predefinita"
+
+#: ../../setup_wizard.rst:40 71c63406035c4f9481bf5d1069757774
+msgid ""
+"LAN Access is enabled by default to allow administrative access from within "
+"the trusted local network."
+msgstr ""
+"L'accesso LAN è abilitato per impostazione predefinita per consentire "
+"l'accesso amministrativo dall'interno della rete locale attendibile."
+
+#: ../../setup_wizard.rst:41 647526ddefa94cbe9ac786341a659499
+msgid ""
+"WAN Access is disabled by default to prevent exposure to external threats "
+"from untrusted networks."
+msgstr ""
+"L'accesso WAN è disabilitato per impostazione predefinita per prevenire "
+"l'esposizione a minacce esterne provenienti da reti non affidabili."
+
+#: ../../setup_wizard.rst:44 ../../setup_wizard.rst:64
+#: 51adcffdaff8403c96e752ada04ea033 0f76eb8f028f4ceba978ef0b327f3481
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: ../../setup_wizard.rst:46 7a96c6121a064782b91976bc41dcbbb2
+msgid ""
+"**TCP port**: the listening port for SSH can be changed if needed. The "
+"default value is 22."
+msgstr ""
+"**Porta TCP**: la porta di ascolto per SSH può essere modificata se "
+"necessario. Il valore predefinito è 22."
+
+#: ../../setup_wizard.rst:47 7c335e936e614067879be3e8efedf250
+msgid ""
+"**Root login with password**: it is advised to disable password-based root "
+"login for SSH. Disabling this option significantly reduces the risk of "
+"unauthorized access by limiting the potential for brute-force password "
+"attacks."
+msgstr ""
+"**Accesso root con password**: si consiglia di disabilitare l'accesso root "
+"tramite password per SSH. Disabilitare questa opzione riduce "
+"significativamente il rischio di accessi non autorizzati, limitando la "
+"possibilità di attacchi brute-force alle password."
+
+#: ../../setup_wizard.rst:49 20da9e9e101c49fbb17b4a3ddf290ae1
+msgid ""
+"If password-based login for the root user is disabled, it is essential to "
+"upload the root user's SSH public key to the device to ensure continued "
+"remote access."
+msgstr ""
+"Se l'accesso tramite password per l'utente root è disabilitato, è essenziale"
+" caricare la chiave pubblica SSH dell'utente root sul dispositivo per "
+"garantire il continuo accesso remoto."
+
+#: ../../setup_wizard.rst:54 7ea8ec1e051f4272b5fcbb4e3b9989a6
+msgid "Step 3: Web interface access on TCP port 9090"
+msgstr "Passaggio 3: Accesso all'interfaccia web sulla porta TCP 9090"
+
+#: ../../setup_wizard.rst:56 b4ccd70564954a738e554005383c6d62
+msgid ""
+"Configure access parameters for the web user interface, which operates on "
+"port 9090."
+msgstr ""
+"Configurare i parametri di accesso per l'interfaccia utente web, che opera "
+"sulla porta 9090."
+
+#: ../../setup_wizard.rst:59 8cf342f24bf64ef7ade89e1a16c03126
+msgid "Default configuration"
+msgstr "Configurazione predefinita"
+
+#: ../../setup_wizard.rst:61 1863c6a4dfbb45f4a7d3e7425f3453d6
+msgid ""
+"By default, web interface access is enabled from the LAN, allowing "
+"administrative management from within the trusted local network."
+msgstr ""
+"Per impostazione predefinita, l'accesso all'interfaccia web è abilitato "
+"dalla LAN, consentendo la gestione amministrativa dall'interno della rete "
+"locale attendibile."
+
+#: ../../setup_wizard.rst:66 1415f6e2d5964207838925e1323cad49
+msgid "You can choose from the following access options for WAN connectivity:"
+msgstr ""
+"È possibile scegliere tra le seguenti opzioni di accesso per la connettività"
+" WAN:"
+
+#: ../../setup_wizard.rst:68 43d304546cba4858a180d019133d058c
+msgid ""
+"**Disabled** (recommended): this option disables web interface access from "
+"the WAN, preventing exposure to external threats."
+msgstr ""
+"**Disabilitato** (consigliato): questa opzione disabilita l'accesso "
+"all'interfaccia web dalla WAN, prevenendo l'esposizione a minacce esterne."
+
+#: ../../setup_wizard.rst:69 4387a679d1554ad6b271a407682023e9
+msgid ""
+"**Enabled**: full access to the web interface is permitted from any WAN "
+"source. This mode should only be used in secure environments or when "
+"necessary for remote management, and must be protected with strong "
+"credentials"
+msgstr ""
+"**Abilitato**: l'accesso completo all'interfaccia web è consentito da "
+"qualsiasi sorgente WAN. Questa modalità dovrebbe essere utilizzata solo in "
+"ambienti sicuri o quando necessario per la gestione remota, e deve essere "
+"protetta con credenziali robuste."
+
+#: ../../setup_wizard.rst:70 097d755a514d4d36b8e18944d399e910
+msgid ""
+"**Limited**: web interface access from WAN is restricted to specified IP "
+"addresses or networks. You have to define one or more of the following:"
+msgstr ""
+"**Limitato**: l'accesso all'interfaccia web dalla WAN è limitato agli "
+"indirizzi IP o alle reti specificate. È necessario definire uno o più dei "
+"seguenti:"
+
+#: ../../setup_wizard.rst:72 75e2d50570594564a2c94e4e09adffea
+msgid "IP address"
+msgstr "Indirizzo IP"
+
+#: ../../setup_wizard.rst:73 95a96b455c7d40929547f580d9d08331
+msgid "CIDR-formatted networks (e.g., 192.168.1.0/24)"
+msgstr "Reti in formato CIDR (ad es., 192.168.1.0/24)"
+
+#: ../../setup_wizard.rst:74 eb18c304a9cc48dab5c4dbbc99d6c739
+msgid "IP address ranges (e.g., 203.0.113.10-203.0.113.20)"
+msgstr "Intervalli di indirizzi IP (ad es., 203.0.113.10-203.0.113.20)"
+
+#: ../../setup_wizard.rst:76 961bc03750624683835fe10287e65e39
+msgid ""
+"If you choose the **Limited** option, the IP addresses you configured will "
+"appear at the end of the wizard under **Firewall > Rules > Input rules**."
+msgstr ""
+"Se si sceglie l'opzione **Limitato**, gli indirizzi IP configurati "
+"appariranno alla fine della procedura guidata sotto **Firewall > Regole > "
+"Regole di input**."
+
+#: ../../setup_wizard.rst:81 8f6e84b54f1445d3b5e9cec8a7530e47
+msgid "Step 4: Web interface and WAN access on TCP port 443"
+msgstr "Passaggio 4: Interfaccia web e accesso WAN sulla porta TCP 443"
+
+#: ../../setup_wizard.rst:83 55f5c9b0dd9d46128caea217d796bcf1
+msgid ""
+"Set up access controls for the web interface and WAN connections on port "
+"443."
+msgstr ""
+"Impostare i controlli di accesso per l'interfaccia web e le connessioni WAN "
+"sulla porta 443."
+
+#: ../../setup_wizard.rst:85 6a676464076144e288a140953c8f3fad
+msgid ""
+"**Web interface service on TCP port 443**: by default, the web user "
+"interface is available on TCP port 9090. Enabling this option also makes it "
+"accessible on TCP port 443. It is recommended to keep this additional access"
+" disabled and always use TCP port 9090 to access the web UI."
+msgstr ""
+"**Servizio dell'interfaccia web sulla porta TCP 443**: per impostazione "
+"predefinita, l'interfaccia utente web è disponibile sulla porta TCP 9090. "
+"Abilitando questa opzione, l'interfaccia sarà accessibile anche sulla porta "
+"TCP 443. Si consiglia di mantenere disabilitato questo accesso aggiuntivo e "
+"di utilizzare sempre la porta TCP 9090 per accedere all'interfaccia web."
+
+#: ../../setup_wizard.rst:86 324c9ba8a6214d4693169fe1bc0c9579
+msgid ""
+"**WAN access on TCP port 443**: this option controls if WAN access on port "
+"443 is disabled (recommended) or enabled. Beware, by leaving this option "
+"disabled, reverse proxies will not function."
+msgstr ""
+"**Accesso WAN sulla porta TCP 443**: questa opzione controlla se l'accesso "
+"WAN sulla porta 443 è disabilitato (consigliato) o abilitato. Attenzione, "
+"lasciando questa opzione disabilitata, i reverse proxy non funzioneranno."
+
+#: ../../setup_wizard.rst:91 6811473115214c608db3a1270355d84e
+msgid "Step 5: Summary"
+msgstr "Passaggio 5: Riepilogo"
+
+#: ../../setup_wizard.rst:93 dade66d4301546fb861bed15c560be4c
+msgid ""
+"The summary page provides an opportunity to review the unit configuration "
+"before applying changes."
+msgstr ""
+"La pagina di riepilogo offre l'opportunità di rivedere la configurazione "
+"dell'unità prima di applicare le modifiche."
+
+#: ../../setup_wizard.rst:95 79841075dca64ba78059d9e3a12ae0af
+msgid ""
+"WAN access to the web interface may be restricted by your current settings. "
+"Applying the changes while connected via port 443 could result in loss of "
+"access. Verify your configuration meets your remote access needs, "
+"particularly when using reverse proxies."
+msgstr ""
+"L'accesso WAN all'interfaccia web potrebbe essere limitato dalle "
+"impostazioni correnti. L'applicazione delle modifiche mentre si è connessi "
+"tramite la porta 443 potrebbe comportare la perdita dell'accesso. Verificare"
+" che la configurazione soddisfi le esigenze di accesso remoto, in "
+"particolare quando si utilizzano reverse proxy."
+
+#: ../../setup_wizard.rst:97 6db0c231696248a7bde10ecb7144d874
+msgid ""
+"Use the 'Previous' button to go back and make adjustments if needed. Click "
+"'Finish setup' to apply the changes and complete the setup wizard."
+msgstr ""
+"Utilizzare il pulsante ``Precedente`` per tornare indietro ed effettuare "
+"eventuali modifiche se necessario. Fare clic su ``Fine configurazione`` per "
+"applicare le modifiche e completare la procedura guidata di configurazione."

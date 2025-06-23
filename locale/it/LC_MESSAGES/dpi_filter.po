@@ -2,21 +2,21 @@
 msgid ""
 msgstr ""
 
-#: ../../dpi_filter.rst:5 34607e661713497aa0781cdc136f1d6d
+#: ../../dpi_filter.rst:5 17d2e81a2eac47bda9747528250d501a
 msgid "Deep Packet Inspection (DPI) filter"
 msgstr "Filtro Deep Packet Inspection (DPI)"
 
-#: ../../dpi_filter.rst:7 7de474a8f8ae49d4878b402dc78570f4
+#: ../../dpi_filter.rst:7 50c428e219d743fda99e7d11b933aad4
 msgid ""
 "NethSecurity uses the `Netify Agent <https://www.netify.ai/resources>`_ to "
 "employ Deep Packet Inspection (DPI) techniques for filtering network "
 "traffic."
 msgstr ""
-"NethSecurity utilizza `Netify Agent <https://www.netify.ai/resources>`_ "
-"per impiegare tecniche di Deep Packet Inspection (DPI) per il filtraggio del"
-" traffico di rete."
+"NethSecurity utilizza `Netify Agent <https://www.netify.ai/resources>`_ per "
+"impiegare tecniche di Deep Packet Inspection (DPI) per il filtraggio del "
+"traffico di rete."
 
-#: ../../dpi_filter.rst:9 10dba5200d3d48bbb07da8da61eeb22a
+#: ../../dpi_filter.rst:9 98524f7da59a416299301b5ca3ccaaf0
 msgid ""
 "The Netify Agent functions as a deep-packet inspection server, leveraging "
 "nDPI (formerly OpenDPI) to identify network protocols and applications. "
@@ -33,17 +33,17 @@ msgstr ""
 "flussi, le statistiche di rete e le classificazioni di rilevamento possono "
 "essere utilizzati per prendere decisioni sul flusso."
 
-#: ../../dpi_filter.rst:13 1ba34a2d6fd243a1afefb13bc014d090
+#: ../../dpi_filter.rst:13 9c86db2c3a6d4e7caba1c20fef0f3c4e
 msgid "Here's how it operates:"
 msgstr "Ecco come funziona:"
 
-#: ../../dpi_filter.rst:15 a7e522a3019f43739339db41136a5995
+#: ../../dpi_filter.rst:15 ae9aad862dba4cbebb440a282b934f51
 msgid "the Netify flow actions plugin assigns labels to matching connections"
 msgstr ""
 "il plugin delle azioni di flusso Netify assegna etichette alle connessioni "
 "corrispondenti"
 
-#: ../../dpi_filter.rst:16 f6839023cc3f4b04a2f748a431759a29
+#: ../../dpi_filter.rst:16 c5eaade646ce438bbcda36e469e190de
 msgid ""
 "nft rules can then either block or adjust priority (DSCP) for connections "
 "based on these labels"
@@ -51,7 +51,7 @@ msgstr ""
 "Le regole nft possono quindi bloccare o regolare la priorità (DSCP) delle "
 "connessioni in base a queste etichette."
 
-#: ../../dpi_filter.rst:18 9c2145c3cbc74c93bb2f4c73ff287155
+#: ../../dpi_filter.rst:18 e1ac2b5412bf4a13a2a2abe686768409
 msgid ""
 "The administrator can create Deep Packet Inspection (DPI) rules for each "
 "interface."
@@ -59,11 +59,11 @@ msgstr ""
 "L'amministratore può creare regole di Deep Packet Inspection (DPI) per "
 "ciascuna interfaccia."
 
-#: ../../dpi_filter.rst:21 9cb4f08d32344933ae9e83eaa94f98a7
+#: ../../dpi_filter.rst:21 d5c18d51be0249fcb0d7d9749aefc17a
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../dpi_filter.rst:23 6dab516a98bf49abb895115e2b3a9d34
+#: ../../dpi_filter.rst:23 e55ccbf2a9d54aa18c718c5d7b555b10
 msgid ""
 "To configure these rules, the administrator initiates the process by "
 "selecting the particular network interface on which the rule is intended to "
@@ -77,7 +77,7 @@ msgstr ""
 "precisione al segmento di rete designato, consentendo una gestione mirata ed"
 " efficace del traffico di rete."
 
-#: ../../dpi_filter.rst:26 3c33f81a2e9b46f98390e7f844cd060b
+#: ../../dpi_filter.rst:26 fc9ef2be1e3c4a9eb09e93fc4c24dd2c
 msgid ""
 "Following the selection of the interface, the administrator is prompted to "
 "specify the applications that are to be blocked or regulated. This essential"
@@ -89,7 +89,7 @@ msgstr ""
 "passaggio essenziale prevede la scelta da un elenco completo di applicazioni"
 " accessibile tramite l'interfaccia del sistema."
 
-#: ../../dpi_filter.rst:29 342c05d2c16b47419eeca0dc775e427b
+#: ../../dpi_filter.rst:29 95004df83b57453994329eeb70240ef8
 msgid ""
 "The interface, as a default feature, presents a catalog of commonly used "
 "applications. However, it provides an advanced search functionality enabling"
@@ -102,15 +102,15 @@ msgstr ""
 "applicazioni specifiche e categorie di applicazioni che richiedono "
 "particolare attenzione."
 
-#: ../../dpi_filter.rst:33 aad347fc1b324ff79802bc583d88e7b0
+#: ../../dpi_filter.rst:33 9228521c33de4cff9580c8a2d8e71fb9
 msgid "Premium application signatures"
 msgstr "Firme delle applicazioni Premium"
 
-#: ../../dpi_filter.rst:35 ee16f2ca86de44a1879dc3a459c5ec05
+#: ../../dpi_filter.rst:35 3040be4725cf49e0a2474c7bd210c7d2
 msgid "Subscription required"
 msgstr "Subscription richiesta"
 
-#: ../../dpi_filter.rst:37 5fb6b1a1e4de4efcbd66720a2a0f4e9a
+#: ../../dpi_filter.rst:37 5865990b37f74561bc9aac7483f9df9a
 msgid ""
 "This feature is available only if the firewall has a valid :ref:`Community "
 "or Enterprise subscription <subscription-section>`."
@@ -118,7 +118,7 @@ msgstr ""
 "Questa funzionalità è disponibile solo se il firewall dispone di una "
 "subscription :ref:`Community o Enterprise <subscription-section>` valida."
 
-#: ../../dpi_filter.rst:40 12d51297f66d46ca8b2d0f2a2903bdfd
+#: ../../dpi_filter.rst:40 1d57a29f5eb44395adff3f117a8e74ad
 msgid ""
 "In the absence of a subscription, the system inherently recognizes a "
 "baseline of approximately 400 applications. However, with an active "
@@ -127,19 +127,19 @@ msgid ""
 "undergoes daily updates, ensuring that the system stays abreast of the ever-"
 "evolving landscape of applications and digital services."
 msgstr ""
-"In assenza di una subscription, il sistema riconosce intrinsecamente una base "
-"di circa 400 applicazioni. Tuttavia, con una subscription attivo, questa "
-"capacità si espande significativamente, includendo oltre 2300 applicazioni. "
-"In questo scenario, l'elenco delle applicazioni riconosciute viene "
-"aggiornato quotidianamente, garantendo che il sistema rimanga al passo con "
-"il panorama in continua evoluzione delle applicazioni e dei servizi "
+"In assenza di una subscription, il sistema riconosce intrinsecamente una "
+"base di circa 400 applicazioni. Tuttavia, con una subscription attivo, "
+"questa capacità si espande significativamente, includendo oltre 2300 "
+"applicazioni. In questo scenario, l'elenco delle applicazioni riconosciute "
+"viene aggiornato quotidianamente, garantendo che il sistema rimanga al passo"
+" con il panorama in continua evoluzione delle applicazioni e dei servizi "
 "digitali."
 
-#: ../../dpi_filter.rst:45 3c9f0539817049709b3e23d5b272fc9a
+#: ../../dpi_filter.rst:45 796d40addeee44f18a47bf9250f6a9c5
 msgid "Applications and protocols list"
 msgstr "Elenco di applicazioni e protocolli"
 
-#: ../../dpi_filter.rst:47 a5c35eba1cc249cbae4f654458ca2b70
+#: ../../dpi_filter.rst:47 26d758871a2e4ebcab82ca3706f31a84
 msgid ""
 "The full list of all applications and protocols supported by the Enterprise "
 "version is available here:"
@@ -147,21 +147,21 @@ msgstr ""
 "L'elenco completo di tutte le applicazioni e i protocolli supportati dalla "
 "versione Enterprise è disponibile qui:"
 
-#: ../../dpi_filter.rst:49 309c5a2ffcd34edc8922c6bcab3ab67d
+#: ../../dpi_filter.rst:49 c8be586673ea4037b96b1567cdb65be1
 msgid ""
 "`Applications <https://www.netify.ai/resources/applications_reference>`_"
 msgstr ""
 "`Applicazioni <https://www.netify.ai/resources/applications_reference>`_"
 
-#: ../../dpi_filter.rst:50 8d65200bfd524227bdce7222352a06ba
+#: ../../dpi_filter.rst:50 a45969b64fa44521acac766b5acb02a5
 msgid "`Protocols <https://www.netify.ai/resources/protocols>`_"
 msgstr "`Protocolli <https://www.netify.ai/resources/protocols>`_"
 
-#: ../../dpi_filter.rst:53 d4834a6bafd443d6b98afe1a428acbfc
+#: ../../dpi_filter.rst:53 950de0faa2d7427bb3a22fc84e09a7ed
 msgid "Exceptions"
 msgstr "Eccezioni"
 
-#: ../../dpi_filter.rst:55 97befd48a1ed46dd9181e7e8d21aaece
+#: ../../dpi_filter.rst:55 9a3ab4cd344d4d3b986efde415b16fb6
 msgid ""
 "DPI exclusion allows for the exclusion of specific network addresses, such "
 "as the gateway or other critical infrastructure, preventing them from being "
@@ -170,26 +170,15 @@ msgstr ""
 "L'esclusione DPI consente di escludere indirizzi di rete specifici, come il "
 "gateway o altre infrastrutture critiche, impedendo che vengano bloccati."
 
-#: ../../dpi_filter.rst:57 dee6b3eb40f5486c9e4486def8420a2d
-msgid ""
-"To add a new exception, click the ``Add exception`` button. Enter the ``IP "
-"address`` that should be exempted from the filter. You can include a "
-"description explaining the reason for the exclusion."
-msgstr ""
-"Per aggiungere una nuova eccezione, fare clic sul pulsante ``Aggiungi "
-"eccezione``. Inserire l\'``Indirizzo IP`` che deve essere escluso dal filtro."
-" È possibile includere una descrizione che spieghi il motivo "
-"dell'esclusione."
-
-#: ../../dpi_filter.rst:61 efbd890b768a4019a22b400f53b3546a
+#: ../../dpi_filter.rst:61 553b4a450ee341c9ab4c1942e6771230
 msgid "Each exception can be enabled or disabled as desired."
 msgstr "Ogni eccezione può essere abilitata o disabilitata secondo necessità."
 
-#: ../../dpi_filter.rst:64 5b08b063f4e44ec08efed763f5b59603
+#: ../../dpi_filter.rst:64 0558f7adc0f846afb0fb28078ae708ed
 msgid "Netify interface exclusion"
 msgstr "Esclusione dell'interfaccia Netify"
 
-#: ../../dpi_filter.rst:66 3c74595b26e94097a8a69f56d302e1cd
+#: ../../dpi_filter.rst:66 e870859bf456472eb34159688cb88d11
 msgid ""
 "By default, Netifyd monitors all interfaces. To exclude specific interfaces,"
 " you can define an exclusion list. Below are commands to add, modify, or "
@@ -204,7 +193,7 @@ msgstr ""
 "utilizzando l'opzione ``ns_exclude``, che accetta una lista di pattern. Ogni"
 " voce è un pattern shell glob."
 
-#: ../../dpi_filter.rst:69 99f41669507745c2b1713e9d8714b63b
+#: ../../dpi_filter.rst:69 1b9bedfabbd14400b2ee8999dea0cc8c
 msgid ""
 "Add interfaces to exclusion list. The system will exclude the `eth1` "
 "interface and all OpenVPN and WireGuard interfaces: ::"
@@ -212,7 +201,7 @@ msgstr ""
 "Aggiungere le interfacce all'elenco di esclusione. Il sistema escluderà "
 "l'interfaccia ``eth1`` e tutte le interfacce OpenVPN e WireGuard: ::"
 
-#: ../../dpi_filter.rst:77 5afd216693404e3fba1428976f5d0b12
+#: ../../dpi_filter.rst:77 7dbb8087ee7748ddb45c5097a881ee26
 msgid ""
 "In this case the system will exclude interface ``eth1``, all WireGuard "
 "``wgX`` interfaces and all OpenVPN routed interfaces."
@@ -220,14 +209,25 @@ msgstr ""
 "In questo caso il sistema escluderà l'interfaccia ``eth1``, tutte le "
 "interfacce WireGuard ``wgX`` e tutte le interfacce OpenVPN instradate."
 
-#: ../../dpi_filter.rst:79 5e5ec99e9ffb48f89f515295b023bc8a
+#: ../../dpi_filter.rst:79 c25be8cac5c245658565aacaf73ddf06
 msgid "Modify exclusion list: ::"
 msgstr "Modifica elenco di esclusione: ::"
 
-#: ../../dpi_filter.rst:86 af2c7a834d654b02abd851c8be866728
+#: ../../dpi_filter.rst:86 69c339bc20d744318907488a96a0d857
 msgid "Clear exclusion list: ::"
 msgstr "Eliminazione elenco di esclusione: ::"
 
-#: ../../dpi_filter.rst:92 954df127c9104aa5b31d925be5423782
+#: ../../dpi_filter.rst:92 c03937ef200f43aca8a60aa6b001799e
 msgid "Return the exclusion list: ::"
 msgstr "Restituire l'elenco di esclusione: ::"
+
+#: ../../dpi_filter.rst:57 dfb5aa43cd0d411a9a99c53dc0c765a7
+msgid ""
+"To add a new exception, click the ``Add exception`` button. Enter the ``IP "
+"address or CIDR`` that should be exempted from the filter. You can include a"
+" description explaining the reason for the exclusion."
+msgstr ""
+"Per aggiungere una nuova eccezione, fare clic sul pulsante ``Aggiungi "
+"eccezione``. Inserire l'``Indirizzo IP address o CIDR`` che deve essere escluso dal "
+"filtro. È possibile includere una descrizione che spieghi il motivo "
+"dell'esclusione."
