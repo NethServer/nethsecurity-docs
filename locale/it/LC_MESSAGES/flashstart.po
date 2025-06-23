@@ -216,7 +216,7 @@ msgid ""
 "administrators can associate specific host sets (defined in the firewall) "
 "with a profile."
 msgstr ""
-"**Oggetti firewall (insiemi di host):** Dal pannello di configurazione di "
+"**Oggetti firewall (host set):** Dal pannello di configurazione di "
 "FlashStart, gli amministratori possono associare insiemi specifici di host "
 "(definiti nel firewall) a un profilo."
 
