@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../high_availability.rst:5 fe83253725374da9b1da976f961abecc
+#: ../../high_availability.rst:5 a1f69dcbc5d24b2ba45edee7d2404d15
 msgid "High Availability (Beta)"
 msgstr "High Availability (Beta)"
 
-#: ../../high_availability.rst:9 627873a56a7440f99570bb1f7b1ff736
+#: ../../high_availability.rst:9 17bfc04a61ae434b8c2c63f5e505c943
 msgid ""
 "This feature is in beta and may not be fully functional or stable. Use it at"
 " your own risk, and ensure you have backups of your configuration."
@@ -15,7 +15,7 @@ msgstr ""
 "funzionante o stabile. Utilizzarla a proprio rischio e assicurarsi di avere "
 "copie di backup della configurazione."
 
-#: ../../high_availability.rst:12 ef66e1b795bf4c4881562eec71531b80
+#: ../../high_availability.rst:12 ac155248343a4c01b8df1da8fff9fb32
 msgid ""
 "NethSecurity High Availability (HA) ensures continuous network operation by "
 "providing redundancy through a cluster of two firewalls. If the primary "
@@ -23,14 +23,14 @@ msgid ""
 "backup firewall automatically takes over all network services and traffic "
 "handling, minimizing downtime."
 msgstr ""
-"L'High Availability (HA) di NethSecurity garantisce la continuità operativa"
-" della rete fornendo ridondanza tramite un cluster di due firewall. Se il "
+"L'High Availability (HA) di NethSecurity garantisce la continuità operativa "
+"della rete fornendo ridondanza tramite un cluster di due firewall. Se il "
 "firewall primario si guasta a causa di problemi hardware, malfunzionamenti "
 "software o manutenzione, un firewall di backup assume automaticamente il "
 "controllo di tutti i servizi di rete e della gestione del traffico, "
 "riducendo al minimo i tempi di inattività."
 
-#: ../../high_availability.rst:16 8af0d744690b4b41910f784062a0f626
+#: ../../high_availability.rst:16 e0b67073de9b40f68706632798a2f79d
 msgid ""
 "This is crucial for businesses or organizations where uninterrupted internet"
 " access, VPN connectivity, and security services are essential for daily "
@@ -41,22 +41,22 @@ msgstr ""
 "sono essenziali per le operazioni quotidiane, prevenendo la perdita di "
 "produttività o di ricavi durante un’interruzione."
 
-#: ../../high_availability.rst:20 6d2d77d15aff46328b2e22074ba2e094
+#: ../../high_availability.rst:20 3fd6391cf4e04c98bd98f515a35b6b68
 msgid "Key concepts"
 msgstr "Concetti chiave"
 
-#: ../../high_availability.rst:22 5eba7dece9934bdf9c192bcade886587
+#: ../../high_availability.rst:22 a8e14613034e44f3bd6bda527f2ec2db
 msgid "Some key concepts to understand before setting up HA:"
 msgstr "Alcuni concetti chiave da comprendere prima di configurare HA:"
 
-#: ../../high_availability.rst:24 0b2a05f24c564bfca51fd0878f2f6e31
+#: ../../high_availability.rst:24 d0a5930c56be46f4b65baa1177b81308
 msgid ""
 "**Primary Node**: The firewall that actively handles traffic and services."
 msgstr ""
 "**Nodo primario**: Il firewall che gestisce attivamente il traffico e i "
 "servizi."
 
-#: ../../high_availability.rst:25 0392436844e34218a34440e89b313621
+#: ../../high_availability.rst:25 1267187e23e74dd3a4b199b4c5a3c5e9
 msgid ""
 "**Backup Node**: The firewall that automatically takes over in case of "
 "failure on the primary node."
@@ -64,7 +64,7 @@ msgstr ""
 "**Nodo di backup**: Il firewall che subentra automaticamente in caso di "
 "guasto del nodo primario."
 
-#: ../../high_availability.rst:26 5a02365647ae4c269488226bcf43c594
+#: ../../high_availability.rst:26 35a9c5554e7541c0abd86405d1c7ff6b
 msgid ""
 "**Virtual IP (VIP)**: A shared IP address used by both nodes for each "
 "configured interface to ensure uninterrupted client access to services. "
@@ -77,7 +77,7 @@ msgstr ""
 "*sempre* utilizzare l'indirizzo VIP (ad esempio, come gateway, server DNS o "
 "endpoint VPN) per garantire un failover senza interruzioni."
 
-#: ../../high_availability.rst:29 277a986693904d4d94f414a3ec1b2251
+#: ../../high_availability.rst:29 4ab4e9311c13448888ae2579c77169ec
 msgid ""
 "Configuration changes must **always** be made on the **primary node**. The "
 "backup node should be considered read-only. Most configurations, such as "
@@ -90,11 +90,11 @@ msgstr ""
 " le impostazioni VPN o le regole di Threat Shield, vengono sincronizzate "
 "automaticamente dal nodo primario al nodo di backup."
 
-#: ../../high_availability.rst:32 3d520072aae34eaf929dfc9ed3b5e161
+#: ../../high_availability.rst:32 fd737bf0db064621afa5604dda41fb71
 msgid "This is how the HA system works:"
 msgstr "Ecco come funziona il sistema HA:"
 
-#: ../../high_availability.rst:34 5bd7327e19224c86834c7b9356992099
+#: ../../high_availability.rst:34 623d96b3bebd44f39889145214e1ec0c
 msgid ""
 "**Heartbeat**: The primary and backup firewalls continuously check each "
 "other's status using the VRRP protocol. If the primary fails, the backup "
@@ -104,17 +104,17 @@ msgstr ""
 "stato l'uno dell'altro utilizzando il protocollo VRRP. Se il primario si "
 "guasta, il backup subentra."
 
-#: ../../high_availability.rst:35 0ad36d1d8956449cab0489311fa8eeac
+#: ../../high_availability.rst:35 ae204972ae8b48dc918ce2a6d623fb40
 msgid ""
 "**Settings synchronization**: The primary firewall securely sends its "
 "settings, including details about active connections like VPNs and network "
 "routes, to the backup firewall."
 msgstr ""
-"**Sincronizzazione delle configurazione**: Il firewall primario invia in modo "
-"sicuro le proprie impostazioni, inclusi i dettagli sulle connessioni attive "
-"come VPN e rotte di rete, al firewall di backup."
+"**Sincronizzazione delle configurazione**: Il firewall primario invia in "
+"modo sicuro le proprie impostazioni, inclusi i dettagli sulle connessioni "
+"attive come VPN e rotte di rete, al firewall di backup."
 
-#: ../../high_availability.rst:37 9bffa93249a14b87b828e1bc5432d99e
+#: ../../high_availability.rst:37 d76266d719094a1da73d954d5d6af9b2
 msgid ""
 "The system automatically adjusts what each firewall does based on whether "
 "it's the active (primary) or standby (backup) unit:"
@@ -122,7 +122,7 @@ msgstr ""
 "Il sistema regola automaticamente il comportamento di ciascun firewall in "
 "base al fatto che sia l'unità attiva (primaria) o in standby (backup):"
 
-#: ../../high_availability.rst:39 0d326978cbf3458a9759d8e7b7b4aa7d
+#: ../../high_availability.rst:39 0a75267cdfc144159390a1f5c355ac52
 msgid ""
 "**Backup receives configuration updates**: When the backup firewall gets new"
 " settings, it saves them but keeps related services (like VPNs) turned off. "
@@ -132,16 +132,16 @@ msgid ""
 "ensures only the active primary firewall handles these tasks, preventing "
 "conflicts."
 msgstr ""
-"**Il backup riceve aggiornamenti della configurazione**: Quando il firewall di "
-"backup riceve nuove impostazioni, le salva ma mantiene i servizi correlati "
-"(come le VPN) disattivati. Il firewall di backup conserva una copia completa"
-" della configurazione del primario, ma mantiene la maggior parte delle "
-"attività in background inattive. Questo include operazioni come la verifica "
-"degli aggiornamenti software, l'esecuzione di backup remoti o l'invio di "
-"report. In questo modo, solo il firewall primario attivo gestisce queste "
-"attività, evitando conflitti."
+"**Il backup riceve aggiornamenti della configurazione**: Quando il firewall "
+"di backup riceve nuove impostazioni, le salva ma mantiene i servizi "
+"correlati (come le VPN) disattivati. Il firewall di backup conserva una "
+"copia completa della configurazione del primario, ma mantiene la maggior "
+"parte delle attività in background inattive. Questo include operazioni come "
+"la verifica degli aggiornamenti software, l'esecuzione di backup remoti o "
+"l'invio di report. In questo modo, solo il firewall primario attivo gestisce"
+" queste attività, evitando conflitti."
 
-#: ../../high_availability.rst:43 742472b2928b441a878c3e515f385f9c
+#: ../../high_availability.rst:43 8dfa8bf59f404d6397c5be1dd7ccf64e
 msgid ""
 "**Firewall becomes active**: When a firewall takes over as the primary "
 "(either starting up normally or during a failover), it activates all "
@@ -151,7 +151,7 @@ msgstr ""
 "primario (sia durante un avvio normale che durante un failover), attiva "
 "tutti i servizi e le connessioni necessari."
 
-#: ../../high_availability.rst:45 f90cf56ae882475d826112a24d23ba7a
+#: ../../high_availability.rst:45 dd3a2ab6980b436abb89fb14b6a0178f
 msgid ""
 "**Firewall becomes standby**: When a firewall is in backup mode (either at "
 "startup or when the primary comes back online), it deactivates most services"
@@ -161,7 +161,7 @@ msgstr ""
 "backup (sia all'avvio che quando il primario torna online), disattiva la "
 "maggior parte dei servizi e delle connessioni."
 
-#: ../../high_availability.rst:48 92b3f063c5294f778284e3425283e609
+#: ../../high_availability.rst:48 43ed77da5c094f498e96ed401a09343e
 msgid ""
 "While the HA system is designed to be as automatic as possible, some "
 "configurations require manual intervention. For example, if you add a new "
@@ -176,7 +176,7 @@ msgstr ""
 "azioni specifiche per garantire che il nodo di backup sia a conoscenza della"
 " nuova configurazione di rete:"
 
-#: ../../high_availability.rst:52 8c98f5458b4140469720266e6c0ff0b1
+#: ../../high_availability.rst:52 81bc42b734df4cceb987527255d1bb5e
 msgid ""
 "Beside the first LAN and WAN configured in the initial setup, all other "
 "interfaces must be explicitly added to the HA cluster. This is done using "
@@ -191,7 +191,7 @@ msgstr ""
 "registra la nuova interfaccia nella configurazione del cluster HA e le "
 "associa un Virtual IP (VIP) per il failover."
 
-#: ../../high_availability.rst:55 755e0dfe91914c96a68cddebef8023b2
+#: ../../high_availability.rst:55 04cff55b07d14e588d189643dc002121
 msgid ""
 "Similarly, when adding an IP alias to an interface on the primary node, you "
 "must also register this alias within the HA cluster configuration using "
@@ -201,11 +201,11 @@ msgstr ""
 "primario, è necessario registrare anche questo alias nella configurazione "
 "del cluster HA utilizzando ``ns-ha-config add-alias``."
 
-#: ../../high_availability.rst:59 ce4975294afc400da00ea5af7e31f79e
+#: ../../high_availability.rst:59 34f07de283d24a518329142c28be5d33
 msgid "Supported features and limitations"
 msgstr "Funzionalità supportate e limitazioni"
 
-#: ../../high_availability.rst:61 890ea2f5d8ab4e3f9905c7d4a9eb802e
+#: ../../high_availability.rst:61 527c838318c0460c9985bfc9b59d69ba
 msgid ""
 "The HA cluster supports synchronization for a wide range of features, "
 "including:"
@@ -213,99 +213,99 @@ msgstr ""
 "Il cluster HA supporta la sincronizzazione per un'ampia gamma di "
 "funzionalità, tra cui:"
 
-#: ../../high_availability.rst:63 1488b166936e4fde9f964f078b154a5d
+#: ../../high_availability.rst:63 9e87848c18c34778b5993eb41ff65e49
 msgid "Firewall rules, port forwarding, DHCP, DNS"
 msgstr "Regole del firewall, port forwarding, DHCP, DNS"
 
-#: ../../high_availability.rst:64 c94ae5239f0a416fb44460bd34367831
+#: ../../high_availability.rst:64 3ff8c287837546549584086ea0b0dc95
 msgid "VPN configurations (OpenVPN, IPsec, WireGuard)"
 msgstr "Configurazioni VPN (OpenVPN, IPsec, WireGuard)"
 
-#: ../../high_availability.rst:65 39bc945f082e4741a9f437cae829bf42
+#: ../../high_availability.rst:65 56c9018a66bd4ae6b9095fb2d1144c17
 msgid "QoS, Multi-WAN, DPI rules"
 msgstr "QoS, Multi-WAN, regole DPI"
 
-#: ../../high_availability.rst:66 19c92672c53c43baa6fbbd514a6dd3fd
+#: ../../high_availability.rst:66 ad053adee8a94f1d9e4e97ba9a67c73e
 msgid "Reverse proxy, ACME certificates, and more."
 msgstr "Reverse proxy, certificati ACME e altro."
 
-#: ../../high_availability.rst:67 273faea285064592a4847e880c5f650b
+#: ../../high_availability.rst:67 6447092a351543af8c1b72981e2e341c
 msgid "Static routes"
 msgstr "Route statiche"
 
-#: ../../high_availability.rst:68 bae1c93ef7314b638aa5e73d55a36321
+#: ../../high_availability.rst:68 b00ba10b4968495f9c3497fbe0492ade
 msgid "Netifyd informatics configuration"
 msgstr "Configurazione Netifyd informatics"
 
-#: ../../high_availability.rst:69 2cae7a9ba3c04a2a8d6a2b1f8f9be27f
+#: ../../high_availability.rst:69 1164996a4495414d83677e6c8071d512
 msgid "Threat shield IP (banip)"
 msgstr "Threat shield IP (banip))"
 
-#: ../../high_availability.rst:70 ee011339295a4b1eac8496dbc4aead25
+#: ../../high_availability.rst:70 5c613bc37b9247be8816e89bb3074418
 msgid "Threat shield DNS (adblock)"
 msgstr "Threat shield DNS (adblock)"
 
-#: ../../high_availability.rst:71 3926155c868b455aad0fb54b75b3c16a
+#: ../../high_availability.rst:71 7a40bcc10586491da6432d6fdc25b633
 msgid "Users and objects database"
 msgstr "Database di utenti e oggetti"
 
-#: ../../high_availability.rst:72 fefd160ce3f44358944ea71a69807686
+#: ../../high_availability.rst:72 62818a4dd983486caf806c37cf4a0150
 msgid "Netmap"
 msgstr "Netmap"
 
-#: ../../high_availability.rst:73 1b5886b1370a469f9a80b269311000d7
+#: ../../high_availability.rst:73 5b9a89128e8546398ef7293fbff5908f
 msgid "Flashstart"
 msgstr "Flashstart"
 
-#: ../../high_availability.rst:74 2ac9de64e55c4fd792b288e3d5c3cbef
+#: ../../high_availability.rst:74 803081ee907c4eca8b13d8d75a0712fb
 msgid "SNMP server (snmpd)"
 msgstr "Server SNMP (snmpd)"
 
-#: ../../high_availability.rst:75 f3405cc6a0204416984eb28a90c0f33e
+#: ../../high_availability.rst:75 2ce203405d6148f8aaf3a6531d499bc0
 msgid "NAT helpers"
 msgstr "Helper NAT"
 
-#: ../../high_availability.rst:76 59901d8fb511493596bd65ba853f3dee
+#: ../../high_availability.rst:76 73935fa0bf994b97adc7d6eb7d6c9c75
 msgid "Dynamic DNS (ddns)"
 msgstr "DNS dinamico (ddns)"
 
-#: ../../high_availability.rst:77 4d05e3b0e02b4385abc958d8b75ab1df
+#: ../../high_availability.rst:77 e712c3de8a1146aab9034143f510abe9
 msgid "SMTP client (msmtp)"
 msgstr "Client SMTP (msmtp)"
 
-#: ../../high_availability.rst:78 809dec03f690430c90dfd700168e2e86
+#: ../../high_availability.rst:78 371d8963bd7c4c2cb70e8e70873a92e4
 msgid "Backup encryption password"
 msgstr "Password di cifratura del backup"
 
-#: ../../high_availability.rst:79 3fd0308c813345a98f7a6415368bf618
+#: ../../high_availability.rst:79 7fcec516a2144679bf6c6adaa376e703
 msgid "Controller connection and subscription (ns-plug)"
 msgstr "Connessione al controller e subscription (ns-plug)"
 
-#: ../../high_availability.rst:80 c54b4c112f354f27b7019c65c3afcaf9
+#: ../../high_availability.rst:80 49ebf79ef9204db698b828471181532b
 msgid "Active connections tracking (conntrackd)"
 msgstr "Monitoraggio delle connessioni attive (conntrackd)"
 
-#: ../../high_availability.rst:81 699341e234fb452295c49f71f68d33ac
+#: ../../high_availability.rst:81 5f109ff64a924fc395811588b998ec69
 msgid "Hotspot (dedalo)"
 msgstr "Hotspot (dedalo)"
 
-#: ../../high_availability.rst:83 a2bf31f4af3541868a62d3bcc98d74cf
+#: ../../high_availability.rst:83 3fd8e5dfc2e34a5bba3a4990df180a7c
 msgid "Be aware of the following current limitations:"
 msgstr "Si tengano presente le seguenti limitazioni attuali:"
 
-#: ../../high_availability.rst:85 1500ee086c544e0997dac81406ba6013
+#: ../../high_availability.rst:85 8679fe07a07842328a006d26b7c346ab
 msgid "IPv4 only (IPv6 is not supported)."
 msgstr "Solo IPv4 (IPv6 non è supportato)."
 
-#: ../../high_availability.rst:86 969d270d41b2400a94870c8ec815f424
+#: ../../high_availability.rst:86 762ec75ae9bd4843947bfc01a087e6cc
 msgid "VLANs are supported only on physical interfaces."
 msgstr "Le VLAN sono supportate solo sulle interfacce fisiche."
 
-#: ../../high_availability.rst:87 cff80db4626846349cce571099bc3d7c
+#: ../../high_availability.rst:87 8f86c4b99e7544d6bf72fe398a6e45be
 msgid "Extra packages such as NUT are not supported."
 msgstr "Pacchetti aggiuntivi come NUT non sono supportati."
 
-#: ../../high_availability.rst:88 2e5229ff03e44888bd7ca1beabdc0e2c
+#: ../../high_availability.rst:88 abc1ff6e3fa845a4b703303737c16c91
 msgid ""
 "Syslog daemon (rsyslog) configuration is not synced: if you need to send "
 "logs to a remote server, you must use the controller."
@@ -314,11 +314,11 @@ msgstr ""
 "necessario inviare i log a un server remoto, occorre utilizzare il "
 "controller."
 
-#: ../../high_availability.rst:89 41d6dfcce8ad46878c240d3efd24a030
+#: ../../high_availability.rst:89 e6b0a1ea94284e009864321a2d0fbe58
 msgid "PPPoE or DHCP WAN is not supported (see Static IP requirement)"
 msgstr "PPPoE o DHCP WAN non sono supportati (vedere il requisito IP statico)"
 
-#: ../../high_availability.rst:91 04d5976d3116482bab6ebcb5043f70d4
+#: ../../high_availability.rst:91 00e40fa487f84ff6a94e987c3395c4bd
 msgid ""
 "Also note that after the first synchronization, the backup node will have "
 "the same hostname as the primary node. The web user interface will show the "
@@ -334,17 +334,17 @@ msgstr ""
 "cambierà per indicare il ruolo del nodo. Consultare la sezione "
 ":ref:`troubleshooting_ha-section` per ulteriori dettagli."
 
-#: ../../high_availability.rst:97 75483e6b792d4e598048dfa56be05818
+#: ../../high_availability.rst:97 0195f5c3a3ff450fab8c8c408a03d6cc
 msgid "Requirements"
 msgstr "Requisiti"
 
-#: ../../high_availability.rst:99 17a5590452b543519ddae022b435d548
+#: ../../high_availability.rst:99 65df4922075a4b5f811de2dcdace54bb
 msgid "Before setting up HA, ensure the following requirements are met:"
 msgstr ""
 "Prima di configurare l'HA, assicurarsi che siano soddisfatti i seguenti "
 "requisiti:"
 
-#: ../../high_availability.rst:101 181316ce9e53465cb924710b99832a22
+#: ../../high_availability.rst:101 16bf90fd62a24a1fb87b364c18870370
 msgid ""
 "Two firewalls with identical network devices. Each device must have the "
 "exact same name and numbering (e.g., eth0, eth1, eth2, eth3)"
@@ -353,7 +353,7 @@ msgstr ""
 "esattamente lo stesso nome e la stessa numerazione (ad esempio, eth0, eth1, "
 "eth2, eth3)"
 
-#: ../../high_availability.rst:102 6c385d3d44064e7ea48bc59762982c81
+#: ../../high_availability.rst:102 1af036c301784349950e579789bbbd4c
 msgid ""
 "Both nodes must be connected to the same LAN; connect the LAN interfaces to "
 "the same broadcast domain (usually the same switch)."
@@ -362,16 +362,16 @@ msgstr ""
 "interfacce LAN allo stesso dominio di broadcast (di solito lo stesso "
 "switch)."
 
-#: ../../high_availability.rst:103 dc8837c337d844778448f40d5897698c
+#: ../../high_availability.rst:103 df287decccf944b8a20b7ee1428be457
 msgid "Static IP addresses for all interfaces that will host a virtual IP."
 msgstr ""
 "Indirizzi IP statici per tutte le interfacce che ospiteranno un IP virtuale."
 
-#: ../../high_availability.rst:106 dce36398c7bb4d7a9c4a165f5a349e75
+#: ../../high_availability.rst:106 c3b71a1add964851805c0150aff74338
 msgid "Setup and configuration"
 msgstr "Configurazione e impostazione"
 
-#: ../../high_availability.rst:108 785b112f81fa425bb70ac94d0d5edbef
+#: ../../high_availability.rst:108 93bad5573a2f457ab2724087e98397f4
 msgid ""
 "The HA setup process involves several steps. If you just want to see the "
 "commands, you can skip to the `Configuration example`_ section, but it's "
@@ -380,14 +380,14 @@ msgid ""
 msgstr ""
 "Il processo di configurazione HA prevede diversi passaggi. Se si desidera "
 "solo visualizzare i comandi, è possibile passare direttamente alla sezione "
-"`Esempio di configurazione`_, ma si consiglia di leggere l'intera sezione per "
-"comprendere il processo e i requisiti."
+"`Esempio di configurazione`_, ma si consiglia di leggere l'intera sezione "
+"per comprendere il processo e i requisiti."
 
-#: ../../high_availability.rst:112 4b73e0f2cddb412fa0586b22eb3bcfc4
+#: ../../high_availability.rst:112 442428e5b3394b5b94d769387afadf7a
 msgid "The setup process is as follows:"
 msgstr "Il processo di configurazione è il seguente:"
 
-#: ../../high_availability.rst:114 9e68dd9911b34ff8b409ee36e6bfc0c3
+#: ../../high_availability.rst:114 9284f13763c4453297e55d0d2a8f3709
 msgid ""
 "**Install the same NethSecurity version** on two identical machines "
 "(physical or virtual). See :ref:`install-section` for detailed installation "
@@ -397,7 +397,7 @@ msgstr ""
 "(fisiche o virtuali). Consultare :ref:`install-section` per istruzioni "
 "dettagliate sull'installazione."
 
-#: ../../high_availability.rst:117 a8ada57cb9bd4f7987aac0dc9a884ac9
+#: ../../high_availability.rst:117 7201d7a93152458eab4e07f15040644c
 msgid ""
 "**Connect network cables properly** to ensure redundancy. See `Network "
 "cabling`_ section below for proper cabling guidelines."
@@ -406,7 +406,7 @@ msgstr ""
 "Consultare la sezione `Network cabling`_ di seguito per le linee guida "
 "corrette sul cablaggio."
 
-#: ../../high_availability.rst:120 fc202ffc305f4793be0a1b611204dbaa
+#: ../../high_availability.rst:120 537b6ff614da409b9585c89feb0c8efa
 msgid ""
 "**Configure LAN interfaces** on both nodes with static IP addresses. Create "
 "any VLANs or other network devices that will be needed for the cluster "
@@ -418,7 +418,7 @@ msgstr ""
 "cluster prima di procedere con la configurazione HA. Consultare la sezione "
 "`LAN interfaces`_ di seguito per istruzioni dettagliate."
 
-#: ../../high_availability.rst:124 53020008da52467db833a29256eddc2a
+#: ../../high_availability.rst:124 df78246f2ce1473f9c747a09cdf8b54b
 msgid ""
 "**Initialize the cluster** using the `ns-ha-config` commands to establish "
 "the HA cluster foundation. The initialization process configures the "
@@ -437,7 +437,7 @@ msgstr ""
 "potrebbe non funzionare correttamente. Consultare la sezione `Cluster "
 "initialization`_ di seguito per istruzioni dettagliate."
 
-#: ../../high_availability.rst:130 99f9a548b2c74a3eab9a2178bd29de90
+#: ../../high_availability.rst:130 82793e2bfdb24cd8a9dcbe864f3ac9e5
 msgid ""
 "**Add WAN interface** to cluster configuration to ensure proper failover for"
 " internet connectivity. This step is crucial for maintaining internet access"
@@ -450,7 +450,7 @@ msgstr ""
 "failover. Consultare la sezione `WAN Interfaces`_ di seguito per istruzioni "
 "dettagliate."
 
-#: ../../high_availability.rst:134 9ea5c545862641b1aa40ff115e95f7cc
+#: ../../high_availability.rst:134 b12b171907d8466f97e2a6623a52c169
 msgid ""
 "**Verify the configuration** to ensure everything is set up correctly. Use "
 "the `ns-ha-config` commands to check the status and configuration of the HA "
@@ -462,7 +462,7 @@ msgstr ""
 "e la configurazione del cluster HA. Consultare la sezione `Verificare la "
 "configurazione`_ di seguito per istruzioni dettagliate."
 
-#: ../../high_availability.rst:138 829d84ee5a794f569387cf7c3e7a7f52
+#: ../../high_availability.rst:138 465ffed7d6534684b48aebf6d33e628f
 msgid ""
 "**Configure additional interfaces** for the cluster as needed (optional). "
 "This step is optional and depends on your network setup. You can add any "
@@ -477,7 +477,7 @@ msgstr ""
 " seguito per istruzioni dettagliate. Se è necessario configurare un hotspot,"
 " vedere la sezione `Supporto hotspot`_ di seguito per i requisiti specifici."
 
-#: ../../high_availability.rst:143 08e570fdf5db489e9dc7112c1b01301d
+#: ../../high_availability.rst:143 5e5242937d284b28b08660655cc7c5a3
 msgid ""
 "**Add IP aliases** to the primary node on relevant interfaces (optional). "
 "This step is optional and allows you to add additional IP addresses to the "
@@ -490,7 +490,7 @@ msgstr ""
 "IP. Consultare la sezione `Alias di rete`_ di seguito per istruzioni "
 "dettagliate."
 
-#: ../../high_availability.rst:147 93deef1bf11c4353966419b044389cfe
+#: ../../high_availability.rst:147 51e97212b8d84c28acf2ee955b467583
 msgid ""
 "The detailed steps for each of these points are covered in the sections "
 "below."
@@ -498,7 +498,7 @@ msgstr ""
 "I passaggi dettagliati per ciascuno di questi punti sono trattati nelle "
 "sezioni seguenti."
 
-#: ../../high_availability.rst:149 e617284b62f54994ae6546feaf2a980c
+#: ../../high_availability.rst:149 f816c3422f2545378b9093e30f078b6a
 msgid ""
 "Sometimes, you may need to remove interfaces or aliases from the HA "
 "configuration. This can be done using the `ns-ha-config` commands. See "
@@ -509,11 +509,11 @@ msgstr ""
 "config`. Consultare la sezione `Remove interfaces and aliases`_ qui sotto "
 "per istruzioni dettagliate."
 
-#: ../../high_availability.rst:154 d303f3b338dd4ffda637e1fe6821324d
+#: ../../high_availability.rst:154 157a530223a44a0bab7d4761b760dd61
 msgid "Network cabling"
 msgstr "Cablaggio di rete"
 
-#: ../../high_availability.rst:156 330d0c79c25c4bb4aef30c447e24e219
+#: ../../high_availability.rst:156 a688d6e62a924ace9c3b6f598e906627
 msgid ""
 "Proper network cabling is essential to ensure high availability and seamless"
 " failover between the primary and backup firewalls."
@@ -522,11 +522,11 @@ msgstr ""
 "disponibilità e un failover senza interruzioni tra il firewall primario e "
 "quello di backup."
 
-#: ../../high_availability.rst:158 e83d2ce1ca23441e950f7b7c00ca8271
+#: ../../high_availability.rst:158 e2eadb5043bc490086a86e593e81bf29
 msgid "**General Recommendations**:"
 msgstr "**Raccomandazioni generali**:"
 
-#: ../../high_availability.rst:160 ac8ca0aefcbe42ba9664fdc389a34e1c
+#: ../../high_availability.rst:160 8a1cfe5b955847508ff5e6e35e7f577f
 msgid ""
 "For each network zone (LAN, WAN, DMZ, etc.), use a dedicated switch or VLAN "
 "to connect both firewalls' interfaces."
@@ -534,7 +534,7 @@ msgstr ""
 "Per ogni zona di rete (LAN, WAN, DMZ, ecc.), utilizzare uno switch dedicato "
 "o una VLAN per collegare le interfacce di entrambi i firewall."
 
-#: ../../high_availability.rst:161 dc025ffc4f9044dcabd886a3f48fcf10
+#: ../../high_availability.rst:161 b8008c9e3d0149c2b49205b3027bcbeb
 msgid ""
 "Avoid connecting the firewalls directly to each other; always use a switch "
 "or network segment in between."
@@ -542,17 +542,17 @@ msgstr ""
 "Evitare di collegare i firewall direttamente tra loro; utilizzare sempre uno"
 " switch o un segmento di rete intermedio."
 
-#: ../../high_availability.rst:162 f4ebd05f83454e94a6b71cc6b583ea9c
+#: ../../high_availability.rst:162 96005bf8c3ff43dfb395c75e95093b7f
 msgid "Label all cables and switches for clarity and easier troubleshooting."
 msgstr ""
 "Etichettare tutti i cavi e gli switch per maggiore chiarezza e per "
 "facilitare la risoluzione dei problemi."
 
-#: ../../high_availability.rst:164 6b8c7c2e9a0848978f936c96ad299a0a
+#: ../../high_availability.rst:164 b0cc0a2d649641d381461ba3d8abfde7
 msgid "**LAN Connections**:"
 msgstr "**Connessioni LAN**:"
 
-#: ../../high_availability.rst:166 28ce9e3386f54b918155229a8a848f67
+#: ../../high_availability.rst:166 6a0038e1c9c24ff0997cf1b5ec940406
 msgid ""
 "Connect the LAN interfaces of both the primary and backup nodes to the same "
 "network segment."
@@ -560,7 +560,7 @@ msgstr ""
 "Collegare le interfacce LAN sia del nodo primario che di quello di backup "
 "allo stesso segmento di rete."
 
-#: ../../high_availability.rst:167 cac918ea38324d5cb8e77ef951775bbd
+#: ../../high_availability.rst:167 9d99cb1e2ec94ca782fd4ba14d0818a9
 msgid ""
 "Ideally, use **two separate switches** for redundancy. Connect each "
 "firewall's LAN port to both switches (if supported), or at least ensure each"
@@ -573,7 +573,7 @@ msgstr ""
 "diverso. In questo modo si evita un singolo punto di guasto nel caso in cui "
 "uno switch si guasti."
 
-#: ../../high_availability.rst:169 ab65b47c0e804ead8de91b209fe26e3c
+#: ../../high_availability.rst:169 d5f88b78c9de41d0bc31d4a5304fa361
 msgid ""
 "If using two separate switches for redundancy, they must be properly "
 "interconnected and support Spanning Tree Protocol (STP) to prevent network "
@@ -585,7 +585,7 @@ msgstr ""
 " (STP) per prevenire loop di rete. Gli switch non gestiti senza supporto STP"
 " possono causare broadcast storm quando sono interconnessi."
 
-#: ../../high_availability.rst:171 340698e1e6b741d2a2cd296b8390f312
+#: ../../high_availability.rst:171 114f19b956414777b0c90e0f6269428a
 msgid ""
 "If only one switch is available, use VLAN segmentation to logically separate"
 " each network zone and minimize broadcast domains."
@@ -594,7 +594,7 @@ msgstr ""
 "separare logicamente ciascuna zona di rete e minimizzare i domini di "
 "broadcast."
 
-#: ../../high_availability.rst:172 7aba0aabe74248549160a541289683f9
+#: ../../high_availability.rst:172 0df8e8755b2848b2b66e90e19ed45bb3
 msgid ""
 "Repeat this process for **each network interface** configured for HA (e.g., "
 "LAN, GUEST, DMZ). Each interface should be connected to its corresponding "
@@ -604,24 +604,24 @@ msgstr ""
 " (ad esempio, LAN, GUEST, DMZ). Ogni interfaccia deve essere collegata al "
 "relativo segmento di rete, preferibilmente tramite switch ridondanti."
 
-#: ../../high_availability.rst:174 20029093be1b4e8aa3b088373e240132
+#: ../../high_availability.rst:174 ba6db06fcbed47ef8dfa9e96c174af4e
 msgid "**WAN Connections**:"
 msgstr "**Connessioni WAN**:"
 
-#: ../../high_availability.rst:176 6e8ec80a9bbc4dcf87f0ddbce9e3515b
+#: ../../high_availability.rst:176 ebba6c7acad84b0a8b8b2eaae6d6f0fc
 msgid ""
 "Connect the WAN interfaces of both nodes to the ISP or upstream router."
 msgstr ""
 "Collegare le interfacce WAN di entrambi i nodi all'ISP o al router upstream."
 
-#: ../../high_availability.rst:177 328557d13d0d4616a2fa90cb5f3909a9
+#: ../../high_availability.rst:177 2ce66cbaba7c4b488c70fb9d655a8f63
 msgid ""
 "For best redundancy, use the same approach as with the LAN connections."
 msgstr ""
 "Per la massima ridondanza, utilizzare lo stesso approccio adottato per le "
 "connessioni LAN."
 
-#: ../../high_availability.rst:178 70437a75630947e0b9734c157328d2a2
+#: ../../high_availability.rst:178 3054d0dec6384578b0357a0f9f8d9ab5
 msgid ""
 "If only one WAN switch/router is available, both firewalls should connect to"
 " it, but this introduces a single point of failure."
@@ -629,7 +629,7 @@ msgstr ""
 "Se è disponibile solo uno switch/router WAN, entrambi i firewall dovrebbero "
 "collegarsi ad esso, ma questo introduce un singolo punto di guasto."
 
-#: ../../high_availability.rst:179 63df02b62f0d42c1a5e207ae6ac8e8d4
+#: ../../high_availability.rst:179 c17e239e2c9e4460b9552298e1f172fe
 msgid ""
 "If your ISP provides a router with HA capability (e.g., VRRP or HSRP), you "
 "can connect both firewalls' WAN ports directly to the ISP's redundant "
@@ -639,7 +639,7 @@ msgstr ""
 " HSRP), è possibile collegare direttamente le porte WAN di entrambi i "
 "firewall ai router ridondanti dell'ISP."
 
-#: ../../high_availability.rst:180 5ccbe4b267d84a7687d89fd0ecbd0914
+#: ../../high_availability.rst:180 7bbf596a612344a09d8cc85370c7de91
 msgid ""
 "Alternatively, you can configure MultiWAN directly in NethSecurity to manage"
 " multiple WAN uplinks and failover."
@@ -647,7 +647,7 @@ msgstr ""
 "In alternativa, è possibile configurare MultiWAN direttamente in "
 "NethSecurity per gestire più uplink WAN e il failover."
 
-#: ../../high_availability.rst:182 c84204107ba34a379d138820c2a84c47
+#: ../../high_availability.rst:182 a3f4e0f3274145d5a9a366596ffdca39
 msgid ""
 "This setup ensures that if any single firewall or switch fails, network "
 "connectivity is maintained through the backup node and the remaining switch."
@@ -656,7 +656,7 @@ msgstr ""
 "dovesse guastarsi, la connettività di rete venga mantenuta tramite il nodo "
 "di backup e lo switch rimanente."
 
-#: ../../high_availability.rst:184 74854fb91cdd4e48a806dfc88c4813ad
+#: ../../high_availability.rst:184 90d14fd8c01e4c069f1bfd39412cd899
 msgid ""
 "The below diagram illustrates the recommended redundant network setup, "
 "switches are omitted for clarity."
@@ -664,16 +664,16 @@ msgstr ""
 "Il diagramma seguente illustra la configurazione di rete ridondante "
 "consigliata; gli switch sono omessi per chiarezza."
 
-#: ../../high_availability.rst:186 354e81c697c541988501319486948d06
+#: ../../high_availability.rst:186 50ae2b7143a9490f87f47f3d996832d0
 msgid "High Availability network diagram showing proper cabling"
 msgstr ""
 "Diagramma di rete per l'Alta Disponibilità che mostra il cablaggio corretto"
 
-#: ../../high_availability.rst:191 38f124a3a0b246c2ac43da311a51e515
+#: ../../high_availability.rst:191 35b21335b6c2453d8ff73e3f330fa132
 msgid "LAN interfaces"
 msgstr "Interfacce LAN"
 
-#: ../../high_availability.rst:193 04358c53dd624223b0807e97aa602ef6
+#: ../../high_availability.rst:193 af370479a8ef45f2892f5f0200acdd61
 msgid ""
 "The HA cluster requires static IP addresses for all interfaces that will "
 "host a virtual IP. Follow these steps:"
@@ -681,7 +681,7 @@ msgstr ""
 "Il cluster HA richiede indirizzi IP statici per tutte le interfacce che "
 "ospiteranno un IP virtuale. Seguire questi passaggi:"
 
-#: ../../high_availability.rst:196 204ec749cabf401785fbf65c12c84df0
+#: ../../high_availability.rst:196 dc3a44199b554e10b4b3653d794d33d3
 msgid ""
 "Power on the backup node, access the web interface and set a static LAN IP "
 "address (e.g., `192.168.100.239`)."
@@ -689,7 +689,7 @@ msgstr ""
 "Accendere il nodo di backup, accedere all'interfaccia web e impostare un "
 "indirizzo IP LAN statico (ad esempio, ``192.168.100.239``)."
 
-#: ../../high_availability.rst:197 9411d26275cb4befa58ac1f04cf5102c
+#: ../../high_availability.rst:197 224e4b2410d0414b8225a2fcc71c97d3
 msgid ""
 "Power on the primary node, access the web interface and set a static LAN IP "
 "address (e.g., `192.168.100.238`)."
@@ -697,7 +697,7 @@ msgstr ""
 "Accendere il nodo primario, accedere all'interfaccia web e impostare un "
 "indirizzo IP LAN statico (ad esempio, ``192.168.100.238``)."
 
-#: ../../high_availability.rst:199 4c2c2f541e7f46adbec4c011a4e6e4fc
+#: ../../high_availability.rst:199 b825f0b1a5474076a4a0243e5973f759
 msgid ""
 "These static IP addresses are used to access the nodes directly, even if the"
 " HA cluster is disabled. Consider them *management IP addresses*."
@@ -706,11 +706,11 @@ msgstr ""
 "nodi, anche se il cluster HA è disabilitato. Considerarli come *indirizzi IP"
 " di gestione*."
 
-#: ../../high_availability.rst:202 669e076ff8e346b0bf6a6c7140d3cd89
+#: ../../high_availability.rst:202 6608030fa2c94f9c80fac7dde49b8851
 msgid "Cluster initialization"
 msgstr "Inizializzazione del cluster"
 
-#: ../../high_availability.rst:204 bb6b2a3dc7ce4240a65e0172827adcae
+#: ../../high_availability.rst:204 78db65451c624d63a51363419e4e81b3
 msgid ""
 "The setup process configures `keepalived` for failover, `rsync` over SSH for"
 " configuration synchronization, and `conntrackd` to sync the connection "
@@ -721,7 +721,7 @@ msgstr ""
 "sincronizzare la tabella di tracciamento delle connessioni. Utilizzare lo "
 "script `ns-ha-config` per semplificare il processo."
 
-#: ../../high_availability.rst:207 4747c3da86bc4b9e88ad2db0b75ec8ac
+#: ../../high_availability.rst:207 b02fb99c9314488886c88d53174d933c
 msgid ""
 "Before diving into the actual setup, it's important to ensure that both "
 "nodes are properly configured and meet the necessary requirements."
@@ -730,7 +730,7 @@ msgstr ""
 " che entrambi i nodi siano configurati correttamente e soddisfino i "
 "requisiti necessari."
 
-#: ../../high_availability.rst:209 a4143e2e9613440ca7232ea5bc9e2042
+#: ../../high_availability.rst:209 76cc290506cd49508f8cb6da8455a594
 msgid ""
 "Access the console or SSH into the primary node and run the following "
 "commands."
@@ -738,21 +738,21 @@ msgstr ""
 "Accedere alla console o connettersi tramite SSH al nodo primario ed eseguire"
 " i seguenti comandi."
 
-#: ../../high_availability.rst:212 f280b4bf84054504b392c6c3fc1a79ee
+#: ../../high_availability.rst:212 3fb44a151fb346fd9fe441b91e4a79f0
 msgid "Check requirements"
 msgstr "Verificare i requisiti"
 
-#: ../../high_availability.rst:214 dbea0ab2231b42bc81e687d05c0b19c7
+#: ../../high_availability.rst:214 3ca95c2be72d43eeb5a1c6b5aade5bf1
 msgid "For the primary node::"
 msgstr "Per il nodo primario::"
 
 #: ../../high_availability.rst:218 ../../high_availability.rst:233
-#: 03baeb04c0794948b3fe9337bc9fa33b e1491dd6b0b54670af24d357f0781e4d
+#: 92f714df21444993819fd6c3b825f0c0 d57d63f3138448aea41b3fbc2f4016e7
 msgid "This checks:"
 msgstr "Questo controlla:"
 
 #: ../../high_availability.rst:220 ../../high_availability.rst:236
-#: ebdcf3eeef934a419d7e754223e0ac44 44210948fba14977bd36c470c3e95329
+#: dc9f0e9ad781496f9fd271dbf76734fc e3f258548d7e4d3b84de226bd2e773e3
 msgid ""
 "LAN interface has a static IP. If the ``lan_interface`` parameter is not "
 "provided, it searches for a LAN interface named ``lan``."
@@ -760,7 +760,7 @@ msgstr ""
 "L'interfaccia LAN ha un IP statico. Se il parametro ``lan_interface`` non "
 "viene fornito, viene cercata un'interfaccia LAN chiamata ``lan``."
 
-#: ../../high_availability.rst:221 8b141f3dd77d49f9963507942edc4e84
+#: ../../high_availability.rst:221 1c832de388324f3790c92a985f95ab49
 msgid ""
 "At least one WAN interface exists. If the ``wan_interface`` parameter is not"
 " provided, it searches for a WAN interface named ``wan``. The WAN interface "
@@ -772,41 +772,41 @@ msgstr ""
 "L'interfaccia WAN deve essere configurata con un indirizzo IP statico; PPPoE"
 " e DHCP non sono supportati."
 
-#: ../../high_availability.rst:223 1f24fb9039e44059bdacf6271dbca4d9
+#: ../../high_availability.rst:223 15e1f7be1f9a4ec78579ee2fff7d23df
 msgid "If DHCP server is running:"
 msgstr "Se il server DHCP è in esecuzione:"
 
-#: ../../high_availability.rst:225 ../../high_availability.rst:328
-#: 35d6d6fc06934c808b17065fa471173e 7fedb0dd633b4399b61d7ecafe3e6518
+#: ../../high_availability.rst:225 ../../high_availability.rst:327
+#: 98eace2395b94522b241e78a24b78668 9fc4c598a51243a1afe7e52e0581df3c
 msgid "``Force DHCP server start`` option is enabled."
 msgstr "L'opzione ``Forza l'avvio del server DHCP`` è abilitata."
 
-#: ../../high_availability.rst:226 ../../high_availability.rst:329
-#: 5f6e62d3683b44028e104b02ebcb8fc2 f523e293eb374fd18bba9d8bde513400
+#: ../../high_availability.rst:226 ../../high_availability.rst:328
+#: 1e6b9d2a82da4dbe9cec52b8fd6ec1b4 a0ad3991f0de4582a5630d52cb13de15
 msgid "``3: router`` DHCP option is set (should be the virtual IP)."
 msgstr ""
 "L'opzione DHCP ``3: router`` è impostata (dovrebbe essere l'IP virtuale)."
 
-#: ../../high_availability.rst:227 ../../high_availability.rst:330
-#: f831e4b2b82246958d8729d68e668931 a381f4cebe0a4c2e8de8545dc504f249
+#: ../../high_availability.rst:227 ../../high_availability.rst:329
+#: d94d9491366b4abea76a0f2268b3d254 dbeb292b5c2f474fa22a84ee86357e4f
 msgid "``6: DNS server`` DHCP option is set."
 msgstr "L'opzione DHCP ``6: DNS server`` è impostata."
 
-#: ../../high_availability.rst:229 ba687e59b03f4e61a546868671f6d255
+#: ../../high_availability.rst:229 38a49579607a496fbcbaf61b83040624
 msgid "For the backup node::"
 msgstr "Per il nodo di backup::"
 
-#: ../../high_availability.rst:235 ff625bf126904d0ea9fd52000fafdf5d
+#: ../../high_availability.rst:235 d85e74e7677c4535925405966fd16ded
 msgid "Backup node is reachable via SSH on port 22 with root user."
 msgstr ""
 "Il nodo di backup è raggiungibile tramite SSH sulla porta 22 con l'utente "
 "root."
 
-#: ../../high_availability.rst:237 46e890ee490143f98657f9d9909be61d
+#: ../../high_availability.rst:237 350dc94566824faa85c28473e840f88f
 msgid "At least one WAN interface exists."
 msgstr "Esiste almeno un'interfaccia WAN."
 
-#: ../../high_availability.rst:239 2ca47a6f34d041caa94c8939d486df86
+#: ../../high_availability.rst:239 ca9c07571fe042fabb368d8702568e4d
 msgid ""
 "WAN interface can be omitted on the backup node, but bear in mind that in "
 "case of failover, the UI of the backup node will show an unknown interface. "
@@ -819,7 +819,7 @@ msgstr ""
 "l'interfaccia WAN anche sul nodo di backup, anche se non dispone di un "
 "indirizzo IP statico."
 
-#: ../../high_availability.rst:243 d0681342422f481d9de0f0b6b4b49a74
+#: ../../high_availability.rst:243 826182b21ea14d16b3d4861a52f8e4f4
 msgid ""
 "The script will request the root password for the backup node. You can also "
 "pipe the password: ::"
@@ -827,7 +827,7 @@ msgstr ""
 "Lo script richiederà la password di root per il nodo di backup. È anche "
 "possibile passare la password tramite pipe: ::"
 
-#: ../../high_availability.rst:247 b5ffc6c5dfe24a74b680e05dd1dc5af2
+#: ../../high_availability.rst:247 698017fb87844719a252579fee78f706
 msgid ""
 "Ensure the backup node can be reached via SSH from the primary node on "
 "standard port 22."
@@ -835,15 +835,15 @@ msgstr ""
 "Assicurarsi che il nodo di backup sia raggiungibile tramite SSH dal nodo "
 "primario sulla porta standard 22."
 
-#: ../../high_availability.rst:250 1d10c23cfd4a4058bd0a62f248ddbc9c
+#: ../../high_availability.rst:250 e2d61e8507734ad3873bde5fb2d2f4e5
 msgid "Initialize nodes"
 msgstr "Inizializzare i nodi"
 
-#: ../../high_availability.rst:252 965270f0eb7c4091be7aee1abec8ec13
+#: ../../high_availability.rst:252 a315d619545a459887b3ad17450de692
 msgid "Initialize the primary node::"
 msgstr "Inizializzare il nodo primario::"
 
-#: ../../high_availability.rst:256 6be8480379324b81a7d29d60de34b3a7
+#: ../../high_availability.rst:256 7f1fe68b5def4d9fb1596c16f8b820e0
 msgid ""
 "Where the ``primary_node_ip`` is the static IP of the primary node already "
 "set for the LAN interface, and ``backup_node_ip`` is the static LAN IP of "
@@ -859,27 +859,27 @@ msgstr ""
 "``lan_interface`` è opzionale e specifica il nome dell'interfaccia LAN (il "
 "valore predefinito è `lan`)."
 
-#: ../../high_availability.rst:261 ../../high_availability.rst:628
-#: 6d3ecc2864d34217acacbbad22bdc096 80636567e953474599e1774e6b8b1f5a
+#: ../../high_availability.rst:261 ../../high_availability.rst:626
+#: aefe75a66be64c09b70f6f50e9e33757 cdc6f65232974004baf7e5e532d80ef8
 msgid "This script will:"
 msgstr "Questo script:"
 
-#: ../../high_availability.rst:263 db1ca1eef80c4ddeb4ce4a8d1fce3d63
+#: ../../high_availability.rst:263 ac7f89147c6e41d5a9adf91c392dab94
 msgid "Initialize `keepalived` with the virtual IP for the LAN interface."
 msgstr ""
 "Inizializzare `keepalived` con l'indirizzo IP virtuale per l'interfaccia "
 "LAN."
 
-#: ../../high_availability.rst:264 3b3cdadd6f48472e87463c0bef89368d
+#: ../../high_availability.rst:264 eb83a3636b9d4784a7fd290365d1529b
 msgid "Configure `conntrackd`."
 msgstr "Configurare `conntrackd`."
 
-#: ../../high_availability.rst:265 b4790bc77553497ea0c7be5c69fc1f56
+#: ../../high_availability.rst:265 d9bec355d32d43569a93969de0cbc0ad
 msgid "Generate a random password and public key for synchronization."
 msgstr ""
 "Generare una password casuale e una chiave pubblica per la sincronizzazione."
 
-#: ../../high_availability.rst:266 d27384ac0193431593ab20f4ba30ef4c
+#: ../../high_availability.rst:266 f6840c18a836454f9f20914d50102b49
 msgid ""
 "Configure `dropbear` (SSH server) to listen on port `65022` and allow only "
 "key-based authentication for sync."
@@ -887,7 +887,7 @@ msgstr ""
 "Configurare `dropbear` (server SSH) per ascoltare sulla porta `65022` e "
 "consentire solo l'autenticazione tramite chiave per la sincronizzazione."
 
-#: ../../high_availability.rst:268 1ca7d11b6134464bba0e7da53dd30e3d
+#: ../../high_availability.rst:268 f45f510b1c5b43d4820cde3fa4ddab0c
 msgid ""
 "Initialize the backup node (always execute the command on the primary "
 "node)::"
@@ -895,7 +895,7 @@ msgstr ""
 "Inizializzare il nodo di backup (eseguire sempre il comando sul nodo "
 "primario)::"
 
-#: ../../high_availability.rst:272 0ed58a4efc9d4ca3ab4de561c99c3cde
+#: ../../high_availability.rst:272 a5cb24ff083f437e930229acb4ea62a2
 msgid ""
 "The script will ask for the root password of the backup node. You can also "
 "pipe the password: ::"
@@ -903,7 +903,7 @@ msgstr ""
 "Lo script richiederà la password di root del nodo di backup. È anche "
 "possibile passare la password tramite pipe: ::"
 
-#: ../../high_availability.rst:276 89bc8b8dc343435ba906da3757969851
+#: ../../high_availability.rst:276 d3b7e2f487f443b9a4280602de94d3a8
 msgid ""
 "At this point, the nodes are configured to communicate over LAN, and the LAN"
 " virtual IP will failover."
@@ -911,29 +911,15 @@ msgstr ""
 "A questo punto, i nodi sono configurati per comunicare tramite LAN e "
 "l'indirizzo IP virtuale della LAN effettuerà il failover."
 
-#: ../../high_availability.rst:279 d7b0196caf7347a2b52655a5f5372f81
+#: ../../high_availability.rst:279 7730a5bcb8fa417d8771cc2298774d7b
 msgid "WAN interfaces"
 msgstr "Interfacce WAN"
 
-#: ../../high_availability.rst:281 fb174c3f2f474e9087837e37fea71a4f
-msgid ""
-"The WAN interface is the first interface to be added to the HA cluster. "
-"Remember that the WAN interface must be configured with a static IP address,"
-" so make sure also to setup"
-msgstr ""
-"L'interfaccia WAN è la prima interfaccia da aggiungere al cluster HA. "
-"Ricordare che l'interfaccia WAN deve essere configurata con un indirizzo IP "
-"statico, quindi assicurarsi anche di configurare"
-
-#: ../../high_availability.rst:283 ae74bf348bb84e4bb40cb058042078f5
-msgid ":ref:`DNS forwarders <forwarding_servers-section>`."
-msgstr ":ref:`Inoltratori DNS <forwarding_servers-section>`."
-
-#: ../../high_availability.rst:285 9efdcacb25fc4d13911bc729de342a55
+#: ../../high_availability.rst:284 bdfd70b394e647ebbf833caf507f10a7
 msgid "Configure the WAN interface::"
 msgstr "Configurare l'interfaccia WAN::"
 
-#: ../../high_availability.rst:289 151acdb5a5384dfba1ea0ed47c76aa63
+#: ../../high_availability.rst:288 e5103a6a8a4045e7b3dd18b46c82e6cc
 msgid ""
 "Where ``<interface>`` is the name of the WAN interface (e.g., `wan`, `eth1`,"
 " etc.), Ensure you provide the virtual IP in CIDR notation (e.g., "
@@ -947,11 +933,11 @@ msgstr ""
 "l'interfaccia su entrambi i nodi utilizzando indirizzi IP fittizi dalla "
 "gamma `169.254.x.0/24` e imposta l'IP virtuale in `keepalived`."
 
-#: ../../high_availability.rst:294 513ab4da2a684884b0400d26475bac72
+#: ../../high_availability.rst:293 586fa97a30bf49dab8a10c64bdaa4a63
 msgid "Verify the configuration"
 msgstr "Verificare la configurazione"
 
-#: ../../high_availability.rst:296 847f87d5060746d9a1aeea37fed597a8
+#: ../../high_availability.rst:295 b2a674962c654c659d419fec63cbb824
 msgid ""
 "The cluster is now ready to be used. You can check the status of the cluster"
 " and verify that the configuration is correct."
@@ -959,11 +945,11 @@ msgstr ""
 "Il cluster è ora pronto per essere utilizzato. È possibile verificare lo "
 "stato del cluster e controllare che la configurazione sia corretta."
 
-#: ../../high_availability.rst:298 eafed33e2c7d4c28bb418d308b0258c9
+#: ../../high_availability.rst:297 7fbc7e25aa1344c38bae0b6dddd738bc
 msgid "Verify current configuration: ::"
 msgstr "Verificare la configurazione attuale: ::"
 
-#: ../../high_availability.rst:302 781a0c8f393a46ccaabf8862bd4b6a08
+#: ../../high_availability.rst:301 f7f46a427d1b4ca285b879b42c3417b0
 msgid ""
 "Check the status of the HA cluster. The first sync may take up to 5 minutes."
 " ::"
@@ -971,7 +957,7 @@ msgstr ""
 "Verificare lo stato del cluster HA. La prima sincronizzazione può richiedere"
 " fino a 5 minuti. ::"
 
-#: ../../high_availability.rst:306 9bf65add4f5347ae8caf5d955822597b
+#: ../../high_availability.rst:305 db5d87d4162945feb1b463f5c03e3a11
 msgid ""
 "Initial status might show `Last Sync Status: SSH Connection Failed`. After "
 "sync, it should show `Last Sync Status: Up to Date`."
@@ -980,11 +966,11 @@ msgstr ""
 "Failed`. Dopo la sincronizzazione, dovrebbe mostrare `Last Sync Status: Up "
 "to Date`."
 
-#: ../../high_availability.rst:309 91abd1ff33df4a8cb55b45b727e9658f
+#: ../../high_availability.rst:308 7677674bbd904e29ad9879bbbc3b17f5
 msgid "Additional interfaces"
 msgstr "Interfacce aggiuntive"
 
-#: ../../high_availability.rst:311 3394dccf3fbb4e90ac42026d6d52d18d
+#: ../../high_availability.rst:310 8f0c457cef06480bb852cbea155d14c8
 msgid ""
 "It's possible to add additional interfaces to the HA cluster after the "
 "initial setup. Before adding an interface, ensure that the interface is "
@@ -1001,7 +987,7 @@ msgstr ""
 "essere di tipo ethernet, bridge, VLAN o bond. Si noti che le VLAN su "
 "interfacce logiche non sono supportate."
 
-#: ../../high_availability.rst:316 b72e8072c21846158739c24bae77c0a2
+#: ../../high_availability.rst:315 7ade0f60a602478b83dd98115807bf64
 msgid ""
 "You can use this command to add any non-WAN interface, like a second LAN, "
 "DMZ or GUEST interface to the HA cluster."
@@ -1009,41 +995,41 @@ msgstr ""
 "È possibile utilizzare questo comando per aggiungere qualsiasi interfaccia "
 "non-WAN, come una seconda LAN, DMZ o un'interfaccia GUEST, al cluster HA."
 
-#: ../../high_availability.rst:318 8cc8c9bd96674ff49b14f815b7280623
+#: ../../high_availability.rst:317 e5718f2d4c2a497da1988249df9f00fa
 msgid "Add additional interfaces as needed::"
 msgstr "Aggiungere interfacce aggiuntive secondo necessità::"
 
-#: ../../high_availability.rst:322 07f33f604f464671a277be7030ca14f7
+#: ../../high_availability.rst:321 caf0740c49774f1789dd32c2b72ae411
 msgid "The following checks are performed:"
 msgstr "Vengono eseguiti i seguenti controlli:"
 
-#: ../../high_availability.rst:324 9e84c63f5f84480b9e324dbc763842a9
+#: ../../high_availability.rst:323 991b17350f8945258da5d3ea6580d235
 msgid "virtual IP address must be in CIDR notation (e.g., `192.168.100.1/24`)"
 msgstr ""
 "l'indirizzo IP virtuale deve essere in notazione CIDR (ad esempio, "
 "``192.168.100.1/24``)"
 
-#: ../../high_availability.rst:325 7aaf8a3cc512404a9a42915fb72ada85
+#: ../../high_availability.rst:324 8e63b26f1830423fbdccb964ade6f069
 msgid "make sure a device with given static IP address exists on the node"
 msgstr ""
 "verificare che un dispositivo con l'indirizzo IP statico specificato esista "
 "sul nodo"
 
-#: ../../high_availability.rst:326 8484c0f56b2b421491679acb2a8c0ebf
+#: ../../high_availability.rst:325 2031b88168cf46519f7ccf5e53a4dae6
 msgid "If DHCP server is running, the following"
 msgstr "Se il server DHCP è in esecuzione, quanto segue"
 
-#: ../../high_availability.rst:333 ../../high_availability.rst:379
-#: ../../high_availability.rst:391 39478f24938949869d4fe525b3bcd8fc
-#: 1661cd447b8d4bfd967a9ff94dc01e4b 9650b5561250433889c32e715b2e1ae7
+#: ../../high_availability.rst:332 ../../high_availability.rst:378
+#: ../../high_availability.rst:390 79d5215e41824168b11fb9cfb83714fd
+#: 2230735fb5134503908e72b9dd25e10d fa20c6e9549041e5b79d98bb05d9ed5b
 msgid "Example: ::"
 msgstr "Esempio: ::"
 
-#: ../../high_availability.rst:339 d7b15f7d1f2940bb965b3cbd28a163b7
+#: ../../high_availability.rst:338 5369bbc37f2043d5b84a97d60d9baa64
 msgid "Hotspot support"
 msgstr "Supporto hotspot"
 
-#: ../../high_availability.rst:341 8655b4cdcc41427d85c2bdb89b198211
+#: ../../high_availability.rst:340 9c29f41aa8614bbb927f406335e3e31d
 msgid ""
 "The hotspot feature is supported in HA clusters, but there are important "
 "requirements:"
@@ -1051,7 +1037,7 @@ msgstr ""
 "La funzionalità hotspot è supportata nei cluster HA, ma ci sono requisiti "
 "importanti:"
 
-#: ../../high_availability.rst:343 6b09a1cc85e74c23b2eb32539d743808
+#: ../../high_availability.rst:342 7ffa129b56544bf0a0417529d45f642e
 msgid ""
 "The backup node must have the exact same network devices as the primary "
 "node. For example, if the primary node has a VLAN interface named "
@@ -1065,14 +1051,14 @@ msgstr ""
 "``eth1.1`` con lo stesso nome e la stessa configurazione. Se le interfacce "
 "non corrispondono, l'hotspot non funzionerà correttamente dopo un failover."
 
-#: ../../high_availability.rst:346 5f096379c47546b39638e9a04a2bbecf
+#: ../../high_availability.rst:345 363cf4e1cec14b9ea389b21c1a1ba9af
 msgid ""
 "The hotspot can only operate on a physical interface or a VLAN interface."
 msgstr ""
 "L'hotspot può funzionare solo su un'interfaccia fisica o su un'interfaccia "
 "VLAN."
 
-#: ../../high_availability.rst:347 597b611ce7a347608b4b8cd8b8b0e022
+#: ../../high_availability.rst:346 2e48496b7fcf4dcd844bd7587b1e1ba4
 msgid ""
 "To maintain hotspot functionality during failover, the MAC address of the "
 "interface running the hotspot on the primary node is automatically copied to"
@@ -1083,7 +1069,7 @@ msgstr ""
 "automaticamente copiato sull'interfaccia corrispondente del nodo di backup "
 "quando si verifica uno switchover."
 
-#: ../../high_availability.rst:350 315c4f44b61346759b20c536a1747132
+#: ../../high_availability.rst:349 409d295d26a54c30beb7a6691697770e
 msgid ""
 "Note that active sessions are stored in RAM and will be lost during a "
 "switchover; clients must re-authenticate unless auto-login is enabled."
@@ -1092,11 +1078,11 @@ msgstr ""
 "durante uno switchover; i client dovranno autenticarsi nuovamente a meno che"
 " l'accesso automatico non sia abilitato."
 
-#: ../../high_availability.rst:353 7b74153322d8440a9c92cba66f7d9f57
+#: ../../high_availability.rst:352 f3f415866a6f41e3ad2248d4e1b6f7aa
 msgid "Network aliases"
 msgstr "Alias di rete"
 
-#: ../../high_availability.rst:355 13dcf7f5e18e42138afc228aef471293
+#: ../../high_availability.rst:354 fdca839deea747268c88c2ce68d68a0e
 msgid ""
 "You can add IP aliases to the primary node on relevant interfaces. This is "
 "useful for services that require multiple IP addresses on the same "
@@ -1109,7 +1095,7 @@ msgstr ""
 " cosa, sul nodo primario, accedere all'interfaccia web e aggiungere l'alias "
 "all'interfaccia di rete."
 
-#: ../../high_availability.rst:359 e95b177074a44e05843c4fde82f766c8
+#: ../../high_availability.rst:358 9a32af59096e43e1963b4ab7228f98a6
 msgid ""
 "Then, use the `ns-ha-config` command to register the alias in the HA cluster"
 " configuration."
@@ -1117,16 +1103,16 @@ msgstr ""
 "Quindi, utilizzare il comando `ns-ha-config` per registrare l'alias nella "
 "configurazione del cluster HA."
 
-#: ../../high_availability.rst:361 7b859110ab7d494a8d9af6faf3db0580
+#: ../../high_availability.rst:360 037afeb9402c4ef6a2c132ce2b8e79ad
 msgid "Aliases must be explicitly set on the primary node. ::"
 msgstr ""
 "Gli alias devono essere impostati esplicitamente sul nodo primario. ::"
 
-#: ../../high_availability.rst:366 d9a26b2f15044b3ba069ae8076d56510
+#: ../../high_availability.rst:365 6e017ea67d7640c8a02013e924a8e0ff
 msgid "Example of a WAN alias: ::"
 msgstr "Esempio di un alias WAN: ::"
 
-#: ../../high_availability.rst:370 a42b4c54709942f1af447a7d7d3a8183
+#: ../../high_availability.rst:369 bb50fac704f34bf08f3fb66fc820f645
 msgid ""
 "**Note:** the alias will not appear in the network configuration page of the"
 " backup node."
@@ -1134,15 +1120,15 @@ msgstr ""
 "**Nota:** l'alias non apparirà nella pagina di configurazione di rete del "
 "nodo di backup."
 
-#: ../../high_availability.rst:373 f48f2b94ecca410cbb11c316875714eb
+#: ../../high_availability.rst:372 3f3dd723e3f04f3a998dc38bc0862748
 msgid "Remove interfaces and aliases"
 msgstr "Rimuovere interfacce e alias"
 
-#: ../../high_availability.rst:375 7f8a6462b510436c9d0302154ca4ab87
+#: ../../high_availability.rst:374 f97301731315425e94db3d3064a47fd9
 msgid "Remove an interface from HA configuration: ::"
 msgstr "Rimuovere un'interfaccia dalla configurazione HA: ::"
 
-#: ../../high_availability.rst:383 c92c02b599d64f939b8169030b9b9105
+#: ../../high_availability.rst:382 05d15171e8e44468b5f267110c120067
 msgid ""
 "This removes the interface from `keepalived` and from the backup node's "
 "network configuration. Also, the virtual IP address associated with the "
@@ -1152,11 +1138,11 @@ msgstr ""
 "del nodo di backup. Inoltre, l'indirizzo IP virtuale associato "
 "all'interfaccia verrà spostato sull'interfaccia di rete del nodo primario."
 
-#: ../../high_availability.rst:387 90fc03c21fc047a687bf50e3a1313e96
+#: ../../high_availability.rst:386 20788fb97c954af2946a3ab34ad9dbec
 msgid "Remove an alias from HA configuration: ::"
 msgstr "Rimuovere un alias dalla configurazione di HA: ::"
 
-#: ../../high_availability.rst:395 c7b7111111de4468ae233785cef9de69
+#: ../../high_availability.rst:394 c7fe28dce1ae4ca79712348db02f26f8
 msgid ""
 "This removes the alias from `keepalived` but not from the backup node's "
 "network configuration. Then, proceed to remove the alias using the primary "
@@ -1166,63 +1152,63 @@ msgstr ""
 "del nodo di backup. Successivamente, procedere a rimuovere l'alias "
 "utilizzando l'interfaccia web del nodo primario."
 
-#: ../../high_availability.rst:399 5b921e26e08d4a8daef2c8dcda22f1b4
+#: ../../high_availability.rst:398 706304afd3214c00b63f1519b0a0948f
 msgid "Configuration example"
 msgstr "Esempio di configurazione"
 
-#: ../../high_availability.rst:401 91a0c91e06f940098d4a421aa3a2446e
+#: ../../high_availability.rst:400 15cfe252d87b4702bab938efce770bd6
 msgid "Assuming:"
 msgstr "Supponendo:"
 
-#: ../../high_availability.rst:403 afedad4502f4434ca6e1609ed3384939
+#: ../../high_availability.rst:402 d2d652e593274d19b3351fc399dddf5d
 msgid "Primary Node LAN IP: `192.168.100.238`"
 msgstr "IP LAN del nodo primario: ``192.168.100.238``"
 
-#: ../../high_availability.rst:404 a5b32e9f2a88453a89c062fa2dcfec92
+#: ../../high_availability.rst:403 4c30177594f8425f8c8d97385c2a6ff2
 msgid "Backup Node LAN IP: `192.168.100.239`"
 msgstr "IP LAN del nodo di backup: ``192.168.100.239``"
 
-#: ../../high_availability.rst:405 751e76f856954ce49658a8aa18eb5c5b
+#: ../../high_availability.rst:404 415d35f8459243e2bb1a5abc8316305e
 msgid "LAN Virtual IP: `192.168.100.240/24`"
 msgstr "IP virtuale LAN: ``192.168.100.240/24``"
 
-#: ../../high_availability.rst:406 3ee70ce85be64b6082e2935e8d9cf9bb
+#: ../../high_availability.rst:405 b8a9175653294fac868d80add4a24ef4
 msgid "WAN Interface: `wan` (e.g., `eth1`)"
 msgstr "Interfaccia WAN: ``wan`` (ad es., ``eth1``)"
 
-#: ../../high_availability.rst:407 9307a35de4ad45578c73a2b84cda467b
+#: ../../high_availability.rst:406 e27fc577b6e54c79b7b7077c8e15dcb6
 msgid "WAN Virtual IP: `192.168.122.49/24`"
 msgstr "IP virtuale WAN: ``192.168.122.49/24``"
 
-#: ../../high_availability.rst:408 2d482b5408b94f1daa83d6527d6bf5d4
+#: ../../high_availability.rst:407 4dc13bd796f94c2899aa49c06bc55643
 msgid "WAN Gateway: `192.168.122.1`"
 msgstr "Gateway WAN: ``192.168.122.1``"
 
-#: ../../high_availability.rst:409 f26c0e45c1824b27badf9e009296fbda
+#: ../../high_availability.rst:408 3318641fdf194dce8dff535e45bd7e24
 msgid "Backup Node Root Password: `backup_root_password`"
 msgstr "Password root del nodo di backup: ``backup_root_password``"
 
-#: ../../high_availability.rst:411 602b9d12213d441cacdb4b794c309dec
+#: ../../high_availability.rst:410 b4b2742fdab8438597642b38f7609b0b
 msgid "Execute the following commands on the **primary node**:"
 msgstr "Eseguire i seguenti comandi sul **nodo primario**:"
 
-#: ../../high_availability.rst:413 d21284ef43a0451d8d0c9a7293e27014
+#: ../../high_availability.rst:412 3873b8e61a91486d96c2911ab780b55b
 msgid "Check requirements and initialize: ::"
 msgstr "Verificare i requisiti e inizializzare: ::"
 
-#: ../../high_availability.rst:425 b4b5bb0e0e104a728b02a72dc1d78790
+#: ../../high_availability.rst:424 ba776da6acf34bda945a18ceb13cb5f4
 msgid "Add WAN interface: ::"
 msgstr "Aggiungere interfaccia WAN: ::"
 
-#: ../../high_availability.rst:430 904d1a8f90e044a3b2a5c169452555a7
+#: ../../high_availability.rst:429 2a3422a4cdae43aea8999954470959d4
 msgid "Alerting"
 msgstr "Avvisi"
 
-#: ../../high_availability.rst:432 4a4ee18f1659489d8b5f8397558c41c1
+#: ../../high_availability.rst:431 d58f14a8bc7e4b6ca0da41357d0a839a
 msgid "Subscription required"
 msgstr "Subscription richiesta"
 
-#: ../../high_availability.rst:434 589986d8f91742c8bb620b551150c733
+#: ../../high_availability.rst:433 a41b014c25334b50906432739b084d7f
 msgid ""
 "This feature is available only if the firewall and the controller have a "
 "valid subscription."
@@ -1230,7 +1216,7 @@ msgstr ""
 "Questa funzionalità è disponibile solo se il firewall e il controller "
 "dispongono di una subscription valida."
 
-#: ../../high_availability.rst:436 091a74a0537b436da9f7fd266f0051be
+#: ../../high_availability.rst:435 0034a81bfbba429f89b06be7bdbeeaa8
 msgid ""
 "The HA cluster provides automated monitoring and notifications to help "
 "administrators respond quickly to failover events or synchronization issues."
@@ -1239,11 +1225,11 @@ msgstr ""
 "amministratori a rispondere rapidamente a eventi di failover o a problemi di"
 " sincronizzazione."
 
-#: ../../high_availability.rst:438 5370c7e943624e159bc9c6bf44c9b05f
+#: ../../high_availability.rst:437 a39e490c5fd747ad82440ab7aed08eb9
 msgid "The following alerts are available:"
 msgstr "I seguenti avvisi sono disponibili:"
 
-#: ../../high_availability.rst:440 a04d8564ca36480f8c62588d74769a19
+#: ../../high_availability.rst:439 04cc5413b33449ce8e432e01a44bf7d7
 msgid ""
 "**ha:sync:failed**: Triggered when the configuration synchronization between"
 " primary and backup nodes fails. This usually indicates that the backup node"
@@ -1255,7 +1241,7 @@ msgstr ""
 "che il nodo di backup non è raggiungibile a causa di problemi di rete, "
 "guasto hardware o interruzione del servizio."
 
-#: ../../high_availability.rst:443 0941a31379474b2fa2732dd8f99699b3
+#: ../../high_availability.rst:442 15aa9d6b8bb44bd596390a13edbcf4b2
 msgid ""
 "**ha:primary:failed**: Triggered during failover events when the primary "
 "node becomes unavailable."
@@ -1263,11 +1249,11 @@ msgstr ""
 "**ha:primary:failed**: Attivato durante eventi di failover quando il nodo "
 "primario diventa non disponibile."
 
-#: ../../high_availability.rst:447 d0914df4d1e84bd8a9932db1be2ab187
+#: ../../high_availability.rst:446 f4528b8e2cdc4453bee91084fcd607ce
 msgid "Maintenance"
 msgstr "Manutenzione"
 
-#: ../../high_availability.rst:449 9143430c50d440cc9a4048b4d3bc6ed7
+#: ../../high_availability.rst:448 f59cc9c751484076ae9a44007821bafc
 msgid ""
 "The HA cluster is designed to be highly available and requires minimal "
 "maintenance. However, there are times when you may need to perform "
@@ -1278,11 +1264,11 @@ msgstr ""
 "necessario eseguire operazioni di manutenzione sia sul nodo primario che su "
 "quello di backup."
 
-#: ../../high_availability.rst:453 a76eb15a20da44828d7d4a1ffa5c83b9
+#: ../../high_availability.rst:452 63ac9bf8319348d081ac8a4b86bbbc94
 msgid "Backup node"
 msgstr "Nodo di backup"
 
-#: ../../high_availability.rst:455 4134c3adafcb4a2ca28866a22f8ab9a9
+#: ../../high_availability.rst:454 53a5fa5825634bda91faee19277d4f10
 msgid ""
 "The backup node can be switched off for maintenance without affecting the "
 "primary node."
@@ -1290,24 +1276,24 @@ msgstr ""
 "Il nodo di backup può essere spento per la manutenzione senza influire sul "
 "nodo primario."
 
-#: ../../high_availability.rst:457 5622a6571e824653a7bbc7af2c6a322e
+#: ../../high_availability.rst:456 585f1587dc8f4ea8bc0a21633b92c85f
 msgid "Stop `keepalived` on the **backup node**: ::"
 msgstr "Arrestare `keepalived` sul **nodo di backup**: ::"
 
-#: ../../high_availability.rst:461 ../../high_availability.rst:477
-#: b21c0336986d46729ab2c904f7b6e532 020f75638cb641c4be738c8a64f45489
+#: ../../high_availability.rst:460 ../../high_availability.rst:476
+#: 1775bc018743465eba243653c086fb4c f0f0f10750664d1297028933c2f93711
 msgid "Perform maintenance."
 msgstr "Eseguire la manutenzione."
 
-#: ../../high_availability.rst:462 f3c99d3f43c04edb815e2d95df911920
+#: ../../high_availability.rst:461 5d18ae3e4365403ba2185c194c88d1af
 msgid "Start `keepalived` on the **backup node**: ::"
 msgstr "Avviare `keepalived` sul **nodo di backup**: ::"
 
-#: ../../high_availability.rst:468 8590a6ddc98e4ae1bca8d64b58035075
+#: ../../high_availability.rst:467 c7419402e26340ae9ddedb32e763a6c2
 msgid "Primary node"
 msgstr "Nodo primario"
 
-#: ../../high_availability.rst:470 808034915a7f440b82ea56b385cca7f4
+#: ../../high_availability.rst:469 2ca439c731ec4d3787b8dd29591d33a8
 msgid ""
 "The primary node can be switched off for maintenance, the backup node will "
 "take over the virtual IP addresses and all services."
@@ -1315,19 +1301,19 @@ msgstr ""
 "Il nodo primario può essere spento per la manutenzione; il nodo di backup "
 "assumerà gli indirizzi IP virtuali e tutti i servizi."
 
-#: ../../high_availability.rst:473 b70411b9c88f4be29ed82e669f75bcdb
+#: ../../high_availability.rst:472 5e3adbf28ed8406e94098b0398371a0c
 msgid "Stop `keepalived` on the **primary node**: ::"
 msgstr "Arrestare `keepalived` sul **nodo primario**: ::"
 
-#: ../../high_availability.rst:478 187f4ccf35fb4ada89d38270d3087241
+#: ../../high_availability.rst:477 794f801464484febbbab9ae2f10fa660
 msgid "Start `keepalived` on the **primary node**: ::"
 msgstr "Avviare `keepalived` sul **nodo primario**: ::"
 
-#: ../../high_availability.rst:483 c9ecddda7c134ae6934114e1a2ef9a79
+#: ../../high_availability.rst:482 ab7f50182630495984bc0c91957ceb9a
 msgid "Remote access"
 msgstr "Accesso remoto"
 
-#: ../../high_availability.rst:485 595ee08ecbfb48c6a568633402ac84cb
+#: ../../high_availability.rst:484 b573ee73196a420197863c4cc17ce4df
 msgid ""
 "The primary node is accessible both from the LAN and WAN interfaces. "
 "Therefore, the backup node is accessible from the LAN interface only. When "
@@ -1340,7 +1326,7 @@ msgstr ""
 "accedere prima al nodo primario e poi collegarsi al nodo di backup "
 "utilizzando SSH."
 
-#: ../../high_availability.rst:489 ac7485d8b4c34cc0867864f7c7baeeae
+#: ../../high_availability.rst:488 e924dec7e040450f87abea64412dbbd2
 msgid ""
 "After connecting to the primary node, use the following command to access "
 "the backup node: ::"
@@ -1348,7 +1334,7 @@ msgstr ""
 "Dopo essersi connessi al nodo primario, utilizzare il seguente comando per "
 "accedere al nodo di backup: ::"
 
-#: ../../high_availability.rst:493 fc670208bbf045e491001309a404ca69
+#: ../../high_availability.rst:492 6ce36aea000d4e7dbeec3af5f7ea8637
 msgid ""
 "This command will establish an SSH connection to the backup node using the "
 "SSH key generated during the HA setup."
@@ -1356,11 +1342,11 @@ msgstr ""
 "Questo comando stabilirà una connessione SSH al nodo di backup utilizzando "
 "la chiave SSH generata durante la configurazione dell'HA."
 
-#: ../../high_availability.rst:496 f68378f868e745da9866df14b17ac1a7
+#: ../../high_availability.rst:495 976d08d794ef4845adbc956c884bbdd3
 msgid "Upgrade"
 msgstr "Aggiorna"
 
-#: ../../high_availability.rst:498 697c0858d5744f40941b8374eb698a53
+#: ../../high_availability.rst:497 499b0266d3984f27b8acdf419afad447
 msgid ""
 "The backup node does not receive system updates automatically because it "
 "does not have direct Internet access. To update the backup node, you need to"
@@ -1372,7 +1358,7 @@ msgstr ""
 "necessario connettersi al nodo primario ed eseguire il comando di "
 "aggiornamento sul nodo di backup: ::"
 
-#: ../../high_availability.rst:503 f5ae1810bca24fb4b247620c3b1ca7bf
+#: ../../high_availability.rst:502 72786e9ce72d455f897c4c387738080b
 msgid ""
 "This command will download the latest image, upload it to the backup node, "
 "and install it. As a normal upgrade, the backup node will reboot after the "
@@ -1382,11 +1368,11 @@ msgstr ""
 "backup e la installerà. Come per un normale aggiornamento, il nodo di backup"
 " verrà riavviato dopo l'installazione."
 
-#: ../../high_availability.rst:509 e045a12e1fe6455aa1f30a1d1d437e16
+#: ../../high_availability.rst:508 bbaab38ed2144c0fa2de79f82be91e8b
 msgid "Troubleshooting"
 msgstr "Risoluzione dei problemi"
 
-#: ../../high_availability.rst:511 4495773b21a34be5a31f8d631165c34f
+#: ../../high_availability.rst:510 12ce8bd18bed4e14944c0c20c9900287
 msgid ""
 "Troubleshooting the HA setup can be challenging, especially if the backup "
 "node is not reachable or the primary node is not responding as expected."
@@ -1395,7 +1381,7 @@ msgstr ""
 "soprattutto se il nodo di backup non è raggiungibile o se il nodo primario "
 "non risponde come previsto."
 
-#: ../../high_availability.rst:513 aea7eccb52e84dce8b5d752a2dc0d71d
+#: ../../high_availability.rst:512 7e49797301bb42f7bcbcec76919a11dc
 msgid ""
 "Remember the backup node does not have direct internet access in its normal "
 "standby state. Therefore:"
@@ -1403,19 +1389,19 @@ msgstr ""
 "Ricordare che il nodo di backup non ha accesso diretto a Internet nel suo "
 "normale stato di standby. Pertanto:"
 
-#: ../../high_availability.rst:515 b38deab5255a44068a5bf51e264cc083
+#: ../../high_availability.rst:514 e171f64072fa46c5abaa55864db21d53
 msgid "It cannot resolve external DNS names."
 msgstr "Non è in grado di risolvere nomi DNS esterni."
 
-#: ../../high_availability.rst:516 2704f1d1fd4f498db46863bba2789e09
+#: ../../high_availability.rst:515 824026af97474e9082085d4b96314825
 msgid "It cannot reach the Controller or other external portals."
 msgstr "Non è possibile raggiungere il Controller o altri portali esterni."
 
-#: ../../high_availability.rst:517 4b92cdb4518f4f5fa68162f2c4678386
+#: ../../high_availability.rst:516 54b97c0ff5064acd85585bbd8f735b4d
 msgid "It will not receive system updates."
 msgstr "Non riceverà aggiornamenti di sistema."
 
-#: ../../high_availability.rst:519 ee4f1b5ce80c45f8b349336874fffb48
+#: ../../high_availability.rst:518 7c7cc41a014343da972df74ea534e3ce
 msgid ""
 "The following instructions can help you identify and resolve common issues. "
 "To start troubleshooting, you need to access the SSH console of both nodes."
@@ -1424,11 +1410,11 @@ msgstr ""
 " comuni. Per iniziare la risoluzione dei problemi, è necessario accedere "
 "alla console SSH di entrambi i nodi."
 
-#: ../../high_availability.rst:523 d38e1156eb5e4dc19088e712ef998310
+#: ../../high_availability.rst:522 aa0d8dc9da5c41a981497357f09164c0
 msgid "Identifying the nodes"
 msgstr "Identificazione dei nodi"
 
-#: ../../high_availability.rst:525 85125f0a7f2d4458b9824a141034b412
+#: ../../high_availability.rst:524 dfa66e5e45e1469cb35a58f9c8a2e485
 msgid ""
 "Since the backup node hostname syncs with the primary, the bash prompt "
 "changes to indicate the node's role:"
@@ -1436,55 +1422,19 @@ msgstr ""
 "Poiché l'hostname del nodo di backup si sincronizza con quello del nodo "
 "primario, il prompt di bash cambia per indicare il ruolo del nodo:"
 
-#: ../../high_availability.rst:527 24f59459d8a44e77ab0ffd30fcc2be71
+#: ../../high_availability.rst:526 4a7395a159f34cfcbee57b277f890193
 msgid "Primary node prompt: ``root@NethSec [P]:~#``"
 msgstr "Prompt del nodo primario: ``root@NethSec [P]:~#``"
 
-#: ../../high_availability.rst:528 9459aa68fd904e7c9114f384799d1cd0
+#: ../../high_availability.rst:527 57393a04755f447a863b331ea9c79856
 msgid "Backup node prompt: ``root@NethSec [B]:~#``"
 msgstr "Prompt del nodo di backup: ``root@NethSec [B]:~#``"
 
-#: ../../high_availability.rst:531 d79b472ffe514bac9d510d71c9f90343
+#: ../../high_availability.rst:530 61e9703af4314dab80549e449302a23f
 msgid "Keepalived status"
 msgstr "Stato di Keepalived"
 
-#: ../../high_availability.rst:533 605d42707db1485bb854cbe8d3e84d30
-msgid ""
-"Execute ``ns-ha-config status`` to check Keepalived statistics. Extract from"
-" the output: ``` Keepalived Statistics:"
-msgstr ""
-"Eseguire ``ns-ha-config status`` per verificare le statistiche di Keepalived. Estratto dall'output:\n"
-"```\n"
-"Statistiche di Keepalived:\n"
-"```"
-
-#: ../../high_availability.rst:537 e554a6f7d9114ce088abfc0c6d4677c5
-msgid ""
-"advert_rcvd: 249 advert_sent: 0 become_master: 1 release_master: 0 "
-"packet_len_err: 0 advert_interval_err: 0 ip_ttl_err: 0 invalid_type_rcvd: 0 "
-"addr_list_err: 0 invalid_authtype: 0 authtype_mismatch: 0 auth_failure: 0 "
-"pri_zero_rcvd: 1 pri_zero_sent: 0"
-msgstr ""
-"advert_rcvd: 249  \n"
-"advert_sent: 0  \n"
-"become_master: 1  \n"
-"release_master: 0  \n"
-"packet_len_err: 0  \n"
-"advert_interval_err: 0  \n"
-"ip_ttl_err: 0  \n"
-"invalid_type_rcvd: 0  \n"
-"addr_list_err: 0  \n"
-"invalid_authtype: 0  \n"
-"authtype_mismatch: 0  \n"
-"auth_failure: 0  \n"
-"pri_zero_rcvd: 1  \n"
-"pri_zero_sent: 0"
-
-#: ../../high_availability.rst:551 28df5464cafe4ca9b385a27b08835433
-msgid "```"
-msgstr ""
-
-#: ../../high_availability.rst:553 134b577811254c02a2d2023d46f9dce6
+#: ../../high_availability.rst:551 793a1e8d66eb4152bd7d1e0c575b071b
 msgid ""
 "On a primary node, the `master.became_master` should be `1` or more, "
 "indicating it has successfully taken over as the master. Also the "
@@ -1496,7 +1446,7 @@ msgstr ""
 "Inoltre, `master.advertisements.sent` dovrebbe essere maggiore di `0`, "
 "indicando che sta inviando attivamente annunci al nodo di backup."
 
-#: ../../high_availability.rst:556 70d6362525f3488a995cbd4b0f084a32
+#: ../../high_availability.rst:554 dc2651aca61a4c9dbc117f38ba2acbc8
 msgid ""
 "On a backup node, the `master.advertisements.received` should be greater "
 "than `0`, indicating it is receiving advertisements from the primary node. "
@@ -1508,11 +1458,11 @@ msgstr ""
 "primario. Se `master.became_master` è `0`, significa che il nodo non è "
 "subentrato come master, il che è previsto per un nodo di backup."
 
-#: ../../high_availability.rst:560 3993d0e3ecf44149b933c7757e5d2711
+#: ../../high_availability.rst:558 1d3c5219ddc0470aa5e281d799ee1b01
 msgid "VRRP traffic"
 msgstr "Traffico VRRP"
 
-#: ../../high_availability.rst:562 b3162dcb7320483ea7a3d7145b0def27
+#: ../../high_availability.rst:560 51b1b16f3d5f4a6cb06e9c3e0fd9f1c4
 msgid ""
 "The primary node sends VRRP advertisements to the backup node every second. "
 "You can check the VRRP traffic using the following command on the primary "
@@ -1522,14 +1472,14 @@ msgstr ""
 "possibile verificare il traffico VRRP utilizzando il seguente comando sul "
 "nodo primario: ::"
 
-#: ../../high_availability.rst:567 7160ef5299e946a48877d3b551f85a7c
+#: ../../high_availability.rst:565 6b8cd67b95ec4cca9ba994ff1829be0d
 msgid ""
 "Replace `<lan_interface>` with the name of the LAN interface (e.g., `eth0`)."
 msgstr ""
 "Sostituire `<lan_interface>` con il nome dell'interfaccia LAN (ad esempio, "
 "``eth0``)."
 
-#: ../../high_availability.rst:569 d3cde2b0a19d4724a739c5af66be0b28
+#: ../../high_availability.rst:567 77b959e79f7548e79699bd8a32ab251b
 msgid ""
 "The output should show VRRP packets being sent from the primary node to the "
 "backup node. Some example output: ::"
@@ -1537,25 +1487,7 @@ msgstr ""
 "L'output dovrebbe mostrare i pacchetti VRRP inviati dal nodo primario al "
 "nodo di backup. Un esempio di output: ::"
 
-#: ../../high_availability.rst:572 379c633f6bba460d89d132789f4ca8a9
-msgid ""
-"13:54:16.629467 IP (tos 0xc0, ttl 255, id 19404, offset 0, flags [none], "
-"proto VRRP (112), length 44)"
-msgstr ""
-"13:54:16.629467 IP (tos 0xc0, ttl 255, id 19404, offset 0, flags [none], "
-"proto VRRP (112), length 44)"
-
-#: ../../high_availability.rst:573 5a2644e39a9c4b968aaf75351480eb94
-msgid ""
-"192.168.100.238 > 192.168.100.239: VRRPv2, Advertisement, vrid 100, prio "
-"200, authtype simple, intvl 1s, length 24, addrs(2): "
-"192.168.122.49,192.168.100.240 auth \"1655e3d3\""
-msgstr ""
-"192.168.100.238 > 192.168.100.239: VRRPv2, Annuncio, vrid 100, priorità 200,"
-" tipo autenticazione semplice, intervallo 1s, lunghezza 24, indirizzi(2): "
-"192.168.122.49,192.168.100.240 auth \"1655e3d3\""
-
-#: ../../high_availability.rst:575 fe147f2df9a64c08bceb155551964300
+#: ../../high_availability.rst:573 c7c2f2cbb4794b1b83ed9ca03fcf5428
 msgid ""
 "If the same command is run on the backup node, it should show VRRP packets "
 "being received from the primary node."
@@ -1563,41 +1495,41 @@ msgstr ""
 "Se lo stesso comando viene eseguito sul nodo di backup, dovrebbe mostrare i "
 "pacchetti VRRP ricevuti dal nodo primario."
 
-#: ../../high_availability.rst:578 a4562fb6eeff4559a98f923463236d89
+#: ../../high_availability.rst:576 013747f19c6e4c6dae72d1f918842d91
 msgid "Logs"
 msgstr "Log"
 
-#: ../../high_availability.rst:580 d8f8d496ee504580a7c518cbc6f8e1f0
+#: ../../high_availability.rst:578 27d20fa41f144ddfb26ceeeec6389a5a
 msgid "All logs are stored in ``/var/log/messages`` on both nodes."
 msgstr ""
 "Tutti i log sono memorizzati in ``/var/log/messages`` su entrambi i nodi."
 
-#: ../../high_availability.rst:582 53f1122a89054445b5a1c0eeb3c46eda
+#: ../../high_availability.rst:580 ed4fa7e7572645a39d3d6b6dd16d6370
 msgid "You can examine specific components of the HA system in logs:"
 msgstr "È possibile esaminare componenti specifici del sistema HA nei log:"
 
-#: ../../high_availability.rst:584 e7346af9c0a04e37a19bc7c027536a2d
+#: ../../high_availability.rst:582 6cbe829d7a234d4197f05c23a87a3093
 msgid "Check rsync synchronization logs::"
 msgstr "Controllare i log di sincronizzazione di rsync::"
 
-#: ../../high_availability.rst:588 bdd97fbc231949bdab0f6dc5c0724818
+#: ../../high_availability.rst:586 db78fa470afb45c2b91680263ff1d027
 msgid "Examine SSH connection activities for syncing::"
 msgstr "Esaminare le attività di connessione SSH per la sincronizzazione::"
 
-#: ../../high_availability.rst:592 cf4eb539c94b4480b37850729039809a
+#: ../../high_availability.rst:590 36d4dd46367e421db517f21df32a2c12
 msgid "View keepalived status changes and events::"
 msgstr "Visualizzare le modifiche di stato e gli eventi di keepalived:"
 
-#: ../../high_availability.rst:596 37a21d9f961d4f27bde51cb0b7f7f329
+#: ../../high_availability.rst:594 9f6a492d6ccd49a59c82465be01e71e0
 msgid "Track network configuration imports on backup node::"
 msgstr ""
 "Traccia le importazioni della configurazione di rete sul nodo di backup:"
 
-#: ../../high_availability.rst:601 848403e89128478a9bae9bec50168c6d
+#: ../../high_availability.rst:599 0d15626831ee4beb8c9162d1ba5ad3d1
 msgid "Debugging"
 msgstr "Debugging"
 
-#: ../../high_availability.rst:603 c0a2a1385b414ff6957312b0e0d26cd0
+#: ../../high_availability.rst:601 33e2c222e8d5403092fb548911eaa337
 msgid ""
 "When log files are not sufficient, you can enable debug logging for specific"
 " components:"
@@ -1605,48 +1537,68 @@ msgstr ""
 "Quando i file di log non sono sufficienti, è possibile abilitare la "
 "registrazione dei log di debug per componenti specifici:"
 
-#: ../../high_availability.rst:605 0bbddc7837024f13bab9dbbdffdda09e
+#: ../../high_availability.rst:603 b34d7a38df034f28a0b3ed596be86ad3
 msgid "Debug the `ns-ha-config` script: ::"
 msgstr "Eseguire il debug dello script `ns-ha-config`: ::"
 
-#: ../../high_availability.rst:609 88ecde107e6a49f394b7ae1de102f969
+#: ../../high_availability.rst:607 574343a59e3f463baa39d310feeba57a
 msgid "View active `keepalived` configuration: ::"
 msgstr "Visualizzare la configurazione attiva di ``keepalived``: ::"
 
-#: ../../high_availability.rst:613 81791927ce14437dae9aecf48333142d
+#: ../../high_availability.rst:611 4acb035ff67540fd8c34e9fb2f2120e8
 msgid "Enable `keepalived` debug logging (on primary): ::"
 msgstr ""
 "Abilitare la registrazione di debug di `keepalived` (sul primario): ::"
 
-#: ../../high_availability.rst:619 2a895a10b83947e691eb0403e5e2da11
+#: ../../high_availability.rst:617 e7dc6ea80500447a88ead3bab9bafa79
 msgid ""
 "Then, search for ``Keepalived_vrrp`` in the ``/var/log/messages`` file."
 msgstr "Quindi, cercare ``Keepalived_vrrp`` nel file ``/var/log/messages``."
 
-#: ../../high_availability.rst:622 e1c8eddd9eaa4e958a59756a2849818f
+#: ../../high_availability.rst:620 07d3af8a6ee84109aa08ddd303b20a39
 msgid "Reset the configuration"
 msgstr "Reimpostare la configurazione"
 
-#: ../../high_availability.rst:624 4cc7923912d34ab39812ddda9160b88d
+#: ../../high_availability.rst:622 a101408995a4478d90af3243518cb712
 msgid "To completely remove the HA configuration: ::"
 msgstr "Per rimuovere completamente la configurazione HA: ::"
 
-#: ../../high_availability.rst:630 06c26785a3774545be010f456b988e79
+#: ../../high_availability.rst:628 e632a4248cc64100969509e2a8e9b184
 msgid "Stop and disable `keepalived` and `conntrackd`."
 msgstr "Arrestare e disabilitare ``keepalived`` e ``conntrackd``."
 
-#: ../../high_availability.rst:631 308e70cafb5043b798fd57dfc86a162f
+#: ../../high_availability.rst:629 fdb450789b5e4ff39306ace3a444d6ee
 msgid "Remove HA configuration files."
 msgstr "Rimuovere i file di configurazione HA."
 
-#: ../../high_availability.rst:632 c8fe793d7eb24b82937e7c0f16d2a5cf
+#: ../../high_availability.rst:630 82cdecc0ced6454fbcd4add2d5081e17
 msgid "Clean up `dropbear` configuration including SSH keys."
 msgstr "Pulire la configurazione di `dropbear`, inclusi le chiavi SSH."
 
-#: ../../high_availability.rst:634 e32ae8a881bc48e1ac5d270268f56e9a
+#: ../../high_availability.rst:632 5fb702f6e0e74d8c91dc26d472524ae6
 msgid ""
 "The network configuration of the nodes remains unchanged. You can manage "
 "them as standalone nodes using their static management IPs."
 msgstr ""
 "La configurazione di rete dei nodi rimane invariata. È possibile gestirli "
 "come nodi standalone utilizzando i loro indirizzi IP di gestione statici."
+
+#: ../../high_availability.rst:281 49a57a3dfa9a41699c351ed2f62ecd52
+msgid ""
+"The WAN interface is the first interface to be added to the HA cluster. "
+"Remember that the WAN interface must be configured with a static IP address,"
+" so make sure also to setup :ref:`DNS forwarders <forwarding_servers-"
+"section>`."
+msgstr ""
+"L'interfaccia WAN è la prima interfaccia da aggiungere al cluster HA. "
+"Ricordare che l'interfaccia WAN deve essere configurata con un indirizzo IP "
+"statico, quindi assicurarsi anche di configurare i :ref:`DNS forwarders "
+"<forwarding_servers-section>`."
+
+#: ../../high_availability.rst:532 13b45d66dcdc4633ada61fd4c6586fab
+msgid ""
+"Execute ``ns-ha-config status`` to check Keepalived statistics. Extract from"
+" the output: ::"
+msgstr ""
+"Eseguire ``ns-ha-config status`` per verificare le statistiche di "
+"Keepalived. Estrarre dal risultato: ::"
