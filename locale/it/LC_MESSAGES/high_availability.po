@@ -380,7 +380,7 @@ msgid ""
 msgstr ""
 "Il processo di configurazione HA prevede diversi passaggi. Se si desidera "
 "solo visualizzare i comandi, è possibile passare direttamente alla sezione "
-"`Configuration example`_, ma si consiglia di leggere l'intera sezione per "
+"`Esempio di configurazione`_, ma si consiglia di leggere l'intera sezione per "
 "comprendere il processo e i requisiti."
 
 #: ../../high_availability.rst:112 4b73e0f2cddb412fa0586b22eb3bcfc4
