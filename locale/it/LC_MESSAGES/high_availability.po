@@ -235,7 +235,7 @@ msgstr "Route statiche"
 
 #: ../../high_availability.rst:68 bae1c93ef7314b638aa5e73d55a36321
 msgid "Netifyd informatics configuration"
-msgstr "Configurazione informatica di Netifyd"
+msgstr "Configurazione Netifyd informatics"
 
 #: ../../high_availability.rst:69 2cae7a9ba3c04a2a8d6a2b1f8f9be27f
 msgid "Threat shield IP (banip)"
