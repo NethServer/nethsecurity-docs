@@ -4,7 +4,7 @@ msgstr ""
 
 #: ../../high_availability.rst:5 fe83253725374da9b1da976f961abecc
 msgid "High Availability (Beta)"
-msgstr "Alta disponibilità (Beta)"
+msgstr "High Availability (Beta)"
 
 #: ../../high_availability.rst:9 627873a56a7440f99570bb1f7b1ff736
 msgid ""
