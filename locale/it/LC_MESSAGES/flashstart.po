@@ -88,8 +88,8 @@ msgstr "Abbonamento richiesto"
 msgid ""
 "This feature is available only if the firewall has a valid subscription."
 msgstr ""
-"Questa funzionalità è disponibile solo se il firewall dispone di un "
-"abbonamento valido."
+"Questa funzionalità è disponibile solo se il firewall dispone di una "
+"subscription valida."
 
 #: ../../flashstart.rst:33 3f92dc0c6b5c4161a8a34fea5dd4c6e2
 msgid "FlashStart Pro vs FlashStart Pro Plus"
