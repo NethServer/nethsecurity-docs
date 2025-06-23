@@ -291,7 +291,7 @@ msgstr "Hotspot (dedalo)"
 
 #: ../../high_availability.rst:83 a2bf31f4af3541868a62d3bcc98d74cf
 msgid "Be aware of the following current limitations:"
-msgstr "Si tenga presente le seguenti limitazioni attuali:"
+msgstr "Si tengano presente le seguenti limitazioni attuali:"
 
 #: ../../high_availability.rst:85 1500ee086c544e0997dac81406ba6013
 msgid "IPv4 only (IPv6 is not supported)."
