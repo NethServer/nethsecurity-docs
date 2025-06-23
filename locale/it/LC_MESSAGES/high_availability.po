@@ -341,7 +341,7 @@ msgstr "Requisiti"
 #: ../../high_availability.rst:99 17a5590452b543519ddae022b435d548
 msgid "Before setting up HA, ensure the following requirements are met:"
 msgstr ""
-"Prima di configurare HA, assicurarsi che siano soddisfatti i seguenti "
+"Prima di configurare l'HA, assicurarsi che siano soddisfatti i seguenti "
 "requisiti:"
 
 #: ../../high_availability.rst:101 181316ce9e53465cb924710b99832a22
