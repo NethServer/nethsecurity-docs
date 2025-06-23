@@ -279,8 +279,7 @@ WAN interfaces
 --------------
 
 The WAN interface is the first interface to be added to the HA cluster.
-Remember that the WAN interface must be configured with a static IP address, so make sure also to setup
- :ref:`DNS forwarders <forwarding_servers-section>`.
+Remember that the WAN interface must be configured with a static IP address, so make sure also to setup :ref:`DNS forwarders <forwarding_servers-section>`.
 
 Configure the WAN interface::
 
@@ -531,24 +530,23 @@ Keepalived status
 -----------------
 
 Execute ``ns-ha-config status`` to check Keepalived statistics.
-Extract from the output:
-```
-Keepalived Statistics:
-  advert_rcvd: 249
-  advert_sent: 0
-  become_master: 1
-  release_master: 0
-  packet_len_err: 0
-  advert_interval_err: 0
-  ip_ttl_err: 0
-  invalid_type_rcvd: 0
-  addr_list_err: 0
-  invalid_authtype: 0
-  authtype_mismatch: 0
-  auth_failure: 0
-  pri_zero_rcvd: 1
-  pri_zero_sent: 0
-```
+Extract from the output: ::
+
+  Keepalived Statistics:
+    advert_rcvd: 249
+    advert_sent: 0
+    become_master: 1
+    release_master: 0
+    packet_len_err: 0
+    advert_interval_err: 0
+    ip_ttl_err: 0
+    invalid_type_rcvd: 0
+    addr_list_err: 0
+    invalid_authtype: 0
+    authtype_mismatch: 0
+    auth_failure: 0
+    pri_zero_rcvd: 1
+    pri_zero_sent: 0
 
 On a primary node, the `master.became_master` should be `1` or more, indicating it has successfully taken over as the master.
 Also the `master.advertisements.sent` should be greater than `0`, indicating it is actively sending advertisements to the backup node.
@@ -569,7 +567,7 @@ Replace `<lan_interface>` with the name of the LAN interface (e.g., `eth0`).
 The output should show VRRP packets being sent from the primary node to the backup node. Some example output: ::
 
    tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
-13:54:16.629467 IP (tos 0xc0, ttl 255, id 19404, offset 0, flags [none], proto VRRP (112), length 44)
+    13:54:16.629467 IP (tos 0xc0, ttl 255, id 19404, offset 0, flags [none], proto VRRP (112), length 44)
     192.168.100.238 > 192.168.100.239: VRRPv2, Advertisement, vrid 100, prio 200, authtype simple, intvl 1s, length 24, addrs(2): 192.168.122.49,192.168.100.240 auth "1655e3d3"
 
 If the same command is run on the backup node, it should show VRRP packets being received from the primary node.

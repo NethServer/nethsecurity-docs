@@ -188,7 +188,7 @@ If the domain is still being resolved and should be blocked, double-check the ac
    The firewall is **never** filtered by FlashStart's DNS servers, as this could potentially conflict with some of the services it provides.
 
 3. Testing DNS Filtering with dig directly from the firewall
----------------------------------------------------------
+------------------------------------------------------------
 
 If you want to perform tests using ``dig`` directly from the firewall, you can do so by specifying the port. Each port corresponds to a different filtering profile.
 
