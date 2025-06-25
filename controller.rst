@@ -56,6 +56,14 @@ The following parameters are optional:
 
 After completing the configuration, the controller is ready to be used and can be accessed using a web browser at the configured hostname, like ``https://mycontroller.nethsecurity.org``.
 
+.. note::
+   The controller must be reachable on :
+
+   * ``Port TCP/443 (HTTPS)`` to access WebUI and allow units communication.
+   * ``Randomly generated UDP port`` dynamically allocated by NethServer 8, used for units VPN connection.
+   
+   The actual ``UDP port`` number can be found in the Controller module status page under the ``OpenVPN UDP Port`` section. Make sure those ports are open on any firewall protecting the node running the controller.
+
 Users
 =====
 
