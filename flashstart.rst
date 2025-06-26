@@ -155,6 +155,34 @@ Once the service is properly set up on the FlashStart dashboard, you can proceed
 
 Once the FlashStart service has been configured on the firewall, all further configuration and management must be performed exclusively via the FlashStart web portal. No additional changes are required on the firewall itself.
 
+
+DNS Server Configuration
+------------------------
+
+The DNS servers used by FlashStart are automatically configured by NethSecurity when the service is enabled.
+It's possible to customize a few of the options:
+
+- **Query logging**: You can enable query logging by running the following command:
+
+  .. code-block::
+
+     uci set flashstart.global.logqueries='1'
+     uci commit flashstart
+     reload_config
+
+  This will log DNS queries to the firewall's system log, which can be useful for tracking and troubleshooting purposes.
+
+- **Disable DNS Rebind protection**: You can disable rebind protection if you need with the following:
+
+  .. code-block::
+
+     uci set flashstart.global.rebind_protection='0'
+     uci commit flashstart
+     reload_config
+
+  Allows to bypass the DNS Rebind protection mechanism, which can be useful in case you have a DNS server that needs to
+  resolve internal domains that might otherwise be blocked by the firewall's DNS Rebind protection.
+
 Troubleshooting
 ===============
 
