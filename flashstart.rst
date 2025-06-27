@@ -26,6 +26,12 @@ It basically links 2 components : filter configuration and network configuration
   FlashStart is a payed service that allows you to use trial licenses.
   Please refer to the supplier's documentation `doc <https://cloud.flashstart.com/customerarea/support/docs>`_.
 
+.. warning::
+
+  FlashStart service requires explicitly specifying the DNS server via DHCP options. Go to the DHCP section, under
+  Advanced Settings, and add the following option: 6:dns-server,<YOUR-USUAL-DNS-SERVER>. This ensures that clients receive the correct DNS server via DHCP.
+
+
 Once the account has been created and the service configured, NethSecurity can be configured.
 
 
