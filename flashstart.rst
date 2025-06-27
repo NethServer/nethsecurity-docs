@@ -160,7 +160,7 @@ DNS Server Configuration
 ------------------------
 
 The DNS servers used by FlashStart are automatically configured by NethSecurity when the service is enabled.
-It's possible to customize a few of the options:
+It's possible to customize a few options:
 
 - **Query logging**: You can enable query logging by running the following command:
 
