@@ -28,9 +28,12 @@ It basically links 2 components : filter configuration and network configuration
 
 .. warning::
 
-  FlashStart service requires explicitly specifying the DNS server via DHCP options. Go to the DHCP section, under
-  Advanced Settings, and add the following option: 6:dns-server,<YOUR-USUAL-DNS-SERVER>. This ensures that clients receive the correct DNS server via DHCP.
-
+  If you are using the DHCP service on NethSecurity, please note that FlashStart integration requires explicitly
+  specifying the DNS server through DHCP options.Go to the DHCP section, under Advanced Settings, and add the following
+  option: 6:dns-server,<YOUR-USUAL-DNS-SERVER>. This ensures that clients receive the correct DNS server via DHCP. In
+  this field, enter the DNS server typically used in your network, usually the IP address of the NethSecurity interface.
+  Do not manually specify the IP addresses of the FlashStart DNS servers, as they are automatically managed by the
+  integration.
 
 Once the account has been created and the service configured, NethSecurity can be configured.
 
