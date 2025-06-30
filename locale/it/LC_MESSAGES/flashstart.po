@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../flashstart.rst:5 c208b51e3aea4214bc5123aed36dee8c
+#: ../../flashstart.rst:5 a2afecf9a5dd4cddaa2a85eb6add36d1
 msgid "FlashStart DNS filter"
 msgstr "Filtro DNS FlashStart"
 
-#: ../../flashstart.rst:7 49124faac8cf4f06a1ce1ea3c2e28652
+#: ../../flashstart.rst:7 e0fb363599b741e8b678d6a2bf373816
 msgid ""
 "DNS filtering integrates with third-party DNS-based content filtering "
 "software, default supported content filter is the one provided from "
@@ -16,7 +16,7 @@ msgstr ""
 "DNS di terze parti; il filtro dei contenuti supportato di default è quello "
 "fornito da `FlashStart <https://www.flashstart.com>`_."
 
-#: ../../flashstart.rst:9 c35d600d83d64e929c4d517bcbefdf49
+#: ../../flashstart.rst:9 fb2431cd55dc431eb1bb72c538e76ce1
 msgid ""
 "It basically links 2 components : filter configuration and network "
 "configuration."
@@ -24,7 +24,7 @@ msgstr ""
 "Collega fondamentalmente 2 componenti: la configurazione dei filtri e la "
 "configurazione di rete."
 
-#: ../../flashstart.rst:11 8730492056824aa2b8c5992aa1619477
+#: ../../flashstart.rst:11 715baa58bafa4e99952fa5056b452f6c
 msgid ""
 "Content filter configuration takes place entirely on the third-party "
 "platform, typically it is possible to block individual websites, as well as "
@@ -35,7 +35,7 @@ msgstr ""
 "web, nonché categorie di siti (ad esempio, per adulti), gestire eccezioni, "
 "visualizzare report e così via."
 
-#: ../../flashstart.rst:13 ef0f16a092774786bd8e0235a1f1abd4
+#: ../../flashstart.rst:13 420a5716650b4d5e9f0c403bb54e2763
 msgid ""
 "Network configuration is completely automated and is done on NethSecurity "
 "which takes care of:"
@@ -43,19 +43,19 @@ msgstr ""
 "La configurazione della rete è completamente automatizzata ed è gestita da "
 "NethSecurity, che si occupa di:"
 
-#: ../../flashstart.rst:15 e6405be37fc7499c870e17a935e4cfb6
+#: ../../flashstart.rst:15 6151ca5e922744909a8af40d7d5fd2e8
 msgid "connect the firewall to the specific third party instance"
 msgstr "collegare il firewall all'istanza specifica di terze parti"
 
-#: ../../flashstart.rst:16 bde9b4e4f3a64614accbc4050068c267
+#: ../../flashstart.rst:16 ac6d46966ceb4295b1e6ae4f65076715
 msgid "redirect all DNS requests to the external service"
 msgstr "reindirizzare tutte le richieste DNS al servizio esterno"
 
-#: ../../flashstart.rst:17 ceb82805f5bc4a6aa7666244771b95a5
+#: ../../flashstart.rst:17 49d5a5c55a204425aa61624db551561c
 msgid "automatically update IP addresses of all connectivities"
 msgstr "aggiornare automaticamente gli indirizzi IP di tutte le connettività"
 
-#: ../../flashstart.rst:25 f5c8df33604d4024b16f3d7844b1a182
+#: ../../flashstart.rst:25 3f95203e095d41329a7e55c00de1d04e
 msgid ""
 "Before configuring NethSecurity you need to create an account on FlashStart "
 "and configure the service. FlashStart is a payed service that allows you to "
@@ -68,7 +68,7 @@ msgstr ""
 "documentazione del fornitore `doc "
 "<https://cloud.flashstart.com/customerarea/support/docs>`_."
 
-#: ../../flashstart.rst:29 e28b4e23c51c4cef8db35a9584b58aa0
+#: ../../flashstart.rst:38 339cadabf2b642d6978b7f5834adec72
 msgid ""
 "Once the account has been created and the service configured, NethSecurity "
 "can be configured."
@@ -76,26 +76,26 @@ msgstr ""
 "Una volta che l'account è stato creato e il servizio configurato, è "
 "possibile configurare NethSecurity."
 
-#: ../../flashstart.rst:143 2a1e97d035fa4786b1318c7d5bc6d654
+#: ../../flashstart.rst:152 369765fa2be54c1eb6069e1e9a8e87f7
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../flashstart.rst:19 24c79e70be5847d58fa98119eab97e53
+#: ../../flashstart.rst:19 ea42fbe9be8d4af79e8b030aac26a93b
 msgid "Subscription required"
 msgstr "Richiesta subscription"
 
-#: ../../flashstart.rst:21 443fcc61431a4f0986b1c654bc43003a
+#: ../../flashstart.rst:21 4942c6608b0041f1b86a80ff707e7e2c
 msgid ""
 "This feature is available only if the firewall has a valid subscription."
 msgstr ""
 "Questa funzionalità è disponibile solo se il firewall dispone di una "
 "subscription valida."
 
-#: ../../flashstart.rst:33 3f92dc0c6b5c4161a8a34fea5dd4c6e2
+#: ../../flashstart.rst:42 c3ad7eabe39041108b55fe6a5b504f8f
 msgid "FlashStart Pro vs FlashStart Pro Plus"
 msgstr "FlashStart Pro vs FlashStart Pro Plus"
 
-#: ../../flashstart.rst:35 144de616b14c42dc9bc66a3dd32cf2a8
+#: ../../flashstart.rst:44 59b1f46e11eb455597049074a80f0e64
 msgid ""
 "FlashStart provides cloud-based content filtering solutions integrated with "
 "NethSecurity. The two main service types, FlashStart Pro and FlashStart Pro "
@@ -109,13 +109,13 @@ msgstr ""
 "granularità del filtraggio e gestione dei profili. Di seguito è riportato un"
 " breve confronto che evidenzia le principali differenze."
 
-#: ../../flashstart.rst:38 ../../flashstart.rst:104 ../../flashstart.rst:196
-#: 7f67b2e7b3bf49e1a52821418bcfa1f8 b1d73e2db4dc4280b722070ab14407cb
-#: 492177cf0bbd4586a03d0ff3e881058d
+#: ../../flashstart.rst:47 ../../flashstart.rst:113 ../../flashstart.rst:233
+#: f7d284efccc14f2bbbdcddff0900126b ebb90c34b4194abd8e98162f9719a734
+#: 9c6ae65622324fc8b3f27f55a1f71a0d
 msgid "FlashStart Pro"
 msgstr "FlashStart Pro"
 
-#: ../../flashstart.rst:40 8302c285f2f74d1c8dd8b9fd4b9965d6
+#: ../../flashstart.rst:49 2f5bd22fd0b74ae2b9cab72adb2fad82
 msgid ""
 "FlashStart Pro enables content filtering using a single filter profile, "
 "applied across the network or to selected network zones."
@@ -123,7 +123,7 @@ msgstr ""
 "FlashStart Pro consente il filtraggio dei contenuti utilizzando un unico "
 "profilo di filtro, applicato all'intera rete o a zone di rete selezionate."
 
-#: ../../flashstart.rst:42 e95d36978b014b39aa4149590428ed0e
+#: ../../flashstart.rst:51 d990aaf9c27045c188546345f23403ad
 msgid ""
 "**Single profile filtering:** All filtered IPs follow the same rules and "
 "category blocks defined on the FlashStart platform."
@@ -131,7 +131,7 @@ msgstr ""
 "**Filtraggio con profilo singolo:** Tutti gli IP filtrati seguono le stesse "
 "regole e i blocchi di categoria definiti sulla piattaforma FlashStart."
 
-#: ../../flashstart.rst:45 d69b69723c8e433a8d9a85b76c7264f8
+#: ../../flashstart.rst:54 d8231785d9e0439a948e3cbf04b64e5c
 msgid ""
 "**Zone-based application:** Administrators can choose which network zones "
 "are subject to filtering."
@@ -139,7 +139,7 @@ msgstr ""
 "**Applicazione basata su zone:** Gli amministratori possono scegliere quali "
 "zone di rete sono soggette al filtraggio."
 
-#: ../../flashstart.rst:48 8b8e4d018cbb4b70a8130a057fea09fe
+#: ../../flashstart.rst:57 99ca844a0e374eaa9c47c9b8feba88cd
 msgid ""
 "**IP-based profile management:** FlashStart Pro on NethSecurity implicitly "
 "supports three traffic profiles, based on IP:"
@@ -147,25 +147,25 @@ msgstr ""
 "**Gestione dei profili basata su IP:** FlashStart Pro su NethSecurity "
 "supporta implicitamente tre profili di traffico, basati su IP:"
 
-#: ../../flashstart.rst:51 bf59828a50774e2db0ed91dbcd1b3be4
+#: ../../flashstart.rst:60 0621e950d91c44b19935f50bda092a4e
 msgid ""
 "Filtered IPs : Subject to the single filter profile defined in FlashStart."
 msgstr ""
 "IP filtrati : Soggetti al singolo profilo di filtro definito in FlashStart."
 
-#: ../../flashstart.rst:52 e554865cf45d4f8a8b28062c7f3fcb37
+#: ../../flashstart.rst:61 d136221bb5bb4c169744f8dd4c5470fc
 msgid "Unfiltered IPs : No filtering applied (see Exclusions below)"
 msgstr ""
 "IP non filtrati : Nessun filtro applicato (vedere Esclusioni di seguito)"
 
-#: ../../flashstart.rst:53 096cdbf980b043028a3d510e01c5039f
+#: ../../flashstart.rst:62 19e9faa35b7e4d1a9d822be43470c051
 msgid ""
 "Blocked IPs : Access denied at the firewall level using firewall rules."
 msgstr ""
 "IP bloccati : Accesso negato a livello di firewall utilizzando regole del "
 "firewall."
 
-#: ../../flashstart.rst:55 02e505c0389745cfa74517f3fa984ddf
+#: ../../flashstart.rst:64 e338be7e80d442aabab905ddc138c359
 msgid ""
 "**Exclusions:** Exceptions can be configured using IP addresses or CIDR "
 "blocks."
@@ -173,11 +173,11 @@ msgstr ""
 "**Esclusioni:** È possibile configurare delle eccezioni utilizzando "
 "indirizzi IP o blocchi CIDR."
 
-#: ../../flashstart.rst:59 f66b9c0563514166b4897db01a65bc11
+#: ../../flashstart.rst:68 487fe19c99cd4d23a5e890ef5dfc3411
 msgid "FlashStart Pro Plus (Beta)"
 msgstr "FlashStart Pro Plus (Beta)"
 
-#: ../../flashstart.rst:61 2ac0b3e0e2c64f41b271a4ba6f5b3e4a
+#: ../../flashstart.rst:70 1a05d7e15e824cd38d465e5b59849fa6
 msgid ""
 "FlashStart Pro Plus extends functionality with support for multiple "
 "independent filtering profiles, allowing greater flexibility and user-level "
@@ -187,7 +187,7 @@ msgstr ""
 "di filtraggio indipendenti, consentendo una maggiore flessibilità e "
 "l'applicazione delle policy a livello utente."
 
-#: ../../flashstart.rst:64 c1148b534044469ea4caaeb91a6b8e28
+#: ../../flashstart.rst:73 e8cd5827a25045c3943f965117592116
 msgid ""
 "**Multi-profile support:** Up to 5 independent profiles can be defined, each"
 " with its own filtering configuration."
@@ -195,7 +195,7 @@ msgstr ""
 "**Supporto multi-profilo:** Possono essere definiti fino a 5 profili "
 "indipendenti, ciascuno con la propria configurazione di filtraggio."
 
-#: ../../flashstart.rst:67 bab14c18fa894dffb45a609fef063bac
+#: ../../flashstart.rst:76 624da01fd47e41718bf25d4a92e3b612
 msgid ""
 "**Independent profile configuration:** Each profile can be customized "
 "individually (categories, safe search, YouTube restrictions, etc.)."
@@ -204,13 +204,13 @@ msgstr ""
 "personalizzato individualmente (categorie, Safe Search, restrizioni YouTube,"
 " ecc.)."
 
-#: ../../flashstart.rst:70 639e7366bada4c8d93762c5ef3b3581b
+#: ../../flashstart.rst:79 dbce35021f2c4005ad9de9461ef0c54e
 msgid "**Filtering criteria options:** Profiles can be assigned using:"
 msgstr ""
 "**Opzioni dei criteri di filtraggio:** I profili possono essere assegnati "
 "utilizzando:"
 
-#: ../../flashstart.rst:73 e68b620a2ca0450ea1baa1718777b309
+#: ../../flashstart.rst:82 d2903045dcba4a79899b4ffd53dff846
 msgid ""
 "**Firewall objects (host sets):** From the FlashStart configuration panel, "
 "administrators can associate specific host sets (defined in the firewall) "
@@ -220,7 +220,7 @@ msgstr ""
 "FlashStart, gli amministratori possono associare insiemi specifici di host "
 "(definiti nel firewall) a un profilo."
 
-#: ../../flashstart.rst:76 dac254863785441ea2b18316acf4be90
+#: ../../flashstart.rst:85 291ab8e1954f424f851ec7f0b51f78d7
 msgid ""
 "**Active Directory users:** If the FlashStart AD connector is installed, "
 "profiles can be assigned to AD users directly, eliminating the need to rely "
@@ -230,7 +230,7 @@ msgstr ""
 "profili possono essere assegnati direttamente agli utenti AD, eliminando la "
 "necessità di fare affidamento sugli indirizzi IP."
 
-#: ../../flashstart.rst:79 0a9ae92fe753468eba2c97750611542f
+#: ../../flashstart.rst:88 d44fa3ae15f8460fbb511e6bcd9a23f4
 msgid ""
 "**Combined assignment (objects + users):** It is possible to use both "
 "methods in parallel.In case of conflicts, firewall object assignments take "
@@ -240,7 +240,7 @@ msgstr ""
 "entrambi i metodi in parallelo. In caso di conflitti, le assegnazioni degli "
 "oggetti firewall hanno la precedenza su quelle basate sugli utenti."
 
-#: ../../flashstart.rst:84 857543966f9c4c82afd2f721cdfd0235
+#: ../../flashstart.rst:93 b84b6c8979ce453dbde22eefd846db45
 msgid ""
 "Although no known bugs have been reported at this time, the Pro Plus feature"
 " is currently released as a **Beta**. We recommend testing it in a non-"
@@ -250,31 +250,31 @@ msgstr ""
 "Plus è attualmente rilasciata come **Beta**. Si consiglia di testarla in un "
 "ambiente non critico prima di implementarla in produzione."
 
-#: ../../flashstart.rst:87 42a2477f8b564c4bb20eebaee8f9a9e4
+#: ../../flashstart.rst:96 f3d45420a740449ca23d8d8007e36f0f
 msgid "Common Features (Pro and Pro Plus)"
 msgstr "Funzionalità comuni (Pro e Pro Plus)"
 
-#: ../../flashstart.rst:89 6f1df2d8bcec4bb89a0c4e253bf1e99a
+#: ../../flashstart.rst:98 442111ee6e3d4b31b1c35049d696cf2d
 msgid "**Same filtering capabilities:**"
 msgstr "**Stesse capacità di filtraggio:**"
 
-#: ../../flashstart.rst:91 e6ad46e2b9a04f09b4de5f056c5addb8
+#: ../../flashstart.rst:100 2573b80143aa4553a91df17f42155bb7
 msgid "URL category-based filtering (blacklists)"
 msgstr "Filtraggio basato su categorie di URL (liste nere)"
 
-#: ../../flashstart.rst:92 38083cd53b23495c913198f7112bfc0e
+#: ../../flashstart.rst:101 f8f2ccdf00484468b84cca124309cfd6
 msgid "Search engine filtering (Safe Search)"
 msgstr "Filtraggio dei motori di ricerca (Safe Search)"
 
-#: ../../flashstart.rst:93 6f8121f655bf469da1dbb181f772d18f
+#: ../../flashstart.rst:102 a7092667ebb849eeb1518b85aa14f6f6
 msgid "YouTube restricted mode"
 msgstr "Modalità con restrizioni di YouTube"
 
-#: ../../flashstart.rst:94 8427f7b7cd0e45b6aa80fcd3951262a8
+#: ../../flashstart.rst:103 04011daa55934114a60a39063c64e8e2
 msgid "Threat protection"
 msgstr "Protezione dalle minacce"
 
-#: ../../flashstart.rst:96 2fa8363a4af94412a008e647f743c8c7
+#: ../../flashstart.rst:105 c63261258fe640d4ad6a9bf60caa53b5
 msgid ""
 "**Cloud-managed configuration:** All filtering rules and profiles are "
 "managed through the FlashStart web interface."
@@ -282,73 +282,73 @@ msgstr ""
 "**Configurazione gestita dal cloud:** Tutte le regole di filtraggio e i "
 "profili sono gestiti tramite l'interfaccia web di FlashStart."
 
-#: ../../flashstart.rst:103 fddcc883b2eb480bab59f67c1bc5e511
+#: ../../flashstart.rst:112 2a475030838a44d1a40b95499305fed4
 msgid "Feature"
 msgstr "Funzionalità"
 
-#: ../../flashstart.rst:105 ../../flashstart.rst:205
-#: fdef2bbe7c2d49e49e7325761a7c787c 7cccaab8fe1c42c3bff457f1d3d36498
+#: ../../flashstart.rst:114 ../../flashstart.rst:242
+#: 7aedc9cb0aa24f318e32de289e9ddab2 7c768bd3fe67497aad34e057f4fecccc
 msgid "FlashStart Pro Plus"
 msgstr "FlashStart Pro Plus"
 
-#: ../../flashstart.rst:106 a01812048ad0431c8fad4aa6dde9a22e
+#: ../../flashstart.rst:115 a46cf0970e8a421c9ff168bc1566446f
 msgid "Zone-based filtering"
 msgstr "Filtraggio basato su zone"
 
-#: ../../flashstart.rst:107 ../../flashstart.rst:108 ../../flashstart.rst:110
-#: ../../flashstart.rst:111 ../../flashstart.rst:117 ../../flashstart.rst:120
-#: dcf826ab8f4045508f225e52d5538f1d 52b6a3a831964f79874b7aa34829406a
-#: 9369f63fe22b4bbe9060bbf0cc1f1c69 f377ef471f6c48f2a5779fca728192aa
-#: 4ce93b6d1b4b460ca4f14b3e6f121fa7 81c57818059e400da3fc4fad46957af6
+#: ../../flashstart.rst:116 ../../flashstart.rst:117 ../../flashstart.rst:119
+#: ../../flashstart.rst:120 ../../flashstart.rst:126 ../../flashstart.rst:129
+#: cb98469c5edf4879905122acd48ca4e7 a4fdcf0342e14a2a9c522036dd0e2c37
+#: b2cb86a803af4a77898bbd5b3620b3f4 cfac8a0ea14b4591a7ae954a0fa79d42
+#: cb34da20f45140bc8a73db8cb62cf3fa 823d951a530745e383951c908eeb5bb6
 msgid "Yes"
 msgstr "Sì"
 
-#: ../../flashstart.rst:109 0651f7c267414102987382952ef288a8
+#: ../../flashstart.rst:118 e19dbcc24ca0436db320f3a42b0bbbbd
 msgid "Profile exclusions (IP/CIDR)"
 msgstr "Esclusioni del profilo (IP/CIDR)"
 
-#: ../../flashstart.rst:112 fd87af45e793420c9dcebfe91619a334
+#: ../../flashstart.rst:121 0c7de8e42cf8448ab496dda1d059da2e
 msgid "Number of filter profiles"
 msgstr "Numero di profili filtro"
 
-#: ../../flashstart.rst:113 6f458b6c90ee41bfa69bee3755a3ca39
+#: ../../flashstart.rst:122 017a882f5a8847da9e71327525c4643a
 msgid "1"
 msgstr "1"
 
-#: ../../flashstart.rst:114 37fa86b22c2e4dfbb7ecf2bb0cc2edb7
+#: ../../flashstart.rst:123 ba28457ecdd941fa9dd263042231dd41
 msgid "Up to 5"
 msgstr "Fino a 5"
 
-#: ../../flashstart.rst:115 47ce8a05b9cb46348f0777aa233c2cd1
+#: ../../flashstart.rst:124 cb5ab9464a6543608df7c8e87c4052a4
 msgid "Filtering per AD user"
 msgstr "Filtraggio per utente AD"
 
-#: ../../flashstart.rst:116 ../../flashstart.rst:119
-#: a7bdc68466d24ebe80c71d634b9e282e 2a212fe1978147da866e075b79454e17
+#: ../../flashstart.rst:125 ../../flashstart.rst:128
+#: 5071386179954f9fb80146501a2711bb 1a0b4f10323644fc94c02316ac218267
 msgid "No"
 msgstr "No"
 
-#: ../../flashstart.rst:118 7e3f55ae0fe940de979fb6b45d6e92f9
+#: ../../flashstart.rst:127 bade199f71d64d27bcfdab9a23ee4a4f
 msgid "Firewall object integration"
 msgstr "Integrazione degli oggetti firewall"
 
-#: ../../flashstart.rst:121 f1a58de9e59d412999703d55eb5f1ffc
+#: ../../flashstart.rst:130 d5b67bf3e0e042439f4053f9a811c296
 msgid "Conflict handling (user vs object)"
 msgstr "Gestione dei conflitti (utente vs oggetto)"
 
-#: ../../flashstart.rst:122 8914ddadbae04efdb0797344e8ef8fa2
+#: ../../flashstart.rst:131 b62738384bd34106b72c9e84d2e0d089
 msgid "N/A"
 msgstr "N/A"
 
-#: ../../flashstart.rst:123 d30a0a850316450cad306f0dbc96f19c
+#: ../../flashstart.rst:132 feeccf42050248fe95f28113b2eb03e8
 msgid "Firewall object takes priority"
 msgstr "L'oggetto Firewall ha la priorità"
 
-#: ../../flashstart.rst:127 5d0f892d4d34488eb3813fd8a9f692f9
+#: ../../flashstart.rst:136 3c761a70e59b4ff9912b213f1248aea0
 msgid "Recommendations Before Configuring FlashStart DNS Filter"
 msgstr "Raccomandazioni prima di configurare FlashStart DNS Filter"
 
-#: ../../flashstart.rst:129 9efbc01c33cf4d5ca9f927182a04d138
+#: ../../flashstart.rst:138 e092bb3ffe9f489cb267e61ed6fc03ce
 msgid ""
 "Before enabling the FlashStart DNS filter, please consider the following "
 "important recommendations:"
@@ -356,7 +356,7 @@ msgstr ""
 "Prima di abilitare il filtro DNS di FlashStart, si prega di considerare le "
 "seguenti raccomandazioni importanti:"
 
-#: ../../flashstart.rst:131 dc67b8220a5e467587530373e9027e60
+#: ../../flashstart.rst:140 f2d00872a95748adab2d4ba992bab236
 msgid ""
 "**DNS Redirection Behavior** When content filtering is enabled, all DNS "
 "traffic from the clients will be automatically redirected to the external "
@@ -370,7 +370,7 @@ msgstr ""
 "indipendentemente dalla loro configurazione. **Non apportare modifiche ai "
 "server DNS configurati in NethSecurity o nei client di rete.**"
 
-#: ../../flashstart.rst:135 76afe21d862b4e33a2b5e0173b838d86
+#: ../../flashstart.rst:144 f173f158dd6541a49a98e6c87688c103
 msgid ""
 "**Block Alternative DNS Protocols** To preserve the effectiveness of the "
 "content filter, it is highly recommended to block alternative DNS protocols "
@@ -379,7 +379,7 @@ msgstr ""
 "**Bloccare i protocolli DNS alternativi**  \n"
 "Per preservare l'efficacia del filtro dei contenuti, si raccomanda vivamente di bloccare i protocolli DNS alternativi (come DoT e DoH) utilizzando il :ref:`dpi_filter-section`."
 
-#: ../../flashstart.rst:138 1461ffbc3df4400eacc169db7facef02
+#: ../../flashstart.rst:147 bafccb6d78a540689487c73383c1bf4f
 msgid ""
 "**Avoid Conflicts with Threat Shield DNS** Use FlashStart only if you are "
 "**not already using the Threat Shield DNS service**, as using both "
@@ -389,7 +389,7 @@ msgstr ""
 "**non si sta già utilizzando il servizio Threat Shield DNS**, poiché l'uso "
 "simultaneo di entrambi potrebbe causare conflitti."
 
-#: ../../flashstart.rst:145 e619b7c6bbe34527bde4dafd2305915c
+#: ../../flashstart.rst:154 7ab777803b044d159067c905265de63d
 msgid ""
 "Before configuring FlashStart on your firewall, you must first purchase the "
 "**Pro** or **Pro Plus** service on the FlashStart platform. Once the service"
@@ -402,7 +402,7 @@ msgstr ""
 " è possibile procedere con la configurazione sul firewall NethSecurity "
 "seguendo pochi semplici passaggi."
 
-#: ../../flashstart.rst:148 6be4d4e7526f4eb5bf38a0f9e31c8574
+#: ../../flashstart.rst:157 e0605bea96a745a1ac289f2c3097ee8a
 msgid ""
 "``Status`` : You can enable or disable the DNS filter by using the "
 "``Status`` toggle switch"
@@ -410,7 +410,7 @@ msgstr ""
 "``Stato`` : È possibile abilitare o disabilitare il filtro DNS utilizzando "
 "l'interruttore ``Stato``."
 
-#: ../../flashstart.rst:149 d9eb0d6fc3284a32b097f9c453121364
+#: ../../flashstart.rst:158 22c5459163144460bb6dedd0606f26e6
 msgid ""
 "``Service type`` : Select the type of service you have purchased: **Pro** or"
 " **Pro Plus**"
@@ -418,21 +418,21 @@ msgstr ""
 "``Tipo di servizio`` : Selezionare il tipo di servizio acquistato: **Pro** "
 "oppure **Pro Plus**"
 
-#: ../../flashstart.rst:150 af7bf2c9b25749e9b0253521d3999f23
+#: ../../flashstart.rst:159 2a97abc2d2b84f0988cb9537c5aa84c2
 msgid ""
 "``Username`` :  Enter the same username used for your FlashStart account"
 msgstr ""
 "``Nome utente`` :  Inserire lo stesso nome utente utilizzato per il proprio "
 "account FlashStart"
 
-#: ../../flashstart.rst:151 914263920ecb41d091ee69c9c1bcdbd8
+#: ../../flashstart.rst:160 a9c7e4c44a0c44a8aa536eb986cc182a
 msgid ""
 "``Password`` :  Enter the same password used for your FlashStart account"
 msgstr ""
 "``Password`` :  Inserire la stessa password utilizzata per l'account "
 "FlashStart"
 
-#: ../../flashstart.rst:152 e2904b6922204ba39afc168d1fa7528d
+#: ../../flashstart.rst:161 16bf8790e55649dc91b811b3a928131b
 msgid ""
 "``Zones to Filter`` :  Select the network zones you want to protect with DNS"
 " filtering. Only the selected zones will be affected by the FlashStart DNS "
@@ -442,7 +442,7 @@ msgstr ""
 "proteggere con il filtro DNS. Solo le zone selezionate saranno interessate "
 "dal filtro DNS di FlashStart."
 
-#: ../../flashstart.rst:153 7bd754cc5f9d4838a29f1c057a438273
+#: ../../flashstart.rst:162 1acb613d6d5548c288eea8a5bc2d473d
 msgid ""
 "``Bypass Source IPs or Networks`` : You can specify a list of IP addresses "
 "or networks (CIDR format) that should bypass DNS filtering. Traffic from "
@@ -453,7 +453,7 @@ msgstr ""
 "traffico proveniente da queste sorgenti non sarà soggetto ad alcuna regola "
 "di filtraggio."
 
-#: ../../flashstart.rst:154 e39c54963ce84e929f5ff35cc846c882
+#: ../../flashstart.rst:163 873bd5f80e6a44de883279fb538ae73d
 msgid ""
 "``Custom DNS Servers`` : If you need to define **custom DNS resolvers for "
 "specific domains**, you can configure them here. The syntax is the same used"
@@ -469,7 +469,7 @@ msgstr ""
 "per dominio <https://docs.nethsecurity.org/en/latest/dns_dhcp.html#domain-"
 "specific-dns-servers>`_"
 
-#: ../../flashstart.rst:156 578f07124859486d92e9b332ddbe541d
+#: ../../flashstart.rst:165 f3c6217281e04817add11ffe0e4d5536
 msgid ""
 "Once the FlashStart service has been configured on the firewall, all further"
 " configuration and management must be performed exclusively via the "
@@ -481,15 +481,15 @@ msgstr ""
 "esclusivamente tramite il portale web di FlashStart. Non sono necessarie "
 "ulteriori modifiche sul firewall stesso."
 
-#: ../../flashstart.rst:159 f4c0ccdf52e94719ade71e621a0d04c5
+#: ../../flashstart.rst:196 a0e5ee37259b4d12b655a6fdcd52ce23
 msgid "Troubleshooting"
 msgstr "Risoluzione dei problemi"
 
-#: ../../flashstart.rst:163 61dc6f185a924592ab358c8183861ce4
+#: ../../flashstart.rst:200 692b7bb15e884302927d44fd744f4eac
 msgid "1. My public IP is not listed in the FlashStart networks"
 msgstr "1. Il mio IP pubblico non è elencato nelle reti FlashStart"
 
-#: ../../flashstart.rst:165 2b5fb4358b264965909f7d4b1de94be7
+#: ../../flashstart.rst:202 be4a8f6811e14bc880e811d69923f87c
 msgid ""
 "If your public IP address does not appear in the FlashStart dashboard under "
 "registered networks, please allow up to 15 minutes. This delay may be caused"
@@ -501,16 +501,16 @@ msgstr ""
 "causato da meccanismi di protezione sulla piattaforma FlashStart progettati "
 "per mitigare tentativi di registrazione ripetuti o automatizzati."
 
-#: ../../flashstart.rst:168 2f3ec90132794a0394ed74d5d62c6e90
+#: ../../flashstart.rst:205 3ddd731bd01c466c97e7f9685d55dce8
 msgid "2. DNS filtering does not seem to be working"
 msgstr "2. Il filtro DNS sembra non funzionare"
 
-#: ../../flashstart.rst:170 103296e1abd141eabf94d5e8f3a60cb2
+#: ../../flashstart.rst:207 282d1c42fa0841f7bfeefb689a9de5b1
 msgid "If the filtering is not effective immediately after configuration:"
 msgstr ""
 "Se il filtraggio non è efficace immediatamente dopo la configurazione:"
 
-#: ../../flashstart.rst:172 553ba49943e5463b8f052157b7e90612
+#: ../../flashstart.rst:209 41991337d6fb452cbb978e0a9fcf6847
 msgid ""
 "Be aware that FlashStart may require a few minutes to propagate the applied "
 "settings across its infrastructure."
@@ -518,7 +518,7 @@ msgstr ""
 "Si tenga presente che FlashStart potrebbe richiedere alcuni minuti per "
 "propagare le impostazioni applicate attraverso la propria infrastruttura."
 
-#: ../../flashstart.rst:173 20b29006ab2c4c368bb41f635693d9ed
+#: ../../flashstart.rst:210 02b422cd5d0e4d7eaf5737bd44cf1854
 msgid ""
 "Also consider the impact of browser DNS cache, which may delay visible "
 "effects."
@@ -526,7 +526,7 @@ msgstr ""
 "Considerare anche l'impatto della cache DNS del browser, che potrebbe "
 "ritardare gli effetti visibili."
 
-#: ../../flashstart.rst:175 1c5482ccf40f4fd0b2d425341686b9cf
+#: ../../flashstart.rst:212 7d7ca5be1cb64c7ba80b05e0a8c03532
 msgid ""
 "To verify whether filtering is actually in place and working, you can "
 "perform a manual DNS query **in your local client** using the `dig` command:"
@@ -535,13 +535,13 @@ msgstr ""
 "possibile eseguire una query DNS manuale **sul client locale** utilizzando "
 "il comando `dig`:"
 
-#: ../../flashstart.rst:181 b73bb0aee1f2424294ed256e97035642
+#: ../../flashstart.rst:218 07b507de83bb433ea3421fe7525ecab3
 msgid "Replace `www.mydomain.com` with the actual domain you're testing."
 msgstr ""
 "Sostituire ``www.mydomain.com`` con il dominio effettivo che si sta "
 "testando."
 
-#: ../../flashstart.rst:183 97b1667889cb4b958c8a9409237b1609
+#: ../../flashstart.rst:220 4563b40a3f3f48e983a9e0e928e6195a
 msgid ""
 "If the domain is still being resolved and should be blocked, double-check "
 "the active profile and block settings on the FlashStart dashboard."
@@ -550,7 +550,7 @@ msgstr ""
 "nuovamente il profilo attivo e le impostazioni di blocco sulla dashboard di "
 "FlashStart."
 
-#: ../../flashstart.rst:187 dd39f87634514ffab4e9bdc51c62bdef
+#: ../../flashstart.rst:224 460562079109446da8a6545cda69da6c
 msgid ""
 "This ``dig`` test must always be performed from the **client** and **never "
 "from the firewall**. The firewall is **never** filtered by FlashStart's DNS "
@@ -562,11 +562,11 @@ msgstr ""
 "FlashStart, poiché ciò potrebbe potenzialmente entrare in conflitto con "
 "alcuni dei servizi che fornisce."
 
-#: ../../flashstart.rst:191 0eb241d35f114af5bcf1b3c6ddb25422
+#: ../../flashstart.rst:228 3516356904ac4faab2444b85ff9379a5
 msgid "3. Testing DNS Filtering with dig directly from the firewall"
 msgstr "3. Verifica del filtraggio DNS con dig direttamente dal firewall"
 
-#: ../../flashstart.rst:193 650a8e5d87c74c758dcb187e0b482442
+#: ../../flashstart.rst:230 b2d7a5e9009c415593ecb6b9586ec4ee
 msgid ""
 "If you want to perform tests using ``dig`` directly from the firewall, you "
 "can do so by specifying the port. Each port corresponds to a different "
@@ -576,7 +576,7 @@ msgstr ""
 "firewall, è possibile farlo specificando la porta. Ogni porta corrisponde a "
 "un diverso profilo di filtraggio."
 
-#: ../../flashstart.rst:198 29f93b4d14c44001b050b76837de80a8
+#: ../../flashstart.rst:235 c30907508e4447478c1648eceafa4452
 msgid ""
 "If you are using **FlashStart Pro**, the port is always **5300**. You can "
 "check if the request is correctly filtered with the following command:"
@@ -585,7 +585,7 @@ msgstr ""
 "verificare se la richiesta viene filtrata correttamente con il seguente "
 "comando:"
 
-#: ../../flashstart.rst:207 ad533f2e27cc4222a837c3b98132cd1e
+#: ../../flashstart.rst:244 c9021b2eed3742f78339ca319579a7ba
 msgid ""
 "If you are using **FlashStart Pro Plus**, each profile is associated with a "
 "different port. You can send a request per profile to verify that the "
@@ -595,7 +595,7 @@ msgstr ""
 " diversa. È possibile inviare una richiesta per ciascun profilo per "
 "verificare che il filtraggio si comporti come previsto."
 
-#: ../../flashstart.rst:209 12a527b2511141e1a4bcb4a4327a09e2
+#: ../../flashstart.rst:246 ccb8b73843c246b9bbf5cfa0f3bfe05e
 msgid ""
 "First, you need to identify the correct port for each profile. Use the "
 "following command to view the configuration:"
@@ -603,14 +603,86 @@ msgstr ""
 "Per prima cosa, è necessario identificare la porta corretta per ciascun "
 "profilo. Utilizzare il seguente comando per visualizzare la configurazione:"
 
-#: ../../flashstart.rst:215 551099277e7a45edaada97bd3eea2cd5
+#: ../../flashstart.rst:252 062812e9eff24cfc946c4cf637a858d4
 msgid "You will see multiple entries like this:"
 msgstr "Si vedranno più voci come questa:"
 
-#: ../../flashstart.rst:230 70796fc08fcd4842a3cfa8d72c5084d0
+#: ../../flashstart.rst:267 7db4088a88f34c908088d259ed8cdf8f
 msgid ""
 "In this example, the profile **\"Guests\"** is associated with port "
 "**5301**, so you would run:"
 msgstr ""
 "In questo esempio, il profilo **\"Guests\"** è associato alla porta "
 "**5301**, quindi si dovrebbe eseguire:"
+
+#: ../../flashstart.rst:31 bab18d4666e1477496e3584438efc456
+msgid ""
+"If you are using the DHCP service on NethSecurity, please note that "
+"FlashStart integration requires explicitly specifying the DNS server through"
+" DHCP options.Go to the DHCP section, under Advanced Settings, and add the "
+"following option: 6:dns-server,<YOUR-USUAL-DNS-SERVER>. This ensures that "
+"clients receive the correct DNS server via DHCP. In this field, enter the "
+"DNS server typically used in your network, usually the IP address of the "
+"NethSecurity interface. Do not manually specify the IP addresses of the "
+"FlashStart DNS servers, as they are automatically managed by the "
+"integration."
+msgstr ""
+"Se si utilizza il servizio DHCP su NethSecurity, si tenga presente che "
+"l'integrazione con FlashStart richiede di specificare esplicitamente il "
+"server DNS tramite le opzioni DHCP. Accedere alla sezione DHCP, sotto "
+":guilabel:`Impostazioni avanzate`, e aggiungere la seguente opzione: 6:dns-"
+"server,<YOUR-USUAL-DNS-SERVER>. Questo garantisce che i client ricevano il "
+"server DNS corretto tramite DHCP. In questo campo, inserire il server DNS "
+"normalmente utilizzato nella rete, solitamente l'indirizzo IP "
+"dell'interfaccia NethSecurity. Non specificare manualmente gli indirizzi IP "
+"dei server DNS di FlashStart, poiché vengono gestiti automaticamente "
+"dall'integrazione."
+
+#: ../../flashstart.rst:169 d189df92c2aa41a5a2c71d5ffb1dd6a8
+msgid "DNS Server Configuration"
+msgstr "Configurazione del server DNS"
+
+#: ../../flashstart.rst:171 94da577c1365465c83b96c67cf78badd
+msgid ""
+"The DNS servers used by FlashStart are automatically configured by "
+"NethSecurity when the service is enabled. It's possible to customize a few "
+"options:"
+msgstr ""
+"I server DNS utilizzati da FlashStart vengono configurati automaticamente da"
+" NethSecurity quando il servizio viene abilitato. È possibile personalizzare"
+" alcune opzioni:"
+
+#: ../../flashstart.rst:174 7c1853db4b094ce2a8cc0dd96ba58602
+msgid ""
+"**Query logging**: You can enable query logging by running the following "
+"command:"
+msgstr ""
+"**Registrazione delle query**: È possibile abilitare la registrazione delle "
+"query eseguendo il seguente comando:"
+
+#: ../../flashstart.rst:182 00bc658651e448a0aa4dbfd8e8676be6
+msgid ""
+"This will log DNS queries to the firewall's system log, which can be useful "
+"for tracking and troubleshooting purposes."
+msgstr ""
+"Questo registrerà le query DNS nel registro di sistema del firewall, il che "
+"può essere utile per scopi di monitoraggio e risoluzione dei problemi."
+
+#: ../../flashstart.rst:184 2a2f295b468a404abf6a8ec4b8f9ec04
+msgid ""
+"**Disable DNS Rebind protection**: You can disable rebind protection if you "
+"need with the following:"
+msgstr ""
+"**Disabilitare la protezione DNS Rebind**: È possibile disabilitare la "
+"protezione rebind, se necessario, con quanto segue:"
+
+#: ../../flashstart.rst:192 d4fec82f4a8f4156b23462af820b0359
+msgid ""
+"Allows to bypass the DNS Rebind protection mechanism, which can be useful in"
+" case you have a DNS server that needs to resolve internal domains that "
+"might otherwise be blocked by the firewall's DNS Rebind protection."
+msgstr ""
+"Consente di bypassare il meccanismo di protezione DNS Rebind, il che può "
+"essere utile nel caso in cui si disponga di un server DNS che deve risolvere"
+" domini interni che altrimenti potrebbero essere bloccati dalla protezione "
+"DNS Rebind del firewall."
