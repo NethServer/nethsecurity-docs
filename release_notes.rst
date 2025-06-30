@@ -8,7 +8,7 @@ NethSecurity releases changelogs.
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
 
-Major changes on 2025-06-23
+Major changes on 2025-06-30
 ===========================
 
 Image version: `8-24.10.0-ns.1.6.0`
