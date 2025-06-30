@@ -26,6 +26,15 @@ It basically links 2 components : filter configuration and network configuration
   FlashStart is a payed service that allows you to use trial licenses.
   Please refer to the supplier's documentation `doc <https://cloud.flashstart.com/customerarea/support/docs>`_.
 
+.. warning::
+
+  If you are using the DHCP service on NethSecurity, please note that FlashStart integration requires explicitly
+  specifying the DNS server through DHCP options.Go to the DHCP section, under Advanced Settings, and add the following
+  option: 6:dns-server,<YOUR-USUAL-DNS-SERVER>. This ensures that clients receive the correct DNS server via DHCP. In
+  this field, enter the DNS server typically used in your network, usually the IP address of the NethSecurity interface.
+  Do not manually specify the IP addresses of the FlashStart DNS servers, as they are automatically managed by the
+  integration.
+
 Once the account has been created and the service configured, NethSecurity can be configured.
 
 
@@ -154,6 +163,34 @@ Once the service is properly set up on the FlashStart dashboard, you can proceed
 * ``Custom DNS Servers`` : If you need to define **custom DNS resolvers for specific domains**, you can configure them here. The syntax is the same used in the DNS section of NethSecurity.For reference, see the official documentation:`Domain-specific DNS servers <https://docs.nethsecurity.org/en/latest/dns_dhcp.html#domain-specific-dns-servers>`_
 
 Once the FlashStart service has been configured on the firewall, all further configuration and management must be performed exclusively via the FlashStart web portal. No additional changes are required on the firewall itself.
+
+
+DNS Server Configuration
+------------------------
+
+The DNS servers used by FlashStart are automatically configured by NethSecurity when the service is enabled.
+It's possible to customize a few options:
+
+- **Query logging**: You can enable query logging by running the following command:
+
+  .. code-block::
+
+     uci set flashstart.global.logqueries='1'
+     uci commit flashstart
+     reload_config
+
+  This will log DNS queries to the firewall's system log, which can be useful for tracking and troubleshooting purposes.
+
+- **Disable DNS Rebind protection**: You can disable rebind protection if you need with the following:
+
+  .. code-block::
+
+     uci set flashstart.global.rebind_protection='0'
+     uci commit flashstart
+     reload_config
+
+  Allows to bypass the DNS Rebind protection mechanism, which can be useful in case you have a DNS server that needs to
+  resolve internal domains that might otherwise be blocked by the firewall's DNS Rebind protection.
 
 Troubleshooting
 ===============
