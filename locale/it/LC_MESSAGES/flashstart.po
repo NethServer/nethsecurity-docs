@@ -674,7 +674,7 @@ msgid ""
 "need with the following:"
 msgstr ""
 "**Disabilitare la protezione DNS Rebind**: È possibile disabilitare la "
-"protezione rebind, se necessario, con quanto segue:"
+"protezione rebind, se necessario, usando i seguenti comandi:"
 
 #: ../../flashstart.rst:192 d4fec82f4a8f4156b23462af820b0359
 msgid ""
