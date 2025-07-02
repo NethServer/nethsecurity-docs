@@ -165,6 +165,32 @@ Once the service is properly set up on the FlashStart dashboard, you can proceed
 Once the FlashStart service has been configured on the firewall, all further configuration and management must be performed exclusively via the FlashStart web portal. No additional changes are required on the firewall itself.
 
 
+Presence of an Active Directory (AD) Controller
+===============================================
+
+If an AD controller is present, user-based profiling can be enabled. To do this, it is necessary to first install the specific FlashStart connector (please refer to the official FlashStart documentation for installation instructions), **this is currently available only for Microsoft Windows Server**.
+
+DNS Management in the Network
+-----------------------------
+All clients on the network must route their DNS requests through NethSecurity instead of directly querying the AD controller, this prevents the clients from inheriting the AD controller’s profiling policy.
+
+Configuration Details
+^^^^^^^^^^^^^^^^^^^^^
+
+* The AD controller uses an external DNS resolver.
+* In the FlashStart DNS UI on NethSecurity, add the local domain of the AD controller for resolution, specifying the IP address of the AD controller for resolving these local names (e.g., `/ad.mydomain.local/192.168.55.1`).
+* Configure clients to use either an external DNS server or the firewall itself as their DNS resolver.
+
+Important Notes
+^^^^^^^^^^^^^^^
+
+It is necessary to prevent clients from querying the AD controller for non-local domain resolution, this can be achieved by:
+
+* Blocking inbound UDP/TCP port 53 on the AD controller
+* disabling DNS recursion for clients on the AD server, so that the server only responds to queries for its local zone.
+
+
+
 DNS Server Configuration
 ------------------------
 
@@ -181,16 +207,18 @@ It's possible to customize a few options:
 
   This will log DNS queries to the firewall's system log, which can be useful for tracking and troubleshooting purposes.
 
-- **Disable DNS Rebind protection**: You can disable rebind protection if you need with the following:
+- **DNS Rebind protection**
 
-  .. code-block::
+DNS Rebind protection is disabled by default for FlashStart clients in order to prevent unwanted blocks when internal DNS servers resolve private or internal domains that could otherwise be flagged by the firewall’s DNS Rebind protection mechanism.
+If required, this protection can be manually enabled using the following configuration:
 
-     uci set flashstart.global.rebind_protection='0'
+.. code-block::
+
+     uci set flashstart.global.rebind_protection='1'
      uci commit flashstart
      reload_config
 
-  Allows to bypass the DNS Rebind protection mechanism, which can be useful in case you have a DNS server that needs to
-  resolve internal domains that might otherwise be blocked by the firewall's DNS Rebind protection.
+
 
 Troubleshooting
 ===============
