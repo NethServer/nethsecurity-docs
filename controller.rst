@@ -59,7 +59,7 @@ After completing the configuration, the controller is ready to be used and can b
 .. note::
    To ensure proper operation, the controller must be accessible over the network on specific ports.
 
-   * ``Port TCP/443 (HTTPS)`` to access WebUI and allow units communication.
+   * ``TCP port 443 (HTTPS)`` to access WebUI and allow units communication.
    * ``A dinamically allocated UDP port`` opened by NethServer 8 and used for VPN connections from the units, this port is randomly generated at setup time.
 
    
