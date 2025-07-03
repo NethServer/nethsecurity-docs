@@ -57,7 +57,7 @@ The following parameters are optional:
 After completing the configuration, the controller is ready to be used and can be accessed using a web browser at the configured hostname, like ``https://mycontroller.nethsecurity.org``.
 
 .. note::
-   The controller must be reachable on :
+   To ensure proper operation, the controller must be accessible over the network on specific ports.
 
    * ``Port TCP/443 (HTTPS)`` to access WebUI and allow units communication.
    * ``Randomly generated UDP port`` dynamically allocated by NethServer 8, used for units VPN connection.
