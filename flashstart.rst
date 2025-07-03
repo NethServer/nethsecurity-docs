@@ -56,8 +56,26 @@ Before enabling the FlashStart DNS filter, please consider the following importa
 Configuration
 =============
 
-Before configuring FlashStart on your firewall, you must first purchase the **Pro** or **Pro Plus** service on the FlashStart platform.
-Once the service is properly set up on the FlashStart dashboard, you can proceed to configure it on your NethSecurity firewall with just a few simple steps.
+FlashStart platform configuration
+---------------------------------
+
+Before configuring FlashStart on your firewall, you must first purchase and configure the **Pro** or **Pro Plus** service on the FlashStart platform.
+Once the service has been purchased, you’ll need to configure the networks on the FlashStart portal.
+
+During the configuration process, the system will guide you through the setup, follow the prompts and select the following options:
+
+Connect the router of your network → I have a dynamic IP → Nethesis Dynamic DNS → NethSecurity → Choose PRO or PRO PLUS
+
+.. note::
+  Starting from July 2nd, 2025, the FlashStart platform requires you to create a new username and password during this setup step.
+  Please note that it is no longer possible to use the email-based login previously associated with your account.  
+  Once the new credentials are created, they must be used for authentication on the firewall side.
+
+Networks previously configured using the email-based login will continue to function normally as long as they are not removed.
+If a network is removed, the system will require a new username and password pair, and the corresponding credentials must also be updated on the NethSecurity side.
+
+NethSecurity configuration
+--------------------------
 
 * ``Status`` : You can enable or disable the DNS filter by using the ``Status`` toggle switch
 * ``Service type`` : Select the type of service you have purchased: **Pro** or **Pro Plus**
