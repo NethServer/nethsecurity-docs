@@ -37,6 +37,90 @@ It basically links 2 components : filter configuration and network configuration
 
 Once the account has been created and the service configured, NethSecurity can be configured.
 
+Recommendations Before Configuring FlashStart DNS Filter
+=========================================================
+
+Before enabling the FlashStart DNS filter, please consider the following important recommendations:
+
+1. **DNS Redirection Behavior**  
+   When content filtering is enabled, all DNS traffic from the clients will be automatically redirected to the external FlashStart filtering service, regardless of their configuration.  
+   **Do not make changes to the DNS servers configured in NethSecurity or in network clients.**
+
+2. **Block Alternative DNS Protocols**  
+   To preserve the effectiveness of the content filter, it is highly recommended to block alternative DNS protocols (such as DoT and DoH) using the :ref:`dpi_filter-section`.
+
+3. **Avoid Conflicts with Threat Shield DNS**  
+   Use FlashStart only if you are **not already using the Threat Shield DNS service**, as using both simultaneously may lead to conflicts.
+
+
+Configuration
+=============
+
+Before configuring FlashStart on your firewall, you must first purchase the **Pro** or **Pro Plus** service on the FlashStart platform.
+Once the service is properly set up on the FlashStart dashboard, you can proceed to configure it on your NethSecurity firewall with just a few simple steps.
+
+* ``Status`` : You can enable or disable the DNS filter by using the ``Status`` toggle switch
+* ``Service type`` : Select the type of service you have purchased: **Pro** or **Pro Plus**
+* ``Username`` :  Enter the same username used for your FlashStart account
+* ``Password`` :  Enter the same password used for your FlashStart account 
+* ``Zones to Filter`` :  Select the network zones you want to protect with DNS filtering. Only the selected zones will be affected by the FlashStart DNS filter.
+* ``Bypass Source IPs or Networks`` : You can specify a list of IP addresses or networks (CIDR format) that should bypass DNS filtering. Traffic from these sources will not be subject to any filtering rules.
+* ``Custom DNS Servers`` : If you need to define **custom DNS resolvers for specific domains**, you can configure them here. The syntax is the same used in the DNS section of NethSecurity.For reference, see the official documentation:`Domain-specific DNS servers <https://docs.nethsecurity.org/en/latest/dns_dhcp.html#domain-specific-dns-servers>`_
+
+Once the FlashStart service has been configured on the firewall, all further configuration and management must be performed exclusively via the FlashStart web portal. No additional changes are required on the firewall itself.
+
+DNS Server Configuration
+------------------------
+
+The DNS servers used by FlashStart are automatically configured by NethSecurity when the service is enabled.
+It's possible to customize a few options:
+
+- **Query logging**: You can enable query logging by running the following command:
+
+  .. code-block::
+
+     uci set flashstart.global.logqueries='1'
+     uci commit flashstart
+     reload_config
+
+  This will log DNS queries to the firewall's system log, which can be useful for tracking and troubleshooting purposes.
+
+- **DNS Rebind protection**
+
+DNS Rebind protection is disabled by default for FlashStart clients in order to prevent unwanted blocks when internal DNS servers resolve private or internal domains that could otherwise be flagged by the firewall’s DNS Rebind protection mechanism.
+If required, this protection can be manually enabled using the following configuration:
+
+.. code-block::
+
+     uci set flashstart.global.rebind_protection='1'
+     uci commit flashstart
+     reload_config
+
+
+Presence of an Active Directory (AD) Controller
+===============================================
+
+If an AD controller is present, user-based profiling can be enabled. To do this, it is necessary to first install the specific FlashStart connector (please refer to the official FlashStart `documentation <https://cloud.flashstart.com/customerarea/support/docs>`_ for installation instructions), **this is currently available only for Microsoft Windows Server**.
+
+DNS Management in the Network
+-----------------------------
+All clients on the network must route their DNS requests through NethSecurity instead of directly querying the AD controller, this prevents the clients from inheriting the AD controller’s profiling policy.
+
+Configuration Details
+^^^^^^^^^^^^^^^^^^^^^
+
+* The AD controller uses an external DNS resolver.
+* In the FlashStart DNS UI on NethSecurity, add the local domain of the AD controller for resolution, specifying the IP address of the AD controller for resolving these local names (e.g., `/ad.mydomain.local/192.168.55.1`).
+* Configure clients to use either an external DNS server or the firewall itself as their DNS resolver.
+
+Important Notes
+^^^^^^^^^^^^^^^
+
+It is necessary to prevent clients from querying the AD controller for non-local domain resolution, this can be achieved by:
+
+* Blocking inbound UDP/TCP port 53 on the AD controller
+* disabling DNS recursion for clients on the AD server, so that the server only responds to queries for its local zone.
+
 
 FlashStart Pro vs FlashStart Pro Plus
 =====================================
@@ -121,6 +205,15 @@ Common Features (Pro and Pro Plus)
    * - Number of filter profiles
      - 1
      - Up to 5
+   * - IP Blocking
+     - No
+     - Yes
+   * - App blocker
+     - No
+     - Yes
+   * - Remote Agent for Win/Mac/Android/iOS
+     - No
+     - Yes
    * - Filtering per AD user
      - No
      - Yes
@@ -130,94 +223,6 @@ Common Features (Pro and Pro Plus)
    * - Conflict handling (user vs object)
      - N/A
      - Firewall object takes priority
-
-
-Recommendations Before Configuring FlashStart DNS Filter
-=========================================================
-
-Before enabling the FlashStart DNS filter, please consider the following important recommendations:
-
-1. **DNS Redirection Behavior**  
-   When content filtering is enabled, all DNS traffic from the clients will be automatically redirected to the external FlashStart filtering service, regardless of their configuration.  
-   **Do not make changes to the DNS servers configured in NethSecurity or in network clients.**
-
-2. **Block Alternative DNS Protocols**  
-   To preserve the effectiveness of the content filter, it is highly recommended to block alternative DNS protocols (such as DoT and DoH) using the :ref:`dpi_filter-section`.
-
-3. **Avoid Conflicts with Threat Shield DNS**  
-   Use FlashStart only if you are **not already using the Threat Shield DNS service**, as using both simultaneously may lead to conflicts.
-
-
-Configuration
-=============
-
-Before configuring FlashStart on your firewall, you must first purchase the **Pro** or **Pro Plus** service on the FlashStart platform.
-Once the service is properly set up on the FlashStart dashboard, you can proceed to configure it on your NethSecurity firewall with just a few simple steps.
-
-* ``Status`` : You can enable or disable the DNS filter by using the ``Status`` toggle switch
-* ``Service type`` : Select the type of service you have purchased: **Pro** or **Pro Plus**
-* ``Username`` :  Enter the same username used for your FlashStart account
-* ``Password`` :  Enter the same password used for your FlashStart account 
-* ``Zones to Filter`` :  Select the network zones you want to protect with DNS filtering. Only the selected zones will be affected by the FlashStart DNS filter.
-* ``Bypass Source IPs or Networks`` : You can specify a list of IP addresses or networks (CIDR format) that should bypass DNS filtering. Traffic from these sources will not be subject to any filtering rules.
-* ``Custom DNS Servers`` : If you need to define **custom DNS resolvers for specific domains**, you can configure them here. The syntax is the same used in the DNS section of NethSecurity.For reference, see the official documentation:`Domain-specific DNS servers <https://docs.nethsecurity.org/en/latest/dns_dhcp.html#domain-specific-dns-servers>`_
-
-Once the FlashStart service has been configured on the firewall, all further configuration and management must be performed exclusively via the FlashStart web portal. No additional changes are required on the firewall itself.
-
-
-Presence of an Active Directory (AD) Controller
-===============================================
-
-If an AD controller is present, user-based profiling can be enabled. To do this, it is necessary to first install the specific FlashStart connector (please refer to the official FlashStart documentation for installation instructions), **this is currently available only for Microsoft Windows Server**.
-
-DNS Management in the Network
------------------------------
-All clients on the network must route their DNS requests through NethSecurity instead of directly querying the AD controller, this prevents the clients from inheriting the AD controller’s profiling policy.
-
-Configuration Details
-^^^^^^^^^^^^^^^^^^^^^
-
-* The AD controller uses an external DNS resolver.
-* In the FlashStart DNS UI on NethSecurity, add the local domain of the AD controller for resolution, specifying the IP address of the AD controller for resolving these local names (e.g., `/ad.mydomain.local/192.168.55.1`).
-* Configure clients to use either an external DNS server or the firewall itself as their DNS resolver.
-
-Important Notes
-^^^^^^^^^^^^^^^
-
-It is necessary to prevent clients from querying the AD controller for non-local domain resolution, this can be achieved by:
-
-* Blocking inbound UDP/TCP port 53 on the AD controller
-* disabling DNS recursion for clients on the AD server, so that the server only responds to queries for its local zone.
-
-
-
-DNS Server Configuration
-------------------------
-
-The DNS servers used by FlashStart are automatically configured by NethSecurity when the service is enabled.
-It's possible to customize a few options:
-
-- **Query logging**: You can enable query logging by running the following command:
-
-  .. code-block::
-
-     uci set flashstart.global.logqueries='1'
-     uci commit flashstart
-     reload_config
-
-  This will log DNS queries to the firewall's system log, which can be useful for tracking and troubleshooting purposes.
-
-- **DNS Rebind protection**
-
-DNS Rebind protection is disabled by default for FlashStart clients in order to prevent unwanted blocks when internal DNS servers resolve private or internal domains that could otherwise be flagged by the firewall’s DNS Rebind protection mechanism.
-If required, this protection can be manually enabled using the following configuration:
-
-.. code-block::
-
-     uci set flashstart.global.rebind_protection='1'
-     uci commit flashstart
-     reload_config
-
 
 
 Troubleshooting
