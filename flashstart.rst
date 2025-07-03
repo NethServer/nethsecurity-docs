@@ -64,7 +64,7 @@ Once the service has been purchased, you’ll need to configure the networks on 
 
 During the configuration process, the system will guide you through the setup, follow the prompts and select the following options:
 
-Connect the router of your network → I have a dynamic IP → Nethesis Dynamic DNS → NethSecurity → Choose PRO or PRO PLUS
+Connect the router of your network → I have a dynamic IP → Nethesis Dynamic DNS → NethSecurity → Choose PRO or PRO PLUS.
 
 .. note::
   Starting from July 2nd, 2025, the FlashStart platform requires you to create a new username and password during this setup step.
