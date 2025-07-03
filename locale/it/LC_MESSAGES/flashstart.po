@@ -691,7 +691,7 @@ msgid ""
 "Connect the router of your network → I have a dynamic IP → Nethesis Dynamic "
 "DNS → NethSecurity → Choose PRO or PRO PLUS."
 msgstr ""
-"Collega il router della tua rete → Ho un un IP dinamico → "
+"Collega il router della tua rete → Ho un IP dinamico → "
 "Sincronizza con DNS dinamico Nethesis → NethSecurity → Scegliere PRO o PRO PLUS."
 
 #: ../../flashstart.rst:70 c326eb20e5b24501b4e785ad2be3be44
