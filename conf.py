@@ -88,31 +88,27 @@ rst_prolog = f"""
 """
 
 # generate download table
-import re
 import boto3
 import semver
 from botocore import UNSIGNED
 from botocore.client import Config
 
-def owrt_version(release):
-    match = re.match(r"^([\d.]+)(?:-(.+))?$", release)
-    if match:
-        version = match.group(1).split(".")
-        return (int(version[0]), int(version[1]) if len(version) > 1 else 0,
-                    int(version[2]) if len(version) > 2 else 0)
-    else:
-        raise ValueError(f"Invalid OpenWrt release format: {release}")
-
 def ns_version(version):
-    # convert from 0.0.1-beta1-3-g4c5b89a to 0.0.1-beta1.3
-    # to correctly sort build part
-    if version.count('-') > 1:
-      parts = version.split('-')
-      version = parts[0] + '-' + parts[1] + '.' + parts[2]
-    try:
-        return semver.VersionInfo.parse(version)
-    except ValueError:
-        return semver.VersionInfo.parse('0.0.0')
+    if isinstance(version, str):
+        # convert from 0.0.1-beta1-3-g4c5b89a to 0.0.1-beta1.3
+        # to correctly sort build part
+        version = version[13:]
+        if version.count('-') > 1:
+            parts = version.split('-')
+            version = parts[0] + '-' + parts[1] + '.' + parts[2]
+        try:
+            return semver.VersionInfo.parse(version)
+        except ValueError:
+            return semver.VersionInfo.parse('0.0.0')
+    elif isinstance(version, semver.VersionInfo):
+        return version
+    else:
+        raise ValueError(f"Invalid version type: {type(version)}")
 
 region = "ams3"
 bucket_name = "nethsecurity"
@@ -121,21 +117,31 @@ for prefix in ['dev', 'stable']:
     unordered_versions = []
     response = s3_client.list_objects_v2(Bucket=bucket_name, Prefix=f'{prefix}/', Delimiter='/')
     for o in response.get('CommonPrefixes'):
-        entry = entry = o.get('Prefix').removeprefix(f'{prefix}/').rstrip('/')
-        if entry.startswith('8-'):
-            unordered_versions.append(entry) 
-    # Sort by OpenWrt release
-    owrt_sorted = sorted(unordered_versions, key=lambda x: owrt_version(x))
-    # Sort by NethSecurity release
-    sorted_dev = sorted(owrt_sorted, key=lambda v: ns_version(v[13:]), reverse=True)
+        entry = o.get('Prefix').removeprefix(f'{prefix}/').rstrip('/')
+        if entry == '24.10.0':
+            # skipping a version that is not a NethSecurity release but gets parsed by semver
+            continue
+        elif entry.startswith('8-'):
+            unordered_versions.append(entry)
+        else:
+            try:
+                unordered_versions.append(semver.Version.parse(entry))
+            except ValueError:
+                print(f"Skipping invalid version: {entry}")
+                continue
+
+    if prefix == 'dev':
+        sorted_versions = sorted(unordered_versions, key=lambda v: ns_version(v).build, reverse=True)
+    else:
+        sorted_versions = sorted(unordered_versions, key=lambda v: ns_version(v), reverse=True)
     fp = open(f'{prefix}.csv', 'w')
     fp.write("Version,Image,Hash,SBOM\n")
-    for entry in sorted_dev:
+    for entry in sorted_versions:
         image = f'`x86-64 <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic-squashfs-combined-efi.img.gz>`__'
         hash = f'`SHA256 <{base_url}/{prefix}/{entry}/targets/x86/64/sha256sums>`__'
-        entry_v = ns_version(entry[13:])
+        entry_v = ns_version(entry)
         # SBOM is available since only 1.5.1-15 prerelease and 1.5.2 stable
-        if (entry_v.prerelease and entry_v >= semver.VersionInfo.parse('1.5.1-15') or (not entry_v.prerelease and entry_v > semver.VersionInfo.parse('1.5.1'))):
+        if entry_v > semver.VersionInfo.parse('1.5.1'):
             sbom = f'`CDX <{base_url}/{prefix}/{entry}/targets/x86/64/nethsecurity-{entry}-x86-64-generic.bom.cdx.json>`__'
         else:
             sbom = ""

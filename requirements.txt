@@ -4,3 +4,4 @@ sphinx-copybutton==0.5.1
 sphinx-intl==2.1.0
 semver==3.0.2
 boto3==1.34.33
+botocore==1.34.162
