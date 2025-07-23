@@ -170,7 +170,6 @@ Threat Shield IP also includes protection against various types of Denial of Ser
 DoS protection limits excessive traffic of specific protocols, blocking that kind of traffic until the situation normalizes.
 It monitors all incoming WAN traffic to detect and block WAN-based DoS attacks.
 
-
 - ``Block ICMP DoS``: when enabled, this option protects against DoS attacks using the Internet Control Message Protocol (ICMP).
   The limit is set to 100 packets per second.
 
