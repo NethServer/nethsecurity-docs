@@ -167,16 +167,18 @@ Block DoS
 ---------
 
 Threat Shield IP also includes protection against various types of Denial of Service (DoS) attacks.
-DoS protection limits excessive suspicious requests of a certain type, blocking that kind of traffic until the situation normalizes.
+DoS protection limits excessive traffic of specific protocols, blocking that kind of traffic until the situation normalizes.
+It monitors all incoming WAN traffic to detect and block WAN-based DoS attacks.
+
 
 - ``Block ICMP DoS``: when enabled, this option protects against DoS attacks using the Internet Control Message Protocol (ICMP).
-  The limit is set to 100 packets per second for all traffic passing through the firewall.
+  The limit is set to 100 packets per second.
 
-- ``Block TCP DoS``: this option, when activated, guards against TCP-based DoS attacks based on bad packets.
+- ``Block TCP SYN DoS``: this option, when activated, guards against TCP-based DoS attacks based on bad packets.
   A packet could be considered bad if it is not part of an established connection or if it is part of a connection that has been closed.
-  The limit is set to 10 bad packets per second for all traffic passing through the firewall.
+  The limit is set to 10 bad packets per second. 
 
 - ``Block UDP DoS``: Enabling this protects against User Datagram Protocol (UDP) based DoS attacks.
-  The limit is set to 100 packets per second for all traffic passing through the firewall.
+  The limit is set to 100 packets per second.
 
 
