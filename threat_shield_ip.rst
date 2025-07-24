@@ -173,7 +173,7 @@ It monitors all incoming WAN traffic to detect and block WAN-based DoS attacks.
 - ``Block ICMP DoS``: when enabled, this option protects against DoS attacks using the Internet Control Message Protocol (ICMP).
   The limit is set to 100 packets per second.
 
-- ``Block TCP SYN DoS``: this option, when activated, guards against TCP-based DoS attacks based on bad packets.
+- ``Block TCP SYN DoS``: this option, when activated, guards against TCP-based DoS attacks limiting the number of new connections per second.
   A packet could be considered bad if it is not part of an established connection or if it is part of a connection that has been closed.
   The limit is set to 10 bad packets per second. 
 
