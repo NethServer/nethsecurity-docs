@@ -69,7 +69,6 @@ boot the server again.
  To update NethSecurity or perform a factory reset, there are already documented options available via the web UI and the command-line console.
  In case the firewall access password is lost and you need to perform a factory reset, we recommend booting into failsafe mode and performing the reset from there, as described in the documentation (:ref:failsafe mode <failsafe-section>).
 
-
 Install on virtual machines
 ===========================
 
