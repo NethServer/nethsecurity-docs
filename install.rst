@@ -53,8 +53,8 @@ Use one of the following tools to write the USB stick:
 Install from USB to disk
 ------------------------
 
-Since running from the USB stick does not guarantee best performances, you can also install
-NethSecurity to the hard disk while running it from the USB stick itself:
+The recommended installation method for NethSecurity is on internal storage, for reasons of robustness and performance. 
+For this purpose, NethSecurity provides a specific command to install its contents from the USB stick onto the internal disk:
 
 1. connect to the server using VGA, serial console or SSH
 2. login with :ref:`default credentials <default_credentials-section>`
@@ -63,6 +63,11 @@ NethSecurity to the hard disk while running it from the USB stick itself:
 The firewall will be halted at the end of the installation.
 Once the firewall has been shutdown, you can safely remove the USB stick and
 boot the server again.
+
+.. note::
+ The USB stick should be used only for the initial installation of NethSecurity; any other use is strongly discouraged.
+ To update NethSecurity or perform a factory reset, there are already documented options available via the web UI and the command-line console.
+ In case the firewall access password is lost and you need to perform a factory reset, we recommend booting into failsafe mode and performing the reset from there, as described in the documentation (:ref:failsafe mode <failsafe-section>).
 
 Install on virtual machines
 ===========================
