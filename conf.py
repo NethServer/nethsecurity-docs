@@ -131,9 +131,16 @@ for prefix in ['dev', 'stable']:
                 continue
 
     if prefix == 'dev':
-        sorted_versions = sorted(unordered_versions, key=lambda v: ns_version(v).build, reverse=True)
+        sorted_versions = sorted(
+            unordered_versions,
+            key=lambda v: (
+                ns_version(v).build.split('.')[-1] if ns_version(v).build else "",
+                ns_version(v).prerelease is None  # Tagged builds (no prerelease) come last
+            ),
+            reverse=True
+        )
     else:
-        sorted_versions = sorted(unordered_versions, key=lambda v: ns_version(v), reverse=True)
+        sorted_versions = sorted(unordered_versions, key=lambda v: ns_version(v) or "", reverse=True)
     fp = open(f'{prefix}.csv', 'w')
     fp.write("Version,Image,Hash,SBOM\n")
     for entry in sorted_versions:
