@@ -187,9 +187,6 @@ FlashStart Pro Plus extends functionality with support for multiple independent 
   - **Active Directory users:**  
     If the FlashStart AD connector is installed, profiles can be assigned to AD users directly, eliminating the need to rely on IP addresses.
 
-- **Combined assignment (objects + users):**  
-  It is possible to use both methods in parallel.In case of conflicts, firewall object assignments take precedence over user-based assignments.
-
 .. note::
 
   Although no known bugs have been reported at this time, the Pro Plus feature is currently released as a **Beta**. We recommend testing it in a non-critical environment before deploying it in production.
