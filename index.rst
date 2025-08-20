@@ -39,7 +39,6 @@ NethSecurity administrator manual
    updates
    storage
    reset_recovery
-   reverse_proxy
    controller
 
 .. toctree::
@@ -51,6 +50,7 @@ NethSecurity administrator manual
    routing
    multiwan
    hotspot
+   reverse_proxy
    qos
 
 .. toctree::
