@@ -53,6 +53,13 @@ The following parameters are optional:
   will be displayed inside Grafana. The license key is required to enable the feature and download the MaxMind GeoIP2 database. 
   To obtain a free license key, signup on the  `MaxMind website <https://www.maxmind.com/en/geolite2/signup>`_, then access the `Manage License Keys` page inside the account section.
   Generate a new license, copy the license key and paste it in the field.
+- `Allowed IPs`: The list of IP addresses or CIDR ranges that are allowed to access the controller web interface. By default,
+  the list is empty, meaning that access is allowed from all IP addresses.
+  You can restrict access to specific IPs or networks for security reasons. 
+  When enabled, only the registration endpoint  (eg. ``https://controller.nethserver.org/api/register``) will be accessible from the units, allowing them to register
+  with the controller. All other traffic between the controller and the units will be routed through the VPN connection.
+  This feature requires unit version 8.6 or later.
+
 
 After completing the configuration, the controller is ready to be used and can be accessed using a web browser at the configured hostname, like ``https://mycontroller.nethsecurity.org``.
 
@@ -70,18 +77,28 @@ Users
 
 The controller has two types of users:
 
-- **Administrator**: The administrator user is the only one who can create and manage users inside the controller.
-- **User**: The user can manage the units and the firewall configurations.
+- **Administrator users**: The administrator users are the only ones who can create and manage users inside the controller.
+  Administrator users can also access all units.
+- **Standard user**: Standard users can manage units and firewall configurations. These users must be associated with a group of units:
+  they will be able to access only the units associated with their group. If a user is not associated with any group, they will have no access to any unit.
+  See :ref:`controller_unit_groups-section` for more information about unit groups.
+  
 
-The administrator is created during the controller configuration. 
+An administrator user is created during the controller configuration from NethServer 8 web interface.
+The administrator user can create and manage other users from the controller web interface.
+A user can be associated to a unit group from the controller web interface, inside the user management page.
 
 It is recommended to create a user for each person who needs access to the controller.
 When creating a new user, the administrator must specify the username, the user display name, and the user password.
 The username is used to log in to the controller, while the display name is used to identify the user in the controller.
 
-The administrator can also reset the user password and delete users.
+The administrator can also:
 
-After logging in, each user can change their password and generate an SSH key pair for accessing the unit.
+- reset the user password and delete users
+- promote a user to administrator
+- delete a user account
+
+After logging in, each user should change their password and generate an SSH key pair for accessing the units.
 
 Two Factor Authentication (2FA)
 -------------------------------
@@ -125,6 +142,40 @@ When a unit is disconnected, the controller will remove the unit configuration a
 
 After removing the unit from the controller web interface, access the unit web interface and click :guilabel:`Disconnect unit` on the ``Controller`` page:
 the unit will destroy the VPN configuration.
+
+.. _controller_unit_groups-section:
+
+Unit groups
+===========
+
+Unit groups are a way to organize units inside the controller. Each user can be associated with one or more unit groups.
+When a user is associated with a unit group, they can access only the units that belong to that group.
+Unit groups are useful to restrict access to specific units for specific users.
+
+To create a new unit group, the administrator must click on the :guilabel:`Add group` button from the controller web interface,
+within the ``Unit groups`` page.
+The administrator can specify the group name, a description, and the units that belong to the group.
+
+Once a unit group is created, the administrator can associate the unit group with a user.
+To do so, the administrator must access the user list inside the ``Users`` page.
+Then, click on the :guilabel:`Edit` button next to the user and select the unit group from the ``Unit groups`` dropdown menu.
+
+Removing unit groups
+--------------------
+
+A unit group can be removed only when there are no users associated with it.
+This can be checked by accessing the ``Users`` page and looking for any users that is associated to the group.
+
+To remove a unit group, the administrator must access the ``Unit groups`` page and click on the :guilabel:`Delete` button next to the group.
+
+Migrated unit group
+-------------------
+
+When upgrading from a controller version prior to 2.0.0, a new ``Migrated`` unit group will be created automatically.
+The ``Migrated`` unit group automatically includes all units that were managed by the controller before the upgrade.
+It is also associated with all existing users to ensure they retain access to their units after migration.
+
+The group can be safely removed once it is no longer needed.
 
 .. _controller_logs-section:
 
