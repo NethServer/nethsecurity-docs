@@ -45,14 +45,13 @@ Machines with a subscription
 
    This feature is available only if the firewall has a valid subscription.
 
-
-Backups behave differently on devices with an active subscription.
+Backups behave differently on devices with an active :ref:`subscription <subscription-section>`.
 
 Unencrypted backups can still be downloaded directly from the NethSecurity UI by clicking the :guilabel:`Download unencrypted` button.
 
 Encrypted backups are stored in the cloud and integrated with Nethesis Operation Center: this approach simplifies backup management and the restore process for subscription-based devices, which can interact directly with the Operation Center and automatically download the backup when restoring.
 
-To enable encrypted cloud backups first, a passphrase must be configured by clicking the :guilabel:`Configure passphrase` button, as described in the above section `Backup encryption`. Once the passphrase is set you can either:
+To enable encrypted cloud backups first, a passphrase must be configured by clicking the :guilabel:`Configure passphrase` button and setting a strong password. Once the passphrase is set you can either:
 
 * Click the :guilabel:`Run cloud backup` button to create a backup immediately
 * Let the system automatically create a backup every night 
