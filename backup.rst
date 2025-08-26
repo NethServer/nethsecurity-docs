@@ -10,8 +10,8 @@ If the machine has a valid Enterprise subscription, the backup is :ref:`automati
 The backup includes all relevant configuration files and also the list of extra packages installed by the user.
 The list is saved in the file ``/etc/backup/installed_packages.txt``.
 
-Backup encryption
-=================
+Backup
+======
 
 NethSecurity allows the creation of both encrypted and unencrypted backups. 
 Downloading an unencrypted backup is always possible by clicking the :guilabel:`Download unencrypted` button.
