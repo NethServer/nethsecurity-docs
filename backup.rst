@@ -107,3 +107,14 @@ Just add a new line to the file ``/etc/sysupgrade.conf`` with the path of the fi
 Example: ::
 
    echo /etc/myfile >> /etc/sysupgrade.conf
+
+How to decrypt a backup
+=======================
+
+Normally, encrypted backups are handled directly by NethSecurity during both the creation and restore phases. Once the passphrase is provided, the system automatically encrypts or decrypts the file.
+
+In some cases, however, it may be useful to decrypt the backup externally (outside the firewall) in order to perform checks before restoring it.
+For this reason, the following ``gpg`` command can be used to decrypt the backup content: ::
+
+   gpg --decrypt --passphrase $YOUR_PASSPHRASE --output unencrypted-file.tar.gz --yes $YOUR_ENCRYPTED_BACKUP_FILE
+
