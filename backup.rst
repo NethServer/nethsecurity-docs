@@ -21,7 +21,7 @@ To allow downloading an encrypted backup, first click on the :guilabel:`Configur
 
 .. note:: If the backup is encrypted and the password is lost, it will no longer be possible to restore the configuration.
 
-To disallow encrypted backups, click on the :guilabel:`Remove passphrase` button and :guilabel:`Download encrypted` button will become inactive.
+To disable encrypted backups, click on the :guilabel:`Remove passphrase` button and :guilabel:`Download encrypted` button will become inactive.
 
 
 .. _automatic_backup-section:
