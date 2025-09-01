@@ -27,7 +27,7 @@ When creating a port forward, certain parameters must be specified:
 - ``Destination address``: specifies the internal host to which the traffic should be redirected. This can be:
 
   - a specific IP address
-  - a firewall object: a host defined by a host set, a DHCP reservation, a DNS record or an OpenVPN account with IP reservation
+  - a firewall object: a host defined by a host set (except host sets containing IP ranges or nested objects), a DHCP reservation, a DNS record or an OpenVPN account with IP reservation 
   - empty: in this case the port will be redirected to the router/firewall itself
 
 By default, all port forwards are accessible only for hosts inside the WAN. Refer to the :ref:`hairpin-section` for instructions on changing this default behavior.
@@ -40,7 +40,7 @@ For each port forward the user can also configure the following aspects:
   a specific public IP is forwarded correctly to the internal server.
 
 - **Access restriction**: Port forwards can be restricted to specific sources to enhance security. This can be done using the ``Restrict access to`` field. The field accepts IP addresses, CIDR blocks or an object.
-  Any type of object is supported except for host sets containing an IP range.
+  All objects are supported, except host sets containing IP ranges or nested objects.
 
 - **Enabling logging**: port forwards can be configured to log incoming traffic for each rule. By enabling the ``Log`` option,
   the network administrator can keep track of the traffic passing through the port forward, allowing for monitoring and analysis.
