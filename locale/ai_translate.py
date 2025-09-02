@@ -34,8 +34,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # Set this to use OpenAI API
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Set this to use GitHub models
 
 def download_and_load_labels():
-    url_en = "https://raw.githubusercontent.com/NethServer/nethsecurity-ui/refs/heads/main/src/i18n/en/translation.json"
-    url_it = "https://raw.githubusercontent.com/NethServer/nethsecurity-ui/refs/heads/main/src/i18n/it/translation.json"
+    url_en = "https://raw.githubusercontent.com/NethServer/nethsecurity-ui/refs/heads/main/src/i18n/en.json"
+    url_it = "https://raw.githubusercontent.com/NethServer/nethsecurity-ui/refs/heads/main/src/i18n/it.json"
     response_en = requests.get(url_en)
     response_en.raise_for_status()
     labels_en = response_en.json()
