@@ -18,7 +18,7 @@ Key Characteristics
 Configuration Storage
 ======================
 
-All UCI configurations are stored as database files in ``/etc/config/``. Each file represents a different system component or service.
+All UCI configurations are stored as database files in ``/etc/config/``. Each file represents a different system component or service, a non-exhaustive example list is provided below.
 
 Configuration Files Structure
 ------------------------------
@@ -32,26 +32,20 @@ Configuration Files Structure
     ├── chilli        # Captive portal
     ├── dedalo        # Network access control
     ├── dhcp          # DHCP server configuration
-    ├── dnsdist       # DNS load balancer
-    ├── don           # Deep packet inspection
     ├── dpi           # Deep packet inspection
     ├── dropbear      # SSH server
     ├── firewall      # Firewall rules and zones
     ├── flashstart    # Web filtering
     ├── fstab         # Filesystem table
     ├── ipsec         # IPsec VPN
-    ├── luci          # Web interface
+    ├── luci          # luci Web interface
     ├── mwan3         # Multi-WAN configuration
-    ├── netifyd       # Network interface daemon
     ├── network       # Network interfaces and routing
     ├── nginx         # Web server
-    ├── ns-api        # NethSec API
-    ├── ns-plug       # NethSec plugins
-    ├── ns-ui         # NethSec user interface
+    ├── ns-ui         # NethSecurity user interface
     ├── objects       # Object definitions
     ├── openssl       # SSL/TLS configuration
     ├── openvpn       # OpenVPN configuration
-    ├── phonehome     # Remote management
     ├── qosify        # Quality of Service
     ├── rpcd          # RPC daemon
     ├── rsyslog       # System logging
