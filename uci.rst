@@ -115,7 +115,7 @@ Standard Three-Phase Process
 
 1. **MODIFY** - Make configuration changes
 2. **COMMIT** - Save changes to the configuration database
-3. **RESTART/RELOAD** - Apply changes to the running system
+3. **RELOAD** - Apply changes to the running system
 
 Practical Example: Changing LAN IP Address
 -------------------------------------------
@@ -217,39 +217,19 @@ If you want to discard uncommitted changes:
 
     uci revert <service>
 
-RESTART - Applying Changes
+RELOAD - Applying Changes
 ==========================
 
-After committing, services need to be restarted or reloaded to apply the new configuration to the running system.
+After committing, you can apply the new configuration to the running system with a single command.
+This will automatically reload the affected services without the need to restart each one manually.
 
-Restart a service
------------------
-
-.. code-block:: bash
-
-    /etc/init.d/<service> restart
-
-**Examples:**
+Reload configuration
+--------------------
 
 .. code-block:: bash
 
-    # Restart network service
-    /etc/init.d/network restart
-    
-    # Restart firewall service
-    /etc/init.d/firewall restart
-    
-    # Restart DHCP service
-    /etc/init.d/dnsmasq restart
+   reload_config  
 
-Reload a service (if supported)
--------------------------------
-
-Some services support reload instead of restart, which is faster and less disruptive:
-
-.. code-block:: bash
-
-    /etc/init.d/<service> reload
 
 Configuration File Format
 ==========================
