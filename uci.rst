@@ -1,4 +1,4 @@
-.. _uci:
+.. _uci-section:
 
 =====================================
 UCI (Unified Configuration Interface)
