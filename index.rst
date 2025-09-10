@@ -109,6 +109,7 @@ NethSecurity administrator manual
    wireguard
    speedtest
    ups
+   wol
    uci
 
 .. toctree::

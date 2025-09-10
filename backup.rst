@@ -10,14 +10,19 @@ If the machine has a valid Enterprise subscription, the backup is :ref:`automati
 The backup includes all relevant configuration files and also the list of extra packages installed by the user.
 The list is saved in the file ``/etc/backup/installed_packages.txt``.
 
-Backup encryption
-=================
+Backup
+======
 
-The backup is not encrypted by default.
-To enable encryption, click on the :guilabel:`Configure passphrase` button and set a strong password.
-To disable encryption, click on the :guilabel:`Configure passphrase` button and leave the password field empty.
+NethSecurity allows the creation of both encrypted and unencrypted backups. 
+Downloading an unencrypted backup is always possible by clicking the :guilabel:`Download unencrypted` button.
+
+
+To allow downloading an encrypted backup, first click on the :guilabel:`Configure passphrase` button and set a strong password. After that the :guilabel:`Download encrypted` button will become active.
 
 .. note:: If the backup is encrypted and the password is lost, it will no longer be possible to restore the configuration.
+
+To disable encrypted backups, click on the :guilabel:`Remove passphrase` button and :guilabel:`Download encrypted` button will become inactive.
+
 
 .. _automatic_backup-section:
 
@@ -33,30 +38,38 @@ After the restore the system will be rebooted.
 
 If you have installed extra packages, you can restore them by following the instructions in the :ref:`restore_extra_packages-section`.
 
-Automatic backup
-================
+Machines with a subscription
+===========================
 
 .. admonition:: Subscription required
 
    This feature is available only if the firewall has a valid subscription.
 
-If the machine has a valid :ref:`subscription <subscription-section>`, a scheduled cron job will run every night to perform a backup.
-This backup is then sent to a remote server over a secure channel.
-If the backup is encrypted, only the encrypted backup will be sent to the remote server.
-It is recommended to encrypt the backup to ensure that no one can access the configuration settings stored inside it.
+Backups behave differently on devices with an active :ref:`subscription <subscription-section>`.
 
-.. warning::
-   
-   Backup without encryption has been deprecated.
-   In the near future, non-encrypted backups will not be sent to the remote server.
-   If you have a valid subscription, please enable encryption to ensure the security of your backup.
-   See also :ref:`backup_encryption-alert` for more information.
-   
-The user can click the :guilabel:`Run backup` button: the backup will be stored on a remote server and the user will be able
-to download it by clicking the :guilabel:`Download` button.
+Unencrypted backups can still be downloaded directly from the NethSecurity UI by clicking the :guilabel:`Download unencrypted` button.
+
+Encrypted backups are stored in the cloud and integrated with Nethesis Operation Center: this approach simplifies backup management and the restore process for subscription-based devices, which can interact directly with the Operation Center and automatically download the backup when restoring.
+
+To enable encrypted cloud backups first, a passphrase must be configured by clicking the :guilabel:`Configure passphrase` button and setting a strong password. Once the passphrase is set you can either:
+
+* Click the :guilabel:`Run cloud backup` button to create a backup immediately
+* Let the system automatically create a backup every night 
+
+Every encrypted backup will be sent directly to the Nethesis Operation Center over a secure channel.
 Please note that the date of the backup is the server date.
 The dates displayed in the backup list are based on the time of the server storing the backups, not the time of the firewall that created them.
 This means the dates might differ depending on time zone differences.
+
+
+.. warning::
+   
+   Cloud backups without encryption have been deprecated. For a limited time, backups will still be sent to the cloud even if they are not encrypted.
+   In the near future, only encrypted backups will be sent to the remote server.
+   If you have a valid subscription, please enable encryption to ensure the security of your backup.
+   See also :ref:`backup_encryption-alert` for more information.
+   
+
 
 .. _backup_encryption-alert:
 
@@ -94,3 +107,14 @@ Just add a new line to the file ``/etc/sysupgrade.conf`` with the path of the fi
 Example: ::
 
    echo /etc/myfile >> /etc/sysupgrade.conf
+
+How to decrypt a backup
+=======================
+
+Normally, encrypted backups are handled directly by NethSecurity during both the creation and restore phases. Once the passphrase is provided, the system automatically encrypts or decrypts the file.
+
+In some cases, however, it may be useful to decrypt the backup externally (outside the firewall) in order to perform checks before restoring it.
+For this reason, the following ``gpg`` command can be used to decrypt the backup content: ::
+
+   gpg --decrypt --passphrase $YOUR_PASSPHRASE --output unencrypted-file.tar.gz --yes $YOUR_ENCRYPTED_BACKUP_FILE
+
