@@ -1,0 +1,79 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../wol.rst:3 fec9a3cc913744c5b7224501a3905e41
+msgid "Wake-on-LAN (EtherWake)"
+msgstr "Wake-on-LAN (EtherWake)"
+
+#: ../../wol.rst:5 5422acd7261a46cf8b280c031500878e
+msgid ""
+"Wake-on-LAN (WoL) is a technology that allows a powered-off or suspended "
+"device to be remotely turned on by sending a special network message called "
+"a *Magic Packet* to its network interface. The EtherWake package provides a "
+"simple command-line utility to send these Magic Packets and wake up devices "
+"in the local network. On NethSecurity, EtherWake is available in the "
+"official repositories but it is not installed by default."
+msgstr ""
+"Wake-on-LAN (WoL) è una tecnologia che consente di accendere da remoto un "
+"dispositivo spento o in sospensione inviando un messaggio di rete speciale "
+"chiamato *Magic Packet* alla sua interfaccia di rete. Il pacchetto EtherWake"
+" fornisce un semplice strumento da riga di comando per inviare questi Magic "
+"Packet e riattivare dispositivi nella rete locale. Su NethSecurity, "
+"EtherWake è disponibile nei repository ufficiali ma non è installato di "
+"default."
+
+#: ../../wol.rst:10 ba6e960c729940909f1bdff9ef636c9e
+msgid ""
+"The target device must support Wake-on-LAN (WoL) and have the feature "
+"enabled in its BIOS/UEFI and network card settings. Otherwise, it will not "
+"respond to Magic Packets."
+msgstr ""
+"Il dispositivo di destinazione deve supportare Wake-on-LAN (WoL) e avere la "
+"funzionalità abilitata nel BIOS/UEFI e nelle impostazioni della scheda di "
+"rete. In caso contrario, non risponderà ai Magic Packet."
+
+#: ../../wol.rst:14 e6ba80ddbd3b4e27ab73aab6976083e9
+msgid "Installation"
+msgstr "Installazione"
+
+#: ../../wol.rst:16 b6755e795c044f48be881bd40c866eca
+msgid "Install the package with::"
+msgstr "Installare il pacchetto con::"
+
+#: ../../wol.rst:21 0993ceb7e9494ae1ad61299a598c6ba6
+msgid ""
+"These packages are not preserved during a system upgrade. For more info see "
+":ref:`restore_extra_packages-section`."
+msgstr ""
+"Questi pacchetti non vengono conservati durante un aggiornamento del "
+"sistema. Per ulteriori informazioni, consultare "
+":ref:`restore_extra_packages-section`."
+
+#: ../../wol.rst:24 3f6cc451f26143c0b4c7a47139b05edf
+msgid "Usage"
+msgstr "Utilizzo"
+
+#: ../../wol.rst:26 23c5146822264a498c395972528c6478
+msgid "To wake up a device in the LAN, you must know:"
+msgstr "Per riattivare un dispositivo nella LAN, è necessario conoscere:"
+
+#: ../../wol.rst:28 7cd5747012c34b38aa03e9089a03b1d5
+msgid "the ``MAC address`` of the device to be powered on"
+msgstr "l'``Indirizzo MAC`` del dispositivo da accendere"
+
+#: ../../wol.rst:29 db0212807ab04f219fb27bc6abd7415d
+msgid ""
+"the ``NethSecurity network interface`` to which the device is connected "
+"(e.g. ``eth0``)"
+msgstr ""
+"l'``interfaccia di rete NethSecurity`` a cui il dispositivo è collegato (ad "
+"es. ``eth0``)"
+
+#: ../../wol.rst:31 7556c96259e84c9ea973db8e8427d7a2
+msgid "The basic command is::"
+msgstr "Il comando di base è::"
+
+#: ../../wol.rst:35 dd9251454338467090a7e00f753b59dd
+msgid "Example::"
+msgstr "Esempio::"
