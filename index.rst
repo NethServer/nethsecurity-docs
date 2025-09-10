@@ -110,6 +110,7 @@ NethSecurity administrator manual
    speedtest
    ups
    wol
+   uci
 
 .. toctree::
    :maxdepth: 2
