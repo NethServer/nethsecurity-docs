@@ -39,7 +39,7 @@ After the restore the system will be rebooted.
 If you have installed extra packages, you can restore them by following the instructions in the :ref:`restore_extra_packages-section`.
 
 Machines with a subscription
-===========================
+============================
 
 .. admonition:: Subscription required
 
