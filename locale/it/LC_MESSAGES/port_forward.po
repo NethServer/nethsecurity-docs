@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../port_forward.rst:5 906451087aae4b5ab8f3796a2a18196b
+#: ../../port_forward.rst:5 4baf5bf489814293a65a81335930cd93
 msgid "Port forward"
 msgstr "Port forward"
 
-#: ../../port_forward.rst:7 dcc2ae82d1ca4dd4a23e94930d74e2ca
+#: ../../port_forward.rst:7 df994d0ddc2e456ca43d705a31466951
 msgid ""
 "The firewall prevents requests from public networks to access private ones. "
 "For instance, if there's a web server operating within the LAN, only "
@@ -19,7 +19,7 @@ msgstr ""
 " questo servizio. Qualsiasi tentativo effettuato da utenti esterni, al di "
 "fuori della rete locale, viene negato."
 
-#: ../../port_forward.rst:15 1f2d61f41798440bb01fd87764983f4f
+#: ../../port_forward.rst:15 aafbf2b949fe48fcbf97b18c4193ceb1
 msgid ""
 "For web servers, common listening ports include port 80 (HTTP) and port 443 "
 "(HTTPS). When creating a port forward, certain parameters must be specified:"
@@ -28,7 +28,7 @@ msgstr ""
 "la porta 443 (HTTPS). Quando si crea un port forwarding, è necessario "
 "specificare determinati parametri:"
 
-#: ../../port_forward.rst:18 6274474447b544418f56aaada39f8feb
+#: ../../port_forward.rst:18 5947b8758fbc4d53970f2e774c6c05cb
 msgid ""
 "``Name``: assigning a name to a port forward rule is beneficial for future "
 "reference and management. By providing a descriptive and meaningful name, "
@@ -40,7 +40,7 @@ msgstr ""
 " gli amministratori di rete possono identificare facilmente lo scopo e il "
 "contesto di ogni port forwarding."
 
-#: ../../port_forward.rst:20 66ce5180e5474dbd9e407ba2e0c894f7
+#: ../../port_forward.rst:20 2a5c9672ec30453d9eed6242ce93eb8b
 msgid ""
 "``Source port``: the port from which the request originates. Note that not "
 "all protocols require a port. For example, protocols like ``GRE`` do not use"
@@ -50,7 +50,7 @@ msgstr ""
 " tutti i protocolli richiedono una porta. Ad esempio, protocolli come "
 "``GRE`` non utilizzano porte."
 
-#: ../../port_forward.rst:22 b59bcfed62fc4f12be3bd9b79d14aa53
+#: ../../port_forward.rst:22 062f09ff57994c54b36a41f456815e36
 msgid ""
 "``Destination port``: the port to which the traffic is directed; this can "
 "differ from the source port."
@@ -58,7 +58,7 @@ msgstr ""
 "``Porta di destinazione``: la porta a cui è diretto il traffico; questa può "
 "differire dalla porta di origine."
 
-#: ../../port_forward.rst:23 94099c72c120488295443bdc57939a34
+#: ../../port_forward.rst:23 6048bd35c7e24f94aeffc2c6bbb3a8d7
 msgid ""
 "``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, "
 "``ICMP``, ``ESP``, ``AH``, ``SCTP``, ``GRE``. Leave empty for any source "
@@ -73,7 +73,7 @@ msgstr ""
 "cautela, poiché potrebbe esporre il sistema a traffico indesiderato o "
 "potenzialmente dannoso."
 
-#: ../../port_forward.rst:27 ef3e47a2fc0843e9b52ab0f463ea4d00
+#: ../../port_forward.rst:27 94941bdc42624df3adb9c172e6a476de
 msgid ""
 "``Destination address``: specifies the internal host to which the traffic "
 "should be redirected. This can be:"
@@ -81,19 +81,11 @@ msgstr ""
 "``Indirizzo di destinazione``: specifica l'host interno verso cui il "
 "traffico deve essere reindirizzato. Questo può essere:"
 
-#: ../../port_forward.rst:29 3a63926802314c48988d127f3b5ffd18
+#: ../../port_forward.rst:29 a3e8233ccc9447efb2c2dfc1bff35ed0
 msgid "a specific IP address"
 msgstr "un indirizzo IP specifico"
 
-#: ../../port_forward.rst:30 b009af1cc60e41ae9e0c606c0d896f0b
-msgid ""
-"a firewall object: a host defined by a host set, a DHCP reservation, a DNS "
-"record or an OpenVPN account with IP reservation"
-msgstr ""
-"un oggetto firewall: un host definito da un insieme di host, una "
-"prenotazione DHCP, un record DNS o un account OpenVPN con prenotazione IP"
-
-#: ../../port_forward.rst:33 f2fdb8f24ce24696be8d6bd82fbf76bd
+#: ../../port_forward.rst:33 118cd04e333e4afe944bd0336b6937f1
 msgid ""
 "By default, all port forwards are accessible only for hosts inside the WAN. "
 "Refer to the :ref:`hairpin-section` for instructions on changing this "
@@ -104,14 +96,14 @@ msgstr ""
 "section` per le istruzioni su come modificare questo comportamento "
 "predefinito."
 
-#: ../../port_forward.rst:35 e0b2f3e3f9f54e27917794dbc0c46c8d
+#: ../../port_forward.rst:35 8d2c65a8774d48b0ba1e0fb379ff88b6
 msgid ""
 "For each port forward the user can also configure the following aspects:"
 msgstr ""
 "Per ogni inoltro di porta è inoltre possibile configurare i seguenti "
 "aspetti:"
 
-#: ../../port_forward.rst:37 5aa5129fc5b64143bbcc06723bd96938
+#: ../../port_forward.rst:37 8f3f81bb4d69400c9bd05cc40189f053
 msgid ""
 "**Binding to a specific public IP**: port forwards can be bound to a "
 "specific public IP address using the ``WAN IP`` field. This means that if "
@@ -128,7 +120,7 @@ msgstr ""
 " rete complesse, garantendo che il traffico indirizzato a uno specifico IP "
 "pubblico venga inoltrato correttamente al server interno."
 
-#: ../../port_forward.rst:45 7f863c54fd344587a14b6e63de4698ac
+#: ../../port_forward.rst:45 325f1d0de3394d4db32e081ac5ef8285
 msgid ""
 "**Enabling logging**: port forwards can be configured to log incoming "
 "traffic for each rule. By enabling the ``Log`` option, the network "
@@ -144,11 +136,11 @@ msgstr ""
 "impostazione predefinita, la registrazione è limitata a 1 voce al secondo. "
 "Per modificare questo limite, consultare la sezione :ref:`logging-limits`."
 
-#: ../../port_forward.rst:52 665635b585a847f4b63a7f77ff2dfe9c
+#: ../../port_forward.rst:52 91e9d2179e0e48bbb9e416c2b2bd8691
 msgid "Hairpin NAT"
 msgstr "Hairpin NAT"
 
-#: ../../port_forward.rst:54 a301bd2b32aa4c2989c23c72c7b48f23
+#: ../../port_forward.rst:54 0adf189a1acd46df8b3dc83eb36c8a95
 msgid ""
 "Hairpin NAT, also known as NAT loopback or NAT reflection, is a technique "
 "used in networking where internal hosts access a server located within the "
@@ -166,7 +158,7 @@ msgstr ""
 "garantisce che il traffico venga instradato internamente senza uscire su "
 "internet e poi rientrare nella rete locale."
 
-#: ../../port_forward.rst:59 82cc5e2d54b241beba636f1c87c44c19
+#: ../../port_forward.rst:59 deb34ff5da7d4da3bf84342220e6a72e
 msgid ""
 "To enable the hairpin, enable the ``Hairpin NAT`` option and select one or "
 "more zones where the NAT loopback should be enabled."
@@ -174,11 +166,11 @@ msgstr ""
 "Per abilitare l'hairpin, attivare l'opzione ``Hairpin NAT`` e selezionare "
 "una o più zone in cui il NAT loopback deve essere abilitato."
 
-#: ../../port_forward.rst:62 a0cd38a7cb184bb4901d0cad8e10aef0
+#: ../../port_forward.rst:62 c28ef7122bbc44f7b12aa93625f6ed18
 msgid "Hairpin NAT for VPN zones"
 msgstr "Hairpin NAT per le zone VPN"
 
-#: ../../port_forward.rst:64 d08b42d3043d4a9aaa8e06188ecfa564
+#: ../../port_forward.rst:64 28fadc6f81824893998bd77a02a07b7d
 msgid ""
 "To use Hairpin NAT with VPN zones such as ``ipsec``, ``openvpn``, and "
 "``rwopenvpn``, additional configuration is necessary. You must explicitly "
@@ -190,7 +182,7 @@ msgstr ""
 "dichiarare esplicitamente la subnet utilizzata dalla VPN; in caso contrario,"
 " Hairpin NAT non funzionerà per i client connessi tramite VPN."
 
-#: ../../port_forward.rst:67 24d510b22de048768888e151304c939e
+#: ../../port_forward.rst:67 f209c34176cd4e308308278af05d9803
 msgid ""
 "This configuration can be performed via the command line. First, identify "
 "the internal reference for the zone, then add the desired network, commit "
@@ -201,23 +193,23 @@ msgstr ""
 "aggiungere la rete desiderata, confermare le modifiche e riavviare il "
 "servizio."
 
-#: ../../port_forward.rst:69 e788edfdd467429ba70fda7d3d1c206c
+#: ../../port_forward.rst:69 b3e36a48607e47d19fde1b3ef127b072
 msgid "Make sure that subnets are assigned to the correct zones:"
 msgstr "Assicurarsi che le subnet siano assegnate alle zone corrette:"
 
-#: ../../port_forward.rst:71 7c0608dfd3a647f88234c9e551570587
+#: ../../port_forward.rst:71 de2c1eec9b8f42bd967080740127be3e
 msgid "``ipsec``: IPsec tunnels"
 msgstr "``ipsec``: tunnel IPsec"
 
-#: ../../port_forward.rst:72 5fed910f33f440b9bc496ea4407402b3
+#: ../../port_forward.rst:72 4f5c25817bc04df88523fd5cf5fd39b0
 msgid "``openvpn``: OpenVPN tunnels"
 msgstr "``openvpn``: tunnel OpenVPN"
 
-#: ../../port_forward.rst:73 764d913c273a4deebfa94256ab7c3d4f
+#: ../../port_forward.rst:73 9c551a18c8aa4f3d9120fdff9294b9e5
 msgid "``rwopenvpn``: OpenVPN Road Warrior"
 msgstr "``rwopenvpn``: OpenVPN Road Warrior"
 
-#: ../../port_forward.rst:75 1722b914fcaa429eb696e97a2f541906
+#: ../../port_forward.rst:75 a90df481e93f4a919788eec6314b3e34
 msgid ""
 "If multiple tunnels or networks are present, all must be included in their "
 "respective zones."
@@ -225,11 +217,11 @@ msgstr ""
 "Se sono presenti più tunnel o reti, tutti devono essere inclusi nelle "
 "rispettive zone."
 
-#: ../../port_forward.rst:78 11b56cedcb904b779b99eb0436e78245
+#: ../../port_forward.rst:78 b0defe9ee089472aa1e036d7c8491531
 msgid "How to declare a subnet for a VPN zone"
 msgstr "Come dichiarare una subnet per una zona VPN"
 
-#: ../../port_forward.rst:80 24f25385955a4ffd98fdb75404f7d62f
+#: ../../port_forward.rst:80 791e4badcb634f71a5fe3a4dcfef31c4
 msgid ""
 "To declare the OpenVPN Road Warrior network, you can use the following "
 "example command sequence:"
@@ -237,16 +229,16 @@ msgstr ""
 "Per dichiarare la rete OpenVPN Road Warrior, è possibile utilizzare la "
 "seguente sequenza di comandi di esempio:"
 
-#: ../../port_forward.rst:83 baf33a808aba444e87fbca5d809ef826
+#: ../../port_forward.rst:83 335cd5146c13463cbcaa93d1612786e4
 msgid "Identify the internal reference for the **rwopenvpn** zone: ::"
 msgstr "Identificare il riferimento interno per la zona **rwopenvpn**: ::"
 
 #: ../../port_forward.rst:87 ../../port_forward.rst:106
-#: 5650358a22094d2990ec49a19e7941fc 1b35880a21bb4f2bb5a6aac443351894
+#: a9bff4c5352443458baa3bf3733ee9f7 f3cc0b14ec5a450c8b8021cceb79a02b
 msgid "Example output: ::"
 msgstr "Esempio di output: ::"
 
-#: ../../port_forward.rst:91 b48fcd8fed864113adf16353b3a1a528
+#: ../../port_forward.rst:91 228dadfdd9ca4ea4a1b35a99576b38d3
 msgid ""
 "Set the desired network (in this case, **10.88.88.0/24**) for the "
 "**rwopenvpn** zone: ::"
@@ -254,12 +246,12 @@ msgstr ""
 "Impostare la rete desiderata (in questo caso, **10.88.88.0/24**) per la zona"
 " **rwopenvpn**: ::"
 
-#: ../../port_forward.rst:95 833db75600314b6897d61403026ff607
+#: ../../port_forward.rst:95 53fec5a56ec347babb894ee4fb3f0a3d
 msgid "Commit the changes and restart the firewall service: ::"
 msgstr ""
 "Eseguire il commit delle modifiche e riavviare il servizio firewall: ::"
 
-#: ../../port_forward.rst:100 32a3bb3e7af5418ea886faaacee36d98
+#: ../../port_forward.rst:100 4d5e222c3b0d438180b17a71fd9c3c44
 msgid ""
 "Ensure that you replace the network **subnet** with the correct one for your"
 " specific VPN setup."
@@ -267,15 +259,15 @@ msgstr ""
 "Assicurarsi di sostituire la **subnet** di rete con quella corretta per la "
 "propria configurazione VPN specifica."
 
-#: ../../port_forward.rst:102 4d558c7bb2834922a74e11387d119d05
+#: ../../port_forward.rst:102 62525109283f4e30a3452149351d19af
 msgid "Verify the added network: ::"
 msgstr "Verificare la rete aggiunta: ::"
 
-#: ../../port_forward.rst:113 b55fa7dc79234807a978509d954ba484
+#: ../../port_forward.rst:113 c906652546ef4b02b2d075ffbb8436cf
 msgid "Add or remove multiple subnets to the VPN zone"
 msgstr "Aggiungere o rimuovere più subnet alla zona VPN"
 
-#: ../../port_forward.rst:115 8d9422b9bc534a569e00293176e627d0
+#: ../../port_forward.rst:115 c60a4173fe7742899ec4f870d321a60b
 msgid ""
 "If you already set a subnet for a VPN zone and want to **add** another "
 "subnet (e.g. 10.33.33.0/24) use the following command (same internal "
@@ -285,7 +277,7 @@ msgstr ""
 "**aggiungere** un'altra subnet (ad esempio 10.33.33.0/24), utilizzare il "
 "seguente comando (stesso riferimento interno dell'esempio precedente): ::"
 
-#: ../../port_forward.rst:121 b9f49905569949e4bb0d926cdc1f9ff7
+#: ../../port_forward.rst:121 7ef8f15f5ef6436ba2c07e0eacc8a6d1
 msgid ""
 "If you already set multiple subnets for a VPN zone and want to **remove** a "
 "subnet (e.g. 10.33.33/24) use the following command (same internal reference"
@@ -295,13 +287,13 @@ msgstr ""
 "**rimuovere** una subnet (ad esempio 10.33.33/24), utilizzare il seguente "
 "comando (stesso riferimento interno dell'esempio precedente): ::"
 
-#: ../../port_forward.rst:125 2f45d10b16264ec3b7f0c0e7f1635074
+#: ../../port_forward.rst:125 f8b8c463b4384a7984c96d2990d68270
 msgid "Ensure to commit and restart firewall service after modifications."
 msgstr ""
 "Assicurarsi di eseguire il commit e riavviare il servizio firewall dopo le "
 "modifiche."
 
-#: ../../port_forward.rst:11 531252d25744420bba29c97b2842a90f
+#: ../../port_forward.rst:11 4b430bb43eaf4eecb5e50e0c90e67b21
 msgid ""
 "A port forward, also known as port redirect or port forwarding, is a "
 "networking technique used in firewalls to redirect specific network traffic "
@@ -316,50 +308,32 @@ msgstr ""
 " servizi o applicazioni ospitati su dispositivi all'interno di una rete "
 "locale privata."
 
-#: ../../port_forward.rst:31 9ff9bd2ab1ac409ba02aa59e3799aea1
+#: ../../port_forward.rst:31 98292279c6e34332818038cc20ac770a
 msgid ""
 "empty: in this case the port will be redirected to the router/firewall "
 "itself"
 msgstr ""
 "vuoto: in questo caso la porta verrà reindirizzata al router/firewall stesso"
 
-#: ../../port_forward.rst:42 88198ab2126a42268dd400d704dc38e4
+#: ../../port_forward.rst:30 91bdb1784cd84d09b706d1947574574c
+msgid ""
+"a firewall object: a host defined by a host set (except host sets containing"
+" IP ranges or nested objects), a DHCP reservation, a DNS record or an "
+"OpenVPN account with IP reservation"
+msgstr ""
+"un oggetto firewall: un host definito da un insieme di host (eccetto insiemi"
+" di host che contengono intervalli IP o oggetti annidati), una prenotazione "
+"DHCP, un record DNS o un account OpenVPN con prenotazione IP"
+
+#: ../../port_forward.rst:42 5a432a7298014759ad9d86877edeb2f4
 msgid ""
 "**Access restriction**: Port forwards can be restricted to specific sources "
 "to enhance security. This can be done using the ``Restrict access to`` "
-"field. The field accepts IP addresses, CIDR blocks or an object. Any type of"
-" object is supported except for host sets containing an IP range."
+"field. The field accepts IP addresses, CIDR blocks or an object. All objects"
+" are supported, except host sets containing IP ranges or nested objects."
 msgstr ""
-"**Restrizione dell'accesso**: Gli inoltri di porta possono essere limitati a"
-" fonti specifiche per aumentare la sicurezza. Questo può essere fatto "
+"**Restrizione di accesso**: Gli inoltri di porta possono essere limitati a "
+"sorgenti specifiche per aumentare la sicurezza. Questo può essere fatto "
 "utilizzando il campo ``Limita accesso a``. Il campo accetta indirizzi IP, "
-"blocchi CIDR o un oggetto. Sono supportati tutti i tipi di oggetti tranne i "
-"set di host che contengono un intervallo IP."
-
-#~ msgid ""
-#~ "A port forward is a networking technique used in firewalls to redirect "
-#~ "specific network traffic from one IP address and port number combination to "
-#~ "another. It is typically employed to enable external users to access "
-#~ "services or applications hosted on devices within a private local network."
-#~ msgstr ""
-#~ "Un port forward è una tecnica di rete utilizzata nei firewall per "
-#~ "reindirizzare traffico di rete specifico da una combinazione di indirizzo IP"
-#~ " e numero di porta a un'altra. Viene tipicamente impiegata per consentire "
-#~ "agli utenti esterni di accedere a servizi o applicazioni ospitati su "
-#~ "dispositivi all'interno di una rete locale privata."
-
-#~ msgid ""
-#~ "**Access restriction**: Port forwards can be restricted to specific sources "
-#~ "to enhance security. This can be done using the ``Restrict access to`` "
-#~ "field. The field accepts IP addresses, CIDR blocks or an object."
-#~ msgstr ""
-#~ "**Restrizione dell'accesso**: Gli inoltri di porta possono essere limitati a"
-#~ " fonti specifiche per aumentare la sicurezza. Questo può essere fatto "
-#~ "utilizzando il campo ``Limita accesso a``. Il campo accetta indirizzi IP, "
-#~ "blocchi CIDR o un oggetto."
-
-#~ msgid ""
-#~ "Any type of object is supported except for host sets containing an IP range."
-#~ msgstr ""
-#~ "È supportato qualsiasi tipo di oggetto, ad eccezione dei set di host che "
-#~ "contengono un intervallo IP."
+"blocchi CIDR o un oggetto. Sono supportati tutti gli oggetti, tranne i set "
+"di host che contengono intervalli di IP o oggetti annidati."
