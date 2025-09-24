@@ -166,6 +166,13 @@ Replace:
 - ``<source_image.raw>`` with the actual path to your raw disk image
 - ``<destination_image.vmdk>`` with your desired .vmdk filename
 
+The following virtual machine settings are known to work well with NethSecurity:
+
+- Guest OS: Other 5.x or later Linux
+- SCSI Controller: VMWare Paravirtual
+- Network Adapters: E1000
+- Firmware: BIOS (not UEFI)
+
 VMware open-vm-tools
 ^^^^^^^^^^^^^^^^^^^^
 
