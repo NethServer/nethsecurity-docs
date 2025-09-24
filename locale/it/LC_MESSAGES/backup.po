@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../backup.rst:3 46766d18dab34493b87a2fbe97a7fa36
+#: ../../backup.rst:3 b61166d66d6d4643b90d3adb5418b563
 msgid "Backup and restore"
 msgstr "Backup e ripristino"
 
-#: ../../backup.rst:5 ad0087c3ab5b46108c71e3c10e93ef63
+#: ../../backup.rst:5 816eb27424724de2ae545a5b131ad70c
 msgid ""
 "NethSecurity provides a flexible and powerful backup system to save and "
 "restore your firewall's configuration settings."
@@ -14,7 +14,7 @@ msgstr ""
 "NethSecurity offre un sistema di backup flessibile e potente per salvare e "
 "ripristinare le impostazioni di configurazione del firewall."
 
-#: ../../backup.rst:7 f1734dc921f74f92bead627d92d39e12
+#: ../../backup.rst:7 b6b88538f99149b9b9bf45f2af9b9111
 msgid ""
 "Access the ``Backup & Restore`` page under the ``System`` section, then "
 "click on the :guilabel:`Download backup` button. If the machine has a valid "
@@ -26,7 +26,7 @@ msgstr ""
 " un abbonamento Enterprise valido, il backup è :ref:`automatico "
 "<automatic_backup-section>`."
 
-#: ../../backup.rst:10 2bd0a2adc7b74c6cb3837e2df94291b2
+#: ../../backup.rst:10 e547e81b694b4900b53db05d1aa871e4
 msgid ""
 "The backup includes all relevant configuration files and also the list of "
 "extra packages installed by the user. The list is saved in the file "
@@ -36,24 +36,7 @@ msgstr ""
 "dei pacchetti aggiuntivi installati dall'utente. L'elenco viene salvato nel "
 "file ``/etc/backup/installed_packages.txt``."
 
-#: ../../backup.rst:14 e53b5ee9e40947568f7c2147f80ea113
-msgid "Backup encryption"
-msgstr "Crittografia del backup"
-
-#: ../../backup.rst:16 9addf7a7058742148558f017874db3c3
-msgid ""
-"The backup is not encrypted by default. To enable encryption, click on the "
-":guilabel:`Configure passphrase` button and set a strong password. To "
-"disable encryption, click on the :guilabel:`Configure passphrase` button and"
-" leave the password field empty."
-msgstr ""
-"Il backup non è crittografato per impostazione predefinita. Per abilitare la"
-" crittografia, fare clic sul pulsante :guilabel:`Configura passphrase` e "
-"impostare una password robusta. Per disabilitare la crittografia, fare clic "
-"sul pulsante :guilabel:`Configura passphrase` e lasciare vuoto il campo "
-"della password."
-
-#: ../../backup.rst:20 cc664078edac475e850ef05e1062c733
+#: ../../backup.rst:22 a2fdaf6f6fd441458dc4ebb548833911
 msgid ""
 "If the backup is encrypted and the password is lost, it will no longer be "
 "possible to restore the configuration."
@@ -61,11 +44,11 @@ msgstr ""
 "Se il backup è crittografato e la password viene persa, non sarà più "
 "possibile ripristinare la configurazione."
 
-#: ../../backup.rst:25 691e715eb86e408e9a2b72be00165bb9
+#: ../../backup.rst:30 3db527bcb0254b6d9cb5b5bf977c4f20
 msgid "Restore"
 msgstr "Ripristina"
 
-#: ../../backup.rst:27 e7cef0af463d444288b0301968404a1b
+#: ../../backup.rst:32 1b60071c5ce044aa8841fb7a028c6d30
 msgid ""
 "The backup can be restored from the the ``Restore`` tab inside the page "
 "inside the ``Backup & Restore`` page The user can initiate the restore "
@@ -84,11 +67,11 @@ msgstr ""
 "passphrase e, infine, fare clic sul pulsante :guilabel:`Ripristino` per "
 "completare il processo."
 
-#: ../../backup.rst:32 c2891f607f4949ae8c2b89938411c0d2
+#: ../../backup.rst:37 df912cf185bf4bb6942272bdacbf7e51
 msgid "After the restore the system will be rebooted."
 msgstr "Dopo il ripristino il sistema verrà riavviato."
 
-#: ../../backup.rst:34 38eda63b67f24ad4957baa822189929c
+#: ../../backup.rst:39 e9d3d235b2f1483e8ef7e5cfe7b4489a
 msgid ""
 "If you have installed extra packages, you can restore them by following the "
 "instructions in the :ref:`restore_extra_packages-section`."
@@ -96,74 +79,22 @@ msgstr ""
 "Se sono stati installati pacchetti aggiuntivi, è possibile ripristinarli "
 "seguendo le istruzioni nella :ref:`restore_extra_packages-section`."
 
-#: ../../backup.rst:37 5d4ebf182bdb42ad8521ae063f6897c4
-msgid "Automatic backup"
-msgstr "Backup automatico"
-
-#: ../../backup.rst:39 b3eb087917784af68c3286bc7e2e9694
+#: ../../backup.rst:44 91bca76c30b1435992deb6d7001ffd7c
 msgid "Subscription required"
 msgstr "Abbonamento richiesto"
 
-#: ../../backup.rst:41 479b69fc5f52414688cab2060c5dc3a7
+#: ../../backup.rst:46 0c29611761564029b4176d96a072c740
 msgid ""
 "This feature is available only if the firewall has a valid subscription."
 msgstr ""
 "Questa funzionalità è disponibile solo se il firewall dispone di un "
 "abbonamento valido."
 
-#: ../../backup.rst:43 ebf093e8096c4abb94cda31d5966f142
-msgid ""
-"If the machine has a valid :ref:`subscription <subscription-section>`, a "
-"scheduled cron job will run every night to perform a backup. This backup is "
-"then sent to a remote server over a secure channel. If the backup is "
-"encrypted, only the encrypted backup will be sent to the remote server. It "
-"is recommended to encrypt the backup to ensure that no one can access the "
-"configuration settings stored inside it."
-msgstr ""
-"Se la macchina dispone di una :ref:`subscription <subscription-section>` "
-"valida, un processo pianificato tramite cron verrà eseguito ogni notte per "
-"effettuare un backup. Questo backup viene poi inviato a un server remoto "
-"tramite un canale sicuro. Se il backup è cifrato, solo il backup cifrato "
-"verrà inviato al server remoto. Si consiglia di cifrare il backup per "
-"garantire che nessuno possa accedere alle impostazioni di configurazione "
-"memorizzate al suo interno."
-
-#: ../../backup.rst:50 46c393e679e64480a3f80328f95b9e47
-msgid ""
-"Backup without encryption has been deprecated. In the near future, non-"
-"encrypted backups will not be sent to the remote server. If you have a valid"
-" subscription, please enable encryption to ensure the security of your "
-"backup. See also :ref:`backup_encryption-alert` for more information."
-msgstr ""
-"Il backup senza crittografia è stato deprecato. In un prossimo futuro, i "
-"backup non crittografati non verranno inviati al server remoto. Se si "
-"dispone di un abbonamento valido, abilitare la crittografia per garantire la"
-" sicurezza del backup. Consultare anche :ref:`backup_encryption-alert` per "
-"ulteriori informazioni."
-
-#: ../../backup.rst:55 813c1b625e504b9eb5437ecbe02fee6e
-msgid ""
-"The user can click the :guilabel:`Run backup` button: the backup will be "
-"stored on a remote server and the user will be able to download it by "
-"clicking the :guilabel:`Download` button. Please note that the date of the "
-"backup is the server date. The dates displayed in the backup list are based "
-"on the time of the server storing the backups, not the time of the firewall "
-"that created them. This means the dates might differ depending on time zone "
-"differences."
-msgstr ""
-"L'utente può fare clic sul pulsante :guilabel:`Esegui backup`: il backup "
-"verrà memorizzato su un server remoto e sarà possibile scaricarlo facendo "
-"clic sul pulsante :guilabel:`Scarica`. Si noti che la data del backup "
-"corrisponde alla data del server. Le date visualizzate nell'elenco dei "
-"backup si basano sull'orario del server che memorizza i backup, e non "
-"sull'orario del firewall che li ha creati. Questo significa che le date "
-"potrebbero differire a seconda delle differenze di fuso orario."
-
-#: ../../backup.rst:64 bc8617bf737348378373279d2244f508
+#: ../../backup.rst:77 8a401be39f4041f99f5fc53ca7bbc0be
 msgid "Backup encryption alert"
 msgstr "Avviso di crittografia del backup"
 
-#: ../../backup.rst:66 e1e4c31b12f544b99a49dffff9d90ece
+#: ../../backup.rst:79 75e97b42c0d641bf95ed8ff90c99911d
 msgid ""
 "Not encrypting the backup is a security risk. If the backup is not "
 "encrypted, anyone with access to the backup file can read the configuration "
@@ -173,7 +104,7 @@ msgstr ""
 "backup non è crittografato, chiunque abbia accesso al file di backup può "
 "leggere le impostazioni di configurazione memorizzate al suo interno."
 
-#: ../../backup.rst:69 1206a2ec243949fbbdf82c606520e9de
+#: ../../backup.rst:82 034aaa6ba7ea4334b611766ca805d9de
 msgid ""
 "Every night a script will check if the backup is encrypted. If the backup is"
 " not encrypted, the script will create an alert inside the remote portal "
@@ -189,11 +120,11 @@ msgstr ""
 "passphrase` e impostando una password robusta. L'avviso verrà risolto "
 "automaticamente durante il job cron notturno."
 
-#: ../../backup.rst:74 0d0f50c907e444c2ad2d01e8e3fc46c0
+#: ../../backup.rst:87 785deb2b7264462e913b76c0063c5ce1
 msgid "To disable the alert, access the shell and execute: ::"
 msgstr "Per disabilitare l'avviso, accedere alla shell ed eseguire: ::"
 
-#: ../../backup.rst:80 eafe54be61474983b3f839c6fc0d18ef
+#: ../../backup.rst:93 cbaa68d234f04b2abb45ceebd8f0bc92
 msgid ""
 "Disabling the alert will result in silent failures when the sending of non-"
 "encrypted backups is blocked in the future. The administrator will not be "
@@ -204,11 +135,11 @@ msgstr ""
 "verrà notificato di questi errori, il che potrebbe portare a problemi di "
 "backup non rilevati."
 
-#: ../../backup.rst:84 c9adff7b099746b68282a023bdc0c783
+#: ../../backup.rst:97 14b0762c2f034d6db9ef81891d01c156
 msgid "Backup customization"
 msgstr "Personalizzazione del backup"
 
-#: ../../backup.rst:86 fdb303fbb6a245c5b6ebce209a69a80a
+#: ../../backup.rst:99 3ddfc88a74604fc8a17fafc1c739499e
 msgid ""
 "The backup includes all relevant configuration files. To list the files "
 "included in the backup, execute the following command: ::"
@@ -216,7 +147,7 @@ msgstr ""
 "Il backup include tutti i file di configurazione rilevanti. Per elencare i "
 "file inclusi nel backup, eseguire il seguente comando: ::"
 
-#: ../../backup.rst:91 304f28831f4d4155bcc29fe7d9ee8720
+#: ../../backup.rst:104 db311c5f174b4c0ea77709139736c7b6
 msgid ""
 "The backup can be customized by adding files to the backup list. Just add a "
 "new line to the file ``/etc/sysupgrade.conf`` with the path of the file to "
@@ -226,6 +157,153 @@ msgstr ""
 "Basta aggiungere una nuova riga al file ``/etc/sysupgrade.conf`` con il "
 "percorso del file da includere nel backup."
 
-#: ../../backup.rst:94 763a640510314d719a0d57cf4761ad8e
+#: ../../backup.rst:107 b95b44ad8a224b5f862e444ca8e27bed
 msgid "Example: ::"
 msgstr "Esempio: ::"
+
+#: ../../backup.rst:14 9614f04081834705adfbcf77498ab575
+msgid "Backup"
+msgstr "Backup"
+
+#: ../../backup.rst:16 dd1f3a9708a845f0acf4a8ada4c776e5
+msgid ""
+"NethSecurity allows the creation of both encrypted and unencrypted backups. "
+"Downloading an unencrypted backup is always possible by clicking the "
+":guilabel:`Download unencrypted` button."
+msgstr ""
+"NethSecurity consente la creazione di backup sia cifrati che non cifrati. È "
+"sempre possibile scaricare un backup non cifrato facendo clic sul pulsante "
+":guilabel:`Scarica non cifrato`."
+
+#: ../../backup.rst:20 5257523ef2cd4484bcaa34d2b48666d1
+msgid ""
+"To allow downloading an encrypted backup, first click on the "
+":guilabel:`Configure passphrase` button and set a strong password. After "
+"that the :guilabel:`Download encrypted` button will become active."
+msgstr ""
+"Per consentire il download di un backup cifrato, prima fare clic sul "
+"pulsante :guilabel:`Configura passphrase` e impostare una password robusta. "
+"Successivamente, il pulsante :guilabel:`Scarica cifrato` diventerà attivo."
+
+#: ../../backup.rst:24 cc6f864dbc14440f835c188b4a47f205
+msgid ""
+"To disable encrypted backups, click on the :guilabel:`Remove passphrase` "
+"button and :guilabel:`Download encrypted` button will become inactive."
+msgstr ""
+"Per disabilitare i backup crittografati, fare clic sul pulsante "
+":guilabel:`Rimuovi passphrase` e il pulsante :guilabel:`Scarica cifrato` "
+"diventerà inattivo."
+
+#: ../../backup.rst:42 808f4d3ddb3f43d395fe09269f36af20
+msgid "Machines with a subscription"
+msgstr "Macchine con un abbonamento"
+
+#: ../../backup.rst:48 4f5e65bccad6436883dbc92370dd65c4
+msgid ""
+"Backups behave differently on devices with an active :ref:`subscription "
+"<subscription-section>`."
+msgstr ""
+"I backup si comportano in modo diverso sui dispositivi con un "
+":ref:`abbonamento <subscription-section>` attivo."
+
+#: ../../backup.rst:50 c2d9d53e0ef44e289b3b834909858aae
+msgid ""
+"Unencrypted backups can still be downloaded directly from the NethSecurity "
+"UI by clicking the :guilabel:`Download unencrypted` button."
+msgstr ""
+"I backup non cifrati possono comunque essere scaricati direttamente "
+"dall'interfaccia di NethSecurity facendo clic sul pulsante "
+":guilabel:`Scarica non cifrato`."
+
+#: ../../backup.rst:52 845ef56e3310435dbd5d4da78415ddbb
+msgid ""
+"Encrypted backups are stored in the cloud and integrated with Nethesis "
+"Operation Center: this approach simplifies backup management and the restore"
+" process for subscription-based devices, which can interact directly with "
+"the Operation Center and automatically download the backup when restoring."
+msgstr ""
+"I backup crittografati sono archiviati nel cloud e integrati con il Nethesis"
+" Operation Center: questo approccio semplifica la gestione dei backup e il "
+"processo di ripristino per i dispositivi basati su abbonamento, che possono "
+"interagire direttamente con l'Operation Center e scaricare automaticamente "
+"il backup durante il ripristino."
+
+#: ../../backup.rst:54 dd47f938be8242008bcd36590f69e446
+msgid ""
+"To enable encrypted cloud backups first, a passphrase must be configured by "
+"clicking the :guilabel:`Configure passphrase` button and setting a strong "
+"password. Once the passphrase is set you can either:"
+msgstr ""
+"Per abilitare i backup cloud crittografati, è necessario prima configurare "
+"una passphrase facendo clic sul pulsante :guilabel:`Configura passphrase` e "
+"impostando una password sicura. Una volta impostata la passphrase, è "
+"possibile:"
+
+#: ../../backup.rst:56 3532d237d16c41af9e56c160b95ec401
+msgid ""
+"Click the :guilabel:`Run cloud backup` button to create a backup immediately"
+msgstr ""
+"Fare clic sul pulsante :guilabel:`Esegui cloud backup` per creare "
+"immediatamente un backup"
+
+#: ../../backup.rst:57 86dcbe069c18430992dacf65841407a2
+msgid "Let the system automatically create a backup every night"
+msgstr "Lascia che il sistema crei automaticamente un backup ogni notte"
+
+#: ../../backup.rst:59 07fa4fd57ddd4aff9b38ceb65c70b5e2
+msgid ""
+"Every encrypted backup will be sent directly to the Nethesis Operation "
+"Center over a secure channel. Please note that the date of the backup is the"
+" server date. The dates displayed in the backup list are based on the time "
+"of the server storing the backups, not the time of the firewall that created"
+" them. This means the dates might differ depending on time zone differences."
+msgstr ""
+"Ogni backup crittografato verrà inviato direttamente al Nethesis Operation "
+"Center tramite un canale sicuro. Si noti che la data del backup corrisponde "
+"alla data del server. Le date visualizzate nell'elenco dei backup si basano "
+"sull'orario del server che memorizza i backup, e non sull'orario del "
+"firewall che li ha creati. Questo significa che le date potrebbero differire"
+" a seconda delle differenze di fuso orario."
+
+#: ../../backup.rst:67 c83429e2bb1c412db6e6f1b5463ef625
+msgid ""
+"Cloud backups without encryption have been deprecated. For a limited time, "
+"backups will still be sent to the cloud even if they are not encrypted. In "
+"the near future, only encrypted backups will be sent to the remote server. "
+"If you have a valid subscription, please enable encryption to ensure the "
+"security of your backup. See also :ref:`backup_encryption-alert` for more "
+"information."
+msgstr ""
+"I backup cloud senza crittografia sono stati deprecati. Per un periodo di "
+"tempo limitato, i backup verranno comunque inviati al cloud anche se non "
+"sono crittografati. In futuro, solo i backup crittografati verranno inviati "
+"al server remoto. Se si dispone di un abbonamento valido, abilitare la "
+"crittografia per garantire la sicurezza del backup. Consultare anche "
+":ref:`backup_encryption-alert` per ulteriori informazioni."
+
+#: ../../backup.rst:112 23e5de55eea143798296a1613c067ead
+msgid "How to decrypt a backup"
+msgstr "Come decrittare un backup"
+
+#: ../../backup.rst:114 be4a314d636145bfba9b1b4516b94714
+msgid ""
+"Normally, encrypted backups are handled directly by NethSecurity during both"
+" the creation and restore phases. Once the passphrase is provided, the "
+"system automatically encrypts or decrypts the file."
+msgstr ""
+"Normalmente, i backup crittografati vengono gestiti direttamente da "
+"NethSecurity sia durante la fase di creazione che durante quella di "
+"ripristino. Una volta fornita la passphrase, il sistema cripta o decripta "
+"automaticamente il file."
+
+#: ../../backup.rst:116 9572449a8c464c0c908ecc4b77f90eb3
+msgid ""
+"In some cases, however, it may be useful to decrypt the backup externally "
+"(outside the firewall) in order to perform checks before restoring it. For "
+"this reason, the following ``gpg`` command can be used to decrypt the backup"
+" content: ::"
+msgstr ""
+"In alcuni casi, tuttavia, può essere utile decriptare il backup esternamente"
+" (al di fuori del firewall) per eseguire controlli prima di ripristinarlo. "
+"Per questo motivo, è possibile utilizzare il seguente comando ``gpg`` per "
+"decriptare il contenuto del backup: ::"
