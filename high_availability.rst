@@ -104,7 +104,6 @@ Before setting up HA, ensure the following requirements are met:
 - Two firewalls with identical network devices. Each device must have the exact same name and numbering (e.g., eth0, eth1, eth2, eth3)
 - Both nodes must be connected to the same LAN; connect the LAN interfaces to the same broadcast domain (usually the same switch).
 - Static IP addresses for all LAN interfaces that will host a virtual IP.
-- Primary LAN interface must be named ``lan`` in both firewalls
 
 Setup and configuration
 ========================
@@ -217,11 +216,11 @@ Check requirements
 
 For the primary node::
 
-  ns-ha-config check-primary-node
+  ns-ha-config check-primary-node <lan_interface>
 
 This checks:
 
-- LAN interface has a static IP. It searches for a LAN interface named ``lan``.
+- The LAN interface exists and has a static IP.
 - If DHCP server is running:
 
   - ``3: router`` DHCP option is set (should be the virtual IP).
@@ -229,16 +228,16 @@ This checks:
 
 For the backup node::
 
-  ns-ha-config check-backup-node <backup_node_ip>
+  ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
 
 This checks:
 
+- The LAN interface exists and has a static IP.
 - Backup node is reachable via SSH on port 22 with root user.
-- LAN interface has a static IP. It searches for a LAN interface named ``lan``.
 
 The script will request the root password for the backup node. You can also pipe the password: ::
 
-   echo "password" | ns-ha-config check-backup-node <backup_node_ip>
+   echo "password" | ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
 
 Ensure the backup node can be reached via SSH from the primary node on standard port 22.
 
@@ -262,11 +261,11 @@ This script will:
 
 Initialize the backup node, always execute the command on the primary node::
 
-   ns-ha-config init-backup-node
+   ns-ha-config init-backup-node <lan_interface>
 
 The script will ask for the root password of the backup node. You can also pipe the password: ::
 
-   echo "password" | ns-ha-config init-backup-node
+   echo '<password>' | ns-ha-config init-backup-node <lan_interface>
 
 At this point, the nodes are configured to communicate over LAN, and the LAN virtual IP will failover.
 
@@ -358,7 +357,6 @@ Virtual IPs must be explicitly set on the primary node. ::
 
    ns-ha-config add-vip <interface> <vip_ip_cidr>
 
-
 **Note:** the virtual IP will appear as an extra IP address on the network interface inside the
 ``Interfaces and devices`` page of the web interface, but it will not be listed in the aliases section.
 
@@ -393,6 +391,7 @@ Assuming:
 - Primary Node LAN IP: `192.168.100.238`
 - Backup Node LAN IP: `192.168.100.239`
 - LAN Virtual IP: `192.168.100.240/24`
+- LAN Interface Name: `lan`
 - Backup Node Root Password: `backup_root_password`
 
 Execute the following commands on the **primary node**:
@@ -400,16 +399,16 @@ Execute the following commands on the **primary node**:
 1. Check requirements: ::
 
       # Check requirements first
-      ns-ha-config check-primary-node
-      echo "backup_root_password" | ns-ha-config check-backup-node 192.168.100.239
+      ns-ha-config check-primary-node lan
+      echo "backup_root_password" | ns-ha-config check-backup-node 192.168.100.239 lan
 
 2. Setup the cluster: ::
 
       # Initialize primary
-      ns-ha-config init-primary-node 192.168.100.238 192.168.100.239 192.168.100.240/24
+      ns-ha-config init-primary-node 192.168.100.238 192.168.100.239 192.168.100.240/24 lan
 
       # Initialize backup (run from primary node)
-      echo "backup_root_password" | ns-ha-config init-backup-node
+      echo "backup_root_password" | ns-ha-config init-backup-node lan
 
 
 Alerting
