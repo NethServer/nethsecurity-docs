@@ -189,7 +189,12 @@ FlashStart Pro Plus extends functionality with support for multiple independent 
 
 .. note::
 
-  Although no known bugs have been reported at this time, the Pro Plus feature is currently released as a **Beta**. We recommend testing it in a non-critical environment before deploying it in production.
+  Due to platform limitations, the system can handle host sets with a limited number of elements.
+  
+  If the set contains only hosts, it can include up to 16 entries. 
+  If it contains only CIDR networks, it can include up to 13 entries.
+  If the host set contains mixed data (both hosts and networks), it is advisable to refer to the lower limit (13).
+
 
 Common Features (Pro and Pro Plus)
 ----------------------------------
@@ -238,6 +243,11 @@ Common Features (Pro and Pro Plus)
    * - Conflict handling (user vs object)
      - N/A
      - Firewall object takes priority
+
+
+.. note::
+
+  Although no known bugs have been reported at this time, the Pro Plus feature is currently released as a **Beta**. We recommend testing it in a non-critical environment before deploying it in production.
 
 
 Troubleshooting
