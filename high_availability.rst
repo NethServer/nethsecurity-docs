@@ -74,7 +74,7 @@ The HA cluster supports synchronization for a wide range of features, including:
 - Backup encryption password
 - Controller connection and subscription (ns-plug)
 - Active connections tracking (conntrackd)
-- Hotspot (dedalo)
+- Hotspot (dedalo) only on physical interfaces
 
 The HA cluster supports the following WAN interface types and setups:
 
@@ -91,6 +91,7 @@ Be aware of the following current limitations:
 - Only IPv4 is supported on LAN interfaces
 - Extra packages not included inside the image are not supported (eg. NUT, etherwake, etc.)
 - Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
+- The Hotspot is supported only on physical interfaces.
 - After the first synchronization, the backup node will have the same hostname as the primary node.
   The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or backup).
   Also, when accessing the SSH console, the prompt will change to indicate the node's role.
@@ -333,12 +334,11 @@ Hotspot support
 
 The hotspot feature is supported in HA clusters, but there are important requirements:
 
-- The backup node must have the exact same network devices as the primary node. For example, if the primary node has a
-  VLAN interface named ``eth1.1``, the backup node must also have a ``eth1.1`` interface with the same name and configuration.
-  If the interfaces do not match, the hotspot will not function correctly after a failover.
-- The hotspot can only operate on a physical interface or a VLAN interface.
+- It must be configured on physical network interfaces only, VLAN interfaces are not supported.
+- The backup node must have the exact same network devices as the primary node. 
 - To maintain hotspot functionality during failover, the MAC address of the interface running the hotspot on the primary node is automatically
   copied to the corresponding interface on the backup node when a switchover occurs.
+  This behavior prevents the use of VLAN interfaces for the hotspot.
 
 Note that active sessions are stored in RAM and will be lost during a switchover; clients must re-authenticate unless auto-login is enabled.
 
