@@ -247,7 +247,7 @@ Initialize nodes
 
 Initialize the primary node::
 
-   ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip>
+   ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip_cidr> <lan_interface>
 
 Where the ``primary_node_ip`` is the static IP of the primary node already set for the LAN interface,
 and ``backup_node_ip`` is the static LAN IP of the backup node
