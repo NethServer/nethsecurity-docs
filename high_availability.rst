@@ -251,7 +251,7 @@ Initialize the primary node::
 
 Where the ``primary_node_ip`` is the static IP of the primary node already set for the LAN interface,
 and ``backup_node_ip`` is the static LAN IP of the backup node
-The ``virtual_ip`` is the virtual IP address for the LAN interface where all LAN hosts should point to.
+The ``virtual_ip`` is the virtual IP address for the LAN interface where all LAN hosts should point to, it must be specified in CIDR notation.
 
 This script will:
 
