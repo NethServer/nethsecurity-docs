@@ -605,14 +605,15 @@ Then, search for ``Keepalived_vrrp`` in the ``/var/log/messages`` file.
 Reset the configuration
 -----------------------
 
-To completely remove the HA configuration: ::
-
-   ns-ha-config reset
-
-This script will:
+To reset command will:
 
 - Stop and disable `keepalived` and `conntrackd`.
 - Remove HA configuration files.
 - Clean up `dropbear` configuration including SSH keys.
+
+At the end, a reboot is required to apply the changes. Just execute: ::
+
+   ns-ha-config reset
+   reboot
 
 The network configuration of the nodes remains unchanged. You can manage them as standalone nodes using their static management IPs.
