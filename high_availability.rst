@@ -191,6 +191,32 @@ The below diagram illustrates the recommended redundant network setup, switches 
    :alt: High Availability network diagram showing proper cabling
    :align: center
 
+
+Interfaces management
+--------------------
+
+Interfaces can be categorized as follows:
+
+1. **Main HA interface**:
+
+This is the interface used for VRRP communication.
+It has to be configured on the primary and the secondary node, then it must be added to the HA configuration during initialization.
+This interface requires three distinct IP addresses: one on the primary node, one on the secondary node and a VIP (Virtual IP) that moves between units when their roles change (Master/Backup).
+
+2. **Additional LAN interfaces**:
+
+Any interface that is not a WAN, such as another LAN, a guest network, or a DMZ.
+These are also managed using the three-address logic (primary IP, secondary IP, and VIP), they have to be configured on the primary and the secondary node, then they must be added to the HA configuration after initialization.
+A fault on any of these interfaces triggers a failover between units.
+They are configured by adding them as LAN interfaces.
+
+3. **WAN interfaces**:
+
+These interfaces are treated as special cases. WANs may have limitations when using the three-address scheme (for example, when public IPs are assigned), and it is essential to prevent conflicts between HA mechanisms and MultiWAN management. 
+For this reason, WAN interfaces do not trigger a failover, ensuring proper MultiWAN handling, especially in complex or high-value installations. 
+WAN interfaces only need to be configured on the primary node; they are automatically replicated to the secondary node, further details are provided in the dedicated section below.
+
+
 LAN interfaces
 --------------
 
