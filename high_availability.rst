@@ -76,7 +76,8 @@ The HA cluster supports synchronization for a wide range of features, including:
 - Active connections tracking (conntrackd)
 - Hotspot (dedalo) only on physical interfaces
 
-The HA cluster supports the following WAN interface types and setups:
+WAN interface types and setups
+------------------------------
 
 - Static IPv4 and static IPv6 addresses
 - IPv4 via DHCP
@@ -86,12 +87,19 @@ The HA cluster supports the following WAN interface types and setups:
 - VLANs on physical interfaces, bond interfaces, or bridge interfaces
 - PPPoE on physical interfaces or on VLAN interfaces
 
-Be aware of the following current limitations:
-
+Interfaces Limitations
+----------------------
 - Only IPv4 is supported on LAN interfaces
+- The main HA interface must be a physical interface
+- Bonds and bridges are supported only for additional LAN interfaces and WANs, not for the main HA interface
+- The Hotspot is supported only on physical interfaces
+
+
+General limitations
+-------------------
+
 - Extra packages not included inside the image are not supported (eg. NUT, etherwake, etc.)
 - Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
-- The Hotspot is supported only on physical interfaces.
 - After the first synchronization, the backup node will have the same hostname as the primary node.
   The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or backup).
   Also, when accessing the SSH console, the prompt will change to indicate the node's role.
