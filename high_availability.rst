@@ -90,8 +90,8 @@ WAN interface types and setups
 Interfaces Limitations
 ----------------------
 - Only IPv4 is supported on LAN interfaces
-- The main HA interface must be a physical interface
-- Bonds and bridges are supported only for additional LAN interfaces and WANs, not for the main HA interface
+- The Main LAN interface must be a physical interface
+- Bonds and bridges are supported only for additional LAN interfaces and WANs, not for the main LAN interface
 - The Hotspot is supported only on physical interfaces
 
 
@@ -129,9 +129,9 @@ The setup process is as follows:
 2. **Connect network cables properly** to ensure redundancy.
    See `Network cabling`_ section below for proper cabling guidelines.
 
-3. **Configure LAN interfaces** on both nodes with static IP addresses. Create any VLANs or other network devices
+3. **Configure the Main LAN interface** on both nodes with static IP addresses.Create a LAN on primary ansd secondary node 
    that will be needed for the cluster before proceeding with HA setup.
-   See `LAN interfaces`_ section below for detailed instructions.
+   See `Main LAN interface`_ section below for detailed instructions.
 
 4. **Initialize the cluster** using the `ns-ha-config` commands to establish the HA cluster foundation.
    The initialization process configures the necessary services and prepares both nodes for synchronization.
@@ -205,18 +205,18 @@ Interfaces management
 
 Interfaces can be categorized as follows:
 
-1. **Main HA interface**:
+1. **Main LAN interface**:
 
 This is the interface used for VRRP communication.
 It has to be configured on the primary and the secondary node, then it must be added to the HA configuration during initialization.
-This interface requires three distinct IP addresses: one on the primary node, one on the secondary node and a VIP (Virtual IP) that moves between units when their roles change (Master/Backup).
+This interface requires three distinct IP addresses: one on the primary node, one on the secondary node and a VIP (Virtual IP) that moves between units when their roles change (Master/Backup). `Main LAN interface`_ 
 
 2. **Additional LAN interfaces**:
 
 Any interface that is not a WAN, such as another LAN, a guest network, or a DMZ.
 These are also managed using the three-address logic (primary IP, secondary IP, and VIP), they have to be configured on the primary and the secondary node, then they must be added to the HA configuration after initialization.
 A fault on any of these interfaces triggers a failover between units.
-They are configured by adding them as LAN interfaces.
+They are configured by adding them as LAN interfaces. `Additional LAN interfaces`_
 
 3. **WAN interfaces**:
 
@@ -225,14 +225,14 @@ For this reason, WAN interfaces do not trigger a failover, ensuring proper Multi
 WAN interfaces only need to be configured on the primary node; they are automatically replicated to the secondary node, further details are provided in the dedicated section below.
 
 
-LAN interfaces
---------------
+Main LAN interface
+------------------
 
-The HA cluster requires static IP addresses for all interfaces that will host a virtual IP.
+The HA cluster requires static IP addresses for all LAN interfaces that will host a virtual IP.
 Follow these steps:
 
-- Power on the backup node, access the web interface and set a static LAN IP address (e.g., `192.168.100.239`).
-- Power on the primary node, access the web interface and set a static LAN IP address (e.g., `192.168.100.238`).
+- Power on the backup node, access the web interface and set a physical interface with a static LAN IP address (e.g., `192.168.100.239`).
+- Power on the primary node, access the web interface and set a physical interface with a static LAN IP address (e.g., `192.168.100.238`).
 
 These static IP addresses are used to access the nodes directly, even if the HA cluster is disabled. Consider them *management IP addresses*.
 
@@ -240,6 +240,7 @@ Cluster initialization
 ----------------------
 
 The setup process configures `keepalived` for failover, `rsync` over SSH for configuration synchronization, and `conntrackd` to sync the connection tracking table.
+All this information passes through the Main LAN interface, which is the one configured during the initialization phase.
 Use the ``ns-ha-config`` script to simplify the process.
 
 Before diving into the actual setup, it's important to ensure that both nodes are properly configured and meet the necessary requirements.
@@ -255,7 +256,7 @@ For the primary node::
 
 This checks:
 
-- The LAN interface exists and has a static IP.
+- The Main LAN interface exists and has a static IP.
 - If DHCP server is running:
 
   - ``3: router`` DHCP option is set (should be the virtual IP).
@@ -267,7 +268,7 @@ For the backup node::
 
 This checks:
 
-- The LAN interface exists and has a static IP.
+- The Main LAN interface exists and has a static IP.
 - Backup node is reachable via SSH on port 22 with root user.
 
 The script will request the root password for the backup node. You can also pipe the password: ::
@@ -283,9 +284,9 @@ Initialize the primary node::
 
    ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip_cidr> <lan_interface>
 
-Where the ``primary_node_ip`` is the static IP of the primary node already set for the LAN interface,
+Where the ``primary_node_ip`` is the static IP of the primary node already set for the Main LAN interface,
 and ``backup_node_ip`` is the static LAN IP of the backup node
-The ``virtual_ip`` is the virtual IP address for the LAN interface where all LAN hosts should point to, it must be specified in CIDR notation.
+The ``virtual_ip`` is the virtual IP address for the Main LAN interface where all LAN hosts should point to, it must be specified in CIDR notation.
 
 This script will:
 
@@ -338,7 +339,7 @@ Additional LAN interfaces
 
 It's possible to add additional LAN interfaces to the HA cluster after the initial setup.
 Before adding an interface, ensure that the interface is configured with a static IP address on the primary node
-and on the secondary node, much like the LAN interface configured during the initial setup.
+and on the secondary node, much like the Main LAN interface configured during the initial setup.
 Interfaces can be ethernets, bridges, VLANs, or bonds, but make sure the secondary node has the same interface with the same name
 and with the same device hierarchy (e.g., if the interface is a VLAN, the parent interface must also exist on the secondary node).
 
