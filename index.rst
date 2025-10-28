@@ -98,9 +98,16 @@ NethSecurity administrator manual
 
 .. toctree::
    :maxdepth: 2
+   :caption: High Availability
+
+   ha_overview_features_limitations
+   ha_setup_and_management
+   ha_maintenance_and_troubleshooting
+
+.. toctree::
+   :maxdepth: 2
    :caption: Advanced (CLI)
 
-   high_availability
    ddns
    smtp
    snmp
