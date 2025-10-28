@@ -8,6 +8,44 @@ NethSecurity releases changelogs.
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
 
+Major changes on 2025-10-29
+===========================
+
+Image version: `8-24.10.3-ns.1.7.0`
+
+.. rubric:: New Features
+
+- High Availability is now production-ready after extensive testing and redesign,the system has changed from the beta version and requires reconfiguration.
+- New WireGuard tunnel UI for creating and managing VPNs directly from the interface, with support for multiple servers and sharing via file or QR code.
+- Existing command-line WireGuard tunnels are automatically migrated to the new UI.
+- Improved DDoS and flood protection handling; configuration centralized under Threat Shield IP.
+- Added local URL allowlist to Threat Shield DNS for more granular control.
+- Automatic configuration templates introduced for GUEST and DMZ zones.
+- Added option to download unencrypted backups locally using a dedicated button.
+- Manual DNS servers now always take priority over DHCP or PPPoE-provided ones.
+- DHCP behavior with FlashStart improved; no need to define DNS in DHCP options when FlashStart is active.
+- System-generated port forwarding rules are now visible but read-only, clearly marked as automated.
+- Threat Shield IP automatically whitelists Nethesis enterprise service IPs to prevent false positives.
+- Added support for IPSec DH Groups 19, 20, and 21.
+- Added unit-group access control, IP-based restrictions, performance optimizations, and UI improvements in the controller.
+- Controller data and logs are now transmitted through the VPN tunnel for improved security.
+- Added unit description field synchronized between units and controller.
+- Added MTU configuration to resolve connectivity issues on low-quality networks.
+- Introduced remote support access (nethsupport) via temporary code; no credentials or 2FA required, with automatic revocation after session end.
+
+.. rubric:: Bug Fixes
+
+- Fixed enabling/disabling of port forward rules via the kebab menu when domain set objects are configured.
+- Improved port forward validation to reject invalid IPs when a destination port is defined.
+- Fixed OpenVPN tunnels with LZO compression failing to start.
+- QoS and MultiWAN configurations now correctly update when a WAN interface is removed.
+- DPI rules now correctly block ICMP traffic; resolved startup segfault and improved performance under load.
+- Fixed kebab menu functionality in port forwarding when domain sets are used in the “limit access to” section.
+- Reverse proxy certificate usage indicators now show the correct status.
+- Fixed controller issue where 2FA could activate after canceling setup; now only activates after successful OTP confirmation.
+- DHCP server now replies with a single message per request when multiple dnsmasq instances are configured.
+
+
 Major changes on 2025-06-30
 ===========================
 
