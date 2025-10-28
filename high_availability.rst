@@ -22,22 +22,39 @@ Key concepts
 Some key concepts to understand before setting up HA:
 
 - **Primary Node**: The firewall that actively handles traffic and services.
-- **Backup Node**: The firewall that automatically takes over in case of failure on the primary node.
+- **Secondary (or backup) Node**: The firewall that automatically takes over in case of failure on the primary node.
 - **Virtual IP (VIP)**: A shared IP address used by both nodes for each configured interface to ensure uninterrupted client access to services.
   Clients on the network should *always* use the VIP address (e.g., as their gateway, DNS server, or VPN endpoint) to ensure seamless failover.
 
-Configuration changes must **always** be made on the **primary node**. The backup node should be considered read-only.
-Most configurations, such as firewall rules, VPN settings, or Threat Shield rules, are automatically synchronized from the primary to the backup node.
+HA Roles
+----------
+
+* **Master**
+
+  * The node that currently has all interfaces active and processes all network traffic
+  * Under normal conditions, the Primary Node operates in this status.
+
+* **Backup**
+
+  * The node that does not process network traffic.
+  * Under normal conditions, the Secondary Node operates in this status.
+
+
+Configuration changes must **always** be made on the **primary node**.
+The secondary node should be considered read-only. The only exception is the network configuration of
+LAN interfaces that are part of the HA cluster.
+
+All other relevant configurations, such as firewall rules, VPN settings, or Threat Shield rules, are automatically synchronized from the primary to the secondary node.
 
 This is how the HA system works:
 
-- **Heartbeat**: The primary and backup firewalls continuously check each other's status using the VRRP protocol. If the primary fails, the backup takes over.
+- **Heartbeat**: The primary and secondary firewalls continuously check each other's status using the VRRP protocol. If the primary fails, the secondary takes over. The VRRP protocol is carried over a dedicated LAN interface called the **HA interface**, additional information will be provided in a later section.
 - **Settings synchronization**: The primary firewall securely sends its settings, including details about active connections like VPNs and network routes,
-  to the backup firewall.
-- The system automatically adjusts what each firewall does based on whether it's the active (primary) or standby (backup) unit:
+  to the secondary firewall.
+- The system automatically adjusts what each firewall does based on whether it's the active (primary) or standby (secondary) unit:
 
-  - **Backup receives configuration updates**: When the backup firewall gets new settings, it saves them but keeps related services (like VPNs) turned off.
-    The backup firewall holds a complete copy of the primary's configuration but keeps most background tasks inactive.
+  - **Secondary receives configuration updates**: When the secondary firewall gets new settings, it saves them but keeps related services (like VPNs) turned off.
+    The secondary firewall holds a complete copy of the primary's configuration but keeps most background tasks inactive.
     This includes things like checking for software updates, performing remote backups, or sending reports.
     This ensures only the active primary firewall handles these tasks, preventing conflicts.
   - **Firewall becomes active**: When a firewall takes over as the primary (either starting up normally or during a failover),
@@ -46,14 +63,7 @@ This is how the HA system works:
     it deactivates most services and connections.
 
 While the HA system is designed to be as automatic as possible, some configurations require manual intervention.
-For example, if you add a new network interface or change an existing one, you need to inform the HA system about these changes.
-Specific actions are needed to ensure the backup node is aware of the new network configuration:
-
-- Beside the first LAN and WAN configured in the initial setup, all other interfaces must be explicitly added to the HA cluster.
-  This is done using the ``ns-ha-config add-lan-interface`` or ``ns-ha-config add-wan-interface`` command.
-  This command registers the new interface in the HA cluster configuration and associates a Virtual IP (VIP) with it for failover.
-- Similarly, when adding an IP alias to an interface on the primary node, you must also register this alias within the HA cluster configuration
-  using ``ns-ha-config add-alias``.
+For example, if you add a new LAN network interface or change an existing one, you need to inform the HA system about these changes.
 
 Supported features and limitations
 ===================================
@@ -78,20 +88,36 @@ The HA cluster supports synchronization for a wide range of features, including:
 - Backup encryption password
 - Controller connection and subscription (ns-plug)
 - Active connections tracking (conntrackd)
-- Hotspot (dedalo)
+- Hotspot (dedalo) only on physical interfaces
 
-Be aware of the following current limitations:
+WAN interface types and setups
+------------------------------
 
-- IPv4 only (IPv6 is not supported).
-- VLANs are supported only on physical interfaces.
-- Extra packages such as NUT are not supported.
+- Static IPv4 and static IPv6 addresses
+- IPv4 via DHCP
+- Physical Ethernet interfaces
+- Bonded interfaces (link aggregation) composed of physical interfaces
+- Bridge interfaces over physical interfaces
+- VLANs on physical interfaces, bond interfaces, or bridge interfaces
+- PPPoE on physical interfaces or on VLAN interfaces
+
+Interfaces Limitations
+----------------------
+- Only IPv4 is supported on LAN interfaces
+- The HA interface must be a physical interface
+- Bonds and bridges are supported only for additional LAN interfaces and WANs, not for the HA interface
+- The Hotspot is supported only on physical interfaces
+
+
+General limitations
+-------------------
+
+- Extra packages not included inside the image are not supported (eg. NUT, etherwake, etc.)
 - Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
-- PPPoE or DHCP WAN is not supported (see Static IP requirement)
-
-Also note that after the first synchronization, the backup node will have the same hostname as the primary node.
-The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or backup).
-Also, when accessing the SSH console, the prompt will change to indicate the node's role.
-See the :ref:`troubleshooting_ha-section` section for more details.
+- After the first synchronization, the secondary node will have the same hostname as the primary node.
+  The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or secondary).
+  Also, when accessing the SSH console, the prompt will change to indicate the node's role.
+  See the :ref:`troubleshooting_ha-section` section for more details.
 
 Requirements
 ============
@@ -100,7 +126,7 @@ Before setting up HA, ensure the following requirements are met:
 
 - Two firewalls with identical network devices. Each device must have the exact same name and numbering (e.g., eth0, eth1, eth2, eth3)
 - Both nodes must be connected to the same LAN; connect the LAN interfaces to the same broadcast domain (usually the same switch).
-- Static IP addresses for all interfaces that will host a virtual IP.
+- Static IP addresses for all LAN interfaces that will host a virtual IP.
 
 Setup and configuration
 ========================
@@ -117,9 +143,9 @@ The setup process is as follows:
 2. **Connect network cables properly** to ensure redundancy.
    See `Network cabling`_ section below for proper cabling guidelines.
 
-3. **Configure LAN interfaces** on both nodes with static IP addresses. Create any VLANs or other network devices
+3. **Configure the HA interface** on both nodes with static IP addresses.Create a LAN on primary ansd secondary node 
    that will be needed for the cluster before proceeding with HA setup.
-   See `LAN interfaces`_ section below for detailed instructions.
+   See `HA interface`_ section below for detailed instructions.
 
 4. **Initialize the cluster** using the `ns-ha-config` commands to establish the HA cluster foundation.
    The initialization process configures the necessary services and prepares both nodes for synchronization.
@@ -127,33 +153,33 @@ The setup process is as follows:
    otherwise the node may enter a fault state and the HA cluster will not work properly.
    See `Cluster initialization`_ section below for detailed instructions.
 
-5. **Add WAN interface** to cluster configuration to ensure proper failover for internet connectivity.
-   This step is crucial for maintaining internet access during failover scenarios.
-   See `WAN Interfaces`_ section below for detailed instructions.
+5. **Configure WAN interface in primary node** using the ``Interfaces and devices`` page in the web interface.
+   WAN interfaces will be automatically configured inside the cluster and synchronized to the secondary node.
+   See `WAN Interfaces`_ section below for more info.
 
 6. **Verify the configuration** to ensure everything is set up correctly.
    Use the `ns-ha-config` commands to check the status and configuration of the HA cluster.
    See `Verify the configuration`_ section below for detailed instructions.
 
-7. **Configure additional interfaces** for the cluster as needed (optional).
-   This step is optional and depends on your network setup. You can add any additional interfaces that require HA support.
-   See `Additional interfaces`_ section below for detailed instructions.
+7. **Configure additional LAN interfaces (optional)** for the cluster.
+   This step is optional and depends on your network setup. You can add any additional LAN interface that require HA support.
+   See `Additional LAN interfaces`_ section below for detailed instructions.
    If you need to configure an hotspot, see `Hotspot support`_ section below for specific requirements.
 
-8. **Add IP aliases** to the primary node on relevant interfaces (optional).
+8. **Add extra Virtual IPs (optional)** to the primary node on relevant LAN interfaces.
    This step is optional and allows you to add additional IP addresses to the primary node for services that require multiple IPs.
-   See `Network aliases`_ section below for detailed instructions.
+   See `Extra Virtual IPs`_ section below for detailed instructions.
 
 The detailed steps for each of these points are covered in the sections below.
 
 Sometimes, you may need to remove interfaces or aliases from the HA configuration.
-This can be done using the `ns-ha-config` commands.
-See `Remove interfaces and aliases`_ section below for detailed instructions.
+This can be done using the ``ns-ha-config`` command.
+See `Remove interfaces and virtual IPs`_ section below for detailed instructions.
 
 Network cabling
 ---------------
 
-Proper network cabling is essential to ensure high availability and seamless failover between the primary and backup firewalls.
+Proper network cabling is essential to ensure high availability and seamless failover between the primary and secondary firewalls.
 
 1. **General Recommendations**:
 
@@ -163,7 +189,7 @@ Proper network cabling is essential to ensure high availability and seamless fai
 
 2. **LAN Connections**:
 
-   - Connect the LAN interfaces of both the primary and backup nodes to the same network segment.
+   - Connect the LAN interfaces of both the primary and secondary nodes to the same network segment.
    - Ideally, use **two separate switches** for redundancy. Connect each firewall's LAN port to both switches (if supported), or at least ensure each firewall is 
      connected to a different switch. This avoids a single point of failure if one switch fails.
    - If using two separate switches for redundancy, they must be properly interconnected and support Spanning Tree Protocol (STP) to prevent network loops.
@@ -179,7 +205,7 @@ Proper network cabling is essential to ensure high availability and seamless fai
    - If your ISP provides a router with HA capability (e.g., VRRP or HSRP), you can connect both firewalls' WAN ports directly to the ISP's redundant routers.
    - Alternatively, you can configure MultiWAN directly in NethSecurity to manage multiple WAN uplinks and failover.
 
-This setup ensures that if any single firewall or switch fails, network connectivity is maintained through the backup node and the remaining switch.
+This setup ensures that if any single firewall or switch fails, network connectivity is maintained through the secondary node and the remaining switch.
 
 The below diagram illustrates the recommended redundant network setup, switches are omitted for clarity.
 
@@ -187,14 +213,40 @@ The below diagram illustrates the recommended redundant network setup, switches 
    :alt: High Availability network diagram showing proper cabling
    :align: center
 
-LAN interfaces
---------------
 
-The HA cluster requires static IP addresses for all interfaces that will host a virtual IP.
+Interfaces management
+--------------------
+
+Interfaces can be categorized as follows:
+
+1. **HA interface**:
+
+This is the interface used for VRRP communication.
+It has to be configured on the primary and the secondary node, then it must be added to the HA configuration during initialization.
+This interface requires three distinct IP addresses: one on the primary node, one on the secondary node and a VIP (Virtual IP) that moves between units when their roles change (Master/Backup). `HA interface`_ 
+
+2. **Additional LAN interfaces**:
+
+Any interface that is not a WAN, such as another LAN, a guest network, or a DMZ.
+These are also managed using the three-address logic (primary IP, secondary IP, and VIP), they have to be configured on the primary and the secondary node, then they must be added to the HA configuration after initialization.
+A fault on any of these interfaces triggers a failover between units.
+They are configured by adding them as LAN interfaces. `Additional LAN interfaces`_
+
+3. **WAN interfaces**:
+
+These interfaces are treated as special cases. WANs may have limitations when using the three-address scheme (for example, when public IPs are assigned), and it is essential to prevent conflicts between HA mechanisms and MultiWAN management. 
+For this reason, WAN interfaces do not trigger a failover, ensuring proper MultiWAN handling, especially in complex or high-value installations. 
+WAN interfaces only need to be configured on the primary node; they are automatically replicated to the secondary node, further details are provided in the dedicated section below.
+
+
+HA interface
+------------
+
+The HA cluster requires static IP addresses for all LAN interfaces that will host a virtual IP.
 Follow these steps:
 
-- Power on the backup node, access the web interface and set a static LAN IP address (e.g., `192.168.100.239`).
-- Power on the primary node, access the web interface and set a static LAN IP address (e.g., `192.168.100.238`).
+- Power on the secondary node, access the web interface and set a physical interface with a static LAN IP address (e.g., `192.168.100.239`).
+- Power on the primary node, access the web interface and set a physical interface with a static LAN IP address (e.g., `192.168.100.238`).
 
 These static IP addresses are used to access the nodes directly, even if the HA cluster is disabled. Consider them *management IP addresses*.
 
@@ -202,7 +254,8 @@ Cluster initialization
 ----------------------
 
 The setup process configures `keepalived` for failover, `rsync` over SSH for configuration synchronization, and `conntrackd` to sync the connection tracking table.
-Use the `ns-ha-config` script to simplify the process.
+All this information passes through the HA interface, which is the one configured during the initialization phase.
+Use the ``ns-ha-config`` script to simplify the process.
 
 Before diving into the actual setup, it's important to ensure that both nodes are properly configured and meet the necessary requirements.
 
@@ -213,50 +266,41 @@ Check requirements
 
 For the primary node::
 
-  ns-ha-config check-primary-node [lan_interface] [wan_interface]
+  ns-ha-config check-primary-node <lan_interface>
 
 This checks:
 
-- LAN interface has a static IP. If the ``lan_interface`` parameter is not provided, it searches for a LAN interface named ``lan``.
-- At least one WAN interface exists. If the ``wan_interface`` parameter is not provided, it searches for a WAN interface named ``wan``.
-  The WAN interface must be configured with a static IP address; PPPoE and DHCP are not supported.
+- The HA interface exists and has a static IP.
 - If DHCP server is running:
 
-  - ``Force DHCP server start`` option is enabled.
   - ``3: router`` DHCP option is set (should be the virtual IP).
   - ``6: DNS server`` DHCP option is set.
 
-For the backup node::
+For the secondary node::
 
-  ns-ha-config check-backup-node <backup_node_ip> [lan_interface]
+  ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
 
 This checks:
 
-- Backup node is reachable via SSH on port 22 with root user.
-- LAN interface has a static IP. If the ``lan_interface`` parameter is not provided, it searches for a LAN interface named ``lan``.
-- At least one WAN interface exists.
+- The HA interface exists and has a static IP.
+- Secondary node is reachable via SSH on port 22 with root user.
 
-WAN interface can be omitted on the backup node, but bear in mind that in case of failover, the UI of the backup node
-will show an unknown interface.
-It's recommended to configure the WAN interface on the backup node as well, even if it does not have a static IP address.
+The script will request the root password for the secondary node. You can also pipe the password: ::
 
-The script will request the root password for the backup node. You can also pipe the password: ::
+   echo "password" | ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
 
-   echo "password" | ns-ha-config check-backup-node <backup_node_ip>
-
-Ensure the backup node can be reached via SSH from the primary node on standard port 22.
+Ensure the secondary node can be reached via SSH from the primary node on standard port 22.
 
 Initialize nodes
 ^^^^^^^^^^^^^^^^
 
 Initialize the primary node::
 
-   ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip> [lan_interface] [wan_interface]
+   ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip_cidr> <lan_interface>
 
-Where the ``primary_node_ip`` is the static IP of the primary node already set for the LAN interface,
-and ``backup_node_ip`` is the static LAN IP of the backup node
-The ``virtual_ip`` is the virtual IP address for the LAN interface where all LAN hosts should point to.
-The ``lan_interface`` parameter is optional and specifies the LAN interface name (default is `lan`).
+Where the ``primary_node_ip`` is the static IP of the primary node already set for the HA interface,
+and ``backup_node_ip`` is the static LAN IP of the secondary node
+The ``virtual_ip`` is the virtual IP address for the HA interface where all LAN hosts should point to, it must be specified in CIDR notation.
 
 This script will:
 
@@ -265,29 +309,29 @@ This script will:
 - Generate a random password and public key for synchronization.
 - Configure `dropbear` (SSH server) to listen on port `65022` and allow only key-based authentication for sync.
 
-Initialize the backup node (always execute the command on the primary node)::
+Initialize the secondary node, always execute the command on the primary node::
 
-   ns-ha-config init-backup-node
+   ns-ha-config init-backup-node <lan_interface>
 
-The script will ask for the root password of the backup node. You can also pipe the password: ::
+The script will ask for the root password of the secondary node. You can also pipe the password: ::
 
-   echo "password" | ns-ha-config init-backup-node
+   echo '<password>' | ns-ha-config init-backup-node <lan_interface>
 
 At this point, the nodes are configured to communicate over LAN, and the LAN virtual IP will failover.
 
 WAN interfaces
 --------------
 
-The WAN interface is the first interface to be added to the HA cluster.
-Remember that the WAN interface must be configured with a static IP address, so make sure also to setup :ref:`DNS forwarders <forwarding_servers-section>`.
+The system does not require any special configuration for the WAN interfaces.
+Just configure them inside the ``Interfaces and devices`` page on the primary node
+and they will be automatically managed by the HA scripts.
 
-Configure the WAN interface::
+WAN aliases can be added from the same network configuration page and will be automatically synchronized to
+the secondary node.
 
-   ns-ha-config add-wan-interface <interface> <virtual_ip_address> <gateway>
-
-Where ``<interface>`` is the name of the WAN interface (e.g., `wan`, `eth1`, etc.),
-Ensure you provide the virtual IP in CIDR notation (e.g., `192.168.1.100/24`) and the gateway IP.
-The script configures the interface on both nodes using fake IP addresses from the `169.254.x.0/24` range and sets up the virtual IP in `keepalived`.
+WAN interfaces are brought up on the primary node and kept down on the secondary node.
+Please note that the web interface on the secondary may not be consistent: it may show the interface as "up" even if it's down.
+This is a known limitation and will be addressed in a future release.
 
 Verify the configuration
 ------------------------
@@ -302,15 +346,16 @@ Check the status of the HA cluster. The first sync may take up to 5 minutes. ::
 
       ns-ha-config status
 
-Initial status might show `Last Sync Status: SSH Connection Failed`. After sync, it should show `Last Sync Status: Up to Date`.
+Initial status might show ``Last Sync Status: SSH Connection Failed``. After sync, it should show ``Last Sync Status: Up to Date``.
 
-Additional interfaces
----------------------
+Additional LAN interfaces
+-------------------------
 
-It's possible to add additional interfaces to the HA cluster after the initial setup.
+It's possible to add additional LAN interfaces to the HA cluster after the initial setup.
 Before adding an interface, ensure that the interface is configured with a static IP address on the primary node
-and on the secondary node, much like the LAN interface configured during the initial setup.
-Interfaces can be ethernets, bridges, VLANs, or bonds. Please note that VLANs over logical interfaces are not supported.
+and on the secondary node, much like the HA interface configured during the initial setup.
+Interfaces can be ethernets, bridges, VLANs, or bonds, but make sure the secondary node has the same interface with the same name
+and with the same device hierarchy (e.g., if the interface is a VLAN, the parent interface must also exist on the secondary node).
 
 You can use this command to add any non-WAN interface, like a second LAN, DMZ or GUEST interface to the HA cluster.
 
@@ -324,7 +369,6 @@ The following checks are performed:
 - make sure a device with given static IP address exists on the node
 - If DHCP server is running, the following
 
-  - ``Force DHCP server start`` option is enabled.
   - ``3: router`` DHCP option is set (should be the virtual IP).
   - ``6: DNS server`` DHCP option is set.
 
@@ -339,37 +383,34 @@ Hotspot support
 
 The hotspot feature is supported in HA clusters, but there are important requirements:
 
-- The backup node must have the exact same network devices as the primary node. For example, if the primary node has a
-  VLAN interface named ``eth1.1``, the backup node must also have a ``eth1.1`` interface with the same name and configuration.
-  If the interfaces do not match, the hotspot will not function correctly after a failover.
-- The hotspot can only operate on a physical interface or a VLAN interface.
+- It must be configured on physical network interfaces only, VLAN interfaces are not supported.
+- The secondary node must have the exact same network devices as the primary node. 
 - To maintain hotspot functionality during failover, the MAC address of the interface running the hotspot on the primary node is automatically
-  copied to the corresponding interface on the backup node when a switchover occurs.
+  copied to the corresponding interface on the secondary node when a switchover occurs.
+  This behavior prevents the use of VLAN interfaces for the hotspot.
 
 Note that active sessions are stored in RAM and will be lost during a switchover; clients must re-authenticate unless auto-login is enabled.
 
-Network aliases
-----------------
+Extra Virtual IPs
+-----------------
 
-You can add IP aliases to the primary node on relevant interfaces.
+A Virtual IP (VIP) is an additional IP address assigned to a network interface that
+will be migrated to the secondary node in case of failover.
+You can add Virtual IPs to the primary node on relevant interfaces.
+
 This is useful for services that require multiple IP addresses on the same interface, such as virtual servers or load balancing.
-First, on the primary node, access the web interface and add the alias to the network interface.
 
-Then, use the `ns-ha-config` command to register the alias in the HA cluster configuration.
+Use the ``ns-ha-config`` command to register the virtual IP in the HA cluster configuration.
 
-Aliases must be explicitly set on the primary node. ::
+Virtual IPs must be explicitly set on the primary node. ::
 
-   ns-ha-config add-alias <interface> <alias_ip_cidr>
+   ns-ha-config add-vip <interface> <vip_ip_cidr>
 
+**Note:** the virtual IP will appear as an extra IP address on the network interface inside the
+``Interfaces and devices`` page of the web interface, but it will not be listed in the aliases section.
 
-Example of a WAN alias: ::
-
-   ns-ha-config add-alias wan 192.168.122.66/24
-
-**Note:** the alias will not appear in the network configuration page of the backup node.
-
-Remove interfaces and aliases
------------------------------
+Remove interfaces and Virtual IPs
+---------------------------------
 
 Remove an interface from HA configuration: ::
 
@@ -379,20 +420,17 @@ Example: ::
    
    ns-ha-config remove-interface guest
 
-This removes the interface from `keepalived` and from the backup node's network configuration.
+This removes the interface from `keepalived`, so it will be excluded from the HA configuration.
 Also, the virtual IP address associated with the interface will be moved to the network interface of the primary node.
 
 
-Remove an alias from HA configuration: ::
+Remove a virtual IP from HA configuration: ::
 
-   ns-ha-config remove-alias <interface> <alias_ip_cidr>
+   ns-ha-config remove-vip <interface> <vip_ip_cidr>
 
 Example: ::
 
-   ns-ha-config remove-alias wan 192.168.122.66/24
-
-This removes the alias from `keepalived` but not from the backup node's network configuration.
-Then, proceed to remove the alias using the primary node's web interface.
+   ns-ha-config remove-vip lan2 192.168.122.66/24
 
 Configuration example
 ---------------------
@@ -400,30 +438,27 @@ Configuration example
 Assuming:
 
 - Primary Node LAN IP: `192.168.100.238`
-- Backup Node LAN IP: `192.168.100.239`
+- Secondary Node LAN IP: `192.168.100.239`
 - LAN Virtual IP: `192.168.100.240/24`
-- WAN Interface: `wan` (e.g., `eth1`)
-- WAN Virtual IP: `192.168.122.49/24`
-- WAN Gateway: `192.168.122.1`
-- Backup Node Root Password: `backup_root_password`
+- LAN Interface Name: `lan`
+- Secondary Node Root Password: `backup_root_password`
 
 Execute the following commands on the **primary node**:
 
-1. Check requirements and initialize: ::
+1. Check requirements: ::
 
       # Check requirements first
-      ns-ha-config check-primary-node
-      echo "backup_root_password" | ns-ha-config check-backup-node 192.168.100.239
+      ns-ha-config check-primary-node lan
+      echo "backup_root_password" | ns-ha-config check-backup-node 192.168.100.239 lan
+
+2. Setup the cluster: ::
 
       # Initialize primary
-      ns-ha-config init-primary-node 192.168.100.238 192.168.100.239 192.168.100.240/24
+      ns-ha-config init-primary-node 192.168.100.238 192.168.100.239 192.168.100.240/24 lan
 
-      # Initialize backup (run from primary node)
-      echo "backup_root_password" | ns-ha-config init-backup-node
+      # Initialize secondary (run from primary node)
+      echo "backup_root_password" | ns-ha-config init-backup-node lan
 
-2. Add WAN interface: ::
-
-      ns-ha-config add-wan-interface wan 192.168.122.49/24 192.168.122.1
 
 Alerting
 ========
@@ -436,8 +471,8 @@ The HA cluster provides automated monitoring and notifications to help administr
 
 The following alerts are available:
 
-- **ha:sync:failed**: Triggered when the configuration synchronization between primary and backup nodes fails.
-  This usually indicates that the backup node is unreachable due to network issues, hardware failure, or service interruption.
+- **ha:sync:failed**: Triggered when the configuration synchronization between primary and secondary nodes fails.
+  This usually indicates that the secondary node is unreachable due to network issues, hardware failure, or service interruption.
 
 - **ha:primary:failed**: Triggered during failover events when the primary node becomes unavailable.
   
@@ -446,19 +481,19 @@ Maintenance
 ===========
 
 The HA cluster is designed to be highly available and requires minimal maintenance.
-However, there are times when you may need to perform maintenance on either the primary or backup node.
+However, there are times when you may need to perform maintenance on either the primary or secondary node.
 
-Backup node
+Secondary node
 -----------
 
-The backup node can be switched off for maintenance without affecting the primary node.
+The secondary node can be switched off for maintenance without affecting the primary node.
 
-1. Stop `keepalived` on the **backup node**: ::
+1. Stop `keepalived` on the **secondary node**: ::
 
      /etc/init.d/keepalived stop
 
 2. Perform maintenance.
-3. Start `keepalived` on the **backup node**: ::
+3. Start `keepalived` on the **secondary node**: ::
 
      /etc/init.d/keepalived start
 
@@ -466,7 +501,7 @@ The backup node can be switched off for maintenance without affecting the primar
 Primary node
 ------------
 
-The primary node can be switched off for maintenance, the backup node will take over the virtual IP addresses
+The primary node can be switched off for maintenance, the secondary node will take over the virtual IP addresses
 and all services.
 
 1. Stop `keepalived` on the **primary node**: ::
@@ -482,34 +517,34 @@ Remote access
 -------------
 
 The primary node is accessible both from the LAN and WAN interfaces.
-Therefore, the backup node is accessible from the LAN interface only.
-When connecting to the backup node from a remote network, you need to access the primary node first and then connect to the backup node using SSH.
+Therefore, the secondary node is accessible from the LAN interface only.
+When connecting to the secondary node from a remote network, you need to access the primary node first and then connect to the secondary node using SSH.
 
-After connecting to the primary node, use the following command to access the backup node: ::
+After connecting to the primary node, use the following command to access the secondary node: ::
 
    ns-ha-config ssh-remote
 
-This command will establish an SSH connection to the backup node using the SSH key generated during the HA setup.
+This command will establish an SSH connection to the secondary node using the SSH key generated during the HA setup.
 
 Upgrade
 -------
 
-The backup node does not receive system updates automatically because it does not have direct Internet access.
-To update the backup node, you need to connect to the primary node and run the update command on the backup node: ::
+The secondary node does not receive system updates automatically because it does not have direct Internet access.
+To update the secondary node, you need to connect to the primary node and run the update command on the secondary node: ::
 
   ns-ha-config upgrade-remote
 
-This command will download the latest image, upload it to the backup node, and install it.
-As a normal upgrade, the backup node will reboot after the installation.
+This command will download the latest image, upload it to the secondary node, and install it.
+As a normal upgrade, the secondary node will reboot after the installation.
 
 .. _troubleshooting_ha-section:
 
 Troubleshooting
 ===============
 
-Troubleshooting the HA setup can be challenging, especially if the backup node is not reachable or the primary node is not responding as expected.
+Troubleshooting the HA setup can be challenging, especially if the secondary node is not reachable or the primary node is not responding as expected.
 
-Remember the backup node does not have direct internet access in its normal standby state. Therefore:
+Remember the secondary node does not have direct internet access in its normal standby state. Therefore:
 
 - It cannot resolve external DNS names.
 - It cannot reach the Controller or other external portals.
@@ -521,10 +556,10 @@ To start troubleshooting, you need to access the SSH console of both nodes.
 Identifying the nodes
 ---------------------
 
-Since the backup node hostname syncs with the primary, the bash prompt changes to indicate the node's role:
+Since the secondary node hostname syncs with the primary, the bash prompt changes to indicate the node's role:
 
 - Primary node prompt: ``root@NethSec [P]:~#``
-- Backup node prompt: ``root@NethSec [B]:~#``
+- Secondary node prompt: ``root@NethSec [S]:~#``
 
 Keepalived status
 -----------------
@@ -549,28 +584,28 @@ Extract from the output: ::
     pri_zero_sent: 0
 
 On a primary node, the `master.became_master` should be `1` or more, indicating it has successfully taken over as the master.
-Also the `master.advertisements.sent` should be greater than `0`, indicating it is actively sending advertisements to the backup node.
+Also the `master.advertisements.sent` should be greater than `0`, indicating it is actively sending advertisements to the secondary node.
 
-On a backup node, the `master.advertisements.received` should be greater than `0`, indicating it is receiving advertisements from the primary node.
-If the `master.became_master` is `0`, it means the node has not taken over as the master, which is expected for a backup node.
+On a secondary node, the `master.advertisements.received` should be greater than `0`, indicating it is receiving advertisements from the primary node.
+If the `master.became_master` is `0`, it means the node has not taken over as the master, which is expected for a secondary node.
 
 VRRP traffic
 ------------
 
-The primary node sends VRRP advertisements to the backup node every second.
+The primary node sends VRRP advertisements to the secondary node every second.
 You can check the VRRP traffic using the following command on the primary node: ::
 
   tcpdump -vnnpi <lan_interface> vrrp
 
 Replace `<lan_interface>` with the name of the LAN interface (e.g., `eth0`).
 
-The output should show VRRP packets being sent from the primary node to the backup node. Some example output: ::
+The output should show VRRP packets being sent from the primary node to the secondary node. Some example output: ::
 
    tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
     13:54:16.629467 IP (tos 0xc0, ttl 255, id 19404, offset 0, flags [none], proto VRRP (112), length 44)
     192.168.100.238 > 192.168.100.239: VRRPv2, Advertisement, vrid 100, prio 200, authtype simple, intvl 1s, length 24, addrs(2): 192.168.122.49,192.168.100.240 auth "1655e3d3"
 
-If the same command is run on the backup node, it should show VRRP packets being received from the primary node.
+If the same command is run on the secondary node, it should show VRRP packets being received from the primary node.
 
 Logs
 ----
@@ -591,7 +626,7 @@ You can examine specific components of the HA system in logs:
 
    grep Keepalived /var/log/messages
 
-- Track network configuration imports on backup node::
+- Track network configuration imports on secondary node::
 
    grep "ns-ha: Importing network configuration" /var/log/messages
 
@@ -619,14 +654,15 @@ Then, search for ``Keepalived_vrrp`` in the ``/var/log/messages`` file.
 Reset the configuration
 -----------------------
 
-To completely remove the HA configuration: ::
-
-   ns-ha-config reset
-
-This script will:
+To reset command will:
 
 - Stop and disable `keepalived` and `conntrackd`.
 - Remove HA configuration files.
 - Clean up `dropbear` configuration including SSH keys.
+
+At the end, a reboot is required to apply the changes. Just execute: ::
+
+   ns-ha-config reset
+   reboot
 
 The network configuration of the nodes remains unchanged. You can manage them as standalone nodes using their static management IPs.
