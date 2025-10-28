@@ -127,11 +127,11 @@ Extract from the output: ::
     pri_zero_rcvd: 1
     pri_zero_sent: 0
 
-On a primary node, the `master.became_master` should be `1` or more, indicating it has successfully taken over as the master.
-Also the `master.advertisements.sent` should be greater than `0`, indicating it is actively sending advertisements to the secondary node.
+On a primary node, the `master.become_master` should be `1` or more, indicating it has successfully taken over as the master.
+Also the `master.advert.sent` should be greater than `0`, indicating it is actively sending advertisements to the secondary node.
 
-On a secondary node, the `master.advertisements.received` should be greater than `0`, indicating it is receiving advertisements from the primary node.
-If the `master.became_master` is `0`, it means the node has not taken over as the master, which is expected for a secondary node.
+On a secondary node, the `master.advert_rcvd` should be greater than `0`, indicating it is receiving advertisements from the primary node.
+If the `master.become_master` is `0`, it means the node has not taken over as the master, which is expected for a secondary node.
 
 VRRP traffic
 ------------
