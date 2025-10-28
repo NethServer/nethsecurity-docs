@@ -7,7 +7,7 @@ It is designed to be faster, simpler, and more functional than IPsec and OpenVPN
 and easy-to-configure VPN solution that uses cutting-edge cryptography. 
 It is designed to be simpler to configure than OpenVPN and to offer a lower attack surface.
 
-NethSecurity provides a WireGuard server and client that can be configured from the command line interface.
+NethSecurity provides a WireGuard server and client that can be configured from the web interface.
 
 Features:
 
@@ -19,230 +19,80 @@ Features:
 - Enhanced security with optional pre-shared keys
 - Standard WireGuard configuration file import capability
 
-Current limitations:
+Server Configuration
+====================
 
-- Supported networks are restricted to /24 subnet masks
-- Peer IP addresses are fixed and cannot be modified after creation
-- WireGuard interfaces appear as "unknown interface" in the Network page
+It's possible to create multiple WireGuard server instances, each with its own isolated network zone. NethSecurity will automatically open the necessary firewall ports
+to allow incoming connections to the WireGuard server and create a VPN zone to allow management of how the traffic is routed between zones.
 
-Quickstart
-==========
+On the contrary of the OpenVPN server, there's no ties to the users database, accounts (peers) are created and managed directly inside the WireGuard interface.
 
-The configuration is composed by the following steps:
+To create a WireGuard server, click on :guilabel:`Add server`, then fill the form with the desired configuration. The fields are the following:
 
-1. Get good defaults to avoid conflicts with existing configurations
-2. Create the server instance
-3. Add a new account (peer)
+- `Status`: enable or disable the WireGuard server instance
+- `Name`: the name of the WireGuard server instance, this is not the name of the network interface, it will be automatically created as `wgX`, where `X` is a number
+- `VPN network`: the network CIDR that will be used by the WireGuard server, the server will automatically get the first IP of the network
+- `UDP port`: the port on which the WireGuard server listens for incoming connections
+- `Public endpoint`: the public IP address or FQDN of the server
 
-The following examples use the ``ns.wireguard`` API to configure the WireGuard server and peers.
+Under advanced settings, it's possible to configure additional options:
 
-Get good defaults
------------------
+- `MTU`: to manually set the MTU of the WireGuard interface
+- `DNS servers`: to set custom DNS servers that will be pushed to the clients, useful to avoid DNS leaks
 
-Before creating an instance, retrieve some valid defaults. Use the calculated defaults to create the instance:
+After creating the server, it's possible to add new clients (peers) directly from the WireGuard interface, click :guilabel:`Add peer` and fill the form as the following:
 
-.. code-block:: bash
+- `Status`: enable or disable the peer
+- `Name`: the name of the peer
+- `Reserved IP`: the static IP address that will be assigned to the peer, must be inside the VPN network, it will be pre-filled with the next available IP
+- `Pre-shared key`: if enabled, a pre-shared key will be automatically created to enhance security
+- `Route all traffic`: if enabled, when the client connects, it will send all the traffic to the server
+- `Server networks`: which networks the peer can access, all LAN networks will be automatically added
+- `Peer networks`: networks reachable on the peer side
 
-  /usr/libexec/rpcd/ns.wireguard call get-instance-defaults
+.. note::
 
-Response example:
+  It's possible to create a client-to-site connection by leaving empty the `Peer networks` entries. This will allow the client to access the server networks.
 
-.. code-block:: json
+Once the peer is saved, it's possible to download the configuration file in text format or as a QR code using the menu on the right side of the peer entry.
 
-  {
-    "listen_port": 51820,
-    "instance": "wg1",
-    "network": "10.98.95.0/24",
-    "routes": ["192.168.100.0/24"],
-    "public_endpoint": "1.2.3.4"
-  }
+The server and peers configuration can be edited by the context menu on the right side of each entry.
 
-The response contains the following fields:
+.. warning::
 
-- ``listen_port``: the port on which the WireGuard server listens for incoming connections, a firewall rule will be automatically created
-  to accept the traffic on this port
-- ``instance``: the name of the WireGuard server instance, this is also the name of the network interface
-- ``network``: the network CIDR that will be used by the WireGuard server, the server will automatically get the first IP of the network
-- ``routes``: a list of network CIDR that will be pushed to the clients
-- ``public_endpoint``: the public IP address of the server, this is used to create the firewall rule to accept the traffic on the WireGuard port;
-  the command will try to automatically detect the public IP address
-  
-Before creating the instance, verify that the calculated defaults are correct:
+  After modifying the WireGuard server or peers, remember that such changes needs to be applied to the peer by re-downloading the configuration file.
 
-- verify the public IP address, use a custom value if the automatic detection fails; a FQDN is supported too
-- verify the network field does not overlap with existing networks
+Tunnel Configuration
+====================
 
-Create an instance
-------------------
+Nethsecurity can be configured as a WireGuard client (peer) to connect to another WireGuard server. On the :guilabel:`Peer tunnels` tab, it's possible to add manually a new tunnel by clicking on :guilabel:`Add peer tunnel` or import a generic wireguard configuration file using :guilabel:`Import peer tunnel`.
 
-Create the WireGuard server instance using the calculated defaults:
+When manually adding a new tunnel, the following fields are available:
 
-.. code-block:: bash
-
-    echo '{"listen_port": 51820, "name": "wg1", "instance": "wg1", "enabled": true, "network": "10.98.95.0/24", "routes": ["192.168.100.0/24"], "public_endpoint": "1.2.3.4", "dns": [], "user_db": ""}' |  /usr/libexec/rpcd/ns.wireguard call set-instance
-
-The server will automatically get the first IP of the `network`, in this case `10.98.95.1`.
-
-Response example:
-
-.. code-block:: json
-
-    {"public_key": "dTQ5v0lJU1mwR3uRMXL+b6lEx7tZxmoIUcDdoTYzClE="}
-
-This is the public key of the server, it is used to create the client configuration.
-
-Save and apply:
-
-.. code-block:: bash
-
-  uci commit network && uci commit firewall
-  reload_config
-  ifdown wg1; ifup wg1
-
-You can use the same API to change the configuration of the server instance.
-
-Add a new account (peer)
-------------------------
-
-Create a new account, ensuring the ``account`` field is unique within the same instance:
-
-.. code-block:: bash
-
-  echo '{"enabled": true, "instance": "wg1", "account": "user1", "route_all_traffic": false, "client_to_client": false, "ns_routes": [], "preshared_key": true}' | /usr/libexec/rpcd/ns.wireguard call set-peer
-  
-Options:
-
-- ``route_all_traffic``: if set to ``true``, when the client connects, it will send all the traffic to the server.
-  This is useful for ensuring all client traffic is encrypted and routed through the VPN. This flag should be set only if the client
-  must access the internet through the VPN.
-- ``client_to_client``: if set to ``true``, the client will be able to communicate with all other peers and not only with the server.
-  This is useful for enabling communication between clients in a mesh network configuration.
-- ``preshared_key``: if set to ``true``, automatically create a pre-shared key that will be used in the peer downloaded configuration.
-  This adds an additional layer of security by requiring a shared secret for communication.
-- ``ns_routes``: a list of network CIDR, automatically routes the networks to this peer;
-  this is used for site-to-site (net2net) connections, allowing the server to access multiple remote networks through the VPN.
-
-Save and apply:
-
-.. code-block:: bash
-
-  uci commit network
-  reload_config
-  ifdown wg1; ifup wg1
-
-
-Download the account configuration
-----------------------------------
-
-The account configuration can be downloaded both in text format or a QR code and is suitable to be imported in a WireGuard client.
-
-Download the text format if you want to configure a Linux machine or another NethSecurity:
-
-.. code-block:: bash
-
-  echo '{"instance": "wg1", "account": "user1"}' |  /usr/libexec/rpcd/ns.wireguard call download-peer-config | jq -r .config
-
-Output example: ::
-
-  # Account: user1 for wg1
-  [Interface]
-  PrivateKey = iGn1xg3pENbVCJpJWf4EqOYtNu7HZj1dg5iIX9AU0FY=
-  Address = 10.98.95.2
-  # Custom DNS disabled
-
-  [Peer]
-  PublicKey = dTQ5v0lJU1mwR3uRMXL+b6lEx7tZxmoIUcDdoTYzClE=
-  PreSharedKey = N37bSeSO1Erzow9wVHqtkyY03TJ5D8uOrewg9iFB9MU=
-  AllowedIPs = 192.168.100.0/24,10.98.95.1
-  Endpoint = 1.2.3.4:51820
-  PersistentKeepalive = 25
-
-
-Configure a mobile device
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Many mobile WireGuard clients allows to import the configuration using a QR code:
-
-- `iOS <https://apps.apple.com/it/app/wireguard/id1441195209>`_
-- `Android <https://play.google.com/store/apps/details?id=com.wireguard.android&hl=it&pli=1>`_
-
-Once the app is installed, open it and import the configuration using the QR code: 
-
-.. code-block:: bash
-
-  echo '{"instance": "wg1", "account": "user1"}' |  /usr/libexec/rpcd/ns.wireguard call download-peer-config | jq -r .qrcode | base64 -d
-
-Import the configuration to another NethSecurity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When importing the configuration to another NethSecurity, the file must be base64 encoded.
-Print the configuration file in base64 to the console:
-
-.. code-block:: bash
-
-  echo '{"instance": "wg1", "account": "user1"}' |  /usr/libexec/rpcd/ns.wireguard call download-peer-config | jq -r .config | base64 -w0; echo
-
-Copy the base64 string, than go the the other NethSecurity and execute:
-
-.. code-block:: bash
-
-  echo '{"config": "IyBBY2NvdW50Oi..."}' | /usr/libexec/rpcd/ns.wireguard call import-configuration
-
-Save and apply:
-
-.. code-block:: bash
-
-  uci commit network && uci commit firewall
-  reload_config
-  ifdown wg1; ifup wg1
-
-Remove an instance
-==================
-
-To remove an instance, use the following command:
-
-.. code-block:: bash
-
-    echo '{"instance": "wg1"}' | /usr/libexec/rpcd/ns.wireguard call remove-instance
-
-This command will remove:
-
-- The WireGuard server instance
-- The firewall rules that allow traffic from the WAN
-- The VPN zone
-- All associated accounts
-
-Save and apply the changes:
-
-.. code-block:: bash
-
-    uci commit network && uci commit firewall
-    reload_config
-
-Remove a peer
-=============
-
-To remove a peer use:
-
-.. code-block:: bash
-
-    echo '{"instance": "wg1", "account": "user1"}' | /usr/libexec/rpcd/ns.wireguard call remove-peer
-
-The command will remove the peer and its configuration inside the users database, if present.
-
-Save and apply:
-
-.. code-block:: bash
-
-    uci commit network && uci commit users
-    reload_config
+- `Status`: enable or disable the tunnel
+- `Name`: the name of the tunnel, this is not the name of the network interface, it will be automatically created as `wgX`, where `X` is a number
+- `Reserved IP`: the static IP address that the tunnel will use
+- `Server public key`: the public key of the WireGuard server
+- `Peer private key`: the private key of the tunnel
+- `Pre-shared key`: the pre-shared key, if used, field is optional
+- `Route all traffic`: if enabled, all the traffic will be routed through the tunnel
+- `Network routes`: networks made available through the tunnel
+- `Endpoint`: the public IP address or FQDN of the WireGuard server
+- `UDP port`: the port on which the WireGuard tunnel will connect to
+- `DNS servers`: custom DNS servers to be used when the tunnel is active
 
 Debug
 =====
 
 By default, WireGuard does not log anything.
-To enable logging on `/var/log/messages`, use the following:
+To enable logging on `/var/log/messages`, use the following commands:
 
 .. code-block:: bash
 
     echo module wireguard +p > /sys/kernel/debug/dynamic_debug/control
+
+To disable logging, use:
+
+.. code-block:: bash
+
+    echo module wireguard -p > /sys/kernel/debug/dynamic_debug/control

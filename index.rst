@@ -88,6 +88,7 @@ NethSecurity administrator manual
    openvpn_roadwarrior
    openvpn_tunnels
    ipsec_tunnels
+   wireguard
 
 .. toctree::
    :maxdepth: 2
@@ -106,7 +107,6 @@ NethSecurity administrator manual
    snmp
    custom_openvpn_tunnel
    logs
-   wireguard
    speedtest
    ups
    wol
