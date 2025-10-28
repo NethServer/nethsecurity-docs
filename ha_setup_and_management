@@ -139,7 +139,7 @@ Cluster initialization
 ----------------------
 
 The setup process configures `keepalived` for failover, `rsync` over SSH for configuration synchronization, and `conntrackd` to sync the connection tracking table.
-All this information passes through the HA interface, which is the one configured during the initialization phase.
+All this data passes through the HA interface, which is the one configured during the initialization phase.
 Use the ``ns-ha-config`` script to simplify the process.
 
 Before diving into the actual setup, it's important to ensure that both nodes are properly configured and meet the necessary requirements.
