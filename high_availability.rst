@@ -22,25 +22,39 @@ Key concepts
 Some key concepts to understand before setting up HA:
 
 - **Primary Node**: The firewall that actively handles traffic and services.
-- **Backup Node**: The firewall that automatically takes over in case of failure on the primary node.
+- **Secondary (or backup) Node**: The firewall that automatically takes over in case of failure on the primary node.
 - **Virtual IP (VIP)**: A shared IP address used by both nodes for each configured interface to ensure uninterrupted client access to services.
   Clients on the network should *always* use the VIP address (e.g., as their gateway, DNS server, or VPN endpoint) to ensure seamless failover.
 
+HA Roles
+----------
+
+* **Master**
+
+  * The node that currently has all interfaces active and processes all network traffic
+  * Under normal conditions, the Primary Node operates in this status.
+
+* **Backup**
+
+  * The node that does not process network traffic.
+  * Under normal conditions, the Secondary Node operates in this status.
+
+
 Configuration changes must **always** be made on the **primary node**.
-The backup node should be considered read-only. The only exception is the network configuration of
+The secondary node should be considered read-only. The only exception is the network configuration of
 LAN interfaces that are part of the HA cluster.
 
-All other relevant configurations, such as firewall rules, VPN settings, or Threat Shield rules, are automatically synchronized from the primary to the backup node.
+All other relevant configurations, such as firewall rules, VPN settings, or Threat Shield rules, are automatically synchronized from the primary to the secondary node.
 
 This is how the HA system works:
 
-- **Heartbeat**: The primary and backup firewalls continuously check each other's status using the VRRP protocol. If the primary fails, the backup takes over.
+- **Heartbeat**: The primary and secondary firewalls continuously check each other's status using the VRRP protocol. If the primary fails, the secondary takes over. The VRRP protocol is carried over a dedicated LAN interface called the **HA interface**, additional information will be provided in a later section.
 - **Settings synchronization**: The primary firewall securely sends its settings, including details about active connections like VPNs and network routes,
-  to the backup firewall.
-- The system automatically adjusts what each firewall does based on whether it's the active (primary) or standby (backup) unit:
+  to the secondary firewall.
+- The system automatically adjusts what each firewall does based on whether it's the active (primary) or standby (secondary) unit:
 
-  - **Backup receives configuration updates**: When the backup firewall gets new settings, it saves them but keeps related services (like VPNs) turned off.
-    The backup firewall holds a complete copy of the primary's configuration but keeps most background tasks inactive.
+  - **Secondary receives configuration updates**: When the secondary firewall gets new settings, it saves them but keeps related services (like VPNs) turned off.
+    The secondary firewall holds a complete copy of the primary's configuration but keeps most background tasks inactive.
     This includes things like checking for software updates, performing remote backups, or sending reports.
     This ensures only the active primary firewall handles these tasks, preventing conflicts.
   - **Firewall becomes active**: When a firewall takes over as the primary (either starting up normally or during a failover),
@@ -100,8 +114,8 @@ General limitations
 
 - Extra packages not included inside the image are not supported (eg. NUT, etherwake, etc.)
 - Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
-- After the first synchronization, the backup node will have the same hostname as the primary node.
-  The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or backup).
+- After the first synchronization, the secondary node will have the same hostname as the primary node.
+  The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or secondary).
   Also, when accessing the SSH console, the prompt will change to indicate the node's role.
   See the :ref:`troubleshooting_ha-section` section for more details.
 
@@ -140,7 +154,7 @@ The setup process is as follows:
    See `Cluster initialization`_ section below for detailed instructions.
 
 5. **Configure WAN interface in primary node** using the ``Interfaces and devices`` page in the web interface.
-   WAN interfaces will be automatically configured inside the cluster and synchronized to the backup node.
+   WAN interfaces will be automatically configured inside the cluster and synchronized to the secondary node.
    See `WAN Interfaces`_ section below for more info.
 
 6. **Verify the configuration** to ensure everything is set up correctly.
@@ -165,7 +179,7 @@ See `Remove interfaces and virtual IPs`_ section below for detailed instructions
 Network cabling
 ---------------
 
-Proper network cabling is essential to ensure high availability and seamless failover between the primary and backup firewalls.
+Proper network cabling is essential to ensure high availability and seamless failover between the primary and secondary firewalls.
 
 1. **General Recommendations**:
 
@@ -175,7 +189,7 @@ Proper network cabling is essential to ensure high availability and seamless fai
 
 2. **LAN Connections**:
 
-   - Connect the LAN interfaces of both the primary and backup nodes to the same network segment.
+   - Connect the LAN interfaces of both the primary and secondary nodes to the same network segment.
    - Ideally, use **two separate switches** for redundancy. Connect each firewall's LAN port to both switches (if supported), or at least ensure each firewall is 
      connected to a different switch. This avoids a single point of failure if one switch fails.
    - If using two separate switches for redundancy, they must be properly interconnected and support Spanning Tree Protocol (STP) to prevent network loops.
@@ -191,7 +205,7 @@ Proper network cabling is essential to ensure high availability and seamless fai
    - If your ISP provides a router with HA capability (e.g., VRRP or HSRP), you can connect both firewalls' WAN ports directly to the ISP's redundant routers.
    - Alternatively, you can configure MultiWAN directly in NethSecurity to manage multiple WAN uplinks and failover.
 
-This setup ensures that if any single firewall or switch fails, network connectivity is maintained through the backup node and the remaining switch.
+This setup ensures that if any single firewall or switch fails, network connectivity is maintained through the secondary node and the remaining switch.
 
 The below diagram illustrates the recommended redundant network setup, switches are omitted for clarity.
 
@@ -231,7 +245,7 @@ HA interface
 The HA cluster requires static IP addresses for all LAN interfaces that will host a virtual IP.
 Follow these steps:
 
-- Power on the backup node, access the web interface and set a physical interface with a static LAN IP address (e.g., `192.168.100.239`).
+- Power on the secondary node, access the web interface and set a physical interface with a static LAN IP address (e.g., `192.168.100.239`).
 - Power on the primary node, access the web interface and set a physical interface with a static LAN IP address (e.g., `192.168.100.238`).
 
 These static IP addresses are used to access the nodes directly, even if the HA cluster is disabled. Consider them *management IP addresses*.
@@ -262,20 +276,20 @@ This checks:
   - ``3: router`` DHCP option is set (should be the virtual IP).
   - ``6: DNS server`` DHCP option is set.
 
-For the backup node::
+For the secondary node::
 
   ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
 
 This checks:
 
 - The HA interface exists and has a static IP.
-- Backup node is reachable via SSH on port 22 with root user.
+- Secondary node is reachable via SSH on port 22 with root user.
 
-The script will request the root password for the backup node. You can also pipe the password: ::
+The script will request the root password for the secondary node. You can also pipe the password: ::
 
    echo "password" | ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
 
-Ensure the backup node can be reached via SSH from the primary node on standard port 22.
+Ensure the secondary node can be reached via SSH from the primary node on standard port 22.
 
 Initialize nodes
 ^^^^^^^^^^^^^^^^
@@ -285,7 +299,7 @@ Initialize the primary node::
    ns-ha-config init-primary-node <primary_node_ip> <backup_node_ip> <virtual_ip_cidr> <lan_interface>
 
 Where the ``primary_node_ip`` is the static IP of the primary node already set for the HA interface,
-and ``backup_node_ip`` is the static LAN IP of the backup node
+and ``backup_node_ip`` is the static LAN IP of the secondary node
 The ``virtual_ip`` is the virtual IP address for the HA interface where all LAN hosts should point to, it must be specified in CIDR notation.
 
 This script will:
@@ -295,11 +309,11 @@ This script will:
 - Generate a random password and public key for synchronization.
 - Configure `dropbear` (SSH server) to listen on port `65022` and allow only key-based authentication for sync.
 
-Initialize the backup node, always execute the command on the primary node::
+Initialize the secondary node, always execute the command on the primary node::
 
    ns-ha-config init-backup-node <lan_interface>
 
-The script will ask for the root password of the backup node. You can also pipe the password: ::
+The script will ask for the root password of the secondary node. You can also pipe the password: ::
 
    echo '<password>' | ns-ha-config init-backup-node <lan_interface>
 
@@ -370,9 +384,9 @@ Hotspot support
 The hotspot feature is supported in HA clusters, but there are important requirements:
 
 - It must be configured on physical network interfaces only, VLAN interfaces are not supported.
-- The backup node must have the exact same network devices as the primary node. 
+- The secondary node must have the exact same network devices as the primary node. 
 - To maintain hotspot functionality during failover, the MAC address of the interface running the hotspot on the primary node is automatically
-  copied to the corresponding interface on the backup node when a switchover occurs.
+  copied to the corresponding interface on the secondary node when a switchover occurs.
   This behavior prevents the use of VLAN interfaces for the hotspot.
 
 Note that active sessions are stored in RAM and will be lost during a switchover; clients must re-authenticate unless auto-login is enabled.
@@ -381,7 +395,7 @@ Extra Virtual IPs
 -----------------
 
 A Virtual IP (VIP) is an additional IP address assigned to a network interface that
-will be migrated to the backup node in case of failover.
+will be migrated to the secondary node in case of failover.
 You can add Virtual IPs to the primary node on relevant interfaces.
 
 This is useful for services that require multiple IP addresses on the same interface, such as virtual servers or load balancing.
@@ -424,10 +438,10 @@ Configuration example
 Assuming:
 
 - Primary Node LAN IP: `192.168.100.238`
-- Backup Node LAN IP: `192.168.100.239`
+- Secondary Node LAN IP: `192.168.100.239`
 - LAN Virtual IP: `192.168.100.240/24`
 - LAN Interface Name: `lan`
-- Backup Node Root Password: `backup_root_password`
+- Secondary Node Root Password: `backup_root_password`
 
 Execute the following commands on the **primary node**:
 
@@ -442,7 +456,7 @@ Execute the following commands on the **primary node**:
       # Initialize primary
       ns-ha-config init-primary-node 192.168.100.238 192.168.100.239 192.168.100.240/24 lan
 
-      # Initialize backup (run from primary node)
+      # Initialize secondary (run from primary node)
       echo "backup_root_password" | ns-ha-config init-backup-node lan
 
 
@@ -457,8 +471,8 @@ The HA cluster provides automated monitoring and notifications to help administr
 
 The following alerts are available:
 
-- **ha:sync:failed**: Triggered when the configuration synchronization between primary and backup nodes fails.
-  This usually indicates that the backup node is unreachable due to network issues, hardware failure, or service interruption.
+- **ha:sync:failed**: Triggered when the configuration synchronization between primary and secondary nodes fails.
+  This usually indicates that the secondary node is unreachable due to network issues, hardware failure, or service interruption.
 
 - **ha:primary:failed**: Triggered during failover events when the primary node becomes unavailable.
   
@@ -467,19 +481,19 @@ Maintenance
 ===========
 
 The HA cluster is designed to be highly available and requires minimal maintenance.
-However, there are times when you may need to perform maintenance on either the primary or backup node.
+However, there are times when you may need to perform maintenance on either the primary or secondary node.
 
-Backup node
+Secondary node
 -----------
 
-The backup node can be switched off for maintenance without affecting the primary node.
+The secondary node can be switched off for maintenance without affecting the primary node.
 
-1. Stop `keepalived` on the **backup node**: ::
+1. Stop `keepalived` on the **secondary node**: ::
 
      /etc/init.d/keepalived stop
 
 2. Perform maintenance.
-3. Start `keepalived` on the **backup node**: ::
+3. Start `keepalived` on the **secondary node**: ::
 
      /etc/init.d/keepalived start
 
@@ -487,7 +501,7 @@ The backup node can be switched off for maintenance without affecting the primar
 Primary node
 ------------
 
-The primary node can be switched off for maintenance, the backup node will take over the virtual IP addresses
+The primary node can be switched off for maintenance, the secondary node will take over the virtual IP addresses
 and all services.
 
 1. Stop `keepalived` on the **primary node**: ::
@@ -503,34 +517,34 @@ Remote access
 -------------
 
 The primary node is accessible both from the LAN and WAN interfaces.
-Therefore, the backup node is accessible from the LAN interface only.
-When connecting to the backup node from a remote network, you need to access the primary node first and then connect to the backup node using SSH.
+Therefore, the secondary node is accessible from the LAN interface only.
+When connecting to the secondary node from a remote network, you need to access the primary node first and then connect to the secondary node using SSH.
 
-After connecting to the primary node, use the following command to access the backup node: ::
+After connecting to the primary node, use the following command to access the secondary node: ::
 
    ns-ha-config ssh-remote
 
-This command will establish an SSH connection to the backup node using the SSH key generated during the HA setup.
+This command will establish an SSH connection to the secondary node using the SSH key generated during the HA setup.
 
 Upgrade
 -------
 
-The backup node does not receive system updates automatically because it does not have direct Internet access.
-To update the backup node, you need to connect to the primary node and run the update command on the backup node: ::
+The secondary node does not receive system updates automatically because it does not have direct Internet access.
+To update the secondary node, you need to connect to the primary node and run the update command on the secondary node: ::
 
   ns-ha-config upgrade-remote
 
-This command will download the latest image, upload it to the backup node, and install it.
-As a normal upgrade, the backup node will reboot after the installation.
+This command will download the latest image, upload it to the secondary node, and install it.
+As a normal upgrade, the secondary node will reboot after the installation.
 
 .. _troubleshooting_ha-section:
 
 Troubleshooting
 ===============
 
-Troubleshooting the HA setup can be challenging, especially if the backup node is not reachable or the primary node is not responding as expected.
+Troubleshooting the HA setup can be challenging, especially if the secondary node is not reachable or the primary node is not responding as expected.
 
-Remember the backup node does not have direct internet access in its normal standby state. Therefore:
+Remember the secondary node does not have direct internet access in its normal standby state. Therefore:
 
 - It cannot resolve external DNS names.
 - It cannot reach the Controller or other external portals.
@@ -542,10 +556,10 @@ To start troubleshooting, you need to access the SSH console of both nodes.
 Identifying the nodes
 ---------------------
 
-Since the backup node hostname syncs with the primary, the bash prompt changes to indicate the node's role:
+Since the secondary node hostname syncs with the primary, the bash prompt changes to indicate the node's role:
 
 - Primary node prompt: ``root@NethSec [P]:~#``
-- Backup node prompt: ``root@NethSec [B]:~#``
+- Secondary node prompt: ``root@NethSec [S]:~#``
 
 Keepalived status
 -----------------
@@ -570,28 +584,28 @@ Extract from the output: ::
     pri_zero_sent: 0
 
 On a primary node, the `master.became_master` should be `1` or more, indicating it has successfully taken over as the master.
-Also the `master.advertisements.sent` should be greater than `0`, indicating it is actively sending advertisements to the backup node.
+Also the `master.advertisements.sent` should be greater than `0`, indicating it is actively sending advertisements to the secondary node.
 
-On a backup node, the `master.advertisements.received` should be greater than `0`, indicating it is receiving advertisements from the primary node.
-If the `master.became_master` is `0`, it means the node has not taken over as the master, which is expected for a backup node.
+On a secondary node, the `master.advertisements.received` should be greater than `0`, indicating it is receiving advertisements from the primary node.
+If the `master.became_master` is `0`, it means the node has not taken over as the master, which is expected for a secondary node.
 
 VRRP traffic
 ------------
 
-The primary node sends VRRP advertisements to the backup node every second.
+The primary node sends VRRP advertisements to the secondary node every second.
 You can check the VRRP traffic using the following command on the primary node: ::
 
   tcpdump -vnnpi <lan_interface> vrrp
 
 Replace `<lan_interface>` with the name of the LAN interface (e.g., `eth0`).
 
-The output should show VRRP packets being sent from the primary node to the backup node. Some example output: ::
+The output should show VRRP packets being sent from the primary node to the secondary node. Some example output: ::
 
    tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
     13:54:16.629467 IP (tos 0xc0, ttl 255, id 19404, offset 0, flags [none], proto VRRP (112), length 44)
     192.168.100.238 > 192.168.100.239: VRRPv2, Advertisement, vrid 100, prio 200, authtype simple, intvl 1s, length 24, addrs(2): 192.168.122.49,192.168.100.240 auth "1655e3d3"
 
-If the same command is run on the backup node, it should show VRRP packets being received from the primary node.
+If the same command is run on the secondary node, it should show VRRP packets being received from the primary node.
 
 Logs
 ----
@@ -612,7 +626,7 @@ You can examine specific components of the HA system in logs:
 
    grep Keepalived /var/log/messages
 
-- Track network configuration imports on backup node::
+- Track network configuration imports on secondary node::
 
    grep "ns-ha: Importing network configuration" /var/log/messages
 
