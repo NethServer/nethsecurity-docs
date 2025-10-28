@@ -1,0 +1,117 @@
+.. _ha_overview_features_limitations
+
+=====================================================
+High Availability: Overview, Features, Limitations
+=====================================================
+
+
+NethSecurity High Availability (HA) ensures continuous network operation by providing redundancy through a cluster of two firewalls.
+If the primary firewall fails due to hardware issues, software problems, or maintenance, a backup firewall automatically takes over all network services and
+traffic handling, minimizing downtime.
+
+This is crucial for businesses or organizations where uninterrupted internet access, VPN connectivity, and security services are essential for daily operations,
+preventing loss of productivity or revenue during an outage.
+
+Key concepts
+============
+
+Some key concepts to understand before setting up HA:
+
+- **Primary Node**: The firewall that actively handles traffic and services.
+- **Secondary (or backup) Node**: The firewall that automatically takes over in case of failure on the primary node.
+- **Virtual IP (VIP)**: A shared IP address used by both nodes for each configured interface to ensure uninterrupted client access to services.
+  Clients on the network should *always* use the VIP address (e.g., as their gateway, DNS server, or VPN endpoint) to ensure seamless failover.
+
+HA Roles
+----------
+
+* **Master**
+
+  * The node that currently has all interfaces active and processes all network traffic
+  * Under normal conditions, the Primary Node operates in this status.
+
+* **Backup**
+
+  * The node that does not process network traffic.
+  * Under normal conditions, the Secondary Node operates in this status.
+
+
+Configuration changes must **always** be made on the **primary node**.
+The secondary node should be considered read-only. The only exception is the network configuration of
+LAN interfaces that are part of the HA cluster.
+
+All other relevant configurations, such as firewall rules, VPN settings, or Threat Shield rules, are automatically synchronized from the primary to the secondary node.
+
+This is how the HA system works:
+
+- **Heartbeat**: The primary and secondary firewalls continuously check each other's status using the VRRP protocol. If the primary fails, the secondary takes over. The VRRP protocol is carried over a dedicated LAN interface called the **HA interface**, additional information will be provided in a later section.
+- **Settings synchronization**: The primary firewall securely sends its settings, including details about active connections like VPNs and network routes,
+  to the secondary firewall.
+- The system automatically adjusts what each firewall does based on whether it's the active (primary) or standby (secondary) unit:
+
+  - **Secondary receives configuration updates**: When the secondary firewall gets new settings, it saves them but keeps related services (like VPNs) turned off.
+    The secondary firewall holds a complete copy of the primary's configuration but keeps most background tasks inactive.
+    This includes things like checking for software updates, performing remote backups, or sending reports.
+    This ensures only the active primary firewall handles these tasks, preventing conflicts.
+  - **Firewall becomes active**: When a firewall takes over as the primary (either starting up normally or during a failover),
+    it activates all necessary services and connections.
+  - **Firewall becomes standby**: When a firewall is in backup mode (either at startup or when the primary comes back online),
+    it deactivates most services and connections.
+
+While the HA system is designed to be as automatic as possible, some configurations require manual intervention.
+For example, if you add a new LAN network interface or change an existing one, you need to inform the HA system about these changes.
+
+Supported features and limitations
+===================================
+
+The HA cluster supports synchronization for a wide range of features, including:
+
+- Firewall rules, port forwarding, DHCP, DNS
+- VPN configurations (OpenVPN, IPsec, WireGuard)
+- QoS, Multi-WAN, DPI rules
+- Reverse proxy, ACME certificates, and more.
+- Static routes
+- Netifyd informatics configuration
+- Threat shield IP (banip)
+- Threat shield DNS (adblock)
+- Users and objects database
+- Netmap
+- Flashstart
+- SNMP server (snmpd)
+- NAT helpers
+- Dynamic DNS (ddns)
+- SMTP client (msmtp)
+- Backup encryption password
+- Controller connection and subscription (ns-plug)
+- Active connections tracking (conntrackd)
+- Hotspot (dedalo) only on physical interfaces
+
+WAN interface types and setups
+------------------------------
+
+- Static IPv4 and static IPv6 addresses
+- IPv4 via DHCP
+- Physical Ethernet interfaces
+- Bonded interfaces (link aggregation) composed of physical interfaces
+- Bridge interfaces over physical interfaces
+- VLANs on physical interfaces, bond interfaces, or bridge interfaces
+- PPPoE on physical interfaces or on VLAN interfaces
+
+Interfaces Limitations
+----------------------
+- Only IPv4 is supported on LAN interfaces
+- The HA interface must be a physical interface
+- Bonds and bridges are supported only for additional LAN interfaces and WANs, not for the HA interface
+- The Hotspot is supported only on physical interfaces
+
+
+General limitations
+-------------------
+
+- Extra packages not included inside the image are not supported (eg. NUT, etherwake, etc.)
+- Syslog daemon (rsyslog) configuration is not synced: if you need to send logs to a remote server, you must use the controller.
+- After the first synchronization, the secondary node will have the same hostname as the primary node.
+  The web user interface will show the hostname of the primary node, but the dashboard will indicate the node's role (primary or secondary).
+  Also, when accessing the SSH console, the prompt will change to indicate the node's role.
+  See the :ref:`troubleshooting_ha-section` section for more details.
+  
