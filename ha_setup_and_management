@@ -28,7 +28,7 @@ The setup process is as follows:
 2. **Connect network cables properly** to ensure redundancy.
    See `Network cabling`_ section below for proper cabling guidelines.
 
-3. **Configure the HA interface** on both nodes with static IP addresses.Create a LAN on primary ansd secondary node 
+3. **Configure the HA interface** on both nodes with static IP addresses. Create a LAN on primary and secondary node 
    that will be needed for the cluster before proceeding with HA setup.
    See `HA interface`_ section below for detailed instructions.
 
