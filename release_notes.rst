@@ -11,7 +11,7 @@ NethSecurity releases changelogs.
 Major changes on 2025-10-29
 ===========================
 
-Image version: `8-24.10.3-ns.1.7.0`
+Image version: `8-24.10.3-ns.1.7.0` 
 
 .. rubric:: New Features
 
