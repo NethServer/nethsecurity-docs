@@ -28,7 +28,7 @@ The HA cluster is designed to be highly available and requires minimal maintenan
 However, there are times when you may need to perform maintenance on either the primary or secondary node.
 
 Secondary node
------------
+----------------------
 
 The secondary node can be switched off for maintenance without affecting the primary node.
 
