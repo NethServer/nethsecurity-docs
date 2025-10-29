@@ -102,7 +102,7 @@ NethSecurity administrator manual
 
    ha_overview_features_limitations
    ha_setup_and_management
-   ha_maintenance_and_troubleshooting
+   ha_maintenance_troubleshooting
 
 .. toctree::
    :maxdepth: 2
