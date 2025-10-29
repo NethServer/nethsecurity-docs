@@ -1,8 +1,8 @@
 .. _ha_setup_and_management-section:
 
-=======================================
-HA: Setup and management
-=======================================
+====================
+Setup and management
+====================
 
 Requirements
 ============
