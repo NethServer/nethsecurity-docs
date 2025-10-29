@@ -31,7 +31,7 @@ To create a WireGuard server, click on :guilabel:`Add server`, then fill the for
 
 - `Status`: enable or disable the WireGuard server instance
 - `Name`: the name of the WireGuard server instance, this is not the name of the network interface, it will be automatically created as `wgX`, where `X` is a number
-- `VPN network`: the network CIDR that will be used by the WireGuard server, the server will automatically get the first IP of the network
+- `VPN network`: the network CIDR that will be used by the WireGuard server, the server will automatically get the first IP of the network. Make sure this network does not overlap with any existing one
 - `UDP port`: the port on which the WireGuard server listens for incoming connections
 - `Public endpoint`: the public IP address or FQDN of the server
 
@@ -48,11 +48,11 @@ After creating the server, it's possible to add new clients (peers) directly fro
 - `Pre-shared key`: if enabled, a pre-shared key will be automatically created to enhance security
 - `Route all traffic`: if enabled, when the client connects, it will send all the traffic to the server
 - `Server networks`: which networks the peer can access, all LAN networks will be automatically added
-- `Peer networks`: networks reachable on the peer side
+- `Peer networks`: networks reachable on the peer side. Always fill this field when you want to create a net2net tunnel
 
 .. note::
 
-  It's possible to create a client-to-site connection by leaving empty the `Peer networks` entries. This will allow the client to access the server networks.
+  It's possible to create a client-to-site (Road Warrior) connection by leaving empty the `Peer networks` entries. This will allow the client to access the server networks.
 
 Once the peer is saved, it's possible to download the configuration file in text format or as a QR code using the menu on the right side of the peer entry.
 
