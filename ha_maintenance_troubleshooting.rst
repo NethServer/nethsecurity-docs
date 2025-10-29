@@ -1,8 +1,8 @@
 .. _ha_maintenance_and_troubleshooting-section:
 
-==================================
-HA:Maintenance and Troubleshooting
-==================================
+===============================
+Maintenance and Troubleshooting
+===============================
 
 Alerting
 ========
