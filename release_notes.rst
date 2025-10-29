@@ -23,7 +23,7 @@ Existing command-line WireGuard tunnels are automatically migrated to the new UI
 - Automatic configuration templates introduced for GUEST and DMZ zones.
 - Added option to download unencrypted backups locally using a dedicated button.
 - Manual DNS servers now always take priority over DHCP or PPPoE-provided ones.
-- DHCP behavior with FlashStart improved; no need to define DNS in DHCP options when FlashStart is active.
+- Improved DHCP behavior with FlashStart: no need to define DNS in DHCP options when FlashStart is active.
 - System-generated port forwarding rules are now visible but read-only, clearly marked as automated.
 - Threat Shield IP automatically whitelists Nethesis enterprise service IPs to prevent false positives.
 - Added support for IPSec DH Groups 19, 20, and 21.
