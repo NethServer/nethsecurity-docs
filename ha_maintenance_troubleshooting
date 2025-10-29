@@ -9,7 +9,7 @@ Alerting
 
 .. admonition:: Subscription required
 
-   This feature is available only if the firewall and the controller have a valid subscription.
+   This feature is available only if the firewall has a valid subscription.
 
 The HA cluster provides automated monitoring and notifications to help administrators respond quickly to failover events or synchronization issues.
 
