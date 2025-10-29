@@ -1,8 +1,8 @@
 .. _ha_overview_features_limitations-section:
 
-=====================================================
-HA: Overview, Features, Limitations
-=====================================================
+===============================
+Overview, Features, Limitations
+===============================
 
 NethSecurity High Availability (HA) ensures continuous network operation by providing redundancy through a cluster of two firewalls.
 If the primary firewall fails due to hardware issues, software problems, or maintenance, a backup firewall automatically takes over all network services and
