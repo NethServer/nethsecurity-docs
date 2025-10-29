@@ -15,7 +15,7 @@ Image version: `8-24.10.3-ns.1.7.0`
 
 .. rubric:: New Features
 
-- High Availability is now production-ready after extensive testing and redesign,the system has changed from the beta version and requires reconfiguration.
+- High Availability is now production-ready after extensive testing and redesign, the design has changed from the beta version and requires reconfiguration.
 - New WireGuard tunnel UI for creating and managing VPNs directly from the interface, with support for multiple servers and sharing via file or QR code.
 - Existing command-line WireGuard tunnels are automatically migrated to the new UI.
 - Improved DDoS and flood protection handling; configuration centralized under Threat Shield IP.
