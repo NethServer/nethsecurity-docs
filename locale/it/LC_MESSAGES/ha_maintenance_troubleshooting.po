@@ -1,0 +1,477 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../ha_maintenance_troubleshooting.rst:5 152fd6edb8c043bdb144b833d3d12b7a
+msgid "Maintenance and Troubleshooting"
+msgstr "Manutenzione e Risoluzione dei Problemi"
+
+#: ../../ha_maintenance_troubleshooting.rst:8 5caba0d0cdbc4fb899a86e3b63afb1a6
+msgid "Alerting"
+msgstr "Avvisi"
+
+#: ../../ha_maintenance_troubleshooting.rst:10
+#: 5176b49395f34f309d2f80c3b84c89d8
+msgid "Subscription required"
+msgstr "Abbonamento richiesto"
+
+#: ../../ha_maintenance_troubleshooting.rst:12
+#: e2d3ec83dea8400f82ebf343c3dd9de1
+msgid ""
+"This feature is available only if the firewall has a valid subscription."
+msgstr ""
+"Questa funzionalità è disponibile solo se il firewall dispone di un "
+"abbonamento valido."
+
+#: ../../ha_maintenance_troubleshooting.rst:14
+#: 40d68aee9a4c460f98bc35e5194faf2e
+msgid ""
+"The HA cluster provides automated monitoring and notifications to help "
+"administrators respond quickly to failover events or synchronization issues."
+msgstr ""
+"Il cluster HA fornisce monitoraggio e notifiche automatiche per aiutare gli "
+"amministratori a rispondere rapidamente a eventi di failover o problemi di "
+"sincronizzazione."
+
+#: ../../ha_maintenance_troubleshooting.rst:16
+#: 4433c974ad8447d4bc38c30b566458d2
+msgid "The following alerts are available:"
+msgstr "I seguenti avvisi sono disponibili:"
+
+#: ../../ha_maintenance_troubleshooting.rst:18
+#: c4fbe45750e144bea6aaf353fd2ceeef
+msgid ""
+"**ha:sync:failed**: Triggered when the configuration synchronization between"
+" primary and secondary nodes fails. This usually indicates that the "
+"secondary node is unreachable due to network issues, hardware failure, or "
+"service interruption."
+msgstr ""
+"**ha:sync:failed**: Attivato quando la sincronizzazione della configurazione"
+" tra nodo primario e secondario non riesce. Questo di solito indica che il "
+"nodo secondario non è raggiungibile a causa di problemi di rete, guasto "
+"hardware o interruzione del servizio."
+
+#: ../../ha_maintenance_troubleshooting.rst:21
+#: 679fe87a3d144822a43719b0fa071c7d
+msgid ""
+"**ha:primary:failed**: Triggered during failover events when the primary "
+"node becomes unavailable."
+msgstr ""
+"**ha:primary:failed**: Attivato durante eventi di failover quando il nodo "
+"primario diventa non disponibile."
+
+#: ../../ha_maintenance_troubleshooting.rst:25
+#: 491355df85a84d038135f281c6158954
+msgid "Maintenance"
+msgstr "Manutenzione"
+
+#: ../../ha_maintenance_troubleshooting.rst:27
+#: 146931d639ea4014b755863eb5bc7d9f
+msgid ""
+"The HA cluster is designed to be highly available and requires minimal "
+"maintenance. However, there are times when you may need to perform "
+"maintenance on either the primary or secondary node."
+msgstr ""
+"Il cluster HA è progettato per essere altamente disponibile e richiede una "
+"manutenzione minima. Tuttavia, ci sono situazioni in cui potrebbe essere "
+"necessario eseguire operazioni di manutenzione sul nodo primario o "
+"secondario."
+
+#: ../../ha_maintenance_troubleshooting.rst:31
+#: 2dca8897fee24b0faa56f20e83134af5
+msgid "Secondary node"
+msgstr "Nodo secondario"
+
+#: ../../ha_maintenance_troubleshooting.rst:33
+#: 9fd9d811099447628060b9a21a9dc570
+msgid ""
+"The secondary node can be switched off for maintenance without affecting the"
+" primary node."
+msgstr ""
+"Il nodo secondario può essere spento per la manutenzione senza influire sul "
+"nodo primario."
+
+#: ../../ha_maintenance_troubleshooting.rst:35
+#: 1d35bac224fb42afb1d25b087179ebf8
+msgid "Stop `keepalived` on the **secondary node**: ::"
+msgstr "Arrestare `keepalived` sul **nodo secondario**: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:39
+#: ../../ha_maintenance_troubleshooting.rst:55
+#: 4a2c55c0be3e4c2a8927edd1b95e2613 58cc24c2e5024abe877c7b2b81ab1a18
+msgid "Perform maintenance."
+msgstr "Eseguire la manutenzione."
+
+#: ../../ha_maintenance_troubleshooting.rst:40
+#: ad6fa8f19c4940edbcf745ca45ad876d
+msgid "Start `keepalived` on the **secondary node**: ::"
+msgstr "Avviare `keepalived` sul **nodo secondario**: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:46
+#: 961dc50f6301429fa1f3301f7b5bfe20
+msgid "Primary node"
+msgstr "Nodo primario"
+
+#: ../../ha_maintenance_troubleshooting.rst:48
+#: ec86732e10bf4a3f98257158382980bf
+msgid ""
+"The primary node can be switched off for maintenance, the secondary node "
+"will take over the virtual IP addresses and all services."
+msgstr ""
+"Il nodo primario può essere spento per la manutenzione; il nodo secondario "
+"assumerà gli indirizzi IP virtuali e tutti i servizi."
+
+#: ../../ha_maintenance_troubleshooting.rst:51
+#: d719457b99bd4d2cba89b93febe74265
+msgid "Stop `keepalived` on the **primary node**: ::"
+msgstr "Arrestare `keepalived` sul **nodo primario**: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:56
+#: 10033adda22d4204b6907e829fdb4aa4
+msgid "Start `keepalived` on the **primary node**: ::"
+msgstr "Avviare `keepalived` sul **nodo primario**: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:61
+#: b6f55394849141e2828e1f826e260f5d
+msgid "Remote access"
+msgstr "Accesso remoto"
+
+#: ../../ha_maintenance_troubleshooting.rst:63
+#: 11486b053c2c4c64bb83188e6fd980e1
+msgid ""
+"The primary node is accessible both from the LAN and WAN interfaces. "
+"Therefore, the secondary node is accessible from the LAN interface only. "
+"When connecting to the secondary node from a remote network, you need to "
+"access the primary node first and then connect to the secondary node using "
+"SSH."
+msgstr ""
+"Il nodo primario è accessibile sia dalle interfacce LAN che WAN. Pertanto, "
+"il nodo secondario è accessibile solo dall'interfaccia LAN. Quando ci si "
+"connette al nodo secondario da una rete remota, è necessario accedere prima "
+"al nodo primario e poi collegarsi al nodo secondario utilizzando SSH."
+
+#: ../../ha_maintenance_troubleshooting.rst:67
+#: a7329cba62ca402393f33e5f6a3297bc
+msgid ""
+"After connecting to the primary node, use the following command to access "
+"the secondary node: ::"
+msgstr ""
+"Dopo essersi connessi al nodo primario, utilizzare il seguente comando per "
+"accedere al nodo secondario: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:71
+#: bb4adbcca2e04a66a85e98cb18bb9eb1
+msgid ""
+"This command will establish an SSH connection to the secondary node using "
+"the SSH key generated during the HA setup."
+msgstr ""
+"Questo comando stabilirà una connessione SSH al nodo secondario utilizzando "
+"la chiave SSH generata durante la configurazione HA."
+
+#: ../../ha_maintenance_troubleshooting.rst:74
+#: eb149260a9204d9792b227705c6fba20
+msgid "Upgrade"
+msgstr "Aggiornamento"
+
+#: ../../ha_maintenance_troubleshooting.rst:76
+#: 9ca5f207709b41c797895963a2078cf5
+msgid ""
+"The secondary node does not receive system updates automatically because it "
+"does not have direct Internet access. To update the secondary node, you need"
+" to connect to the primary node and run the update command on the secondary "
+"node: ::"
+msgstr ""
+"Il nodo secondario non riceve aggiornamenti di sistema automaticamente "
+"perché non ha accesso diretto a Internet. Per aggiornare il nodo secondario,"
+" è necessario connettersi al nodo primario ed eseguire il comando di "
+"aggiornamento sul nodo secondario: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:81
+#: 16427f3d25a94af1aeef4cdc205abe81
+msgid ""
+"This command will download the latest image, upload it to the secondary "
+"node, and install it. As a normal upgrade, the secondary node will reboot "
+"after the installation."
+msgstr ""
+"Questo comando scaricherà l'immagine più recente, la caricherà sul nodo "
+"secondario e la installerà. Come per un aggiornamento normale, il nodo "
+"secondario verrà riavviato dopo l'installazione."
+
+#: ../../ha_maintenance_troubleshooting.rst:87
+#: 93670c7d55484d9c90652b2360210a0d
+msgid "Troubleshooting"
+msgstr "Risoluzione dei problemi"
+
+#: ../../ha_maintenance_troubleshooting.rst:89
+#: 5a082a6159854b95a908023883873fbd
+msgid ""
+"Troubleshooting the HA setup can be challenging, especially if the secondary"
+" node is not reachable or the primary node is not responding as expected."
+msgstr ""
+"La risoluzione dei problemi della configurazione HA può essere complessa, "
+"soprattutto se il nodo secondario non è raggiungibile o se il nodo primario "
+"non risponde come previsto."
+
+#: ../../ha_maintenance_troubleshooting.rst:91
+#: 2b94f3b2bad0419997d24804eb37250f
+msgid ""
+"Remember the secondary node does not have direct internet access in its "
+"normal standby state. Therefore:"
+msgstr ""
+"Ricordare che il nodo secondario non ha accesso diretto a Internet nel suo "
+"normale stato di standby. Pertanto:"
+
+#: ../../ha_maintenance_troubleshooting.rst:93
+#: bd4f45d0a25b421fb91d9c8b714dde16
+msgid "It cannot resolve external DNS names."
+msgstr "Non è in grado di risolvere nomi DNS esterni."
+
+#: ../../ha_maintenance_troubleshooting.rst:94
+#: b4e93a54eb82455f8a9569cb5eedbf11
+msgid "It cannot reach the Controller or other external portals."
+msgstr "Non è possibile raggiungere il Controller o altri portali esterni."
+
+#: ../../ha_maintenance_troubleshooting.rst:95
+#: fb0829d5509b4535ba9de0b1f8bc8110
+msgid "It will not receive system updates."
+msgstr "Non riceverà aggiornamenti di sistema."
+
+#: ../../ha_maintenance_troubleshooting.rst:97
+#: ae4b84c9824e4229909befbcd6b92ef9
+msgid ""
+"The following instructions can help you identify and resolve common issues. "
+"To start troubleshooting, you need to access the SSH console of both nodes."
+msgstr ""
+"Le seguenti istruzioni possono aiutare a identificare e risolvere i problemi"
+" comuni. Per iniziare la risoluzione dei problemi, è necessario accedere "
+"alla console SSH di entrambi i nodi."
+
+#: ../../ha_maintenance_troubleshooting.rst:101
+#: 152aa8b8a776405d8bca75efe2f417d3
+msgid "Identifying the nodes"
+msgstr "Identificazione dei nodi"
+
+#: ../../ha_maintenance_troubleshooting.rst:103
+#: aa60f01156d5490aaa1d526e86fc5f11
+msgid ""
+"Since the secondary node hostname syncs with the primary, the bash prompt "
+"changes to indicate the node's role:"
+msgstr ""
+"Poiché il nome host del nodo secondario si sincronizza con quello primario, "
+"il prompt di bash cambia per indicare il ruolo del nodo:"
+
+#: ../../ha_maintenance_troubleshooting.rst:105
+#: b49e055e612c4652a3fc5f8c3a71896f
+msgid "Primary node prompt: ``root@NethSec [P]:~#``"
+msgstr "Prompt del nodo primario: ``root@NethSec [P]:~#``"
+
+#: ../../ha_maintenance_troubleshooting.rst:106
+#: badb976d60394e03805565435f270352
+msgid "Secondary node prompt: ``root@NethSec [S]:~#``"
+msgstr "Prompt del nodo secondario: ``root@NethSec [S]:~#``"
+
+#: ../../ha_maintenance_troubleshooting.rst:109
+#: c6c089364abc44d68d0a57dd7ea8923c
+msgid "Keepalived status"
+msgstr "Stato di Keepalived"
+
+#: ../../ha_maintenance_troubleshooting.rst:111
+#: 5ff1f5a877614824b00f9451a610e4e4
+msgid ""
+"Execute ``ns-ha-config status`` to check Keepalived statistics. Extract from"
+" the output: ::"
+msgstr ""
+"Eseguire ``ns-ha-config status`` per verificare le statistiche di "
+"Keepalived. Estrarre dal risultato: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:130
+#: 4637e871b7ea48289e25b5bb954fb273
+msgid ""
+"On a primary node, the `master.become_master` should be `1` or more, "
+"indicating it has successfully taken over as the master. Also the "
+"`master.advert.sent` should be greater than `0`, indicating it is actively "
+"sending advertisements to the secondary node."
+msgstr ""
+"Su un nodo primario, il valore di `master.become_master` dovrebbe essere `1`"
+" o superiore, indicando che ha assunto con successo il ruolo di master. "
+"Inoltre, `master.advert.sent` dovrebbe essere maggiore di `0`, indicando che"
+" sta inviando attivamente annunci al nodo secondario."
+
+#: ../../ha_maintenance_troubleshooting.rst:133
+#: 47dc3d5e187a4afa96694d22b6de1e14
+msgid ""
+"On a secondary node, the `master.advert_rcvd` should be greater than `0`, "
+"indicating it is receiving advertisements from the primary node. If the "
+"`master.become_master` is `0`, it means the node has not taken over as the "
+"master, which is expected for a secondary node."
+msgstr ""
+"Su un nodo secondario, il valore di `master.advert_rcvd` dovrebbe essere "
+"maggiore di `0`, indicando che sta ricevendo annunci dal nodo primario. Se "
+"`master.become_master` è `0`, significa che il nodo non è subentrato come "
+"master, il che è previsto per un nodo secondario."
+
+#: ../../ha_maintenance_troubleshooting.rst:137
+#: ea5bf7bf682541c5964e551779b3d251
+msgid "VRRP traffic"
+msgstr "Traffico VRRP"
+
+#: ../../ha_maintenance_troubleshooting.rst:139
+#: 8b721c745f8d4d649560e91f3762f9e5
+msgid ""
+"The primary node sends VRRP advertisements to the secondary node every "
+"second. You can check the VRRP traffic using the following command on the "
+"primary node: ::"
+msgstr ""
+"Il nodo primario invia annunci VRRP al nodo secondario ogni secondo. È "
+"possibile verificare il traffico VRRP utilizzando il seguente comando sul "
+"nodo primario: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:144
+#: d8c1dc4042154e129c47ed3a0826fde2
+msgid ""
+"Replace `<lan_interface>` with the name of the LAN interface (e.g., `eth0`)."
+msgstr ""
+"Sostituire `<lan_interface>` con il nome dell'interfaccia LAN (ad esempio, "
+"``eth0``)."
+
+#: ../../ha_maintenance_troubleshooting.rst:146
+#: 6473ba116c3b4bc5baea8bfc0ee31494
+msgid ""
+"The output should show VRRP packets being sent from the primary node to the "
+"secondary node. Some example output: ::"
+msgstr ""
+"L'output dovrebbe mostrare i pacchetti VRRP inviati dal nodo primario al "
+"nodo secondario. Un esempio di output: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:152
+#: 771a10b97cc04b18be255d445a7f5116
+msgid ""
+"If the same command is run on the secondary node, it should show VRRP "
+"packets being received from the primary node."
+msgstr ""
+"Se lo stesso comando viene eseguito sul nodo secondario, dovrebbe mostrare i"
+" pacchetti VRRP ricevuti dal nodo primario."
+
+#: ../../ha_maintenance_troubleshooting.rst:155
+#: be2e69e2e9d14a4cb3565edaa1297199
+msgid "Logs"
+msgstr "Log"
+
+#: ../../ha_maintenance_troubleshooting.rst:157
+#: ecdedc5ab8ab4d3a94b5b13827e936ca
+msgid "All logs are stored in ``/var/log/messages`` on both nodes."
+msgstr ""
+"Tutti i log sono memorizzati in ``/var/log/messages`` su entrambi i nodi."
+
+#: ../../ha_maintenance_troubleshooting.rst:159
+#: 8c0c6b88d7a44864a024b50e8f6866fe
+msgid "You can examine specific components of the HA system in logs:"
+msgstr "È possibile esaminare componenti specifici del sistema HA nei log:"
+
+#: ../../ha_maintenance_troubleshooting.rst:161
+#: 299f4ba1260d43e8a8d8ce5724d07b2a
+msgid "Check rsync synchronization logs::"
+msgstr "Controllare i log di sincronizzazione di rsync::"
+
+#: ../../ha_maintenance_troubleshooting.rst:165
+#: 7382310d3d4144ccab1882a4cdb5d7d8
+msgid "Examine SSH connection activities for syncing::"
+msgstr "Esaminare le attività di connessione SSH per la sincronizzazione::"
+
+#: ../../ha_maintenance_troubleshooting.rst:169
+#: bfa0a9d852d4415283b4e3eab9866090
+msgid "View keepalived status changes and events::"
+msgstr "Visualizzare le modifiche di stato e gli eventi di keepalived:"
+
+#: ../../ha_maintenance_troubleshooting.rst:173
+#: edb2d78188a7424b9a18405fe70efcdf
+msgid "Track network configuration imports on secondary node::"
+msgstr ""
+"Traccia le importazioni della configurazione di rete sul nodo secondario:"
+
+#: ../../ha_maintenance_troubleshooting.rst:178
+#: 79a56ddca754488799948a48a8447e19
+msgid "Debugging"
+msgstr "Debugging"
+
+#: ../../ha_maintenance_troubleshooting.rst:180
+#: 48b601400abf4c1db154c8a33e4800a0
+msgid ""
+"When log files are not sufficient, you can enable debug logging for specific"
+" components:"
+msgstr ""
+"Quando i file di log non sono sufficienti, è possibile abilitare la "
+"registrazione di debug per componenti specifici:"
+
+#: ../../ha_maintenance_troubleshooting.rst:182
+#: 07cde6082e084b32a6cedfc4746f5073
+msgid "Debug the `ns-ha-config` script: ::"
+msgstr "Eseguire il debug dello script `ns-ha-config`: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:186
+#: c4f78111afdd4b208d61585fd300ecff
+msgid "View active `keepalived` configuration: ::"
+msgstr "Visualizzare la configurazione attiva di ``keepalived``: ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:190
+#: 683dae60b1054533b4c1e1be69ff1d7a
+msgid "Enable `keepalived` debug logging (on primary): ::"
+msgstr ""
+"Abilitare la registrazione di debug di `keepalived` (sul primario): ::"
+
+#: ../../ha_maintenance_troubleshooting.rst:196
+#: 5f58085b11d34c11b25bb5eb617537e3
+msgid ""
+"Then, search for ``Keepalived_vrrp`` in the ``/var/log/messages`` file."
+msgstr "Quindi, cercare ``Keepalived_vrrp`` nel file ``/var/log/messages``."
+
+#: ../../ha_maintenance_troubleshooting.rst:199
+#: 9cdecaeda3dc4ff28b74f3e2c8a92565
+msgid "Reset the configuration"
+msgstr "Reimpostare la configurazione"
+
+#: ../../ha_maintenance_troubleshooting.rst:201
+#: 4b94801a55a4452cae3f8d608334f67e
+msgid ""
+"The reset command restores the cluster configuration to its default state. "
+"Typically, after the reset, the primary node can continue operating "
+"normally, while the secondary node, no longer used in the cluster should be "
+"reset to default to avoid any conflicts. After the reset, only the HA "
+"interface remains active, so a reboot is required to complete the process. "
+"The reset must be performed locally on the primary node."
+msgstr ""
+"Il comando di reset ripristina la configurazione del cluster allo stato "
+"predefinito. Tipicamente, dopo il reset, il nodo primario può continuare a "
+"funzionare normalmente, mentre il nodo secondario, non più utilizzato nel "
+"cluster, dovrebbe essere riportato alle impostazioni predefinite per evitare"
+" eventuali conflitti. Dopo il reset, rimane attiva solo l'interfaccia HA, "
+"quindi è necessario un riavvio per completare il processo. Il reset deve "
+"essere eseguito localmente sul nodo primario."
+
+#: ../../ha_maintenance_troubleshooting.rst:204
+#: 1ed6e90b611549adb214ef2b7bff794b
+msgid "To reset command will:"
+msgstr "Il comando di reset:"
+
+#: ../../ha_maintenance_troubleshooting.rst:206
+#: 545bff8a932e419b8a0cc65a58eb3bc0
+msgid "Stop and disable `keepalived` and `conntrackd`."
+msgstr "Arrestare e disabilitare ``keepalived`` e ``conntrackd``."
+
+#: ../../ha_maintenance_troubleshooting.rst:207
+#: 94b6c4896a0f40e596ef70c87de19ac4
+msgid "Remove HA configuration files."
+msgstr "Rimuovere i file di configurazione HA."
+
+#: ../../ha_maintenance_troubleshooting.rst:208
+#: 77191bd4945b4b1daad4429c5deb547b
+msgid "Clean up `dropbear` configuration including SSH keys."
+msgstr "Pulire la configurazione di `dropbear`, inclusi le chiavi SSH."
+
+#: ../../ha_maintenance_troubleshooting.rst:210
+#: ef487e21045e4be8aa88fba45f660b95
+msgid ""
+"At the end, a reboot is required to apply the changes. Just execute: ::"
+msgstr ""
+"Alla fine, è necessario un riavvio per applicare le modifiche. È sufficiente"
+" eseguire: ::"

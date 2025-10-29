@@ -1,0 +1,453 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../ha_overview_features_limitations.rst:5
+#: e4c85b3a63844983abc8a06824841d8f
+msgid "Overview, Features, Limitations"
+msgstr "Panoramica, Funzionalità, Limitazioni"
+
+#: ../../ha_overview_features_limitations.rst:7
+#: bfe3f8caae61495ea4a880ac9f5190e2
+msgid ""
+"NethSecurity High Availability (HA) ensures continuous network operation by "
+"providing redundancy through a cluster of two firewalls. If the primary "
+"firewall fails due to hardware issues, software problems, or maintenance, a "
+"backup firewall automatically takes over all network services and traffic "
+"handling, minimizing downtime."
+msgstr ""
+"L'Alta Disponibilità (HA) di NethSecurity garantisce la continuità operativa"
+" della rete fornendo ridondanza tramite un cluster di due firewall. Se il "
+"firewall primario si guasta a causa di problemi hardware, problemi software "
+"o manutenzione, un firewall di backup assume automaticamente la gestione di "
+"tutti i servizi di rete e del traffico, riducendo al minimo i tempi di "
+"inattività."
+
+#: ../../ha_overview_features_limitations.rst:11
+#: 8f075f9979c246a3bcf8c0a28d626dcd
+msgid ""
+"This is crucial for businesses or organizations where uninterrupted internet"
+" access, VPN connectivity, and security services are essential for daily "
+"operations, preventing loss of productivity or revenue during an outage."
+msgstr ""
+"Questo è fondamentale per aziende o organizzazioni in cui l’accesso a "
+"Internet senza interruzioni, la connettività VPN e i servizi di sicurezza "
+"sono essenziali per le operazioni quotidiane, prevenendo la perdita di "
+"produttività o di ricavi durante un’interruzione."
+
+#: ../../ha_overview_features_limitations.rst:15
+#: 9b7b6d1a51684bb78e8270c77d213c06
+msgid "Key concepts"
+msgstr "Concetti chiave"
+
+#: ../../ha_overview_features_limitations.rst:17
+#: 84883e884efb468fa3e7d34bc2bcdef9
+msgid "Some key concepts to understand before setting up HA:"
+msgstr "Alcuni concetti chiave da comprendere prima di configurare HA:"
+
+#: ../../ha_overview_features_limitations.rst:19
+#: abd5249ea54340858201639be67d0505
+msgid ""
+"**Primary Node**: The firewall that actively handles traffic and services."
+msgstr ""
+"**Nodo Primario**: Il firewall che gestisce attivamente il traffico e i "
+"servizi."
+
+#: ../../ha_overview_features_limitations.rst:20
+#: 1a8ed933ee9c4923ae9441182b0c0d30
+msgid ""
+"**Secondary (or backup) Node**: The firewall that automatically takes over "
+"in case of failure on the primary node."
+msgstr ""
+"**Nodo secondario (o di backup)**: Il firewall che subentra automaticamente "
+"in caso di guasto del nodo primario."
+
+#: ../../ha_overview_features_limitations.rst:21
+#: cd269ad3c27a41b9a71320ec30c401a6
+msgid ""
+"**Virtual IP (VIP)**: A shared IP address used by both nodes for each "
+"configured interface to ensure uninterrupted client access to services. "
+"Clients on the network should *always* use the VIP address (e.g., as their "
+"gateway, DNS server, or VPN endpoint) to ensure seamless failover."
+msgstr ""
+"**Virtual IP (VIP)**: Un indirizzo IP condiviso utilizzato da entrambi i "
+"nodi per ciascuna interfaccia configurata, al fine di garantire un accesso "
+"ininterrotto ai servizi da parte dei client. I client sulla rete dovrebbero "
+"*sempre* utilizzare l'indirizzo VIP (ad esempio, come gateway, server DNS o "
+"endpoint VPN) per garantire un failover senza interruzioni."
+
+#: ../../ha_overview_features_limitations.rst:25
+#: 590d9ccaa43a45eb9a6732a05ed0db2f
+msgid "HA Roles"
+msgstr "Ruoli HA"
+
+#: ../../ha_overview_features_limitations.rst:27
+#: b531b0d457be465fa2701adeab18f98b
+msgid "**Master**"
+msgstr "**Principale**"
+
+#: ../../ha_overview_features_limitations.rst:29
+#: e43da3fb42014317b8757061d3b2d49c
+msgid ""
+"The node that currently has all interfaces active and processes all network "
+"traffic"
+msgstr ""
+"Il nodo che attualmente ha tutte le interfacce attive ed elabora tutto il "
+"traffico di rete"
+
+#: ../../ha_overview_features_limitations.rst:30
+#: 8b6907938bb64ec1979a9f5fb660fc70
+msgid "Under normal conditions, the Primary Node operates in this status."
+msgstr "In condizioni normali, il Nodo Primario opera in questo stato."
+
+#: ../../ha_overview_features_limitations.rst:32
+#: b5cb7ecb0cfc4493b770c2777f382214
+msgid "**Backup**"
+msgstr "**Backup**"
+
+#: ../../ha_overview_features_limitations.rst:34
+#: 84ba310e3adc43cca0f5714b1fdc20e7
+msgid "The node that does not process network traffic."
+msgstr "Il nodo che non elabora il traffico di rete."
+
+#: ../../ha_overview_features_limitations.rst:35
+#: 0c75878f13b54937859b9e88d1389207
+msgid "Under normal conditions, the Secondary Node operates in this status."
+msgstr "In condizioni normali, il Nodo Secondario opera in questo stato."
+
+#: ../../ha_overview_features_limitations.rst:38
+#: fd81b76b6c104ff1aeea44792f338e5a
+msgid ""
+"Configuration changes must **always** be made on the **primary node**. The "
+"secondary node should be considered read-only. The only exception is the "
+"network configuration of LAN interfaces that are part of the HA cluster."
+msgstr ""
+"Le modifiche alla configurazione devono essere **sempre** effettuate sul "
+"**nodo primario**. Il nodo secondario deve essere considerato in sola "
+"lettura. L'unica eccezione riguarda la configurazione di rete delle "
+"interfacce LAN che fanno parte del cluster HA."
+
+#: ../../ha_overview_features_limitations.rst:42
+#: a43d614e3771494182b757cacc7a367e
+msgid ""
+"All other relevant configurations, such as firewall rules, VPN settings, or "
+"Threat Shield rules, are automatically synchronized from the primary to the "
+"secondary node."
+msgstr ""
+"Tutte le altre configurazioni rilevanti, come le regole del firewall, le "
+"impostazioni VPN o le regole di Threat Shield, vengono sincronizzate "
+"automaticamente dal nodo primario al nodo secondario."
+
+#: ../../ha_overview_features_limitations.rst:44
+#: 1d786d7df2d24c75a021de159634d01c
+msgid "This is how the HA system works:"
+msgstr "Ecco come funziona il sistema HA:"
+
+#: ../../ha_overview_features_limitations.rst:46
+#: 1cafd66353804566be09e728047d3165
+msgid ""
+"**Heartbeat**: The primary and secondary firewalls continuously check each "
+"other's status using the VRRP protocol. If the primary fails, the secondary "
+"takes over. The VRRP protocol is carried over a dedicated LAN interface "
+"called the **HA interface**, additional information will be provided in a "
+"later section."
+msgstr ""
+"**Heartbeat**: I firewall primario e secondario controllano continuamente lo"
+" stato l’uno dell’altro utilizzando il protocollo VRRP. Se il primario si "
+"guasta, il secondario subentra. Il protocollo VRRP viene trasportato tramite"
+" un’interfaccia LAN dedicata chiamata **interfaccia HA**; ulteriori "
+"informazioni saranno fornite in una sezione successiva."
+
+#: ../../ha_overview_features_limitations.rst:47
+#: 914bbd51ff1a40b2bd7e88bc333fd3a0
+msgid ""
+"**Settings synchronization**: The primary firewall securely sends its "
+"settings, including details about active connections like VPNs and network "
+"routes, to the secondary firewall."
+msgstr ""
+"**Sincronizzazione delle impostazioni**: Il firewall primario invia in modo "
+"sicuro le proprie impostazioni, inclusi i dettagli sulle connessioni attive "
+"come VPN e route di rete, al firewall secondario."
+
+#: ../../ha_overview_features_limitations.rst:49
+#: 7a7ee02915334d10bff0df835ee5c56b
+msgid ""
+"The system automatically adjusts what each firewall does based on whether "
+"it's the active (primary) or standby (secondary) unit:"
+msgstr ""
+"Il sistema regola automaticamente il comportamento di ciascun firewall in "
+"base al fatto che sia l'unità attiva (primaria) o di standby (secondaria):"
+
+#: ../../ha_overview_features_limitations.rst:51
+#: c481fd52166f44228ff57c76be4dcbf0
+msgid ""
+"**Secondary receives configuration updates**: When the secondary firewall "
+"gets new settings, it saves them but keeps related services (like VPNs) "
+"turned off. The secondary firewall holds a complete copy of the primary's "
+"configuration but keeps most background tasks inactive. This includes things"
+" like checking for software updates, performing remote backups, or sending "
+"reports. This ensures only the active primary firewall handles these tasks, "
+"preventing conflicts."
+msgstr ""
+"**Il secondario riceve aggiornamenti di configurazione**: Quando il firewall"
+" secondario riceve nuove impostazioni, le salva ma mantiene i servizi "
+"correlati (come le VPN) disattivati. Il firewall secondario conserva una "
+"copia completa della configurazione del primario, ma mantiene inattivi la "
+"maggior parte dei processi in background. Questo include attività come la "
+"verifica degli aggiornamenti software, l'esecuzione di backup remoti o "
+"l'invio di report. In questo modo, solo il firewall primario attivo gestisce"
+" queste attività, prevenendo conflitti."
+
+#: ../../ha_overview_features_limitations.rst:55
+#: f33fa24d37ba4f1fbd6ea7479bf27c1f
+msgid ""
+"**Firewall becomes active**: When a firewall takes over as the primary "
+"(either starting up normally or during a failover), it activates all "
+"necessary services and connections."
+msgstr ""
+"**Il firewall diventa attivo**: Quando un firewall assume il ruolo di "
+"primario (sia durante un avvio normale che durante un failover), attiva "
+"tutti i servizi e le connessioni necessari."
+
+#: ../../ha_overview_features_limitations.rst:57
+#: cc221a7ae7b34f0bb2bd3d1ac4ac77eb
+msgid ""
+"**Firewall becomes standby**: When a firewall is in backup mode (either at "
+"startup or when the primary comes back online), it deactivates most services"
+" and connections."
+msgstr ""
+"**Il firewall diventa standby**: Quando un firewall è in modalità di backup "
+"(sia all'avvio che quando il primario torna online), disattiva la maggior "
+"parte dei servizi e delle connessioni."
+
+#: ../../ha_overview_features_limitations.rst:60
+#: f46ef9a8638f4106aa44d23c26ba74b2
+msgid ""
+"While the HA system is designed to be as automatic as possible, some "
+"configurations require manual intervention. For example, if you add a new "
+"LAN network interface or change an existing one, you need to inform the HA "
+"system about these changes."
+msgstr ""
+"Sebbene il sistema HA sia progettato per essere il più automatico possibile,"
+" alcune configurazioni richiedono un intervento manuale. Ad esempio, se si "
+"aggiunge una nuova interfaccia di rete LAN o si modifica una esistente, è "
+"necessario informare il sistema HA di queste modifiche."
+
+#: ../../ha_overview_features_limitations.rst:64
+#: 5e00a16fd07045ce9b8f4e0ce1cd70ff
+msgid "Supported features and limitations"
+msgstr "Funzionalità supportate e limitazioni"
+
+#: ../../ha_overview_features_limitations.rst:66
+#: 330a03b6b7414adfa7eda49cd6cdd2a3
+msgid ""
+"The HA cluster supports synchronization for a wide range of features, "
+"including:"
+msgstr ""
+"Il cluster HA supporta la sincronizzazione per un'ampia gamma di "
+"funzionalità, tra cui:"
+
+#: ../../ha_overview_features_limitations.rst:68
+#: 53a94cc06ce545b1b05ea77b57768be0
+msgid "Firewall rules, port forwarding, DHCP, DNS"
+msgstr "Regole del firewall, port forwarding, DHCP, DNS"
+
+#: ../../ha_overview_features_limitations.rst:69
+#: 77fffdd081e44dd7a7d62442e3a20d26
+msgid "VPN configurations (OpenVPN, IPsec, WireGuard)"
+msgstr "Configurazioni VPN (OpenVPN, IPsec, WireGuard)"
+
+#: ../../ha_overview_features_limitations.rst:70
+#: 5be1354d649d4a908e6cdc67e26440b0
+msgid "QoS, Multi-WAN, DPI rules"
+msgstr "QoS, Multi-WAN, regole DPI"
+
+#: ../../ha_overview_features_limitations.rst:71
+#: cd541fe1c5524fcb8d24f8f9cd31f3b3
+msgid "Reverse proxy, ACME certificates, and more."
+msgstr "Reverse proxy, certificati ACME e altro."
+
+#: ../../ha_overview_features_limitations.rst:72
+#: 3c7e42a59dc44593af32dcc262a6382a
+msgid "Static routes"
+msgstr "Route statiche"
+
+#: ../../ha_overview_features_limitations.rst:73
+#: 7ab91a8eaa4e45058fc7d52190fdeadb
+msgid "Netifyd informatics configuration"
+msgstr "Configurazione informatica di Netifyd"
+
+#: ../../ha_overview_features_limitations.rst:74
+#: 2acbc7980acd4ad9b42aca584ed8b2bd
+msgid "Threat shield IP (banip)"
+msgstr "Protezione dalle minacce IP (banip)"
+
+#: ../../ha_overview_features_limitations.rst:75
+#: d011963d28984d15bdac04a2cee8ba46
+msgid "Threat shield DNS (adblock)"
+msgstr "Threat shield DNS (adblock)"
+
+#: ../../ha_overview_features_limitations.rst:76
+#: 4eec297839824ed192248ea09a32b794
+msgid "Users and objects database"
+msgstr "Database di utenti e oggetti"
+
+#: ../../ha_overview_features_limitations.rst:77
+#: b86e911f7ba3430fb00f722cc677a602
+msgid "Netmap"
+msgstr "Netmap"
+
+#: ../../ha_overview_features_limitations.rst:78
+#: 175edb93314a4c49b66066df97336fc6
+msgid "Flashstart"
+msgstr "Flashstart"
+
+#: ../../ha_overview_features_limitations.rst:79
+#: 48bb16ab94134260acd6723e8755d622
+msgid "SNMP server (snmpd)"
+msgstr "Server SNMP (snmpd)"
+
+#: ../../ha_overview_features_limitations.rst:80
+#: 31e8e88ca0cb45bba0d9ed6577b44d4c
+msgid "NAT helpers"
+msgstr "Helper NAT"
+
+#: ../../ha_overview_features_limitations.rst:81
+#: 09f7b42f24734817bca9a1c192a7707e
+msgid "Dynamic DNS (ddns)"
+msgstr "DNS dinamico (ddns)"
+
+#: ../../ha_overview_features_limitations.rst:82
+#: 95131d311e5743d681ed16919099db20
+msgid "SMTP client (msmtp)"
+msgstr "Client SMTP (msmtp)"
+
+#: ../../ha_overview_features_limitations.rst:83
+#: 98224a2819014315a15021d153d4b693
+msgid "Backup encryption password"
+msgstr "Password di cifratura del backup"
+
+#: ../../ha_overview_features_limitations.rst:84
+#: 0bc5849951c14b1ba12a2bc2241cb5ab
+msgid "Controller connection and subscription (ns-plug)"
+msgstr "Connessione e sottoscrizione del controller (ns-plug)"
+
+#: ../../ha_overview_features_limitations.rst:85
+#: d1dfc13d21a34284994354a22a4c66f3
+msgid "Active connections tracking (conntrackd)"
+msgstr "Monitoraggio delle connessioni attive (conntrackd)"
+
+#: ../../ha_overview_features_limitations.rst:86
+#: 2e020badd77f4edcae85708afb0ef23a
+msgid "Hotspot (dedalo) only on physical interfaces"
+msgstr "Hotspot (dedalo) solo su interfacce fisiche"
+
+#: ../../ha_overview_features_limitations.rst:89
+#: 51f68c79253445d79d299e2324699984
+msgid "WAN interface types and setups"
+msgstr "Tipi e configurazioni di interfacce WAN"
+
+#: ../../ha_overview_features_limitations.rst:91
+#: 8b93ac4f4a5d4ecfada74ccdb2ad8fe1
+msgid "Static IPv4 and static IPv6 addresses"
+msgstr "Indirizzi IPv4 statici e indirizzi IPv6 statici"
+
+#: ../../ha_overview_features_limitations.rst:92
+#: 21f108f4fe2c4fe49deee3c91492cd74
+msgid "IPv4 via DHCP"
+msgstr "IPv4 tramite DHCP"
+
+#: ../../ha_overview_features_limitations.rst:93
+#: 6ecb8b5935774b19814fbc00cdc4198d
+msgid "Physical Ethernet interfaces"
+msgstr "Interfacce Ethernet fisiche"
+
+#: ../../ha_overview_features_limitations.rst:94
+#: a82e6738b7754f458d7ceda496329822
+msgid "Bonded interfaces (link aggregation) composed of physical interfaces"
+msgstr "Interfacce bond (aggregazione di link) composte da interfacce fisiche"
+
+#: ../../ha_overview_features_limitations.rst:95
+#: 4c59b714587642f7912832388e651cdb
+msgid "Bridge interfaces over physical interfaces"
+msgstr "Interfacce bridge su interfacce fisiche"
+
+#: ../../ha_overview_features_limitations.rst:96
+#: 54398a826bfa45d5a74265cd70c562b2
+msgid "VLANs on physical interfaces, bond interfaces, or bridge interfaces"
+msgstr "VLAN su interfacce fisiche, interfacce bond o interfacce bridge"
+
+#: ../../ha_overview_features_limitations.rst:97
+#: 2754f32e43484b968202b33a1bc8d178
+msgid "PPPoE on physical interfaces or on VLAN interfaces"
+msgstr "PPPoE su interfacce fisiche o su interfacce VLAN"
+
+#: ../../ha_overview_features_limitations.rst:100
+#: e8e52d5aaf834a7e9a4cd4661d131dbb
+msgid "Interfaces Limitations"
+msgstr "Limitazioni delle interfacce"
+
+#: ../../ha_overview_features_limitations.rst:101
+#: 317e5bf619e54a008397b6a1bf4f72b6
+msgid "Only IPv4 is supported on LAN interfaces"
+msgstr "Solo IPv4 è supportato sulle interfacce LAN"
+
+#: ../../ha_overview_features_limitations.rst:102
+#: b3d3f3f68be54f8790d740da80389a7b
+msgid "The HA interface must be a physical interface"
+msgstr "L'interfaccia HA deve essere un'interfaccia fisica"
+
+#: ../../ha_overview_features_limitations.rst:103
+#: c2aed81f7c5c4c179421e01d6ec83b91
+msgid ""
+"Bonds and bridges are supported only for additional LAN interfaces and WANs,"
+" not for the HA interface"
+msgstr ""
+"I bond e i bridge sono supportati solo per interfacce LAN aggiuntive e WAN, "
+"non per l'interfaccia HA"
+
+#: ../../ha_overview_features_limitations.rst:104
+#: 863f86b150794526878c2c70b5f49c6b
+msgid "The Hotspot is supported only on physical interfaces"
+msgstr "L'Hotspot è supportato solo su interfacce fisiche"
+
+#: ../../ha_overview_features_limitations.rst:108
+#: 7da18e8c7f0a45b1a7524a900d8f619b
+msgid "General limitations"
+msgstr "Limitazioni generali"
+
+#: ../../ha_overview_features_limitations.rst:110
+#: 87815f2ec2b741138e123ee2ce843e33
+msgid ""
+"Extra packages not included inside the image are not supported (eg. NUT, "
+"etherwake, etc.)"
+msgstr ""
+"I pacchetti aggiuntivi non inclusi nell'immagine non sono supportati (ad es."
+" NUT, etherwake, ecc.)"
+
+#: ../../ha_overview_features_limitations.rst:111
+#: 2569f5f3917f4656a999b188504ba03d
+msgid ""
+"Syslog daemon (rsyslog) configuration is not synced: if you need to send "
+"logs to a remote server, you must use the controller."
+msgstr ""
+"La configurazione del demone Syslog (rsyslog) non è sincronizzata: se è "
+"necessario inviare i log a un server remoto, occorre utilizzare il "
+"controller."
+
+#: ../../ha_overview_features_limitations.rst:112
+#: ee36c86430dd418cadbdeb09b7db1ed4
+msgid ""
+"After the first synchronization, the secondary node will have the same "
+"hostname as the primary node. The web user interface will show the hostname "
+"of the primary node, but the dashboard will indicate the node's role "
+"(primary or secondary). Also, when accessing the SSH console, the prompt "
+"will change to indicate the node's role. See the :ref:`troubleshooting_ha-"
+"section` section for more details."
+msgstr ""
+"Dopo la prima sincronizzazione, il nodo secondario avrà lo stesso hostname "
+"del nodo primario. L'interfaccia utente web mostrerà l'hostname del nodo "
+"primario, ma la dashboard indicherà il ruolo del nodo (primario o "
+"secondario). Inoltre, quando si accede alla console SSH, il prompt cambierà "
+"per indicare il ruolo del nodo. Consultare la sezione "
+":ref:`troubleshooting_ha-section` per ulteriori dettagli."

@@ -10,7 +10,7 @@ msgstr "Informazioni"
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../index.rst:31
+#: ../../index.rst:32
 msgid "System"
 msgstr "Sistema"
 
@@ -18,50 +18,54 @@ msgstr "Sistema"
 msgid "Network"
 msgstr "Rete"
 
-#: ../../index.rst:55
+#: ../../index.rst:56
 msgid "Users and objects"
 msgstr "Utenti e oggetti"
 
-#: ../../index.rst:62
+#: ../../index.rst:63
 msgid "Firewall"
 msgstr "Firewall"
 
-#: ../../index.rst:72
+#: ../../index.rst:73
 msgid "Security"
 msgstr "Sicurezza"
 
-#: ../../index.rst:83
+#: ../../index.rst:84
 msgid "VPN"
 msgstr "VPN"
 
-#: ../../index.rst:91
+#: ../../index.rst:92
 msgid "Report"
 msgstr "Report"
 
-#: ../../index.rst:98
+#: ../../index.rst:107
 msgid "Advanced (CLI)"
 msgstr "Avanzate (CLI)"
 
-#: ../../index.rst:111
+#: ../../index.rst:122
 msgid "Best practices"
 msgstr "Best practice"
 
-#: ../../index.rst:5 816220246b3f4167bcce838c9183158b
+#: ../../index.rst:5 bd41a0f4a4e44735aa23ec20b19604ad
 msgid "NethSecurity administrator manual"
 msgstr "Manuale dell'amministratore di NethSecurity"
 
-#: ../../index.rst:9 6fa6ff4088194f61b35cbf609bc32d5e
+#: ../../index.rst:9 7709bb60d04f49d7942460b1c38c9d89
 msgid "`Official site <https://www.nethsecurity.org>`_"
 msgstr "`Sito ufficiale <https://www.nethsecurity.org>`_"
 
-#: ../../index.rst:11 9ed1220364c347ae8ca565e483fd8bf8
+#: ../../index.rst:11 4d53321230dc46c3ac21007a8b091421
 msgid "`Developer manual <https://nethserver.github.io/nethsecurity/>`_"
 msgstr "`Manuale sviluppatori <https://nethserver.github.io/nethsecurity/>`_"
 
-#: ../../index.rst:13 333fa6d9be854a2d87c017d7af4a1212
+#: ../../index.rst:13 a57d50570c124645a4f7a03c9cb1fc3a
 msgid "Help on `Community <http://community.nethserver.org>`_"
 msgstr "Aiuto su `Community <http://community.nethserver.org>`_"
 
-#: ../../index.rst:5 c1294ad3551c40dd93c84d4cb835fae3
+#: ../../index.rst:5 09c1489c33324d338dc0d545a5e984e8
 msgid "External links"
 msgstr "Collegamenti esterni"
+
+#: ../../index.rst:99
+msgid "High Availability"
+msgstr "Alta disponibilità"
