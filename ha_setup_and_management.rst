@@ -100,7 +100,7 @@ The below diagram illustrates the recommended redundant network setup, switches 
 
 
 Interfaces management
---------------------
+----------------------
 
 Interfaces can be categorized as follows:
 
