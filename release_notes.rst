@@ -8,6 +8,15 @@ NethSecurity releases changelogs.
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
 
+Major changes on 2025-10-30
+===========================
+
+Image version: `8.7.1`
+
+.. rubric:: Bug Fixes
+
+- Fixed issue where dnsmasq could be stopped by keepalived even when not in HA mode.
+
 Major changes on 2025-10-29
 ===========================
 
