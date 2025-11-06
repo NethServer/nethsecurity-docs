@@ -37,7 +37,7 @@ Before starting the migration, shut down the secondary firewall to prevent confl
 2. **Choose the migration method**
 Access the *Firewall Migration* tool on your NethSecurity 7.9. You can either:
 
-* download a migrated image to create a USB key for testing and verifying configurations before performing the actual migration, or
+* Download a migrated image to create a USB key for testing and verifying configurations before performing the actual migration, or
 * run an **in-place migration** directly on the system.
 
 Choose the option that best fits your needs: the first one is safer, while the second is faster.
@@ -56,7 +56,7 @@ Remember to do the same for every other non-WAN interface.
 5. **Restore and reconfigure the secondary node**
 After confirming that the primary firewall is working as expected:
 
-* unplug all network cables from the secondary firewall to prevent any conflict with primary one
-* reset the secondary firewall to factory defaults;
-* recreate the network configuration, ensuring that additional LAN interfaces are also managed using VIPs;
-* reconfigure High Availability between the two NethSecurity 8 systems.
+* Disconnect all network cables from the secondary firewall to avoid conflicts with the primary.
+* Reset the secondary firewall to factory defaults;
+* Recreate the network configuration, ensuring that additional LAN interfaces are also managed using VIPs;
+* Reconfigure High Availability between the two NethSecurity 8 systems.
