@@ -57,6 +57,6 @@ Remember to do the same for every other non-WAN interface.
 After confirming that the primary firewall is working as expected:
 
 * Disconnect all network cables from the secondary firewall to avoid conflicts with the primary.
-* Reset the secondary firewall to factory defaults;
-* Recreate the network configuration, ensuring that additional LAN interfaces are also managed using VIPs;
+* Reset the secondary firewall to factory defaults.
+* Recreate the network configuration, ensuring that additional LAN interfaces are also managed using VIPs.
 * Reconfigure High Availability between the two NethSecurity 8 systems.
