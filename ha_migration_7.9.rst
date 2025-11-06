@@ -6,27 +6,26 @@ Migration from NethSecurity 7.9 with HA
 
 
 This document describes the procedure for migrating a **NethSecurity 7.9** system configured with **High Availability (HA)** to **NethSecurity 8**, while keeping the HA setup active.
-There are several possible ways to handle the migration; here we describe one of them.
+Several approaches are possible for this migration; this guide outlines one recommended method.
 
 The migration process consists of two main phases:
 
 * upgrading the NethSecurity 7.9 system to version 8,
 * reconfiguring the High Availability service between the two firewalls running NethSecurity 8.
 
-During the migration, the two firewalls are treated as separate systems:
-one device will be upgraded to NethSecurity 8 by migrating its configuration,
-while the other will be reset to factory defaults and reconfigured to be used as the secondary HA node.
+During the migration, the two firewalls are treated as independent systems.
+One device will be upgraded to NethSecurity 8 by migrating its configuration, while the other will be reset to factory defaults and reconfigured as the secondary HA node.
 
 Once the migration and validation of the primary node are complete, the High Availability service will be enabled again between the two NethSecurity 8 firewalls.
 
 Prerequisites
 -------------
 
-* Document the IP addresses used for the HA interface: primary, secondary, and VIP.
+* Take a note of the IP addresses used for the HA interface: primary, secondary, and VIP.
 * Review the network configuration, especially for **local (non-WAN) interfaces**.
   Each of these interfaces now requires **three IP addresses**: previously only one was used, but in NethSecurity 8 additional LAN interfaces are also managed through **VIPs**, ensuring failover in case of issues affecting those interfaces.
-* Document all required IP addresses for the additional non-WAN interfaces.
-* As a precaution, perform a backup of both firewalls before proceeding
+* Take a note of all required IP addresses for the additional non-WAN interfaces.
+* Perform a backup of both firewalls as a precaution.
 * Verify **hardware compatibility** with NethSecurity 8.
 
 Migration procedure
@@ -42,12 +41,12 @@ Access the *Firewall Migration* tool on your NethSecurity 7.9. You can either:
 * run an **in-place migration** directly on the system.
 
 Choose the option that best fits your needs: the first one is safer, while the second is faster.
-If any issue occurs, simply power on the secondary firewall running version 7.9, which still holds the original configuration.
+If any issue occurs, simply power on the secondary firewall running version 7.9, which still retains the original configuration.
 
 3. **Run the migration**
 
-* If using in-place migration, once the process completes, verify that the firewall is now running NethSecurity 8 and that all features are working correctly.
-* If you are using the USB image, create it and boot the primary firewall from it. Verify that all features are working correctly. After that, write the appliance storage using the ns-install command, then reboot the hardware without the USB key.
+* If using in-place migration, once the process completes, verify that the firewall is now running NethSecurity 8 and that all features work as expected.
+* If you are using the USB image, create it and boot the primary firewall from it. Verify that all features are working correctly. After that, write the appliance storage using the `ns-install` command, then reboot the hardware without the USB key.
 
 4. **Configure the VIP address**
   
@@ -57,6 +56,7 @@ Remember to do the same for every other non-WAN interface.
 5. **Restore and reconfigure the secondary node**
 After confirming that the primary firewall is working as expected:
 
+* unplug all network cables from the secondary firewall to prevent any conflict with primary one
 * reset the secondary firewall to factory defaults;
 * recreate the network configuration, ensuring that additional LAN interfaces are also managed using VIPs;
 * reconfigure High Availability between the two NethSecurity 8 systems.
