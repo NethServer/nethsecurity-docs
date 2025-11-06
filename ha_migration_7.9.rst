@@ -26,7 +26,7 @@ Prerequisites
 * Review the network configuration, especially for **local (non-WAN) interfaces**.
   Each of these interfaces now requires **three IP addresses**: previously only one was used, but in NethSecurity 8 additional LAN interfaces are also managed through **VIPs**, ensuring failover in case of issues affecting those interfaces.
 * Document all required IP addresses for the additional non-WAN interfaces.
-* Perform a **full backup** of both firewalls (the configuration backup is already available in *MyNeth*).
+* As a precaution, perform a backup of both firewalls before proceeding
 * Verify **hardware compatibility** with NethSecurity 8.
 
 Migration procedure
