@@ -133,6 +133,7 @@ During the migration, the following configurations will be imported from NethSer
 
 - Password of the *root* user: it can be used to access the system via SSH and the web interface
 - Network configuration: everything should be migrated except for bridges over bonds that are not supported
+- If the interfaces have labels, these labels are converted into the interface names in NethSecurity 8, except for WAN interfaces.
 - Date and timezone
 - DHCP servers and reservations: DHCP server on bonds interfaces are not supported
 - DNS configuration with host definition: TFTP options are migrated, but not the content of the TFTP server.
