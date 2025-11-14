@@ -14,6 +14,9 @@ This section is divided in 5 tabs:
 * Dynamic leases
 * DNS
 * DNS records
+* Scan network
+
+.. _dhcp_and_mac_binding-section:
 
 DHCP and MAC binding
 ====================
@@ -71,7 +74,7 @@ See also :ref:`dns_dhcp_custom-section` for more information on non-standard opt
 .. _static_leases-section:
 
 Static Leases
--------------
+=============
 
 Static leases assigns stable IP addresses and symbolic hostnames to DHCP clients. The host is identified by its MAC address, assigned a fixed IP address, and provided with a symbolic hostname for easy recognition.
 
@@ -85,8 +88,10 @@ Available fields:
 * ``MAC address`` : MAC address of the device where you want to make the reservation
 * ``Reservation name`` : Optional, freely configurable filed
 
+.. _dynamic_leases-section:
+
 Dynamic leases
---------------
+==============
 
 Dynamic leases represents IP addresses that are currently in use and have been allocated to devices on the network.
 This tab shows all currently active leases.
@@ -122,6 +127,8 @@ Custom options configured via the command line are preserved even when changes a
 Custom options can be safely removed from the UI.
 
 However, users should avoid modifying these custom options directly from the UI to prevent unexpected behavior.
+
+.. _dns-section:
 
 DNS
 ===
@@ -188,24 +195,6 @@ NethSecurity will send queries for google.com and gmail.google.com to 1.2.3.4, b
 
 This is true also for wildcards: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
 
-.. _dns_records-section:
-
-DNS records
------------
-
-The system can handle local DNS records. When the server performs a DNS lookup, first it will search inside local DNS records. If no local record is found, an external DNS query will be done.
-
-.. note:: Local DNS records will always override records from external DNS servers.
-
-Click the button :guilabel:`Add DNS record` to add a new DNS hostname.
-
-Available fields:
-
-- ``Hostname`` : DNS hostname
-- ``IP address`` : IP address associated to hostname
-- ``Name`` : optional field
-- ``Wildcard DNS record``: enable it if you want this answer for any subdomain you haven't already defined
-
 DNS Rebind Protection
 ---------------------
 
@@ -256,3 +245,48 @@ Execute these commands: ::
  uci set dhcp.@dnsmasq[0].rebind_localhost='1'
  uci commit dhcp
  /etc/init.d/dnsmasq restart
+
+.. _dns_records-section:
+
+DNS records
+===========
+
+The system can handle local DNS records. When the server performs a DNS lookup, first it will search inside local DNS records. If no local record is found, an external DNS query will be done.
+
+.. note:: Local DNS records will always override records from external DNS servers.
+
+Click the button :guilabel:`Add DNS record` to add a new DNS hostname.
+
+Available fields:
+
+- ``Hostname`` : DNS hostname
+- ``IP address`` : IP address associated to hostname
+- ``Name`` : optional field
+- ``Wildcard DNS record``: enable it if you want this answer for any subdomain you haven't already defined
+
+.. _scan network-section:
+
+Scan network
+============
+
+This section describes the local network scanning feature. The page allows scanning all available local networks, excluding WAN networks.
+The page displays a list of detected local networks, each network includes a Scan network button, selecting this button starts a full scan of the chosen network.
+
+Scan results
+------------
+
+After the operation is completed, the page shows a table with all discovered hosts. For each host the following information is provided:
+
+- IP address
+- MAC address
+- Hostname (if detected)
+- Description
+
+You can select any host from the table and create a DNS record entry or a DHCP reservation using the respective three dot menu.
+
+.. note:: The system supports scanning only on networks with a maximum netmask of 255.255.240.0 (CIDR /20), which corresponds to a maximum of 4094 hosts. Scans on larger networks are not supported.
+
+
+
+
+
