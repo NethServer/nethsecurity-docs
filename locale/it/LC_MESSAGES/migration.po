@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../migration.rst:5 eb8a5bc154e843648c6355b885f69878
+#: ../../migration.rst:5 9d9c2db521f84d3588e30808a31f0c95
 msgid "NethServer 7 migration"
 msgstr "Migrazione NethServer 7"
 
-#: ../../migration.rst:7 4ddb1743cce946c4bebad37296829699
+#: ../../migration.rst:7 619b4dba58b44a768d238f5f933ba797
 msgid ""
 "Migration is the process to convert a NethServer 7 machine (*source*) into a"
 " NethSecurity (*destination*)."
@@ -14,7 +14,7 @@ msgstr ""
 "La migrazione è il processo per convertire una macchina NethServer 7 "
 "(*sorgente*) in una NethSecurity (*destinazione*)."
 
-#: ../../migration.rst:9 adc0baae24f141a0a5b824b2a8ac456b
+#: ../../migration.rst:9 d5fffcef154e4e8ab25a6d4f66a16ec0
 msgid ""
 "Migrating the firewall configuration from NethServer 7 to NethSecurity is a "
 "crucial process to ensure the continuity and security of your network "
@@ -24,15 +24,15 @@ msgstr ""
 "NethSecurity è un processo cruciale per garantire la continuità e la "
 "sicurezza dei servizi di rete."
 
-#: ../../migration.rst:11 0981c67fa62f434099c13fb9a2a70ebe
+#: ../../migration.rst:11 d7a7833b5e074ed3bbfe2d80d53bf6e8
 msgid "Migration requirements:"
 msgstr "Requisiti per la migrazione:"
 
-#: ../../migration.rst:13 68bc597187654f91be554ad8e2c97dd6
+#: ../../migration.rst:13 2ef45c7897814bf09c9c7a5b8b11f0a0
 msgid "ensure access to Cockpit on NethServer 7"
 msgstr "garantire l'accesso a Cockpit su NethServer 7"
 
-#: ../../migration.rst:14 1224407181f043f38dd75cdddcbf4cf4
+#: ../../migration.rst:14 f768766706f343afa773241b8adf3d2b
 msgid ""
 "install the ``Firewall Migration`` application on NethServer 7. After "
 "installation, the application will be available in the Cockpit applications "
@@ -42,11 +42,11 @@ msgstr ""
 "l'installazione, l'applicazione sarà disponibile nell'elenco delle "
 "applicazioni di Cockpit"
 
-#: ../../migration.rst:16 162a7f20595c4753b0764bccac14b18f
+#: ../../migration.rst:16 d910b03e1f59438d8cae242f66575064
 msgid "Migration scenarios:"
 msgstr "Scenari di migrazione:"
 
-#: ../../migration.rst:18 82069cb30ecf47f68d7910aefedfdb9a
+#: ../../migration.rst:18 86dbd62af3fc40918c7706ebb91bb7b6
 msgid ""
 "Migration in-place (firewall only): if the original NethServer 7 only "
 "contains the firewall module, you can perform an in-place migration and "
@@ -58,7 +58,7 @@ msgstr ""
 "riutilizzare l'hardware esistente. Questo scenario semplifica il processo di"
 " migrazione senza la necessità di hardware aggiuntivo."
 
-#: ../../migration.rst:21 47a0e1cc57e74b95afb37069849c963e
+#: ../../migration.rst:21 0a10d8daf7114858abcae5e86a1c2b33
 msgid ""
 "Migration with other installed modules: if NethServer 7 contains additional "
 "modules such as the mail server, suitable hardware is required to run "
@@ -71,7 +71,7 @@ msgstr ""
 " configurazione <import_migration-section>` su un NethSecurity appena "
 "installato."
 
-#: ../../migration.rst:24 aebbaaeacf8b4b7c995da0cc5138b6ed
+#: ../../migration.rst:24 6c5be27dd05b43dfa7b174d9c283b94d
 msgid ""
 "Migration from NethServer 6 is not supported. If you are running NethServer "
 "6.x, you must first upgrade to NethServer 7 before migrating to "
@@ -81,11 +81,11 @@ msgstr ""
 "NethServer 6.x, è necessario prima eseguire l'aggiornamento a NethServer 7 "
 "prima di migrare a NethSecurity."
 
-#: ../../migration.rst:27 f129d6d46a994fdb9e59f1f4579d8e46
+#: ../../migration.rst:27 ef70c64b6515459f87cc1f7ccf39134a
 msgid "Testing the migration"
 msgstr "Test della migrazione"
 
-#: ../../migration.rst:29 09452170264f4da3a6a24565e4e633e7
+#: ../../migration.rst:29 790b571efbdb46949c99b208983c79af
 msgid ""
 "This method allows for thorough testing without affecting your existing "
 "installation. A test system will boot from an USB drive leaving the existing"
@@ -95,13 +95,13 @@ msgstr ""
 "sull'installazione esistente. Un sistema di test verrà avviato da una "
 "chiavetta USB lasciando l'installazione attuale invariata."
 
-#: ../../migration.rst:32 6bfb2092a0c34621989eec468c3a4c5d
+#: ../../migration.rst:32 2eaff043a9ea4a068be9b40203e880c5
 msgid "To perform a test migration, follow these steps:"
 msgstr "Per eseguire una migrazione di prova, seguire questi passaggi:"
 
 #: ../../migration.rst:34 ../../migration.rst:62 ../../migration.rst:95
-#: cea292366f4d454fb4ce0c49e3d034ce 0ab95889e30343e284db67e5b409b227
-#: a6b84bf330dc41bebf80fe7b8417d98c
+#: eb91a80818114585a5234a41e2dec604 628b458566614982a5bf5a2a9b4340ad
+#: 75d7ac57a14d4477aa0accdb470d8375
 msgid ""
 "Access ``Firewall Migration`` page on NethServer 7 Cockpit: the page will "
 "list all migrated configurations"
@@ -109,7 +109,7 @@ msgstr ""
 "Accedere alla pagina ``Firewall Migration`` su NethServer 7 Cockpit: la "
 "pagina elencherà tutte le configurazioni migrate"
 
-#: ../../migration.rst:36 ccc2f5ff25794af09e0e099c488dab6e
+#: ../../migration.rst:36 7342f3c89e814bbc94fe5adecadd0a0a
 msgid ""
 "Download the live USB image: click :guilabel:`Download` in the ``Download "
 "live USB image`` section"
@@ -117,7 +117,7 @@ msgstr ""
 "Scaricare l'immagine live USB: fare clic su :guilabel:`Scarica` nella "
 "sezione ``Download live USB image``"
 
-#: ../../migration.rst:38 3a95d1d604814818b0cd695844e16eff
+#: ../../migration.rst:38 b0199f82d61a40848de68ff40a41aebb
 msgid ""
 "Prepare the USB drive: write the downloaded image using your preferred "
 "method to an USB drive, see the :ref:`installation section <install-"
@@ -128,7 +128,7 @@ msgstr ""
 "<install-section>` per ulteriori informazioni su come copiare l'immagine su "
 "un disco."
 
-#: ../../migration.rst:41 008ec8ccb3b64fb6978cfde639f350dd
+#: ../../migration.rst:41 c7e201b8121749878935afd56e595e06
 msgid ""
 "Boot from USB drive: shutdown the firewall, plug the USB drive and restart "
 "it, ensuring it boots from the USB drive. This is typically done through "
@@ -138,7 +138,7 @@ msgstr ""
 "riavviarlo, assicurandosi che l'avvio avvenga dall'unità USB. Questo viene "
 "generalmente effettuato tramite le impostazioni del BIOS/UEFI."
 
-#: ../../migration.rst:44 54ba9eed1e214a00bb23e39333a99bc0
+#: ../../migration.rst:44 513df2117af04318af3129ab0fdc3b05
 msgid ""
 "Migration boot: during the boot process, the system loads from the USB drive"
 " instead of the internal hard drive"
@@ -146,7 +146,7 @@ msgstr ""
 "Avvio di migrazione: durante il processo di avvio, il sistema viene caricato"
 " dall'unità USB invece che dal disco rigido interno"
 
-#: ../../migration.rst:46 214f668cd1b94a6c88cf08c1af7d4d5e
+#: ../../migration.rst:46 179dfc16c24d4d809c9ad84372cb6ae9
 msgid ""
 "Testing environment: your system now operates using the migrated system "
 "stored on the USB. Any changes or tests performed occur within this isolated"
@@ -156,7 +156,7 @@ msgstr ""
 "memorizzato sulla USB. Eventuali modifiche o test effettuati avvengono "
 "all'interno di questo ambiente isolato."
 
-#: ../../migration.rst:49 b85af06ca7b9451991546016185cb5f0
+#: ../../migration.rst:49 1c1457b065b847869db6d474656eca36
 msgid ""
 "Remember, after testing, you can simply remove the USB drive, reboot the "
 "firewall normally, and it will resume using the original setup, leaving your"
@@ -166,11 +166,11 @@ msgstr ""
 "riavviare normalmente il firewall e questo riprenderà a utilizzare la "
 "configurazione originale, lasciando l'installazione esistente invariata."
 
-#: ../../migration.rst:53 08fc411fc4c84f0e99672f7714933c6b
+#: ../../migration.rst:53 ce06819ae8cd4cdbb93a4271f0e2a9e7
 msgid "Migration in-place"
 msgstr "Migrazione in-place"
 
-#: ../../migration.rst:55 3fd8a883b15349cfbd3a169bc4282d4c
+#: ../../migration.rst:55 bb032e8e3d204a308f06668c0db1342c
 msgid ""
 "If the initial NethServer 7 setup includes only the firewall module, you can"
 " seamlessly migrate and reuse the current hardware. This approach "
@@ -181,7 +181,7 @@ msgstr ""
 "interruzioni. Questo approccio semplifica la migrazione, eliminando la "
 "necessità di hardware aggiuntivo."
 
-#: ../../migration.rst:58 031e871568e649a88f671c9bbe71a624
+#: ../../migration.rst:58 174eda1df80744668ff1e2fa8ac5f5e1
 msgid ""
 "To perform the in-place migration from NethServer 7 to NethSecurity, follow "
 "these steps:"
@@ -189,7 +189,7 @@ msgstr ""
 "Per eseguire la migrazione in-place da NethServer 7 a NethSecurity, seguire "
 "questi passaggi:"
 
-#: ../../migration.rst:60 2f9bf247c4584692a9364eb9848b7524
+#: ../../migration.rst:60 ee16645cded04dbba0582cfc83d51adc
 msgid ""
 "Backup your data: the in-place migration is a destructive process. It is "
 "strongly recommended to create a full backup of the machine before "
@@ -201,7 +201,7 @@ msgstr ""
 "macchina prima di procedere. Questo passaggio è fondamentale per garantire "
 "la sicurezza dei dati in caso di eventuali problemi durante la migrazione."
 
-#: ../../migration.rst:64 7e53bbf00f74484f8d7f8e28ab755eba
+#: ../../migration.rst:64 077facc954084c308c32b3cbabfde095
 msgid ""
 "Download configuration archive as a precaution: as a precaution, download "
 "the archive containing the exported configuration by clicking "
@@ -215,7 +215,7 @@ msgstr ""
 "archive``. Conservare questo archivio in un luogo sicuro; potrebbe essere "
 "utile nel caso in cui la migrazione in-place fallisca."
 
-#: ../../migration.rst:67 351eac97fc214dcfa103b63fc2f381ee
+#: ../../migration.rst:67 acd7d30d9f554abca270c5ff4886521b
 msgid ""
 "Initiate the migration: when ready, click the :guilabel:`Migrate` button to "
 "start the migration process. This signals the system to begin migrating from"
@@ -225,7 +225,7 @@ msgstr ""
 ":guilabel:`Migra` per avviare il processo di migrazione. Questo segnala al "
 "sistema di iniziare la migrazione da NethServer 7 a NethSecurity."
 
-#: ../../migration.rst:70 7e35770f080c415d845b7e943913920d
+#: ../../migration.rst:70 dfec66c2f40f4937b60e55ae57e7b27c
 msgid ""
 "Select the target disk: choose the disk where NethSecurity will be "
 "installed. Note that NethSecurity does not support RAID. If the original "
@@ -237,7 +237,7 @@ msgstr ""
 "server NethServer 7 originale dispone di più di un disco, gli altri dischi "
 "rimarranno invariati e inutilizzati durante il processo di migrazione."
 
-#: ../../migration.rst:73 c434ec1e5e7543be90035499a7e49b85
+#: ../../migration.rst:73 4830731d0b524d37a45ecf3d3ccb497c
 msgid ""
 "Confirm and start the process: after selecting the disk, click "
 ":guilabel:`Migrate` to confirm. The system will download the NethSecurity "
@@ -249,7 +249,7 @@ msgstr ""
 "NethSecurity e la scriverà sul disco selezionato. Successivamente, il "
 "sistema si riavvierà automaticamente."
 
-#: ../../migration.rst:76 7e4643eff4194d74bf1929673668261b
+#: ../../migration.rst:76 e5efb0fbee5e47699d9869c046efac58
 msgid ""
 "Complete the migration on first boot: upon the first boot of NethSecurity, "
 "the configuration from NethServer 7 will be automatically migrated. Ensure "
@@ -262,7 +262,7 @@ msgstr ""
 "che siano stati migrati correttamente."
 
 #: ../../migration.rst:79 ../../migration.rst:107
-#: 19b55162910f4ebd918b6e5026407b68 41019b6718a44f0b984b2b066a023e5a
+#: 4f26cbea879f4b6cae4fb355001d1f55 e030bf62d9774183a5a54b4d256e2512
 msgid ""
 "After completing the migration, follow the :ref:`post-migration steps <post-"
 "migration-section>` to ensure the system is correctly configured."
@@ -271,11 +271,11 @@ msgstr ""
 " <post-migration-section>` per assicurarsi che il sistema sia configurato "
 "correttamente."
 
-#: ../../migration.rst:84 64e329c5873947c3b0cfca861b0a0346
+#: ../../migration.rst:84 e6588b528a3c4e308a1c0d4436c771a9
 msgid "Migration with other installed modules"
 msgstr "Migrazione con altri moduli installati"
 
-#: ../../migration.rst:86 3757f7bb5a594246a89c32a6bac6584c
+#: ../../migration.rst:86 72a8d67e7ae94d57ab3a1cf3b5c39150
 msgid ""
 "This scenario involves exporting a special configuration archive from "
 "NethServer 7 and importing it into NethSecurity."
@@ -283,7 +283,7 @@ msgstr ""
 "Questo scenario prevede l'esportazione di un archivio di configurazione "
 "speciale da NethServer 7 e l'importazione dello stesso in NethSecurity."
 
-#: ../../migration.rst:88 6eda922261404e7fa5b6fee3f77506b1
+#: ../../migration.rst:88 da4148abfa65451ebd95c5587279ecb3
 msgid ""
 "This method is recommended when the original NethServer 7 setup includes "
 "additional modules, such as the mail server. To perform this migration, you "
@@ -295,7 +295,7 @@ msgstr ""
 "migrazione, sarà necessario installare NethSecurity su un nuovo hardware e "
 "poi importare la configurazione nel sistema NethSecurity appena installato."
 
-#: ../../migration.rst:91 eaa19e75cf2d4eca9c0a31cb2ba9c6c2
+#: ../../migration.rst:91 fdbeca8fb7774179ba5d2d505c6957ee
 msgid ""
 "To perform the migration from NethServer 7 to NethSecurity, follow these "
 "steps:"
@@ -303,7 +303,7 @@ msgstr ""
 "Per eseguire la migrazione da NethServer 7 a NethSecurity, seguire questi "
 "passaggi:"
 
-#: ../../migration.rst:93 6ca6e542acf04fcab2ffdbccda70dbd7
+#: ../../migration.rst:93 cc7909d14c914413b70d02920b92f89a
 msgid ""
 "Install NethSecurity on a new machine: follow the :ref:`installation "
 "instructions <install-section>`"
@@ -311,7 +311,7 @@ msgstr ""
 "Installare NethSecurity su una nuova macchina: seguire le :ref:`istruzioni "
 "di installazione <install-section>`"
 
-#: ../../migration.rst:97 8cbb7a6c840c4c29a744d634251642fb
+#: ../../migration.rst:97 863849283eca448c8f43b4b27a2f12b9
 msgid ""
 "Download the archive with exported configuration: click :guilabel:`Download`"
 " in the ``Download export archive`` section"
@@ -319,7 +319,7 @@ msgstr ""
 "Scaricare l'archivio con la configurazione esportata: fare clic su "
 ":guilabel:`Scarica` nella sezione ``Download export archive``"
 
-#: ../../migration.rst:99 60e0275f4e2d4c3fbab5cda8ee6fe04d
+#: ../../migration.rst:99 3d09848cba4c4f97848b26ea3fb873cb
 msgid ""
 "Access the ``Backup & Restore`` page on NethSecurity and go to the "
 "``Migration`` tab, then click :guilabel:`Upload migration file` and select "
@@ -329,7 +329,7 @@ msgstr ""
 "scheda ``Migrazione``, quindi fare clic su :guilabel:`Carica file di "
 "migrazione` e selezionare l'archivio scaricato nel passaggio precedente."
 
-#: ../../migration.rst:101 802a79b870ac4d06a09475086802efb6
+#: ../../migration.rst:101 dcfd69ce889f4ed8bb879fe0ad9e04f4
 msgid ""
 "When importing the configuration onto new hardware, the MAC addresses of the"
 " network interfaces change, requiring a decision on how to remap these "
@@ -347,15 +347,15 @@ msgstr ""
 "rimappare l'interfaccia fisica e il sistema ricreerà automaticamente la VLAN"
 " sull'interfaccia sottostante."
 
-#: ../../migration.rst:105 584a66f594ee416ab9fa17a603702026
+#: ../../migration.rst:105 379492b563ae4f92abbb644f508e2289
 msgid "Click :guilabel:`Migrate` to start the migration process"
 msgstr "Fare clic su :guilabel:`Migra` per avviare il processo di migrazione"
 
-#: ../../migration.rst:112 2f8e6a4441584573993b6ddc0d38dd45
+#: ../../migration.rst:112 6d724c11a3694a7a9b9a37df9af30b5c
 msgid "Post migration steps"
 msgstr "Passaggi post-migrazione"
 
-#: ../../migration.rst:114 9e7833bb40ef4173893b899519facdb9
+#: ../../migration.rst:114 1843161529b140d8a1c839746eef98ae
 msgid ""
 "The in-place migration process is executed when the system is offline. Since"
 " the registration process requires an active Internet connections, the "
@@ -372,7 +372,7 @@ msgstr ""
 "passaggio non è necessario se è stata eseguita una migrazione utilizzando il"
 " metodo dell'archivio esportato."
 
-#: ../../migration.rst:119 749c4550616c4e6fb866aacb4911eee3
+#: ../../migration.rst:119 ab2fabe305614211bb98517c83ef0bcf
 msgid ""
 "When using a remote LDAP or Active Directory server to authenticate OpenVPN "
 "Road Warrior clients, make sure that the remote server is reachable from the"
@@ -389,7 +389,7 @@ msgstr ""
 "utenti remoto <remote_user_databases-section>` per verificare che tutti gli "
 "utenti siano stati importati correttamente."
 
-#: ../../migration.rst:123 3bfe6494c85e40e19af8326f9aef2b66
+#: ../../migration.rst:123 d0ed085008d047e0a92a6f411813f334
 msgid ""
 "Then, verify that all services are working correctly. If you encounter any "
 "issues, refer to the :ref:`troubleshooting section <troubleshooting-"
@@ -399,7 +399,7 @@ msgstr ""
 "problemi, consultare la :ref:`sezione di risoluzione dei problemi "
 "<troubleshooting-section>`."
 
-#: ../../migration.rst:125 c072b607eb6c434a912f27a0802095f5
+#: ../../migration.rst:125 81ea561238584a68922cfd695c3791be
 msgid ""
 "The migration process is logged inside a special log file located at "
 "``/root/migration.log``. This file contains all the actions performed during"
@@ -411,11 +411,11 @@ msgstr ""
 "eseguite durante il processo di migrazione. Si noti che il file di log viene"
 " eliminato dopo un aggiornamento dell'immagine."
 
-#: ../../migration.rst:130 d37cac6f92844246b4ff300412f54861
+#: ../../migration.rst:130 0ef3b17f47ca467f9542da6c8040fb76
 msgid "Migrated configurations"
 msgstr "Configurazioni migrate"
 
-#: ../../migration.rst:132 ab6277504a5c427591175475be868482
+#: ../../migration.rst:132 60856d5184a84a79ab4678345eb8604b
 msgid ""
 "During the migration, the following configurations will be imported from "
 "NethServer 7:"
@@ -423,7 +423,7 @@ msgstr ""
 "Durante la migrazione, le seguenti configurazioni verranno importate da "
 "NethServer 7:"
 
-#: ../../migration.rst:134 45d08488c870403487de610675b471a2
+#: ../../migration.rst:134 95800f75f42e480d8ed47dfad70c5b48
 msgid ""
 "Password of the *root* user: it can be used to access the system via SSH and"
 " the web interface"
@@ -431,7 +431,7 @@ msgstr ""
 "Password dell'utente *root*: può essere utilizzata per accedere al sistema "
 "tramite SSH e l'interfaccia web"
 
-#: ../../migration.rst:135 a7503c971a124282b0518f48d61b4fcb
+#: ../../migration.rst:135 fcf684d67c5e4c948c5a81fbc2382900
 msgid ""
 "Network configuration: everything should be migrated except for bridges over"
 " bonds that are not supported"
@@ -439,11 +439,11 @@ msgstr ""
 "Configurazione di rete: tutto dovrebbe essere migrato ad eccezione dei "
 "bridge su bond che non sono supportati"
 
-#: ../../migration.rst:136 ad41e0dd04884ef9a27632727bf8bc9a
+#: ../../migration.rst:137 b9f9de630c1b4aeebb767d6d62aaf851
 msgid "Date and timezone"
 msgstr "Data e fuso orario"
 
-#: ../../migration.rst:137 ab9c6d9de5334187a87b3b215412c9dc
+#: ../../migration.rst:138 28a185241f1f4dec9717116f2d7bb39c
 msgid ""
 "DHCP servers and reservations: DHCP server on bonds interfaces are not "
 "supported"
@@ -451,7 +451,7 @@ msgstr ""
 "Server DHCP e prenotazioni: i server DHCP sulle interfacce bond non sono "
 "supportati"
 
-#: ../../migration.rst:138 452203add8b440fbbcc1d42c4ef7d2af
+#: ../../migration.rst:139 f9a383aab7ed43379ac090c59d7b2b31
 msgid ""
 "DNS configuration with host definition: TFTP options are migrated, but not "
 "the content of the TFTP server. To re-enable the service make sure to "
@@ -461,15 +461,15 @@ msgstr ""
 " non il contenuto del server TFTP. Per riabilitare il servizio, assicurarsi "
 "di configurare manualmente l'opzione ``tftp_root``."
 
-#: ../../migration.rst:140 5c8f6765d0a14ae0874970dfb5394b42
+#: ../../migration.rst:141 17064d5ea41b438cb05eb87a675d3f81
 msgid "Static IPv4 routes"
 msgstr "Route IPv4 statiche"
 
-#: ../../migration.rst:141 be2aaf137b6f4a89abef065590ba4551
+#: ../../migration.rst:142 dee29ca56fb24f3eb30d2cdb9e47c323
 msgid "Port forwards"
 msgstr "Reindirizzamenti di porta"
 
-#: ../../migration.rst:142 ce5d2ac29c4146c89b8ba056a9a185e1
+#: ../../migration.rst:143 804e49990b5f434ca726463619d0fdcd
 msgid ""
 "Firewall zones: zones are migrated and should retain the same behavior of "
 "the original configuration: green zones will be mapped to ``lan``, red zones"
@@ -484,7 +484,7 @@ msgstr ""
 "per l'accettazione delle richieste DNS e DHCP verranno aggiunte "
 "automaticamente"
 
-#: ../../migration.rst:145 17d9572780d04bdaad334c8caee7c6e3
+#: ../../migration.rst:146 596566ebba654ed989f19de6b4f2a0bd
 msgid ""
 "Firewall rules: rules using NDPI services are not supported; source and "
 "destination objects, including zones, are not currently supported and will "
@@ -497,7 +497,7 @@ msgstr ""
 "NAT helper vengono caricati automaticamente dopo la migrazione con i "
 "parametri standard del kernel"
 
-#: ../../migration.rst:147 5fa18414b41d49b18b3a2eb18e645a8a
+#: ../../migration.rst:148 9749d4b3f7b6416fa194fea3d15cd904
 msgid ""
 "MultiWAN configuration: providers will be preserved while divert rules "
 "(policy routing) are not migrated"
@@ -505,12 +505,12 @@ msgstr ""
 "Configurazione MultiWAN: i provider verranno preservati mentre le regole di "
 "deviazione (policy routing) non verranno migrate"
 
-#: ../../migration.rst:148 c700e16ff48648629e4cb3cc6489fc02
+#: ../../migration.rst:149 c4e667ea45424a918f81c934b558aa8f
 msgid "QoS: classes with reserved bandwidth and rules are not supported"
 msgstr ""
 "QoS: le classi con larghezza di banda riservata e regole non sono supportate"
 
-#: ../../migration.rst:149 0c3779dd19e54982aae930eb4f148b4c
+#: ../../migration.rst:150 fe474c5086674a78bf6dc08d9f2c4e21
 msgid ""
 "OpenVPN Road Warrior: all settings are migrated; the accounting database of "
 "client connections is not migrated; mail notification is still not supported"
@@ -525,15 +525,15 @@ msgstr ""
 "autenticarsi tramite esso, consultare anche :ref:`remote_user_databases-"
 "section`."
 
-#: ../../migration.rst:151 b2b3f439603a4f118c9f7626b27813ca
+#: ../../migration.rst:152 626cc51e52b5465ba7b44abfd8aca0c5
 msgid "OpenVPN tunnels"
 msgstr "Tunnel OpenVPN"
 
-#: ../../migration.rst:152 e0ba88ec075949faa1e9396fa4dc9a96
+#: ../../migration.rst:153 c711a0ae94014821b349111f0ee68f8c
 msgid "IPSec tunnels"
 msgstr "Tunnel IPSec"
 
-#: ../../migration.rst:153 d22ec455c42748cdaac83cc994c8357a
+#: ../../migration.rst:154 4e85453d4c8643efa6d16ee3f6a273d0
 msgid ""
 "Threat shield IP: only enterprise lists are migrated, community lists must "
 "be reconfigured manually"
@@ -541,7 +541,7 @@ msgstr ""
 "Threat shield IP: solo le liste enterprise vengono migrate, le liste "
 "community devono essere riconfigurate manualmente"
 
-#: ../../migration.rst:154 0991f9780a324dda8d0b080d919f7e82
+#: ../../migration.rst:155 d2ba683f39b34472925b4c5588e774ae
 msgid ""
 "Subscription: the subscription is migrated only when using the exported "
 "archive method"
@@ -549,7 +549,7 @@ msgstr ""
 "Abbonamento: l'abbonamento viene migrato solo quando si utilizza il metodo "
 "dell'archivio esportato"
 
-#: ../../migration.rst:155 7aa5fe768104457abe2c03ced68850d7
+#: ../../migration.rst:156 564a7e86ee484e01a81df95ffeb6a32b
 msgid ""
 "Hotspot: if the migration has been executed on a new hardware, the hotspot "
 "interface will change MAC address and it must be registered again to the "
@@ -559,7 +559,7 @@ msgstr ""
 "l'interfaccia hotspot cambierà indirizzo MAC e dovrà essere registrata "
 "nuovamente presso il gestore hotspot remoto"
 
-#: ../../migration.rst:157 a16eae07e5694528b91da07e5e11987b
+#: ../../migration.rst:158 ebb409a8ce9f403fb9ab254aae0817b0
 msgid ""
 "Let's Encrypt certificate configuration: certificates will be regenerated "
 "after the migration"
@@ -567,7 +567,7 @@ msgstr ""
 "Configurazione del certificato Let's Encrypt: i certificati saranno "
 "rigenerati dopo la migrazione"
 
-#: ../../migration.rst:158 0b514266ae574076a5ef347b099f7ae2
+#: ../../migration.rst:159 f2880da9853e4cfdb7b613f7bfc15960
 msgid ""
 "Reverse proxy configuration: the configuration is migrated, but the "
 "certificates will be regenerated after the migration"
@@ -575,39 +575,39 @@ msgstr ""
 "Configurazione reverse proxy: la configurazione viene migrata, ma i "
 "certificati saranno rigenerati dopo la migrazione"
 
-#: ../../migration.rst:159 bd514799b77b4ec290aa3b35871adab5
+#: ../../migration.rst:160 e404f2e7a17a4eb08dfab18a1fcfbbb0
 msgid "FlashStart Cloud DNS filter"
 msgstr "Filtro DNS Cloud FlashStart"
 
-#: ../../migration.rst:161 cf1296f58c4c4f868cf7f520f7263220
+#: ../../migration.rst:162 3c735a11796044ff89745783464b0b7d
 msgid "The following features are not migrated to NethSecurity:"
 msgstr "Le seguenti funzionalità non sono migrate su NethSecurity:"
 
-#: ../../migration.rst:163 99911f543ade426f8e763d7f6e15f4b0
+#: ../../migration.rst:164 17743557cf1841819c7b23f367869679
 msgid "Web proxy (Squid) and filter (ufdbGuard)"
 msgstr "Proxy web (Squid) e filtro (ufdbGuard)"
 
-#: ../../migration.rst:164 7049a1aa7bc943149ca553a1b5cadbe8
+#: ../../migration.rst:165 beb0ae1563ab41cc8d7ea84486761ff8
 msgid "IPS (Suricata) and IPS alerts (EveBox)"
 msgstr "IPS (Suricata) e avvisi IPS (EveBox)"
 
-#: ../../migration.rst:165 d32bb28a1c1f4433b10158e2cf21f20c
+#: ../../migration.rst:166 f7271372f31046c99031507242383739
 msgid "UPS monitoring (NUT)"
 msgstr "Monitoraggio UPS (NUT)"
 
-#: ../../migration.rst:166 e863fa9b906e4d4a96d798d6d2e1f623
+#: ../../migration.rst:167 7f79df613fdf4eaba4ed9a9a1dd4f6cc
 msgid "System statistics (Collectd)"
 msgstr "Statistiche di sistema (Collectd)"
 
-#: ../../migration.rst:167 15f0f6ed5bfe40d78190fce086a7c87f
+#: ../../migration.rst:168 75df44ea2ae44a8987fd5688bacac1e9
 msgid "Reports (Dante)"
 msgstr "Report (Dante)"
 
-#: ../../migration.rst:168 1b843d2e4d1b4620a1cc1cd6f112c5d6
+#: ../../migration.rst:169 4974d310361841fa87857e8f45a6c937
 msgid "Bandwidth monitor (ntopng)"
 msgstr "Monitor della larghezza di banda (ntopng)"
 
-#: ../../migration.rst:169 4006b6cf4fdf4acd8eeb0641b42ad054
+#: ../../migration.rst:170 d6a1073838694e14b48167f0b8666b49
 msgid ""
 "Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block "
 "feature <brute_force-section>`"
@@ -615,7 +615,7 @@ msgstr ""
 "Fail2ban, viene sostituito da Threat shield :ref:`funzionalità di blocco dei"
 " tentativi di forza bruta <brute_force-section>`"
 
-#: ../../migration.rst:170 91cbbbf23d5945bfa6d9da843650cc01
+#: ../../migration.rst:171 865c06b980164cc7a47a41cec81a1e1b
 msgid ""
 "Threat shield DNS, currently :ref:`available only from command line "
 "<threat_shield_dns-section>`"
@@ -623,11 +623,11 @@ msgstr ""
 "Threat shield DNS, attualmente :ref:`disponibile solo da riga di comando "
 "<threat_shield_dns-section>`"
 
-#: ../../migration.rst:175 cdadf3037b664bde8b104f20618ad50a
+#: ../../migration.rst:176 8e2768c056d14f4a9d8bbc1dd0b28cb8
 msgid "Custom Zones"
 msgstr "Zone personalizzate"
 
-#: ../../migration.rst:176 df97eb92cbe449bc997a5bd8eeb98d34
+#: ../../migration.rst:177 401a56046f1447909488a6f5a59bf761
 msgid ""
 "Custom zones are rarely used in NethServer 7 and tipically for very specific"
 " tasks. They are required to define a network segment with firewall rules "
@@ -648,7 +648,7 @@ msgstr ""
 "complessi (ad esempio, una regola di port forwarding con destinazione host "
 "remoto tramite MPLS o tunnel VPN)."
 
-#: ../../migration.rst:180 ca543bd6e75d4b93a8403da9407d1656
+#: ../../migration.rst:181 cf658f7abca0436b83e46425b3c7214e
 msgid ""
 "In NethSecurity, zones work differently from NethServer 7, offering for "
 "these cases a much simpler management. Typically, in NethSecurity, all "
@@ -663,11 +663,11 @@ msgstr ""
 "ricreare alcuna zona personalizzata**, grazie al seguente comportamento "
 "predefinito."
 
-#: ../../migration.rst:183 e9e22b9041cd4e38b19c73ef9dabafdb
+#: ../../migration.rst:184 82bfce3167054c46972a72c060b134e9
 msgid "**1. Policy inheritance for incoming traffic**"
 msgstr "**1. Ereditarietà delle policy per il traffico in ingresso**"
 
-#: ../../migration.rst:185 a547aab7caae474da109157c82ace8ce
+#: ../../migration.rst:186 59b97a3ce53744b38837c11bef2113a1
 msgid ""
 "All traffic incoming from a NethSecurity interface automatically inherits "
 "the same policies as the connected interface, regardless of the originating "
@@ -679,11 +679,11 @@ msgstr ""
 "indipendentemente dalla rete di origine. Questo include il masquerading "
 "automatico quando il traffico è destinato a Internet."
 
-#: ../../migration.rst:187 c758e7a20809448998c4532e8c75ee0a
+#: ../../migration.rst:188 cd00560f75d84f619e27f27b23784eb2
 msgid "Let's look at an example:"
 msgstr "Vediamo un esempio:"
 
-#: ../../migration.rst:189 405e394333cc46a0a0dc8390666613ba
+#: ../../migration.rst:190 6a1c0331ae28472b8372a699e3851920
 msgid ""
 "A local interface named \"office\" is operating on the 192.168.1.0/24 "
 "network segment and is assigned to the \"lan\" zone. A gateway with IP "
@@ -697,7 +697,7 @@ msgstr ""
 "fornendo accesso alla rete remota 10.10.10.0/24. La rete remota "
 "10.10.10.0/24 deve utilizzare NethSecurity per accedere a Internet."
 
-#: ../../migration.rst:193 187721cabc2542d782b24d9a4e4fbc78
+#: ../../migration.rst:194 6a6cf437327d492eae05284b423f33a6
 msgid ""
 "In NethSecurity, no additional configuration is needed, all packets sent to "
 "the \"office\" interface are correctly routed, even if they originate from a"
@@ -709,11 +709,11 @@ msgstr ""
 "correttamente, anche se provengono da un segmento di rete diverso. Il "
 "masquerading viene inoltre applicato a tutti i pacchetti in uscita."
 
-#: ../../migration.rst:195 2a0e2f896c7a401d926a9c6362f7d656
+#: ../../migration.rst:196 a4a7fe0950a94058895deea8603b5501
 msgid "**2. No need to create new zones for different segments**"
 msgstr "**2. Non è necessario creare nuove zone per segmenti diversi**"
 
-#: ../../migration.rst:197 babc47951cbb4fa9af3e89a503c7ebe0
+#: ../../migration.rst:198 d9a4c79b369340a4a08041f52f8dea0d
 msgid ""
 "Just like policies, standard rules can be applied to this traffic without "
 "needing to create a new zone. If you want to apply different policies for "
@@ -727,11 +727,11 @@ msgstr ""
 "firewall standard. Per comodità, è possibile utilizzare un set di host con "
 "la rete CIDR negli oggetti firewall."
 
-#: ../../migration.rst:199 35d7d6e7cdfa46fbbbe0146587e56058
+#: ../../migration.rst:200 eec8e5fdccea4d72a47a6c517937542d
 msgid "**3. Routing works seamlessly without extra rules**"
 msgstr "**3. Il routing funziona senza problemi senza regole aggiuntive**"
 
-#: ../../migration.rst:201 79a378a0d9a14c9ab6830a0dc86c2492
+#: ../../migration.rst:202 825dc0325d6f46e58f4b2cfee0496386
 msgid ""
 "Routing for this specific network segment functions correctly without any "
 "additional rules or zones. In NethServer 7, it was mandatory to create a "
@@ -744,11 +744,11 @@ msgstr ""
 "pacchetti in ingresso, come menzionato nell'esempio iniziale di port "
 "forwarding."
 
-#: ../../migration.rst:204 803ee1137c1b43588df6672ce9298641
+#: ../../migration.rst:205 019a4d4121d14f338b6fa139afba2294
 msgid "USB-to-Ethernet adapters"
 msgstr "Adattatori USB-Ethernet"
 
-#: ../../migration.rst:205 2dd7630e53694a049a5cae63a5061b48
+#: ../../migration.rst:206 a487743b2cff4616aa6e4576b021fca6
 msgid ""
 "It may rarely happen that the NethServer 7 being migrated has a USB to "
 "Ethernet adapter connected to add a network device. These adapters should "
@@ -769,7 +769,7 @@ msgstr ""
 "necessarie. Maggiori informazioni sono disponibili nella :ref:`sezione di "
 "rete <network-section>`."
 
-#: ../../migration.rst:209 b018dbc4c6e14e738ec4d56dae2d9968
+#: ../../migration.rst:210 688860f4732f44dc801a388d3b5908bf
 msgid ""
 "If you are using these adapters, remember that they will not work until the "
 "correct driver is installed. Keep in mind that NethSecurity 8 may not have "
@@ -782,7 +782,7 @@ msgstr ""
 "utilizzato su NethServer 7. In questo caso, sarà necessario utilizzare un "
 "adattatore diverso."
 
-#: ../../migration.rst:213 7fde97e554b44e46b376ff1165ab4b81
+#: ../../migration.rst:214 54dcca70d2e04b65bb0101ccdfe5a3ad
 msgid ""
 "If you are using a USB to Ethernet adapter for a RED/WAN interface, be aware"
 " that you won't be able to download the necessary modules to make it work "
@@ -794,3 +794,13 @@ msgstr ""
 "farlo funzionare correttamente su NethSecurity 8 a meno che non siano "
 "presenti altre interfacce RED/WAN che utilizzano schede di rete collegate "
 "direttamente alla scheda madre."
+
+#: ../../migration.rst:136 8d588d6824f246fa98cb69ec6ed4a8db
+msgid ""
+"When present, interface labels from the source system are adopted as "
+"interface names in NethSecurity 8, with the exception of WAN interfaces, "
+"which retain their original names."
+msgstr ""
+"Quando presenti, le etichette delle interfacce dal sistema di origine "
+"vengono adottate come nomi delle interfacce in NethSecurity 8, con "
+"l'eccezione delle interfacce WAN, che mantengono i loro nomi originali."
