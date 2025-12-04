@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../wireguard.rst:3 f5c444bee7dd4c2e9486ca9db74cc088
+#: ../../wireguard.rst:3 3fa2d423088147a4a6783c1310a7100e
 msgid "WireGuard VPN"
 msgstr "WireGuard VPN"
 
-#: ../../wireguard.rst:5 029eb3681c434a0a8a829a50e105d6cd
+#: ../../wireguard.rst:5 6eadd47ee3784071843b01c6bb3c0e21
 msgid ""
 "WireGuard is a modern VPN (Virtual Private Network) technology that utilizes"
 " state-of-the-art cryptography. It is designed to be faster, simpler, and "
@@ -22,412 +22,328 @@ msgstr ""
 "ultima generazione. È progettata per essere più semplice da configurare "
 "rispetto a OpenVPN e per offrire una superficie di attacco ridotta."
 
-#: ../../wireguard.rst:10 97a4c71289f8474b960a1b5dc54dfdd8
-msgid ""
-"NethSecurity provides a WireGuard server and client that can be configured "
-"from the command line interface."
-msgstr ""
-"NethSecurity fornisce un server e un client WireGuard che possono essere "
-"configurati dall'interfaccia a riga di comando."
-
-#: ../../wireguard.rst:12 fabe8d5b09204bafa8bc7c1c335e1da3
+#: ../../wireguard.rst:12 086b92426b2a4458bb10abd204d0ea8f
 msgid "Features:"
 msgstr "Funzionalità:"
 
-#: ../../wireguard.rst:14 9b8a67a78be040a1aecb86b26efa2cce
+#: ../../wireguard.rst:14 f56a3a1bbe6f4bcfb6050b23728ced30
 msgid "Multiple WireGuard server instances can run simultaneously"
 msgstr "È possibile eseguire simultaneamente più istanze del server WireGuard"
 
-#: ../../wireguard.rst:15 9a742b3c42744e34a4221de373b845d8
+#: ../../wireguard.rst:15 87c500d8cc3c460dbf9241b3cc38d77a
 msgid "Each instance operates in its own isolated network zone"
 msgstr "Ogni istanza opera nella propria zona di rete isolata"
 
-#: ../../wireguard.rst:16 320a109141554a8da3e2119d37f9bd42
+#: ../../wireguard.rst:16 c7026eb6ce304f1e8a8abb9031e7fc12
 msgid "Static IP address allocation for each peer (client account)"
 msgstr "Assegnazione di indirizzo IP statico per ogni peer (account client)"
 
-#: ../../wireguard.rst:17 b7534bace0ca4f4f813e834caf58c688
+#: ../../wireguard.rst:17 379516199291455ca097f8042904bfb6
 msgid "Client configuration available as text file or QR code"
 msgstr "Configurazione client disponibile come file di testo o codice QR"
 
-#: ../../wireguard.rst:18 fbc53d67a06a43aeb51a51506f57ce11
+#: ../../wireguard.rst:18 7f6310790a26406794fe591c8c2de6a9
 msgid "Site-to-site (net2net) connections supported"
 msgstr "Connessioni site-to-site (net2net) supportate"
 
-#: ../../wireguard.rst:19 1b8f185084244d3d98c1a88d549e7774
+#: ../../wireguard.rst:19 d5bd884401e34dbc970931b58b64057e
 msgid "Enhanced security with optional pre-shared keys"
 msgstr "Sicurezza avanzata con chiavi pre-condivise opzionali"
 
-#: ../../wireguard.rst:20 afa77793fe7c4c0e818360a20d340bf9
+#: ../../wireguard.rst:20 2288ca33aaab4809a4420d0b1fa87f8b
 msgid "Standard WireGuard configuration file import capability"
 msgstr ""
 "Funzionalità di importazione dei file di configurazione standard WireGuard"
 
-#: ../../wireguard.rst:22 fd9e809111804d09821f901721fff971
-msgid "Current limitations:"
-msgstr "Limitazioni attuali:"
-
-#: ../../wireguard.rst:24 274b2645b28e482dac1c900010cac9d3
-msgid "Supported networks are restricted to /24 subnet masks"
-msgstr "Le reti supportate sono limitate a maschere di sottorete /24"
-
-#: ../../wireguard.rst:25 a5bfe76acac841c09cb8c57e5802e913
-msgid "Peer IP addresses are fixed and cannot be modified after creation"
-msgstr ""
-"Gli indirizzi IP dei peer sono fissi e non possono essere modificati dopo la"
-" creazione."
-
-#: ../../wireguard.rst:26 27f407fe277a4d348a5ccaed163f7ac5
-msgid "WireGuard interfaces appear as \"unknown interface\" in the Network page"
-msgstr ""
-"Le interfacce WireGuard vengono visualizzate come \"interfaccia "
-"sconosciuta\" nella pagina Rete"
-
-#: ../../wireguard.rst:29 bc9377b7adb9482e88a2253bf5408ebb
-msgid "Quickstart"
-msgstr "Guida rapida"
-
-#: ../../wireguard.rst:31 0a9fce24af854b32807f73866297c051
-msgid "The configuration is composed by the following steps:"
-msgstr "La configurazione è composta dai seguenti passaggi:"
-
-#: ../../wireguard.rst:33 30fcfd4b7f8643b8a756d9025947fba9
-msgid "Get good defaults to avoid conflicts with existing configurations"
-msgstr ""
-"Ottenere impostazioni predefinite adeguate per evitare conflitti con le "
-"configurazioni esistenti"
-
-#: ../../wireguard.rst:34 d26a77bb15294d7e991548c08d81c28c
-msgid "Create the server instance"
-msgstr "Crea l'istanza del server"
-
-#: ../../wireguard.rst:35 ../../wireguard.rst:105
-#: e097afc2ade74ab69f9013073ac5bc85 c18359065eb64853b04793a991f884fa
-msgid "Add a new account (peer)"
-msgstr "Aggiungere un nuovo account (peer)"
-
-#: ../../wireguard.rst:37 ce23fec483924bdb912b79a350380641
-msgid ""
-"The following examples use the ``ns.wireguard`` API to configure the "
-"WireGuard server and peers."
-msgstr ""
-"I seguenti esempi utilizzano l'API ``ns.wireguard`` per configurare il "
-"server WireGuard e i peer."
-
-#: ../../wireguard.rst:40 64921f9aac714805b2005b1a7e4eb224
-msgid "Get good defaults"
-msgstr "Generazione di default appropriati"
-
-#: ../../wireguard.rst:42 b0bf955f1f404afbab5e146d71def211
-msgid ""
-"Before creating an instance, retrieve some valid defaults. Use the "
-"calculated defaults to create the instance:"
-msgstr ""
-"Prima di creare un'istanza, recuperare alcuni valori predefiniti validi. "
-"Utilizzare i valori predefiniti calcolati per creare l'istanza:"
-
-#: ../../wireguard.rst:48 ../../wireguard.rst:86
-#: eed3ff1dabd448faa48b84062d6a2c24 5739579244e44b7e9629aaeedb279e22
-msgid "Response example:"
-msgstr "Esempio di risposta:"
-
-#: ../../wireguard.rst:60 608ed949c447438c934dbe86ffcb885c
-msgid "The response contains the following fields:"
-msgstr "La risposta contiene i seguenti campi:"
-
-#: ../../wireguard.rst:62 7cb4a4e29fdd4af78631031d26360c12
-msgid ""
-"``listen_port``: the port on which the WireGuard server listens for incoming"
-" connections, a firewall rule will be automatically created to accept the "
-"traffic on this port"
-msgstr ""
-"``listen_port``: la porta su cui il server WireGuard ascolta le connessioni "
-"in ingresso; verrà automaticamente creata una regola del firewall per "
-"accettare il traffico su questa porta"
-
-#: ../../wireguard.rst:64 eb28b669f35143ae807c409d68d9574e
-msgid ""
-"``instance``: the name of the WireGuard server instance, this is also the "
-"name of the network interface"
-msgstr ""
-"``istanza``: il nome dell'istanza del server WireGuard, che corrisponde "
-"anche al nome dell'interfaccia di rete"
-
-#: ../../wireguard.rst:65 af3c6dbe082941ae88b5097e02c5d5b8
-msgid ""
-"``network``: the network CIDR that will be used by the WireGuard server, the"
-" server will automatically get the first IP of the network"
-msgstr ""
-"``network``: la CIDR di rete che verrà utilizzata dal server WireGuard; il "
-"server otterrà automaticamente il primo IP della rete"
-
-#: ../../wireguard.rst:66 912eb54c3de348dd9c57cf99533e56bb
-msgid "``routes``: a list of network CIDR that will be pushed to the clients"
-msgstr "``routes``: un elenco di CIDR di rete che verranno inviati ai client"
-
-#: ../../wireguard.rst:67 d7a60507b9ab40428996004b6a76367c
-msgid ""
-"``public_endpoint``: the public IP address of the server, this is used to "
-"create the firewall rule to accept the traffic on the WireGuard port; the "
-"command will try to automatically detect the public IP address"
-msgstr ""
-"``public_endpoint``: l'indirizzo IP pubblico del server, utilizzato per "
-"creare la regola del firewall per accettare il traffico sulla porta "
-"WireGuard; il comando cercherà di rilevare automaticamente l'indirizzo IP "
-"pubblico"
-
-#: ../../wireguard.rst:70 e84d286228c44b28bd22bb98916e3a3a
-msgid ""
-"Before creating the instance, verify that the calculated defaults are "
-"correct:"
-msgstr ""
-"Prima di creare l'istanza, verificare che i valori predefiniti calcolati "
-"siano corretti:"
-
-#: ../../wireguard.rst:72 15d58009e46748fab9837ba4f003db6d
-msgid ""
-"verify the public IP address, use a custom value if the automatic detection "
-"fails; a FQDN is supported too"
-msgstr ""
-"verificare l'indirizzo IP pubblico, utilizzare un valore personalizzato se "
-"il rilevamento automatico non riesce; è supportato anche un FQDN"
-
-#: ../../wireguard.rst:73 448e6965491240dcacee1d8ee14dcf64
-msgid "verify the network field does not overlap with existing networks"
-msgstr ""
-"verificare che il campo di rete non si sovrapponga alle reti esistenti"
-
-#: ../../wireguard.rst:76 9a1c2cb4389d409792be49a8a1a1fdcb
-msgid "Create an instance"
-msgstr "Creare un'istanza"
-
-#: ../../wireguard.rst:78 a90f6d361e9f4c4f9c07cfef728caeab
-msgid "Create the WireGuard server instance using the calculated defaults:"
-msgstr ""
-"Creare l'istanza del server WireGuard utilizzando i valori predefiniti "
-"calcolati:"
-
-#: ../../wireguard.rst:84 6641744b93974699a5e1368b555fefd9
-msgid ""
-"The server will automatically get the first IP of the `network`, in this "
-"case `10.98.95.1`."
-msgstr ""
-"Il server otterrà automaticamente il primo IP della ``network``, in questo "
-"caso ``10.98.95.1``."
-
-#: ../../wireguard.rst:92 09ed23dd62eb40ce8887d2c508e2c10b
-msgid ""
-"This is the public key of the server, it is used to create the client "
-"configuration."
-msgstr ""
-"Questa è la chiave pubblica del server, viene utilizzata per creare la "
-"configurazione del client."
-
-#: ../../wireguard.rst:94 ../../wireguard.rst:125 ../../wireguard.rst:191
-#: ../../wireguard.rst:233 61af0742b7a840a490dc7585adc7960d
-#: f36a86f614404a1595de58f747fcb829 53136e0aa79f4dba9ab11205409baf50
-#: a1e5453112b34d1dbe3b7e5a95fee6f0
-msgid "Save and apply:"
-msgstr "Salva e applica:"
-
-#: ../../wireguard.rst:102 3f686a23473d4b83a178fdd20828a3ab
-msgid ""
-"You can use the same API to change the configuration of the server instance."
-msgstr ""
-"È possibile utilizzare la stessa API per modificare la configurazione "
-"dell'istanza del server."
-
-#: ../../wireguard.rst:107 a3b3a8b28d954c0bb4c50a3111796f0d
-msgid ""
-"Create a new account, ensuring the ``account`` field is unique within the "
-"same instance:"
-msgstr ""
-"Creare un nuovo account, assicurandosi che il campo ``account`` sia univoco "
-"all'interno della stessa istanza:"
-
-#: ../../wireguard.rst:113 b7db224e62c540f7b8d8dd4d294dcb02
-msgid "Options:"
-msgstr "Opzioni:"
-
-#: ../../wireguard.rst:115 8a5480a5197b40c493562baaeb5d53e7
-msgid ""
-"``route_all_traffic``: if set to ``true``, when the client connects, it will"
-" send all the traffic to the server. This is useful for ensuring all client "
-"traffic is encrypted and routed through the VPN. This flag should be set "
-"only if the client must access the internet through the VPN."
-msgstr ""
-"``route_all_traffic``: se impostato su ``true``, quando il client si "
-"connette, invierà tutto il traffico al server. Questo è utile per garantire "
-"che tutto il traffico del client sia crittografato e instradato attraverso "
-"la VPN. Questo flag dovrebbe essere impostato solo se il client deve "
-"accedere a Internet tramite la VPN."
-
-#: ../../wireguard.rst:118 81b399070a1e4f24bc86059c43f3c4da
-msgid ""
-"``client_to_client``: if set to ``true``, the client will be able to "
-"communicate with all other peers and not only with the server. This is "
-"useful for enabling communication between clients in a mesh network "
-"configuration."
-msgstr ""
-"``client_to_client``: se impostato su ``true``, il client sarà in grado di "
-"comunicare con tutti gli altri peer e non solo con il server. Questo è utile"
-" per abilitare la comunicazione tra client in una configurazione di rete "
-"mesh."
-
-#: ../../wireguard.rst:120 2b9e019a71a34eb4bb79c522aa4e3e39
-msgid ""
-"``preshared_key``: if set to ``true``, automatically create a pre-shared key"
-" that will be used in the peer downloaded configuration. This adds an "
-"additional layer of security by requiring a shared secret for communication."
-msgstr ""
-"``preshared_key``: se impostato su ``true``, crea automaticamente una pre-"
-"shared key che verrà utilizzata nella configurazione scaricata dal peer. "
-"Questo aggiunge un ulteriore livello di sicurezza richiedendo un segreto "
-"condiviso per la comunicazione."
-
-#: ../../wireguard.rst:122 eaaecce3915846338b19f2f65c16760e
-msgid ""
-"``ns_routes``: a list of network CIDR, automatically routes the networks to "
-"this peer; this is used for site-to-site (net2net) connections, allowing the"
-" server to access multiple remote networks through the VPN."
-msgstr ""
-"``ns_routes``: un elenco di CIDR di rete, instrada automaticamente le reti "
-"verso questo peer; questo viene utilizzato per connessioni site-to-site "
-"(net2net), consentendo al server di accedere a più reti remote tramite la "
-"VPN."
-
-#: ../../wireguard.rst:135 ef0d52ad89e04c0bb7823b8a01d503e9
-msgid "Download the account configuration"
-msgstr "Download configurazione account"
-
-#: ../../wireguard.rst:137 d688f615c3d34dde8930c86e9884d292
-msgid ""
-"The account configuration can be downloaded both in text format or a QR code"
-" and is suitable to be imported in a WireGuard client."
-msgstr ""
-"La configurazione dell'account può essere scaricata sia in formato testo che"
-" come codice QR ed è adatta per essere importata in un client WireGuard."
-
-#: ../../wireguard.rst:139 2b77d84f2bca42629829f4fd71b15553
-msgid ""
-"Download the text format if you want to configure a Linux machine or another"
-" NethSecurity:"
-msgstr ""
-"Scaricare il formato testo se si desidera configurare una macchina Linux o "
-"un altro NethSecurity:"
-
-#: ../../wireguard.rst:145 2f6db40ed1f14aefa03cbdd285598255
-msgid "Output example: ::"
-msgstr "Esempio di output: ::"
-
-#: ../../wireguard.rst:162 6e2776bedb374b5ab621a7c0b40bc5b3
-msgid "Configure a mobile device"
-msgstr "Configurare un dispositivo mobile"
-
-#: ../../wireguard.rst:164 2e9663cc9ddb4b02882cea1a212c97a5
-msgid ""
-"Many mobile WireGuard clients allows to import the configuration using a QR "
-"code:"
-msgstr ""
-"Molti client WireGuard per dispositivi mobili consentono di importare la "
-"configurazione tramite un codice QR:"
-
-#: ../../wireguard.rst:166 01b8037770d44a1c822995011c506fc3
-msgid "`iOS <https://apps.apple.com/it/app/wireguard/id1441195209>`_"
-msgstr "`iOS <https://apps.apple.com/it/app/wireguard/id1441195209>`_"
-
-#: ../../wireguard.rst:167 f03d05b075564236953906a5e2154e2e
-msgid ""
-"`Android "
-"<https://play.google.com/store/apps/details?id=com.wireguard.android&hl=it&pli=1>`_"
-msgstr ""
-"`Android "
-"<https://play.google.com/store/apps/details?id=com.wireguard.android&hl=it&pli=1>`_"
-
-#: ../../wireguard.rst:169 01dc68016fc344b4b78a67ad30a20931
-msgid ""
-"Once the app is installed, open it and import the configuration using the QR"
-" code:"
-msgstr ""
-"Una volta installata l'app, aprirla e importare la configurazione "
-"utilizzando il codice QR:"
-
-#: ../../wireguard.rst:176 753de7ff8f9b44b6898a4081fc11450f
-msgid "Import the configuration to another NethSecurity"
-msgstr "Importare la configurazione in un altro NethSecurity"
-
-#: ../../wireguard.rst:178 58e9763d7e584ad6a4241d3bd55b134d
-msgid ""
-"When importing the configuration to another NethSecurity, the file must be "
-"base64 encoded. Print the configuration file in base64 to the console:"
-msgstr ""
-"Quando si importa la configurazione su un altro NethSecurity, il file deve "
-"essere codificato in base64. Stampare il file di configurazione in base64 "
-"sulla console:"
-
-#: ../../wireguard.rst:185 2d1cccc648af4be483212f75acfceb84
-msgid ""
-"Copy the base64 string, than go the the other NethSecurity and execute:"
-msgstr ""
-"Copia la stringa base64, quindi vai sull'altro NethSecurity ed esegui:"
-
-#: ../../wireguard.rst:200 dedff95223834248a8acbcf8e1b9a6e6
-msgid "Remove an instance"
-msgstr "Rimuovere un'istanza"
-
-#: ../../wireguard.rst:202 d705d673f4654b3aacbb17b0631cd584
-msgid "To remove an instance, use the following command:"
-msgstr "Per rimuovere un'istanza, utilizzare il seguente comando:"
-
-#: ../../wireguard.rst:208 f8338bfa394443619c02f7dc2a5430b5
-msgid "This command will remove:"
-msgstr "Questo comando rimuoverà:"
-
-#: ../../wireguard.rst:210 edb0914e7c8a4fc8875272889e2a082a
-msgid "The WireGuard server instance"
-msgstr "L'istanza del server WireGuard"
-
-#: ../../wireguard.rst:211 93df810327ed43dda62002af6699fd91
-msgid "The firewall rules that allow traffic from the WAN"
-msgstr ""
-"Le regole del firewall che consentono il traffico proveniente dalla WAN"
-
-#: ../../wireguard.rst:212 75aff20d1bf64d1ab8bb458645ba6fb3
-msgid "The VPN zone"
-msgstr "La zona VPN"
-
-#: ../../wireguard.rst:213 b67874e2c57a41d3909f088754dd451a
-msgid "All associated accounts"
-msgstr "Tutti gli account associati"
-
-#: ../../wireguard.rst:215 4a74927522294ce9b26757d019abd08b
-msgid "Save and apply the changes:"
-msgstr "Salvare e applicare le modifiche:"
-
-#: ../../wireguard.rst:223 429bded603e8492aba79dd5a62efe5e4
-msgid "Remove a peer"
-msgstr "Rimuovere un peer"
-
-#: ../../wireguard.rst:225 030c407deb3d4ff9b8b126f40f612f52
-msgid "To remove a peer use:"
-msgstr "Per rimuovere un peer utilizzare:"
-
-#: ../../wireguard.rst:231 d36d5a26fca04158b6218879de98b5df
-msgid ""
-"The command will remove the peer and its configuration inside the users "
-"database, if present."
-msgstr ""
-"Il comando rimuoverà il peer e la sua configurazione all'interno del "
-"database utenti, se presente."
-
-#: ../../wireguard.rst:241 556841e9b22b4f7c9100390de248bcc2
+#: ../../wireguard.rst:85 eb7764d32e7e43cda55c2b163e05413a
 msgid "Debug"
 msgstr "Debug"
 
-#: ../../wireguard.rst:243 52a1ff4206cd41fe89c65fed606a5494
+#: ../../wireguard.rst:10 046d0d47a9a745c3803e1d25e6cc99e5
+msgid ""
+"NethSecurity provides a WireGuard server and client that can be configured "
+"from the web interface."
+msgstr ""
+"NethSecurity fornisce un server e un client WireGuard che possono essere "
+"configurati dall'interfaccia web."
+
+#: ../../wireguard.rst:23 2862b1e62835405593f5331438216097
+msgid "Server Configuration"
+msgstr "Configurazione del server"
+
+#: ../../wireguard.rst:25 eccb9a7f38834bf0bbdea6710c17353f
+msgid ""
+"It's possible to create multiple WireGuard server instances, each with its "
+"own isolated network zone. NethSecurity will automatically open the "
+"necessary firewall ports to allow incoming connections to the WireGuard "
+"server and create a VPN zone to allow management of how the traffic is "
+"routed between zones."
+msgstr ""
+"È possibile creare più istanze del server WireGuard, ciascuna con la propria"
+" zona di rete isolata. NethSecurity aprirà automaticamente le porte firewall"
+" necessarie per consentire le connessioni in ingresso al server WireGuard e "
+"creerà una zona VPN per permettere la gestione di come il traffico viene "
+"instradato tra le zone."
+
+#: ../../wireguard.rst:28 8e5afd64459549b8ad5066dd6b01e31c
+msgid ""
+"On the contrary of the OpenVPN server, there's no ties to the users "
+"database, accounts (peers) are created and managed directly inside the "
+"WireGuard interface."
+msgstr ""
+"Al contrario del server OpenVPN, non vi è alcun collegamento al database "
+"degli utenti; gli account (peer) vengono creati e gestiti direttamente "
+"all'interno dell'interfaccia WireGuard."
+
+#: ../../wireguard.rst:30 ce2765aa1b92434aa96b62cf35266f3a
+msgid ""
+"To create a WireGuard server, click on :guilabel:`Add server`, then fill the"
+" form with the desired configuration. The fields are the following:"
+msgstr ""
+"Per creare un server WireGuard, fare clic su :guilabel:`Aggiungi server`, "
+"quindi compilare il modulo con la configurazione desiderata. I campi sono i "
+"seguenti:"
+
+#: ../../wireguard.rst:32 c323124138424718a8c7ed8282801a95
+msgid "`Status`: enable or disable the WireGuard server instance"
+msgstr "`Stato`: abilitare o disabilitare l'istanza del server WireGuard"
+
+#: ../../wireguard.rst:33 e84bb8faab6a46a1b15d678e7c9e9a84
+msgid ""
+"`Name`: the name of the WireGuard server instance, this is not the name of "
+"the network interface, it will be automatically created as `wgX`, where `X` "
+"is a number"
+msgstr ""
+"`Nome`: il nome dell'istanza del server WireGuard; questo non è il nome "
+"dell'interfaccia di rete, che verrà creata automaticamente come `wgX`, dove "
+"`X` è un numero"
+
+#: ../../wireguard.rst:34 1a21dbaf0a984b0cb238b10f1bb0a159
+msgid ""
+"`VPN network`: the network CIDR that will be used by the WireGuard server, "
+"the server will automatically get the first IP of the network. Make sure "
+"this network does not overlap with any existing one"
+msgstr ""
+"`Rete VPN`: il CIDR di rete che verrà utilizzato dal server WireGuard; il "
+"server otterrà automaticamente il primo IP della rete. Assicurarsi che "
+"questa rete non si sovrapponga a nessuna rete esistente."
+
+#: ../../wireguard.rst:35 5a64587400c14c55b6d61a15e92c0228
+msgid ""
+"`UDP port`: the port on which the WireGuard server listens for incoming "
+"connections"
+msgstr ""
+"`Porta UDP`: la porta su cui il server WireGuard ascolta le connessioni in "
+"ingresso"
+
+#: ../../wireguard.rst:36 7b754204bd434bf482fc344190e747e8
+msgid "`Public endpoint`: the public IP address or FQDN of the server"
+msgstr "`Endpoint pubblico`: l'indirizzo IP pubblico o FQDN del server"
+
+#: ../../wireguard.rst:38 04288cf0daa344cbaed6322b6bc38e50
+msgid ""
+"Under advanced settings, it's possible to configure additional options:"
+msgstr ""
+"Nelle impostazioni avanzate, è possibile configurare opzioni aggiuntive:"
+
+#: ../../wireguard.rst:40 314085e111e4426bafdca83f0dbce3b3
+msgid "`MTU`: to manually set the MTU of the WireGuard interface"
+msgstr "`MTU`: per impostare manualmente l'MTU dell'interfaccia WireGuard"
+
+#: ../../wireguard.rst:41 323f8575a28548a3bb3c74b5dfe375e0
+msgid ""
+"`DNS servers`: to set custom DNS servers that will be pushed to the clients,"
+" useful to avoid DNS leaks"
+msgstr ""
+"`Server DNS`: per impostare server DNS personalizzati che verranno inviati "
+"ai client, utile per evitare perdite DNS"
+
+#: ../../wireguard.rst:43 a490fc02cdfb4f1899b3b796d5ba077c
+msgid ""
+"After creating the server, it's possible to add new clients (peers) directly"
+" from the WireGuard interface, click :guilabel:`Add peer` and fill the form "
+"as the following:"
+msgstr ""
+"Dopo aver creato il server, è possibile aggiungere nuovi client (peer) "
+"direttamente dall'interfaccia di WireGuard, facendo clic su "
+":guilabel:`Aggiungi peer` e compilando il modulo come segue:"
+
+#: ../../wireguard.rst:45 f14d7178321e440eb0b68da379073f4a
+msgid "`Status`: enable or disable the peer"
+msgstr "`Stato`: abilitare o disabilitare il peer"
+
+#: ../../wireguard.rst:46 a43f9832c0b0436081caaff8fd3f33c6
+msgid "`Name`: the name of the peer"
+msgstr "`Name`: il nome del peer"
+
+#: ../../wireguard.rst:47 3a99ec36c80e4919bfdef99863ce1e1c
+msgid ""
+"`Reserved IP`: the static IP address that will be assigned to the peer, must"
+" be inside the VPN network, it will be pre-filled with the next available IP"
+msgstr ""
+"`IP riservato`: l'indirizzo IP statico che verrà assegnato al peer, deve "
+"essere all'interno della rete VPN, verrà precompilato con il prossimo IP "
+"disponibile"
+
+#: ../../wireguard.rst:48 938d6c0c69664a81b787b2ac8bbe1d89
+msgid ""
+"`Pre-shared key`: if enabled, a pre-shared key will be automatically created"
+" to enhance security"
+msgstr ""
+"``Pre-shared key``: se abilitato, verrà creato automaticamente una pre-"
+"shared key per aumentare la sicurezza"
+
+#: ../../wireguard.rst:49 d0980bcdfc9944a483974844e13177c7
+msgid ""
+"`Route all traffic`: if enabled, when the client connects, it will send all "
+"the traffic to the server"
+msgstr ""
+"`Instrada tutto il traffico`: se abilitato, quando il client si connette, "
+"invierà tutto il traffico al server"
+
+#: ../../wireguard.rst:50 f4e99508505248d798825564e97fe272
+msgid ""
+"`Server networks`: which networks the peer can access, all LAN networks will"
+" be automatically added"
+msgstr ""
+"`Reti del server`: quali reti può accedere il peer; tutte le reti LAN "
+"saranno aggiunte automaticamente"
+
+#: ../../wireguard.rst:51 cb9f54f295604d08bf18ec67b962ff2d
+msgid ""
+"`Peer networks`: networks reachable on the peer side. Always fill this field"
+" when you want to create a net2net tunnel"
+msgstr ""
+"`Peer networks`: reti raggiungibili dal lato peer. Compilare sempre questo "
+"campo quando si desidera creare un tunnel net2net."
+
+#: ../../wireguard.rst:55 2b55c148cccf49c29b28a0ea8c83da5d
+msgid ""
+"It's possible to create a client-to-site (Road Warrior) connection by "
+"leaving empty the `Peer networks` entries. This will allow the client to "
+"access the server networks."
+msgstr ""
+"È possibile creare una connessione client-to-site (Road Warrior) lasciando "
+"vuoti i campi `Peer networks`. In questo modo il client potrà accedere alle "
+"reti del server."
+
+#: ../../wireguard.rst:57 892fb318fc1a47a9883c84978b69c738
+msgid ""
+"Once the peer is saved, it's possible to download the configuration file in "
+"text format or as a QR code using the menu on the right side of the peer "
+"entry."
+msgstr ""
+"Una volta che il peer è stato salvato, è possibile scaricare il file di "
+"configurazione in formato testo oppure come codice QR utilizzando il menu "
+"sul lato destro della voce del peer."
+
+#: ../../wireguard.rst:59 5ecd22743a62416aabf3b5b8cbfd3817
+msgid ""
+"The server and peers configuration can be edited by the context menu on the "
+"right side of each entry."
+msgstr ""
+"La configurazione del server e dei peer può essere modificata tramite il "
+"menu contestuale situato sul lato destro di ciascuna voce."
+
+#: ../../wireguard.rst:63 9d95164b5dd14fcabc5ecfcf6009c3fd
+msgid ""
+"After modifying the WireGuard server or peers, remember that such changes "
+"needs to be applied to the peer by re-downloading the configuration file."
+msgstr ""
+"Dopo aver modificato il server WireGuard o i peer, ricordare che tali "
+"modifiche devono essere applicate al peer riscaricando il file di "
+"configurazione."
+
+#: ../../wireguard.rst:66 169001ab48ca4a61826f7900ed1399d3
+msgid "Tunnel Configuration"
+msgstr "Configurazione del tunnel"
+
+#: ../../wireguard.rst:68 c0cacae74e10492c9e7eee1b73d15a01
+msgid ""
+"Nethsecurity can be configured as a WireGuard client (peer) to connect to "
+"another WireGuard server. On the :guilabel:`Peer tunnels` tab, it's possible"
+" to add manually a new tunnel by clicking on :guilabel:`Add peer tunnel` or "
+"import a generic wireguard configuration file using :guilabel:`Import peer "
+"tunnel`."
+msgstr ""
+"Nethsecurity può essere configurato come client (peer) WireGuard per "
+"connettersi a un altro server WireGuard. Nella scheda :guilabel:`Peer "
+"tunnels`, è possibile aggiungere manualmente un nuovo tunnel facendo clic su"
+" :guilabel:`Aggiungi tunnel peer` oppure importare un file di configurazione"
+" WireGuard generico utilizzando :guilabel:`Importa tunnel peer`."
+
+#: ../../wireguard.rst:70 bdcc461521e24d919ff777fd8f51b303
+msgid "When manually adding a new tunnel, the following fields are available:"
+msgstr ""
+"Quando si aggiunge manualmente un nuovo tunnel, sono disponibili i seguenti "
+"campi:"
+
+#: ../../wireguard.rst:72 9741a85d802546878c337e82ec15c6e5
+msgid "`Status`: enable or disable the tunnel"
+msgstr "`Stato`: abilita o disabilita il tunnel"
+
+#: ../../wireguard.rst:73 f1996518730e494595c9f992980fd54d
+msgid ""
+"`Name`: the name of the tunnel, this is not the name of the network "
+"interface, it will be automatically created as `wgX`, where `X` is a number"
+msgstr ""
+"`Nome`: il nome del tunnel; questo non è il nome dell'interfaccia di rete, "
+"che verrà creata automaticamente come `wgX`, dove `X` è un numero"
+
+#: ../../wireguard.rst:74 a12d38031315473994c40b961a606c42
+msgid "`Reserved IP`: the static IP address that the tunnel will use"
+msgstr ""
+"`IP riservato`: l'indirizzo IP statico che verrà utilizzato dal tunnel"
+
+#: ../../wireguard.rst:75 c195062741844b56a105df50f7fada89
+msgid "`Server public key`: the public key of the WireGuard server"
+msgstr "`Chiave pubblica del server`: la chiave pubblica del server WireGuard"
+
+#: ../../wireguard.rst:76 3c25563f77c64189a9738ddacea05634
+msgid "`Peer private key`: the private key of the tunnel"
+msgstr "`Peer private key`: la chiave privata del tunnel"
+
+#: ../../wireguard.rst:77 cdfc04c9eee94f6594f874f7f7bf449f
+msgid "`Pre-shared key`: the pre-shared key, if used, field is optional"
+msgstr ""
+"`Chiave pre-condivisa`: la chiave pre-condivisa, se utilizzata, il campo è "
+"facoltativo"
+
+#: ../../wireguard.rst:78 20953b735fcf41498c7035ebf2c9427b
+msgid ""
+"`Route all traffic`: if enabled, all the traffic will be routed through the "
+"tunnel"
+msgstr ""
+"`Instrada tutto il traffico`: se abilitato, tutto il traffico verrà "
+"instradato attraverso il tunnel"
+
+#: ../../wireguard.rst:79 995be60f1efc4483a7b70f0d9194a44e
+msgid "`Network routes`: networks made available through the tunnel"
+msgstr "`Route di rete`: reti rese disponibili tramite il tunnel"
+
+#: ../../wireguard.rst:80 e0fe583fc8ca4cfc85c8d9aebe564432
+msgid "`Endpoint`: the public IP address or FQDN of the WireGuard server"
+msgstr "`Endpoint`: l'indirizzo IP pubblico o FQDN del server WireGuard"
+
+#: ../../wireguard.rst:81 e1289d9fe15f4683bce945a28d0d8e98
+msgid "`UDP port`: the port on which the WireGuard tunnel will connect to"
+msgstr "`Porta UDP`: la porta su cui il tunnel WireGuard si connetterà"
+
+#: ../../wireguard.rst:82 490f1e73f13c4ab797219e03a33be45d
+msgid "`DNS servers`: custom DNS servers to be used when the tunnel is active"
+msgstr ""
+"`Server DNS`: server DNS personalizzati da utilizzare quando il tunnel è "
+"attivo"
+
+#: ../../wireguard.rst:87 821f8d692a4e4eaca84e8b3a968cfa86
 msgid ""
 "By default, WireGuard does not log anything. To enable logging on "
-"`/var/log/messages`, use the following:"
+"`/var/log/messages`, use the following commands:"
 msgstr ""
 "Per impostazione predefinita, WireGuard non registra alcun log. Per "
-"abilitare la registrazione su `/var/log/messages`, utilizzare quanto segue:"
+"abilitare la registrazione su `/var/log/messages`, utilizzare i seguenti "
+"comandi:"
+
+#: ../../wireguard.rst:94 fd4383e99cd64ecfb81460b4af357ddb
+msgid "To disable logging, use:"
+msgstr "Per disabilitare la registrazione, utilizzare:"
