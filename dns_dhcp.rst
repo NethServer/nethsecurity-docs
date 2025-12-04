@@ -287,6 +287,51 @@ You can select any host from the table and create a DNS record entry or a DHCP r
 .. note:: The system supports scanning only on networks with a maximum netmask of 255.255.240.0 (CIDR /20), which corresponds to a maximum of 4094 hosts. Scans on larger networks are not supported.
 
 
+DHCP Relay
+==========
+
+The DHCP relay allows the firewall to forward DHCP requests from clients to an external DHCP server, DHCP relay is not available from the UI, but it's possible to configure it from the terminal using `uci`. 
+
+* Replace `<INTERFACE_NAME>` with the name of the interface where the DHCP relay should listen.
+* Replace `<LOCAL_ADDR>` with the IP address of the firewall on that interface.
+* Replace `<SERVER_ADDR>` with the IP address of the upstream DHCP server.
+
+
+1.Create a new DHCP relay entry ::
+
+ uci add dhcp relay
+   
+2.Set the interface: ::
+
+ uci set dhcp.@relay[-1].interface='<INTERFACE_NAME>'
+
+3.Set the local address of the firewall: ::
+
+ uci set dhcp.@relay[-1].local_addr='<LOCAL_ADDR>'
+ 
+4.Set the upstream DHCP server address: ::
+
+ uci set dhcp.@relay[-1].server_add='<SERVER_ADDR>'
+
+5.Commit the configuration: ::
+
+ uci commit dhcp
+
+6.Reload the system configuration: ::
+
+ reload_config
+
+Example
+-------
+::
+
+ uci add dhcp relay
+ uci set dhcp.@relay[-1].interface='LAN'
+ uci set dhcp.@relay[-1].local_addr='192.168.1.1'
+ uci set dhcp.@relay[-1].server_add='192.168.10.100'
+ uci commit dhcp
+ reload_config
+
 
 
 
