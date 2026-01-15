@@ -163,7 +163,7 @@ If previously enabled, the LuCI web interface can be disabled by executing: ::
 
 
 Hide web server version
-------------------
+---------------------------------
 
 By default, the nginx web server serving the NethSecurity UI includes its version number in HTTP response headers.
 Many vulnerability assessments rely on software version identification, which can produce false positives when fixes are backported without modifying the reported version.
