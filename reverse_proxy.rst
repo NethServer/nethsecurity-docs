@@ -39,6 +39,37 @@ Additional information:
 - Certificate validation: if the destination uses HTTPS, the certificate is not validated to avoid errors on misconfigured servers.
 - WebSocket support: all reverse proxies automatically support WebSockets.
 
+.. _reverse_proxy-http-section:
+
+Proxy on port 80 (HTTP)
+-----------------------
+
+NethSecurity 8 only listens on HTTPS (port 443) for reverse proxy rules. This differs
+from NethSecurity 7, where the reverse proxy listened on both HTTP (port 80).
+
+When migrating from NethSecurity 7, some services or user bookmarks may still use
+HTTP. Because NethSecurity 8 does not listen on port 80 by default, those
+HTTP links will no longer reach the reverse proxy and may appear broken to users.
+
+Eenabling port 80 may expose services, including the web UI, over unencrypted channels.
+For this reason, the recommended approach is to keep the reverse proxy listening only
+on secure channel and provide a permanent redirect (301) from HTTP to HTTPS.
+
+To create a global HTTP to HTTPS redirect, access the terminal and enter the following commands:
+
+::
+
+  uci set nginx._cleartext=server
+  uci add_list nginx._cleartext.listen='80 default_server'
+  uci add_list nginx._cleartext.listen='[::]:80 default_server'
+  uci set nginx._cleartext.return='301 https://$host$request_uri'
+  uci set nginx._cleartext.server_name='_'
+  uci commit nginx
+  /etc/init.d/nginx reload
+
+After enabling the redirect, access the firewall rules page and make sure the port 80
+is open on the WAN side to allow incoming connections.
+
 .. _certificates-section:
 
 Certificates

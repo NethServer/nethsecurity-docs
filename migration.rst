@@ -120,6 +120,10 @@ When using a remote LDAP or Active Directory server to authenticate OpenVPN Road
 reachable from the new NethSecurity machine by verifying also the DNS name resolution. If necessary, update the DNS configuration on the new machine.
 Also review the :ref:`remote user database page <remote_user_databases-section>` to check if all users have been correctly imported.
 
+Please note that NethSecurity web server only listens on HTTPS (port 443) for reverse proxy rules.
+If you had any reverse proxy rules configured on NethServer 7 using HTTP (port 80), you will need to update them to use HTTPS.
+See the :ref:`reverse proxy documentation <reverse_proxy-http-section>` for more details.
+
 Then, verify that all services are working correctly. If you encounter any issues, refer to the :ref:`troubleshooting section <troubleshooting-section>`.
 
 The migration process is logged inside a special log file located at ``/root/migration.log``.
