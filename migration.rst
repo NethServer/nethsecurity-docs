@@ -23,6 +23,10 @@ Migration scenarios:
 
 Migration from NethServer 6 is not supported. If you are running NethServer 6.x, you must first upgrade to NethServer 7 before migrating to NethSecurity.
 
+.. note::
+
+   If you are using High Availability (HA) with NethServer 7, please refer also to the :ref:`HA migration guide <ha_migration_7.9-section>` for detailed instructions on migrating while maintaining HA functionality.
+
 Testing the migration
 =====================
 
