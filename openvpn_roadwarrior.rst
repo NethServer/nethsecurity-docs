@@ -172,6 +172,8 @@ All major platforms are supported. Here are some references to download the nece
 
 * iOS Systems: `OpenVPN Connect on App Store <https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_
 
+.. _managing-openvpn-certificate-expiration:
+
 Managing certificate expiration
 --------------------------------
 
@@ -182,7 +184,7 @@ When a new OpenVPN Road Warrior server is created, the system generates a new ``
 * a **CA** (**Certificate Authority**) certificate
 * a **server** certificate
 
-Client certificates are generated for each user in the database selected during the server setup.
+Client certificates are generated for each user in the database selected during the server setup or when a user is added later.
 
 Each of these elements (client, server, and CA) has its own certificate with a specific expiration date, and all of them must be valid to avoid connectivity issues.
 
@@ -204,18 +206,18 @@ Example (Ubuntu client):
 
 .. code-block:: bash
 
-    cat /var/log/syslog | grep 'VERIFY ERROR:'
+    grep 'VERIFY ERROR:' /var/log/messages
 
-If the search returns messages like the following:
+The search returns messages like the following:
 
 .. code-block:: bash
 
     Feb  9 13:02:07 NethSec openvpn(ns_ctunnel_1)[8031]: VERIFY ERROR: depth=1, error=certificate has expired: CN=NethSec, serial={serial_number}
     Feb  9 13:02:07 NethSec openvpn(ns_ctunnel_1)[8031]: VERIFY ERROR: depth=0, error=certificate has expired: CN=server, serial={serial_number}
 
-it means that the connection is not working due to certificate expiration. The issue may be related to the CA certificate (``depth=1``), the server certificate (``depth=0``), or both.
+Those lines mean that the connection is not working due to certificate expiration. The issue may be related to the CA certificate (``depth=1``), the server certificate (``depth=0``), or both.
 
-You can check the validity of the client, server, and CA certificates using the following commands on the server firewall terminal:
+You can check the validity of the clients, server, and CA certificates using the following commands on the server firewall terminal:
 
 .. code-block:: bash
 
@@ -251,6 +253,7 @@ In this scenario, the server certificate must be renewed on the server side.
 These operations will revoke the existing server certificate, create a new one without affecting the CA certificate, and then restart the *openvpn* service to apply the changes.
 In this scenario, if the client certificates are still valid, you can continue using the existing client configuration.
 
+.. _managing-openvpn-certificate-expiration-CA:
 
 CA certificate expired
 ^^^^^^^^^^^^^^^^^^^^^^
