@@ -186,7 +186,7 @@ When a new OpenVPN Road Warrior server is created, the system generates a new ``
 
 Client certificates are generated for each user in the database selected during the server setup or when a user is added later.
 
-Each of these elements (client, server, and CA) has its own certificate with a specific expiration date, and all of them must be valid to avoid connectivity issues.
+Each of these elements (client, server, and CA) has its own certificate with a specific expiration date, and all of them must be valid to allow connection.
 
 You can check the expiration date of each certificate in the **OpenVPN Road Warrior** section. Here you can find the expiration dates of the CA and server certificates (which belong to the OpenVPN instance) and the expiration date of each client certificate (which belongs to the user accounts created for that instance) in the dedicated table below.
 An alert icon is shown if the certificate will expire in less than 30 days.
