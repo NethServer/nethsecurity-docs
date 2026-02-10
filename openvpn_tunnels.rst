@@ -128,6 +128,6 @@ Use the same :guilabel:`Regenerate certificates` action described in the previou
 CA certificate expired
 ^^^^^^^^^^^^^^^^^^^^^^
 In this scenario, you've to proceed with the generation of a completely new PKI. Follow the steps described on the :ref:`managing-openvpn-certificate-expiration-CA` section.
-In this scenario, you will have to download and import the new client certificate on the client side to restore the connection.
+Then, you will have to download and import the new client certificate on the client side to restore the connection.
 
-All considerations remain the same as for Road Warrior connections. If the expired certificate is the CA certificate, you have to generate a completely new PKI, while if the expired certificate is the server or client certificate, you can regenerate it using the dedicated action.
+All considerations remain the same as for Road Warrior connections. If the expired certificate is the CA certificate, you have to generate a completely new PKI, while if the expired certificate is the server or client one, you can regenerate it using the dedicated action.
