@@ -107,6 +107,38 @@ Use the :guilabel:`Add domain` button to add a domain to the list; you can add a
 
   The DNS resolution for the names listed in the blocklist will also affect the unit itself
 
+.. _dns_troubleshooting-section:
+
+DNS resolution troubleshooting
+==============================
+
+If you are experiencing issues with domain resolution and want to check whether a specific domain is blocked, you can perform a query directly from the local terminal.
+
+Use the following command to check a domain:
+
+:code:`/etc/init.d/adblock query <domain>`
+
+For example:
+
+:code:`root@nethsecurity8:~# /etc/init.d/adblock query baddomain.com`
+
+The output might look like this:
+
+:: 
+
+    :::
+    ::: domain 'baddomain.com' in active blocklist
+    :::
+      + baddomain.com
+
+    :::
+    ::: domain 'baddomain.com' in backups and black-/whitelist
+    :::
+      + adb_list.adult.gz             baddomain.com
+
+This output shows if the domain is currently blocked by any active blocklists.
+In this specific example, the domain `baddomain.com` is part of the category **adult**, as indicated by ``adb_list.adult.gz``. This helps you identify which category or list caused the domain to be blocked.
+
 .. _advanced_configuration-section:
 
 Advanced configuration
