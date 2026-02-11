@@ -107,10 +107,10 @@ Use the :guilabel:`Add domain` button to add a domain to the list; you can add a
 
   The DNS resolution for the names listed in the blocklist will also affect the unit itself
 
-.. _dns_troubleshooting-section:
+.. _check_domain_blocklist-section:
 
-DNS resolution troubleshooting
-==============================
+Check if a domain is blocked
+=============================
 
 If you are experiencing issues with domain resolution and want to check whether a specific domain is blocked, you can perform a query directly from the local terminal.
 
