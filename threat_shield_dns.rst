@@ -85,6 +85,16 @@ Some hosts or subnets may need to bypass Threat shield DNS filtering. To configu
 Use the :guilabel:`Add bypass` button to add a new address to the list.
 The address can be a valid IPv4/IPv6 address with optional CIDR notation.
 
+.. _local_allowlist_dns-section:
+
+Local allowlist
+===============
+
+To allow specific domains that may be included in blocklists, you can navigate to the ``Local allowlist`` tab of Threat shield DNS.
+Use the :guilabel:`Add domain` button to add a domain to the list; you can add a description to the domain to help you remember why it was added.
+
+Domains in the allowlist take priority over ``Blocklists`` and the ``Local blocklist``
+
 .. _local_blocklist_dns-section:
 
 Local blocklist
