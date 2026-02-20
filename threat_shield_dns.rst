@@ -36,6 +36,10 @@ Community blocklists
 Community blocklists are sourced from community contributors and block various domains related to: ads, malware, spam, 
 tracker, explicit sexual content, piracy and so on. 
 NethSecurity makes them available as they are.
+
+Community lists do not provide a standardized "Confidence" metric, therefore the UI shows their confidence as "Unknown".
+As a practical heuristic, lists whose names include a clear severity or trust indicator (for example "lvl 1" or "level 1") are often safer and contain fewer aggressive entries than lists labelled with a greater level of severity.
+Naming conventions vary and not all community providers include such indicators, so always review a community list's contents and purpose before enabling it in production.
 The type of usage license may vary depending on the provider, so if the use is not personal, you may need to inquire with the provider.
 
 .. rubric:: Community lists maintenance
@@ -72,6 +76,13 @@ Enterprise blocklists are specifically focused on security and offer several adv
    This includes access to technical support, documentation, and integration assistance.
    If any issues or questions arise while using the Enterprise blocklists, you can rely on the support provided by the cybersecurity companies to help you
    address them effectively.
+
+Confidence
+----------
+
+Enterprise blocklists include a "Confidence" score which is shown in the UI.
+The score is expressed as a value from 1 to 10 and represents the provider's assessment of the list quality: higher values indicate higher confidence and a lower likelihood of false positives.
+This "Confidence" metric is available only for Enterprise lists; Community lists are presented "as is" and display "Unknown" for confidence.
 
 Yoroi and Nethesis blocklists are Enterprise blocklists.
 These lists will be listed only if the unit has a valid :ref:`Enterprise or Community subscription <subscription-section>` and a valid entitlement for the Threat Shield service.
