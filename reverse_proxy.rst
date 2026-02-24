@@ -70,6 +70,43 @@ To create a global HTTP to HTTPS redirect, access the terminal and enter the fol
 After enabling the redirect, access the firewall rules page and make sure the port 80
 is open on the WAN side to allow incoming connections.
 
+.. _reverse_proxy-hide-version-section:
+
+Hide web server version
+-----------------------
+
+By default, the nginx reverse proxy includes its version number in HTTP response headers.
+Many vulnerability assessments rely on software version identification, which can produce false positives when fixes are backported without modifying the reported version.
+While hiding version information does not improve security by itself, it can help limit the exposure of known version-specific vulnerabilities to automated scanning tools.
+
+To disable the nginx version from being displayed in the reverse proxy HTTP headers, you need to configure the ``server_tokens`` directive for your nginx server configurations.
+
+First, identify your nginx server configurations: ::
+
+  uci show nginx | grep "=server"
+
+This will show you the server blocks configured in your system (e.g., ``nginx._lan=server``, ``nginx.ns_88e3b6fd=server``).
+
+Then, for each server block you want to configure, set the ``server_tokens`` to ``off``. For example, to configure the ``_lan`` server: ::
+
+  uci set nginx._lan.server_tokens='off'
+  uci commit nginx
+  reload_config
+
+If you have additional custom server blocks (like ``ns_88e3b6fd`` in the example), apply the same configuration: ::
+
+  uci set nginx.ns_88e3b6fd.server_tokens='off'
+  uci commit nginx
+  reload_config
+
+To apply this setting globally to all reverse proxy servers at once, you can use a script: ::
+
+  for server in $(uci show nginx | grep "=server$" | cut -d. -f2 | cut -d= -f1); do
+    uci set nginx.$server.server_tokens='off'
+  done
+  uci commit nginx
+  reload_config
+
 .. _certificates-section:
 
 Certificates
@@ -158,3 +195,4 @@ The process involves the following steps:
 - drag and drop the certificate, private key, and optionally, the chain certificate; ensure that all uploaded files adhere to the
   `PEM format <https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail>`_ standards
 - click on the :guilabel:`Save` button
+
