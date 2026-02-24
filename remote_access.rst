@@ -161,6 +161,22 @@ If previously enabled, the LuCI web interface can be disabled by executing: ::
   uci commit ns-ui
   ns-ui
 
+
+Hide web server version
+-----------------------
+
+By default, the nginx web server serving the NethSecurity UI includes its version number in HTTP response headers.
+Many vulnerability assessments rely on software version identification, which can produce false positives when fixes are backported without modifying the reported version.
+While hiding version information does not improve security by itself, it can help limit the exposure of known version-specific vulnerabilities to automated scanning tools.
+
+To disable the nginx version from being displayed in the NethSecurity UI HTTP headers, execute the following commands: ::
+
+  uci set ns-ui.config.server_tokens='off'
+  uci commit ns-ui
+  reload_config
+
+This configuration only affects the NethSecurity UI. The reverse proxy has its own separate configuration.
+
 .. _2fa-section:
 
 NethSecurity UI 2FA
