@@ -7,6 +7,63 @@ NethSecurity releases changelogs.
 - List of `known bugs <https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20>`_
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
+Major changes on 2025-10-xx
+===========================
+
+From this release, NethSecurity image will use a progressive version scheme not based on OpenWrt versioning.
+
+Image version: `8.7`
+
+.. rubric:: New Features
+
+- OpenWrt 24.10.3: the image has been rebased on OpenWrt which includes several package updates and security fixes. see `upstream changelog <https://openwrt.org/releases/24.10/notes-24.10.3>`_
+- my.nethesis.it: the resources tab now shows the product card with hardware details for nethsecurity 8 devices, restoring parity with nethsecurity 7
+- Refactoring build system: build system refactor makes switching targets and openwrt versions easier, improves package override and hash consistency, decouples image releases from openwrt, and resolves prior limitations after verification
+- Flood firewall protection: syn flood protection default disabled to align with safer practices, with enhanced dos blocking via customizable traffic limits in threat shield ip (banip) and clearer ui/documentation with standardized labels
+- Threat shield dns allowlist: a local url allowlist has been added to threat shield dns ui, letting users permit specific websites without manual file edits, taking precedence over blocklist
+- Port forwards and firewall rules: system entries are now marked as "automated"; keeping system rules visible but non-editable for transparency without clutter
+- Zones: when creating a guest or DMZ zones now UI pre-fills most common settings to simplify setup and avoid misconfigurations
+- Backup:
+   - Allow download of unencrypted backup even with passphrase set: ui now allows downloading unencrypted backups when a passphrase is set and subscription is active, simplifying backup management
+   - Add password confirmation field and ui improvements for backup passphrase management: passphrase management ui adds a confirmation field, a status badge indicating passphrase presence, and a dedicated removal modal to prevent mistakes and improve clarity
+- Threat shield DNS: added domain allowlist to easily permit specific domains without manual edits
+- IPsec: now supports selecting dh groups 19, 20 and 21 for ike and esp, aligning with modern security standards
+- Threat shield IP: firewalls with active subscriptions automatically whitelist nethesis enterprise ips when threat shield ip is enabled, ensuring uninterrupted access to core services
+- Controller: 
+   - enable remote support login with nethsupport: support agents can sign in to the controller with a temporary support code, without user credentials or 2fa, with access auto-revoked when support ends
+   - added unit-group based access control, ip-based access restrictions, centralized configuration with encrypted sensitive data, performance optimizations, and ui refinements for scale
+   - units now report to controllers over a secure vpn using new registration parameters, restricting access to vpn-connected units while maintaining fallback compatibility
+   - a description field syncs between unit and controller, is editable in configuration, and appears in the units table for easier identification
+   - ns-plug adds an mtu connectivity test and a configurable persistent mtu setting, improving diagnostics and avoiding manual fixes after vpn reconnections
+
+.. rubric:: Bug Fixes
+
+- Interfaces: qosify and mwan3 configurations now update correctly when a wan interface is removed, preventing stale settings and status inconsistencies
+- DNS: manual dns settings now override dhcp/pppoe-provided servers, ensuring predictable resolution and preventing unintended use of wan dns
+- DPI: dpi rules now effectively block ICMP traffic via automatic conntrack labels, this fix also solves a startup segfault and improves behavior under bursts
+- Port forward: kenabling or disabling rules via the kebab menu now works when a domain set is used in "limit access to"
+- Reverse proxy: certificate usage indicators now display correct statuses
+- OpenVPN tunnels: lzo compression option is now saved correctly, allowing openvpn tunnels to start as expected
+- Port forward: ip validation now correctly rejects invalid destination addresses when a destination port is specified
+- Controller: fixed a controller bug where 2fa could be enabled on cancel, ensuring activation only after completing setup with a valid otp
+- DHCP: now DHCP server correctly serves only one DHCP response per request when multiple dnsmasq servers are configured
+
+.. rubric:: Migration of High Availability from Beta 1
+
+Installations where the HA feature were enabled, must be reconfigured after the update.
+Before proceeding with the update, please connect to the server via SSH on the LAN interface and
+execute the following command to reset the HA configuration:
+
+.. code::
+
+  rm -f /etc/keepalived/keys/id_rsa* /etc/conntrackd/conntrackd.conf
+  /etc/init.d/conntrackd stop; /etc/init.d/conntrackd disable
+  /etc/init.d/keepalived stop; /etc/init.d/keepalived disable 
+  echo "config globals 'globals'" > /etc/config/keepalived
+  reload_config 
+
+Beware that this will remove the current HA configuration and stop the WAN interfaces.
+After the update, configure the WAN interface normally and reconfigure the :ref:`High availability <high_availability>`.
 
 Major changes on 2025-10-30
 ===========================
@@ -62,7 +119,7 @@ Image version: `8-24.10.0-ns.1.6.0`
 .. rubric:: New Features
 
 - High Availability: added support for two-node clusters in backup mode. automatic failover within seconds. configured via command line.
-- Flashstarto ProPLus: added support for multi-profile configurations, dynamic blocklists, and improved dns client management.
+- Flashstart ProPLus: added support for multi-profile configurations, dynamic blocklists, and improved dns client management.
 - Security wizard: assists with initial security setup (password, ssh, and ui). appears after login if not yet completed and can be skipped.
 - Automatic persistent storage for logs: free disk space is auto-assigned to logs by default, preventing log loss during reboot. admins can change the destination.
 - Threat Shield: blocked ip management from the ui: added interface to view, search, and unblock ips. ipv4 and ipv6 blocklists manageable from the ui.
