@@ -32,7 +32,7 @@ Tracker blocking, and so on.
 NethSecurity makes them available as they are.
 
 Community lists do not provide a standardized "Confidence" metric, therefore the UI shows their confidence as "Unknown".
-As a practical heuristic, lists whose names include a clear severity or trust indicator (for example "level 1" or "lvl 1") are often safer and contain fewer aggressive entries than lists labelled with a greater level of severity.
+As a practical heuristic, when the list name contains a severity or trust indicator (e.g. "lvl 1", "level 1"), it generally denotes the lowest false positive rate and the highest confidence; conversely, higher indicated levels (e.g. "lvl 2", "lvl 3", "lvl 4") typically imply lower confidence and a higher risk of aggressive or incorrect entries.
 However, naming conventions vary and not all community providers include such indicators, so always review a community list's contents and purpose before enabling it in production.
 The type of usage license may vary depending on the provider, so if the use is not personal, you may need to inquire with the provider.
 
