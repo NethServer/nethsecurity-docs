@@ -16,8 +16,11 @@ IPS is disabled by default, to enable it, navigate to the ``IPS`` page under the
 The interface will prompt that the service is disabled and will provide a quick link to browse directly to the
 ``Settings`` tab.
 
-Once toggled the :guilabel:`Status` switch, you'll need to pick a policy for your rules. Rules are grouped into
-policies, each policy is a set of rules that are optimized for a specific use case. The policies are:
+Once toggled the :guilabel:`Status` switch, you'll be able to configure the service.
+
+Rule policy 
+-----------
+Rules are grouped into policies, each policy is a set of rules that are optimized for a specific use case, the policies are:
 
 - **connectivity**: prioritizes performance over security, minimizing false positives and ensuring high device
   performance while detecting common threats.
@@ -26,7 +29,12 @@ policies, each policy is a set of rules that are optimized for a specific use ca
 - **security**: for high-security environments with lower bandwidth and higher false positive tolerance.
   It provides the maximum protection while minimizing the risk of bringing the network down.
 
-Once the policy is selected, click on the :guilabel:`Save` button to save the changes.
+Home Networks
+-------------
+
+Home networks define the protected internal networks and specify the IP addresses or subnets that IPS should consider as local networks, allowing it to distinguish internal traffic from external traffic and reducing false positives in threat detection.
+
+Select a policy, define your home networks and then click on the :guilabel:`Save` button to save the changes.
 
 .. _oinkcode-section:
 
