@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 
-#: ../../reverse_proxy.rst:3 b7815b78302346359529f915cf7ec9af
+#: ../../reverse_proxy.rst:3 b320ca9c0cac4926838fe1bb74b3cd82
 msgid "Certificates and reverse proxy"
 msgstr "Certificati e reverse proxy"
 
-#: ../../reverse_proxy.rst:8 78d23bf30266465f8187bb3741627096
+#: ../../reverse_proxy.rst:8 3d7507fd97db4780a9d2df5625c9f5cb
 msgid "Reverse proxy"
 msgstr "Reverse proxy"
 
-#: ../../reverse_proxy.rst:10 5af40fed17094083a00254e0b1684110
+#: ../../reverse_proxy.rst:10 2cc67752442f4753afc25d8bd29155c6
 msgid ""
 "NethSecurity provides a reverse proxy using `nginx <https://nginx.org>`_. A "
 "reverse proxy, sometimes called also proxy pass, is a server that sits in "
@@ -23,7 +23,7 @@ msgstr ""
 "richieste verso di essi. Può essere utilizzato per migliorare le "
 "prestazioni, la sicurezza e l'affidabilità."
 
-#: ../../reverse_proxy.rst:14 c138115799bd459383980b0be03264a3
+#: ../../reverse_proxy.rst:14 ef7b87a75b50446c87eb51f6e8d5a588
 msgid ""
 "In simpler terms, a reverse proxy is like a traffic cop for web servers. It "
 "directs incoming requests to the appropriate server and sends back the "
@@ -33,7 +33,7 @@ msgstr ""
 "i server web. Instrada le richieste in arrivo al server appropriato e "
 "restituisce le risposte."
 
-#: ../../reverse_proxy.rst:16 9c139a23383a48408297aa04abdaa31a
+#: ../../reverse_proxy.rst:16 b2851132f0eb47649f4b6d28fca42376
 msgid ""
 "Reverse proxies are often used to improve performance by caching static "
 "content and distributing traffic across multiple servers. They can also be "
@@ -44,7 +44,7 @@ msgstr ""
 "più server. Possono anche essere utilizzati per aumentare la sicurezza "
 "implementando l'endpoint TLS."
 
-#: ../../reverse_proxy.rst:20 aadad09e365e4da9a6106bc5b193c0c7
+#: ../../reverse_proxy.rst:20 a11de64a92354221be279457150172a8
 msgid ""
 "The reverse proxy is only available on port 443 (HTTPS) and *not* on port 80"
 " (HTTP)."
@@ -52,7 +52,7 @@ msgstr ""
 "Il reverse proxy è disponibile solo sulla porta 443 (HTTPS) e *non* sulla "
 "porta 80 (HTTP)."
 
-#: ../../reverse_proxy.rst:22 4d830975f16c4198b1fa152418da4aeb
+#: ../../reverse_proxy.rst:22 a857efbb5e404d9eb1c5ed7f54c138d4
 msgid ""
 "This page allows users to configure proxy pass settings, specifying whether "
 "the rule applies to a domain or a path. For domain configurations, users can"
@@ -69,7 +69,7 @@ msgstr ""
 "specifiche reti in formato CIDR. È possibile aggiungere una descrizione per "
 "maggiore chiarezza."
 
-#: ../../reverse_proxy.rst:27 0aaadf3e9e524a769a763d19e6543a5c
+#: ../../reverse_proxy.rst:27 742619bb9f1c40218d575cae5603aa19
 msgid ""
 "To configure a new proxy pass, click on the :guilabel:`Add reverse proxy` "
 "and customize the following options:"
@@ -77,7 +77,7 @@ msgstr ""
 "Per configurare un nuovo proxy pass, fare clic su :guilabel:`Aggiungi "
 "reverse proxy` e personalizzare le seguenti opzioni:"
 
-#: ../../reverse_proxy.rst:29 c7a8b5818bac4fa7be92cd8deb3872f3
+#: ../../reverse_proxy.rst:29 c3f05730f0e44d20b4b026120e9dcada
 msgid ""
 "``Type``: choose between Domain or Path. If type is ``Path``, enter the "
 "resource path starting with a '/' for matching rules (e.g., ``/resource-"
@@ -92,7 +92,7 @@ msgstr ""
 "sito web. Selezionare anche un :ref:`certificato <certificates-section>` "
 "associato."
 
-#: ../../reverse_proxy.rst:32 e3b2f716ca9b4b25a9580b0642ac691f
+#: ../../reverse_proxy.rst:32 2308ed25fc8b4b859587086726f133b1
 msgid ""
 "``Destination URL``: specify the forwarding location for incoming requests "
 "(e.g., ``http://destination-server:port/path``)."
@@ -100,7 +100,7 @@ msgstr ""
 "``URL di destinazione``: specificare la posizione di inoltro per le "
 "richieste in arrivo (ad esempio, ``http://destination-server:port/path``)."
 
-#: ../../reverse_proxy.rst:33 e9c37db243eb428696d20b8a3141f30a
+#: ../../reverse_proxy.rst:33 c1e7329fff5749b09f26588cbbabb115
 msgid ""
 "``Allowed networks``: define allowed IPv4/IPv6 networks in CIDR format. By "
 "default, accessible from anywhere."
@@ -108,25 +108,25 @@ msgstr ""
 "``Reti permesse``: definire le reti IPv4/IPv6 consentite in formato CIDR. "
 "Per impostazione predefinita, accessibile da qualsiasi luogo."
 
-#: ../../reverse_proxy.rst:34 5be83c0a5c2940178cb9d2790042f5fe
+#: ../../reverse_proxy.rst:34 3730474e3d584685add8983b160c2801
 msgid "``Description``: optionally, add a description for clarity."
 msgstr ""
 "``Descrizione``: facoltativamente, aggiungere una descrizione per maggiore "
 "chiarezza."
 
-#: ../../reverse_proxy.rst:36 97e358e02f174e37ac198cc801296099
+#: ../../reverse_proxy.rst:36 7e911ec3fcde456e86748663c2aea61c
 msgid "Additional information:"
 msgstr "Informazioni aggiuntive:"
 
-#: ../../reverse_proxy.rst:38 72ea6fa38cb346889200dc45f60d2fa7
+#: ../../reverse_proxy.rst:38 9169737c724a4e0488c8be57f7ad1a9c
 msgid ""
 "Headers sent to destination server: X-Forwarded-Proto, X-Forwarded-For, "
 "X-Real-IP are always sent."
 msgstr ""
-"Header verso il server di destinazione: X-Forwarded-Proto, "
-"X-Forwarded-For, X-Real-IP sono sempre inviati."
+"Header verso il server di destinazione: X-Forwarded-Proto, X-Forwarded-For, "
+"X-Real-IP sono sempre inviati."
 
-#: ../../reverse_proxy.rst:39 6d626592a8c241629c0184631088cb47
+#: ../../reverse_proxy.rst:39 503132602242478d9219f8b94e819118
 msgid ""
 "Certificate validation: if the destination uses HTTPS, the certificate is "
 "not validated to avoid errors on misconfigured servers."
@@ -135,18 +135,18 @@ msgstr ""
 "certificato non viene validato per evitare errori su server configurati in "
 "modo errato."
 
-#: ../../reverse_proxy.rst:40 1dca2b7bb38f42eebb2fedd91ad36d08
+#: ../../reverse_proxy.rst:40 32bb6d92e37a4fdca92135822f56344e
 msgid ""
 "WebSocket support: all reverse proxies automatically support WebSockets."
 msgstr ""
 "Supporto WebSocket: tutti i reverse proxy supportano automaticamente i "
 "WebSocket."
 
-#: ../../reverse_proxy.rst:45 f1c639e356b14e3e960763e77a76cec7
+#: ../../reverse_proxy.rst:113 86c42a12ee7042eb9009908ba581761d
 msgid "Certificates"
 msgstr "Certificati"
 
-#: ../../reverse_proxy.rst:47 6eed826ba2f44ba6979490f84884c7a8
+#: ../../reverse_proxy.rst:115 3ab94ed76c8e4b15af43657714996cfa
 msgid ""
 "The ``Certificates`` page centralizes certificate management "
 "functionalities, facilitating the handling of certificates on the firewall. "
@@ -158,7 +158,7 @@ msgstr ""
 "avvio del firewall, viene generato automaticamente un certificato "
 "autofirmato. Questo certificato funge da opzione sicura predefinita."
 
-#: ../../reverse_proxy.rst:50 d4106898326845a9941d364e85aa5c24
+#: ../../reverse_proxy.rst:118 c4b379b7b19f43af96ea20d16db9a795
 msgid ""
 "The certificate management page allows users to upload custom certificates, "
 "request certificates from Let's Encrypt, and manage existing certificates."
@@ -167,7 +167,7 @@ msgstr ""
 "personalizzati, richiedere certificati da Let's Encrypt e gestire i "
 "certificati esistenti."
 
-#: ../../reverse_proxy.rst:52 840b3dccf9c64e91a786711e67f61e9a
+#: ../../reverse_proxy.rst:120 972588cfbddb4d9f8ccde869f8904aa4
 msgid ""
 "The page lists all certificates, highlighting the default certificate. To "
 "set a certificate as the default certificate, click on the :guilabel:`Set as"
@@ -183,11 +183,11 @@ msgstr ""
 "porta 443, sia sulla :ref:`9090 o su una porta personalizzata "
 "<change_ui_port-section>`."
 
-#: ../../reverse_proxy.rst:59 89423be9ad014b158ef691d7b5e73c0b
+#: ../../reverse_proxy.rst:127 e08f7e55fe944b099c91e1f1670b265a
 msgid "Let's Encrypt"
 msgstr "Let's Encrypt"
 
-#: ../../reverse_proxy.rst:61 224cc1c295ba498095bde7c9c84d59f9
+#: ../../reverse_proxy.rst:129 b62e4efb3da2447dbceb2b825a0e90ad
 msgid ""
 "Let's Encrypt is a free, automated, and open Certificate Authority (CA) that"
 " provides SSL/TLS certificates for securing websites. These certificates "
@@ -206,7 +206,7 @@ msgstr ""
 "proprietari e agli amministratori di siti web senza costi significativi o "
 "particolari competenze tecniche."
 
-#: ../../reverse_proxy.rst:66 f7d00b68a93940b9b4335dad0652e7f2
+#: ../../reverse_proxy.rst:134 b9b53d92d1054dfa827f706c13ab7f27
 msgid ""
 "The certificate page allows users to request certificates from Let's "
 "Encrypt. The process is straightforward and requires minimal configuration. "
@@ -218,35 +218,35 @@ msgstr ""
 "possibile specificare un nome significativo per il certificato e uno o più "
 "domini. Il certificato viene rinnovato automaticamente ogni 60 giorni."
 
-#: ../../reverse_proxy.rst:69 8507b317ee7246fda99d8881a3316222
+#: ../../reverse_proxy.rst:137 61bff4b2e1424cfbb6f99d74126c9603
 msgid ""
 "The Let's Encrypt certificate request process involves the following steps:"
 msgstr ""
 "Il processo di richiesta del certificato Let's Encrypt prevede i seguenti "
 "passaggi:"
 
-#: ../../reverse_proxy.rst:71 4a4df36bb4714241bc8f15c781d5e846
+#: ../../reverse_proxy.rst:139 3d026a5666f143e096893917f2a479c4
 msgid "click on the :guilabel:`Add Let's Encrypt certificate` button;"
 msgstr ""
 "fare clic sul pulsante :guilabel:`Aggiungi certificato Let's Encrypt`;"
 
-#: ../../reverse_proxy.rst:72 7ca111bafd604bab93908932ef679384
+#: ../../reverse_proxy.rst:140 c9019d304af94ac48742afd46eb9906e
 msgid "specify a meaningful name for the certificate;"
 msgstr "specificare un nome significativo per il certificato;"
 
-#: ../../reverse_proxy.rst:73 9b00fc95e8144d28b6788bfa1dd768ab
+#: ../../reverse_proxy.rst:141 17e48c42d91e447396ca2b0d6daaa0fc
 msgid "specify one or more domains for the certificate;"
 msgstr "specificare uno o più domini per il certificato;"
 
-#: ../../reverse_proxy.rst:74 e1800f1f045b4695aa746ad08778629b
+#: ../../reverse_proxy.rst:142 bf498cd0a1204a8793615e081d48759f
 msgid "click on the :guilabel:`Save` button."
 msgstr "fare clic sul pulsante :guilabel:`Salva`."
 
-#: ../../reverse_proxy.rst:76 644cceef2573482bb3ae984f7a0eaebe
+#: ../../reverse_proxy.rst:144 01a5bf3b88c34ad99a2007cb54067676
 msgid "The validation process can be performed in two ways:"
 msgstr "Il processo di validazione può essere eseguito in due modi:"
 
-#: ../../reverse_proxy.rst:78 ba8a6fef5b324498ac6f636845f568d9
+#: ../../reverse_proxy.rst:146 ff527eb72b84401891dd7a67ee17bda0
 msgid ""
 "Standalone mode (HTTP validation): the Standalone mode involves temporarily "
 "stopping the web server to allow the ACME client tool to bind to the "
@@ -259,7 +259,7 @@ msgstr ""
 "autenticazione per dimostrare la proprietà del dominio, ottenendo e "
 "installando il certificato."
 
-#: ../../reverse_proxy.rst:81 0c3f134a40794dd692d554bc6919b875
+#: ../../reverse_proxy.rst:149 2e571f9e9bb54ed986d6fadd22aefff1
 msgid ""
 "DNS validation: DNS validation requires adding a specific DNS TXT record to "
 "the domain's DNS configuration. ACME client checks for this record to verify"
@@ -272,7 +272,7 @@ msgstr ""
 " metodo è utile in situazioni in cui modificare la configurazione del server"
 " web risulta difficile o non è desiderato."
 
-#: ../../reverse_proxy.rst:84 15296f552e114617bd02018d38c47159
+#: ../../reverse_proxy.rst:152 438f72e21149414888773a12b009ff41
 msgid ""
 "When standalone mode is selected, make sure the following requirements are "
 "met:"
@@ -280,7 +280,7 @@ msgstr ""
 "Quando viene selezionata la modalità standalone, assicurarsi che siano "
 "soddisfatti i seguenti requisiti:"
 
-#: ../../reverse_proxy.rst:86 364c76a532fc4138ba1926438a4d1290
+#: ../../reverse_proxy.rst:154 51b4b6b4e87240a6890801b49ba9e205
 msgid ""
 "The firewall must be reachable from outside on port 80. The acme client "
 "will:"
@@ -288,20 +288,20 @@ msgstr ""
 "Il firewall deve essere raggiungibile dall'esterno sulla porta 80. Il client"
 " acme:"
 
-#: ../../reverse_proxy.rst:88 d1c75c1f9b914d72af528149b734a5ee
+#: ../../reverse_proxy.rst:156 1769508a69fb4214a1c61c7df3d2aa80
 msgid "temporarily bind to port 80 to serve the authentication challenges"
 msgstr ""
 "associare temporaneamente alla porta 80 per servire le sfide di "
 "autenticazione"
 
-#: ../../reverse_proxy.rst:89 65a4473dac1745149d1e570ed2821ce3
+#: ../../reverse_proxy.rst:157 4344eca4f60e431cacb9363b3bf0b223
 msgid ""
 "temporarily open port 80 to the public Internet to perform the validation."
 msgstr ""
 "apri temporaneamente la porta 80 verso Internet pubblico per eseguire la "
 "convalida."
 
-#: ../../reverse_proxy.rst:91 f55d1591125a45d3924a30ff0c7a2c74
+#: ../../reverse_proxy.rst:159 96f20c3db5c148bca6255f9a7e86b0ef
 msgid ""
 "Once the validation is complete, port 80 is automatically closed. Please "
 "note that if port 80 is forwarded to another server, the validation will "
@@ -311,7 +311,7 @@ msgstr ""
 " Si noti che, se la porta 80 è inoltrata a un altro server, la convalida non"
 " andrà a buon fine."
 
-#: ../../reverse_proxy.rst:94 2550b90da7c74400b91d7261d2515f5a
+#: ../../reverse_proxy.rst:162 29db1140098c496e870f5b0c608b05a9
 msgid ""
 "The domains that you want the certificate for must be public domain names "
 "associated to server own public IP. Make sure you have public DNS name "
@@ -323,7 +323,7 @@ msgstr ""
 "avere un nome DNS pubblico che punti al proprio server (è possibile "
 "verificare con siti come `VDNS <http://viewdns.info/>`_)."
 
-#: ../../reverse_proxy.rst:98 cf74bf485ebe4ffdb8d188045a557744
+#: ../../reverse_proxy.rst:166 c69adf0d88fb4dfabff3e9e3bf64b907
 msgid ""
 "Select DNS validation if your DNS provider supports API access. Choose the "
 "DNS provider from the drop-down menu and enter the API key and secret. "
@@ -339,7 +339,7 @@ msgstr ""
 "sapere quale chiave API e quale segreto sono richiesti dal proprio provider "
 "DNS. La convalida DNS è l'unica supportata per i certificati wildcard."
 
-#: ../../reverse_proxy.rst:103 a5555c14e2974c1e8f417cc72b68cc99
+#: ../../reverse_proxy.rst:171 81faf2d1e60c4c8987adff83066cf1a1
 msgid ""
 "The certificate generation process can take a few minutes. During this time,"
 " the certificate status is ``Pending``."
@@ -347,11 +347,11 @@ msgstr ""
 "Il processo di generazione del certificato può richiedere alcuni minuti. "
 "Durante questo periodo, lo stato del certificato è ``In attesa``."
 
-#: ../../reverse_proxy.rst:106 aa56530b891f49368344ac60b7b4c513
+#: ../../reverse_proxy.rst:174 05a3152c558e41078afcf6b3d9fabca6
 msgid "Debug Let's Encrypt"
 msgstr "Debug Let's Encrypt"
 
-#: ../../reverse_proxy.rst:108 a37a7917a49745389fad82cee0670095
+#: ../../reverse_proxy.rst:176 57c89b7b1e4e48a3a6c3bec2707cb3bc
 msgid ""
 "If the Let's Encrypt certificate request fails, the user can debug the "
 "process by entering the following commands in the terminal: ::"
@@ -359,7 +359,7 @@ msgstr ""
 "Se la richiesta del certificato Let's Encrypt fallisce, è possibile eseguire"
 " il debug del processo inserendo i seguenti comandi nel terminale: ::"
 
-#: ../../reverse_proxy.rst:113 f3d6b6b436ad4a069334557104650582
+#: ../../reverse_proxy.rst:181 95fd76621e2846b8bb7daa222935132e
 msgid ""
 "The debug messages will be printed on the standard output. After the problem"
 " is solved, the user can disable debug by entering the following command in "
@@ -369,27 +369,27 @@ msgstr ""
 "problema è stato risolto, è possibile disabilitare il debug inserendo il "
 "seguente comando nel terminale: ::"
 
-#: ../../reverse_proxy.rst:119 25fff07201394caf9da3e2853b2b950a
+#: ../../reverse_proxy.rst:187 d5ebe8d4925743a49cf845df5c2f5504
 msgid "Custom certificate"
 msgstr "Certificato personalizzato"
 
-#: ../../reverse_proxy.rst:121 59b579ffb9af480b8b0403d95c418190
+#: ../../reverse_proxy.rst:189 060f60efbb074039b5fa049b71b9ee7b
 msgid "The user can upload a custom certificate to the firewall."
 msgstr "L'utente può caricare un certificato personalizzato nel firewall."
 
-#: ../../reverse_proxy.rst:123 f696122972d7427ba6e55d28253f42b3
+#: ../../reverse_proxy.rst:191 152a4203ef274a1cbf0183677458ce17
 msgid "The process involves the following steps:"
 msgstr "Il processo prevede i seguenti passaggi:"
 
-#: ../../reverse_proxy.rst:125 4222614ad9f44b79b90bf67dfdc55897
+#: ../../reverse_proxy.rst:193 3ede9a4e82674dc79597ca30ddc505c5
 msgid "click on the :guilabel:`Import certificate` button"
 msgstr "fare clic sul pulsante :guilabel:`Importa certificato`"
 
-#: ../../reverse_proxy.rst:126 47f9be84062943649a7cf7333b563020
+#: ../../reverse_proxy.rst:194 cdbc4d41f8f54b00a9101c1e8b6271f4
 msgid "specify a meaningful name for the certificate"
 msgstr "specificare un nome significativo per il certificato"
 
-#: ../../reverse_proxy.rst:127 cf0cbcd385cc42c3b594480968edf263
+#: ../../reverse_proxy.rst:195 4ec6948a1be64deaac652b4970db9993
 msgid ""
 "drag and drop the certificate, private key, and optionally, the chain "
 "certificate; ensure that all uploaded files adhere to the `PEM format "
@@ -400,6 +400,131 @@ msgstr ""
 "caricati rispettino gli standard del formato `PEM "
 "<https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail>`_"
 
-#: ../../reverse_proxy.rst:129 87c1f38e68bf45c78a27905f3383c053
+#: ../../reverse_proxy.rst:197 5336a9b153ec4712977faf9f68ecdf74
 msgid "click on the :guilabel:`Save` button"
 msgstr "fare clic sul pulsante :guilabel:`Salva`"
+
+#: ../../reverse_proxy.rst:45 51aabcd722584c32915d0c1c076d6049
+msgid "Proxy on port 80 (HTTP)"
+msgstr "Proxy sulla porta 80 (HTTP)"
+
+#: ../../reverse_proxy.rst:47 7981309e1cf1497b97f9108d48c5889e
+msgid ""
+"NethSecurity 8 only listens on HTTPS (port 443) for reverse proxy rules. "
+"This differs from NethSecurity 7, where the reverse proxy listened on both "
+"HTTP (port 80)."
+msgstr ""
+"NethSecurity 8 ascolta solo su HTTPS (porta 443) per le regole di reverse "
+"proxy. Questo differisce da NethSecurity 7, dove il reverse proxy ascoltava "
+"sia su HTTP (porta 80)."
+
+#: ../../reverse_proxy.rst:50 3822f466db1245428cfce81da1a696c5
+msgid ""
+"When migrating from NethSecurity 7, some services or user bookmarks may "
+"still use HTTP. Because NethSecurity 8 does not listen on port 80 by "
+"default, those HTTP links will no longer reach the reverse proxy and may "
+"appear broken to users."
+msgstr ""
+"Durante la migrazione da NethSecurity 7, alcuni servizi o segnalibri utente "
+"potrebbero ancora utilizzare HTTP. Poiché NethSecurity 8 non ascolta sulla "
+"porta 80 per impostazione predefinita, tali collegamenti HTTP non "
+"raggiungeranno più il reverse proxy e potrebbero risultare non funzionanti "
+"per gli utenti."
+
+#: ../../reverse_proxy.rst:54 8e17514026e94929bcf4350010b75b5a
+msgid ""
+"Eenabling port 80 may expose services, including the web UI, over "
+"unencrypted channels. For this reason, the recommended approach is to keep "
+"the reverse proxy listening only on secure channel and provide a permanent "
+"redirect (301) from HTTP to HTTPS."
+msgstr ""
+"Abilitare la porta 80 può esporre i servizi, inclusa la web UI, su canali "
+"non crittografati. Per questo motivo, l'approccio raccomandato è mantenere "
+"il reverse proxy in ascolto solo su un canale sicuro e fornire un "
+"reindirizzamento permanente (301) da HTTP a HTTPS."
+
+#: ../../reverse_proxy.rst:58 951e7a2582ca43d489319a706cdd2394
+msgid ""
+"To create a global HTTP to HTTPS redirect, access the terminal and enter the"
+" following commands:"
+msgstr ""
+"Per creare un reindirizzamento globale da HTTP a HTTPS, accedere al "
+"terminale e inserire i seguenti comandi:"
+
+#: ../../reverse_proxy.rst:70 44683050edd644f3a469c368b8996567
+msgid ""
+"After enabling the redirect, access the firewall rules page and make sure "
+"the port 80 is open on the WAN side to allow incoming connections."
+msgstr ""
+"Dopo aver abilitato il reindirizzamento, accedere alla pagina delle regole "
+"del firewall e assicurarsi che la porta 80 sia aperta sul lato WAN per "
+"consentire le connessioni in ingresso."
+
+#: ../../reverse_proxy.rst:76 8063258f52b24f43997732da9128b5fb
+msgid "Hide web server version"
+msgstr "Nascondere la versione del server web"
+
+#: ../../reverse_proxy.rst:78 923f72b1ba434c389df682ca17674c08
+msgid ""
+"By default, the nginx reverse proxy includes its version number in HTTP "
+"response headers. Many vulnerability assessments rely on software version "
+"identification, which can produce false positives when fixes are backported "
+"without modifying the reported version. While hiding version information "
+"does not improve security by itself, it can help limit the exposure of known"
+" version-specific vulnerabilities to automated scanning tools."
+msgstr ""
+"Per impostazione predefinita, il reverse proxy nginx include il proprio "
+"numero di versione negli header di risposta HTTP. Molte valutazioni delle "
+"vulnerabilità si basano sull'identificazione della versione del software, il"
+" che può generare falsi positivi quando le correzioni vengono retroportate "
+"senza modificare la versione riportata. Sebbene nascondere le informazioni "
+"sulla versione non migliori la sicurezza di per sé, può contribuire a "
+"limitare l'esposizione di vulnerabilità note e specifiche della versione "
+"agli strumenti di scansione automatizzati."
+
+#: ../../reverse_proxy.rst:82 8b337ea76c0d4fa28be1c11afddcbf2e
+msgid ""
+"To disable the nginx version from being displayed in the reverse proxy HTTP "
+"headers, you need to configure the ``server_tokens`` directive for your "
+"nginx server configurations."
+msgstr ""
+"Per disabilitare la visualizzazione della versione di nginx negli header "
+"HTTP del reverse proxy, è necessario configurare la direttiva "
+"``server_tokens`` nelle configurazioni del server nginx."
+
+#: ../../reverse_proxy.rst:84 bb45bc982fa34f45b133c4053787e01a
+msgid "First, identify your nginx server configurations: ::"
+msgstr "Per prima cosa, identificare le configurazioni del server nginx: ::"
+
+#: ../../reverse_proxy.rst:88 5dac566a54bd4dcb95c65dab08dfd393
+msgid ""
+"This will show you the server blocks configured in your system (e.g., "
+"``nginx._lan=server``, ``nginx.ns_88e3b6fd=server``)."
+msgstr ""
+"Questo mostrerà i blocchi server configurati nel sistema (ad esempio, "
+"``nginx._lan=server``, ``nginx.ns_88e3b6fd=server``)."
+
+#: ../../reverse_proxy.rst:90 2f3ac54b0c1040179ba01a9830b873bf
+msgid ""
+"Then, for each server block you want to configure, set the ``server_tokens``"
+" to ``off``. For example, to configure the ``_lan`` server: ::"
+msgstr ""
+"Quindi, per ciascun blocco server che si desidera configurare, impostare "
+"``server_tokens`` su ``off``. Ad esempio, per configurare il server "
+"``_lan``: ::"
+
+#: ../../reverse_proxy.rst:96 340d685236ac4e85ab5ce73d98805b28
+msgid ""
+"If you have additional custom server blocks (like ``ns_88e3b6fd`` in the "
+"example), apply the same configuration: ::"
+msgstr ""
+"Se sono presenti ulteriori blocchi server personalizzati (come "
+"``ns_88e3b6fd`` nell'esempio), applicare la stessa configurazione: ::"
+
+#: ../../reverse_proxy.rst:102 fb01af81954d4929841de89b33396fbf
+msgid ""
+"To apply this setting globally to all reverse proxy servers at once, you can"
+" use a script: ::"
+msgstr ""
+"Per applicare questa impostazione globalmente a tutti i server reverse proxy"
+" contemporaneamente, è possibile utilizzare uno script: ::"
