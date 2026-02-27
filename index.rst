@@ -31,6 +31,13 @@ NethSecurity administrator manual
 
 .. toctree::
    :maxdepth: 2
+   :caption: Monitoring
+   
+   monitoring
+   netify_informatics
+
+.. toctree::
+   :maxdepth: 2
    :caption: System
 
    subscription
@@ -89,13 +96,6 @@ NethSecurity administrator manual
    openvpn_tunnels
    ipsec_tunnels
    wireguard
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Report
-   
-   monitoring
-   netify_informatics
 
 .. toctree::
    :maxdepth: 2
