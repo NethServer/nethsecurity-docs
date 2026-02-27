@@ -66,7 +66,7 @@ Live Flows
 The Live Flows section provides a real-time view of all active network connections, allowing administrators to monitor traffic as it happens, this section is displayed in a table format, with each row representing a single flow. 
 The table includes the following information for each connection:
 
-- ``Application``: the name of the detected application generating the traffic.
+- ``Application``: the detected application generating the traffic.
 
 - ``Protocol``: the network protocol used for the flow (e.g., TCP, UDP, HTTP).
 
