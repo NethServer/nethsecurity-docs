@@ -68,9 +68,9 @@ The table includes the following information for each connection:
 
 - ``Application``: the detected application generating the traffic.
 
-- ``Protocol``: the network protocol used for the flow (e.g., TCP, UDP, HTTP).
+- ``Protocol``: the network protocol used for the flow (e.g. TCP, UDP, HTTP).
 
-- ``Tags``: any relevant tags assigned to the flow for classification or policy purposes.
+- ``Tags``: any relevant tags assigned to the flow for classification (e.g. Outgoing, Remote, Internal)
 
 - ``Source``: the source of the connection, typically showing the IP address and port of the initiating device.
 - ``Destination``: the destination of the connection, typically showing the hostname or IP address and port of the target device.
