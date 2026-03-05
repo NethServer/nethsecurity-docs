@@ -113,6 +113,7 @@ NethSecurity administrator manual
    ddns
    smtp
    snmp
+   softflowd
    custom_openvpn_tunnel
    logs
    speedtest
