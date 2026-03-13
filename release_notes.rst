@@ -11,7 +11,7 @@ NethSecurity releases changelogs.
 Major changes on 2025-10-30
 ===========================
 
-Image version: `8.7.1`
+Image version: `8.7.1` (based on OpenWrt 24.10.3)
 
 .. rubric:: Bug Fixes
 
@@ -20,7 +20,7 @@ Image version: `8.7.1`
 Major changes on 2025-10-29
 ===========================
 
-Image version: `8.7.0` 
+Image version: `8.7.0` (based on OpenWrt 24.10.3)
 
 .. rubric:: New Features
 
