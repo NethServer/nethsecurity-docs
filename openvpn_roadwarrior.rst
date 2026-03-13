@@ -172,6 +172,108 @@ All major platforms are supported. Here are some references to download the nece
 
 * iOS Systems: `OpenVPN Connect on App Store <https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_
 
+.. _managing-openvpn-certificate-expiration:
+
+Managing certificate expiration
+--------------------------------
+
+An OpenVPN Road Warrior instance uses TLS certificates for authentication. To avoid connectivity issues, it is crucial to monitor the expiration dates of the certificates used across the entire infrastructure.
+
+When a new OpenVPN Road Warrior server is created, the system generates a new ``PKI (Public Key Infrastructure)``, which is composed of:
+
+* a **CA** (**Certificate Authority**) certificate
+* a **server** certificate
+
+Client certificates are generated for each user in the database selected during the server setup or when a user is added later.
+
+Each of these elements (client, server, and CA) has its own certificate with a specific expiration date, and all of them must be valid to allow connection.
+
+You can check the expiration date of each certificate in the **OpenVPN Road Warrior** section. Here you can find the expiration dates of the CA and server certificates (which belong to the OpenVPN instance) and the expiration date of each client certificate (which belongs to the user accounts created for that instance) in the dedicated table below.
+An alert icon is shown if the certificate will expire in less than 30 days.
+
+By default, all certificates are generated with a validity of 3650 days (10 years).
+
+A connection between the OpenVPN Road Warrior server and its clients will be interrupted when at least one certificate expires, so it is important to monitor expiration dates and renew certificates before they expire.
+In particular, these are the possible scenarios:
+
+* the CA certificate has expired
+* the server certificate has expired
+* the client certificate has expired
+
+To check whether your OpenVPN Road Warrior connection is disconnected due to certificate expiration, you can inspect your client logs and search for OpenVPN-related messages.
+
+Example (Ubuntu client):
+
+.. code-block:: bash
+
+    grep 'VERIFY ERROR:' /var/log/messages
+
+The search returns messages like the following:
+
+.. code-block:: bash
+
+    Feb  9 13:02:07 NethSec openvpn(ns_ctunnel_1)[8031]: VERIFY ERROR: depth=1, error=certificate has expired: CN=NethSec, serial={serial_number}
+    Feb  9 13:02:07 NethSec openvpn(ns_ctunnel_1)[8031]: VERIFY ERROR: depth=0, error=certificate has expired: CN=server, serial={serial_number}
+
+Those lines mean that the connection is not working due to certificate expiration. The issue may be related to the CA certificate (``depth=1``), the server certificate (``depth=0``), or both.
+
+You can check the validity of the clients, server, and CA certificates using the following commands on the server firewall terminal:
+
+.. code-block:: bash
+
+    # client
+    openssl x509 -in /etc/openvpn/{vpn-instance}/pki/issued/{username}.crt -text -noout | grep 'Not After'
+    # server
+    openssl x509 -in /etc/openvpn/{vpn-instance}/pki/issued/server.crt -text -noout | grep 'Not After'
+    # CA
+    openssl x509 -in /etc/openvpn/{vpn-instance}/pki/ca.crt -noout -dates -subject -issuer -serial
+
+The ``{vpn-instance}`` placeholder must be replaced with the name of your OpenVPN instance (e.g. ``ns_roadwarrior1``).
+
+Below are the steps to renew certificates in each scenario and restore the connection.
+
+
+Client certificate expired
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+In this scenario, the client certificate must be regenerated using the :guilabel:`Regenerate certificate` option on the server side (as mentioned above). Then, the new client configuration/certificate must be downloaded and imported on the client side.
+
+
+Server certificate expired
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+In this scenario, the server certificate must be renewed on the server side.
+
+1. Access the server firewall terminal and execute the following commands:
+
+.. code-block:: bash
+
+    EASYRSA_BATCH=1 EASYRSA_PKI=/etc/openvpn/{vpn-instance}/pki easyrsa revoke server
+    EASYRSA_BATCH=1 EASYRSA_PKI=/etc/openvpn/{vpn-instance}/pki EASYRSA_CERT_EXPIRE=3650 easyrsa build-server-full server nopass
+    /etc/init.d/openvpn restart
+
+These operations will revoke the existing server certificate, create a new one without affecting the CA certificate, and then restart the *openvpn* service to apply the changes.
+In this scenario, if the client certificates are still valid, you can continue using the existing client configuration.
+
+.. _managing-openvpn-certificate-expiration-CA:
+
+CA certificate expired
+^^^^^^^^^^^^^^^^^^^^^^
+In this scenario, certificate regeneration is not possible because the CA certificate is the one that signs both the server and client certificates. Therefore, a completely new PKI must be generated.
+To generate a new PKI, proceed as follows:
+
+1. Access the server firewall terminal.
+2. Execute the following commands:
+
+.. code-block:: bash
+
+    ns-openvpn-renew-ca {vpn-instance}
+    service openvpn restart
+
+These commands will generate a new CA certificate, as well as new server and client certificates signed by the new CA.
+In this scenario, it is **mandatory** to download and import the new client configuration on the client side to restore the connection, so make sure to do it as soon as possible to minimize downtime.
+
+.. warning:: When the CA certificate has expired, the only way to restore the connection is to generate a new PKI and import the new client configuration on the client side. If the client and server certificates are still valid (for example, you regenerated the client certificate using the :guilabel:`Regenerate certificate` option and renewed the server certificate using the commands above) but the CA certificate has expired, the connection will not be restored until a new CA certificate is generated and the new client configuration is imported on the client side. Therefore, if your client can no longer connect to the server due to certificate expiration, make sure to check which certificate has expired and follow the correct procedure to restore the connection.
+
+
 MTU Issue and Packet Fragmentation
 ----------------------------------
 
