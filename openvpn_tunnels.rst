@@ -96,7 +96,7 @@ All information about certificate expiration dates can be found in the **OpenVPN
 On the **server side**, the modal shows certificate information for the CA, server, and client certificates. 
 On the **client side**, it shows only the CA and client certificates.
 
-In the tunnel table, an alert icon is shown when at least one of these certificates will expire in less than 30 days. By opening the tunnel details modal, you can see which certificate is expiring and its expiration date.
+In the tunnel table, an alert icon is shown when at least one of these certificates will expire in less than 30 days or has already expired. By opening the tunnel details modal, you can see which certificate is expiring and its expiration date.
 
 By default, all certificates are generated with a validity of 3650 days (10 years).
 
@@ -104,7 +104,33 @@ A connection between the two firewalls will be interrupted when at least one cer
 
 To check whether your OpenVPN tunnel is disconnected due to certificate expiration, you can inspect the **firewall logs** and search for OpenVPN-related messages, located in the ``/var/log/messages`` file.
 
-To check the validity of the certificates, you can use the same ``openssl`` commands as for Road Warrior connections, with the difference that there is only one client certificate, called **client.crt**.
+Example:
+
+.. code-block:: bash
+
+    grep 'VERIFY ERROR:' /var/log/messages
+
+The search returns messages like the following:
+
+.. code-block:: bash
+
+    Feb  9 13:02:07 NethSec openvpn(ns_roadwarrior1)[8031]: VERIFY ERROR: depth=1, error=certificate has expired
+    Feb  9 13:02:07 NethSec openvpn(ns_roadwarrior1)[8031]: VERIFY ERROR: depth=0, error=certificate has expired
+
+Those lines mean that the connection is not working due to certificate expiration. The issue may be related to the CA certificate (``depth=1``), the server certificate (``depth=0``), or both.
+
+To check the validity of the certificates, you can use the following ``openssl`` commands.
+
+.. code-block:: bash
+
+    # client
+    openssl x509 -in /etc/openvpn/{vpn-instance}/pki/issued/client.crt -text -noout | grep 'Not After'
+    # server
+    openssl x509 -in /etc/openvpn/{vpn-instance}/pki/issued/server.crt -text -noout | grep 'Not After'
+    # CA
+    openssl x509 -in /etc/openvpn/{vpn-instance}/pki/ca.crt -noout -dates -subject -issuer -serial
+
+The ``{vpn-instance}`` placeholder must be replaced with the name of your OpenVPN instance (e.g. ``ns_roadwarrior1``).
 
 Below are the steps to renew certificates in each scenario and restore the connection.
 
@@ -123,11 +149,23 @@ In this scenario, using the new client certificate on the client firewall is **m
 Server certificate expired
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 In this scenario, the server certificate must be renewed on the server side. 
-Use the same :guilabel:`Regenerate certificates` action described in the previous scenario. action described in the previous scenario. However, if the client certificate is still valid, the connection will be restored automatically after the OpenVPN service is restarted (the restart is performed automatically). You can continue using the existing client certificate and download/import the newly generated one later. The new client certificate will expire on the same day as the new server certificate.
+Use the same :guilabel:`Regenerate certificates` action described in the previous scenario. You can continue using the existing client certificate (if it's still valid) and download/import the newly generated one later. The new client certificate will expire on the same day as the new server certificate.
+
+As for the Road Warrior server certificate renewal, the consideration about the client behavior is the same: if the certificate renewal is done while clients are connected, it's necessary for the client to disconnect and then reconnect to the server to restore the connection, while if the certificate renewal is done while **clients are disconnected (recommended way)**, the connection will be automatically restored when they will try to connect again.
 
 CA certificate expired
 ^^^^^^^^^^^^^^^^^^^^^^
-In this scenario, you've to proceed with the generation of a completely new PKI. Follow the steps described on the :ref:`managing-openvpn-certificate-expiration-CA` section.
-Then, you will have to download and import the new client certificate on the client side to restore the connection.
+In this scenario, you've to proceed with the generation of a completely new PKI.
+
+1. Access the server firewall terminal.
+2. Execute the following commands:
+
+.. code-block:: bash
+
+    ns-openvpn-renew-ca {vpn-instance}
+    service openvpn restart
+
+These commands will generate a new CA certificate, as well as new server and client certificates signed by the new CA.
+In this scenario, it is **mandatory** to download and import the new client configuration on the client side to restore the connection, so make sure to do it as soon as possible to minimize downtime.
 
 All considerations remain the same as for Road Warrior connections. If the expired certificate is the CA certificate, you have to generate a completely new PKI, while if the expired certificate is the server or client one, you can regenerate it using the dedicated action.
