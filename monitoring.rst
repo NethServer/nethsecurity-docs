@@ -27,8 +27,8 @@ Real-time monitoring stores data in RAM and resets at every machine reboot.
 The ``Real-time monitor`` page provides a comprehensive overview of the firewall's performance and status, with detailed insights into network traffic.
 It's divided into four main sections: ``Traffic``, ``Live Flows``, ``Top Talkers``, ``WAN uplinks``, ``VPN`` and  ``Security``.
 
-Traffic
--------
+Daily Traffic
+-------------
 
 The below charts reads data from `dpireport <https://dev.nethsecurity.org/packages/ns-report/>`_ daemon:
 
