@@ -86,19 +86,16 @@ possible to jump right to the rule documentation by clicking on the rule ID.
 By clicking on the menu icon on the right side of the record, it's possible to open a pre-filled form to suppress or
 disable the rule that generated the alert.
 
-Source and destination bypass
-=============================
+Filter bypass
+=============
 
 All traffic that goes through the firewall is analyzed by the IPS.
-To bypass the IPS for specific source or destination IP addresses, the system supports bypass rules both for IPv4 and
-IPv6 addresses.
+The system supports bypass rules for specific IPv4 and IPv6 addresses. Any IP address added to a bypass rule will be evaluated for both incoming and outgoing traffic.
 
-To do so, browse to the `Filter bypass` tab and press the :guilabel:`Add bypass` button. A form will be provided to
-add the bypass rule based of the source or destination IP address with the following fields:
+To do so, browse to the `Filter bypass` tab and press the :guilabel:`Add bypass` button. A form is provided to add a bypass rule for a specific IP address, the rule applies to traffic in both directions and includes the following fields:
 
 - ``Address type``: if the ip provided is IPv4 or IPv6
 - ``IP address``: the IP address or CIDR to bypass
-- ``Direction``: if the bypass is for the source or destination IP address
 - ``Description``: a description of the bypass rule, it is optional and can be omitted
 
 Disable rules
