@@ -146,8 +146,9 @@ After the installation, start the service: ::
 
 The QEMU guest agent will be available on the virtual machine and automatically started at boot.
 
-Please note that after an image upgrade the QEMU guest agent will be removed and you will need to reinstall it.
-See :ref:`restore_extra_packages-section` for more info.
+.. note::
+   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+   For earlier versions, please refer to the following documentation to restore extra packages after an upgrade :ref:`restore_extra_packages-section`.
 
 Install on VMWare
 -----------------
