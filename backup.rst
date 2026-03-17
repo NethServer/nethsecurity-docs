@@ -36,7 +36,9 @@ If the backup is encrypted, enter the passphrase, and finally, click the :guilab
 
 After the restore the system will be rebooted.
 
-If you have installed extra packages, you can restore them by following the instructions in the :ref:`restore_extra_packages-section`.
+.. note::
+   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+   For earlier versions, please refer to the following documentation to restore extra packages after an upgrade :ref:`restore_extra_packages-section`.
 
 Machines with a subscription
 ============================
