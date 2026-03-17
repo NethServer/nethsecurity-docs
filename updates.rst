@@ -26,10 +26,6 @@ System upgrades
 
 This types of upgrages involve the transition to a new version of the firmware that introduces new features, improvements and wider hardware support.
 
-.. note::
-
-  The upgrade will preserve all the configurations and settings, but it will not preserve extra packages installed by the user.
-
 This type of update will reboot the device (which will therefore not be reachable for a few dozen seconds) and then completely rewrites the firmware, preserving all the configurations.
 However it is recommended to save a configuration backup before proceeding with the upgrade.
 
@@ -47,12 +43,16 @@ Then run the following command: ::
 
 The ``sysupgrade`` command flashes the new image file to the device.
 
+.. note::
+   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+   For earlier versions, please refer to the following documentation to restore extra packages after an upgrade :ref:`restore_extra_packages-section`.
+
 .. _restore_extra_packages-section:
 
 Restore extra packages
 ----------------------
 
-During the upgrade, the system will be completely rewritten, so all the extra packages installed by the user will be lost.
+During the upgrade, the system will be completely rewritten, so all the extra packages installed by the user will be lost. This applies to versions earlier than 8.7.2.
 Still, the list of installed packages is saved in the configuration backup, so it is possible to restore them after the upgrade.
 
 After the upgrade, make sure the system can access the internet, then restore previously installed packages using the following commands: ::
