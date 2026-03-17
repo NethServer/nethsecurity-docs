@@ -18,7 +18,9 @@ Install the package with::
     opkg update
     opkg install etherwake
 
-These packages are not preserved during a system upgrade. For more info see :ref:`restore_extra_packages-section`.
+.. note::
+   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+   For earlier versions, please refer to the following documentation to restore extra packages after an upgrade :ref:`restore_extra_packages-section`.
 
 Usage
 -----
