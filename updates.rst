@@ -43,19 +43,27 @@ Then run the following command: ::
 
 The ``sysupgrade`` command flashes the new image file to the device.
 
-.. note::
-   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
-   For earlier versions, please refer to the following documentation to restore extra packages after an upgrade :ref:`restore_extra_packages-section`.
-
 .. _restore_extra_packages-section:
 
 Restore extra packages
 ----------------------
+.. note::
+   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+   Refer to the following documentation for earlier versions or for troubleshooting scenarios.
 
-During the upgrade, the system will be completely rewritten, so all the extra packages installed by the user will be lost. This applies to versions earlier than 8.7.2.
-Still, the list of installed packages is saved in the configuration backup, so it is possible to restore them after the upgrade.
+After the upgrade has been done, to list all extra packages, run the following command: ::
 
-After the upgrade, make sure the system can access the internet, then restore previously installed packages using the following commands: ::
+  grep overlay /etc/backup/installed_packages.txt
+
+This command returns all extra packages, making it easier to verify which ones are installed and whether they are running correctly.
+
+Restore extra packages on versions before 8.7.2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During the upgrade, the system is completely rewritten, and all extra packages installed by the user will be lost.
+However, the list of installed packages is saved in the configuration backup, allowing them to be restored after the upgrade.
+
+After the upgrade, ensure that the system has internet access, then restore the previously installed packages using the following commands: ::
 
   opkg update
   grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs opkg install
