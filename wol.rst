@@ -20,7 +20,7 @@ Install the package with::
 
 .. note::
    Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
-   For earlier versions, please refer to the following documentation to restore extra packages after an upgrade :ref:`restore_extra_packages-section`.
+   For earlier versions and for additional information, refer to this documentation: :ref:`restore_extra_packages-section`.
 
 Usage
 -----
