@@ -47,15 +47,14 @@ The ``sysupgrade`` command flashes the new image file to the device.
 
 Restore extra packages
 ----------------------
-.. note::
-   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
-   Refer to the following documentation for earlier versions or for troubleshooting scenarios.
+Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+See the next section for earlier versions.
 
-After the upgrade has been done, to list all extra packages, run the following command: ::
+After the upgrade, you can run the following command to list all extra packages: ::
 
   grep overlay /etc/backup/installed_packages.txt
 
-This command returns all extra packages, making it easier to verify which ones are installed and whether they are running correctly.
+This command returns all extra packages, allowing you to verify which ones are installed and present on the system.
 
 Restore extra packages on versions before 8.7.2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
