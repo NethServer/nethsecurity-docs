@@ -8,6 +8,46 @@ NethSecurity releases changelogs.
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
 
+Major changes on 2026-03-25
+===========================
+
+Image version: `8.7.2` (based on OpenWrt 24.10.5)
+
+.. rubric:: New Features
+
+- Real-time network flow monitoring: visualize active flows with detailed metrics (source, destination, protocol, application, bandwidth) through the refactored netifyd engine integration.
+- Network scan improvements: added sorting and filtering capabilities for network scan results, similar to static and dynamic leases.
+- WireGuard peer MTU configuration: allow MTU editing for WireGuard peers to optimize connections on networks with specific constraints.
+
+.. rubric:: Improvements
+
+- Updated nginx to upstream version to improve security posture and reduce false-positive vulnerability detections.
+- Threat Shield DNS: removed confidence indicator from community-based blocklists to reduce confusion; confidence indicator now only displayed for enterprise Yoroi lists.
+- Scan Network: improved visibility of IP reservations and fixed hostname resolution for all scanned devices.
+
+.. rubric:: Bug Fixes
+
+- Reverse Proxy: fixed inconsistent default certificate behavior; now correctly applies default certificate across both administration interface and reverse proxy services.
+- WireGuard: fixed DNS responses not reaching clients due to incorrect address format (missing CIDR notation).
+- WireGuard: removed duplicate empty entries in allowed_ips list configuration.
+- WireGuard: fixed issue where WireGuard zone was incorrectly available for other interface types.
+- Port Forwarding: fixed UI validation for "ALL" protocol selection; now properly disables port fields and prevents mixing with other protocols.
+- Snort/IPS: fixed configuration failure on systems with more than 16 logical CPU cores; now correctly limits thread and queue count to maximum of 16.
+- Flashstart: fixed bypassed IPs still being redirected to catch-all DNS rule; bypasses now properly elude catch-all filtering.
+- Flashstart: changed from forceful firewall restart to graceful reload when updating ProPlus configuration, preventing connection drops during updates.
+- OpenVPN Roadwarrior: added certificate renewal functionality and expiration date visibility (CA and server certificates); warnings displayed for certificates within one month of expiration.
+- MultiWAN: fixed rule editing to retain previously configured source and destination options instead of reverting to defaults.
+- QoS: fixed inverted upload/download bandwidth values for non-WAN (LAN) interfaces.
+- Network bonding: added default link monitoring settings (MII monitoring every 100ms) to ensure active-backup mode correctly switches to backup interface.
+- Migration: fixed firewall rules wrongly tagged as "automated" after migration; rules are now correctly editable.
+- Network interfaces: fixed VLAN regex matching issue after migration where VLANs on bridges (e.g., br111.112) were incorrectly parsed as bridges.
+- DPI: fixed logging limit configuration; hardcoded proper nftables rate syntax to prevent firewall reload failures.
+- High Availability (ns-ha): fixed race condition during role switches causing dedalo and dpi services to remain inactive; added locking mechanism.
+- PPPoE: fixed pppd crashes with SIGILL during LCP negotiation on specific ISPs; disabled FORTIFY_SOURCE to resolve memcpy issues.
+- WireGuard default gateway: fixed missing default gateway after tunnel disconnection on single-WAN systems; assigned proper default metric for WAN interfaces.
+- WireGuard setup: fixed silent failures when public IP cannot be resolved; now handles DNS resolution failures gracefully without blocking installation.
+
+
 Major changes on 2025-10-30
 ===========================
 
