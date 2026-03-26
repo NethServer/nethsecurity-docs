@@ -67,11 +67,8 @@ The Live Flows section provides a real-time view of all active network connectio
 The table includes the following information for each connection:
 
 - ``Application``: the detected application generating the traffic.
-
 - ``Protocol``: the network protocol used for the flow (e.g. TCP, UDP, HTTP).
-
 - ``Tags``: any relevant tags assigned to the flow for classification (e.g. Outgoing, Remote, Internal)
-
 - ``Source``: the source of the connection, typically showing the IP address and port of the initiating device.
 - ``Destination``: the destination of the connection, typically showing the hostname or IP address and port of the target device.
 - ``Download``: the current download transfer rate of the flow, indicating how fast data is being received.
@@ -83,17 +80,18 @@ The table includes the following information for each connection:
 This real-time table allows operators to quickly identify heavy users, monitor application behavior, and troubleshoot network issues as they occur.
 
 Configuration
+^^^^^^^^^^^
 
 The Live Flows section also includes configuration options to manage the behavior of the flows monitoring service:
 
 - ``Flows Daemon Enabled``: a toggle to enable or disable the live flows monitoring service, turning off the daemon stops the collection of real-time flow data.
 - ``Flows Persistence After Expiration``: a setting that determines how long flow records are retained after the flow has ended, this allows administrators to adjust data retention based on monitoring needs and storage availability.
 
-Together, these features provide both real-time visibility and configurable control over flow data collection and retention, making it easier to manage network traffic effectively.
-
-
 Top Talkers
 -----------
+
+The main purpose of the Top Talkers section is to provide an initial overview of bandwidth usage, quickly identifying the primary “contributors” to network traffic. 
+This information can serve as a starting point for deeper analysis, troubleshooting, or general network efficiency monitoring.
 
 The Top Talkers section displays traffic data updated every 30 seconds, providing a quick and up-to-date overview of which entities are generating the most network traffic, it's is divided into three categories:
 
@@ -102,9 +100,6 @@ The Top Talkers section displays traffic data updated every 30 seconds, providin
 - ``Applications``: shows all detected applications and their current traffic, ordered by volume. This view helps to understand which services or applications are consuming the most network resources, regardless of the device running them.
 
 - ``Protocols``: lists all detected protocols and their current traffic, ordered by volume. This provides an immediate insight into which types of traffic (for example, HTTP, DNS, SMTP) are dominating the network, without considering which host or application is generating them.
-
-The main purpose of the Top Talkers section is to provide an initial overview of bandwidth usage, quickly identifying the primary “contributors” to network traffic. 
-This information can serve as a starting point for deeper analysis, troubleshooting, or general network efficiency monitoring.
 
 
 WAN uplinks
