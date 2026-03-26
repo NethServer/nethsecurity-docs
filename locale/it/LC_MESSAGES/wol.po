@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../wol.rst:3 9c9f312a6af1493bb048561fa153093e
+#: ../../wol.rst:3 da27895e610a4e8e9b79ed052dae4d1f
 msgid "Wake-on-LAN (EtherWake)"
 msgstr "Wake-on-LAN (EtherWake)"
 
-#: ../../wol.rst:5 a547e0a23ff14406bb220f6725d2cdda
+#: ../../wol.rst:5 536b8aed1d6848b6975f6fc27a08280f
 msgid ""
 "Wake-on-LAN (WoL) is a technology that allows a powered-off or suspended "
 "device to be remotely turned on by sending a special network message called "
@@ -23,7 +23,7 @@ msgstr ""
 "EtherWake è disponibile nei repository ufficiali ma non è installato di "
 "default."
 
-#: ../../wol.rst:10 bd848a7d59594c4d9b7237b94e5b0f12
+#: ../../wol.rst:10 e2be14cfaf0b45ecaf3b3e87e04a0b19
 msgid ""
 "The target device must support Wake-on-LAN (WoL) and have the feature "
 "enabled in its BIOS/UEFI and network card settings. Otherwise, it will not "
@@ -33,36 +33,27 @@ msgstr ""
 "funzionalità abilitata nel BIOS/UEFI e nelle impostazioni della scheda di "
 "rete. In caso contrario, non risponderà ai Magic Packet."
 
-#: ../../wol.rst:14 9bad711ceca34330b98c4fab3341347b
+#: ../../wol.rst:14 52dde0b1c5ab44529b9a44219c61a2e9
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../wol.rst:16 e7bb652b570c4149a8f6699ac0f3c36d
+#: ../../wol.rst:16 b7c628e4d1b4482b860341736e769ee5
 msgid "Install the package with::"
 msgstr "Installare il pacchetto con::"
 
-#: ../../wol.rst:21 bab29dd3bbd24184939042bc8a423b00
-msgid ""
-"These packages are not preserved during a system upgrade. For more info see "
-":ref:`restore_extra_packages-section`."
-msgstr ""
-"Questi pacchetti non vengono conservati durante un aggiornamento del "
-"sistema. Per ulteriori informazioni, consultare "
-":ref:`restore_extra_packages-section`."
-
-#: ../../wol.rst:24 d1ae8e4f03084496963cc77f0b98395b
+#: ../../wol.rst:26 caad9027251147d5afbcfcc335e88500
 msgid "Usage"
 msgstr "Utilizzo"
 
-#: ../../wol.rst:26 05311470f8974e61ba62fb89e30fcb37
+#: ../../wol.rst:28 1ddfac848a2c4c96a7df79a58847561e
 msgid "To wake up a device in the LAN, you must know:"
 msgstr "Per riattivare un dispositivo nella LAN, è necessario conoscere:"
 
-#: ../../wol.rst:28 f6e79d8460cc406883ce2d870892c8e0
+#: ../../wol.rst:30 a4900b6f281b4b1fbe259f6a4667b572
 msgid "the ``MAC address`` of the device to be powered on"
 msgstr "l'``Indirizzo MAC`` del dispositivo da accendere"
 
-#: ../../wol.rst:29 baf2ac976a45420cb5ee022a5c4cb3cc
+#: ../../wol.rst:31 e0bb824061f7424da87a851bee35977d
 msgid ""
 "the ``NethSecurity network interface`` to which the device is connected "
 "(e.g. ``eth0``)"
@@ -70,10 +61,21 @@ msgstr ""
 "l'``interfaccia di rete NethSecurity`` a cui il dispositivo è collegato (ad "
 "es. ``eth0``)"
 
-#: ../../wol.rst:31 7a6ae956cc8e4061a4a2b206ac27af8d
+#: ../../wol.rst:33 acbcf240843a40c6b2eb8ca62849a310
 msgid "The basic command is::"
 msgstr "Il comando di base è::"
 
-#: ../../wol.rst:35 3df944d96a2743c6a7b35ca1dd97cf0c
+#: ../../wol.rst:37 324f417cf3ae40e099d7d9c7576eb672
 msgid "Example::"
 msgstr "Esempio::"
+
+#: ../../wol.rst:22 7a772a9afc124b4e8bd4549aa7f440a2
+msgid ""
+"Starting from version 8.7.2, extra packages are automatically reinstalled "
+"after system upgrade. For earlier versions and for additional information, "
+"refer to this documentation: :ref:`restore_extra_packages-section`."
+msgstr ""
+"A partire dalla versione 8.7.2, i pacchetti extra vengono reinstallati "
+"automaticamente dopo l'aggiornamento del sistema. Per le versioni precedenti"
+" e per ulteriori informazioni, consultare questa documentazione: "
+":ref:`restore_extra_packages-section`."

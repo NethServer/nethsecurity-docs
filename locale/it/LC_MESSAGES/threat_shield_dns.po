@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../threat_shield_dns.rst:5 7fe8ee1ccc3d4838861bcbae95a00898
+#: ../../threat_shield_dns.rst:5 a893c600315847a28522e5b8fd49b692
 msgid "Threat shield DNS"
 msgstr "Threat shield DNS"
 
-#: ../../threat_shield_dns.rst:11 2b8870561a08408091c65d45c9934090
+#: ../../threat_shield_dns.rst:11 10fd2aabb8024deea64e8038bc4de420
 msgid ""
 "Please note that to access the Nethesis and Yoroi blocklists, the unit must "
 "have a valid extra entitlement for this service."
@@ -14,11 +14,11 @@ msgstr ""
 "Si noti che, per accedere alle blocklist di Nethesis e Yoroi, l'unità deve "
 "disporre di un abbonamento extra valido per questo servizio."
 
-#: ../../threat_shield_dns.rst:16 28bbee7ebe39489ab9ad1cb16676db47
+#: ../../threat_shield_dns.rst:16 a7a8bab0175741cca787d128c28e2041
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../threat_shield_dns.rst:18 a53f4a5945d54f3bbf3792f4917eed36
+#: ../../threat_shield_dns.rst:18 35b0462e797d425aab8dea6a9d8a487e
 msgid ""
 "Please use Threat shield DNS only if you are not already using the "
 "FlashStart service. Both services operate at the DNS level and cannot be "
@@ -30,7 +30,7 @@ msgstr ""
 "utilizzati insieme. L'interfaccia utente impedisce di abilitarli "
 "contemporaneamente per evitare conflitti."
 
-#: ../../threat_shield_dns.rst:20 e13dad13c1564efea4dff13dfe797cb3
+#: ../../threat_shield_dns.rst:20 24bd868d94454050b99391b081a28676
 msgid ""
 "The service is disabled by default, to enable it navigate to the ``Threat "
 "shield DNS`` page under the ``Security`` section. Access the ``Settings`` "
@@ -40,7 +40,7 @@ msgstr ""
 "navigare alla pagina ``Threat shield DNS`` nella sezione ``Sicurezza``. "
 "Accedere alla scheda ``Impostazioni`` e attivare l'interruttore ``Stato``."
 
-#: ../../threat_shield_dns.rst:23 35f9b39395804c29b777110053b9af6c
+#: ../../threat_shield_dns.rst:23 bb76896595414341ae3711d27376ae9c
 msgid ""
 "When the service is enabled, the ``Blocklist sources`` tab will display all "
 "available blocklists. You can enable or disable each blocklist by using the "
@@ -53,7 +53,7 @@ msgstr ""
 "Le blocklist abilitate verranno aggiornate automaticamente a intervalli "
 "regolari."
 
-#: ../../threat_shield_dns.rst:27 45d5375a1d6a469a8711d511ba48d411
+#: ../../threat_shield_dns.rst:27 76b570f89ef04e7f82341b4f02a6fa55
 msgid ""
 "To specify on which zones the service should be active, select them in the "
 "``Force DNS redirection on these zones`` combobox."
@@ -61,7 +61,7 @@ msgstr ""
 "Per specificare su quali zone il servizio deve essere attivo, selezionarle "
 "nella combobox ``Forza la redirezione DNS in queste zone``."
 
-#: ../../threat_shield_dns.rst:29 1fe6cf604b0f4351a5c24ddb67fafd75
+#: ../../threat_shield_dns.rst:29 4f495197c16240dd9dea8166d254fb37
 msgid ""
 "``Redirected ports`` allows you to specify which ports should be redirected "
 "to Threat shield DNS service."
@@ -69,30 +69,15 @@ msgstr ""
 "``Porte redirezionate`` consente di specificare quali porte devono essere "
 "reindirizzate al servizio DNS di Threat shield."
 
-#: ../../threat_shield_dns.rst:34 e9242e8d25f54f108c1b44ce5c2e746f
+#: ../../threat_shield_dns.rst:34 e826111a2475491bb4de682a45e112ad
 msgid "Community blocklists"
 msgstr "Blocklist della community"
 
-#: ../../threat_shield_dns.rst:36 170bdc9421a3445b8bbd493eb99646db
-msgid ""
-"Community blocklists are sourced from community contributors and block "
-"various domains related to: ads, malware, spam, tracker, explicit sexual "
-"content, piracy and so on. NethSecurity makes them available as they are. "
-"The type of usage license may vary depending on the provider, so if the use "
-"is not personal, you may need to inquire with the provider."
-msgstr ""
-"Le blocklist della community sono fornite da contributori della community e "
-"bloccano vari domini relativi a: pubblicità, malware, spam, tracker, "
-"contenuti sessuali espliciti, pirateria e così via. NethSecurity le rende "
-"disponibili così come sono. Il tipo di licenza d'uso può variare a seconda "
-"del fornitore, quindi, se l'utilizzo non è personale, potrebbe essere "
-"necessario informarsi presso il fornitore."
-
-#: ../../threat_shield_dns.rst:42 5e061dccc9fd4a0480ddd5016170d35f
+#: ../../threat_shield_dns.rst:46 ca76d0bbf1e146e69829eb95ca604344
 msgid "Community lists maintenance"
 msgstr "Manutenzione delle liste della community"
 
-#: ../../threat_shield_dns.rst:43 1940b6d61ffb4637ac0b79002a343f26
+#: ../../threat_shield_dns.rst:47 34504133b415498e98c0f65eb3629403
 msgid ""
 "Each blocklist is maintained by its specific provider. NethSecurity already "
 "includes the URLs for downloading the feeds, which are valid at the time of "
@@ -105,15 +90,15 @@ msgstr ""
 "sistema, se il provider li modifica, alcune blocklist potrebbero non essere "
 "più scaricabili."
 
-#: ../../threat_shield_dns.rst:50 d366c56fce3d4f1180263dbc8bf34f55
+#: ../../threat_shield_dns.rst:54 a1d4aeffac664f6191ecfb279e96828b
 msgid "Enterprise blocklists"
 msgstr "Blocklist Enterprise"
 
-#: ../../threat_shield_dns.rst:52 4384105c62994b97bdc22b35b55068f3
+#: ../../threat_shield_dns.rst:56 0973d1120a414355b2670d68f7b7de4e
 msgid "Subscription required"
 msgstr "Subscription richiesta"
 
-#: ../../threat_shield_dns.rst:54 b22161efe2344a69b5de46b84f78315f
+#: ../../threat_shield_dns.rst:58 8a553c42514b4c3ca95f99116e3f2aeb
 msgid ""
 "This feature is available only if the unit has a valid :ref:`Community or "
 "Enterprise subscription <subscription-section>`."
@@ -121,7 +106,7 @@ msgstr ""
 "Questa funzionalità è disponibile solo se l'unità dispone di un valido "
 ":ref:`abbonamento Community o Enterprise <subscription-section>`."
 
-#: ../../threat_shield_dns.rst:56 9d97629d3cdc41969fec22328272f39e
+#: ../../threat_shield_dns.rst:60 ebfafcc45c1e4cf9a83e9a6ba950d177
 msgid ""
 "Enterprise blocklists are specifically focused on security and offer several"
 " advantages over community-maintained blocklists:"
@@ -129,7 +114,7 @@ msgstr ""
 "Le blocklist enterprise sono specificamente focalizzate sulla sicurezza e "
 "offrono diversi vantaggi rispetto alle blocklist mantenute dalla comunità:"
 
-#: ../../threat_shield_dns.rst:58 dda77fa65ba841b2ac48be5321deb87a
+#: ../../threat_shield_dns.rst:62 b2c66271d78c4941aa5ad693cb238781
 msgid ""
 "**Quality and accuracy**: Enterprise blocklists, such as the ones provided "
 "by Nethesis and Yoroi, are curated and maintained by reputable cybersecurity"
@@ -148,7 +133,7 @@ msgstr ""
 "comunità, che potrebbero non ricevere la stessa attenzione e frequenza di "
 "aggiornamenti."
 
-#: ../../threat_shield_dns.rst:62 075f18bac4554390b01f9065f603ef36
+#: ../../threat_shield_dns.rst:66 ff4b229ce1dc4062b94c09231c22455a
 msgid ""
 "**Timeliness**: Enterprise blocklists are frequently updated to include the "
 "latest threats and malicious IP addresses. Cybersecurity companies like "
@@ -163,7 +148,7 @@ msgstr ""
 "garantisce che il sistema sia protetto contro le minacce più recenti e in "
 "evoluzione."
 
-#: ../../threat_shield_dns.rst:66 a47e549d40074888a70fb4c5398f18dd
+#: ../../threat_shield_dns.rst:70 f1dd7d541622491d8117470a91422bbd
 msgid ""
 "**Reduced false positives**: False positives occur when legitimate traffic "
 "is mistakenly blocked. Enterprise blocklists are designed to minimize false "
@@ -182,7 +167,7 @@ msgstr ""
 "Questo riduce la possibilità che il traffico legittimo venga bloccato, "
 "minimizzando le interruzioni alla rete o ai servizi."
 
-#: ../../threat_shield_dns.rst:71 af91b7eee4494c6da2a1cda5f410f21d
+#: ../../threat_shield_dns.rst:75 50933822374649ed968bd35aae49f018
 msgid ""
 "**Enterprise support**: Enterprise blocklists often come with additional "
 "support and services tailored for enterprise environments. This includes "
@@ -198,7 +183,7 @@ msgstr ""
 "blocklist Enterprise, è possibile fare affidamento sul supporto fornito "
 "dalle aziende di cybersecurity per affrontarli in modo efficace."
 
-#: ../../threat_shield_dns.rst:76 2d4bea4d173d455cbbe5c949a7a245e7
+#: ../../threat_shield_dns.rst:87 1d16e1b75a4443d0bcb29708bd76ba69
 msgid ""
 "Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will be"
 " listed only if the unit has a valid :ref:`Enterprise or Community "
@@ -210,11 +195,11 @@ msgstr ""
 "Enterprise o Community <subscription-section>` e di un diritto valido per il"
 " servizio Threat Shield."
 
-#: ../../threat_shield_dns.rst:82 d698d73b04a1419b8c6c08cae5f0a9fb
+#: ../../threat_shield_dns.rst:93 fdf7bf5dac1943cdb6d924d88f9dbfd1
 msgid "Filter bypass"
 msgstr "Bypass del filtro"
 
-#: ../../threat_shield_dns.rst:84 992a11ed8d544d70ac4d5b3f771f2c88
+#: ../../threat_shield_dns.rst:95 199eafd261c24c6994c8fcf77a1563cb
 msgid ""
 "Some hosts or subnets may need to bypass Threat shield DNS filtering. To "
 "configure filter bypass, navigate to the ``Filter bypass`` tab of Threat "
@@ -228,11 +213,11 @@ msgstr ""
 "bypass` per aggiungere un nuovo indirizzo all'elenco. L'indirizzo può essere"
 " un indirizzo IPv4/IPv6 valido con notazione CIDR opzionale."
 
-#: ../../threat_shield_dns.rst:91 6f9fb74c4f5c4e8cad38d0d708bb4b08
+#: ../../threat_shield_dns.rst:112 110597e7cb9a4418ba74fce0ee27efb4
 msgid "Local blocklist"
 msgstr "Blocklist locale"
 
-#: ../../threat_shield_dns.rst:93 8a98537f2dfd44e9a4288b141f84e0e7
+#: ../../threat_shield_dns.rst:114 c9798505182d40ee84886428d4a7227c
 msgid ""
 "To block specific domains not included in the blocklists, you can navigate "
 "to the ``Local blocklist`` tab of Threat shield DNS. Use the :guilabel:`Add "
@@ -245,7 +230,7 @@ msgstr ""
 "all'elenco; è possibile aggiungere una descrizione al dominio per ricordare "
 "il motivo per cui è stato aggiunto."
 
-#: ../../threat_shield_dns.rst:98 48550990fc6c4599be053ab8a5cbbe13
+#: ../../threat_shield_dns.rst:119 03ebaae5ca0e41008bed93025217fc91
 msgid ""
 "The DNS resolution for the names listed in the blocklist will also affect "
 "the unit itself"
@@ -253,15 +238,15 @@ msgstr ""
 "La risoluzione DNS per i nomi elencati nella blocklist influenzerà anche "
 "l'unità stessa"
 
-#: ../../threat_shield_dns.rst:103 c6adcbcf3d3746649cdd34b2d4f5963f
+#: ../../threat_shield_dns.rst:156 7b2f2ec235954f19aa7593f84b1bedec
 msgid "Advanced configuration"
 msgstr "Configurazione avanzata"
 
-#: ../../threat_shield_dns.rst:105 5cbe095e37fd414e8b5133d3822e485e
+#: ../../threat_shield_dns.rst:158 059c885957b64b75acedfe9e7a48791b
 msgid "When Threat shield DNS is enabled:"
 msgstr "Quando Threat shield DNS è abilitato:"
 
-#: ../../threat_shield_dns.rst:107 18d0075d3ee24745aa5fa928ebcfaa6a
+#: ../../threat_shield_dns.rst:160 6a97fc14a787478caca77ac00d21c514
 msgid ""
 "A new category source file is generated based on the unit registration and "
 "entitlement."
@@ -269,11 +254,11 @@ msgstr ""
 "Un nuovo file sorgente di categoria viene generato in base alla "
 "registrazione dell'unità e ai diritti."
 
-#: ../../threat_shield_dns.rst:108 66990c4069634363862f70bec4362edd
+#: ../../threat_shield_dns.rst:161 8a96562549e847daae90b9c61ec79cad
 msgid "All DNS queries are redirected to the local machine."
 msgstr "Tutte le query DNS vengono reindirizzate alla macchina locale."
 
-#: ../../threat_shield_dns.rst:109 a726c0229dd64237bddc4effacf76371
+#: ../../threat_shield_dns.rst:162 3ff14613f2924691a8d918f4ec2e6271
 msgid ""
 "Adblock is configured to use the new category source file and will be "
 "started automatically."
@@ -281,7 +266,7 @@ msgstr ""
 "Adblock è configurato per utilizzare il nuovo file di origine delle "
 "categorie e verrà avviato automaticamente."
 
-#: ../../threat_shield_dns.rst:111 d09fd97ad02941719ea7c899ce8c6e3a
+#: ../../threat_shield_dns.rst:164 1fa632a5e6b54cd1bee839d6ea184c82
 msgid ""
 "Even if not recommended, it's possible to use Adblock without Threat shield "
 "DNS. For more detailed configuration options, please refer to the `developer"
@@ -292,7 +277,7 @@ msgstr ""
 "`manuale per sviluppatori <https://dev.nethsecurity.org/packages/ns-"
 "threat_shield/#ts-dns>`_."
 
-#: ../../threat_shield_dns.rst:7 de093ddbda2d41c593d64e846992f5b8
+#: ../../threat_shield_dns.rst:7 432f73a98db94252a69c67f55149af1d
 msgid ""
 "Threat shield DNS uses Adblock which blocks any request to domains "
 "considered malicious. The service can load community-maintained blocklists "
@@ -307,3 +292,136 @@ msgstr ""
 "`Nethesis <https://www.nethesis.it>`_ e `Yoroi <https://yoroi.company>`_, "
 "un'azienda leader focalizzata sulla CyberSecurity e membro della `Cyber "
 "Threat Alliance <https://www.cyberthreatalliance.org>`_."
+
+#: ../../threat_shield_dns.rst:36 af037362a72a4770bbf2c09b29e58515
+msgid ""
+"Community blocklists are sourced from community contributors and block "
+"various domains related to: ads, malware, spam, tracker, explicit sexual "
+"content, piracy and so on. NethSecurity makes them available as they are."
+msgstr ""
+"Le blocklist della community sono fornite da contributori della community e "
+"bloccano vari domini relativi a: pubblicità, malware, spam, tracker, "
+"contenuti sessuali espliciti, pirateria e così via. NethSecurity le rende "
+"disponibili così come sono."
+
+#: ../../threat_shield_dns.rst:40 657f7bc5eb9d41ab8b1dee807ebb7e3b
+msgid ""
+"Community lists do not provide a standardized \"Confidence\" metric, "
+"therefore the UI shows their confidence as \"Unknown\". As a practical "
+"heuristic, when the list name contains a severity or trust indicator (e.g. "
+"\"lvl 1\", \"level 1\"), it generally denotes the lowest false positive rate"
+" and the highest confidence; conversely, higher indicated levels (e.g. \"lvl"
+" 2\", \"lvl 3\", \"lvl 4\") typically imply lower confidence and a higher "
+"risk of aggressive or incorrect entries. Naming conventions vary and not all"
+" community providers include such indicators, so always review a community "
+"list's contents and purpose before enabling it in production. The type of "
+"usage license may vary depending on the provider, so if the use is not "
+"personal, you may need to inquire with the provider."
+msgstr ""
+"Le liste della community non forniscono un parametro \"Confidence\" "
+"standardizzato, pertanto l'interfaccia utente mostra la loro affidabilità "
+"come \"Sconosciuta\". Come euristica pratica, quando il nome della lista "
+"contiene un indicatore di severità o affidabilità (ad esempio, \"lvl 1\", "
+"\"level 1\"), generalmente indica il tasso di falsi positivi più basso e la "
+"massima affidabilità; al contrario, livelli più alti indicati (ad esempio, "
+"\"lvl 2\", \"lvl 3\", \"lvl 4\") tipicamente implicano una minore "
+"affidabilità e un rischio maggiore di voci aggressive o errate. Le "
+"convenzioni di denominazione variano e non tutti i fornitori della community"
+" includono tali indicatori, quindi è sempre consigliabile esaminare il "
+"contenuto e lo scopo di una lista della community prima di abilitarla in "
+"produzione. Il tipo di licenza d'uso può variare a seconda del fornitore, "
+"quindi se l'utilizzo non è personale, potrebbe essere necessario informarsi "
+"presso il fornitore."
+
+#: ../../threat_shield_dns.rst:81 8819cc522d5040488c02fc5f3c85051c
+msgid "Confidence"
+msgstr "Affidabilità"
+
+#: ../../threat_shield_dns.rst:83 2cf85d3c666e406f82fd4c8f2efaf7ee
+msgid ""
+"Enterprise blocklists include a \"Confidence\" score which is shown in the "
+"UI. The score is expressed as a value from 1 to 10 and represents the "
+"provider's assessment of the list quality: higher values indicate higher "
+"confidence and a lower likelihood of false positives. This \"Confidence\" "
+"metric is available only for Enterprise lists; Community lists are presented"
+" \"as is\" and display \"Unknown\" for confidence."
+msgstr ""
+"Le blocklist Enterprise includono un punteggio di \"Affidabilità\" che viene"
+" mostrato nell'interfaccia utente. Il punteggio è espresso come un valore da"
+" 1 a 10 e rappresenta la valutazione del provider sulla qualità della lista:"
+" valori più alti indicano una maggiore affidabilità e una minore probabilità"
+" di falsi positivi. Questa metrica di \"Affidabilità\" è disponibile solo "
+"per le liste Enterprise; le liste Community vengono presentate \"così come "
+"sono\" e mostrano \"Sconosciuto\" per l'affidabilità."
+
+#: ../../threat_shield_dns.rst:102 ca355746ddcc4cf7b27b56f87ed11146
+msgid "Local allowlist"
+msgstr "Allowlist locale"
+
+#: ../../threat_shield_dns.rst:104 64232b0b10c149bc8679f678bf04c3a2
+msgid ""
+"To allow specific domains that may be included in blocklists, you can "
+"navigate to the ``Local allowlist`` tab of Threat shield DNS. Use the "
+":guilabel:`Add domain` button to add a domain to the list; you can add a "
+"description to the domain to help you remember why it was added."
+msgstr ""
+"Per consentire domini specifici che potrebbero essere inclusi nelle "
+"blocklist, è possibile navigare nella scheda ``Allowlist locale`` di Threat "
+"shield DNS. Utilizzare il pulsante :guilabel:`Aggiungi dominio` per "
+"aggiungere un dominio all'elenco; è possibile aggiungere una descrizione al "
+"dominio per ricordare il motivo per cui è stato aggiunto."
+
+#: ../../threat_shield_dns.rst:107 79ba8129d73d455cad1f40c6b462c004
+msgid ""
+"Domains in the allowlist take priority over ``Blocklists`` and the ``Local "
+"blocklist``"
+msgstr ""
+"I domini presenti nella allowlist hanno priorità rispetto alle "
+"``Blocklists`` e alla ``Blocklist locale``."
+
+#: ../../threat_shield_dns.rst:124 84d6852394a8485ca6f4a0ac7176f117
+msgid "Check if a domain is blocked"
+msgstr "Verificare se un dominio è bloccato"
+
+#: ../../threat_shield_dns.rst:126 25ce027520824f79bca6d80a9b554e73
+msgid ""
+"If you are experiencing issues with domain resolution and want to check "
+"whether a specific domain is blocked, you can perform a query directly from "
+"the local terminal."
+msgstr ""
+"Se si riscontrano problemi con la risoluzione dei domini e si desidera "
+"verificare se un dominio specifico è bloccato, è possibile eseguire una "
+"query direttamente dal terminale locale."
+
+#: ../../threat_shield_dns.rst:128 9ce5f12ff09f47aa914eb3a51a274586
+msgid "Use the following command to check a domain:"
+msgstr "Utilizzare il seguente comando per verificare un dominio:"
+
+#: ../../threat_shield_dns.rst:130 44862c4bd5414cfc9ba6ebec7e7a3c85
+msgid ":code:`/etc/init.d/adblock query <domain>`"
+msgstr ":code:`/etc/init.d/adblock query <domain>`"
+
+#: ../../threat_shield_dns.rst:132 0cf4f72ea611437287120a8632479182
+msgid "For example:"
+msgstr "Ad esempio:"
+
+#: ../../threat_shield_dns.rst:134 b54e35b8d1744cdbb496214420e7df7c
+msgid ":code:`root@nethsecurity8:~# /etc/init.d/adblock query baddomain.com`"
+msgstr ":code:`root@nethsecurity8:~# /etc/init.d/adblock query baddomain.com`"
+
+#: ../../threat_shield_dns.rst:136 39381d518134408c86daa10b4cd25bcd
+msgid "The output might look like this:"
+msgstr "L'output potrebbe apparire così:"
+
+#: ../../threat_shield_dns.rst:150 235ae069da3a48599ddb86409d3f13e3
+msgid ""
+"This output shows if the domain is currently blocked by any active "
+"blocklists. In this specific example, the domain `baddomain.com` is part of "
+"the category **adult**, as indicated by ``adb_list.adult.gz``. This helps "
+"you identify which category or list caused the domain to be blocked."
+msgstr ""
+"Questa schermata mostra se il dominio è attualmente bloccato da una "
+"qualsiasi delle blocklist attive. In questo esempio specifico, il dominio "
+"`baddomain.com` fa parte della categoria **adult**, come indicato da "
+"``adb_list.adult.gz``. Questo aiuta a identificare quale categoria o lista "
+"ha causato il blocco del dominio."

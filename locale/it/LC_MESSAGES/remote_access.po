@@ -2,55 +2,55 @@
 msgid ""
 msgstr ""
 
-#: ../../remote_access.rst:3 48a8b48795bf46548d612420c2ca965b
+#: ../../remote_access.rst:3 defa6a693a1d4d5e99f8afc15c553fcc
 msgid "Remote access"
 msgstr "Accesso remoto"
 
-#: ../../remote_access.rst:10 d8abda391022475fb541817aa901607b
+#: ../../remote_access.rst:10 acc05fc565ee40aa87a86234d76fce80
 msgid "Default credentials"
 msgstr "Credenziali predefinite"
 
-#: ../../remote_access.rst:12 89fc2b051ce149768310072e867a3478
+#: ../../remote_access.rst:12 f55f4dc4d77d4a108a562eeb79b07d2a
 msgid "Default credentials are:"
 msgstr "Le credenziali predefinite sono:"
 
-#: ../../remote_access.rst:14 9ec15ea80aec462882dd69f51c61a7e7
+#: ../../remote_access.rst:14 2a2a43e931a1460881fbf9011ce34602
 msgid "User: ``root``"
 msgstr "Utente: ``root``"
 
-#: ../../remote_access.rst:15 4f075650581b462fac0834ab8d45ad8f
+#: ../../remote_access.rst:15 054f984dd49b4f2596a4383464daf30a
 msgid "Password: ``Nethesis,1234``"
 msgstr "Password: ``Nethesis,1234``"
 
-#: ../../remote_access.rst:17 e9f21da776574823b15736395c0ad97d
+#: ../../remote_access.rst:17 f4b44c9178114abf9cf5fe32b64c9ed4
 msgid ""
 "Such credentials can be used to log in to the web interface or using SSH:"
 msgstr ""
 "Queste credenziali possono essere utilizzate per accedere all'interfaccia "
 "web o tramite SSH:"
 
-#: ../../remote_access.rst:19 aea60df6515b4a088a0f1f1cb1efd875
+#: ../../remote_access.rst:19 e0ebc8dd093a4a6c8479eebcd8a1ab85
 msgid "Web user interface: **https://<server_ip>:9090**"
 msgstr "Interfaccia utente web: **https://<server_ip>:9090**"
 
-#: ../../remote_access.rst:20 9071c37c47c14798b51c2110b255014d
+#: ../../remote_access.rst:20 940b2e6dba9548c7acdaf4550bea34cc
 msgid "SSH default port: **22**"
 msgstr "Porta SSH predefinita: **22**"
 
-#: ../../remote_access.rst:23 0393cb72195c4fc08e89a6610a43df7c
+#: ../../remote_access.rst:23 a670ab7d94704cf48c1f5fcbe049dc5a
 msgid "NethSecurity's default hostname is: ``NethSec``"
 msgstr "Il nome host predefinito di NethSecurity è: ``NethSec``"
 
-#: ../../remote_access.rst:28 58b54880922144c1bb34e639028269f9
+#: ../../remote_access.rst:28 3f3c89278fbc4d828dea5a040472c6c0
 msgid "https://nethsec:9090"
 msgstr "https://nethsec:9090"
 
-#: ../../remote_access.rst:30 a06d8e92ffd6469a8d6f1fa1be2a3585
+#: ../../remote_access.rst:30 ef17c270d3cc4ae084584f3b8ee8d656
 msgid "This hostname can be modified in the System Settings section."
 msgstr ""
 "Questo hostname può essere modificato nella sezione Impostazioni di sistema."
 
-#: ../../remote_access.rst:34 86dee9187c3647308ff2994655f7e3a3
+#: ../../remote_access.rst:34 df7e326b70ba4498a0b3714aa7320998
 msgid ""
 "The default password for the root user is ``Nethesis,1234``. It is "
 "recommended to change the password immediately after logging in for the "
@@ -59,11 +59,11 @@ msgstr ""
 "La password predefinita per l'utente root è ``Nethesis,1234``. Si consiglia "
 "di cambiare la password immediatamente dopo il primo accesso."
 
-#: ../../remote_access.rst:37 083c3ec627c04f65bc103c46522c323e
+#: ../../remote_access.rst:37 dc271a88a0dc4e0483527b0653737429
 msgid "Reset root password"
 msgstr "Reimpostare la password di root"
 
-#: ../../remote_access.rst:39 2e40aec595b64375ae3463087a9f623e
+#: ../../remote_access.rst:39 69a8d50f3bed4f20a6122e755b04b231
 msgid ""
 "The ``root password`` can be reset by entering in :ref:`Failsafe mode "
 "<failsafe-section>`. Once in this mode, you can change the password by "
@@ -73,15 +73,15 @@ msgstr ""
 "Failsafe <failsafe-section>`. Una volta in questa modalità, è possibile "
 "cambiare la password eseguendo i seguenti comandi. ::"
 
-#: ../../remote_access.rst:45 15d03bfd057441949850ba7dd3cf3a75
+#: ../../remote_access.rst:45 5317b198dc1c450a83303f65030fb183
 msgid "Restart the firewall with the command ::"
 msgstr "Riavviare il firewall con il comando ::"
 
-#: ../../remote_access.rst:52 cee4f353bd544e878d7336e6213fada2
+#: ../../remote_access.rst:52 b863fed3db8e46a580168aa7a89ee125
 msgid "Web user interface"
 msgstr "Interfaccia utente web"
 
-#: ../../remote_access.rst:54 8074b8fb0eb54dfea243e5ea771289b0
+#: ../../remote_access.rst:54 1679ac49446946c4ad0b2198b31b4f45
 msgid ""
 "NethSecurity UI (User Interface), the NethSecurity official web interface, "
 "is available on port ``9090`` at the following URL: "
@@ -91,7 +91,7 @@ msgstr ""
 "ufficiale di NethSecurity, è disponibile sulla porta ``9090`` al seguente "
 "URL: **https://<server_ip>:9090**."
 
-#: ../../remote_access.rst:56 bf301eb746fa4870b5e9d580cc3a70c0
+#: ../../remote_access.rst:56 2fe6004bd7024163a13285bfd1b859e1
 msgid ""
 "To ease the access, NethSecurity UI is also available on standard HTTP port "
 "``443`` at the following URL: **https://<server_ip>** or "
@@ -101,17 +101,17 @@ msgstr ""
 " anche sulla porta HTTP standard ``443`` al seguente URL: "
 "**https://<server_ip>** oppure **http://<server_fqdn>**."
 
-#: ../../remote_access.rst:58 0ec34e471a67458f8932e3a44207ee0c
+#: ../../remote_access.rst:58 193093844f7c421da27b19061c5902bb
 msgid "Both URLs are accessible from LAN and WAN by default."
 msgstr ""
 "Entrambi gli URL sono accessibili dalla LAN e dalla WAN per impostazione "
 "predefinita."
 
-#: ../../remote_access.rst:61 0238817b13e8474393320f832b2a4cf9
+#: ../../remote_access.rst:61 94b1fc38709a41a888ca8ede4099e504
 msgid "Restricting access to NethSecurity UI"
 msgstr "Limitazione dell'accesso all'interfaccia utente di NethSecurity"
 
-#: ../../remote_access.rst:63 423493fa8d7a4246bb686b406ec3ec1b
+#: ../../remote_access.rst:63 0ebbdd60d0994709ab9ecc69096baaf9
 msgid ""
 "By default, this interface is accessible on port 9090 from both your "
 "internal network (LAN) and the wider internet (WAN). While convenient, this "
@@ -122,14 +122,14 @@ msgstr ""
 "conveniente, ciò può potenzialmente rappresentare un rischio per la "
 "sicurezza."
 
-#: ../../remote_access.rst:66 53acfc6ab6f04d1d8678d13e2a82d3f5
+#: ../../remote_access.rst:66 ac8c3f76d98f45dd953db2cd10fe2eae
 msgid ""
 "To mitigate this risk, you have two options (remove or restrict access):"
 msgstr ""
 "Per mitigare questo rischio, sono disponibili due opzioni (rimuovere o "
 "limitare l'accesso):"
 
-#: ../../remote_access.rst:68 52ecede16bb24086b46caf4bc93fca9a
+#: ../../remote_access.rst:68 14bd0a01c5e04272b01e0daec46e1be5
 msgid ""
 "remove the ``Allow-UI-from-WAN`` rule: go to the Firewall rules page, "
 "navigate to the ``Input rules`` tab, and locate the \"Allow-UI-from-WAN\" "
@@ -140,7 +140,7 @@ msgstr ""
 "regola \"Allow-UI-from-WAN\". Fare clic sul pulsante :guilabel:`Elimina` per"
 " rimuoverla"
 
-#: ../../remote_access.rst:70 f65d9a090b41491e9518241ea148cdfd
+#: ../../remote_access.rst:70 c7d630abdd594ceeb8221d22eceb7cfe
 msgid ""
 "restrict access from specific IPs or networks: in the Firewall rules page, "
 "locate the \"Allow-UI-from-WAN\" rule and click the :guilabel:`Edit` button."
@@ -153,7 +153,7 @@ msgstr ""
 "gli indirizzi IP o i CIDR di rete dai quali si desidera consentire l'accesso"
 " all'interfaccia utente di NethSecurity."
 
-#: ../../remote_access.rst:74 bbffd0e659a2493185fc1a64f09d9377
+#: ../../remote_access.rst:74 83e18452ea8a4193b5f01bb692043f3c
 msgid ""
 "For example, to allow access only from your home network, you could enter "
 "the 192.168.1.0/24 network. Only allow access from trusted IP addresses or "
@@ -165,15 +165,15 @@ msgstr ""
 "indirizzi IP o reti affidabili. Lasciando questo campo vuoto, chiunque su "
 "Internet potrà accedere all'interfaccia utente di NethSecurity."
 
-#: ../../remote_access.rst:77 c0820d26efb149ce94834f19ca576e44
+#: ../../remote_access.rst:77 f8be6dbd224849deb8543a081ff9a648
 msgid "Additional security measures:"
 msgstr "Misure di sicurezza aggiuntive:"
 
-#: ../../remote_access.rst:79 a118f3c9ae214252a5a5bc87eb82e2a3
+#: ../../remote_access.rst:79 2637d01d23ff4f2da5acaa56c3ce0bff
 msgid "use a strong password for the admin user"
 msgstr "utilizzare una password robusta per l'utente amministratore"
 
-#: ../../remote_access.rst:80 6e2a8eb293f44e4696fca3f56369ff34
+#: ../../remote_access.rst:80 532f8ec7cc204042ba38106ac3cc33c5
 msgid ""
 "enable :ref:`two-factor authentication (2FA) <2fa-section>` for the admin "
 "user"
@@ -181,27 +181,27 @@ msgstr ""
 "abilitare :ref:`l'autenticazione a due fattori (2FA) <2fa-section>` per "
 "l'utente amministratore"
 
-#: ../../remote_access.rst:81 ecd16436b0374a14a06f7104629c42e3
+#: ../../remote_access.rst:81 0589f430b5a34fc9b87c34772322a698
 msgid "keep your firewall up to date with the latest security patches"
 msgstr "mantenere il firewall aggiornato con le ultime patch di sicurezza"
 
-#: ../../remote_access.rst:86 261791f4dab940398e92bb79524c3389
+#: ../../remote_access.rst:86 98bae4b57f214b7dabbe2e221c74936a
 msgid "Change web user interface port"
 msgstr "Modificare la porta dell'interfaccia utente web"
 
-#: ../../remote_access.rst:88 c7816dbe366e456789870e23d708c366
+#: ../../remote_access.rst:88 dc5c8e81ba134e84b0bee48ddddd1cad
 msgid "Users can change the NethSecurity UI port."
 msgstr ""
 "Gli utenti possono modificare la porta dell'interfaccia utente di "
 "NethSecurity."
 
-#: ../../remote_access.rst:90 94f5440af12e45f3b1f41da1e5102d62
+#: ../../remote_access.rst:90 57ac1bbe06074c789e0005727ca4d13b
 msgid "To change the NethSecurity UI port from 9090 to 8181, execute: ::"
 msgstr ""
 "Per modificare la porta dell'interfaccia utente di NethSecurity da 9090 a "
 "8181, eseguire: ::"
 
-#: ../../remote_access.rst:97 f5fa429a506a4ed29257c55f3c8f05c4
+#: ../../remote_access.rst:97 6d93bc2898f444baa231cd8041c485b0
 msgid ""
 "The controller uses port 9090 to communicate with the unit. Changing the "
 "port will prevent the controller from managing the NethSecurity."
@@ -209,11 +209,11 @@ msgstr ""
 "Il controller utilizza la porta 9090 per comunicare con l'unità. Modificare "
 "la porta impedirà al controller di gestire NethSecurity."
 
-#: ../../remote_access.rst:100 e6f8c4f7a8744e1e828c5a8a48e3e107
+#: ../../remote_access.rst:100 3b10da4d1c974906b1da50299c70ad89
 msgid "Disable web user interface on port 443"
 msgstr "Disabilitare l'interfaccia utente web sulla porta 443"
 
-#: ../../remote_access.rst:102 7f77340230dc4500aef5262a32c6f0b7
+#: ../../remote_access.rst:102 651e89f440a7478683ef48dd2a1a7bed
 msgid ""
 "While exposing port 443 (HTTPS) can be necessary for certain services, "
 "directly accessing the NethSecurity UI through this port may introduce a "
@@ -226,7 +226,7 @@ msgstr ""
 "sicurezza. Ecco come mantenere in modo sicuro la funzionalità della porta "
 "443 proteggendo al contempo l'interfaccia utente di NethSecurity."
 
-#: ../../remote_access.rst:105 21f1a22bee1242dfb0661ebd2ffe6f25
+#: ../../remote_access.rst:105 069bf885f4654747b88f4b74aef5a7fa
 msgid ""
 "If you don't require accessing the NethSecurity UI through port 443, disable"
 " it to minimize attack opportunities. Execute the following commands on your"
@@ -236,7 +236,7 @@ msgstr ""
 "la porta 443, disabilitarla per ridurre al minimo le opportunità di attacco."
 " Eseguire i seguenti comandi sul sistema NethServer: ::"
 
-#: ../../remote_access.rst:111 0cac1e0e0ce64fa8a2a0c838e7c33a99
+#: ../../remote_access.rst:111 a72652f06dff42cfa0aea39f785efd04
 msgid ""
 "This option disables access to the NethSecurity UI through both the server "
 "IP address and FQDN on port 443."
@@ -244,7 +244,7 @@ msgstr ""
 "Questa opzione disabilita l'accesso all'interfaccia utente di NethSecurity "
 "sia tramite l'indirizzo IP del server che tramite FQDN sulla porta 443."
 
-#: ../../remote_access.rst:113 64cd4d67f3344e26b996907e4889cff8
+#: ../../remote_access.rst:113 d8b5cb5bd2f14ceaae60311fa7118320
 msgid ""
 "If you need port 443 for other services, configure your firewall to redirect"
 " traffic destined for port 443 to a separate web server hosting those "
@@ -255,11 +255,11 @@ msgstr ""
 "web separato che ospita tali servizi. Assicurarsi che questo server separato"
 " disponga di solide misure di sicurezza."
 
-#: ../../remote_access.rst:119 ee87c74e88824431a659822298a6bf0a
+#: ../../remote_access.rst:119 1867671188a34f049e682a5c1a5ad924
 msgid "Privacy policy"
 msgstr "Informativa sulla privacy"
 
-#: ../../remote_access.rst:121 16fc3732654d49ff8ee9fc24945c082f
+#: ../../remote_access.rst:121 0891fd5089374e33858dbdb8028dffee
 msgid ""
 "In some cases, it is necessary to display the privacy policy of a product "
 "before login. NethSecurity does not display any privacy policy by default, "
@@ -271,14 +271,14 @@ msgstr ""
 "sulla privacy per impostazione predefinita, ma è possibile aggiungere un "
 "collegamento a un sito web esterno che contiene l'informativa sulla privacy."
 
-#: ../../remote_access.rst:124 5c1dfb73490d4ed1b45fefbd0e0c00e2
+#: ../../remote_access.rst:124 c840db8a43ec49c58b439efdfbd282ea
 msgid ""
 "To add a link to the privacy policy, access the command line and execute: ::"
 msgstr ""
 "Per aggiungere un collegamento all'informativa sulla privacy, accedere alla "
 "riga di comando ed eseguire: ::"
 
-#: ../../remote_access.rst:128 bf9986aa709f46cda46e0ddc2cc93e8f
+#: ../../remote_access.rst:128 d36740cf78684461864af5679b479c64
 msgid ""
 "Substitute ``https://mysite.org/privacy_policy`` with the URL of your "
 "privacy policy."
@@ -286,7 +286,7 @@ msgstr ""
 "Sostituire ``https://mysite.org/privacy_policy`` con l'URL della propria "
 "informativa sulla privacy."
 
-#: ../../remote_access.rst:130 5775cbe8df3240e3aab891bfd8afd1b2
+#: ../../remote_access.rst:130 8daebbb32507462d82ed469ba864946f
 msgid ""
 "The link to the privacy policy will be displayed inside the login page after"
 " next page refresh."
@@ -294,11 +294,11 @@ msgstr ""
 "Il link alla privacy policy verrà visualizzato all'interno della pagina di "
 "accesso dopo il prossimo aggiornamento della pagina."
 
-#: ../../remote_access.rst:135 e2f5f6bbfb94460ebbb6b22a8bfedcc0
+#: ../../remote_access.rst:135 37c78d015ee7483c87fd606edf96f380
 msgid "Legacy web user interface"
 msgstr "Interfaccia utente web legacy"
 
-#: ../../remote_access.rst:139 af8fd3455fb8420097d5d01d1fbc8994
+#: ../../remote_access.rst:139 9a8d9d4314244ce09aa69afe91cb1b9b
 msgid ""
 "Changes done via LuCI web interface may break the official NethSecurity UI. "
 "Use at your own risk!"
@@ -307,7 +307,7 @@ msgstr ""
 " il funzionamento dell'interfaccia ufficiale di NethSecurity. Utilizzare a "
 "proprio rischio!"
 
-#: ../../remote_access.rst:143 8bf676cdc00841b59e84bf4a7addbdd6
+#: ../../remote_access.rst:143 4f2067e5c343452f8548e424559caf28
 msgid ""
 "NethSecurity offers also LuCI, the original OpenWrt web interface, which "
 "provides a wide range of configuration options but is not officially "
@@ -318,7 +318,7 @@ msgstr ""
 "supportata. LuCI è disabilitato per impostazione predefinita. Per "
 "abilitarla, eseguire: ::"
 
-#: ../../remote_access.rst:150 9f6ff3e79a1f4a9181a13f6de700e758
+#: ../../remote_access.rst:150 a6d7db30b9fd46b0a42e9c364b586222
 msgid ""
 "Once enabled, Luci will be available only on port 443 at this URL: "
 "**https://<server_ip>/cgi-bin/luci**"
@@ -326,7 +326,7 @@ msgstr ""
 "Una volta abilitato, Luci sarà disponibile solo sulla porta 443 a questo "
 "URL: **https://<server_ip>/cgi-bin/luci**"
 
-#: ../../remote_access.rst:152 d8855242fb3e492d91db62c87e8c06c6
+#: ../../remote_access.rst:152 fcd14c4fac7c4906b99986ff9a1bb213
 msgid ""
 "Changes to the following LuCI pages are known to cause unpredictable "
 "behavior:"
@@ -334,7 +334,7 @@ msgstr ""
 "Le modifiche alle seguenti pagine di LuCI sono note per causare "
 "comportamenti imprevedibili:"
 
-#: ../../remote_access.rst:154 f82e7782ef3b4bed8b3e6842ed41fbb4
+#: ../../remote_access.rst:154 6e9e6f01f30f4994b423634728fad020
 msgid ""
 "HTTP access tab: it configures uhttpd which is not present inside "
 "NethSecurity"
@@ -342,14 +342,14 @@ msgstr ""
 "Scheda accesso HTTP: configura uhttpd che non è presente all'interno di "
 "NethSecurity"
 
-#: ../../remote_access.rst:155 5501d3e3e39f4a4da807c7117d828c57
+#: ../../remote_access.rst:155 8b418d742b514b798f6ba66297008bae
 msgid ""
 "Logging tab: it configures logd which is not present inside NethSecurity"
 msgstr ""
 "Scheda Registrazione: configura logd, che non è presente all'interno di "
 "NethSecurity."
 
-#: ../../remote_access.rst:156 70868875e0104b63b0f1da543f710ffd
+#: ../../remote_access.rst:156 fe529ff5a8c04a66a822bd466f26affe
 msgid ""
 "Networking: configuration created with this page is not compatible with "
 "NethSecurity UI"
@@ -357,7 +357,7 @@ msgstr ""
 "Rete: la configurazione creata con questa pagina non è compatibile con "
 "l'interfaccia utente di NethSecurity"
 
-#: ../../remote_access.rst:158 e9e1cc640a6b4a40bad9f53fea281565
+#: ../../remote_access.rst:158 9234bf85f81f4ee198a32f4aebaaed50
 msgid ""
 "If previously enabled, the LuCI web interface can be disabled by executing: "
 "::"
@@ -365,11 +365,11 @@ msgstr ""
 "Se precedentemente abilitata, l'interfaccia web LuCI può essere disabilitata"
 " eseguendo: ::"
 
-#: ../../remote_access.rst:167 a09b32ec0cf04b43ae7e97c87bcaa97d
+#: ../../remote_access.rst:183 f2178738abd04fc2a9441d9d32a806f0
 msgid "NethSecurity UI 2FA"
 msgstr "Interfaccia utente NethSecurity 2FA"
 
-#: ../../remote_access.rst:169 82e217a924f24770b18a992bf095b1f9
+#: ../../remote_access.rst:185 0858ba8988a249a09552972f28fb85db
 msgid ""
 "Protecting your NethSecurity administrator account is crucial, and Two-"
 "Factor Authentication (2FA) adds an extra layer of security beyond just a "
@@ -386,17 +386,17 @@ msgstr ""
 "smartphone o tablet. Questo riduce significativamente il rischio di accessi "
 "non autorizzati anche nel caso in cui la password venga compromessa."
 
-#: ../../remote_access.rst:173 c0cab8e6d0a94ccc89040b0b5896d86b
+#: ../../remote_access.rst:189 a44166754ece46aea82349e5baf2cf92
 msgid "Enabling 2FA on NethSecurity UI:"
 msgstr ""
 "Abilitazione dell'autenticazione a due fattori (2FA) nell'interfaccia utente"
 " di NethSecurity:"
 
-#: ../../remote_access.rst:175 39e7c5e9db0e42909e1f21d351d2c349
+#: ../../remote_access.rst:191 775b1d539310448ab3f8e26362845970
 msgid "Log in to your NethSecurity web interface"
 msgstr "Accedere all'interfaccia web di NethSecurity"
 
-#: ../../remote_access.rst:176 e1bce01b350c4abea1ea72aa246fb9ea
+#: ../../remote_access.rst:192 c1d7d502dc52431dbc257f14e2b0d57b
 msgid ""
 "Click on the user icon in the top right corner and select ``Account "
 "settings``"
@@ -404,7 +404,7 @@ msgstr ""
 "Fare clic sull'icona utente nell'angolo in alto a destra e selezionare "
 "``Impostazioni account``"
 
-#: ../../remote_access.rst:177 a78a0f0818a248a4b5ecb16e9916348c
+#: ../../remote_access.rst:193 4a53fe9c48ee4e189ee212dceb418df9
 msgid ""
 "Find the Two-factor authentication option and click :guilabel:`Configure "
 "2FA`"
@@ -412,11 +412,11 @@ msgstr ""
 "Individuare l'opzione Autenticazione a due fattori e fare clic su "
 ":guilabel:`Configura 2FA`"
 
-#: ../../remote_access.rst:179 c260739cceff4c3cb9ae2ac6376c2d6e
+#: ../../remote_access.rst:195 cb451d3637bf4181b1861202fa82b961
 msgid "Setting up your authenticator app:"
 msgstr "Configurazione dell'app di autenticazione:"
 
-#: ../../remote_access.rst:181 8fd7e54f379d4caea1ee3d9b616f0809
+#: ../../remote_access.rst:197 f33f43a230aa4b16a6050ef913e03ab0
 msgid ""
 "Download an authenticator app on your smartphone or tablet. Popular options "
 "include FreeOTP, Google Authenticator, and Microsoft Authenticator."
@@ -425,7 +425,7 @@ msgstr ""
 "opzioni più diffuse includono FreeOTP, Google Authenticator e Microsoft "
 "Authenticator."
 
-#: ../../remote_access.rst:182 e118a0e61a6447a6a8faab1b3aeb1a93
+#: ../../remote_access.rst:198 f4fa4c97eeb845d18d555a5f7b51f191
 msgid ""
 "Open the app and scan the QR code displayed on the NethSecurity web "
 "interface. This will add your NethSecurity account to the authenticator app."
@@ -434,7 +434,7 @@ msgstr ""
 " NethSecurity. Questo aggiungerà l'account NethSecurity all'app di "
 "autenticazione."
 
-#: ../../remote_access.rst:183 b7e0597a5152474dae1c078d3b14ff2a
+#: ../../remote_access.rst:199 f482bb91e7df49caa1cff71eabf894e6
 msgid ""
 "Enter the 6-digit code displayed by your authenticator app in the One-Time "
 "Password (OTP) field on the NethSecurity web interface."
@@ -442,7 +442,7 @@ msgstr ""
 "Inserire il codice a 6 cifre visualizzato dall'app di autenticazione nel "
 "campo One-Time Password (OTP) dell'interfaccia web di NethSecurity."
 
-#: ../../remote_access.rst:185 9fa4b72e057342b0bb9d26099c32b03d
+#: ../../remote_access.rst:201 f949d1e5defa428faf3d921fbf7a8249
 msgid ""
 "The system will also provide you with a set of backup codes. These codes can"
 " be used to log in if you lose your smartphone or authenticator app. Store "
@@ -453,17 +453,17 @@ msgstr ""
 "l'app di autenticazione. Conservare questi codici in modo sicuro, "
 "preferibilmente offline."
 
-#: ../../remote_access.rst:188 10940b74240c433c9d84b2f4b0bf63ff
+#: ../../remote_access.rst:204 e2e9b39ff57d43f0b2accad4777571ba
 msgid "You can disable 2FA from the same page."
 msgstr ""
 "È possibile disabilitare l'autenticazione a due fattori (2FA) dalla stessa "
 "pagina."
 
-#: ../../remote_access.rst:193 1ff80b502f4945bfb1b83ece2a30a60b
+#: ../../remote_access.rst:209 c172ba68a367477799259d84bd0986eb
 msgid "NethSecurity UI administrators"
 msgstr "Amministratori dell'interfaccia utente di NethSecurity"
 
-#: ../../remote_access.rst:195 8cb428daa9c84ff29e8642f75db1c068
+#: ../../remote_access.rst:211 d9402f4c97bf4e19990a49ebb6ac4ff3
 msgid ""
 "The default user for accessing the user web interface is root, but it is "
 "possible to create other administrator users with access only to the web "
@@ -473,7 +473,7 @@ msgstr ""
 "possibile creare altri utenti amministratori con accesso esclusivo "
 "all'interfaccia web."
 
-#: ../../remote_access.rst:197 fed3612eb4274cef956ffcafb5cd65f5
+#: ../../remote_access.rst:213 36eb891367b44131ae8c1b1277342564
 msgid ""
 "To create a user in the local database, enter the `Username` and `Display "
 "name`. Ensure to set a password for the user; this is mandatory for "
@@ -486,7 +486,7 @@ msgstr ""
 "di accesso amministrativo all'interfaccia web, abilitare l'opzione ``Utente "
 "amministratore``."
 
-#: ../../remote_access.rst:201 38873e6144d745d280c270ac8c34af5c
+#: ../../remote_access.rst:217 27765dcf81114b20834d3dd7f7f1f325
 msgid ""
 "It is possible to grant or remove administrative access only to users "
 "residing in the local database."
@@ -494,11 +494,11 @@ msgstr ""
 "È possibile concedere o revocare l'accesso amministrativo solo agli utenti "
 "presenti nel database locale."
 
-#: ../../remote_access.rst:204 5a47444d58ae4deba13b3e056e74a335
+#: ../../remote_access.rst:220 0040f0840d0b48d38f3b34988ab75150
 msgid "Auditing user actions"
 msgstr "Verifica delle azioni utente"
 
-#: ../../remote_access.rst:206 9010e0dd70cc445da323c7a0277eacee
+#: ../../remote_access.rst:222 4852d98d29ba45e6b8a3308276fa341a
 msgid ""
 "Every time an administrator logs in to the NethSecurity UI, the system logs "
 "the event, inside the `/var/log/messages` file. Example of login event for "
@@ -508,11 +508,11 @@ msgstr ""
 "NethSecurity, il sistema registra l'evento all'interno del file "
 "`/var/log/messages`. Esempio di evento di accesso per l'utente `goofy`: ::"
 
-#: ../../remote_access.rst:212 d826e1fc0b8e42aabc50bbc2e5abd648
+#: ../../remote_access.rst:228 7669e1a6ba784b978d8c2297326dbfec
 msgid "Example of logout event for user `goofy`: ::"
 msgstr "Esempio di evento di logout per l'utente `goofy`: ::"
 
-#: ../../remote_access.rst:217 fe65729d582c40c2bf27d2520c994c10
+#: ../../remote_access.rst:233 ae0e019547434f01b849675be4acb166
 msgid ""
 "Also every action performed by an administrator inside the NethSecurity UI "
 "is logged inside the `/var/log/messages` file. Example of action performed "
@@ -522,11 +522,11 @@ msgstr ""
 "dell'interfaccia NethSecurity viene registrata nel file `/var/log/messages`."
 " Esempio di azione eseguita dall'utente `goofy`: ::"
 
-#: ../../remote_access.rst:223 3f3230c5740442b18b1e3089b02d64aa
+#: ../../remote_access.rst:239 2c2191e424774b9eb7f76b097a35c1ef
 msgid "SSH"
 msgstr "SSH"
 
-#: ../../remote_access.rst:225 40db5db159b34360a54e30ba17f46c79
+#: ../../remote_access.rst:241 9cb210592c3842b8bc7b803c5e5cc60d
 msgid ""
 "By default, the system accepts SSH connections on the standard port 22 from "
 "the internal network (LAN). Root access is enabled using the default "
@@ -539,15 +539,15 @@ msgstr ""
 "internet (WAN), è necessario aggiungere una regola di input del firewall per"
 " la porta di ascolto del server."
 
-#: ../../remote_access.rst:228 7d788bc09a6f45c096fc658ff03516f9
+#: ../../remote_access.rst:244 080e5da4323147b196433b0b5897d821
 msgid "From a Linux machine, use the following command: ::"
 msgstr "Da una macchina Linux, utilizzare il seguente comando: ::"
 
-#: ../../remote_access.rst:233 09a48ae8f7dc41d9a70a1ab9fa3ad4d3
+#: ../../remote_access.rst:249 9a24e2116acc4ce188b984557df66d4f
 msgid "VGA console and keyboard layout"
 msgstr "Console VGA e layout tastiera"
 
-#: ../../remote_access.rst:235 2abaf5f9e72440b6a8b8d9ee64aed747
+#: ../../remote_access.rst:251 78caf71006784ee4b94e91c4989e6b01
 msgid ""
 "If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. Then,"
 " you will be able to log in to the console using the default credentials "
@@ -557,11 +557,11 @@ msgstr ""
 " ad essa. In questo modo sarà possibile accedere alla console utilizzando le"
 " credenziali predefinite sopra indicate."
 
-#: ../../remote_access.rst:237 3085c84659db425ab2291cf729d4ce37
+#: ../../remote_access.rst:253 e4db12bc6c0f4932b420e402788d35bb
 msgid "Please note that the system is configured with the US keyboard layout."
 msgstr "Si noti che il sistema è configurato con il layout di tastiera US."
 
-#: ../../remote_access.rst:239 72ada47aaefc4a66bfe122b587155029
+#: ../../remote_access.rst:255 faa9ad6021d2485c9eb164d6be408549
 msgid ""
 "To temporarily change the current keyboard layout to Italian, log in to the "
 "system and then execute the following command: ::"
@@ -569,7 +569,7 @@ msgstr ""
 "Per modificare temporaneamente il layout della tastiera corrente in "
 "italiano, accedere al sistema ed eseguire il seguente comando: ::"
 
-#: ../../remote_access.rst:243 009d4769192e42ca99993ed6bc8ede56
+#: ../../remote_access.rst:259 aecb44c56d7e4c79836a3d6a7c2dfa64
 msgid ""
 "The keyboard layout configuration can be saved by writing the keymap code "
 "inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::"
@@ -578,18 +578,18 @@ msgstr ""
 "codice della mappa dei tasti all'interno di ``/etc/keymap``. Esempio per la "
 "mappa dei tasti ``it`` (italiana): ::"
 
-#: ../../remote_access.rst:248 ab9915ad4d8c482db328c87e198e7f63
+#: ../../remote_access.rst:264 f4f0861c54914e32a78da30f05a95a2c
 msgid ""
 "To obtain the list of available keymaps, execute the following command: ::"
 msgstr ""
 "Per ottenere l'elenco delle keymap disponibili, eseguire il seguente "
 "comando: ::"
 
-#: ../../remote_access.rst:253 3f405f76d4d44a069e97d8971aa3050c
+#: ../../remote_access.rst:269 a2fff90215f84a24a531ebd3eac5d65b
 msgid "Serial console"
 msgstr "Console seriale"
 
-#: ../../remote_access.rst:255 b5f5a16f77f642779980f2a94458b7fb
+#: ../../remote_access.rst:271 3b7f1c2a3b5e4681bd09b76bb4cf9b4a
 msgid ""
 "If the machine has a serial port (RS-232, tipically available with DE-9 "
 "connector or RJ45/8P8C connector) it's possible to access the firewall "
@@ -605,35 +605,35 @@ msgstr ""
 "comune se si utilizza Microsoft Windows, mentre le distribuzioni Linux "
 "offrono strumenti come ``minicom``, ``picocom`` o ``screen``."
 
-#: ../../remote_access.rst:258 267a84923b69486ba38bf08faa95419d
+#: ../../remote_access.rst:274 46a3d77138ce400ebf0a2a873a40884f
 msgid "Default acces parameters for NethSecurity 8 are:"
 msgstr "I parametri di accesso predefiniti per NethSecurity 8 sono:"
 
-#: ../../remote_access.rst:260 b764550bf06f4612ab08e9c53d0c804e
+#: ../../remote_access.rst:276 607370d8f1fb485cabad1be253100bae
 msgid "Baud rate: 115200,"
 msgstr "Velocità di trasmissione: 115200,"
 
-#: ../../remote_access.rst:261 44032dda40984036bb9c7c0f4384649e
+#: ../../remote_access.rst:277 295c61278b2540b2918f5ce10dfbb36e
 msgid "Data bits:8"
 msgstr "Bit dati: 8"
 
-#: ../../remote_access.rst:262 be6bd9183f2d405899676cef576b3eaa
+#: ../../remote_access.rst:278 aa07f9fd34cf4b4a8c111ed72b4237bc
 msgid "Parity :None"
 msgstr "Parità : Nessuna"
 
-#: ../../remote_access.rst:263 ca28448302564a929f9b16890f2230da
+#: ../../remote_access.rst:279 51ad8393df304d729caf92dd2870f689
 msgid "Stop bits to 1"
 msgstr "Bit di stop su 1"
 
-#: ../../remote_access.rst:265 dd925fd2293b4a07b9317096337d5b02
+#: ../../remote_access.rst:281 822119986988441cba261a13052fc0f4
 msgid "These last three parameters are often abbreviated as 8N1"
 msgstr "Questi ultimi tre parametri sono spesso abbreviati come 8N1"
 
-#: ../../remote_access.rst:268 61f2cae06d7a49f0b79a346b3a347481
+#: ../../remote_access.rst:284 ea03ba908c3e4486ab6fa9629bf7f65b
 msgid "USB-to-Serial Adapters"
 msgstr "Adattatori USB-Seriale"
 
-#: ../../remote_access.rst:270 7077d61eb8604d3f849366e639044867
+#: ../../remote_access.rst:286 ce2d3627072b4cefabf8b1d58314cad9
 msgid ""
 "In case of need, NethSecurity can be used to access another server via the "
 "serial console. If the hardware does not have an RS-232 port, USB-to-serial "
@@ -650,17 +650,7 @@ msgstr ""
 "sono supportati da Nethesis** (in caso di utilizzo della versione Enterprise"
 " o Subscription)."
 
-#: ../../remote_access.rst:275 2588f69dbd6d451ab5e6235456344b9c
-msgid ""
-"Extra packages, including kernel modules, are not preserved across image "
-"upgrades, so in the event of an upgrade, you will need to download and "
-"install them again if needed."
-msgstr ""
-"I pacchetti extra, inclusi i moduli del kernel, non vengono mantenuti "
-"durante gli aggiornamenti dell'immagine; pertanto, in caso di aggiornamento,"
-" sarà necessario scaricarli e installarli nuovamente se necessario."
-
-#: ../../remote_access.rst:277 4b23cd8548384b42ba817dfe180c735d
+#: ../../remote_access.rst:289 f7da53ac2dd145e29c5f4816f85b4da5
 msgid ""
 "Two packages are provided for installation, covering the vast majority of "
 "adapters available on the market. ::"
@@ -668,15 +658,15 @@ msgstr ""
 "Sono forniti due pacchetti per l'installazione, che coprono la grande "
 "maggioranza degli adattatori disponibili sul mercato. ::"
 
-#: ../../remote_access.rst:283 b37f9a771ac2401db6d62ff303634869
+#: ../../remote_access.rst:295 5b8ae122e9bf4b7d90582f6770ff4816
 msgid "To install Prolific PL2303 driver:"
 msgstr "Per installare il driver Prolific PL2303:"
 
-#: ../../remote_access.rst:289 5fc86a15608641d59583842f5f3aaf06
+#: ../../remote_access.rst:301 b859afed9a3a47738e152f216d4f5372
 msgid "The logs will show an output similar to this:"
 msgstr "I log mostreranno un output simile al seguente:"
 
-#: ../../remote_access.rst:25 4d6071005aee4de783d4c37e17b3f52d
+#: ../../remote_access.rst:25 8da5d182f43a4110b3aef3248b40881e
 msgid ""
 "If your client has received an IP address from NethSecurity's DHCP, it will "
 "use NethSecurity as both gateway and DNS server. Under these conditions you "
@@ -687,3 +677,55 @@ msgstr ""
 "utilizzerà NethSecurity sia come gateway che come server DNS. In queste "
 "condizioni è possibile contattare NethSecurity utilizzando il suo hostname "
 "**nethsec** invece di **server_ip**, ad esempio"
+
+#: ../../remote_access.rst:166 d8142fcc068948a2960de9e2ec4b8c80
+msgid "Hide web server version"
+msgstr "Nascondere la versione del server web"
+
+#: ../../remote_access.rst:168 34ff4b25deb64627a7041040cd43fe8d
+msgid ""
+"By default, the nginx web server serving the NethSecurity UI includes its "
+"version number in HTTP response headers. Many vulnerability assessments rely"
+" on software version identification, which can produce false positives when "
+"fixes are backported without modifying the reported version. While hiding "
+"version information does not improve security by itself, it can help limit "
+"the exposure of known version-specific vulnerabilities to automated scanning"
+" tools."
+msgstr ""
+"Per impostazione predefinita, il server web nginx che serve l'interfaccia "
+"utente di NethSecurity include il proprio numero di versione negli header di"
+" risposta HTTP. Molte valutazioni delle vulnerabilità si basano "
+"sull'identificazione della versione del software, il che può generare falsi "
+"positivi quando le correzioni vengono retroportate senza modificare la "
+"versione riportata. Sebbene nascondere le informazioni sulla versione non "
+"migliori la sicurezza di per sé, può contribuire a limitare l'esposizione di"
+" vulnerabilità note e specifiche della versione agli strumenti di scansione "
+"automatizzati."
+
+#: ../../remote_access.rst:172 f84a50e57edd46b9b4783713dcca132b
+msgid ""
+"To disable the nginx version from being displayed in the NethSecurity UI "
+"HTTP headers, execute the following commands: ::"
+msgstr ""
+"Per disabilitare la visualizzazione della versione di nginx negli header "
+"HTTP dell'interfaccia utente di NethSecurity, eseguire i seguenti comandi: "
+"::"
+
+#: ../../remote_access.rst:178 63a4a7bccbbe42c8a2ce4e7ecb018b49
+msgid ""
+"This configuration only affects the NethSecurity UI. The reverse proxy has "
+"its own separate configuration."
+msgstr ""
+"Questa configurazione riguarda solo l'interfaccia utente di NethSecurity. Il"
+" reverse proxy ha una propria configurazione separata."
+
+#: ../../remote_access.rst:310 cecb56da1d91497daae95a89563cc34a
+msgid ""
+"Starting from version 8.7.2, extra packages are automatically reinstalled "
+"after system upgrade. For earlier versions and for additional information, "
+"refer to this documentation: :ref:`restore_extra_packages-section`."
+msgstr ""
+"A partire dalla versione 8.7.2, i pacchetti extra vengono reinstallati "
+"automaticamente dopo l'aggiornamento del sistema. Per le versioni precedenti"
+" e per ulteriori informazioni, consultare questa documentazione: "
+":ref:`restore_extra_packages-section`."
