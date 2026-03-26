@@ -147,7 +147,7 @@ After the installation, start the service: ::
 The QEMU guest agent will be available on the virtual machine and automatically started at boot.
 
 .. note::
-   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+   Starting from version 8.7.2, extra packages are automatically reinstalled after system upgrade.
    For earlier versions and for additional information, refer to this documentation: :ref:`restore_extra_packages-section`.
 
 Install on VMWare
