@@ -47,7 +47,9 @@ The ``sysupgrade`` command flashes the new image file to the device.
 
 Restore extra packages
 ----------------------
-Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+Starting from version 8.7.2, extra packages are automatically reinstalled after system upgrade.
+Please note that the reinstall procedure requires access to Internet.
+In case of error, proceed with the manual restore documented below.
 See the next section for earlier versions.
 
 After the upgrade, you can run the following command to list all extra packages: ::
