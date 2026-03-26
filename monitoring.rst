@@ -25,10 +25,10 @@ unauthorized access, and security breaches are identified and mitigated promptly
 Real-time monitoring stores data in RAM and resets at every machine reboot.
 
 The ``Real-time monitor`` page provides a comprehensive overview of the firewall's performance and status, with detailed insights into network traffic.
-It's divided into four main sections: ``Traffic``, ``WAN uplinks``, ``VPN``,  ``Security`` and ``Real-time Traffic``.
+It's divided into four main sections: ``Traffic``, ``Live Flows``, ``Top Talkers``, ``WAN uplinks``, ``VPN`` and  ``Security``.
 
-Traffic
--------
+Daily Traffic
+-------------
 
 The below charts reads data from `dpireport <https://dev.nethsecurity.org/packages/ns-report/>`_ daemon:
 
@@ -60,10 +60,52 @@ The below charts reads data from `dpireport <https://dev.nethsecurity.org/packag
 
 It's possible to narrow the search for a specific host, application, or protocol by clicking on the respective label in the table below the chart.
 
-Connectivity
+Live Flows
+----------
+
+The Live Flows section provides a real-time view of all active network connections, allowing administrators to monitor traffic as it happens, this section is displayed in a table format, with each row representing a single flow. 
+The table includes the following information for each connection:
+
+- ``Application``: the detected application generating the traffic.
+- ``Protocol``: the network protocol used for the flow (e.g. TCP, UDP, HTTP).
+- ``Tags``: any relevant tags assigned to the flow for classification (e.g. Outgoing, Remote, Internal)
+- ``Source``: the source of the connection, typically showing the IP address and port of the initiating device.
+- ``Destination``: the destination of the connection, typically showing the hostname or IP address and port of the target device.
+- ``Download``: the current download transfer rate of the flow, indicating how fast data is being received.
+- ``Upload``: the current upload transfer rate of the flow, indicating how fast data is being sent.
+- ``Duration``: the total time the flow has been active since it was first detected. This helps in understanding how long a particular connection has been maintained.
+- ``Last Seen At``: the timestamp of the most recent activity for the flow, this indicates when the flow last transmitted or received data, helping to identify inactive or idle connections.
+- ``Details``: the magnifying glass icon with a plus sign, clicking this icon opens a detailed view of the flow, showing all available information, including data not directly displayed in the main table. This allows administrators to access complete flow metadata for deeper analysis or troubleshooting.
+
+This real-time table allows operators to quickly identify heavy users, monitor application behavior, and troubleshoot network issues as they occur.
+
+Configuration
+^^^^^^^^^^^
+
+The Live Flows section also includes configuration options to manage the behavior of the flows monitoring service:
+
+- ``Flows Daemon Enabled``: a toggle to enable or disable the live flows monitoring service, turning off the daemon stops the collection of real-time flow data.
+- ``Flows Persistence After Expiration``: a setting that determines how long flow records are retained after the flow has ended, this allows administrators to adjust data retention based on monitoring needs and storage availability.
+
+Top Talkers
+-----------
+
+The main purpose of the Top Talkers section is to provide an initial overview of bandwidth usage, quickly identifying the primary “contributors” to network traffic. 
+This information can serve as a starting point for deeper analysis, troubleshooting, or general network efficiency monitoring.
+
+The Top Talkers section displays traffic data updated every 30 seconds, providing a quick and up-to-date overview of which entities are generating the most network traffic, it's is divided into three categories:
+
+- ``Local Hosts``: lists all detected local hosts and their current traffic status, ordered by traffic volume. This allows you to quickly identify which devices are using the most bandwidth, without distinguishing connection type or protocol.
+
+- ``Applications``: shows all detected applications and their current traffic, ordered by volume. This view helps to understand which services or applications are consuming the most network resources, regardless of the device running them.
+
+- ``Protocols``: lists all detected protocols and their current traffic, ordered by volume. This provides an immediate insight into which types of traffic (for example, HTTP, DNS, SMTP) are dominating the network, without considering which host or application is generating them.
+
+
+WAN uplinks
 ------------
 
-The connectivity section provides an overview of WAN connections, including status, bandwidth allocation, and traffic data.
+The WAN uplinks section provides an overview of WAN connections, including status, bandwidth allocation, and traffic data.
 
 This page shows the following information:
 
@@ -184,14 +226,6 @@ Available charts are:
   this char shows the IP addresses that have been blocked most frequently.
   It is useful for identifying persistent threats or attack sources that should be investigated or blacklisted.
 
-Real-time traffic
------------------
-
-The Real-time traffic section shows data updated every 2 minutes. It's divided into three categories:
-
-- ``Local Hosts``: lists all detected local hosts and their current traffic status, ordered by traffic volume.
-- ``Applications``: lists all detected applications and their current traffic status, ordered by traffic volume.
-- ``Protocols``: lists all detected protocols and their current traffic status, ordered by traffic volume.
 
 Netdata
 -------
