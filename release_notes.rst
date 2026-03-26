@@ -42,7 +42,6 @@ Image version: `8.7.2` (based on OpenWrt 24.10.5)
 - Migration: fixed firewall rules wrongly tagged as "automated" after migration; rules are now correctly editable.
 - Network interfaces: fixed VLAN regex matching issue after migration where VLANs on bridges (e.g., br111.112) were incorrectly parsed as bridges.
 - DPI: fixed logging limit configuration; hardcoded proper nftables rate syntax to prevent firewall reload failures.
-- High Availability (ns-ha): fixed race condition during role switches causing dedalo and dpi services to remain inactive; added locking mechanism.
 - PPPoE: fixed pppd crashes with SIGILL during LCP negotiation on specific ISPs; disabled FORTIFY_SOURCE to resolve memcpy issues.
 - WireGuard default gateway: fixed missing default gateway after tunnel disconnection on single-WAN systems; assigned proper default metric for WAN interfaces.
 - WireGuard setup: fixed silent failures when public IP cannot be resolved; now handles DNS resolution failures gracefully without blocking installation.
