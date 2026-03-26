@@ -58,8 +58,11 @@ After the upgrade, you can run the following command to list all extra packages:
 
 This command returns all extra packages, allowing you to verify which ones are installed and present on the system.
 
-Restore extra packages on versions before 8.7.2
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Manually restore extra packages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This manual procedure is required only on versions before 8.7.2 or if the automatic reinstall procedure fails.
+
 
 During the upgrade, the system is completely rewritten, and all extra packages installed by the user will be lost.
 However, the list of installed packages is saved in the configuration backup, allowing them to be restored after the upgrade.
