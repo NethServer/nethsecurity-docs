@@ -307,5 +307,5 @@ Two packages are provided for installation, covering the vast majority of adapte
     Aug  6 08:08:17 nsec8 kernel: [ 2346.550401] usb 1-6: pl2303 converter now attached to ttyUSB0
 
 .. note::
-   Starting from version 8.7.2 of NethSecurity, extra packages are preserved during system upgrades.
+   Starting from version 8.7.2, extra packages are automatically reinstalled after system upgrade.
    For earlier versions and for additional information, refer to this documentation: :ref:`restore_extra_packages-section`.
