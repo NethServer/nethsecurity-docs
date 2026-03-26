@@ -17,18 +17,21 @@ When creating a port forward, certain parameters must be specified:
 
 - ``Name``: assigning a name to a port forward rule is beneficial for future reference and management.
   By providing a descriptive and meaningful name, network administrators can easily identify the purpose and context of each port forward.
+- ``Traffic type``: Specifies which traffic the rule applies to.
+
+  - ``Select protocols``: the rule applies only to the selected protocols. The protocols must be selected in the following field.
+  - ``All traffic``: the rule applies to all incoming traffic regardless of protocol, which is forwarded to the configured destination IP without further filtering.
+    When this option is selected, the form is reduced and only the destination IP address needs to be configured. Use this setting with caution, as it may expose the system to unintended or potentially harmful traffic.
+- ``Protocols``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, ``ICMP``, ``ESP``, ``AH``, ``SCTP``, ``GRE``. At least one protocol needs to be specified.
 - ``Source port``: the port from which the request originates. 
   Note that not all protocols require a port. For example, protocols like ``GRE`` do not use ports.
-- ``Destination port``: the port to which the traffic is directed; this can differ from the source port.
-- ``Protocol``: specifies the protocol such as ``TCP``, ``UDP``, ``UDPLITE``, ``ICMP``, ``ESP``, ``AH``, ``SCTP``, ``GRE``.
-  Leave empty for any source protocol
-  If left empty, all traffic, regardless of the protocol, will be forwarded.
-  Use this setting with caution, as it may expose the system to unintended or potentially harmful traffic.
 - ``Destination address``: specifies the internal host to which the traffic should be redirected. This can be:
 
   - a specific IP address
   - a firewall object: a host defined by a host set (except host sets containing IP ranges or nested objects), a DHCP reservation, a DNS record or an OpenVPN account with IP reservation 
-  - empty: in this case the port will be redirected to the router/firewall itself
+  - the firewall firewall itself
+
+- ``Destination port``: the port to which the traffic is directed; this can differ from the source port.
 
 By default, all port forwards are accessible only for hosts inside the WAN. Refer to the :ref:`hairpin-section` for instructions on changing this default behavior.
 
