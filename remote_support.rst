@@ -15,12 +15,12 @@ by Nethesis at ``sos.nethesis.it``.
 The firewall must be able to connect to the above host on port ``1194`` UDP. If port ``1194`` is closed,
 the system will try to fallback on port ``443`` TCP.
 
-Session Management
+Session management
 ==================
 
 The remote support must be started and stopped by the firewall administrator.
 
-Starting a Session
+Starting a session
 ------------------
 
 To start a session:
@@ -36,14 +36,15 @@ The system will display:
 - The session expiration time
 - The remaining time until expiration
 
-Session Expiration
+You can view this information at any time in the ``Remote support`` section of the ``Subscription`` page.
+
+Session expiration
 ------------------
 
 Remote support sessions have the following expiration behavior:
 
 - **Default session**: expires after 24 hours
 - **Extended session**: expires after 7 days from the extension time
-- **Automatic cleanup**: expired sessions are automatically stopped by the system
 
 The system continuously monitors session expiration:
 
@@ -51,22 +52,8 @@ The system continuously monitors session expiration:
 - When a session expires, it is automatically stopped
 - Session expiration events are logged to the system log
 
-.. note::
-   The session expiration check ensures that remote access is automatically
-   terminated when the support window expires, maintaining security best practices.
 
-Session Status Information
---------------------------
-
-The user interface displays the following session information:
-
-- **Session status**: Active or Not running
-- **Session ID**: Unique identifier to share with support team
-- **Expiration time**: When the session will automatically end
-
-You can view this information at any time in the ``Remote support`` section of the ``Subscription`` page.
-
-Terminating a Session
+Terminating a session
 ---------------------
 
 To manually terminate an active session before it expires:
@@ -78,7 +65,7 @@ To manually terminate an active session before it expires:
 Command Line Interface
 ======================
 
-Advanced users can manage remote support sessions using the ``don`` command from the firewall's command line.
+The ``don`` command requires root privileges and logs all operations to the system log.
 
 Start a session::
 
@@ -102,7 +89,7 @@ Extend an active session::
 
 .. important::
    Session extension is only available via command line. This feature extends the session 
-   from the default 24 hours to 7 days from the current time.
+   from the default 24 hours to 7 days starting since the current time.
 
 Stop a session::
 
@@ -117,5 +104,3 @@ Check for expired sessions::
 This command is automatically run by cron every hour to check if the session has expired.
 If the session has expired, it will be automatically stopped.
 
-.. note::
-   The ``don`` command requires root privileges and logs all operations to the system log.
