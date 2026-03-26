@@ -36,7 +36,9 @@ If the backup is encrypted, enter the passphrase, and finally, click the :guilab
 
 After the restore the system will be rebooted.
 
-If you have installed extra packages, you can restore them by following the instructions in the :ref:`restore_extra_packages-section`.
+.. note::
+   Starting from version 8.7.2, extra packages are automatically reinstalled after system upgrade.
+   For earlier versions and for additional information, refer to this documentation: :ref:`restore_extra_packages-section`.
 
 Machines with a subscription
 ============================

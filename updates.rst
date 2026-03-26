@@ -26,10 +26,6 @@ System upgrades
 
 This types of upgrages involve the transition to a new version of the firmware that introduces new features, improvements and wider hardware support.
 
-.. note::
-
-  The upgrade will preserve all the configurations and settings, but it will not preserve extra packages installed by the user.
-
 This type of update will reboot the device (which will therefore not be reachable for a few dozen seconds) and then completely rewrites the firmware, preserving all the configurations.
 However it is recommended to save a configuration backup before proceeding with the upgrade.
 
@@ -51,11 +47,27 @@ The ``sysupgrade`` command flashes the new image file to the device.
 
 Restore extra packages
 ----------------------
+Starting from version 8.7.2, extra packages are automatically reinstalled after system upgrade.
+Please note that the reinstall procedure requires access to Internet.
+In case of error, proceed with the manual restore documented below.
+See the next section for earlier versions.
 
-During the upgrade, the system will be completely rewritten, so all the extra packages installed by the user will be lost.
-Still, the list of installed packages is saved in the configuration backup, so it is possible to restore them after the upgrade.
+After the upgrade, you can run the following command to list all extra packages: ::
 
-After the upgrade, make sure the system can access the internet, then restore previously installed packages using the following commands: ::
+  grep overlay /etc/backup/installed_packages.txt
+
+This command returns all extra packages, allowing you to verify which ones are installed and present on the system.
+
+Manually restore extra packages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This manual procedure is required only on versions before 8.7.2 or if the automatic reinstall procedure fails.
+
+
+During the upgrade, the system is completely rewritten, and all extra packages installed by the user will be lost.
+However, the list of installed packages is saved in the configuration backup, allowing them to be restored after the upgrade.
+
+After the upgrade, ensure that the system has internet access, then restore the previously installed packages using the following commands: ::
 
   opkg update
   grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs opkg install

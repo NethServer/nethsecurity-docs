@@ -146,8 +146,9 @@ After the installation, start the service: ::
 
 The QEMU guest agent will be available on the virtual machine and automatically started at boot.
 
-Please note that after an image upgrade the QEMU guest agent will be removed and you will need to reinstall it.
-See :ref:`restore_extra_packages-section` for more info.
+.. note::
+   Starting from version 8.7.2, extra packages are automatically reinstalled after system upgrade.
+   For earlier versions and for additional information, refer to this documentation: :ref:`restore_extra_packages-section`.
 
 Install on VMWare
 -----------------
