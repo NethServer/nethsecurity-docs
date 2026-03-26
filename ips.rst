@@ -36,6 +36,10 @@ Home networks define the protected internal networks and specify the IP addresse
 
 Select a policy, define your home networks and then click on the :guilabel:`Save` button to save the changes.
 
+.. note::
+
+  Home Networks values are not updated automatically. If the IP address of a local interface is changed and this results in a different network, the IPS Home network configuration must be updated manually to reflect the new network.
+
 .. _oinkcode-section:
 
 Access to Snort rules via Oinkcode
