@@ -1,0 +1,227 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../ha_migration_7.9.rst:5 634ee6a97c544619818a078e4f3bc3af
+msgid "Migration from NethSecurity 7.9 with HA"
+msgstr "Migrazione da NethSecurity 7.9 con HA"
+
+#: ../../ha_migration_7.9.rst:8 441e7f8a391a4d65aa272412956d2c04
+msgid ""
+"This document describes the procedure for migrating a **NethSecurity 7.9** "
+"system configured with **High Availability (HA)** to **NethSecurity 8**, "
+"while keeping the HA setup active. Several approaches are possible for this "
+"migration; this guide outlines one recommended method."
+msgstr ""
+"Questo documento descrive la procedura per migrare un sistema **NethSecurity"
+" 7.9** configurato con **High Availability (HA)** a **NethSecurity 8**, "
+"mantenendo attiva la configurazione HA. Sono possibili diversi approcci per "
+"questa migrazione; questa guida illustra un metodo consigliato."
+
+#: ../../ha_migration_7.9.rst:11 d62574bcad4c4096815e10714f6f8369
+msgid "The migration process consists of two main phases:"
+msgstr "Il processo di migrazione consiste in due fasi principali:"
+
+#: ../../ha_migration_7.9.rst:13 e1c3305e50804ab9adc8bc37ba8a9f65
+msgid "upgrading the NethSecurity 7.9 system to version 8,"
+msgstr "aggiornamento del sistema NethSecurity 7.9 alla versione 8,"
+
+#: ../../ha_migration_7.9.rst:14 9d159e47b6ce457eb8203bbca82ef61d
+msgid ""
+"reconfiguring the High Availability service between the two firewalls "
+"running NethSecurity 8."
+msgstr ""
+"riconfigurazione del servizio High Availability tra i due firewall che "
+"eseguono NethSecurity 8."
+
+#: ../../ha_migration_7.9.rst:16 9140c292bd7b44cebe2fde71010d23b9
+msgid ""
+"During the migration, the two firewalls are treated as independent systems. "
+"One device will be upgraded to NethSecurity 8 by migrating its "
+"configuration, while the other will be reset to factory defaults and "
+"reconfigured as the secondary HA node."
+msgstr ""
+"Durante la migrazione, i due firewall vengono trattati come sistemi "
+"indipendenti. Un dispositivo verrà aggiornato a NethSecurity 8 tramite la "
+"migrazione della sua configurazione, mentre l'altro verrà ripristinato alle "
+"impostazioni di fabbrica e riconfigurato come nodo secondario HA."
+
+#: ../../ha_migration_7.9.rst:19 a641004d15a043759dc999fc94c95093
+msgid ""
+"Once the migration and validation of the primary node are complete, the High"
+" Availability service will be enabled again between the two NethSecurity 8 "
+"firewalls."
+msgstr ""
+"Una volta completata la migrazione e la validazione del nodo primario, il "
+"servizio di High Availability verrà nuovamente abilitato tra i due firewall "
+"NethSecurity 8."
+
+#: ../../ha_migration_7.9.rst:22 8c2b8d65306746648bbd795f7f88619d
+msgid "Prerequisites"
+msgstr "Prerequisiti"
+
+#: ../../ha_migration_7.9.rst:24 e4ffa64bf10b43059715f037caf11427
+msgid ""
+"Take a note of the IP addresses used for the HA interface: primary, "
+"secondary, and VIP."
+msgstr ""
+"Prendere nota degli indirizzi IP utilizzati per l'interfaccia HA: primario, "
+"secondario e VIP."
+
+#: ../../ha_migration_7.9.rst:25 e6fd894d206249e58662a2e7fb0f1585
+msgid ""
+"Review the network configuration, especially for **local (non-WAN) "
+"interfaces**. Each of these interfaces now requires **three IP addresses**: "
+"previously only one was used, but in NethSecurity 8 additional LAN "
+"interfaces are also managed through **VIPs**, ensuring failover in case of "
+"issues affecting those interfaces."
+msgstr ""
+"Esaminare la configurazione di rete, in particolare per le **interfacce "
+"locali (non-WAN)**. Ognuna di queste interfacce richiede ora **tre indirizzi"
+" IP**: in precedenza ne veniva utilizzato solo uno, ma in NethSecurity 8 "
+"anche le interfacce LAN aggiuntive sono gestite tramite **VIP**, garantendo "
+"il failover in caso di problemi che interessano tali interfacce."
+
+#: ../../ha_migration_7.9.rst:27 0c0dcea170a543cd8106c792fa482957
+msgid ""
+"Take a note of all required IP addresses for the additional non-WAN "
+"interfaces."
+msgstr ""
+"Prendere nota di tutti gli indirizzi IP necessari per le interfacce "
+"aggiuntive non-WAN."
+
+#: ../../ha_migration_7.9.rst:28 6e1cafd8f50b470a93076894e974a72c
+msgid "Perform a backup of both firewalls as a precaution."
+msgstr "Eseguire un backup di entrambi i firewall come precauzione."
+
+#: ../../ha_migration_7.9.rst:29 77021becde264ab88d92eec502b4ea59
+msgid "Verify **hardware compatibility** with NethSecurity 8."
+msgstr "Verificare la **compatibilità hardware** con NethSecurity 8."
+
+#: ../../ha_migration_7.9.rst:32 313c92683a124267a4f2a3d03aa8e1a2
+msgid "Migration procedure"
+msgstr "Procedura di migrazione"
+
+#: ../../ha_migration_7.9.rst:34 e8b7c939149a41f48fcf25e4413f5160
+msgid "**Power off the secondary firewall**"
+msgstr "**Spegnere il firewall secondario**"
+
+#: ../../ha_migration_7.9.rst:36 36b0193ecba841d4b3179f0ff6f30b78
+msgid ""
+"Before starting the migration, shut down the secondary firewall to prevent "
+"conflicts during the upgrade of the primary node."
+msgstr ""
+"Prima di iniziare la migrazione, spegnere il firewall secondario per evitare"
+" conflitti durante l'aggiornamento del nodo primario."
+
+#: ../../ha_migration_7.9.rst:38 d04f91b681564d9f9f540521dfcbed30
+msgid "**Choose the migration method**"
+msgstr "**Scegliere il metodo di migrazione**"
+
+#: ../../ha_migration_7.9.rst:40 b159a79c726d403fa02e0e6dae865f47
+msgid ""
+"Access the *Firewall Migration* tool on your NethSecurity 7.9. You can "
+"either:"
+msgstr ""
+"Accedere allo strumento *Firewall Migration* su NethSecurity 7.9. È "
+"possibile:"
+
+#: ../../ha_migration_7.9.rst:42 417e4b79902b4547b49bc12d67e4f1f2
+msgid ""
+"Download a migrated image to create a USB key for testing and verifying "
+"configurations before performing the actual migration, or"
+msgstr ""
+"Scaricare un'immagine migrata per creare una chiavetta USB da utilizzare per"
+" testare e verificare le configurazioni prima di eseguire la migrazione "
+"effettiva, oppure"
+
+#: ../../ha_migration_7.9.rst:43 4c2b32c1a6374f66b5215e7cd3c3614d
+msgid "Run an **in-place migration** directly on the system."
+msgstr "Eseguire una **migrazione in-place** direttamente sul sistema."
+
+#: ../../ha_migration_7.9.rst:45 79e85c6b379a40db96f362c6e8a642d5
+msgid ""
+"Choose the option that best fits your needs: the first one is safer, while "
+"the second is faster. If any issue occurs, simply power on the secondary "
+"firewall running version 7.9, which still retains the original "
+"configuration."
+msgstr ""
+"Scegliere l'opzione che meglio si adatta alle proprie esigenze: la prima è "
+"più sicura, mentre la seconda è più veloce. In caso di problemi, è "
+"sufficiente accendere il firewall secondario con la versione 7.9, che "
+"mantiene ancora la configurazione originale."
+
+#: ../../ha_migration_7.9.rst:48 d1a48a1e789e4b90b74d21cecd61e7b5
+msgid "**Run the migration**"
+msgstr "**Eseguire la migrazione**"
+
+#: ../../ha_migration_7.9.rst:50 9a9ed35f1de848e9966e0c1b152119e4
+msgid ""
+"If using in-place migration, once the process completes, verify that the "
+"firewall is now running NethSecurity 8 and that all features work as "
+"expected."
+msgstr ""
+"Se si utilizza la migrazione in-place, una volta completato il processo, "
+"verificare che il firewall stia ora eseguendo NethSecurity 8 e che tutte le "
+"funzionalità funzionino come previsto."
+
+#: ../../ha_migration_7.9.rst:51 84f9d869d276463bbcf4b94e6902c83e
+msgid ""
+"If you are using the USB image, create it and boot the primary firewall from"
+" it. Verify that all features are working correctly. After that, write the "
+"appliance storage using the `ns-install` command, then reboot the hardware "
+"without the USB key."
+msgstr ""
+"Se si utilizza l'immagine USB, crearla e avviare il firewall primario da "
+"essa. Verificare che tutte le funzionalità siano operative. Successivamente,"
+" scrivere lo storage dell'appliance utilizzando il comando `ns-install`, "
+"quindi riavviare l'hardware senza la chiave USB."
+
+#: ../../ha_migration_7.9.rst:53 517e2588606b41cda2cc646ceb59611e
+msgid "**Configure the VIP address**"
+msgstr "**Configurare l'indirizzo VIP**"
+
+#: ../../ha_migration_7.9.rst:55 6e8ed075d414494c90670c46427dd6a7
+msgid ""
+"Add the VIP (HA alias IP) to allow LAN hosts to access the network "
+"correctly. This ensures that all LAN clients can reach the Internet while "
+"you proceed with the restore process, without interrupting user "
+"connectivity. Remember to do the same for every other non-WAN interface."
+msgstr ""
+"Aggiungere il VIP (IP alias HA) per consentire agli host LAN di accedere "
+"correttamente alla rete. Questo garantisce che tutti i client LAN possano "
+"raggiungere Internet mentre si procede con il processo di ripristino, senza "
+"interrompere la connettività degli utenti. Ricordarsi di fare lo stesso per "
+"ogni altra interfaccia non-WAN."
+
+#: ../../ha_migration_7.9.rst:58 6cb8da0498d448c8bed56a4742cce054
+msgid "**Restore and reconfigure the secondary node**"
+msgstr "**Ripristinare e riconfigurare il nodo secondario**"
+
+#: ../../ha_migration_7.9.rst:60 c93a6581186e419cbfbe182d09af23bf
+msgid "After confirming that the primary firewall is working as expected:"
+msgstr "Dopo aver confermato che il firewall primario funziona come previsto:"
+
+#: ../../ha_migration_7.9.rst:62 8a54ed8b7dae47309827247e2c74f2d6
+msgid ""
+"Disconnect all network cables from the secondary firewall to avoid conflicts"
+" with the primary."
+msgstr ""
+"Scollegare tutti i cavi di rete dal firewall secondario per evitare "
+"conflitti con quello primario."
+
+#: ../../ha_migration_7.9.rst:63 8a751fb640c0447e9a8a3f2e0d5941c1
+msgid "Reset the secondary firewall to factory defaults."
+msgstr "Ripristinare il firewall secondario alle impostazioni di fabbrica."
+
+#: ../../ha_migration_7.9.rst:64 73466c83b09b480b9892458c76e43f6b
+msgid ""
+"Recreate the network configuration, ensuring that additional LAN interfaces "
+"are also managed using VIPs."
+msgstr ""
+"Ricreare la configurazione di rete, assicurandosi che anche le interfacce "
+"LAN aggiuntive siano gestite utilizzando i VIP."
+
+#: ../../ha_migration_7.9.rst:65 5281f453361b49f8b96ebf447eaa8d7e
+msgid "Reconfigure High Availability between the two NethSecurity 8 systems."
+msgstr "Riconfigurare l'Alta Affidabilità tra i due sistemi NethSecurity 8."

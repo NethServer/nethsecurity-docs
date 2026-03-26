@@ -10,62 +10,62 @@ msgstr "Informazioni"
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../index.rst:32
+#: ../../index.rst:39
 msgid "System"
 msgstr "Sistema"
 
-#: ../../index.rst:44
+#: ../../index.rst:51
 msgid "Network"
 msgstr "Rete"
 
-#: ../../index.rst:56
+#: ../../index.rst:63
 msgid "Users and objects"
 msgstr "Utenti e oggetti"
 
-#: ../../index.rst:63
+#: ../../index.rst:70
 msgid "Firewall"
 msgstr "Firewall"
 
-#: ../../index.rst:73
+#: ../../index.rst:80
 msgid "Security"
 msgstr "Sicurezza"
 
-#: ../../index.rst:84
+#: ../../index.rst:91
 msgid "VPN"
 msgstr "VPN"
 
-#: ../../index.rst:92
-msgid "Report"
-msgstr "Report"
-
-#: ../../index.rst:107
+#: ../../index.rst:109
 msgid "Advanced (CLI)"
 msgstr "Avanzate (CLI)"
 
-#: ../../index.rst:122
+#: ../../index.rst:123
 msgid "Best practices"
 msgstr "Best practice"
 
-#: ../../index.rst:5 bd41a0f4a4e44735aa23ec20b19604ad
+#: ../../index.rst:5 627dea8e69c14601ac6a647f77602ab2
 msgid "NethSecurity administrator manual"
 msgstr "Manuale dell'amministratore di NethSecurity"
 
-#: ../../index.rst:9 7709bb60d04f49d7942460b1c38c9d89
+#: ../../index.rst:9 7c19ab95885f4ec4861dd16ce2ea9dda
 msgid "`Official site <https://www.nethsecurity.org>`_"
 msgstr "`Sito ufficiale <https://www.nethsecurity.org>`_"
 
-#: ../../index.rst:11 4d53321230dc46c3ac21007a8b091421
+#: ../../index.rst:11 f623df53255b40ffa90f6b0564a4ff6b
 msgid "`Developer manual <https://nethserver.github.io/nethsecurity/>`_"
 msgstr "`Manuale sviluppatori <https://nethserver.github.io/nethsecurity/>`_"
 
-#: ../../index.rst:13 a57d50570c124645a4f7a03c9cb1fc3a
+#: ../../index.rst:13 faf71a70ec3a44a88b68d958fdde029a
 msgid "Help on `Community <http://community.nethserver.org>`_"
 msgstr "Aiuto su `Community <http://community.nethserver.org>`_"
 
-#: ../../index.rst:5 09c1489c33324d338dc0d545a5e984e8
+#: ../../index.rst:5 4cb8837b91ba43a598c6426e7dc32e40
 msgid "External links"
 msgstr "Collegamenti esterni"
 
-#: ../../index.rst:99
+#: ../../index.rst:100
 msgid "High Availability"
 msgstr "Alta disponibilità"
+
+#: ../../index.rst:32
+msgid "Monitoring"
+msgstr "Monitoraggio"

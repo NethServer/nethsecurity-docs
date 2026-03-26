@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../updates.rst:5 6d88d57d31474ffa82ac804a0f3fe455
+#: ../../updates.rst:5 0851b768d14b40218da049510de76998
 msgid "Updates"
 msgstr "Aggiornamenti"
 
-#: ../../updates.rst:7 dcf7c5b45c5a4138bb89f412b15b744d
+#: ../../updates.rst:7 e82bf96f17474dabb6aebda2faa9a44a
 msgid ""
 "NethSecurity allows two types of updates, both available from the ``Update``"
 " section under the ``System`` menu:"
@@ -14,25 +14,25 @@ msgstr ""
 "NethSecurity consente due tipi di aggiornamenti, entrambi disponibili dalla "
 "sezione ``Aggiorna`` nel menu ``Sistema``:"
 
-#: ../../updates.rst:9 5c73bd8eb6b3436eac36e879c52c0d5d
+#: ../../updates.rst:9 139d9245c0d1498ab178b185599fe49d
 msgid "normal updates for bugfixes and security patches"
 msgstr "aggiornamenti normali per correzioni di bug e patch di sicurezza"
 
-#: ../../updates.rst:10 dc33ac8bdc2d4e35b65e66367ff665e9
+#: ../../updates.rst:10 4968cf3601c54aeb9bdd0a1463fa2d29
 msgid "system upgrades to switch to a different version"
 msgstr "aggiornamenti di sistema per passare a una versione diversa"
 
-#: ../../updates.rst:13 3f2c4664e345416a8083231e78d22a24
+#: ../../updates.rst:13 e0107fef254e4ad8b37684ce035325c4
 msgid "Bug & security fixes"
 msgstr "Correzioni di bug e di sicurezza"
 
-#: ../../updates.rst:15 da4e95735e6e428ca7813ee3a752cdcd
+#: ../../updates.rst:15 463382610071491cac82e8b4b4d7fbf7
 msgid "These updates are intended for minor updates and bugfixes."
 msgstr ""
 "Questi aggiornamenti sono destinati ad aggiornamenti minori e correzioni di "
 "bug."
 
-#: ../../updates.rst:17 ee232d1dc5f1476fb74951a4a2c9c865
+#: ../../updates.rst:17 612425c5b5f9438fa6397787b1dcb796
 msgid ""
 "Typically they could be performed automatically, but at any time it is "
 "possible to check for new updates available by clicking on :guilabel:`Check "
@@ -45,7 +45,7 @@ msgstr ""
 "Questi aggiornamenti non richiedono il riavvio di NethSecurity, sono legati "
 "a una versione specifica e distribuiti tramite pacchetti."
 
-#: ../../updates.rst:20 07d87e7f2ff64117b61d50396dae64f7
+#: ../../updates.rst:20 b1baeede7c234611949f88556faaab44
 msgid ""
 "When using this method, the version of the image shown inside the dashboard "
 "does not change, but the system is updated with the latest fixes."
@@ -54,11 +54,11 @@ msgstr ""
 "all'interno della dashboard non cambia, ma il sistema viene aggiornato con "
 "le ultime correzioni."
 
-#: ../../updates.rst:25 8c0cd224ad3a4aefb8fea915bb819429
+#: ../../updates.rst:25 e4b3fb27d40f4e52aaf1b3fef76dc545
 msgid "System upgrades"
 msgstr "Aggiornamenti di sistema"
 
-#: ../../updates.rst:27 53c1317d23bc436faeb31888cbef644f
+#: ../../updates.rst:27 9a98c002ac6d42d282c63be8f0d25184
 msgid ""
 "This types of upgrages involve the transition to a new version of the "
 "firmware that introduces new features, improvements and wider hardware "
@@ -68,15 +68,7 @@ msgstr ""
 "del firmware che introduce nuove funzionalità, miglioramenti e un supporto "
 "hardware più ampio."
 
-#: ../../updates.rst:31 b0fa479843474c688012144069b6fce1
-msgid ""
-"The upgrade will preserve all the configurations and settings, but it will "
-"not preserve extra packages installed by the user."
-msgstr ""
-"L'aggiornamento preserverà tutte le configurazioni e le impostazioni, ma non"
-" manterrà i pacchetti aggiuntivi installati dall'utente."
-
-#: ../../updates.rst:33 4ae4306f72bf48fcb0f4c8a5118404b1
+#: ../../updates.rst:29 f850d7c29d344544a3995ce7c2ec1209
 msgid ""
 "This type of update will reboot the device (which will therefore not be "
 "reachable for a few dozen seconds) and then completely rewrites the "
@@ -89,7 +81,7 @@ msgstr ""
 "salvare un backup della configurazione prima di procedere con "
 "l'aggiornamento."
 
-#: ../../updates.rst:36 1afca5efe7e84f729f72b1859199b273
+#: ../../updates.rst:32 fda8dbeaea9340abbcd625199d968e85
 msgid ""
 "If a new version is available, the user interface will display an "
 "information banner and a dedicated button :guilabel:`Update System` that "
@@ -99,7 +91,7 @@ msgstr ""
 " informativo e un pulsante dedicato :guilabel:`Aggiorna sistema` che "
 "permetterà di eseguire l'aggiornamento."
 
-#: ../../updates.rst:38 a4d2c19a2f7043fa8f3b53de77db5a0b
+#: ../../updates.rst:34 fa5216b4bf444abcbd6c689576facb47
 msgid ""
 "Alternatively, it is always possible to manually upload a compatible image "
 "using the :guilabel:`Update with image file` button and proceed with the "
@@ -109,11 +101,11 @@ msgstr ""
 "compatibile utilizzando il pulsante :guilabel:`Aggiorna con file immagine` e"
 " procedere con l'aggiornamento."
 
-#: ../../updates.rst:41 82e8dcf79d7a4c9a8f6f8b5d791d35f1
+#: ../../updates.rst:37 92306a00da2a482c9b4c3d2ada050373
 msgid "Update from command line"
 msgstr "Aggiornamento da riga di comando"
 
-#: ../../updates.rst:42 c11ca3a9f37741a99ff29aadd37b734b
+#: ../../updates.rst:38 2416bea694a941d88d52579bf375fed4
 msgid ""
 "You can also perform a ``System update`` from the command line. To do this, "
 "simply download the new image file, it is recommended to save it inside "
@@ -124,52 +116,31 @@ msgstr ""
 "consiglia di salvarlo all'interno della directory ``/tmp``. Successivamente,"
 " eseguire il seguente comando: ::"
 
-#: ../../updates.rst:48 c3a9e7107e14465babcf423b8480423b
+#: ../../updates.rst:44 098e4e13ad084bf38c81cbaa8681e8dd
 msgid "The ``sysupgrade`` command flashes the new image file to the device."
 msgstr ""
 "Il comando ``sysupgrade`` scrive il nuovo file immagine sul dispositivo."
 
-#: ../../updates.rst:53 3aabf3b8babe4361aff13ad9dc177956
+#: ../../updates.rst:49 e234a80b682243f6bc6f4ef73b6f76b0
 msgid "Restore extra packages"
 msgstr "Ripristinare pacchetti aggiuntivi"
 
-#: ../../updates.rst:55 4e5757d78cbe40fcb96166792380a682
-msgid ""
-"During the upgrade, the system will be completely rewritten, so all the "
-"extra packages installed by the user will be lost. Still, the list of "
-"installed packages is saved in the configuration backup, so it is possible "
-"to restore them after the upgrade."
-msgstr ""
-"Durante l'aggiornamento, il sistema verrà completamente riscritto, quindi "
-"tutti i pacchetti aggiuntivi installati dall'utente andranno persi. "
-"Tuttavia, l'elenco dei pacchetti installati viene salvato nel backup della "
-"configurazione, quindi sarà possibile ripristinarli dopo l'aggiornamento."
-
-#: ../../updates.rst:58 e9bfc5aa437243ffbcf0df89ac1acce4
-msgid ""
-"After the upgrade, make sure the system can access the internet, then "
-"restore previously installed packages using the following commands: ::"
-msgstr ""
-"Dopo l'aggiornamento, assicurarsi che il sistema possa accedere a Internet, "
-"quindi ripristinare i pacchetti precedentemente installati utilizzando i "
-"seguenti comandi: ::"
-
-#: ../../updates.rst:66 fde85e3cb0c946e68b78fe4fabc78aa0
+#: ../../updates.rst:78 33d158a372b748c096ad6f9b962cfb82
 msgid "Subscription required"
 msgstr "Subscription richiesta"
 
-#: ../../updates.rst:68 02595f0d9396491183a8053e0fc89083
+#: ../../updates.rst:80 64eebd43d1a44dec9ac832b256d01467
 msgid ""
 "This feature is available only if the firewall has a valid subscription."
 msgstr ""
 "Questa funzionalità è disponibile solo se il firewall dispone di una "
 "subscription valida."
 
-#: ../../updates.rst:64 9dd6ce690db74a68a43734201297bd65
+#: ../../updates.rst:76 aeda9a4843f9451d9d389f0b477fbd27
 msgid "Automatic package updates"
 msgstr "Aggiornamenti automatici dei pacchetti"
 
-#: ../../updates.rst:70 04ef2f37a22b43b8b784af9fd6c87cba
+#: ../../updates.rst:82 120d7352b84a465f9dd710b6e14cbc06
 msgid ""
 "Automatic updates for packages can be enabled from the ``Update`` section "
 "under the ``System`` menu, by enabling the ``Automatic updates`` option. "
@@ -182,16 +153,64 @@ msgstr ""
 "quotidianamente e, se disponibili, vengono scaricati e installati "
 "automaticamente."
 
-#~ msgid "Automatic updates"
-#~ msgstr "Aggiornamenti automatici"
+#: ../../updates.rst:50 e32040cdf597488eb89d395af440a94b
+msgid ""
+"Starting from version 8.7.2, extra packages are automatically reinstalled "
+"after system upgrade. Please note that the reinstall procedure requires "
+"access to Internet. In case of error, proceed with the manual restore "
+"documented below. See the next section for earlier versions."
+msgstr ""
+"A partire dalla versione 8.7.2, i pacchetti aggiuntivi vengono reinstallati "
+"automaticamente dopo l’aggiornamento del sistema. Si noti che la procedura "
+"di reinstallazione richiede l’accesso a Internet. In caso di errore, "
+"procedere con il ripristino manuale documentato di seguito. Consultare la "
+"sezione successiva per le versioni precedenti."
 
-#~ msgid ""
-#~ "Automatic updates can be enabled from the ``Update`` section under the "
-#~ "``System`` menu, by enabling the ``Automatic updates`` option. Updates are "
-#~ "checked daily and, if available, they are automatically downloaded and "
-#~ "installed."
-#~ msgstr ""
-#~ "Gli aggiornamenti automatici possono essere abilitati dalla sezione "
-#~ "``Aggiorna`` nel menu ``Sistema``, attivando l'opzione ``Aggiornamenti "
-#~ "automatici``. Gli aggiornamenti vengono verificati quotidianamente e, se "
-#~ "disponibili, vengono scaricati e installati automaticamente."
+#: ../../updates.rst:55 99ddda4616ac43158f4057b8ccbd5515
+msgid ""
+"After the upgrade, you can run the following command to list all extra "
+"packages: ::"
+msgstr ""
+"Dopo l'aggiornamento, è possibile eseguire il seguente comando per elencare "
+"tutti i pacchetti aggiuntivi: ::"
+
+#: ../../updates.rst:59 4cf2b9f8e817406db1b79c4275241862
+msgid ""
+"This command returns all extra packages, allowing you to verify which ones "
+"are installed and present on the system."
+msgstr ""
+"Questo comando restituisce tutti i pacchetti extra, consentendo di "
+"verificare quali sono installati e presenti sul sistema."
+
+#: ../../updates.rst:62 e8bcda6673574979813db9b5738974fe
+msgid "Manually restore extra packages"
+msgstr "Ripristinare manualmente i pacchetti aggiuntivi"
+
+#: ../../updates.rst:64 89d43992b1534aab956cb610cf71e8bb
+msgid ""
+"This manual procedure is required only on versions before 8.7.2 or if the "
+"automatic reinstall procedure fails."
+msgstr ""
+"Questa procedura manuale è necessaria solo per le versioni precedenti alla "
+"8.7.2 o se la procedura di reinstallazione automatica non va a buon fine."
+
+#: ../../updates.rst:67 a72f9a5a967144ca9fa312d3e2db1702
+msgid ""
+"During the upgrade, the system is completely rewritten, and all extra "
+"packages installed by the user will be lost. However, the list of installed "
+"packages is saved in the configuration backup, allowing them to be restored "
+"after the upgrade."
+msgstr ""
+"Durante l'aggiornamento, il sistema viene completamente riscritto e tutti i "
+"pacchetti aggiuntivi installati dall'utente andranno persi. Tuttavia, "
+"l'elenco dei pacchetti installati viene salvato nel backup della "
+"configurazione, consentendone il ripristino dopo l'aggiornamento."
+
+#: ../../updates.rst:70 9a98c655a4f04d32bc4689ab1404a22f
+msgid ""
+"After the upgrade, ensure that the system has internet access, then restore "
+"the previously installed packages using the following commands: ::"
+msgstr ""
+"Dopo l'aggiornamento, assicurarsi che il sistema abbia accesso a Internet, "
+"quindi ripristinare i pacchetti precedentemente installati utilizzando i "
+"seguenti comandi: ::"
