@@ -172,6 +172,68 @@ All major platforms are supported. Here are some references to download the nece
 
 * iOS Systems: `OpenVPN Connect on App Store <https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_
 
+.. _managing-openvpn-certificate-expiration:
+
+Managing certificate expiration
+--------------------------------
+
+An OpenVPN Road Warrior instance uses TLS certificates for authentication. To avoid connectivity issues, it is crucial to monitor the expiration dates of the certificates used across the entire infrastructure.
+
+When a new OpenVPN Road Warrior server is created, the system generates a new ``PKI (Public Key Infrastructure)``, which is composed of:
+
+* a **CA** (**Certificate Authority**) certificate
+* a **server** certificate
+
+Client certificates are generated for each user in the database selected during the server setup or when a user is added later.
+
+Each of these elements (client, server, and CA) has its own certificate with a specific expiration date, and all of them must be valid to allow connection.
+
+You can check the expiration dates directly on the UI. The CA and server dates (which belong to the OpenVPN instance) are shown on the server detail section, the clients ones (which belongs to the user accounts created for that instance) are shown in the clients table.
+
+Near each date two different icons can be shown:
+
+- a yellow triangle exclamation icon, which means that the certificate will expire in less than 30 days
+- a red circle exclamation icon, which means that the certificate has already expired.
+
+By default, all certificates are generated with a validity of 3650 days (10 years).
+
+A connection between the OpenVPN Road Warrior server and its clients will be interrupted when at least one certificate expires, so it is important to monitor expiration dates and renew certificates before they expire.
+In particular, these are the possible scenarios:
+
+* the CA certificate has expired
+* the server certificate has expired
+* the client certificate has expired
+
+Below are the steps to renew certificates in each scenario and restore the connection.
+
+Client certificate expired
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+In this scenario, the client certificate must be regenerated using the :guilabel:`Regenerate certificate` option on the server side (as mentioned above). Then, the new client configuration/certificate must be downloaded and imported on the client side.
+
+Server certificate expired
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+In this scenario, the server certificate must be renewed on the server side.
+
+The server certificate can be renewed using the dedicated option :guilabel:`Renew server certificate`, available on the :guilabel:`︙` menu on the right of the server details section.
+
+This operation will revoke the existing server certificate, create a new one without affecting the CA certificate, and then restart the *openvpn* service to apply the changes.
+In this scenario, if the client certificates are still valid, you can continue using the existing client configuration.
+
+.. warning:: When regerating the server certificate, the clients certificates remain valid (if not expired). If the certificate renewal is done while clients are connected, it's necessary for the client to disconnect and then reconnect to the server to restore the connection. If the certificate renewal is done while **clients are disconnected (recommended way)**, the connection will be automatically restored when they will try to connect again.
+
+CA certificate expired
+^^^^^^^^^^^^^^^^^^^^^^
+In this scenario, certificate regeneration is not possible because the CA certificate is the one that signs both the server and client certificates. Therefore, a completely new PKI must be generated.
+
+To generate a new PKI, the :guilabel:`Regenerate all certificates` option is available on the :guilabel:`︙` menu on the right of the server details section.
+The user has then to type the server name to confirm the operation.
+
+This operation will generate a new CA certificate, as well as new server and client certificates signed by the new CA.
+In this scenario, it is **mandatory** to download and import the new client configuration on the client side to restore the connection, so make sure to do it as soon as possible to minimize downtime.
+
+.. warning:: When the CA certificate has expired, the only way to restore the connection is to generate a new PKI and import the new client configuration on the client side. If the client and server certificates are still valid (for example, you regenerated the client certificate using the :guilabel:`Regenerate certificate` option and renewed the server certificate using the :guilabel:`Renew server certificate` option above) but the CA certificate has expired, the connection will not be restored until a new CA certificate is generated and the new client configuration is imported on the client side. Therefore, if your client can no longer connect to the server due to certificate expiration, make sure to check which certificate has expired and follow the correct procedure to restore the connection.
+
+
 MTU Issue and Packet Fragmentation
 ----------------------------------
 
