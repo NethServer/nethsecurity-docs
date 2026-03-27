@@ -104,3 +104,8 @@ Check for expired sessions::
 This command is automatically run by cron every hour to check if the session has expired.
 If the session has expired, it will be automatically stopped.
 
+Log examples::
+
+    Mar 27 09:24:37 NethSec don: Remote support session started
+    Mar 27 09:24:54 NethSec don: Remote support session extended by 7 days
+    Mar 27 09:25:04 NethSec don: Remote support session stopped
