@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../openvpn_roadwarrior.rst:5 95199fca4a254074961d18139363ca8f
+#: ../../openvpn_roadwarrior.rst:5 0fb4dd1868a9491ca2c696b0fb026924
 msgid "OpenVPN Road Warrior"
 msgstr "OpenVPN Road Warrior"
 
-#: ../../openvpn_roadwarrior.rst:8 fa4fc29c46234aacb935c7219994c5a5
+#: ../../openvpn_roadwarrior.rst:8 e5bf935b65c544d2882b1aab8497fbbd
 msgid ""
 "Road Warrior refers to a specific configuration of the OpenVPN VPN tailored "
 "for remote users, allowing them secure access to a private network from "
@@ -21,7 +21,7 @@ msgstr ""
 "collaboratori distribuiti in diverse sedi, garantendo comunicazioni cifrate "
 "e la privacy dei dati."
 
-#: ../../openvpn_roadwarrior.rst:13 618fd95db19c41bb9336a0ee27afbc21
+#: ../../openvpn_roadwarrior.rst:13 4966a0246eb04c378c26fbd28ee76721
 msgid ""
 "OpenVPN is a protocol supported by the most widely used platforms, with "
 ":ref:`free clients <client_software-section>` available for Windows, MacOS, "
@@ -31,7 +31,7 @@ msgstr ""
 ":ref:`client gratuiti <client_software-section>` disponibili per sistemi "
 "Windows, MacOS, Linux, Android e iOS."
 
-#: ../../openvpn_roadwarrior.rst:15 567a7e3f74084b55842c56a84396c2ff
+#: ../../openvpn_roadwarrior.rst:15 b6f23c3f26014fb5b9720dd13b5ae5ef
 msgid ""
 "Before configuring the OpenVPN Road Warrior, make sure you have read the "
 "chapter related to the :ref:`user database <users_database-section>`."
@@ -39,11 +39,11 @@ msgstr ""
 "Prima di configurare OpenVPN Road Warrior, assicurarsi di aver letto il "
 "capitolo relativo al :ref:`database utenti <users_database-section>`."
 
-#: ../../openvpn_roadwarrior.rst:18 2290e1ad7685471ba5cf1090b3f9d3e8
+#: ../../openvpn_roadwarrior.rst:18 31a1c1a2e5f54c7daf00067487b9f937
 msgid "Server configuration"
 msgstr "Configurazione del server"
 
-#: ../../openvpn_roadwarrior.rst:23 b5a8d1c83b6547448f7dc7558e01c381
+#: ../../openvpn_roadwarrior.rst:23 3eef932b8eb94e4291f31ccbe953afe0
 msgid ""
 "An OpenVPN server on NethSecurity is closely tied to a user database, which "
 "can be local or remote. The association with the database is defined during "
@@ -54,7 +54,7 @@ msgstr ""
 " definita durante la creazione del server e non può essere modificata "
 "successivamente."
 
-#: ../../openvpn_roadwarrior.rst:26 108d0875336b4cb9ba5bc9933a907eaa
+#: ../../openvpn_roadwarrior.rst:26 2b6253c15e1c44d29ec69197549415a1
 msgid ""
 "The server configuration is straightforward because NethSecurity "
 "automatically sets most fields to sane defaults, which usually only need "
@@ -64,7 +64,7 @@ msgstr ""
 "automaticamente la maggior parte dei campi su valori predefiniti adeguati, "
 "che di solito richiedono solo una verifica."
 
-#: ../../openvpn_roadwarrior.rst:28 3d05a612174f4129aae218738d3f6907
+#: ../../openvpn_roadwarrior.rst:28 9a1d5eaec7934144b55d6541e2fdb766
 msgid ""
 "To configure a new OpenVPN server, click :guilabel:`Create Server` button "
 "and configure the proposed fields:"
@@ -72,11 +72,11 @@ msgstr ""
 "Per configurare un nuovo server OpenVPN, fare clic sul pulsante "
 ":guilabel:`Crea server` e configurare i campi proposti:"
 
-#: ../../openvpn_roadwarrior.rst:30 af066fa28dc541e4afd3b8bf71b5114f
+#: ../../openvpn_roadwarrior.rst:30 ed7a9636f7aa479f889ce765321e8feb
 msgid "``Server name``: give a name to this OpenVPN server"
 msgstr "``Nome del server``: assegnare un nome a questo server OpenVPN"
 
-#: ../../openvpn_roadwarrior.rst:32 b8a1d3d46a254b19a053e1c7d31e200f
+#: ../../openvpn_roadwarrior.rst:32 193fa547b8c146528731f7927fec5d0f
 msgid ""
 "``User database``: choose the user database to use for authentication, it "
 "can be a local database or a remote one (e.g. LDAP or Active Directory)"
@@ -85,7 +85,7 @@ msgstr ""
 "l'autenticazione; può essere un database locale oppure uno remoto (ad "
 "esempio LDAP o Active Directory)"
 
-#: ../../openvpn_roadwarrior.rst:34 73889d7332a040a6924c342ccd3ccf9c
+#: ../../openvpn_roadwarrior.rst:34 56e7c2827aaa4368b2177435320676c1
 msgid ""
 "``Create an account for each user``: this is a special field and won't be "
 "shown again in the future, it allows you to automatically create a VPN "
@@ -97,7 +97,7 @@ msgstr ""
 " VPN per ogni utente presente nel database. Tutti gli account creati avranno"
 " un certificato valido per 3650 giorni."
 
-#: ../../openvpn_roadwarrior.rst:36 9e22e35dbd134cfcb372653e7dcd4e0f
+#: ../../openvpn_roadwarrior.rst:36 7b0ce1584b124d6da7a3d808dc67ef77
 msgid ""
 "``Mode``: bridged or routed; routed mode is the default one and the most "
 "common, it allows to create a virtual network where clients are connected to"
@@ -115,13 +115,13 @@ msgstr ""
 "risorse che non sono direttamente accessibili dal server. In caso di dubbio,"
 " selezionare la modalità routed."
 
-#: ../../openvpn_roadwarrior.rst:42 deeb7c31db17442f833950bc363cf04a
+#: ../../openvpn_roadwarrior.rst:42 ad69ed8decff4d878f9d593dc437ae8c
 msgid "``Authentication mode``: several authentication modes are supported:"
 msgstr ""
 "``Modalità di autenticazione``: sono supportate diverse modalità di "
 "autenticazione:"
 
-#: ../../openvpn_roadwarrior.rst:44 3e5f57cd329a438a82d6e4c3df9684ce
+#: ../../openvpn_roadwarrior.rst:44 5acd5272d21e4293ba4e2cd4c67828d3
 msgid ""
 "``Username and password``: the connecting client must provide a valid "
 "username and password; only users with a password set can use this mode"
@@ -130,7 +130,7 @@ msgstr ""
 " e una password validi; solo gli utenti con una password impostata possono "
 "utilizzare questa modalità"
 
-#: ../../openvpn_roadwarrior.rst:46 e095c5ba9fad4f46bc3f6a06968d1ce8
+#: ../../openvpn_roadwarrior.rst:46 13ce84c6979a4e4d8cf87140ee177a1c
 msgid ""
 "``Certificate``: the connecting client must have its own certificate to "
 "authenticate; this is the recommended mode for most cases"
@@ -139,7 +139,7 @@ msgstr ""
 "certificato per autenticarsi; questa è la modalità consigliata nella maggior"
 " parte dei casi"
 
-#: ../../openvpn_roadwarrior.rst:48 97d09b00ae0c4c93aebada03f550d279
+#: ../../openvpn_roadwarrior.rst:48 36fe54a3e49747298b5849bb8d9943da
 msgid ""
 "``Username password and certificate``: the connecting client must provide a "
 "valid username, password and certificate"
@@ -147,7 +147,7 @@ msgstr ""
 "``Utente, password e certificato``: il client che si connette deve fornire "
 "un nome utente, una password e un certificato validi"
 
-#: ../../openvpn_roadwarrior.rst:52 cdd640ba1c4741748197088eb46f1314
+#: ../../openvpn_roadwarrior.rst:52 d7d4de8b7e42408bb4aa9c6b9c93f625
 msgid ""
 "``VPN Network``: the virtual network used by clients; every client will "
 "receive an IP address taken from this network. NethSecurity already suggests"
@@ -159,7 +159,7 @@ msgstr ""
 "già una rete poco comune per evitare sovrapposizioni con altre reti "
 "utilizzate dal firewall."
 
-#: ../../openvpn_roadwarrior.rst:54 a7d25de3f9aa4026ac93a8689545a459
+#: ../../openvpn_roadwarrior.rst:54 325eefc32012430596611119bc1a6838
 msgid ""
 "``Dynamic range IP start``: the first IP address that will be assigned to "
 "clients connecting to the server; the address must be part of the VPN "
@@ -171,7 +171,7 @@ msgstr ""
 "rete VPN. Quando si aggiunge una prenotazione IP a un client, assicurarsi "
 "che l'indirizzo IP sia al di fuori dell'intervallo dinamico."
 
-#: ../../openvpn_roadwarrior.rst:57 5ac2fb89afae4f0783cb4e047f72428c
+#: ../../openvpn_roadwarrior.rst:57 dc2c82e7f6464257a6f75ab4354f5dc0
 msgid ""
 "``Dynamic range IP end``: the last IP address that will be assigned to "
 "clients connecting to the server"
@@ -179,7 +179,7 @@ msgstr ""
 "``Fine intervallo IP dinamico``: l'ultimo indirizzo IP che verrà assegnato "
 "ai client che si connettono al server"
 
-#: ../../openvpn_roadwarrior.rst:59 fa86d9fdd3704eaa8be428fc741a6609
+#: ../../openvpn_roadwarrior.rst:59 9667e358c088433395da1d3418c02a4a
 msgid ""
 "``Public IP/hostname of this unit``: NethSecurity automatically fills out "
 "this field with the public IP address of each configured WAN interface. "
@@ -195,7 +195,7 @@ msgstr ""
 "client che si connette inizierà a contattare gli IP/hostname partendo dal "
 "primo nella lista e proseguendo con i successivi in caso di indisponibilità."
 
-#: ../../openvpn_roadwarrior.rst:63 1974dd92a6144caf80f6ad36c945fb18
+#: ../../openvpn_roadwarrior.rst:63 32b8aeb2253e4618b285aefa0967b8e0
 msgid ""
 "Click on the :guilabel:`Create` button to create the server. After that, "
 "main server details will be shown in the Web UI."
@@ -204,24 +204,24 @@ msgstr ""
 "Successivamente, i dettagli principali del server verranno mostrati "
 "nell'interfaccia Web."
 
-#: ../../openvpn_roadwarrior.rst:66 0a8e3376256449e78753f6c51562fb04
+#: ../../openvpn_roadwarrior.rst:66 fdab3ce0b3a646ec9097efba833ad9d6
 msgid "Advanced settings"
 msgstr "Impostazioni avanzate"
 
-#: ../../openvpn_roadwarrior.rst:68 c3458941da8b4109b7528c7b38f59790
+#: ../../openvpn_roadwarrior.rst:68 f4763c0d4f4646018ca02f92be7ef148
 msgid "If needed, you can also customize some advanced options:"
 msgstr ""
 "Se necessario, è anche possibile personalizzare alcune opzioni avanzate:"
 
-#: ../../openvpn_roadwarrior.rst:70 7fa2b1c796f94a97abb62d608056c59b
+#: ../../openvpn_roadwarrior.rst:70 9e4768796a1145f9a9af771fdb0f3026
 msgid "``Protocol``: UDP (default), TCP"
 msgstr "``Protocollo``: UDP (predefinito), TCP"
 
-#: ../../openvpn_roadwarrior.rst:72 3a7989a38e6b487bb0449db0f3ea2dfb
+#: ../../openvpn_roadwarrior.rst:72 f47a88d158114511b918f3ed08402840
 msgid "``Port``: 1194 (default)"
 msgstr "``Porta``: 1194 (predefinita)"
 
-#: ../../openvpn_roadwarrior.rst:74 44e064319fac420181a00816dcade8a4
+#: ../../openvpn_roadwarrior.rst:74 9fd84dcbbf3d4328b0c8cfecb5a67b53
 msgid ""
 "``Route all client traffic through VPN``: if enabled, all traffic from the "
 "client will be routed into the VPN tunnel, even standard internet traffic. "
@@ -234,7 +234,7 @@ msgstr ""
 "monitoraggio e controllo, ma solitamente è disabilitata perché introduce una"
 " maggiore latenza e consuma larghezza di banda."
 
-#: ../../openvpn_roadwarrior.rst:76 e0aa41edb4ca4ddf9aa65b5e1aab5f10
+#: ../../openvpn_roadwarrior.rst:76 78dc1396ae124992b5c25e8c668e3100
 msgid ""
 "``Push network routes``: a list of networks that the client should route in "
 "the VPN tunnel; the LAN networks are automatically added, but they can also "
@@ -245,7 +245,7 @@ msgstr ""
 "possono anche essere rimosse e altre reti possono essere aggiunte allo "
 "stesso modo"
 
-#: ../../openvpn_roadwarrior.rst:78 314af2fed36045868c327adae1d16c82
+#: ../../openvpn_roadwarrior.rst:78 16603ac0fd374bfd81d882b935896dbc
 msgid ""
 "``Allow client-to-client network traffic``: allows all connected clients to "
 "exchange traffic between them; it is recommended to leave it disabled."
@@ -253,7 +253,7 @@ msgstr ""
 "``Consenti il traffico tra i client``: consente a tutti i client connessi di"
 " scambiarsi traffico tra loro; si consiglia di lasciarlo disabilitato."
 
-#: ../../openvpn_roadwarrior.rst:80 ce5adda178f542219065859aa0bf3ff7
+#: ../../openvpn_roadwarrior.rst:80 beda0ad5353c4ea98816a4b10a412332
 msgid ""
 "``Compression``: compress the OpenVPN tunnel traffic to save bandwidth. "
 "However, it is now a less useful option and, in some cases, can be "
@@ -266,19 +266,19 @@ msgstr ""
 "disabilitata. Quando questa opzione viene modificata, è necessario scaricare"
 " nuovamente la configurazione del client."
 
-#: ../../openvpn_roadwarrior.rst:82 e66013d8c6a5414fb0038f2f67d6aeef
+#: ../../openvpn_roadwarrior.rst:82 eaf21c1e83b34184a543dce8cbdea2bd
 msgid ""
 "``Digest``: the digest authenticates data channel packets (default SHA 256)"
 msgstr ""
 "``Digest``: il digest autentica i pacchetti del canale dati (SHA 256 "
 "predefinito)"
 
-#: ../../openvpn_roadwarrior.rst:84 bac567a6bd084fedb6f6c45daba81af2
+#: ../../openvpn_roadwarrior.rst:84 c35547ab1f0a4eb894de993114731c36
 msgid "``Cipher``: encryption cipher used (default AES-256-GCM)"
 msgstr ""
 "``Cipher``: cifrario di crittografia utilizzato (predefinito AES-256-GCM)"
 
-#: ../../openvpn_roadwarrior.rst:86 b8deafe360254b4ab81ed194a0add2fa
+#: ../../openvpn_roadwarrior.rst:86 578c053dd33442259d2fb3aaa15e76c9
 msgid ""
 "``Enforce a minimum TLS version``: allows connection only for clients using "
 "a TLS version equal to or greater than the one specified."
@@ -287,7 +287,7 @@ msgstr ""
 "client che utilizzano una versione di TLS uguale o superiore a quella "
 "specificata."
 
-#: ../../openvpn_roadwarrior.rst:88 f0bf58e565da4ee69b49716f7a7eee0c
+#: ../../openvpn_roadwarrior.rst:88 35e158a7be514270852ee891fac52141
 msgid ""
 "``Custom DHCP options``: pass specific DHCP options to the client (e.g. "
 "DOMAIN, DNS, WINS and so on)"
@@ -295,11 +295,11 @@ msgstr ""
 "``Opzioni DHCP personalizzate``: consente di passare opzioni DHCP specifiche"
 " al client (ad esempio DOMAIN, DNS, WINS e così via)"
 
-#: ../../openvpn_roadwarrior.rst:92 78ef2cb471e449b9b8b14c269b8fb7d8
+#: ../../openvpn_roadwarrior.rst:92 bb831e9a77bf42298aa04322fd3183a3
 msgid "DHCP options"
 msgstr "Opzioni DHCP"
 
-#: ../../openvpn_roadwarrior.rst:94 71f7602ea82d46d5aa7311cf99feb72d
+#: ../../openvpn_roadwarrior.rst:94 996c220bb71a4c62989024fe3e860049
 msgid ""
 "The DHCP options are used to pass specific configuration parameters to the "
 "client. Available DHCP options are:"
@@ -307,7 +307,7 @@ msgstr ""
 "Le opzioni DHCP vengono utilizzate per trasmettere parametri di "
 "configurazione specifici al client. Le opzioni DHCP disponibili sono:"
 
-#: ../../openvpn_roadwarrior.rst:97 90b2af5ad0434d6e982fdec70a44ceb8
+#: ../../openvpn_roadwarrior.rst:97 30dadf2bb68c4b5d950682959e6cbd07
 msgid ""
 "``DNS [addr]``: set primary and secondary DNS server addresses (IPv4 or "
 "IPv6). Repeat the option to set multiple addresses."
@@ -315,7 +315,7 @@ msgstr ""
 "``DNS [addr]``: imposta gli indirizzi del server DNS primario e secondario "
 "(IPv4 o IPv6). Ripetere l'opzione per impostare più indirizzi."
 
-#: ../../openvpn_roadwarrior.rst:99 8f1fe382bbc64befb594805206817f21
+#: ../../openvpn_roadwarrior.rst:99 b3da301ccb914d8fb128e20f1357045b
 msgid ""
 "``WINS [addr]``: set primary and secondary Windows Internet Name Service "
 "Server (NetBIOS over TCP/IP Name Server) addresses. Repeat the option to set"
@@ -325,7 +325,7 @@ msgstr ""
 "Service primario e secondario (server dei nomi NetBIOS su TCP/IP). Ripetere "
 "l'opzione per impostare più indirizzi."
 
-#: ../../openvpn_roadwarrior.rst:105 1fdd35d0f16d476ab60ee5b36b931fd4
+#: ../../openvpn_roadwarrior.rst:105 e66d571635d44192bc199d69f9f1d7f5
 msgid ""
 "``NTP [addr]``: set primary and secondary Network Time Protocol server "
 "addresses. Repeat the option to set multiple addresses."
@@ -333,27 +333,27 @@ msgstr ""
 "``NTP [addr]``: imposta gli indirizzi dei server Network Time Protocol "
 "primario e secondario. Ripetere l'opzione per impostare più indirizzi."
 
-#: ../../openvpn_roadwarrior.rst:107 0684cb7ad8c24ff48ba44924caeb4ba5
+#: ../../openvpn_roadwarrior.rst:107 79df5a05e8bc4bc5ac22f5155001e015
 msgid "``NBT [type]``: set NetBIOS over TCP/IP ode type:"
 msgstr "``NBT [type]``: imposta il tipo di modalità NetBIOS over TCP/IP"
 
-#: ../../openvpn_roadwarrior.rst:109 02635446e3dd4cdda35b371d285fadbf
+#: ../../openvpn_roadwarrior.rst:109 fa4b1ed39cca4a33b2b91a27821133f2
 msgid "``1``: Broadcast"
 msgstr "``1``: Trasmissione"
 
-#: ../../openvpn_roadwarrior.rst:110 c9c58a5f9eb5404383d362da4e1e02ee
+#: ../../openvpn_roadwarrior.rst:110 0b40a6f3c8bf4069abd42a320e00dd79
 msgid "``2``: Point-to-point (uses WINS)"
 msgstr "``2``: Punto-a-punto (usa WINS)"
 
-#: ../../openvpn_roadwarrior.rst:111 7d3e271bd1dd4f87aef47fc3efacecbe
+#: ../../openvpn_roadwarrior.rst:111 98b7fdae58464e5f8861bffd7eaa177d
 msgid "``4``: Mixed (broadcast, then query name server)"
 msgstr "``4``: Misto (broadcast, poi query al name server)"
 
-#: ../../openvpn_roadwarrior.rst:112 e62ba20df97f46aa878ac6f586dc2d4e
+#: ../../openvpn_roadwarrior.rst:112 68185392eb4c440a93470b32c413d020
 msgid "``8``: Hybrid (query name server, then broadcast)"
 msgstr "``8``: Ibrido (interroga il name server, poi trasmette in broadcast)"
 
-#: ../../openvpn_roadwarrior.rst:114 0bf455061131423f82cbcab160a1ff0d
+#: ../../openvpn_roadwarrior.rst:114 d64a825bef9647bba37e9816cefd57fd
 msgid ""
 "``NBS [scope-id]``: set NetBIOS Scope ID to isolate NetBIOS traffic and "
 "allow unique computer names across different scopes."
@@ -361,7 +361,7 @@ msgstr ""
 "``NBS [scope-id]``: imposta l'ID di ambito NetBIOS per isolare il traffico "
 "NetBIOS e consentire nomi di computer univoci tra ambiti diversi."
 
-#: ../../openvpn_roadwarrior.rst:116 7d60c0fee75d49cb890ef7c60176d302
+#: ../../openvpn_roadwarrior.rst:116 eedcf38bdd5a48ac83c0361ec5ea485a
 msgid ""
 "``DISABLE-NBT [1]``: Turn off NetBIOS over TCP/IP. The parameter is simply "
 "``1`` to enable the option."
@@ -369,11 +369,11 @@ msgstr ""
 "``DISABLE-NBT [1]``: Disattiva NetBIOS su TCP/IP. Il parametro è "
 "semplicemente ``1`` per abilitare l'opzione."
 
-#: ../../openvpn_roadwarrior.rst:119 d3ce3ef812db4676ad5c253ebe554239
+#: ../../openvpn_roadwarrior.rst:119 6345a247defc46fe9c18fa09e66d39b1
 msgid "VPN accounts"
 msgstr "Account VPN"
 
-#: ../../openvpn_roadwarrior.rst:121 5b8f41bb452d4ebb9f6503efa2def3c0
+#: ../../openvpn_roadwarrior.rst:121 5940180a8c9a449f89382f8b3ba79c5e
 msgid ""
 "Now that the server has been configured, it is necessary to create the "
 "accounts for the connecting clients. To do this, click on :guilabel:`Add VPN"
@@ -383,7 +383,7 @@ msgstr ""
 " client che si connetteranno. Per fare ciò, fare clic su :guilabel:`Aggiungi"
 " account VPN` e compilare il modulo:"
 
-#: ../../openvpn_roadwarrior.rst:123 f8996b2092c64bcb8b668b9f19c207ad
+#: ../../openvpn_roadwarrior.rst:123 fc5ba59322c94de8a63e7c6df84b879f
 msgid ""
 "``User``: each account is associated with only one user from the chosen "
 "database, select the user for this account"
@@ -391,7 +391,7 @@ msgstr ""
 "``Utente``: ogni account è associato a un solo utente dal database "
 "selezionato; selezionare l'utente per questo account"
 
-#: ../../openvpn_roadwarrior.rst:125 be0dcbc243cb40afa630a4217231e1b5
+#: ../../openvpn_roadwarrior.rst:125 4cf4248350494d4ba4da2d5297e16777
 msgid ""
 "``Reserved IP``: specify an IP address that is part of the defined VPN "
 "network but outside the dynamic range. The entered IP address will always be"
@@ -405,7 +405,7 @@ msgstr ""
 "molto utile per creare regole firewall. Lasciare vuoto per assegnare un "
 "indirizzo IP casuale a ogni connessione."
 
-#: ../../openvpn_roadwarrior.rst:129 06121aea836c4f10bb40159a244f6801
+#: ../../openvpn_roadwarrior.rst:129 8a457186b2404eea8282167c7aa7b05f
 msgid ""
 "``Certificate expiration (days)``: specify a certificate duration (default "
 "3650 days)"
@@ -413,7 +413,7 @@ msgstr ""
 "``Scadenza certificato (giorni)``: specificare una durata del certificato "
 "(predefinito 3650 giorni)"
 
-#: ../../openvpn_roadwarrior.rst:131 e4fbb43f4b284565a7d3f210ce8b530f
+#: ../../openvpn_roadwarrior.rst:131 cd51fdfebbf24aaeaaa98de766dd03de
 msgid ""
 "Once the account is created, it is necessary to export the configuration and"
 " load it into the client that needs to connect. To do this, simply click on "
@@ -438,18 +438,18 @@ msgstr ""
 " (ad esempio, se viene cambiata la modalità di autenticazione), è necessario"
 " scaricare nuovamente il file."
 
-#: ../../openvpn_roadwarrior.rst:134 b44cfc572cb741d0830a3d0654e53c51
+#: ../../openvpn_roadwarrior.rst:134 cdfe4a4f8d324a538d6a9619065896c4
 msgid "Other available actions are:"
 msgstr "Altre azioni disponibili sono:"
 
-#: ../../openvpn_roadwarrior.rst:136 3f350ed1126d49dda2ca14e5336883dd
+#: ../../openvpn_roadwarrior.rst:136 29b5b7a4e7754aaba126cdcb9a91d925
 msgid ""
 "``Disable``: disable the account; the account can be re-enabled at any time."
 msgstr ""
 "``Disabilita``: disabilita l'account; l'account può essere riabilitato in "
 "qualsiasi momento."
 
-#: ../../openvpn_roadwarrior.rst:138 64e8556c78634c689e5bd9b3fd52effc
+#: ../../openvpn_roadwarrior.rst:138 43eec5119e29400aa50b2d2e94d1f6d4
 msgid ""
 "If a client is already connected to the roadwarrior server, the ``Disable`` "
 "action on the respective account causes an immediate disconnection from the "
@@ -459,7 +459,7 @@ msgstr ""
 "sull'account corrispondente provoca una disconnessione immediata dal server,"
 " interrompendo la comunicazione."
 
-#: ../../openvpn_roadwarrior.rst:140 8ea03bb8a5794c17a0fdbbc8c3b3d265
+#: ../../openvpn_roadwarrior.rst:140 4f003c886c2e43f2871c1118f5b506c9
 msgid ""
 "``Regenerate certificate``: recreate the personal certificate for the "
 "account; if the current certificate has not expired, it will be revoked, and"
@@ -473,7 +473,7 @@ msgstr ""
 "aggiornarlo sul client scaricando nuovamente l'intera configurazione oppure "
 "solo il certificato."
 
-#: ../../openvpn_roadwarrior.rst:142 8ec80919e71e47f9bec488eb13d80e8d
+#: ../../openvpn_roadwarrior.rst:142 aee3bcdbb97f409ab4d7c8546d8131ed
 msgid ""
 "``Delete``: delete the account and its certificate, this operation is "
 "irreversible and the certificate is not recoverable."
@@ -481,15 +481,15 @@ msgstr ""
 "``Elimina``: elimina l'account e il relativo certificato; questa operazione "
 "è irreversibile e il certificato non è recuperabile."
 
-#: ../../openvpn_roadwarrior.rst:145 bba06711397940fd90656de29f15373b
+#: ../../openvpn_roadwarrior.rst:145 d5a3bfa77ab84b6aa6c1d72c8182faed
 msgid "Client behavior"
 msgstr "Comportamento del client"
 
-#: ../../openvpn_roadwarrior.rst:147 f77ee964a4444e9383deed288bb8d083
+#: ../../openvpn_roadwarrior.rst:147 21ea515c8ceb4c5699d004257b3c5cbd
 msgid "Some information about the behavior of the clients:"
 msgstr "Alcune informazioni sul comportamento dei client:"
 
-#: ../../openvpn_roadwarrior.rst:149 6ae84fdd9d1947758da7deb66a261211
+#: ../../openvpn_roadwarrior.rst:149 edde9c3ffa9246319c4db532b81a58d7
 msgid ""
 "Clients connected to the Road Warrior VPN are assigned to the ``rwopenvpn`` "
 "zone, which is inherently trusted. By default, this zone has privileged "
@@ -500,7 +500,7 @@ msgstr ""
 "impostazione predefinita, questa zona dispone di accesso privilegiato sia "
 "alle zone LAN che WAN all'interno dell'infrastruttura di rete."
 
-#: ../../openvpn_roadwarrior.rst:152 9da2172d110047d694d8e346f1ae5421
+#: ../../openvpn_roadwarrior.rst:152 307d029d3c65434a954f9469840e42f1
 msgid ""
 "Connection backup: in case of multiple WANs, clients will connect using the "
 "first IP/hostname of the server configuration, if it's unavailable they will"
@@ -510,7 +510,7 @@ msgstr ""
 "utilizzando il primo IP/nome host della configurazione del server; se questo"
 " non è disponibile, verrà utilizzato il secondo IP/nome host e così via."
 
-#: ../../openvpn_roadwarrior.rst:154 6c805a0cc229431699d76348f904c229
+#: ../../openvpn_roadwarrior.rst:154 f3a09a4eaa6d43f1bef68a24c075b77b
 msgid ""
 "For security reasons, it is not possible to connect multiple clients with "
 "the same account. Each account can be used by only one client at a time. If "
@@ -522,11 +522,11 @@ msgstr ""
 "Se un nuovo client tenta di connettersi con un account già connesso al "
 "sistema, il primo account verrà disconnesso."
 
-#: ../../openvpn_roadwarrior.rst:161 da9c46e6ad7e498387894d9ebc9bd7a1
+#: ../../openvpn_roadwarrior.rst:161 f5de25690c0e48aa86a262dc9da6905c
 msgid "Client software"
 msgstr "Client software"
 
-#: ../../openvpn_roadwarrior.rst:163 49c26b69a7f14cd5a0012a586dda9e8e
+#: ../../openvpn_roadwarrior.rst:163 412eee2575c04aa8985c1cf9c91f5045
 msgid ""
 "All major platforms are supported. Here are some references to download the "
 "necessary software:"
@@ -534,7 +534,7 @@ msgstr ""
 "Tutte le principali piattaforme sono supportate. Ecco alcuni riferimenti per"
 " scaricare il software necessario:"
 
-#: ../../openvpn_roadwarrior.rst:165 dcca202179d4403886faaa075bae4265
+#: ../../openvpn_roadwarrior.rst:165 2864aca0960f443db1700b290c8ab8c6
 msgid ""
 "Windows Systems: `OpenVPN WebSite <https://openvpn.net/community-"
 "downloads/>`_"
@@ -542,7 +542,7 @@ msgstr ""
 "Sistemi Windows: `OpenVPN WebSite <https://openvpn.net/community-"
 "downloads/>`_"
 
-#: ../../openvpn_roadwarrior.rst:167 6ec158c9f51c4c248d90ee4d7e8a0554
+#: ../../openvpn_roadwarrior.rst:167 e0c65e2da1d248d98d783a0865aed1cd
 msgid ""
 "MacOS Systems: `TunnelBlick <https://tunnelblick.net/>`_ or the `Official "
 "Client <https://openvpn.net/client-connect-vpn-for-mac-os/>`_"
@@ -550,7 +550,7 @@ msgstr ""
 "Sistemi MacOS: `TunnelBlick <https://tunnelblick.net/>`_ oppure il `Client "
 "Ufficiale <https://openvpn.net/client-connect-vpn-for-mac-os/>`_"
 
-#: ../../openvpn_roadwarrior.rst:169 a77cd76f23a04728b0ba55f1b98f4220
+#: ../../openvpn_roadwarrior.rst:169 a6dbb47c333242609da0d1195215a08c
 msgid ""
 "Linux Systems: usually already available in most distribution software "
 "section, sources are available at `OpenVPN WebSite "
@@ -560,7 +560,7 @@ msgstr ""
 "software delle distribuzioni, i sorgenti sono disponibili su `OpenVPN "
 "WebSite <https://openvpn.net/community-downloads/>`_"
 
-#: ../../openvpn_roadwarrior.rst:171 24b9b176adc8437ebb549de0642fcfd9
+#: ../../openvpn_roadwarrior.rst:171 f9c475c49ecf401fbd1c454bd725f733
 msgid ""
 "Android Systems: `OpenVPN Connect on Play Store "
 "<https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_"
@@ -568,7 +568,7 @@ msgstr ""
 "Sistemi Android: `OpenVPN Connect su Play Store "
 "<https://play.google.com/store/apps/details?id=net.openvpn.openvpn>`_"
 
-#: ../../openvpn_roadwarrior.rst:173 d17d83e70fc54109baa8e376afb15ddd
+#: ../../openvpn_roadwarrior.rst:173 6dadf34d07fb42e5bb2dc5900efff904
 msgid ""
 "iOS Systems: `OpenVPN Connect on App Store "
 "<https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_"
@@ -576,11 +576,11 @@ msgstr ""
 "Sistemi iOS: `OpenVPN Connect su App Store "
 "<https://apps.apple.com/it/app/openvpn-connect-openvpn-app/id590379981>`_"
 
-#: ../../openvpn_roadwarrior.rst:176 b80ea5f553724cc998540d8373f6cae5
+#: ../../openvpn_roadwarrior.rst:238 c4cb0812ee034568aae9d1ac5f0d9d20
 msgid "MTU Issue and Packet Fragmentation"
 msgstr "Problema MTU e Frammentazione dei Pacchetti"
 
-#: ../../openvpn_roadwarrior.rst:178 5351dc6582c24a7093e699ee0f25ec47
+#: ../../openvpn_roadwarrior.rst:240 c7c07a065b014a33add94f25395d3222
 msgid ""
 "VPN users may experience connectivity issues due to packet fragmentation. "
 "The LAN interface has an MTU of 1500, but when packets are encrypted for VPN"
@@ -590,17 +590,17 @@ msgid ""
 msgstr ""
 "Gli utenti VPN possono riscontrare problemi di connettività a causa della "
 "frammentazione dei pacchetti. L'interfaccia LAN ha un MTU di 1500, ma quando"
-" i pacchetti vengono cifrati per la trasmissione tramite VPN, la dimensione"
-" aumenta, causando la perdita di pacchetti. Per risolvere questo problema, è"
-" necessario abbassare l'MTU sull'interfaccia TUN del server VPN. Non sono "
+" i pacchetti vengono cifrati per la trasmissione tramite VPN, la dimensione "
+"aumenta, causando la perdita di pacchetti. Per risolvere questo problema, è "
+"necessario abbassare l'MTU sull'interfaccia TUN del server VPN. Non sono "
 "richieste modifiche lato client."
 
-#: ../../openvpn_roadwarrior.rst:180 444e70c8f5684956b0e34f82bddc45ba
+#: ../../openvpn_roadwarrior.rst:242 e6ca5f526de74621b45d768b4fd29e90
 msgid "Add these options to the Roadwarrior server configuration ::"
 msgstr ""
 "Aggiungere queste opzioni alla configurazione del server Roadwarrior ::"
 
-#: ../../openvpn_roadwarrior.rst:187 e8d6ce735a6841b3aa05dd77fe678d7f
+#: ../../openvpn_roadwarrior.rst:249 0acc83eb938a4e9e83852ca9f732a98e
 msgid ""
 "The MTU values may need to be adjusted to fit your specific network "
 "environment. A lower MTU ensures packets fit within the limits of the VPN "
@@ -613,11 +613,11 @@ msgstr ""
 " latenza di rete o dell'overhead, potrebbero essere necessari valori "
 "leggermente diversi."
 
-#: ../../openvpn_roadwarrior.rst:190 658989174f6f42c68d0da05b44e2c844
+#: ../../openvpn_roadwarrior.rst:252 64d5d5bf1ee44790bb7eb5b863087269
 msgid "Connection history"
 msgstr "Cronologia delle connessioni"
 
-#: ../../openvpn_roadwarrior.rst:192 f29eadba03f947f7b7a50c7fc197d832
+#: ../../openvpn_roadwarrior.rst:254 19fb2ff098d643209d344a07305927f1
 msgid ""
 "Every time a client connects or disconnects from the server, the event is "
 "saved inside a SQLite database stored in RAM. Such event history can be "
@@ -627,9 +627,10 @@ msgstr ""
 "Ogni volta che un client si connette o si disconnette dal server, l'evento "
 "viene salvato all'interno di un database SQLite memorizzato in RAM. La "
 "cronologia di tali eventi può essere visualizzata facendo clic sulla scheda "
-"``Cronologia delle connessioni`` disponibile nella parte superiore della pagina."
+"``Cronologia delle connessioni`` disponibile nella parte superiore della "
+"pagina."
 
-#: ../../openvpn_roadwarrior.rst:195 9acfef92986f42d6af906e28020d9867
+#: ../../openvpn_roadwarrior.rst:257 5b9df901cbd4438ca4b24ee37b2e3698
 msgid ""
 "By default the page will display all connections from current day, but it is"
 " possible to filter the results by date and time and account name."
@@ -638,7 +639,7 @@ msgstr ""
 "del giorno corrente, ma è possibile filtrare i risultati per data e ora e "
 "per nome account."
 
-#: ../../openvpn_roadwarrior.rst:197 6b4816ff5ce94618bdf7dc97a7a2a28c
+#: ../../openvpn_roadwarrior.rst:259 e35365b19a574e779abfc0f2e124c217
 msgid ""
 "To download all history in CSV format, click on the button "
 ":guilabel:`Download server history`. The header of the CSV file explains the"
@@ -648,7 +649,7 @@ msgstr ""
 ":guilabel:`Scarica la cronologia del server`. L'intestazione del file CSV "
 "spiega il significato di ciascuna colonna, incluse le unità di misura."
 
-#: ../../openvpn_roadwarrior.rst:200 5ffd006b31a74b1c85ebeba3bc737aa3
+#: ../../openvpn_roadwarrior.rst:262 76e94c0b6d0641c3855fc7b3854016b3
 msgid ""
 "Once the server is rebooted, the local history is lost. If the server is "
 "connected to a :ref:`controller-section`, the history is sent to the "
@@ -660,7 +661,7 @@ msgstr ""
 " inviata al controller e può essere visualizzata all'interno della sezione "
 ":ref:`historical_monitoring-section`."
 
-#: ../../openvpn_roadwarrior.rst:20 ae79e63eaf0d4728a7255560277e7b10
+#: ../../openvpn_roadwarrior.rst:20 9b2f9692e4284e95b0ce4965894716f0
 msgid ""
 "An OpenVPN server is running on NethSecurity waiting for remote clients to "
 "contact it and establish a connection. It must be reachable from the "
@@ -679,7 +680,7 @@ msgstr ""
 "l’autenticazione, riceve un indirizzo IP con cui si presenterà alla rete "
 "remota."
 
-#: ../../openvpn_roadwarrior.rst:50 275f1ebcc1234755813e86eedc86ffc6
+#: ../../openvpn_roadwarrior.rst:50 fb1ce6d52ad647f5a512c969b106c405
 msgid ""
 "``Username, certificate and OTP``: the connecting client must provide a "
 "valid username, certificate and also an OTP code used as a password. This "
@@ -690,7 +691,7 @@ msgstr ""
 "password. Questa modalità richiede una configurazione aggiuntiva nel client "
 "per ricevere il codice OTP."
 
-#: ../../openvpn_roadwarrior.rst:102 e15ece050b274c17b0d06479fd9db244
+#: ../../openvpn_roadwarrior.rst:102 644efc4117244b07b860714a66d305fb
 msgid ""
 "``NBDD [addr]``: set primary and secondary NetBIOS Datagram Distribution "
 "Server (NetBIOS over TCP/IP Datagram Distribution Server) addresses. Repeat "
@@ -700,38 +701,260 @@ msgstr ""
 "datagrammi NetBIOS primario e secondario (NetBIOS over TCP/IP Datagram "
 "Distribution Server). Ripetere l'opzione per impostare più indirizzi."
 
-#~ msgid ""
-#~ "3. ``NBDD [addr]``: set primary and secondary NetBIOS Datagram Distribution "
-#~ "Server (NetBIOS over TCP/IP Datagram Distribution Server) addresses. Repeat "
-#~ "the option to set multiple addresses."
-#~ msgstr ""
-#~ "3. ``NBDD [addr]``: imposta gli indirizzi del server di distribuzione "
-#~ "datagrammi NetBIOS primario e secondario (NetBIOS over TCP/IP Datagram "
-#~ "Distribution Server). Ripetere l'opzione per impostare più indirizzi."
+#: ../../openvpn_roadwarrior.rst:178 47cbc45acf894d09ace64fe7e5d93147
+msgid "Managing certificate expiration"
+msgstr "Gestione della scadenza dei certificati"
 
-#~ msgid ""
-#~ "``Username OTP and certificate``: the connecting client must provide a valid"
-#~ " username, certificate and also an OTP code used as a password. This mode "
-#~ "requires additional configuration in the client to receive to OTP code"
-#~ msgstr ""
-#~ "``Username OTP e certificato``: il client che si connette deve fornire un "
-#~ "nome utente valido, un certificato e anche un codice OTP utilizzato come "
-#~ "password. Questa modalità richiede una configurazione aggiuntiva nel client "
-#~ "per ricevere il codice OTP."
+#: ../../openvpn_roadwarrior.rst:180 6ac784b8a5f44972b24b8819a2753946
+msgid ""
+"An OpenVPN Road Warrior instance uses TLS certificates for authentication. "
+"To avoid connectivity issues, it is crucial to monitor the expiration dates "
+"of the certificates used across the entire infrastructure."
+msgstr ""
+"Un'istanza OpenVPN Road Warrior utilizza certificati TLS per "
+"l'autenticazione. Per evitare problemi di connettività, è fondamentale "
+"monitorare le date di scadenza dei certificati utilizzati in tutta "
+"l'infrastruttura."
 
-#~ msgid ""
-#~ "An OpenVPN server is running on NethSecurity waiting for remote clients to "
-#~ "contact it and establish a connection. It must be reachable from the "
-#~ "internet on its specific port (default: 1194 UDP). Multiple clients can "
-#~ "connect to the server, authenticate themselves and gain access to the "
-#~ "private network; however, the clients do not need to be reachable on the "
-#~ "internet. Each connecting client, after authentication, receives an IP "
-#~ "address with which it will present itself to the remote network."
-#~ msgstr ""
-#~ "Un server OpenVPN è in esecuzione su NethSecurity in attesa che i client "
-#~ "remoti lo contattino e stabiliscano una connessione. Deve essere "
-#~ "raggiungibile da internet sulla sua porta specifica (predefinita: 1194 UDP)."
-#~ " Più client possono connettersi al server, autenticarsi e ottenere l’accesso"
-#~ " alla rete privata; tuttavia, i client non devono essere raggiungibili da "
-#~ "internet. Ogni client che si connette, dopo l’autenticazione, riceve un "
-#~ "indirizzo IP con cui si presenterà alla rete remota."
+#: ../../openvpn_roadwarrior.rst:182 17e6ebfda3e84cd59cb879865fc7458f
+msgid ""
+"When a new OpenVPN Road Warrior server is created, the system generates a "
+"new ``PKI (Public Key Infrastructure)``, which is composed of:"
+msgstr ""
+"Quando viene creato un nuovo server OpenVPN Road Warrior, il sistema genera "
+"una nuova ``PKI (Public Key Infrastructure)``, che è composta da:"
+
+#: ../../openvpn_roadwarrior.rst:184 c4df02d9e85047118ce49b72a65cf1cd
+msgid "a **CA** (**Certificate Authority**) certificate"
+msgstr "un certificato **CA** (**Certificate Authority**)"
+
+#: ../../openvpn_roadwarrior.rst:185 dbb4b5dfc972477582242dafdcd9ed48
+msgid "a **server** certificate"
+msgstr "un certificato **server**"
+
+#: ../../openvpn_roadwarrior.rst:187 e8f6dca936e54eb0ae9b086c29953870
+msgid ""
+"Client certificates are generated for each user in the database selected "
+"during the server setup or when a user is added later."
+msgstr ""
+"I certificati client vengono generati per ogni utente nel database "
+"selezionato durante la configurazione del server o quando un utente viene "
+"aggiunto successivamente."
+
+#: ../../openvpn_roadwarrior.rst:189 675a6200bcd8477f82b94c7482c0a6ff
+msgid ""
+"Each of these elements (client, server, and CA) has its own certificate with"
+" a specific expiration date, and all of them must be valid to allow "
+"connection."
+msgstr ""
+"Ciascuno di questi elementi (client, server e CA) possiede il proprio "
+"certificato con una specifica data di scadenza, e tutti devono essere validi"
+" per consentire la connessione."
+
+#: ../../openvpn_roadwarrior.rst:191 db2f78a05c7e452b92896d2abb541c2b
+msgid ""
+"You can check the expiration dates directly on the UI. The CA and server "
+"dates (which belong to the OpenVPN instance) are shown on the server detail "
+"section, the clients ones (which belongs to the user accounts created for "
+"that instance) are shown in the clients table."
+msgstr ""
+"È possibile verificare le date di scadenza direttamente nell'interfaccia "
+"utente. Le date della CA e del server (che appartengono all'istanza OpenVPN)"
+" sono visualizzate nella sezione dei dettagli del server, mentre quelle dei "
+"client (che appartengono agli account utente creati per quell'istanza) sono "
+"mostrate nella tabella dei client."
+
+#: ../../openvpn_roadwarrior.rst:193 b5bf673e5b6b4e00af86244786124278
+msgid "Near each date two different icons can be shown:"
+msgstr ""
+"Accanto a ciascuna data possono essere visualizzate due icone diverse:"
+
+#: ../../openvpn_roadwarrior.rst:195 58fcfa80f42e4c519b0e1d4aefafe541
+msgid ""
+"a yellow triangle exclamation icon, which means that the certificate will "
+"expire in less than 30 days"
+msgstr ""
+"un'icona a triangolo giallo con punto esclamativo, che indica che il "
+"certificato scadrà entro 30 giorni"
+
+#: ../../openvpn_roadwarrior.rst:196 de39134fd07a4c898c97d9d6f33cb2b5
+msgid ""
+"a red circle exclamation icon, which means that the certificate has already "
+"expired."
+msgstr ""
+"un'icona a cerchio rosso con punto esclamativo, che indica che il "
+"certificato è già scaduto."
+
+#: ../../openvpn_roadwarrior.rst:198 1911b92e55424cb8aae341f41a5f8088
+msgid ""
+"By default, all certificates are generated with a validity of 3650 days (10 "
+"years)."
+msgstr ""
+"Per impostazione predefinita, tutti i certificati vengono generati con una "
+"validità di 3650 giorni (10 anni)."
+
+#: ../../openvpn_roadwarrior.rst:200 97d500a3562c4fa991f8c980a268a26b
+msgid ""
+"A connection between the OpenVPN Road Warrior server and its clients will be"
+" interrupted when at least one certificate expires, so it is important to "
+"monitor expiration dates and renew certificates before they expire. In "
+"particular, these are the possible scenarios:"
+msgstr ""
+"Una connessione tra il server OpenVPN Road Warrior e i suoi client verrà "
+"interrotta quando almeno un certificato scade, quindi è importante "
+"monitorare le date di scadenza e rinnovare i certificati prima che scadano. "
+"In particolare, questi sono gli scenari possibili:"
+
+#: ../../openvpn_roadwarrior.rst:203 c56afa51520b49e0b3348b9d367887ce
+msgid "the CA certificate has expired"
+msgstr "il certificato CA è scaduto"
+
+#: ../../openvpn_roadwarrior.rst:204 2930e10ecf7b4fcb8182dde3eeaae921
+msgid "the server certificate has expired"
+msgstr "il certificato del server è scaduto"
+
+#: ../../openvpn_roadwarrior.rst:205 cc1a0030c0fb4be69fe3d7f142f0778b
+msgid "the client certificate has expired"
+msgstr "il certificato client è scaduto"
+
+#: ../../openvpn_roadwarrior.rst:207 5098c8cc8bce4bd3889ab75c118c0d1d
+msgid ""
+"Below are the steps to renew certificates in each scenario and restore the "
+"connection."
+msgstr ""
+"Di seguito sono riportati i passaggi per rinnovare i certificati in ciascuno"
+" scenario e ripristinare la connessione."
+
+#: ../../openvpn_roadwarrior.rst:210 5b714ad0c12f443ea1d53bc89c820b09
+msgid "Client certificate expired"
+msgstr "Certificato client scaduto"
+
+#: ../../openvpn_roadwarrior.rst:211 34bdd8bad15542438d08677ad95152da
+msgid ""
+"In this scenario, the client certificate must be regenerated using the "
+":guilabel:`Regenerate certificate` option on the server side (as mentioned "
+"above). Then, the new client configuration/certificate must be downloaded "
+"and imported on the client side."
+msgstr ""
+"In questo scenario, il certificato client deve essere rigenerato utilizzando"
+" l'opzione :guilabel:`Rigenera certificato` sul lato server (come menzionato"
+" sopra). Successivamente, la nuova configurazione/certificato client deve "
+"essere scaricata e importata sul lato client."
+
+#: ../../openvpn_roadwarrior.rst:214 ac2410aa44cf449594b59f8302a8e92d
+msgid "Server certificate expired"
+msgstr "Certificato del server scaduto"
+
+#: ../../openvpn_roadwarrior.rst:215 4252ac2d03fd41e9b4100afe8072d1c6
+msgid ""
+"In this scenario, the server certificate must be renewed on the server side."
+msgstr ""
+"In questo scenario, il certificato del server deve essere rinnovato lato "
+"server."
+
+#: ../../openvpn_roadwarrior.rst:217 7120db0cedb848369e86af67df4347b5
+msgid ""
+"The server certificate can be renewed using the dedicated option "
+":guilabel:`Renew server certificate`, available on the :guilabel:`︙` menu on"
+" the right of the server details section."
+msgstr ""
+"Il certificato server può essere rinnovato utilizzando l'opzione dedicata "
+":guilabel:`Rinnova certificato server`, disponibile nel menu :guilabel:`︙` a"
+" destra della sezione dei dettagli del server."
+
+#: ../../openvpn_roadwarrior.rst:219 b8847bb4251747718f18121f2db2f9d6
+msgid ""
+"This operation will revoke the existing server certificate, create a new one"
+" without affecting the CA certificate, and then restart the *openvpn* "
+"service to apply the changes. In this scenario, if the client certificates "
+"are still valid, you can continue using the existing client configuration."
+msgstr ""
+"Questa operazione revocherà il certificato server esistente, ne creerà uno "
+"nuovo senza influire sul certificato CA e quindi riavvierà il servizio "
+"*openvpn* per applicare le modifiche. In questo scenario, se i certificati "
+"client sono ancora validi, è possibile continuare a utilizzare la "
+"configurazione client esistente."
+
+#: ../../openvpn_roadwarrior.rst:222 db0337b6c535414dbe5b5ca7d4a4ba5f
+msgid ""
+"When regerating the server certificate, the clients certificates remain "
+"valid (if not expired). If the certificate renewal is done while clients are"
+" connected, it's necessary for the client to disconnect and then reconnect "
+"to the server to restore the connection. If the certificate renewal is done "
+"while **clients are disconnected (recommended way)**, the connection will be"
+" automatically restored when they will try to connect again."
+msgstr ""
+"Quando si rigenera il certificato del server, i certificati dei client "
+"rimangono validi (se non scaduti). Se il rinnovo del certificato viene "
+"effettuato mentre i client sono connessi, è necessario che il client si "
+"disconnetta e poi si riconnetta al server per ripristinare la connessione. "
+"Se il rinnovo del certificato viene effettuato mentre **i client sono "
+"disconnessi (modalità consigliata)**, la connessione verrà ripristinata "
+"automaticamente quando tenteranno nuovamente di connettersi."
+
+#: ../../openvpn_roadwarrior.rst:225 4042a863131449f9be030ab48f4ca045
+msgid "CA certificate expired"
+msgstr "Certificato CA scaduto"
+
+#: ../../openvpn_roadwarrior.rst:226 108c10f4202b4442a43698a50977bf75
+msgid ""
+"In this scenario, certificate regeneration is not possible because the CA "
+"certificate is the one that signs both the server and client certificates. "
+"Therefore, a completely new PKI must be generated."
+msgstr ""
+"In questo scenario, la rigenerazione del certificato non è possibile perché "
+"il certificato CA è quello che firma sia i certificati del server che quelli"
+" del client. Pertanto, è necessario generare una nuova PKI completa."
+
+#: ../../openvpn_roadwarrior.rst:228 e6d0356749fb46e4af7cc5cc80d8af29
+msgid ""
+"To generate a new PKI, the :guilabel:`Regenerate all certificates` option is"
+" available on the :guilabel:`︙` menu on the right of the server details "
+"section. The user has then to type the server name to confirm the operation."
+msgstr ""
+"Per generare una nuova PKI, l'opzione :guilabel:`Rigenera tutti i "
+"certificati` è disponibile nel menu :guilabel:`︙` a destra della sezione dei"
+" dettagli del server. È quindi necessario digitare il nome del server per "
+"confermare l'operazione."
+
+#: ../../openvpn_roadwarrior.rst:231 2359af03da7b4b43b577eb4bbddda49a
+msgid ""
+"This operation will generate a new CA certificate, as well as new server and"
+" client certificates signed by the new CA. In this scenario, it is "
+"**mandatory** to download and import the new client configuration on the "
+"client side to restore the connection, so make sure to do it as soon as "
+"possible to minimize downtime."
+msgstr ""
+"Questa operazione genererà un nuovo certificato CA, oltre a nuovi "
+"certificati server e client firmati dalla nuova CA. In questo scenario, è "
+"**obbligatorio** scaricare e importare la nuova configurazione client sul "
+"lato client per ripristinare la connessione, quindi assicurarsi di eseguire "
+"questa operazione il prima possibile per ridurre al minimo i tempi di "
+"inattività."
+
+#: ../../openvpn_roadwarrior.rst:234 e969d18ad1954a80bd4b0c435d325f50
+msgid ""
+"When the CA certificate has expired, the only way to restore the connection "
+"is to generate a new PKI and import the new client configuration on the "
+"client side. If the client and server certificates are still valid (for "
+"example, you regenerated the client certificate using the "
+":guilabel:`Regenerate certificate` option and renewed the server certificate"
+" using the :guilabel:`Renew server certificate` option above) but the CA "
+"certificate has expired, the connection will not be restored until a new CA "
+"certificate is generated and the new client configuration is imported on the"
+" client side. Therefore, if your client can no longer connect to the server "
+"due to certificate expiration, make sure to check which certificate has "
+"expired and follow the correct procedure to restore the connection."
+msgstr ""
+"Quando il certificato CA è scaduto, l’unico modo per ripristinare la "
+"connessione è generare una nuova PKI e importare la nuova configurazione "
+"client sul lato client. Se i certificati client e server sono ancora validi "
+"(ad esempio, è stato rigenerato il certificato client utilizzando l’opzione "
+":guilabel:`Rigenera certificato` e rinnovato il certificato server "
+"utilizzando l’opzione :guilabel:`Rinnova certificato server` sopra), ma il "
+"certificato CA è scaduto, la connessione non verrà ripristinata finché non "
+"verrà generato un nuovo certificato CA e importata la nuova configurazione "
+"client sul lato client. Pertanto, se il client non riesce più a connettersi "
+"al server a causa della scadenza di un certificato, assicurarsi di "
+"verificare quale certificato è scaduto e seguire la procedura corretta per "
+"ripristinare la connessione."
