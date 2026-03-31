@@ -80,7 +80,7 @@ The table includes the following information for each connection:
 This real-time table allows operators to quickly identify heavy users, monitor application behavior, and troubleshoot network issues as they occur.
 
 Configuration
-^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 The Live Flows section also includes configuration options to manage the behavior of the flows monitoring service:
 
