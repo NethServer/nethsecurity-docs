@@ -48,9 +48,9 @@ Remote support sessions have the following expiration behavior:
 
 The system continuously monitors session expiration:
 
-- A cron job runs every hour to check for expired sessions
-- When a session expires, it is automatically stopped
-- Session expiration events are logged to the system log
+- a cron job runs every 10 minutes to check for expired sessions
+- when a session expires, it is automatically stopped
+- session expiration events are logged to the system log
 
 
 Terminating a session
