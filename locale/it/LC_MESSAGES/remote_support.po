@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 
-#: ../../remote_support.rst:5 870b3be96145444ba9ae3ef904b33a56
+#: ../../remote_support.rst:5 54d082b3fa454cf18ef576e6c1c8e48e
 msgid "Remote support"
 msgstr "Supporto remoto"
 
-#: ../../remote_support.rst:7 cf05f7195be94d40b0160660d497fc50
+#: ../../remote_support.rst:7 f9b3c21aea1e4b12bf3be52d70d3198d
 msgid "Enterprise subscription required"
 msgstr "È necessaria una subscription Enterprise"
 
-#: ../../remote_support.rst:9 4a4715b02c5b453db9fdbbed499148a1
+#: ../../remote_support.rst:9 c4df8bbc0cc0477bb573b9f2b0b22a32
 msgid ""
 "This feature is available only if the firewall has a valid Enterprise "
 "subscription."
@@ -18,7 +18,7 @@ msgstr ""
 "Questa funzionalità è disponibile solo se il firewall dispone di un "
 "abbonamento Enterprise valido."
 
-#: ../../remote_support.rst:11 211fb692e422412f828da1163905fb45
+#: ../../remote_support.rst:11 8ef6fe099c454f70b5355b831d01be6f
 msgid ""
 "The :ref:`Enterprise subscription <subscription-section>` allows you to "
 "access the Nethesis remote support."
@@ -26,7 +26,7 @@ msgstr ""
 "L'abbonamento :ref:`Enterprise <subscription-section>` consente di accedere "
 "al supporto remoto Nethesis."
 
-#: ../../remote_support.rst:13 a23a8fa3794e487895cbb42aa0f362bf
+#: ../../remote_support.rst:13 7bae21ea276e46309f75950d7a79de52
 msgid ""
 "The remote support session will connect the firewall to a `WindMill instance"
 " <https://github.com/nethesis/windmill>`_ hosted by Nethesis at "
@@ -34,37 +34,213 @@ msgid ""
 "on port ``1194`` UDP. If port ``1194`` is closed, the system will try to "
 "fallback on port ``443`` TCP."
 msgstr ""
-"La sessione di supporto remoto collegherà il firewall ad una `istanza di WindMill "
-" <https://github.com/nethesis/windmill>`_ ospitato da Nethesis su "
+"La sessione di supporto remoto collegherà il firewall ad una `istanza di "
+"WindMill  <https://github.com/nethesis/windmill>`_ ospitato da Nethesis su "
 "``sos.nethesis.it``. Il firewall deve poter connettersi all'host sopra "
 "indicato sulla porta ``1194`` UDP. Se la porta ``1194`` è chiusa, il sistema"
 " tenterà di utilizzare come alternativa la porta ``443`` TCP."
 
-#: ../../remote_support.rst:18 660412728c024b6197ff65212dc34138
-msgid ""
-"The remote support must be started and stopped by the firewall "
-"administrator. To start a session:"
-msgstr ""
-"Il supporto remoto deve essere avviato e interrotto dall'amministratore del "
-"firewall. Per avviare una sessione:"
-
-#: ../../remote_support.rst:21 853357eba23241aa8dc8543dfe5e1341
+#: ../../remote_support.rst:28 ../../remote_support.rst:61
+#: 9ab0977b091641c7bddcda973cf69f41 90bd0ff3ef3c4ab78beb05e05eda81ed
 msgid ""
 "access the ``Subscription`` page and go to the ``Remote support`` section"
 msgstr ""
 "Accedere alla pagina ``Subscription`` e andare alla sezione ``Supporto "
 "remoto``"
 
-#: ../../remote_support.rst:22 6e0042f8ea72477899a71c1a96ff4024
+#: ../../remote_support.rst:29 99cb459564e341a7a6214c9e795b7f40
 msgid "click the :guilabel:`Start session` button"
 msgstr "fare clic sul pulsante :guilabel:`Avvia sessione`"
 
-#: ../../remote_support.rst:23 3bb69a80e06644029fd6515d36aa796e
+#: ../../remote_support.rst:30 e84069fb5aba42299ec1918bc67df76d
 msgid "copy the ``Session ID`` and share it with the support team"
 msgstr "Copiare ``ID sessione`` e condividerlo con il team di supporto."
 
-#: ../../remote_support.rst:25 756d5da2d59d4e7f9c768eb69ced9d53
-msgid "To terminate the session, click the :guilabel:`End session` button."
+#: ../../remote_support.rst:19 88c79e0e74f240ad971b81768b79657a
+msgid "Session management"
+msgstr "Gestione delle sessioni"
+
+#: ../../remote_support.rst:21 3dae7bd52d2a49d28ef8ae211668e871
+msgid ""
+"The remote support must be started and stopped by the firewall "
+"administrator."
 msgstr ""
-"Per terminare la sessione, fare clic sul pulsante :guilabel:`Termina "
-"sessione`."
+"Il supporto remoto deve essere avviato e interrotto dall'amministratore del "
+"firewall."
+
+#: ../../remote_support.rst:24 f8a9d38a7b154c6ebc0dbd48c955962f
+msgid "Starting a session"
+msgstr "Avvio di una sessione"
+
+#: ../../remote_support.rst:26 eb7d7e1743e4484e9df5cd4622b3acb4
+msgid "To start a session:"
+msgstr "Per avviare una sessione:"
+
+#: ../../remote_support.rst:31 62525993ae7545269d6b83443d1b13f8
+msgid "the session will be active for 24 hours by default"
+msgstr "la sessione sarà attiva per 24 ore per impostazione predefinita"
+
+#: ../../remote_support.rst:33 5d557236ed174b5d91f4ae4f433df0cb
+msgid "The system will display:"
+msgstr "Il sistema visualizzerà:"
+
+#: ../../remote_support.rst:35 cdf8690f1fef4566889b48df15116761
+msgid "The current session status (active/inactive)"
+msgstr "Lo stato attuale della sessione (attiva/inattiva)"
+
+#: ../../remote_support.rst:36 aecf05ea50794e8da9f687d59f179eb4
+msgid "The session expiration time"
+msgstr "Il tempo di scadenza della sessione"
+
+#: ../../remote_support.rst:37 e557afe456914cbebcb129f5ff9f4506
+msgid "The remaining time until expiration"
+msgstr "Il tempo rimanente fino alla scadenza"
+
+#: ../../remote_support.rst:39 e4fc55da473648a2b1e9ac46baaa07bc
+msgid ""
+"You can view this information at any time in the ``Remote support`` section "
+"of the ``Subscription`` page."
+msgstr ""
+"È possibile visualizzare queste informazioni in qualsiasi momento nella "
+"sezione ``Supporto remoto`` della pagina ``Subscription``."
+
+#: ../../remote_support.rst:42 5b326da7a45d4c08b960b749cb3568fa
+msgid "Session expiration"
+msgstr "Scadenza della sessione"
+
+#: ../../remote_support.rst:44 ba2f32bf170345ae9c3f9af9269f5514
+msgid "Remote support sessions have the following expiration behavior:"
+msgstr ""
+"Le sessioni di supporto remoto presentano il seguente comportamento di "
+"scadenza:"
+
+#: ../../remote_support.rst:46 8c6aff1be79c4c16a50dbb80763194bb
+msgid "**Default session**: expires after 24 hours"
+msgstr "**Sessione predefinita**: scade dopo 24 ore"
+
+#: ../../remote_support.rst:47 23656f8646824d7db3da011311098447
+msgid "**Extended session**: expires after 7 days from the extension time"
+msgstr "**Sessione estesa**: scade dopo 7 giorni dall’ora dell’estensione"
+
+#: ../../remote_support.rst:49 0c234a438b3c4691918de85460699128
+msgid "The system continuously monitors session expiration:"
+msgstr "Il sistema monitora continuamente la scadenza delle sessioni:"
+
+#: ../../remote_support.rst:51 7365fdf409ae4de0b15a2f66d0014e18
+msgid "A cron job runs every hour to check for expired sessions"
+msgstr ""
+"Un processo cron viene eseguito ogni ora per verificare la presenza di "
+"sessioni scadute"
+
+#: ../../remote_support.rst:52 5b20265dfa2e487eb0b6e31340258c94
+msgid "When a session expires, it is automatically stopped"
+msgstr "Quando una sessione scade, viene automaticamente interrotta"
+
+#: ../../remote_support.rst:53 0a6eb504159e41098038e63c0a9799f5
+msgid "Session expiration events are logged to the system log"
+msgstr ""
+"Gli eventi di scadenza della sessione vengono registrati nel registro di "
+"sistema"
+
+#: ../../remote_support.rst:57 466f5664992547afa20f802dfe5e3429
+msgid "Terminating a session"
+msgstr "Terminazione di una sessione"
+
+#: ../../remote_support.rst:59 d14345162bdd44f9bdb485577931f858
+msgid "To manually terminate an active session before it expires:"
+msgstr ""
+"Per terminare manualmente una sessione attiva prima della sua scadenza:"
+
+#: ../../remote_support.rst:62 8ddf68e5c48d4141bc362277bbbaca9f
+msgid "click the :guilabel:`End session` button"
+msgstr "fare clic sul pulsante :guilabel:`Termina sessione`"
+
+#: ../../remote_support.rst:63 186820055771438e94632c8f58570951
+msgid "the remote support connection will be immediately closed"
+msgstr "la connessione di supporto remoto verrà immediatamente chiusa"
+
+#: ../../remote_support.rst:66 6744c6337d914c83b36291e71dafbca3
+msgid "Command Line Interface"
+msgstr "Interfaccia a riga di comando"
+
+#: ../../remote_support.rst:68 deef988fd5c04428ba5c6f959b0bf623
+msgid ""
+"The ``don`` command requires root privileges and logs all operations to the "
+"system log."
+msgstr ""
+"Il comando ``don`` richiede privilegi di root e registra tutte le operazioni"
+" nel log di sistema."
+
+#: ../../remote_support.rst:70 ec3d30b89b90412ea30c67b96af3169e
+msgid "Start a session::"
+msgstr "Avvia una sessione:"
+
+#: ../../remote_support.rst:74 a0a5a9d4ee5243f28d6ceb1cd7784aa0
+msgid ""
+"This will start a new remote support session with a 24-hour expiration."
+msgstr ""
+"Questo avvierà una nuova sessione di supporto remoto con una scadenza di 24 "
+"ore."
+
+#: ../../remote_support.rst:76 f409cd49d79149799236518ad0efb744
+msgid "Check session status::"
+msgstr "Verificare lo stato della sessione:"
+
+#: ../../remote_support.rst:80 1ae2077049fc4231ac1b85f8d1471ab5
+msgid "This displays the current session information including:"
+msgstr "Questo visualizza le informazioni sulla sessione corrente, inclusi:"
+
+#: ../../remote_support.rst:82 cbadba2876fc407e8286bfb30b5bb535
+msgid "Server ID"
+msgstr "ID server"
+
+#: ../../remote_support.rst:83 133bd9325f224e75851fdb2a09bc6af8
+msgid "Session ID"
+msgstr "ID sessione"
+
+#: ../../remote_support.rst:84 265cc2e14a0b4826a95d0e79e5b3ccd1
+msgid "Time remaining until expiration"
+msgstr "Tempo rimanente fino alla scadenza"
+
+#: ../../remote_support.rst:86 dd360687671446a6a1acbbaa361f0a31
+msgid "Extend an active session::"
+msgstr "Estendere una sessione attiva:"
+
+#: ../../remote_support.rst:91 94137881a8864f398eda08c7b71e2335
+msgid ""
+"Session extension is only available via command line. This feature extends "
+"the session from the default 24 hours to 7 days starting since the current "
+"time."
+msgstr ""
+"L'estensione della sessione è disponibile solo tramite riga di comando. "
+"Questa funzionalità estende la sessione dalla durata predefinita di 24 ore a"
+" 7 giorni a partire dall'ora corrente."
+
+#: ../../remote_support.rst:94 6624cc8026fd47efbfc2bf41972fde05
+msgid "Stop a session::"
+msgstr "Interrompere una sessione::"
+
+#: ../../remote_support.rst:98 3ef697cff3964f62b4d6e130cf4dc508
+msgid ""
+"This immediately terminates the remote support session and cleans up all "
+"resources."
+msgstr ""
+"Questo termina immediatamente la sessione di supporto remoto e libera tutte "
+"le risorse."
+
+#: ../../remote_support.rst:100 f75fc6f3fabc443c8184bf255b049001
+msgid "Check for expired sessions::"
+msgstr "Verificare le sessioni scadute:"
+
+#: ../../remote_support.rst:104 66b02f46601c4813ab3e32c1f711b440
+msgid ""
+"This command is automatically run by cron every hour to check if the session"
+" has expired. If the session has expired, it will be automatically stopped."
+msgstr ""
+"Questo comando viene eseguito automaticamente da cron ogni ora per "
+"verificare se la sessione è scaduta. Se la sessione è scaduta, verrà "
+"automaticamente interrotta."
+
+#: ../../remote_support.rst:107 5351e14756814b83baeeb6d5e92c5e2e
+msgid "Log examples::"
+msgstr "Esempi di log::"
