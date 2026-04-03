@@ -111,6 +111,7 @@ NethSecurity administrator manual
    :caption: Advanced (CLI)
 
    ddns
+   dns_over_http
    smtp
    snmp
    custom_openvpn_tunnel

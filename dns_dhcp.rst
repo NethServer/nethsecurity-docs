@@ -156,6 +156,8 @@ You can configure the following:
 - **Specify a single upstream DNS server:** enter the IP address of the desired DNS server in the designated field.
 - **Set up domain-specific DNS servers:** this allows you to route queries for specific domains to different servers.
 
+For privacy-focused DNS configuration using encrypted connections, see :ref:`dns_over_http-section` for DNS over HTTPS (DoH) setup.
+
 Domain-specific DNS servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
