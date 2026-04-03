@@ -12,6 +12,7 @@ The ``https-dns-proxy`` package provides a local DNS-to-HTTPS proxy that forward
 
 This document provides instructions for installing and configuring the DoH upstream servers that provide
 filtering and are based in the EU, but you can use any DoH provider that suits your needs.
+This configuration only applies to the upstream servers of the firewall: clients will continue to send DNS requests to the firewall in plaintext on port 53.
 
 A list of DoH providers that support European locations and filtering are available on the
 `European Alternatives <https://european-alternatives.eu/category/public-dns>`_ site.
@@ -58,7 +59,6 @@ In this example, we will configure the JoinDNS4 DoH provider.
      uci set https-dns-proxy.joindns4.upstream_url='https://noads.joindns4.eu/dns-query'
      uci set https-dns-proxy.joindns4.listen_addr='127.0.0.1'
      uci set https-dns-proxy.joindns4.listen_port='5053'
-     uci set https-dns-proxy.joindns4.enabled='1'
      uci commit https-dns-proxy  
 
 3. Apply the configuration, https-dns-proxy will automatically use the local DoH proxy as upstream DNS: ::
@@ -66,7 +66,7 @@ In this example, we will configure the JoinDNS4 DoH provider.
      reload_config
 
 Verification
-============
+^^^^^^^^^^^^
 
 To verify that the DoH proxy is working correctly, check the service status: ::
 
@@ -77,10 +77,14 @@ You can also test DNS resolution: ::
   dig google.com @127.0.0.1 -p 5053
 
 Troubleshooting
----------------
+===============
 
-DNS forcing is a feature that forces all DNS queries to be sent to the local DoH proxy, 
-it's enabled by default to ensure that all DNS traffic is encrypted, but it may cause issues with certain devices or applications.
+DNS redirection
+----------------
+
+DNS forcing is a feature that forces all DNS queries to be sent to the local DoH proxy. It's
+enabled by default to ensure that all DNS traffic is encrypted, but it may cause issues with
+certain devices or applications.
 
 If you encounter a "Private DNS server cannot be accessed" error on your Android device,
 you can fix it by disabling DNS forcing in the ``https-dns-proxy`` configuration.
@@ -90,3 +94,27 @@ Run the following commands via SSH or terminal: ::
   uci set https-dns-proxy.config.force_dns='0'
   uci commit https-dns-proxy
   service https-dns-proxy restart
+
+Image update
+------------
+
+The ``https-dns-proxy`` package overrides the default DNS configuration,
+so if you update your NethSecurity image, the system will not be able to connect to Internet
+and restore the package.
+
+To overcome this issue, you can temporarily stop the DoH proxy before updating the image: ::
+
+  service https-dns-proxy stop
+
+This will restore the default DNS configuration and allow the system to connect to the Internet
+after image update. Once the update is complete, you can restart the DoH proxy: ::
+
+  service https-dns-proxy restart
+
+Blocking other DoH providers
+----------------------------
+
+To block DoH requests from clients to any other server while allowing requests originating from the firewall, you have 2 options:
+
+1. Enable the "public DoH-Providers" category inside Threat Shield IP and whitelist the upstream server you choose as your DoH provider
+2. Use DPI (Deep Packet Inspection) to block DoH, which operates only on forwarded traffic, allowing the firewall to use DoH while blocking clients from using it directly
