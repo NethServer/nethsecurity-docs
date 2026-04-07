@@ -15,17 +15,36 @@ Migration requirements:
 
 Migration scenarios:
 
-- Migration in-place (firewall only): if the original NethServer 7 only contains the firewall module, you can perform an in-place migration and
-  reuse the existing hardware. This scenario simplifies the migration process without the need for additional hardware.
+.. list-table::
+   :widths: 32 22 46
+   :header-rows: 1
 
-- Migration with other installed modules: if NethServer 7 contains additional modules such as the mail server, suitable hardware is required to run NethSecurity.
-  In this case you will need to :ref:`import the configuration <import_migration-section>` on a freshly installed NethSecurity.
-
-Migration from NethServer 6 is not supported. If you are running NethServer 6.x, you must first upgrade to NethServer 7 before migrating to NethSecurity.
+   * - Source system
+     - Supported method
+     - Notes
+   * - NethServer 7 with only the firewall role
+     - In-place or export/import
+     - You can reuse the existing hardware if NethSecurity 8 detects all required disks and network cards.
+   * - NethServer 7 with additional roles such as NethService, NethVoice or mail
+     - Export/import only
+     - In-place migration is not supported. Install NethSecurity 8 on a dedicated machine and import only the firewall configuration.
+   * - NethServer 6.x
+     - Not supported
+     - Upgrade to NethServer 7 first.
 
 .. note::
 
    If you are using High Availability (HA) with NethServer 7, please refer also to the :ref:`HA migration guide <ha_migration_7.9-section>` for detailed instructions on migrating while maintaining HA functionality.
+
+Hardware compatibility
+======================
+
+Before reusing the existing hardware, boot the live USB image or a fresh NethSecurity 8 installation and verify that all disks and network cards are detected.
+No special migration step is required for supported 10 Gb SFP/SFP+ adapters: if the card is detected, you can proceed with the migration normally.
+If it is not detected, use different hardware or a network card already supported by NethSecurity 8.
+
+USB-to-Ethernet adapters are not supported in production on NethSecurity 8.
+See the :ref:`USB-to-Ethernet adapters section <usb_ethernet_migration-section>` for more details.
 
 Testing the migration
 =====================
@@ -89,7 +108,7 @@ Migration with other installed modules
 
 This scenario involves exporting a special configuration archive from NethServer 7 and importing it into NethSecurity.
 
-This method is recommended when the original NethServer 7 setup includes additional modules, such as the mail server.
+This method is recommended when the original NethServer 7 setup includes additional modules, such as the mail server, the WebTop groupware or the NethVoice PBX module.
 To perform this migration, you will need to install NethSecurity on new hardware and then import the configuration into the newly installed NethSecurity system.
 
 To perform the migration from NethServer 7 to NethSecurity, follow these steps:
@@ -134,49 +153,103 @@ The migration process is logged inside a special log file located at ``/root/mig
 This file contains all the actions performed during the migration process.
 Please note that the log file is deleted after an image upgrade.
 
-Migrated configurations
-=======================
+Migration coverage matrix
+=========================
 
-During the migration, the following configurations will be imported from NethServer 7:
+The following table shows what is migrated from NethServer 7 and what still needs manual work.
 
-- Password of the *root* user: it can be used to access the system via SSH and the web interface
-- Network configuration: everything should be migrated except for bridges over bonds that are not supported
-- When present, interface labels from the source system are adopted as interface names in NethSecurity 8, with the exception of WAN interfaces, which retain their original names.
-- Date and timezone
-- DHCP servers and reservations: DHCP server on bonds interfaces are not supported
-- DNS configuration with host definition: TFTP options are migrated, but not the content of the TFTP server.
-  To re-enable the service make sure to manually setup ``tftp_root`` option
-- Static IPv4 routes
-- Port forwards
-- Firewall zones: zones are migrated and should retain the same behavior of the original configuration:
-  green zones will be mapped to ``lan``, red zones to ``wan``, orange zones to ``dmz``, and blue zones to ``guest`` zones;
-  if a blue zone was present on NethServer 7, rules for accepting DNS and DHCP requests will be automatically added
-- Firewall rules: rules using NDPI services are not supported; source and destination objects, including zones, are not currently supported and will be converted
-  to rules with IP/CIDR addresses; all NAT helpers are automatically loaded after the migration with standard kernel parameters
-- MultiWAN configuration: providers will be preserved while divert rules (policy routing) are not migrated
-- QoS: classes with reserved bandwidth and rules are not supported
-- OpenVPN Road Warrior: all settings are migrated; the accounting database of client connections is not migrated; mail notification is still not supported on NethSecurity.
-  If the machine was connected to a remote Active Directory and the OpenVPN server was configured to authenticate against it, please see also :ref:`remote_user_databases-section`.
-- OpenVPN tunnels
-- IPSec tunnels
-- Threat shield IP: only enterprise lists are migrated, community lists must be reconfigured manually
-- Subscription: the subscription is migrated only when using the exported archive method
-- Hotspot: if the migration has been executed on a new hardware, the hotspot interface will change MAC address and it must be registered again 
-  to the remote hotspot manager
-- Let's Encrypt certificate configuration: certificates will be regenerated after the migration
-- Reverse proxy configuration: the configuration is migrated, but the certificates will be regenerated after the migration
-- FlashStart Cloud DNS filter
+.. list-table::
+   :widths: 30 18 52
+   :header-rows: 1
+
+   * - Area
+     - Result
+     - Notes
+   * - Root password
+     - Migrated
+     - The same password can be used for SSH and the web interface.
+   * - Network interfaces and VLANs
+     - Migrated with limits
+     - Network configuration is migrated. Bridges over bonds are not supported. On new hardware, VLANs are recreated automatically on the physical interface chosen during remapping.
+   * - Network interface labels
+     - Migrated
+     - Source labels are kept as interface names, except on WAN interfaces which keep their original names.
+   * - Date and timezone
+     - Migrated
+     - 
+   * - DHCP servers and reservations
+     - Migrated with limits
+     - DHCP servers on bond interfaces are not supported.
+   * - DNS configuration and local hosts
+     - Migrated with limits
+     - TFTP options are migrated, but TFTP content is not. To re-enable it, configure ``tftp_root`` manually.
+   * - Static IPv4 routes
+     - Migrated
+     - 
+   * - Port forwards
+     - Migrated
+     - 
+   * - Firewall zones
+     - Migrated
+     - Green zones become ``lan``, red becomes ``wan``, orange becomes ``dmz``, and blue becomes ``guest``. If a blue zone existed, DNS and DHCP accept rules are added automatically.
+   * - Firewall rules
+     - Migrated with conversion
+     - Rules using NDPI services are not supported. Source and destination objects, including custom zones, are converted to IP/CIDR values inside the migrated rules. NAT helpers are loaded automatically with standard kernel parameters.
+   * - Firewall objects
+     - Not recreated
+     - At the moment, firewall objects cannot be reimported automatically on the new system. Rules that used objects as source or destination are converted to the corresponding IP/CIDR values.
+   * - MultiWAN
+     - Partial
+     - Providers are preserved. Divert rules (policy routing) are not migrated.
+   * - QoS
+     - Partial
+     - Classes with reserved bandwidth and related rules are not supported.
+   * - OpenVPN Road Warrior
+     - Partial
+     - Settings are migrated. The accounting database is not migrated and mail notification is not supported. If the server authenticates against a remote Active Directory, please see also :ref:`remote_user_databases-section`.
+   * - OpenVPN tunnels
+     - Migrated
+     - 
+   * - IPSec tunnels
+     - Migrated
+     - 
+   * - Threat Shield IP
+     - Partial
+     - Only enterprise lists are migrated. Community lists must be configured again manually.
+   * - Subscription
+     - Conditional
+     - It is migrated only when using the exported archive method.
+   * - Hotspot
+     - Conditional
+     - On new hardware the MAC address changes, so the hotspot must be registered again on the remote manager.
+   * - Let's Encrypt and reverse proxy certificates
+     - Regenerated
+     - Configuration is migrated, but certificates are generated again after the migration.
+   * - FlashStart Cloud DNS filter
+     - Migrated
+     - 
+
+Remapping examples
+------------------
+
+The following examples show how some configurations are migrated when the network interfaces of the source and destination machines do not match:
+
+- VLAN remapping: if VLAN 20 was configured on ``eth1`` on the source firewall and ``eth1`` is mapped to ``eth2`` on the destination firewall, VLAN 20 is recreated automatically on ``eth2``.
+- Firewall object conversion: if a rule used a host set named ``BranchOffice`` with value ``10.20.30.0/24``, the migrated rule keeps ``10.20.30.0/24`` directly instead of recreating the object.
+
+Not migrated features
+---------------------
 
 The following features are not migrated to NethSecurity:
 
-- Web proxy (Squid) and filter (ufdbGuard)
-- IPS (Suricata) and IPS alerts (EveBox)
-- UPS monitoring (NUT)
-- System statistics (Collectd)
-- Reports (Dante)
-- Bandwidth monitor (ntopng)
+- Web proxy (Squid) and filter (ufdbGuard), replaced by :doc:`Content Filtering <content_filter>` and :ref:`dpi_filter-section`
+- IPS (Suricata) and IPS alerts (EveBox), replaced by :ref:`intrusion_prevention_system-section`
+- UPS monitoring (NUT), available only from command line with :doc:`UPS (NUT) <ups>`
+- System statistics (Collectd), replaced by Netdata in :ref:`real_time_monitoring-section`
+- Reports (Dante), replaced by controller metrics in :ref:`controller_metrics-section`
+- Bandwidth monitor (ntopng), built-in bandwidth monitoring is available in :ref:`real_time_monitoring-section` and through :ref:`controller_metrics-section`
 - Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block feature <brute_force-section>`
-- Threat shield DNS, currently :ref:`available only from command line <threat_shield_dns-section>`
+- Threat shield DNS, must be reconfigured manually :ref:`threat_shield_dns-section`
 
 .. _custom_zones_migration-section:
 
@@ -209,8 +282,11 @@ Just like policies, standard rules can be applied to this traffic without needin
 
 Routing for this specific network segment functions correctly without any additional rules or zones. In NethServer 7, it was mandatory to create a zone to ensure proper routing for incoming packets, as mentioned in the initial port forwarding's example.
 
+.. _usb_ethernet_migration-section:
+
 USB-to-Ethernet adapters
 ========================
+
 It may rarely happen that the NethServer 7 being migrated has a USB to Ethernet adapter connected to add a network device. These adapters should not be used in a firewall and are **not supported on NethSecurity 8**. However, it is possible to install certain specific drivers for experimental purposes, not for production environments. These drivers might be useful for temporarily managing the migrated firewall while awaiting hardware with all the necessary network cards. More information can be found in the :ref:`network section <network-section>`.
 
 .. warning::
