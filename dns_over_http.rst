@@ -82,9 +82,7 @@ Troubleshooting
 DNS redirection
 ----------------
 
-DNS forcing is a feature that forces all DNS queries to be sent to the local DoH proxy. It's
-enabled by default to ensure that all DNS traffic is encrypted, but it may cause issues with
-certain devices or applications.
+By default, all DNS queries to any server are forced through the local DoH proxy to ensure that all DNS traffic is encrypted, but this may cause issues with certain devices or applications.
 
 If you encounter a "Private DNS server cannot be accessed" error on your Android device,
 you can fix it by disabling DNS forcing in the ``https-dns-proxy`` configuration.
