@@ -201,7 +201,46 @@ Setting up your authenticator app:
 The system will also provide you with a set of backup codes. These codes can be used to log in if you lose your smartphone or authenticator app.
 Store these codes securely, preferably offline.
 
-You can disable 2FA from the same page.
+Disable 2FA via the web interface
+---------------------------------
+
+If the administrator can still log in to the web interface:
+
+1. Click the user icon in the top-right corner and select ``Account settings``.
+2. Scroll to the ``Two-factor authentication`` section.
+3. Click ``Revoke 2FA``.
+4. A confirmation dialog appears warning that the security level will be reduced.
+   Click ``Revoke 2FA`` to confirm.
+5. If prompted, enter your current password to authorize the change.
+
+After the confirmation the status badge changes to disabled and the next login will no
+longer require an OTP.
+
+Disable 2FA from the command line (emergency recovery)
+-------------------------------------------------------
+
+If an administrator has lost both the OTP device and the recovery codes and can no
+longer log in to the web interface, 2FA can be reset directly from the shell as ``root``
+over SSH.
+
+Run the following commands, replacing `<username>` with the administrator account name
+(use ``root`` for the default administrator): ::
+
+  SECRETS_DIR=/etc/ns-api-server
+  USERNAME=root   # change to the affected username
+
+  rm -f  "${SECRETS_DIR}/${USERNAME}/secret"
+  rm -f  "${SECRETS_DIR}/${USERNAME}/codes"
+  printf '0' > "${SECRETS_DIR}/${USERNAME}/status"
+
+After these commands the user can log in with just their password.  2FA can be
+re-enabled at any time from the web interface.
+
+.. note::
+
+  Only the ``root`` account has SSH access by default.  Non-root administrators
+  cannot be recovered from SSH by the affected user themselves; an existing ``root``
+  session is required to run the commands above on their behalf.
 
 .. _admin_users-section:
 

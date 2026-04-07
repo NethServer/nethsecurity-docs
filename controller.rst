@@ -108,6 +108,23 @@ To enable 2FA, follow the same steps documented inside the firewall web interfac
 
 The administrator can see the 2FA status of each user inside the user list.
 
+2FA reset
+^^^^^^^^^
+
+If a controller administrator has lost access to their OTP device and cannot log in,
+2FA can be reset from the NethServer 8 node by wiping the ``otp_secret`` and ``otp_recovery_codes``
+fields directly in the controller's database.
+
+Run the following commands on the NethServer 8 node, replacing ``nethsecurity-controller1`` with
+the actual controller module instance name and ``admin`` with the affected username: ::
+
+  runagent -m nethsecurity-controller1
+  source db.env; podman exec -it timescale psql -U "${POSTGRES_USER}" -p "${POSTGRES_PORT}" \
+    -c "UPDATE accounts SET otp_recovery_codes='', otp_secret='' WHERE username = 'admin';"
+
+After the query completes the user can log in with just their password and re-enroll a
+new OTP device from the controller UI.
+
 Units
 =====
 
