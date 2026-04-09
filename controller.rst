@@ -151,6 +151,8 @@ When the unit is connected, the user can access the unit web interface by clicki
 .. note:: 
 
   The unit user interface :ref:`must listen on port 9090 <change_ui_port-section>` to allow the controller to access it.
+  The controller will access the unit web interface through the VPN connection. The port 9090 does not need to be open from
+  the WAN side, but it must be open from the VPN side to allow the controller to access it.
 
 .. rubric:: Remove a unit
 
