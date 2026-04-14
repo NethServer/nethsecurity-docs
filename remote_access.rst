@@ -96,6 +96,10 @@ To change the NethSecurity UI port from 9090 to 8181, execute: ::
 
   The controller uses port 9090 to communicate with the unit. Changing the port will prevent the controller from managing the NethSecurity.
 
+If you still need to forward port 9090 to another machine inside the LAN, you can keep the controller connected by leaving the ``ns-ui_extra_port``
+unchanged and forwarding the port to the new machine.
+Forwarding the port to another machine will be acceptable because the controller will reach port 9090 over the VPN.
+
 Disable web user interface on port 443
 --------------------------------------
 
