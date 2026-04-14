@@ -43,7 +43,7 @@ Before enabling the FlashStart DNS filter, please consider the following importa
    **Do not make changes to the DNS servers configured in NethSecurity or in network clients.**
 
 2. **Block Alternative DNS Protocols**  
-   To preserve the effectiveness of the content filter, it is highly recommended to block alternative DNS protocols (such as DoT and DoH) using the :ref:`dpi_filter-section`.
+   To preserve the effectiveness of the content filter, it is strongly recommended to block alternative DNS protocols such as DoT and DoH. The most effective approach is to use the Threat Shield IP blocklist “public DoH-Provider” to block known DoH providers, and to reject all outbound TCP connections on port 853 in order to block DoT traffic.
 
 3. **Avoid Conflicts with Threat Shield DNS**  
    Use FlashStart only if you are **not already using the Threat Shield DNS service**, as using both simultaneously may lead to conflicts.
