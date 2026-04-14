@@ -48,10 +48,18 @@ It is possible also to configure RFC 5424 using the same syntax: ::
 
 It is possible to configure multiple forwarders by repeating the operation using a different configuration name like ``clm2``.
 
-Log rotation size
-=================
+.. _log-rotation-section:
 
-The ``/var/log/messages`` log file is stored in RAM. Once it reaches a predefined size limit, the log is rotated and compressed to conserve space. 
+Log rotation
+============
+
+Logs are rotated to manage disk space and ensure that log files do not grow indefinitely.
+
+In-memory log rotation
+----------------------
+
+The ``/var/log/messages`` log file is stored in RAM and it's rotated based on size.
+Once it reaches a predefined size limit, the log is rotated and compressed to conserve space. 
 The rotated log is saved as ``/var/log/messages.1.gz`` in gzip format. The system retains only two versions of the log: the active log file and the latest rotated, compressed file. 
 From version 1.4.0, by default, the log rotation threshold is set to 10% of the tmpfs filesystem mounted at ``/tmp``.
 
@@ -62,7 +70,7 @@ The ``ns-log-size`` script manages the log rotation size for the Rsyslog service
 - **Configuration safety**: If the specified size is below the minimum threshold, the script warns the user and does not make any changes to the configuration.
 
 Usage
------
+^^^^^
 
 To use the script, run it with the following syntax:
 
@@ -74,7 +82,7 @@ To use the script, run it with the following syntax:
 - **set <size>**: Sets the log rotation size to the specified value (in bytes).
 
 Example
-^^^^^^^
+~~~~~~~
 
 To get the current log rotation size:
 
@@ -91,3 +99,16 @@ To set a new log rotation size to 104857600 bytes (100 MB):
 The service rsyslog is restarted automatically after the size is set.
 
 All changes to the log rotation size are directly written in the Rsyslog configuration file ``/etc/rsyslog.conf``.
+
+.. _storage-log-rotation-section:
+
+Storage log rotation
+--------------------
+
+When using persistent storage, log rotation is managed by the ``logrotate`` utility, which is configured to rotate logs weekly and keep a maximum of
+52 weeks (1 year) of logs.
+After rotation, the logs are compressed using gzip and stored in the same directory with a naming convention that includes the date of rotation
+(e.g., ``/mnt/data/log/messages-20260315.gz``).
+
+The configuration file for logrotate is located at ``/etc/logrotate.d/data.conf`` and can be modified to change the rotation frequency and retention period as needed.
+The configuration file is automatically added to the backup and preserved during upgrades, so any custom settings persist.
