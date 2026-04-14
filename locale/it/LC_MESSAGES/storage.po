@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../storage.rst:5 59e3ec77784d4008afd32fd8a6fa0f3c
+#: ../../storage.rst:5 56b876eac1be49dbb3bcc58038b03662
 msgid "Storage"
 msgstr "Storage"
 
-#: ../../storage.rst:64 2c252e6d9f744da99b9492645f648946
+#: ../../storage.rst:63 61175f5b35db41328d3deb095756710b
 msgid ""
 "In certain instances, you may encounter challenges utilizing the primary "
 "disk for log storage, as the user interface may not present any options. In "
@@ -21,7 +21,7 @@ msgstr ""
 "deve essere rimossa preventivamente per garantirne il corretto utilizzo da "
 "parte del sistema."
 
-#: ../../storage.rst:67 b9ebcc585c684b3284a378b67967e572
+#: ../../storage.rst:66 4b3fc86f5ebe4611a89887a6768102f5
 msgid ""
 "This typically occurs even after performing a default reset using failsafe "
 "mode (which does not remove the log partition), in order to allow the system"
@@ -34,53 +34,53 @@ msgstr ""
 "lo storage per salvare nuovi log è necessario rimuovere la vecchia "
 "partizione."
 
-#: ../../storage.rst:69 f45fd31556ca434883f2fb022553c1b6
+#: ../../storage.rst:68 3c6efa584cba4e52ac8624a8ea7c5850
 msgid "This can be easily done this way."
 msgstr "Questo può essere fatto facilmente in questo modo."
 
-#: ../../storage.rst:71 d889a92e527e4850a1bb3151d4152826
+#: ../../storage.rst:70 f217eb283a6c45dda50cf567188c27ba
 msgid "Verify if the log partition is present with the command:"
 msgstr "Verificare se la partizione di log è presente con il comando:"
 
-#: ../../storage.rst:73 893978b275fa40cdaaa9ac48b1b0c09d
+#: ../../storage.rst:72 c4508106aac94f17af1d3eac8b236f80
 msgid "``parted /dev/sda print``::"
 msgstr "``parted /dev/sda print``::"
 
-#: ../../storage.rst:88 f9d51e9996424d188994dc76991f49af
+#: ../../storage.rst:87 313d6a80369646d79b7f39d2fbe0c525
 msgid "Partition 3 is the one used for logs."
 msgstr "La partizione 3 è quella utilizzata per i log."
 
-#: ../../storage.rst:90 47e7cfd588024fa8975bbbf048953d84
+#: ../../storage.rst:89 b5ae03c91f7e4470abea1c29756debf3
 msgid "to remove partition 3 execute the command:"
 msgstr "per rimuovere la partizione 3 eseguire il comando:"
 
-#: ../../storage.rst:92 a22e45069abe4807b33a2af9a30f8a26
+#: ../../storage.rst:91 599752b4ee754106aa4c6350846f7834
 msgid "``parted /dev/sda rm 3``"
 msgstr "``parted /dev/sda rm 3``"
 
-#: ../../storage.rst:94 d33f93a3ef2948558ee0dd14fbf5c0ea
+#: ../../storage.rst:93 3f65fff6729548c68e0c60cf792f663d
 msgid "Now verify again the partition table with the command:"
 msgstr "Ora verificare nuovamente la tabella delle partizioni con il comando:"
 
-#: ../../storage.rst:96 891e0bc445264e02bdab33c108840428
+#: ../../storage.rst:95 d611138934734f5397fccbee4da9d826
 msgid "``parted /dev/sda print``"
 msgstr "``parted /dev/sda print``"
 
-#: ../../storage.rst:98 82241d5076af43dca9de027f108e218e
+#: ../../storage.rst:97 9a81d34dbd1e450697c84a986d2638ac
 msgid "Partition 3 should not be visible."
 msgstr "La partizione 3 non dovrebbe essere visibile."
 
-#: ../../storage.rst:100 78618b0523dd4237a7286dcda07b92e1
+#: ../../storage.rst:99 3b14ec6504a54f3da062130a5dfd3759
 msgid "Now the storage is ready to be configured for logs from the Web UI."
 msgstr ""
 "Ora lo storage è pronto per essere configurato per i log dall'interfaccia "
 "Web."
 
-#: ../../storage.rst:62 943da3384fa04d02b8ba1e5ec5eeae3c
+#: ../../storage.rst:61 ddf6e125407546158ad114a6424a588f
 msgid "Troubleshooting"
 msgstr "Risoluzione dei problemi"
 
-#: ../../storage.rst:7 950e9455e488496d9ed56ce1c237120a
+#: ../../storage.rst:7 40e9e0322bad43f18ce75af91cfd51e8
 msgid ""
 "Starting from version 8.6, NethSecurity automatically saves system logs to a"
 " persistent storage partition on bare metal installations (*refer to the "
@@ -91,7 +91,7 @@ msgstr ""
 "metal (*fare riferimento alla sezione dedicata qui sotto per le macchine "
 "virtuali*)."
 
-#: ../../storage.rst:9 e181405d029e4b1f8f58cfcab1d96057
+#: ../../storage.rst:9 d9891c55deea472fbee05eaaa992bc93
 msgid ""
 "This guarantees that logs remain available across reboots or unexpected "
 "shutdowns, even if the storage has not been manually configured. The default"
@@ -101,7 +101,7 @@ msgstr ""
 "arresti imprevisti, anche se lo storage non è stato configurato manualmente."
 " Il periodo di conservazione dei log predefinito è di 52 settimane."
 
-#: ../../storage.rst:12 f9aae923dbbf458886f4dd19d072ef7c
+#: ../../storage.rst:12 75aa962ed27f4ed38c958613468e242d
 msgid ""
 "For **new installations** the system automatically creates a dedicated "
 "partition on the main disk to store logs."
@@ -109,11 +109,11 @@ msgstr ""
 "Per **nuove installazioni** il sistema crea automaticamente una partizione "
 "dedicata sul disco principale per memorizzare i log."
 
-#: ../../storage.rst:14 985605fa1c7144549f26b572163ffaef
+#: ../../storage.rst:14 4bd7901e9ad5409fbb2808c759884ece
 msgid "For **upgrades**:"
 msgstr "Per **gli aggiornamenti**:"
 
-#: ../../storage.rst:16 17ecfad58dc04415bced990e5e8f520c
+#: ../../storage.rst:16 e7a1b07ab16249f5a9a61e3b1e35dfd7
 msgid ""
 "if no storage had previously been configured, the system automatically sets "
 "it up using unallocated space on the primary disk"
@@ -122,11 +122,11 @@ msgstr ""
 "imposta automaticamente utilizzando lo spazio non allocato sul disco "
 "principale"
 
-#: ../../storage.rst:17 841211b3dc764c7cb7ba884a6bb4d721
+#: ../../storage.rst:17 692dc0dde01343d591300d2dafec8017
 msgid "if storage was already configured, it remains unchanged"
 msgstr "se lo storage era già stato configurato, rimane invariato"
 
-#: ../../storage.rst:21 6f5ef2f42d0f4f739f004a034328e784
+#: ../../storage.rst:21 2a17d987a93645e4b04c3c1642345d13
 msgid ""
 "This behavior improves reliability and does not require manual intervention."
 " However, users can still manage storage settings from the web interface."
@@ -135,7 +135,7 @@ msgstr ""
 "manuali. Tuttavia, è comunque possibile gestire le impostazioni di "
 "archiviazione dall'interfaccia web."
 
-#: ../../storage.rst:23 120ff6d792e143b2b236c1d05cf17129
+#: ../../storage.rst:23 22ae23ef9f2742829b1d083c2e9fffa9
 msgid ""
 "Persistent log storage can be disabled (not recommended), or moved to a "
 "different disk if needed. If disabled, the system will automatically "
@@ -146,11 +146,11 @@ msgstr ""
 "disabilitata, il sistema la riconfigurerà automaticamente durante un futuro "
 "aggiornamento."
 
-#: ../../storage.rst:27 08221533f8af4eab85693b29f9aa7eae
+#: ../../storage.rst:27 c98ee0d8978f4ea7a477f9e29d66552f
 msgid "Manual configuration"
 msgstr "Configurazione manuale"
 
-#: ../../storage.rst:29 90c6809623104620b1647187116598b3
+#: ../../storage.rst:29 6f5d26690fb74afdb1ca5583af9ca1ba
 msgid ""
 "Manual configuration of additional storage is still available and works as "
 "follows:"
@@ -158,11 +158,11 @@ msgstr ""
 "La configurazione manuale dello storage aggiuntivo è ancora disponibile e "
 "funziona come segue:"
 
-#: ../../storage.rst:31 8e47e09540904cfbae05aa9b1b87989f
+#: ../../storage.rst:31 938bd1223d434ecc970867593cb498b5
 msgid "If using an additional device, connect it to the system."
 msgstr "Se si utilizza un dispositivo aggiuntivo, collegarlo al sistema."
 
-#: ../../storage.rst:32 044f2f8c47c64da88e90d930d285c880
+#: ../../storage.rst:32 3a94fda311164378a2ca8a005999ee4a
 msgid ""
 "Access the ``Storage`` page under the ``System`` section in the right-hand "
 "menu."
@@ -170,17 +170,17 @@ msgstr ""
 "Accedere alla pagina ``Storage`` nella sezione ``Sistema`` nel menu a "
 "destra."
 
-#: ../../storage.rst:33 c109e6f9cb084771a4cc52dda94fb9d4
+#: ../../storage.rst:33 6b9f912662404316a5cb5e16fecc02a8
 msgid "Select the storage device where logs should be saved."
 msgstr ""
 "Selezionare il dispositivo di archiviazione su cui devono essere salvati i "
 "log."
 
-#: ../../storage.rst:34 98ddd08591e545d5acc06b02c270402e
+#: ../../storage.rst:34 f503012e8be34b2f8b797f6be9c90966
 msgid "Click on the button :guilabel:`Format and configure storage`."
 msgstr "Fare clic sul pulsante :guilabel:`Formatta e configura lo storage`."
 
-#: ../../storage.rst:35 a77d054ef0cc47e0b3caf30ec5805784
+#: ../../storage.rst:35 9ac33aa99e354a36953913dff5287bfa
 msgid ""
 "If the selected device is the **primary disk**, the system will generate a "
 "new partition using any unallocated space."
@@ -188,7 +188,7 @@ msgstr ""
 "Se il dispositivo selezionato è il **disco primario**, il sistema genererà "
 "una nuova partizione utilizzando qualsiasi spazio non allocato."
 
-#: ../../storage.rst:36 27fc3f63dc5149abbafbaab6e8eabdcf
+#: ../../storage.rst:36 eb42a187b465437da0dffca958fd96d4
 msgid ""
 "If an **additional disk** is selected, the system will erase all existing "
 "partitions and data and create a single new partition."
@@ -196,34 +196,25 @@ msgstr ""
 "Se viene selezionato un **disco aggiuntivo**, il sistema cancellerà tutte le"
 " partizioni e i dati esistenti e creerà una nuova partizione singola."
 
-#: ../../storage.rst:38 52f7043e1060403db04e52590b897189
+#: ../../storage.rst:38 80ed1a664a5e42eba2cbb354867491a0
 msgid "The storage is then:"
 msgstr "Lo storage è quindi:"
 
-#: ../../storage.rst:40 399eeb8a26b740a696807a7ec71a90d5
+#: ../../storage.rst:40 2f82d5861ab04e1f9d64b49f7f86d2c0
 msgid "Formatted with the ``ext4`` filesystem"
 msgstr "Formattato con il filesystem ``ext4``"
 
-#: ../../storage.rst:41 56012a91e712467a9dd2fdc982b28bc7
+#: ../../storage.rst:41 bacabbc93cd043d88ad38fb219e87612
 msgid "Mounted at ``/mnt/data``"
 msgstr "Montato in ``/mnt/data``"
 
-#: ../../storage.rst:42 5701c940a49a42629d46644ea8aafe90
-msgid "Used by ``rsyslog`` to write logs to ``/mnt/data/log/messages``"
-msgstr ""
-"Utilizzato da ``rsyslog`` per scrivere i log in ``/mnt/data/log/messages``"
-
-#: ../../storage.rst:43 3bfe52b06c1844e2a9639ca414221e6d
-msgid "Rotated weekly by ``logrotate``"
-msgstr "Ruotato settimanalmente da ``logrotate``"
-
-#: ../../storage.rst:44 53b730a336334368b8fdd4b0a19546e4
+#: ../../storage.rst:43 7004b1b881864916bc6d469658acb4b0
 msgid "Synchronized daily (at night) for additional data like metrics"
 msgstr ""
 "Sincronizzato quotidianamente (di notte) per dati aggiuntivi come le "
 "metriche"
 
-#: ../../storage.rst:46 407adad3f7e44cb2bc37dae67a9a638b
+#: ../../storage.rst:45 df206efcc0d545aea111a3c05db8db17
 msgid ""
 "To remove persistent storage and return to in-memory logging, click on the "
 "button :guilabel:`Remove storage`."
@@ -231,11 +222,11 @@ msgstr ""
 "Per rimuovere lo storage persistente e tornare al logging in memoria, fare "
 "clic sul pulsante :guilabel:`Rimuovi storage`."
 
-#: ../../storage.rst:49 ea4bd5b575c74fab8a6f6ac60be23916
+#: ../../storage.rst:48 ea299ca044b04d418a056903e07e5722
 msgid "Virtual Machines"
 msgstr "Macchine Virtuali"
 
-#: ../../storage.rst:50 58b961f2e209445e9044901dc066c41a
+#: ../../storage.rst:49 54e508c3197e43f0bd9a0140d9d95e3a
 msgid ""
 "When installing NethSecurity on a virtual machine, the recommended method is"
 " to generate the virtual disk from the official image. In this mode, logs "
@@ -253,11 +244,11 @@ msgstr ""
 "utilizzare lo spazio libero su disco per creare una nuova partizione come su"
 " un hardware fisico."
 
-#: ../../storage.rst:56 2581fbcc93a24f4f88d3bfe951ab6883
+#: ../../storage.rst:55 dacc0634601b41eb9427d17b712b4847
 msgid "Behavior in versions prior to 8.6"
 msgstr "Comportamento nelle versioni precedenti alla 8.6"
 
-#: ../../storage.rst:58 c09fea19983f4c688ee49fa47c8ffa5e
+#: ../../storage.rst:57 d5e65dcd454d48538923ebc89f195f9c
 msgid ""
 "In earlier versions of NethSecurity, logs were written by default to a "
 "**volatile in-memory directory**. To persist logs, storage had to be "
@@ -269,3 +260,11 @@ msgstr ""
 "rendere persistenti i log, era necessario configurare lo storage "
 "**manualmente**, utilizzando lo spazio non allocato sul disco di sistema "
 "oppure collegando un disco secondario."
+
+#: ../../storage.rst:42 5fc3577e69574e3fbaa09da7cfebb1c1
+msgid ""
+"Used by ``rsyslog`` to write logs to ``/mnt/data/log/messages``. For more "
+"details, see :ref:`storage-log-rotation-section`."
+msgstr ""
+"Utilizzato da ``rsyslog`` per scrivere i log in ``/mnt/data/log/messages``. "
+"Per ulteriori dettagli, vedere :ref:`storage-log-rotation-section`."
