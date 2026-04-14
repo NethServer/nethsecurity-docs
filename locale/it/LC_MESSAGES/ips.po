@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../ips.rst:5 dd0fd3f4874f414a8194ff31a5d43755
+#: ../../ips.rst:5 5c5c06a8ad5946c0ba568317ad59d2fa
 msgid "Intrusion Prevention System (Snort)"
 msgstr "Intrusion Prevention System (Snort)"
 
-#: ../../ips.rst:7 d7accb35366e472fbfb957220d2ae17d
+#: ../../ips.rst:7 53e6551771294e39874f2a00ac0539b6
 msgid ""
 "Snort 3 is an open-source network Intrusion Prevention System that is "
 "capable of performing real-time traffic analysis and packet logging on IP "
@@ -23,11 +23,11 @@ msgstr ""
 "overflow, scansioni di porte stealth, attacchi CGI, sonde SMB, tentativi di "
 "fingerprinting del sistema operativo e molto altro."
 
-#: ../../ips.rst:13 610b7f7c256348df921a580c903e4b71
+#: ../../ips.rst:13 279bc0b35faa48beb18c4e2e68c491a2
 msgid "Enable IPS"
 msgstr "Abilitare IPS"
 
-#: ../../ips.rst:15 fb920800239e4f3d9f1f71e91c43981e
+#: ../../ips.rst:15 e690ea6632c54012bac812ec14aed474
 msgid ""
 "IPS is disabled by default, to enable it, navigate to the ``IPS`` page under"
 " the ``Security`` section. The interface will prompt that the service is "
@@ -39,7 +39,7 @@ msgstr ""
 " il servizio è disabilitato e fornirà un collegamento rapido per accedere "
 "direttamente alla scheda ``Impostazioni``."
 
-#: ../../ips.rst:25 3fd1f7723c214375aa39c1440c8e56c0
+#: ../../ips.rst:25 5e5f70bdad7d4cd18ac496857745a371
 msgid ""
 "**connectivity**: prioritizes performance over security, minimizing false "
 "positives and ensuring high device performance while detecting common "
@@ -49,7 +49,7 @@ msgstr ""
 "riducendo al minimo i falsi positivi e garantendo elevate prestazioni del "
 "dispositivo, pur rilevando le minacce comuni."
 
-#: ../../ips.rst:27 56a3ba4fcf79404c8b0fd0b4f87a1713
+#: ../../ips.rst:27 48e65d61d7ff434bb535d721fab59cb0
 msgid ""
 "**balanced**: recommended for initial deployments, balancing security and "
 "performance. and relatively high performance rate with evaluation and "
@@ -59,7 +59,7 @@ msgstr ""
 "sicurezza e prestazioni, offrendo un livello di prestazioni relativamente "
 "elevato con strumenti di valutazione e test."
 
-#: ../../ips.rst:29 8fe1c9fa301647e0b7f1c914a9f23b23
+#: ../../ips.rst:29 2bc338496912451791216ccc0e989c6c
 msgid ""
 "**security**: for high-security environments with lower bandwidth and higher"
 " false positive tolerance. It provides the maximum protection while "
@@ -69,11 +69,11 @@ msgstr ""
 " e una maggiore tolleranza ai falsi positivi. Fornisce la massima protezione"
 " riducendo al minimo il rischio di interrompere la rete."
 
-#: ../../ips.rst:46 c07e024139d34fecaf9521753a62fe7a
+#: ../../ips.rst:88 de7e56e1d85b4c468ea3b8727d51ba01
 msgid "Access to Snort rules via Oinkcode"
 msgstr "Accesso alle regole Snort tramite Oinkcode"
 
-#: ../../ips.rst:48 d8ce1466a14d4525bbbbc24a3bb40db3
+#: ../../ips.rst:90 3b385f22cb20400791e0ba25e9768cb7
 msgid ""
 "NethSecurity supports the use of a Snort subscription to obtain "
 "``Registered`` and ``Subscriber`` rules through the Oinkcode. The `Oinkcode`"
@@ -85,11 +85,11 @@ msgstr ""
 "codice univoco assegnato agli utenti registrati su Snort.org; questo codice "
 "è necessario per autenticare il download delle regole Snort."
 
-#: ../../ips.rst:53 4ca21812cd854753a16334be0d2fbdb0
+#: ../../ips.rst:95 5699899471b04951b5623c1512c8521e
 msgid "Available rule categories"
 msgstr "Categorie di regole disponibili"
 
-#: ../../ips.rst:55 b414e33a19f64309b3efec6bae8020b9
+#: ../../ips.rst:97 ab5982f8f2ed4c76bb853dea1a3f4385
 msgid ""
 "**Community Rules (Free rules)**: Available to all registered users without "
 "restrictions. Maintained by the Snort community. Provide basic protection "
@@ -102,7 +102,7 @@ msgstr ""
 "rispetto alle regole ufficiali. Non è necessario alcun Oinkcode per accedere"
 " a queste regole."
 
-#: ../../ips.rst:61 363013b3889e417a9777060511ef163d
+#: ../../ips.rst:103 df01a1fa99aa4173b19eb66e87803744
 msgid ""
 "**Registered Rules (Free rules with delay)**: Official rules updated by the "
 "Snort team. Available for free to registered users, but with a 30-day delay "
@@ -113,19 +113,19 @@ msgstr ""
 "registrati, ma con un ritardo di 30 giorni rispetto alla versione più "
 "recente. È necessario un Oinkcode per accedere a queste regole."
 
-#: ../../ips.rst:72 7780af3f01604382bca71b8504348db8
+#: ../../ips.rst:114 8f2fb956d49040748adbfa4f0ff5ee90
 msgid "How to obtain and use the Oinkcode"
 msgstr "Come ottenere e utilizzare l'Oinkcode"
 
-#: ../../ips.rst:74 364656280a104eb7b69c0bdd0777782c
+#: ../../ips.rst:116 302286457dc24cb280d3d45dd76fc713
 msgid "Register on Snort.org"
 msgstr "Registrarsi su Snort.org"
 
-#: ../../ips.rst:75 b534ef4c80e44fa19a9f67c43794ec2c
+#: ../../ips.rst:117 f8a325b2b33e48a292e9a6c1082ec854
 msgid "Retrieve your Oinkcode from the account profile section"
 msgstr "Recuperare il proprio Oinkcode dalla sezione del profilo account"
 
-#: ../../ips.rst:76 d038809360a7470cbc21ccf4058d154e
+#: ../../ips.rst:118 153efd248058486c9f15eb1459811943
 msgid ""
 "On NethSecurity, paste your personal code into the `Oinkcode` field. You can"
 " verify if the code is valid by clicking on the :guilabel:`Test code` button"
@@ -134,11 +134,11 @@ msgstr ""
 " È possibile verificare se il codice è valido facendo clic sul pulsante "
 ":guilabel:`Verifica codice`."
 
-#: ../../ips.rst:80 aa39f0c5a3c64eef9c71cd083c7bf2b1
+#: ../../ips.rst:122 7f25e5e2b661495bb0a773dfe79fd46e
 msgid "Today event list"
 msgstr "Elenco eventi di oggi"
 
-#: ../../ips.rst:82 c2b4a5e2b8b1445da0b643c8e44bc219
+#: ../../ips.rst:124 96c54fe318b041bd8ae3c1e82ec33b3e
 msgid ""
 "The IPS automatically checks traffic inside the network and generates alerts"
 " or blocks traffic based on the ruleset. A browsable list can be found under"
@@ -153,7 +153,7 @@ msgstr ""
 "indirizzi IP di origine e destinazione, il protocollo e l'azione intrapresa "
 "dal sistema."
 
-#: ../../ips.rst:87 7a94ab0eb9f34e50a2cb109a6173d4f4
+#: ../../ips.rst:129 9cf45baf27e5481fa70229ca26e57d7d
 msgid ""
 "This list can be filtered using the filter box at the top of the page. "
 "Additionally, for every record shown, it's possible to jump right to the "
@@ -164,7 +164,7 @@ msgstr ""
 "possibile accedere direttamente alla documentazione della regola facendo "
 "clic sull'ID della regola."
 
-#: ../../ips.rst:90 c8afc0e57b0d46e99e0d87837d1fe6f9
+#: ../../ips.rst:132 95b318af2e2d4b6d8be1735aad0c6ef9
 msgid ""
 "By clicking on the menu icon on the right side of the record, it's possible "
 "to open a pre-filled form to suppress or disable the rule that generated the"
@@ -174,11 +174,11 @@ msgstr ""
 "aprire un modulo precompilato per sopprimere o disabilitare la regola che ha"
 " generato l'avviso."
 
-#: ../../ips.rst:101 0d6afc2616824f51b2a5ec7f03402828
+#: ../../ips.rst:143 4c8b4f82807442fbad0518feb7e88861
 msgid "``Address type``: if the ip provided is IPv4 or IPv6"
 msgstr "``Tipo di indirizzo``: se l'IP fornito è IPv4 o IPv6"
 
-#: ../../ips.rst:103 36970dcf9682410f99bc596a5c2ebd0c
+#: ../../ips.rst:145 8c1c6d7ed74c47ff9a99592e5ae56c1a
 msgid ""
 "``Description``: a description of the bypass rule, it is optional and can be"
 " omitted"
@@ -186,11 +186,11 @@ msgstr ""
 "``Descrizione``: una descrizione della regola di bypass; è opzionale e può "
 "essere omessa"
 
-#: ../../ips.rst:106 a151a0f4b6964a2a9447a4f22c55c76f
+#: ../../ips.rst:148 5933fdc8f9274b34a3363460bfca28ce
 msgid "Disable rules"
 msgstr "Disabilitare regole"
 
-#: ../../ips.rst:108 5fe532414b174bb68cc4a20b63d1c276
+#: ../../ips.rst:150 3f2bee0582a7441b966173ecda4e5b52
 msgid ""
 "In some environments, rules can be too restrictive or generate too many "
 "false positives. To avoid this, it is possible to disable some rules. A "
@@ -201,7 +201,7 @@ msgstr ""
 "regole. Una regola disabilitata è una regola che non viene inclusa nel set "
 "di regole di Snort."
 
-#: ../../ips.rst:111 5009be504ef34847b316c951e3e60ed3
+#: ../../ips.rst:153 d3bf86281c2a4da68ced6df91591c9fd
 msgid ""
 "Browse to the `Disabled Rules` tab and press the :guilabel:`Disable rule` "
 "button. The system will prompt for the following fields:"
@@ -209,17 +209,17 @@ msgstr ""
 "Passare alla scheda `Regole disabilitate` e premere il pulsante "
 ":guilabel:`Disabilita regola`. Il sistema richiederà i seguenti campi:"
 
-#: ../../ips.rst:114 ../../ips.rst:127 5649fce0bdfd454e8ac2181011b3f86f
-#: 21b9d63c30434c41a98112f00835223b
+#: ../../ips.rst:156 ../../ips.rst:169 dbf7a6d323ce489fb483a0cf800dc40b
+#: d0fa4eb70600443097d7dbd084577dee
 msgid "``GID``: the rule GID, it is a number and usually is always `1`"
 msgstr "``GID``: il GID della regola, è un numero e di solito è sempre `1`"
 
-#: ../../ips.rst:115 ../../ips.rst:128 efac0ac12aba451e82a0f34e4e23a8ed
-#: 89739e4e2aaa49e9a4190e59d15ef99f
+#: ../../ips.rst:157 ../../ips.rst:170 18169d44bc6b461189a781740c31217d
+#: 92db2c540e844cf3840f4799c04f1e05
 msgid "``SID``: the rule SID, it is a number"
 msgstr "``SID``: il SID della regola, è un numero"
 
-#: ../../ips.rst:116 50baf1ddad19437abafa2eba3c45481f
+#: ../../ips.rst:158 620cb6d742c64e87840a2244d1797cd4
 msgid ""
 "``Description``: a description of the disabled rule, it is optional and can "
 "be omitted"
@@ -227,11 +227,11 @@ msgstr ""
 "``Descrizione``: una descrizione della regola disabilitata; è opzionale e "
 "può essere omessa"
 
-#: ../../ips.rst:119 bf6b344300d94efaafa8cbe7bf6edf42
+#: ../../ips.rst:161 6dc459ddd1a2447ea85d8c7ea4c3b44d
 msgid "Suppressed alerts"
 msgstr "Allarmi silenziati"
 
-#: ../../ips.rst:121 60c05415901f41eaaf9187c1a58bd4fa
+#: ../../ips.rst:163 f54b6f294b4c4580af31c9e86b5fb50c
 msgid ""
 "A suppression rule is a rule that is ignored by Snort for a specific IP "
 "address or CIDR. The rule is still evaluated for all other IP addresses."
@@ -240,7 +240,7 @@ msgstr ""
 "indirizzo IP o CIDR specifico. La regola viene comunque valutata per tutti "
 "gli altri indirizzi IP."
 
-#: ../../ips.rst:124 9d14ea58e3b4433095c62ce7161eea57
+#: ../../ips.rst:166 bcf33d2ca3734cff9c46a96a7d549be0
 msgid ""
 "To add a suppression rule, browse to the `Suppressed alerts` tab and press "
 "the :guilabel:`Suppress alert` button. Fill the fields with the following "
@@ -250,7 +250,7 @@ msgstr ""
 "silenziati` e premere il pulsante :guilabel:`Silenzia allarme`. Compilare i "
 "campi con le seguenti informazioni:"
 
-#: ../../ips.rst:129 bf77673724524f1b8615feff8534150a
+#: ../../ips.rst:171 1c04127df2cf4915901f76dc81c54516
 msgid ""
 "``Direction``: if the suppression is for the source or destination IP "
 "address"
@@ -258,7 +258,7 @@ msgstr ""
 "``Direzione``: se la soppressione riguarda l'indirizzo IP di origine o di "
 "destinazione"
 
-#: ../../ips.rst:130 750de86879134068aa1bebce0517e51d
+#: ../../ips.rst:172 2c616a05c544417c9bf1053c16e50137
 msgid ""
 "``IP address``: the IP address to suppress the alert for, can be a CIDR "
 "range"
@@ -266,7 +266,7 @@ msgstr ""
 "``Indirizzo IP``: l'indirizzo IP per cui sopprimere l'avviso; può essere un "
 "intervallo CIDR"
 
-#: ../../ips.rst:131 9b209b46be524a8184dc1b66b908a788
+#: ../../ips.rst:173 291d7934183443e18c4dadf3b83a0406
 msgid ""
 "``Description``: a description of the suppression rule, it is optional and "
 "can be omitted"
@@ -274,7 +274,7 @@ msgstr ""
 "``Descrizione``: una descrizione della regola di soppressione; è facoltativa"
 " e può essere omessa"
 
-#: ../../ips.rst:66 87ccca17169943bb9fce7a0032f61a4c
+#: ../../ips.rst:108 cc56b78158c0495dae636c7455bd9f50
 msgid ""
 "**Subscriber Rules (Paid rules, real-time updates)**: Immediate access to "
 "the most up-to-date rules without any delay. Available only to users with a "
@@ -286,11 +286,11 @@ msgstr ""
 "Disponibile solo per gli utenti con un abbonamento Snort Subscriber Rule "
 "Set. È necessario un Oinkcode per accedere a queste regole."
 
-#: ../../ips.rst:102 ec4bbcc077454cd5b7399463beb5bf1f
+#: ../../ips.rst:144 74dd0f724e4f4c58885d3e217ba28c69
 msgid "``IP address``: the IP address or CIDR to bypass"
 msgstr "``Indirizzo IP``: l'indirizzo IP o CIDR da bypassare"
 
-#: ../../ips.rst:19 4e6e8806e97f4b359de719fb4887a6a2
+#: ../../ips.rst:19 76d29434f9494dcfae5254ae8ff49d55
 msgid ""
 "Once toggled the :guilabel:`Status` switch, you'll be able to configure the "
 "service."
@@ -298,11 +298,11 @@ msgstr ""
 "Una volta attivato l'interruttore :guilabel:`Stato`, sarà possibile "
 "configurare il servizio."
 
-#: ../../ips.rst:22 3f69cebf45744594b33e5c7c5c2da958
+#: ../../ips.rst:22 281a0d9745b14a11bd01f393ff6e55ec
 msgid "Rule policy"
 msgstr "Politica delle regole"
 
-#: ../../ips.rst:23 8d4729a2ece24debb7ff6beeb4417465
+#: ../../ips.rst:23 d0c42bed940f4991ae681d61a7428bcb
 msgid ""
 "Rules are grouped into policies, each policy is a set of rules that are "
 "optimized for a specific use case, the policies are:"
@@ -310,11 +310,11 @@ msgstr ""
 "Le regole sono raggruppate in policy, ciascuna policy è un insieme di regole"
 " ottimizzate per un caso d'uso specifico; le policy sono:"
 
-#: ../../ips.rst:33 6ad34bd7203c4f5b9d07fc0786cf8a8f
+#: ../../ips.rst:33 b405e1b1a2084135a5fbb70f45d3fb06
 msgid "Home Networks"
 msgstr "Reti domestiche"
 
-#: ../../ips.rst:35 99831cdcbfa144998f4769693be9329f
+#: ../../ips.rst:35 d758e25bf6314ba49f882269277bd468
 msgid ""
 "Home networks define the protected internal networks and specify the IP "
 "addresses or subnets that IPS should consider as local networks, allowing it"
@@ -326,7 +326,7 @@ msgstr ""
 "permettendo di distinguere il traffico interno da quello esterno e riducendo"
 " i falsi positivi nel rilevamento delle minacce."
 
-#: ../../ips.rst:37 45b1ed62379e4d4cbd2e81efe5e58b56
+#: ../../ips.rst:37 b8c6963aab4f43a4a421f40cc6c0e121
 msgid ""
 "Select a policy, define your home networks and then click on the "
 ":guilabel:`Save` button to save the changes."
@@ -334,7 +334,7 @@ msgstr ""
 "Selezionare una policy, definire le proprie reti domestiche e quindi fare "
 "clic sul pulsante :guilabel:`Salva` per salvare le modifiche."
 
-#: ../../ips.rst:41 13d279fc3c474fecb1d5c825e20104af
+#: ../../ips.rst:41 7f50e9afa2ae4f8782e05d2d074c90a6
 msgid ""
 "Home Networks values are not updated automatically. If the IP address of a "
 "local interface is changed and this results in a different network, the IPS "
@@ -346,11 +346,11 @@ msgstr ""
 "una rete diversa, la configurazione della rete domestica dell'IPS deve "
 "essere aggiornata manualmente per riflettere la nuova rete."
 
-#: ../../ips.rst:94 1e0ece810b1c4214abf4d68f7fa69449
+#: ../../ips.rst:136 76bdf413fc434233a6fca5aae9203133
 msgid "Filter bypass"
 msgstr "Bypass del filtro"
 
-#: ../../ips.rst:96 ec92665586444a48bce41ae687ad7a74
+#: ../../ips.rst:138 a9abba2a75cf468c955bfba0de36c627
 msgid ""
 "All traffic that goes through the firewall is analyzed by the IPS. The "
 "system supports bypass rules for specific IPv4 and IPv6 addresses. Any IP "
@@ -362,7 +362,7 @@ msgstr ""
 "specifici. Qualsiasi indirizzo IP aggiunto a una regola di bypass verrà "
 "valutato sia per il traffico in ingresso che in uscita."
 
-#: ../../ips.rst:99 b5d557cfa1574e63af56ae42540fcf38
+#: ../../ips.rst:141 1fe6a894a6894d50b459898ab0b0c207
 msgid ""
 "To do so, browse to the `Filter bypass` tab and press the :guilabel:`Add "
 "bypass` button. A form is provided to add a bypass rule for a specific IP "
@@ -373,3 +373,59 @@ msgstr ""
 ":guilabel:`Aggiungi bypass`. Viene fornito un modulo per aggiungere una "
 "regola di bypass per un indirizzo IP specifico; la regola si applica al "
 "traffico in entrambe le direzioni e include i seguenti campi:"
+
+#: ../../ips.rst:44 7b9c1fc3027147a8afa1350e3d780d84
+msgid "Enable Hyperscan"
+msgstr "Abilitare Hyperscan"
+
+#: ../../ips.rst:46 46e33199fe624a738988ea4d14531ee8
+msgid ""
+"Hyperscan is an advanced pattern matching engine that can improve Snort3 "
+"performance on supported hardware. It requires specific processor flags to "
+"be supported by your CPU."
+msgstr ""
+"Hyperscan è un motore avanzato di pattern matching che può migliorare le "
+"prestazioni di Snort3 sull'hardware supportato. Richiede che la CPU supporti"
+" specifici flag del processore."
+
+#: ../../ips.rst:48 1ab4a0606e7e40e69d61bc163b5ad0ad
+msgid ""
+"Before enabling Hyperscan, verify that your processor supports the required "
+"CPU flags:"
+msgstr ""
+"Prima di abilitare Hyperscan, verificare che il processore supporti i flag "
+"CPU richiesti:"
+
+#: ../../ips.rst:54 ce9a3c0b03a24beba874038f9281d4bc
+msgid ""
+"If the command returns results, your processor is compatible with Hyperscan."
+msgstr ""
+"Se il comando restituisce dei risultati, il processore è compatibile con "
+"Hyperscan."
+
+#: ../../ips.rst:56 5e0937d688fa4bb8993d379a2e1beb1d
+msgid ""
+"To enable Hyperscan, first create the configuration file at "
+"``/etc/snort/hyperscan.config``:"
+msgstr ""
+"Per abilitare Hyperscan, creare innanzitutto il file di configurazione in "
+"``/etc/snort/hyperscan.config``:"
+
+#: ../../ips.rst:65 3e55e7c4b6af4f0aaf7359ac9c1dbb18
+msgid "Then enable it with the following commands:"
+msgstr "Quindi abilitarlo con i seguenti comandi:"
+
+#: ../../ips.rst:73 f691a5eb975644f0a388f77055b2de9a
+msgid "To disable Hyperscan:"
+msgstr "Per disabilitare Hyperscan:"
+
+#: ../../ips.rst:83 5be9b44f925a4e69b2aed5716a0ddda1
+msgid ""
+"Hyperscan is an optional performance enhancement feature. Enable it only if "
+"your CPU supports the required processor flags and you want to improve IPS "
+"performance at the cost of higher CPU feature requirements."
+msgstr ""
+"Hyperscan è una funzionalità opzionale per il miglioramento delle "
+"prestazioni. Attivarla solo se la CPU supporta i flag del processore "
+"richiesti e si desidera migliorare le prestazioni dell’IPS a fronte di "
+"requisiti più elevati per le funzionalità della CPU."
