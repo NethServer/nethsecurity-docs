@@ -313,7 +313,7 @@ The DHCP relay allows the firewall to forward DHCP requests from clients to an e
  
 4.Set the upstream DHCP server address: ::
 
- uci set dhcp.@relay[-1].server_add='<SERVER_ADDR>'
+ uci set dhcp.@relay[-1].server_addr='<SERVER_ADDR>'
 
 5.Commit the configuration: ::
 
