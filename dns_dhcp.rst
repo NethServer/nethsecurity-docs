@@ -313,7 +313,7 @@ The DHCP relay allows the firewall to forward DHCP requests from clients to an e
  
 4.Set the upstream DHCP server address: ::
 
- uci set dhcp.@relay[-1].server_add='<SERVER_ADDR>'
+ uci set dhcp.@relay[-1].server_addr='<SERVER_ADDR>'
 
 5.Commit the configuration: ::
 
@@ -330,7 +330,7 @@ Example
  uci add dhcp relay
  uci set dhcp.@relay[-1].interface='LAN'
  uci set dhcp.@relay[-1].local_addr='192.168.1.1'
- uci set dhcp.@relay[-1].server_add='192.168.10.100'
+ uci set dhcp.@relay[-1].server_addr='192.168.10.100'
  uci commit dhcp
  reload_config
 
