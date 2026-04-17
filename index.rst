@@ -119,6 +119,7 @@ NethSecurity administrator manual
    speedtest
    ups
    wol
+   checkmk
    uci
 
 .. toctree::
