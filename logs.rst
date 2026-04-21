@@ -50,7 +50,7 @@ It is possible also to configure RFC 5424 using the same syntax: ::
 
 It is possible to configure multiple forwarders by repeating the operation using a different configuration name like ``clm2``.
 
-Forwarding to Cloud Log Manager
+Forwarding to Nethesis Cloud Log Manager
 ================================
 
 .. admonition:: Service entitlement required
