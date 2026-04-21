@@ -40,6 +40,48 @@ Select a policy, define your home networks and then click on the :guilabel:`Save
 
   Home Networks values are not updated automatically. If the IP address of a local interface is changed and this results in a different network, the IPS Home network configuration must be updated manually to reflect the new network.
 
+Enable Hyperscan
+----------------
+
+Hyperscan is an advanced pattern matching engine that can improve Snort3 performance on supported hardware. It requires specific processor flags to be supported by your CPU.
+
+Before enabling Hyperscan, verify that your processor supports the required CPU flags:
+
+.. code-block:: bash
+
+  grep --color=auto -E 'sse3|ssse3|sse4_1|sse4_2|avx|avx2' /proc/cpuinfo
+
+If the command returns results, your processor is compatible with Hyperscan.
+
+To enable Hyperscan, first create the configuration file at ``/etc/snort/hyperscan.config``:
+
+.. code-block:: bash
+
+  cat > /etc/snort/hyperscan.config << 'EOF'
+  search_engine = { search_method = hyperscan }
+  detection = { hyperscan_literals = true, pcre_to_regex = true }
+  EOF
+
+Then enable it with the following commands:
+
+.. code-block:: bash
+
+  uci set snort.snort.include=/etc/snort/hyperscan.config
+  uci commit snort
+  reload_config
+
+To disable Hyperscan:
+
+.. code-block:: bash
+
+  uci del snort.snort.include
+  uci commit snort
+  reload_config
+
+.. note::
+
+  Hyperscan is an optional performance enhancement feature. Enable it only if your CPU supports the required processor flags and you want to improve IPS performance at the cost of higher CPU feature requirements.
+
 .. _oinkcode-section:
 
 Access to Snort rules via Oinkcode

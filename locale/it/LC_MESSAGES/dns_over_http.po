@@ -1,0 +1,258 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../dns_over_http.rst:5 8db3ba49c4c7412db4e11ccc39e11590
+msgid "DNS over HTTPS with filtering"
+msgstr "DNS over HTTPS con filtraggio"
+
+#: ../../dns_over_http.rst:9 26f5ece563044207aeb5236ac14b2332
+msgid ""
+"DNS over HTTPS (DoH) is a protocol for encrypting DNS queries over HTTPS, "
+"enhancing privacy by preventing eavesdropping on DNS traffic. This feature "
+"allows you to configure upstream DNS servers that support the DoH protocol. "
+"The ``https-dns-proxy`` package provides a local DNS-to-HTTPS proxy that "
+"forwards DNS queries to a remote DoH provider."
+msgstr ""
+"DNS over HTTPS (DoH) è un protocollo per la cifratura delle query DNS "
+"tramite HTTPS, migliorando la privacy impedendo l'intercettazione del "
+"traffico DNS. Questa funzionalità consente di configurare server DNS "
+"upstream che supportano il protocollo DoH. Il pacchetto ``https-dns-proxy`` "
+"fornisce un proxy DNS-to-HTTPS locale che inoltra le query DNS a un provider"
+" DoH remoto."
+
+#: ../../dns_over_http.rst:13 6e6f2747e43d482c8add8571e746c240
+msgid ""
+"This document provides instructions for installing and configuring the DoH "
+"upstream servers that provide filtering and are based in the EU, but you can"
+" use any DoH provider that suits your needs. This configuration only applies"
+" to the upstream servers of the firewall: clients will continue to send DNS "
+"requests to the firewall in plaintext on port 53."
+msgstr ""
+"Questo documento fornisce istruzioni per l'installazione e la configurazione"
+" dei server upstream DoH che offrono filtraggio e sono basati nell'UE, ma è "
+"possibile utilizzare qualsiasi provider DoH che soddisfi le proprie "
+"esigenze. Questa configurazione si applica solo ai server upstream del "
+"firewall: i client continueranno a inviare richieste DNS al firewall in "
+"chiaro sulla porta 53."
+
+#: ../../dns_over_http.rst:17 1a5f6bbf0b4d4426aa7458d8a4f69238
+msgid ""
+"A list of DoH providers that support European locations and filtering are "
+"available on the `European Alternatives <https://european-"
+"alternatives.eu/category/public-dns>`_ site."
+msgstr ""
+"Un elenco di provider DoH che supportano località europee e il filtraggio è "
+"disponibile sul sito `European Alternatives <https://european-"
+"alternatives.eu/category/public-dns>`_."
+
+#: ../../dns_over_http.rst:20 ae12db10f1d04de9ac31e02e76fc0feb
+msgid "Some popular alternatives include:"
+msgstr "Alcune alternative popolari includono:"
+
+#: ../../dns_over_http.rst:22 88fbc894aa9f4238a032caf902becc67
+msgid ""
+"`JoinDNS4 <https://joindns4.eu/>`_, european-based DNS service with "
+"protective resolution and ad blocking capabilities."
+msgstr ""
+"`JoinDNS4 <https://joindns4.eu/>`_, servizio DNS con sede in Europa che "
+"offre risoluzione protettiva e funzionalità di blocco degli annunci."
+
+#: ../../dns_over_http.rst:23 b3d847527ce94e4198414ace02fa8ce8
+msgid ""
+"`Quad9 <https://dns.quad9.net/dns-query>`_, privacy-focused with malware "
+"blocking"
+msgstr ""
+"`Quad9 <https://dns.quad9.net/dns-query>`_, orientato alla privacy con "
+"blocco dei malware"
+
+#: ../../dns_over_http.rst:24 7956d46eb5fe4007a836d42fbaad017e
+msgid ""
+"`Mullvad <https://doh.mullvad.net/dns-query>`_, includes malware blocking, "
+"ad blocking and basic filtering (Porn, Gambling, etc.)"
+msgstr ""
+"`Mullvad <https://doh.mullvad.net/dns-query>`_, include il blocco di "
+"malware, il blocco di pubblicità e il filtraggio di base (Pornografia, Gioco"
+" d'azzardo, ecc.)"
+
+#: ../../dns_over_http.rst:25 8ce404e8e9f24af89377e3d56654200c
+msgid ""
+"`Cloudflare <https://developers.cloudflare.com/1.1.1.1/setup/>`_, fast and "
+"widely used DoH provider with malware blocking (1.1.1.1 for families)"
+msgstr ""
+"`Cloudflare <https://developers.cloudflare.com/1.1.1.1/setup/>`_, provider "
+"DoH veloce e ampiamente utilizzato con blocco malware (1.1.1.1 for families)"
+
+#: ../../dns_over_http.rst:29 14e989a78d884005b89edc9769490f47
+msgid "Installation"
+msgstr "Installazione"
+
+#: ../../dns_over_http.rst:31 f8323ed506344f75adc2e4ae5d300330
+msgid ""
+"The ``https-dns-proxy`` package is not included in default NethSecurity "
+"images, so you will need to install it manually: ::"
+msgstr ""
+"Il pacchetto ``https-dns-proxy`` non è incluso nelle immagini predefinite di"
+" NethSecurity, quindi sarà necessario installarlo manualmente: ::"
+
+#: ../../dns_over_http.rst:37 d9e6fe7e67e741c1a669c82ee06ca8cf
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: ../../dns_over_http.rst:39 9d27eee4c1594234aa66ed711bf321dc
+msgid ""
+"By default, the package includes two providers (Cloudflare and Google). To "
+"use a custom DoH provider, you'll need to:"
+msgstr ""
+"Per impostazione predefinita, il pacchetto include due provider (Cloudflare "
+"e Google). Per utilizzare un provider DoH personalizzato, è necessario:"
+
+#: ../../dns_over_http.rst:42 439ba6ce62e3440aaf21eb081634ed5d
+msgid "Remove the default providers (optional)"
+msgstr "Rimuovere i provider predefiniti (opzionale)"
+
+#: ../../dns_over_http.rst:43 adefb92c22924be7866984d8370fe7b6
+msgid "Add your preferred DoH provider configuration"
+msgstr "Aggiungere la configurazione del provider DoH preferito"
+
+#: ../../dns_over_http.rst:44 249549fc96444243ad94fcf4be282e87
+msgid "Commit and apply the configuration"
+msgstr "Eseguire il commit e applicare la configurazione"
+
+#: ../../dns_over_http.rst:47 84c05be99a82485199fb6f54dcc74afd
+msgid "Configuration steps"
+msgstr "Passaggi di configurazione"
+
+#: ../../dns_over_http.rst:49 374ed6c8344146a7a882c4d8ab0d330e
+msgid "In this example, we will configure the JoinDNS4 DoH provider."
+msgstr "In questo esempio verrà configurato il provider DoH JoinDNS4."
+
+#: ../../dns_over_http.rst:51 80f83f22ec744b38a61f30d262a9410b
+msgid "Remove default providers (if you want to use only JoinDNS4): ::"
+msgstr ""
+"Rimuovere i provider predefiniti (se si desidera utilizzare solo JoinDNS4): "
+"::"
+
+#: ../../dns_over_http.rst:56 ff5d17ea92c34934a53b2082d8f79667
+msgid "Add the JoinDNS4 DoH provider: ::"
+msgstr "Aggiungere il provider DoH JoinDNS4: ::"
+
+#: ../../dns_over_http.rst:64 c5a383442aa94675b8c889001ef83832
+msgid ""
+"Apply the configuration, https-dns-proxy will automatically use the local "
+"DoH proxy as upstream DNS: ::"
+msgstr ""
+"Applicare la configurazione, https-dns-proxy utilizzerà automaticamente il "
+"proxy DoH locale come DNS upstream: ::"
+
+#: ../../dns_over_http.rst:69 ca5dccb90d2442fcab74c1530b061a38
+msgid "Verification"
+msgstr "Verifica"
+
+#: ../../dns_over_http.rst:71 321fe0ee1a034ce9ba8863615f92087d
+msgid ""
+"To verify that the DoH proxy is working correctly, check the service status:"
+" ::"
+msgstr ""
+"Per verificare che il proxy DoH stia funzionando correttamente, controllare "
+"lo stato del servizio: ::"
+
+#: ../../dns_over_http.rst:75 46c1ad2e326e4aeb9115a1c1905be16c
+msgid "You can also test DNS resolution: ::"
+msgstr "È anche possibile testare la risoluzione DNS: ::"
+
+#: ../../dns_over_http.rst:80 e73f13b47c4842a3b73effa3863a1b13
+msgid "Troubleshooting"
+msgstr "Risoluzione dei problemi"
+
+#: ../../dns_over_http.rst:83 97cf9c45efd5406eb7b640807d6c1eff
+msgid "DNS redirection"
+msgstr "Reindirizzamento DNS"
+
+#: ../../dns_over_http.rst:85 2cf4795e2ef44618bf88362c316ac301
+msgid ""
+"By default, all DNS queries to any server are forced through the local DoH "
+"proxy to ensure that all DNS traffic is encrypted, but this may cause issues"
+" with certain devices or applications."
+msgstr ""
+"Per impostazione predefinita, tutte le query DNS verso qualsiasi server "
+"vengono forzate attraverso il proxy DoH locale per garantire che tutto il "
+"traffico DNS sia crittografato, ma ciò potrebbe causare problemi con alcuni "
+"dispositivi o applicazioni."
+
+#: ../../dns_over_http.rst:87 e11df2112d7e462bbc94498dfc092df2
+msgid ""
+"If you encounter a \"Private DNS server cannot be accessed\" error on your "
+"Android device, you can fix it by disabling DNS forcing in the ``https-dns-"
+"proxy`` configuration."
+msgstr ""
+"Se viene visualizzato un errore \"Impossibile accedere al server DNS "
+"privato\" sul dispositivo Android, è possibile risolverlo disabilitando il "
+"forcing DNS nella configurazione di ``https-dns-proxy``."
+
+#: ../../dns_over_http.rst:90 d77e74c506a1421a9e25a92e10abdf9d
+msgid "Run the following commands via SSH or terminal: ::"
+msgstr "Eseguire i seguenti comandi tramite SSH o terminale: ::"
+
+#: ../../dns_over_http.rst:97 965b9da45568454bae90c9979ef4c10c
+msgid "Image update"
+msgstr "Aggiornamento dell'immagine"
+
+#: ../../dns_over_http.rst:99 228f6ba5fb974f909bab8b2cf233e609
+msgid ""
+"The ``https-dns-proxy`` package overrides the default DNS configuration, so "
+"if you update your NethSecurity image, the system will not be able to "
+"connect to Internet and restore the package."
+msgstr ""
+"Il pacchetto ``https-dns-proxy`` sovrascrive la configurazione DNS "
+"predefinita, quindi se si aggiorna l'immagine di NethSecurity, il sistema "
+"non sarà in grado di connettersi a Internet e ripristinare il pacchetto."
+
+#: ../../dns_over_http.rst:103 ecfaee58a2b84ad29a6bcf498daca4ce
+msgid ""
+"To overcome this issue, you can temporarily stop the DoH proxy before "
+"updating the image: ::"
+msgstr ""
+"Per superare questo problema, è possibile interrompere temporaneamente il "
+"proxy DoH prima di aggiornare l'immagine: ::"
+
+#: ../../dns_over_http.rst:107 c4f10bb866ce4bdca432d2a19e91ba53
+msgid ""
+"This will restore the default DNS configuration and allow the system to "
+"connect to the Internet after image update. Once the update is complete, you"
+" can restart the DoH proxy: ::"
+msgstr ""
+"Questo ripristinerà la configurazione DNS predefinita e consentirà al "
+"sistema di connettersi a Internet dopo l'aggiornamento dell'immagine. Una "
+"volta completato l'aggiornamento, è possibile riavviare il proxy DoH: ::"
+
+#: ../../dns_over_http.rst:113 5f4de0aec7bc44db8237d0ff38530a59
+msgid "Blocking other DoH providers"
+msgstr "Blocco di altri provider DoH"
+
+#: ../../dns_over_http.rst:115 35d3061ed04d4325944d96130e56681c
+msgid ""
+"To block DoH requests from clients to any other server while allowing "
+"requests originating from the firewall, you have 2 options:"
+msgstr ""
+"Per bloccare le richieste DoH dai client verso qualsiasi altro server "
+"consentendo però le richieste provenienti dal firewall, sono disponibili due"
+" opzioni:"
+
+#: ../../dns_over_http.rst:117 409e773ae54d4808be339451b364ee38
+msgid ""
+"Enable the \"public DoH-Providers\" category inside Threat Shield IP and "
+"whitelist the upstream server you choose as your DoH provider"
+msgstr ""
+"Abilitare la categoria ``public DoH-Providers`` all'interno di Threat Shield"
+" IP e inserire nella allowlist il server upstream scelto come provider DoH"
+
+#: ../../dns_over_http.rst:118 ae70cac2fa8a4e1985e2d45fb07db6b0
+msgid ""
+"Use DPI (Deep Packet Inspection) to block DoH, which operates only on "
+"forwarded traffic, allowing the firewall to use DoH while blocking clients "
+"from using it directly"
+msgstr ""
+"Utilizzare DPI (Deep Packet Inspection) per bloccare DoH, che opera solo sul"
+" traffico inoltrato, consentendo al firewall di utilizzare DoH mentre si "
+"impedisce ai client di utilizzarlo direttamente"

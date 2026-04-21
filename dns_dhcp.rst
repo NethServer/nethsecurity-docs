@@ -156,6 +156,8 @@ You can configure the following:
 - **Specify a single upstream DNS server:** enter the IP address of the desired DNS server in the designated field.
 - **Set up domain-specific DNS servers:** this allows you to route queries for specific domains to different servers.
 
+For privacy-focused DNS configuration using encrypted connections, see :ref:`dns_over_http-section` for DNS over HTTPS (DoH) setup.
+
 Domain-specific DNS servers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -311,7 +313,7 @@ The DHCP relay allows the firewall to forward DHCP requests from clients to an e
  
 4.Set the upstream DHCP server address: ::
 
- uci set dhcp.@relay[-1].server_add='<SERVER_ADDR>'
+ uci set dhcp.@relay[-1].server_addr='<SERVER_ADDR>'
 
 5.Commit the configuration: ::
 
@@ -328,7 +330,7 @@ Example
  uci add dhcp relay
  uci set dhcp.@relay[-1].interface='LAN'
  uci set dhcp.@relay[-1].local_addr='192.168.1.1'
- uci set dhcp.@relay[-1].server_add='192.168.10.100'
+ uci set dhcp.@relay[-1].server_addr='192.168.10.100'
  uci commit dhcp
  reload_config
 

@@ -13,6 +13,9 @@ Major changes on 2026-03-25
 
 Image version: `8.7.2` (based on OpenWrt 24.10.5)
 
+.. warning:: If you are restoring a backup from version 8-24.10.0-ns.1.6.0 or earlier, please check the section :ref:`restore_old_backup_bug-section` 
+     at the end of this section.
+
 .. rubric:: New Features
 
 - Real-time network flow monitoring: visualize active flows with detailed metrics (source, destination, protocol, application, bandwidth) through the refactored netifyd engine integration.
@@ -46,6 +49,25 @@ Image version: `8.7.2` (based on OpenWrt 24.10.5)
 - WireGuard default gateway: fixed missing default gateway after tunnel disconnection on single-WAN systems; assigned proper default metric for WAN interfaces.
 - WireGuard setup: fixed silent failures when public IP cannot be resolved; now handles DNS resolution failures gracefully without blocking installation.
 
+
+.. _restore_old_backup_bug-section:
+
+Restore backup from older versions
+----------------------------------
+
+When restoring a backup from version 8-24.10.0-ns.1.6.0 or earlier, the UI and reverse proxy could be unavailable because nginx fails to start.
+In this case, you can check for any issue by running:
+
+  /usr/sbin/nginx -c /etc/nginx/uci.conf -T
+
+You may encounter an nginx configuration error: ::
+   
+  "module \"ngx_http_ubus_module\" is already loaded"
+   
+This happens because the old backup contains the file ```/etc/nginx/module.d/luci.module```, which conflicts with the new upstream nginx version.
+To fix, run: ::
+   
+  rm -f /etc/nginx/module.d/luci.module && /etc/init.d/nginx restart 
 
 Major changes on 2025-10-30
 ===========================

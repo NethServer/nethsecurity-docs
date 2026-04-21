@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../dns_dhcp.rst:5 499b859d4f2846a2b35852ed5128e811
+#: ../../dns_dhcp.rst:5 5195e0831b6e4ded9762162a119a3231
 msgid "DNS & DHCP"
 msgstr "DNS e DHCP"
 
-#: ../../dns_dhcp.rst:9 4ab1b9e310ad437b90c92629be2c4fff
+#: ../../dns_dhcp.rst:9 fe5fbdfaeb5b4251b4ef61237f45da91
 msgid ""
 "NethSecurity can provide DNS and DHCP services to every local network. This "
 "section is divided in 5 tabs:"
@@ -15,30 +15,30 @@ msgstr ""
 "sezione è suddivisa in 5 schede:"
 
 #: ../../dns_dhcp.rst:12 ../../dns_dhcp.rst:22
-#: 237eb828b1054c9aa649487234d5fddd 05a4b2874b47458696e08633640ffb0e
+#: 7c5a94b680894433bf94fa2cf1370765 9e17449923aa4e8eb41a3878d3fbd2f1
 msgid "DHCP and MAC binding"
 msgstr "DHCP e MAC bindining"
 
-#: ../../dns_dhcp.rst:13 f0192f2200d24b0dabab03d1dc0d4703
+#: ../../dns_dhcp.rst:13 353244968ee84856bdf11bb53bcf7748
 msgid "Static leases"
 msgstr "Lease statiche"
 
 #: ../../dns_dhcp.rst:14 ../../dns_dhcp.rst:94
-#: d8066e5c596149e9a37f08cc4b66b8a4 c9011f52a8114b3bb1552fe4e168efc0
+#: b4fed7cfbf444fd1af36962ea3de0013 6b3039ecf1384a3abfd8ca16dbf23ca8
 msgid "Dynamic leases"
 msgstr "Lease dinamici"
 
 #: ../../dns_dhcp.rst:15 ../../dns_dhcp.rst:134
-#: cd272b7e12684390ad2e8193098071e1 49aa7199e48846d5b2e9aeffcc8bcd5c
+#: 3c77a75fc1f340a6a4e353e3a766d6c3 d8b9bc695caf4c01876f37418b6158b4
 msgid "DNS"
 msgstr "DNS"
 
-#: ../../dns_dhcp.rst:16 ../../dns_dhcp.rst:252
-#: fee70c6a04ce484e8044914d8e0ca5ed 6596bd0b70ba4746b75890c5c1839c7a
+#: ../../dns_dhcp.rst:16 ../../dns_dhcp.rst:254
+#: 4bb25864af5d40cc97058cbabc809959 574458b7e3df4880b4789b241721b54e
 msgid "DNS records"
 msgstr "Record DNS"
 
-#: ../../dns_dhcp.rst:24 269b20695cb24c9f91e56e52079e63a3
+#: ../../dns_dhcp.rst:24 84b6cfdfb7bd4d5ca79c5c96c463cfb6
 msgid ""
 "This section allows you to enable and manage a DHCP server for every local "
 "network configured in your NethSecurity. Every local interface is provided "
@@ -50,28 +50,28 @@ msgstr ""
 "dotata di una scheda in cui è possibile abilitare il servizio facendo clic "
 "sul pulsante :guilabel:`Modifica`."
 
-#: ../../dns_dhcp.rst:27 ../../dns_dhcp.rst:84 ../../dns_dhcp.rst:260
-#: de56ccecae7f4a36a7ff05cdb0e54a01 747f7d12dcc849ccacd0ee5f3384175c
-#: 1cb0d771a2274030b48bf2071956887e
+#: ../../dns_dhcp.rst:27 ../../dns_dhcp.rst:84 ../../dns_dhcp.rst:262
+#: 4bc0d3953fed443fa00378bdf1c2372f 46b8db50deb14c2294683e7741666e4f
+#: b552d99988a14c5295ac7494eed538fb
 msgid "Available fields:"
 msgstr "Campi disponibili:"
 
-#: ../../dns_dhcp.rst:29 764da9d0b09b4a319d8c68bd19140bd3
+#: ../../dns_dhcp.rst:29 a27efdb5de714f9cb0a51d7462fb792f
 msgid "``Mac binding``:"
 msgstr "``MAC binding``"
 
-#: ../../dns_dhcp.rst:31 9f493e0978594b5491d588cef8a54029
+#: ../../dns_dhcp.rst:31 147020ae8835480db8280484399ac62f
 msgid ""
 "``Status``: enable/disable the MAC-IP binding feature for this interface"
 msgstr ""
 "``Stato``: abilita/disabilita la funzione di binding MAC-IP per questa "
 "interfaccia"
 
-#: ../../dns_dhcp.rst:32 ebffd3859da34e87a26f66ad97365966
+#: ../../dns_dhcp.rst:32 4fe218990d0645ec91dcc4ae7a98f425
 msgid "``Type``: it's possible to choose between two types of MAC-IP binding:"
 msgstr "``Tipo``: è possibile scegliere tra due tipi di binding MAC-IP:"
 
-#: ../../dns_dhcp.rst:34 fde0f380e81b42bfb6da134a584b20f9
+#: ../../dns_dhcp.rst:34 cfd7f64553074f0d9fdf17a6d3835d4c
 msgid ""
 "``Soft binding``: allows hosts without a reservation, blocks mismatched "
 "IP/MAC"
@@ -79,7 +79,7 @@ msgstr ""
 "``Soft binding``: consente agli host senza una reservation, blocca IP/MAC "
 "non corrispondenti"
 
-#: ../../dns_dhcp.rst:36 f1ca5b1753f64d798422feec00ea194b
+#: ../../dns_dhcp.rst:36 d4bb9d68d72047e19dba974470031e49
 msgid ""
 "**Example**: An office network where employees frequently bring their own "
 "devices (BYOD). In this case Soft binding allows devices without a "
@@ -94,7 +94,7 @@ msgstr ""
 "bloccato. Questo offre flessibilità ai dipendenti mantenendo comunque un "
 "certo livello di sicurezza."
 
-#: ../../dns_dhcp.rst:42 77e0e822048a4cc8addff011e074b582
+#: ../../dns_dhcp.rst:42 c4c18b1952a643679e8b2e7bb6b43e7e
 msgid ""
 "**Example**: A corporate network with strict security policies. Here hard "
 "binding ensures that only devices with a pre-configured reservation can "
@@ -106,35 +106,35 @@ msgstr ""
 "reservation preconfigurata possano accedere alla rete. Questo impedisce che "
 "i dipendenti rubino un IP con autorizzazioni superiori."
 
-#: ../../dns_dhcp.rst:46 143c0f95e5684fc3bf950fa53d04e6a6
+#: ../../dns_dhcp.rst:46 7d7992e6e60247a2b93ea852492202e1
 msgid "``DHCP``:"
 msgstr "``DHCP``:"
 
-#: ../../dns_dhcp.rst:48 5cdea486971a4a28aa4ad05e87d3d4a1
+#: ../../dns_dhcp.rst:48 d3efe1865dd94af999e8dbb6791494f3
 msgid "``Enable DHCP`` : enable/disable the service"
 msgstr "``Abilita DHCP`` : abilita/disabilita il servizio"
 
-#: ../../dns_dhcp.rst:49 0891a0226b1b4c28a5c410b6fa7827e6
+#: ../../dns_dhcp.rst:49 92f76ef6c1144e00957ebc7237aad796
 msgid "``Range IP start`` : first IP address of DHCP range"
 msgstr "``Inizio intervallo IP`` : primo indirizzo IP dell'intervallo DHCP"
 
-#: ../../dns_dhcp.rst:50 37fd67cfac5742ecaa033b335fe5185a
+#: ../../dns_dhcp.rst:50 72f1c92d966e447da29284f826be405a
 msgid "``Range IP end`` : last IP address of DHCP range"
 msgstr "``Fine intervallo IP`` : ultimo indirizzo IP dell'intervallo DHCP"
 
-#: ../../dns_dhcp.rst:51 6cc770a6993440028b51e79967dfab5c
+#: ../../dns_dhcp.rst:51 9188350e707444f39c584f31adbe537d
 msgid "``Lease time`` :  lease time (default 1 hour)"
 msgstr "``Tempo di lease`` :  tempo di lease (predefinito 1 ora)"
 
-#: ../../dns_dhcp.rst:53 439188d5931b4ec0b72156e00ecbbddc
+#: ../../dns_dhcp.rst:53 23427141d24b4465b77effedb9aebdc0
 msgid "**DHCP Advanced settings**"
 msgstr "**Impostazioni avanzate DHCP**"
 
-#: ../../dns_dhcp.rst:55 f24d8ae8bcb84f3a93f2225c90a2f693
+#: ../../dns_dhcp.rst:55 f1f4ac64ed494d70a546dd18e68949e7
 msgid "``Force DHCP server start``"
 msgstr "``Forza l'avvio del server DHCP``"
 
-#: ../../dns_dhcp.rst:57 903da095805a4c91ab94d45d1276e27c
+#: ../../dns_dhcp.rst:57 c6776c9418b64658bdae63d68de95c04
 msgid ""
 "Upon startup, the DHCP server checks if there are other DHCP servers on the "
 "network. With this option disabled, the DHCP server won't be activated if "
@@ -148,11 +148,11 @@ msgstr ""
 "abilitata, il server DHCP verrà avviato anche se sono presenti altri server "
 "DHCP all'interno della rete."
 
-#: ../../dns_dhcp.rst:61 ac13197585464f21b5535a7c356f7bd9
+#: ../../dns_dhcp.rst:61 7b4ee65ac6ba46caaa1be75f6d45fd41
 msgid "``DHCP option``"
 msgstr "``Opzione DHCP``"
 
-#: ../../dns_dhcp.rst:63 dc7c98b314b949fc96dab0ce8b26fecf
+#: ../../dns_dhcp.rst:63 bb05c84404ad451e8fd3fe70c432a059
 msgid ""
 "It is possible to declare very specific DHCP options, searching for the "
 "field to configure (e.g. DNS passed to clients, tftp IP address and so on) "
@@ -164,19 +164,19 @@ msgstr ""
 "via) e quindi specificando il valore. Il valore può anche essere un elenco "
 "di valori separati da una virgola."
 
-#: ../../dns_dhcp.rst:66 bd55df0ee8914f709b5f02d65c526935
+#: ../../dns_dhcp.rst:66 9eb42869c43a43e8849baaae80ea8770
 msgid "Example to override the DNS passed to clients with 2 servers:"
 msgstr "Esempio per sovrascrivere il DNS passato ai client con 2 server:"
 
-#: ../../dns_dhcp.rst:68 406fb633d02c43b88bdc47b161ea6f2f
+#: ../../dns_dhcp.rst:68 8eb2bed937f345e785d0e87d79a4932c
 msgid "selected option: ``dns-server``"
 msgstr "opzione selezionata: ``dns-server``"
 
-#: ../../dns_dhcp.rst:69 37c1feced5594dd094de307bcf828f4b
+#: ../../dns_dhcp.rst:69 ef6a5df7512045bd90b9999dcb05c51e
 msgid "value: ``1.1.1.1,8.8.8.8``"
 msgstr "valore: ``1.1.1.1,8.8.8.8``"
 
-#: ../../dns_dhcp.rst:71 84a9469cf0fa4dbbbc8bd2e8f0ac2352
+#: ../../dns_dhcp.rst:71 a2d4acc2a4e84596a39c2874dd3ecafb
 msgid ""
 "See also :ref:`dns_dhcp_custom-section` for more information on non-standard"
 " options."
@@ -184,11 +184,11 @@ msgstr ""
 "Vedere anche :ref:`dns_dhcp_custom-section` per ulteriori informazioni sulle"
 " opzioni non standard."
 
-#: ../../dns_dhcp.rst:77 c20758f4ca824973bed08a886a3d0bb7
+#: ../../dns_dhcp.rst:77 ac9a4ac9ea484e348a7fca953ed66e91
 msgid "Static Leases"
 msgstr "Lease statici"
 
-#: ../../dns_dhcp.rst:79 1fd180e7cc3244739005c0e6b901ebbd
+#: ../../dns_dhcp.rst:79 320e649683374b99a58c2428a1de03a1
 msgid ""
 "Static leases assigns stable IP addresses and symbolic hostnames to DHCP "
 "clients. The host is identified by its MAC address, assigned a fixed IP "
@@ -199,7 +199,7 @@ msgstr ""
 "viene assegnato un indirizzo IP fisso e viene fornito un nome host simbolico"
 " per un facile riconoscimento."
 
-#: ../../dns_dhcp.rst:81 0531c0789e424413a79fa65400f1936b
+#: ../../dns_dhcp.rst:81 0aba6076ac0c4ab0ac04ac758e593cfb
 msgid ""
 "Click the button :guilabel:`Add reservation` to add a new device's "
 "reservation."
@@ -207,11 +207,11 @@ msgstr ""
 "Fare clic sul pulsante :guilabel:`Aggiungi reservation` per aggiungere una "
 "nuova reservation per un dispositivo."
 
-#: ../../dns_dhcp.rst:86 4f4199f3c601438eafaedac6e97b2e3c
+#: ../../dns_dhcp.rst:86 d0aa93b513b64b7397444839f8df9856
 msgid "``Hostname`` : Hostname associated to the IP address"
 msgstr "``Nome host`` : Nome host associato all'indirizzo IP"
 
-#: ../../dns_dhcp.rst:87 047221bf94aa43bbb8a78f4b932dd816
+#: ../../dns_dhcp.rst:87 d00994ce6bb24cacb6853cc05dd1be13
 msgid ""
 "``IP address`` : IP address to assign to the specified MAC Address.The IP "
 "address must be within the DHCP range"
@@ -219,7 +219,7 @@ msgstr ""
 "``Indirizzo IP`` : Indirizzo IP da assegnare al MAC Address specificato. "
 "L'indirizzo IP deve essere compreso nell'intervallo DHCP."
 
-#: ../../dns_dhcp.rst:88 49cd03d3516e4f51b45a390159cb7b8f
+#: ../../dns_dhcp.rst:88 e2deb8fce6914fc29502136a5144d6d6
 msgid ""
 "``MAC address`` : MAC address of the device where you want to make the "
 "reservation"
@@ -227,11 +227,11 @@ msgstr ""
 "``Indirizzo MAC`` : Indirizzo MAC del dispositivo per cui si desidera "
 "effettuare la reservation"
 
-#: ../../dns_dhcp.rst:89 090fb38ccb3b4e1196bee94e0dcf43f3
+#: ../../dns_dhcp.rst:89 6a39c58517e742d8aa7636402a6f6141
 msgid "``Reservation name`` : Optional, freely configurable filed"
 msgstr "``Nome reservation`` : Facoltativo, campo configurabile liberamente"
 
-#: ../../dns_dhcp.rst:96 722ee4fb1d4d438584c5fd8477c0f733
+#: ../../dns_dhcp.rst:96 95b65cc48db04069adfdbe9aed4ba8db
 msgid ""
 "Dynamic leases represents IP addresses that are currently in use and have "
 "been allocated to devices on the network. This tab shows all currently "
@@ -241,11 +241,11 @@ msgstr ""
 "assegnati ai dispositivi sulla rete. Questa scheda mostra tutti i lease "
 "attualmente attivi."
 
-#: ../../dns_dhcp.rst:100 8b614303ac374d6dbe7cf6494555422b
+#: ../../dns_dhcp.rst:100 d40c9a5a156d4ff688b15432ee047be4
 msgid "Default Configuration"
 msgstr "Configurazione predefinita"
 
-#: ../../dns_dhcp.rst:102 eec531e9d9df496a8ac16541279050c2
+#: ../../dns_dhcp.rst:102 e1a27365f6d14fc9a21d98e364d719fe
 msgid ""
 "By default, the DHCP server has a limit of 1000 concurrent leases to prevent"
 " DoS attacks. Set the dnsmasq ``dhcpleasemax`` option to change the limit."
@@ -254,11 +254,11 @@ msgstr ""
 "simultanei per prevenire attacchi DoS. Impostare l'opzione ``dhcpleasemax`` "
 "di dnsmasq per modificare il limite."
 
-#: ../../dns_dhcp.rst:113 d5e8f4f75f78498da08a46e0fb94c6fe
+#: ../../dns_dhcp.rst:113 c3d995b1aa8d4a469957766884b2fa2f
 msgid "Non-standard custom options"
 msgstr "Opzioni personalizzate non standard"
 
-#: ../../dns_dhcp.rst:115 685aaabf2baf481f86d965e5b9e17f18
+#: ../../dns_dhcp.rst:115 866494a14b5d47c38d40164ce3e986ce
 msgid ""
 "In addition to the standard DHCP options, NethSecurity allows you to "
 "configure non-standard custom options, such as option 82 (DHCP Relay Agent "
@@ -270,14 +270,14 @@ msgstr ""
 "Information). Queste opzioni possono essere utili per configurazioni "
 "avanzate o requisiti di rete specifici."
 
-#: ../../dns_dhcp.rst:118 da0666436d714973b55704104175b17e
+#: ../../dns_dhcp.rst:118 c4e6ba03f0974c7695f81b4a96e69f60
 msgid ""
 "To set a custom option from the command line, use the following commands:"
 msgstr ""
 "Per impostare un'opzione personalizzata dalla riga di comando, utilizzare i "
 "seguenti comandi:"
 
-#: ../../dns_dhcp.rst:126 d1b7c81560934825995c15a015d945b3
+#: ../../dns_dhcp.rst:126 4036c7291804465194b8ddfb4968c013
 msgid ""
 "Custom options configured via the command line are preserved even when "
 "changes are made through the UI. Custom options can be safely removed from "
@@ -288,7 +288,7 @@ msgstr ""
 "utente. Le opzioni personalizzate possono essere rimosse in modo sicuro "
 "dall'interfaccia utente."
 
-#: ../../dns_dhcp.rst:129 bb823c22e8dd4f1993b8eca634df77e9
+#: ../../dns_dhcp.rst:129 7f33b7768bd140a9bcb97c6f6186db01
 msgid ""
 "However, users should avoid modifying these custom options directly from the"
 " UI to prevent unexpected behavior."
@@ -297,7 +297,7 @@ msgstr ""
 "personalizzate direttamente dall'interfaccia utente per prevenire "
 "comportamenti imprevisti."
 
-#: ../../dns_dhcp.rst:136 a72ace14bf6a4b1e97936a6da47adb8f
+#: ../../dns_dhcp.rst:136 c49366251d154353823d378ce07ff6ef
 msgid ""
 "The system employs `Dnsmasq <https://thekelleys.org.uk/dnsmasq/doc.html>`_ a"
 " as a downstream caching DNS server. Dnsmasq functions as a local caching "
@@ -312,7 +312,7 @@ msgstr ""
 "comportamento può essere personalizzato utilizzando le seguenti opzioni di "
 "configurazione:"
 
-#: ../../dns_dhcp.rst:140 eb0acc57caba4d30ab30a85352a86d56
+#: ../../dns_dhcp.rst:140 73f426deec6048c0ba52de79db18e53d
 msgid ""
 "``DNS forwarding servers``: Click the button :guilabel:`Add DNS Server` to "
 "specify the desired upstream DNS, you can add more servers, each one is "
@@ -322,7 +322,7 @@ msgstr ""
 "server DNS` per specificare il DNS upstream desiderato; è possibile "
 "aggiungere più server, ognuno dei quali viene gestito individualmente."
 
-#: ../../dns_dhcp.rst:141 21cdbb90416d412cbddfd6aa28bd3e13
+#: ../../dns_dhcp.rst:141 894ed462ca7d4886b2bd007a4481b331
 msgid ""
 "``DNS Domain`` : Insert the the local DNS domain, ensuring that queries for "
 "this domain are always resolved locally."
@@ -330,7 +330,7 @@ msgstr ""
 "``DNS Domain`` : Inserire il dominio DNS locale, assicurandosi che le query "
 "per questo dominio vengano sempre risolte localmente."
 
-#: ../../dns_dhcp.rst:142 9b47e9c98f854621a09b0e7f251d1bc7
+#: ../../dns_dhcp.rst:142 fa325eac011444b68e3ff344786b83de
 msgid ""
 "``Log DNS queries``: enable it if you want all the DNS queries to be logged "
 "by the system."
@@ -338,11 +338,11 @@ msgstr ""
 "``Log query DNS``: abilitarlo se si desidera che tutte le query DNS vengano "
 "registrate dal sistema."
 
-#: ../../dns_dhcp.rst:147 a86266e766a54badb83c36cb181b0d38
+#: ../../dns_dhcp.rst:147 1c9f20df521f4522ad54e107730bdb41
 msgid "Forwarding servers"
 msgstr "Server di forwarding"
 
-#: ../../dns_dhcp.rst:149 e4e78eb6b1354288a7ee5840105586a4
+#: ../../dns_dhcp.rst:149 c35cc2a01113484b8601982bf8b19e4e
 msgid ""
 "You only need to configure forwarders if your WAN interfaces are set up with"
 " static IP addresses. If your WAN interfaces are configured via DHCP, "
@@ -357,11 +357,11 @@ msgstr ""
 "upstream configurati automaticamente possono essere trovati nel file "
 "`/tmp/resolv.conf.d/resolv.conf.auto`."
 
-#: ../../dns_dhcp.rst:154 7b0e45fc505543c9b41fb6ebd171a5f7
+#: ../../dns_dhcp.rst:154 52cbb8a47ae443428569820fa3fd2cc7
 msgid "You can configure the following:"
 msgstr "È possibile configurare quanto segue:"
 
-#: ../../dns_dhcp.rst:156 3d6ee456bd6d4945ba9c3b6f8ad5869c
+#: ../../dns_dhcp.rst:156 d2221b8f95854de99a8cd0f3f2beedd8
 msgid ""
 "**Specify a single upstream DNS server:** enter the IP address of the "
 "desired DNS server in the designated field."
@@ -369,7 +369,7 @@ msgstr ""
 "**Specificare un singolo server DNS upstream:** inserire l'indirizzo IP del "
 "server DNS desiderato nel campo designato."
 
-#: ../../dns_dhcp.rst:157 f056e64e814c4a69a8efae4acee1c6e6
+#: ../../dns_dhcp.rst:157 ef1928b92ad4451a956420988587ffdf
 msgid ""
 "**Set up domain-specific DNS servers:** this allows you to route queries for"
 " specific domains to different servers."
@@ -377,37 +377,37 @@ msgstr ""
 "**Configurare server DNS specifici per dominio:** questo consente di "
 "instradare le query per domini specifici verso server diversi."
 
-#: ../../dns_dhcp.rst:160 e376ff464df0491389f921dee7528be1
+#: ../../dns_dhcp.rst:162 6dc2dd4803ea4565b7d163b8128e6a2b
 msgid "Domain-specific DNS servers"
 msgstr "Server DNS specifici per dominio"
 
-#: ../../dns_dhcp.rst:162 65fa260dcebf47d0b5e2be8f55be727d
+#: ../../dns_dhcp.rst:164 a5a5c4b04c5545bcb9fb11a924bf8c12
 msgid ""
 "To use a custom DNS server for a specific domain, use the following syntax:"
 msgstr ""
 "Per utilizzare un server DNS personalizzato per un dominio specifico, "
 "utilizzare la seguente sintassi:"
 
-#: ../../dns_dhcp.rst:164 3adeb3bef6f44310af43ecb64a12e152
+#: ../../dns_dhcp.rst:166 6e7e6108d5744db1b140fe24b74932ab
 msgid "``/DOMAIN/IP_ADDRESS#PORT``"
 msgstr "``/DOMAIN/IP_ADDRESS#PORT``"
 
-#: ../../dns_dhcp.rst:166 7d32705fd2d140ab965e983d0f4cf764
+#: ../../dns_dhcp.rst:168 f9cd42f77eb74b1caf2297e114e2defa
 msgid "where:"
 msgstr "dove:"
 
-#: ../../dns_dhcp.rst:168 2600c0bbcb0d4491bc420410a3393f6b
+#: ../../dns_dhcp.rst:170 8dac4a132c0842638d22529230bd3088
 msgid "IP_ADDRESS: specify the IP address of the desired server"
 msgstr "IP_ADDRESS: specificare l'indirizzo IP del server desiderato"
 
-#: ../../dns_dhcp.rst:169 420f690bfcc24d019792f019a54b2e85
+#: ../../dns_dhcp.rst:171 06fa2e84ddff42a799fefafd5307bada
 msgid ""
 "PORT: append the desired port (after the IP address using `#` character)."
 msgstr ""
 "PORTA: aggiungere la porta desiderata (dopo l'indirizzo IP utilizzando il "
 "carattere `#`)."
 
-#: ../../dns_dhcp.rst:171 4ff54971da4d48ed913dee2eacd8ebf2
+#: ../../dns_dhcp.rst:173 398f62646e5747ed9e114b96b9cb8586
 msgid ""
 "The ``PORT`` value is optional so usually the configuration appears just "
 "like:"
@@ -415,20 +415,20 @@ msgstr ""
 "Il valore ``PORT`` è opzionale, quindi di solito la configurazione appare "
 "semplicemente così:"
 
-#: ../../dns_dhcp.rst:173 0a0cb861f27942aab5d96a984a392a4a
+#: ../../dns_dhcp.rst:175 359e1a570e894c86b68ee3c609251758
 msgid "``/DOMAIN/IP_ADDRESS``"
 msgstr "``/DOMAIN/IP_ADDRESS``"
 
-#: ../../dns_dhcp.rst:175 c23e29783c314befbc91e69db292feff
+#: ../../dns_dhcp.rst:177 15dc8c9aaa634680affef1ae02690d95
 msgid "These are the main supported options:"
 msgstr "Queste sono le principali opzioni supportate:"
 
-#: ../../dns_dhcp.rst:177 dfce5fa3414446108a8d93489a714d7c
+#: ../../dns_dhcp.rst:179 c913d36dde644eb99fd181d30e1b972a
 msgid "Empty domain (``//``): matches unqualified names (without dots)."
 msgstr ""
 "Dominio vuoto (``//``): corrisponde a nomi non qualificati (senza punti)."
 
-#: ../../dns_dhcp.rst:178 d517c01b32a6400f818503e33d0721f7
+#: ../../dns_dhcp.rst:180 0d181652dff143638b8436f4edffbb0e
 msgid ""
 "Specific domain (``/google.com/``): matches the exact domain and all its "
 "subdomains (e.g., google.com, www.google.com, drive.google.com...)."
@@ -437,7 +437,7 @@ msgstr ""
 "indicato e a tutti i suoi sottodomini (ad esempio, google.com, "
 "www.google.com, drive.google.com...)."
 
-#: ../../dns_dhcp.rst:179 e02bdf43856f46fbb593c7f1256d84fa
+#: ../../dns_dhcp.rst:181 5dcd37e1ed9b4727a0465cb8430b8894
 msgid ""
 "Wildcard domain (``*google.com/``): matches any domain **containing** "
 "\"google.com\" (e.g., google.com, www.google.com, supergoogle.com)."
@@ -446,11 +446,11 @@ msgstr ""
 "**contenente** \"google.com\" (ad esempio, google.com, www.google.com, "
 "supergoogle.com)."
 
-#: ../../dns_dhcp.rst:181 19e4864b81384b9f8101ca04a1130a90
+#: ../../dns_dhcp.rst:183 d414093bdfb042edaf5054cf8f36b4b8
 msgid "Examples:"
 msgstr "Esempi:"
 
-#: ../../dns_dhcp.rst:183 b6849e1e7dc6417da02cb6ce6bd66a8d
+#: ../../dns_dhcp.rst:185 9f3d0aaca14447fd8c0333ae66ba5886
 msgid ""
 "Send all queries for \"google.com\" and its subdomains to 1.2.3.4:  "
 "``/google.com/1.2.3.4``"
@@ -458,7 +458,7 @@ msgstr ""
 "Inviare tutte le query per \"google.com\" e i suoi sottodomini a 1.2.3.4:  "
 "``/google.com/1.2.3.4``"
 
-#: ../../dns_dhcp.rst:184 343d96a5432945d3bf49c3d4733c6212
+#: ../../dns_dhcp.rst:186 c02ca34b74124139a8e2418368fb6631
 msgid ""
 "Send all unqualified names (e.g., \"localhost\") to 10.0.0.1 and everything "
 "else to standard servers: ``//10.0.0.1``"
@@ -466,7 +466,7 @@ msgstr ""
 "Inviare tutti i nomi non qualificati (ad esempio, \"localhost\") a 10.0.0.1 "
 "e tutto il resto ai server standard: ``//10.0.0.1``"
 
-#: ../../dns_dhcp.rst:185 e85ac11c6de8483196de935ef8c3d3bf
+#: ../../dns_dhcp.rst:187 8c40f85022be4419952b0e4197385484
 msgid ""
 "Send queries for domain \"ad.nethserver.org\" and its subdomains to "
 "192.168.1.1 and everything else to standard servers: "
@@ -476,7 +476,7 @@ msgstr ""
 " 192.168.1.1 e tutto il resto ai server standard: "
 "``/ad.nethserver.org/192.168.1.1``"
 
-#: ../../dns_dhcp.rst:189 00e9c5a52e154cadbb47e586dcad8d93
+#: ../../dns_dhcp.rst:191 c79c8f8920bd462fad11cd847fb93796
 msgid ""
 "More specific domains take precedence over less specific domains, so for a "
 "configuration like this:"
@@ -484,15 +484,15 @@ msgstr ""
 "I domini più specifici hanno la precedenza su quelli meno specifici, quindi "
 "per una configurazione come questa:"
 
-#: ../../dns_dhcp.rst:191 629e61eb6ca94c00b5f6b267a262e97e
+#: ../../dns_dhcp.rst:193 7a4740deee314e16a426d048a6c43dbd
 msgid "``/google.com/1.2.3.4``"
 msgstr "``/google.com/1.2.3.4``"
 
-#: ../../dns_dhcp.rst:192 ad93a984e8ee461cb4b9940bec02db9e
+#: ../../dns_dhcp.rst:194 513111e564db48a89ab02751a694a33b
 msgid "``/www.google.com/2.3.4.5``"
 msgstr "``/www.google.com/2.3.4.5``"
 
-#: ../../dns_dhcp.rst:194 423623206e044c989e20eae5e54bfb03
+#: ../../dns_dhcp.rst:196 433901c6d2484192aeb74399ee63b449
 msgid ""
 "NethSecurity will send queries for google.com and gmail.google.com to "
 "1.2.3.4, but www.google.com will go to 2.3.4.5"
@@ -500,7 +500,7 @@ msgstr ""
 "NethSecurity invierà le richieste per google.com e gmail.google.com a "
 "1.2.3.4, ma www.google.com verrà indirizzato a 2.3.4.5"
 
-#: ../../dns_dhcp.rst:196 bc3d49810f4e414b813b06657ccf68d0
+#: ../../dns_dhcp.rst:198 20d206821fd84879a18a772fd11ad121
 msgid ""
 "This is true also for wildcards: if both specific and wildcard domains are "
 "defined for the same pattern, the specific one takes precedence (e.g., "
@@ -513,7 +513,7 @@ msgstr ""
 "``/*google.com/`` : il primo gestirà google.com e www.google.com, mentre il "
 "carattere jolly gestirà supergoogle.com)."
 
-#: ../../dns_dhcp.rst:254 211a6bc21b1143418beeb41d708e74b8
+#: ../../dns_dhcp.rst:256 875c2ee8683a43c6add5e93ea351d4e2
 msgid ""
 "The system can handle local DNS records. When the server performs a DNS "
 "lookup, first it will search inside local DNS records. If no local record is"
@@ -523,32 +523,32 @@ msgstr ""
 "ricerca DNS, prima cercherà all'interno dei record DNS locali. Se non viene "
 "trovato alcun record locale, verrà effettuata una query DNS esterna."
 
-#: ../../dns_dhcp.rst:256 d95bd214e15240f1b9f322feee6b677d
+#: ../../dns_dhcp.rst:258 ba704ff918964f9c9e4fbb7cabb16f62
 msgid ""
 "Local DNS records will always override records from external DNS servers."
 msgstr ""
 "I record DNS locali avranno sempre la precedenza sui record provenienti dai "
 "server DNS esterni."
 
-#: ../../dns_dhcp.rst:258 97a5a7f0a86a4fd9a467e540451d1130
+#: ../../dns_dhcp.rst:260 91e3999ac3384e42a71b86c67fb4bc5c
 msgid "Click the button :guilabel:`Add DNS record` to add a new DNS hostname."
 msgstr ""
 "Fare clic sul pulsante :guilabel:`Aggiungi record DNS` per aggiungere un "
 "nuovo hostname DNS."
 
-#: ../../dns_dhcp.rst:262 8a0a6f282a3a4a8ea0723bdafa3c377c
+#: ../../dns_dhcp.rst:264 0d9790e6f070463b962649eee13b8dcb
 msgid "``Hostname`` : DNS hostname"
 msgstr "``Nome host`` : Nome host DNS"
 
-#: ../../dns_dhcp.rst:263 7e3fdb4175964591a0084b84a1cf0c6f
+#: ../../dns_dhcp.rst:265 fff72111af5240b9979fd6d073870e07
 msgid "``IP address`` : IP address associated to hostname"
 msgstr "``Indirizzo IP`` : Indirizzo IP associato al nome host"
 
-#: ../../dns_dhcp.rst:264 faebe90e971146dcbb49a1be642fd076
+#: ../../dns_dhcp.rst:266 d4d3e51094444f6595d502f5c59ebab0
 msgid "``Name`` : optional field"
 msgstr "``Nome`` : campo facoltativo"
 
-#: ../../dns_dhcp.rst:265 978999ee518f4ec0ac7e47bf57c14857
+#: ../../dns_dhcp.rst:267 d21752fb884d4c6cabbd99dbab3bcd28
 msgid ""
 "``Wildcard DNS record``: enable it if you want this answer for any subdomain"
 " you haven't already defined"
@@ -556,11 +556,11 @@ msgstr ""
 "``Record DNS wildcard``: abilitarlo se si desidera questa risposta per "
 "qualsiasi sottodominio non già definito"
 
-#: ../../dns_dhcp.rst:199 03262bd5e21d410da1fd79bcbea9aa59
+#: ../../dns_dhcp.rst:201 4d5fd1c0b9f0482b817309d2d58894fb
 msgid "DNS Rebind Protection"
 msgstr "Protezione contro il DNS Rebind"
 
-#: ../../dns_dhcp.rst:201 a80cf2a3e3ba4dd985391a7d7eb1edbf
+#: ../../dns_dhcp.rst:203 2057e250c2db4273ad69270f8cfd7d84
 msgid ""
 "DNS Rebind Protection is a security feature that safeguards against DNS "
 "rebinding attacks. It blocks the use of private IP ranges by public domains,"
@@ -573,7 +573,7 @@ msgstr ""
 "dannosi di manipolare i browser per effettuare richieste non autorizzate ai "
 "dispositivi della rete locale."
 
-#: ../../dns_dhcp.rst:203 3e3726c31f96423580d8fc4e1fa972b1
+#: ../../dns_dhcp.rst:205 b695347ec3aa4fcb8c0c85133bc5daba
 msgid ""
 "DNS Rebind Protection is enabled by default on NethSecurity and usually does"
 " not have operational repercussions. In the presence of split DNS, resolving"
@@ -589,7 +589,7 @@ msgstr ""
 "(``/var/log/messages``), dove potrebbero comparire righe simili alle "
 "seguenti:"
 
-#: ../../dns_dhcp.rst:211 dd9911153ae64dec9ab6b5453dc46be4
+#: ../../dns_dhcp.rst:213 9dee6ac0ece74054a879ea3eb4356565
 msgid ""
 "To ensure maximum compatibility and prevent malfunctions in migrated "
 "installations using the dedicated tool from NethServer 7.9, DNS Rebind "
@@ -600,42 +600,42 @@ msgstr ""
 "la Protezione DNS Rebind è disabilitata, assicurando lo stesso comportamento"
 " della versione precedente."
 
-#: ../../dns_dhcp.rst:214 9a83082a84aa4e92af3db8f6348fccad
+#: ../../dns_dhcp.rst:216 6163950985724f36835b84493ae61a3f
 msgid "How to fix DNS rebind protection issues"
 msgstr "Come risolvere i problemi di protezione DNS rebind"
 
-#: ../../dns_dhcp.rst:216 f5a8e2d1cb3748c18e3c471ef7ee1f95
+#: ../../dns_dhcp.rst:218 42de5c512a494214b4db03ed4fc2dcc4
 msgid "You can easily fix any of these issues from the CLI."
 msgstr ""
 "È possibile risolvere facilmente qualsiasi di questi problemi dalla CLI."
 
-#: ../../dns_dhcp.rst:218 35b8b5ef3c3e4480ab4bf15456d68741
+#: ../../dns_dhcp.rst:220 de2ff67f83c24a7587f6afb41db57d26
 msgid "**Solution 1**: Whitelist the domain"
 msgstr "**Soluzione 1**: Inserire il dominio nella whitelist"
 
-#: ../../dns_dhcp.rst:220 9b5950014163486a8cbdbcecadd9ab80
+#: ../../dns_dhcp.rst:222 e45389af2e0141c7a9a8e55f523ee920
 msgid "Put the specific domain in a whitelist (suggested): ::"
 msgstr "Inserire il dominio specifico in una whitelist (consigliato): ::"
 
-#: ../../dns_dhcp.rst:224 6f655a5d8e0e4044bfc6f11810d96734
+#: ../../dns_dhcp.rst:226 0961571caed04463885365a0f8d0e4dd
 msgid "then commit and restart: ::"
 msgstr "quindi eseguire il commit e riavviare: ::"
 
-#: ../../dns_dhcp.rst:229 ed46ce888e49444ebc5e7da33c4635bd
+#: ../../dns_dhcp.rst:231 cda60ecc1462408fb6435c8e3374d517
 msgid "**Solution 2**: disable the DNS protection"
 msgstr "**Soluzione 2**: disabilitare la protezione DNS"
 
-#: ../../dns_dhcp.rst:231 77c56141069e45c4b15435486f3ba6de
+#: ../../dns_dhcp.rst:233 e8f5c0ebd48d47d79b41694475e9ac25
 msgid "Completely disable DNS rebind protection using these commands: ::"
 msgstr ""
 "Disabilitare completamente la protezione contro il DNS rebind utilizzando "
 "questi comandi: ::"
 
-#: ../../dns_dhcp.rst:238 b605a6cac99143c68a772429b1e6dcee
+#: ../../dns_dhcp.rst:240 2c0b3f29074642b98b46e8e8d96dc8d6
 msgid "How to enable DNS rebind protection"
 msgstr "Come abilitare la protezione contro il DNS rebind"
 
-#: ../../dns_dhcp.rst:240 9f13583f1b244dadbb82a8478f302ccf
+#: ../../dns_dhcp.rst:242 df7239eab73046e39e8fd4737128c055
 msgid ""
 "If you have previously disabled rebind protection or if your configuration "
 "comes from a migration and you wish to enable rebind protection, it is "
@@ -652,11 +652,11 @@ msgstr ""
 "127.0.0.0/8, essenziale per i servizi di blacklist basati su DNS. Eseguire "
 "questi comandi: ::"
 
-#: ../../dns_dhcp.rst:104 2c4bf5e430b640189b37619b9995269a
+#: ../../dns_dhcp.rst:104 38ef6e5096544bc59df7ec8837a760a0
 msgid "Execute these commands: ::"
 msgstr "Eseguire questi comandi: ::"
 
-#: ../../dns_dhcp.rst:40 8c711deb3ec6444ea16f2ae5a28a27fa
+#: ../../dns_dhcp.rst:40 fbde878d576d4ee3a146fc5e1181cf9b
 msgid ""
 "``Strict binding``: Only hosts with a reservation allowed, others are "
 "blocked"
@@ -664,12 +664,12 @@ msgstr ""
 "``Strict binding``: Solo gli host con una prenotazione sono consentiti, gli "
 "altri vengono bloccati"
 
-#: ../../dns_dhcp.rst:17 ../../dns_dhcp.rst:270
-#: e123eb0602524802a4432df5af422115 006505bcb899467292ca0b559725b113
+#: ../../dns_dhcp.rst:17 ../../dns_dhcp.rst:272
+#: 5307025d58fe465084fd137a2c4bcc98 c96b7222f05f4b6ea8579f0b0b1b041b
 msgid "Scan network"
 msgstr "Scansione rete"
 
-#: ../../dns_dhcp.rst:272 ce459406631e426986f2015d7898f0c6
+#: ../../dns_dhcp.rst:274 0243e4dcea444794a0b3736e36e44f05
 msgid ""
 "This section describes the local network scanning feature. The page allows "
 "scanning all available local networks, excluding WAN networks. The page "
@@ -684,11 +684,11 @@ msgstr ""
 "network`, la selezione di questo pulsante avvia una scansione completa della"
 " rete scelta."
 
-#: ../../dns_dhcp.rst:276 548f803400204b9aa7c80d75baa47da8
+#: ../../dns_dhcp.rst:278 eff2b85ebd304f46902387a6d3333a94
 msgid "Scan results"
 msgstr "Risultati della scansione"
 
-#: ../../dns_dhcp.rst:278 19dfcb72b930414386d332868e65ef3b
+#: ../../dns_dhcp.rst:280 9869d94e593a47eeb1033760f462fca6
 msgid ""
 "After the operation is completed, the page shows a table with all discovered"
 " hosts. For each host the following information is provided:"
@@ -696,23 +696,23 @@ msgstr ""
 "Al termine dell'operazione, la pagina mostra una tabella con tutti gli host "
 "rilevati. Per ciascun host vengono fornite le seguenti informazioni:"
 
-#: ../../dns_dhcp.rst:280 594fb6875a2449bbb6a050c55413e3d9
+#: ../../dns_dhcp.rst:282 ca95055e4e124222b3bf4f72552909f7
 msgid "IP address"
 msgstr "Indirizzo IP"
 
-#: ../../dns_dhcp.rst:281 0543b3c0387b47898e92a6cbc6be73c6
+#: ../../dns_dhcp.rst:283 4f1d1216911d4df59083b5a6278af6ec
 msgid "MAC address"
 msgstr "Indirizzo MAC"
 
-#: ../../dns_dhcp.rst:282 65b7f1f1836f4118a4b60b50bebb726a
+#: ../../dns_dhcp.rst:284 e8f40b9cee6d4312b5db536bdd1f649f
 msgid "Hostname (if detected)"
 msgstr "Nome host (se rilevato)"
 
-#: ../../dns_dhcp.rst:283 1178b60807ba4209ab6d2acc504e6b05
+#: ../../dns_dhcp.rst:285 33b896aadad6439dbac84caf97da1593
 msgid "Description"
 msgstr "Descrizione"
 
-#: ../../dns_dhcp.rst:285 42b5eabdc60a4920a77ecf735ed681c5
+#: ../../dns_dhcp.rst:287 94312964da1146e890c9f11f7f28e199
 msgid ""
 "You can select any host from the table and create a DNS record entry or a "
 "DHCP reservation using the respective three dot menu."
@@ -721,7 +721,7 @@ msgstr ""
 "record DNS o una prenotazione DHCP utilizzando il relativo menu a tre "
 "puntini."
 
-#: ../../dns_dhcp.rst:287 0b50c6bdc96c4cf7b13f6c8e5fb14895
+#: ../../dns_dhcp.rst:289 3110723a690245f09388404c13fca031
 msgid ""
 "The system supports scanning only on networks with a maximum netmask of "
 "255.255.240.0 (CIDR /20), which corresponds to a maximum of 4094 hosts. "
@@ -731,11 +731,11 @@ msgstr ""
 "255.255.240.0 (CIDR /20), che corrisponde a un massimo di 4094 host. Le "
 "scansioni su reti più grandi non sono supportate."
 
-#: ../../dns_dhcp.rst:291 cfdab657284041b5a4345ee13d8a8b28
+#: ../../dns_dhcp.rst:293 66866fa0f1234696b6a7a781fc34debb
 msgid "DHCP Relay"
 msgstr "DHCP Relay"
 
-#: ../../dns_dhcp.rst:293 2b420334ca5542eb883d182f731e905c
+#: ../../dns_dhcp.rst:295 8991c8a4a3ec4af692f0ef1f9377528b
 msgid ""
 "The DHCP relay allows the firewall to forward DHCP requests from clients to "
 "an external DHCP server, DHCP relay is not available from the UI, but it's "
@@ -745,7 +745,7 @@ msgstr ""
 " a un server DHCP esterno. Il relay DHCP non è disponibile dall'interfaccia "
 "utente, ma è possibile configurarlo dal terminale utilizzando `uci`."
 
-#: ../../dns_dhcp.rst:295 b23bd258d88e47799c218bff736089e7
+#: ../../dns_dhcp.rst:297 bd1d67e738e54f3785ed325df6e26c4e
 msgid ""
 "Replace `<INTERFACE_NAME>` with the name of the interface where the DHCP "
 "relay should listen."
@@ -753,7 +753,7 @@ msgstr ""
 "Sostituire `<INTERFACE_NAME>` con il nome dell'interfaccia su cui il relay "
 "DHCP deve ascoltare."
 
-#: ../../dns_dhcp.rst:296 c3159951e06d471783302ab0377d7849
+#: ../../dns_dhcp.rst:298 87e7ff80f2c44b0b8135275710467809
 msgid ""
 "Replace `<LOCAL_ADDR>` with the IP address of the firewall on that "
 "interface."
@@ -761,36 +761,45 @@ msgstr ""
 "Sostituire `<LOCAL_ADDR>` con l'indirizzo IP del firewall su quella "
 "interfaccia."
 
-#: ../../dns_dhcp.rst:297 4342dee74f7541e48046172093574955
+#: ../../dns_dhcp.rst:299 a42c442ad81c4bcd85642d28308c9817
 msgid ""
 "Replace `<SERVER_ADDR>` with the IP address of the upstream DHCP server."
 msgstr ""
 "Sostituire `<SERVER_ADDR>` con l'indirizzo IP del server DHCP upstream."
 
-#: ../../dns_dhcp.rst:300 b2289b8db6e441acbd6592a4e605dc35
+#: ../../dns_dhcp.rst:302 d7e405aaac1b48b7a638783db2e83be7
 msgid "1.Create a new DHCP relay entry ::"
 msgstr "1. Creare una nuova voce di relay DHCP ::"
 
-#: ../../dns_dhcp.rst:304 6bcbe2cc8ea9456caaf9d7dcd4f394d4
+#: ../../dns_dhcp.rst:306 12490af3cb2d4ac1a5c6882502010185
 msgid "2.Set the interface: ::"
 msgstr "2. Impostare l'interfaccia: ::"
 
-#: ../../dns_dhcp.rst:308 5fd0872921b44ca7bc99ea017a803562
+#: ../../dns_dhcp.rst:310 1c8fff1638244874884f1aafac89ab09
 msgid "3.Set the local address of the firewall: ::"
 msgstr "3. Impostare l'indirizzo locale del firewall: ::"
 
-#: ../../dns_dhcp.rst:312 b624c78a72bd494985b837f92a4fad13
+#: ../../dns_dhcp.rst:314 7def758bbe974524bdc7364576bae9c1
 msgid "4.Set the upstream DHCP server address: ::"
 msgstr "4. Impostare l'indirizzo del server DHCP upstream: ::"
 
-#: ../../dns_dhcp.rst:316 35fa3f3636ef43aa8e981993849f7aec
+#: ../../dns_dhcp.rst:318 3d720d63e07f445797a9dfd51e730424
 msgid "5.Commit the configuration: ::"
 msgstr "5. Confermare la configurazione: ::"
 
-#: ../../dns_dhcp.rst:320 b63b512aacf3471195f277b89089c6b9
+#: ../../dns_dhcp.rst:322 6c62867d94ba4c9fa06af0ecaf70efb5
 msgid "6.Reload the system configuration: ::"
 msgstr "6. Ricaricare la configurazione del sistema: ::"
 
-#: ../../dns_dhcp.rst:325 3095a42f96a44ee086606cbc91d1f947
+#: ../../dns_dhcp.rst:327 1cf4445eec1e4a09a69bf52637b76798
 msgid "Example"
 msgstr "Esempio"
+
+#: ../../dns_dhcp.rst:159 b611b4317d274bf3bb539ce0b07f264b
+msgid ""
+"For privacy-focused DNS configuration using encrypted connections, see "
+":ref:`dns_over_http-section` for DNS over HTTPS (DoH) setup."
+msgstr ""
+"Per una configurazione DNS orientata alla privacy utilizzando connessioni "
+"crittografate, consultare :ref:`dns_over_http-section` per la configurazione"
+" di DNS over HTTPS (DoH)."

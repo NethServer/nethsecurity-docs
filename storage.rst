@@ -39,8 +39,7 @@ The storage is then:
 
 * Formatted with the ``ext4`` filesystem
 * Mounted at ``/mnt/data``
-* Used by ``rsyslog`` to write logs to ``/mnt/data/log/messages``
-* Rotated weekly by ``logrotate``
+* Used by ``rsyslog`` to write logs to ``/mnt/data/log/messages``. For more details, see :ref:`storage-log-rotation-section`.
 * Synchronized daily (at night) for additional data like metrics
 
 To remove persistent storage and return to in-memory logging, click on the button :guilabel:`Remove storage`.
