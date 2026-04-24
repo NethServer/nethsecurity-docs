@@ -56,7 +56,7 @@ In this example, we will configure the JoinDNS4 DoH provider.
 2. Add the JoinDNS4 DoH provider: ::
 
      uci set https-dns-proxy.joindns4=https-dns-proxy
-     uci set https-dns-proxy.joindns4.upstream_url='https://noads.joindns4.eu/dns-query'
+     uci set https-dns-proxy.joindns4.resolver_url='https://noads.joindns4.eu/dns-query'
      uci set https-dns-proxy.joindns4.listen_addr='127.0.0.1'
      uci set https-dns-proxy.joindns4.listen_port='5053'
      uci commit https-dns-proxy  
