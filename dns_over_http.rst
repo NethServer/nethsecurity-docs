@@ -19,7 +19,7 @@ A list of DoH providers that support European locations and filtering are availa
 
 Some popular alternatives include:
 
-- `JoinDNS4 <https://joindns4.eu/>`_, european-based DNS service with protective resolution and ad blocking capabilities.
+- `DNS4EU <https://joindns4.eu/>`_, european-based DNS service with protective resolution and ad blocking capabilities
 - `Quad9 <https://dns.quad9.net/dns-query>`_, privacy-focused with malware blocking
 - `Mullvad <https://doh.mullvad.net/dns-query>`_, includes malware blocking, ad blocking and basic filtering (Porn, Gambling, etc.)
 - `Cloudflare <https://developers.cloudflare.com/1.1.1.1/setup/>`_, fast and widely used DoH provider with malware blocking (1.1.1.1 for families)
@@ -46,14 +46,14 @@ To use a custom DoH provider, you'll need to:
 Configuration steps
 -------------------
 
-In this example, we will configure the JoinDNS4 DoH provider.
+In this example, we will configure the DNS4EU (joindns4.eu) DoH provider.
 
-1. Remove default providers (if you want to use only JoinDNS4): ::
+1. Remove default providers (if you want to use only DNS4EU): ::
 
      uci del https-dns-proxy.@https-dns-proxy[1]
      uci del https-dns-proxy.@https-dns-proxy[0]
 
-2. Add the JoinDNS4 DoH provider: ::
+2. Add the DNS4EU DoH provider: ::
 
      uci set https-dns-proxy.joindns4=https-dns-proxy
      uci set https-dns-proxy.joindns4.upstream_url='https://noads.joindns4.eu/dns-query'
