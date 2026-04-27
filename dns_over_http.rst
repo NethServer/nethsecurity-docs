@@ -56,10 +56,14 @@ In this example, we will configure the DNS4EU (joindns4.eu) DoH provider.
 2. Add the DNS4EU DoH provider: ::
 
      uci set https-dns-proxy.joindns4=https-dns-proxy
-     uci set https-dns-proxy.joindns4.upstream_url='https://noads.joindns4.eu/dns-query'
+     uci set https-dns-proxy.joindns4.resolver_url='https://noads.joindns4.eu/dns-query'
+     uci set https-dns-proxy.joindns4.bootstrap_dns='86.54.11.13,86.54.11.213,2a13:1001::86:54:11:13,2a13:1001::86:54:11:213'
      uci set https-dns-proxy.joindns4.listen_addr='127.0.0.1'
      uci set https-dns-proxy.joindns4.listen_port='5053'
      uci commit https-dns-proxy  
+
+
+The ``bootstrap_dns`` parameter is optional, if not provided, the system will use Google and Cloudflare DNS for bootstrap.
 
 3. Apply the configuration, https-dns-proxy will automatically use the local DoH proxy as upstream DNS: ::
 
