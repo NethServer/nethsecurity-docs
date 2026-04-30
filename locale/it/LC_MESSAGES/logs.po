@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../logs.rst:5 885b28de83204cf4ac64b9d779f76e9e
+#: ../../logs.rst:5 b75c2a621fe641a0ab3365b6724abed7
 msgid "Logs"
 msgstr "Log"
 
-#: ../../logs.rst:7 e336ad4346954cc7875299318b8c89ea
+#: ../../logs.rst:7 724e9f1712ff45faba642b75ce274643
 msgid ""
 "Logs are initially written to a temporary in-memory directory to prevent "
 "potential errors on the root file system in case of a failure."
@@ -14,7 +14,7 @@ msgstr ""
 "I log vengono inizialmente scritti in una directory temporanea in memoria "
 "per prevenire potenziali errori sul file system root in caso di un guasto."
 
-#: ../../logs.rst:9 dbc795d46b384ff48fd0a51f802822f7
+#: ../../logs.rst:9 399ac153a57b4073ae29d1c0a6a626ba
 msgid ""
 "**Local Storage**: Logs can be written directly to storage. This can be "
 "configured from the UI, see the :ref:`storage-section`."
@@ -23,7 +23,7 @@ msgstr ""
 "nell'archiviazione. Questa opzione può essere configurata dall'interfaccia "
 "utente, vedere la sezione :ref:`storage-section`."
 
-#: ../../logs.rst:11 ac7077cc737343da9924f49d61eefffc
+#: ../../logs.rst:11 e85154381643461fa2649e2bb7137760
 msgid ""
 "**Remote Controller**: Logs can be automatically forwarded to a :ref:`remote"
 " controller <controller_logs-section>`."
@@ -31,23 +31,18 @@ msgstr ""
 "**Controller remoto**: I log possono essere inoltrati automaticamente a un "
 ":ref:`controller remoto <controller_logs-section>`."
 
-#: ../../logs.rst:13 3ba452f73211467b9843a6dc93b2836b
+#: ../../logs.rst:13 46f796f18ba4467fbf4e5abba347a0af
 msgid ""
 "**Custom Syslog Forwarder**: Logs can be sent to a remote syslog server."
 msgstr ""
 "**Syslog Forwarder personalizzato**: I log possono essere inviati a un "
 "server syslog remoto."
 
-#: ../../logs.rst:15 f8d0c4cb0bcb4a04bc32e765d7f0978b
-msgid "The next paragraph will explain how to configure this latter option."
-msgstr ""
-"Il paragrafo seguente spiegherà come configurare quest'ultima opzione."
-
-#: ../../logs.rst:18 19e54241d29a4f72afbeff22c2e72730
+#: ../../logs.rst:20 27f469a3379a40079c58b8d1d0f32dfe
 msgid "Forwarding to a remote server"
 msgstr "Inoltro a un server remoto"
 
-#: ../../logs.rst:20 d979155a10d74e35a9f5b9e232698c4d
+#: ../../logs.rst:22 0be5ad8cdbb8425889b876b83495287f
 msgid ""
 "It is sufficient to configure the UCI database with the desired options, "
 "then commit the changes, and finally restart the service. Temporary logs "
@@ -59,14 +54,14 @@ msgstr ""
 "continueranno a essere visibili in ``/var/log/messages`` e saranno anche "
 "inviati al server remoto."
 
-#: ../../logs.rst:23 6ef5cb246b8545789696aadb6364df41
+#: ../../logs.rst:25 305c427cfa674881822e5aacbea4d074
 msgid ""
 "Most syslog servers are configured to listen on UDP port 514 by default."
 msgstr ""
 "La maggior parte dei server syslog sono configurati per ascoltare sulla "
 "porta UDP 514 per impostazione predefinita."
 
-#: ../../logs.rst:25 8f4ad779b1d643208c4db461563f2904
+#: ../../logs.rst:27 5bcb97af184140afaf26ac23b9e49673
 msgid ""
 "Example configuration for sending logs to the syslog server with IP "
 "192.168.1.88 on UDP port 514. The configuration is named ``clm`` (custom log"
@@ -76,17 +71,17 @@ msgstr ""
 "192.168.1.88 sulla porta UDP 514. La configurazione è denominata ``clm`` "
 "(custom log manager):"
 
-#: ../../logs.rst:36 36db5dfdbaa549df89591f4da8fa9273
+#: ../../logs.rst:38 2e0157c48fb44e9e99710edb892eaaa0
 msgid "Once configured, simply commit the changes with the command: ::"
 msgstr ""
 "Una volta configurato, è sufficiente confermare le modifiche con il comando:"
 " ::"
 
-#: ../../logs.rst:40 11d0e03c82f14b428ffed5efa8a0140d
+#: ../../logs.rst:42 722001ce0c3f4f218930f62a4a877ae4
 msgid "And finally, restart the service: ::"
 msgstr "E infine, riavviare il servizio: ::"
 
-#: ../../logs.rst:44 64bfca450ce24ae087373a9c0460a840
+#: ../../logs.rst:46 1615238fef8e485e9191c54fa17b4c78
 msgid ""
 "By default the forwarder uses the TraditionalFileFormat (RFC 3164) for the "
 "logs. It is possible also to configure RFC 5424 using the same syntax: ::"
@@ -95,7 +90,7 @@ msgstr ""
 " (RFC 3164) per i log. È anche possibile configurare RFC 5424 utilizzando la"
 " stessa sintassi: ::"
 
-#: ../../logs.rst:49 b0936aa4eb524c0e8c713b5be4cd47e4
+#: ../../logs.rst:51 e3f4067562d8468abc67f24857ec71d8
 msgid ""
 "It is possible to configure multiple forwarders by repeating the operation "
 "using a different configuration name like ``clm2``."
@@ -103,13 +98,13 @@ msgstr ""
 "È possibile configurare più forwarder ripetendo l'operazione utilizzando un "
 "nome di configurazione diverso come ``clm2``."
 
-#: ../../logs.rst:68 49ff9711f9dc4e7bbb44bd692fb4e1b1
+#: ../../logs.rst:135 efc6ae03e4244d91a87704b9016102bf
 msgid "**Get current size**: Retrieve the current log rotation size in bytes."
 msgstr ""
 "**Ottieni dimensione attuale**: Recupera la dimensione attuale della "
 "rotazione del log in byte."
 
-#: ../../logs.rst:69 e9059bb11c66478a8326f844d61f8e58
+#: ../../logs.rst:136 4b204a8d4da941ebb5751d46cb753303
 msgid ""
 "**Set new size**: Change the log rotation size to a specified value, "
 "ensuring that the new size is a positive integer and not less than 52428800 "
@@ -119,7 +114,7 @@ msgstr ""
 "a un valore specificato, assicurandosi che la nuova dimensione sia un intero"
 " positivo e non inferiore a 52428800 byte (50 MB)."
 
-#: ../../logs.rst:70 cd464b0399c6499499fdaebc791c818c
+#: ../../logs.rst:137 a458a01416634699bfaa892f02fbbffb
 msgid ""
 "**Configuration safety**: If the specified size is below the minimum "
 "threshold, the script warns the user and does not make any changes to the "
@@ -129,20 +124,20 @@ msgstr ""
 " alla soglia minima, lo script avvisa l'utente e non apporta alcuna modifica"
 " alla configurazione."
 
-#: ../../logs.rst:73 65bc4d6051284de4ad6dbdbff220dbf1
+#: ../../logs.rst:140 e4ede7e72b85473a834450061d1d0076
 msgid "Usage"
 msgstr "Utilizzo"
 
-#: ../../logs.rst:75 92400a1696544d29abb3af81870e2bf8
+#: ../../logs.rst:142 9d5ffd67637c4029966f2ed0fa74eb50
 msgid "To use the script, run it with the following syntax:"
 msgstr "Per utilizzare lo script, eseguirlo con la seguente sintassi:"
 
-#: ../../logs.rst:81 d3460efd36a148b2a9415ba44ab2722c
+#: ../../logs.rst:148 a3f627dee602430ba07d81b5b2099e2e
 msgid "**get**: Outputs the current log rotation size in bytes."
 msgstr ""
 "**get**: Restituisce la dimensione attuale della rotazione dei log in byte."
 
-#: ../../logs.rst:82 30141f9989cd4b2a8ed52d7eb197c605
+#: ../../logs.rst:149 a1a3110de611461caf56c257d808f0f0
 msgid ""
 "**set <size>**: Sets the log rotation size to the specified value (in "
 "bytes)."
@@ -150,27 +145,27 @@ msgstr ""
 "**set <size>**: Imposta la dimensione di rotazione del log al valore "
 "specificato (in byte)."
 
-#: ../../logs.rst:85 eebca182d17d479fbb4e911aed46ee63
+#: ../../logs.rst:152 5b9f81e82bf44f39b4d12403bb272e80
 msgid "Example"
 msgstr "Esempio"
 
-#: ../../logs.rst:87 eb93d7e52cba44cfb0902522a4db45f8
+#: ../../logs.rst:154 f82618f5c1ca431cb475677ad784cb7f
 msgid "To get the current log rotation size:"
 msgstr "Per ottenere la dimensione attuale della rotazione dei log:"
 
-#: ../../logs.rst:93 c0c1cf33030249179dd7aee29b79fbcb
+#: ../../logs.rst:160 b980632a722b47b2a36bb38aa14e9cda
 msgid "To set a new log rotation size to 104857600 bytes (100 MB):"
 msgstr ""
 "Per impostare una nuova dimensione di rotazione dei log a 104857600 byte "
 "(100 MB):"
 
-#: ../../logs.rst:99 b22668c77ba84632af54baf20ce3ebc8
+#: ../../logs.rst:166 8b19d0432c954d97917824f6ca4903ce
 msgid "The service rsyslog is restarted automatically after the size is set."
 msgstr ""
 "Il servizio rsyslog viene riavviato automaticamente dopo che la dimensione è"
 " stata impostata."
 
-#: ../../logs.rst:101 5d522f808032429786a22f20a74ce4b6
+#: ../../logs.rst:168 e98a90c0e7c4420f937cf7eddc185b1b
 msgid ""
 "All changes to the log rotation size are directly written in the Rsyslog "
 "configuration file ``/etc/rsyslog.conf``."
@@ -178,7 +173,7 @@ msgstr ""
 "Tutte le modifiche alla dimensione della rotazione dei log vengono scritte "
 "direttamente nel file di configurazione di Rsyslog ``/etc/rsyslog.conf``."
 
-#: ../../logs.rst:66 1a38a4cacf1f4c78b6fce4e879827540
+#: ../../logs.rst:133 00e6033feaa44471b95efbc732a176ea
 msgid ""
 "The ``ns-log-size`` script manages the log rotation size for the Rsyslog "
 "service. It allows to **get** and **set** the log rotation size defined in "
@@ -189,11 +184,11 @@ msgstr ""
 " rotazione dei log, definita in byte, per il file di log situato in "
 "``/var/log/messages``."
 
-#: ../../logs.rst:54 4117cae6dfe944d3ab01e2d64fa34201
+#: ../../logs.rst:121 dbdf504624e74dffa8196fcf2512b93a
 msgid "Log rotation"
 msgstr "Rotazione dei log"
 
-#: ../../logs.rst:56 5b276da7458f44219033b545a37f34b1
+#: ../../logs.rst:123 443011e757b94b1aac23f1c290a790fa
 msgid ""
 "Logs are rotated to manage disk space and ensure that log files do not grow "
 "indefinitely."
@@ -201,11 +196,11 @@ msgstr ""
 "I log vengono ruotati per gestire lo spazio su disco e garantire che i file "
 "di log non crescano indefinitamente."
 
-#: ../../logs.rst:59 5cfaebd5bab143ff8adba8bc645e7a1b
+#: ../../logs.rst:126 ee55bae46e6444a9b9c48b0f8adb0163
 msgid "In-memory log rotation"
 msgstr "Rotazione dei log in memoria"
 
-#: ../../logs.rst:61 48eba02b6ee8475eaf528ad14e11e624
+#: ../../logs.rst:128 a4b41bcab8124df3b19daa7b395268d9
 msgid ""
 "The ``/var/log/messages`` log file is stored in RAM and it's rotated based "
 "on size. Once it reaches a predefined size limit, the log is rotated and "
@@ -224,11 +219,11 @@ msgstr ""
 "predefinita, la soglia di rotazione del log è impostata al 10% del "
 "filesystem tmpfs montato su ``/tmp``."
 
-#: ../../logs.rst:106 79fb870493894102a040b7bf7fac89e1
+#: ../../logs.rst:173 a2102f803e764c13b32243da32cdff1d
 msgid "Storage log rotation"
 msgstr "Rotazione dei log di storage"
 
-#: ../../logs.rst:108 1d3df08fdebf487788cf2275e328ccd9
+#: ../../logs.rst:175 680af8931c3542ea98c599dd8f054988
 msgid ""
 "When using persistent storage, log rotation is managed by the ``logrotate`` "
 "utility, which is configured to rotate logs weekly and keep a maximum of 52 "
@@ -243,7 +238,7 @@ msgstr ""
 "nella stessa directory con una convenzione di denominazione che include la "
 "data della rotazione (ad esempio, ``/mnt/data/log/messages-20260315.gz``)."
 
-#: ../../logs.rst:113 536c1cfac9df4cd3976ddfffd3d05a64
+#: ../../logs.rst:180 c122efe7cc0c40bdae20d79d4e140354
 msgid ""
 "The configuration file for logrotate is located at "
 "``/etc/logrotate.d/data.conf`` and can be modified to change the rotation "
@@ -257,3 +252,91 @@ msgstr ""
 "file di configurazione viene aggiunto automaticamente al backup e mantenuto "
 "durante gli aggiornamenti, quindi tutte le impostazioni personalizzate "
 "vengono preservate."
+
+#: ../../logs.rst:15 5bc1f66a5fd14d9cb281c0272541477d
+msgid ""
+"**Cloud Log Manager**: Logs can be forwarded to the Nethesis Cloud Log "
+"Manager (CLM) service."
+msgstr ""
+"**Cloud Log Manager**: I log possono essere inoltrati al servizio Nethesis "
+"Cloud Log Manager (CLM)."
+
+#: ../../logs.rst:17 fa1578d6ccc440c19d9a2c7e981cdfec
+msgid ""
+"The next paragraphs will explain how to configure these latter options."
+msgstr ""
+"I prossimi paragrafi spiegheranno come configurare queste ultime opzioni."
+
+#: ../../logs.rst:54 c32682b7e0574d6ba772cdfcf4947b36
+msgid "Forwarding to Nethesis Cloud Log Manager"
+msgstr "Inoltro a Nethesis Cloud Log Manager"
+
+#: ../../logs.rst:56 49ac9175b32c4ec28dddc7e3e54037f8
+msgid "Service entitlement required"
+msgstr "Autorizzazione al servizio richiesta"
+
+#: ../../logs.rst:58 f0e95fdf252141a9a2048ff116517ed7
+msgid ""
+"You need to purchase a subscription for the CLM service from Nethesis and "
+"obtain the tenant identifier. The service is currenlty reserved to "
+"Enterprise customers. For more information, please contact Nethesis sales."
+msgstr ""
+"È necessario acquistare un abbonamento per il servizio CLM da Nethesis e "
+"ottenere l'identificativo del tenant. Il servizio è attualmente riservato ai"
+" clienti Enterprise. Per ulteriori informazioni, contattare il reparto "
+"vendite di Nethesis."
+
+#: ../../logs.rst:61 07d2511ceffe40a4bd0803405c449f13
+msgid ""
+"The ``ns-clm`` package forwards syslog messages to the Nethesis Cloud Log "
+"Manager (CLM) service. It provides the ``ns-clm-forwarder`` daemon, which "
+"tails ``/var/log/messages`` and tracks its read position in ``/var/run/ns-"
+"clm/last_offset``. New syslog lines are parsed, batched, and sent as JSON "
+"via HTTP POST to the CLM endpoint. The daemon polls for new lines every 10 "
+"seconds, detects log rotation automatically, and persists the offset on "
+"shutdown so it can resume after a restart."
+msgstr ""
+"Il pacchetto ``ns-clm`` inoltra i messaggi syslog al servizio Nethesis Cloud"
+" Log Manager (CLM). Fornisce il demone ``ns-clm-forwarder``, che monitora "
+"``/var/log/messages`` e tiene traccia della posizione di lettura in "
+"``/var/run/ns-clm/last_offset``. Le nuove righe syslog vengono analizzate, "
+"raggruppate e inviate come JSON tramite HTTP POST all'endpoint CLM. Il "
+"demone controlla la presenza di nuove righe ogni 10 secondi, rileva "
+"automaticamente la rotazione dei log e salva la posizione raggiunta allo "
+"spegnimento, in modo da poter riprendere dopo un riavvio."
+
+#: ../../logs.rst:66 f09dc0f0e667421fba97ea883fb9312d
+msgid ""
+"The package is not included by default on NethSecurity 8.7.2 or earlier, but"
+" it is available in the package repository and can be manually installed. "
+"Install it with: ::"
+msgstr ""
+"Il pacchetto non è incluso di default su NethSecurity 8.7.2 o versioni "
+"precedenti, ma è disponibile nel repository dei pacchetti e può essere "
+"installato manualmente. Installarlo con: ::"
+
+#: ../../logs.rst:73 20f67d9f2a8244b2a9587321e0c1f992
+msgid "The UCI configuration is stored in ``/etc/config/ns-clm``:"
+msgstr "La configurazione UCI è memorizzata in ``/etc/config/ns-clm``:"
+
+#: ../../logs.rst:100 df40acf80a9a4eeeb6eb02be2c94ab13
+msgid "To enable the forwarder and set the tenant identifier, run: ::"
+msgstr ""
+"Per abilitare il forwarder e impostare l'identificatore del tenant, "
+"eseguire: ::"
+
+#: ../../logs.rst:108 de2da81d138044f5b603a3996037d7f5
+msgid ""
+"You can find the tenant identifier in the CLM portal, under ``Users and "
+"Companies`` -> ``Companies``."
+msgstr ""
+"È possibile trovare l'identificatore del tenant nel portale CLM, sotto "
+"``Utenti e Aziende`` -> ``Aziende``."
+
+#: ../../logs.rst:110 8828661bdf06492fa4bcd5db82240b62
+msgid "To also enable the service at boot: ::"
+msgstr "Per abilitare anche il servizio all'avvio: ::"
+
+#: ../../logs.rst:114 e4b8a6c964ab44b6b75ffdbe7ab81c68
+msgid "To stop and disable the forwarder: ::"
+msgstr "Per arrestare e disabilitare il forwarder: ::"

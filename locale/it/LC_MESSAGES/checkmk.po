@@ -1,0 +1,129 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../checkmk.rst:4 ccadcd80901646c09132d788259a6442
+msgid "Checkmk"
+msgstr "Checkmk"
+
+#: ../../checkmk.rst:6 cc6c13b0e5594dcd95d1616c98d1b5de
+msgid ""
+"Checkmk is a monitoring platform used to supervise servers, network devices,"
+" and appliances. The firewall can be monitored with `Checkmk "
+"<https://checkmk.com/>`_ by installing the NethSecurity extra packages "
+"described in this chapter."
+msgstr ""
+"Checkmk è una piattaforma di monitoraggio utilizzata per supervisionare "
+"server, dispositivi di rete e appliance. Il firewall può essere monitorato "
+"con `Checkmk <https://checkmk.com/>`_ installando i pacchetti extra di "
+"NethSecurity descritti in questo capitolo."
+
+#: ../../checkmk.rst:10 ccca05b7e4c84dde893f2be0809c05fb
+msgid "NethSecurity packages"
+msgstr "Pacchetti NethSecurity"
+
+#: ../../checkmk.rst:12 f26cb38ed9a04f8789d34f7aad0aef65
+msgid "The Checkmk integration for NethSecurity is split into two packages:"
+msgstr ""
+"L'integrazione di Checkmk per NethSecurity è suddivisa in due pacchetti:"
+
+#: ../../checkmk.rst:14 13334ca82f2b4f7d80a08ba45744737e
+msgid "``checkmk-agent`` is the standard Checkmk agent package."
+msgstr "``checkmk-agent`` è il pacchetto agente standard di Checkmk."
+
+#: ../../checkmk.rst:15 bd2531acc13a411a823f77ddd0413eed
+msgid ""
+"``ns-checkmk-utils`` adds NethSecurity-specific monitoring scripts and is "
+"optional."
+msgstr ""
+"``ns-checkmk-utils`` aggiunge script di monitoraggio specifici per "
+"NethSecurity ed è opzionale."
+
+#: ../../checkmk.rst:17 bc7827a36f5c481685d5f69c07d4592f
+msgid ""
+"Installing ``ns-checkmk-utils`` also pulls in ``checkmk-agent`` as a "
+"dependency. If you only need the upstream agent, install ``checkmk-agent`` "
+"alone."
+msgstr ""
+"L'installazione di ``ns-checkmk-utils`` include anche ``checkmk-agent`` come"
+" dipendenza. Se è necessario solo l'agent upstream, installare "
+"esclusivamente ``checkmk-agent``."
+
+#: ../../checkmk.rst:21 9ce8d4327e2f4f83b5d888181bb5a612
+msgid "Install the packages"
+msgstr "Installa i pacchetti"
+
+#: ../../checkmk.rst:23 ba07f112eecd4f56872d2d69a2f30b07
+msgid ""
+"Install the agent and the optional NethSecurity checks from the command "
+"line::"
+msgstr ""
+"Installare l'agente e i controlli opzionali di NethSecurity dalla riga di "
+"comando::"
+
+#: ../../checkmk.rst:28 08a8a69725bc4fe58c2dcdebcdeada71
+msgid ""
+"After installation, the agent service is managed by "
+"``/etc/init.d/check_mk_agent`` and it's started and enabled on boot by "
+"default."
+msgstr ""
+"Dopo l'installazione, il servizio dell'agente è gestito da "
+"``/etc/init.d/check_mk_agent`` ed è avviato e abilitato all'avvio per "
+"impostazione predefinita."
+
+#: ../../checkmk.rst:31 6720d782cb88456faf0126d8142de3cd
+msgid "Use the following command to check the status::"
+msgstr "Utilizzare il seguente comando per verificare lo stato::"
+
+#: ../../checkmk.rst:35 f4ec0a35af384fa59bbcbd3821bda867
+msgid "Verify the output locally with::"
+msgstr "Verificare l'output localmente con::"
+
+#: ../../checkmk.rst:40 6010e7b8aa814b2d967fdc39b84ba560
+msgid "Allow remote monitoring"
+msgstr "Consenti il monitoraggio remoto"
+
+#: ../../checkmk.rst:42 9f850dccda8043b8814e598b11837ff2
+msgid ""
+"The agent listens on TCP port ``6556``. By default, traffic from the LAN is "
+"allowed, but if you have a more restrictive firewall configuration, you may "
+"need to allow access to this port from the Checkmk monitoring server."
+msgstr ""
+"L'agente ascolta sulla porta TCP ``6556``. Per impostazione predefinita, il "
+"traffico proveniente dalla LAN è consentito, ma se si dispone di una "
+"configurazione firewall più restrittiva, potrebbe essere necessario "
+"consentire l'accesso a questa porta dal server di monitoraggio Checkmk."
+
+#: ../../checkmk.rst:46 33aa052797a74e0181579b47411246fd
+msgid ""
+"You can add a firewall rule to allow access directly from web user "
+"interface, see :ref:`firewall_rules-section`, or use the command line "
+"interface to add a rule."
+msgstr ""
+"È possibile aggiungere una regola del firewall per consentire l'accesso "
+"direttamente dall'interfaccia utente web, vedere :ref:`firewall_rules-"
+"section`, oppure utilizzare l'interfaccia a riga di comando per aggiungere "
+"una regola."
+
+#: ../../checkmk.rst:48 b4a19648e404497398a55ae3aab1c3c7
+msgid "For example, to allow access from a monitoring host in the LAN::"
+msgstr ""
+"Ad esempio, per consentire l'accesso da un host di monitoraggio nella LAN::"
+
+#: ../../checkmk.rst:59 09673e85fed54381a1a61c6bd379a83b
+msgid ""
+"Bear in mind that if the monitoring server is located in a different zone, "
+"you will need to adjust the source zone and address accordingly."
+msgstr ""
+"Tenere presente che, se il server di monitoraggio si trova in una zona "
+"diversa, sarà necessario regolare di conseguenza la zona di origine e "
+"l'indirizzo."
+
+#: ../../checkmk.rst:61 5c3a995d6e90462a9f54116659458d12
+msgid ""
+"When the rule is in place, the monitoring server can connect to the firewall"
+" and read the agent output, including the optional NethSecurity checks."
+msgstr ""
+"Quando la regola è attiva, il server di monitoraggio può connettersi al "
+"firewall e leggere l’output dell’agente, inclusi i controlli opzionali di "
+"NethSecurity."
