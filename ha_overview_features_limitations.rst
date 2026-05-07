@@ -114,3 +114,9 @@ General limitations
   Also, when accessing the SSH console, the prompt will change to indicate the node's role.
   See the :ref:`troubleshooting_ha-section` section for more details.
   
+Synchronization and log retention
+------------------------------------
+
+HA synchronizes configuration, active sessions, and runtime state between cluster nodes to ensure service continuity during failover.
+Logs and reporting data, such as system logs or OpenVPN Road Warrior history databases, are **not** synchronized between HA nodes. 
+For centralized retention and unified reporting, please use the controller.
