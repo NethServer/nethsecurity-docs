@@ -197,6 +197,29 @@ NethSecurity will send queries for google.com and gmail.google.com to 1.2.3.4, b
 
 This is true also for wildcards: if both specific and wildcard domains are defined for the same pattern, the specific one takes precedence (e.g., having ``/google.com/`` and ``/*google.com/`` : the first will handle google.com and www.google.com, the wildcard will handle supergoogle.com.
 
+.. _dns_forward_max-section:
+
+Maximum concurrent DNS queries
+------------------------------
+
+By default, dnsmasq has a limit of 150 concurrent DNS queries to prevent DoS attacks.
+If this limit is reached, dnsmasq will log an error and stop processing new DNS queries until some of the existing ones are completed.
+
+In this case, dnsmasq will log an error similar to:
+
+.. code-block:: text
+
+   May 12 09:27:23 fw1 dnsmasq[1]: Maximum number of concurrent DNS queries reached (max: 150)
+
+To increase the limit from the CLI, run the following commands: ::
+
+   uci set dhcp.@dnsmasq[0].dnsforwardmax=5000
+   uci commit dhcp
+   reload_config
+
+This option is not exposed in the UI, but the change will persist across updates and will not be overridden by the UI.
+
+
 DNS Rebind Protection
 ---------------------
 
@@ -335,5 +358,9 @@ Example
  reload_config
 
 
+External references
+===================
 
+- `OpenWrt DNS and DHCP documentation <https://openwrt.org/docs/guide-user/base-system/dhcp>`_
+- `Dnsmasq manual <https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html>`_
 
