@@ -84,9 +84,11 @@ The UCI configuration is stored in ``/etc/config/ns-clm``:
      - Enable (``1``) or disable (``0``) the forwarder
    * - ``uuid``
      - (empty)
-     - Unique identifier for the device, generated with ``uuidgen`` and prefixed with "L" to ensure it starts with a letter
-     - This is required for the CLM service to identify the source of the logs
-     - Example: ``L3d50ca11-4415-4e46-9ee9-b1da0f62c337``
+     - Unique identifier for the device, generated with ``uuidgen`` and prefixed with "L" to ensure it starts with a letter.
+
+       This is required for the CLM service to identify the source of the logs.
+
+       Example: ``L3d50ca11-4415-4e46-9ee9-b1da0f62c337``
    * - ``address``
      - ``https://nar.nethesis.it``
      - CLM server address
