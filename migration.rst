@@ -153,6 +153,52 @@ The migration process is logged inside a special log file located at ``/root/mig
 This file contains all the actions performed during the migration process.
 Please note that the log file is deleted after an image upgrade.
 
+.. _bond_vlan_naming-section:
+
+Fixing bond and VLAN naming for High Availability
+-------------------------------------------------
+
+If you migrated from NethServer 7, you might notice that your bonded network devices have long names like ``bond-bond0`` instead of
+the shorter ``bond0`` format used in fresh NethSecurity 8 installations.
+While this doesn't affect basic functionality, these longer names can prevent you from setting up :ref:`High Availability (HA) <ha_overview_features_limitations-section>`
+and may look inconsistent in the user interface.
+
+If you plan to use High Availability or simply prefer cleaner device names, you can rename them using a simple script.
+
+Before you start, make a backup copy of your network configuration:
+
+.. code-block:: bash
+
+    cp /etc/config/network /root/network.ori
+
+Then, run this command to rename the devices:
+
+.. code-block:: bash
+
+    sed -i \
+      -e "/option[[:space:]]\+ifname/s/'bond-bond\([0-9]\+\)'/'bond-b\1'/" \
+      -e "/option[[:space:]]\+device/s/'bond-bond\([0-9]\+\)'/'bond-b\1'/" \
+      -e "/option[[:space:]]\+name/s/'bond-bond\([0-9]\+\)\(\.[0-9]\+\)'/'b\1\2'/" \
+      -e "/option[[:space:]]\+name/s/'bond-bond\([0-9]\+\)'/'bond-b\1'/" \
+      -e "s/^\([[:space:]]*option[[:space:]]\+name[[:space:]]\+\)'b\([0-9]\+\)'\([[:space:]]*\)$/\1'bond-b\2'\3/" \
+      /etc/config/network
+
+After running the script, restart the network to apply the changes:
+
+.. code-block:: bash
+
+    /etc/init.d/network restart
+
+Alternatively, you can reboot the entire system to ensure all changes take effect properly.
+
+Once you verify that everything is working correctly, you can safely delete the backup:
+
+.. code-block:: bash
+
+    rm -f /root/network.ori
+
+After the changes, your devices will use the shorter naming convention (e.g., ``b0``, ``b0.20``), which is compatible with High Availability and matches fresh installations.
+
 Migration coverage matrix
 =========================
 
@@ -170,7 +216,7 @@ The following table shows what is migrated from NethServer 7 and what still need
      - The same password can be used for SSH and the web interface.
    * - Network interfaces and VLANs
      - Migrated with limits
-     - Network configuration is migrated. Bridges over bonds are not supported. On new hardware, VLANs are recreated automatically on the physical interface chosen during remapping.
+     - Network configuration is migrated. Bridges over bonds are not supported. On new hardware, VLANs are recreated automatically on the physical interface chosen during remapping. If you migrated from NethServer 7 and need to normalize bond and VLAN names for HA, see :ref:`bond_vlan_naming-section`.
    * - Network interface labels
      - Migrated
      - Source labels are kept as interface names, except on WAN interfaces which keep their original names.

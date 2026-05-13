@@ -102,6 +102,7 @@ Interfaces Limitations
 - The HA interface must be a physical interface
 - Bonds and bridges are supported only for additional LAN interfaces and WANs, not for the HA interface
 - The Hotspot is supported only on physical interfaces
+- If you migrated from NethServer 7, bond devices with long names (like ``bond-bond0``) are not compatible with HA. See the :ref:`bond naming fix section <bond_vlan_naming-section>` for instructions on how to rename them.
 
 
 General limitations
