@@ -110,12 +110,18 @@ This is the interface used for VRRP communication.
 It has to be configured on the primary and the secondary node, then it must be added to the HA configuration during initialization.
 This interface requires three distinct IP addresses: one on the primary node, one on the secondary node and a VIP (Virtual IP) that moves between units when their roles change (Master/Backup). `HA interface`_ 
 
+.. note::
+   This interface can use any name, however, the recommended best practice is to name the HA interface ``lan``.
+   In an HA environment, only the HA interface can be named ``lan``, all other interfaces must use a different name.
+
 2. **Additional LAN interfaces**:
 
 Any interface that is not a WAN, such as another LAN, a guest network, or a DMZ.
 These are also managed using the three-address logic (primary IP, secondary IP, and VIP), they have to be configured on the primary and the secondary node, then they must be added to the HA configuration after initialization.
 A fault on any of these interfaces triggers a failover between units.
-They are configured by adding them as LAN interfaces. `Additional LAN interfaces`_
+They are configured by adding them as LAN interfaces. `Additional LAN interfaces`_.
+
+Please remember that all additional interfaces must use a name different from ``lan``.
 
 3. **WAN interfaces**:
 
