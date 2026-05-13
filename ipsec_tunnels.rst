@@ -53,6 +53,11 @@ A single IPsec tunnel can handle multiple local and remote networks.
 In this case, NethSecurity always creates multiple child SAs to ensure broad compatibility with remote devices. 
 The behavior remains the same for IKEv1 or IKEv2.
 
+By clicking on the magnifier icon in the IPsec tunnels list, you can see the details of the tunnel, including the child SAs status and the networks associated with each SA.
+After adding ore removing a network, if the child tunnels do not update automatically, you may need to
+restart the service if the child tunnels do not update automatically.
+To restart the service, click on the ``Restart`` button on the top right corner of the IPsec tunnels page.
+
 
 IPsec tunnel in a MultiWAN scenario
 -----------------------------------
