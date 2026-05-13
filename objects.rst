@@ -192,6 +192,8 @@ Add an Host Set
    - Once you're satisfied with your host set configuration, click :guilabel:`Add host set` to create it
    - If you need to start over or cancel the process, click :guilabel:`Cancel`
 
+.. _domain_sets-section:
+
 Domain Sets
 ===========
 
@@ -244,6 +246,15 @@ When to use domain sets:
 - for implementing content filtering policies
 - when managing access to cloud services or web applications
 - for creating security policies based on domain reputation
+
+
+DNS cache timing
+----------------
+
+Domain set entries are refreshed when dnsmasq performs a new lookup for the domain.
+If the answer is served from the local cache, the IP is not added back to the set.
+
+See :ref:`dns_dhcp_domain_set_refresh-section` for how cache timing affects domain set refreshes.
 
 
 Manage Domain Sets

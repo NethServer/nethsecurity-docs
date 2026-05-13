@@ -220,6 +220,33 @@ To increase the limit from the CLI, run the following commands: ::
 This option is not exposed in the UI, but the change will persist across updates and will not be overridden by the UI.
 
 
+.. _dns_dhcp_domain_set_refresh-section:
+
+Domain set refresh timing
+-------------------------
+
+:ref:`Domain set <domain_sets-section>` entries are refreshed when dnsmasq performs a new lookup for the domain.
+When responses are served from the local cache instead of performing a new lookup, the IP addresses are not re-added to the set.
+This can cause intermittent gaps if the ipset expires before the DNS TTL expires, or if the cache prevents dnsmasq from performing fresh lookups.
+Note that Adblock may alter dnsmasq behavior and affect domain set refreshing.
+
+A cron job runs every 10 minutes to refresh all domain sets, but it also depends on dnsmasq performing actual lookups rather than serving cached results.
+
+To resolve domain set refresh issues, adjust the DNS cache TTL settings:
+
+.. code-block:: text
+
+   uci set dhcp.@dnsmasq[0].max_cache_ttl=300
+   uci set dhcp.@dnsmasq[0].max_ttl=300
+   uci commit dhcp
+   reload_config
+
+These settings ensure that cached entries expire promptly, allowing dnsmasq to perform fresh lookups and properly update domain sets.
+Please note that setting will override the default TTL provided by upstream DNS servers.
+Such a low TTL may increase the number of queries sent to upstream DNS servers, which can lead to increased network traffic and potential
+performance issues if the upstream servers have rate limits or if there are many clients making frequent DNS requests.
+Use this configuration with caution and monitor the system's performance after applying it.
+
 DNS Rebind Protection
 ---------------------
 
@@ -363,4 +390,3 @@ External references
 
 - `OpenWrt DNS and DHCP documentation <https://openwrt.org/docs/guide-user/base-system/dhcp>`_
 - `Dnsmasq manual <https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html>`_
-
