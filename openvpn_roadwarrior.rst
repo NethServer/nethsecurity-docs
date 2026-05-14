@@ -251,7 +251,7 @@ The MTU values may need to be adjusted to fit your specific network environment.
 Connection history
 ------------------
 
-Every time a client connects or disconnects from the server, the event is saved inside a SQLite database stored in RAM.
+Every time a client connects or disconnects from the server, the event is saved inside a SQLite database.
 Such event history can be viewed by clicking on tab ``Connection History`` available on the top of the page.
 
 By default the page will display all connections from current day, but it is possible to filter the results by date and time and account name.
@@ -259,5 +259,14 @@ By default the page will display all connections from current day, but it is pos
 To download all history in CSV format, click on the button :guilabel:`Download server history`.
 The header of the CSV file explains the meaning of each column, including the units of measure.
 
-Once the server is rebooted, the local history is lost.
+History is read from an SQLite database that can be stored in:
+
+- **RAM**: stored in RAM (not persistent); it will be lost when the firewall reboots.
+- **Storage**: stored on persistent storage; it will survive a reboot.
+
+By default, if persistent storage is available and configured, connection events are stored in the storage database, otherwise they are stored in the RAM database.
+
+If a RoadWarrior server is already configured and a new storage device is connected, the history is automatically moved from RAM to storage, making it persistent and able to survive reboots. 
+Conversely, if the storage is removed, new connection events will be stored in the RAM database and will be visible in the Connections History section. If the storage is then reconnected, the histories from RAM and storage are merged without data loss.
+
 If the server is connected to a :ref:`controller-section`, the history is sent to the controller and can be viewed inside the :ref:`historical_monitoring-section`.
