@@ -73,15 +73,23 @@ The web interface allows the configuration of advanced features like:
 MTU Issue and Packet Fragmentation
 ----------------------------------
 
-VPN users may experience connectivity issues due to packet fragmentation. The LAN interface has an MTU of 1500, but when packets are encrypted for VPN transmission, the size increases, leading to packet drops. To resolve this, the MTU on the OpenVPN tunnel must be lowered. No changes are required on the client side.
+By default, OpenVPN tunnel instances created on NethSecurity are initialized with the following values: 
 
-Add the following option to the Roadwarrior server configuration::
+- Maximum Transmission Unit - ``tun_mtu`` = ``1500`` 
+- Maximum Segment Size - ``mssfix`` = ``1450``. 
+
+VPN users may experience connectivity issues due to packet fragmentation. The LAN interface has an MTU of 1500 by default, but when packets are encrypted for VPN transmission, the size increases, leading to packet drops. 
+To resolve this, the MTU and the MSS on the OpenVPN tunnel must be lowered. No changes are required on the client side.
+
+The values of MTU and MSS can be adjusted directly on the UI, when creating the tunnel for the first time or than when editing it using the `Edit` button, under the `Advanced options` section in the drawer.
+Alternatively, you can adjust the two configuration values using the command line interface on the firewall::
 
     uci set openvpn.ns_<name>.tun_mtu='1300'
+    uci set openvpn.ns_<name>.mssfix='1250'
     uci commit openvpn.ns_<name>
     /etc/init.d/openvpn restart ns_<name>
 
-The `tun_mtu` value may need to be adjusted based on your specific network environment. A lower MTU ensures that packets fit within the limits of the OpenVPN tunnel without fragmentation. Depending on factors like network latency or overhead, you might find that slightly different values work better for your setup.
+The `tun_mtu` and `mssfix` values may need to be adjusted based on your specific network environment. A lower MTU ensures that packets fit within the limits of the OpenVPN tunnel without fragmentation. Depending on factors like network latency or overhead, you might find that slightly different values work better for your setup.
 
 
 Managing certificate expiration
