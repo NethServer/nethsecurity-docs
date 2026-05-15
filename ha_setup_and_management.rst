@@ -127,7 +127,7 @@ Please remember that all additional interfaces must use a name different from ``
 
 These interfaces are handled as special cases. WAN connectivity issues are generally more likely than a physical failure of a switch, cable, or network card. Triggering an HA failover when a single WAN goes down would usually not provide any real benefit: the secondary firewall would be affected by the same upstream connectivity issue, while the failover itself could introduce unnecessary disruption.
 
-For this reason, WAN failures are not used to trigger a switch from the primary firewall to the secondary one. WAN availability should be handled by MultiWAN, which is designed to manage connectivity loss, link failover, and traffic routing across multiple uplinks. This also prevents conflicts between HA mechanisms and MultiWAN management, especially in complex or high-value installations.
+For this reason, WAN failures do not trigger a switch from the primary firewall to the secondary one. WAN availability should be handled by MultiWAN, which is designed to manage connectivity loss, link failover, and traffic routing across multiple uplinks. This also prevents conflicts between HA mechanisms and MultiWAN management, especially in complex or high-value installations.
 WAN interfaces only need to be configured on the primary node; they are automatically replicated to the secondary node, further details are provided in the dedicated section below.
 
 
