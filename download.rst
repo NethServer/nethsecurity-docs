@@ -21,6 +21,11 @@ For verification, download also the hash file and execute the following command 
 To proceed with the installation of NethSecurity, you have two options: write the downloaded image directly to your disk or create a bootable USB stick.
 Refer to the :ref:`installation <install-section>` page for detailed instructions on both methods.
 
+You can navigate inside the package repository using the `package browser <browser/index.html>`_ to find all availables releases
+and download directly images, hash files and packages.
+
+The tables below list the available releases along with their respective download links.
+
 .. csv-table:: Stable releases
    :file: stable.csv
    :widths: 60, 10, 10, 10
