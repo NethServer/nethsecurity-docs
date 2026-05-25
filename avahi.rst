@@ -19,8 +19,8 @@ Installation
 
 Install the package with::
 
-    opkg update
-    opkg install avahi-nodbus-daemon
+    apk update
+    apk add avahi-nodbus-daemon
 
 Configuration
 =============
@@ -29,11 +29,9 @@ By default, the mDNS reflector functionality is disabled. To enable it:
 
 1. Edit the Avahi daemon configuration file: ::
 
-     vi /etc/avahi/avahi-daemon.conf
+     sed -i 's/^enable\-reflector\=no$/enable\-reflector\=yes/g' /etc/avahi/avahi-daemon.conf
 
-2. Find the line ``enable-reflector=no`` and change it to ``enable-reflector=yes``
-
-3. Restart the Avahi daemon to apply the changes: ::
+2. Restart the Avahi daemon to apply the changes: ::
 
      /etc/init.d/avahi-daemon restart
 
