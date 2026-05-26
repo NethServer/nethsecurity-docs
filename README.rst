@@ -132,6 +132,10 @@ Finally, build the doc: ::
 
    make html
 
+The standalone package browser is published from ``_extra/browser/`` through
+``html_extra_path``. It is plain HTML, CSS, and JavaScript, so local and Read
+the Docs builds do not require a separate frontend toolchain.
+
 Localization workflow
 ---------------------
 
