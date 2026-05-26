@@ -37,6 +37,11 @@ On NethSecurity 7.7, the package is not included in default NethSecurity image, 
   opkg update
   opkg install https-dns-proxy
 
+On NethSecurity 7.7, the package is not included in default NethSecurity image, so you will need to install it manually: ::
+
+  opkg update
+  opkg install https-dns-proxy
+
 Configuration
 =============
 
