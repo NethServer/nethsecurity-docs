@@ -118,8 +118,6 @@ However, NethSecurity treats ``dnsmasq_config_update='-'`` as the disabled
 state. If that value is still set during an image upgrade, the first-boot
 defaults script can disable ``https-dns-proxy`` again.
 
-At the moment this is not expected to be a practical problem because
-configuration is supported only from the command line.
 
 Blocking other DoH providers
 ----------------------------
