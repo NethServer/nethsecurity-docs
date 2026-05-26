@@ -29,7 +29,7 @@ Some popular alternatives include:
 Installation
 ============
 
-The ``https-dns-proxy`` package is included in NethSecurity images, so no
+Since NethSecurity 8.8, the ``https-dns-proxy`` package is included in NethSecurity image, so no
 separate installation step is required.
 
 Configuration
