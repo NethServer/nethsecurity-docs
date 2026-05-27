@@ -237,16 +237,27 @@ In this scenario, it is **mandatory** to download and import the new client conf
 MTU Issue and Packet Fragmentation
 ----------------------------------
 
-VPN users may experience connectivity issues due to packet fragmentation. The LAN interface has an MTU of 1500, but when packets are encrypted for VPN transmission, the size increases, leading to packet drops. To resolve this, lower the MTU on the VPN server's TUN interface. No changes are required on the client side.
+By default, OpenVPN Road Warrior server instances created on NethSecurity are initialized with the following values: 
 
-Add these options to the Roadwarrior server configuration ::
+- Maximum Transmission Unit - ``tun_mtu`` = ``1500`` 
+- Maximum Segment Size - ``mssfix`` = ``1450``. 
 
-  uci set openvpn.ns_roadwarrior1.tun_mtu='1300'
-  uci set openvpn.ns_roadwarrior1.mssfix='1250'
-  uci commit openvpn.ns_roadwarrior1
-  /etc/init.d/openvpn restart ns_roadwarrior1
+These are default values from OpenVPN which are generally suitable for most network environments that should be changed only if you experience connectivity issues due to packet fragmentation. 
 
-The MTU values may need to be adjusted to fit your specific network environment. A lower MTU ensures packets fit within the limits of the VPN tunnel without fragmentation, but depending on network latency or overhead, slightly different values might be necessary.
+VPN users may experience connectivity issues due to packet fragmentation. The LAN interface has an MTU of 1500 by default, but when packets are encrypted for VPN transmission, the size increases, leading to packet drops. 
+To resolve this, the MTU and the MSS on the OpenVPN RW server must be lowered. No changes are required on the client side.
+
+The values of MTU and MSS can be adjusted directly on the UI, when creating the OpenVPN RW server for the first time or later when editing it using the `Edit` button, under the `Advanced options` section in the drawer.
+Alternatively, you can adjust the two configuration values using the command line interface on the firewall::
+
+    uci set openvpn.ns_<name>.tun_mtu='1300'
+    uci set openvpn.ns_<name>.mssfix='1250'
+    uci commit openvpn.ns_<name>
+    /etc/init.d/openvpn restart ns_<name>
+
+The `tun_mtu` and `mssfix` values may need to be adjusted based on your specific network environment. A lower MTU ensures that packets fit within the limits of the OpenVPN tunnel without fragmentation. Depending on factors like network latency or overhead, you might find that slightly different values work better for your setup.
+
+For more specific information please see the `official OpenVPN documentation <https://openvpn.net/community-docs/community-articles/openvpn-2-6-manual.html>`_.
 
 Connection history
 ------------------
