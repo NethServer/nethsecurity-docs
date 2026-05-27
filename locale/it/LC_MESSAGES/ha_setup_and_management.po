@@ -2,21 +2,21 @@
 msgid ""
 msgstr ""
 
-#: ../../ha_setup_and_management.rst:5 48c0f153863e4deb8291e3f67340f36f
+#: ../../ha_setup_and_management.rst:5 4876589dfde14c12b9f9935a03249e05
 msgid "Setup and management"
 msgstr "Configurazione e gestione"
 
-#: ../../ha_setup_and_management.rst:8 0dab467925c740fd86999bf91ab92a0b
+#: ../../ha_setup_and_management.rst:8 befd7d4ae68448ce951a8c5482287212
 msgid "Requirements"
 msgstr "Requisiti"
 
-#: ../../ha_setup_and_management.rst:10 df9f3b92e36e4da098bb9e2bf2cdccbf
+#: ../../ha_setup_and_management.rst:10 83b2670c8ecd4b9d9491477746099053
 msgid "Before setting up HA, ensure the following requirements are met:"
 msgstr ""
 "Prima di configurare HA, assicurarsi che siano soddisfatti i seguenti "
 "requisiti:"
 
-#: ../../ha_setup_and_management.rst:12 d592cf1783f942a6aa5fcfbba44c7b9e
+#: ../../ha_setup_and_management.rst:12 b73cf20edb294640b2e5812fbb301e4f
 msgid ""
 "Two firewalls with identical network devices. Each device must have the "
 "exact same name and numbering (e.g., eth0, eth1, eth2, eth3)"
@@ -25,7 +25,7 @@ msgstr ""
 "esattamente lo stesso nome e la stessa numerazione (ad esempio, eth0, eth1, "
 "eth2, eth3)"
 
-#: ../../ha_setup_and_management.rst:13 0d1278d1febf4016be3d6753c797ec73
+#: ../../ha_setup_and_management.rst:13 6e44b2981ae0479f8adcddcd45b3e034
 msgid ""
 "Both nodes must be connected to the same LAN; connect the LAN interfaces to "
 "the same broadcast domain (usually the same switch)."
@@ -34,18 +34,18 @@ msgstr ""
 "interfacce LAN allo stesso dominio di broadcast (di solito allo stesso "
 "switch)."
 
-#: ../../ha_setup_and_management.rst:14 82911e907a3c454bb1f4fecbb1b9a670
+#: ../../ha_setup_and_management.rst:14 54bf2bef782140ccbd498c3998e4ea98
 msgid ""
 "Static IP addresses for all LAN interfaces that will host a virtual IP."
 msgstr ""
 "Indirizzi IP statici per tutte le interfacce LAN che ospiteranno un IP "
 "virtuale."
 
-#: ../../ha_setup_and_management.rst:17 3309d09232d84878b7be830f88c267e0
+#: ../../ha_setup_and_management.rst:17 75139823729d4521b86ffd2e3c42de4e
 msgid "Setup and configuration"
 msgstr "Configurazione e impostazione"
 
-#: ../../ha_setup_and_management.rst:19 85daed6efc3f4e8092f4c2de6c2cd25a
+#: ../../ha_setup_and_management.rst:19 f7e91152dbc34500bdee94dce8a9da59
 msgid ""
 "The HA setup process involves several steps. If you just want to see the "
 "commands, you can skip to the `Configuration example`_ section, but it's "
@@ -57,11 +57,11 @@ msgstr ""
 "`Configuration example`_, ma si consiglia di leggere l'intera sezione per "
 "comprendere il processo e i requisiti."
 
-#: ../../ha_setup_and_management.rst:23 66cfa8ca013543b3b2c9cb38642bfae1
+#: ../../ha_setup_and_management.rst:23 94b8d1acbced45e6be517f946c6b3800
 msgid "The setup process is as follows:"
 msgstr "Il processo di configurazione è il seguente:"
 
-#: ../../ha_setup_and_management.rst:25 0db7157ef26d436ba6f17e2d8efce4d2
+#: ../../ha_setup_and_management.rst:25 ff24d8e5ff6a4d64863f06fb603980db
 msgid ""
 "**Install the same NethSecurity version** on two identical machines "
 "(physical or virtual). See :ref:`install-section` for detailed installation "
@@ -71,7 +71,7 @@ msgstr ""
 "(fisiche o virtuali). Consultare :ref:`install-section` per istruzioni "
 "dettagliate sull'installazione."
 
-#: ../../ha_setup_and_management.rst:28 06aaf638655047279526b042b9ad1a07
+#: ../../ha_setup_and_management.rst:28 f14ae2b343e1449e8a0550f03c7452df
 msgid ""
 "**Connect network cables properly** to ensure redundancy. See `Network "
 "cabling`_ section below for proper cabling guidelines."
@@ -80,7 +80,7 @@ msgstr ""
 "Consultare la sezione `Network cabling`_ di seguito per le linee guida "
 "corrette sul cablaggio."
 
-#: ../../ha_setup_and_management.rst:31 fb47659b039a4b729edc3941fc8d3469
+#: ../../ha_setup_and_management.rst:31 0eaa275d9fbd441cad31d295e0af700e
 msgid ""
 "**Configure the HA interface** on both nodes with static IP addresses. "
 "Create a LAN on primary and secondary node that will be needed for the "
@@ -92,7 +92,7 @@ msgstr ""
 "necessaria per il cluster prima di procedere con la configurazione di HA. "
 "Consultare la sezione `HA interface`_ qui sotto per istruzioni dettagliate."
 
-#: ../../ha_setup_and_management.rst:35 f4fc85ee511642ca9db080de1abbb0e7
+#: ../../ha_setup_and_management.rst:35 72b891f283fe49d3987dbd17d186349d
 msgid ""
 "**Initialize the cluster** using the `ns-ha-config` commands to establish "
 "the HA cluster foundation. The initialization process configures the "
@@ -111,7 +111,7 @@ msgstr ""
 "potrebbe non funzionare correttamente. Consultare la sezione `Cluster "
 "initialization`_ qui sotto per istruzioni dettagliate."
 
-#: ../../ha_setup_and_management.rst:41 18270f79f86a44ef9e8fb4132568637f
+#: ../../ha_setup_and_management.rst:41 838b7f417a5c45eeb8681ecb8670bb91
 msgid ""
 "**Configure WAN interface in primary node** using the ``Interfaces and "
 "devices`` page in the web interface. WAN interfaces will be automatically "
@@ -124,7 +124,7 @@ msgstr ""
 " con il nodo secondario. Consultare la sezione `WAN Interfaces`_ di seguito "
 "per ulteriori informazioni."
 
-#: ../../ha_setup_and_management.rst:45 1865e4471a3844d4ab0626b47a95d9c2
+#: ../../ha_setup_and_management.rst:45 a3cc43d81a074bec9611067f89a90909
 msgid ""
 "**Verify the configuration** to ensure everything is set up correctly. Use "
 "the `ns-ha-config` commands to check the status and configuration of the HA "
@@ -136,7 +136,7 @@ msgstr ""
 "e la configurazione del cluster HA. Consultare la sezione `Verificare la "
 "configurazione`_ di seguito per istruzioni dettagliate."
 
-#: ../../ha_setup_and_management.rst:49 f06fbd283b9f40b9be586549ca4360d7
+#: ../../ha_setup_and_management.rst:49 1674ea83fa454233be9146b38f1c0d61
 msgid ""
 "**Configure additional LAN interfaces (optional)** for the cluster. This "
 "step is optional and depends on your network setup. You can add any "
@@ -153,7 +153,7 @@ msgstr ""
 "consultare la sezione `Supporto hotspot`_ di seguito per i requisiti "
 "specifici."
 
-#: ../../ha_setup_and_management.rst:54 3ec4f993d3964c328fc773844c28905a
+#: ../../ha_setup_and_management.rst:54 7d29f7ad437841abbed8461156094d4b
 msgid ""
 "**Add extra Virtual IPs (optional)** to the primary node on relevant LAN "
 "interfaces. This step is optional and allows you to add additional IP "
@@ -166,7 +166,7 @@ msgstr ""
 "richiedono più IP. Consultare la sezione `IP virtuali extra`_ di seguito per"
 " istruzioni dettagliate."
 
-#: ../../ha_setup_and_management.rst:58 731f53c33a254f32a08ba80725c90fad
+#: ../../ha_setup_and_management.rst:58 b09ec0f16c9a454cba830561b70a4d25
 msgid ""
 "The detailed steps for each of these points are covered in the sections "
 "below."
@@ -174,7 +174,7 @@ msgstr ""
 "I passaggi dettagliati per ciascuno di questi punti sono trattati nelle "
 "sezioni seguenti."
 
-#: ../../ha_setup_and_management.rst:60 f66cb16e9bdf4111bec70eb02482f2a7
+#: ../../ha_setup_and_management.rst:60 4398589265d24328aa396ef2b32bf6a9
 msgid ""
 "Sometimes, you may need to remove interfaces or aliases from the HA "
 "configuration. This can be done using the ``ns-ha-config`` command. See "
@@ -186,11 +186,11 @@ msgstr ""
 "config``. Consultare la sezione `Remove interfaces and virtual IPs`_ di "
 "seguito per istruzioni dettagliate."
 
-#: ../../ha_setup_and_management.rst:65 e6d9be71115f4ee79699562e8a002765
+#: ../../ha_setup_and_management.rst:65 869801d48401498ab0ab2e8e99c91d28
 msgid "Network cabling"
 msgstr "Cablaggio di rete"
 
-#: ../../ha_setup_and_management.rst:67 12998a72cf1045dc94aaf454e2dc0ad2
+#: ../../ha_setup_and_management.rst:67 21dc9eab9e594488bc32cc4301c97cdf
 msgid ""
 "Proper network cabling is essential to ensure high availability and seamless"
 " failover between the primary and secondary firewalls."
@@ -199,11 +199,11 @@ msgstr ""
 "disponibilità e un failover senza interruzioni tra il firewall primario e "
 "quello secondario."
 
-#: ../../ha_setup_and_management.rst:69 85a890175a624a9f86594d21e6a74f25
+#: ../../ha_setup_and_management.rst:69 a2cab55be9df4330bde4fa96cfedb60e
 msgid "**General Recommendations**:"
 msgstr "**Raccomandazioni generali**:"
 
-#: ../../ha_setup_and_management.rst:71 f3c43d30f86b420fab35530277b27abc
+#: ../../ha_setup_and_management.rst:71 f29687272ae2456bbe31e96d03e5ca32
 msgid ""
 "For each network zone (LAN, WAN, DMZ, etc.), use a dedicated switch or VLAN "
 "to connect both firewalls' interfaces."
@@ -211,7 +211,7 @@ msgstr ""
 "Per ogni zona di rete (LAN, WAN, DMZ, ecc.), utilizzare uno switch dedicato "
 "o una VLAN per collegare le interfacce di entrambi i firewall."
 
-#: ../../ha_setup_and_management.rst:72 ce61e574d80d4f91924d9a946548d04e
+#: ../../ha_setup_and_management.rst:72 0637aad0ab3f415e8d1434a2ce6dcd37
 msgid ""
 "Avoid connecting the firewalls directly to each other; always use a switch "
 "or network segment in between."
@@ -219,17 +219,17 @@ msgstr ""
 "Evitare di collegare i firewall direttamente tra loro; utilizzare sempre uno"
 " switch o un segmento di rete intermedio."
 
-#: ../../ha_setup_and_management.rst:73 24abfc0aa41c4ddc840657f8e6c7afbd
+#: ../../ha_setup_and_management.rst:73 a6b71d60a5a74ddda640ad70761e3c74
 msgid "Label all cables and switches for clarity and easier troubleshooting."
 msgstr ""
 "Etichettare tutti i cavi e gli switch per maggiore chiarezza e facilitare la"
 " risoluzione dei problemi."
 
-#: ../../ha_setup_and_management.rst:75 936196b0e65b4937b45629938155515b
+#: ../../ha_setup_and_management.rst:75 0cafff324e804fe1b0cc0e9d889cdc4c
 msgid "**LAN Connections**:"
 msgstr "**Connessioni LAN**:"
 
-#: ../../ha_setup_and_management.rst:77 c4e1f1de248e4ccfacfd8c7f1fd1cd57
+#: ../../ha_setup_and_management.rst:77 5d1879287ba044f48f43fd52c3f49461
 msgid ""
 "Connect the LAN interfaces of both the primary and secondary nodes to the "
 "same network segment."
@@ -237,7 +237,7 @@ msgstr ""
 "Collegare le interfacce LAN sia del nodo primario che di quello secondario "
 "allo stesso segmento di rete."
 
-#: ../../ha_setup_and_management.rst:78 cf75266a82d2443c8174b970844a33a9
+#: ../../ha_setup_and_management.rst:78 53b346213b084cde88346d749c807226
 msgid ""
 "Ideally, use **two separate switches** for redundancy. Connect each "
 "firewall's LAN port to both switches (if supported), or at least ensure each"
@@ -250,7 +250,7 @@ msgstr ""
 "diverso. In questo modo si evita un singolo punto di guasto nel caso in cui "
 "uno switch si guasti."
 
-#: ../../ha_setup_and_management.rst:80 a3ee3e65f8c94833896768bc7765146a
+#: ../../ha_setup_and_management.rst:80 29892fad537348dabedbb8250f432d49
 msgid ""
 "If using two separate switches for redundancy, they must be properly "
 "interconnected and support Spanning Tree Protocol (STP) to prevent network "
@@ -262,7 +262,7 @@ msgstr ""
 " (STP) per prevenire loop di rete. Gli switch non gestiti senza supporto STP"
 " possono causare broadcast storm quando sono interconnessi."
 
-#: ../../ha_setup_and_management.rst:82 e0516b83765144cf815809cb09dfa967
+#: ../../ha_setup_and_management.rst:82 d73a3554cdcc4afe81008e0579c56982
 msgid ""
 "If only one switch is available, use VLAN segmentation to logically separate"
 " each network zone and minimize broadcast domains."
@@ -271,7 +271,7 @@ msgstr ""
 "separare logicamente ciascuna zona di rete e minimizzare i domini di "
 "broadcast."
 
-#: ../../ha_setup_and_management.rst:83 abfe56e684344afa8de219f154a74aac
+#: ../../ha_setup_and_management.rst:83 6c2513eea4cd4e09975576a198e15e20
 msgid ""
 "Repeat this process for **each network interface** configured for HA (e.g., "
 "LAN, GUEST, DMZ). Each interface should be connected to its corresponding "
@@ -281,24 +281,24 @@ msgstr ""
 " (ad esempio, LAN, GUEST, DMZ). Ogni interfaccia deve essere collegata al "
 "relativo segmento di rete, preferibilmente tramite switch ridondanti."
 
-#: ../../ha_setup_and_management.rst:85 6096355d741348289ff0b6b1b16db685
+#: ../../ha_setup_and_management.rst:85 02a0ad2fc9ff44e49699742ca139efd2
 msgid "**WAN Connections**:"
 msgstr "**Connessioni WAN**:"
 
-#: ../../ha_setup_and_management.rst:87 a4e1d96a11dd4579a7ae5c4c060ad8f7
+#: ../../ha_setup_and_management.rst:87 54d850bb38554ec0b0f33bdb2c762ae9
 msgid ""
 "Connect the WAN interfaces of both nodes to the ISP or upstream router."
 msgstr ""
 "Collegare le interfacce WAN di entrambi i nodi all'ISP o al router upstream."
 
-#: ../../ha_setup_and_management.rst:88 638dc651e96044fe95e4193b589f8674
+#: ../../ha_setup_and_management.rst:88 e1786c2a03e5440b8b96c54272002981
 msgid ""
 "For best redundancy, use the same approach as with the LAN connections."
 msgstr ""
 "Per la massima ridondanza, utilizzare lo stesso approccio adottato per le "
 "connessioni LAN."
 
-#: ../../ha_setup_and_management.rst:89 95276d81048a414fa94a2f13e58b5d83
+#: ../../ha_setup_and_management.rst:89 52bdf5d3370f4927860147ec978b7136
 msgid ""
 "If only one WAN switch/router is available, both firewalls should connect to"
 " it, but this introduces a single point of failure."
@@ -306,7 +306,7 @@ msgstr ""
 "Se è disponibile solo uno switch/router WAN, entrambi i firewall dovrebbero "
 "collegarsi ad esso, ma questo introduce un singolo punto di guasto."
 
-#: ../../ha_setup_and_management.rst:90 01d4bfd98596451a8ad28055269eb843
+#: ../../ha_setup_and_management.rst:90 4304203db0854206b931516eb8ef80c7
 msgid ""
 "If your ISP provides a router with HA capability (e.g., VRRP or HSRP), you "
 "can connect both firewalls' WAN ports directly to the ISP's redundant "
@@ -316,7 +316,7 @@ msgstr ""
 " HSRP), è possibile collegare direttamente le porte WAN di entrambi i "
 "firewall ai router ridondanti dell'ISP."
 
-#: ../../ha_setup_and_management.rst:91 21a6cac6bc524948917ea17a9d9a41e2
+#: ../../ha_setup_and_management.rst:91 819a644362a44937a04cc86eeaea51ea
 msgid ""
 "Alternatively, you can configure MultiWAN directly in NethSecurity to manage"
 " multiple WAN uplinks and failover."
@@ -324,7 +324,7 @@ msgstr ""
 "In alternativa, è possibile configurare MultiWAN direttamente in "
 "NethSecurity per gestire più uplink WAN e il failover."
 
-#: ../../ha_setup_and_management.rst:93 d1862fa83f9d44f29e388242c9f9a730
+#: ../../ha_setup_and_management.rst:93 aad371c338a54070a81f3714748ce8d6
 msgid ""
 "This setup ensures that if any single firewall or switch fails, network "
 "connectivity is maintained through the secondary node and the remaining "
@@ -334,7 +334,7 @@ msgstr ""
 "firewall o switch, la connettività di rete venga mantenuta tramite il nodo "
 "secondario e lo switch rimanente."
 
-#: ../../ha_setup_and_management.rst:95 b21ba3f16dc842e8a1c31e03758f4fd1
+#: ../../ha_setup_and_management.rst:95 08a356a35b1b4c8e80b8455f7ebe02c9
 msgid ""
 "The below diagram illustrates the recommended redundant network setup, "
 "switches are omitted for clarity."
@@ -342,23 +342,23 @@ msgstr ""
 "Il diagramma seguente illustra la configurazione di rete ridondante "
 "consigliata; gli switch sono omessi per chiarezza."
 
-#: ../../ha_setup_and_management.rst:97 b9614cceaf414b069787f69ad5f7773a
+#: ../../ha_setup_and_management.rst:97 4d6af644bc264b72b76ddbeb5dc6c149
 msgid "High Availability network diagram showing proper cabling"
 msgstr "Diagramma di rete High Availability che mostra il cablaggio corretto"
 
-#: ../../ha_setup_and_management.rst:103 aeff2d792f4d49a281f5a01e2030a553
+#: ../../ha_setup_and_management.rst:103 5440fa2678904754947ada3c26b532df
 msgid "Interfaces management"
 msgstr "Gestione delle interfacce"
 
-#: ../../ha_setup_and_management.rst:105 efa74f834818477092c59aaef43df7fd
+#: ../../ha_setup_and_management.rst:105 a6f6748ff1c24180ae3f6809010d6397
 msgid "Interfaces can be categorized as follows:"
 msgstr "Le interfacce possono essere classificate come segue:"
 
-#: ../../ha_setup_and_management.rst:107 23c6fe3ada5d4b8bae052467fa1d8921
+#: ../../ha_setup_and_management.rst:107 33ca077dd69e4f349fb4b84fdc026f1f
 msgid "**HA interface**:"
 msgstr "**Interfaccia HA**:"
 
-#: ../../ha_setup_and_management.rst:109 a7f3333365694742813ae8c41bf97f11
+#: ../../ha_setup_and_management.rst:109 75c50036d79a458fb2f19c501fe37b8f
 msgid ""
 "This is the interface used for VRRP communication. It has to be configured "
 "on the primary and the secondary node, then it must be added to the HA "
@@ -374,58 +374,19 @@ msgstr ""
 "sul nodo secondario e un VIP (Virtual IP) che si sposta tra le unità quando "
 "i loro ruoli cambiano (Master/Backup). `HA interface`_"
 
-#: ../../ha_setup_and_management.rst:113 e1fbd8d8f8d849f7a5e48a76aa393f60
+#: ../../ha_setup_and_management.rst:117 461170774d17494fa3e2ff1bf2ac60ab
 msgid "**Additional LAN interfaces**:"
 msgstr "**Interfacce LAN aggiuntive**:"
 
-#: ../../ha_setup_and_management.rst:115 717a61b0222543eb8670ba0375a130d7
-msgid ""
-"Any interface that is not a WAN, such as another LAN, a guest network, or a "
-"DMZ. These are also managed using the three-address logic (primary IP, "
-"secondary IP, and VIP), they have to be configured on the primary and the "
-"secondary node, then they must be added to the HA configuration after "
-"initialization. A fault on any of these interfaces triggers a failover "
-"between units. They are configured by adding them as LAN interfaces. "
-"`Additional LAN interfaces`_"
-msgstr ""
-"Qualsiasi interfaccia che non sia una WAN, come un'altra LAN, una rete guest"
-" o una DMZ. Anche queste vengono gestite utilizzando la logica a tre "
-"indirizzi (IP primario, IP secondario e VIP), devono essere configurate sia "
-"sul nodo primario che su quello secondario, quindi devono essere aggiunte "
-"alla configurazione HA dopo l'inizializzazione. Un guasto su una qualsiasi "
-"di queste interfacce attiva un failover tra le unità. Vengono configurate "
-"aggiungendole come interfacce LAN. `Interfacce LAN aggiuntive`_"
-
-#: ../../ha_setup_and_management.rst:120 7bc4561a99a144d39dae2fe54c227337
+#: ../../ha_setup_and_management.rst:126 e603f93032d84de1a049fb1d73ee553b
 msgid "**WAN interfaces**:"
 msgstr "**Interfacce WAN**:"
 
-#: ../../ha_setup_and_management.rst:122 7fdcac15e16a481d91f51c3187c7afda
-msgid ""
-"These interfaces are treated as special cases. WANs may have limitations "
-"when using the three-address scheme (for example, when public IPs are "
-"assigned), and it is essential to prevent conflicts between HA mechanisms "
-"and MultiWAN management. For this reason, WAN interfaces do not trigger a "
-"failover, ensuring proper MultiWAN handling, especially in complex or high-"
-"value installations. WAN interfaces only need to be configured on the "
-"primary node; they are automatically replicated to the secondary node, "
-"further details are provided in the dedicated section below."
-msgstr ""
-"Queste interfacce sono trattate come casi speciali. Le WAN possono "
-"presentare limitazioni nell'utilizzo dello schema a tre indirizzi (ad "
-"esempio, quando vengono assegnati IP pubblici), ed è essenziale prevenire "
-"conflitti tra i meccanismi di HA e la gestione MultiWAN. Per questo motivo, "
-"le interfacce WAN non attivano un failover, garantendo una corretta gestione"
-" MultiWAN, soprattutto in installazioni complesse o di alto valore. Le "
-"interfacce WAN devono essere configurate solo sul nodo primario; vengono "
-"replicate automaticamente sul nodo secondario. Ulteriori dettagli sono "
-"forniti nella sezione dedicata di seguito."
-
-#: ../../ha_setup_and_management.rst:128 3d600e5d806a40f9bb21e6a0b166e837
+#: ../../ha_setup_and_management.rst:135 3198c17820a1453bb2e624d81307667e
 msgid "HA interface"
 msgstr "Interfaccia HA"
 
-#: ../../ha_setup_and_management.rst:130 da5d1270ddb2449299142b86d0aec931
+#: ../../ha_setup_and_management.rst:137 ebe76084e84441d9890ef264d3d7daa0
 msgid ""
 "The HA cluster requires static IP addresses for all LAN interfaces that will"
 " host a virtual IP. Follow these steps:"
@@ -433,7 +394,7 @@ msgstr ""
 "Il cluster HA richiede indirizzi IP statici per tutte le interfacce LAN che "
 "ospiteranno un IP virtuale. Seguire questi passaggi:"
 
-#: ../../ha_setup_and_management.rst:133 a6bcf1311672420b9ca89ef0dfb44ffa
+#: ../../ha_setup_and_management.rst:140 4d82d5fd8128420f8a4f63f32f8df6cc
 msgid ""
 "Power on the secondary node, access the web interface and set a physical "
 "interface with a static LAN IP address (e.g., `192.168.100.239`)."
@@ -442,7 +403,7 @@ msgstr ""
 "un'interfaccia fisica con un indirizzo IP LAN statico (ad esempio, "
 "``192.168.100.239``)."
 
-#: ../../ha_setup_and_management.rst:134 cb40e47ce4b0432880c5871950ae742a
+#: ../../ha_setup_and_management.rst:141 34a6612814dc4beea61fef151516466e
 msgid ""
 "Power on the primary node, access the web interface and set a physical "
 "interface with a static LAN IP address (e.g., `192.168.100.238`)."
@@ -451,7 +412,7 @@ msgstr ""
 "un'interfaccia fisica con un indirizzo IP LAN statico (ad esempio, "
 "``192.168.100.238``)."
 
-#: ../../ha_setup_and_management.rst:136 9dc81b529aae43b3ba442cb5789eaebe
+#: ../../ha_setup_and_management.rst:143 b87822dc7a33460a827ab635f42a6269
 msgid ""
 "These static IP addresses are used to access the nodes directly, even if the"
 " HA cluster is disabled. Consider them *management IP addresses*."
@@ -460,11 +421,11 @@ msgstr ""
 "nodi, anche se il cluster HA è disabilitato. Considerarli come *indirizzi IP"
 " di gestione*."
 
-#: ../../ha_setup_and_management.rst:139 d5efa4665de74d1a83c83dadc05e1e79
+#: ../../ha_setup_and_management.rst:146 acac59081d8c4a92980c907dc5d5de13
 msgid "Cluster initialization"
 msgstr "Inizializzazione del cluster"
 
-#: ../../ha_setup_and_management.rst:141 161fbcdb410c4e6b873ec72bbf938970
+#: ../../ha_setup_and_management.rst:148 a26ee77ddcd242458e2f819a089616e0
 msgid ""
 "The setup process configures `keepalived` for failover, `rsync` over SSH for"
 " configuration synchronization, and `conntrackd` to sync the connection "
@@ -479,7 +440,7 @@ msgstr ""
 "inizializzazione. Utilizzare lo script ``ns-ha-config`` per semplificare il "
 "processo."
 
-#: ../../ha_setup_and_management.rst:145 9abaeb8a65034d9dab37a6b7bd407f11
+#: ../../ha_setup_and_management.rst:152 632ef3de71c54ac89ea1f85c210d2bb4
 msgid ""
 "Before diving into the actual setup, it's important to ensure that both "
 "nodes are properly configured and meet the necessary requirements."
@@ -488,7 +449,7 @@ msgstr ""
 " che entrambi i nodi siano configurati correttamente e soddisfino i "
 "requisiti necessari."
 
-#: ../../ha_setup_and_management.rst:147 e2d8d687f6f243df9ddd2a98cad63157
+#: ../../ha_setup_and_management.rst:154 7322995c01784d548cb1e48c3d2d44b2
 msgid ""
 "Access the console or SSH into the primary node and run the following "
 "commands."
@@ -496,50 +457,50 @@ msgstr ""
 "Accedere alla console o connettersi tramite SSH al nodo primario ed eseguire"
 " i seguenti comandi."
 
-#: ../../ha_setup_and_management.rst:150 fcaba63fbf034b959131ff152de53055
+#: ../../ha_setup_and_management.rst:157 ae46e4a055b440f985ab06e1b699967f
 msgid "Check requirements"
 msgstr "Verificare i requisiti"
 
-#: ../../ha_setup_and_management.rst:152 6955bda4f39b4943a8d9d1338d569d8b
+#: ../../ha_setup_and_management.rst:159 cd097a29daeb4aeea7e9760af98fae0d
 msgid "For the primary node::"
 msgstr "Per il nodo primario::"
 
-#: ../../ha_setup_and_management.rst:156 ../../ha_setup_and_management.rst:168
-#: cf961cf5d61b4669816b69a1cfb66367 c41b4c2dcd8a4bb28d10e728c6b48dcb
+#: ../../ha_setup_and_management.rst:163 ../../ha_setup_and_management.rst:175
+#: 7fb1f88c33fa411a8eed4345429e193a 2426408b4ce24092a60ad8ffbad2d1a0
 msgid "This checks:"
 msgstr "Questo controlla:"
 
-#: ../../ha_setup_and_management.rst:158 ../../ha_setup_and_management.rst:170
-#: d1f6ed0eb10642b4b5de033123bd08a2 fba043c9ad4540bfb110939365d23774
+#: ../../ha_setup_and_management.rst:165 ../../ha_setup_and_management.rst:177
+#: 0609b51072d543519c076408c5590620 4b2644be54ec4c0c9ed7ecf23e1a2bd1
 msgid "The HA interface exists and has a static IP."
 msgstr "L'interfaccia HA esiste ed ha un IP statico."
 
-#: ../../ha_setup_and_management.rst:159 f440436968a3450096d55e3952a04370
+#: ../../ha_setup_and_management.rst:166 b17f6925047b4f2e945d8c032e6ad675
 msgid "If DHCP server is running:"
 msgstr "Se il server DHCP è in esecuzione:"
 
-#: ../../ha_setup_and_management.rst:161 ../../ha_setup_and_management.rst:257
-#: 3b7550bfe0404a9c94665156c4634db9 e6736370d28e4cdeab9bc34124bfb47c
+#: ../../ha_setup_and_management.rst:168 ../../ha_setup_and_management.rst:264
+#: 67841d99ea8542c1b297471e234ab292 2e7bfbd271e4454997fdeb6abf37a75a
 msgid "``3: router`` DHCP option is set (should be the virtual IP)."
 msgstr ""
 "L'opzione DHCP ``3: router`` è impostata (dovrebbe essere l'IP virtuale)."
 
-#: ../../ha_setup_and_management.rst:162 ../../ha_setup_and_management.rst:258
-#: 7052943ea9454a55bdb8f8d6f8ca907e 5e48b72a5dcc4d17bc52ba2f0b8e31e0
+#: ../../ha_setup_and_management.rst:169 ../../ha_setup_and_management.rst:265
+#: f3bca13ee029437b81140f2cca163c69 de06423818b6408b9004b5e1497f27d5
 msgid "``6: DNS server`` DHCP option is set."
 msgstr "L'opzione DHCP ``6: DNS server`` è impostata."
 
-#: ../../ha_setup_and_management.rst:164 a3d6f51f76ec437a8ed395004e6b5a21
+#: ../../ha_setup_and_management.rst:171 1a5541c37b0e4fb99009b2824be5d228
 msgid "For the secondary node::"
 msgstr "Per il nodo secondario::"
 
-#: ../../ha_setup_and_management.rst:171 93cb917d00ab4c5593681a2486eb8053
+#: ../../ha_setup_and_management.rst:178 bc8e863d917e4326a9be24cffd175e13
 msgid "Secondary node is reachable via SSH on port 22 with root user."
 msgstr ""
 "Il nodo secondario è raggiungibile tramite SSH sulla porta 22 con l'utente "
 "root."
 
-#: ../../ha_setup_and_management.rst:173 47670a1bccac4bfa9f3d58071d05d17c
+#: ../../ha_setup_and_management.rst:180 9da5628ee1434803af64bf7866acb555
 msgid ""
 "The script will request the root password for the secondary node. You can "
 "also pipe the password: ::"
@@ -547,7 +508,7 @@ msgstr ""
 "Lo script richiederà la password di root per il nodo secondario. È anche "
 "possibile passare la password tramite pipe: ::"
 
-#: ../../ha_setup_and_management.rst:177 fa7bb8468dc34f1f86c2c37250c61973
+#: ../../ha_setup_and_management.rst:184 ffad7dd264534d92831f179d1a86987e
 msgid ""
 "Ensure the secondary node can be reached via SSH from the primary node on "
 "standard port 22."
@@ -555,15 +516,15 @@ msgstr ""
 "Assicurarsi che il nodo secondario sia raggiungibile tramite SSH dal nodo "
 "primario sulla porta standard 22."
 
-#: ../../ha_setup_and_management.rst:180 b6134c23789e47a3807042e61fe3a2ba
+#: ../../ha_setup_and_management.rst:187 103b2b758aa5462cb1cc8a6446800812
 msgid "Initialize nodes"
 msgstr "Inizializzare i nodi"
 
-#: ../../ha_setup_and_management.rst:182 6d2d7133485642cf80aca0fc47c26a38
+#: ../../ha_setup_and_management.rst:189 120b4b24fd32445ab3ce4468158cc5c5
 msgid "Initialize the primary node::"
 msgstr "Inizializzare il nodo primario::"
 
-#: ../../ha_setup_and_management.rst:186 8ee443a02eb749b4af24b168097035b1
+#: ../../ha_setup_and_management.rst:193 81e9e213a4b04e84b4e4f45ac962c408
 msgid ""
 "Where the ``primary_node_ip`` is the static IP of the primary node already "
 "set for the HA interface, and ``backup_node_ip`` is the static LAN IP of the"
@@ -577,24 +538,24 @@ msgstr ""
 " l'interfaccia HA a cui tutti gli host LAN devono puntare; deve essere "
 "specificato in notazione CIDR."
 
-#: ../../ha_setup_and_management.rst:190 cbf0e46dfc7b4086812822a41e891365
+#: ../../ha_setup_and_management.rst:197 0c1a850bd3884494a774e7ae0aac77a3
 msgid "This script will:"
 msgstr "Questo script:"
 
-#: ../../ha_setup_and_management.rst:192 abda121246114a959b10696ef9bf686a
+#: ../../ha_setup_and_management.rst:199 22a456d34618412aa05033faf29cc275
 msgid "Initialize `keepalived` with the virtual IP for the LAN interface."
 msgstr "Inizializzare `keepalived` con l’IP virtuale per l’interfaccia LAN."
 
-#: ../../ha_setup_and_management.rst:193 b9e8fbb284f44695b0c7bd667680d28e
+#: ../../ha_setup_and_management.rst:200 93d36135a2e14b219127578f38b24511
 msgid "Configure `conntrackd`."
 msgstr "Configurare `conntrackd`."
 
-#: ../../ha_setup_and_management.rst:194 419901511c6849af91d295bca02297af
+#: ../../ha_setup_and_management.rst:201 33eee138c4014a31ad26e996f7bc90e8
 msgid "Generate a random password and public key for synchronization."
 msgstr ""
 "Generare una password casuale e una chiave pubblica per la sincronizzazione."
 
-#: ../../ha_setup_and_management.rst:195 5fea9ebd086845188849280e4e809b72
+#: ../../ha_setup_and_management.rst:202 8d0435b21e6f42b5b306b10121579d68
 msgid ""
 "Configure `dropbear` (SSH server) to listen on port `65022` and allow only "
 "key-based authentication for sync."
@@ -617,7 +578,7 @@ msgstr ""
 ".. note::\n"
 "   In questo modo, `dropbear` accetterà solo connessioni SSH sulla porta ``65022`` e solo tramite autenticazione con chiave pubblica."
 
-#: ../../ha_setup_and_management.rst:197 3be66335effe45b983a8957a38d74af9
+#: ../../ha_setup_and_management.rst:204 da88d5ebba614e5a95ce567cc6dea8fb
 msgid ""
 "Initialize the secondary node, always execute the command on the primary "
 "node::"
@@ -625,7 +586,7 @@ msgstr ""
 "Inizializzare il nodo secondario, eseguire sempre il comando sul nodo "
 "primario::"
 
-#: ../../ha_setup_and_management.rst:201 eee3249bc78c4267934d82f5e99d03aa
+#: ../../ha_setup_and_management.rst:208 8e3b1fc8a9b9412185bfc0fe7f7a6f02
 msgid ""
 "The script will ask for the root password of the secondary node. You can "
 "also pipe the password: ::"
@@ -633,7 +594,7 @@ msgstr ""
 "Lo script richiederà la password di root del nodo secondario. È anche "
 "possibile passare la password tramite pipe: ::"
 
-#: ../../ha_setup_and_management.rst:205 2f236dfc78a94258b2bbc5de8312fce1
+#: ../../ha_setup_and_management.rst:212 5ad5660ce13d410faad25cd61a844cd0
 msgid ""
 "At this point, the nodes are configured to communicate over LAN, and the LAN"
 " virtual IP will failover."
@@ -641,11 +602,11 @@ msgstr ""
 "A questo punto, i nodi sono configurati per comunicare tramite LAN e "
 "l'indirizzo IP virtuale della LAN effettuerà il failover."
 
-#: ../../ha_setup_and_management.rst:208 5d43f3fcb59040bfa8111e1709ec5722
+#: ../../ha_setup_and_management.rst:215 f2e0933662f84f7f91e53073dc6e456a
 msgid "WAN interfaces"
 msgstr "Interfacce WAN"
 
-#: ../../ha_setup_and_management.rst:210 cc764b74b5e74e1783230ed4b4590a1f
+#: ../../ha_setup_and_management.rst:217 940fed8fb0ea4837b5762d85616ab5ed
 msgid ""
 "The system does not require any special configuration for the WAN "
 "interfaces. Just configure them inside the ``Interfaces and devices`` page "
@@ -657,7 +618,7 @@ msgstr ""
 "dispositivi`` sul nodo primario e saranno gestite automaticamente dagli "
 "script HA."
 
-#: ../../ha_setup_and_management.rst:214 aa62817f0b084388ab347e08f5de47e3
+#: ../../ha_setup_and_management.rst:221 3c2355facf6d430a87f67f7b7219b4d9
 msgid ""
 "WAN aliases can be added from the same network configuration page and will "
 "be automatically synchronized to the secondary node."
@@ -665,7 +626,7 @@ msgstr ""
 "Gli alias WAN possono essere aggiunti dalla stessa pagina di configurazione "
 "della rete e verranno sincronizzati automaticamente con il nodo secondario."
 
-#: ../../ha_setup_and_management.rst:217 2b79cfd5d5cf4ab1962e9f7e77399414
+#: ../../ha_setup_and_management.rst:224 2fc87e76ac424cbf879a691fac598552
 msgid ""
 "WAN interfaces are brought up on the primary node and kept down on the "
 "secondary node. Please note that the web interface on the secondary may not "
@@ -678,11 +639,11 @@ msgstr ""
 "\"attiva\" anche se è inattiva. Questa è una limitazione nota e verrà "
 "risolta in una versione futura."
 
-#: ../../ha_setup_and_management.rst:222 d81e92831b564a69b6f09d68cda4d68d
+#: ../../ha_setup_and_management.rst:229 d90b963af65e42dcbfce7d2ec55e73c0
 msgid "Verify the configuration"
 msgstr "Verificare la configurazione"
 
-#: ../../ha_setup_and_management.rst:224 f1f86d087e7a441bbc0cfe5c7fe99a22
+#: ../../ha_setup_and_management.rst:231 27276f2a72b44fc6850b225f1b4e575a
 msgid ""
 "The cluster is now ready to be used. You can check the status of the cluster"
 " and verify that the configuration is correct."
@@ -690,11 +651,11 @@ msgstr ""
 "Il cluster è ora pronto per essere utilizzato. È possibile verificare lo "
 "stato del cluster e accertarsi che la configurazione sia corretta."
 
-#: ../../ha_setup_and_management.rst:226 2404bcc1a68c4160b6155c8295cdb9a8
+#: ../../ha_setup_and_management.rst:233 43b60edd5ecf4c3080940721fc1ec6c7
 msgid "Verify current configuration: ::"
 msgstr "Verificare la configurazione attuale: ::"
 
-#: ../../ha_setup_and_management.rst:230 377d116b19274f1f9b97bcbc115ab524
+#: ../../ha_setup_and_management.rst:237 9066441940b443edbaccd383ac6c877b
 msgid ""
 "Check the status of the HA cluster. The first sync may take up to 5 minutes."
 " ::"
@@ -702,7 +663,7 @@ msgstr ""
 "Verificare lo stato del cluster HA. La prima sincronizzazione può richiedere"
 " fino a 5 minuti. ::"
 
-#: ../../ha_setup_and_management.rst:234 a065b83686ec483c909af09cff89e172
+#: ../../ha_setup_and_management.rst:241 bb4183a6a3954c3f87f1ac5723802cc6
 msgid ""
 "Initial status might show ``Last Sync Status: SSH Connection Failed``. After"
 " sync, it should show ``Last Sync Status: Up to Date``."
@@ -711,11 +672,11 @@ msgstr ""
 "Failed``. Dopo la sincronizzazione, dovrebbe mostrare ``Last Sync Status: Up"
 " to Date``."
 
-#: ../../ha_setup_and_management.rst:237 6f6441a0ec1843889b94221abb3b7a23
+#: ../../ha_setup_and_management.rst:244 b4c2b96d701f4a468516779297f60a3f
 msgid "Additional LAN interfaces"
 msgstr "Interfacce LAN aggiuntive"
 
-#: ../../ha_setup_and_management.rst:239 81cdbd661292441aac18e99a5fa13559
+#: ../../ha_setup_and_management.rst:246 2da9f5e0f34d4bbdaa840979023b58c5
 msgid ""
 "It's possible to add additional LAN interfaces to the HA cluster after the "
 "initial setup. Before adding an interface, ensure that the interface is "
@@ -736,7 +697,7 @@ msgstr ""
 "gerarchia dei dispositivi (ad esempio, se l'interfaccia è una VLAN, anche "
 "l'interfaccia padre deve essere presente sul nodo secondario)."
 
-#: ../../ha_setup_and_management.rst:245 a1e31e8de5054c3a81b62722fa57680b
+#: ../../ha_setup_and_management.rst:252 872c3ce146464c3ea605cc394d964982
 msgid ""
 "You can use this command to add any non-WAN interface, like a second LAN, "
 "DMZ or GUEST interface to the HA cluster."
@@ -744,41 +705,41 @@ msgstr ""
 "È possibile utilizzare questo comando per aggiungere qualsiasi interfaccia "
 "non-WAN, come una seconda LAN, DMZ o un'interfaccia GUEST al cluster HA."
 
-#: ../../ha_setup_and_management.rst:247 1f1a00395570436d97cb191fd5d87460
+#: ../../ha_setup_and_management.rst:254 b6f45bb7070c46969a78fe27a8402a91
 msgid "Add additional interfaces as needed::"
 msgstr "Aggiungere interfacce aggiuntive secondo necessità::"
 
-#: ../../ha_setup_and_management.rst:251 99eab9c69a434c07af13a119f9e227fe
+#: ../../ha_setup_and_management.rst:258 e14f7086823b40858dccb32a8afbf31a
 msgid "The following checks are performed:"
 msgstr "Vengono eseguiti i seguenti controlli:"
 
-#: ../../ha_setup_and_management.rst:253 a806747ee5b8495a8845397aa4f7e9b4
+#: ../../ha_setup_and_management.rst:260 9c5f81ce51ec43df9ffe934e8e9d40f2
 msgid "virtual IP address must be in CIDR notation (e.g., `192.168.100.1/24`)"
 msgstr ""
 "l'indirizzo IP virtuale deve essere in notazione CIDR (ad esempio, "
 "``192.168.100.1/24``)"
 
-#: ../../ha_setup_and_management.rst:254 e7a7a68634324dfa91bb6d185535468b
+#: ../../ha_setup_and_management.rst:261 2363c8c2dc6d408da9b23eb918842037
 msgid "make sure a device with given static IP address exists on the node"
 msgstr ""
 "assicurarsi che un dispositivo con l'indirizzo IP statico specificato esista"
 " sul nodo"
 
-#: ../../ha_setup_and_management.rst:255 a25a4f4519f548e39bd77263708d55d1
+#: ../../ha_setup_and_management.rst:262 6e72a3f684654b239fb3c0e2ac2f64f8
 msgid "If DHCP server is running, the following"
 msgstr "Se il server DHCP è in esecuzione, il seguente"
 
-#: ../../ha_setup_and_management.rst:261 ../../ha_setup_and_management.rst:304
-#: ../../ha_setup_and_management.rst:316 97db371af19041d887d9f6406ecf346b
-#: 3a6750951c104addbcb159956d0f9810 e5221a424b3c4f9baa86e82bf540ff92
+#: ../../ha_setup_and_management.rst:268 ../../ha_setup_and_management.rst:311
+#: ../../ha_setup_and_management.rst:323 ba971b8dd716497aa8abd536df2a35e1
+#: a90ebc2aa9d848f89facf29dfcc24fe4 271ef83f07994950af57e4c99eec131c
 msgid "Example: ::"
 msgstr "Esempio: ::"
 
-#: ../../ha_setup_and_management.rst:267 de5784ce428a4584a32fe594ffda0353
+#: ../../ha_setup_and_management.rst:274 6b52a51157694e9b881cf1dce59b1cce
 msgid "Hotspot support"
 msgstr "Supporto hotspot"
 
-#: ../../ha_setup_and_management.rst:269 8f27ebcba8574b5d8f595f7c276255c4
+#: ../../ha_setup_and_management.rst:276 61aa57fba14845948f16ba7d0114bbfe
 msgid ""
 "The hotspot feature is supported in HA clusters, but there are important "
 "requirements:"
@@ -786,7 +747,7 @@ msgstr ""
 "La funzionalità hotspot è supportata nei cluster HA, ma ci sono requisiti "
 "importanti:"
 
-#: ../../ha_setup_and_management.rst:271 7346a2835a59444585b434235bef528f
+#: ../../ha_setup_and_management.rst:278 20dce13dc50048de9c9d13930d7bd307
 msgid ""
 "It must be configured on physical network interfaces only, VLAN interfaces "
 "are not supported."
@@ -794,7 +755,7 @@ msgstr ""
 "Deve essere configurato solo sulle interfacce di rete fisiche; le interfacce"
 " VLAN non sono supportate."
 
-#: ../../ha_setup_and_management.rst:272 830d4ee618014ead8bee9b885d58dbc7
+#: ../../ha_setup_and_management.rst:279 1af8a25c1f3c41fba24c450df85ed196
 msgid ""
 "The secondary node must have the exact same network devices as the primary "
 "node."
@@ -802,7 +763,7 @@ msgstr ""
 "Il nodo secondario deve avere esattamente gli stessi dispositivi di rete del"
 " nodo primario."
 
-#: ../../ha_setup_and_management.rst:273 cde8c51fba5e494fae4606b8245a5632
+#: ../../ha_setup_and_management.rst:280 95b86531c1494b6298e4a2b4bc8b425d
 msgid ""
 "To maintain hotspot functionality during failover, the MAC address of the "
 "interface running the hotspot on the primary node is automatically copied to"
@@ -815,7 +776,7 @@ msgstr ""
 "quando si verifica uno switchover. Questo comportamento impedisce l'utilizzo"
 " di interfacce VLAN per l'hotspot."
 
-#: ../../ha_setup_and_management.rst:277 d021a711c68d4007bf76f9bbd3e14a6c
+#: ../../ha_setup_and_management.rst:284 a0ad892a24b34179b8146ae0e61ff1de
 msgid ""
 "Note that active sessions are stored in RAM and will be lost during a "
 "switchover; clients must re-authenticate unless auto-login is enabled."
@@ -824,11 +785,11 @@ msgstr ""
 "durante uno switchover; i client dovranno autenticarsi nuovamente a meno che"
 " l'accesso automatico non sia abilitato."
 
-#: ../../ha_setup_and_management.rst:280 b5204eab1db348428a0dd0e6ce6c9d93
+#: ../../ha_setup_and_management.rst:287 239b6205226a4444800835d9788bc12a
 msgid "Extra Virtual IPs"
 msgstr "IP virtuali extra"
 
-#: ../../ha_setup_and_management.rst:282 2175f0b2a228423a95d4020bc4378c72
+#: ../../ha_setup_and_management.rst:289 040f4ae5456e4d1d81986f954e0c2a17
 msgid ""
 "A Virtual IP (VIP) is an additional IP address assigned to a network "
 "interface that will be migrated to the secondary node in case of failover. "
@@ -839,7 +800,7 @@ msgstr ""
 "possibile aggiungere IP Virtuali al nodo primario sulle interfacce "
 "rilevanti."
 
-#: ../../ha_setup_and_management.rst:286 1974291f7f6541b2a947b2398e0edfad
+#: ../../ha_setup_and_management.rst:293 cfc1ab6de18f4210a1a9d340aa721ebd
 msgid ""
 "This is useful for services that require multiple IP addresses on the same "
 "interface, such as virtual servers or load balancing."
@@ -847,7 +808,7 @@ msgstr ""
 "Questo è utile per i servizi che richiedono più indirizzi IP sulla stessa "
 "interfaccia, come i server virtuali o il bilanciamento del carico."
 
-#: ../../ha_setup_and_management.rst:288 7c962e2ca5bc45f6953babd845e40d13
+#: ../../ha_setup_and_management.rst:295 c05b536cc73e4c9c886ac8cc0369ddb6
 msgid ""
 "Use the ``ns-ha-config`` command to register the virtual IP in the HA "
 "cluster configuration."
@@ -855,12 +816,12 @@ msgstr ""
 "Utilizzare il comando ``ns-ha-config`` per registrare l'IP virtuale nella "
 "configurazione del cluster HA."
 
-#: ../../ha_setup_and_management.rst:290 41e7a5f0b91d4b9b858b1c54c175dfd4
+#: ../../ha_setup_and_management.rst:297 0340760f7ce345999c20999201c400fb
 msgid "Virtual IPs must be explicitly set on the primary node. ::"
 msgstr ""
 "Gli IP virtuali devono essere impostati esplicitamente sul nodo primario. ::"
 
-#: ../../ha_setup_and_management.rst:294 0345daf363fd4ce38bb350b1643f9d76
+#: ../../ha_setup_and_management.rst:301 8a972e016bc24971ab731684920787a6
 msgid ""
 "**Note:** the virtual IP will appear as an extra IP address on the network "
 "interface inside the ``Interfaces and devices`` page of the web interface, "
@@ -871,15 +832,15 @@ msgstr ""
 "dispositivi`` dell'interfaccia web, ma non sarà elencato nella sezione degli"
 " alias."
 
-#: ../../ha_setup_and_management.rst:298 18d3b635fb514fa58f4e4e666d9257cd
+#: ../../ha_setup_and_management.rst:305 c47c8c88117749cda01278da565ce3c3
 msgid "Remove interfaces and Virtual IPs"
 msgstr "Rimuovere interfacce e IP virtuali"
 
-#: ../../ha_setup_and_management.rst:300 018976471dde4dbf8599f7ca9fb2de51
+#: ../../ha_setup_and_management.rst:307 ace767132e7c4a27b9947e2608cacbd7
 msgid "Remove an interface from HA configuration: ::"
 msgstr "Rimuovere un'interfaccia dalla configurazione HA: ::"
 
-#: ../../ha_setup_and_management.rst:308 60a6b742e0c54630b59e416100f9ebb8
+#: ../../ha_setup_and_management.rst:315 023dcb05c7874856a39a6cfa6a17341d
 msgid ""
 "This removes the interface from `keepalived`, so it will be excluded from "
 "the HA configuration. Also, the virtual IP address associated with the "
@@ -889,46 +850,122 @@ msgstr ""
 "configurazione HA. Inoltre, l'indirizzo IP virtuale associato "
 "all'interfaccia verrà spostato sull'interfaccia di rete del nodo primario."
 
-#: ../../ha_setup_and_management.rst:312 78cbbf5f4eb845f78cca6c9b3f7085b8
+#: ../../ha_setup_and_management.rst:319 19ff33be246849cbbb55373cd913ad85
 msgid "Remove a virtual IP from HA configuration: ::"
 msgstr "Rimuovere un IP virtuale dalla configurazione HA: ::"
 
-#: ../../ha_setup_and_management.rst:321 c835cd64d1324eb5800c362b87b91a54
+#: ../../ha_setup_and_management.rst:328 affab7ae636648a585f9d86fc8f56d5a
 msgid "Configuration example"
 msgstr "Esempio di configurazione"
 
-#: ../../ha_setup_and_management.rst:323 b236ba13d0264cac9dac2dc1f4a76d66
+#: ../../ha_setup_and_management.rst:330 7859230ab3f34b878378f62d03df4539
 msgid "Assuming:"
 msgstr "Supponendo:"
 
-#: ../../ha_setup_and_management.rst:325 2e850caa498649a78cf578b070f719a8
+#: ../../ha_setup_and_management.rst:332 40399b7d498a41e89a2e1981eb652957
 msgid "Primary Node LAN IP: `192.168.100.238`"
 msgstr "IP LAN del nodo primario: ``192.168.100.238``"
 
-#: ../../ha_setup_and_management.rst:326 e43ed15b9781458998eff58fc7c6fbb8
+#: ../../ha_setup_and_management.rst:333 2ab0937e41ea4131a6d7b3459f151106
 msgid "Secondary Node LAN IP: `192.168.100.239`"
 msgstr "IP LAN nodo secondario: ``192.168.100.239``"
 
-#: ../../ha_setup_and_management.rst:327 6388aa207de64752b5997e1f751ba126
+#: ../../ha_setup_and_management.rst:334 48f13a1cca364bac85bbea0fe4483532
 msgid "LAN Virtual IP: `192.168.100.240/24`"
 msgstr "LAN Virtual IP: ``192.168.100.240/24``"
 
-#: ../../ha_setup_and_management.rst:328 b0345020bd46498aaeb7ec0d59bb6544
+#: ../../ha_setup_and_management.rst:335 d7e78a41505f4ed8a96d50ab040b36df
 msgid "LAN Interface Name: `lan`"
 msgstr "Nome interfaccia LAN: ``lan``"
 
-#: ../../ha_setup_and_management.rst:329 f1354752eb584a3c8e5c263322761cf8
+#: ../../ha_setup_and_management.rst:336 36f6cce930aa44ac9499c6bb04eca81c
 msgid "Secondary Node Root Password: `backup_root_password`"
 msgstr "Password di root del nodo secondario: ``backup_root_password``"
 
-#: ../../ha_setup_and_management.rst:331 ca399e3c0b344075af8b80ec46ddbad5
+#: ../../ha_setup_and_management.rst:338 a2633cb1f9d2440d92a47125d56cb9ea
 msgid "Execute the following commands on the **primary node**:"
 msgstr "Eseguire i seguenti comandi sul **nodo primario**:"
 
-#: ../../ha_setup_and_management.rst:333 7ddd0047b22e488ea7fb9abae505e6c3
+#: ../../ha_setup_and_management.rst:340 a8c65b15a0244ffe8ae5f67cc9185e60
 msgid "Check requirements: ::"
 msgstr "Verificare i requisiti: ::"
 
-#: ../../ha_setup_and_management.rst:339 eae8f74c425b42ab876ecac7de2eabe3
+#: ../../ha_setup_and_management.rst:346 81ad6f821e5c427e84f9bb49e4c866e4
 msgid "Setup the cluster: ::"
 msgstr "Configurare il cluster: ::"
+
+#: ../../ha_setup_and_management.rst:114 de163cd158424f40ae52cfa37a140e91
+msgid ""
+"This interface can use any name, however, the recommended best practice is "
+"to name the HA interface ``lan``. In an HA environment, only the HA "
+"interface can be named ``lan``, all other interfaces must use a different "
+"name."
+msgstr ""
+"Questa interfaccia può avere qualsiasi nome; tuttavia, la prassi consigliata"
+" è di chiamare l'interfaccia HA ``lan``. In un ambiente HA, solo "
+"l'interfaccia HA può essere chiamata ``lan``, tutte le altre interfacce "
+"devono utilizzare un nome diverso."
+
+#: ../../ha_setup_and_management.rst:119 f5add18b53614a2885c9d8f11403c641
+msgid ""
+"Any interface that is not a WAN, such as another LAN, a guest network, or a "
+"DMZ. These are also managed using the three-address logic (primary IP, "
+"secondary IP, and VIP), they have to be configured on the primary and the "
+"secondary node, then they must be added to the HA configuration after "
+"initialization. A fault on any of these interfaces triggers a failover "
+"between units. They are configured by adding them as LAN interfaces. "
+"`Additional LAN interfaces`_."
+msgstr ""
+"Qualsiasi interfaccia che non sia una WAN, come un'altra LAN, una rete guest"
+" o una DMZ. Anche queste vengono gestite utilizzando la logica a tre "
+"indirizzi (IP primario, IP secondario e VIP), devono essere configurate sia "
+"sul nodo primario che su quello secondario, quindi devono essere aggiunte "
+"alla configurazione HA dopo l'inizializzazione. Un guasto su una di queste "
+"interfacce attiva un failover tra le unità. Vengono configurate "
+"aggiungendole come interfacce LAN. `Interfacce LAN aggiuntive`_."
+
+#: ../../ha_setup_and_management.rst:124 07381c4234bf4147a69cb2eac1d6a826
+msgid ""
+"Please remember that all additional interfaces must use a name different "
+"from ``lan``."
+msgstr ""
+"Si ricorda che tutte le interfacce aggiuntive devono utilizzare un nome "
+"diverso da ``lan``."
+
+#: ../../ha_setup_and_management.rst:128 542d3fa4e2eb47e88385475548631019
+msgid ""
+"These interfaces are handled as special cases. WAN connectivity issues are "
+"generally more likely than a physical failure of a switch, cable, or network"
+" card. Triggering an HA failover when a single WAN goes down would usually "
+"not provide any real benefit: the secondary firewall would be affected by "
+"the same upstream connectivity issue, while the failover itself could "
+"introduce unnecessary disruption."
+msgstr ""
+"Queste interfacce vengono gestite come casi speciali. I problemi di "
+"connettività WAN sono generalmente più probabili rispetto a un guasto fisico"
+" di uno switch, di un cavo o di una scheda di rete. Attivare un failover HA "
+"quando una singola WAN va giù di solito non apporterebbe alcun reale "
+"beneficio: il firewall secondario sarebbe interessato dallo stesso problema "
+"di connettività a monte, mentre il failover stesso potrebbe introdurre "
+"interruzioni non necessarie."
+
+#: ../../ha_setup_and_management.rst:130 f3478a5949f1495b93d52206413e64d5
+msgid ""
+"For this reason, WAN failures do not trigger a switch from the primary "
+"firewall to the secondary one. WAN availability should be handled by "
+"MultiWAN, which is designed to manage connectivity loss, link failover, and "
+"traffic routing across multiple uplinks. This also prevents conflicts "
+"between HA mechanisms and MultiWAN management, especially in complex or "
+"high-value installations. WAN interfaces only need to be configured on the "
+"primary node; they are automatically replicated to the secondary node, "
+"further details are provided in the dedicated section below."
+msgstr ""
+"Per questo motivo, i guasti WAN non provocano il passaggio dal firewall "
+"primario a quello secondario. La disponibilità della WAN dovrebbe essere "
+"gestita da MultiWAN, che è progettato per gestire la perdita di "
+"connettività, il failover dei collegamenti e l'instradamento del traffico su"
+" più uplink. Questo previene anche conflitti tra i meccanismi di HA e la "
+"gestione MultiWAN, specialmente in installazioni complesse o di alto valore."
+" Le interfacce WAN devono essere configurate solo sul nodo primario; vengono"
+" replicate automaticamente sul nodo secondario. Ulteriori dettagli sono "
+"forniti nella sezione dedicata di seguito."
