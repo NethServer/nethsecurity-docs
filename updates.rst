@@ -74,7 +74,7 @@ If you are running NethSecurity 8.8, use::
   apk update
   grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs apk add
 
-If you are running NethSecurity 8.7, use::
+If you are running NethSecurity 8.7 or older, use::
 
   opkg update
   grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs opkg install

@@ -169,7 +169,7 @@ These packages can be installed from the command line console, just find the cor
       apk update
       apk search kmod-usb-net-*
 
-  If you are running NethSecurity 8.7, use::
+  If you are running NethSecurity 8.7 or older, use::
 
       opkg update
       opkg find kmod-usb-net-*
@@ -197,7 +197,7 @@ These packages can be installed from the command line console, just find the cor
 
       apk add kmod-usb-net-rtl8150
 
-  If you are running NethSecurity 8.7, use::
+  If you are running NethSecurity 8.7 or older, use::
 
       opkg install kmod-usb-net-rtl8150
 

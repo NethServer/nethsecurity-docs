@@ -20,7 +20,7 @@ If you are running NethSecurity 8.8, use::
     apk update
     apk add etherwake
 
-If you are running NethSecurity 8.7, use::
+If you are running NethSecurity 8.7 or older, use::
 
     opkg update
     opkg install etherwake

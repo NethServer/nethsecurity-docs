@@ -342,7 +342,7 @@ Two packages are provided for installation, covering the vast majority of adapte
       apk update
       apk add kmod-usb-serial-pl2303
 
-  If you are running NethSecurity 8.7, use::
+  If you are running NethSecurity 8.7 or older, use::
 
       opkg update
       opkg install kmod-usb-serial-pl2303
