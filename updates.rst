@@ -52,6 +52,12 @@ Please note that the reinstall procedure requires access to Internet.
 If one or more packages cannot be installed because the network is not yet ready or a transient error occurs,
 the restore service stays enabled and retries automatically on the next boot until all packages are restored.
 Only packages that are actually installed successfully are reported as restored.
+For example, a mixed restore may log::
+
+  Restored package: etherwake
+  Failed to restore package: qemu-ga
+  Some packages failed to restore, will retry later
+
 In case of error, proceed with the manual restore documented below.
 See the next section for earlier versions.
 
