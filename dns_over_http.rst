@@ -32,7 +32,7 @@ Installation
 Since NethSecurity 8.8, the ``https-dns-proxy`` package is included in NethSecurity image, so no
 separate installation step is required.
 
-On NethSecurity 7.7, the package is not included in default NethSecurity image, so you will need to install it manually: ::
+On NethSecurity 8.7, the package is not included in default NethSecurity image, so you will need to install it manually: ::
 
   opkg update
   opkg install https-dns-proxy
