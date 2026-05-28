@@ -40,12 +40,12 @@ Step 1: install the required packages
 
 Install the required packages.
 
-If you are using NethSecurity 8.8, use::
+If you are running NethSecurity 8.8, use::
 
     apk update
     apk add nut-server nut-upsc nut-upsmon nut-upscmd
 
-If you are using NethSecurity 8.7, use::
+If you are running NethSecurity 8.7, use::
 
     opkg update
     opkg install nut-server nut-upsc nut-upsmon nut-upscmd
@@ -70,11 +70,11 @@ Step 2: setup the appropriate driver
 3. All driver packages start with ``nut-driver-`` prefix. Some UPS models may require a specific driver, but most of them work with the ``usbhid-ups`` driver.
    Install the selected driver package, in this case the ``usbhid-ups`` driver.
 
-   If you are using NethSecurity 8.8, use::
+   If you are running NethSecurity 8.8, use::
 
       apk add nut-driver-usbhid-ups
 
-   If you are using NethSecurity 8.7, use::
+   If you are running NethSecurity 8.7, use::
 
       opkg install nut-driver-usbhid-ups
 
@@ -199,12 +199,12 @@ The secondary firewall will connect to the primary firewall and monitor the UPS 
 
 1. First, install the NUT services on the client machine.
 
-   If you are using NethSecurity 8.8, use::
+   If you are running NethSecurity 8.8, use::
 
        apk update
        apk add nut-upsc nut-upsmon
 
-   If you are using NethSecurity 8.7, use::
+   If you are running NethSecurity 8.7, use::
 
        opkg update
        opkg install nut-upsc nut-upsmon

@@ -337,12 +337,12 @@ Two packages are provided for installation, covering the vast majority of adapte
 
 * To install Prolific PL2303 driver:
 
-  If you are using NethSecurity 8.8, use::
+  If you are running NethSecurity 8.8, use::
 
       apk update
       apk add kmod-usb-serial-pl2303
 
-  If you are using NethSecurity 8.7, use::
+  If you are running NethSecurity 8.7, use::
 
       opkg update
       opkg install kmod-usb-serial-pl2303

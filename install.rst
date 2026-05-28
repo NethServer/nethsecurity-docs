@@ -136,12 +136,12 @@ The agent can work when the virtual machine is running on KVM, Proxmox, or other
 
 First, make sure the virtual machine is running, then connect to the machine using SSH or the Proxmox console.
 
-If you are using NethSecurity 8.8, use::
+If you are running NethSecurity 8.8, use::
 
     apk update
     apk add qemu-ga
 
-If you are using NethSecurity 8.7, use::
+If you are running NethSecurity 8.7, use::
 
     opkg update
     opkg install qemu-ga
@@ -188,12 +188,12 @@ The tools can work only when the virtual machine is running on VMWare hypervisor
 
 First, make sure the virtual machine is running, then connect to the machine using SSH or the VMWare console.
 
-If you are using NethSecurity 8.8, use::
+If you are running NethSecurity 8.8, use::
 
     apk update
     apk add open-vm-tools
 
-If you are using NethSecurity 8.7, use::
+If you are running NethSecurity 8.7, use::
 
     opkg update
     opkg install open-vm-tools

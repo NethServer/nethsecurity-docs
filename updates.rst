@@ -69,12 +69,12 @@ However, the list of installed packages is saved in the configuration backup, al
 
 After the upgrade, ensure that the system has Internet access, then restore the previously installed packages using the commands that match your NethSecurity version.
 
-If you are using NethSecurity 8.8, use::
+If you are running NethSecurity 8.8, use::
 
   apk update
   grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs apk add
 
-If you are using NethSecurity 8.7, use::
+If you are running NethSecurity 8.7, use::
 
   opkg update
   grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs opkg install

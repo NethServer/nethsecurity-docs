@@ -66,12 +66,12 @@ The daemon polls for new lines every 10 seconds, detects log rotation automatica
 The package is not included by default on NethSecurity 8.7.2 or earlier, but it is available in the package repository and can be
 manually installed.
 
-If you are using NethSecurity 8.8, use::
+If you are running NethSecurity 8.8, use::
 
     apk update
     apk add ns-clm
 
-If you are using NethSecurity 8.7, use::
+If you are running NethSecurity 8.7, use::
 
     opkg update
     opkg install ns-clm
