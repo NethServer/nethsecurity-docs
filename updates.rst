@@ -49,6 +49,9 @@ Restore extra packages
 ----------------------
 Starting from version 8.7.2, extra packages are automatically reinstalled after system upgrade.
 Please note that the reinstall procedure requires access to Internet.
+If one or more packages cannot be installed because the network is not yet ready or a transient error occurs,
+the restore service stays enabled and retries automatically on the next boot until all packages are restored.
+Only packages that are actually installed successfully are reported as restored.
 In case of error, proceed with the manual restore documented below.
 See the next section for earlier versions.
 
