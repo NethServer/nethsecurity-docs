@@ -70,6 +70,16 @@ The web interface allows the configuration of advanced features like:
 
 * ``Enforce a minimum TLS version``: Allows you to choose a minimum version of TLS, in which case connections will only be allowed from devices that use a version greater than or equal to the one selected
 
+Multiple OpenVPN tunnels
+------------------------
+If a NethSecurity must act as the VPN server for multiple remote firewalls, create a dedicated OpenVPN tunnel for each remote peer.
+The UI-supported and recommended model is one server/client pair per site-to-site connection, for example, a central firewall connected to three remote firewalls should have three separate OpenVPN server tunnels, each with its own client configuration imported on the corresponding remote firewall.
+
+This approach allows each tunnel to be managed independently, with separate configuration, certificates, routes, status, monitoring, and troubleshooting. 
+It also prevents issues on one remote connection from affecting the operational management of the others.
+
+Do not use a single OpenVPN server tunnel shared by multiple remote clients for site-to-site configurations managed from the UI.
+
 MTU Issue and Packet Fragmentation
 ----------------------------------
 
