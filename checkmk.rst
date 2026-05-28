@@ -20,7 +20,14 @@ If you only need the upstream agent, install ``checkmk-agent`` alone.
 Install the packages
 --------------------
 
-Install the agent and the optional NethSecurity checks from the command line::
+Install the agent and the optional NethSecurity checks from the command line.
+
+If you are using NethSecurity 8.8, use::
+
+    apk update
+    apk add ns-checkmk-utils
+
+If you are using NethSecurity 8.7, use::
 
     opkg update
     opkg install ns-checkmk-utils

@@ -13,7 +13,14 @@ On NethSecurity, EtherWake is available in the official repositories but it is n
 Installation
 ------------
 
-Install the package with::
+Install the package with the commands that match your NethSecurity version.
+
+If you are using NethSecurity 8.8, use::
+
+    apk update
+    apk add etherwake
+
+If you are using NethSecurity 8.7, use::
 
     opkg update
     opkg install etherwake
@@ -37,4 +44,3 @@ The basic command is::
 Example::
 
     etherwake -i eth0 00:11:22:33:44:55
-
