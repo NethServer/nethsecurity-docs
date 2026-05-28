@@ -117,6 +117,7 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Advanced (CLI)
 
+   avahi
    ddns
    dns_over_http
    smtp
