@@ -36,9 +36,9 @@ The user must have a password set.
 Remote databases
 ================
 
-.. admonition:: Subscription required
+.. admonition:: Community or Enterprise subscription required
 
-   This feature is available only if the firewall has a valid subscription.
+   This feature is available if the firewall has a valid Community or Enterprise subscription.
 
 The administrator can extend the capabilities of the firewall by adding new remote databases.
 Remote databases allow the firewall to authenticate users against an external LDAP server, such as Active Directory or OpenLDAP.

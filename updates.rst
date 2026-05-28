@@ -75,9 +75,9 @@ After the upgrade, ensure that the system has internet access, then restore the 
 Automatic package updates
 =========================
 
-.. admonition:: Subscription required
+.. admonition:: Community or Enterprise subscription required
 
-   This feature is available only if the firewall has a valid subscription.
+   This feature is available if the firewall has a valid Community or Enterprise subscription.
 
 Automatic updates for packages can be enabled from the ``Update`` section under the ``System`` menu, by enabling the ``Automatic updates`` option.
 Updates are checked daily and, if available, they are automatically downloaded and installed.

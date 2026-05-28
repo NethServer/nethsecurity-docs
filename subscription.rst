@@ -25,6 +25,10 @@ Typical benefits of the subscription service include:
 - **Support**: subscribers can receive priority support on stable releases. This can be crucial for businesses relying on NethSecurity for their operations. See also :ref:`remote_support-section`.
 - **Consultation and customization**: subscribers could get consultation services and assistance with customization to tailor the server's functionalities according to specific business requirements.
 
+.. note::
+
+   Community subscriptions also include automatic package updates and remote LDAP user databases.
+
 It's important to note that while a subscription might not be required for normal use, businesses with specific needs or those seeking additional support and features might find value in subscribing to NethSecurity offer.
 
 .. _register_subscription-section:
