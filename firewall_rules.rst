@@ -44,6 +44,8 @@ Fill in the following fields for the new rule:
   * ``Accept``: accept the network traffic.
   * ``Reject``: block the traffic and notify the sender host.
   * ``Drop``: block the traffic, packets are dropped and no notification is sent to the sender host.
+  * ``Don't track``: bypass connection tracking for matching traffic. This action is available only in
+    ``Forward rules`` and ``Input rules``, requires a source zone, and is not available in ``Output rules``.
 * ``Rule position``: decide whether to add the rule to the bottom or top of the rule list.
 * ``Logging``: indicate whether traffic matching this rule should be logged. The log entry will include the rule name as a prefix.
   By default, logging is limited to 1 entry per second. See the :ref:`logging-limits` section for instructions on changing this limit.
