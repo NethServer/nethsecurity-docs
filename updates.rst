@@ -75,9 +75,9 @@ After the upgrade, ensure that the system has internet access, then restore the 
 Automatic package updates
 =========================
 
-.. admonition:: Community or Enterprise subscription required
+.. note:: No subscription required
 
-   This feature is available if the firewall has a valid Community or Enterprise subscription.
+   Starting from NethSecurity 8.8, this feature is available even without a subscription.
 
 Automatic updates for packages can be enabled from the ``Update`` section under the ``System`` menu, by enabling the ``Automatic updates`` option.
 Updates are checked daily and, if available, they are automatically downloaded and installed.
