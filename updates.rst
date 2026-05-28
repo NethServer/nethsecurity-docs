@@ -67,14 +67,7 @@ This manual procedure is required only on versions before 8.7.2 or if the automa
 During the upgrade, the system is completely rewritten, and all extra packages installed by the user will be lost.
 However, the list of installed packages is saved in the configuration backup, allowing them to be restored after the upgrade.
 
-After the upgrade, ensure that the system has Internet access, then restore the previously installed packages using the commands that match your NethSecurity version.
-
-If you are running NethSecurity 8.8, use::
-
-  apk update
-  grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs apk add
-
-If you are running NethSecurity 8.7 or older, use::
+After the upgrade, ensure that the system has internet access, then restore the previously installed packages using the following commands: ::
 
   opkg update
   grep -E '\w+\s+overlay$' /etc/backup/installed_packages.txt | awk '{print $1}' | xargs opkg install
