@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../uci.rst:5 a74265388406474ab79e76c782a8a335
+#: ../../uci.rst:5 ce61a3909a06408dba207c60ff77897b
 msgid "UCI (Unified Configuration Interface)"
 msgstr "UCI (Unified Configuration Interface)"
 
-#: ../../uci.rst:7 c21233c7b1a54b8791865189f52bec70
+#: ../../uci.rst:7 a9b03f97cde24d8690a933f45968aa63
 msgid ""
 "UCI (Unified Configuration Interface) is a centralized configuration "
 "management system used in NethSecurity. It provides a unified approach to "
@@ -18,11 +18,11 @@ msgstr ""
 "unificato alla configurazione del sistema tramite un'interfaccia a riga di "
 "comando e file di configurazione standardizzati."
 
-#: ../../uci.rst:10 6f8e5193d7d64dbdaca0e83e0e7d89e4
+#: ../../uci.rst:10 e287c69cd3314d76ae78fd82b3849409
 msgid "Key Characteristics"
 msgstr "Caratteristiche principali"
 
-#: ../../uci.rst:12 7800682b64be44e2a1d6f522432454f0
+#: ../../uci.rst:12 682177f3512143c88a27ef1df8a5033f
 msgid ""
 "**Centralized Configuration**: All system configurations are stored in a "
 "single location (``/etc/config/``)"
@@ -30,14 +30,14 @@ msgstr ""
 "**Configurazione centralizzata**: Tutte le configurazioni di sistema sono "
 "memorizzate in un'unica posizione (``/etc/config/``)"
 
-#: ../../uci.rst:13 c8758f0299a746fdb77bb869bb47b92f
+#: ../../uci.rst:13 09d4c4c54595447bab936de25b5c1f0f
 msgid ""
 "**Database-driven**: Configurations are stored in structured database files"
 msgstr ""
 "**Basato su database**: Le configurazioni sono memorizzate in file di "
 "database strutturati"
 
-#: ../../uci.rst:14 2887a3b66f7f40c9a1e77a4bacb9d26c
+#: ../../uci.rst:14 abba7026dec343aebb8f7e11a1581f0b
 msgid ""
 "**No Built-in Validation**: UCI executes commands without safety checks - "
 "requires system knowledge"
@@ -45,12 +45,12 @@ msgstr ""
 "**Nessuna validazione integrata**: UCI esegue i comandi senza controlli di "
 "sicurezza - è richiesta conoscenza del sistema"
 
-#: ../../uci.rst:15 319dc47c072947569d4c7cc419a06a71
+#: ../../uci.rst:15 065f1239c25d4746885843f9c58121b6
 msgid "**Three-phase Workflow**: Modify → Commit → Restart/Reload"
 msgstr ""
 "**Flusso di lavoro in tre fasi**: Modifica → Commit → Riavvia/Ricarica"
 
-#: ../../uci.rst:16 cd7fc4fe432844669303a85515c30afd
+#: ../../uci.rst:16 27ac256f1d794d1bb50d9b80715ba821
 msgid ""
 "**Multi-event Capable**: User interfaces can trigger multiple configuration "
 "events simultaneously"
@@ -58,11 +58,11 @@ msgstr ""
 "**Supporto per eventi multipli**: Le interfacce utente possono attivare più "
 "eventi di configurazione simultaneamente"
 
-#: ../../uci.rst:19 37c129239bcb49d29dd9a8b7899b77cd
+#: ../../uci.rst:19 391e2564c9e547ddbd657f863205b34d
 msgid "Configuration Storage"
 msgstr "Archiviazione della configurazione"
 
-#: ../../uci.rst:21 fd2cbf1273b44e2199927b19145fe491
+#: ../../uci.rst:21 5a26efa15157426dbbb1ce5286cbb35f
 msgid ""
 "All UCI configurations are stored as database files in ``/etc/config/``. "
 "Each file represents a different system component or service, a non-"
@@ -72,61 +72,61 @@ msgstr ""
 "``/etc/config/``. Ogni file rappresenta un diverso componente o servizio di "
 "sistema; di seguito è fornito un elenco esemplificativo non esaustivo."
 
-#: ../../uci.rst:24 fdd5a60caf9b40f58c51c0d82065d361
+#: ../../uci.rst:24 c71640e91ac84a0f90ff3456a435bda3
 msgid "Configuration Files Structure"
 msgstr "Struttura dei file di configurazione"
 
-#: ../../uci.rst:60 982288b77f3747d9ba3a9f6ea900f05e
+#: ../../uci.rst:60 5b34a6698b2d41c3a9f9de71dc74ab23
 msgid "Viewing Configuration"
 msgstr "Visualizzazione della configurazione"
 
-#: ../../uci.rst:63 4193c3bde91645c4b6bbcfd1d21315b0
+#: ../../uci.rst:63 2c013d82b5984db6b84eb78c0aac1e87
 msgid "Show all configuration for a specific service"
 msgstr "Mostra tutta la configurazione per un servizio specifico"
 
-#: ../../uci.rst:69 ../../uci.rst:104 ../../uci.rst:189
-#: dba925c1760f4d1ab824d242f6ae13e0 b2da3e354ef9471a86c96f96ab91959a
-#: c3b8ee16b5c046a09bd6cc04476e50b2
+#: ../../uci.rst:69 ../../uci.rst:104 ../../uci.rst:216
+#: 926146c776034c08af4756a575677a5b a8ae28d116914491af8626e0adb2d767
+#: 0bd0ba56add246228bf5e24701277b3d
 msgid "**Example:**"
 msgstr "**Esempio:**"
 
-#: ../../uci.rst:75 daceb30d90dd423488fa0fe1797e5d4f
+#: ../../uci.rst:75 6914d2e07a7a4a03915d70c3f7735d44
 msgid "**Output:**"
 msgstr "**Output:**"
 
-#: ../../uci.rst:98 6e3d79d1735446ba9725a682a6cafd82
+#: ../../uci.rst:98 19173fcea5b443229f5b8fe2e184bd23
 msgid "Show specific configuration option"
 msgstr "Mostra opzione di configurazione specifica"
 
-#: ../../uci.rst:111 1c28533e740a4accb6d0bb4ea404ba1c
+#: ../../uci.rst:111 f33b6a879c9c43049bf74a84d4b9de97
 msgid "Complete Configuration Workflow"
 msgstr "Flusso di lavoro completo di configurazione"
 
-#: ../../uci.rst:114 c839d5c8f6d840d48ebcaa13ebc50df1
+#: ../../uci.rst:114 762fff250a90441988be200e5fe3a7cb
 msgid "Standard Three-Phase Process"
 msgstr "Processo standard in tre fasi"
 
-#: ../../uci.rst:116 7ad49cca52f847e3a3d4bc651f85705f
+#: ../../uci.rst:116 b926430f87604380915474fd3ff7d1c3
 msgid "**MODIFY** - Make configuration changes"
 msgstr "**MODIFICA** - Apportare modifiche alla configurazione"
 
-#: ../../uci.rst:117 4e95e41c4ff14150bc228af10fe7eb27
+#: ../../uci.rst:117 ce51ef025be64be8bdc202ecc32ddddb
 msgid "**COMMIT** - Save changes to the configuration database"
 msgstr "**COMMIT** - Salva le modifiche nel database di configurazione"
 
-#: ../../uci.rst:118 6357c63df41c49e8a42baebb47569825
+#: ../../uci.rst:118 1ddd002242184b12936caab1e0bddbde
 msgid "**RELOAD** - Apply changes to the running system"
 msgstr "**RELOAD** - Applica le modifiche al sistema in esecuzione"
 
-#: ../../uci.rst:121 9fda44d9ac644adfab615dc6f3b8f2fa
+#: ../../uci.rst:121 78eec24974fe42e0b296fd9395337e74
 msgid "Practical Example: Changing LAN IP Address"
 msgstr "Esempio pratico: modifica dell'indirizzo IP LAN"
 
-#: ../../uci.rst:135 ca2ca5bc7bdf44309e28b5287ce5c472
+#: ../../uci.rst:135 0265398bf5e64d3a8312732ddfd64275
 msgid "SET - Modifying Configuration"
 msgstr "SET - Modifica della configurazione"
 
-#: ../../uci.rst:137 0ae5d9feffdd4566949382e727f792ac
+#: ../../uci.rst:137 69f59eb0a299402891698b4c5bce059f
 msgid ""
 "The ``uci set`` command is used to modify configuration values. Changes are "
 "stored temporarily and must be committed to become persistent."
@@ -135,27 +135,27 @@ msgstr ""
 "configurazione. Le modifiche vengono memorizzate temporaneamente e devono "
 "essere confermate per diventare permanenti."
 
-#: ../../uci.rst:140 5c13dd2094e746caa8bac977a3cac7a0
+#: ../../uci.rst:140 ea362e654b8d4c229ff6bd2022d2f824
 msgid "Set a configuration value"
 msgstr "Impostare un valore di configurazione"
 
-#: ../../uci.rst:146 ab0a57cbe5864f58b76379e37fd73406
+#: ../../uci.rst:146 b2267e15ef944dc5874fdf0c430b5e02
 msgid "**Examples:**"
 msgstr "**Esempi:**"
 
-#: ../../uci.rst:160 0216653de8a846a9b39e846a23626c25
+#: ../../uci.rst:160 d56d4430b5c64ca3b97da319f3e32697
 msgid "Add a new section"
 msgstr "Aggiungere una nuova sezione"
 
-#: ../../uci.rst:167 c6cabf836e444c1f98b51019b74184bf
+#: ../../uci.rst:167 d4ab435934dd44a396854747002bba78
 msgid "Delete operations"
 msgstr "Operazioni di eliminazione"
 
-#: ../../uci.rst:178 7458f5771b5f4b3f94a73d98e489b607
+#: ../../uci.rst:205 293d1d6dbdd147b394485079d27092ae
 msgid "COMMIT - Saving Changes"
 msgstr "COMMIT - Salvataggio delle modifiche"
 
-#: ../../uci.rst:180 4410ae4378704054b58a36a968e481e9
+#: ../../uci.rst:207 83854c6329e04559addb82b036d6fe8f
 msgid ""
 "Changes made with ``uci set`` are not immediately applied to the system. "
 "They must be committed first to make them persistent."
@@ -163,37 +163,37 @@ msgstr ""
 "Le modifiche apportate con ``uci set`` non vengono applicate immediatamente "
 "al sistema. Devono essere prima confermate per renderle persistenti."
 
-#: ../../uci.rst:183 bc4d5428b27a4c869a3a86b2c1fc8de3
+#: ../../uci.rst:210 aa54ceb77fd8490f983dfa23177cdccc
 msgid "Commit specific service"
 msgstr "Servizio specifico del commit"
 
-#: ../../uci.rst:196 3ee2ddb02d3a4e3fb4a0bcf0f2fa67db
+#: ../../uci.rst:223 b977bb307f8148cab9d5c00783604153
 msgid "Commit all pending changes"
 msgstr "Confermare tutte le modifiche in sospeso"
 
-#: ../../uci.rst:203 a762065d5bea492786d44ef9a6362aa7
+#: ../../uci.rst:230 b105167a07154791b8d23a28ca520350
 msgid "Check pending changes"
 msgstr "Controllare le modifiche in sospeso"
 
-#: ../../uci.rst:205 3c2fb041044b48c4967393f3a81c0a64
+#: ../../uci.rst:232 3743a8a167904799ba12467c32e4ce24
 msgid "Before committing, you can review what changes will be applied:"
 msgstr ""
 "Prima di eseguire il commit, è possibile esaminare quali modifiche verranno "
 "applicate:"
 
-#: ../../uci.rst:212 3c6e289966414f58b459dd4ae4201154
+#: ../../uci.rst:239 dbd5187e6cb94c74894a8ab01c933fa7
 msgid "Revert uncommitted changes"
 msgstr "Annullare le modifiche non confermate"
 
-#: ../../uci.rst:214 b3b43160b5df4f4da82b133367721d13
+#: ../../uci.rst:241 235d4930f63943c09eb3804fba3ac12d
 msgid "If you want to discard uncommitted changes:"
 msgstr "Se si desidera scartare le modifiche non confermate:"
 
-#: ../../uci.rst:221 70ae286f87304aa483c75924889593e7
+#: ../../uci.rst:248 df5ca23fa39f4b0daff0cc0aaa5c68e7
 msgid "RELOAD - Applying Changes"
 msgstr "RELOAD - Applicazione delle modifiche"
 
-#: ../../uci.rst:223 5bb5a79a95c8453bb80726c644357c5a
+#: ../../uci.rst:250 634adbb17c1b484a9c594fd247097e0c
 msgid ""
 "After committing, you can apply the new configuration to the running system "
 "with a single command. This will automatically reload the affected services "
@@ -204,77 +204,77 @@ msgstr ""
 "ricaricherà automaticamente i servizi interessati senza la necessità di "
 "riavviarli manualmente uno per uno."
 
-#: ../../uci.rst:227 42f82ee0474f4a548ae5744a51f29985
+#: ../../uci.rst:254 6fcf007985c84069b99aa07f4276dd13
 msgid "Reload configuration"
 msgstr "Ricarica configurazione"
 
-#: ../../uci.rst:235 764009f8639745cfbe6f69a7fec792c7
+#: ../../uci.rst:262 f5c6719912374a63a111b1504ec9ab42
 msgid "Configuration File Format"
 msgstr "Formato del file di configurazione"
 
-#: ../../uci.rst:237 62251a9385bb4254ac4d84f4f2d3aabe
+#: ../../uci.rst:264 a90c492f7d314930960ee21c6e0e8329
 msgid ""
 "UCI configuration files use a structured format with sections and options:"
 msgstr ""
 "I file di configurazione UCI utilizzano un formato strutturato con sezioni e"
 " opzioni:"
 
-#: ../../uci.rst:247 523804536e1b4418801173ab068183cf
+#: ../../uci.rst:274 733dc482c3a8454f964d075b9a56de58
 msgid "Example: Network Configuration File"
 msgstr "Esempio: File di configurazione di rete"
 
-#: ../../uci.rst:249 a581bb12dcde48349c1abd1bb5940607
+#: ../../uci.rst:276 d3a3e5780bb34078bde29802d3416695
 msgid "Network Configuration File (``/etc/config/network``):"
 msgstr "File di configurazione di rete (``/etc/config/network``):"
 
-#: ../../uci.rst:275 255e1d34a8b8479ab1906cfba845eebd
+#: ../../uci.rst:302 d633d20d132947e79468b9ac3fa81834
 msgid "Best Practices"
 msgstr "Migliori pratiche"
 
-#: ../../uci.rst:278 6620d89f5bfb4ca58cbaa8660677eb8b
+#: ../../uci.rst:305 48868813ff9e4a37b65ecde07c40838a
 msgid "Safety Considerations"
 msgstr "Considerazioni sulla sicurezza"
 
-#: ../../uci.rst:280 e1a36043ea834c96a2c6217f39105388
+#: ../../uci.rst:307 c70304c7032448d3b15bae674f8a635e
 msgid "**Always backup configurations** before making changes"
 msgstr ""
 "**Eseguire sempre il backup delle configurazioni** prima di apportare "
 "modifiche"
 
-#: ../../uci.rst:281 72af2fa0b53141088666c0b0e18b3733
+#: ../../uci.rst:308 e18b89cc76714a4dbd38f4426dd58f4c
 msgid ""
 "**Test changes incrementally** rather than making multiple changes at once"
 msgstr ""
 "**Testare le modifiche in modo incrementale** invece di apportare più "
 "modifiche contemporaneamente"
 
-#: ../../uci.rst:282 de244d1ba0d84c68939018c4ae1a63d9
+#: ../../uci.rst:309 e87bd34f2d5f49f5b494fc66c96cbb91
 msgid "**Understand service dependencies** before restarting services"
 msgstr ""
 "**Comprendere le dipendenze dei servizi** prima di riavviare i servizi"
 
-#: ../../uci.rst:283 46524b2eb6414531999f1221131873a5
+#: ../../uci.rst:310 2f5b5fc52a4b4de19c26b45ef3939ea4
 msgid "**Use** ``uci changes`` **to review** pending modifications"
 msgstr ""
 "**Utilizzare** ``uci changes`` **per esaminare** le modifiche in sospeso"
 
-#: ../../uci.rst:284 dc11d856d4a64d5aac320c8c636ef6d1
+#: ../../uci.rst:311 78129ae8eec44239aa03975da1cd3ce0
 msgid "**Have console access** available when making network changes"
 msgstr ""
 "**Avere accesso alla console** disponibile durante la modifica delle "
 "impostazioni di rete"
 
-#: ../../uci.rst:287 cf8cd050da604960a6211ba82afbd584
+#: ../../uci.rst:314 e07f46f2d2f14b6a9eff7fd7d1b522b0
 msgid "Common Pitfalls"
 msgstr "Problemi comuni"
 
-#: ../../uci.rst:289 221df18161434a62bad5a7edaedf1962
+#: ../../uci.rst:316 409a31f38a1e4c1381f9b348a7611995
 msgid "**Forgetting to commit**: Changes are not persistent until committed"
 msgstr ""
 "**Dimenticare di eseguire il commit**: le modifiche non sono persistenti "
 "fino a quando non viene effettuato il commit"
 
-#: ../../uci.rst:290 0284c206480d4a52a7fc88da4e28e7a1
+#: ../../uci.rst:317 f9e0070464484159becc6ce5050dfeca
 msgid ""
 "**Not restarting services**: Committed changes may not be active until "
 "service restart"
@@ -282,41 +282,41 @@ msgstr ""
 "**Nessun riavvio dei servizi**: le modifiche confermate potrebbero non "
 "essere attive fino al riavvio del servizio"
 
-#: ../../uci.rst:291 ace31e7357944e27ace5e44f961f8ef5
+#: ../../uci.rst:318 ae7c844fb2ef44a98a01f0f222d6f851
 msgid ""
 "**Breaking network connectivity**: Always ensure alternative access methods"
 msgstr ""
 "**Interruzione della connettività di rete**: Assicurarsi sempre di disporre "
 "di metodi di accesso alternativi"
 
-#: ../../uci.rst:292 9836bc93e63f4b198fb9d787a1d082a6
+#: ../../uci.rst:319 d17dd30f21f24f56b7d42d1e131ce5d3
 msgid ""
 "**Syntax errors**: Invalid UCI syntax can cause configuration corruption"
 msgstr ""
 "**Errori di sintassi**: Una sintassi UCI non valida può causare la "
 "corruzione della configurazione"
 
-#: ../../uci.rst:295 b0f6563d2a5a4c889e1d76c688415393
+#: ../../uci.rst:322 7dd02bc98b774ad0b312fffba4e6749b
 msgid "Troubleshooting"
 msgstr "Risoluzione dei problemi"
 
-#: ../../uci.rst:298 8092dc6b25c44fa0afeef149a5dcc2b8
+#: ../../uci.rst:325 c97ca1da1b02453892ee2034ddfe4bdc
 msgid "Common Commands for Debugging"
 msgstr "Comandi comuni per il debug"
 
-#: ../../uci.rst:301 d19ca7a8aabb40f9bf99d5c9ab9cdd2a
+#: ../../uci.rst:328 b8287fd5f21642c6b34902fa2719f15b
 msgid "View pending changes"
 msgstr "Visualizza modifiche in sospeso"
 
-#: ../../uci.rst:308 b06970c561a8406caf53b19b8e9de773
+#: ../../uci.rst:335 b82c4ffb168142fe9b657d6e147f85b3
 msgid "Revert to last committed state"
 msgstr "Ripristina allo stato dell'ultimo commit"
 
-#: ../../uci.rst:315 e730e70e30ba422e83c4183c9b36e15f
+#: ../../uci.rst:342 dd91d10fdddd4fc29c2c046137bbf343
 msgid "Check UCI syntax"
 msgstr "Controllare la sintassi UCI"
 
-#: ../../uci.rst:322 a9bb13d90d2d4b799086a3e27e029c66
+#: ../../uci.rst:349 4cfffac4d1b7434fa084cc34d58e83ab
 msgid ""
 "Always ensure you have alternative access to the system when making critical"
 " configuration changes, especially network-related modifications."
@@ -325,10 +325,51 @@ msgstr ""
 "si apportano modifiche critiche alla configurazione, in particolare per "
 "quanto riguarda le modifiche relative alla rete."
 
-#: ../../uci.rst:325 b823b9ba7bf24e2fa37594cf5b4cce39
+#: ../../uci.rst:352 bf69b9d1758748679861c3daa40601fd
 msgid ""
 "UCI commands execute without validation. Incorrect configurations can render"
 " the system inaccessible."
 msgstr ""
 "I comandi UCI vengono eseguiti senza validazione. Configurazioni errate "
 "possono rendere il sistema inaccessibile."
+
+#: ../../uci.rst:180 4f351e9ab1ba4a8c8cbc0d94a382441e
+msgid "LISTS - Editing List Options"
+msgstr "LISTE - Modifica delle opzioni della lista"
+
+#: ../../uci.rst:182 0a80b9a3fb8742ffaef5285ddbc988a3
+msgid "Lists are a special type of option that can contain multiple values."
+msgstr ""
+"Gli elenchi sono un tipo speciale di opzione che può contenere più valori."
+
+#: ../../uci.rst:185 6f8281a5470243b38adc71cdf6cd2dcc
+msgid "Add a value to a list"
+msgstr "Aggiungere un valore a una lista"
+
+#: ../../uci.rst:187 1cdb0a3204514560857842aef0ece053
+msgid ""
+"Use the ``uci add_list`` command to add values to a list, the command "
+"creates the list if it does not already exist."
+msgstr ""
+"Utilizzare il comando ``uci add_list`` per aggiungere valori a una lista; il"
+" comando crea la lista se non esiste già."
+
+#: ../../uci.rst:194 9c1e8dc0108f4579b37dd9e7093a377f
+msgid "Remove a value from a list"
+msgstr "Rimuovere un valore da una lista"
+
+#: ../../uci.rst:196 561cb026aa844041ac738ed04e63f50d
+msgid ""
+"To remove the last value from a list, use the ``uci del_list``, you must "
+"specify the value to be removed."
+msgstr ""
+"Per rimuovere l'ultimo valore da una lista, utilizzare ``uci del_list``; è "
+"necessario specificare il valore da rimuovere."
+
+#: ../../uci.rst:202 7071b9d2661b48af8794f0666e257717
+msgid ""
+"To remove all values from a list, use the ``uci delete`` command as "
+"explained in the previous section."
+msgstr ""
+"Per rimuovere tutti i valori da una lista, utilizzare il comando ``uci "
+"delete`` come spiegato nella sezione precedente."
