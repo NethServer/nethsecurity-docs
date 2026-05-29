@@ -192,6 +192,9 @@ A correctly loaded system should look like this::
     + last_run        : mode: reload, date / time: 28/05/2026 14:30:37, duration: 0m 2s, memory: 708.93 MB available
     + system_info     : cores: 2, fetch: curl, QEMU Standard PC (Q35 + ICH9, 2009), x86/64, NethSecurity 8.8.0-nethsecurity-8.8.20260527151745.8ae1ddcc9 (r32933-4ccb782af7)
 
+If there were network problems and Adblock could not download any feed, just restart it::
+
+  /etc/init.d/adblock restart
 .. _advanced_configuration-section:
 
 Advanced configuration
