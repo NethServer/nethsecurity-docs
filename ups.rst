@@ -45,7 +45,7 @@ If you are running NethSecurity 8.8, use::
     apk update
     apk add nut-server nut-upsc nut-upsmon nut-upscmd
 
-If you are running NethSecurity 8.7 or older, use::
+If you are running NethSecurity 8.7.2 or older, use::
 
     opkg update
     opkg install nut-server nut-upsc nut-upsmon nut-upscmd
@@ -74,7 +74,7 @@ Step 2: setup the appropriate driver
 
       apk add nut-driver-usbhid-ups
 
-   If you are running NethSecurity 8.7 or older, use::
+   If you are running NethSecurity 8.7.2 or older, use::
 
       opkg install nut-driver-usbhid-ups
 
@@ -204,7 +204,7 @@ The secondary firewall will connect to the primary firewall and monitor the UPS 
        apk update
        apk add nut-upsc nut-upsmon
 
-   If you are running NethSecurity 8.7 or older, use::
+   If you are running NethSecurity 8.7.2 or older, use::
 
        opkg update
        opkg install nut-upsc nut-upsmon
