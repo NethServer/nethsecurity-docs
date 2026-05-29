@@ -195,6 +195,7 @@ A correctly loaded system should look like this::
 If there were network problems and Adblock could not download any feed, just restart it::
 
   /etc/init.d/adblock restart
+  
 .. _advanced_configuration-section:
 
 Advanced configuration
