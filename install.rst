@@ -134,11 +134,17 @@ QEMU guest agent
 QEMU guest agent is not part of the NethSecurity image but can be installed from the command line.
 The agent can work when the virtual machine is running on KVM, Proxmox, or other QEMU-based hypervisors.
 
-First, make sure the virtual machine is running, then connect to the machine using SSH or the Proxmox console and
-execute the following commands: ::
+First, make sure the virtual machine is running, then connect to the machine using SSH or the Proxmox console.
 
-  opkg update
-  opkg install qemu-ga
+If you are running NethSecurity 8.8, use::
+
+    apk update
+    apk add qemu-ga
+
+If you are running NethSecurity 8.7.2 or older, use::
+
+    opkg update
+    opkg install qemu-ga
 
 After the installation, start the service: ::
 
@@ -180,11 +186,17 @@ VMware open-vm-tools
 VMware open-vm-tools are not part of the NethSecurity image but can be installed from the command line.
 The tools can work only when the virtual machine is running on VMWare hypervisors.
 
-First make sure the virtual machine is running, then connect to the machine using SSH or the VMWare console and
-execute the following commands: ::
+First, make sure the virtual machine is running, then connect to the machine using SSH or the VMWare console.
 
-  opkg update
-  opkg install open-vm-tools
+If you are running NethSecurity 8.8, use::
+
+    apk update
+    apk add open-vm-tools
+
+If you are running NethSecurity 8.7.2 or older, use::
+
+    opkg update
+    opkg install open-vm-tools
 
 After the installation, start the service: ::
 

@@ -90,3 +90,40 @@ Automatic package updates
 
 Automatic updates for packages can be enabled from the ``Update`` section under the ``System`` menu, by enabling the ``Automatic updates`` option.
 Updates are checked daily and, if available, they are automatically downloaded and installed.
+
+Package manager commands
+========================
+
+NethSecurity 8.8 uses ``apk``. NethSecurity 8.7.2 and earlier use ``opkg``.
+Use the following quick reference when translating older command examples:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 28 28 44
+
+   * - OPKG command
+     - APK equivalent
+     - Description
+   * - ``opkg install <pkg>``
+     - ``apk add <pkg>``
+     - Install a package
+   * - ``opkg remove <pkg>``
+     - ``apk del <pkg>``
+     - Remove a package
+   * - ``opkg upgrade``
+     - ``apk upgrade``
+     - Upgrade all packages
+   * - ``opkg files <pkg>``
+     - ``apk info -L <pkg>``
+     - List package contents
+   * - ``opkg list-installed``
+     - ``apk info``
+     - List installed packages
+   * - ``opkg update``
+     - ``apk update``
+     - Update package lists
+   * - ``opkg search <pkg>``
+     - ``apk search <pkg>``
+     - Search for packages
+
+The ``opkg find`` command used in a few older examples maps to ``apk search`` on NethSecurity 8.8.

@@ -162,12 +162,17 @@ These packages can be installed from the command line console, just find the cor
     Bus 001 Device 002: ID 0627:0001 QEMU QEMU USB Tablet
     Bus 001 Device 001: ID 1d6b:0002 Linux 5.15.162 xhci-hcd xHCI Host Controller
 
-* Search for the the kernel module: 
+* Search for the kernel module:
 
-  ::
+  If you are running NethSecurity 8.8, use::
 
-    opkg update
-    opkg find kmod-usb-net-\*
+      apk update
+      apk search kmod-usb-net-*
+
+  If you are running NethSecurity 8.7.2 or older, use::
+
+      opkg update
+      opkg find kmod-usb-net-*
 
 * Output example:
 
@@ -188,9 +193,13 @@ These packages can be installed from the command line console, just find the cor
 
 * Install the right driver:
 
-  ::
+  If you are running NethSecurity 8.8, use::
 
-    opkg install kmod-usb-net-rtl8150
+      apk add kmod-usb-net-rtl8150
+
+  If you are running NethSecurity 8.7.2 or older, use::
+
+      opkg install kmod-usb-net-rtl8150
 
 * Verify a new ethX interface appears using ``ifconfig -a``
 * Configure the ethernet from the UI
