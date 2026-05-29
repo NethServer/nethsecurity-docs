@@ -60,35 +60,20 @@ You can include a description explaining the reason for the exclusion.
 
 Each exception can be enabled or disabled as desired.
 
-Netify interface exclusion
---------------------------
+Netify traffic bypass
+---------------------
 
-By default, Netifyd monitors all interfaces. To exclude specific interfaces, you can define an exclusion list. Below are commands to add, modify, or remove excluded interfaces.
-The exclusion list is configured using the ``ns_exclude`` option that takes a list of patterns. Each entry is a shel glob pattern.
+By default, Netifyd processes all traffic passing from, to and out of the firewall. In some cases it may be desiderable to completely ignore traffic analysis on some specific hosts or subnets. The exclusions is configured using the `bypassv4` and `bypassv6` options that take a list of IP addresses or CIDR subnets. Bypasses can have a description to explain the reason for the bypass, separated by a `|` pipe character after the IP.
 
-- Add interfaces to exclusion list. The system will exclude the `eth1` interface and all OpenVPN and WireGuard interfaces: ::
+To add a new bypass entry, use the following command: ::
 
-      uci add_list netifyd.@netifyd[0].ns_exclude='eth1'
-      uci add_list netifyd.@netifyd[0].ns_exclude='tun*'
-      uci add_list netifyd.@netifyd[0].ns_exclude='wg*'
+      uci add_list netifyd.config.bypassv4='10.45.23.0/24|Remote network'
+      uci add_list netifyd.config.bypassv4='192.168.5.164|Critical host'
       uci commit netifyd
-      echo '{"changes": {"network": {}}}' | /usr/libexec/rpcd/ns.commit call commit
+      reload_config
 
-In this case the system will exclude interface ``eth1``, all WireGuard ``wgX`` interfaces and all OpenVPN routed interfaces.
-  
-- Modify exclusion list: ::
+To edit and manage uci entries, refer to the :ref:`UCI list management <uci-lists>` section.
 
-      uci delete netifyd.@netifyd[0].ns_exclude='eth1'
-      uci add_list netifyd.@netifyd[0].ns_exclude='eth2'
-      uci commit netifyd
-      echo '{"changes": {"network": {}}}' | /usr/libexec/rpcd/ns.commit call commit
+You can visualize the applied bypass entries and netifyd capture configuration using the following command: ::
 
-- Clear exclusion list: ::
-
-      uci delete netifyd.@netifyd[0].ns_exclude
-      uci commit netifyd
-      echo '{"changes": {"network": {}}}' | /usr/libexec/rpcd/ns.commit call commit
-
-- Return the exclusion list: ::
-
-      uci show netifyd.@netifyd[0].ns_exclude
+      nft list table inet netifyd
