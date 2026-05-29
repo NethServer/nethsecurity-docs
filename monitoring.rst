@@ -7,12 +7,15 @@ Monitoring
 NethSecurity provides comprehensive monitoring capabilities to help administrators track the performance and health of the firewall.
 Monitoring is essential for ensuring the firewall's optimal operation and identifying potential issues that may impact its functionality.
 
-NethSecurity offers two types of monitoring:
+NethSecurity offers 3 monitoring views:
 
-- **Real-time monitoring**: it leverages Netdata, Netify agent and logs to provide immediate insights into the firewall's performance.
-  It reads data from logs and local databases, storing metrics in RAM. Note that these metrics are reset upon every reboot, ensuring that only the most current data are displayed.
-- **Historical monitoring**: for a more comprehensive view over time, historical monitoring stores data on a remote controller.
-  This allows metrics to be preserved across reboots and enables centralized monitoring. Please note that this feature requires a valid subscription both on the firewall and the controller.
+- **Real-time monitoring**: it leverages Telegraf, Netifyd and logs to provide immediate insights into the firewall's performance and status,
+  with detailed charts and alerts. It also used Netify agent and logs to provide immediate insights into the firewall's traffic, VPN connections and security events.
+- **Historical monitoring**: Telegraf write its data inside VictoriaMetrics, which saves the metrics inside a local persistent storage, when available.
+  Local historical monitoring is available starting from NethSecurity 8.8 and do not require a subscription.
+- **Remote monitoring**: when the firewall is connected to a controller, metrics are also stored remotely using Prometheus.
+  This allows metrics to be preserved for a longer time and enables centralized monitoring.
+  Please note that the controller will store metrics only if both the firewall and the controller itself have a valid subscription.
 
 .. _real_time_monitoring-section:
 
@@ -103,7 +106,7 @@ The Top Talkers section displays traffic data updated every 30 seconds, providin
 
 
 WAN uplinks
-------------
+-----------
 
 The WAN uplinks section provides an overview of WAN connections, including status, bandwidth allocation, and traffic data.
 
@@ -121,7 +124,7 @@ This page shows the following information:
   The results are cached for 5 minutes.
 
 - ``WAN interface traffic``:  
-  this histogram shows the traffic data for each WAN connection over the past 60 minutes, sourced from Netdata.
+  this histogram shows the traffic data for each WAN connection over the past 60 minutes.
   It helps track real-time performance and diagnose issues such as uneven load balancing or WAN link saturation.
 
 - ``Latency to <address>``:
@@ -226,25 +229,49 @@ Available charts are:
   this char shows the IP addresses that have been blocked most frequently.
   It is useful for identifying persistent threats or attack sources that should be investigated or blacklisted.
 
+.. _historical_monitoring-section:
 
-Netdata
--------
+Historical monitoring
+=====================
 
-NethSecurity uses `Netdata <https://www.netdata.cloud/>`_ as Real-time monitoring tool.
-Netdata is an open-source, real-time, performance monitoring and troubleshooting tool for systems and applications.
-It provides comprehensive insights into the performance and health of systems and applications through visualizations and detailed metrics.
-Netdata is designed to be lightweight, fast, and easy to use.
+Starting from NethSecurity 8.8, the Monitoring page includes a new ``Metrics`` view powered by VictoriaMetrics, Telegraf and vmalert.
+Telegraf reads the metrics and writes them to VictoriaMetrics, while vmalert evaluates the alert rules.
+VictoriaMetrics stores the data in RAM by default, but it automatically switches to persistent storage when available.
+If the local storage is removed, the system switches back to RAM storage.
 
-Netdata is enabled by default on NethSecurity and it is accessible from the LAN network. To access it, go to the ``Monitoring`` page
-and click :guilabel:`Open report` button from the ``Real-time report`` tab.
+As a result, NethSecurity 8.8 metrics remain persistent even without a controller.
 
-Netdata metrics are saved in RAM and will be reset at very machine reboot.
-If the firewall is connected to the :ref:`remote controller <controller-section>`, metrics will be stored to the controller itself and preserved across reboots.
+Data retention periods are as follows:
+
+- **RAM storage**: 7 days
+- **Persistent storage**: 1 year
+
+
+The ``Metrics`` page has two tabs: ``Charts`` and ``Alerts``.
+
+Charts
+------
+
+The ``Charts`` tab shows the following charts:
+
+* ``CPU usage``
+* ``System load``
+* ``Disk I/O``
+* ``Disk usage (%)``
+* ``Total processes``
+* ``RAM usage``
+* ``Network interface traffic``: one chart for each interface configured on the unit
+* ``Network packets``
+* ``Connections (conntrack)``
+* ``Latency``: one chart for each configured ping host
+* ``Packet delivery``: one chart for each configured ping host, configured inside the :ref:`ping_latency-section` section
+
+The chart time range can be changed between 5 minutes, 30 minutes, 1 hour, 12 hours, 24 hours and 7 days.
 
 .. _ping_latency-section:
 
 Ping latency monitoring
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Configure the monitoring tool to evaluate round-trip time and packet loss by transmitting ping messages to network hosts.
 This tool is employed to monitor the quality of network connectivity. You have the option to include one or more hosts for monitoring,
@@ -255,19 +282,64 @@ finally click on the :guilabel:`Save` button to confirm the changes.
 
 Changes are applied immediately. To remove a host from the list, click on the delete icon.
 
-You can see a graph of the ping latency by accessing Netdata from the report page.
+You can see the latency and packet delivery charts in the ``Metrics`` page after configuring the hosts.
 
-.. _historical_monitoring-section:
+.. _alert-section:
 
-Historical monitoring
-=====================
+Alerts
+------
+
+The alert system prioritizes only those alerts that have the potential to disrupt or compromise the firewall's functionality.
+By focusing on critical indicators, administrators can efficiently address issues that pose a genuine threat to the security and operation of the firewall.
+
+The ``Alerts`` tab reads current pending and firing alerts from vmalert.
+Those alerts are shown locally in the ``Metrics`` page and in the notification drawer opened from the bell icon in the top-right corner.
+
+Available alerts:
+
+* ``BackupEncryptionDisabled``: backup encryption is disabled because ``/etc/backup.pass`` is missing or empty.
+* ``HighCpuUsage``: CPU usage is above 70%.
+* ``CriticalCpuUsage``: CPU usage is above 85%.
+* ``HighMemoryUsage``: memory usage is above 80%.
+* ``CriticalMemoryUsage``: memory usage is above 90%.
+* ``DiskSpaceWarning``: a mounted filesystem is above 80% usage.
+* ``DiskSpaceCritical``: a mounted filesystem is above 90% usage.
+* ``HighSystemLoad``: system load per CPU is above 2.
+* ``WanDown``: a monitored WAN interface is offline.
+* ``ServiceDown``: a configured ``procd`` service is not running.
+* ``StorageStatus``: the configured data storage is not mounted or is otherwise in error.
+
+Remote alert notifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the server has a valid :ref:`subscription-section`, alert notifications are seamlessly sent to remote servers for centralized monitoring and management.
+Both ``my.nethesis.it`` and ``my.nethserver.com`` serve as central hubs for receiving alerts, allowing administrators to stay informed about the firewall's
+status and promptly respond to any critical situations.
+
+Currently, only the following alerts are forwarded to the remote monitoring servers:
+
+- Disk Space: the disk space alert triggers when available disk space on the system reaches a critical level.
+  This proactive notification helps prevent potential disruptions by addressing disk space issues before they impact firewall operations.
+
+- MultiWAN Status (Up/Down): this alert notifies administrators when there are changes in the MultiWAN status, indicating whether connections are up or down.
+  Timely awareness of MultiWAN status changes is crucial for maintaining continuous and reliable internet connectivity.
+
+Other alerts, such as CPU and memory usage, are not forwarded to the remote monitoring servers at this time.
+
+
+.. _remote_monitoring-section:
+
+Remote monitoring
+=================
 
 .. admonition:: Subscription required
 
    This feature is available only if the firewall and the controller have a valid subscription.
 
-If the unit was connected to the controller before the subscription was activated, historical monitoring will not be enabled automatically.
-The ``Controller`` page will show a message indicating that historical monitoring is disabled.
+Historical monitoring is available locally on the unit and remotely on the controller when the firewall is connected to it.
+All data are automatically sent to the controller and stored in Prometheus, allowing for long-term retention and centralized monitoring.
+
+The ``Controller`` page will show a message indicating that remote monitoring is disabled.
 
 To enable it, follow these steps:
 
@@ -277,25 +349,46 @@ To enable it, follow these steps:
 
 See the :ref:`controller metrics <controller_metrics-section>` for more information.
 
-.. _alert-section:
+.. note::
 
-Alerts
-======
+   If the unit was connected to the controller before the subscription was activated, remote monitoring will not be enabled automatically.
+   To enable it, you need to disconnect the unit from the controller and reconnect it again after the subscription is active.
 
-The alert system leverages the power of the Netdata engine for efficient monitoring and alerting.
 
-The alert system prioritizes only those alerts that have the potential to disrupt or compromise the firewall's functionality.
-By focusing on critical indicators, administrators can efficiently address issues that pose a genuine threat to the security and operation of the firewall.
+.. _legacy_netdata-section:
 
-If the server has a valid :ref:`subscription-section`, alert notifications are seamlessly sent to remote servers for centralized monitoring and management.
-Both ``my.nethesis.it`` and ``my.nethserver.com`` serve as central hubs for receiving alerts, allowing administrators to stay informed about the firewall's
-status and promptly respond to any critical situations.
+Legacy Netdata
+--------------
 
-Implemented alerts:
+.. warning::
 
-- Disk Space: the disk space alert triggers when available disk space on the system reaches a critical level.
-  This proactive notification helps prevent potential disruptions by addressing disk space issues before they impact firewall operations.
+   Starting from 8.8, Netdata has been deprecated and removed from the default installation.
+   If you still have custom Grafana dashboards that rely on Netdata metrics,
+   it is recommended to switch to the new Telegraf format.
 
-- MultiWAN Status (Up/Down): this alert notifies administrators when there are changes in the MultiWAN status, indicating whether connections are up or down.
-  Timely awareness of MultiWAN status changes is crucial for maintaining continuous and reliable internet connectivity.
+NethSecurity 8.7.2 and older uses `Netdata <https://www.netdata.cloud/>`_ as Real-time monitoring tool.
+Netdata is an open-source, real-time, performance monitoring and troubleshooting tool for systems and applications.
+It provides comprehensive insights into the performance and health of systems and applications through visualizations and detailed metrics.
+Netdata is designed to be lightweight, fast, and easy to use.
+
+Netdata is enabled by default on NethSecurity 8.7.2 and older and it is accessible from the LAN network. To access it, go to the ``Monitoring`` page
+and click :guilabel:`Open report` button from the ``Real-time report`` tab.
+
+Netdata metrics are saved in RAM and will be reset at very machine reboot.
+If the firewall is connected to the :ref:`remote controller <controller-section>`, metrics will be stored to the controller itself and preserved across reboots.
+
+Install Netdata on NethSecurity 8.8
+-----------------------------------
+
+If you have configured custom Grafana dashboards that rely on Netdata metrics on the Controller, they will break after upgrading to NethSecurity 8.8
+since Netdata has been removed.
+
+To restore your dashboards, you can reinstall Netdata manually on NethSecurity 8.8 using the following command::
+
+      apk update
+      apk add netdata
+
+However, it is strongly recommended to migrate your custom dashboards to the new Telegraf format instead.
+This ensures better long-term compatibility and support, as Netdata is no longer maintained as part of NethSecurity.
+
 
