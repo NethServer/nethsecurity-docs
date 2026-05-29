@@ -85,7 +85,7 @@ Updates are checked daily and, if available, they are automatically downloaded a
 Package manager commands
 ========================
 
-NethSecurity 8.8 uses ``apk``. NethSecurity 8.7 and earlier use ``opkg``.
+NethSecurity 8.8 uses ``apk``. NethSecurity 8.7.2 and earlier use ``opkg``.
 Use the following quick reference when translating older command examples:
 
 .. list-table::
