@@ -36,9 +36,9 @@ The user must have a password set.
 Remote databases
 ================
 
-.. admonition:: Subscription required
+.. note:: No subscription required
 
-   This feature is available only if the firewall has a valid subscription.
+   Starting from NethSecurity 8.8, this feature is available even without a subscription.
 
 The administrator can extend the capabilities of the firewall by adding new remote databases.
 Remote databases allow the firewall to authenticate users against an external LDAP server, such as Active Directory or OpenLDAP.
