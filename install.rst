@@ -141,7 +141,7 @@ If you are running NethSecurity 8.8, use::
     apk update
     apk add qemu-ga
 
-If you are running NethSecurity 8.7 or older, use::
+If you are running NethSecurity 8.7.2 or older, use::
 
     opkg update
     opkg install qemu-ga
@@ -193,7 +193,7 @@ If you are running NethSecurity 8.8, use::
     apk update
     apk add open-vm-tools
 
-If you are running NethSecurity 8.7 or older, use::
+If you are running NethSecurity 8.7.2 or older, use::
 
     opkg update
     opkg install open-vm-tools

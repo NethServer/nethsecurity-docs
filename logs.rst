@@ -71,7 +71,7 @@ If you are running NethSecurity 8.8, use::
     apk update
     apk add ns-clm
 
-If you are running NethSecurity 8.7 or older, use::
+If you are running NethSecurity 8.7.2 or older, use::
 
     opkg update
     opkg install ns-clm
