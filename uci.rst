@@ -174,6 +174,33 @@ Delete operations
     # Delete an entire section
     uci delete <service>.<section>
 
+.. _uci-lists:
+
+LISTS - Editing List Options
+============================
+
+Lists are a special type of option that can contain multiple values.
+
+Add a value to a list
+---------------------
+
+Use the ``uci add_list`` command to add values to a list, the command creates the list if it does not already exist.
+
+.. code-block:: bash
+
+    uci add_list <service>.<section>.<list_option>='<value>'
+
+Remove a value from a list
+--------------------------
+
+To remove the last value from a list, use the ``uci del_list``, you must specify the value to be removed.
+
+.. code-block:: bash
+
+    uci del_list <service>.<section>.<list_option>='<value>'
+
+To remove all values from a list, use the ``uci delete`` command as explained in the previous section.
+
 COMMIT - Saving Changes
 =======================
 
