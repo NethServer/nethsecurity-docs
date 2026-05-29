@@ -24,10 +24,6 @@ When the service is enabled, the ``Blocklist sources`` tab will display all avai
 You can enable or disable each blocklist by using the switch on the right side of the list.
 Enabled blocklists will be automatically updated at regular intervals.
 
-.. note::
-
-   Changes to Adblock feeds and settings can take up to 30 seconds to be applied.
-
 To specify on which zones the service should be active, select them in the ``Force DNS redirection on these zones`` combobox.
 
 ``Redirected ports`` allows you to specify which ports should be redirected to Threat shield DNS service.
