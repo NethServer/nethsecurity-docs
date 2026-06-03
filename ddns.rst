@@ -85,6 +85,41 @@ Additional notes:
 - Consider enabling logging for the DDNS service to monitor updates and troubleshoot any issues.
 - Some providers may offer advanced features like wildcards and subdomain updates. Explore these options based on your specific needs.
 
+Example: DigitalOcean (DO)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following example uses the fictional ``firewall.example.net`` setup on NethSecurity.
+The DigitalOcean API token is intentionally redacted; replace it with your own token. ::
+
+  uci set ddns.do=service
+  uci set ddns.do.service_name='digitalocean.com-v2'
+  uci set ddns.do.lookup_host='firewall.example.net'
+  uci set ddns.do.domain='example.net'
+  uci set ddns.do.username='firewall'
+  uci set ddns.do.password='REDACTED_DIGITALOCEAN_API_TOKEN'
+  uci set ddns.do.param_opt='21694203'
+  uci set ddns.do.enabled='1'
+  uci set ddns.do.interface='wan'
+  uci set ddns.do.ip_source='network'
+  uci set ddns.do.ip_network='wan'
+  uci commit ddns
+  /etc/init.d/ddns restart
+
+The relevant DigitalOcean fields are:
+
+- ``domain``: the domain managed in DigitalOcean
+- ``username``: the hostname label to update
+- ``password``: the personal access token
+- ``param_opt``: the DNS record ID for that hostname
+
+To list the records and find the ID, run::
+
+  curl -X GET -H 'Content-Type: application/json' \
+        -H "Authorization: Bearer TOKEN" \
+        "https://api.digitalocean.com/v2/domains/DOMAIN/records"
+
+Replace ``TOKEN`` and ``DOMAIN`` with your own values.
+
 Example: afraid.org (FreeDNS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -134,6 +169,20 @@ The domain is named "nstest1.freeddns.it" and the username and password are "nst
   uci set ddns.dyndns_it.update_url='http://update.dyndns.it/nic/update?hostname=[DOMAIN]&user=[USERNAME]&password=[PASSWORD]'
   uci commit ddns
   /etc/init.d/ddns restart
+
+Split DNS
+---------
+
+Some deployments publish the same hostname inside the LAN and on the public internet.
+If ``lookup_host`` resolves to a private address on the firewall itself, DDNS can compare the public WAN IP against the internal answer and keep retrying even when the provider update succeeded.
+
+The recommended fix is to make DDNS query an external resolver for the lookup instead of the local split-DNS answer. For example::
+
+  uci set ddns.do.dns_server='1.1.1.1'
+  uci commit ddns
+  /etc/init.d/ddns restart
+
+This keeps split DNS for LAN clients while the DDNS client validates the public record.
 
 Using Luci
 ----------
