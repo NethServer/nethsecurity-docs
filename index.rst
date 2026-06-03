@@ -127,6 +127,7 @@ NethSecurity administrator manual
    ups
    wol
    checkmk
+   victoria_logs
    uci
 
 .. toctree::
