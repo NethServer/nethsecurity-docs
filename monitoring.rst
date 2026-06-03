@@ -10,9 +10,9 @@ Monitoring is essential for ensuring the firewall's optimal operation and identi
 NethSecurity offers 3 monitoring views:
 
 - **Real-time monitoring**: it leverages Telegraf, Netifyd and logs to provide immediate insights into the firewall's performance and status,
-  with detailed charts and alerts. It also used Netify agent and logs to provide immediate insights into the firewall's traffic, VPN connections and security events.
-- **Historical monitoring**: Telegraf write its data inside VictoriaMetrics, which saves the metrics inside a local persistent storage, when available.
-  Local historical monitoring is available starting from NethSecurity 8.8 and do not require a subscription.
+  with detailed charts and alerts. It also uses Netify agent and logs to provide immediate insights into the firewall's traffic, VPN connections and security events.
+- **Historical monitoring**: Telegraf writes its data inside VictoriaMetrics, which saves the metrics inside a local persistent storage, when available.
+  Local historical monitoring is available starting from NethSecurity 8.8 and does not require a subscription.
 - **Remote monitoring**: when the firewall is connected to a controller, metrics are also stored remotely using Prometheus.
   This allows metrics to be preserved for a longer time and enables centralized monitoring.
   Please note that the controller will store metrics only if both the firewall and the controller itself have a valid subscription.
@@ -337,7 +337,7 @@ Remote monitoring
    This feature is available only if the firewall and the controller have a valid subscription.
 
 Historical monitoring is available locally on the unit and remotely on the controller when the firewall is connected to it.
-All data are automatically sent to the controller and stored in Prometheus, allowing for long-term retention and centralized monitoring.
+All data is automatically sent to the controller and stored in Prometheus, allowing for long-term retention and centralized monitoring.
 
 The ``Controller`` page will show a message indicating that remote monitoring is disabled.
 
@@ -374,7 +374,7 @@ Netdata is designed to be lightweight, fast, and easy to use.
 Netdata is enabled by default on NethSecurity 8.7.2 and older and it is accessible from the LAN network. To access it, go to the ``Monitoring`` page
 and click :guilabel:`Open report` button from the ``Real-time report`` tab.
 
-Netdata metrics are saved in RAM and will be reset at very machine reboot.
+Netdata metrics are saved in RAM and will be reset at every machine reboot.
 If the firewall is connected to the :ref:`remote controller <controller-section>`, metrics will be stored to the controller itself and preserved across reboots.
 
 Install Netdata on NethSecurity 8.8
