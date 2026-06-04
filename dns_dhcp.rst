@@ -96,6 +96,11 @@ Dynamic leases
 Dynamic leases represents IP addresses that are currently in use and have been allocated to devices on the network.
 This tab shows all currently active leases.
 
+.. note::
+   When :ref:`storage-section` is configured, dnsmasq stores the lease file in
+   ``/mnt/data/dnsmasq/dhcp.leases``, so dynamic leases survive reboots.
+   Otherwise it keeps using ``/tmp/dhcp.leases``.
+
 Default Configuration
 ---------------------
 

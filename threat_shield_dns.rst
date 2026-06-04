@@ -150,6 +150,52 @@ The output might look like this:
 This output shows if the domain is currently blocked by any active blocklists.
 In this specific example, the domain `baddomain.com` is part of the category **adult**, as indicated by ``adb_list.adult.gz``. This helps you identify which category or list caused the domain to be blocked.
 
+.. _adblock_troubleshooting-section:
+
+Troubleshooting
+===============
+
+After enabling Adblock or changing its configuration, wait up to 30 seconds for the changes to be applied.
+During boot, Adblock also waits around 30 seconds for the network to come up before loading the feeds.
+
+Use the following command to check whether Adblock is running::
+
+  /etc/init.d/adblock status
+
+If the output shows zero blocked domains and no active feeds, Adblock has not loaded anything yet. In that case the status may look like this::
+
+  ::: adblock runtime information
+    + adblock_status  : enabled
+    + frontend_ver    : 4.5.5-r2
+    + backend_ver     : 4.5.5-r3
+    + blocked_domains : 0
+    + active_feeds    : -
+    + dns_backend     : dnsmasq (2.91-r3), /tmp/dnsmasq.d, 3.39 MB
+    + run_ifaces      : trigger: -, report: br-lan
+    + run_information : base: /tmp, dns: /tmp/dnsmasq.d, backup: /tmp/adblock-backup, report: /tmp/adblock-report, error: /tmp/adb_error.log
+    + run_flags       : shift: ✘, custom feed: ✔, ext. DNS (std/prot/remote/bridge): ✘/✘/✘/✘, force: ✔, flush: ✘, tld: ✔, search: ✘, report: ✔, mail: ✘, jail: ✘, debug: ✔
+    + last_run        : mode: reload, date / time: 28/05/2026 13:44:31, duration: 0m 5s, memory: 3450.30 MB available
+    + system_info     : cores: 2, fetch: wget, Nethesis NethBox Z1+, x86/64, NethSecurity 8.8.0-nethsecurity-8.8.20260528105131.094c098 (r32933-4ccb782af7)
+
+A correctly loaded system should look like this::
+
+  ::: adblock runtime information
+    + adblock_status  : enabled
+    + frontend_ver    : 4.5.5-r2
+    + backend_ver     : 4.5.5-r3
+    + blocked_domains : 237 974
+    + active_feeds    : doh_vpn_tor_proxy gambling,
+    + dns_backend     : dnsmasq (2.91-r3), /tmp/dnsmasq.ns_dnsmasq.d, 19.74 MB
+    + run_ifaces      : trigger: -, report: -
+    + run_information : base: /tmp, dns: /tmp/dnsmasq.ns_dnsmasq.d, backup: /tmp/adblock-backup, report: /tmp/adblock-report, error: /dev/null
+    + run_flags       : shift: ✘, custom feed: ✔, ext. DNS (std/prot/remote/bridge): ✘/✘/✘/✘, force: ✔, flush: ✘, tld: ✔, search: ✘, report: ✘, mail: ✘, jail: ✘, debug: ✘
+    + last_run        : mode: reload, date / time: 28/05/2026 14:30:37, duration: 0m 2s, memory: 708.93 MB available
+    + system_info     : cores: 2, fetch: curl, QEMU Standard PC (Q35 + ICH9, 2009), x86/64, NethSecurity 8.8.0-nethsecurity-8.8.20260527151745.8ae1ddcc9 (r32933-4ccb782af7)
+
+If there were network problems and Adblock could not download any feed, just restart it::
+
+  /etc/init.d/adblock restart
+  
 .. _advanced_configuration-section:
 
 Advanced configuration

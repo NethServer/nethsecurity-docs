@@ -221,7 +221,7 @@ Metrics
 
 Each unit exports two types of metrics:
 
-- system operating metrics (CPU, memory, disk, network): these metrics are collected using `Netdata <https://www.netdata.cloud/>`_
+- system operating metrics (CPU, memory, disk, network): these metrics are collected using `Telegraf <https://www.influxdata.com/time-series-platform/telegraf/>`_
   and stored in `Prometheus <https://prometheus.io/>`_. As soon as a unit is connected, the controller starts scraping the metrics.
   These metrics are available to everyone regardless of the subscription status.
 - firewall metrics (traffic, security, VPN): these metrics are sent from the unit to controller at fixed intervals.
@@ -240,6 +240,13 @@ Users can access the dashboard by clicking on the :guilabel:`Open metrics` link 
 
 By default, only the admin user can access the metrics dashboard. If you want to allow other users to access the metrics dashboard,
 you can create a new role and assign it to the user directly from the Grafana web interface.
+
+.. note::
+
+   Starting from NethSecurity 8.8, Netdata is not installed by default on units.
+   If you have configured custom dashboards that rely on Netdata metrics, you can reinstall it manually on the unit.
+
+   See :ref:`legacy Netdata section <legacy_netdata-section>` for more information on how to resinstall it.
 
 .. _grafana-section:
 
@@ -263,7 +270,7 @@ See the `official documentation <https://grafana.com/docs/grafana/latest/>`_ for
 Prometheus metrics
 ^^^^^^^^^^^^^^^^^^
 
-Prometheus metrics are collected using Netdata and stored in a Prometheus database.
+Prometheus metrics are collected using Telegraf by default. When Netdata is installed manually, Prometheus also scrapes metrics from it.
 
 Metrics exported for each unit includes the following labels:
 
