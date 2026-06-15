@@ -65,6 +65,7 @@ NethSecurity administrator manual
    :caption: Users and objects
 
    users_databases
+   administrative_users
    objects
 
 .. toctree::
