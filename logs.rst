@@ -4,15 +4,12 @@
 Logs
 ====
 
-Logs are used for troubleshooting, operational monitoring, incident analysis, and audit reconstruction. 
-Depending on the installation type, logs can be :
+Logs are used for troubleshooting, operational monitoring, incident analysis, and audit reconstruction.
+Depending on the installation type and available services, logs can be **stored on persistent local storage** and/or **forwarded to external systems** for centralized collection, retention, and analysis, such as:
 
-1. **Saved on persistent local storage**
-2. **Forwarded to external systems such as:**
-
-* a remote syslog server
-* a NethSecurity Controller
-* a Nethesis Cloud Log Manager
+* remote syslog server
+* NethSecurity Controller
+* Nethesis Cloud Log Manager
   
 
 For audit, troubleshooting, and long-term retention, persistent storage or remote log forwarding is recommended.
