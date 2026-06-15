@@ -45,7 +45,7 @@ Interaction with port forward rules
 -----------------------------------
 
 Reverse proxy uses only port 443, if a port forward rule is also configured on port 443, the port forward rule always takes precedence. 
-In this case, HTTPS traffic is forwarded according to the port forward rule and the reverse proxy rule is not applied.
+In this case, HTTPS traffic is forwarded according to the port forward rule and the reverse proxy rule is not applied because no traffic reaches the web server running on the firewall itself.
 To use the reverse proxy, make sure that no port forward rule is configured on port 443 for the same WAN address.
 
 Proxy on port 80 (HTTP)
