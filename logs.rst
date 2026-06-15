@@ -23,16 +23,13 @@ Physical appliances
 -------------------
 
 On NethSecurity physical appliances, persistent storage is configured automatically and used to store logs.
-When persistent storage is available, logs are saved on disk and managed by log rotation. By default, logs are rotated weekly and retained for 52 weeks.
-This default retention provides approximately one year of local log history and is suitable for most operational troubleshooting and audit reconstruction use cases.
+When persistent storage is available, logs are saved on disk and managed by log rotation. 
 
 Virtual machines
 ----------------
 
 On virtual machines, persistent storage must be configured explicitly.
 For audit, troubleshooting, and long-term retention, it is recommended to attach and configure a dedicated virtual disk for logs. 
-Avoid relying only on in-memory logs, because they are limited in size and may be lost after reboot or rotation.
-After configuring persistent storage, NethSecurity can use it to store logs with the configured retention policy.
 
 In-memory logs
 --------------
