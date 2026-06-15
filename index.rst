@@ -100,6 +100,12 @@ NethSecurity administrator manual
 
 .. toctree::
    :maxdepth: 2
+   :caption: Logs
+   
+    logs
+
+.. toctree::
+   :maxdepth: 2
    :caption: High Availability
 
    ha_overview_features_limitations
@@ -116,7 +122,6 @@ NethSecurity administrator manual
    smtp
    snmp
    custom_openvpn_tunnel
-   logs
    speedtest
    ups
    wol
