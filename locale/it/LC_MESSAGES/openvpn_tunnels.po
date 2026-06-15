@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../openvpn_tunnels.rst:5 43346fe2604a440b93bb916fb78667d1
+#: ../../openvpn_tunnels.rst:5 d753cbf7ed964b4f8efaadae3d579589
 msgid "OpenVPN tunnels"
 msgstr "Tunnel OpenVPN"
 
-#: ../../openvpn_tunnels.rst:7 11abc3df7183439985f969b7701c6d78
+#: ../../openvpn_tunnels.rst:7 7937cbc590874241b7fc196b337248c1
 msgid ""
 "OpenVPN net-to-net tunnels establish secure connections between two separate"
 " networks, such as branch offices of a company, over the internet. These "
@@ -18,7 +18,7 @@ msgstr ""
 " connessioni utilizzano i protocolli SSL/TLS per la cifratura e "
 "l'autenticazione, garantendo la riservatezza e l'integrità dei dati."
 
-#: ../../openvpn_tunnels.rst:10 5c8e7fe643194e23a0ca6fd47b7cea90
+#: ../../openvpn_tunnels.rst:10 b92c74bf461f4d7fa200293959c98ed9
 msgid ""
 "The connection is handled by 2 NethSecurity firewalls, each one has a "
 "specific role. When creating an OpenVPN net2net connection a firewall will "
@@ -32,7 +32,7 @@ msgstr ""
 " NethSecurity può essere contemporaneamente server e client per tunnel "
 "differenti; tutti i tunnel utilizzano la modalità routed di OpenVPN."
 
-#: ../../openvpn_tunnels.rst:15 1980fd471888441cb431ae4f988281bf
+#: ../../openvpn_tunnels.rst:15 ba19dfd98330499299833e2a48ad9fbd
 msgid ""
 "The OpenVPN tunnels interface has been crafted for straightforward "
 "connection between two NethSecuirty devices. For this reason, it is "
@@ -46,11 +46,11 @@ msgstr ""
 "OpenVPN per collegarsi a un dispositivo di terze parti. Per connettersi a un"
 " dispositivo di terze parti, si consiglia di utilizzare il protocollo IPsec."
 
-#: ../../openvpn_tunnels.rst:19 0bdc6de666be4b16af6ab0b56c6dd297
+#: ../../openvpn_tunnels.rst:19 43a5c6e7d5e5454abdb84cd2adf18934
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../openvpn_tunnels.rst:20 24a67f88cde6470a8fa0bd443f0c1412
+#: ../../openvpn_tunnels.rst:20 be5da9b335d84db9878af16b4b6f6711
 msgid ""
 "To connect two firewalls via an OpenVPN tunnel, first configure the server "
 "firewall, then configure the client one. The server needs at least one "
@@ -71,11 +71,11 @@ msgstr ""
 "sarà possibile scaricare la configurazione client da importare sull’altro "
 "firewall."
 
-#: ../../openvpn_tunnels.rst:26 c9fc6808e5624c46889139bfb9912318
+#: ../../openvpn_tunnels.rst:26 e700a8e9f9204ef2b4f83ec4e1b649cf
 msgid "Proceed as follows:"
 msgstr "Procedere come segue:"
 
-#: ../../openvpn_tunnels.rst:27 b4652bad16904cc9be79540951a5e53b
+#: ../../openvpn_tunnels.rst:27 d5164a6b751b4331b5c40545678a6110
 msgid ""
 "Access the OpenVPN tunnels page, move to ``Server tunnel`` tab and click on "
 ":guilabel:`Add server tunnel`."
@@ -83,11 +83,11 @@ msgstr ""
 "Accedere alla pagina dei tunnel OpenVPN, spostarsi sulla scheda ``Tunnel "
 "server`` e fare clic su :guilabel:`Aggiungi tunnel server`."
 
-#: ../../openvpn_tunnels.rst:29 cc3dbbf8cb6a4664b4750805c01e75a6
+#: ../../openvpn_tunnels.rst:29 57b98de9a028431b818796a497c62766
 msgid "Insert all required fields, but please note:"
 msgstr "Inserire tutti i campi obbligatori, ma si noti:"
 
-#: ../../openvpn_tunnels.rst:31 ec39b3cf560b4995b69c32a62eff9644
+#: ../../openvpn_tunnels.rst:31 806434f879f14f68a61103e926efb7c1
 msgid ""
 "``Public endpoints`` it's a list of IP addresses or hostnames that clients "
 "can use to reach the OpenVPN tunnel server"
@@ -95,7 +95,7 @@ msgstr ""
 "``Endpoint pubblici`` è un elenco di indirizzi IP o nomi host che i client "
 "possono utilizzare per raggiungere il server tunnel OpenVPN"
 
-#: ../../openvpn_tunnels.rst:32 0b997d06554f4e9c84ef9eb0a9d78b45
+#: ../../openvpn_tunnels.rst:32 4d2c73a492a24ac196580b60588c60f3
 msgid ""
 "``Local networks`` it's a list of local networks that will be accessible "
 "from the remote server. If topology is set to p2p, the same list will be "
@@ -105,7 +105,7 @@ msgstr ""
 "server remoto. Se la topologia è impostata su p2p, lo stesso elenco verrà "
 "riportato nel campo ``Reti remote`` del client."
 
-#: ../../openvpn_tunnels.rst:33 085cf593aa79477d9e24bda08287723c
+#: ../../openvpn_tunnels.rst:33 e0ae956cfae54f7c9c7d62e2f3b20b50
 msgid ""
 "``Remote networks``, it’s a list of networks behind the remote server which "
 "will be accessible from hosts in the local network"
@@ -113,7 +113,7 @@ msgstr ""
 "``Reti remote``, è un elenco di reti dietro il server remoto che saranno "
 "accessibili dagli host nella rete locale"
 
-#: ../../openvpn_tunnels.rst:34 1c942eee986749779e6ebdc65a47b3e1
+#: ../../openvpn_tunnels.rst:34 bc985d4f19ce47119a47cbe738b5ab77
 msgid ""
 "After the configuration is saved, click on the :guilabel:`Download` action "
 "and select ``Client configuration``"
@@ -121,7 +121,7 @@ msgstr ""
 "Dopo che la configurazione è stata salvata, fare clic sull'azione "
 ":guilabel:`Scarica` e selezionare ``Client configuration``"
 
-#: ../../openvpn_tunnels.rst:35 1967e925d2ab45d3b01997a21fa3a75f
+#: ../../openvpn_tunnels.rst:35 aa63aa795dd14acdbaeb1dc02d8910ef
 msgid ""
 "Access the client firewall, OpenVPN tunnel, move to ``Client tunnel`` tab, "
 "click on :guilabel:`Import configuration`"
@@ -129,11 +129,11 @@ msgstr ""
 "Accedere al firewall client, al tunnel OpenVPN, spostarsi nella scheda "
 "``Tunnel client``, fare clic su :guilabel:`Importa configurazione`"
 
-#: ../../openvpn_tunnels.rst:38 44bde8f7648e46f5945fb0dd775a46d8
+#: ../../openvpn_tunnels.rst:38 bcdfa67a93db4b2aa1d727df42b0e934
 msgid "Topology"
 msgstr "Topologia"
 
-#: ../../openvpn_tunnels.rst:39 5f705ec323db4148ac79ab7dd2c860d4
+#: ../../openvpn_tunnels.rst:39 22797fe97bb7481ba972892ec5a33043
 msgid ""
 "Tunnels can have two kinds of topologies: ``subnet`` and ``p2p`` (Point to "
 "Point)."
@@ -141,11 +141,11 @@ msgstr ""
 "I tunnel possono avere due tipi di topologie: ``subnet`` e ``p2p`` (Point to"
 " Point)."
 
-#: ../../openvpn_tunnels.rst:42 1d7c7ae0dfc949018d26222f783c704d
+#: ../../openvpn_tunnels.rst:42 054b1e4e405e4aad8b06952e9492a8ea
 msgid "Subnet"
 msgstr "Subnet"
 
-#: ../../openvpn_tunnels.rst:43 ca2b755bdeff43089a04bd3e8e1f1119
+#: ../../openvpn_tunnels.rst:43 64a67be697be4780982534adec833bd5
 msgid ""
 "``Subnet`` is the default topology and the recommended one: in ``subnet`` "
 "topology, the server will accept connections and will act as a DHCP server "
@@ -155,7 +155,7 @@ msgstr ""
 "``subnet``, il server accetterà le connessioni e agirà come server DHCP per "
 "ogni client connesso."
 
-#: ../../openvpn_tunnels.rst:45 6b1f27d1faf44539be39464bd5f96f51
+#: ../../openvpn_tunnels.rst:45 cd7bb554399c477db8b7a4bd47ac8ed4
 msgid ""
 "In this scenario the server will authenticate clients using TLS certificates"
 " and will push local routes to remote client."
@@ -163,11 +163,11 @@ msgstr ""
 "In questo scenario il server autenticherà i client utilizzando certificati "
 "TLS e invierà le route locali al client remoto."
 
-#: ../../openvpn_tunnels.rst:48 e4f6e06372be4cffa4cad5b0a53feb51
+#: ../../openvpn_tunnels.rst:48 bd597946c60e4d8c8e978de45abcce2e
 msgid "P2P"
 msgstr "P2P"
 
-#: ../../openvpn_tunnels.rst:50 5c975eb4bba746a0ba6cc920a38f55c2
+#: ../../openvpn_tunnels.rst:50 f9b65e84d6514227a6e0b9ab44202107
 msgid ""
 "In a ``p2p`` topology, the administrator must configure one server for each "
 "client, in this scenario the only supported authentication method is the PSK"
@@ -177,32 +177,32 @@ msgstr ""
 "ciascun client; in questo scenario, l'unico metodo di autenticazione "
 "supportato è il PSK (Pre-Shared Key)."
 
-#: ../../openvpn_tunnels.rst:52 39be34929a3c4c15a6d5f1148a7da8a9
+#: ../../openvpn_tunnels.rst:52 da2e497fd6e64552a06df5782f2a6da9
 msgid ""
 "make sure to exchange the PSK using a secure channel (like SSH or HTTPS)"
 msgstr ""
 "assicurarsi di scambiare il PSK utilizzando un canale sicuro (come SSH o "
 "HTTPS)"
 
-#: ../../openvpn_tunnels.rst:53 f6f3268c0be249f7bc84b6a99588b003
+#: ../../openvpn_tunnels.rst:53 1fab1f3a27954d19ba34ff2c261e30e3
 msgid "the administrator must select an IP for both endpoints"
 msgstr "l'amministratore deve selezionare un IP per entrambi gli endpoint"
 
-#: ../../openvpn_tunnels.rst:54 3d0127b720124023956cd4e27c248a72
+#: ../../openvpn_tunnels.rst:54 6cacd1b0249c497cb597516ea1c32c35
 msgid "routes to remote networks must be configured on each endpoint"
 msgstr ""
 "le route verso le reti remote devono essere configurate su ciascun endpoint"
 
-#: ../../openvpn_tunnels.rst:58 574a4bc5463c4a52b353db125c709cab
+#: ../../openvpn_tunnels.rst:58 ef5050ba6800456198a0aaac9d7d1812
 msgid "Advanced features"
 msgstr "Funzionalità avanzate"
 
-#: ../../openvpn_tunnels.rst:59 7f8c12f0a3a942d38f29eeafdf044284
+#: ../../openvpn_tunnels.rst:59 a2d647eee82e4243bd48efab07ac98ca
 msgid "The web interface allows the configuration of advanced features like:"
 msgstr ""
 "L'interfaccia web consente la configurazione di funzionalità avanzate come:"
 
-#: ../../openvpn_tunnels.rst:61 5c5e22e58b3a4d5e8241f6b9cf75c7ad
+#: ../../openvpn_tunnels.rst:61 c2a99fe82a414affb6cde72306e28b88
 msgid ""
 "``Multiple remote host``: multiple remote server addresses can be specified "
 "for redundancy; the OpenVPN client will try to connect to each host in the "
@@ -212,7 +212,7 @@ msgstr ""
 "remoti per la ridondanza; il client OpenVPN tenterà di connettersi a ciascun"
 " host nell'ordine indicato"
 
-#: ../../openvpn_tunnels.rst:63 1fb1bfe9b8834bfdb9b53473323ef0c9
+#: ../../openvpn_tunnels.rst:63 3aaefa58dca64b2ea8177e226e60f22d
 msgid ""
 "``Protocol``: OpenVPN is designed to operate optimally over UDP, but TCP "
 "capability is provided for situations where UDP cannot be used"
@@ -221,7 +221,7 @@ msgstr ""
 " ma la compatibilità con TCP è prevista per situazioni in cui UDP non può "
 "essere utilizzato."
 
-#: ../../openvpn_tunnels.rst:65 e6eeb93179c64e7eb7226a0b73f94129
+#: ../../openvpn_tunnels.rst:65 badce7e09ee643cebcf0d18656d94749
 msgid ""
 "``Compression``: if enabled, data to be sent through the VPN tunnel will be "
 "compressed. This option is disabled by default both for security reasons. "
@@ -234,7 +234,7 @@ msgstr ""
 "essenziale al giorno d'oggi, poiché il traffico internet è generalmente già "
 "altamente compresso e ottimizzato."
 
-#: ../../openvpn_tunnels.rst:67 3eddb54ea04c4cad9d16556a4b975f9e
+#: ../../openvpn_tunnels.rst:67 699340ade1804619923cad8b2a4d77d6
 msgid ""
 "``Digest``: the digest algorithm used to transform an arbitrarily large "
 "block of data into a fixed-size output. If not explicitly selected, the "
@@ -246,7 +246,7 @@ msgstr ""
 " selezionato esplicitamente, il server e il client tenteranno di negoziare "
 "il miglior digest disponibile su entrambi i lati."
 
-#: ../../openvpn_tunnels.rst:69 d920ee2074de4abbb7c7d18bdbc82852
+#: ../../openvpn_tunnels.rst:69 fc8dcb7900dc4aa79d239a10f0a2480f
 msgid ""
 "``Cipher``: the cryptographic algorithm used to encrypt all the traffic. If "
 "not explicitly selected, the server and client will try to negotiate the "
@@ -256,7 +256,7 @@ msgstr ""
 "traffico. Se non viene selezionato esplicitamente, il server e il client "
 "tenteranno di negoziare il miglior cipher disponibile su entrambi i lati."
 
-#: ../../openvpn_tunnels.rst:71 cef768df1c484f11b97e5dbc6c06a420
+#: ../../openvpn_tunnels.rst:71 8604396811834de3992b553cd08b8281
 msgid ""
 "``Enforce a minimum TLS version``: Allows you to choose a minimum version of"
 " TLS, in which case connections will only be allowed from devices that use a"
@@ -267,15 +267,15 @@ msgstr ""
 "provenienti da dispositivi che utilizzano una versione uguale o superiore a "
 "quella selezionata."
 
-#: ../../openvpn_tunnels.rst:74 19c03b74c845492887fe1779c69f0644
+#: ../../openvpn_tunnels.rst:84 4d65a602b08e4d5b93543327dde8f8e1
 msgid "MTU Issue and Packet Fragmentation"
 msgstr "Problema MTU e Frammentazione dei Pacchetti"
 
-#: ../../openvpn_tunnels.rst:99 7d5eab70cf5b4e6ba80ddc07f61cd064
+#: ../../openvpn_tunnels.rst:109 99ab516c4bc2475c89028b9aa66219c4
 msgid "Managing certificate expiration"
 msgstr "Gestione della scadenza dei certificati"
 
-#: ../../openvpn_tunnels.rst:101 8896343bacd54158839f61873ab269e9
+#: ../../openvpn_tunnels.rst:111 703a8cffe276444b93f8a84d3d24c324
 msgid ""
 "As mentioned in the :ref:`managing-openvpn-certificate-expiration` section, "
 "OpenVPN tunnels are also based on certificates, and it is crucial to monitor"
@@ -286,7 +286,7 @@ msgstr ""
 "fondamentale monitorare le loro date di scadenza per evitare problemi di "
 "connettività."
 
-#: ../../openvpn_tunnels.rst:103 2301b72f92944fb6b92c19228f4bc2da
+#: ../../openvpn_tunnels.rst:113 b8dba8d6258241f2a83cb757205818f9
 msgid ""
 "When a new OpenVPN tunnel is created, the system generates a new ``PKI "
 "(Public Key Infrastructure)``, which is composed of the **CA**, **server**, "
@@ -298,7 +298,7 @@ msgstr ""
 " da un **singolo certificato client** (a differenza delle connessioni Road "
 "Warrior, che prevedono un certificato per ogni utente)."
 
-#: ../../openvpn_tunnels.rst:105 1a15d6ea59c8495eb00f0a68226ec8d9
+#: ../../openvpn_tunnels.rst:115 0c15a00c34de45a6846b70296b2078d2
 msgid ""
 "All information about certificate expiration dates can be found in the "
 "**OpenVPN Tunnels** table, where a magnifying-glass icon is shown for each "
@@ -311,7 +311,7 @@ msgstr ""
 "si apre una finestra modale con tutti i dettagli sulla configurazione del "
 "tunnel, inclusi i certificati e le rispettive date di scadenza."
 
-#: ../../openvpn_tunnels.rst:107 22987eb7665c42b38d05431cf4266c1d
+#: ../../openvpn_tunnels.rst:117 38ba31ab3c944dc6bd87e31dda372a89
 msgid ""
 "On the **server side**, the modal shows certificate information for the CA, "
 "server, and client certificates. On the **client side**, it shows only the "
@@ -321,7 +321,7 @@ msgstr ""
 "certificati per la CA, il server e i certificati client. Sul **lato "
 "client**, mostra solo i certificati CA e client."
 
-#: ../../openvpn_tunnels.rst:110 a60fd8d9f6994e29b8a9f73c14b8e4a7
+#: ../../openvpn_tunnels.rst:120 bd8c39842960462dbe1e5e04ed4e549f
 msgid ""
 "In the tunnel table, an alert icon is shown when at least one of these "
 "certificates will expire in less than 30 days or has already expired. By "
@@ -333,7 +333,7 @@ msgstr ""
 " finestra modale dei dettagli del tunnel, è possibile vedere quale "
 "certificato sta per scadere e la sua data di scadenza."
 
-#: ../../openvpn_tunnels.rst:112 7c9d1c39329344e984952f6cc2c4328f
+#: ../../openvpn_tunnels.rst:122 62716952a8994116a8217391727f06e3
 msgid ""
 "By default, all certificates are generated with a validity of 3650 days (10 "
 "years)."
@@ -341,7 +341,7 @@ msgstr ""
 "Per impostazione predefinita, tutti i certificati vengono generati con una "
 "validità di 3650 giorni (10 anni)."
 
-#: ../../openvpn_tunnels.rst:114 5ec86564fa7d42bd8762b1e5ed6eb189
+#: ../../openvpn_tunnels.rst:124 4c320e5910a94899ae7b583fd7fe5495
 msgid ""
 "A connection between the two firewalls will be interrupted when at least one"
 " certificate expires, according to the three possible scenarios described in"
@@ -351,7 +351,7 @@ msgstr ""
 "certificato scade, secondo i tre possibili scenari descritti nella sezione "
 "OpenVPN Road Warrior."
 
-#: ../../openvpn_tunnels.rst:116 f4d9178253e44c6cb858427206ca6a01
+#: ../../openvpn_tunnels.rst:126 276fd289ab2a4e86ab82f915986285bf
 msgid ""
 "To check whether your OpenVPN tunnel is disconnected due to certificate "
 "expiration, you can inspect the **firewall logs** and search for OpenVPN-"
@@ -361,15 +361,15 @@ msgstr ""
 " certificato, è possibile ispezionare i **log del firewall** e cercare "
 "messaggi relativi a OpenVPN, situati nel file ``/var/log/messages``."
 
-#: ../../openvpn_tunnels.rst:118 c082efb0996e4f74afe403e6f9e8a3ee
+#: ../../openvpn_tunnels.rst:128 1ef1217aee904327a1220ec5a37cba51
 msgid "Example:"
 msgstr "Esempio:"
 
-#: ../../openvpn_tunnels.rst:124 623b62a2718b449896f1a3f951c1cdd6
+#: ../../openvpn_tunnels.rst:134 27c2804763b44904b890fc70e43ddf84
 msgid "The search returns messages like the following:"
 msgstr "La ricerca restituisce messaggi come il seguente:"
 
-#: ../../openvpn_tunnels.rst:131 be6fee078f5d4442b67433cbe48c3b35
+#: ../../openvpn_tunnels.rst:141 6150f185dc9d4b0ea1d4cd5c4dfb8e06
 msgid ""
 "Those lines mean that the connection is not working due to certificate "
 "expiration. The issue may be related to the CA certificate (``depth=1``), "
@@ -379,7 +379,7 @@ msgstr ""
 " del certificato. Il problema può essere relativo al certificato CA "
 "(``depth=1``), al certificato del server (``depth=0``), o a entrambi."
 
-#: ../../openvpn_tunnels.rst:133 af1004f12c3747f3a7fd6bd0e8fdcd7f
+#: ../../openvpn_tunnels.rst:143 861b606197714106b63e81b1ca575497
 msgid ""
 "To check the validity of the certificates, you can use the following "
 "``openssl`` commands."
@@ -387,7 +387,7 @@ msgstr ""
 "Per verificare la validità dei certificati, è possibile utilizzare i "
 "seguenti comandi ``openssl``."
 
-#: ../../openvpn_tunnels.rst:144 772138c7ab9e44889ad83c92ded90935
+#: ../../openvpn_tunnels.rst:154 83da85518f514194863e0de456dba784
 msgid ""
 "The ``{vpn-instance}`` placeholder must be replaced with the name of your "
 "OpenVPN instance (e.g. ``ns_roadwarrior1``)."
@@ -395,7 +395,7 @@ msgstr ""
 "Il segnaposto ``{vpn-instance}`` deve essere sostituito con il nome della "
 "propria istanza OpenVPN (ad esempio ``ns_roadwarrior1``)."
 
-#: ../../openvpn_tunnels.rst:146 cba4eb7e83674d5b91c39ff3987b0215
+#: ../../openvpn_tunnels.rst:156 7873db64c06b498bbd9d930d38e20414
 msgid ""
 "Below are the steps to renew certificates in each scenario and restore the "
 "connection."
@@ -403,11 +403,11 @@ msgstr ""
 "Di seguito sono riportati i passaggi per rinnovare i certificati in ciascuno"
 " scenario e ripristinare la connessione."
 
-#: ../../openvpn_tunnels.rst:149 eac32277ffae4154831c1394aaefba0b
+#: ../../openvpn_tunnels.rst:159 fe3be178c3a34f5f966e3de1fd7578fd
 msgid "Client certificate expired"
 msgstr "Certificato client scaduto"
 
-#: ../../openvpn_tunnels.rst:150 9a1c17c4a79e4a4cb17a119e738d5509
+#: ../../openvpn_tunnels.rst:160 12f7f43333a54a0380e4ce02b5aa435d
 msgid ""
 "In this scenario, the client certificate must be renewed on the server side "
 "and then downloaded and imported again on the client side."
@@ -415,13 +415,13 @@ msgstr ""
 "In questo scenario, il certificato client deve essere rinnovato lato server "
 "e poi scaricato e importato nuovamente lato client."
 
-#: ../../openvpn_tunnels.rst:152 bb18793c24f54778a672b2248df21687
+#: ../../openvpn_tunnels.rst:162 4d51bd62e8494a39abc0cc835612cd23
 msgid ""
 "Access the server firewall and navigate to the **OpenVPN tunnels** section."
 msgstr ""
 "Accedere al firewall del server e navigare alla sezione **Tunnel OpenVPN**."
 
-#: ../../openvpn_tunnels.rst:153 1ece02ee109045bf9707bb509828d3e8
+#: ../../openvpn_tunnels.rst:163 1e2a7ee4b6a64f3f85db446129dadf1a
 msgid ""
 "Click the :guilabel:`︙` menu on the right of the tunnel and select "
 ":guilabel:`Regenerate certificates`."
@@ -429,11 +429,11 @@ msgstr ""
 "Fare clic sul menu :guilabel:`︙` a destra del tunnel e selezionare "
 ":guilabel:`Rigenera certificati`."
 
-#: ../../openvpn_tunnels.rst:154 68e256dab4334dfa8016a01e6133e9e5
+#: ../../openvpn_tunnels.rst:164 08edcfda0f474aa4acf61b5eb1d52859
 msgid "Download the new client certificate and import it on the client side."
 msgstr "Scaricare il nuovo certificato client e importarlo sul lato client."
 
-#: ../../openvpn_tunnels.rst:156 0a61bbce5530413fb39c92c0596f6002
+#: ../../openvpn_tunnels.rst:166 46df6d0b157f4d61a6929fed7de67708
 msgid ""
 "These operations will create new server and client certificates without "
 "affecting the CA certificate (which is assumed to be still valid in this "
@@ -449,11 +449,11 @@ msgstr ""
 "scaricarlo e importarlo sul lato client il prima possibile per ridurre al "
 "minimo i tempi di inattività."
 
-#: ../../openvpn_tunnels.rst:161 d75780e902c7486e8a8ba525e531290f
+#: ../../openvpn_tunnels.rst:171 eff6bfec79e442158f160c24e6de6143
 msgid "Server certificate expired"
 msgstr "Certificato del server scaduto"
 
-#: ../../openvpn_tunnels.rst:162 6174973fa1cd42caab19945e1311ff09
+#: ../../openvpn_tunnels.rst:172 3eb2c012617f4264a9726a463472a5dd
 msgid ""
 "In this scenario, the server certificate must be renewed on the server side."
 " Use the same :guilabel:`Regenerate certificates` action described in the "
@@ -469,7 +469,7 @@ msgstr ""
 " appena generato in un secondo momento. Il nuovo certificato client scadrà "
 "lo stesso giorno del nuovo certificato server."
 
-#: ../../openvpn_tunnels.rst:165 235778eab85a4d42bbbc2f25b0274675
+#: ../../openvpn_tunnels.rst:175 29a98985775b48e0b196f9ae6ca606ce
 msgid ""
 "As for the Road Warrior server certificate renewal, the consideration about "
 "the client behavior is the same: if the certificate renewal is done while "
@@ -487,11 +487,11 @@ msgstr ""
 "**i client sono disconnessi (modalità consigliata)**, la connessione verrà "
 "automaticamente ripristinata quando tenteranno nuovamente di connettersi."
 
-#: ../../openvpn_tunnels.rst:168 081e0f53ec8f4ee189d7fd7b3994e0f5
+#: ../../openvpn_tunnels.rst:178 82742c08c7f945b5b8265a93eace6d84
 msgid "CA certificate expired"
 msgstr "Certificato CA scaduto"
 
-#: ../../openvpn_tunnels.rst:169 4a10fff56eba40c1a18614f0582ae3b3
+#: ../../openvpn_tunnels.rst:179 81fef905149e45d696d2443932f42bf5
 msgid ""
 "In this scenario, you've to proceed with the generation of a completely new "
 "PKI."
@@ -499,15 +499,15 @@ msgstr ""
 "In questo scenario, è necessario procedere con la generazione di una nuova "
 "PKI completa."
 
-#: ../../openvpn_tunnels.rst:171 13c9f3a61f1b4fc18cddc7ea86b61a40
+#: ../../openvpn_tunnels.rst:181 19499e4b11644de29e7bd94cbd432bec
 msgid "Access the server firewall terminal."
 msgstr "Accedere al terminale del firewall del server."
 
-#: ../../openvpn_tunnels.rst:172 e0d066a8f8644f6e9fa47e4668a0c80c
+#: ../../openvpn_tunnels.rst:182 94ce5f3cf02546e0bc60ebff9a9ce75f
 msgid "Execute the following commands:"
 msgstr "Eseguire i seguenti comandi:"
 
-#: ../../openvpn_tunnels.rst:179 996b41a31383438392bacc3e196ab557
+#: ../../openvpn_tunnels.rst:189 fda838c9157c4589a8e6e106a9191d65
 msgid ""
 "These commands will generate a new CA certificate, as well as new server and"
 " client certificates signed by the new CA. In this scenario, it is "
@@ -522,7 +522,7 @@ msgstr ""
 "questa operazione il prima possibile per ridurre al minimo i tempi di "
 "inattività."
 
-#: ../../openvpn_tunnels.rst:182 792f49667d17411a9751b5278cf7e3de
+#: ../../openvpn_tunnels.rst:192 383d27af2d1447359cb5c2200c5ac5cc
 msgid ""
 "All considerations remain the same as for Road Warrior connections. If the "
 "expired certificate is the CA certificate, you have to generate a completely"
@@ -534,7 +534,7 @@ msgstr ""
 "nuova PKI completa, mentre se il certificato scaduto è quello del server o "
 "del client, è possibile rigenerarlo utilizzando l'azione dedicata."
 
-#: ../../openvpn_tunnels.rst:76 9265dd62d9d742509dd497cfba78f501
+#: ../../openvpn_tunnels.rst:86 26b7ded0ef644097933e25316edc082c
 msgid ""
 "By default, OpenVPN tunnel instances created on NethSecurity are initialized"
 " with the following values:"
@@ -542,15 +542,15 @@ msgstr ""
 "Per impostazione predefinita, le istanze del tunnel OpenVPN create su "
 "NethSecurity vengono inizializzate con i seguenti valori:"
 
-#: ../../openvpn_tunnels.rst:78 f2ec0b8e225a4cb1ac40291803b9c255
+#: ../../openvpn_tunnels.rst:88 2f0e2666efa648e49057efa8c4bd9f3a
 msgid "Maximum Transmission Unit - ``tun_mtu`` = ``1500``"
 msgstr "Unità Massima di Trasmissione - ``tun_mtu`` = ``1500``"
 
-#: ../../openvpn_tunnels.rst:79 caa77327c26e4d0cb6bb9a8f68e2bca6
+#: ../../openvpn_tunnels.rst:89 9f5b91b99b9c4b26ba8ecc95ae69f8ce
 msgid "Maximum Segment Size - ``mssfix`` = ``1450``."
 msgstr "Dimensione massima del segmento - ``mssfix`` = ``1450``."
 
-#: ../../openvpn_tunnels.rst:81 d989c0e028bd4d33b7412dbc0a7752be
+#: ../../openvpn_tunnels.rst:91 fa6d72bc99c648c38d78d1fe307a5f36
 msgid ""
 "These are default values from OpenVPN which are generally suitable for most "
 "network environments that should be changed only if you experience "
@@ -561,7 +561,7 @@ msgstr ""
 "in caso di problemi di connettività dovuti alla frammentazione dei "
 "pacchetti."
 
-#: ../../openvpn_tunnels.rst:83 fe309515aeac4887b02b9c92b3df19e3
+#: ../../openvpn_tunnels.rst:93 fdd9ad1ff26b44c3af1bd5eb8b0afe6f
 msgid ""
 "VPN users may experience connectivity issues due to packet fragmentation. "
 "The LAN interface has an MTU of 1500 by default, but when packets are "
@@ -576,7 +576,7 @@ msgstr ""
 "pacchetti. Per risolvere questo problema, è necessario abbassare l'MTU e "
 "l'MSS sul tunnel OpenVPN. Non sono richieste modifiche lato client."
 
-#: ../../openvpn_tunnels.rst:86 82d71bc7e80b46c380ba8385795e690e
+#: ../../openvpn_tunnels.rst:96 27e19b1d6b094ebca5fe68530a1511ef
 msgid ""
 "The values of MTU and MSS can be adjusted directly on the UI, when creating "
 "the tunnel for the first time or later when editing it using the `Edit` "
@@ -590,7 +590,7 @@ msgstr ""
 "avanzate`` del drawer. In alternativa, è possibile regolare i due valori di "
 "configurazione utilizzando l'interfaccia a riga di comando sul firewall::"
 
-#: ../../openvpn_tunnels.rst:94 7c08321899dd4efabe257d824585e818
+#: ../../openvpn_tunnels.rst:104 b812a39aec3d45dfa5ae094d3381ec21
 msgid ""
 "The `tun_mtu` and `mssfix` values may need to be adjusted based on your "
 "specific network environment. A lower MTU ensures that packets fit within "
@@ -605,7 +605,7 @@ msgstr ""
 "che valori leggermente diversi funzionino meglio per la propria "
 "configurazione."
 
-#: ../../openvpn_tunnels.rst:96 96e37ff480994d318bf1c1b026596060
+#: ../../openvpn_tunnels.rst:106 b00b4957a7924453b29319dd3420d326
 msgid ""
 "For more specific information please see the `official OpenVPN documentation"
 " <https://openvpn.net/community-docs/community-"
@@ -614,3 +614,44 @@ msgstr ""
 "Per informazioni più specifiche, consultare la `documentazione ufficiale di "
 "OpenVPN <https://openvpn.net/community-docs/community-"
 "articles/openvpn-2-6-manual.html>`_."
+
+#: ../../openvpn_tunnels.rst:74 43b02e397c014d6f97ad604225194c9d
+msgid "Multiple OpenVPN tunnels"
+msgstr "Tunnel OpenVPN multipli"
+
+#: ../../openvpn_tunnels.rst:75 87bc823828ed47a59ccdbc1148f5c832
+msgid ""
+"If a NethSecurity must act as the VPN server for multiple remote firewalls, "
+"create a dedicated OpenVPN tunnel for each remote peer. The UI-supported and"
+" recommended model is one server/client pair per site-to-site connection, "
+"for example, a central firewall connected to three remote firewalls should "
+"have three separate OpenVPN server tunnels, each with its own client "
+"configuration imported on the corresponding remote firewall."
+msgstr ""
+"Se un NethSecurity deve agire come server VPN per più firewall remoti, è "
+"necessario creare un tunnel OpenVPN dedicato per ciascun peer remoto. Il "
+"modello supportato dall'interfaccia utente e raccomandato prevede una coppia"
+" server/client per ogni connessione site-to-site; ad esempio, un firewall "
+"centrale collegato a tre firewall remoti dovrebbe avere tre tunnel server "
+"OpenVPN separati, ciascuno con la propria configurazione client importata "
+"sul corrispondente firewall remoto."
+
+#: ../../openvpn_tunnels.rst:78 f56a52212cdb4a5bb7be57aa30433992
+msgid ""
+"This approach allows each tunnel to be managed independently, with separate "
+"configuration, certificates, routes, status, monitoring, and "
+"troubleshooting. It also prevents issues on one remote connection from "
+"affecting the operational management of the others."
+msgstr ""
+"Questo approccio consente di gestire ciascun tunnel in modo indipendente, "
+"con configurazione, certificati, route, stato, monitoraggio e risoluzione "
+"dei problemi separati. Inoltre, impedisce che eventuali problemi su una "
+"connessione remota influenzino la gestione operativa delle altre."
+
+#: ../../openvpn_tunnels.rst:81 d5b85bf22ec6441791ac3a7c129c1cbf
+msgid ""
+"Do not use a single OpenVPN server tunnel shared by multiple remote clients "
+"for site-to-site configurations managed from the UI."
+msgstr ""
+"Non utilizzare un singolo tunnel server OpenVPN condiviso da più client "
+"remoti per configurazioni site-to-site gestite dall'interfaccia utente."
