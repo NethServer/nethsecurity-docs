@@ -111,27 +111,12 @@ Administrative activity logging
 ===============================
 
 NethSecurity logs administrative activity performed through the web interface in ``/var/log/messages``.
-
 Administrative logs can support troubleshooting, incident analysis, and audit reconstruction.
-
-The following administrative events are logged:
-
-* administrator login events;
-* administrator logout events;
-* UI/API authorization events;
-* API path and method called by the web interface;
-* request payload associated with the action, with sensitive values masked where applicable;
-* configuration changes submitted through the UI;
-* configuration commits;
-* UI pages and functions accessed by the administrator.
-
-These logs allow administrators to reconstruct which user accessed the firewall, when the access occurred, and which actions were performed through the web interface.
 
 Where to find administrative logs
 ---------------------------------
 
 Logs are written in ``/var/log/messages`` and rotated on a weekly base, they are visible from the UI in their dedicated section.
-
 To see administrative UI events use the filter ``nethsecurity-api``.
 
 For long-term retention and centralized audit, configure persistent log storage, remote syslog forwarding, Controller log forwarding, or Cloud Log Manager. For details, see :ref:`logs-section`.
@@ -148,9 +133,6 @@ To reconstruct administrator activity, start from the login event and then revie
 * which values were submitted;
 * whether a change was committed;
 * whether the action was followed by service errors or security events.
-
-Auditing user actions
----------------------
 
 Every time an administrator logs in to the NethSecurity UI, the system logs the event, inside the `/var/log/messages` file.
 Example of login event for user `goofy`: ::
