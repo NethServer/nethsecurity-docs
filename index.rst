@@ -102,7 +102,7 @@ NethSecurity administrator manual
    :maxdepth: 2
    :caption: Logs
    
-    logs
+   logs
 
 .. toctree::
    :maxdepth: 2
