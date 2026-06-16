@@ -22,7 +22,7 @@ NethSecurity can store logs in different ways depending on the installation type
 Physical appliances
 -------------------
 
-On NethSecurity physical appliances, persistent storage is configured automatically and used to store logs.
+On NethSecurity physical appliances, **persistent storage is configured automatically** and used to store logs.
 When persistent storage is available, logs are saved on disk and managed by log rotation. 
 
 Virtual machines
@@ -30,6 +30,8 @@ Virtual machines
 
 On virtual machines, persistent storage must be configured explicitly.
 For audit, troubleshooting, and long-term retention, it is recommended to attach and configure a dedicated virtual disk for logs. 
+
+For details about how to set and verify storage configuration see the storage section :ref:`storage-section`.
 
 In-memory logs
 --------------
