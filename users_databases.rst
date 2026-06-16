@@ -29,7 +29,7 @@ The local user database is implemented as UCI configuration file.
 Passwords of local users are stored in the Unix passwd format, ensuring compatibility and security in the local user database.
 
 Users inside the local database can be granted administrative privileges on the web user interface by enabling the ``Administrator user`` option, the user must have a password set.
-Please refer to to section ``Administrative users`` :ref:`administrative_users-section`.
+Please refer to to section :ref:`administrative_users-section`.
 
 .. _remote_user_databases-section:
 
