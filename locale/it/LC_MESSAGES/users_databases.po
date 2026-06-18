@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../users_databases.rst:5 923561cab8fd43db8efb1fbe7a823a64
+#: ../../users_databases.rst:5 3d5e702659174720adf9af5e92770351
 msgid "Users databases"
 msgstr "Database utenti"
 
-#: ../../users_databases.rst:7 1788747c2874465e97bb5a1f22982d7e
+#: ../../users_databases.rst:7 ac25e822c770420ea5c3c6fe6f79cae5
 msgid ""
 "NethSecurity introduces support for two types of users databases: a local "
 "database and a remote LDAP database, enhancing user management capabilities."
@@ -19,7 +19,7 @@ msgstr ""
 "utilizzati per le connessioni VPN, inclusa la :ref:`openvpn_roadwarrior-"
 "section`."
 
-#: ../../users_databases.rst:10 f8ec4b04d1804217ad61eba6066e5bd6
+#: ../../users_databases.rst:10 754bc271e98142208456e3742008d272
 msgid ""
 "Only users with a password can connect to VPN by authenticating with a "
 "username and password. Users without a password can connect to VPN by "
@@ -30,11 +30,11 @@ msgstr ""
 "alla VPN autenticandosi tramite certificato o altri metodi di "
 "autenticazione."
 
-#: ../../users_databases.rst:14 c0e01d1ce5da450d96e3195d2e1887a5
+#: ../../users_databases.rst:14 a41a278b32de4a4db7b29cf0059638ef
 msgid "Local database"
 msgstr "Database locale"
 
-#: ../../users_databases.rst:20 17513ba8cea2497f806e3516c7a6096b
+#: ../../users_databases.rst:20 b648e3af763b4c5c86aa7398bb284307
 msgid ""
 "To create a new user, click on the :guilabel:`Add user` button to initiate "
 "the process. When configuring a local user, you should fill all the "
@@ -44,11 +44,11 @@ msgstr ""
 "utente` per avviare la procedura. Durante la configurazione di un utente "
 "locale, è necessario compilare tutti i seguenti campi:"
 
-#: ../../users_databases.rst:23 0c4e15ac982d4b42a11af28e9fa2df32
+#: ../../users_databases.rst:23 7a0a240d12764878b8cd8902fb1eea40
 msgid "``Username``: specifies the desired username."
 msgstr "``Nome utente``: specifica il nome utente desiderato."
 
-#: ../../users_databases.rst:24 6d1715ed290c4cd1b66f7866fe6567a3
+#: ../../users_databases.rst:24 9b0514b28cf54c08ab68f1749482dc07
 msgid ""
 "``Display Name``: specifies the display name of the user. This field is "
 "optional."
@@ -56,7 +56,7 @@ msgstr ""
 "``Nome visualizzato``: specifica il nome visualizzato dell'utente. Questo "
 "campo è facoltativo."
 
-#: ../../users_databases.rst:25 1cdaf3a2ece340ccb1603cc075653447
+#: ../../users_databases.rst:25 d5b577e57ee0443889b75a96e331c6fc
 msgid ""
 "``User password``: specifies the password of the user. This is required only"
 " if the VPN is configured to use password authentication."
@@ -65,7 +65,7 @@ msgstr ""
 "solo se la VPN è configurata per utilizzare l'autenticazione tramite "
 "password."
 
-#: ../../users_databases.rst:26 4febec18800d470ca7cf6b8f4d4a32eb
+#: ../../users_databases.rst:26 5ba6504989ff4b20aacc6ff23aa3f82e
 msgid ""
 "``Confirm password``: specifies the password of the user, make sure to match"
 " the password with the one specified in the previous field."
@@ -73,7 +73,7 @@ msgstr ""
 "``Conferma password``: specifica la password dell'utente; assicurarsi che la"
 " password corrisponda a quella inserita nel campo precedente."
 
-#: ../../users_databases.rst:28 4b68985ed074423bb709ed857696ea44
+#: ../../users_databases.rst:28 3b467e57407a4e83a3f5ee72fc074af9
 msgid ""
 "The local user database is implemented as UCI configuration file. Passwords "
 "of local users are stored in the Unix passwd format, ensuring compatibility "
@@ -83,33 +83,22 @@ msgstr ""
 " password degli utenti locali sono memorizzate nel formato Unix passwd, "
 "garantendo compatibilità e sicurezza nel database utenti locale."
 
-#: ../../users_databases.rst:31 dcdb013e10754994a1510a86be3062cf
-msgid ""
-"Users inside the local database can be granted :ref:`administrative "
-"privileges <admin_users-section>` on the web user interface by enabling the "
-"``Administrator user`` option. The user must have a password set."
-msgstr ""
-"Agli utenti presenti nel database locale possono essere concessi "
-":ref:`privilegi amministrativi <admin_users-section>` sull'interfaccia web "
-"abilitando l'opzione ``Utente amministratore``. L'utente deve avere una "
-"password impostata."
-
-#: ../../users_databases.rst:37 b0a2d9708f144b57bd7b5306b4039f7f
+#: ../../users_databases.rst:37 dbfa08489f984699987b55ff56261618
 msgid "Remote databases"
 msgstr "Database remoti"
 
-#: ../../users_databases.rst:39 3a2474bc29c34ce1b3e1721e236574ee
+#: ../../users_databases.rst:39 a7e1f1f89c454ab7ac873d006522e8cb
 msgid "Subscription required"
 msgstr "Subscription richiesta"
 
-#: ../../users_databases.rst:41 6f8c131cf7d14dc28648dff8f1098f98
+#: ../../users_databases.rst:41 bca6a431f3554a389958ce257a673089
 msgid ""
 "This feature is available only if the firewall has a valid subscription."
 msgstr ""
 "Questa funzionalità è disponibile solo se il firewall dispone di una "
 "subscription valida."
 
-#: ../../users_databases.rst:53 9dacca84a53f43428771bf0c672b9450
+#: ../../users_databases.rst:53 9279134e44c042fd9ad4f3fc964fcbcf
 msgid ""
 "When configuring a remote database, click on the :guilabel:`Add remote "
 "database` button  and fill all the following fields:"
@@ -117,7 +106,7 @@ msgstr ""
 "Quando si configura un database remoto, fare clic sul pulsante "
 ":guilabel:`Aggiungi database remoto` e compilare tutti i seguenti campi:"
 
-#: ../../users_databases.rst:55 7e753e5973054b56b67fccbc3918c2e4
+#: ../../users_databases.rst:55 769951a8a6594c3c8e4085e92cdd2029
 msgid ""
 "``LDAP URI``: specifies the LDAP Uniform Resource Identifier (URI), "
 "including the server address and port (e.g., ``ldap://example.com:389``)."
@@ -125,7 +114,7 @@ msgstr ""
 "``LDAP URI``: specifica l'Uniform Resource Identifier (URI) LDAP, includendo"
 " l'indirizzo del server e la porta (ad esempio, ``ldap://example.com:389``)."
 
-#: ../../users_databases.rst:57 92439aa2e29244f8a6ec9d575034a638
+#: ../../users_databases.rst:57 26a5b1e20f5744d78715d93e176c870e
 msgid ""
 "``Type``: specifies the type of LDAP server. The available options are "
 "``Active Directory`` and ``OpenLDAP``. If OpenLDAP is selected, the remote "
@@ -135,7 +124,7 @@ msgstr ""
 "``Active Directory`` e ``OpenLDAP``. Se viene selezionato OpenLDAP, il "
 "server remoto deve rispettare lo schema RFC 2307."
 
-#: ../../users_databases.rst:60 48346593735c4bce94eb7f3be9f7735a
+#: ../../users_databases.rst:60 ec1c7527c1fd48eda9f7a7021cc9d5ee
 msgid ""
 "``Base DN``: specifies the LDAP Base Distinguished Name (DN), representing "
 "the starting point for searches in the LDAP directory (eg. "
@@ -145,7 +134,7 @@ msgstr ""
 "rappresenta il punto di partenza per le ricerche nella directory LDAP (ad "
 "es. ``dc=example,dc=com``)."
 
-#: ../../users_databases.rst:62 33649d2da8e944049544e21464f7d48a
+#: ../../users_databases.rst:62 625375810e4e4f4288534a51fa765f76
 msgid ""
 "``User DN``: specifies the LDAP User Distinguished Name (DN). If not "
 "present, the default value is equal to base_dn (eg. "
@@ -155,7 +144,7 @@ msgstr ""
 " presente, il valore predefinito è uguale a base_dn (ad es. "
 "``cn=users,dc=example,dc=com``)."
 
-#: ../../users_databases.rst:64 c72954c61444493388808e2048aa5552
+#: ../../users_databases.rst:64 c0f4cdd102bf4fd796be4d004847bec0
 msgid ""
 "``User attribute field``: specifies the user attribute used to identify the "
 "user, this option is used by the OpenVPN road warrior server to compose the "
@@ -167,7 +156,7 @@ msgstr ""
 "road warrior per comporre il bind DN dell'utente. Dovrebbe essere ``cn`` per"
 " Active Directory oppure ``uid`` per OpenLDAP."
 
-#: ../../users_databases.rst:67 9a826989a59b465683645e84008378db
+#: ../../users_databases.rst:67 ef4777b39856406192acac15b758dcfc
 msgid ""
 "This field is used to authenticate users in the OpenVPN road warrior server."
 " The authentication process is based on a LDAP bind operation which uses the"
@@ -182,7 +171,7 @@ msgstr ""
 " nella directory OpenLDAP, il bind DN dell'utente viene composto come "
 "``uid=jdoe,ou=People,dc=directory,dc=nh``."
 
-#: ../../users_databases.rst:72 ba6caff621cd49f2ada71d4aa86023da
+#: ../../users_databases.rst:72 7bbf5c52239847b7aa3a79ec449fe7b6
 msgid ""
 "``User display name field``: specifies the user attribute containing the "
 "user's complete name like `John Doe`. Usually is ``cn`` for OpenLDAP and "
@@ -192,7 +181,7 @@ msgstr ""
 "dell'utente, come `John Doe`. Di solito è ``cn`` per OpenLDAP e "
 "``displayName`` per Active Directory."
 
-#: ../../users_databases.rst:75 af91340e6c3a48148b7de6bc0a52260c
+#: ../../users_databases.rst:75 b11b2e73dd554276a5095532d13bba62
 msgid ""
 "``Custom user bind DN``: if this field is set, it overrides the calculated "
 "user bind DN used to authenticate users in the OpenVPN road warrior server. "
@@ -211,7 +200,7 @@ msgstr ""
 "come ``jdoe``. Se il server remoto è un server Active Directory, è possibile"
 " utilizzare uno dei seguenti valori:"
 
-#: ../../users_databases.rst:80 6764e6a424a143a28b3ac56bc3e67cc0
+#: ../../users_databases.rst:80 94b5e1de41de44c284fda9eb18299135
 msgid ""
 "``%u@domain.local``: where `domain.local` is the domain name of the Active "
 "Directory server; inside the OpenVPN client, to authenticate the user use "
@@ -221,7 +210,7 @@ msgstr ""
 "Active Directory; all'interno del client OpenVPN, per autenticare l'utente "
 "utilizzare solo il nome utente come ``jdoe``"
 
-#: ../../users_databases.rst:82 2e25590ad7234f75aca35f63847080fc
+#: ../../users_databases.rst:82 4c8d43135789422c8f72e638e9125e8e
 msgid ""
 "``DOMAIN\\%u``: where `DOMAIN` is the realm of the Active Directory server; "
 "inside the OpenVPN client, to authenticate the user use only the username "
@@ -231,7 +220,7 @@ msgstr ""
 "all'interno del client OpenVPN, per autenticare l'utente utilizzare solo il "
 "nome utente come ``jdoe``"
 
-#: ../../users_databases.rst:85 ce0d1a4681a04295aa58cb9cbf15ee82
+#: ../../users_databases.rst:85 aa8c7015994d4fd59944ff0732b3c178
 msgid ""
 "If the remote server is an OpenLDAP you can leave this field empty or "
 "specify it like ``uid=%u,dc=directory,dc=nh``."
@@ -239,7 +228,7 @@ msgstr ""
 "Se il server remoto è un OpenLDAP è possibile lasciare questo campo vuoto "
 "oppure specificarlo come ``uid=%u,dc=directory,dc=nh``."
 
-#: ../../users_databases.rst:87 3a54d20d8b854763822c3ae103cd1031
+#: ../../users_databases.rst:87 e8d2812d67d0422a95572a97a71a8d23
 msgid ""
 "``Bind DN``: specifies the LDAP Bind Distinguished Name (DN), representing "
 "the user used to bind to the LDAP server. For an OpenLDAP server, it's "
@@ -255,7 +244,7 @@ msgstr ""
 "Directory, di solito è qualcosa come ``ldapservice@example.com`` oppure "
 "``cn=ldapservice,cn=Users,dc=example,dc=com``."
 
-#: ../../users_databases.rst:91 9869a235709a4cef8217291dca903bf8
+#: ../../users_databases.rst:91 15ac2e813c65403e84c33f02a9928bab
 msgid ""
 "``Bind password``: specifies the password of the user used to bind to the "
 "LDAP server."
@@ -263,7 +252,7 @@ msgstr ""
 "``Password di bind``: specifica la password dell'utente utilizzato per "
 "effettuare il bind al server LDAP."
 
-#: ../../users_databases.rst:93 5dfab0c9ec634e7d86a7a668d96fcd73
+#: ../../users_databases.rst:93 9b8b05d1564b4835ad7ad5a33cb709d3
 msgid ""
 "``StartTLS``: enables StartTLS for secure communication with the LDAP "
 "server, it should be disabled if the LDAP URI is already using the "
@@ -273,7 +262,7 @@ msgstr ""
 "LDAP; dovrebbe essere disabilitato se l'URI LDAP utilizza già lo schema "
 "``ldaps://``."
 
-#: ../../users_databases.rst:95 746d402267454cb2bf912bbe0648f2e7
+#: ../../users_databases.rst:95 a462f61daf4e430caa892e468116c768
 msgid ""
 "``Verify TLS certificate``: determines whether to enable or disable "
 "certificate validation, it must be disabled if the LDAP server is using a "
@@ -283,11 +272,11 @@ msgstr ""
 "validazione del certificato; deve essere disabilitata se il server LDAP "
 "utilizza un certificato autofirmato."
 
-#: ../../users_databases.rst:99 4623fa0e34eb49eaba7d3332ebef9840
+#: ../../users_databases.rst:99 1a37d5b384904cb2b4db0eec73254516
 msgid "Suggested configurations"
 msgstr "Configurazioni consigliate"
 
-#: ../../users_databases.rst:101 de70c2520f744f01be8d3e0942c1bcf9
+#: ../../users_databases.rst:101 cefe2f244570489b864cfa9257979deb
 msgid ""
 "The following configurations are suggested for the most common LDAP servers."
 " When configuring the remote database:"
@@ -295,7 +284,7 @@ msgstr ""
 "Le seguenti configurazioni sono suggerite per i server LDAP più comuni. "
 "Durante la configurazione del database remoto:"
 
-#: ../../users_databases.rst:104 af3b270fb715432bb02b5f99ea8ece79
+#: ../../users_databases.rst:104 c8e6004e4b924e0e8a9c6b4360e340e9
 msgid ""
 "ensure the LDAP server is reachable from the firewall. If the LDAP URI "
 "contains a hostname, make sure the hostname is resolvable"
@@ -303,11 +292,11 @@ msgstr ""
 "assicurarsi che il server LDAP sia raggiungibile dal firewall. Se l'URI LDAP"
 " contiene un nome host, verificare che il nome host sia risolvibile"
 
-#: ../../users_databases.rst:105 a8ecb26c8a6e4d08891b869b57dfa548
+#: ../../users_databases.rst:105 fde91a18f4a24bd7a782ac0a0bfd9993
 msgid "replace the example values with the actual values of the LDAP server"
 msgstr "sostituire i valori di esempio con i valori effettivi del server LDAP"
 
-#: ../../users_databases.rst:106 65005db72d534c7799375a1d4b5dd384
+#: ../../users_databases.rst:106 976e7a254c8f4c2591a3a3bff2f1c486
 msgid ""
 "for Active Directory, it's recommended to use ``Custom user bind DN`` to "
 "specify how the OpenVPN server should authenticate the user"
@@ -316,39 +305,39 @@ msgstr ""
 "personalizzato`` per specificare come il server OpenVPN deve autenticare "
 "l'utente"
 
-#: ../../users_databases.rst:109 9cfa714a4f3f43f0accf6e7e0b36a96b
+#: ../../users_databases.rst:109 a8cf7a1835b04633b682fc570c77b6b6
 msgid "OpenLDAP (RFC 2307)"
 msgstr "OpenLDAP (RFC 2307)"
 
-#: ../../users_databases.rst:111 27236c3ee1554bd6baef408c1f73430d
+#: ../../users_databases.rst:111 704b5ccc01e6464386b387705fe0d4a1
 msgid "You can access the NethServer 7 OpenLDAP without authentication:"
 msgstr "È possibile accedere a NethServer 7 OpenLDAP senza autenticazione:"
 
-#: ../../users_databases.rst:113 764872db173d460ebdefa5d67d1f819d
+#: ../../users_databases.rst:113 cf564e07a5a2485cbd5674738ca5d0bb
 msgid "LDAP URI: ``ldap://ns7ldap.nethserver.org``"
 msgstr "URI LDAP: ``ldap://ns7ldap.nethserver.org``"
 
-#: ../../users_databases.rst:114 2c6299a8f30f475ea1071d87b7298855
+#: ../../users_databases.rst:114 60c73d1d9eb04b9ea9323db56bcffe20
 msgid "Type: ``OpenLDAP``"
 msgstr "Tipo: ``OpenLDAP``"
 
-#: ../../users_databases.rst:115 82a625afef0749e3a711c9a159335986
+#: ../../users_databases.rst:115 bda303e97ad34cb4957387d1b8084b79
 msgid "Base DN: ``dc=directory,dc=nh``"
 msgstr "Base DN: ``dc=directory,dc=nh``"
 
-#: ../../users_databases.rst:116 77e14d5dac5640dba71b1c1e0e671f58
+#: ../../users_databases.rst:116 431f75427d3340448e129c3f02344547
 msgid "User DN: ``ou=People,dc=directory,dc=nh``"
 msgstr "DN utente: ``ou=People,dc=directory,dc=nh``"
 
-#: ../../users_databases.rst:117 d34f41e7a8544cbdb47fff56263e1787
+#: ../../users_databases.rst:117 90bf86e9c29c4f9eb18680882e425d7e
 msgid "User attribute field: ``uid``"
 msgstr "Campo attributo utente: ``uid``"
 
-#: ../../users_databases.rst:118 bdf883501e384557b6ec5de43f48d04d
+#: ../../users_databases.rst:118 b68fa78fe3f94dc1b2618da710e9e3a0
 msgid "User display name field: ``cn``"
 msgstr "Campo nome visualizzato utente: ``cn``"
 
-#: ../../users_databases.rst:120 a37d132dfb40492ea898ecf56efe9a77
+#: ../../users_databases.rst:120 03344e994f494f99b350a4d3b8102bb2
 msgid ""
 "If you want to use authentication by entering Bind DN and Bind Password, "
 "remember to enable StartTLS."
@@ -356,11 +345,11 @@ msgstr ""
 "Se si desidera utilizzare l'autenticazione inserendo Bind DN e Bind "
 "Password, ricordarsi di abilitare StartTLS."
 
-#: ../../users_databases.rst:123 0f14b8b3fc854c54801a9063632eeef6
+#: ../../users_databases.rst:123 6f06958a9dfb4b09baa3613829e17da1
 msgid "Active Directory"
 msgstr "Active Directory"
 
-#: ../../users_databases.rst:125 b66f3505db9641bfa03c55741d1fcb91
+#: ../../users_databases.rst:125 168b169ffc4e4b1b9ceb3423a3e299c6
 msgid ""
 "To access NethServer 7 Samba Active Directory or Windows Server 2012 Active "
 "Directory, use the following configuration:"
@@ -368,35 +357,35 @@ msgstr ""
 "Per accedere a NethServer 7 Samba Active Directory o Windows Server 2012 "
 "Active Directory, utilizzare la seguente configurazione:"
 
-#: ../../users_databases.rst:127 2416457eafd54363bbb50cfcb9cc0554
+#: ../../users_databases.rst:127 ed51cabe71be4e76b0314aa965a4525c
 msgid "LDAP URI: ``ldap://dcserver.ad.example.com``"
 msgstr "URI LDAP: ``ldap://dcserver.ad.example.com``"
 
-#: ../../users_databases.rst:128 b392d5c6814849568d5a6429d8eb6e62
+#: ../../users_databases.rst:128 26dfcb88a8e64e27b85d77e8dc12bfac
 msgid "Type: ``Active Directory``"
 msgstr "Tipo: ``Active Directory``"
 
-#: ../../users_databases.rst:129 3b23a02970944d538f6aa049f001a609
+#: ../../users_databases.rst:129 ac25f23984724e3782047bfffa873ede
 msgid "Base DN: ``dc=example,dc=com``"
 msgstr "Base DN: ``dc=example,dc=com``"
 
-#: ../../users_databases.rst:130 f847ece291ba4b1d9d7d4401aa42429b
+#: ../../users_databases.rst:130 ab868cffda3e454ea8d789fb528c88eb
 msgid "User DN: ``cn=Users,dc=example,dc=com``"
 msgstr "DN utente: ``cn=Users,dc=example,dc=com``"
 
-#: ../../users_databases.rst:131 6fa826a525bd4627a18a604f8b019d66
+#: ../../users_databases.rst:131 ee396463f3d9444aa25cf481999868b9
 msgid "User attribute field: ``sAMAccountName``"
 msgstr "Campo attributo utente: ``sAMAccountName``"
 
-#: ../../users_databases.rst:132 92004add0de14c2ea1c2ae1730bc8bcc
+#: ../../users_databases.rst:132 82bfd89a45ae41a19062e4e4120ebad8
 msgid "User display name field: ``displayName``"
 msgstr "Campo nome visualizzato utente: ``displayName``"
 
-#: ../../users_databases.rst:133 318ed09e18934af5bb1192f54deb8bf9
+#: ../../users_databases.rst:133 579d694c3cc24b46b12efa59a475ebbd
 msgid "Custom user bind DN: ``%u@example.com``"
 msgstr "DN di binding utente personalizzato: ``%u@example.com``"
 
-#: ../../users_databases.rst:134 70b36a69687a4a1fa6a1b7ae5e6fcd50
+#: ../../users_databases.rst:134 f32a46c6193343caab82c26e313f6bb6
 msgid ""
 "Bind DN: ``<user>@exampl.com`` or ``cn=<user>,cn=Users,dc=example,dc=com``, "
 "where ``<user>`` is the username of the user used to bind to the LDAP server"
@@ -405,7 +394,7 @@ msgstr ""
 "``cn=<user>,cn=Users,dc=example,dc=com``, dove ``<user>`` è il nome utente "
 "dell'utente utilizzato per effettuare il bind al server LDAP"
 
-#: ../../users_databases.rst:135 269e4ae749d34b358602f308d65f2b17
+#: ../../users_databases.rst:135 da84891df89941aa8af4df2a68111e98
 msgid ""
 "Bind Password: ``<password>``, where ``<password>`` is the password of the "
 "user inserted in the Bind DN field"
@@ -413,7 +402,7 @@ msgstr ""
 "Password di Bind: ``<password>``, dove ``<password>`` è la password "
 "dell'utente inserito nel campo Bind DN"
 
-#: ../../users_databases.rst:137 dcae3f6fdb07448c8b07bd10b2205791
+#: ../../users_databases.rst:137 0f985e787e8c400bb49eb6e61237999f
 msgid ""
 "The ``StartTLS`` option should be enabled for NethServer 7 Samba Active "
 "Directory, while it should be usually disabled for Windows Server 2012 "
@@ -423,7 +412,7 @@ msgstr ""
 "Active Directory, mentre di solito dovrebbe essere disabilitata per Windows "
 "Server 2012 Active Directory."
 
-#: ../../users_databases.rst:16 9b11caf77b6e4bafb4f97cefc9000a2f
+#: ../../users_databases.rst:16 87ca8936d9114be48059d8b7ac1b5513
 msgid ""
 "The local user database is an inherent component of the firewall, it's "
 "available by default and does not require any additional configuration. It "
@@ -439,7 +428,7 @@ msgstr ""
 "integra inoltre perfettamente con i servizi VPN, in particolare con il "
 "server OpenVPN Road Warrior."
 
-#: ../../users_databases.rst:43 3c88795b5d24488dbbbba8268c8d4c60
+#: ../../users_databases.rst:43 1e3f854e3d94476599d510fdc5c05c39
 msgid ""
 "The administrator can extend the capabilities of the firewall by adding new "
 "remote databases. Remote databases allow the firewall to authenticate users "
@@ -450,7 +439,7 @@ msgstr ""
 "autenticare gli utenti tramite un server LDAP esterno, come Active Directory"
 " o OpenLDAP."
 
-#: ../../users_databases.rst:46 fc092366e2a64b56b461cd98ec5215e9
+#: ../../users_databases.rst:46 f4c21dc44ec147b5966073fab25498f5
 msgid ""
 "Unlike local users, users in remote databases must be managed directly on "
 "the source LDAP server. Any additions, deletions, or modifications to user "
@@ -465,7 +454,7 @@ msgstr ""
 "pagina di configurazione del firewall ma non potranno essere effettuate "
 "dall'interfaccia del firewall."
 
-#: ../../users_databases.rst:50 42d7a01b98184b49a541d2feb77dee39
+#: ../../users_databases.rst:50 34e4a819fc47463faf24a4044dd0a6ec
 msgid ""
 "Also note that if the remote database is offline, VPN authentication will "
 "fail. It is crucial to ensure that the remote database is online and "
@@ -476,34 +465,14 @@ msgstr ""
 " online e accessibile per garantire una corretta autenticazione degli utenti"
 " tramite il servizio VPN."
 
-#~ msgid ""
-#~ "The administrator can extend the capabilities of the firewall by adding new "
-#~ "remote databases. Users in remote databases must be added directly at the "
-#~ "source. User modifications should be made on the underlying LDAP server to "
-#~ "accurately reflect changes in the firewall configuration page."
-#~ msgstr ""
-#~ "L'amministratore può estendere le funzionalità del firewall aggiungendo "
-#~ "nuovi database remoti. Gli utenti presenti nei database remoti devono essere"
-#~ " aggiunti direttamente alla fonte. Le modifiche agli utenti devono essere "
-#~ "effettuate sul server LDAP sottostante per riflettere accuratamente i "
-#~ "cambiamenti nella pagina di configurazione del firewall."
-
-#~ msgid ""
-#~ "If the remote database is offline, VPN authentication will fail. It is "
-#~ "crucial to ensure that the remote database is online and accessible to "
-#~ "ensure proper user authentication through the VPN service."
-#~ msgstr ""
-#~ "Se il database remoto è offline, l'autenticazione VPN non andrà a buon fine."
-#~ " È fondamentale assicurarsi che il database remoto sia online e accessibile "
-#~ "per garantire una corretta autenticazione degli utenti tramite il servizio "
-#~ "VPN."
-
-#~ msgid ""
-#~ "The local user database is an inherent component of the firewall, ensuring "
-#~ "seamless user authentication for VPN services. It is present by default, "
-#~ "offering a foundation for user management."
-#~ msgstr ""
-#~ "Il database utenti locale è una componente intrinseca del firewall, che "
-#~ "garantisce un'autenticazione utente senza interruzioni per i servizi VPN. È "
-#~ "presente per impostazione predefinita, offrendo una base per la gestione "
-#~ "degli utenti."
+#: ../../users_databases.rst:31 737b83889128483dbbb6379a00f8a437
+msgid ""
+"Users inside the local database can be granted administrative privileges on "
+"the web user interface by enabling the ``Administrator user`` option, the "
+"user must have a password set. Please refer to to section "
+":ref:`administrative_users-section`."
+msgstr ""
+"Agli utenti presenti nel database locale possono essere concessi privilegi "
+"amministrativi sull'interfaccia web abilitando l'opzione ``Utente "
+"amministratore``; l'utente deve avere una password impostata. Fare "
+"riferimento alla sezione :ref:`administrative_users-section`."
