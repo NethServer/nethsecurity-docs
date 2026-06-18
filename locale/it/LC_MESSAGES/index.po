@@ -22,50 +22,54 @@ msgstr "Rete"
 msgid "Users and objects"
 msgstr "Utenti e oggetti"
 
-#: ../../index.rst:70
+#: ../../index.rst:71
 msgid "Firewall"
 msgstr "Firewall"
 
-#: ../../index.rst:80
+#: ../../index.rst:81
 msgid "Security"
 msgstr "Sicurezza"
 
-#: ../../index.rst:91
+#: ../../index.rst:92
 msgid "VPN"
 msgstr "VPN"
 
-#: ../../index.rst:109
+#: ../../index.rst:116
 msgid "Advanced (CLI)"
 msgstr "Avanzate (CLI)"
 
-#: ../../index.rst:123
+#: ../../index.rst:131
 msgid "Best practices"
 msgstr "Best practice"
 
-#: ../../index.rst:5 627dea8e69c14601ac6a647f77602ab2
+#: ../../index.rst:5 db6dc929b53a4e7ea8cb2a82f94381af
 msgid "NethSecurity administrator manual"
 msgstr "Manuale dell'amministratore di NethSecurity"
 
-#: ../../index.rst:9 7c19ab95885f4ec4861dd16ce2ea9dda
+#: ../../index.rst:9 669b5531437c4b049ee07c9f8a921787
 msgid "`Official site <https://www.nethsecurity.org>`_"
 msgstr "`Sito ufficiale <https://www.nethsecurity.org>`_"
 
-#: ../../index.rst:11 f623df53255b40ffa90f6b0564a4ff6b
+#: ../../index.rst:11 3a8b2d68203346e7a1d87623b04223a3
 msgid "`Developer manual <https://nethserver.github.io/nethsecurity/>`_"
 msgstr "`Manuale sviluppatori <https://nethserver.github.io/nethsecurity/>`_"
 
-#: ../../index.rst:13 faf71a70ec3a44a88b68d958fdde029a
+#: ../../index.rst:13 b0e301c67f3e4842bfbb7e1d78cacd3c
 msgid "Help on `Community <http://community.nethserver.org>`_"
 msgstr "Aiuto su `Community <http://community.nethserver.org>`_"
 
-#: ../../index.rst:5 4cb8837b91ba43a598c6426e7dc32e40
+#: ../../index.rst:5 f441dde6b1074ee0b55364f380887b83
 msgid "External links"
 msgstr "Collegamenti esterni"
 
-#: ../../index.rst:100
+#: ../../index.rst:107
 msgid "High Availability"
 msgstr "Alta disponibilità"
 
 #: ../../index.rst:32
 msgid "Monitoring"
 msgstr "Monitoraggio"
+
+#: ../../index.rst:101
+msgid "Logs"
+msgstr "Log"

@@ -1,0 +1,578 @@
+#
+msgid ""
+msgstr ""
+
+#: ../../administrative_users.rst:5 c1fb230a99e54e4aa413f6635dd5b16a
+msgid "Administrative users"
+msgstr "Utenti amministrativi"
+
+#: ../../administrative_users.rst:7 4bd9dca96f444e289d94d59ecc436769
+msgid ""
+"NethSecurity allows local users to be granted administrative access to the "
+"web interface. Administrative users should be personal accounts assigned to "
+"individual operators, so that actions can be attributed to a specific user "
+"in the logs."
+msgstr ""
+"NethSecurity consente agli utenti locali di ottenere l’accesso "
+"amministrativo all’interfaccia web. Gli utenti amministrativi dovrebbero "
+"essere account personali assegnati ai singoli operatori, in modo che le "
+"azioni possano essere attribuite a uno specifico utente nei log."
+
+#: ../../administrative_users.rst:9 0bac3272a1814c6eaadae13a117aa5a5
+msgid ""
+"This page explains how administrative users work, how MFA applies to "
+"administrators, how administrative actions are logged, and how to "
+"reconstruct administrator activity for troubleshooting and audit purposes."
+msgstr ""
+"Questa pagina spiega come funzionano gli utenti amministrativi, come l'MFA "
+"si applica agli amministratori, come vengono registrate le azioni "
+"amministrative e come ricostruire l'attività degli amministratori per scopi "
+"di troubleshooting e audit."
+
+#: ../../administrative_users.rst:12 d1babf12ba2c4727931ea9d245794bbf
+msgid "Administrative account types"
+msgstr "Tipi di account amministrativi"
+
+#: ../../administrative_users.rst:14 600c2bc22b6e4ec1a9521394f61b94bc
+msgid "NethSecurity uses the following administrative account types:"
+msgstr "NethSecurity utilizza i seguenti tipi di account amministrativi:"
+
+#: ../../administrative_users.rst:16 8e5747b37f294aebb3960eb87630e81d
+msgid ""
+"``root``: local system account. It should be reserved for emergency or "
+"recovery operations whenever possible."
+msgstr ""
+"``root``: account di sistema locale. Dovrebbe essere riservato, ove "
+"possibile, alle operazioni di emergenza o di ripristino."
+
+#: ../../administrative_users.rst:17 c1d4862b0af0400ba0348dac89b46dc0
+msgid ""
+"Administrative users: local users with the **Administrator user** option "
+"enabled. They can access the NethSecurity UI and perform administrative "
+"operations."
+msgstr ""
+"Utenti amministrativi: utenti locali con l'opzione **Utente amministratore**"
+" abilitata. Possono accedere all'interfaccia utente di NethSecurity ed "
+"eseguire operazioni amministrative."
+
+#: ../../administrative_users.rst:18 5b8a4f24d60348eeb0dfe84f726467ae
+msgid ""
+"Non-administrative users: local or remote users used for services such as "
+"VPN or authentication, without access to the NethSecurity UI."
+msgstr ""
+"Utenti non amministrativi: utenti locali o remoti utilizzati per servizi "
+"come VPN o autenticazione, senza accesso all'interfaccia utente di "
+"NethSecurity."
+
+#: ../../administrative_users.rst:22 e69403b2c07d41ba899bc8121357b21f
+msgid "Administrative access should be granted only to trusted operators."
+msgstr ""
+"L'accesso amministrativo dovrebbe essere concesso solo a operatori "
+"affidabili."
+
+#: ../../administrative_users.rst:25 62693977245f4e64949867a0fb8a9ee8
+msgid "Creating administrative users"
+msgstr "Creazione di utenti amministrativi"
+
+#: ../../administrative_users.rst:27 70844a26dfa84ebf9039c4abf6c2ee0e
+msgid "Administrative users are created from the local users database."
+msgstr "Gli utenti amministrativi vengono creati dal database utenti locale."
+
+#: ../../administrative_users.rst:29 d73a1bd35a2448b7ad0899f1a46a9473
+msgid "To create an administrative user:"
+msgstr "Per creare un utente amministrativo:"
+
+#: ../../administrative_users.rst:31 60900b7adb374dd4936d8b2445a2d5b3
+msgid "Create a local user."
+msgstr "Creare un utente locale."
+
+#: ../../administrative_users.rst:32 b6da1e565ee1497fa6621a5e46667e0c
+msgid "Set a password for the user."
+msgstr "Impostare una password per l'utente."
+
+#: ../../administrative_users.rst:33 7fe4a6a9bd0341e28a8c8cefe4446204
+msgid "Enable the **Administrator user** option."
+msgstr "Abilitare l'opzione **Utente amministratore**."
+
+#: ../../administrative_users.rst:34 9d698aa5cb51455a84e57f1787ac6c59
+msgid "Save the configuration."
+msgstr "Salvare la configurazione."
+
+#: ../../administrative_users.rst:36 a3e757365c9a439fb1335b8ea5dc187b
+msgid ""
+"For general information about local and remote user databases, see "
+":ref:`users_databases-section`."
+msgstr ""
+"Per informazioni generali sui database utenti locali e remoti, consultare "
+":ref:`users_databases-section`."
+
+#: ../../administrative_users.rst:41 8a34a72f283f44eda926d2ef1fcf7ca4
+msgid "NethSecurity UI 2FA"
+msgstr "Interfaccia utente NethSecurity 2FA"
+
+#: ../../administrative_users.rst:43 56c3608defef4d7a874fcbcbb9176840
+msgid ""
+"Protecting your NethSecurity administrator account is crucial, and Two-"
+"Factor Authentication (2FA) adds an extra layer of security beyond just a "
+"password. 2FA requires two verification steps when logging in. Instead of "
+"just a password, you'll also need a temporary code generated by a separate "
+"app on your smartphone or tablet. This significantly reduces the risk of "
+"unauthorized access even if your password is compromised."
+msgstr ""
+"Proteggere l'account amministratore di NethSecurity è fondamentale, e "
+"l'Autenticazione a Due Fattori (2FA) aggiunge un ulteriore livello di "
+"sicurezza oltre alla sola password. La 2FA richiede due passaggi di verifica"
+" durante l'accesso. Oltre alla password, sarà necessario inserire anche un "
+"codice temporaneo generato da un'app separata sul proprio smartphone o "
+"tablet. Questo riduce significativamente il rischio di accessi non "
+"autorizzati anche nel caso in cui la password venga compromessa."
+
+#: ../../administrative_users.rst:47 53c9a6095d854d369c1168d3408430b0
+msgid "Enabling 2FA on NethSecurity UI:"
+msgstr ""
+"Abilitazione dell'autenticazione a due fattori (2FA) nell'interfaccia utente"
+" di NethSecurity:"
+
+#: ../../administrative_users.rst:49 9912061063e24d89bdcce134d042cc55
+msgid "Log in to your NethSecurity web interface"
+msgstr "Accedere all'interfaccia web di NethSecurity"
+
+#: ../../administrative_users.rst:50 bcf1e12e0af44b638a15e3b6bc5d0ab2
+msgid ""
+"Click on the user icon in the top right corner and select ``Account "
+"settings``"
+msgstr ""
+"Fare clic sull'icona utente nell'angolo in alto a destra e selezionare "
+"``Impostazioni account``"
+
+#: ../../administrative_users.rst:51 d16628e63545480482c160a9492d6eab
+msgid ""
+"Find the Two-factor authentication option and click :guilabel:`Configure "
+"2FA`"
+msgstr ""
+"Individuare l'opzione Autenticazione a due fattori e fare clic su "
+":guilabel:`Configura 2FA`"
+
+#: ../../administrative_users.rst:53 a6d043159b6746ca9df52df1837bbb6f
+msgid "Setting up your authenticator app:"
+msgstr "Configurazione dell'app di autenticazione:"
+
+#: ../../administrative_users.rst:55 ff2551d395664702b123925f52ff0f29
+msgid ""
+"Download an authenticator app on your smartphone or tablet. Popular options "
+"include FreeOTP, Google Authenticator, and Microsoft Authenticator."
+msgstr ""
+"Scaricare un'app di autenticazione sul proprio smartphone o tablet. Opzioni "
+"popolari includono FreeOTP, Google Authenticator e Microsoft Authenticator."
+
+#: ../../administrative_users.rst:56 54ce810d9ebf4fd9a3af0321899784b5
+msgid ""
+"Open the app and scan the QR code displayed on the NethSecurity web "
+"interface. This will add your NethSecurity account to the authenticator app."
+msgstr ""
+"Aprire l'app e scansionare il codice QR visualizzato sull'interfaccia web di"
+" NethSecurity. Questo aggiungerà l'account NethSecurity all'app di "
+"autenticazione."
+
+#: ../../administrative_users.rst:57 d5090e5c921941cabc37951bca250fd5
+msgid ""
+"Enter the 6-digit code displayed by your authenticator app in the One-Time "
+"Password (OTP) field on the NethSecurity web interface."
+msgstr ""
+"Inserire il codice a 6 cifre visualizzato dall'app di autenticazione nel "
+"campo One-Time Password (OTP) dell'interfaccia web di NethSecurity."
+
+#: ../../administrative_users.rst:59 ea1eb556f42f409d9d5a7fe9be64ce10
+msgid ""
+"The system will also provide you with a set of backup codes. These codes can"
+" be used to log in if you lose your smartphone or authenticator app. Store "
+"these codes securely, preferably offline."
+msgstr ""
+"Il sistema fornirà anche un set di codici di backup. Questi codici possono "
+"essere utilizzati per accedere nel caso in cui si perda lo smartphone o "
+"l'app di autenticazione. Conservare questi codici in modo sicuro, "
+"preferibilmente offline."
+
+#: ../../administrative_users.rst:63 26cc2dcfb0864e66960f792e6ade8960
+msgid "Disable 2FA via the web interface"
+msgstr ""
+"Disabilitare l'autenticazione a due fattori (2FA) tramite l'interfaccia web"
+
+#: ../../administrative_users.rst:65 eb82e825cd97438daada2ef13dc70c9b
+msgid "If the administrator can still log in to the web interface:"
+msgstr "Se l'amministratore può ancora accedere all'interfaccia web:"
+
+#: ../../administrative_users.rst:67 eed9b4e7d5c044b4bfa638b5b03952eb
+msgid ""
+"Click the user icon in the top-right corner and select ``Account settings``."
+msgstr ""
+"Fare clic sull'icona utente nell'angolo in alto a destra e selezionare "
+"``Impostazioni account``."
+
+#: ../../administrative_users.rst:68 f02b182adab644bf8e5d2f7cf5f67da9
+msgid "Scroll to the ``Two-factor authentication`` section."
+msgstr "Scorrere fino alla sezione ``Autenticazione a due fattori``."
+
+#: ../../administrative_users.rst:69 c88bf454aea343359c634296d1c7531e
+msgid "Click ``Revoke 2FA``."
+msgstr "Fare clic su ``Revoca 2FA``."
+
+#: ../../administrative_users.rst:70 1dbfc49ae47940ceb065b5cc59d7e42d
+msgid ""
+"A confirmation dialog appears warning that the security level will be "
+"reduced. Click ``Revoke 2FA`` to confirm."
+msgstr ""
+"Viene visualizzata una finestra di conferma che avverte che il livello di "
+"sicurezza sarà ridotto. Fare clic su ``Revoca 2FA`` per confermare."
+
+#: ../../administrative_users.rst:72 100471f2f54b4d2890055c32f5dae87f
+msgid "If prompted, enter your current password to authorize the change."
+msgstr ""
+"Se richiesto, inserire la password attuale per autorizzare la modifica."
+
+#: ../../administrative_users.rst:74 871b9a5759bb427a871cb71b841ccb5f
+msgid ""
+"After the confirmation the status badge changes to disabled and the next "
+"login will no longer require an OTP."
+msgstr ""
+"Dopo la conferma, il badge di stato cambia in disabilitato e al prossimo "
+"accesso non sarà più richiesto un OTP."
+
+#: ../../administrative_users.rst:78 a1f65ca475984dbfb9a87151d9550cee
+msgid "Disable 2FA from the command line (emergency recovery)"
+msgstr ""
+"Disabilitare l'autenticazione a due fattori (2FA) dalla riga di comando "
+"(recupero d'emergenza)"
+
+#: ../../administrative_users.rst:80 e2b2a4a771a24605bee2650883c3bbb3
+msgid ""
+"If an administrator has lost both the OTP device and the recovery codes and "
+"can no longer log in to the web interface, 2FA can be reset directly from "
+"the shell as ``root`` over SSH."
+msgstr ""
+"Se un amministratore ha perso sia il dispositivo OTP che i codici di "
+"recupero e non può più accedere all'interfaccia web, l'autenticazione a due "
+"fattori (2FA) può essere reimpostata direttamente dalla shell come ``root`` "
+"tramite SSH."
+
+#: ../../administrative_users.rst:84 f344c1a6a91547a9868e1c6907ce0e51
+msgid ""
+"Run the following commands, replacing `<username>` with the administrator "
+"account name (use ``root`` for the default administrator): ::"
+msgstr ""
+"Eseguire i seguenti comandi, sostituendo `<username>` con il nome "
+"dell'account amministratore (utilizzare ``root`` per l'amministratore "
+"predefinito): ::"
+
+#: ../../administrative_users.rst:94 398819e47c4b478485932c54a10d6993
+msgid ""
+"After these commands the user can log in with just their password.  2FA can "
+"be re-enabled at any time from the web interface."
+msgstr ""
+"Dopo questi comandi, l'utente può accedere solo con la propria password. "
+"L'autenticazione a due fattori (2FA) può essere riattivata in qualsiasi "
+"momento dall'interfaccia web."
+
+#: ../../administrative_users.rst:99 799acffd9a954ab2837730fc13b785e0
+msgid ""
+"Only the ``root`` account has SSH access by default.  Non-root "
+"administrators cannot be recovered from SSH by the affected user themselves;"
+" an existing ``root`` session is required to run the commands above on their"
+" behalf."
+msgstr ""
+"Solo l'account ``root`` ha accesso SSH per impostazione predefinita. Gli "
+"amministratori non-root non possono essere recuperati tramite SSH "
+"dall'utente interessato stesso; è necessaria una sessione ``root`` esistente"
+" per eseguire i comandi sopra indicati per loro conto."
+
+#: ../../administrative_users.rst:105 c88afd4387d242dd972438d618fee99a
+msgid "Root and emergency access"
+msgstr "Accesso root e di emergenza"
+
+#: ../../administrative_users.rst:107 4d96f77e0fe847b79dc33d6df7f9681e
+msgid ""
+"The ``root`` account is the main local system account, it should be treated "
+"as an emergency or recovery account and should not be used for ordinary "
+"administrative activity when personal administrative users are available. "
+"Use personal administrative accounts for daily operations, so that actions "
+"can be attributed to individual users in the logs."
+msgstr ""
+"L'account ``root`` è l'account principale del sistema locale; dovrebbe "
+"essere utilizzato solo come account di emergenza o per il recupero e non "
+"dovrebbe essere impiegato per le normali attività amministrative quando sono"
+" disponibili utenti amministrativi personali. Utilizzare account "
+"amministrativi personali per le operazioni quotidiane, in modo che le azioni"
+" possano essere attribuite ai singoli utenti nei log."
+
+#: ../../administrative_users.rst:111 9f5e806a27da452585637d4299b1bfd1
+msgid "Administrative activity logging"
+msgstr "Registrazione delle attività amministrative"
+
+#: ../../administrative_users.rst:113 404daca42cc745ba82e5b15ad46233e0
+msgid ""
+"NethSecurity logs administrative activity performed through the web "
+"interface in ``/var/log/messages``. Administrative logs can support "
+"troubleshooting, incident analysis, and audit reconstruction."
+msgstr ""
+"NethSecurity registra l'attività amministrativa eseguita tramite "
+"l'interfaccia web in ``/var/log/messages``. I log amministrativi possono "
+"supportare la risoluzione dei problemi, l'analisi degli incidenti e la "
+"ricostruzione degli audit."
+
+#: ../../administrative_users.rst:117 d859d4d652ad42a79bfd4523fe560e36
+msgid "Where to find administrative logs"
+msgstr "Dove trovare i log amministrativi"
+
+#: ../../administrative_users.rst:119 d0b9a8999dd94b5db755265394082783
+msgid ""
+"Logs are written in ``/var/log/messages`` and rotated on a weekly base, they"
+" are visible from the UI in their dedicated section. To see administrative "
+"UI events use the filter ``nethsecurity-api``."
+msgstr ""
+"I log vengono scritti in ``/var/log/messages`` e ruotati su base "
+"settimanale; sono visibili dall'interfaccia utente nella sezione dedicata. "
+"Per visualizzare gli eventi dell'interfaccia amministrativa, utilizzare il "
+"filtro ``nethsecurity-api``."
+
+#: ../../administrative_users.rst:122 b44bc3a377694a479e3ed7155c0e20a1
+msgid ""
+"For long-term retention and centralized audit, configure persistent log "
+"storage, remote syslog forwarding, Controller log forwarding, or Cloud Log "
+"Manager. For details, see :ref:`logs-section`."
+msgstr ""
+"Per la conservazione a lungo termine e l'audit centralizzato, configurare "
+"l'archiviazione persistente dei log, l'inoltro remoto tramite syslog, "
+"l'inoltro dei log del Controller o Cloud Log Manager. Per dettagli, vedere "
+":ref:`logs-section`."
+
+#: ../../administrative_users.rst:125 6fedcb1478854513890fc805a71e2382
+msgid "Reconstructing administrator actions"
+msgstr "Ricostruzione delle azioni dell'amministratore"
+
+#: ../../administrative_users.rst:127 344e9513940141cd952bff2ecd8eca3a
+msgid ""
+"To reconstruct administrator activity, start from the login event and then "
+"review the following UI/API authorization and commit events for the same "
+"user, the logs allow to answer questions such as:"
+msgstr ""
+"Per ricostruire l'attività dell'amministratore, iniziare dall'evento di "
+"accesso e poi esaminare i successivi eventi di autorizzazione e commit "
+"tramite UI/API per lo stesso utente; i log permettono di rispondere a "
+"domande come:"
+
+#: ../../administrative_users.rst:129 5a013e4cfa15471e92364cc2bd4c1f37
+msgid "who logged in;"
+msgstr "chi ha effettuato l'accesso;"
+
+#: ../../administrative_users.rst:130 d6ceec820f0247a388dd28f92d95b07a
+msgid "when the administrator accessed the firewall;"
+msgstr "quando l'amministratore ha effettuato l'accesso al firewall;"
+
+#: ../../administrative_users.rst:131 e1aa42490a934e79acddc0343a4b3ebb
+msgid "which UI pages or API functions were used;"
+msgstr ""
+"quali pagine dell'interfaccia utente o funzioni API sono state utilizzate;"
+
+#: ../../administrative_users.rst:132 f9159fe8361348d8b828b73d24865829
+msgid "which configuration areas were changed;"
+msgstr "quali aree di configurazione sono state modificate;"
+
+#: ../../administrative_users.rst:133 fa2e4fe6d8024d3385706273fe1c222b
+msgid "which values were submitted;"
+msgstr "quali valori sono stati inviati;"
+
+#: ../../administrative_users.rst:134 793f8a0920a04ac9a3cafe2c1967d9c1
+msgid "whether a change was committed;"
+msgstr "se una modifica è stata confermata;"
+
+#: ../../administrative_users.rst:135 d51241993d894c29a8b963671dca4896
+msgid "whether the action was followed by service errors or security events."
+msgstr ""
+"se l'azione è stata seguita da errori di servizio o eventi di sicurezza."
+
+#: ../../administrative_users.rst:137 6431fc98c4044403af2b4e3d4191c458
+msgid ""
+"Every time an administrator logs in to the NethSecurity UI, the system logs "
+"the event, inside the `/var/log/messages` file. Example of login event for "
+"user `goofy`: ::"
+msgstr ""
+"Ogni volta che un amministratore accede all'interfaccia utente di "
+"NethSecurity, il sistema registra l'evento all'interno del file "
+"`/var/log/messages`. Esempio di evento di accesso per l'utente `goofy`: ::"
+
+#: ../../administrative_users.rst:143 f3e9e677581045f3a2c08f3304cb389e
+msgid "Example of logout event for user `goofy`: ::"
+msgstr "Esempio di evento di logout per l'utente `goofy`: ::"
+
+#: ../../administrative_users.rst:148 c5f88b5eb9604b6182806b877cb22af1
+msgid ""
+"Also every action performed by an administrator inside the NethSecurity UI "
+"is logged inside the `/var/log/messages` file. Example of action performed "
+"by user `goofy`: ::"
+msgstr ""
+"Inoltre, ogni azione eseguita da un amministratore all'interno "
+"dell'interfaccia NethSecurity viene registrata nel file `/var/log/messages`."
+" Esempio di azione eseguita dall'utente `goofy`: ::"
+
+#: ../../administrative_users.rst:154 37b5a414bc844216b2125d5cc8ba8cb6
+msgid "Audit and compliance recommendations"
+msgstr "Raccomandazioni per audit e conformità"
+
+#: ../../administrative_users.rst:156 3908dbac771c44c3a5fe2287a885b8c7
+msgid "For audit-oriented deployments:"
+msgstr "Per le distribuzioni orientate all'audit:"
+
+#: ../../administrative_users.rst:158 5a55b938dd724ec4a4e9d0710be7fd91
+msgid "create a personal administrative account for each operator;"
+msgstr "creare un account amministrativo personale per ciascun operatore;"
+
+#: ../../administrative_users.rst:159 42ce16d207da4f50ac730ff79af209e5
+msgid "avoid shared administrative accounts;"
+msgstr "evitare account amministrativi condivisi;"
+
+#: ../../administrative_users.rst:160 fadaf11c79fe4d1080ec30c5309ae553
+msgid "enable MFA for all administrative users;"
+msgstr "abilitare l'MFA per tutti gli utenti amministrativi;"
+
+#: ../../administrative_users.rst:161 ea184b9a44f04b17b2919d016d397f16
+msgid ""
+"reserve ``root`` for emergency or recovery operations whenever possible;"
+msgstr ""
+"riservare ``root`` per operazioni di emergenza o di ripristino, ove "
+"possibile;"
+
+#: ../../administrative_users.rst:162 4502dd3191614ca5918baffbfaf923dc
+msgid "use strong passwords and protect recovery codes;"
+msgstr "utilizzare password robuste e proteggere i codici di recupero;"
+
+#: ../../administrative_users.rst:163 25d7d4a0a5694c398ed7ed8be279549a
+msgid "configure persistent log storage or remote log forwarding;"
+msgstr ""
+"configurare l'archiviazione persistente dei log o l'inoltro remoto dei log;"
+
+#: ../../administrative_users.rst:164 61ca08fbde2249e6aff4d46358a20a0a
+msgid ""
+"forward logs to a remote syslog server, SIEM, Controller, or Cloud Log "
+"Manager;"
+msgstr ""
+"inoltrare i log a un server syslog remoto, SIEM, Controller o Cloud Log "
+"Manager;"
+
+#: ../../administrative_users.rst:165 1a5c79507b1b4e809ad1ea67419e3a05
+msgid "verify that log forwarding is working correctly;"
+msgstr "verificare che l'inoltro dei log funzioni correttamente;"
+
+#: ../../administrative_users.rst:166 ee65d5808d4c4844a0c2f191f2be87e8
+msgid ""
+"ensure that date, time, and timezone are correct, preferably using NTP;"
+msgstr ""
+"assicurarsi che data, ora e fuso orario siano corretti, preferibilmente "
+"utilizzando NTP;"
+
+#: ../../administrative_users.rst:167 6bdbbe98d605407a8ebe3f38d64eac54
+msgid "define log retention according to the organization security policy;"
+msgstr ""
+"definire la conservazione dei log secondo la policy di sicurezza "
+"dell'organizzazione;"
+
+#: ../../administrative_users.rst:168 0d5ecffbe3314f7597586b405190351a
+msgid "protect remote logs from unauthorized access or deletion;"
+msgstr ""
+"proteggere i log remoti da accessi non autorizzati o dalla cancellazione;"
+
+#: ../../administrative_users.rst:169 cebb7274d461451f80ba34a5e4aba76f
+msgid ""
+"periodically review administrative access and configuration change logs."
+msgstr ""
+"esaminare periodicamente i log di accesso amministrativo e delle modifiche "
+"alla configurazione."
+
+#: ../../administrative_users.rst:171 0f63fd9bb20b465cb7962fa3966d2ee4
+msgid ""
+"NethSecurity logs can support audit reconstruction and incident analysis. "
+"Organizational processes such as change approval, periodic review, incident "
+"classification, and evidence preservation remain the responsibility of the "
+"organization operating the firewall."
+msgstr ""
+"I log di NethSecurity possono supportare la ricostruzione degli audit e "
+"l'analisi degli incidenti. I processi organizzativi come l'approvazione "
+"delle modifiche, la revisione periodica, la classificazione degli incidenti "
+"e la conservazione delle evidenze rimangono di responsabilità "
+"dell'organizzazione che gestisce il firewall."
+
+#: ../../administrative_users.rst:175 c6d2085e5e464081a6e581343ae3ae68
+msgid "Current limitations"
+msgstr "Limitazioni attuali"
+
+#: ../../administrative_users.rst:177 95accbe9fdd847ffbdfa6b354eeb09c7
+msgid ""
+"Administrative activity logs are technical logs intended to support "
+"troubleshooting and audit reconstruction."
+msgstr ""
+"I log delle attività amministrative sono log tecnici destinati a supportare "
+"la risoluzione dei problemi e la ricostruzione degli audit."
+
+#: ../../administrative_users.rst:179 4ab3b5b2d89d45ef8b56db8fd35d4805
+msgid "Administrators should be aware of the following limitations:"
+msgstr ""
+"Gli amministratori devono essere a conoscenza delle seguenti limitazioni:"
+
+#: ../../administrative_users.rst:181 289962dcb41d4abd8134e5f82614586e
+msgid ""
+"NethSecurity does not currently provide a full local RBAC model for web "
+"administrators;"
+msgstr ""
+"NethSecurity attualmente non fornisce un modello RBAC locale completo per "
+"gli amministratori web;"
+
+#: ../../administrative_users.rst:182 2b944ae06c844f0bb6d83447920235a1
+msgid ""
+"a dedicated local read-only administrator role is not currently available;"
+msgstr ""
+"un ruolo amministratore locale dedicato in sola lettura non è attualmente "
+"disponibile;"
+
+#: ../../administrative_users.rst:183 3af188904bc24542a220a88896a9fbce
+msgid ""
+"administrative users should therefore be assigned only to trusted operators;"
+msgstr ""
+"gli utenti amministrativi dovrebbero quindi essere assegnati solo a "
+"operatori affidabili;"
+
+#: ../../administrative_users.rst:184 9c3a9a6cc1654d10b00ffbdbdf315bf4
+msgid ""
+"some log entries may require correlation with configuration commit logs or "
+"related service logs;"
+msgstr ""
+"alcune voci di log potrebbero richiedere una correlazione con i log di "
+"commit della configurazione o con i log dei servizi correlati;"
+
+#: ../../administrative_users.rst:185 19a1f2642fb64e0b8c3f96be0ec90dca
+msgid ""
+"an authorization event means that the API request was allowed, but related "
+"logs should be checked to confirm the final effect of the operation;"
+msgstr ""
+"un evento di autorizzazione significa che la richiesta API è stata "
+"consentita, ma è necessario controllare i log correlati per confermare "
+"l'effetto finale dell'operazione;"
+
+#: ../../administrative_users.rst:186 a784942072c0499cbe10cd5c842fe233
+msgid "not every log entry necessarily contains the same fields;"
+msgstr "non tutte le voci di log necessariamente contengono gli stessi campi;"
+
+#: ../../administrative_users.rst:187 2007c67ad7074771935ff13aed2e462b
+msgid ""
+"local in-memory logs may be lost after reboot or rotation unless persistent "
+"storage or remote forwarding is configured."
+msgstr ""
+"i log locali in memoria potrebbero andare persi dopo un riavvio o una "
+"rotazione, a meno che non sia configurato uno storage persistente o "
+"l'inoltro remoto."
+
+#: ../../administrative_users.rst:189 d99e8fa8e2714f16b1bb1ba5f94e164f
+msgid ""
+"For long-term audit requirements, use remote log forwarding or Cloud Log "
+"Manager in addition to local logs."
+msgstr ""
+"Per requisiti di audit a lungo termine, utilizzare l'inoltro remoto dei log "
+"o Cloud Log Manager oltre ai log locali."
