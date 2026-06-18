@@ -4,20 +4,55 @@
 Logs
 ====
 
-Logs are initially written to a temporary in-memory directory to prevent potential errors on the root file system in case of a failure.
+Logs are used for troubleshooting, operational monitoring, incident analysis, and audit reconstruction.
+Depending on the installation type and available services, logs can be **stored on persistent local storage** and/or **forwarded to external systems** for centralized collection, retention, and analysis, such as:
 
-1. **Local Storage**: Logs can be written directly to storage. This can be configured from the UI, see the :ref:`storage-section`.
+* remote syslog server
+* NethSecurity Controller
+* Nethesis Cloud Log Manager
+  
 
-2. **Remote Controller**: Logs can be automatically forwarded to a :ref:`remote controller <controller_logs-section>`.
+For audit, troubleshooting, and long-term retention, persistent storage or remote log forwarding is recommended.
 
-3. **Custom Syslog Forwarder**: Logs can be sent to a remote syslog server.
+Log storage
+===========
 
-4. **Cloud Log Manager**: Logs can be forwarded to the Nethesis Cloud Log Manager (CLM) service.
+NethSecurity can store logs in different ways depending on the installation type and the available storage.
 
-The next paragraphs will explain how to configure these latter options.
+Physical appliances
+-------------------
+
+On NethSecurity physical appliances, **persistent storage is configured automatically** and used to store logs.
+When persistent storage is available, logs are saved on disk and managed by log rotation. 
+
+Virtual machines
+----------------
+
+On virtual machines, persistent storage must be configured explicitly.
+For audit, troubleshooting, and long-term retention, it is recommended to attach and configure a dedicated virtual disk for logs. 
+
+For details about how to set and verify storage configuration see the storage section :ref:`storage-section`.
+
+In-memory logs
+--------------
+
+If persistent storage is not configured, logs are written to a temporary in-memory directory. 
+This prevents potential errors on the root file system in case of failure, but it is not suitable for long-term retention.
+In-memory logs are useful for short-term troubleshooting only. For audit-oriented deployments, configure persistent storage or remote log forwarding.
+
+OpenVPN connection history 
+==========================
+
+OpenVPN connection history is permanently saved on all systems equipped with persistent storage.
+This allows administrators to review historical OpenVPN connection activity on systems with storage. 
+OpenVPN connection logs can be useful to reconstruct VPN access history, support troubleshooting, and provide evidence during audit or incident analysis.
+
 
 Forwarding to a remote server
 =============================
+
+NethSecurity can forward logs to a remote syslog server.
+Remote log forwarding is recommended when logs must be centralized, retained for a longer period, protected from local deletion, or integrated with a SIEM or external monitoring system.
 
 It is sufficient to configure the UCI database with the desired options, then commit the changes, and finally restart the service. 
 Temporary logs will continue to be visible in ``/var/log/messages`` and will also be sent to the remote server. 
@@ -125,15 +160,24 @@ To stop and disable the forwarder: ::
 
 .. _log-rotation-section:
 
-Log rotation
-============
+
+
+Log rotation and retention
+==========================
 
 Logs are rotated to manage disk space and ensure that log files do not grow indefinitely.
+
+Storage log rotation
+--------------------
+
+When using persistent storage, log rotation is managed by the ``logrotate`` utility, which is configured to rotate logs weekly and keep a maximum of 52 weeks (1 year) of logs.
+After rotation, the logs are compressed using gzip and stored in the same directory with a naming convention that includes the date of rotation (e.g., ``/mnt/data/log/messages-20260315.gz``).
+
 
 In-memory log rotation
 ----------------------
 
-The ``/var/log/messages`` log file is stored in RAM and it's rotated based on size.
+If a storage is not present the ``/var/log/messages`` log file is stored in RAM and it's rotated based on size.
 Once it reaches a predefined size limit, the log is rotated and compressed to conserve space. 
 The rotated log is saved as ``/var/log/messages.1.gz`` in gzip format. The system retains only two versions of the log: the active log file and the latest rotated, compressed file. 
 From version 1.4.0, by default, the log rotation threshold is set to 10% of the tmpfs filesystem mounted at ``/tmp``.
@@ -177,13 +221,31 @@ All changes to the log rotation size are directly written in the Rsyslog configu
 
 .. _storage-log-rotation-section:
 
-Storage log rotation
---------------------
 
-When using persistent storage, log rotation is managed by the ``logrotate`` utility, which is configured to rotate logs weekly and keep a maximum of
-52 weeks (1 year) of logs.
-After rotation, the logs are compressed using gzip and stored in the same directory with a naming convention that includes the date of rotation
-(e.g., ``/mnt/data/log/messages-20260315.gz``).
 
-The configuration file for logrotate is located at ``/etc/logrotate.d/data.conf`` and can be modified to change the rotation frequency and retention period as needed.
-The configuration file is automatically added to the backup and preserved during upgrades, so any custom settings persist.
+Audit and compliance recommendations
+====================================
+
+For audit and compliance-oriented deployments, use persistent storage or remote log forwarding.
+
+Recommended setup:
+
+* on physical appliances, use the automatically configured storage;
+* on virtual machines, configure a dedicated virtual disk for log storage;
+* configure remote syslog forwarding, Controller forwarding, or Cloud Log Manager when centralized retention is required;
+* verify that system time is synchronized with NTP;
+* define a retention policy aligned with the organization security requirements;
+* protect remote logs from unauthorized access or deletion;
+* periodically verify that logs are correctly collected and forwarded;
+* periodically review administrative access, configuration changes, VPN access, and relevant security events.
+
+Local persistent storage provides useful historical information, but for stronger audit requirements it is recommended to forward logs to an external system such as a syslog server, SIEM, Controller, or Cloud Log Manager.
+
+Related information
+-------------------
+
+Administrative actions performed through the NethSecurity UI are logged in `/var/log/messages`.
+For details about administrative users, administrative audit logs, and how to reconstruct administrator activity, see the Administrative users section :ref:`administrative_users-section`.
+
+
+
