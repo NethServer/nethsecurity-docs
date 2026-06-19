@@ -8,7 +8,7 @@ NethSecurity releases changelogs.
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
 
-Major changes on 2026-06-xx
+Major changes on 2026-06-25
 ===========================
 
 Image version: `8.8.0-beta1` (based on OpenWrt 25.12.4)
