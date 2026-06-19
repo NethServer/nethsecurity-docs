@@ -121,6 +121,7 @@ NethSecurity administrator manual
    dns_over_http
    smtp
    snmp
+   softflowd
    custom_openvpn_tunnel
    speedtest
    ups
