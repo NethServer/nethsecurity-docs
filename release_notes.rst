@@ -11,7 +11,7 @@ NethSecurity releases changelogs.
 Major changes on 2026-06-xx
 ===========================
 
-Image version: `8.8.0` (based on OpenWrt 25.12.4)
+Image version: `8.8.0-beta1` (based on OpenWrt 25.12.4)
 
 .. rubric:: New Features
 
