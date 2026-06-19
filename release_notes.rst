@@ -27,6 +27,7 @@ Image version: `8.8.0` (based on OpenWrt 25.12.4)
 
 - Updated Snort with vectorscan to improve performance.
 - Updated OpenVPN to 2.7.4.
+- Updated strongSwan to 6.0.3.
 - Improved package repository handling and signing for the new base image.
 - Netdata is no longer installed by default; legacy controller dashboards can still restore it manually.
 - DHCP leases are now persisted if local storage is available, preventing loss of leases on reboot.
