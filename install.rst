@@ -86,6 +86,10 @@ You can use the downloaded image as a virtual machine disk:
 .. note::
    If you wish to save the logs locally, it is recommended to attach an additional virtual hard drive to the virtual machine and select it as the destination for logs in the ``Storage`` page under the ``System`` section.
 
+   If you are deploying a remote virtual machine on a cloud provider, you can also complete the network configuration over virtual monitor with the ``setup`` command
+   as a quick start. This is often the fastest way to configure the keyboard layout and network interfaces before opening the web user interface.
+
+
 Install on Proxmox
 ------------------
 
