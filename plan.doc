@@ -1,0 +1,106 @@
+# Plan: Italian Translation + Homepage Update
+
+## Context
+
+Docusaurus site has `locales: ['en']` with an empty `i18n/it/` scaffold. User wants full Italian translation of all docs + homepage, and the homepage content itself reviewed/updated. 59 doc files (md/mdx) across administrator-manual + tutorial.
+
+## Scope
+
+1. **Enable `it` locale** in `docusaurus.config.ts`
+2. **Homepage strings** — translate via `i18n/it/code.json`
+3. **Navbar/sidebar labels** — translate via Docusaurus JSON files
+4. **All 59 docs** — translate content, preserve all markdown/MDX/JSX syntax
+5. **Build validation** — `yarn build` must exit 0
+
+---
+
+## Step-by-step
+
+### 1. Enable locale
+
+`docusaurus.config.ts`:
+- `locales: ['en', 'it']` (was `['en']`)
+- Uncomment / add `localeDropdown` item to navbar
+
+### 2. Generate translation JSON scaffolds
+
+```bash
+cd /home/giacomo/projects/nethsecurity/nethsecurity-docs
+node_modules/.bin/docusaurus write-translations --locale it
+```
+
+Generates (in `i18n/it/`):
+- `code.json` — strings from `translate()` in React components (homepage hero, features, meta)
+- `docusaurus-theme-classic/navbar.json`
+- `docusaurus-theme-classic/footer.json`
+- `docusaurus-plugin-content-docs/current.json` — sidebar category labels
+
+### 3. Translate JSON files
+
+**`i18n/it/code.json`** — homepage strings:
+| key | Italian |
+|---|---|
+| `homepage.hero.title` | `Documentazione NethSecurity` |
+| `homepage.hero.tagline` | `La soluzione Unified Threat Management basata su OpenWrt, progettata per piccole e medie imprese` |
+| `homepage.meta.description` | `Documentazione NethSecurity` |
+| `homepage.features.utm.title` | `Unified Threat Management` |
+| `homepage.features.utm.description` | `Firewall, multi-WAN, filtraggio contenuti, ispezione approfondita dei pacchetti, prevenzione delle intrusioni e VPN in un'unica soluzione integrata.` |
+| `homepage.features.webui.title` | `Interfaccia web moderna` |
+| `homepage.features.webui.description` | `Configura e monitora ogni servizio tramite un'interfaccia web pulita, con un controller remoto opzionale per gestire più firewall.` |
+| `homepage.features.opensource.title` | `Open Source` |
+| `homepage.features.opensource.description` | `Costruito su OpenWrt e supportato dalla vivace comunità NethServer.` |
+
+**`i18n/it/docusaurus-plugin-content-docs/current.json`** — sidebar category labels (Administrator Manual, Tutorial, all folder labels).
+
+**`i18n/it/docusaurus-theme-classic/navbar.json`** — navbar item labels.
+
+### 4. Translate docs content
+
+Copy + translate all files from `docs/` → `i18n/it/docusaurus-plugin-content-docs/current/`, mirroring the directory structure exactly.
+
+Rules for translation agents:
+- Translate all prose (paragraphs, headings, admonition text, list items, table content)
+- **Preserve intact**: YAML front matter keys (`title:` value → translate, keys stay), MDX import statements, JSX expressions `{...}`, code blocks (content unchanged), markdown links (translate text, keep URLs), admonition directives (`:::note` stays, inner text translated), `{#anchor-id}` heading ids
+- Front matter `title:` → translate the value
+
+Use a **Workflow** with `pipeline()` to fan out translation agents in parallel. Group files into ~10 batches of ~6 files each for efficiency.
+
+### 5. Homepage update
+
+The homepage already uses `translate()` hooks. After step 3, Italian strings will render when `?docusaurus_locale=it` or via the locale switcher. No source file changes needed.
+
+If user wants additional homepage content changes (new sections, different text), address after translation is live.
+
+### 6. Build + verify
+
+```bash
+yarn build
+```
+- Must exit 0
+- Check that `build/it/` directory is generated
+- Spot-check a few Italian pages
+
+### 7. Commit + push
+
+```
+docs(i18n): add Italian translation for all docs and homepage
+```
+Push to `giacomo/docusaurus` + force-push to `giacomo/main` (triggers CI).
+
+---
+
+## Files modified
+
+- `docusaurus.config.ts` — enable `it` locale, add locale dropdown
+- `i18n/it/code.json` — homepage + component strings (new)
+- `i18n/it/docusaurus-theme-classic/navbar.json` — navbar labels (new, generated)
+- `i18n/it/docusaurus-theme-classic/footer.json` — footer labels (new, generated)
+- `i18n/it/docusaurus-plugin-content-docs/current.json` — sidebar labels (new, generated)
+- `i18n/it/docusaurus-plugin-content-docs/current/**/*.md[x]` — 59 translated docs (new)
+
+## Verification
+
+1. `yarn build` exits 0, `build/it/` exists
+2. Open `build/it/index.html` — Italian hero text visible
+3. Spot-check `build/it/docs/administrator-manual/` — Italian prose, intact code blocks
+4. No broken links (Docusaurus link checker runs in build)

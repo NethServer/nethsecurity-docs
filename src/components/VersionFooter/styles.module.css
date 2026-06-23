@@ -1,0 +1,42 @@
+.versionFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  margin-top: 8px;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  font-size: 13px;
+}
+
+.versionText {
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.versionNumber {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* Dark mode support */
+html[data-theme='dark'] .versionFooter {
+  border-top-color: var(--ifm-color-emphasis-300);
+}
+
+html[data-theme='dark'] .versionText {
+  color: var(--ifm-color-emphasis-700);
+}
+
+html[data-theme='dark'] .versionNumber {
+  color: var(--ifm-color-primary);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .versionFooter {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+}

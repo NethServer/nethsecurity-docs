@@ -1,0 +1,42 @@
+{
+  "link.title.Docs": {
+    "message": "Documentazione",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "Altro",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Administrator manual": {
+    "message": "Manuale amministratore",
+    "description": "The label of footer link with label=Administrator manual linking to /docs/administrator-manual"
+  },
+  "link.item.label.Tutorial": {
+    "message": "Tutorial",
+    "description": "The label of footer link with label=Tutorial linking to /docs/tutorial"
+  },
+  "link.item.label.Developer manual": {
+    "message": "Manuale dello sviluppatore",
+    "description": "The label of footer link with label=Developer manual linking to https://nethserver.github.io/nethsecurity/"
+  },
+  "link.item.label.NethSecurity website": {
+    "message": "Sito NethSecurity",
+    "description": "The label of footer link with label=NethSecurity website linking to https://www.nethsecurity.org"
+  },
+  "link.item.label.NethServer Community": {
+    "message": "Comunità NethServer",
+    "description": "The label of footer link with label=NethServer Community linking to https://community.nethserver.org"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/NethServer/nethsecurity-docs"
+  },
+  "copyright": {
+    "message": "Copyright © 2026 Nethesis Srl and the NethSecurity project contributors",
+    "description": "The footer copyright"
+  }
+}

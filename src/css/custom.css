@@ -1,0 +1,32 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* NethSecurity brand palette — cyan (matches nethsecurity.org, #0891b2 cyan-600).
+   Light mode uses cyan-700 (#0e7490, the logo fill) for AA text contrast on white. */
+:root {
+  --ifm-color-primary: #0e7490;
+  --ifm-color-primary-dark: #0c6882;
+  --ifm-color-primary-darker: #0b627b;
+  --ifm-color-primary-darkest: #095164;
+  --ifm-color-primary-light: #1085a4;
+  --ifm-color-primary-lighter: #0891b2;
+  --ifm-color-primary-lightest: #06b6d4;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Lighter palette for dark mode (cyan-400 base for contrast on dark). */
+[data-theme='dark'] {
+  --ifm-color-primary: #22d3ee;
+  --ifm-color-primary-dark: #06b6d4;
+  --ifm-color-primary-darker: #0891b2;
+  --ifm-color-primary-darkest: #0e7490;
+  --ifm-color-primary-light: #3dd9f0;
+  --ifm-color-primary-lighter: #67e8f9;
+  --ifm-color-primary-lightest: #a5f3fc;
+  --ifm-background-color: #232429;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}

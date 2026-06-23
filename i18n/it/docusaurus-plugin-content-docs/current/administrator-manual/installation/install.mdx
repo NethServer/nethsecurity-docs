@@ -1,0 +1,254 @@
+---
+title: Installazione
+sidebar_position: 3
+---
+
+import versions from '@site/src/data/versions.json';
+
+# Installazione {#install-section}
+
+Per iniziare il processo di installazione, scarica prima l'[ultima immagine](./download.mdx). Una volta completato il download, hai due metodi per installare NethSecurity:
+
+- Installazione diretta su disco: scrivi l'immagine scaricata direttamente sul disco del tuo computer. Questo metodo consente un processo di installazione semplice e diretto sulla memoria del tuo sistema.
+- Installazione da USB: in alternativa, puoi creare una chiavetta USB avviabile utilizzando l'immagine scaricata. Avvia il sistema dalla chiavetta USB e digita un comando per avviare il processo di installazione.
+
+Scegli il metodo più adatto alle tue esigenze e procedi con il processo di installazione di NethSecurity.
+
+## Installazione su bare metal {#install_bare_metal-section}
+
+NethSecurity può essere eseguito da una chiavetta USB o installato direttamente su qualsiasi dispositivo avviabile come dischi rigidi o schede SD.
+
+1.  collega il disco/chiavetta/scheda di destinazione a una macchina Linux desktop
+2.  trova il nome del dispositivo disco/chiavetta/scheda, in questo esempio il dispositivo è denominato `/dev/sdd`
+3.  come utente `root`, scrivi l'immagine scaricata sul dispositivo:
+
+    <pre><code>{`zcat ${versions.image} | dd of=/dev/sdd bs=1M iflag=fullblock status=progress oflag=direct`}</code></pre>
+
+4.  scollega il disco/chiavetta/scheda dal desktop e collegalo al server
+5.  avvia il server, seleziona il dispositivo corretto (USB, scheda SD o disco rigido) dal menu di avvio
+6.  il server è installato e pronto per essere utilizzato
+
+**Scrittura dell'immagine su Windows**
+
+:::note
+
+La scrittura dell'immagine su una macchina Windows non è consigliata perché potrebbe danneggiare il partizionamento del disco.
+
+:::
+
+Se stai utilizzando una macchina desktop Windows, avrai bisogno di software aggiuntivo per il punto 2. Innanzitutto, assicurati di formattare l'unità USB, quindi smontala. Usa uno dei seguenti strumenti per scrivere la chiavetta USB:
+
+- [Etcher](https://etcher.io/)
+- [Win32 Disk Imager](http://sourceforge.net/projects/win32diskimager/)
+- [Rawrite32](http://www.netbsd.org/~martin/rawrite32/)
+
+### Installazione da USB a disco
+
+Il metodo di installazione consigliato per NethSecurity è sulla memoria interna, per motivi di robustezza e prestazioni. A questo scopo, NethSecurity fornisce un comando specifico per installare i suoi contenuti dalla chiavetta USB sul disco interno:
+
+1.  collegati al server utilizzando VGA, console seriale o SSH
+2.  accedi con le credenziali predefinite
+3.  esegui `ns-install` e segui le istruzioni
+
+Il firewall verrà arrestato al termine dell'installazione. Una volta che il firewall si è spento, puoi tranquillamente rimuovere la chiavetta USB e avviare nuovamente il server.
+
+:::note
+
+La chiavetta USB dovrebbe essere utilizzata solo per l'installazione iniziale di NethSecurity; qualsiasi altro uso è fortemente sconsigliato. Per aggiornare NethSecurity o eseguire un ripristino di fabbrica, ci sono già opzioni documentate disponibili tramite l'interfaccia web e la console da riga di comando. Nel caso in cui la password di accesso al firewall fosse smarrita e fosse necessario eseguire un ripristino di fabbrica, consigliamo di avviare in modalità failsafe ed eseguire il ripristino da lì, come descritto nella documentazione [reset e recovery](../system/reset_recovery.md).
+
+:::
+
+## Installazione su macchine virtuali
+
+Puoi utilizzare l'immagine scaricata come disco di una macchina virtuale:
+
+1.  estrai l'immagine scaricata:
+
+    <pre><code>{`gunzip ${versions.image}`}</code></pre>
+
+2.  crea una nuova macchina virtuale e seleziona l'immagine decompressa come disco
+3.  avvia la macchina virtuale
+
+:::note
+
+Se desideri salvare i log localmente, è consigliato collegare un disco rigido virtuale aggiuntivo alla macchina virtuale e selezionarlo come destinazione per i log nella pagina `Storage` nella sezione `System`.
+
+:::
+
+### Installazione su Proxmox
+
+L'immagine può essere importata all'interno di [Proxmox](https://www.proxmox.com/).
+
+Innanzitutto, assicurati di avere 2 bridge di rete diversi. In questo esempio useremo `vmbr0` e `vmbr1`. La procedura descritta può essere eseguita anche utilizzando l'interfaccia utente di Proxmox.
+
+Crea la macchina virtuale, in questo esempio la macchina avrà id `401`:
+
+```bash
+qm create 401 --name "NethSecurity" --ostype l26 --cores 1 --memory 1024 --net0 virtio,bridge=vmbr0,firewall=0 --net1 virtio,bridge=vmbr1,firewall=0 --scsihw virtio-scsi-pci
+```
+
+Scarica l'immagine:
+
+<pre><code>{`wget '${versions.downloadUrl}'`}</code></pre>
+
+Estrai l'immagine:
+
+<pre><code>{`gunzip ${versions.image}`}</code></pre>
+
+Importa l'immagine estratta come disco della macchina virtuale:
+
+<pre><code>{`qm importdisk 401 ${versions.imageNoGz} local-lvm`}</code></pre>
+
+Collega il disco alla macchina virtuale:
+
+```bash
+qm set 401 --scsi0 "local-lvm:vm-401-disk-0"
+```
+
+Configura l'ordine di avvio:
+
+```bash
+qm set 401 --boot order=scsi0
+```
+
+Infine, avvia la macchina virtuale.
+
+#### QEMU guest agent
+
+QEMU guest agent non fa parte dell'immagine NethSecurity ma può essere installato dalla riga di comando. L'agente può funzionare quando la macchina virtuale è in esecuzione su KVM, Proxmox o altri hypervisor basati su QEMU.
+
+Innanzitutto, assicurati che la macchina virtuale sia in esecuzione, quindi collegati alla macchina utilizzando SSH o la console Proxmox.
+
+Se stai eseguendo NethSecurity 8.8, usa:
+
+```bash
+apk update
+apk add qemu-ga
+```
+
+Se stai eseguendo NethSecurity 8.7.2 o una versione precedente, usa:
+
+```bash
+opkg update
+opkg install qemu-ga
+```
+
+Dopo l'installazione, avvia il servizio:
+
+```bash
+/etc/init.d/qemu-ga start
+```
+
+QEMU guest agent sarà disponibile sulla macchina virtuale e avviato automaticamente all'avvio.
+
+:::note
+
+A partire dalla versione 8.7.2, i pacchetti aggiuntivi vengono reinstallati automaticamente dopo l'aggiornamento del sistema. Per le versioni precedenti e per ulteriori informazioni, fai riferimento alla documentazione [updates](../system/updates.md).
+
+:::
+
+### Installazione su VMWare
+
+[VMWare](https://www.vmware.com) potrebbe incontrare problemi durante l'importazione diretta di immagini disco grezze. Per garantire un'importazione senza problemi, decomprimere prima il file immagine, quindi convertire l'immagine grezza nel formato nativo di VMWare `.vmdk` prima di procedere.
+
+Su Windows, puoi utilizzare un software come [V2V Converter](https://www.starwindsoftware.com/starwind-v2v-converter).
+
+Su Linux puoi utilizzare il comando `qemu-img`. Esempio:
+
+```bash
+qemu-img convert -f raw -O vmdk <source_image.raw> <destination_image.vmdk>
+```
+
+Sostituisci:
+
+- `<source_image.raw>` con il percorso effettivo della tua immagine disco grezza
+- `<destination_image.vmdk>` con il nome del file .vmdk desiderato
+
+Le seguenti impostazioni della macchina virtuale sono note per funzionare bene con NethSecurity:
+
+- Guest OS: Other 5.x o successivi Linux
+- SCSI Controller: VMWare Paravirtual
+- Network Adapters: E1000
+- Firmware: BIOS (non UEFI)
+
+#### VMware open-vm-tools
+
+VMware open-vm-tools non fanno parte dell'immagine NethSecurity ma possono essere installati dalla riga di comando. Gli strumenti possono funzionare solo quando la macchina virtuale è in esecuzione su hypervisor VMWare.
+
+Innanzitutto, assicurati che la macchina virtuale sia in esecuzione, quindi collegati alla macchina utilizzando SSH o la console VMWare.
+
+Se stai eseguendo NethSecurity 8.8, usa:
+
+```bash
+apk update
+apk add open-vm-tools
+```
+
+Se stai eseguendo NethSecurity 8.7.2 o una versione precedente, usa:
+
+```bash
+opkg update
+opkg install open-vm-tools
+```
+
+Dopo l'installazione, avvia il servizio:
+
+```bash
+/etc/init.d/vmtoolsd start
+```
+
+VMware open-vm-tools sarà disponibile sulla macchina virtuale e avviato automaticamente all'avvio.
+
+Tieni presente che dopo un aggiornamento dell'immagine VMware open-vm-tools verrà rimosso e dovrai reinstallarlo. Per ulteriori informazioni, consulta la documentazione [updates](../system/updates.md).
+
+### Installazione su Hyper-V
+
+Per garantire un'importazione senza problemi su Hyper-V, decomprimere prima il file immagine, quindi convertire l'immagine grezza nel formato nativo di Hyper-V `.vhdx` prima di procedere.
+
+Su Windows, puoi utilizzare un software come [V2V Converter](https://www.starwindsoftware.com/starwind-v2v-converter).
+
+Su Linux puoi utilizzare il comando `qemu-img`. Esempio:
+
+```bash
+qemu-img convert -f raw -O vhdx <source_image.raw> <destination_image.vhdx>
+```
+
+Sostituisci:
+
+- `<source_image.raw>` con il percorso effettivo della tua immagine disco grezza
+- `<destination_image.vhdx>` con il nome del file .vhdx desiderato
+
+### Installazione su VirtualBox
+
+[VirtualBox](https://www.virtualbox.org) potrebbe incontrare problemi durante l'importazione diretta di immagini disco grezze. Per garantire un'importazione senza problemi, decomprimere prima il file immagine, quindi convertire l'immagine grezza nel formato nativo di VirtualBox `.vdi` prima di procedere.
+
+Su Windows, Linux e macOS puoi utilizzare lo strumento integrato `VBoxManage`. Esempio:
+
+```bash
+VBoxManage convertfromraw <source_image.raw> <destination_image.vdi>
+```
+
+Sostituisci:
+
+- `<source_image.raw>` con il percorso effettivo della tua immagine disco grezza
+- `<destination_image.vdi>` con il nome del file .vdi desiderato
+
+## Configurazione di rete predefinita
+
+Quando avvii per la prima volta NethSecurity, il sistema tenterà di configurare le interfacce di rete.
+
+Per impostazione predefinita, la configurazione di rete sarà la seguente:
+
+- L'interfaccia LAN sarà configurata con un indirizzo IP statico di 192.168.1.1.
+- L'interfaccia WAN sarà configurata per utilizzare DHCP per ottenere un indirizzo IP dal tuo ISP.
+
+Un'eccezione a questa configurazione di rete predefinita sono le macchine virtuali in esecuzione su KVM e sul provider cloud Digital Ocean (droplet). In questo caso, la configurazione di rete sarà la seguente:
+
+- L'interfaccia LAN sarà configurata per utilizzare DHCP per ottenere un indirizzo IP dalla piattaforma di virtualizzazione.
+- L'interfaccia WAN sarà configurata per utilizzare DHCP per ottenere un indirizzo IP dal tuo ISP.
+
+:::note
+
+Se stai utilizzando NethSecurity in un ambiente di produzione, potrebbe essere necessario modificare la configurazione di rete predefinita per soddisfare le tue esigenze specifiche. Ad esempio, potrebbe essere necessario configurare l'interfaccia LAN con un indirizzo IP diverso o configurare l'interfaccia WAN per utilizzare un indirizzo IP statico.
+
+:::

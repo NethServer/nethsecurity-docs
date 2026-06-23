@@ -1,0 +1,35 @@
+---
+title: Download
+sidebar_position: 2
+---
+
+import versions from '@site/src/data/versions.json';
+import {StableReleases, DevReleases} from '@site/src/components/DownloadTable';
+
+# Download {#download-section}
+
+La tabella contiene i seguenti link per ogni versione:
+
+- il file immagine x86-64, utilizzato per installare NethSecurity
+- il file sha256sums, che contiene i checksum SHA256 per verificare l'integrità dell'immagine scaricata
+- il file SBOM (Software Bill of Materials), nel formato CDX (CycloneDX) che contiene l'elenco di tutti i pacchetti software inclusi nell'immagine
+
+Inizia scaricando l'immagine x86_64 più recente dalla tabella sottostante.
+
+Per la verifica, scarica anche il file hash ed esegui il seguente comando in una shell Linux per assicurare l'integrità dell'immagine scaricata:
+
+<pre><code>{`grep ${versions.image} sha256sums | sha256sum -c`}</code></pre>
+
+Per procedere con l'installazione di NethSecurity, hai due opzioni: scrivere l'immagine scaricata direttamente sul disco oppure creare una chiavetta USB avviabile. Fai riferimento alla pagina [installazione](./install.mdx) per istruzioni dettagliate su entrambi i metodi.
+
+Puoi usare il [browser dei pacchetti](pathname:///packages/) per esplorare tutte le versioni disponibili e scaricare immagini, file hash e pacchetti direttamente.
+
+Le tabelle sottostanti elencano le versioni disponibili insieme ai rispettivi link di download.
+
+## Versioni stabili
+
+<StableReleases />
+
+## Versioni di sviluppo
+
+<DevReleases />

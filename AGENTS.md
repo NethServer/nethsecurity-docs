@@ -1,67 +1,117 @@
 # Agent Guide: NethSecurity Documentation
 
-This repository contains the source for the NethSecurity documentation, built using Sphinx and reStructuredText (RST).
+This repository contains the [Docusaurus](https://docusaurus.io/)-based
+documentation for NethSecurity, the Unified Threat Management solution based on
+OpenWrt. It was migrated from the previous Sphinx/reStructuredText sources.
 
-## Project Overview
+## Build commands
 
-- **Framework:** [Sphinx](https://www.sphinx-doc.org/)
-- **Markup Language:** [reStructuredText (RST)](https://docutils.sourceforge.io/rst.html)
-- **Primary Configuration:** `conf.py`
-- **Output Theme:** `sphinx_book_theme`
-- **Localization:** Managed via `gettext` and `weblate`, stored in `locale/` directory.
-
-## Core Directories and Files
-
-- `/`: Contains the main `.rst` chapters of the documentation.
-- `index.rst`: The master document that defines the documentation structure (Table of Contents).
-- `conf.py`: Sphinx configuration, including extensions, theme options, and custom build logic (like fetching the latest release version).
-- `_static/`: Custom CSS (`custom.css`), JS (`kapa.js`), and images/graphics.
-- `locale/`: Translation files (`.po`).
-- `Makefile`: Build automation.
-- `requirements.txt`: Python dependencies.
-
-## Key Workflows
-
-### 1. Building Documentation
-To build the HTML version locally:
 ```bash
-# Setup virtual environment (if not done)
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+# Install dependencies (Node.js >= 18)
+yarn install
 
-# Build
-make html
+# Start a local dev server with hot reload (runs the version script first)
+yarn start
+
+# Build the static site (validates MDX, links and anchors)
+yarn build
+
+# Serve the production build locally
+yarn serve
+
+# Regenerate the version/download data only
+yarn gen:versions
 ```
-Build output will be in `_build/html/`.
 
-After building, if any error or warning occurs, fix it.
+Always run `yarn build` before submitting changes: it fails on broken MDX and
+reports broken links and anchors.
 
-### 2. Adding a New Chapter
-1. Create a new `.rst` file in the root directory.
-2. Add the file name (without extension) to the `toctree` in `index.rst`.
-3. Follow the editing guidelines in `README.rst` (headers, cross-references, etc.).
+## Architecture
 
-### 3. Localization
-- Source strings are extracted using `make gettext`.
-- Translations are updated via `sphinx-intl update -p _build/gettext -l <lang>`.
-- The `locale/it/LC_MESSAGES/` directory contains Italian translations.
-- Localization is automatically handled using a GitHub workflow, so do not translate
-  anything when adding or modifying the doc
+- The site is split into two manuals, each rendered as its own sidebar
+  (see `sidebars.ts` and the navbar in `docusaurus.config.ts`):
+  - `docs/administrator-manual/` — install, configure and manage NethSecurity.
+    Chapters are grouped into subfolders (`about/`, `installation/`,
+    `monitoring/`, `system/`, `network/`, `users-objects/`, `firewall/`,
+    `security/`, `vpn/`, `high-availability/`, `advanced-cli/`,
+    `best-practices/`), each with a `_category_.json` (sidebar label +
+    position).
+  - `docs/tutorial/` — step-by-step guides. New tutorials are imported from the
+    Nethesis helpdesk using the `freshdesk-to-tutorial` skill
+    (`.agents/skills/freshdesk-to-tutorial/`).
+- Each manual root has an `index.md` with a `slug:` so the navbar/footer links
+  resolve.
+- `docusaurus.config.ts` sets `markdown.format: 'detect'`, so `.md` files are
+  parsed as CommonMark (tolerant of bare `<...>`/`{...}`) and `.mdx` as MDX.
+- **Dynamic version data:** `scripts/generate-version-data.mjs` runs before
+  `start`/`build` (npm `prestart`/`prebuild` hooks). It fetches the latest
+  release tag and lists the public release bucket, writing
+  `src/data/versions.json` (gitignored). The download/install pages
+  (`installation/download.mdx`, `installation/install.mdx`) and the
+  `DownloadTable` component consume this data; `docusaurus.config.ts` reads the
+  version into `customFields.productVersion`.
+- **Search:** the kapa.ai AI widget is injected via the `src/kapa.js` client
+  module. Algolia DocSearch is wired in `themeConfig.algolia` with placeholder
+  keys — fill them in once provisioned.
+- **Branding:** logo is `static/img/logo.svg` (the NethSecurity wordmark);
+  favicon is `static/img/favicon.png`. The brand accent is cyan (`#0891b2`),
+  set in `src/css/custom.css`.
+- **Images** are served from `static/` and referenced with absolute paths such
+  as `/_static/high_availability.png`.
+- **Internationalization:** English only for now. The `i18n/it/` tree is
+  scaffolded for a later translation pass — re-add `it` to `i18n.locales` and
+  restore the `localeDropdown` navbar item once Italian content exists.
 
-## Editing Guidelines (RST)
+## Markdown conventions
 
-- **Titles:** Use `=` over and under for the main title.
-- **Section Headers:** 
-    - Level 1: `=`
-    - Level 2: `-`
-    - Level 3: `^`
-    - Level 4: `~`
-- **Cross-references:** Use ".. _label_with_space-section:" before a header and ":ref:`label_with_space-section`" to link to it.
-- **Notes/Warnings:** Use ".. note::" or ".. warning::" blocks.
-- **UI Elements:** Use ":guilabel:`label`" for buttons and double backticks ``label`` for inline UI text.
+- One top-level `#` heading per file; the page `title` is set in frontmatter.
+- Use explicit heading ids where other pages link to them:
+  `## My section {#my-section}`.
+- UI elements (buttons, fields) use bold: `**Save**`.
+- File paths, commands and config keys use inline code: `` `ns-install` ``.
+- Admonitions use the Docusaurus syntax (`:::note`, `:::warning`, `:::tip`,
+  `:::info`, `:::danger`).
+- Pages that need the live version/image name must be `.mdx` and interpolate the
+  imported `versions.json` (code fences cannot contain components — use
+  `<pre><code>{`...`}</code></pre>`).
 
-## CI/CD
-- Builds are automated via GitHub Actions (see `.github/workflows/`).
-- Translations are automatically updated after commits.
-- Stable and Dev release tables are dynamically generated during the build process (see `conf.py` logic).
+## Editorial conventions
+
+These rules apply to both English (`docs/`) and Italian
+(`i18n/it/docusaurus-plugin-content-docs/current/`) sources; keep the two
+locales structurally parallel.
+
+- **Sentence case titles** — capitalize only the first word and proper nouns
+  (brands like NethSecurity/NethServer/Nethesis, product/feature names such as
+  Threat Shield, FlashStart, Netify Informatics, WireGuard, OpenVPN, Cerbeyra,
+  and acronyms like DNS, VPN, NAT, QoS, DPI, IPS, UCI). Never use ALL-CAPS and
+  never Title-Case every word.
+  - Wrong: `YOROI BLACKLIST AND NUMBER OF DEVICES TO PROTECT`,
+    `Possible Solutions`, `Content Filtering`
+  - Right: `YOROI blacklist and number of devices to protect`,
+    `Possible solutions`, `Content filtering`
+  - Applies to the frontmatter `title:`, the `#` H1, and every `##`/`###`
+    sub-heading. Keep the `title:` and the H1 in sync, and never alter an
+    existing `{#anchor}` when editing a heading.
+- **Links** — every internal and external link must resolve. `yarn build` fails
+  on broken links and anchors; run it before submitting.
+- **Index parity** — each manual-root `index.md`
+  (`administrator-manual/index.md`, `tutorial/index.md`) must list its sections
+  in the same order the sidebar renders them (`_category_.json` `position` and
+  per-page `sidebar_position`), in both locales.
+- **Tutorial order** — tutorials follow this canonical sequence in both
+  locales (set via `sidebar_position` and mirrored in `tutorial/index.md`):
+  FAQ → Troubleshooting → GDPR compliance → remaining chapters (alphabetical)
+  → Nethesis Threat Shield → Cerbeyra probe (these last two pinned to the end).
+
+## CI
+
+- `.github/workflows/deploy.yml` — builds and deploys to GitHub Pages on push
+  to `main`.
+- `.github/workflows/test-deploy.yml` — test build on pull requests.
+
+## One-shot migration scripts
+
+`scripts/convert_rst.py` performed the original Sphinx→Docusaurus conversion
+(pandoc + cleanup). It is kept for reference; the `.rst` sources no longer live
+in this repo.

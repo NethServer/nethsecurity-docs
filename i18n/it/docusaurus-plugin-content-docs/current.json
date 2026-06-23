@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.administratorManualSidebar.category.About": {
+    "message": "Informazioni",
+    "description": "The label for category 'About' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.Installation": {
+    "message": "Installazione",
+    "description": "The label for category 'Installation' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.Monitoring": {
+    "message": "Monitoraggio",
+    "description": "The label for category 'Monitoring' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.System": {
+    "message": "Sistema",
+    "description": "The label for category 'System' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.Network": {
+    "message": "Rete",
+    "description": "The label for category 'Network' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.Users and objects": {
+    "message": "Utenti e oggetti",
+    "description": "The label for category 'Users and objects' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.Firewall": {
+    "message": "Firewall",
+    "description": "The label for category 'Firewall' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.Security": {
+    "message": "Sicurezza",
+    "description": "The label for category 'Security' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.VPN": {
+    "message": "VPN",
+    "description": "The label for category 'VPN' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.High Availability": {
+    "message": "Alta disponibilità",
+    "description": "The label for category 'High Availability' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.Advanced (CLI)": {
+    "message": "Avanzato (CLI)",
+    "description": "The label for category 'Advanced (CLI)' in sidebar 'administratorManualSidebar'"
+  },
+  "sidebar.administratorManualSidebar.category.Best practices": {
+    "message": "Best practice",
+    "description": "The label for category 'Best practices' in sidebar 'administratorManualSidebar'"
+  }
+}
