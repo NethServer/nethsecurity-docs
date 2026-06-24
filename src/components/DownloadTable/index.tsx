@@ -1,12 +1,6 @@
 import type {ReactNode} from 'react';
-import versions from '@site/src/data/versions.json';
-
-type Release = {
-  version: string;
-  imageUrl: string;
-  hashUrl: string;
-  sbomUrl: string;
-};
+import {useVersionData} from '@site/src/hooks/useVersionData';
+import type {Release, VersionData} from '@site/src/hooks/useVersionData';
 
 function ReleaseTable({rows}: {rows: Release[]}): ReactNode {
   if (!rows || rows.length === 0) {
@@ -41,23 +35,55 @@ function ReleaseTable({rows}: {rows: Release[]}): ReactNode {
 }
 
 export function StableReleases(): ReactNode {
-  return <ReleaseTable rows={versions.stable as Release[]} />;
+  const {data, loading, error} = useVersionData();
+  if (loading) return <p>Loading releases…</p>;
+  if (error) return <p>Could not load releases: {error}</p>;
+  return <ReleaseTable rows={data?.stable ?? []} />;
 }
 
 export function DevReleases(): ReactNode {
-  return <ReleaseTable rows={versions.dev as Release[]} />;
+  const {data, loading, error} = useVersionData();
+  if (loading) return <p>Loading releases…</p>;
+  if (error) return <p>Could not load releases: {error}</p>;
+  return <ReleaseTable rows={data?.dev ?? []} />;
 }
 
-// Inline helpers for substituting the latest version / image name / download URL
-// (the former Sphinx |version|, |image|, |download_url| substitutions).
-export function Version(): ReactNode {
-  return <>{versions.version}</>;
+// Renders any shell command that needs live version data.
+// Pass a template function: (v: VersionData) => string
+// Falls back to '…' while loading, or a placeholder string on error.
+const FALLBACK: VersionData = {
+  version: '<version>',
+  image: 'nethsecurity-<version>-x86-64-generic-squashfs-combined-efi.img.gz',
+  imageNoGz: 'nethsecurity-<version>-x86-64-generic-squashfs-combined-efi.img',
+  downloadUrl: '#',
+  stable: [],
+  dev: [],
+};
+
+export function VersionCommand({
+  template,
+}: {
+  template: (v: VersionData) => string;
+}): ReactNode {
+  const {data, loading} = useVersionData();
+  const text = loading ? '…' : template(data ?? FALLBACK);
+  return (
+    <pre>
+      <code>{text}</code>
+    </pre>
+  );
 }
 
-export function ImageName(): ReactNode {
-  return <>{versions.image}</>;
-}
-
-export function DownloadUrl(): ReactNode {
-  return <>{versions.downloadUrl}</>;
+// Renders the sha256 verification command with the live latest image name.
+export function ImageVerifyCommand(): ReactNode {
+  const {data, loading} = useVersionData();
+  const name = loading
+    ? '…'
+    : (data?.image ??
+      'nethsecurity-<version>-x86-64-generic-squashfs-combined-efi.img.gz');
+  return (
+    <pre>
+      <code>{`grep ${name} sha256sums | sha256sum -c`}</code>
+    </pre>
+  );
 }

@@ -3,7 +3,7 @@ title: Installation
 sidebar_position: 3
 ---
 
-import versions from '@site/src/data/versions.json';
+import {VersionCommand} from '@site/src/components/DownloadTable';
 
 # Installation {#install-section}
 
@@ -22,7 +22,7 @@ NethSecurity can be run from a USB stick or installed directly to any bootable d
 2.  find the disk/stick/card device name, in this example the device is named `/dev/sdd`
 3.  as `root` user, write the downloaded image to the device:
 
-    <pre><code>{`zcat ${versions.image} | dd of=/dev/sdd bs=1M iflag=fullblock status=progress oflag=direct`}</code></pre>
+    <VersionCommand template={(v) => `zcat ${v.image} | dd of=/dev/sdd bs=1M iflag=fullblock status=progress oflag=direct`} />
 
 4.  unplug the disk/stick/card from the desktop and plug it into the server
 5.  boot the server, select the correct device (USB, SD card or hard disk) from boot menu
@@ -64,7 +64,7 @@ You can use the downloaded image as a virtual machine disk:
 
 1.  extract the downloaded image:
 
-    <pre><code>{`gunzip ${versions.image}`}</code></pre>
+    <VersionCommand template={(v) => `gunzip ${v.image}`} />
 
 2.  create a new virtual machine and select the uncompressed image as disk
 3.  boot the virtual machine
@@ -89,15 +89,15 @@ qm create 401 --name "NethSecurity" --ostype l26 --cores 1 --memory 1024 --net0 
 
 Download the image:
 
-<pre><code>{`wget '${versions.downloadUrl}'`}</code></pre>
+<VersionCommand template={(v) => `wget '${v.downloadUrl}'`} />
 
 Extract the image:
 
-<pre><code>{`gunzip ${versions.image}`}</code></pre>
+<VersionCommand template={(v) => `gunzip ${v.image}`} />
 
 Import the extracted image as a virtual machine disk:
 
-<pre><code>{`qm importdisk 401 ${versions.imageNoGz} local-lvm`}</code></pre>
+<VersionCommand template={(v) => `qm importdisk 401 ${v.imageNoGz} local-lvm`} />
 
 Attach the disk to the virtual machine:
 

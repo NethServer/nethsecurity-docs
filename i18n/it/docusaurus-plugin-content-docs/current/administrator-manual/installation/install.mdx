@@ -3,7 +3,7 @@ title: Installazione
 sidebar_position: 3
 ---
 
-import versions from '@site/src/data/versions.json';
+import {VersionCommand} from '@site/src/components/DownloadTable';
 
 # Installazione {#install-section}
 
@@ -22,7 +22,7 @@ NethSecurity può essere eseguito da una chiavetta USB o installato direttamente
 2.  trova il nome del dispositivo disco/chiavetta/scheda, in questo esempio il dispositivo è denominato `/dev/sdd`
 3.  come utente `root`, scrivi l'immagine scaricata sul dispositivo:
 
-    <pre><code>{`zcat ${versions.image} | dd of=/dev/sdd bs=1M iflag=fullblock status=progress oflag=direct`}</code></pre>
+    <VersionCommand template={(v) => `zcat ${v.image} | dd of=/dev/sdd bs=1M iflag=fullblock status=progress oflag=direct`} />
 
 4.  scollega il disco/chiavetta/scheda dal desktop e collegalo al server
 5.  avvia il server, seleziona il dispositivo corretto (USB, scheda SD o disco rigido) dal menu di avvio
@@ -64,7 +64,7 @@ Puoi utilizzare l'immagine scaricata come disco di una macchina virtuale:
 
 1.  estrai l'immagine scaricata:
 
-    <pre><code>{`gunzip ${versions.image}`}</code></pre>
+    <VersionCommand template={(v) => `gunzip ${v.image}`} />
 
 2.  crea una nuova macchina virtuale e seleziona l'immagine decompressa come disco
 3.  avvia la macchina virtuale
@@ -89,15 +89,15 @@ qm create 401 --name "NethSecurity" --ostype l26 --cores 1 --memory 1024 --net0 
 
 Scarica l'immagine:
 
-<pre><code>{`wget '${versions.downloadUrl}'`}</code></pre>
+<VersionCommand template={(v) => `wget '${v.downloadUrl}'`} />
 
 Estrai l'immagine:
 
-<pre><code>{`gunzip ${versions.image}`}</code></pre>
+<VersionCommand template={(v) => `gunzip ${v.image}`} />
 
 Importa l'immagine estratta come disco della macchina virtuale:
 
-<pre><code>{`qm importdisk 401 ${versions.imageNoGz} local-lvm`}</code></pre>
+<VersionCommand template={(v) => `qm importdisk 401 ${v.imageNoGz} local-lvm`} />
 
 Collega il disco alla macchina virtuale:
 

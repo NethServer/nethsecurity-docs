@@ -3,8 +3,7 @@ title: Download
 sidebar_position: 2
 ---
 
-import versions from '@site/src/data/versions.json';
-import {StableReleases, DevReleases} from '@site/src/components/DownloadTable';
+import {StableReleases, DevReleases, ImageVerifyCommand} from '@site/src/components/DownloadTable';
 
 # Download {#download-section}
 
@@ -18,7 +17,7 @@ Begin by downloading the most recent x86_64 image from the table below.
 
 For verification, download also the hash file and execute the following command in a Linux shell to ensure the integrity of the downloaded image:
 
-<pre><code>{`grep ${versions.image} sha256sums | sha256sum -c`}</code></pre>
+<ImageVerifyCommand />
 
 To proceed with the installation of NethSecurity, you have two options: write the downloaded image directly to your disk or create a bootable USB stick. Refer to the [installation](./install.mdx) page for detailed instructions on both methods.
 

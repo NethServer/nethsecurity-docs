@@ -8,9 +8,6 @@
 /.docusaurus
 .docusaurus
 
-# Generated at build time by scripts/generate-version-data.mjs
-/src/data/versions.json
-
 # Misc
 .DS_Store
 .env.local

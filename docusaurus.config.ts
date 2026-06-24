@@ -1,30 +1,14 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import * as fs from 'fs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-// The latest NethSecurity version and download tables are generated at build
-// time by scripts/generate-version-data.mjs into src/data/versions.json.
-let productVersion = '';
-try {
-  productVersion = JSON.parse(
-    fs.readFileSync('./src/data/versions.json', 'utf8'),
-  ).version;
-} catch {
-  // versions.json is absent on a fresh checkout; the prebuild script creates it.
-}
 
 const config: Config = {
   title: 'NethSecurity documentation',
   tagline:
     'NethSecurity is a Unified Threat Management solution based on OpenWrt',
   favicon: 'img/favicon.png',
-
-  customFields: {
-    productVersion,
-  },
 
   future: {
     v4: false,
