@@ -127,12 +127,15 @@ async function collectReleases(prefix: string): Promise<string[]> {
   return folders;
 }
 
+let _cache: VersionData | null = null;
+
 export function useVersionData(): UseVersionDataResult {
-  const [data, setData] = useState<VersionData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<VersionData | null>(_cache);
+  const [loading, setLoading] = useState(_cache === null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (_cache) return;
     let cancelled = false;
 
     async function load() {
@@ -153,14 +156,16 @@ export function useVersionData(): UseVersionDataResult {
         const version = versionText.trim() || (stable[0]?.version ?? '');
         const image = version ? imageName(version) : '';
 
-        setData({
+        const result: VersionData = {
           version,
           image,
           imageNoGz: image.replace(/\.gz$/, ''),
           downloadUrl: version ? makeImageUrl('stable', version) : '',
           stable,
           dev,
-        });
+        };
+        _cache = result;
+        setData(result);
       } catch (e) {
         if (!cancelled) setError(e instanceof Error ? e.message : String(e));
       } finally {

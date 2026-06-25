@@ -1,0 +1,18 @@
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background-color: var(--ifm-color-primary-lightest, var(--ifm-color-emphasis-200));
+  color: var(--ifm-color-primary-darkest, var(--ifm-color-primary));
+  border: 1px solid var(--ifm-color-primary-light, var(--ifm-color-primary));
+}
+
+html[data-theme='dark'] .badge {
+  background-color: var(--ifm-color-primary-darkest, var(--ifm-background-color));
+  color: var(--ifm-color-primary-lightest, var(--ifm-color-primary));
+  border-color: var(--ifm-color-primary, var(--ifm-color-primary));
+}
