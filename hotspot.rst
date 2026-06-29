@@ -159,6 +159,10 @@ These logs include information related to guest sessions, such as:
 
 Connection logs are the first data to be deleted. When the retention period expires, the related guest sessions are deleted, including the ``device_mac`` of the guest device and the ``unit_mac`` of the connected NethSecurity appliance.
 
+.. note:: No browsing logs for guest traffic
+
+NethSpot does not collect or store the browsing activity of Hotspot users. Visited websites, URLs, DNS queries, or other navigation details are neither collected nor retained by the NethSpot cloud portal. The retained information is limited to session data required to identify the guest access session.
+
 Guest login data and vouchers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
