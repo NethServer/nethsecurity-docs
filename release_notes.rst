@@ -23,6 +23,7 @@ Image version: `8.8.0-beta1` (based on OpenWrt 25.12.4)
 - Added the firewall `DON'T TRACK` action.
 - Several features previously limited to subscription-based versions are now available in the Community edition.
 - Added Geoblocking feature to Threat Shield IP, allowing users to block traffic from specific countries or regions.
+- Added support for multiple DHCP ranges directly in the UI, allowing for more flexible IP address allocation.
 
 .. rubric:: Improvements
 
