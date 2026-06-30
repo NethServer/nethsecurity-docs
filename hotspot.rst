@@ -132,3 +132,82 @@ To restore the default DNS settings, use the following commands:
    uci delete dedalo.config.dns2
 
 Then repeat the steps 2 and 3 in the previous section to apply the changes.
+
+
+Data retention for Hotspot service with NethSpot cloud portal
+-------------------------------------------------------------
+
+.. admonition:: NethSpot cloud portal users only
+
+   This section applies only to NethSecurity firewalls with a valid subscription that are specifically using the NethSpot cloud portal, available at https://my.nethspot.com/.
+   If the Hotspot service is used without the NethSpot cloud portal, the information in this section does not apply.
+
+NethSpot stores hotspot-related data on cloud infrastructure located in a European data center in the Netherlands. The retained data includes connection logs, guest login data, voucher information, email-based access data, and SMS-based access data.
+
+Connection logs
+^^^^^^^^^^^^^^^
+
+Connection logs are retained for **6 months**.
+
+These logs include information related to guest sessions, such as:
+
+* connection and disconnection date and time
+* guest user
+* guest device
+* device MAC address
+* NethSecurity unit MAC address
+
+Connection logs are the first data to be deleted. When the retention period expires, the related guest sessions are deleted, including the ``device_mac`` of the guest device and the ``unit_mac`` of the connected NethSecurity appliance.
+
+.. note:: NethSpot does not collect or store the browsing activity of Hotspot users. Visited websites, URLs, DNS queries, or other navigation details are neither collected nor retained by the NethSpot cloud portal. The retained information is limited to session data required to identify the guest access session.
+
+Guest login data and vouchers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Guest login data is retained for the whole validity period of the guest account and for the following **24 months**. This additional retention period allows expired guest accounts to be reactivated, for example by extending their validity from the portal, without having to recreate them. 
+It also helps preserve the association between the guest identity and the previously issued voucher, so that operators can review or extend an existing access record when needed.
+
+This includes data related to platform users, vouchers, email login, and SMS login. When vouchers are used, all the information entered in the voucher is retained, including the data used to identify the guest.
+
+For voucher-based access, retained data may include:
+
+* guest first name and last name, if entered in the voucher
+* guest email address, if entered in the voucher
+* voucher data
+* MAC address of the device used by the guest
+
+The guest name is required when creating a voucher because it is used to identify the association between the guest and the voucher.
+
+Voucher validity and account expiration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vouchers can be created in two ways:
+
+* with a fixed expiration date
+* with a duration, counted from the first activation
+
+Before the first use, a voucher is inactive. When the voucher is used for the first time, it is associated with the guest using it. From that moment, the voucher and the guest account refer to the same access identity.
+
+Administrative hotspot users are not related to guest vouchers.
+
+The additional 24-month retention period starts from the voucher expiration date.
+
+For example, if a voucher expires on **June 30, 2026** and the guest starts using it before that date, the guest account associated with that voucher expires on **June 30, 2026**. The 24-month retention period starts from that date.
+
+This retention period allows the account to be reactivated later, for example by extending its validity from the portal, without deleting the guest data too early.
+
+Contract or service termination
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the contract or service is terminated, guest data is deleted according to the same retention periods described above.
+
+
+Marketing consent
+^^^^^^^^^^^^^^^^^
+
+NethSpot can be configured to ask WiFi guests for marketing consent through the captive portal.
+The marketing consent is collected exclusively for the organization using the hotspot, it is **not used by Nethesis** for its own marketing purposes.
+
+The guest panel clearly shows which guests have given marketing consent: this allows exporting only the contacts that have explicitly provided consent.
+
+Nethesis does not use collected guest contacts for marketing activities and does not sell or transfer this data to third parties.
