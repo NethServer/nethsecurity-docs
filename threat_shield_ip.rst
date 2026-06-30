@@ -135,6 +135,43 @@ Valid syntax for the address is the same as for the :ref:`local_allowlist-sectio
 When adding addresses to the local blocklist, ensure you enter them correctly to avoid accidentally blocking legitimate traffic.
 It's also a good practice to include a descriptive comment for each entry to help with future management and auditing of your blocklist.
 
+.. _geoblocking-section:
+
+Geoblocking
+-----------
+
+The ``Geoblocking`` tab allows you to block network traffic based on the geographic origin of the IP addresses,
+relying on country-based IP feeds. This is useful to keep out traffic coming from countries you never expect to
+interact with.
+
+The feature is disabled by default. To enable it, open the ``Geoblocking`` tab and turn on the ``Geo IP Blocking`` switch.
+Threat Shield IP must be enabled for geoblocking to work.
+
+Countries are organized into regions (Africa, Americas, Asia, Europe, Oceania and Others), each shown as a card
+reporting the number of currently blocked countries. Selecting a region displays the list of its countries, where you can:
+
+- block or allow individual countries using their checkbox;
+- use the :guilabel:`Block all` and :guilabel:`Allow all` buttons to act on the whole region at once;
+- filter the list by country name or by status (blocked / not blocked).
+
+Click :guilabel:`Save` to apply the configuration.
+
+.. warning:: Avoid blocking the regions where your own users are located, otherwise legitimate traffic may be dropped.
+
+Blocking direction
+^^^^^^^^^^^^^^^^^^
+
+By default, geoblocking only blocks **incoming** connections, i.e. traffic initiated from the selected countries
+towards your firewall and networks. Outgoing connections (traffic initiated by your local clients towards hosts in the
+selected countries) are still allowed.
+
+If you also want to block **outgoing** connections to the selected countries, add the ``country`` feed to the
+``ban_blockforwardlan`` property, which applies the feed to the LAN-forward chain. From the command line: ::
+
+  uci add_list banip.global.ban_blockforwardlan='country'
+  uci commit banip
+  /etc/init.d/banip restart
+
 .. _brute_force-section:
 
 Block brute force attacks
