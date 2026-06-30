@@ -291,7 +291,7 @@ The following features are not migrated to NethSecurity:
 - Web proxy (Squid) and filter (ufdbGuard), replaced by :doc:`Content Filtering <content_filter>` and :ref:`dpi_filter-section`
 - IPS (Suricata) and IPS alerts (EveBox), replaced by :ref:`intrusion_prevention_system-section`
 - UPS monitoring (NUT), available only from command line with :doc:`UPS (NUT) <ups>`
-- System statistics (Collectd), replaced by Netdata in :ref:`real_time_monitoring-section`
+- System statistics (Collectd), replaced by Telegraf and VictoriaMetrics page in :ref:`historical_monitoring-section` 
 - Reports (Dante), replaced by controller metrics in :ref:`controller_metrics-section`
 - Bandwidth monitor (ntopng), built-in bandwidth monitoring is available in :ref:`real_time_monitoring-section` and through :ref:`controller_metrics-section`
 - Fail2ban, it is replaced by Threat shield :ref:`brute force attempt block feature <brute_force-section>`
@@ -301,7 +301,7 @@ The following features are not migrated to NethSecurity:
 
 Custom Zones
 ============
-Custom zones are rarely used in NethServer 7 and tipically for very specific tasks. 
+Custom zones are rarely used in NethServer 7 and typically for very specific tasks. 
 They are required to define a network segment with firewall rules different from those of the primary interface or, more commonly, to correctly manage traffic coming from a network other than the one to which the interface is connected.
 These zones allow for defining specific behavior for that network segment and ensure correct routing in complex environments (e.g., a port forwarding rule with a remote host destination via MPLS or a VPN tunnel).
 

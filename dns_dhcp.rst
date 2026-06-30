@@ -50,6 +50,12 @@ Available fields:
   * ``Range IP end`` : last IP address of DHCP range
   * ``Lease time`` :  lease time (default 1 hour)
 
+  Each DHCP server can serve more than one address range: under ``IP ranges`` you can specify multiple distinct IP ranges
+  for the same interface, each one defined by its own ``Range IP start`` and ``Range IP end``. Click :guilabel:`Add IP range`
+  to define an additional range, or use the trash icon next to a range to remove it. At least one range must be specified,
+  while the others are optional. Each range must belong to the interface network class, and the ``Range IP end`` must be
+  higher than the ``Range IP start``. Ranges are allowed to overlap.
+
 **DHCP Advanced settings**
 
 ``Force DHCP server start`` 
@@ -95,6 +101,11 @@ Dynamic leases
 
 Dynamic leases represents IP addresses that are currently in use and have been allocated to devices on the network.
 This tab shows all currently active leases.
+
+.. note::
+   When :ref:`storage-section` is configured, dnsmasq stores the lease file in
+   ``/mnt/data/dnsmasq/dhcp.leases``, so dynamic leases survive reboots.
+   Otherwise it keeps using ``/tmp/dhcp.leases``.
 
 Default Configuration
 ---------------------

@@ -10,8 +10,9 @@ DNS over HTTPS (DoH) is a protocol for encrypting DNS queries over HTTPS, enhanc
 This feature allows you to configure upstream DNS servers that support the DoH protocol.
 The ``https-dns-proxy`` package provides a local DNS-to-HTTPS proxy that forwards DNS queries to a remote DoH provider.
 
-This document provides instructions for installing and configuring the DoH upstream servers that provide
-filtering and are based in the EU, but you can use any DoH provider that suits your needs.
+This document provides instructions for configuring DoH upstream servers that
+provide filtering and are based in the EU, but you can use any DoH provider
+that suits your needs.
 This configuration only applies to the upstream servers of the firewall: clients will continue to send DNS requests to the firewall in plaintext on port 53.
 
 A list of DoH providers that support European locations and filtering are available on the
@@ -28,7 +29,10 @@ Some popular alternatives include:
 Installation
 ============
 
-The ``https-dns-proxy`` package is not included in default NethSecurity images, so you will need to install it manually: ::
+Since NethSecurity 8.8, the ``https-dns-proxy`` package is included in NethSecurity image, so no
+separate installation step is required.
+
+On NethSecurity 8.7, the package is not included in default NethSecurity image, so you will need to install it manually: ::
 
   opkg update
   opkg install https-dns-proxy
@@ -36,12 +40,17 @@ The ``https-dns-proxy`` package is not included in default NethSecurity images, 
 Configuration
 =============
 
-By default, the package includes two providers (Cloudflare and Google).
-To use a custom DoH provider, you'll need to:
+By default, the package includes two providers (Cloudflare and Google), listens
+on ``127.0.0.1:5053`` and ``127.0.0.1:5054``, and keeps
+``dnsmasq_config_update`` set to ``-`` so it does not modify the firewall DNS
+configuration automatically.
+
+To start using the proxy, you need to:
 
 1. Remove the default providers (optional)
 2. Add your preferred DoH provider configuration
-3. Commit and apply the configuration
+3. Choose the ``dnsmasq_config_update`` value to use
+4. Commit the configuration and enable the service
 
 Configuration steps
 -------------------
@@ -65,9 +74,16 @@ In this example, we will configure the DNS4EU (joindns4.eu) DoH provider.
 
 The ``bootstrap_dns`` parameter is optional, if not provided, the system will use Google and Cloudflare DNS for bootstrap.
 
-3. Apply the configuration, https-dns-proxy will automatically use the local DoH proxy as upstream DNS: ::
+3. Enable integration with ``dnsmasq`` and start the service: ::
 
-     reload_config
+     uci set https-dns-proxy.config.dnsmasq_config_update='*'
+     uci commit https-dns-proxy
+     /etc/init.d/https-dns-proxy enable
+     /etc/init.d/https-dns-proxy start
+
+   The value ``*`` updates all ``dnsmasq`` instances. If you need a more
+   specific integration, set ``dnsmasq_config_update`` to the instance name or
+   index you want to manage.
 
 Verification
 ^^^^^^^^^^^^
@@ -100,18 +116,13 @@ Run the following commands via SSH or terminal: ::
 Image update
 ------------
 
-The ``https-dns-proxy`` package overrides the default DNS configuration,
-so if you update your NethSecurity image, the system will not be able to connect to Internet
-and restore the package.
+The package is included in the image, so it does not need to be reinstalled
+after an upgrade.
 
-To overcome this issue, you can temporarily stop the DoH proxy before updating the image: ::
+However, NethSecurity treats ``dnsmasq_config_update='-'`` as the disabled
+state. If that value is still set during an image upgrade, the first-boot
+defaults script can disable ``https-dns-proxy`` again.
 
-  service https-dns-proxy stop
-
-This will restore the default DNS configuration and allow the system to connect to the Internet
-after image update. Once the update is complete, you can restart the DoH proxy: ::
-
-  service https-dns-proxy restart
 
 Blocking other DoH providers
 ----------------------------

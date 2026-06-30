@@ -49,6 +49,15 @@ Restore extra packages
 ----------------------
 Starting from version 8.7.2, extra packages are automatically reinstalled after system upgrade.
 Please note that the reinstall procedure requires access to Internet.
+If one or more packages cannot be installed because the network is not yet ready or a transient error occurs,
+the restore service stays enabled and retries automatically on the next boot until all packages are restored.
+Restored packages are reported inside the log.
+For example, a mixed restore may log::
+
+  Restored package: etherwake
+  Failed to restore package: qemu-ga
+  Some packages failed to restore, will retry later
+
 In case of error, proceed with the manual restore documented below.
 See the next section for earlier versions.
 
@@ -75,9 +84,46 @@ After the upgrade, ensure that the system has internet access, then restore the 
 Automatic package updates
 =========================
 
-.. admonition:: Subscription required
+.. note:: No subscription required
 
-   This feature is available only if the firewall has a valid subscription.
+   Starting from NethSecurity 8.8, this feature is available even without a subscription.
 
 Automatic updates for packages can be enabled from the ``Update`` section under the ``System`` menu, by enabling the ``Automatic updates`` option.
 Updates are checked daily and, if available, they are automatically downloaded and installed.
+
+Package manager commands
+========================
+
+NethSecurity 8.8 uses ``apk``. NethSecurity 8.7.2 and earlier use ``opkg``.
+Use the following quick reference when translating older command examples:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 28 28 44
+
+   * - OPKG command
+     - APK equivalent
+     - Description
+   * - ``opkg install <pkg>``
+     - ``apk add <pkg>``
+     - Install a package
+   * - ``opkg remove <pkg>``
+     - ``apk del <pkg>``
+     - Remove a package
+   * - ``opkg upgrade``
+     - ``apk upgrade``
+     - Upgrade all packages
+   * - ``opkg files <pkg>``
+     - ``apk info -L <pkg>``
+     - List package contents
+   * - ``opkg list-installed``
+     - ``apk info``
+     - List installed packages
+   * - ``opkg update``
+     - ``apk update``
+     - Update package lists
+   * - ``opkg search <pkg>``
+     - ``apk search <pkg>``
+     - Search for packages
+
+The ``opkg find`` command used in a few older examples maps to ``apk search`` on NethSecurity 8.8.

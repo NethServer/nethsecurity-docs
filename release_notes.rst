@@ -8,6 +8,41 @@ NethSecurity releases changelogs.
 - Discussions around `possible bugs <http://community.nethserver.org/c/bug>`_
 
 
+Major changes on 2026-06-25
+===========================
+
+Image version: `8.8.0-beta1` (based on OpenWrt 25.12.4)
+
+.. rubric:: New Features
+
+- Rebased NethSecurity on OpenWrt 25.12.4 and switched package management from `opkg` to `apk`.
+- Monitoring now stores metrics in VictoriaMetrics and automatically uses persistent storage when available.
+- Alerts are now accessibile inside the web interface.
+- Preserved Bash history across reboots and enabled persistent `/var` when storage is available.
+- Added Avahi (mDNS) package to the NethSecurity reposistory.
+- Added the firewall `DON'T TRACK` action.
+- Several features previously limited to subscription-based versions are now available in the Community edition.
+- Added Geoblocking feature to Threat Shield IP, allowing users to block traffic from specific countries or regions.
+- Added support for multiple DHCP ranges directly in the UI, allowing for more flexible IP address allocation.
+
+.. rubric:: Improvements
+
+- Updated Snort with vectorscan to improve performance.
+- Updated OpenVPN to 2.7.4.
+- Updated strongSwan to 6.0.3.
+- Improved package repository handling and signing for the new base image.
+- Netdata is no longer installed by default; legacy controller dashboards can still restore it manually.
+- DHCP leases are now persisted if local storage is available, preventing loss of leases on reboot.
+- Changes to Threat Shield DNS local list are now applied using the commit button, like all other Threat Shield options.
+
+.. rubric:: Bug Fixes
+
+- DNS/DHCP failures now surface clearer troubleshooting information: if dnamsq fails to start, the Web Interface
+  will display an alert.
+- Adblock no longer restarts with empty lists after repeated blocklist or allowlist edits.
+- Traffic logging options are shown consistently in the firewall UI.
+- IPSec tunnel can now use restart dpd_action.
+
 Major changes on 2026-03-25
 ===========================
 

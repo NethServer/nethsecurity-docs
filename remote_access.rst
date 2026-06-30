@@ -191,25 +191,45 @@ From a Linux machine, use the following command: ::
 
    ssh root@192.168.1.1
 
-VGA console and keyboard layout
-===============================
+.. _setup-command-section:
 
-If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. Then, you will be able to log in to the console using the default credentials above.
+Using the setup command
+=======================
 
-Please note that the system is configured with the US keyboard layout.
+If the machine has a VGA/DVI/HDMI video port, connect a monitor to it. You can then use the ``setup`` command from the console to perform the first configuration steps.
 
-To temporarily change the current keyboard layout to Italian, log in to the system and then execute the following command: ::
+Use ``setup`` when the web user interface is not yet reachable, or when you are working from VGA, serial console, or SSH on a new firewall.
 
-  loadkmap < /usr/share/keymaps/it.map.bin
+Run the tool as ``root``::
 
-The keyboard layout configuration can be saved by writing the keymap code inside ``/etc/keymap``. Example for ``it`` (Italian) keymap: ::
+  setup
 
-  echo 'it' > /etc/keymap
-  grep -q /etc/keymap /etc/sysupgrade.conf || echo /etc/keymap >> /etc/sysupgrade.conf
+The interactive menu lets you:
 
-To obtain the list of available keymaps, execute the following command: ::
+* configure the keyboard layout
+* configure the LAN and WAN interfaces
 
-  ls -1 /usr/share/keymaps/ | cut -d'.' -f1
+Keyboard layout
+---------------
+
+The system starts with the US keyboard layout. In the ``setup`` menu, choose `keymap` item to switch between the available layouts.
+The tool currently supports ``us`` and ``it`` keymaps.
+
+The selected keymap is applied immediately and saved automatically, so it remains active after reboot.
+It's also preserved inside the backup to be restored in case of system recovery or upgrade.
+
+Network settings
+----------------
+
+The ``setup`` tool allows you to configure the following network settings:
+
+- LAN interface: DHCP or static IP address with netmask in CIDR notation
+- WAN interface: DHCP or static IP address with netmask in CIDR notation and gateway
+
+After making changes, the network configuration must be applied with the `Apply network changes` button in the network section.
+
+If you are using a non-US keyboard layout, you can change it in the setup tool before entering the network configuration.
+This is important because the network configuration requires typing IP addresses and other information that may be affected by the keyboard layout.
 
 Serial console 
 ==============
@@ -240,9 +260,15 @@ Two packages are provided for installation, covering the vast majority of adapte
 
 * To install Prolific PL2303 driver:
 
-  ::
+  If you are running NethSecurity 8.8, use::
 
-    opkg install kmod-usb-serial-pl2303
+      apk update
+      apk add kmod-usb-serial-pl2303
+
+  If you are running NethSecurity 8.7.2 or older, use::
+
+      opkg update
+      opkg install kmod-usb-serial-pl2303
 
 * The logs will show an output similar to this:
 
