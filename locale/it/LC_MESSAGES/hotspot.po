@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 
-#: ../../hotspot.rst:3 28aa659f53e94f08aba8bb44280e773d
+#: ../../hotspot.rst:3 5412f37bfc0f4293885ed78b5c3ee914
 msgid "Hotspot"
 msgstr "Hotspot"
 
-#: ../../hotspot.rst:5 3c3de4831c7348b888afc04360e0a81d
+#: ../../hotspot.rst:5 c1a93106555748f0bac022ed09dea64c
 msgid ""
 "Hotspot main goal is to provide internet connectivity via wi-fi to casual "
 "users. Users are sent to a captive portal from which they can access the "
@@ -22,19 +22,19 @@ msgstr ""
 "regolamentazione, la tracciabilità e la tariffazione dell'accesso a Internet"
 " in luoghi pubblici, come piazze, hotel, stazioni e molti altri."
 
-#: ../../hotspot.rst:9 62ac70eaf459428a96c587e908e750b5
+#: ../../hotspot.rst:9 9884ee2e27504446bc1f77fc861f99e8
 msgid "Main features"
 msgstr "Funzionalità principali"
 
-#: ../../hotspot.rst:11 bae467a334384c30bb028dfbd9649cae
+#: ../../hotspot.rst:11 b9601ecfdd5a4c6eb977b22f5787db54
 msgid "Network isolation between corporate and guests"
 msgstr "Isolamento della rete tra azienda e ospiti"
 
-#: ../../hotspot.rst:13 8664f4f6f16143e381d44199a9b551ca
+#: ../../hotspot.rst:13 2508bc808eae41f68904ecee39aacb77
 msgid "Customizable captive portal page"
 msgstr "Pagina del captive portal personalizzabile"
 
-#: ../../hotspot.rst:15 5364a14c7f4b4df7a4cb9bbe60754cbc
+#: ../../hotspot.rst:15 416028d72cb243bbb2b68b0436fbbea5
 msgid ""
 "Many authentication modes supported (Social Login, SMS, Email or Voucher "
 "code)"
@@ -42,27 +42,27 @@ msgstr ""
 "Sono supportate molte modalità di autenticazione (Social Login, SMS, Email o"
 " codice Voucher)"
 
-#: ../../hotspot.rst:17 c6ba633e85e14c0dad1e3eeb6ae8c481
+#: ../../hotspot.rst:17 2f1c6807303a4b4f9d70dd98cd4c0d86
 msgid "AutoLogin support"
 msgstr "Supporto AutoLogin"
 
-#: ../../hotspot.rst:19 a79c9751c4644948b2f59eebf5aa57e3
+#: ../../hotspot.rst:19 6cb718ee8f1540a6a270001d394297ad
 msgid "Hotspot manager with different accesses type (admin, customer, desk)"
 msgstr "Gestore hotspot con diversi tipi di accesso (admin, cliente, desk)"
 
-#: ../../hotspot.rst:21 f71e1ebe7a204b47882ae8f399031175
+#: ../../hotspot.rst:21 0d2ab8ddc2ab471984e04d1474378b30
 msgid "Export of accounts and connections report"
 msgstr "Esportazione del report di account e connessioni"
 
-#: ../../hotspot.rst:24 986e92f32c8540ea89a2141a72c840b3
+#: ../../hotspot.rst:24 56c0401a126e43ad8a27a1b9f80b9e07
 msgid "How it works?"
 msgstr "Come funziona?"
 
-#: ../../hotspot.rst:26 71bcddad1ec1422eba4266624527f797
+#: ../../hotspot.rst:26 608e4c2489804b2cae958b4040008243
 msgid "The implementation is based on 2 components:"
 msgstr "L'implementazione si basa su 2 componenti:"
 
-#: ../../hotspot.rst:28 a2a11adf8b5f4182af715f00bb4fff6b
+#: ../../hotspot.rst:28 41aba43f96434bd2bc930dcf34fb3515
 msgid ""
 "A hotspot manager section running on a cloud server, a dedicated WebUI "
 "allows you to perform tasks as:"
@@ -70,7 +70,7 @@ msgstr ""
 "Una sezione del gestore hotspot in esecuzione su un server cloud, una WebUI "
 "dedicata consente di eseguire attività quali:"
 
-#: ../../hotspot.rst:30 bb437fbd32c64512afc8e1d8f92b15d3
+#: ../../hotspot.rst:30 9939c9d973164dd19e9aef80edbfb4f5
 msgid ""
 "create a hotspot instance: usually each instance is referred to a specific "
 "location (e.g. Art Cafè, Ritz Hotel and so on)"
@@ -78,19 +78,19 @@ msgstr ""
 "creare un'istanza hotspot: di solito ogni istanza fa riferimento a una "
 "posizione specifica (ad esempio, Art Cafè, Ritz Hotel e così via)"
 
-#: ../../hotspot.rst:32 cbb7557baa334a20b26fbfcfa52c8071
+#: ../../hotspot.rst:32 d33e29ff0dbb4324a81a0498f8942118
 msgid "edit the captive portal page"
 msgstr "modificare la pagina del captive portal"
 
-#: ../../hotspot.rst:34 65a7f1f28c98485286eaa1942cd9744a
+#: ../../hotspot.rst:34 ebf7708af5f445b2b5d8e4b26c090827
 msgid "choose what type of login to use"
 msgstr "scegliere quale tipo di accesso utilizzare"
 
-#: ../../hotspot.rst:36 321c41e7dcb449d98427d4927885c6cc
+#: ../../hotspot.rst:36 41e25386a8b24ffba0121fca1a96383b
 msgid "see session and users logged"
 msgstr "vedere sessione e utenti connessi"
 
-#: ../../hotspot.rst:38 e2bfe9dce3394bba9c620f6b5af0594c
+#: ../../hotspot.rst:38 a550ec96292f440fb82510fd06cc4970
 msgid ""
 "A client part running on NethSecurity (in nethspot terminology this client "
 "is called \"unit\") ."
@@ -98,19 +98,19 @@ msgstr ""
 "Una parte client in esecuzione su NethSecurity (in terminologia nethspot "
 "questo client è chiamato \"unità\")."
 
-#: ../../hotspot.rst:40 925c914811b24128a46c0f7e4be17e0d
+#: ../../hotspot.rst:40 849604d9d2524ee093ab3a97ef698280
 msgid "It has to be physically connected to the Access Points network"
 msgstr "Deve essere fisicamente connesso alla rete degli Access Points"
 
-#: ../../hotspot.rst:41 a6ec37e36a894810a4a112b0f94f1984
+#: ../../hotspot.rst:41 6685972f15e64945a8f75af63f2a16a1
 msgid "It assigns IP addresses to devices"
 msgstr "Assegna indirizzi IP ai dispositivi"
 
-#: ../../hotspot.rst:42 d64724bb96144e53b5f1148e7cba2b0c
+#: ../../hotspot.rst:42 7f44b087ddbf4b15ae5907c9c2876074
 msgid "It redirects devices to the captive portal"
 msgstr "Reindirizza i dispositivi al captive portal"
 
-#: ../../hotspot.rst:45 8ac84161bff94debb06a85e1a59d580e
+#: ../../hotspot.rst:45 4db11d835be94b47b4d2dea475148dc6
 msgid ""
 "This manual only cover the client part. If you're interested on the hotspot "
 "manager section please refer to `Icaro project "
@@ -125,11 +125,11 @@ msgstr ""
 "SaaS fornito da Nethesis e disponibile su `my.nethspot.com "
 "<https://my.nethspot.com>`_."
 
-#: ../../hotspot.rst:49 1cc54ce2fcb4426da59d70476d501f31
+#: ../../hotspot.rst:49 8f58c72e0fbb41e39d63be9a967da1d3
 msgid "Status"
 msgstr "Stato"
 
-#: ../../hotspot.rst:51 7de272afda1a450a83376a51e1e8dafd
+#: ../../hotspot.rst:51 a5654044f8694c938d15a394c19a1993
 msgid ""
 "This section shows all users connected to the system, distinguishing those "
 "who have authenticated from those who have simply received an IP address, it"
@@ -142,11 +142,11 @@ msgstr ""
 "il traffico effettuato e così via. Informazioni più dettagliate sono "
 "disponibili nel gestore hotspot."
 
-#: ../../hotspot.rst:55 b72df49a9d674273bb2e70b1c68d8a53
+#: ../../hotspot.rst:55 188c9cc47c214b898b4950a5243b7747
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: ../../hotspot.rst:56 d19eeb5ed4a9478b98a40546842db4d3
+#: ../../hotspot.rst:56 d0103c8994744c4da960cff9e3e40e79
 msgid ""
 "This section allows you to associate a unit with a specific hotspot instance"
 " created in the hotspot manager."
@@ -154,7 +154,7 @@ msgstr ""
 "Questa sezione consente di associare un'unità a una specifica istanza di "
 "hotspot creata nel gestore degli hotspot."
 
-#: ../../hotspot.rst:58 128827faacc8463b823c67663942705d
+#: ../../hotspot.rst:58 624a8387dce341a79baf25372c7c2ea4
 msgid ""
 "Before associating the unit you must create an instance in the hotspot "
 "manager."
@@ -162,7 +162,7 @@ msgstr ""
 "Prima di associare l'unità è necessario creare un'istanza nel gestore degli "
 "hotspot."
 
-#: ../../hotspot.rst:60 dc5cf4f2035c4eb0970f301cd9822049
+#: ../../hotspot.rst:60 b6bdcff74a934ff895004e4731693032
 msgid ""
 "Multiple geographically separated units (NethSecurity) can be connected to "
 "the same centralized hotspot instance, creating a conference in which all "
@@ -174,11 +174,11 @@ msgstr ""
 "tutti gli utenti accedono allo stesso captive portal e possono riutilizzare "
 "le stesse credenziali di accesso in tutte le unità collegate."
 
-#: ../../hotspot.rst:63 361e3d3c7eb14555b8827ade85d104c3
+#: ../../hotspot.rst:63 aa3a0625e68046ada8b4c1163ee8b892
 msgid "Login to your hotspot manager"
 msgstr "Accedere al proprio gestore hotspot"
 
-#: ../../hotspot.rst:65 3753037d7da447e6a186e79f131f48b1
+#: ../../hotspot.rst:65 b38555211a3b4c8db926f0a29635fb46
 msgid ""
 "This operation is mandatory to associate your unit with the created hotspot "
 "instance, use the same user and password of your hotspot manager, the "
@@ -189,7 +189,7 @@ msgstr ""
 " manager. Il campo ``Nome host`` per impostazione predefinita punta a "
 "my.nethspot.com."
 
-#: ../../hotspot.rst:67 5dd8106cd216440a91d2092ec387724f
+#: ../../hotspot.rst:67 783ef057f23e4894aa2eac22400f1dd9
 msgid ""
 "Once you have logged in you can continue to fill in the following fields. "
 "This login access will remain active for 24 hours without any need to login "
@@ -199,21 +199,21 @@ msgstr ""
 "seguenti campi. Questo accesso rimarrà attivo per 24 ore senza la necessità "
 "di effettuare nuovamente il login."
 
-#: ../../hotspot.rst:71 9ea0b9144477423f8e11694ae594aff1
+#: ../../hotspot.rst:71 0b1d88889a3744fca21d2940e083d295
 msgid "Register your unit"
 msgstr "Registrare l'unità"
 
-#: ../../hotspot.rst:73 5a18e460e1654442b9f47601087bbecf
+#: ../../hotspot.rst:73 a3c3d085353f4dd482e6aa9c3129d690
 msgid ""
 "``Parent Hotspot`` : choose which instance you want to connect your unit to"
 msgstr ""
 "``Hotspot parent`` : scegliere a quale istanza si desidera collegare l'unità"
 
-#: ../../hotspot.rst:75 63e00473de7343fb80cc7ec1f7883df2
+#: ../../hotspot.rst:75 59684331146b4786a583664e08102e70
 msgid "``Unit name`` : your NethSecurity's name"
 msgstr "``Nome unità`` : il nome del proprio NethSecurity"
 
-#: ../../hotspot.rst:77 374fb8c70fbc4b68af9ba9d38899b823
+#: ../../hotspot.rst:77 0148ddd11ddf4fee9ccfff2a99d18421
 msgid ""
 "``Unit description`` : insert a brief description so that you can identify "
 "your unit more easily"
@@ -221,7 +221,7 @@ msgstr ""
 "``Descrizione unità`` : inserire una breve descrizione per identificare più "
 "facilmente l'unità"
 
-#: ../../hotspot.rst:79 b5402aabcb5b411b94453f1ed73e5ef1
+#: ../../hotspot.rst:79 5ba131d60350463b898c1497b646e110
 msgid ""
 "``Network device`` : Specify a network device to be used by the hotspot "
 "service. The device can be either physical or a VLAN; however, it is crucial"
@@ -236,7 +236,7 @@ msgstr ""
 "l'hotspot intercetterà tutte le connessioni su questa interfaccia di rete, "
 "imponendo l'autenticazione per i client connessi."
 
-#: ../../hotspot.rst:82 271abdf999f147158f1d4a682e3b278f
+#: ../../hotspot.rst:82 b72ec51771494150abae5fe57690e773
 msgid ""
 "``Network address`` : clients will receive an IP address belonging to this "
 "network (use CIDR format). The first address of the network class is always "
@@ -255,7 +255,7 @@ msgstr ""
 "netmask più ampia (/23 o /22 o anche superiore) e assicurarsi di avere un "
 "intervallo appropriato."
 
-#: ../../hotspot.rst:87 47d4cf901e7246b68ad153538ee380db
+#: ../../hotspot.rst:87 e85398f1a85143d5bb490bf9e62d7bfa
 msgid ""
 "``DHCP limit`` : by default, the system uses the entire network range. "
 "However, you can define a more specific range by adjusting the maximum "
@@ -267,7 +267,7 @@ msgstr ""
 "specifico regolando il numero massimo di lease. Il primo indirizzo "
 "dell'intervallo DHCP viene calcolato automaticamente."
 
-#: ../../hotspot.rst:89 a37b897de2c749ef90dcd5809246d258
+#: ../../hotspot.rst:89 3162e37de27e4b8e8bc28e9f3e24938d
 msgid ""
 "After having fulfilled the form click :guilabel:`Save` button to register "
 "the unit."
@@ -275,24 +275,23 @@ msgstr ""
 "Dopo aver compilato il modulo, fare clic sul pulsante :guilabel:`Salva` per "
 "registrare l'unità."
 
-#: ../../hotspot.rst:91 880b02aa663d41f28c61c5a6255c6b9a
+#: ../../hotspot.rst:91 ef8bc94901be4fa8becf8b1a95000e6f
 msgid ""
 "Please verify in the hotspot manager-> Units that your unit has been "
 "properly registered. Each properly registered unit must show its MAC address"
 " in the hotspot manager. If the MAC address is missing please unregister the"
 " unit and try to do the registration again."
 msgstr ""
-"Verificare in Hotspot manager -> Units che l'unità "
-"sia stata registrata correttamente. Ogni unità registrata correttamente deve"
-" mostrare il proprio indirizzo MAC nel Hotspot manager`. Se "
-"l'indirizzo MAC è assente, annullare la registrazione dell'unità e ripetere "
-"la procedura di registrazione."
+"Verificare in Hotspot manager -> Units che l'unità sia stata registrata "
+"correttamente. Ogni unità registrata correttamente deve mostrare il proprio "
+"indirizzo MAC nel Hotspot manager`. Se l'indirizzo MAC è assente, annullare "
+"la registrazione dell'unità e ripetere la procedura di registrazione."
 
-#: ../../hotspot.rst:94 887ecd8ba7be49d2a02fb1f72014847b
+#: ../../hotspot.rst:94 a0f3c0e19d9a400e9e38befd66d51fdf
 msgid "Unregister your unit"
 msgstr "Annullare la registrazione dell'unità"
 
-#: ../../hotspot.rst:96 78c69c969e7b4bbca474c2a3eafb5bcf
+#: ../../hotspot.rst:96 05b9d79cc460439cb0d6c03d467a72d8
 msgid ""
 "If you made some error registering your unit (es. unit was associated to a "
 "wrong hotspot instance) or you want to remove this service, do the login in "
@@ -304,16 +303,16 @@ msgstr ""
 "Se è stato commesso un errore durante la registrazione dell'unità (ad "
 "esempio, l'unità è stata associata a un'istanza hotspot errata) oppure si "
 "desidera rimuovere questo servizio, effettuare l'accesso nella sezione "
-"hotspot di NethSecurity e fare clic su :guilabel:`Rimuovi registrazione unità hotspot`. L'unità "
-"verrà rimossa sia da NethSecurity sia dal gestore hotspot remoto, "
-"l'interfaccia utilizzata in NethSecurity verrà liberata e potrà essere "
-"utilizzata per altri scopi."
+"hotspot di NethSecurity e fare clic su :guilabel:`Rimuovi registrazione "
+"unità hotspot`. L'unità verrà rimossa sia da NethSecurity sia dal gestore "
+"hotspot remoto, l'interfaccia utilizzata in NethSecurity verrà liberata e "
+"potrà essere utilizzata per altri scopi."
 
-#: ../../hotspot.rst:100 843bee962db5418b97251e242e63a056
+#: ../../hotspot.rst:100 288f2bb6e32640b7ac92076aac8d392d
 msgid "Change DNS settings"
 msgstr "Modificare le impostazioni DNS"
 
-#: ../../hotspot.rst:102 8d44b9ac8a11492b933fa47d1f98ccd8
+#: ../../hotspot.rst:102 e353ff00378b410c96f7ca1b0f9c35b1
 msgid ""
 "By default the DNS server used by the hotspot is from OpenDNS, to change the"
 " DNS settings manual configuration is required. Please follow the steps "
@@ -324,31 +323,296 @@ msgstr ""
 "configurazione manuale. Seguire i passaggi riportati di seguito dal "
 "terminale:"
 
-#: ../../hotspot.rst:105 96d6c52fc81746608a14aa1555f0da7e
+#: ../../hotspot.rst:105 1f371f71b5d84667a88143faa7d43194
 msgid "Edit the UCI configuration file with the following commands:"
 msgstr "Modificare il file di configurazione UCI con i seguenti comandi:"
 
-#: ../../hotspot.rst:112 879e4842d74b47549eb1b99421bdddd3
+#: ../../hotspot.rst:112 797b982441144b1fa861030cd2384438
 msgid "Save the changes with the following command:"
 msgstr "Salvare le modifiche con il seguente comando:"
 
-#: ../../hotspot.rst:118 91e5725dbe83418aadaf7e8ef191fa17
+#: ../../hotspot.rst:118 4ed010d04e76456d8ecd05dfd3048da2
 msgid "Restart the dedalo service with:"
 msgstr "Riavviare il servizio dedalo con:"
 
-#: ../../hotspot.rst:125 7a8dba7a52c14c9f8f9bbcc60e621ef6
+#: ../../hotspot.rst:125 d7ba6a5fb53a4bf498e6e49fe502703a
 msgid "Restore default DNS settings"
 msgstr "Ripristinare le impostazioni DNS predefinite"
 
-#: ../../hotspot.rst:127 91d38e4d6ad54892885c30d0cdc5c11a
+#: ../../hotspot.rst:127 b55c265ee3a44a23bafb5ce638d69100
 msgid "To restore the default DNS settings, use the following commands:"
 msgstr ""
 "Per ripristinare le impostazioni DNS predefinite, utilizzare i seguenti "
 "comandi:"
 
-#: ../../hotspot.rst:134 7ec2e93ef48d4ad7bf937fd7ebdfc3d3
+#: ../../hotspot.rst:134 73a58e75e4ea4b47b627f547ddb91bc2
 msgid ""
 "Then repeat the steps 2 and 3 in the previous section to apply the changes."
 msgstr ""
 "Quindi ripetere i passaggi 2 e 3 della sezione precedente per applicare le "
 "modifiche."
+
+#: ../../hotspot.rst:138 f941d7f506cf4564976eebd853993f43
+msgid "Data retention for Hotspot service with NethSpot cloud portal"
+msgstr ""
+"Conservazione dei dati per il servizio Hotspot con il portale cloud NethSpot"
+
+#: ../../hotspot.rst:140 ef433551c87d4000a5451b95c9cfa14a
+msgid "NethSpot cloud portal users only"
+msgstr "Solo per gli utenti del portale cloud NethSpot"
+
+#: ../../hotspot.rst:142 2dc8da905ba040c3b4b66bb7fbba13d4
+msgid ""
+"This section applies only to NethSecurity firewalls with a valid "
+"subscription that are specifically using the NethSpot cloud portal, "
+"available at https://my.nethspot.com/. If the Hotspot service is used "
+"without the NethSpot cloud portal, the information in this section does not "
+"apply."
+msgstr ""
+"Questa sezione si applica solo ai firewall NethSecurity con un abbonamento "
+"valido che utilizzano specificamente il portale cloud NethSpot, disponibile "
+"all'indirizzo https://my.nethspot.com/. Se il servizio Hotspot viene "
+"utilizzato senza il portale cloud NethSpot, le informazioni in questa "
+"sezione non sono applicabili."
+
+#: ../../hotspot.rst:145 4bf216cfd4b74d509981a5d85fb8d508
+msgid ""
+"NethSpot stores hotspot-related data on cloud infrastructure located in a "
+"European data center in the Netherlands. The retained data includes "
+"connection logs, guest login data, voucher information, email-based access "
+"data, and SMS-based access data."
+msgstr ""
+"NethSpot memorizza i dati relativi agli hotspot su un'infrastruttura cloud "
+"situata in un data center europeo nei Paesi Bassi. I dati conservati "
+"includono i log delle connessioni, i dati di accesso degli ospiti, le "
+"informazioni sui voucher, i dati di accesso tramite email e i dati di "
+"accesso tramite SMS."
+
+#: ../../hotspot.rst:148 1d516854bb8e499caaa3fa2c97237848
+msgid "Connection logs"
+msgstr "Log di connessione"
+
+#: ../../hotspot.rst:150 de042e39b26e416aa72029e48618a81a
+msgid "Connection logs are retained for **6 months**."
+msgstr "I log di connessione vengono conservati per **6 mesi**."
+
+#: ../../hotspot.rst:152 7643b585b4214991b0ad9f79fcdae5c6
+msgid "These logs include information related to guest sessions, such as:"
+msgstr ""
+"Questi log includono informazioni relative alle sessioni guest, come ad "
+"esempio:"
+
+#: ../../hotspot.rst:154 a4acecc0f4d7411f90d7ef8f157a013c
+msgid "connection and disconnection date and time"
+msgstr "data e ora di connessione e disconnessione"
+
+#: ../../hotspot.rst:155 d97e73a4805d403ba8e3945d1706ccdf
+msgid "guest user"
+msgstr "utente ospite"
+
+#: ../../hotspot.rst:156 747311f9190440c3ae313345833a536c
+msgid "guest device"
+msgstr "dispositivo guest"
+
+#: ../../hotspot.rst:157 98eb3ecc96c44067a4a9e8bc1e95727a
+msgid "device MAC address"
+msgstr "indirizzo MAC del dispositivo"
+
+#: ../../hotspot.rst:158 9e41774939fa4af3b4bc9bc7486cdfaf
+msgid "NethSecurity unit MAC address"
+msgstr "Indirizzo MAC dell'unità NethSecurity"
+
+#: ../../hotspot.rst:160 32025527aa584f20bbe60285b5c78e07
+msgid ""
+"Connection logs are the first data to be deleted. When the retention period "
+"expires, the related guest sessions are deleted, including the "
+"``device_mac`` of the guest device and the ``unit_mac`` of the connected "
+"NethSecurity appliance."
+msgstr ""
+"I log di connessione sono i primi dati a essere eliminati. Alla scadenza del"
+" periodo di conservazione, vengono eliminate le relative sessioni guest, "
+"inclusi il ``device_mac`` del dispositivo guest e il ``unit_mac`` "
+"dell'appliance NethSecurity connessa."
+
+#: ../../hotspot.rst:162 b0ef8fa3104e4a9e9fe5476552822817
+msgid ""
+"NethSpot does not collect or store the browsing activity of Hotspot users. "
+"Visited websites, URLs, DNS queries, or other navigation details are neither"
+" collected nor retained by the NethSpot cloud portal. The retained "
+"information is limited to session data required to identify the guest access"
+" session."
+msgstr ""
+"NethSpot non raccoglie né memorizza l’attività di navigazione degli utenti "
+"Hotspot. I siti visitati, gli URL, le query DNS o altri dettagli di "
+"navigazione non vengono né raccolti né conservati dal portale cloud "
+"NethSpot. Le informazioni conservate sono limitate ai dati di sessione "
+"necessari per identificare la sessione di accesso guest."
+
+#: ../../hotspot.rst:165 41b547b2d80d4cf4844ec12fa54579b7
+msgid "Guest login data and vouchers"
+msgstr "Dati di accesso ospite e voucher"
+
+#: ../../hotspot.rst:167 c33a7c9b2b994b68b58a82a650e76d8a
+msgid ""
+"Guest login data is retained for the whole validity period of the guest "
+"account and for the following **24 months**. This additional retention "
+"period allows expired guest accounts to be reactivated, for example by "
+"extending their validity from the portal, without having to recreate them. "
+"It also helps preserve the association between the guest identity and the "
+"previously issued voucher, so that operators can review or extend an "
+"existing access record when needed."
+msgstr ""
+"I dati di accesso degli ospiti vengono conservati per l'intero periodo di "
+"validità dell'account ospite e per i **24 mesi** successivi. Questo periodo "
+"di conservazione aggiuntivo consente di riattivare account ospiti scaduti, "
+"ad esempio estendendone la validità dal portale, senza doverli ricreare. "
+"Inoltre, aiuta a preservare l'associazione tra l'identità dell'ospite e il "
+"voucher precedentemente emesso, in modo che gli operatori possano consultare"
+" o estendere un record di accesso esistente quando necessario."
+
+#: ../../hotspot.rst:170 d59965ce1ef243b6bdef2a7df1b0cadc
+msgid ""
+"This includes data related to platform users, vouchers, email login, and SMS"
+" login. When vouchers are used, all the information entered in the voucher "
+"is retained, including the data used to identify the guest."
+msgstr ""
+"Questo include dati relativi agli utenti della piattaforma, voucher, accesso"
+" tramite email e accesso tramite SMS. Quando vengono utilizzati i voucher, "
+"tutte le informazioni inserite nel voucher vengono conservate, inclusi i "
+"dati utilizzati per identificare l'ospite."
+
+#: ../../hotspot.rst:172 970faf86fc30485480819bcea8261855
+msgid "For voucher-based access, retained data may include:"
+msgstr "Per l'accesso basato su voucher, i dati conservati possono includere:"
+
+#: ../../hotspot.rst:174 894fd8c5e5644d15b841596099d5becb
+msgid "guest first name and last name, if entered in the voucher"
+msgstr "nome e cognome dell'ospite, se inseriti nel voucher"
+
+#: ../../hotspot.rst:175 9be52785388c4132912477f89b9e9803
+msgid "guest email address, if entered in the voucher"
+msgstr "indirizzo email dell'ospite, se inserito nel voucher"
+
+#: ../../hotspot.rst:176 59e47349ed364ab69ae9358604c70e3d
+msgid "voucher data"
+msgstr "dati del voucher"
+
+#: ../../hotspot.rst:177 9d7adc97358241e1a12a929bf11ff918
+msgid "MAC address of the device used by the guest"
+msgstr "Indirizzo MAC del dispositivo utilizzato dall'ospite"
+
+#: ../../hotspot.rst:179 27c286d8c1e3432d9478c6a26ff97920
+msgid ""
+"The guest name is required when creating a voucher because it is used to "
+"identify the association between the guest and the voucher."
+msgstr ""
+"Il nome dell'ospite è obbligatorio durante la creazione di un voucher perché"
+" viene utilizzato per identificare l'associazione tra l'ospite e il voucher."
+
+#: ../../hotspot.rst:182 a5c16360fe9c487e93a34141687365b0
+msgid "Voucher validity and account expiration"
+msgstr "Validità del voucher e scadenza dell'account"
+
+#: ../../hotspot.rst:184 1d8fd93afefd4bcc894be3fc10bd0011
+msgid "Vouchers can be created in two ways:"
+msgstr "I voucher possono essere creati in due modi:"
+
+#: ../../hotspot.rst:186 d7a789ac3d224c3bbe5ff2c55e9635c5
+msgid "with a fixed expiration date"
+msgstr "con una data di scadenza fissa"
+
+#: ../../hotspot.rst:187 25500f0920224f80b3cdf4be87e8b2b4
+msgid "with a duration, counted from the first activation"
+msgstr "con una durata, calcolata a partire dalla prima attivazione"
+
+#: ../../hotspot.rst:189 891a742ac76647f2b1ef7f3a6bb84861
+msgid ""
+"Before the first use, a voucher is inactive. When the voucher is used for "
+"the first time, it is associated with the guest using it. From that moment, "
+"the voucher and the guest account refer to the same access identity."
+msgstr ""
+"Prima del primo utilizzo, un voucher è inattivo. Quando il voucher viene "
+"utilizzato per la prima volta, viene associato all'ospite che lo utilizza. "
+"Da quel momento, il voucher e l'account dell'ospite fanno riferimento alla "
+"stessa identità di accesso."
+
+#: ../../hotspot.rst:191 7b372370046b43f2844ace2070026532
+msgid "Administrative hotspot users are not related to guest vouchers."
+msgstr ""
+"Gli utenti amministrativi dell'hotspot non sono collegati ai voucher ospite."
+
+#: ../../hotspot.rst:193 38c5d48561734249a94c9ef3bc391c76
+msgid ""
+"The additional 24-month retention period starts from the voucher expiration "
+"date."
+msgstr ""
+"Il periodo di conservazione aggiuntivo di 24 mesi inizia dalla data di "
+"scadenza del voucher."
+
+#: ../../hotspot.rst:195 c2e468c0882a484a8ea72f0b118bb236
+msgid ""
+"For example, if a voucher expires on **June 30, 2026** and the guest starts "
+"using it before that date, the guest account associated with that voucher "
+"expires on **June 30, 2026**. The 24-month retention period starts from that"
+" date."
+msgstr ""
+"Ad esempio, se un voucher scade il **30 giugno 2026** e l'ospite inizia a "
+"utilizzarlo prima di tale data, l'account ospite associato a quel voucher "
+"scade il **30 giugno 2026**. Il periodo di conservazione di 24 mesi inizia "
+"da quella data."
+
+#: ../../hotspot.rst:197 b016055b1cab4958a5f406998f0e7df6
+msgid ""
+"This retention period allows the account to be reactivated later, for "
+"example by extending its validity from the portal, without deleting the "
+"guest data too early."
+msgstr ""
+"Questo periodo di conservazione consente di riattivare l'account in un "
+"secondo momento, ad esempio estendendone la validità dal portale, senza "
+"eliminare i dati dell'ospite troppo presto."
+
+#: ../../hotspot.rst:200 941b9fe43cfb499087858f783b17d4ef
+msgid "Contract or service termination"
+msgstr "Risoluzione del contratto o del servizio"
+
+#: ../../hotspot.rst:202 79ceb71c38d445328cb32e61a6e9800c
+msgid ""
+"If the contract or service is terminated, guest data is deleted according to"
+" the same retention periods described above."
+msgstr ""
+"Se il contratto o il servizio viene terminato, i dati degli ospiti vengono "
+"eliminati secondo gli stessi periodi di conservazione descritti sopra."
+
+#: ../../hotspot.rst:206 e8e55bfa3d994e21b8122c7f8423e84f
+msgid "Marketing consent"
+msgstr "Consenso marketing"
+
+#: ../../hotspot.rst:208 3a4a5a41e40f4ab5bd6025ecb7a91e46
+msgid ""
+"NethSpot can be configured to ask WiFi guests for marketing consent through "
+"the captive portal. The marketing consent is collected exclusively for the "
+"organization using the hotspot, it is **not used by Nethesis** for its own "
+"marketing purposes."
+msgstr ""
+"NethSpot può essere configurato per richiedere il consenso marketing agli "
+"ospiti WiFi tramite il captive portal. Il consenso marketing viene raccolto "
+"esclusivamente per l'organizzazione che utilizza l'hotspot, **non viene "
+"utilizzato da Nethesis** per scopi di marketing propri."
+
+#: ../../hotspot.rst:211 abbb1842e75b4f66a0c4b7ee32215592
+msgid ""
+"The guest panel clearly shows which guests have given marketing consent: "
+"this allows exporting only the contacts that have explicitly provided "
+"consent."
+msgstr ""
+"Il pannello degli ospiti mostra chiaramente quali ospiti hanno fornito il "
+"consenso marketing: questo permette di esportare solo i contatti che hanno "
+"esplicitamente fornito il consenso."
+
+#: ../../hotspot.rst:213 63aa13e29ef84a8b85c12141ff35c10d
+msgid ""
+"Nethesis does not use collected guest contacts for marketing activities and "
+"does not sell or transfer this data to third parties."
+msgstr ""
+"Nethesis non utilizza i contatti degli ospiti raccolti per attività di "
+"marketing e non vende né trasferisce questi dati a terzi."
