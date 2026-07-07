@@ -41,6 +41,13 @@ export function StableReleases(): ReactNode {
   return <ReleaseTable rows={data?.stable ?? []} />;
 }
 
+export function StagingReleases(): ReactNode {
+  const {data, loading, error} = useVersionData();
+  if (loading) return <p>Loading releases…</p>;
+  if (error) return <p>Could not load releases: {error}</p>;
+  return <ReleaseTable rows={data?.staging ?? []} />;
+}
+
 export function DevReleases(): ReactNode {
   const {data, loading, error} = useVersionData();
   if (loading) return <p>Loading releases…</p>;
@@ -57,6 +64,7 @@ const FALLBACK: VersionData = {
   imageNoGz: 'nethsecurity-<version>-x86-64-generic-squashfs-combined-efi.img',
   downloadUrl: '#',
   stable: [],
+  staging: [],
   dev: [],
 };
 

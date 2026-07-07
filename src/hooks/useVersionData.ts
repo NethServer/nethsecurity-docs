@@ -17,6 +17,7 @@ export type VersionData = {
   imageNoGz: string;
   downloadUrl: string;
   stable: Release[];
+  staging: Release[];
   dev: Release[];
 };
 
@@ -140,18 +141,20 @@ export function useVersionData(): UseVersionDataResult {
 
     async function load() {
       try {
-        const [versionText, stableFolders, devFolders] = await Promise.all([
+        const [versionText, stableFolders, stagingFolders, devFolders] = await Promise.all([
           // Degrade gracefully if latest_release has CORS issues.
           fetch(`${BASE_URL}/stable/latest_release`)
             .then((r) => (r.ok ? r.text() : ''))
             .catch(() => ''),
           collectReleases('stable'),
+          collectReleases('staging'),
           collectReleases('dev'),
         ]);
 
         if (cancelled) return;
 
         const stable = buildRows('stable', stableFolders);
+        const staging = buildRows('staging', stagingFolders);
         const dev = buildRows('dev', devFolders);
         const version = versionText.trim() || (stable[0]?.version ?? '');
         const image = version ? imageName(version) : '';
@@ -162,6 +165,7 @@ export function useVersionData(): UseVersionDataResult {
           imageNoGz: image.replace(/\.gz$/, ''),
           downloadUrl: version ? makeImageUrl('stable', version) : '',
           stable,
+          staging,
           dev,
         };
         _cache = result;
