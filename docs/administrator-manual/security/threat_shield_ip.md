@@ -85,6 +85,38 @@ To access and customize the blocklist, navigate to the `Local blocklist` tab in 
 
 When adding addresses to the local blocklist, ensure you enter them correctly to avoid accidentally blocking legitimate traffic. It\'s also a good practice to include a descriptive comment for each entry to help with future management and auditing of your blocklist.
 
+## Geoblocking {#geoblocking-section}
+
+The `Geoblocking` tab allows you to block network traffic based on the geographic origin of the IP addresses, relying on country-based IP feeds. This is useful to keep out traffic coming from countries you never expect to interact with.
+
+The feature is disabled by default. To enable it, open the `Geoblocking` tab and turn on the `Geo IP Blocking` switch. Threat Shield IP must be enabled for geoblocking to work.
+
+Countries are organized into regions (Africa, Americas, Asia, Europe, Oceania and Others), each shown as a card reporting the number of currently blocked countries. Selecting a region displays the list of its countries, where you can:
+
+- block or allow individual countries using their checkbox;
+- use the **Block all** and **Allow all** buttons to act on the whole region at once;
+- filter the list by country name or by status (blocked / not blocked).
+
+Click **Save** to apply the configuration.
+
+:::warning
+
+Avoid blocking the regions where your own users are located, otherwise legitimate traffic may be dropped.
+
+:::
+
+### Blocking direction
+
+By default, geoblocking only blocks **incoming** connections, i.e. traffic initiated from the selected countries towards your firewall and networks. Outgoing connections (traffic initiated by your local clients towards hosts in the selected countries) are still allowed.
+
+If you also want to block **outgoing** connections to the selected countries, add the `country` feed to the `ban_blockforwardlan` property, which applies the feed to the LAN-forward chain. From the command line:
+
+```bash
+uci add_list banip.global.ban_blockforwardlan='country'
+uci commit banip
+/etc/init.d/banip restart
+```
+
 ## Block brute force attacks {#brute_force-section}
 
 When Threat Shield IP is enabled, the system automatically starts checking for brute force attack attempts on firewall services. By default, the monitored services include SSH access and the login to NethSecurity UI. The system detects login attempts and automatically blocks IPs that have failed to enter the correct credentials.
