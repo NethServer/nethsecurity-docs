@@ -147,7 +147,7 @@ const config: Config = {
           items: [
             {
               label: 'Package browser',
-              href: '/packages/',
+              href: 'pathname:///packages/',
             },
             {
               label: 'GitHub',
