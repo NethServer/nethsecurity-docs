@@ -164,9 +164,9 @@ const config: Config = {
     },
     // Algolia DocSearch. Fill in apiKey/appId/indexName once provisioned.
     algolia: {
-      appId: 'PLACEHOLDER_APP_ID',
-      apiKey: 'PLACEHOLDER_SEARCH_API_KEY',
-      indexName: 'nethsecurity',
+      appId: '10HTUTQ94F',
+      apiKey: '1194366ce35a4f804c40fb58cea070dc',
+      indexName: 'NethSecurity Docs',
       searchPagePath: 'search',
       insights: true,
     },
