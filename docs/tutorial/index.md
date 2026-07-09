@@ -18,6 +18,7 @@ This section collects focused how-to articles.
 - [DNS over HTTPS](./dns-over-https.md) — set up DNS over HTTPS with filtering for privacy-focused DNS
 - [Hardware RAID controller](./hardware-raid-controller-nethsecurity-8.md) — driver compatibility and workarounds for hardware RAID controllers
 - [High Availability (HA)](./high-availability-ha.md) — active/passive HA setup, support package, and upgrade from NethSecurity 7
+- [Hosting an FTP server in passive mode](./hosting-an-ftp-server-passive-mode.md) — allow passive FTP connections for a LAN server behind NethSecurity 8
 - [Installing on a VPS](./installing-nethsecurity-8-on-a-vps.md) — install NethSecurity on cloud providers that don't allow disk image uploads
 - [Network interface reorder after upgrade to 8.7.1](./network-interface-reorder-after-upgrade-8-7-1.md) — fix for network interface order changes after upgrade with mixed NIC vendors
 - [Registration troubleshooting](./registration-troubleshooting-nethsecurity-8.md) — diagnose and fix registration failures
