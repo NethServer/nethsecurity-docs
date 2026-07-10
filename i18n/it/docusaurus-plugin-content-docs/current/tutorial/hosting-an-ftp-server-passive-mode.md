@@ -33,8 +33,6 @@ Per consentire il traffico FTP in modalità passiva, è necessario abilitare esp
    reload_config
    ```
 
-## Migrazione da NethServer 7
-
-:::warning
+:::tip
 Se si sta migrando una configurazione esistente da **NethServer 7**, il passaggio 1 non è necessario. Nei firewall migrati, gli helper sono abilitati per impostazione predefinita per garantire la compatibilità.
 :::
