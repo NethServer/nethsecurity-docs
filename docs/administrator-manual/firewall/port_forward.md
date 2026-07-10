@@ -31,11 +31,10 @@ For each port forward the user can also configure the following aspects:
 - **Access restriction**: Port forwards can be restricted to specific sources to enhance security. This can be done using the `Restrict access to` field. The field accepts IP addresses, CIDR blocks or an object. All objects are supported, except host sets containing IP ranges or nested objects.
 - **Enabling logging**: port forwards can be configured to log incoming traffic for each rule. By enabling the `Log` option, the network administrator can keep track of the traffic passing through the port forward, allowing for monitoring and analysis. By default, logging is limited to 1 entry per second. To change this limit, refer to the [Logging limits](./firewall_rules.md#logging-limits) section.
 
-
 ## Port forwarding for an FTP server in passive mode {#port_forward_ftp-section}
 
 When creating a port forward for TCP port `21` to publish an FTP server located inside the LAN, passive FTP connections may not work correctly with the default configuration.
-Passive FTP uses additional dynamically negotiated ports for data connections. To allow NethSecurity 8 to identify these related connections and apply NAT correctly, the Netfilter FTP connection tracking helper must be enabled on the WAN zone.
+Passive FTP uses additional dynamically negotiated ports for data connections: to allow NethSecurity 8 to identify these related connections and apply NAT correctly, the Netfilter FTP connection tracking helper must be enabled on the WAN zone.
 
 ### Configuration
 
@@ -67,8 +66,6 @@ If the firewall was migrated from NethServer 7, step 1 is not required because t
 However, step 2 is still required: the FTP helper must be explicitly assigned to the `ns_wan` zone also on migrated systems.
 
 :::
-
-
 
 ## Hairpin NAT {#hairpin-section}
 
