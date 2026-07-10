@@ -33,8 +33,6 @@ To allow passive FTP traffic, explicitly enable the Netfilter FTP connection tra
    reload_config
    ```
 
-## Migration from NethServer 7
-
-:::warning
+:::tip
 If you are migrating an existing setup from **NethServer 7**, step 1 is not required. On migrated firewalls, the helpers are enabled by default for compatibility.
 :::
