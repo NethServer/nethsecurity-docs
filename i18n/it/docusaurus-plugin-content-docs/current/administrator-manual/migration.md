@@ -140,7 +140,7 @@ Dopo le modifiche, i dispositivi usano nomi più corti (es. `b0`, `b0.20`), comp
 | Server DHCP e prenotazioni | Migrata con limitazioni | I server DHCP su interfacce bond non sono supportati. |
 | Configurazione DNS e host locali | Migrata con limitazioni | Le opzioni TFTP sono migrate, ma il contenuto TFTP no. Per riabilitarlo, configura `tftp_root` manualmente. |
 | Rotte IPv4 statiche | Migrata | |
-| Port forward | Migrata | |
+| Port forward | Migrata | Se utilizzi il port forwarding per un server FTP, devi abilitare esplicitamente l’helper conntrack FTP sulla zona WAN. Consulta la sezione [Port Forward](./firewall/port_forward.md) per i dettagli.|
 | Zone firewall | Migrata | Green → `lan`, red → `wan`, orange → `dmz`, blue → `guest`. Se esisteva una zona blue, le regole di accettazione DNS e DHCP vengono aggiunte automaticamente. |
 | Regole firewall | Migrata con conversione | Le regole che usano servizi NDPI non sono supportate. Gli oggetti sorgente/destinazione vengono convertiti in valori IP/CIDR. |
 | Oggetti firewall | Non ricreati | Gli oggetti non possono essere reimportati automaticamente. Le regole che usavano oggetti vengono convertite nei corrispondenti valori IP/CIDR. |

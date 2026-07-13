@@ -31,6 +31,44 @@ Per ogni port forward l'utente può anche configurare i seguenti aspetti:
 - **Restrizione dell'accesso**: i port forward possono essere limitati a fonti specifiche per migliorare la sicurezza. Questo può essere fatto utilizzando il campo `Restrict access to`. Il campo accetta indirizzi IP, blocchi CIDR o un oggetto. Tutti gli oggetti sono supportati, ad eccezione dei set di host contenenti intervalli di IP o oggetti annidati.
 - **Abilitazione della registrazione**: i port forward possono essere configurati per registrare il traffico in ingresso per ogni regola. Abilitando l'opzione `Log`, l'amministratore di rete può tenere traccia del traffico che passa attraverso il port forward, consentendo il monitoraggio e l'analisi. Per impostazione predefinita, la registrazione è limitata a 1 voce al secondo. Per modificare questo limite, fare riferimento alla sezione [Logging limits](./firewall_rules.md#logging-limits).
 
+## Port forwarding per un server FTP in modalità passiva {#port_forward_ftp-section}
+
+Quando si crea un port forward della porta TCP `21` per pubblicare un server FTP situato nella LAN, le connessioni FTP passive potrebbero non funzionare correttamente con la configurazione predefinita.
+
+L'FTP passivo utilizza porte aggiuntive negoziate dinamicamente per le connessioni dati. Per consentire a NethSecurity 8 di identificare queste connessioni correlate e applicare correttamente il NAT, è necessario abilitare l'helper di connection tracking FTP di Netfilter sulla zona WAN.
+
+### Configurazione
+
+#### 1. Caricare i moduli helper FTP
+
+Dalla pagina **NAT helpers** dell'interfaccia web, abilitare i seguenti moduli del kernel:
+
+```text
+nf_conntrack_ftp
+nf_nat_ftp
+```
+
+#### 2. Abilitare l'helper FTP sulla zona WAN
+
+Connettersi al firewall tramite SSH ed eseguire:
+
+```bash
+uci set firewall.ns_wan.auto_helper='0'
+uci set firewall.ns_wan.helper='ftp'
+uci commit firewall
+reload_config
+```
+
+Questa configurazione disabilita l'assegnazione automatica degli helper e abilita esplicitamente l'helper FTP sulla zona `ns_wan`.
+
+:::warning
+
+Se il firewall è stato migrato da NethServer 7, il passaggio 1 non è necessario perché, per compatibilità con le versioni precedenti, i moduli helper FTP sono già abilitati per impostazione predefinita.
+Il passaggio 2 rimane comunque necessario: anche sui sistemi migrati, l'helper FTP deve essere assegnato esplicitamente alla zona `ns_wan`.
+
+:::
+
+
 ## Hairpin NAT {#hairpin-section}
 
 Hairpin NAT, noto anche come NAT loopback o NAT reflection, è una tecnica utilizzata in rete in cui gli host interni accedono a un server situato all'interno della stessa rete locale utilizzando l'indirizzo IP esterno del router o del firewall. In altre parole, quando i dispositivi interni tentano di connettersi a un server utilizzando l'indirizzo IP pubblico, hairpin NAT garantisce che il traffico sia instradato internamente senza uscire da internet e poi rientrare nella rete locale.
