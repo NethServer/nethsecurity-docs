@@ -10,7 +10,7 @@ The solution provides a redundant and reliable infrastructure, ensuring that tra
 
 Unlike the previous version in NethSecurity 7.9, installation and configuration can be carried out autonomously, without the need to send equipment to Nethesis laboratories.
 
-Full documentation is available in the official manual: [High Availability](https://docs.nethsecurity.org/en/latest/ha_overview_features_limitations.html#overview-features-limitations)
+Full documentation is available in the official manual: [High Availability](../administrator-manual/high-availability/ha_overview_features_limitations.md)
 
 ## Support limitations
 

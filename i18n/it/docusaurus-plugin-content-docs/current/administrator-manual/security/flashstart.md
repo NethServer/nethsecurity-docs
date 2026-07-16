@@ -72,7 +72,7 @@ Le reti precedentemente configurate utilizzando l'accesso basato su email contin
 - `Password` : Inserisci la stessa password utilizzata per il tuo account FlashStart
 - `Zone da filtrare` : Seleziona le zone di rete che desideri proteggere con il filtraggio DNS. Solo le zone selezionate saranno interessate dal filtro DNS FlashStart.
 - `Ignora IP sorgente o reti` : È possibile specificare un elenco di indirizzi IP o reti (formato CIDR) che dovrebbero evitare il filtraggio DNS. Il traffico da queste sorgenti non sarà soggetto a nessuna regola di filtraggio.
-- `Server DNS personalizzati` : Se hai bisogno di definire **resolver DNS personalizzati per domini specifici**, puoi configurarli qui. La sintassi è la stessa utilizzata nella sezione DNS di NethSecurity. Per riferimento, consulta la documentazione ufficiale: `Server DNS specifici del dominio <https://docs.nethsecurity.org/en/latest/dns_dhcp.html#domain-specific-dns-servers>`_
+- `Server DNS personalizzati` : Se hai bisogno di definire **resolver DNS personalizzati per domini specifici**, puoi configurarli qui. La sintassi è la stessa utilizzata nella sezione DNS di NethSecurity. Per riferimento, consulta la documentazione ufficiale: [Server DNS specifici del dominio](../network/dns_dhcp.md#server-dns-specifici-del-dominio)
 
 Una volta configurato il servizio FlashStart sul firewall, tutta la configurazione e la gestione successive devono essere eseguite esclusivamente tramite il portale web FlashStart. Nessun ulteriore cambiamento è richiesto sul firewall stesso.
 

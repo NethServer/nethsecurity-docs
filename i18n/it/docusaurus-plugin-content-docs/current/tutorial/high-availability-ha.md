@@ -10,7 +10,7 @@ La soluzione consente di ottenere un'infrastruttura ridondata e affidabile, assi
 
 A differenza della versione precedente presente in NethSecurity 7.9, l'installazione e la configurazione possono essere eseguite in autonomia, senza la necessità di inviare le macchine ai laboratori Nethesis.
 
-La documentazione completa è consultabile nel manuale ufficiale: [Alta Affidabilità](https://docs.nethsecurity.org/it/latest/ha_overview_features_limitations.html#overview-features-limitations)
+La documentazione completa è consultabile nel manuale ufficiale: [Alta Affidabilità](../administrator-manual/high-availability/ha_overview_features_limitations.md)
 
 ## Limitazioni supporto
 
