@@ -40,23 +40,27 @@ Verify the output locally with:
 
     check_mk_agent
 
-## Allow remote monitoring
+## Restrict access to the agent
 
-The agent listens on TCP port `6556`. By default, traffic from the LAN is allowed, but if you have a more restrictive firewall configuration, you may need to allow access to this port from the Checkmk monitoring server.
+:::warning
 
-You can add a firewall rule to allow access directly from web user interface, see [Rules](../firewall/firewall_rules.md), or use the command line interface to add a rule.
+The Checkmk agent exposes system and monitoring data over the network. Make sure to secure access to the agent port, allowing only trusted hosts; otherwise, sensitive information could leak.
 
-For example, to allow access from a monitoring host in the LAN:
+:::
+
+The agent listens on TCP port `6556`. By default, traffic from the LAN is allowed, so it is recommended to restrict access to this port to trusted hosts only.
+
+You can manage firewall rules directly from the web user interface, see [Rules](../firewall/firewall_rules.md), or use the command line interface as shown below.
+
+For example, to block access to the agent port from any source:
 
     uci add firewall rule
-    uci set firewall.@rule[-1].name='Allow-Checkmk'
-    uci set firewall.@rule[-1].src='lan'
-    uci set firewall.@rule[-1].proto='tcp'
+    uci set firewall.@rule[-1].name='Block-Checkmk'
+    uci set firewall.@rule[-1].src='*'
+    uci add_list firewall.@rule[-1].proto='tcp'
     uci set firewall.@rule[-1].dest_port='6556'
-    uci set firewall.@rule[-1].target='ACCEPT'
+    uci set firewall.@rule[-1].target='DROP'
     uci commit firewall
-    /etc/init.d/firewall restart
+    reload_config
 
-Bear in mind that if the monitoring server is located in a different zone, you will need to adjust the source zone and address accordingly.
-
-When the rule is in place, the monitoring server can connect to the firewall and read the agent output, including the optional NethSecurity checks.
+If you need remote monitoring, add a specific allow rule scoped to the trusted Checkmk monitoring server and zone, and make sure it is ordered before the block rule above, since firewall rules are evaluated in order and the first match wins.
