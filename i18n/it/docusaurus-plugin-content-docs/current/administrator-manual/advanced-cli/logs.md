@@ -157,6 +157,21 @@ Per interrompere e disabilitare il forwarder: :
 
     /etc/init.d/ns-clm stop && /etc/init.d/ns-clm disable
 
+## Ricezione dei log da dispositivi remoti {#receiving-logs-from-remote-devices}
+
+NethSecurity esegue un input rsyslog che può ricevere messaggi di log da altri dispositivi tramite la rete.  
+L'input UDP è abilitato di default sulla porta 514, mentre l'input TCP è disabilitato.
+
+Per motivi di sicurezza, entrambi gli input sono associati all'interfaccia di loopback (`127.0.0.1`) di default, quindi il servizio non accetta log da dispositivi remoti a meno che non venga configurato esplicitamente. L'indirizzo di binding è controllato dalle opzioni `udp_input_address` e `tcp_input_address` della configurazione `syslog`.
+
+Per ricevere log da dispositivi remoti, configurare l'input per ascoltare su tutte le interfacce (`0.0.0.0`) o su un indirizzo IP locale specifico. Esempio per l'input UDP sulla porta 514: ::
+
+`uci set rsyslog.syslog.udp_input_address=0.0.0.0`  
+`uci commit rsyslog`  
+`/etc/init.d/rsyslog restart`
+
+Lo stesso vale per l'input TCP utilizzando l'opzione `tcp_input_address`. L'accesso a questo servizio deve essere gestito a livello di firewall, aggiungendo le regole appropriate per consentire il traffico in entrata sulla porta scelta.
+
 ## Rotazione dei registri {#log-rotation-section}
 
 I registri vengono ruotati per gestire lo spazio su disco e garantire che i file di registro non crescano indefinitamente.
