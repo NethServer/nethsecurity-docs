@@ -40,23 +40,27 @@ Verifica l'output localmente con:
 
     check_mk_agent
 
-## Consentire il monitoraggio remoto
+## Limitare l'accesso all'agente
 
-L'agent è in ascolto sulla porta TCP `6556`. Per impostazione predefinita, il traffico dalla LAN è consentito, ma se hai una configurazione del firewall più restrittiva, potrebbe essere necessario consentire l'accesso a questa porta dal server di monitoraggio Checkmk.
+:::warning
 
-Puoi aggiungere una regola del firewall per consentire l'accesso direttamente dall'interfaccia utente web, vedi [Rules](../firewall/firewall_rules.md), oppure utilizzare l'interfaccia della riga di comando per aggiungere una regola.
+L'agente Checkmk espone dati di sistema e di monitoraggio sulla rete. Assicurarsi di proteggere l'accesso alla porta dell'agente, consentendo l'accesso solo a host fidati; in caso contrario, informazioni sensibili potrebbero essere esposte.
 
-Ad esempio, per consentire l'accesso da un host di monitoraggio nella LAN:
+:::
+
+L'agente ascolta sulla porta TCP `6556`. Per impostazione predefinita, il traffico dalla LAN è consentito, quindi si raccomanda di limitare l'accesso a questa porta solo agli host fidati.
+
+È possibile gestire le regole del firewall direttamente dall'interfaccia web, vedere [Regole](../firewall/firewall_rules.md), oppure utilizzare l'interfaccia a riga di comando come mostrato di seguito.
+
+Ad esempio, per bloccare l'accesso alla porta dell'agente da qualsiasi origine:
 
     uci add firewall rule
-    uci set firewall.@rule[-1].name='Allow-Checkmk'
-    uci set firewall.@rule[-1].src='lan'
-    uci set firewall.@rule[-1].proto='tcp'
+    uci set firewall.@rule[-1].name='Block-Checkmk'
+    uci set firewall.@rule[-1].src='*'
+    uci add_list firewall.@rule[-1].proto='tcp'
     uci set firewall.@rule[-1].dest_port='6556'
-    uci set firewall.@rule[-1].target='ACCEPT'
+    uci set firewall.@rule[-1].target='DROP'
     uci commit firewall
-    /etc/init.d/firewall restart
+    reload_config
 
-Tieni presente che se il server di monitoraggio si trova in una zona diversa, dovrai modificare la zona di origine e l'indirizzo di conseguenza.
-
-Quando la regola è in vigore, il server di monitoraggio può connettersi al firewall e leggere l'output dell'agent, inclusi i controlli NethSecurity facoltativi.
+Se è necessario il monitoraggio remoto, aggiungere una regola specifica di autorizzazione limitata al server di monitoraggio Checkmk fidato e alla zona, e assicurarsi che sia ordinata prima della regola di blocco sopra, poiché le regole del firewall vengono valutate in ordine e la prima corrispondenza prevale.
