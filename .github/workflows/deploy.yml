@@ -34,7 +34,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       # `yarn build` runs the prebuild script that fetches the latest
       # NethSecurity version and download tables, then builds the static site.
