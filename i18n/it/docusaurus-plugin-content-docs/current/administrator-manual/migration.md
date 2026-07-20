@@ -172,6 +172,7 @@ Le seguenti funzionalità non vengono migrate in NethSecurity:
 - **Monitor banda** (ntopng): disponibile nel [Monitoraggio in tempo reale](./monitoring/monitoring.md) e in [Metriche](./system/controller.md)
 - **Fail2ban**: sostituito da Threat Shield [protezione attacchi brute force](./security/threat_shield_ip.md)
 - **Threat Shield DNS**: deve essere riconfigurato manualmente — vedi [Threat Shield DNS](./security/threat_shield_dns.md)
+- **Template personalizzati** (`template-custom`): non migrati — questo meccanismo non esiste più in NethSecurity. L'interfaccia web espone ora molte più opzioni di configurazione rispetto a NethServer 7, quindi verifica se lo stesso risultato è ottenibile direttamente dall'interfaccia. Se non sei sicuro che la stessa funzionalità sia già presente in NethSecurity, apri un ticket di supporto a Nethesis prima di procedere con la migrazione.
 
 ## Zone personalizzate
 
