@@ -50,7 +50,7 @@ Most syslog servers are configured to listen on UDP port 514 by default.
 Example configuration for sending logs to the syslog server with IP 192.168.1.88 on UDP port 514. The configuration is named `clm` (custom log manager):
 
     uci set rsyslog.clm=forwarder
-    uci set rsyslog.clm.source=*.* 
+    uci set rsyslog.clm.source=*.*
     uci set rsyslog.clm.protocol=udp
     uci set rsyslog.clm.port=514
     uci set rsyslog.clm.target=192.168.1.88
@@ -156,6 +156,25 @@ To also enable the service at boot: :
 To stop and disable the forwarder: :
 
     /etc/init.d/ns-clm stop && /etc/init.d/ns-clm disable
+
+## Receiving logs from remote devices
+
+NethSecurity runs an rsyslog input that can receive log messages from other devices over the network.
+The UDP input is enabled by default on port 514, while the TCP input is disabled.
+
+For security reasons, both inputs are bound to the loopback interface (`127.0.0.1`) by default, so the service
+does not accept logs from remote devices unless explicitly configured. The bind address is controlled by the
+`udp_input_address` and `tcp_input_address` options of the `syslog` configuration.
+
+To receive logs from remote devices, set the input to listen on all interfaces (`0.0.0.0`) or on a specific
+local IP address. Example for the UDP input on port 514: ::
+
+uci set rsyslog.syslog.udp_input_address=0.0.0.0
+uci commit rsyslog
+/etc/init.d/rsyslog restart
+
+The same applies to the TCP input using the `tcp_input_address` option. Access to this service must be
+handled at firewall level, by adding the appropriate rules to allow inbound traffic on the chosen port.
 
 ## Log rotation {#log-rotation-section}
 
