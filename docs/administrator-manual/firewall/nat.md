@@ -75,7 +75,7 @@ Let's use this translation scheme.
 - Network A: 192.168.1.0/24 -\> is translated to -\> Network ALT_A: 10.1.1.0/24
 - Network B: 192.168.1.0/24 -\> is translated to -\> Network ALT_B: 10.2.2.0/24
 
-A host in network A trying to reach a host in network B must not contact the real IP but its translated network (only the last octet remains the same). For example, the host 192.168.1.10 from the network A wanting to reach 192.168.0.20 in network B must contact the IP 10.2.2.20 instead. Before the request exits firewall FW-A, the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The inverse process will occur for the returning packets.
+A host in network A trying to reach a host in network B must not contact the real IP but its translated network (only the last octet remains the same). For example, the host 192.168.1.10 from the network A wanting to reach 192.168.1.20 in network B must contact the IP 10.2.2.20 instead. Before the request exits firewall FW-A, the source of the packet will be rewritten by FW-A to the ALT_IP 10.1.1.10 to eliminate every routing issue on network B. The inverse process will occur for the returning packets.
 
 **Solution** The problem can be solved by using netmap to translate the traffic to a different private network. This allows the traffic to be routed correctly.
 
