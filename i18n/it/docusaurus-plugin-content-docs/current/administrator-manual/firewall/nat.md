@@ -75,7 +75,7 @@ Usiamo questo schema di traduzione.
 - Network A: 192.168.1.0/24 -> è tradotto a -> Network ALT_A: 10.1.1.0/24
 - Network B: 192.168.1.0/24 -> è tradotto a -> Network ALT_B: 10.2.2.0/24
 
-Un host nella rete A che cerca di raggiungere un host nella rete B non deve contattare l'IP reale ma la sua rete tradotta (solo l'ultimo ottetto rimane lo stesso). Ad esempio, l'host 192.168.1.10 dalla rete A che vuole raggiungere 192.168.0.20 nella rete B deve contattare l'IP 10.2.2.20 invece. Prima che la richiesta esca dal firewall FW-A, l'origine del pacchetto verrà riscritta da FW-A all'ALT_IP 10.1.1.10 per eliminare ogni problema di routing sulla rete B. Il processo inverso si verificherà per i pacchetti di ritorno.
+Un host nella rete A che cerca di raggiungere un host nella rete B non deve contattare l'IP reale ma la sua rete tradotta (solo l'ultimo ottetto rimane lo stesso). Ad esempio, l'host 192.168.1.10 dalla rete A che vuole raggiungere 192.168.1.20 nella rete B deve contattare l'IP 10.2.2.20 invece. Prima che la richiesta esca dal firewall FW-A, l'origine del pacchetto verrà riscritta da FW-A all'ALT_IP 10.1.1.10 per eliminare ogni problema di routing sulla rete B. Il processo inverso si verificherà per i pacchetti di ritorno.
 
 **Soluzione** Il problema può essere risolto utilizzando netmap per tradurre il traffico a una rete privata diversa. Ciò consente al traffico di essere instradato correttamente.
 
