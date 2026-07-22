@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-US" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tutorial/active-directory-ldap-bind-issues" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.1">
+<title data-rh="true">Active Directory LDAP bind issues | NethSecurity documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.nethsecurity.org/pr-preview/pr-298/docs/tutorial/active-directory-ldap-bind-issues"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="it_IT"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Active Directory LDAP bind issues | NethSecurity documentation"><meta data-rh="true" name="description" content="Recent versions of Microsoft Active Directory, including Windows Server 2025, enforce stricter security requirements that can cause LDAP bind operations to fail when NethSecurity tries to connect to a remote AD user database. This tutorial explains how to diagnose the issue, apply the appropriate fix, and configure the AD remote database on NethSecurity to authenticate OpenVPN Road Warrior users."><meta data-rh="true" property="og:description" content="Recent versions of Microsoft Active Directory, including Windows Server 2025, enforce stricter security requirements that can cause LDAP bind operations to fail when NethSecurity tries to connect to a remote AD user database. This tutorial explains how to diagnose the issue, apply the appropriate fix, and configure the AD remote database on NethSecurity to authenticate OpenVPN Road Warrior users."><link data-rh="true" rel="icon" href="/pr-preview/pr-298/img/favicon.png"><link data-rh="true" rel="canonical" href="https://docs.nethsecurity.org/pr-preview/pr-298/docs/tutorial/active-directory-ldap-bind-issues"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-298/docs/tutorial/active-directory-ldap-bind-issues" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-298/it/docs/tutorial/active-directory-ldap-bind-issues" hreflang="it-IT"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-298/docs/tutorial/active-directory-ldap-bind-issues" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://10HTUTQ94F-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Active Directory LDAP bind issues","item":"https://docs.nethsecurity.org/pr-preview/pr-298/docs/tutorial/active-directory-ldap-bind-issues"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="NethSecurity documentation" href="/pr-preview/pr-298/opensearch.xml"><link rel="stylesheet" href="/pr-preview/pr-298/assets/css/styles.c1f0ff24.css">
+<script src="/pr-preview/pr-298/assets/js/runtime~main.63c8cc86.js" defer="defer"></script>
+<script src="/pr-preview/pr-298/assets/js/main.606c50ab.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/pr-preview/pr-298/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/pr-preview/pr-298/"><div class="navbar__logo"><img src="/pr-preview/pr-298/img/logo.svg" alt="NethSecurity" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/pr-preview/pr-298/img/logo.svg" alt="NethSecurity" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" href="/pr-preview/pr-298/docs/administrator-manual">Administrator manual</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/pr-preview/pr-298/docs/tutorial">Tutorial</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/pr-preview/pr-298/docs/tutorial/active-directory-ldap-bind-issues" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en-US">English</a></li><li><a href="/pr-preview/pr-298/it/docs/tutorial/active-directory-ldap-bind-issues" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="it-IT">Italiano</a></li></ul></div><a href="https://github.com/NethServer/nethsecurity-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial"><span title="Tutorial" class="linkLabel_WmDU">Tutorial</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/nethsecurity-8-faq"><span title="FAQ" class="linkLabel_WmDU">FAQ</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/troubleshooting"><span title="Troubleshooting" class="linkLabel_WmDU">Troubleshooting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/nethsecurity-8-gdpr-compliance-information"><span title="GDPR compliance" class="linkLabel_WmDU">GDPR compliance</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/pr-preview/pr-298/docs/tutorial/active-directory-ldap-bind-issues"><span title="Active Directory LDAP bind issues" class="linkLabel_WmDU">Active Directory LDAP bind issues</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/custom-openvpn-tunnel"><span title="Custom OpenVPN tunnel" class="linkLabel_WmDU">Custom OpenVPN tunnel</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/dns-over-https"><span title="DNS over HTTPS with filtering" class="linkLabel_WmDU">DNS over HTTPS with filtering</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/hardware-raid-controller-nethsecurity-8"><span title="Hardware RAID controller" class="linkLabel_WmDU">Hardware RAID controller</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/high-availability-ha"><span title="High Availability (HA)" class="linkLabel_WmDU">High Availability (HA)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/installing-nethsecurity-8-on-a-vps"><span title="Installing on a VPS" class="linkLabel_WmDU">Installing on a VPS</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/network-interface-reorder-after-upgrade-8-7-1"><span title="Network interface reorder after upgrade to 8.7.1" class="linkLabel_WmDU">Network interface reorder after upgrade to 8.7.1</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/registration-troubleshooting-nethsecurity-8"><span title="Registration troubleshooting" class="linkLabel_WmDU">Registration troubleshooting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/uci"><span title="UCI (Unified Configuration Interface)" class="linkLabel_WmDU">UCI (Unified Configuration Interface)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/nethesis-threat-shield"><span title="Nethesis Threat Shield" class="linkLabel_WmDU">Nethesis Threat Shield</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-298/docs/tutorial/cerbeyra-probe"><span title="Cerbeyra probe" class="linkLabel_WmDU">Cerbeyra probe</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/pr-preview/pr-298/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Active Directory LDAP bind issues</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Active Directory LDAP bind issues</h1></header>
+<p>Recent versions of Microsoft Active Directory, including Windows Server 2025, enforce stricter security requirements that can cause LDAP bind operations to fail when NethSecurity tries to connect to a remote AD user database. This tutorial explains how to diagnose the issue, apply the appropriate fix, and configure the AD remote database on NethSecurity to authenticate OpenVPN Road Warrior users.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="problem-description">Problem description<a href="#problem-description" class="hash-link" aria-label="Direct link to Problem description" title="Direct link to Problem description" translate="no">​</a></h2>
+<p>When you add a Windows Server 2025 (or later) Active Directory as a remote user database on NethSecurity, the LDAP bind may fail with an error such as <strong>&quot;Server is unavailable&quot;</strong> or <strong>&quot;Strong(er) authentication required&quot;</strong>. This happens because Windows Server 2025 disables unsigned LDAP binds by default.</p>
+<p>You can reproduce the failure from the NethSecurity console:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">LDAPTLS_REQCERT=never ldapsearch \</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  -D &#x27;binduser@example.com&#x27; \</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  -w &#x27;Password123!&#x27; \</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  -b &#x27;DC=example,DC=com&#x27; \</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  -Z \</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  -H ldap://192.168.10.100:389</span><br></div></code></pre></div></div>
+<p>If the Domain Controller rejects the connection, you will see errors similar to:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">ldap_start_tls: Server is unavailable (52)</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">        additional info: 00000000: LdapErr: DSID-0C09131E, comment: Error initializing SSL/TLS, data 0, v2580</span><br></div></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="solutions">Solutions<a href="#solutions" class="hash-link" aria-label="Direct link to Solutions" title="Direct link to Solutions" translate="no">​</a></h2>
+<p>Two approaches exist to resolve the bind failure. Choose the one that fits your environment.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-1-configure-ldaps-or-starttls-recommended-for-production">Option 1: configure LDAPS or StartTLS (recommended for production)<a href="#option-1-configure-ldaps-or-starttls-recommended-for-production" class="hash-link" aria-label="Direct link to Option 1: configure LDAPS or StartTLS (recommended for production)" title="Direct link to Option 1: configure LDAPS or StartTLS (recommended for production)" translate="no">​</a></h3>
+<p>Configure the Domain Controller with a valid TLS certificate and enable LDAPS (<code>ldaps://</code>, port 636) or StartTLS (<code>ldap://</code>, port 389 with <strong>StartTLS</strong> enabled).</p>
+<p>On the NethSecurity remote database:</p>
+<ul>
+<li class="">Use <code>ldaps://dc.example.com:636</code> as the <strong>LDAP URI</strong> and leave <strong>StartTLS</strong> disabled, <strong>or</strong></li>
+<li class="">Use <code>ldap://dc.example.com:389</code> as the <strong>LDAP URI</strong> and enable <strong>StartTLS</strong>.</li>
+<li class="">If the Domain Controller uses a self-signed certificate, disable <strong>Verify TLS certificate</strong>.</li>
+</ul>
+<p>This is the preferred approach for any environment exposed beyond a trusted LAN.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-2-disable-ldap-signing-on-the-domain-controller-for-lab--poc">Option 2: disable LDAP signing on the Domain Controller (for lab / POC)<a href="#option-2-disable-ldap-signing-on-the-domain-controller-for-lab--poc" class="hash-link" aria-label="Direct link to Option 2: disable LDAP signing on the Domain Controller (for lab / POC)" title="Direct link to Option 2: disable LDAP signing on the Domain Controller (for lab / POC)" translate="no">​</a></h3>
+<p>If you need a quick solution for a proof of concept or an isolated network, you can relax the LDAP signing requirement on the Domain Controller.</p>
+<p>On the Domain Controller, open the <strong>Group Policy Management Editor</strong> (<code>gpedit.msc</code> or the domain policy manager) and navigate to:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">Computer Configuration</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  → Windows Settings</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    → Security Settings</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">      → Local Policies</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">        → Security Options</span><br></div></code></pre></div></div>
+<p>Locate and set the following policy:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Policy</th><th>Value</th></tr></thead><tbody><tr><td>Domain controller: LDAP server signing requirements</td><td><strong>None</strong></td></tr></tbody></table>
+<p>Apply the policy and wait for replication (or force it with <code>gpupdate /force</code>).</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>Disabling LDAP signing reduces the security of your Active Directory environment by allowing unencrypted, unauthenticated LDAP binds. Only use this approach on isolated or lab networks. For production environments, use <a href="#option-1-configure-ldaps-or-starttls-recommended-for-production" class="">Option 1</a> instead.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="configure-the-remote-database-on-nethsecurity">Configure the remote database on NethSecurity<a href="#configure-the-remote-database-on-nethsecurity" class="hash-link" aria-label="Direct link to Configure the remote database on NethSecurity" title="Direct link to Configure the remote database on NethSecurity" translate="no">​</a></h2>
+<p>After fixing the LDAP bind, add the Active Directory as a remote user database:</p>
+<ol>
+<li class="">Go to <strong>Users and objects</strong> → <strong>Users databases</strong>.</li>
+<li class="">Click <strong>Add remote database</strong>.</li>
+<li class="">Fill in the fields as described below.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-a-authenticate-all-users-in-the-default-users-container">Scenario A: authenticate all users in the default Users container<a href="#scenario-a-authenticate-all-users-in-the-default-users-container" class="hash-link" aria-label="Direct link to Scenario A: authenticate all users in the default Users container" title="Direct link to Scenario A: authenticate all users in the default Users container" translate="no">​</a></h3>
+<p>Use this when you want to authenticate any user stored in the default <code>CN=Users</code> container of the domain.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>LDAP URI</td><td><code>ldap://dc.example.com:389</code></td></tr><tr><td>Type</td><td><code>Active Directory</code></td></tr><tr><td>Base DN</td><td><code>dc=example,dc=com</code></td></tr><tr><td>User DN</td><td><code>cn=Users,dc=example,dc=com</code></td></tr><tr><td>User attribute field</td><td><code>sAMAccountName</code></td></tr><tr><td>User display name field</td><td><code>displayName</code></td></tr><tr><td>Custom user bind DN</td><td><code>%u@example.com</code></td></tr><tr><td>Bind DN</td><td><code>svcaccount@example.com</code></td></tr><tr><td>Bind password</td><td><code>&lt;service account password&gt;</code></td></tr><tr><td>StartTLS</td><td>disabled (or enabled if using StartTLS fix)</td></tr></tbody></table>
+<p>Replace <code>example.com</code> with your domain name and <code>svcaccount</code> with a read-only service account created on the Domain Controller for this purpose.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-b-authenticate-users-from-a-specific-ou">Scenario B: authenticate users from a specific OU<a href="#scenario-b-authenticate-users-from-a-specific-ou" class="hash-link" aria-label="Direct link to Scenario B: authenticate users from a specific OU" title="Direct link to Scenario B: authenticate users from a specific OU" translate="no">​</a></h3>
+<p>Use this when you want to restrict VPN access to users belonging to a dedicated Organizational Unit (e.g., <code>testVPN</code>).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>LDAP URI</td><td><code>ldap://dc.example.com:389</code></td></tr><tr><td>Type</td><td><code>Active Directory</code></td></tr><tr><td>Base DN</td><td><code>dc=example,dc=com</code></td></tr><tr><td>User DN</td><td><code>ou=testVPN,dc=example,dc=com</code></td></tr><tr><td>User attribute field</td><td><code>sAMAccountName</code></td></tr><tr><td>User display name field</td><td><code>displayName</code></td></tr><tr><td>Custom user bind DN</td><td><code>%u@example.com</code></td></tr><tr><td>Bind DN</td><td><code>svcaccount@example.com</code></td></tr><tr><td>Bind password</td><td><code>&lt;service account password&gt;</code></td></tr><tr><td>StartTLS</td><td>disabled (or enabled if using StartTLS fix)</td></tr></tbody></table>
+<p>Changing <code>User DN</code> to the OU path restricts user enumeration and authentication to that container only, so users outside the OU cannot authenticate even if their credentials are valid.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/NethServer/nethsecurity-docs/tree/main/docs/tutorial/active-directory-ldap-bind-issues.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/pr-preview/pr-298/docs/tutorial/nethsecurity-8-gdpr-compliance-information"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">GDPR compliance</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/pr-preview/pr-298/docs/tutorial/custom-openvpn-tunnel"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Custom OpenVPN tunnel</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#problem-description" class="table-of-contents__link toc-highlight">Problem description</a></li><li><a href="#solutions" class="table-of-contents__link toc-highlight">Solutions</a><ul><li><a href="#option-1-configure-ldaps-or-starttls-recommended-for-production" class="table-of-contents__link toc-highlight">Option 1: configure LDAPS or StartTLS (recommended for production)</a></li><li><a href="#option-2-disable-ldap-signing-on-the-domain-controller-for-lab--poc" class="table-of-contents__link toc-highlight">Option 2: disable LDAP signing on the Domain Controller (for lab / POC)</a></li></ul></li><li><a href="#configure-the-remote-database-on-nethsecurity" class="table-of-contents__link toc-highlight">Configure the remote database on NethSecurity</a><ul><li><a href="#scenario-a-authenticate-all-users-in-the-default-users-container" class="table-of-contents__link toc-highlight">Scenario A: authenticate all users in the default Users container</a></li><li><a href="#scenario-b-authenticate-users-from-a-specific-ou" class="table-of-contents__link toc-highlight">Scenario B: authenticate users from a specific OU</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/pr-preview/pr-298/docs/administrator-manual">Administrator manual</a></li><li class="footer__item"><a class="footer__link-item" href="/pr-preview/pr-298/docs/tutorial">Tutorial</a></li><li class="footer__item"><a href="https://nethserver.github.io/nethsecurity/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Developer manual<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.nethsecurity.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">NethSecurity website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://community.nethserver.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">NethServer Community<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="/pr-preview/pr-298/packages/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Package browser<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/NethServer/nethsecurity-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Nethesis Srl and the NethSecurity project contributors</div></div></div></footer></div>
+</body>
+</html>
