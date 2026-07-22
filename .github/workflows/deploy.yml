@@ -6,19 +6,15 @@ on:
       - main
   workflow_dispatch:
 
-# Permissions for GitHub Pages deployment (build_type: workflow).
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-# Allow one concurrent deployment, cancelling in-progress runs.
-concurrency:
-  group: pages
-  cancel-in-progress: true
+permissions:
+  contents: write # to push to the gh-pages branch
 
 jobs:
-  build:
+  build-and-deploy:
+    name: Build and deploy Docusaurus
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -38,19 +34,11 @@ jobs:
       - name: Build
         run: yarn build
 
-      - uses: actions/configure-pages@v6
-
-      - uses: actions/upload-pages-artifact@v5
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          cname: docs.nethsecurity.org
+          keep_files: true # preserve pr-preview/ subdirs created by PR previews
