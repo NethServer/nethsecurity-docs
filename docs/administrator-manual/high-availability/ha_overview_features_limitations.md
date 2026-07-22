@@ -33,7 +33,7 @@ All other relevant configurations, such as firewall rules, VPN settings, or Thre
 This is how the HA system works:
 
 - **Heartbeat**: The primary and secondary firewalls continuously check each other\'s status using the VRRP protocol. If the primary fails, the secondary takes over. The VRRP protocol is carried over a dedicated LAN interface called the **HA interface**, additional information will be provided in a later section.
-- **Settings synchronization**: The primary firewall securely sends its settings, including details about active connections like VPNs and network routes, to the secondary firewall.
+- **Settings synchronization**: The primary firewall securely sends its settings, including details about active connections like VPNs and network routes, to the secondary firewall. This synchronization runs automatically every 10 minutes. Keep this interval in mind when testing the cluster: see [Testing failover](./ha_setup_and_management.md#testing-failover) for details.
 - The system automatically adjusts what each firewall does based on whether it\'s the active (primary) or standby (secondary) unit:
   - **Secondary receives configuration updates**: When the secondary firewall gets new settings, it saves them but keeps related services (like VPNs) turned off. The secondary firewall holds a complete copy of the primary\'s configuration but keeps most background tasks inactive. This includes things like checking for software updates, performing remote backups, or sending reports. This ensures only the active primary firewall handles these tasks, preventing conflicts.
   - **Firewall becomes active**: When a firewall takes over as the primary (either starting up normally or during a failover), it activates all necessary services and connections.

@@ -177,6 +177,18 @@ Check the status of the HA cluster. The first sync may take up to 5 minutes. :
 
 Initial status might show `Last Sync Status: SSH Connection Failed`. After sync, it should show `Last Sync Status: Up to Date`.
 
+### Testing failover
+
+Once the cluster is initialized, you can test the failover mechanism by physically disconnecting the primary node from the network (e.g., unplugging the HA interface cable) or powering it off. This simulates a real failure, unlike the `keepalived stop` command used for planned maintenance (see [Maintenance](./ha_maintenance_troubleshooting.md#maintenance)).
+
+:::note
+
+Configuration synchronization between the primary and secondary node runs automatically every 10 minutes. After completing the initial setup, wait at least 10 minutes before testing a failover, to make sure the secondary node has received a full copy of the configuration. Testing too early may cause the secondary node to take over with an incomplete or outdated configuration.
+
+:::
+
+While testing, you can monitor the failover on the secondary node with `ns-ha-config status` and by observing the VRRP traffic, as described in [Keepalived status](./ha_maintenance_troubleshooting.md#keepalived-status) and [VRRP traffic](./ha_maintenance_troubleshooting.md#vrrp-traffic).
+
 ### Additional LAN interfaces
 
 It\'s possible to add additional LAN interfaces to the HA cluster after the initial setup. Before adding an interface, ensure that the interface is configured with a static IP address on the primary node and on the secondary node, much like the HA interface configured during the initial setup. Interfaces can be ethernets, bridges, VLANs, or bonds, but make sure the secondary node has the same interface with the same name and with the same device hierarchy (e.g., if the interface is a VLAN, the parent interface must also exist on the secondary node).

@@ -177,6 +177,18 @@ Controlla lo stato del cluster HA. La prima sincronizzazione potrebbe richiedere
 
 Lo stato iniziale potrebbe mostrare `Last Sync Status: SSH Connection Failed`. Dopo la sincronizzazione, dovrebbe mostrare `Last Sync Status: Up to Date`.
 
+### Testare il failover {#testing-failover}
+
+Una volta inizializzato il cluster, puoi testare il meccanismo di failover scollegando fisicamente il nodo primario dalla rete (ad es. staccando il cavo dell'interfaccia HA) o spegnendolo. Questo simula un guasto reale, a differenza del comando `keepalived stop` usato per la manutenzione pianificata (vedi [Manutenzione](./ha_maintenance_troubleshooting.md#manutenzione)).
+
+:::note
+
+La sincronizzazione della configurazione tra nodo primario e secondario avviene automaticamente ogni 10 minuti. Dopo aver completato la configurazione iniziale, attendi almeno 10 minuti prima di testare un failover, per essere sicuro che il nodo secondario abbia ricevuto una copia completa della configurazione. Testare troppo presto potrebbe far sì che il nodo secondario prenda il controllo con una configurazione incompleta o non aggiornata.
+
+:::
+
+Durante il test, puoi monitorare il failover sul nodo secondario con `ns-ha-config status` e osservando il traffico VRRP, come descritto in [Stato di Keepalived](./ha_maintenance_troubleshooting.md#stato-di-keepalived) e [Traffico VRRP](./ha_maintenance_troubleshooting.md#traffico-vrrp).
+
 ### Interfacce LAN aggiuntive {#additional-lan-interfaces}
 
 È possibile aggiungere interfacce LAN aggiuntive al cluster HA dopo la configurazione iniziale. Prima di aggiungere un'interfaccia, assicurati che l'interfaccia sia configurata con un indirizzo IP statico sul nodo primario e sul nodo secondario, molto come l'interfaccia HA configurata durante la configurazione iniziale. Le interfacce possono essere ethernet, bridge, VLAN o bond, ma assicurati che il nodo secondario abbia la stessa interfaccia con lo stesso nome e con la stessa gerarchia di dispositivi (ad es., se l'interfaccia è una VLAN, l'interfaccia padre deve esistere anche sul nodo secondario).
