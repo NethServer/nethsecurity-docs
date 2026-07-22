@@ -120,3 +120,80 @@ uci delete dedalo.config.dns2
 ```
 
 Quindi ripeti i passaggi 2 e 3 della sezione precedente per applicare le modifiche.
+
+## Conservazione dei dati per il servizio Hotspot con il portale cloud NethSpot
+
+:::note
+
+Solo per gli utenti del portale cloud NethSpot
+
+Questa sezione si applica esclusivamente ai firewall NethSecurity con un abbonamento valido che utilizzano specificamente il portale cloud NethSpot, disponibile all'indirizzo <https://my.nethspot.com/>. Se il servizio Hotspot viene utilizzato senza il portale cloud NethSpot, le informazioni contenute in questa sezione non si applicano.
+
+:::
+
+NethSpot memorizza i dati relativi all'hotspot su un'infrastruttura cloud situata in un data center europeo nei Paesi Bassi. I dati conservati includono i log delle connessioni, i dati di accesso degli ospiti, le informazioni sui voucher e i dati relativi agli accessi tramite email e SMS.
+
+### Log delle connessioni
+
+I log delle connessioni vengono conservati per **6 mesi**.
+
+Questi log includono informazioni relative alle sessioni degli ospiti, come:
+
+- data e ora di connessione e disconnessione
+- utente ospite
+- dispositivo dell'ospite
+- indirizzo MAC del dispositivo
+- indirizzo MAC dell'unità NethSecurity
+
+I log delle connessioni sono i primi dati a essere eliminati. Alla scadenza del periodo di conservazione, vengono eliminate le relative sessioni degli ospiti, inclusi il `device_mac` del dispositivo dell'ospite e lo `unit_mac` dell'appliance NethSecurity a cui si è connesso.
+
+:::note
+
+NethSpot non raccoglie né memorizza l'attività di navigazione degli utenti Hotspot. I siti web visitati, gli URL, le query DNS e gli altri dettagli di navigazione non vengono raccolti né conservati dal portale cloud NethSpot. Le informazioni conservate sono limitate ai dati di sessione necessari per identificare la sessione di accesso dell'ospite.
+
+:::
+
+### Dati di accesso degli ospiti e voucher
+
+I dati di accesso degli ospiti vengono conservati per l'intero periodo di validità dell'account dell'ospite e per i successivi **24 mesi**. Questo periodo di conservazione aggiuntivo consente di riattivare gli account degli ospiti scaduti, ad esempio estendendone la validità dal portale, senza doverli ricreare. Consente inoltre di mantenere l'associazione tra l'identità dell'ospite e il voucher precedentemente emesso, in modo che gli operatori possano verificare o estendere una registrazione di accesso esistente quando necessario.
+
+Sono inclusi i dati relativi agli utenti della piattaforma, ai voucher e agli accessi tramite email e SMS. Quando vengono utilizzati i voucher, vengono conservate tutte le informazioni inserite nel voucher, inclusi i dati utilizzati per identificare l'ospite.
+
+Per gli accessi basati su voucher, i dati conservati possono includere:
+
+- nome e cognome dell'ospite, se inseriti nel voucher
+- indirizzo email dell'ospite, se inserito nel voucher
+- dati del voucher
+- indirizzo MAC del dispositivo utilizzato dall'ospite
+
+Il nome dell'ospite è obbligatorio durante la creazione di un voucher, poiché viene utilizzato per identificare l'associazione tra l'ospite e il voucher.
+
+### Validità del voucher e scadenza dell'account
+
+I voucher possono essere creati in due modi:
+
+- con una data di scadenza fissa
+- con una durata calcolata a partire dalla prima attivazione
+
+Prima del primo utilizzo, un voucher è inattivo. Quando il voucher viene utilizzato per la prima volta, viene associato all'ospite che lo utilizza. Da quel momento, il voucher e l'account dell'ospite fanno riferimento alla stessa identità di accesso.
+
+Gli utenti amministrativi dell'hotspot non sono associati ai voucher degli ospiti.
+
+Il periodo di conservazione aggiuntivo di 24 mesi inizia dalla data di scadenza del voucher.
+
+Ad esempio, se un voucher scade il **30 giugno 2026** e l'ospite inizia a utilizzarlo prima di tale data, l'account dell'ospite associato al voucher scade il **30 giugno 2026**. Il periodo di conservazione di 24 mesi inizia da tale data.
+
+Questo periodo di conservazione consente di riattivare successivamente l'account, ad esempio estendendone la validità dal portale, senza eliminare prematuramente i dati dell'ospite.
+
+### Cessazione del contratto o del servizio
+
+In caso di cessazione del contratto o del servizio, i dati degli ospiti vengono eliminati in base agli stessi periodi di conservazione descritti sopra.
+
+### Consenso per finalità di marketing
+
+NethSpot può essere configurato per richiedere agli ospiti WiFi il consenso per finalità di marketing tramite il captive portal. Il consenso viene raccolto esclusivamente per conto dell'organizzazione che utilizza l'hotspot e **non viene utilizzato da Nethesis** per proprie finalità di marketing.
+
+Il pannello degli ospiti mostra chiaramente quali utenti hanno fornito il consenso per finalità di marketing: in questo modo è possibile esportare esclusivamente i contatti che hanno espresso esplicitamente il proprio consenso.
+
+Nethesis non utilizza i contatti raccolti degli ospiti per attività di marketing e non vende né trasferisce tali dati a terze parti.
+:::
