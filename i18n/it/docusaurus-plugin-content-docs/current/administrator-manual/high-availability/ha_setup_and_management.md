@@ -183,7 +183,7 @@ Una volta inizializzato il cluster, puoi testare il meccanismo di failover scoll
 
 :::note
 
-La sincronizzazione della configurazione tra nodo primario e secondario avviene automaticamente ogni 10 minuti. Dopo aver completato la configurazione iniziale, attendi almeno 10 minuti prima di testare un failover, per essere sicuro che il nodo secondario abbia ricevuto una copia completa della configurazione. Testare troppo presto potrebbe far sì che il nodo secondario prenda il controllo con una configurazione incompleta o non aggiornata.
+La sincronizzazione della configurazione tra nodo primario e secondario avviene automaticamente ogni 10 minuti. Dopo aver completato la configurazione iniziale oppure dopo aver aggiornato il sistema, attendi almeno 10 minuti prima di testare un failover, per essere sicuro che il nodo secondario abbia ricevuto una copia completa della configurazione. Testare troppo presto potrebbe far sì che il nodo secondario prenda il controllo con una configurazione incompleta o non aggiornata.
 
 :::
 

@@ -183,7 +183,7 @@ Once the cluster is initialized, you can test the failover mechanism by physical
 
 :::note
 
-Configuration synchronization between the primary and secondary node runs automatically every 10 minutes. After completing the initial setup, wait at least 10 minutes before testing a failover, to make sure the secondary node has received a full copy of the configuration. Testing too early may cause the secondary node to take over with an incomplete or outdated configuration.
+Configuration synchronization between the primary and secondary node runs automatically every 10 minutes. After completing the initial setup or updating the system, wait at least 10 minutes before testing a failover, to make sure the secondary node has received a full copy of the configuration. Testing too early may cause the secondary node to take over with an incomplete or outdated configuration.
 
 :::
 
