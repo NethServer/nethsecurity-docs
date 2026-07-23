@@ -250,18 +250,25 @@ Return ONLY the translated markdown content that should be added/modified, witho
         
         # If target file doesn't exist, create it with translated content
         if not target_path.exists():
+            if not translated_content:
+                # Pure deletion with no target file: nothing to remove or create
+                print(f"⚠️ Target file does not exist and no content to add: {target_file} - skipping")
+                return
             with open(target_path, 'w', encoding='utf-8') as f:
                 f.write(translated_content)
             print(f"Created new file: {target_file}")
             return
-        
+
         # Read current target file content
         with open(target_path, 'r', encoding='utf-8') as f:
             current_content = f.read()
-        
-        if not translated_content:
+
+        # Nothing to insert and nothing removed in the source: no work to do.
+        # For a pure deletion translated_content is empty but the diff still
+        # carries removed lines, so we must proceed to positioning.
+        if not translated_content and not self._diff_has_deletions(diff_content):
             return
-        
+
         # Use AI to intelligently position the translated content
         updated_content = self._apply_ai_positioning(
             current_content, translated_content, original_content, diff_content, target_file
@@ -278,16 +285,34 @@ Return ONLY the translated markdown content that should be added/modified, witho
 
     def _apply_ai_positioning(self, current_target_content: str, translated_content: str, original_source_content: str, diff_content: str, target_file: str) -> Optional[str]:
         """Use AI to intelligently position translated content in the target file"""
-        
-        prompt = f"""You are an expert documentation editor. Your task is to intelligently merge new translated content into an existing documentation file.
+
+        if translated_content.strip():
+            new_content_section = f"""- New translated content to be inserted:
+```
+{translated_content}
+```"""
+        else:
+            new_content_section = (
+                "- New translated content to be inserted: (NONE — this change ONLY "
+                "REMOVES content).\n"
+                "  IMPORTANT: This is a deletion-only change. You must return the "
+                "current target file EXACTLY as it is, changing NOTHING except the "
+                "removal of the parts that correspond to the lines deleted in the "
+                "git diff. Do NOT translate, re-translate, rephrase, reformat, "
+                "reorder or otherwise touch any other part of the file. Every line "
+                "that is not the one being removed must remain byte-for-byte "
+                "identical to the current target file content shown above."
+            )
+
+        prompt = f"""You are an expert documentation editor. Your task is to intelligently merge the changes shown in a git diff into an existing translated documentation file.
 
 CONTEXT:
-- Original source file (the file that was modified): 
+- Original source file (the file that was modified):
 ```
 {original_source_content}
 ```
 
-- Current target file content (where the translation should be inserted):
+- Current target file content (where the change should be applied):
 ```
 {current_target_content}
 ```
@@ -297,23 +322,22 @@ CONTEXT:
 {diff_content}
 ```
 
-- New translated content to be inserted:
-```
-{translated_content}
-```
+{new_content_section}
 
 TASK:
-Analyze the changes shown in the git diff and intelligently insert the translated content into the appropriate position in the current target file. 
+Analyze the changes shown in the git diff and apply the equivalent change to the current target file. Changes may ADD, MODIFY, or REMOVE content.
 
 RULES:
-1. **Understand the context**: Look at where the changes were made in the source file
+1. **Understand the context**: Look at where the changes were made in the source file (lines starting with '+' were added, lines starting with '-' were removed)
 2. **Find the equivalent position**: Locate the corresponding section in the target file
-3. **Insert appropriately**: 
+3. **Insert appropriately**:
    - If it's a NEW section/content: Insert it in the same relative position
    - If it's a MODIFICATION: Replace the existing content with the new translation
    - If it's an ADDITION to existing section: Add it in the correct place within that section
-4. **Preserve structure**: Maintain the overall document structure and hierarchy
-5. **Keep formatting**: Preserve all markdown formatting, spacing, and line breaks
+4. **Avoid duplication (CRITICAL)**: Before inserting anything, check whether that content — or its equivalent already-translated version — is ALREADY present in the current target file. If it is, do NOT add it again: leave that part of the file unchanged. The result must be IDEMPOTENT — if the change was already applied in a previous run, re-applying it must produce no further changes. Never create a second copy of a sentence, list item, paragraph or section that already exists in the target file.
+5. **Handle deletions**: If the git diff shows removed lines (starting with '-' with no '+' counterpart), locate the sentence, paragraph or list item in the target file that corresponds to the removed source text and REMOVE only that part. Do NOT translate or re-insert the removed text. Everything else in the file must stay untouched — do NOT translate, re-translate, rephrase or reformat any surrounding content; leave it exactly as it currently is.
+6. **Preserve structure**: Maintain the overall document structure and hierarchy. Do not add, remove or reword any content other than what the git diff indicates. Any content not affected by the diff must remain identical to the current target file, character for character.
+7. **Keep formatting**: Preserve all markdown formatting, spacing, and line breaks
 
 OUTPUT FORMAT:
 Return the COMPLETE updated target file content with the translated content properly positioned.
@@ -362,25 +386,26 @@ Return ONLY the raw file content, starting directly with the file's content (e.g
             print(f"❌ Error with AI positioning: {e}")
             return None
 
-    def _is_completely_new_file(self, diff_content: str) -> bool:
-        """Check if the diff represents a completely new file"""
-        lines = diff_content.split('\n')
-        
-        # Look for "new file mode" indicator
-        for line in lines:
-            if line.startswith('new file mode'):
-                return True
-            # Also check if all non-header lines are additions (start with +)
-            if line.startswith('@@'):
-                # After finding diff header, check if most lines are additions
-                break
-        
-        # Count additions vs modifications
-        additions = sum(1 for line in lines if line.startswith('+') and not line.startswith('+++'))
-        modifications = sum(1 for line in lines if line.startswith('-') and not line.startswith('---'))
-        
-        # If there are only additions and no deletions, it's likely a new file
-        return additions > 0 and modifications == 0
+    def _is_file_deletion(self, diff_content: str) -> bool:
+        """Check if the diff represents a full file deletion"""
+        return any(
+            line.startswith('deleted file mode')
+            for line in diff_content.split('\n')
+        )
+
+    def _diff_has_additions(self, diff_content: str) -> bool:
+        """Check if the diff contains any added lines (excluding the +++ header)"""
+        return any(
+            line.startswith('+') and not line.startswith('+++')
+            for line in diff_content.split('\n')
+        )
+
+    def _diff_has_deletions(self, diff_content: str) -> bool:
+        """Check if the diff contains any removed lines (excluding the --- header)"""
+        return any(
+            line.startswith('-') and not line.startswith('---')
+            for line in diff_content.split('\n')
+        )
 
     def translate_entire_file(self, file_path: str, source_content: str, source_lang: str, target_lang: str) -> Optional[str]:
         """Translate an entire file content for new files"""
@@ -465,26 +490,51 @@ Return the COMPLETE translated file content, without any explanations or markdow
         
         print(f"Processing changes in {source_file}")
         print(f"Diff content preview: {diff_content[:200]}...")
-        
-        # Determine if this is a completely new file
-        is_new_file = self._is_completely_new_file(diff_content)
-        
-        if is_new_file and not target_exists:
-            print(f"🆕 Detected new file: {source_file}")
-            # For new files, translate the entire content
+
+        # Handle full file deletion: the source file was removed entirely, so the
+        # corresponding translated file must be deleted too (not emptied/merged).
+        # This must be checked before the pure-deletion branch, since a deleted
+        # file also contains only removed lines.
+        if self._is_file_deletion(diff_content):
+            print(f"🗑️ Detected full file deletion: {source_file}")
+            target_path = Path(target_file)
+            if target_path.exists():
+                target_path.unlink()
+                print(f"🗑️ Deleted translated file: {target_file}")
+            else:
+                print(f"ℹ️ Translated file does not exist, nothing to delete: {target_file}")
+            return
+
+        # Determine the kind of change we're dealing with
+        has_additions = self._diff_has_additions(diff_content)
+        has_deletions = self._diff_has_deletions(diff_content)
+        is_pure_deletion = has_deletions and not has_additions
+
+        if not target_exists:
+            print(f"🆕 No existing translation for {source_file} - translating entire file")
             source_content = self.get_file_content(source_file)
+            if not source_content:
+                print(f"Source file is empty or missing, nothing to translate: {source_file}")
+                return
             translated_content = self.translate_entire_file(source_file, source_content, source_lang, target_lang)
+            if not translated_content:
+                print(f"Could not generate translation for {source_file}")
+                return
+        elif is_pure_deletion:
+            print(f"🗑️ Detected pure deletion: {source_file}")
+            # no new content to translate/insert, just deletion
+            # skip the translation call entirely to avoid mistakenly translating the removed lines as content to insert
+            translated_content = ""
         else:
             print(f"📝 Detected file modification: {source_file}")
             # For modifications, use the existing diff-based approach
             translated_content = self.analyze_changes_with_ai(
                 source_file, diff_content, source_lang, target_lang
             )
-        
-        if not translated_content:
-            print(f"Could not generate translation for {source_file}")
-            return
-        
+            if not translated_content:
+                print(f"Could not generate translation for {source_file}")
+                return
+
         print(f"Generated translation: {translated_content[:200]}...")
         
         # Get original content for context
