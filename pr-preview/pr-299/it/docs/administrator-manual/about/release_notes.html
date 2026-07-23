@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="it-IT" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-administrator-manual/about/release_notes" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.1">
+<title data-rh="true">Note di rilascio | NethSecurity documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.nethsecurity.org/pr-preview/pr-299/it/docs/administrator-manual/about/release_notes"><meta data-rh="true" property="og:locale" content="it_IT"><meta data-rh="true" property="og:locale:alternate" content="en_US"><meta data-rh="true" name="docusaurus_locale" content="it"><meta data-rh="true" name="docsearch:language" content="it"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Note di rilascio | NethSecurity documentation"><meta data-rh="true" name="description" content="Changelog dei rilasci di NethSecurity."><meta data-rh="true" property="og:description" content="Changelog dei rilasci di NethSecurity."><link data-rh="true" rel="icon" href="/pr-preview/pr-299/it/img/favicon.png"><link data-rh="true" rel="canonical" href="https://docs.nethsecurity.org/pr-preview/pr-299/it/docs/administrator-manual/about/release_notes"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-299/docs/administrator-manual/about/release_notes" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-299/it/docs/administrator-manual/about/release_notes" hreflang="it-IT"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-299/docs/administrator-manual/about/release_notes" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://10HTUTQ94F-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Note di rilascio","item":"https://docs.nethsecurity.org/pr-preview/pr-299/it/docs/administrator-manual/about/release_notes"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="NethSecurity documentation" href="/pr-preview/pr-299/it/opensearch.xml"><link rel="stylesheet" href="/pr-preview/pr-299/it/assets/css/styles.c1f0ff24.css">
+<script src="/pr-preview/pr-299/it/assets/js/runtime~main.f5b78404.js" defer="defer"></script>
+<script src="/pr-preview/pr-299/it/assets/js/main.dd46d2b5.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/pr-preview/pr-299/it/img/logo.svg"><div role="region" aria-label="Passa al contenuto principale"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Passa al contenuto principale</a></div><nav aria-label="Principale" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Attiva/disattiva la barra di navigazione" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/pr-preview/pr-299/it/"><div class="navbar__logo"><img src="/pr-preview/pr-299/it/img/logo.svg" alt="NethSecurity" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/pr-preview/pr-299/it/img/logo.svg" alt="NethSecurity" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/pr-preview/pr-299/it/docs/administrator-manual">Manuale amministratore</a><a class="navbar__item navbar__link" href="/pr-preview/pr-299/it/docs/tutorial">Tutorial</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>Italiano</a><ul class="dropdown__menu"><li><a href="/pr-preview/pr-299/docs/administrator-manual/about/release_notes" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en-US">English</a></li><li><a href="/pr-preview/pr-299/it/docs/administrator-manual/about/release_notes" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="it-IT">Italiano</a></li></ul></div><a href="https://github.com/NethServer/nethsecurity-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Passa dalla modalità scura a quella chiara (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Cerca (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Cerca</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Torna indietro all&#x27;inizio" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Barra laterale dei documenti" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-299/it/docs/administrator-manual"><span title="Manuale dell&#x27;amministratore" class="linkLabel_WmDU">Manuale dell&#x27;amministratore</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/pr-preview/pr-299/it/docs/administrator-manual/about/introduction"><span title="Informazioni" class="categoryLinkLabel_W154">Informazioni</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pr-preview/pr-299/it/docs/administrator-manual/about/introduction"><span title="Introduzione" class="linkLabel_WmDU">Introduzione</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/pr-preview/pr-299/it/docs/administrator-manual/about/release_notes"><span title="Note di rilascio" class="linkLabel_WmDU">Note di rilascio</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pr-preview/pr-299/it/docs/administrator-manual/installation/system_requirements"><span title="Installazione" class="categoryLinkLabel_W154">Installazione</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/pr-preview/pr-299/it/docs/administrator-manual/monitoring"><span title="Monitoraggio" class="categoryLinkLabel_W154">Monitoraggio</span></a><button aria-label="Expand sidebar category &#x27;Monitoraggio&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pr-preview/pr-299/it/docs/administrator-manual/system/subscription"><span title="Sistema" class="categoryLinkLabel_W154">Sistema</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/pr-preview/pr-299/it/docs/administrator-manual/network"><span title="Rete" class="categoryLinkLabel_W154">Rete</span></a><button aria-label="Expand sidebar category &#x27;Rete&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pr-preview/pr-299/it/docs/administrator-manual/users-objects/users_databases"><span title="Utenti e oggetti" class="categoryLinkLabel_W154">Utenti e oggetti</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pr-preview/pr-299/it/docs/administrator-manual/firewall/port_forward"><span title="Firewall" class="categoryLinkLabel_W154">Firewall</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pr-preview/pr-299/it/docs/administrator-manual/security/content_filter"><span title="Sicurezza" class="categoryLinkLabel_W154">Sicurezza</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pr-preview/pr-299/it/docs/administrator-manual/vpn/openvpn_roadwarrior"><span title="VPN" class="categoryLinkLabel_W154">VPN</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pr-preview/pr-299/it/docs/administrator-manual/high-availability/ha_overview_features_limitations"><span title="Alta disponibilità" class="categoryLinkLabel_W154">Alta disponibilità</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pr-preview/pr-299/it/docs/administrator-manual/migration"><span title="Migrazione da NethServer 7" class="linkLabel_WmDU">Migrazione da NethServer 7</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/pr-preview/pr-299/it/docs/administrator-manual/advanced-cli/avahi"><span title="Avanzato (CLI)" class="categoryLinkLabel_W154">Avanzato (CLI)</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Briciole di pane"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Pagina principale" class="breadcrumbs__link" href="/pr-preview/pr-299/it/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Informazioni</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Note di rilascio</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">Su questa pagina</button></div><div class="theme-doc-markdown markdown"><header><h1>Note di rilascio</h1></header>
+<p>Changelog dei rilasci di NethSecurity.</p>
+<ul>
+<li class="">Elenco dei <a href="https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20" target="_blank" rel="noopener noreferrer" class="">bug noti</a></li>
+<li class="">Discussioni sui <a href="http://community.nethserver.org/c/bug" target="_blank" rel="noopener noreferrer" class="">possibili bug</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2026-06-25">Principali modifiche il 2026-06-25<a href="#principali-modifiche-il-2026-06-25" class="hash-link" aria-label="Link diretto a Principali modifiche il 2026-06-25" title="Link diretto a Principali modifiche il 2026-06-25" translate="no">​</a></h2>
+<p>Versione immagine: <code>8.8.0-beta1</code> (basata su OpenWrt 25.12.4)</p>
+<p><strong>Nuove funzionalità</strong></p>
+<ul>
+<li class="">NethSecurity è stato ribasato su OpenWrt 25.12.4 e il sistema di gestione dei pacchetti è stato cambiato da <code>opkg</code> a <code>apk</code>.</li>
+<li class="">Il monitoraggio ora archivia le metriche in VictoriaMetrics e utilizza automaticamente l&#x27;archiviazione persistente quando disponibile.</li>
+<li class="">Gli avvisi sono ora accessibili dall&#x27;interfaccia web.</li>
+<li class="">La cronologia di Bash è stata preservata tra i riavvii e <code>/var</code> persistente è stata abilitata quando l&#x27;archiviazione è disponibile.</li>
+<li class="">Il pacchetto Avahi (mDNS) è stato aggiunto al repository di NethSecurity.</li>
+<li class="">È stata aggiunta l&#x27;azione del firewall <code>DON\&#x27;T TRACK</code>.</li>
+<li class="">Diverse funzionalità precedentemente limitate alle versioni basate su sottoscrizione sono ora disponibili nell&#x27;edizione Community.</li>
+</ul>
+<p><strong>Miglioramenti</strong></p>
+<ul>
+<li class="">Snort è stato aggiornato con vectorscan per migliorare le prestazioni.</li>
+<li class="">OpenVPN è stato aggiornato alla versione 2.7.4.</li>
+<li class="">strongSwan è stato aggiornato alla versione 6.0.3.</li>
+<li class="">È stata migliorata la gestione del repository dei pacchetti e la firma per la nuova immagine di base.</li>
+<li class="">Netdata non è più installato per impostazione predefinita; i dashboard del controller legacy possono ancora ripristinarlo manualmente.</li>
+<li class="">I leasing DHCP sono ora persistenti se l&#x27;archiviazione locale è disponibile, prevenendo la perdita di leasing al riavvio.</li>
+<li class="">Le modifiche all&#x27;elenco locale DNS di Threat Shield vengono ora applicate utilizzando il pulsante commit, come tutte le altre opzioni di Threat Shield.</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Gli errori DNS/DHCP ora mostrano informazioni di risoluzione dei problemi più chiare: se dnamsq non riesce ad avviarsi, l&#x27;interfaccia web visualizzerà un avviso.</li>
+<li class="">Adblock non si riavvia più con elenchi vuoti dopo ripetute modifiche alla blocklist o allowlist.</li>
+<li class="">Le opzioni di registrazione del traffico sono mostrate in modo coerente nell&#x27;interfaccia del firewall.</li>
+<li class="">Il tunnel IPSec può ora utilizzare l&#x27;azione dpd_action di riavvio.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2026-03-25">Principali modifiche il 2026-03-25<a href="#principali-modifiche-il-2026-03-25" class="hash-link" aria-label="Link diretto a Principali modifiche il 2026-03-25" title="Link diretto a Principali modifiche il 2026-03-25" translate="no">​</a></h2>
+<p>Versione immagine: <code>8.7.2</code> (basata su OpenWrt 24.10.5)</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>Se stai ripristinando un backup dalla versione 8-24.10.0-ns.1.6.0 o precedente, consulta la sezione <a href="#restore_old_backup_bug-section" class="">Ripristino del backup da versioni precedenti</a> alla fine di questa sezione.</p></div></div>
+<p><strong>Nuove funzionalità</strong></p>
+<ul>
+<li class="">Monitoraggio del flusso di rete in tempo reale: visualizza i flussi attivi con metriche dettagliate (sorgente, destinazione, protocollo, applicazione, larghezza di banda) attraverso l&#x27;integrazione del motore netifyd ridisegnata.</li>
+<li class="">Miglioramenti della scansione di rete: aggiunte funzionalità di ordinamento e filtro per i risultati della scansione di rete, simili ai leasing statici e dinamici.</li>
+<li class="">Configurazione MTU del peer WireGuard: consente la modifica dell&#x27;MTU per i peer di WireGuard per ottimizzare le connessioni su reti con vincoli specifici.</li>
+</ul>
+<p><strong>Miglioramenti</strong></p>
+<ul>
+<li class="">Nginx è stato aggiornato alla versione upstream per migliorare il profilo di sicurezza e ridurre i rilevamenti di vulnerabilità falsi positivi.</li>
+<li class="">DNS di Threat Shield: rimosso l&#x27;indicatore di confidenza dalle blocklist basate sulla comunità per ridurre la confusione; l&#x27;indicatore di confidenza viene ora visualizzato solo per gli elenchi Yoroi aziendali.</li>
+<li class="">Scansione di rete: migliorata la visibilità delle prenotazioni IP e risolto il problema di risoluzione del nome host per tutti i dispositivi scansionati.</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Proxy inverso: corretto il comportamento incoerente del certificato predefinito; ora applica correttamente il certificato predefinito sia all&#x27;interfaccia di amministrazione che ai servizi di proxy inverso.</li>
+<li class="">WireGuard: corretti i problemi di risposta DNS non raggiunti dai client a causa del formato dell&#x27;indirizzo errato (notazione CIDR mancante).</li>
+<li class="">WireGuard: rimossi i duplicati di voci vuote nella configurazione dell&#x27;elenco allowed_ips.</li>
+<li class="">WireGuard: risolto il problema in cui la zona WireGuard era erroneamente disponibile per altri tipi di interfaccia.</li>
+<li class="">Port Forwarding: corretto il controllo della convalida dell&#x27;interfaccia utente per la selezione del protocollo &quot;ALL&quot;; ora disabilita correttamente i campi della porta e previene la miscelazione con altri protocolli.</li>
+<li class="">Snort/IPS: risolto l&#x27;errore di configurazione su sistemi con più di 16 core CPU logici; ora limita correttamente il conteggio dei thread e della coda al massimo di 16.</li>
+<li class="">Flashstart: corretto il problema dei dati IP ignorati che venivano ancora reindirizzati alla regola DNS catch-all; i bypass ora eludono correttamente il filtro catch-all.</li>
+<li class="">Flashstart: modificato dal riavvio forzato del firewall al ricaricamento graduale durante l&#x27;aggiornamento della configurazione ProPlus, prevenendo le perdite di connessione durante gli aggiornamenti.</li>
+<li class="">OpenVPN Roadwarrior: aggiunta la funzionalità di rinnovo del certificato e la visibilità della data di scadenza (certificati CA e server); gli avvisi vengono visualizzati per i certificati entro un mese dalla scadenza.</li>
+<li class="">MultiWAN: risolto il problema di modifica della regola per conservare le opzioni di origine e destinazione precedentemente configurate invece di tornare ai valori predefiniti.</li>
+<li class="">QoS: corretti i valori invertiti della larghezza di banda di caricamento/download per le interfacce non WAN (LAN).</li>
+<li class="">Bonding di rete: aggiunte impostazioni predefinite di monitoraggio dei link (monitoraggio MII ogni 100 ms) per garantire che la modalità active-backup commuti correttamente all&#x27;interfaccia di backup.</li>
+<li class="">Migrazione: risolto il problema per cui le regole del firewall erano erroneamente etichettate come &quot;automatiche&quot; dopo la migrazione; le regole sono ora correttamente modificabili.</li>
+<li class="">Interfacce di rete: risolto il problema di corrispondenza della regex VLAN dopo la migrazione in cui le VLAN sui bridge (ad es. br111.112) venivano erroneamente analizzate come bridge.</li>
+<li class="">DPI: corretto il controllo del limite di registrazione; impostata la sintassi di nftables appropriata codificata in modo da prevenire gli errori di ricaricamento del firewall.</li>
+<li class="">PPPoE: risolti gli arresti anomali di pppd con SIGILL durante la negoziazione LCP su ISP specifici; disabilitato FORTIFY_SOURCE per risolvere i problemi di memcpy.</li>
+<li class="">Gateway predefinito WireGuard: risolto il problema del gateway predefinito mancante dopo la disconnessione del tunnel su sistemi single-WAN; assegnato la metrica predefinita appropriata per le interfacce WAN.</li>
+<li class="">Configurazione WireGuard: risolti gli errori invisibili quando l&#x27;indirizzo IP pubblico non può essere risolto; ora gestisce gli errori di risoluzione DNS senza bloccare l&#x27;installazione.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="restore_old_backup_bug-section">Ripristino del backup da versioni precedenti<a href="#restore_old_backup_bug-section" class="hash-link" aria-label="Link diretto a Ripristino del backup da versioni precedenti" title="Link diretto a Ripristino del backup da versioni precedenti" translate="no">​</a></h3>
+<p>Quando si ripristina un backup dalla versione 8-24.10.0-ns.1.6.0 o precedente, l&#x27;interfaccia utente e il proxy inverso potrebbero non essere disponibili perché nginx non riesce ad avviarsi. In questo caso, è possibile verificare eventuali problemi eseguendo:</p>
+<blockquote>
+<p>/usr/sbin/nginx -c /etc/nginx/uci.conf -T</p>
+</blockquote>
+<p>Potrebbe verificarsi un errore di configurazione nginx: :</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">&quot;module \&quot;ngx_http_ubus_module\&quot; is already loaded&quot;</span><br></div></code></pre></div></div>
+<p>Ciò accade perché il vecchio backup contiene il file <code>/etc/nginx/module.d/luci.module</code>, che entra in conflitto con la nuova versione upstream di nginx. Per risolvere, eseguire: :</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">rm -f /etc/nginx/module.d/luci.module &amp;&amp; /etc/init.d/nginx restart </span><br></div></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2025-10-30">Principali modifiche il 2025-10-30<a href="#principali-modifiche-il-2025-10-30" class="hash-link" aria-label="Link diretto a Principali modifiche il 2025-10-30" title="Link diretto a Principali modifiche il 2025-10-30" translate="no">​</a></h2>
+<p>Versione immagine: <code>8.7.1</code> (basata su OpenWrt 24.10.3)</p>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Risolto il problema in cui dnsmasq poteva essere fermato da keepalived anche quando non in modalità HA.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2025-10-29">Principali modifiche il 2025-10-29<a href="#principali-modifiche-il-2025-10-29" class="hash-link" aria-label="Link diretto a Principali modifiche il 2025-10-29" title="Link diretto a Principali modifiche il 2025-10-29" translate="no">​</a></h2>
+<p>Versione immagine: <code>8.7.0</code> (basata su OpenWrt 24.10.3)</p>
+<p><strong>Nuove funzionalità</strong></p>
+<ul>
+<li class="">L&#x27;alta disponibilità è ora pronta per la produzione dopo test estesi e ridisegno; il design è cambiato dalla versione beta e richiede una riconfigurazione.</li>
+<li class="">Nuova interfaccia utente del tunnel WireGuard per creare e gestire VPN direttamente dall&#x27;interfaccia, con supporto per più server e condivisione tramite file o codice QR. I tunnel WireGuard configurati dalla riga di comando esistenti vengono migrati automaticamente nella nuova interfaccia utente.</li>
+<li class="">Gestione migliorata della protezione DDoS e flood; configurazione centralizzata in IP di Threat Shield.</li>
+<li class="">Aggiunto elenco di URL locale consentiti a DNS di Threat Shield per un controllo più granulare.</li>
+<li class="">Modelli di configurazione automatica introdotti per le zone GUEST e DMZ.</li>
+<li class="">Aggiunta l&#x27;opzione per scaricare i backup non crittografati localmente utilizzando un pulsante dedicato.</li>
+<li class="">I server DNS configurati manualmente ora hanno sempre la precedenza su quelli forniti dall&#x27;ISP tramite DHCP o PPPoE.</li>
+<li class="">Comportamento DHCP migliorato con FlashStart: non è necessario definire DNS nelle opzioni DHCP quando FlashStart è attivo.</li>
+<li class="">Le regole di port forwarding generate dal sistema sono ora visibili ma di sola lettura, chiaramente contrassegnate come automatiche.</li>
+<li class="">Threat Shield IP automaticamente aggiunge alla whitelist gli IP dei servizi aziendali Nethesis per prevenire i falsi positivi.</li>
+<li class="">Aggiunto supporto per i gruppi DH IPSec 19, 20 e 21.</li>
+<li class="">Aggiunto il controllo di accesso del gruppo di unità, le restrizioni basate su IP, le ottimizzazioni delle prestazioni e i miglioramenti dell&#x27;interfaccia utente nel controller.</li>
+<li class="">I dati e i log del controller vengono ora trasmessi attraverso il tunnel VPN per una migliore sicurezza.</li>
+<li class="">Aggiunto il campo di descrizione dell&#x27;unità sincronizzato tra le unità e il controller.</li>
+<li class="">Aggiunta la configurazione MTU per risolvere i problemi di connettività su reti di bassa qualità.</li>
+<li class="">Introdotto l&#x27;accesso di supporto remoto (nethsupport) tramite codice temporaneo; nessuna credenziale o 2FA richiesta, con revoca automatica dopo la fine della sessione.</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Risolto il problema di abilitazione/disabilitazione delle regole di port forward tramite il menu kebab quando sono configurati oggetti di set di dominio.</li>
+<li class="">Migliore convalida del port forward per rifiutare gli indirizzi IP non validi quando è definita una porta di destinazione.</li>
+<li class="">Corretti i tunnel OpenVPN con compressione LZO che non riuscivano ad avviarsi.</li>
+<li class="">Le configurazioni QoS e MultiWAN vengono ora aggiornate correttamente quando un&#x27;interfaccia WAN viene rimossa.</li>
+<li class="">Le regole DPI ora bloccano correttamente il traffico ICMP; risolto il segfault all&#x27;avvio e migliorato le prestazioni sotto carico.</li>
+<li class="">Risolto il problema della funzionalità del menu kebab nel port forwarding quando vengono utilizzati i set di dominio nella sezione &quot;limita accesso a&quot;.</li>
+<li class="">Gli indicatori di utilizzo del certificato del proxy inverso ora mostrano lo stato corretto.</li>
+<li class="">Risolto il problema del controller in cui 2FA poteva attivarsi dopo l&#x27;annullamento della configurazione; ora si attiva solo dopo la corretta conferma dell&#x27;OTP.</li>
+<li class="">Il server DHCP ora risponde con un singolo messaggio per richiesta quando sono configurate più istanze di dnsmasq.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2025-06-30">Principali modifiche il 2025-06-30<a href="#principali-modifiche-il-2025-06-30" class="hash-link" aria-label="Link diretto a Principali modifiche il 2025-06-30" title="Link diretto a Principali modifiche il 2025-06-30" translate="no">​</a></h2>
+<p>Versione immagine: <code>8-24.10.0-ns.1.6.0</code></p>
+<p><strong>Nuove funzionalità</strong></p>
+<ul>
+<li class="">Alta disponibilità: aggiunto il supporto per cluster a due nodi in modalità backup. failover automatico entro pochi secondi. configurato tramite riga di comando.</li>
+<li class="">Flashstart ProPlus: aggiunto il supporto per configurazioni multi-profilo, blocklist dinamiche e gestione migliorata del client dns.</li>
+<li class="">Procedura guidata di sicurezza: assiste con la configurazione di sicurezza iniziale (password, ssh e interfaccia utente). appare dopo l&#x27;accesso se non ancora completata e può essere saltata.</li>
+<li class="">Archiviazione persistente automatica dei log: lo spazio su disco libero viene assegnato automaticamente ai log per impostazione predefinita, prevenendo la perdita di log durante il riavvio. gli amministratori possono modificare la destinazione.</li>
+<li class="">Threat Shield: gestione IP bloccati dall&#x27;interfaccia utente: aggiunta l&#x27;interfaccia per visualizzare, cercare e sbloccare gli IP. le blocklist IPv4 e IPv6 sono gestibili dall&#x27;interfaccia utente.</li>
+<li class="">Stato di sincronizzazione del centro servizi: la pagina dell&#x27;abbonamento ora mostra lo stato della connessione, l&#x27;ora dell&#x27;ultima sincronizzazione e un pulsante &quot;sincronizza ora&quot;.</li>
+<li class="">SNAT limitato per interfaccia: consente le regole SNAT su interfacce di rete specifiche. semplifica il routing avanzato e le configurazioni di failover. gestibile tramite interfaccia utente.</li>
+<li class="">Filtro dei leasing statici: aggiunto il filtro per i leasing DHCP statici per interfaccia per una gestione più semplice delle configurazioni complesse.</li>
+<li class="">Versione nei log di migrazione: i log di migrazione e le esportazioni ora includono la versione dello strumento di migrazione e del sistema di destinazione.</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">OpenVPN: risolto il problema in cui gli utenti Active Directory rinominati/eliminati potevano comunque accedere con le vecchie credenziali. il tracciamento dell&#x27;accesso viene ora aggiornato correttamente.</li>
+<li class="">Firewall: impedito ai nomi delle zone del firewall di iniziare con numeri: evita i problemi di applicazione della regola.</li>
+<li class="">Port forward: consente il port forwarding senza specificare un indirizzo di destinazione.</li>
+<li class="">Certificati: possibilità di eliminare le richieste Let&#x27;s Encrypt anche se ancora in sospeso.</li>
+<li class="">OpenVPN: i tunnel OpenVPN net-to-net con trattini nel nome possono ora essere modificati dopo la migrazione.</li>
+<li class="">Log: risolto il problema in cui i log potevano occupare il filesystem root dopo un ripristino.</li>
+<li class="">OpenVPN RW: rinegoziazione regolata per prevenire disconnessioni inaspettate per determinati metodi di autenticazione.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2025-04-10">Principali modifiche il 2025-04-10<a href="#principali-modifiche-il-2025-04-10" class="hash-link" aria-label="Link diretto a Principali modifiche il 2025-04-10" title="Link diretto a Principali modifiche il 2025-04-10" translate="no">​</a></h2>
+<p>Versione immagine: <code>8-24.10.0-ns.1.5.1</code></p>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Bond: risolto il problema con le interfacce di bonding che non avevano il modulo del kernel caricato correttamente</li>
+<li class="">Traffico in tempo reale: i valori del traffico sono stati regolati per essere più accurati nelle tabelle</li>
+<li class="">Threat Shield DNS/IP: rimosso il problema grafico in cui più elenchi apparivano abilitati di quelli effettivi</li>
+<li class="">Monitoraggio: rimosso il display dell&#x27;IP WAN se l&#x27;interfaccia è offline</li>
+<li class="">Interfaccia utente: raddoppiata la velocità dell&#x27;interfaccia utente comprimendo i dati inviati al browser</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2025-04-08">Principali modifiche il 2025-04-08<a href="#principali-modifiche-il-2025-04-08" class="hash-link" aria-label="Link diretto a Principali modifiche il 2025-04-08" title="Link diretto a Principali modifiche il 2025-04-08" translate="no">​</a></h2>
+<p>Versione immagine: <code>8-24.10.0-ns.1.5.0</code></p>
+<p>Questo rilascio affronta un bug riscontrato nel rilascio precedente a causa dell&#x27;irrigidimento del backend API.</p>
+<p>Nessun cambiamento aggiuntivo è stato effettuato dalla versione 1.5.0-rc1 a questo rilascio.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2025-03-28">Principali modifiche il 2025-03-28<a href="#principali-modifiche-il-2025-03-28" class="hash-link" aria-label="Link diretto a Principali modifiche il 2025-03-28" title="Link diretto a Principali modifiche il 2025-03-28" translate="no">​</a></h2>
+<p>Versione immagine: <code>8-24.10.0-ns.1.5.0-rc1</code></p>
+<p>Questo rilascio contiene nuove interfacce utente per servizi precedentemente accessibili solo tramite riga di comando, insieme a miglioramenti della sicurezza e correzioni di bug.</p>
+<p><strong>Nuove funzionalità e miglioramenti</strong></p>
+<ul>
+<li class="">IPS: l&#x27;interfaccia utente è stata rilasciata</li>
+<li class="">DNS di Threat Shield: l&#x27;interfaccia utente è stata rilasciata</li>
+<li class="">Binding IP/MAC: l&#x27;interfaccia utente è stata rilasciata</li>
+<li class="">Informatica Netify: l&#x27;interfaccia utente è stata rilasciata per la registrazione del servizio</li>
+<li class="">DNS FlashStart: Miglioramenti dell&#x27;implementazione. La gestione DNS di NethSecurity è ora indipendente dal DNS utilizzato per FlashStart per evitare qualsiasi interazione con i servizi del firewall. I server DNS esterni non sono più necessari per le reti non filtrate.</li>
+<li class="">Varie modifiche sono state apportate per rafforzare il sistema, incluse: indurimento dell&#x27;API, il servizio SNMP è ora disabilitato per impostazione predefinita, modifiche alla gestione del backup (solo con sottoscrizione)</li>
+</ul>
+<p><strong>Correzioni di bug (questo è un elenco limitato dei più segnalati)</strong></p>
+<ul>
+<li class="">Migrazione: problema del nome dispositivo OpenVPN quando si superano i 16 caratteri</li>
+<li class="">Migrazione: perdita di configurazione per i tunnel OpenVPN con nomi simili</li>
+<li class="">Migrazione: interruzione della migrazione del client Road Warrior se manca un certificato utente</li>
+<li class="">MultiWAN non consente al firewall di inviare traffico all&#x27;esterno se la rotta di metrica più bassa non è disponibile</li>
+<li class="">L&#x27;esportazione JSON del tunnel OpenVPN include solo il primo endpoint remoto, omettendo gli altri</li>
+<li class="">L&#x27;abilitazione della registrazione nelle regole del firewall può sovraccaricare la CPU</li>
+<li class="">Le regole Netmap non caricate dopo un aggiornamento della versione</li>
+<li class="">L&#x27;interfaccia web del server OpenVPN si arresta in modo anomalo se il database utente viene rimosso</li>
+<li class="">Firewall: zona &quot;any&quot; visualizzata come inattiva</li>
+<li class="">Port forward: errore quando si assegna un oggetto con un intervallo IP</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-12-18">Principali modifiche il 2024-12-18<a href="#principali-modifiche-il-2024-12-18" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-12-18" title="Link diretto a Principali modifiche il 2024-12-18" translate="no">​</a></h2>
+<p>Versione immagine: <code>8-23.05.6-ns.1.4.1</code></p>
+<p>Questo rilascio si concentra sul monitoraggio locale migliorato e aggiunge alcune funzionalità sperimentali.</p>
+<p><strong>Nuove funzionalità e miglioramenti</strong></p>
+<ul>
+<li class="">La funzionalità di monitoraggio in tempo reale ora consente agli utenti di filtrare i dati del traffico selezionando un host e una delle seguenti opzioni: applicazione, host remoto o protocollo</li>
+<li class="">Monitoraggio in tempo reale: aggiunti grafici di latenza e velocità di perdita</li>
+<li class="">Migliorare la configurazione della rete Netifyd: la configurazione è stata aggiornata per migliorare le prestazioni di rete limitando il numero di interfacce controllate</li>
+<li class="">Assicurare un comportamento coerente della registrazione del nome host nei log nginx: i log nginx includevano precedentemente il nome host due volte, causando incoerenze all&#x27;interno di Grafana</li>
+<li class="">MultiWAN: aggiungere regole di routing per il traffico avviato dal router</li>
+<li class="">La configurazione di FlashStart viene ora disabilitata automaticamente se non è disponibile una sottoscrizione attiva</li>
+<li class="">Phonehome: raccogliere statistiche sull&#x27;utilizzo del DNS di Threat Shield</li>
+</ul>
+<p><strong>Funzionalità sperimentali</strong></p>
+<p>Le seguenti funzionalità sono sperimentali e devono essere configurate da CLI:</p>
+<ul>
+<li class="">Binding MAC: introdotto il binding MAC tramite prenotazione DHCP per migliorare la sicurezza di rete associando indirizzi MAC specifici agli indirizzi IP designati</li>
+<li class="">Supporto NUT: configurare i dispositivi UPS con NUT. Questo non è ufficialmente supportato su macchine con una sottoscrizione</li>
+<li class="">Configurazione WireGuard: configurare WireGuard tramite CLI, abilitando la gestione di più istanze di server e peer</li>
+<li class="">Intrusion Prevention System (IPS): introdotta la configurazione di Snort tramite CLI, consentendo agli utenti di gestire regole e criteri</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Regole firewall: riferimento ipset non rimosso durante la modifica della regola di input</li>
+<li class="">Port forward: riferimento ipset non rimosso durante la modifica della regola di input</li>
+<li class="">Oggetti firewall: modifiche all&#x27;host set non riflesse nelle regole nft</li>
+<li class="">OpenVPN Road Warrior: correggere il problema del percorso con la gestione del bonding</li>
+<li class="">Archiviazione: il disco non viene visualizzato nell&#x27;interfaccia utente dopo l&#x27;aggiornamento del sistema</li>
+<li class="">Flashstart: corretto un problema che impediva l&#x27;invio dell&#x27;heartbeat</li>
+<li class="">Migrazione: gli account VPN non visibili se il nome utente contiene lettere maiuscole</li>
+<li class="">Dashboard: messaggio di errore errato nonostante la risposta API corretta</li>
+<li class="">Monitoraggio: errore quando OpenVPN RoadWarrior ha una configurazione incompleta</li>
+<li class="">Migrazione: l&#x27;importazione dell&#x27;alias PPPoE non riuscita con errore di argomento non valido</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-10-17">Principali modifiche il 2024-10-17<a href="#principali-modifiche-il-2024-10-17" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-10-17" title="Link diretto a Principali modifiche il 2024-10-17" translate="no">​</a></h2>
+<p>Versione immagine: <code>8-23.05.5-ns.1.3.0</code></p>
+<p>Questo rilascio si concentra sul monitoraggio, sui miglioramenti della migrazione e su una migliore integrazione del controller NethSecurity.</p>
+<p>Il changelog dettagliato può essere trovato <a href="https://github.com/NethServer/nethsecurity/milestone/5?closed=1" target="_blank" rel="noopener noreferrer" class="">qui</a></p>
+<p><strong>Nuove funzionalità e miglioramenti</strong></p>
+<ul>
+<li class="">Aggiornamento a OpenWrt 23.05.5: consultare il changelog upstream <a href="https://openwrt.org/releases/23.05/notes-23.05.5" target="_blank" rel="noopener noreferrer" class="">changelog</a></li>
+<li class="">Gestione centralizzata dell&#x27;aggiornamento dell&#x27;unità: dal controller dovrebbe essere possibile aggiornare l&#x27;unità senza problemi (pacchetti e/o immagine)</li>
+<li class="">Pagina di monitoraggio in tempo reale: creare una dashboard completa per il monitoraggio di NethSecurity</li>
+<li class="">Monitoraggio storico: il monitoraggio storico consente all&#x27;utente di vedere come si comporta il firewall dal controller NethSecurity</li>
+<li class="">Supporto degli strumenti per le macchine virtuali per KVM e VMware: rimuovere tutti gli strumenti dall&#x27;immagine e fornirli come pacchetti opzionali</li>
+<li class="">Port forward: supportare tutti gli oggetti all&#x27;interno del campo restrict: implementare il supporto per più tipi di oggetto nel campo &quot;limita accesso da&quot;</li>
+<li class="">Inventario, statistiche di utilizzo avanzate: raccogliere statistiche anonime sull&#x27;utilizzo del sistema</li>
+<li class="">Migliorare l&#x27;interfaccia utente di Threat Shield: esporre le impostazioni di registrazione e protezione dalla forza bruta nella pagina di Threat Shield</li>
+<li class="">Interfaccia utente degli helper NAT: nuova pagina di configurazione dell&#x27;helper NAT</li>
+<li class="">Supporto remoto (ns-don): aprire la porta netdata (19999): aggiungere l&#x27;accesso alla porta 19999 da tunDON per consentire la visualizzazione dell&#x27;interfaccia utente di netdata dalle sessioni di supporto remoto</li>
+<li class="">Regole NAT: aggiungi &quot;0.0.0.0/0 qualsiasi indirizzo&quot;: aggiungi l&#x27;opzione &quot;0.0.0.0/0 qualsiasi indirizzo&quot; tra i suggerimenti degli indirizzi di destinazione</li>
+<li class="">Zone e criteri: consenti di impostare il criterio di registrazione per ogni zona</li>
+<li class="">Pagina DNS e DHCP: la ricerca non distingue più tra maiuscole e minuscole</li>
+<li class="">OpenVPN Road Warrior: aggiungere un pulsante per scaricare tutti i certificati OpenVPN associati a una specifica istanza di Road Warrior</li>
+<li class="">Interfaccia utente: migliora l&#x27;usabilità, la navigazione, il layout e gli elementi visivi su più pagine</li>
+<li class="">Migrazione: alla fine della migrazione, viene creato un file di log con tutte le azioni eseguite, il log è disponibile in <code>/root/migration.log</code></li>
+<li class="">MultiWAN: migliorare la configurazione predefinita per ripristinare l&#x27;uplink dopo che tutti i WAN hanno perso la connettività</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Migrazione: correggere le regole del firewall che utilizzavano la zona blu</li>
+<li class="">Migrazione: configurazione di rete non migrata se l&#x27;alias non ha gateway</li>
+<li class="">Migrazione: correggere le regole del firewall con il servizio &quot;any&quot; che migrano in modo errato</li>
+<li class="">Migrazione: correggere il flag di autenticazione della password root visualizzato in modo errato</li>
+<li class="">Migrazione: rinominare le interfacce VPN che hanno causato un errore firewall se il nome era troppo lungo</li>
+<li class="">Migrazione: correggere l&#x27;account_email mancante in ACME che ha causato un errore di rinnovo del certificato</li>
+<li class="">Migrazione: correggere la zona errata per le regole personalizzate OpenVPN e IPsec</li>
+<li class="">Migrazione: correggere la riflessione della zona errata sul port forward per le VPN</li>
+<li class="">Migrazione: rimuovere le zone personalizzate sulla migrazione, le zone vengono convertite in reti CIDR</li>
+<li class="">Migrazione: correggere FlashStart non abilitato sull&#x27;interfaccia guest/blue</li>
+<li class="">Migrazione: correggere il certificato OpenVPN Road Warrior non esportato se CN contiene il carattere punto</li>
+<li class="">Migrazione: importare correttamente gli utenti di OpenVPN Road Warrior senza proprietà &quot;status&quot;</li>
+<li class="">OpenVPN Road Warrior: aggiungere l&#x27;impostazione di compressione client mancante nel file .ovpn</li>
+<li class="">OpenVPN Road Warrior: correggere la gestione del pool IP</li>
+<li class="">OpenVPN Road Warrior: correggere il CRL scaduto che causava un errore di connessione dopo 6 mesi</li>
+<li class="">Tunnel OpenVPN tra NS7 e NS8 cipher: la connessione non riusciva nonostante mostrasse &quot;connesso&quot;</li>
+<li class="">Client del tunnel OpenVPN: modalità di visualizzazione corretta</li>
+<li class="">Client del tunnel OpenVPN: modalità &quot;bridged&quot; visualizzata erroneamente come nuova impostazione predefinita, la nuova impostazione predefinita è ora &quot;routed&quot;</li>
+<li class="">Il client del tunnel OpenVPN reimposta il cipher su <code>AES-128-CBC</code>: impostare il cipher correttamente senza reimpostarlo</li>
+<li class="">Client del tunnel OpenVPN: impostare correttamente la modalità &quot;tap&quot; e &quot;tun&quot; sulla creazione del tunnel client</li>
+<li class="">Impossibile disabilitare l&#x27;interfaccia utente legacy LuCI dopo l&#x27;aggiornamento del sistema: correggere l&#x27;opzione di disabilitazione dell&#x27;interfaccia utente LuCI</li>
+<li class="">Connessione del controller (ns-plug): forzare la pulizia della cache dei pacchetti e sincronizzare lo stato dell&#x27;unità</li>
+<li class="">Migrazione: migliorare la migrazione in loco, aggiungere un ritardo prima della scrittura dell&#x27;immagine per ridurre i problemi durante la scrittura del kernel</li>
+<li class="">Conntrack: assicurarsi che i contatori siano impostati: evitare l&#x27;errore dai contatori mancanti.</li>
+<li class="">Proxy inverso: impostare correttamente il certificato predefinito</li>
+<li class="">Proxy inverso: correggere la configurazione per consentire l&#x27;accesso solo dalla rete specificata</li>
+<li class="">Netdata: attenuato il problema con il processo fping orfano che continua a effettuare il ping degli IP rimossi</li>
+<li class="">Impossibile disconnettersi mentre viene visualizzata una notifica di tosto: impedire alle notifiche di tosto di bloccare il menu dell&#x27;account</li>
+<li class="">Server API: correggere il riavvio all&#x27;aggiornamento del pacchetto</li>
+<li class="">La pagina dell&#x27;interfaccia non riesce con QoS abilitato su PPPoE: migliorare il validatore nella pagina di configurazione della rete</li>
+<li class="">Impossibile duplicare un port forward: correggere la duplicazione della regola di port forwarding</li>
+<li class="">Report: disabilitare il pulsante &quot;apri report&quot; quando l&#x27;interfaccia utente viene visualizzata dal controller</li>
+<li class="">Report DPI: correggere l&#x27;arresto anomalo al riavvio di netifyd</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-08-08">Principali modifiche il 2024-08-08<a href="#principali-modifiche-il-2024-08-08" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-08-08" title="Link diretto a Principali modifiche il 2024-08-08" translate="no">​</a></h2>
+<p>Versione immagine: <code>8-23.05.4-ns.1.2.0</code></p>
+<p>Questo rilascio si concentra su nuove funzionalità per gli abbonamenti e l&#x27;esperienza utente migliorata.</p>
+<p>Il changelog dettagliato può essere trovato <a href="https://github.com/NethServer/nethsecurity/milestone/4?closed=1" target="_blank" rel="noopener noreferrer" class="">qui</a></p>
+<p><strong>Nuove funzionalità e miglioramenti</strong></p>
+<ul>
+<li class="">Aggiornamento a OpenWrt 23.05.4: aggiornare OpenWrt alla versione 23.05.4 con pacchetti e modifiche di base rilevanti</li>
+<li class="">Elenchi liberi di Threat Shield per la comunità: implementare elenchi liberi di Threat Shield per gli utenti della comunità, migliorando la protezione generale dalle minacce</li>
+<li class="">Backup remoto per tutte le sottoscrizioni: estendere l&#x27;accesso al backup remoto a sottoscrizioni sia Enterprise che Community con informazioni di backup aggiuntive</li>
+<li class="">Nuovo script per aggiornare i pacchetti con registrazione e accesso al canale stabile: implementare un nuovo script update-packages con registrazione migliorata e flag force-stable</li>
+<li class="">Oggetti firewall: implementare oggetti host set e domain set per la gestione migliorata del firewall</li>
+<li class="">Aggiungere il supporto degli oggetti nelle regole MultiWAN: implementare il supporto degli oggetti nell&#x27;interfaccia utente MultiWAN per gli indirizzi di origine e destinazione</li>
+<li class="">Aggiungere il supporto degli oggetti nelle regole Port Forward: aggiungere il supporto degli oggetti per l&#x27;indirizzo di destinazione e l&#x27;accesso limitato nelle regole Port Forward</li>
+<li class="">Aggiungere il supporto degli oggetti nelle regole Firewall: includere il supporto degli oggetti per gli indirizzi di origine e destinazione nelle regole Firewall</li>
+<li class="">Prenotazione IP di OpenVPN Road Warrior: migliorare la gestione degli IP riservati nella configurazione di OpenVPN per prevenire conflitti</li>
+<li class="">Backup: includere l&#x27;elenco dei pacchetti installati nel backup per un ripristino più semplice dopo l&#x27;aggiornamento dell&#x27;immagine</li>
+<li class="">Certificato Let&#x27;s Encrypt sulla porta aggiuntiva dell&#x27;interfaccia web: estendere l&#x27;utilizzo del certificato Let&#x27;s Encrypt alla porta aggiuntiva ns-ui</li>
+<li class="">Server tunnel OpenVPN: aggiungere l&#x27;opzione &quot;remote-cert-tls&quot; nel file di configurazione del client esportato</li>
+<li class="">DNS personalizzato per hotspot: aggiungere il supporto per modificare il DNS predefinito per l&#x27;hotspot</li>
+<li class="">Supporto limitato per adattatori USB-to-Ethernet: fornire il supporto sperimentale per adattatori USB-to-Ethernet con installazione manuale del driver</li>
+<li class="">Supporto limitato per adattatori USB-to-Serial: aggiungere il supporto sperimentale per adattatori USB-to-Serial con installazione manuale del driver</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Negare la creazione di certificati con domini già richiesti: prevenire la creazione di certificati duplicati con lo stesso dominio</li>
+<li class="">Problema visivo con oggetti DHCP in OpenVPN Road Warrior: correggere i campi mancanti e gli errori di visualizzazione nelle opzioni DHCP</li>
+<li class="">Impossibile creare proxy inversi: correggere l&#x27;errore di convalida della configurazione nginx durante la creazione di proxy inversi</li>
+<li class="">Limitare i nomi delle interfacce a 13 caratteri: prevenire l&#x27;errore mwan a causa di nomi di interfaccia lunghi</li>
+<li class="">OpenVPN, impossibile rimuovere l&#x27;IP riservato per il client Road Warrior: correggere il problema in cui l&#x27;IP riservato non può essere rimosso per i client Roadwarrior</li>
+<li class="">Arresto anomalo dell&#x27;interfaccia utente con oltre 3000 voci di conntrack: correggere l&#x27;arresto anomalo dell&#x27;interfaccia utente e l&#x27;interruzione del servizio rpcd con un gran numero di voci di conntrack</li>
+<li class="">MultiWAN, mancanti avvisi di disconnessione/riconnessione WAN: nuova implementazione degli avvisi WAN per gestire correttamente gli eventi di connessione e riconnessione</li>
+<li class="">Controller, visualizzare il nome degli utenti disconnessi: mostrare il nome delle unità disconnesse invece del solo UUID</li>
+<li class="">Controller, visualizzare la porta VPN: aggiungere la visualizzazione della porta VPN nell&#x27;interfaccia utente NS8 per una configurazione del firewall più semplice</li>
+<li class="">Controller, convalidare CN: aggiungere la regola di convalida al campo del nome del controller per consentire solo lettere e numeri</li>
+<li class="">Controller, non rimuovere il file .info al momento della disconnessione: preservare il file di informazioni dell&#x27;unità per le unità disconnesse</li>
+<li class="">Controller, le unità passano continuamente da connesse a disconnesse: affrontare il problema con la visualizzazione dello stato di connessione irregolare per più unità</li>
+<li class="">Migrazione, servizi DHCP e DNS per zona blu/guest: abilitare i servizi DHCP e DNS per le zone blu/guest migrate</li>
+<li class="">Migrazione, IP riservato OpenVPN non assegnato: risolvere il problema con l&#x27;assegnazione dell&#x27;IP riservato per i certificati migrati</li>
+<li class="">Migrazione, nome utente FlashStart mancante: correggere il problema in cui il campo del nome utente non viene visualizzato nell&#x27;interfaccia di FlashStart dopo la migrazione</li>
+<li class="">FlashStart, ridurre il numero di query: modificare la configurazione di dnsdist per ottimizzare la gestione delle query e ridurre le richieste non necessarie</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-07-05">Principali modifiche il 2024-07-05<a href="#principali-modifiche-il-2024-07-05" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-07-05" title="Link diretto a Principali modifiche il 2024-07-05" translate="no">​</a></h2>
+<p>Versione immagine: <code>8-23.05.3-ns.1.1.0</code></p>
+<p>Questo rilascio si concentra sulla correzione di bug e sulla fornitura di nuove funzionalità.</p>
+<p>Il changelog dettagliato può essere trovato <a href="https://github.com/NethServer/nethsecurity/milestone/3?closed=1" target="_blank" rel="noopener noreferrer" class="">qui</a>.</p>
+<p><strong>Nuove funzionalità e miglioramenti</strong></p>
+<ul>
+<li class="">Gestione delle connessioni: interfaccia implementata per il monitoraggio e il controllo in tempo reale delle connessioni tracciate da conntrack</li>
+<li class="">Opzione sticky MultiWAN: configurazione sticky aggiunta nelle regole MultiWAN per mantenere la persistenza della connessione tra le sessioni</li>
+<li class="">Aggiornamenti della firma DPI: abilitati gli aggiornamenti delle firme di Deep Packet Inspection per i tipi di sottoscrizione sia community che enterprise</li>
+<li class="">Gestione degli utenti amministratore: funzioni API implementate per elevare gli utenti locali allo stato di amministratore e revocare i privilegi di amministratore</li>
+<li class="">Miglioramento dell&#x27;autenticazione LDAP: flessibilità migliorata per configurazioni di Active Directory e Distinguished Name LDAP non standard</li>
+<li class="">Autenticazione del repository di sottoscrizione: sistema implementato di verifica della system_key per l&#x27;accesso ai repository di pacchetti basati su sottoscrizione</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Utilizzo dell&#x27;archiviazione NVME: risolto il problema che impedisce l&#x27;utilizzo dello spazio dell&#x27;unità NVME non allocato per la registrazione del sistema</li>
+<li class="">Convalida del ripristino del backup: messaggi di errore specifici aggiunti per l&#x27;input della passphrase errata durante il processo di ripristino del backup</li>
+<li class="">Regolazione delle metriche MWAN: allocazione della metrica dell&#x27;interfaccia modificata per iniziare da 20 e incrementare di 10 per un miglior bilanciamento del carico</li>
+<li class="">Coerenza dell&#x27;interfaccia utente dell&#x27;aggiornamento pianificato: visualizzazione persistente corretta degli aggiornamenti pianificati completati nell&#x27;interfaccia utente</li>
+<li class="">Etichettatura della politica MultiWAN: visualizzazione dell&#x27;etichetta &quot;balance&quot; non corretta corretta per le politiche personalizzate a gateway singolo</li>
+<li class="">Convalida del modulo MultiWAN e gestione dell&#x27;input: gestione dello stato del campo di input appropriato e convalida del modulo implementate nell&#x27;editor dei criteri</li>
+<li class="">Raffinamento dell&#x27;interfaccia utente/UX MultiWAN: flessibilità della porta di input migliorata e logica di invio del modulo per regole e criteri</li>
+<li class="">Funzionalità DHCP post-migrazione: errore di assegnazione dell&#x27;indirizzo DHCP affrontato dopo la migrazione dalla versione 7.9 alla 8</li>
+<li class="">Effetto collaterale della creazione dell&#x27;account VPN: rimozione involontaria impedita dei nomi visualizzati degli utenti alla creazione dell&#x27;account VPN</li>
+<li class="">Configurazione della rete di migrazione: implementato il rimuovimento di voci gateway estranee dalle interfacce non rosse</li>
+<li class="">Logica di migrazione MultiWAN: disabilitazione automatica aggiunta delle configurazioni MultiWAN con provider singolo durante la migrazione</li>
+<li class="">Visualizzazione della configurazione IPsec: interfaccia utente corretta per riflettere accuratamente i valori dei parametri del tunnel IPsec personalizzato</li>
+<li class="">Funzionalità del proxy inverso: risolti i problemi di passaggio del proxy per l&#x27;accesso a WebTop post-migrazione</li>
+<li class="">Integrità del database utente locale: correzione della scomparsa dei dati dell&#x27;utente locale dopo gli aggiornamenti del sistema</li>
+<li class="">Robustezza del sistema di inventario: gestione migliorata dei dispositivi VLAN sulle interfacce del bridge e recupero della configurazione DNS</li>
+<li class="">Persistenza della configurazione del controller: correzione del problema di corruzione del file di configurazione dopo il salvataggio delle impostazioni dell&#x27;interfaccia del cluster</li>
+<li class="">Flusso di lavoro di configurazione del controller: modulo di configurazione migliorato con opzioni avanzate e guida utente più chiara</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-06-05">Principali modifiche il 2024-06-05<a href="#principali-modifiche-il-2024-06-05" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-06-05" title="Link diretto a Principali modifiche il 2024-06-05" translate="no">​</a></h2>
+<p><strong>Questo è un rilascio di sicurezza</strong></p>
+<p>Versione immagine: <code>8-23.05.3-ns.1.0.1</code></p>
+<p>Affrontata la vulnerabilità di sicurezza: <a href="https://github.com/NethServer/nethsecurity/security/advisories/GHSA-74xv-ww67-jjpx" target="_blank" rel="noopener noreferrer" class="">GHSA-74xv-ww67-jjpx</a> (la divulgazione sarà pubblicata il 2024-06-20)</p>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Correzione della sicurezza per GHSA-74xv-ww67-jjpx</li>
+<li class="">Ipsec: correggere il tunnel non funzionante se il WAN selezionato è un PPPoE su vlan</li>
+<li class="">MultiWAN: forza la lunghezza massima per i nomi delle regole e dei criteri</li>
+<li class="">OpenVPN Road Warrior: prevenire la creazione di utenti con spazi finali</li>
+<li class="">Inventario: migliorare la raccolta di dati per sottoscrizioni e rete</li>
+<li class="">Migrazione: utenti di OpenVPN Road Warrior non visibili nell&#x27;interfaccia utente dopo la migrazione</li>
+<li class="">Server API: stabilità e prestazioni migliorate mediante l&#x27;ottimizzazione dell&#x27;ordine di avvio per il corretto avvio al boot</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-05-22">Principali modifiche il 2024-05-22<a href="#principali-modifiche-il-2024-05-22" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-05-22" title="Link diretto a Principali modifiche il 2024-05-22" translate="no">​</a></h2>
+<p><strong>Stabile</strong></p>
+<p>Versione immagine: <code>8-23.05.3-ns.1.0.0</code></p>
+<p>Il rilascio stabile si concentra sulla correzione di bug e sul miglioramento dell&#x27;esperienza utente complessiva.</p>
+<p>Il changelog dettagliato può essere trovato <a href="https://github.com/NethServer/nethsecurity/milestone/2?closed=1" target="_blank" rel="noopener noreferrer" class="">qui</a>.</p>
+<p><strong>Nuove funzionalità e miglioramenti</strong></p>
+<ul>
+<li class="">Route: le regole IPsec sono ora non modificabili</li>
+<li class="">IPsec: aggiunto un validatore per le reti remote e locali</li>
+<li class="">Ricaricamento automatico delle pagine VPN: le pagine VPN vengono ora ricaricate automaticamente</li>
+<li class="">DHCP: funzionalità di scansione della rete aggiunta</li>
+<li class="">IPsec: gestione migliorata di più reti all&#x27;interno di un singolo tunnel</li>
+<li class="">DHCP: l&#x27;opzione di forzatura per DHCP è ora disponibile nell&#x27;interfaccia utente</li>
+<li class="">Minaccia shield: rimuovere l&#x27;elenco enterprise al momento della rimozione della sottoscrizione</li>
+<li class="">DPI: rimuovere le firme premium alla revoca dell&#x27;iscrizione</li>
+<li class="">Sottoscrizione: migliorare la modalità di annullamento della registrazione</li>
+<li class="">Inventario: raccogliere statistiche di utilizzo di base</li>
+<li class="">IPsec: esporre meglio l&#x27;opzione PFS</li>
+<li class="">Dashboard: aggiungere una notifica della nuova versione disponibile</li>
+<li class="">Regole firewall: migliorare la leggibilità complessiva della pagina</li>
+<li class="">Zone e criteri: cassetto migliorato per la zona WAN</li>
+<li class="">Dashboard: mostrare un avviso se DNS non è configurato</li>
+<li class="">Helper NAT: tutti gli helper NAT sono ora inclusi nell&#x27;immagine ma disabilitati per impostazione predefinita</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">FlashStart: la risoluzione DNS non riesce dopo la disabilitazione del servizio</li>
+<li class="">FlashStart: correggere la prima configurazione</li>
+<li class="">Let&#x27;s Encrypt: i certificati non vengono creati</li>
+<li class="">FlashStart: la regola di reindirizzamento è inefficace</li>
+<li class="">Firewall: ipset non viene aggiornato dopo la rimozione di un indirizzo</li>
+<li class="">Migrazione: i gruppi di host non vengono importati correttamente nelle regole del firewall</li>
+<li class="">Regole firewall: impossibile inserire un indirizzo IP personalizzato</li>
+<li class="">Minaccia shield: le modifiche all&#x27;allowlist non vengono applicate immediatamente</li>
+<li class="">Migrazione: impossibile modificare il tunnel IPsec importato</li>
+<li class="">OpenVPN road warrior: impossibile ricreare un utente precedentemente creato dal database LDAP</li>
+<li class="">OpenVPN RW: gli host non sono raggiungibili con configurazione bridged</li>
+<li class="">MultiWAN: l&#x27;indirizzo IP di traccia non viene aggiornato</li>
+<li class="">Proxy inverso: l&#x27;elenco degli IP consentiti non deve essere obbligatorio</li>
+<li class="">Controller: impossibile connettersi all&#x27;unità se l&#x27;interfaccia utente è disabilitata sulla porta 443</li>
+<li class="">Sottoscrizione: impossibile registrare una sottoscrizione della comunità</li>
+<li class="">Installa da USB: tabella di partizione errata</li>
+<li class="">Migrazione: impossibile avviare l&#x27;interfaccia PPPoE</li>
+<li class="">Minaccia shield: feed di sottoscrizione vuoto</li>
+<li class="">Aggiornamenti automatici: il lavoro cron non viene avviato durante la notte</li>
+<li class="">Minaccia shield non avviato dall&#x27;interfaccia utente</li>
+<li class="">Migrazione: l&#x27;IP di minaccia shield non viene migrato</li>
+<li class="">EFI: impossibile utilizzare lo spazio libero come archiviazione aggiuntiva</li>
+<li class="">Zona: forza la creazione in minuscolo</li>
+<li class="">OpenVPN Road Warrior: autenticazione OTP, VPN si disconnette dopo un&#x27;ora</li>
+<li class="">ns-api: threatshield, impostare ban_nftexpiry e ban_logcount</li>
+<li class="">Helper NAT: le sessioni FTP attive non trasferiscono file</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-04-29">Principali modifiche il 2024-04-29<a href="#principali-modifiche-il-2024-04-29" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-04-29" title="Link diretto a Principali modifiche il 2024-04-29" translate="no">​</a></h2>
+<p><strong>Candidato al rilascio 2</strong></p>
+<p>Versione immagine: <code>8-23.05.3-ns.0.0.5-rc2</code></p>
+<p>Il rilascio del candidato al rilascio 2 si concentra sulla correzione di bug e sul miglioramento dell&#x27;esperienza utente complessiva. Il changelog dettagliato può essere trovato <a href="https://github.com/NethServer/nethsecurity/milestone/1?closed=1" target="_blank" rel="noopener noreferrer" class="">qui</a>.</p>
+<p><strong>Nuove funzionalità e miglioramenti</strong></p>
+<ul>
+<li class="">Regole firewall: visualizzazione migliorata della sezione delle regole.</li>
+<li class="">FlashStart: aggiunta la funzionalità di risoluzione DNS dopo la disabilitazione del servizio.</li>
+<li class="">Dashboard: organizzazione delle schede migliorata e link aggiuntivi.</li>
+<li class="">Route: abilitazione della creazione di route senza gateway.</li>
+<li class="">Ricaricamento automatico delle pagine VPN: implementato il ricaricamento automatico dei dati ogni 10 secondi.</li>
+<li class="">Migrazione a libreria vue-components: componenti e utility migrati a vue-components.</li>
+<li class="">Interfaccia utente: imposta il timeout rpcd a 300 secondi per supportare attività a lunga esecuzione.</li>
+<li class="">DHCP: funzionalità di scansione della rete introdotta.</li>
+<li class="">Database utente: ordinamento degli utenti in base al nome utente e esecuzione coerente di query LDAP.</li>
+<li class="">DHCP: opzione di forzatura abilitata per impostazione predefinita per i server DHCP, opzione esposta nell&#x27;interfaccia utente.</li>
+<li class="">OpenVPN road warrior: ordinamento implementato degli utenti di OpenVPN road warrior per nome utente.</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">Regole firewall: glitch risolto visualizzando contenuto errato.</li>
+<li class="">FlashStart: errore di risoluzione DNS risolto post disabilitazione del servizio.</li>
+<li class="">Route: modifica della modifica impedita delle regole IPsec.</li>
+<li class="">IPsec: reti remote/locali validate per evitare duplicati.</li>
+<li class="">Port forward: etichetta dell&#x27;opzione di riflessione corretta.</li>
+<li class="">Migrazione: importazione corretta dei gruppi di host nelle regole del firewall.</li>
+<li class="">Regole firewall: consentire l&#x27;inserimento di indirizzi IP personalizzati.</li>
+<li class="">Minaccia shield: applicare le modifiche all&#x27;allowlist immediatamente.</li>
+<li class="">Migrazione: migliorare la migrazione dell&#x27;opzione IPSec e consentire la modifica del tunnel IPsec importato.</li>
+<li class="">OpenVPN road warrior: problema risolto con la ricreazione dell&#x27;utente da LDAP.</li>
+<li class="">Errore axios fisso durante il commit delle modifiche.</li>
+<li class="">OpenVPN road warrior: problema risolto con la configurazione bridged.</li>
+<li class="">IPsec: gestione migliorata di più reti con un singolo tunnel.</li>
+<li class="">Zone: ID dei pulsanti radio fissi nella pagina delle zone.</li>
+<li class="">FlashStart: regola di reindirizzamento inefficace risolta.</li>
+<li class="">Controller: comportamento perfezionato in base alla presenza della sottoscrizione.</li>
+<li class="">Firewall: ipset aggiornato dopo la rimozione dell&#x27;indirizzo IP.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-04-10">Principali modifiche il 2024-04-10<a href="#principali-modifiche-il-2024-04-10" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-04-10" title="Link diretto a Principali modifiche il 2024-04-10" translate="no">​</a></h2>
+<p><strong>Candidato al rilascio 1</strong></p>
+<p>Versione immagine: <code>8-23.05.3-ns.0.0.3-rc1</code></p>
+<p>Il rilascio del candidato al rilascio 1 si concentra sulla correzione di bug, l&#x27;aggiunta del controller centralizzato e il miglioramento del processo di migrazione da NethServer 7.</p>
+<p>Il tracker dei problemi è stato spostato su GitHub. Il nuovo URL è: <a href="https://github.com/NethServer/nethsecurity/issues" target="_blank" rel="noopener noreferrer" class="">https://github.com/NethServer/nethsecurity/issues</a>.</p>
+<p><strong>Nuove funzionalità e miglioramenti</strong></p>
+<ul>
+<li class="">NethSecurity è stato ribasato su <a href="https://forum.openwrt.org/t/openwrt-23-05-3-service-release/192587" target="_blank" rel="noopener noreferrer" class="">OpenWrt 23.05.3</a>.</li>
+<li class="">Aggiunto il <a class="" href="/pr-preview/pr-299/it/docs/administrator-manual/system/controller">controller centralizzato</a> per gestire più istanze di NethSecurity da una singola interfaccia.</li>
+<li class="">Port forward: supporto per intervalli di porte nel campo della porta di origine.</li>
+<li class="">Regole firewall: supporto per intervalli IP come regole di destinazione.</li>
+<li class="">Backup: consenti il download del file di backup dall&#x27;interfaccia utente anche se la macchina ha una sottoscrizione enterprise e il server di backup remoto non è disponibile.</li>
+<li class="">Minaccia shield: migliorare la visualizzazione della pagina shield minaccia se il firewall non ha accesso a Internet.</li>
+<li class="">Sottoscrizione: mostrare la sottoscrizione anche se la macchina non ha accesso a Internet.</li>
+<li class="">MultiWAN: gestione migliorata della configurazione della politica di equilibrio.</li>
+<li class="">Pagina di rete: lo stato di attivo/non attivo delle interfacce di rete ora riflette accuratamente lo stato del cavo invece dello stato del kernel.</li>
+<li class="">Regole firewall: migliorare la visualizzazione delle regole del firewall disabilitate.</li>
+<li class="">Aggiunta un&#x27;opzione per abilitare il collegamento alla politica sulla privacy durante l&#x27;accesso.</li>
+<li class="">Supporto remoto (don): consenti l&#x27;accesso all&#x27;interfaccia utente e conserva la sessione dopo il riavvio del firewall.</li>
+<li class="">Utenti: supporto di binding su database utente LDAP remoto.</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<ul>
+<li class="">2FA: abilitare 2FA per l&#x27;utente solo dopo la verifica dell&#x27;OTP.</li>
+<li class="">Tunnel IPsec: associare correttamente l&#x27;interfaccia ipsecX al WAN selezionato.</li>
+<li class="">IPsec: assicurarsi di iniziare dopo una migrazione anche se il WAN associato non è disponibile.</li>
+<li class="">Migrazione: rielaborare il processo di migrazione della rete per evitare problemi con la configurazione di bonding, bridge e alias.</li>
+<li class="">Migrazione: visualizzare bonding e bridge nella pagina di rimappatura durante la migrazione.</li>
+<li class="">Migrazione, aggiornamento e backup: implementare nuovi metodi di caricamento e download per evitare problemi con file di grandi dimensioni.</li>
+<li class="">Migrazione: corretto un problema che impediva l&#x27;avvio del server DHCP quando le opzioni DHCP erano presenti nella configurazione.</li>
+<li class="">DPI: prevenire la perdita di firme Enterprise dopo un aggiornamento.</li>
+<li class="">Archiviazione: aggiunta la possibilità di ricreare una partizione di archiviazione eliminata.</li>
+<li class="">Rete: correggere la creazione di VLAN su bridge.</li>
+<li class="">Port forward e tunnel IPsec: correggere la visualizzazione degli IP WAN, la pagina ora visualizza tutti gli alias ed evita duplicati anche se il WAN non è disponibile.</li>
+<li class="">Port forward: elencare la zona LAN all&#x27;interno delle destinazioni NAT hairpin.</li>
+<li class="">Tunnel OpenVPN: corretto un problema che impediva la modifica di un tunnel P2P.</li>
+<li class="">Pagina MultiWAN: ordinamento corretto delle interfacce WAN per priorità.</li>
+<li class="">Pagina MultiWAN: non mostrare gli alias WAN nella pagina della politica.</li>
+<li class="">DHCP: nascondi i leasing statici nella scheda dei leasing dinamici.</li>
+<li class="">Proxy pass: correggere un problema che impediva la modifica di una regola di proxy pass.</li>
+<li class="">Tunnel OpenVPN: selezione corretta della cifra predefinita per i tunnel P2P.</li>
+<li class="">DPI: riavviare netifyd dopo una modifica della configurazione di rete.</li>
+<li class="">FlashStart: correggere la registrazione del firewall al servizio FlashStart.</li>
+<li class="">FlashStart: indirizzo DNS secondario corretto.</li>
+<li class="">Regole firewall: host duplicato fisso in indirizzo di origine e destinazione.</li>
+<li class="">OpenVPN Road Warrior: creazione utente in massa per elenchi di utenti di grandi dimensioni.</li>
+</ul>
+<p><strong>Bug noti</strong></p>
+<p>I bond di rete soffrono ancora di alcuni problemi. Se stai eseguendo la migrazione da NethServer 7, tieni presente quanto segue:</p>
+<ul>
+<li class="">VLAN su un&#x27;interfaccia di bonding non viene creata se il bonding non ha un ruolo</li>
+<li class="">Durante la creazione del bonding, a volte, l&#x27;interfaccia web non mostra i dispositivi da aggiungere al bonding</li>
+<li class="">Il bonding appena creato mostra un pulsante che dice &quot;Configura bonding&quot;, ma poi non configura il bonding stesso ma l&#x27;interfaccia membro del bonding</li>
+</ul>
+<p><strong>Note di aggiornamento</strong></p>
+<p>Se stai eseguendo l&#x27;aggiornamento da una versione beta precedente e hai tunnel IPsec configurati, devi eseguire i seguenti comandi dopo l&#x27;aggiornamento:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">uci delete ipsec.ns_ipsec_global.interface</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">uci commit ipsec</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">/etc/init.d/swanctl restart</span><br></div></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-02-29">Principali modifiche il 2024-02-29<a href="#principali-modifiche-il-2024-02-29" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-02-29" title="Link diretto a Principali modifiche il 2024-02-29" translate="no">​</a></h2>
+<p><strong>Beta 2</strong></p>
+<p>Versione immagine: <code>8-23.05.2-ns.0.0.2-beta2</code></p>
+<p>Il rilascio di Beta2 si concentra sul miglioramento della nuova interfaccia utente e sul miglioramento dell&#x27;esperienza utente complessiva.</p>
+<p><strong>Nuove funzionalità</strong></p>
+<p>Nuovi pacchetti inclusi nell&#x27;immagine:</p>
+<ul>
+<li class="">Aggiunto il pacchetto SNMPD per il monitoraggio e la gestione della rete.</li>
+<li class="">Pacchetto Dyndns incluso per i servizi di DNS dinamico.</li>
+<li class="">Supporto driver espanso per interfacce di rete meno recenti e ambienti vmnet.</li>
+</ul>
+<p>Interfaccia utente (UI):</p>
+<ul>
+<li class="">La porta dell&#x27;interfaccia utente predefinita è stata modificata in 9090, accessibile da WAN. L&#x27;interfaccia utente è anche accessibile da LAN e WAN sulla porta 443.</li>
+<li class="">Interfaccia LuCI disabilitata per impostazione predefinita per un&#x27;esperienza semplificata.</li>
+<li class="">Nuova pagina per configurare SNAT di origine, mascheramento, regole No-NAT e netmap.</li>
+<li class="">Leggibilità migliorata dei conteggi dei pacchetti di rete sulla pagina di rete.</li>
+</ul>
+<p>Rete:</p>
+<ul>
+<li class="">Supporto PPPoE con DHCPv6-PD implementato.</li>
+<li class="">È ora possibile configurare interfacce di rete di bonding dall&#x27;interfaccia utente.</li>
+</ul>
+<p>DPI:</p>
+<ul>
+<li class="">
+<p>Riconfigurazione automatica della modifica di rete abilitata.</p>
+</li>
+<li class="">
+<p>Tutte le interfacce non WAN visualizzate nella pagina DPI. Per aggiornare la configurazione DPI nelle installazioni esistenti, eseguire:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">echo &#x27;{&quot;changes&quot;: {&quot;network&quot;: []}}&#x27; | /usr/libexec/rpcd/ns.commit call commit</span><br></div></code></pre></div></div>
+</li>
+</ul>
+<p>Funzionalità aggiuntive:</p>
+<ul>
+<li class="">Script migliorato <code>ns-install</code>: l&#x27;installazione è ora più veloce e si ferma al termine del processo di installazione.</li>
+<li class="">Interfaccia utente di migrazione migliorata per un&#x27;esperienza di aggiornamento più fluida.</li>
+<li class="">Creazione del leasing statico DHCP da leasing dinamici esistenti.</li>
+<li class="">Autenticazione a due fattori (2FA) per gli account amministratore.</li>
+<li class="">Esperienza di accesso ridisegnata con un aspetto più integrato e orientato all&#x27;amministratore.</li>
+<li class="">Ganci di pre e post commit aggiunti per il controllo API migliorato.</li>
+<li class="">Funzionalità opt-in basata su sottoscrizione per gli aggiornamenti automatici, accessibile solo agli utenti con sottoscrizioni attive.</li>
+</ul>
+<p><strong>Correzioni di bug</strong></p>
+<p>MultiWAN:</p>
+<ul>
+<li class="">Flessibilità della regola migliorata: ora consente di specificare singoli indirizzi IP (non solo il formato CIDR) nei campi di origine/destinazione per le regole.</li>
+<li class="">Protezione della politica: impedisce l&#x27;eliminazione accidentale di politiche già utilizzate nelle regole.</li>
+<li class="">Visualizzazione del grafico mwan risolta: il grafico mwan all&#x27;interno di Netdata viene ora visualizzato correttamente dopo la configurazione multi-WAN.</li>
+</ul>
+<p>Firewall:</p>
+<ul>
+<li class="">Gestione migliorata del protocollo: crea regole per tutti i protocolli (non solo TCP/UDP) quando è selezionato &quot;any&quot;.</li>
+<li class="">Leggibilità della regola migliorata: nelle regole con 2 o più indirizzi di origine/destinazione, solo il secondo indirizzo era facilmente visibile nel tooltip.</li>
+</ul>
+<p>Port Forwarding:</p>
+<ul>
+<li class="">Configurazione semplificata: le porte di origine e destinazione sono richieste solo per i protocolli TCP/UDP.</li>
+<li class="">Selezione del protocollo ALL semplificata: quando viene scelto il protocollo &quot;ALL&quot;, le altre opzioni di protocollo vengono disabilitate poiché sono ridondanti.</li>
+</ul>
+<p>Certificati:</p>
+<ul>
+<li class="">Problema risolto: il certificato personalizzato viene sovrascritto con un certificato autogenerato quando impostato come certificato predefinito per il FQDN del firewall.</li>
+<li class="">Visualizza correttamente il dominio del certificato: nell&#x27;elenco dei certificati, il soggetto visualizzato ora corrisponde al certificato client invece del primo certificato nella catena.</li>
+<li class="">Correzione dell&#x27;eliminazione del certificato Let&#x27;s Encrypt: forzato acme.sh a generare una nuova configurazione quando si ricrea un certificato Let&#x27;s Encrypt per lo stesso dominio, invece di riutilizzare quello esistente.</li>
+<li class="">Richiesta del certificato Let&#x27;s Encrypt: reindirizzamento automatico disabilitato dalla porta 80 alla 443 per evitare conflitti con acme.sh.</li>
+</ul>
+<p>DPI:</p>
+<ul>
+<li class="">Perdita di configurazione risolta: risolto il problema in cui le configurazioni del filtro DPI salvate sono state eliminate durante l&#x27;aggiornamento dalle versioni precedenti</li>
+</ul>
+<p>Rete:</p>
+<ul>
+<li class="">Gestione dell&#x27;interfaccia migliorata: abilitazione della modifica delle interfacce anche dopo l&#x27;eliminazione della zona associata.</li>
+</ul>
+<p>API:</p>
+<ul>
+<li class="">Coerenza del log: log del server API standardizzato per il server API di NethSecurity per abbinare gli oggetti passati agli script.</li>
+</ul>
+<p>OpenVPN:</p>
+<ul>
+<li class="">Problema di aggiornamento della porta risolto: la modifica della porta del servizio OpenVPN Road Warrior tramite l&#x27;interfaccia utente ora riflette correttamente l&#x27;aggiornamento nella configurazione del servizio e nella regola del firewall associata.</li>
+<li class="">Protezione della configurazione: problema risolto in cui la configurazione di RoadWarrior è stata persa durante la modifica della password di un utente.</li>
+<li class="">Autenticazione migliorata: problemi di autenticazione risolti di OpenVPN Roadwarrior utilizzando utenti locali in NethSecurity beta1.</li>
+<li class="">Stato del server tunnel risolto: problema risolto in cui lo stato del server tunnel non veniva visualizzato correttamente nell&#x27;interfaccia utente.</li>
+</ul>
+<p>Hotspot:</p>
+<ul>
+<li class="">Inclusione dell&#x27;indirizzo MAC: problema risolto in cui gli indirizzi MAC mancavano nella sezione &quot;unit&quot; di Hotspot Manager quando l&#x27;hotspot si affidava a una VLAN.</li>
+<li class="">Eliminazione VLAN: problema risolto che impediva l&#x27;eliminazione delle VLAN precedentemente utilizzate da hotspot non registrati, anche dopo la liberazione della VLAN.</li>
+<li class="">Visibilità dello stato migliorata: stato abilitato/disabilitato aggiunto alla scheda principale per un rapido riferimento.</li>
+</ul>
+<p>DHCP:</p>
+<ul>
+<li class="">Valore chiave fisso mancante per un&#x27;opzione avanzata preconfigurata, garantendo la corretta funzionalità.</li>
+<li class="">Visualizzazione migliorata di più opzioni rimuovendo l&#x27;etichetta ridondante.</li>
+</ul>
+<p>IPsec:</p>
+<ul>
+<li class="">Porta NAT della regola IPsec: porta corretta per la regola Allow-IPsec-NAT, modificata da 500 a 4500 (UDP)</li>
+<li class="">Regole duplicate: creazione della regola del firewall duplicata impedita alla creazione del tunnel</li>
+<li class="">Correzione dell&#x27;ortografia dei nomi delle regole IPsec</li>
+</ul>
+<p><strong>Bug noti</strong></p>
+<p>IPsec:</p>
+<ul>
+<li class="">Solo la prima subnet nel tunnel IPSec è funzionante: quando si definisce più di una rete in un tunnel IPSec tra diversi dispositivi, solo la prima rete funziona; il traffico destinato ad altre subnet nel tunnel non viene instradato correttamente. Una soluzione alternativa è creare più tunnel con singole subnet. Questo problema non si verifica tra due dispositivi NethSecurity 8 (poiché utilizzano lo stesso daemon), ma può verificarsi tra, ad esempio, un NethSecurity 8 e un NethServer 7.9.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2024-02-01">Principali modifiche il 2024-02-01<a href="#principali-modifiche-il-2024-02-01" class="hash-link" aria-label="Link diretto a Principali modifiche il 2024-02-01" title="Link diretto a Principali modifiche il 2024-02-01" translate="no">​</a></h2>
+<p><strong>Beta 1</strong></p>
+<p>Versione immagine: <code>8-23.05.2-ns.0.0.1-beta1</code></p>
+<p>Il rilascio di Beta1 segna la transizione alla nuova interfaccia utente come interfaccia di configurazione primaria. Luci rimane attivo per impostazione predefinita per le configurazioni non ancora disponibili nella nuova interfaccia utente e per scopi di verifica. I bug noti nella nuova interfaccia possono essere trovati <a href="https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG" target="_blank" rel="noopener noreferrer" class="">qui</a>.</p>
+<p>Modifiche principali:</p>
+<ul>
+<li class="">Aggiunta una pagina dedicata per la gestione dei certificati e delle impostazioni del proxy inverso. Processo di importazione migliorato per entrambe le configurazioni.</li>
+<li class="">Introdotta una nuova pagina per la configurazione delle regole del firewall. Gli utenti sono consigliati di utilizzare questa pagina al posto della pagina di Luci, poiché l&#x27;utilizzo di entrambe potrebbe portare a incompatibilità.</li>
+<li class="">Aggiunta una pagina per la configurazione della qualità del servizio (QoS) per migliorare la gestione del traffico di rete.</li>
+<li class="">Aggiunta una pagina per la configurazione di OpenVPN Roadwarrior. Processo di migrazione aggiornato per la nuova implementazione.</li>
+<li class="">Introdotta l&#x27;opzione di utilizzare una partizione del disco principale come archiviazione per i log.</li>
+<li class="">Processo di migrazione migliorato per multiwan e tunnel OpenVPN, migliorando la compatibilità complessiva del sistema.</li>
+<li class="">Gestione semplificata degli aggiornamenti e delle migrazioni, con focus su una transizione più fluida.</li>
+<li class="">Implementato un nuovo sistema di versioning per identificare in modo univoco ogni immagine, migliorando la chiarezza nel tracciamento dei rilasci.</li>
+<li class="">Incorporati numerosi miglioramenti di usabilità e correzione di problemi nelle pagine esistenti, garantendo un&#x27;esperienza più user-friendly.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2023-12-11">Principali modifiche il 2023-12-11<a href="#principali-modifiche-il-2023-12-11" class="hash-link" aria-label="Link diretto a Principali modifiche il 2023-12-11" title="Link diretto a Principali modifiche il 2023-12-11" translate="no">​</a></h2>
+<p><strong>Alpha 2</strong></p>
+<p>Questo rilascio alpha è specificamente realizzato a fini di valutazione, con focus sul test delle funzionalità della nuova interfaccia utente del sistema. Agli utenti viene fornita l&#x27;opzione di sperimentare lo sviluppo in corso della nuova interfaccia o attenersi all&#x27;interfaccia LuCI stabilita. I bug noti nella nuova interfaccia possono essere trovati <a href="https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG" target="_blank" rel="noopener noreferrer" class="">qui</a>.</p>
+<p><strong>Miglioramenti dell&#x27;interfaccia utente</strong></p>
+<ul>
+<li class="">Risolti numerosi bug in varie pagine, incluso il filtro DHCP e DPI, migliorando la stabilità complessiva delle pagine.</li>
+<li class="">Introdotta la pagina di configurazione del tunnel OpenVPN.</li>
+<li class="">Aggiunta la pagina di configurazione del tunnel IPsec.</li>
+<li class="">Incorporata la pagina di configurazione Hotspot (Dedalo).</li>
+<li class="">Implementata la pagina di backup e ripristino.</li>
+<li class="">Introdotta la funzionalità di esclusione nella pagina del filtro DPI.</li>
+<li class="">Esposti i report netdata nell&#x27;interfaccia utente, con un monitor di latenza ping configurabile.</li>
+<li class="">Affrontato il problema della lingua predefinita per le lingue non tradotte.</li>
+<li class="">Pagina di rete refactorizzata e migliorata.</li>
+<li class="">Aggiunta una pagina per gestire gli aggiornamenti del sistema.</li>
+<li class="">Inclusa una pagina di migrazione da NethServer 7.</li>
+<li class="">Abilitata la funzionalità di ripristino delle impostazioni di fabbrica direttamente dall&#x27;interfaccia utente.</li>
+<li class="">Implementata una pagina Utenti VPN in preparazione del prossimo server OpenVPN Road Warrior.</li>
+</ul>
+<p><strong>Miglioramenti generali</strong></p>
+<ul>
+<li class="">OpenWrt di base aggiornato alla versione 23.05.2.</li>
+<li class="">Stabilito un meccanismo per inviare avvisi ai portali remoti, inclusi my.nethesis.it e my.nethserver.com.</li>
+<li class="">Aggiunto il supporto per le password monouso (OTP) nelle future configurazioni del server OpenVPN Road Warrior.</li>
+</ul>
+<p><strong>Nota</strong>: la configurazione del bonding è ancora in corso e, di conseguenza, le interfacce di rete di tipo bonding attualmente non sono funzionali in questo rilascio.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="principali-modifiche-il-2023-10-31">Principali modifiche il 2023-10-31<a href="#principali-modifiche-il-2023-10-31" class="hash-link" aria-label="Link diretto a Principali modifiche il 2023-10-31" title="Link diretto a Principali modifiche il 2023-10-31" translate="no">​</a></h2>
+<p><strong>Alpha 1</strong></p>
+<p>Questo è un rilascio alpha, progettato a fini di valutazione per esplorare le funzionalità del nuovo sistema. Gli utenti hanno la possibilità di utilizzare la nuova interfaccia, che è attualmente in fase di sviluppo o l&#x27;interfaccia LuCI legacy. Tieni presente che alcune funzioni disponibili sulla vecchia interfaccia LuCI verranno rimosse una volta completata la pagina corrispondente sulla nuova interfaccia.</p>
+<p>Mentre l&#x27;intera funzionalità backend è già operativa e completamente testata, la nuova interfaccia non è ancora completa. Alcuni bug nella nuova interfaccia sono già noti e possono essere trovati <a href="https://trello.com/b/FndRrgIp/nethsecurity-project?filter=label:BUG" target="_blank" rel="noopener noreferrer" class="">qui</a>.</p>
+<p>La nuova interfaccia include le seguenti funzionalità:</p>
+<ul>
+<li class="">Dashboard</li>
+<li class="">Gestione della sottoscrizione</li>
+<li class="">Configurazione del nome host e del fuso orario</li>
+<li class="">Configurazione dell&#x27;archiviazione aggiuntiva</li>
+<li class="">Configurazione dell&#x27;interfaccia di rete</li>
+<li class="">Impostazioni DNS e DHCP</li>
+<li class="">Configurazione del routing</li>
+<li class="">Supporto multi-WAN</li>
+<li class="">Opzioni di port forwarding</li>
+<li class="">Gestione delle zone e dei criteri</li>
+<li class="">Filtro DNS FlashStart</li>
+<li class="">Filtro DPI (Deep Packet Inspection)</li>
+<li class="">Modifica della password dell&#x27;utente root</li>
+<li class="">Accesso ai log di sistema</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="release_glossary-section">Glossario dei rilasci<a href="#release_glossary-section" class="hash-link" aria-label="Link diretto a Glossario dei rilasci" title="Link diretto a Glossario dei rilasci" translate="no">​</a></h2>
+<p>Il ciclo di rilascio del software include quattro fasi: Alpha, Beta, Candidato al rilascio (RC) e Stabile.</p>
+<p>Durante la fase <strong>Alpha</strong>, il software non è completamente testato e potrebbe non includere tutte le funzionalità pianificate. Questo rilascio non è adatto per ambienti di produzione. Tuttavia, può essere utilizzato per visualizzare in anteprima cosa arriverà nella versione prossima. Tieni presente che gli aggiornamenti da un rilascio Alpha ad altri rilasci non sono supportati.</p>
+<p>La fase <strong>Beta</strong> indica che il software è principalmente completo dal punto di vista delle funzionalità, ma potrebbe comunque contenere molti bug noti e sconosciuti. Questo rilascio non dovrebbe essere utilizzato in ambienti di produzione. Tuttavia, può essere utilizzato per testare il software prima di distribuirlo in produzione. Gli aggiornamenti da un rilascio Beta a un rilascio RC o Stabile sono supportati ma potrebbero richiedere una procedura manuale.</p>
+<p>Durante la fase del <strong>Candidato al rilascio (RC)</strong>, il software è completo dal punto di vista delle funzionalità e non contiene bug noti. Se non emergono problemi importanti, può essere promosso a Stabile. Gli aggiornamenti da un rilascio RC a un rilascio Stabile sono supportati e dovrebbero essere quasi automatici. Tuttavia, se sei nuovo al software, è meglio utilizzarlo in produzione solo se hai già esperienza con esso.</p>
+<p>Il rilascio <strong>Stabile</strong> è il più affidabile e sicuro da utilizzare negli ambienti di produzione. È stato completamente testato ed è considerato privo di bug principali.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/NethServer/nethsecurity-docs/tree/main/docs/administrator-manual/about/release_notes.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Modifica questa pagina</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Pagina del documento"><a class="pagination-nav__link pagination-nav__link--prev" href="/pr-preview/pr-299/it/docs/administrator-manual/about/introduction"><div class="pagination-nav__sublabel">Precedente</div><div class="pagination-nav__label">Introduzione</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/pr-preview/pr-299/it/docs/administrator-manual/installation/system_requirements"><div class="pagination-nav__sublabel">Successivo</div><div class="pagination-nav__label">Requisiti di sistema</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#principali-modifiche-il-2026-06-25" class="table-of-contents__link toc-highlight">Principali modifiche il 2026-06-25</a></li><li><a href="#principali-modifiche-il-2026-03-25" class="table-of-contents__link toc-highlight">Principali modifiche il 2026-03-25</a><ul><li><a href="#restore_old_backup_bug-section" class="table-of-contents__link toc-highlight">Ripristino del backup da versioni precedenti</a></li></ul></li><li><a href="#principali-modifiche-il-2025-10-30" class="table-of-contents__link toc-highlight">Principali modifiche il 2025-10-30</a></li><li><a href="#principali-modifiche-il-2025-10-29" class="table-of-contents__link toc-highlight">Principali modifiche il 2025-10-29</a></li><li><a href="#principali-modifiche-il-2025-06-30" class="table-of-contents__link toc-highlight">Principali modifiche il 2025-06-30</a></li><li><a href="#principali-modifiche-il-2025-04-10" class="table-of-contents__link toc-highlight">Principali modifiche il 2025-04-10</a></li><li><a href="#principali-modifiche-il-2025-04-08" class="table-of-contents__link toc-highlight">Principali modifiche il 2025-04-08</a></li><li><a href="#principali-modifiche-il-2025-03-28" class="table-of-contents__link toc-highlight">Principali modifiche il 2025-03-28</a></li><li><a href="#principali-modifiche-il-2024-12-18" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-12-18</a></li><li><a href="#principali-modifiche-il-2024-10-17" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-10-17</a></li><li><a href="#principali-modifiche-il-2024-08-08" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-08-08</a></li><li><a href="#principali-modifiche-il-2024-07-05" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-07-05</a></li><li><a href="#principali-modifiche-il-2024-06-05" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-06-05</a></li><li><a href="#principali-modifiche-il-2024-05-22" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-05-22</a></li><li><a href="#principali-modifiche-il-2024-04-29" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-04-29</a></li><li><a href="#principali-modifiche-il-2024-04-10" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-04-10</a></li><li><a href="#principali-modifiche-il-2024-02-29" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-02-29</a></li><li><a href="#principali-modifiche-il-2024-02-01" class="table-of-contents__link toc-highlight">Principali modifiche il 2024-02-01</a></li><li><a href="#principali-modifiche-il-2023-12-11" class="table-of-contents__link toc-highlight">Principali modifiche il 2023-12-11</a></li><li><a href="#principali-modifiche-il-2023-10-31" class="table-of-contents__link toc-highlight">Principali modifiche il 2023-10-31</a></li><li><a href="#release_glossary-section" class="table-of-contents__link toc-highlight">Glossario dei rilasci</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentazione</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/pr-preview/pr-299/it/docs/administrator-manual">Manuale amministratore</a></li><li class="footer__item"><a class="footer__link-item" href="/pr-preview/pr-299/it/docs/tutorial">Tutorial</a></li><li class="footer__item"><a href="https://nethserver.github.io/nethsecurity/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Manuale dello sviluppatore<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.nethsecurity.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Sito NethSecurity<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://community.nethserver.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Comunità NethServer<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Altro</div><ul class="footer__items clean-list"><li class="footer__item"><a href="/pr-preview/pr-299/it/packages/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Package browser<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/NethServer/nethsecurity-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Nethesis Srl and the NethSecurity project contributors</div></div></div></footer></div>
+</body>
+</html>
