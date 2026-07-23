@@ -3,7 +3,7 @@ title: Download
 sidebar_position: 2
 ---
 
-import {StableReleases, DevReleases, ImageVerifyCommand} from '@site/src/components/DownloadTable';
+import {StableReleases, StagingReleases, DevReleases, ImageVerifyCommand} from '@site/src/components/DownloadTable';
 
 # Download {#download-section}
 
@@ -25,10 +25,25 @@ Puoi usare il [browser dei pacchetti](pathname:///packages/) per esplorare tutte
 
 Le tabelle sottostanti elencano le versioni disponibili insieme ai rispettivi link di download.
 
+Ogni versione è inoltre contrassegnata con uno stato di supporto:
+
+- **Supported** — la versione riceve tutti gli aggiornamenti software e di sicurezza applicabili ed è coperta da supporto tecnico completo.
+- **Limited** — la versione riceve aggiornamenti di sicurezza compatibili fino alla pubblicazione di un'altra versione stabile. Alcune correzioni potrebbero richiedere l'aggiornamento alla versione corrente.
+- **End of life** — la versione non riceve più aggiornamenti software, correzioni di sicurezza o backport.
+- **Not supported** — le versioni staging e di sviluppo sono build pre-release non destinate all'uso in produzione.
+
 ## Versioni stabili
 
 <StableReleases />
 
+## Versioni staging
+
+Le versioni staging sono build pre-release pubblicate prima di una versione stabile, come immagini beta e release candidate (RC). Sono più stabili delle build di sviluppo ma non ancora consigliate per l'uso in produzione.
+
+<StagingReleases />
+
 ## Versioni di sviluppo
+
+Tutte le versioni di sviluppo non sono supportate.
 
 <DevReleases />
