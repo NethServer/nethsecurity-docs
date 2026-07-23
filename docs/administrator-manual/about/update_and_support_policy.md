@@ -52,7 +52,6 @@ To qualify for **full support**, the system must:
 
 * run the current version
 * have all available software updates installed
-* comply with any update instructions published by NethSecurity
 
 Systems running the previous version may qualify only for **limited support**, under the conditions described in the relevant section.
 
