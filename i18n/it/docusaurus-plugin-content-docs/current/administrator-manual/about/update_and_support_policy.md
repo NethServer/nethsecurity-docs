@@ -53,7 +53,6 @@ Per qualificarsi per il **supporto completo**, il sistema deve:
 
 * eseguire la versione corrente
 * avere installati tutti gli aggiornamenti software disponibili
-* rispettare eventuali istruzioni di aggiornamento pubblicate da NethSecurity
 
 I sistemi che eseguono la versione precedente possono qualificarsi solo per il **supporto limitato**, alle condizioni descritte nella sezione pertinente.
 

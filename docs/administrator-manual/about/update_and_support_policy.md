@@ -41,7 +41,6 @@ Versions older than the previous version do not receive new software updates, se
 
 See the [Download](../installation/download.mdx) page for the support status of each published release.
 
-
 ## Requirements for Nethesis technical support
 
 :::note
