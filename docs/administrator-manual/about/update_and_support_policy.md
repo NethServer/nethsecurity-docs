@@ -39,6 +39,8 @@ Upgrading to the current version is therefore recommended and may become mandato
 
 Versions older than the previous version do not receive new software updates, security fixes, or backports.
 
+See the [Download](../installation/download.mdx) page for the support status of each published release.
+
 
 ## Requirements for Nethesis technical support
 

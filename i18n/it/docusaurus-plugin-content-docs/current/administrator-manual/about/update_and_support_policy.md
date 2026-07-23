@@ -39,6 +39,8 @@ Pertanto, si raccomanda di aggiornare alla versione corrente, che potrebbe diven
 
 Le versioni più vecchie della versione precedente non ricevono nuovi aggiornamenti software, correzioni di sicurezza o backport.
 
+Consulta la pagina [Download](../installation/download.mdx) per lo stato di supporto di ogni versione pubblicata.
+
 ## Requisiti per il supporto tecnico di Nethesis
 
 :::note
