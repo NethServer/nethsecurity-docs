@@ -1,8 +1,15 @@
 import type {ReactNode} from 'react';
 import {useVersionData} from '@site/src/hooks/useVersionData';
-import type {Release, VersionData} from '@site/src/hooks/useVersionData';
+import type {Release, SupportStatus, VersionData} from '@site/src/hooks/useVersionData';
 
-function ReleaseTable({rows}: {rows: Release[]}): ReactNode {
+const SUPPORT_STATUS_LABELS: Record<SupportStatus, string> = {
+  supported: 'Supported',
+  limited: 'Limited',
+  eol: 'End of life',
+  'not-supported': 'Not supported',
+};
+
+function ReleaseTable({rows, detailed = true}: {rows: Release[]; detailed?: boolean}): ReactNode {
   if (!rows || rows.length === 0) {
     return <p>No releases available.</p>;
   }
@@ -10,7 +17,14 @@ function ReleaseTable({rows}: {rows: Release[]}): ReactNode {
     <table>
       <thead>
         <tr>
-          <th>Version</th>
+          <th>NethSecurity version</th>
+          {detailed && (
+            <>
+              <th>Published</th>
+              <th>OpenWrt version</th>
+              <th>Support status</th>
+            </>
+          )}
           <th>Image</th>
           <th>Hash</th>
           <th>SBOM</th>
@@ -20,6 +34,13 @@ function ReleaseTable({rows}: {rows: Release[]}): ReactNode {
         {rows.map((r) => (
           <tr key={r.version}>
             <td>{r.version}</td>
+            {detailed && (
+              <>
+                <td>{r.publishedDate ?? '–'}</td>
+                <td>{r.openwrtVersion ?? '–'}</td>
+                <td>{SUPPORT_STATUS_LABELS[r.supportStatus]}</td>
+              </>
+            )}
             <td>
               <a href={r.imageUrl}>x86-64</a>
             </td>
@@ -52,7 +73,7 @@ export function DevReleases(): ReactNode {
   const {data, loading, error} = useVersionData();
   if (loading) return <p>Loading releases…</p>;
   if (error) return <p>Could not load releases: {error}</p>;
-  return <ReleaseTable rows={data?.dev ?? []} />;
+  return <ReleaseTable rows={data?.dev ?? []} detailed={false} />;
 }
 
 // Renders any shell command that needs live version data.

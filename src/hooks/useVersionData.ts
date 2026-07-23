@@ -3,12 +3,18 @@ import {useState, useEffect} from 'react';
 const BASE_URL = 'https://updates.nethsecurity.nethserver.org';
 const S3_ENDPOINT = 'https://ams3.digitaloceanspaces.com';
 const BUCKET = 'nethsecurity';
+const TARGET = 'targets/x86/64';
+
+export type SupportStatus = 'supported' | 'limited' | 'eol' | 'not-supported';
 
 export type Release = {
   version: string;
   imageUrl: string;
   hashUrl: string;
   sbomUrl: string;
+  openwrtVersion: string | null;
+  publishedDate: string | null;
+  supportStatus: SupportStatus;
 };
 
 export type VersionData = {
@@ -40,16 +46,18 @@ function imageName(version: string): string {
 }
 
 function makeImageUrl(prefix: string, version: string): string {
-  return `${BASE_URL}/${prefix}/${version}/targets/x86/64/${imageName(version)}`;
+  return `${BASE_URL}/${prefix}/${version}/${TARGET}/${imageName(version)}`;
 }
 
 function makeHashUrl(prefix: string, version: string): string {
-  return `${BASE_URL}/${prefix}/${version}/targets/x86/64/sha256sums`;
+  return `${BASE_URL}/${prefix}/${version}/${TARGET}/sha256sums`;
 }
 
 function makeSbomUrl(prefix: string, version: string): string {
-  return `${BASE_URL}/${prefix}/${version}/targets/x86/64/nethsecurity-${version}-x86-64-generic.bom.cdx.json`;
+  return `${BASE_URL}/${prefix}/${version}/${TARGET}/nethsecurity-${version}-x86-64-generic.bom.cdx.json`;
 }
+
+// --- Dev releases: naming scheme is unrelated to stable/staging, left as-is. ---
 
 function parseVersion(tag: string): ParsedVersion | null {
   const m = /^(\d+)\.(\d+)\.(\d+)(?:-([^-]+))?(?:-(\d+)-g[0-9a-f]+)?$/.exec(tag);
@@ -91,6 +99,83 @@ function compareVersions(a: string, b: string): number {
   return b.localeCompare(a);
 }
 
+// --- Stable/staging releases: two real naming schemes, both starting with "8". ---
+// Legacy: 8-<openwrt-version>-ns.<build>            e.g. 8-23.05.3-ns.1.1.0
+// Current: 8.<minor>.<patch>[-beta.<n>]             e.g. 8.7.2, 8.8.0-beta.3
+// The bucket also contains bogus bare OpenWrt-version pointer folders (e.g. "23.05.3",
+// "24.10.0") that are not real releases - they don't start with "8" and are excluded below.
+
+const LEGACY_RE = /^8-(\d+\.\d+\.\d+)-ns\.(\d+)\.(\d+)\.(\d+)$/;
+const CURRENT_RE = /^8\.(\d+)\.(\d+)(?:-beta\.(\d+))?$/;
+
+function releaseSortKey(version: string): number[] {
+  const legacy = LEGACY_RE.exec(version);
+  if (legacy) {
+    const owrt = legacy[1].split('.').map(Number);
+    const build = [Number(legacy[2]), Number(legacy[3]), Number(legacy[4])];
+    return [0, ...owrt, ...build];
+  }
+
+  const current = CURRENT_RE.exec(version);
+  if (current) {
+    const minor = Number(current[1]);
+    const patch = Number(current[2]);
+    const betaNum = current[3] ? Number(current[3]) : null;
+    const isFinal = betaNum === null ? 1 : 0;
+    return [1, minor, patch, isFinal, betaNum ?? 0];
+  }
+
+  return [-1];
+}
+
+function compareReleaseKeys(a: number[], b: number[]): number {
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    const av = a[i] ?? 0;
+    const bv = b[i] ?? 0;
+    if (av !== bv) return bv - av;
+  }
+  return 0;
+}
+
+async function resolveReleaseMeta(
+  prefix: string,
+  version: string,
+): Promise<{openwrtVersion: string | null; publishedDate: string | null}> {
+  const legacy = LEGACY_RE.exec(version);
+  const url = `${BASE_URL}/${prefix}/${version}/${TARGET}/profiles.json`;
+
+  try {
+    if (legacy) {
+      // OpenWrt version is embedded in the folder name; only need Last-Modified.
+      const res = await fetch(url, {method: 'HEAD'});
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return {
+        openwrtVersion: legacy[1],
+        publishedDate: formatDateOnly(res.headers.get('last-modified')),
+      };
+    }
+
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const profile = await res.json();
+    const stripped = (profile.version_code || '').replace(/^v/, '');
+    const openwrtVersion = /^\d+\.\d+\.\d+$/.test(stripped) ? stripped : null;
+    return {
+      openwrtVersion,
+      publishedDate: formatDateOnly(res.headers.get('last-modified')),
+    };
+  } catch {
+    return {openwrtVersion: null, publishedDate: null};
+  }
+}
+
+function formatDateOnly(lastModified: string | null): string | null {
+  if (!lastModified) return null;
+  const date = new Date(lastModified);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toISOString().slice(0, 10);
+}
+
 async function listReleaseFolders(prefix: string): Promise<string[]> {
   const url =
     `${S3_ENDPOINT}/${BUCKET}?list-type=2&delimiter=/&prefix=` +
@@ -108,24 +193,57 @@ async function listReleaseFolders(prefix: string): Promise<string[]> {
   return folders;
 }
 
-function buildRows(prefix: string, versions: string[]): Release[] {
-  return versions.map((v) => {
-    const parsed = parseVersion(v);
+function buildLinks(prefix: string, version: string, hasSbom: boolean) {
+  return {
+    imageUrl: makeImageUrl(prefix, version),
+    hashUrl: makeHashUrl(prefix, version),
+    sbomUrl: hasSbom ? makeSbomUrl(prefix, version) : '',
+  };
+}
+
+async function collectDevReleases(): Promise<Release[]> {
+  let folders = await listReleaseFolders('dev');
+  folders = folders.filter((e) => e !== '24.10.0');
+  folders.sort(compareVersions);
+  return folders.map((version) => {
+    const parsed = parseVersion(version);
     const hasSbom = parsed != null && isNewScheme(parsed);
     return {
-      version: v,
-      imageUrl: makeImageUrl(prefix, v),
-      hashUrl: makeHashUrl(prefix, v),
-      sbomUrl: hasSbom ? makeSbomUrl(prefix, v) : '',
+      version,
+      ...buildLinks('dev', version, hasSbom),
+      openwrtVersion: null,
+      publishedDate: null,
+      supportStatus: 'not-supported' as const,
     };
   });
 }
 
-async function collectReleases(prefix: string): Promise<string[]> {
-  let folders = await listReleaseFolders(prefix);
-  folders = folders.filter((e) => e !== '24.10.0');
-  folders.sort(compareVersions);
-  return folders;
+async function collectStableOrStagingReleases(
+  prefix: 'stable' | 'staging',
+): Promise<Release[]> {
+  const folders = await listReleaseFolders(prefix);
+  const versions = folders
+    .filter((entry) => /^8[.-]/.test(entry))
+    .sort((a, b) => compareReleaseKeys(releaseSortKey(a), releaseSortKey(b)));
+
+  const rows = await Promise.all(
+    versions.map(async (version, index) => {
+      const meta = await resolveReleaseMeta(prefix, version);
+      const hasSbom = CURRENT_RE.test(version);
+      const supportStatus: SupportStatus =
+        prefix === 'staging' ? 'not-supported' : index === 0 ? 'supported' : index === 1 ? 'limited' : 'eol';
+
+      return {
+        version,
+        ...buildLinks(prefix, version, hasSbom),
+        openwrtVersion: meta.openwrtVersion,
+        publishedDate: meta.publishedDate,
+        supportStatus,
+      };
+    }),
+  );
+
+  return rows;
 }
 
 let _cache: VersionData | null = null;
@@ -141,21 +259,18 @@ export function useVersionData(): UseVersionDataResult {
 
     async function load() {
       try {
-        const [versionText, stableFolders, stagingFolders, devFolders] = await Promise.all([
+        const [versionText, stable, staging, dev] = await Promise.all([
           // Degrade gracefully if latest_release has CORS issues.
           fetch(`${BASE_URL}/stable/latest_release`)
             .then((r) => (r.ok ? r.text() : ''))
             .catch(() => ''),
-          collectReleases('stable'),
-          collectReleases('staging'),
-          collectReleases('dev'),
+          collectStableOrStagingReleases('stable'),
+          collectStableOrStagingReleases('staging'),
+          collectDevReleases(),
         ]);
 
         if (cancelled) return;
 
-        const stable = buildRows('stable', stableFolders);
-        const staging = buildRows('staging', stagingFolders);
-        const dev = buildRows('dev', devFolders);
         const version = versionText.trim() || (stable[0]?.version ?? '');
         const image = version ? imageName(version) : '';
 
