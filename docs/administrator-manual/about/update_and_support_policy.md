@@ -56,4 +56,4 @@ Systems running the previous version are **still supported** under the condition
 
 Versions older than the previous version are not covered by standard support. An upgrade to a supported version may be required before further support activities can be provided.
 
-To maintain adequate levels of security, stability, and compatibility, both software package updates and new system versions must be installed regularly and within the applicable update window.
+To maintain adequate levels of security, stability, and compatibility, both software package updates and new system versions must be installed regularly within the applicable update window.
