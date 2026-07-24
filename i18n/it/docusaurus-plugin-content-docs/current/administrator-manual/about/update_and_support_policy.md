@@ -56,4 +56,4 @@ I sistemi che eseguono la **penultima versione** sono **ancora supportati** alle
 
 Le versioni più vecchie della versione precedente non sono coperte dal supporto. Potrebbe essere necessario un aggiornamento a una versione supportata prima che possano essere fornite ulteriori attività di supporto.
 
-Per mantenere livelli adeguati di sicurezza, stabilità e compatibilità, sia gli aggiornamenti dei pacchetti software che le nuove versioni di sistema devono essere installati regolarmente e entro la finestra di aggiornamento applicabile.
+Per mantenere livelli adeguati di sicurezza, stabilità e compatibilità, sia gli aggiornamenti dei pacchetti software che le nuove versioni di sistema devono essere installati regolarmente entro la finestra di aggiornamento applicabile.
