@@ -18,22 +18,22 @@ Nel caso in cui un fix non possa essere applicato tramite un aggiornamento stand
 
 ### Versione corrente - supporto completo
 
-La versione attuale corrisponde all'ultima immagine stable pubblicata ed è consigliata per:
+La versione corrente corrisponde all'ultima immagine stabile pubblicata ed è consigliata per:
 
 * nuove installazioni
 * aggiornamenti di sistemi esistenti
 * accesso a tutte le correzioni di sicurezza disponibili
 * accesso al supporto tecnico completo
 
-La versione attuale riceve tutti gli aggiornamenti software.
+La versione corrente riceve tutti gli aggiornamenti software.
 
 ### Penultima versione - supporto limitato
 
-La versione stable immediatamente precedente alla versione corrente gode di un supporto limitato fino alla pubblicazione della prossima immagine di NethSecurity.
+La penultima versione stabile gode di un supporto limitato fino alla pubblicazione della prossima immagine di NethSecurity.
 
 Durante questo periodo, la versione indicata può ricevere solo aggiornamenti di sicurezza. Tuttavia, potrebbe essere necessario eseguire l'aggiornamento alla versione corrente per risolvere determinati problemi, inclusi bug già corretti nell'ultima release o correzioni che non possono essere applicate alla versione precedente.
 
-La penultima versione rimane supportata fino al rilascio della versione successiva all'attuale corrente. Basandosi sul consueto programma di rilascio delle immagini, questo periodo è generalmente compreso tra **4 e 6 mesi**.
+La penultima versione rimane supportata fino al rilascio della versione successiva a quella corrente. Basandosi sul consueto programma di rilascio delle immagini, questo periodo è generalmente compreso tra **4 e 6 mesi**.
 
 ### Tutte le altre versioni - non supportate
 
