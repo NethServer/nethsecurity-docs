@@ -10,21 +10,24 @@ NethSecurity releases changelogs.
 - List of [known bugs](https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20)
 - Discussions around [possible bugs](http://community.nethserver.org/c/bug)
 
-## Major changes on 2026-06-25
+## Major changes on 2026-07-29
 
-Image version: `8.8.0-beta1` (based on OpenWrt 25.12.4)
+Image version: `8.8.0` (based on OpenWrt 25.12.5)
 
 **New Features**
 
-- Rebased NethSecurity on OpenWrt 25.12.4 and switched package management from `opkg` to `apk`.
+- Rebased NethSecurity on OpenWrt 25.12.5 and switched package management from `opkg` to `apk`.
 - Monitoring now stores metrics in VictoriaMetrics and automatically uses persistent storage when available.
-- Alerts are now accessibile inside the web interface.
+- Alerts are now accessible inside the web interface; on subscription-based systems alerts are forwarded through the my.nethesis.it proxy, reusing the existing system credentials.
+- Added a console setup helper to complete the initial configuration directly from the local console, and a login banner showing product name, version and setup hint.
 - Preserved Bash history across reboots and enabled persistent `/var` when storage is available.
-- Added Avahi (mDNS) package to the NethSecurity reposistory.
-- Added the firewall `DON\'T TRACK` action.
+- Added Avahi (mDNS) package to the NethSecurity repository.
+- Added the firewall `DON'T TRACK` action.
 - Several features previously limited to subscription-based versions are now available in the Community edition.
 - Added Geoblocking feature to Threat Shield IP, allowing users to block traffic from specific countries or regions.
 - Added support for multiple DHCP ranges directly in the UI, allowing for more flexible IP address allocation.
+- Added the softflowd package to the NethSecurity repository.
+- Remote logging: the listening IP address of the syslog collector can now be selected.
 
 **Improvements**
 
@@ -35,13 +38,27 @@ Image version: `8.8.0-beta1` (based on OpenWrt 25.12.4)
 - Netdata is no longer installed by default; legacy controller dashboards can still restore it manually.
 - DHCP leases are now persisted if local storage is available, preventing loss of leases on reboot.
 - Changes to Threat Shield DNS local list are now applied using the commit button, like all other Threat Shield options.
+- Dashboard loads much faster: the interface now aggregates its requests into a single API call, with a noticeable improvement on older hardware.
+- Cloud backups are uploaded only when the configuration has actually changed.
+- Telegraf: down interfaces are skipped, ping checks have been improved, and WireGuard and nftables plugins have been added.
+- nginx access logs are no longer written, reducing disk usage and log noise.
 
 **Bug Fixes**
 
-- DNS/DHCP failures now surface clearer troubleshooting information: if dnamsq fails to start, the Web Interface will display an alert.
+- DNS/DHCP failures now surface clearer troubleshooting information: if dnsmasq fails to start, the Web Interface will display an alert.
 - Adblock no longer restarts with empty lists after repeated blocklist or allowlist edits.
 - Traffic logging options are shown consistently in the firewall UI.
 - IPSec tunnel can now use restart dpd_action.
+- OpenVPN: users authenticated against an external database are no longer shown as disconnected while connected.
+- OpenVPN: the dashboard counter no longer counts disconnected client tunnels as connected.
+- OpenVPN Roadwarrior: fixed client certificate name extraction.
+- Threat Shield IP: Geoblocking now blocks only incoming connections.
+- Flashstart: bypass rules are now honored for network object entries in Pro+ profiles.
+- rsyslog no longer fills up the root filesystem when the configured storage is not mounted.
+- Hotspot: chilli and dedalo log lines are now tagged with the correct syslog facility and are no longer duplicated.
+- Sessions of demoted or deleted administrators are now revoked immediately.
+- The console keymap is now preserved across upgrades.
+- UI: the selected page size is now preserved in DHCP lease tables.
 
 ## Major changes on 2026-03-25
 
