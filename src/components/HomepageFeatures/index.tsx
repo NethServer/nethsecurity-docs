@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react';
 import {translate} from '@docusaurus/Translate';
+import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -8,6 +9,7 @@ type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
+  link?: {to: string; label: string};
 };
 
 const FeatureList: FeatureItem[] = [

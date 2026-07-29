@@ -288,11 +288,12 @@ function renderBreadcrumbs() {
     separator.textContent = '/';
     breadcrumbs.appendChild(separator);
 
+    const target = accumulated;
     const crumb = document.createElement('button');
     crumb.type = 'button';
     crumb.className = 'crumb';
     crumb.textContent = segment;
-    crumb.addEventListener('click', () => navigateTo(accumulated));
+    crumb.addEventListener('click', () => navigateTo(target));
     breadcrumbs.appendChild(crumb);
   });
 }
