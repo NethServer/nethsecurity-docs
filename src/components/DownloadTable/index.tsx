@@ -59,21 +59,21 @@ export function StableReleases(): ReactNode {
   const {data, loading, error} = useVersionData();
   if (loading) return <p>Loading releases…</p>;
   if (error) return <p>Could not load releases: {error}</p>;
-  return <ReleaseTable rows={data?.stable ?? []} />;
+  return <ReleaseTable rows={(data?.stable ?? []).slice(0, 3)} />;
 }
 
 export function StagingReleases(): ReactNode {
   const {data, loading, error} = useVersionData();
   if (loading) return <p>Loading releases…</p>;
   if (error) return <p>Could not load releases: {error}</p>;
-  return <ReleaseTable rows={data?.staging ?? []} />;
+  return <ReleaseTable rows={(data?.staging ?? []).slice(0, 3)} />;
 }
 
 export function DevReleases(): ReactNode {
   const {data, loading, error} = useVersionData();
   if (loading) return <p>Loading releases…</p>;
   if (error) return <p>Could not load releases: {error}</p>;
-  return <ReleaseTable rows={data?.dev ?? []} detailed={false} />;
+  return <ReleaseTable rows={(data?.dev ?? []).slice(0, 3)} detailed={false} />;
 }
 
 // Renders any shell command that needs live version data.
