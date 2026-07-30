@@ -194,8 +194,6 @@ Questo è il caso in cui un firewall secondario è collegato allo stesso UPS e i
         opkg update
         opkg install nut-upsc nut-upsmon
 
-    Questi pacchetti non vengono preservati durante un aggiornamento del sistema. Per ulteriori informazioni, consulta [Ripristina pacchetti extra](../system/updates.md#restore_extra_packages-section).
-
 2.  Quindi, configura il client per connettersi al server remoto:
 
         uci set nut_monitor.upsmon=upsmon
