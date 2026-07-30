@@ -194,7 +194,6 @@ This is the case where a secondary firewall is connected to the same UPS and the
         opkg update
         opkg install nut-upsc nut-upsmon
 
-    These packages are not preserved during a system upgrade. For more info see [Restore extra packages](../system/updates.md#restore_extra_packages-section).
 
 2.  Then, configure the client to connect to the remote server:
 
