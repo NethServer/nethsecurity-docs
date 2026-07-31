@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Port forward | NethSecurity documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.nethsecurity.org/pr-preview/pr-303/docs/administrator-manual/firewall/port_forward"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="it_IT"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Port forward | NethSecurity documentation"><meta data-rh="true" name="description" content="port_forward-section}"><meta data-rh="true" property="og:description" content="port_forward-section}"><link data-rh="true" rel="icon" href="/pr-preview/pr-303/img/favicon.png"><link data-rh="true" rel="canonical" href="https://docs.nethsecurity.org/pr-preview/pr-303/docs/administrator-manual/firewall/port_forward"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-303/docs/administrator-manual/firewall/port_forward" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-303/it/docs/administrator-manual/firewall/port_forward" hreflang="it-IT"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/pr-preview/pr-303/docs/administrator-manual/firewall/port_forward" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://10HTUTQ94F-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Port forward","item":"https://docs.nethsecurity.org/pr-preview/pr-303/docs/administrator-manual/firewall/port_forward"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="NethSecurity documentation" href="/pr-preview/pr-303/opensearch.xml"><link rel="stylesheet" href="/pr-preview/pr-303/assets/css/styles.c1f0ff24.css">
-<script src="/pr-preview/pr-303/assets/js/runtime~main.d35b8528.js" defer="defer"></script>
+<script src="/pr-preview/pr-303/assets/js/runtime~main.913dd856.js" defer="defer"></script>
 <script src="/pr-preview/pr-303/assets/js/main.c39ccab1.js" defer="defer"></script>
 </head>
 <body>
@@ -72,26 +72,26 @@ However, step 2 is still required: the FTP helper must be explicitly assigned to
 <p>To declare the OpenVPN Road Warrior network, you can use the following example command sequence:</p>
 <ol>
 <li class="">
-<p>Identify the internal reference for the <strong>rwopenvpn</strong> zone: :</p>
+<p>Identify the internal reference for the <strong>rwopenvpn</strong> zone:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">uci show firewall | grep &quot;.name=&#x27;rwopenvpn&#x27;&quot;</span><br></div></code></pre></div></div>
-<p>Example output: :</p>
+<p>Example output:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">firewall.ns_49d9f400.name=&#x27;rwopenvpn&#x27;</span><br></div></code></pre></div></div>
 </li>
 <li class="">
-<p>Set the desired network (in this case, <strong>10.88.88.0/24</strong>) for the <strong>rwopenvpn</strong> zone: :</p>
+<p>Set the desired network (in this case, <strong>10.88.88.0/24</strong>) for the <strong>rwopenvpn</strong> zone:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">uci add_list firewall.ns_49d9f400.subnet=10.88.88.0/24</span><br></div></code></pre></div></div>
 </li>
 <li class="">
-<p>Commit the changes and restart the firewall service: :</p>
+<p>Commit the changes and restart the firewall service:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">uci commit firewall</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">/etc/init.d/firewall restart</span><br></div></code></pre></div></div>
 </li>
 </ol>
 <p>Ensure that you replace the network <strong>subnet</strong> with the correct one for your specific VPN setup.</p>
 <ol start="4">
 <li class="">
-<p>Verify the added network: :</p>
+<p>Verify the added network:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">uci show firewall | grep subnet</span><br></div></code></pre></div></div>
-<p>Example output: :</p>
+<p>Example output:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">firewall.ns_49d9f400.subnet=&#x27;10.88.88.0/24&#x27;</span><br></div></code></pre></div></div>
 </li>
 </ol>
@@ -99,9 +99,9 @@ However, step 2 is still required: the FTP helper must be explicitly assigned to
 <p>To declare the hotspot network, you can use the following example command sequence:</p>
 <ol>
 <li class="">
-<p>Identify the internal reference for the <strong>hotspot</strong> zone: :</p>
+<p>Identify the internal reference for the <strong>hotspot</strong> zone:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">uci show firewall | grep &quot;.name=&#x27;hotspot&#x27;&quot;</span><br></div></code></pre></div></div>
-<p>Example output: :</p>
+<p>Example output:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">firewall.ns_12823322.name=&#x27;hotspot&#x27;</span><br></div></code></pre></div></div>
 </li>
 </ol>
