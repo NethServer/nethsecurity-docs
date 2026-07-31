@@ -73,9 +73,9 @@ Hairpin NAT, also known as NAT loopback or NAT reflection, is a technique used i
 
 To enable the hairpin, enable the `Hairpin NAT` option and select one or more zones where the NAT loopback should be enabled.
 
-### Hairpin NAT for VPN zones
+### Hairpin NAT for VPN and hotspot zones
 
-To use Hairpin NAT with VPN zones such as `ipsec`, `openvpn`, and `rwopenvpn`, additional configuration is necessary. You must explicitly declare the subnet used by the VPN; otherwise, Hairpin NAT will not function for VPN-connected clients.
+To use Hairpin NAT with VPN zones such as `ipsec`, `openvpn`, `rwopenvpn` and `hotspot` additional configuration is necessary. You must explicitly declare the subnet used by the zone; otherwise, Hairpin NAT will not function for VPN-connected clients.
 
 This configuration can be performed via the command line. First, identify the internal reference for the zone, then add the desired network, commit the changes, and restart the service.
 
@@ -84,6 +84,7 @@ Make sure that subnets are assigned to the correct zones:
 - `ipsec`: IPsec tunnels
 - `openvpn`: OpenVPN tunnels
 - `rwopenvpn`: OpenVPN Road Warrior
+- `hotspot`: Hotspot 
 
 If multiple tunnels or networks are present, all must be included in their respective zones.
 
@@ -117,6 +118,28 @@ Ensure that you replace the network **subnet** with the correct one for your spe
     Example output: :
 
         firewall.ns_49d9f400.subnet='10.88.88.0/24'
+
+#### How to declare a subnet for a hotspot zone
+
+To declare the hotspot network, you can use the following example command sequence:
+
+1.  Identify the internal reference for the **hotspot** zone: :
+
+        uci show firewall | grep ".name='hotspot'"
+
+    Example output: :
+
+        firewall.ns_12823322.name='hotspot'
+
+Proceed exactly as described for VPN zones, taking into account the following note.
+
+:::note
+
+For the hotspot zone, explicitly declare the hotspot interface address as
+the zone subnet. Use the first usable address of the hotspot network, keeping the same prefix. For
+example for `192.168.182.0/24` , use `192.168.182.1/24`.
+
+:::
 
 #### Add or remove multiple subnets to the VPN zone
 
