@@ -66,7 +66,7 @@ Questo comando stabilirà una connessione SSH al nodo secondario utilizzando la 
 
 ### Aggiornamento
 
-Il nodo secondario non riceve gli aggiornamenti di sistema automaticamente perché non ha accesso diretto a Internet. Per aggiornare il nodo secondario, è necessario connettersi al nodo primario ed eseguire il comando di aggiornamento sul nodo secondario:
+Il nodo secondario non riceve gli aggiornamenti di sistema automaticamente perché non ha accesso diretto a Internet. Per aggiornare il nodo secondario, è necessario connettersi al nodo primario e da lì lanciare il comando di aggiornamento:
 
     ns-ha-config upgrade-remote
 

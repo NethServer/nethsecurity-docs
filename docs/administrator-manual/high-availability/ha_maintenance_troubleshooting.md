@@ -66,7 +66,7 @@ This command will establish an SSH connection to the secondary node using the SS
 
 ### Upgrade
 
-The secondary node does not receive system updates automatically because it does not have direct Internet access. To update the secondary node, you need to connect to the primary node and run the update command on the secondary node: :
+The secondary node does not receive system updates automatically because it does not have direct Internet access. To update the secondary node, you need to connect to the primary node and run the update command on the primary node itself:
 
     ns-ha-config upgrade-remote
 

@@ -64,6 +64,7 @@ The HA cluster supports synchronization for a wide range of features, including:
 - Controller connection and subscription (ns-plug)
 - Active connections tracking (conntrackd)
 - Hotspot (dedalo) only on physical interfaces
+- Nethesis Cloud Log Manager
 
 ### WAN interface types and setups
 
