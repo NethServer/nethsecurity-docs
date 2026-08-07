@@ -77,7 +77,7 @@ Per abilitare hairpin, abilitare l'opzione `Hairpin NAT` e selezionare una o pi�
 
 ### Hairpin NAT per le zone VPN e hotspot
 
-Per utilizzare Hairpin NAT con la zone `hotspot` o con le zone VPN come `ipsec`, `openvpn` e `rwopenvpn`, è necessaria una configurazione aggiuntiva. Bisogna dichiarare esplicitamente la subnet utilizzata dalla zona; in caso contrario, Hairpin NAT non funzionerà.
+Per utilizzare Hairpin NAT con la zone `hotspot` o con le zone VPN come `ipsec`, `openvpn` e `rwopenvpn`, è necessaria una configurazione aggiuntiva. Bisogna dichiarare esplicitamente la subnet utilizzata dalla zona; in caso contrario, Hairpin NAT non funzionerà per i client connessi a queste zone.
 
 Questa configurazione può essere eseguita tramite la riga di comando. Innanzitutto, identificare il riferimento interno della zona, quindi aggiungere la rete desiderata, eseguire il commit delle modifiche e riavviare il servizio.
 
