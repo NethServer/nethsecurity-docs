@@ -75,9 +75,9 @@ Hairpin NAT, noto anche come NAT loopback o NAT reflection, è una tecnica utili
 
 Per abilitare hairpin, abilitare l'opzione `Hairpin NAT` e selezionare una o più zone dove il NAT loopback deve essere abilitato.
 
-### Hairpin NAT per zone VPN
+### Hairpin NAT per le zone VPN e hotspot
 
-Per utilizzare Hairpin NAT con zone VPN come `ipsec`, `openvpn` e `rwopenvpn`, è necessaria una configurazione aggiuntiva. È necessario dichiarare esplicitamente la subnet utilizzata dalla VPN; in caso contrario, Hairpin NAT non funzionerà per i client connessi VPN.
+Per utilizzare Hairpin NAT con la zone `hotspot` o con le zone VPN come `ipsec`, `openvpn` e `rwopenvpn`, è necessaria una configurazione aggiuntiva. Bisogna dichiarare esplicitamente la subnet utilizzata dalla zona; in caso contrario, Hairpin NAT non funzionerà per i client connessi a queste zone.
 
 Questa configurazione può essere eseguita tramite la riga di comando. Innanzitutto, identificare il riferimento interno della zona, quindi aggiungere la rete desiderata, eseguire il commit delle modifiche e riavviare il servizio.
 
@@ -86,6 +86,7 @@ Assicurarsi che le subnet siano assegnate alle zone corrette:
 - `ipsec`: tunnel IPsec
 - `openvpn`: tunnel OpenVPN
 - `rwopenvpn`: OpenVPN Road Warrior
+- `hotspot`: Hotspot
 
 Se sono presenti più tunnel o reti, tutti devono essere inclusi nelle rispettive zone.
 
@@ -93,7 +94,7 @@ Se sono presenti più tunnel o reti, tutti devono essere inclusi nelle rispettiv
 
 Per dichiarare la rete OpenVPN Road Warrior, è possibile utilizzare la seguente sequenza di comandi di esempio:
 
-1.  Identificare il riferimento interno per la zona **rwopenvpn**: :
+1.  Identificare il riferimento interno per la zona **rwopenvpn**: 
 
         uci show firewall | grep ".name='rwopenvpn'"
 
@@ -105,14 +106,14 @@ Per dichiarare la rete OpenVPN Road Warrior, è possibile utilizzare la seguente
 
         uci add_list firewall.ns_49d9f400.subnet=10.88.88.0/24
 
-3.  Eseguire il commit delle modifiche e riavviare il servizio firewall: :
+3.  Eseguire il commit delle modifiche e riavviare il servizio firewall: 
 
         uci commit firewall
         /etc/init.d/firewall restart
 
 Assicurarsi di sostituire la rete **subnet** con quella corretta per la propria configurazione VPN specifica.
 
-4.  Verificare la rete aggiunta: :
+4.  Verificare la rete aggiunta: 
 
         uci show firewall | grep subnet
 
@@ -120,9 +121,33 @@ Assicurarsi di sostituire la rete **subnet** con quella corretta per la propria 
 
         firewall.ns_49d9f400.subnet='10.88.88.0/24'
 
+#### Come dichiarare una subnet per una zona hotspot
+
+Per dichiarare la rete hotspot, puoi utilizzare la seguente sequenza di comandi di esempio:
+
+1. Identificare il riferimento interno della zona **hotspot**:
+
+   ```
+   uci show firewall | grep ".name='hotspot'"
+   ```
+
+   Esempio di output:
+
+   ```
+   firewall.ns_12823322.name='hotspot'
+   ```
+
+Procedere esattamente come descritto per le zone VPN, tenendo conto della seguente nota.
+
+:::note
+
+Per la zona hotspot, dichiarare esplicitamente l'indirizzo dell'interfaccia hotspot come subnet della zona. Utilizzare il primo indirizzo utilizzabile della rete hotspot, mantenendo lo stesso prefisso. Ad esempio, per la rete `192.168.182.0/24`, utilizzare l'indirizzo `192.168.182.1/24`.
+
+:::
+
 #### Aggiungere o rimuovere più subnet dalla zona VPN
 
-Se hai già impostato una subnet per una zona VPN e vuoi **aggiungere** un'altra subnet (ad es. 10.33.33.0/24) utilizza il seguente comando (stesso riferimento interno dell'esempio precedente): :
+Se hai già impostato una subnet per una zona VPN e vuoi **aggiungere** un'altra subnet (ad es. 10.33.33.0/24) utilizza il seguente comando (stesso riferimento interno dell'esempio precedente): 
 
     uci add_list firewall.ns_49d9f400.subnet=10.33.33.0/24
 

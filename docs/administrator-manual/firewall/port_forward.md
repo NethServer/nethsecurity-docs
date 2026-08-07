@@ -73,9 +73,9 @@ Hairpin NAT, also known as NAT loopback or NAT reflection, is a technique used i
 
 To enable the hairpin, enable the `Hairpin NAT` option and select one or more zones where the NAT loopback should be enabled.
 
-### Hairpin NAT for VPN zones
+### Hairpin NAT for VPN and hotspot zones
 
-To use Hairpin NAT with VPN zones such as `ipsec`, `openvpn`, and `rwopenvpn`, additional configuration is necessary. You must explicitly declare the subnet used by the VPN; otherwise, Hairpin NAT will not function for VPN-connected clients.
+To use Hairpin NAT with `hotspot` zone or with VPN zones such as `ipsec`, `openvpn`, `rwopenvpn` additional configuration is necessary. You must explicitly declare the subnet used by the zone; otherwise, Hairpin NAT will not function for clients connected through these zones.
 
 This configuration can be performed via the command line. First, identify the internal reference for the zone, then add the desired network, commit the changes, and restart the service.
 
@@ -84,6 +84,7 @@ Make sure that subnets are assigned to the correct zones:
 - `ipsec`: IPsec tunnels
 - `openvpn`: OpenVPN tunnels
 - `rwopenvpn`: OpenVPN Road Warrior
+- `hotspot`: Hotspot 
 
 If multiple tunnels or networks are present, all must be included in their respective zones.
 
@@ -91,32 +92,54 @@ If multiple tunnels or networks are present, all must be included in their respe
 
 To declare the OpenVPN Road Warrior network, you can use the following example command sequence:
 
-1.  Identify the internal reference for the **rwopenvpn** zone: :
+1.  Identify the internal reference for the **rwopenvpn** zone: 
 
         uci show firewall | grep ".name='rwopenvpn'"
 
-    Example output: :
+    Example output: 
 
         firewall.ns_49d9f400.name='rwopenvpn'
 
-2.  Set the desired network (in this case, **10.88.88.0/24**) for the **rwopenvpn** zone: :
+2.  Set the desired network (in this case, **10.88.88.0/24**) for the **rwopenvpn** zone: 
 
         uci add_list firewall.ns_49d9f400.subnet=10.88.88.0/24
 
-3.  Commit the changes and restart the firewall service: :
+3.  Commit the changes and restart the firewall service: 
 
         uci commit firewall
         /etc/init.d/firewall restart
 
 Ensure that you replace the network **subnet** with the correct one for your specific VPN setup.
 
-4.  Verify the added network: :
+4.  Verify the added network: 
 
         uci show firewall | grep subnet
 
-    Example output: :
+    Example output: 
 
         firewall.ns_49d9f400.subnet='10.88.88.0/24'
+
+#### How to declare a subnet for a hotspot zone
+
+To declare the hotspot network, you can use the following example command sequence:
+
+1.  Identify the internal reference for the **hotspot** zone: 
+
+        uci show firewall | grep ".name='hotspot'"
+
+    Example output: 
+
+        firewall.ns_12823322.name='hotspot'
+
+Proceed exactly as described for VPN zones, taking into account the following note.
+
+:::note
+
+For the hotspot zone, explicitly declare the hotspot interface address as
+the zone subnet. Use the first usable address of the hotspot network, keeping the same prefix. For
+example for the network `192.168.182.0/24` , use the address `192.168.182.1/24`.
+
+:::
 
 #### Add or remove multiple subnets to the VPN zone
 
