@@ -125,7 +125,7 @@ Assicurarsi di sostituire la rete **subnet** con quella corretta per la propria 
 
 Per dichiarare la rete hotspot, puoi utilizzare la seguente sequenza di comandi di esempio:
 
-1. Identifica il riferimento interno della zona **hotspot**:
+1. Identificare il riferimento interno della zona **hotspot**:
 
    ```
    uci show firewall | grep ".name='hotspot'"
@@ -137,11 +137,11 @@ Per dichiarare la rete hotspot, puoi utilizzare la seguente sequenza di comandi 
    firewall.ns_12823322.name='hotspot'
    ```
 
-Procedi esattamente come descritto per le zone VPN, tenendo conto della seguente nota.
+Procedere esattamente come descritto per le zone VPN, tenendo conto della seguente nota.
 
 :::note
 
-Per la zona hotspot, dichiara esplicitamente l'indirizzo dell'interfaccia hotspot come subnet della zona. Utilizza il primo indirizzo utilizzabile della rete hotspot, mantenendo lo stesso prefisso. Ad esempio, per `192.168.182.0/24`, utilizza `192.168.182.1/24`.
+Per la zona hotspot, dichiarare esplicitamente l'indirizzo dell'interfaccia hotspot come subnet della zona. Utilizzare il primo indirizzo utilizzabile della rete hotspot, mantenendo lo stesso prefisso. Ad esempio, per la rete `192.168.182.0/24`, utilizzare l'indirizzo `192.168.182.1/24`.
 
 :::
 
