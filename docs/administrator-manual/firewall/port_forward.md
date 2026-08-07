@@ -137,7 +137,7 @@ Proceed exactly as described for VPN zones, taking into account the following no
 
 For the hotspot zone, explicitly declare the hotspot interface address as
 the zone subnet. Use the first usable address of the hotspot network, keeping the same prefix. For
-example for `192.168.182.0/24` , use `192.168.182.1/24`.
+example for the network `192.168.182.0/24` , use the address `192.168.182.1/24`.
 
 :::
 
