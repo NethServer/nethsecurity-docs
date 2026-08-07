@@ -64,6 +64,7 @@ Il cluster HA supporta la sincronizzazione per un'ampia gamma di caratteristiche
 - Connessione del controller e sottoscrizione (ns-plug)
 - Tracciamento delle connessioni attive (conntrackd)
 - Hotspot (dedalo) solo su interfacce fisiche
+- Nethesis Cloud Log Manager
 
 ### Tipi di interfaccia WAN e configurazioni
 
