@@ -22,7 +22,7 @@ Caratteristiche principali:
 
 ## Installazione e configurazione
 
-Il controller può essere installato su un sistema NethServer 8 dal Software Center. Il modulo si chiama `NethSecurity Controller`.
+Il controller può essere installato su un sistema NethServer 8 dal Software Center. Il modulo si chiama `NethSecurity Controller`. Tieni presente che lo stato dell'abbonamento del firewall e della macchina NethServer 8 su cui è in esecuzione il controller deve corrispondere: se uno dei due ha un abbonamento valido, anche l'altro deve averne uno valido, altrimenti l'unità non riuscirà a connettersi al controller.
 
 Dopo l'installazione, il controller deve essere configurato. La configurazione può essere eseguita utilizzando l'interfaccia web NethServer 8. I seguenti parametri devono essere impostati:
 
@@ -312,11 +312,9 @@ Se l'utente utilizza una chiave SSH per l'autenticazione, il log conterrà l'imp
 
 ## Abbonamento e limitazioni
 
-:::note
+:::warning
 
-Abbonamento richiesto
-
-Alcune restrizioni possono essere superate solo se il firewall ha un abbonamento valido.
+Lo stato dell'abbonamento deve corrispondere su entrambi i lati: se il firewall ha un abbonamento valido, anche la macchina NethServer 8 su cui è in esecuzione il controller deve avere un abbonamento valido, e viceversa. Se lo stato dell'abbonamento non corrisponde tra il firewall e l'host NS8 del controller, l'unità non riuscirà a connettersi al controller.
 
 :::
 

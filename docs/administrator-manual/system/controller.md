@@ -22,7 +22,7 @@ Key features:
 
 ## Installation and configuration
 
-The controller can be installed on a NethServer 8 system from the Software Center. The module is named `NethSecurity Controller`.
+The controller can be installed on a NethServer 8 system from the Software Center. The module is named `NethSecurity Controller`. Note that the subscription status of the firewall and of the NethServer 8 machine running the controller must match: if one of them has a valid subscription, the other one must have a valid subscription too, otherwise the unit will fail to connect to the controller.
 
 After the installation, the controller must be configured. The configuration can be done using the NethServer 8 web interface. The following parameters need to be set:
 
@@ -312,11 +312,9 @@ If the user uses an SSH key for authentication, the log will contain the fingerp
 
 ## Subscription and limitations
 
-:::note
+:::warning
 
-Subscription required
-
-Some restrictions can only be overcame if the firewall has a valid subscription.
+The subscription status must match on both sides: if the firewall has a valid subscription, the NethServer 8 machine running the controller must also have a valid subscription, and vice versa. If the subscription status does not match between the firewall and the controller's NS8 host, the unit will fail to connect to the controller.
 
 :::
 
