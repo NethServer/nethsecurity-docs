@@ -155,7 +155,7 @@ NethSpot non raccoglie né memorizza l'attività di navigazione degli utenti Hot
 
 ### Dati di accesso degli ospiti e voucher
 
-I dati di accesso degli ospiti vengono conservati per l'intero periodo di validità dell'account dell'ospite e per i successivi **24 mesi**. Questo periodo di conservazione aggiuntivo consente di riattivare gli account degli ospiti scaduti, ad esempio estendendone la validità dal portale, senza doverli ricreare. Consente inoltre di mantenere l'associazione tra l'identità dell'ospite e il voucher precedentemente emesso, in modo che gli operatori possano verificare o estendere una registrazione di accesso esistente quando necessario.
+I dati di accesso degli ospiti vengono conservati per l'intero periodo di validità dell'account dell'ospite e per i successivi **12 mesi**. Questo periodo di conservazione aggiuntivo consente di riattivare gli account degli ospiti scaduti, ad esempio estendendone la validità dal portale, senza doverli ricreare. Consente inoltre di mantenere l'associazione tra l'identità dell'ospite e il voucher precedentemente emesso, in modo che gli operatori possano verificare o estendere una registrazione di accesso esistente quando necessario.
 
 Sono inclusi i dati relativi agli utenti della piattaforma, ai voucher e agli accessi tramite email e SMS. Quando vengono utilizzati i voucher, vengono conservate tutte le informazioni inserite nel voucher, inclusi i dati utilizzati per identificare l'ospite.
 
@@ -179,9 +179,9 @@ Prima del primo utilizzo, un voucher è inattivo. Quando il voucher viene utiliz
 
 Gli utenti amministrativi dell'hotspot non sono associati ai voucher degli ospiti.
 
-Il periodo di conservazione aggiuntivo di 24 mesi inizia dalla data di scadenza del voucher.
+Il periodo di conservazione aggiuntivo di 12 mesi inizia dalla data di scadenza del voucher.
 
-Ad esempio, se un voucher scade il **30 giugno 2026** e l'ospite inizia a utilizzarlo prima di tale data, l'account dell'ospite associato al voucher scade il **30 giugno 2026**. Il periodo di conservazione di 24 mesi inizia da tale data.
+Ad esempio, se un voucher scade il **30 giugno 2026** e l'ospite inizia a utilizzarlo prima di tale data, l'account dell'ospite associato al voucher scade il **30 giugno 2026**. Il periodo di conservazione di 12 mesi inizia da tale data.
 
 Questo periodo di conservazione consente di riattivare successivamente l'account, ad esempio estendendone la validità dal portale, senza eliminare prematuramente i dati dell'ospite.
 
