@@ -47,47 +47,19 @@ Per eseguire l'override della classificazione DSCP, creare un file `/etc/qosify/
 
 Match è uno dei seguenti:
 
-- 
+- `tcp:<port>[-<endport>]`:   Singola porta TCP o intervallo da \<port\> a \<endport\>
 
-  `tcp:<port>[-<endport>]`
+- `udp:<port>[-<endport>]`:   Singola porta UDP o intervallo da \<port\> a \<endport\>
 
-  :   Singola porta TCP o intervallo da \<port\> a \<endport\>
+- `<ipaddr>`:   Indirizzo IPv4, ad esempio 1.1.1.1
 
-- 
+- `<ipv6addr>`:   Indirizzo IPv6, ad esempio ff01::1
 
-  `udp:<port>[-<endport>]`
+- `dns:<pattern>`:   Pattern fnmatch() che supporta \* e ? come caratteri jolly
 
-  :   Singola porta UDP o intervallo da \<port\> a \<endport\>
+- `dns:/<regex>`:   Espressione regolare estesa POSIX.2 per l'abbinamento dei nomi host Funziona solo se le ricerche DNS vengono passate a qosify tramite la chiamata ubus add_dns_host.
 
-- 
-
-  `<ipaddr>`
-
-  :   Indirizzo IPv4, ad esempio 1.1.1.1
-
-- 
-
-  `<ipv6addr>`
-
-  :   Indirizzo IPv6, ad esempio ff01::1
-
-- 
-
-  `dns:<pattern>`
-
-  :   Pattern fnmatch() che supporta \* e ? come caratteri jolly
-
-- 
-
-  `dns:/<regex>`
-
-  :   Espressione regolare estesa POSIX.2 per l'abbinamento dei nomi host Funziona solo se le ricerche DNS vengono passate a qosify tramite la chiamata ubus add_dns_host.
-
-- 
-
-  `dns_c:...`
-
-  :   Come dns, ma corrisponde solo alle voci cname
+- `dns_c:...`:   Come dns, ma corrisponde solo alle voci cname
 
 Il dscp può essere un valore grezzo o un codepoint come CS0. Aggiungere un `+` davanti al valore indica a qosify di eseguire l'override del valore DSCP solo se è zero.
 
