@@ -33,7 +33,13 @@ Per configurare un nuovo server OpenVPN, fai clic sul pulsante **Create Server**
   - `Username and password`: il client che si connette deve fornire un nome utente e una password validi; solo gli utenti con una password impostata possono utilizzare questa modalità
   - `Certificate`: il client che si connette deve avere il proprio certificato per autenticarsi; questa è la modalità consigliata per la maggior parte dei casi
   - `Username password and certificate`: il client che si connette deve fornire un nome utente, una password e un certificato validi
-  - `Username, certificate and OTP`: il client che si connette deve fornire un nome utente, un certificato e anche un codice OTP utilizzato come password. Questa modalità richiede una configurazione aggiuntiva nel client per ricevere il codice OTP
+  - `Username, certificate and OTP`: il client che si connette deve fornire un nome utente, un certificato e anche un codice OTP utilizzato come password. Questa modalità richiede una configurazione aggiuntiva nel client per ricevere il codice OTP.
+ 
+:::note
+
+Quando si utilizza la modalità `Username, certificate and OTP`, la password non viene controllata: è sufficiente fornire lo username e, quando viene richiesta la password, inserire **solo** il codice OTP.In caso di codice errato contrario il client potrebbe riportare un errore relativo alla static-challenge.
+
+:::
 - `VPN Network`: la rete virtuale utilizzata dai client; ogni client riceverà un indirizzo IP dalla rete. NethSecurity suggerisce già una rete inusuale per evitare sovrapposizioni con altre reti utilizzate dal firewall
 - `Dynamic range IP start`: il primo indirizzo IP che sarà assegnato ai client che si connettono al server; l'indirizzo deve far parte della rete VPN. Quando si aggiunge una prenotazione IP a un client, assicurati che l'indirizzo IP sia al di fuori dell'intervallo dinamico.
 - `Dynamic range IP end`: l'ultimo indirizzo IP che sarà assegnato ai client che si connettono al server
