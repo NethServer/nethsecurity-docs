@@ -97,7 +97,16 @@ Custom rules are not currently supported — the tool works well out of the box.
 
 See [Quality of Service (QoS)](../administrator-manual/network/qos.md) for details.
 
-## 11. How to factory reset a NethServer 7.9 firewall not yet migrated to NethSecurity 8?
+## 11. How can I restore a NethSecurity 7.9 backup directly onto NethSecurity 8 if the source system is no longer accessible?
+
+Direct restoration of a NethSecurity 7.9 backup onto NethSecurity 8 is not supported, to recover your setup, you must follow a two-step process:
+
+* Restore the backup onto a NethSecurity 7 system.
+* Run the migration process from NethSecurity 7 to NethSecurity 8.
+
+**Tip:** For speed and simplicity, we recommend spinning up a temporary NethSecurity 7 Virtual Machine (VM) to perform the restoration and subsequent migration.
+
+## 12. How to factory reset a NethServer 7.9 firewall not yet migrated to NethSecurity 8?
 
 On NethServer 7, factory reset is only supported via a bootable USB drive, there is no internal software reset.
 This procedure erases all data on the device.
