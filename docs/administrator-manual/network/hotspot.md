@@ -155,7 +155,7 @@ NethSpot does not collect or store the browsing activity of Hotspot users. Visit
 
 ### Guest login data and vouchers
 
-Guest login data is retained for the whole validity period of the guest account and for the following **24 months**. This additional retention period allows expired guest accounts to be reactivated, for example by extending their validity from the portal, without having to recreate them. It also helps preserve the association between the guest identity and the previously issued voucher, so that operators can review or extend an existing access record when needed.
+Guest login data is retained for the whole validity period of the guest account and for the following **12 months**. This additional retention period allows expired guest accounts to be reactivated, for example by extending their validity from the portal, without having to recreate them. It also helps preserve the association between the guest identity and the previously issued voucher, so that operators can review or extend an existing access record when needed.
 
 This includes data related to platform users, vouchers, email login, and SMS login. When vouchers are used, all the information entered in the voucher is retained, including the data used to identify the guest.
 
@@ -179,9 +179,9 @@ Before the first use, a voucher is inactive. When the voucher is used for the fi
 
 Administrative hotspot users are not related to guest vouchers.
 
-The additional 24-month retention period starts from the voucher expiration date.
+The additional 12-month retention period starts from the voucher expiration date.
 
-For example, if a voucher expires on **June 30, 2026** and the guest starts using it before that date, the guest account associated with that voucher expires on **June 30, 2026**. The 24-month retention period starts from that date.
+For example, if a voucher expires on **June 30, 2026** and the guest starts using it before that date, the guest account associated with that voucher expires on **June 30, 2026**. The 12-month retention period starts from that date.
 
 This retention period allows the account to be reactivated later, for example by extending its validity from the portal, without deleting the guest data too early.
 
