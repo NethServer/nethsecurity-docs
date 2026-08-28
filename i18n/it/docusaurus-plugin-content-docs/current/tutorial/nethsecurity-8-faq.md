@@ -97,7 +97,16 @@ Al momento non sono previste regole personalizzate — lo strumento funziona ott
 
 Consulta [Qualità del servizio (QoS)](../administrator-manual/network/qos.md) per i dettagli.
 
-## 11. Come ripristinare alle impostazioni di fabbrica un firewall NethServer 7.9 non ancora migrato a NethSecurity 8?
+## 11.Come posso ripristinare un backup di NethSecurity 7.9 direttamente su NethSecurity 8 se il sistema sorgente non è più accessibile?
+
+Il ripristino diretto di un backup di NethSecurity 7.9 su NethSecurity 8 non è supportato, per recuperare la configurazione è necessario seguire un processo in due passaggi:
+
+* Ripristinare il backup su un sistema NethSecurity 7.
+* Eseguire la migrazione da NethSecurity 7 a NethSecurity 8.
+
+**Consiglio:** Per maggiore semplicità e velocità, si consiglia di creare una Macchina Virtuale (VM) temporanea con NethSecurity 7 su cui effettuare il ripristino e la successiva migrazione.
+
+## 12. Come ripristinare alle impostazioni di fabbrica un firewall NethServer 7.9 non ancora migrato a NethSecurity 8?
 
 Su NethServer 7, il ripristino alle impostazioni di fabbrica è supportato solo tramite un'unità USB avviabile; non esiste un ripristino software interno.
 Questa procedura cancella tutti i dati presenti sul dispositivo.
