@@ -37,7 +37,7 @@ Per configurare un nuovo server OpenVPN, fai clic sul pulsante **Create Server**
  
 :::note
 
-Quando si utilizza la modalità `Username, certificate and OTP`, la password non viene controllata: è sufficiente fornire lo username e, quando viene richiesta la password, inserire **solo** il codice OTP.In caso di codice errato contrario il client potrebbe riportare un errore relativo alla static-challenge.
+Quando si utilizza la modalità `Username, certificate and OTP`, la password non viene controllata: è sufficiente fornire lo username e, quando viene richiesta la password, inserire **solo** il codice OTP.In caso di codice errato il client potrebbe riportare un errore relativo alla static-challenge.
 
 :::
 - `VPN Network`: la rete virtuale utilizzata dai client; ogni client riceverà un indirizzo IP dalla rete. NethSecurity suggerisce già una rete inusuale per evitare sovrapposizioni con altre reti utilizzate dal firewall
