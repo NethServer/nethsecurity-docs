@@ -37,7 +37,8 @@ To configure a new OpenVPN server, click **Create Server** button and configure 
 
 :::note
 
-When using `Username, certificate and OTP mode`, the password isn't checked. You just need to provide the username and, when asked for the password, enter the **OTP** code.
+When using `Username, certificate and OTP mode`, the password isn't checked. You just need to provide the username and, when asked for the password, enter the OTP code **only**.
+If an incorrect code is entered, the client may report an error related to `static-challenge`.
 
 :::
 
