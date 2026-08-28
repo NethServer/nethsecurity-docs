@@ -97,7 +97,7 @@ Custom rules are not currently supported — the tool works well out of the box.
 
 See [Quality of Service (QoS)](../administrator-manual/network/qos.md) for details.
 
-## 11. How to factory reset a NethServer 7.9 firewall not yet migrated to NS8?
+## 11. How to factory reset a NethServer 7.9 firewall not yet migrated to NethSecurity 8?
 
 On NethServer 7, factory reset is only supported via a bootable USB drive, there is no internal software reset.
 This procedure erases all data on the device.
