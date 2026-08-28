@@ -47,7 +47,7 @@ To override DSCP classification, create a file `/etc/qosify/10-custom.conf` with
 
 Match is one of:
 
--   `tcp:<port>[-<endport>]`:   TCP single port, or range from \<port\> to \<endport\>
+- `tcp:<port>[-<endport>]`:   TCP single port, or range from \<port\> to \<endport\>
 
 - `udp:<port>[-<endport>]`:   UDP single port, or range from \<port\> to \<endport\>
 
