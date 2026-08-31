@@ -96,3 +96,35 @@ On NethSecurity 8, QoS works differently from NethSecurity 7. The system automat
 Custom rules are not currently supported — the tool works well out of the box. If custom rules become necessary, they will be introduced in a future release.
 
 See [Quality of Service (QoS)](../administrator-manual/network/qos.md) for details.
+
+## 11. How can I restore a NethSecurity 7.9 backup directly onto NethSecurity 8 if the source system is no longer accessible?
+
+Direct restoration of a NethSecurity 7.9 backup onto NethSecurity 8 is not supported, to recover your setup, you must follow a two-step process:
+
+* Restore the backup onto a NethSecurity 7 system.
+* Run the migration process from NethSecurity 7 to NethSecurity 8.
+
+**Tip:** For speed and simplicity, we recommend spinning up a temporary NethSecurity 7 Virtual Machine (VM) to perform the restoration and subsequent migration.
+
+## 12. How to factory reset a NethServer 7.9 firewall not yet migrated to NethSecurity 8?
+
+On NethServer 7, factory reset is only supported via a bootable USB drive, there is no internal software reset.
+This procedure erases all data on the device.
+
+**Prerequisites**
+* Connect a monitor/keyboard or serial console.
+* Access BIOS to set the USB drive as the primary boot device (check `Hard Drive BBS Priorities` if needed).
+
+**Procedure**
+* **Download Image:** [NethSecurity 7.9 NG (`.img.gz`)](https://ns-legacy.ams3.digitaloceanspaces.com/NethServer/nethsecurity-7.9.2009.box-20201130.img.gz)
+* **Flash USB Drive:**
+  * **Linux/macOS:** `zcat nethsecurity-7.9.2009.box-20201130.img.gz | dd of=/dev/sdX bs=1M`
+  * **Windows:** Extract `.img.gz` with 7-Zip, then write the `.img` using **Win32DiskImager** or **balenaEtcher**.
+* **Restore System:**
+  * Insert USB drive and boot the device.
+  * Wait for automatic flashing (up to 6 min).
+  * The box will beep 3 times and shut down when finished. Remove the USB drive.
+* **First Boot:**
+  * Power on without any USB storage devices connected (they can break initial setup), wait up to 3 minutes for storage partitioning and setup.
+* **Access Device:**
+  * Connect to any physical interface at `192.168.1.1`.

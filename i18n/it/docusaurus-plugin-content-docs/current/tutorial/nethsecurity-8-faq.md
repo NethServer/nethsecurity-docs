@@ -96,3 +96,42 @@ Su NethSecurity 8 il QoS funziona diversamente da NethSecurity 7. Il sistema ind
 Al momento non sono previste regole personalizzate — lo strumento funziona ottimamente out-of-the-box. Se le regole custom si renderanno necessarie, verranno introdotte in una versione futura.
 
 Consulta [Qualità del servizio (QoS)](../administrator-manual/network/qos.md) per i dettagli.
+
+## 11.Come posso ripristinare un backup di NethSecurity 7.9 direttamente su NethSecurity 8 se il sistema sorgente non è più accessibile?
+
+Il ripristino diretto di un backup di NethSecurity 7.9 su NethSecurity 8 non è supportato, per recuperare la configurazione è necessario seguire un processo in due passaggi:
+
+* Ripristinare il backup su un sistema NethSecurity 7.
+* Eseguire la migrazione da NethSecurity 7 a NethSecurity 8.
+
+**Consiglio:** Per maggiore semplicità e velocità, si consiglia di creare una Macchina Virtuale (VM) temporanea con NethSecurity 7 su cui effettuare il ripristino e la successiva migrazione.
+
+## 12. Come ripristinare alle impostazioni di fabbrica un firewall NethServer 7.9 non ancora migrato a NethSecurity 8?
+
+Su NethServer 7, il ripristino alle impostazioni di fabbrica è supportato solo tramite un'unità USB avviabile; non esiste un ripristino software interno.
+Questa procedura cancella tutti i dati presenti sul dispositivo.
+
+**Prerequisiti**
+
+* Collegare un monitor/tastiera oppure una console seriale.
+* Accedere al BIOS per impostare l'unità USB come dispositivo di avvio principale (controllare `Hard Drive BBS Priorities` se necessario).
+
+**Procedura**
+
+* **Scaricare l'immagine:** [NethSecurity 7.9 NG (`.img.gz`)](https://ns-legacy.ams3.digitaloceanspaces.com/NethServer/nethsecurity-7.9.2009.box-20201130.img.gz)
+* **Masterizzare l'unità USB:**
+
+  * **Linux/macOS:** `zcat nethsecurity-7.9.2009.box-20201130.img.gz | dd of=/dev/sdX bs=1M`
+  * **Windows:** estrarre `.img.gz` con 7-Zip, quindi scrivere il file `.img` utilizzando **Win32DiskImager** o **balenaEtcher**.
+* **Ripristinare il sistema:**
+
+  * Inserire l'unità USB e avviare il dispositivo.
+  * Attendere il flashing automatico (fino a 6 minuti).
+  * Al termine, il dispositivo emetterà 3 segnali acustici e si spegnerà. Rimuovere l'unità USB.
+* **Primo avvio:**
+
+  * Accendere il dispositivo senza alcun dispositivo di archiviazione USB collegato (potrebbero interrompere la configurazione iniziale), quindi attendere fino a 3 minuti per il partizionamento e la configurazione dello spazio di archiviazione.
+* **Accedere al dispositivo:**
+
+  * Collegarsi a una qualsiasi interfaccia fisica all'indirizzo `192.168.1.1`.
+

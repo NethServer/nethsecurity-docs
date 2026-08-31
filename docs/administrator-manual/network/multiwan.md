@@ -42,6 +42,13 @@ Here\'s how you can create a custom rule:
     - Enter an address or range: specify a single IP address or a CIDR. Only IPv4 is supported.
     - Any address: select this option to match any address.
     - Select a firewall object: choose from the list of predefined firewall objects.
+
+:::note
+
+Routing by destination domain is currently not supported.
+
+:::
+
 5.  Select the created policy for this traffic type: choose the custom policy you created in the first step as the routing preference for this specific type of traffic. By associating the rule with a particular policy, you are instructing the system to route the defined traffic according to the settings specified within that policy.
 
 - `Sticky` option: The sticky option of a rule ensures that traffic originating from the same source IP always exits through the same WAN for a duration of 10 minutes. This can prevent issues when connecting to websites of banks, insurance companies, etc. This option is typically used for HTTPS traffic (443/TCP).

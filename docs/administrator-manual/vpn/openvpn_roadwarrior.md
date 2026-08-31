@@ -34,6 +34,14 @@ To configure a new OpenVPN server, click **Create Server** button and configure 
   - `Certificate`: the connecting client must have its own certificate to authenticate; this is the recommended mode for most cases
   - `Username password and certificate`: the connecting client must provide a valid username, password and certificate
   - `Username, certificate and OTP`: the connecting client must provide a valid username, certificate and also an OTP code used as a password. This mode requires additional configuration in the client to receive to OTP code
+
+:::note
+
+When using `Username, certificate and OTP mode`, the password isn't checked. You just need to provide the username and, when asked for the password, enter the OTP code **only**.
+If an incorrect code is entered, the client may report an error related to `static-challenge`.
+
+:::
+
 - `VPN Network`: the virtual network used by clients; every client will receive an IP address taken from this network. NethSecurity already suggests an uncommon network to avoid overlaps with other networks used by the firewall
 - `Dynamic range IP start`: the first IP address that will be assigned to clients connecting to the server; the address must be part of the VPN network. When adding an IP reservation to client, make sure that the IP address is outside the dynamic range.
 - `Dynamic range IP end`: the last IP address that will be assigned to clients connecting to the server

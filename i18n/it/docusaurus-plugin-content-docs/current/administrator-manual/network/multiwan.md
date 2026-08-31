@@ -42,6 +42,13 @@ Ecco come puoi creare una regola personalizzata:
     - Immettere un indirizzo o un intervallo: specificare un singolo indirizzo IP o un CIDR. Solo IPv4 è supportato.
     - Qualsiasi indirizzo: selezionare questa opzione per corrispondere a qualsiasi indirizzo.
     - Selezionare un oggetto firewall: scegliere dall'elenco di oggetti firewall predefiniti.
+
+:::note
+
+L'instradamento per dominio di destinazione non è attualmente supportato.
+
+:::
+
 5.  Selezionare il criterio creato per questo tipo di traffico: scegliere il criterio personalizzato creato nel primo passaggio come preferenza di routing per questo tipo di traffico specifico. Associando la regola a un criterio particolare, stai istruendo il sistema a instradare il traffico definito secondo le impostazioni specificate all'interno di quel criterio.
 
 - Opzione `Sticky`: L'opzione sticky di una regola garantisce che il traffico proveniente dallo stesso indirizzo IP di origine esca sempre attraverso lo stesso WAN per una durata di 10 minuti. Questo può prevenire problemi durante la connessione a siti Web di banche, compagnie assicurative, ecc. Questa opzione è generalmente utilizzata per il traffico HTTPS (443/TCP).
