@@ -146,6 +146,10 @@ const config: Config = {
           title: 'More',
           items: [
             {
+              label: 'Download',
+              to: '/docs/administrator-manual/installation/download',
+            },
+            {
               label: 'Package browser',
               href: 'pathname:///packages/',
             },
