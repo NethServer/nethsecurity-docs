@@ -36,9 +36,19 @@ curl -s http://127.0.0.1:9274/metrics | head
 ```
 
 The exporter now listens on port `9274` and publishes the metrics on the
-`/metrics` path. The firewall still blocks the port for any incoming traffic, so
-continue with [Accessing the exporter
+`/metrics` path. Continue with [Accessing the exporter
 remotely](#accessing-the-exporter-remotely) to reach it from the collector.
+
+:::danger
+
+The exporter binds every address of the firewall, so the port is reachable from
+every zone whose input policy is `ACCEPT`. With the default configuration this
+means the whole LAN; if the input policy of a WAN or guest zone has been changed
+to `ACCEPT`, the metrics are exposed there too. Never leave the port open like
+that: restrict it as described in [Restricting access to the
+metrics](#restricting-access-to-the-metrics).
+
+:::
 
 :::warning
 
@@ -79,9 +89,38 @@ with:
 - `Destination service`: **Custom**, protocol `TCP`, port `9274`
 - `Action`: **Accept**
 
-The metrics are then available at `http://<firewall-ip>:9274/metrics`. This
-option exposes the exporter in clear text, so also protect it with a password,
-as described below.
+The metrics are then available at `http://<firewall-ip>:9274/metrics`. This rule
+alone does not close the port to the other zones: complete the configuration as
+described in [Restricting access to the
+metrics](#restricting-access-to-the-metrics). The exporter is exposed in clear
+text, so also protect it with a password.
+
+## Restricting access to the metrics {#restricting-access-to-the-metrics}
+
+Choose one of the two following approaches, depending on how the collector
+reaches the exporter.
+
+**With the reverse proxy path**, bind the exporter to the loopback address only:
+nothing is published on the network interfaces and the reverse proxy remains the
+single entry point, filtered by its `Allowed networks` field.
+
+``` bash
+uci set telegraf.output_prometheus.listen_addr='127.0.0.1:9274'
+uci commit telegraf
+reload_config
+```
+
+**With a firewall input rule**, close the port to everyone else. On the
+[Rules](../firewall/firewall_rules.md) page, `Input rules` tab, add a second
+rule *below* the one that accepts the collector:
+
+- `Source address`: any source address
+- `Source zone`: Any
+- `Destination service`: **Custom**, protocol `TCP`, port `9274`
+- `Action`: **Drop**
+
+The first matching rule wins, so the collector is accepted and every other host
+is dropped, whatever the input policy of its zone is.
 
 ## Protecting the exporter with a password {#protecting-the-exporter-with-a-password}
 

@@ -36,9 +36,20 @@ curl -s http://127.0.0.1:9274/metrics | head
 ```
 
 L'esportatore ora ascolta sulla porta `9274` e pubblica le metriche sul percorso
-`/metrics`. Il firewall blocca comunque la porta per il traffico in ingresso,
-quindi proseguire con [Accedere all'esportatore da
+`/metrics`. Proseguire con [Accedere all'esportatore da
 remoto](#accessing-the-exporter-remotely) per raggiungerlo dal collettore.
+
+:::danger
+
+L'esportatore si lega a tutti gli indirizzi del firewall, quindi la porta è
+raggiungibile da ogni zona la cui politica di ingresso è `ACCEPT`. Con la
+configurazione predefinita questo significa tutta la LAN; se la politica di
+ingresso di una zona WAN o guest è stata modificata in `ACCEPT`, le metriche
+sono esposte anche lì. Non lasciare mai la porta aperta in questo modo:
+limitarla come descritto in [Limitare l'accesso alle
+metriche](#restricting-access-to-the-metrics).
+
+:::
 
 :::warning
 
@@ -61,9 +72,9 @@ nessuna porta aggiuntiva sul firewall. Accedere alla pagina [Certificati e
 reverse proxy](../network/reverse_proxy.md), fare clic su **Aggiungi reverse
 proxy** e compilare:
 
-- `Tipo`: **Percorso**, per esempio `/telegraf-metrics`
-- `URL di destinazione`: `http://127.0.0.1:9274/metrics`
-- `Reti consentite`: l'indirizzo del collettore in formato CIDR, per esempio
+- `Type`: **Path**, per esempio `/telegraf-metrics`
+- `Destination URL`: `http://127.0.0.1:9274/metrics`
+- `Allowed networks`: l'indirizzo del collettore in formato CIDR, per esempio
   `203.0.113.5/32`
 
 Le metriche sono poi disponibili all'indirizzo
@@ -81,8 +92,39 @@ Usare questa opzione quando il collettore deve raggiungere direttamente la porta
 - `Azione`: **Accetta**
 
 Le metriche sono poi disponibili all'indirizzo
-`http://<firewall-ip>:9274/metrics`. Questa opzione espone l'esportatore in
-chiaro, quindi proteggerlo anche con una password, come descritto qui sotto.
+`http://<firewall-ip>:9274/metrics`. Questa regola da sola non chiude la porta
+alle altre zone: completare la configurazione come descritto in [Limitare
+l'accesso alle metriche](#restricting-access-to-the-metrics). L'esportatore è
+esposto in chiaro, quindi proteggerlo anche con una password.
+
+## Limitare l'accesso alle metriche {#restricting-access-to-the-metrics}
+
+Scegliere uno dei due approcci seguenti, in base a come il collettore raggiunge
+l'esportatore.
+
+**Con il percorso su reverse proxy**, legare l'esportatore solo all'indirizzo di
+loopback: nulla viene pubblicato sulle interfacce di rete e il reverse proxy
+resta l'unico punto di accesso, filtrato dal suo campo `Allowed networks`.
+
+``` bash
+uci set telegraf.output_prometheus.listen_addr='127.0.0.1:9274'
+uci commit telegraf
+reload_config
+```
+
+**Con una regola di firewall in ingresso**, chiudere la porta a tutti gli altri.
+Nella pagina [Regole](../firewall/firewall_rules.md), scheda `Regole di
+ingresso`, aggiungere una seconda regola *sotto* quella che accetta il
+collettore:
+
+- `Indirizzo sorgente`: qualsiasi indirizzo sorgente
+- `Zona sorgente`: Qualsiasi
+- `Servizio di destinazione`: **Personalizzato**, protocollo `TCP`, porta `9274`
+- `Azione`: **Scarta**
+
+Vince la prima regola che corrisponde, quindi il collettore viene accettato e
+ogni altro host viene scartato, qualunque sia la politica di ingresso della sua
+zona.
 
 ## Proteggere l'esportatore con una password {#protecting-the-exporter-with-a-password}
 
