@@ -47,47 +47,19 @@ To override DSCP classification, create a file `/etc/qosify/10-custom.conf` with
 
 Match is one of:
 
-- 
+- `tcp:<port>[-<endport>]`:   TCP single port, or range from \<port\> to \<endport\>
 
-  `tcp:<port>[-<endport>]`
+- `udp:<port>[-<endport>]`:   UDP single port, or range from \<port\> to \<endport\>
 
-  :   TCP single port, or range from \<port\> to \<endport\>
+- `<ipaddr>`:   IPv4 address, e.g. 1.1.1.1
 
-- 
+- `<ipv6addr>`:   IPv6 address, e.g. ff01::1
 
-  `udp:<port>[-<endport>]`
+- `dns:<pattern>`:   fnmatch() pattern supporting \* and ? as wildcard characters
 
-  :   UDP single port, or range from \<port\> to \<endport\>
+- `dns:/<regex>`:   POSIX.2 extended regular expression for matching hostnames Only works, if dns lookups are passed to qosify via the add_dns_host ubus call.
 
-- 
-
-  `<ipaddr>`
-
-  :   IPv4 address, e.g. 1.1.1.1
-
-- 
-
-  `<ipv6addr>`
-
-  :   IPv6 address, e.g. ff01::1
-
-- 
-
-  `dns:<pattern>`
-
-  :   fnmatch() pattern supporting \* and ? as wildcard characters
-
-- 
-
-  `dns:/<regex>`
-
-  :   POSIX.2 extended regular expression for matching hostnames Only works, if dns lookups are passed to qosify via the add_dns_host ubus call.
-
-- 
-
-  `dns_c:...`
-
-  :   Like dns, but only matches cname entries
+- `dns_c:...`:   Like dns, but only matches cname entries
 
 The dscp can be a raw value, or a codepoint like CS0. Adding a `+` in front of the value tells qosify to only override the DSCP value if it is zero.
 
