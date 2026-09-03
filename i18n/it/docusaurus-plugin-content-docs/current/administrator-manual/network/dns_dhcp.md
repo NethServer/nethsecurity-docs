@@ -297,7 +297,7 @@ Il sistema supporta la scansione solo su reti con una netmask massima di 255.255
 L'inoltro DHCP consente al firewall di inoltrare le richieste DHCP dai client a un server DHCP esterno. L'inoltro DHCP non è disponibile dall'interfaccia utente, ma è possibile configurarlo dal terminale utilizzando `uci`.
 
 - Sostituisci `\<INTERFACE_NAME\>` con il nome dell'interfaccia di rete logica in cui si trova il server DHCP di destinazione.
-- Sostituisci `\<LOCAL_ADDR\>` con l'indirizzo IP del firewall su cui ascoltare le richieste DHCP dei client.
+- Sostituisci `\<LOCAL_ADDR\>` con l'indirizzo IP dell'interfaccia del firewall su cui il server DHCP ascolta le richieste dei client.
 - Sostituisci `\<SERVER_ADDR\>` con l'indirizzo IP del server DHCP a monte.
 
 1. Crea una nuova voce di inoltro DHCP:
