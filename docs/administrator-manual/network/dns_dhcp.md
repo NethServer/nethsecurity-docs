@@ -298,8 +298,8 @@ The system supports scanning only on networks with a maximum netmask of 255.255.
 
 The DHCP relay allows the firewall to forward DHCP requests from clients to an external DHCP server, DHCP relay is not available from the UI, but it\'s possible to configure it from the terminal using `uci`.
 
-- Replace `\<INTERFACE_NAME\>` with the name of the interface where the DHCP relay should listen.
-- Replace `\<LOCAL_ADDR\>` with the IP address of the firewall on that interface.
+- Replace `\<INTERFACE_NAME\>` with the name of the logical network interface where the destination DHCP server is located.
+- Replace `\<LOCAL_ADDR\>` with the IP address of the firewall interface where the DHCP server listens for client requests.
 - Replace `\<SERVER_ADDR\>` with the IP address of the upstream DHCP server.
 
 1.Create a new DHCP relay entry :
