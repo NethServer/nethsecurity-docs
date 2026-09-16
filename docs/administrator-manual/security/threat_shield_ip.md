@@ -44,6 +44,25 @@ Enterprise blocklists are specifically focused on security and offer several adv
 3.  **Reduced false positives**: False positives occur when legitimate traffic is mistakenly blocked. Enterprise blocklists are designed to minimize false positives by carefully curating and verifying the listed IP addresses and hostnames. The companies behind Enterprise blocklists have robust processes in place to ensure that only malicious entities are included in the blocklists. This reduces the chances of legitimate traffic being blocked, minimizing disruptions to your network or services.
 4.  **Enterprise support**: Enterprise blocklists often come with additional support and services tailored for enterprise environments. This includes access to technical support, documentation, and integration assistance. If any issues or questions arise while using the Enterprise blocklists, you can rely on the support provided by the cybersecurity companies to help you address them effectively.
 
+### Direction
+
+Each blocklist feed acts on a specific traffic direction:
+
+- **Inbound**: the feed blocks connections coming from the internet, both those destined to the firewall itself and those routed towards hosts in the local networks. Most security feeds, which list known malicious or compromised addresses, work in this direction.
+- **Outbound**: the feed blocks connections originated by the local networks and directed to the internet. This direction is typically used by feeds that prevent local clients from reaching a specific category of remote hosts, rather than protecting the perimeter from external attackers.
+- **Inbound and outbound**: the feed is applied in both directions.
+
+Traffic exchanged between local networks is never inspected, regardless of the feed direction: only traffic crossing the firewall towards or from the internet is matched.
+
+### Ports
+
+Some feeds do not apply to every kind of traffic, but only to specific protocols and destination ports, when no restriction is shown, the feed is matched against any traffic.
+
+This is common for feeds that target a single service. For example, a feed listing public DNS resolvers is matched only on TCP and UDP ports 53 and 853, while a feed listing DNS-over-HTTPS servers is matched only on TCP and UDP ports 80 and 443. In both cases a listed address remains reachable on any other port: the purpose is to prevent clients from bypassing the
+resolver configured on the firewall, not to block the host entirely.
+
+Keep this in mind when a feed does not seem to produce the expected effect: a listed address that is still reachable may simply be contacted on a port outside the feed scope.
+
 ### Confidence
 
 Enterprise blocklists include a \"Confidence\" score which is shown in the UI. The score is expressed as a value from 1 to 10 and represents the provider\'s assessment of the list quality: higher values indicate higher confidence and a lower likelihood of false positives. This \"Confidence\" metric is available only for Enterprise lists; Community lists are presented \"as is\" and display \"Unknown\" for confidence.
@@ -112,7 +131,7 @@ By default, geoblocking only blocks **incoming** connections, i.e. traffic initi
 If you also want to block **outgoing** connections to the selected countries, add the `country` feed to the `ban_blockforwardlan` property, which applies the feed to the LAN-forward chain. From the command line:
 
 ```bash
-uci add_list banip.global.ban_blockforwardlan='country'
+uci add_list banip.global.ban_feedinout='country'
 uci commit banip
 /etc/init.d/banip restart
 ```
@@ -122,6 +141,8 @@ uci commit banip
 When Threat Shield IP is enabled, the system automatically starts checking for brute force attack attempts on firewall services. By default, the monitored services include SSH access and the login to NethSecurity UI. The system detects login attempts and automatically blocks IPs that have failed to enter the correct credentials.
 
 To enable or disable the brute force protection, navigate to the `Block brute force attacks` section in the Threat Shield IP interface, under the `Settings` tab and use the switch to activate or deactivate the feature.
+
+Brute force protection relies on the same enforcement chains used by the blocklist feeds, which only inspect traffic crossing the firewall from or towards the internet. Login attempts originated from a local network are detected and the source address is added to the blocklist, but the address is not actually blocked, since no rule inspects traffic sent from a local network to the firewall itself.
 
 The feature can be customized by adjusting the following settings:
 
