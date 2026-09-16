@@ -128,7 +128,7 @@ Avoid blocking the regions where your own users are located, otherwise legitimat
 
 By default, geoblocking only blocks **incoming** connections, i.e. traffic initiated from the selected countries towards your firewall and networks. Outgoing connections (traffic initiated by your local clients towards hosts in the selected countries) are still allowed.
 
-If you also want to block **outgoing** connections to the selected countries, add the `country` feed to the `ban_blockforwardlan` property, which applies the feed to the LAN-forward chain. From the command line:
+If you also want to block **outgoing** connections to the selected countries, add the `country` feed to the `ban_feedinout` property, which applies the feed to the LAN-forward chain. From the command line:
 
 ```bash
 uci add_list banip.global.ban_feedinout='country'
