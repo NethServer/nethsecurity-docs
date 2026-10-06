@@ -50,6 +50,28 @@ Enterprise blocklists include a \"Confidence\" score which is shown in the UI. T
 
 Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will be listed only if the machine has a valid [Enterprise or Community subscription](../system/subscription.md) and a valid entitlement for the Threat Shield IP service.
 
+### Nethesis community blocklist {#nethesis_community-section}
+
+Attackers usually target many firewalls at once. NethSecurity and NethServer systems with a subscription share the attackers they block, so that each system can block them before they attack.
+
+It works this way:
+
+- When Threat Shield IP blocks an IP address with the [brute force protection](#brute_force-section), the firewall sends that address to Nethesis. Only public addresses are sent. The firewall sends them every 5 minutes.
+- When enough systems report the same address, Nethesis adds it to the `Nethesis community - Level 2` blocklist.
+- Firewalls with the Threat Shield add-on can enable this blocklist from the `Blocklist feeds` tab, like the other Enterprise blocklists. It is disabled by default.
+
+Registered firewalls also apply the Nethesis global allowlist. The addresses in this list, such as the Nethesis subscription servers, are never blocked.
+
+What happens depends on the subscription:
+
+| Firewall | Sends blocked addresses | Nethesis global allowlist | `Nethesis community - Level 2` blocklist |
+|---|---|---|---|
+| Not registered | No | No | Not available |
+| Registered | Yes | Yes | Not available |
+| Registered with the Threat Shield add-on | Yes | Yes | Available, disabled by default |
+
+No configuration is needed. Reporting starts when you register the firewall and stops when you unregister it. A firewall that is not registered sends nothing.
+
 ### Logging
 
 The Threat Shield IP feature includes advanced logging capabilities to monitor and track potential threats. The logging section allows you to configure which types of blocked packets are logged:

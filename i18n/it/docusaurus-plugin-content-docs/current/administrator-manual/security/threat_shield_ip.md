@@ -50,6 +50,28 @@ Le liste di blocco Enterprise includono un punteggio "Affidabilità" mostrato ne
 
 I blocklist di Yoroi e Nethesis sono blocklist Enterprise. Questi elenchi verranno visualizzati solo se la macchina ha un valido [abbonamento Enterprise o Community](../system/subscription.md) e un valido diritto per il servizio Threat Shield IP.
 
+### Lista di blocco Nethesis community {#nethesis_community-section}
+
+Gli attaccanti di solito colpiscono molti firewall contemporaneamente. I sistemi NethSecurity e NethServer con una sottoscrizione condividono gli attaccanti che bloccano, così ogni sistema può bloccarli prima che attacchino.
+
+Funziona così:
+
+- Quando Threat Shield IP blocca un indirizzo IP con la [protezione brute force](#brute_force-section), il firewall invia quell'indirizzo a Nethesis. Vengono inviati solo indirizzi pubblici. Il firewall li invia ogni 5 minuti.
+- Quando abbastanza sistemi segnalano lo stesso indirizzo, Nethesis lo aggiunge alla lista di blocco `Nethesis community - Level 2`.
+- I firewall con l'add-on Threat Shield possono abilitare questa lista dalla scheda `Blocklist feeds`, come le altre liste di blocco Enterprise. È disabilitata di default.
+
+I firewall registrati applicano anche la allowlist globale di Nethesis. Gli indirizzi in questa lista, come i server delle sottoscrizioni Nethesis, non vengono mai bloccati.
+
+Il comportamento dipende dalla sottoscrizione:
+
+| Firewall | Invia gli indirizzi bloccati | Allowlist globale Nethesis | Lista di blocco `Nethesis community - Level 2` |
+|---|---|---|---|
+| Non registrato | No | No | Non disponibile |
+| Registrato | Sì | Sì | Non disponibile |
+| Registrato con l'add-on Threat Shield | Sì | Sì | Disponibile, disabilitata di default |
+
+Non serve alcuna configurazione. L'invio parte quando registri il firewall e si ferma quando annulli la registrazione. Un firewall non registrato non invia nulla.
+
 ### Registrazione
 
 La funzione Threat Shield IP include funzionalità avanzate di registrazione per monitorare e tracciare le minacce potenziali. La sezione di registrazione consente di configurare quali tipi di pacchetti bloccati vengono registrati:
