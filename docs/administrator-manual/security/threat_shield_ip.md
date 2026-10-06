@@ -58,7 +58,7 @@ It works this way:
 
 - When Threat Shield IP blocks an IP address with the [brute force protection](#brute_force-section), the firewall sends that address to Nethesis. Only public addresses are sent. The firewall sends them every 5 minutes.
 - When enough systems report the same address, Nethesis adds it to the `Nethesis community - Level 2` blocklist.
-- Firewalls with the Threat Shield entitlement can enable this blocklist from the `Blocklist feeds` tab, like the other Enterprise blocklists. It is disabled by default.
+- Firewalls with the Threat Shield add-on can enable this blocklist from the `Blocklist feeds` tab, like the other Enterprise blocklists. It is disabled by default.
 
 Registered firewalls also apply the Nethesis global allowlist. The addresses in this list, such as the Nethesis subscription servers, are never blocked.
 
@@ -67,16 +67,10 @@ What happens depends on the subscription:
 | Firewall | Sends blocked addresses | Nethesis global allowlist | `Nethesis community - Level 2` blocklist |
 |---|---|---|---|
 | Not registered | No | No | Not available |
-| Registered | Yes | Yes | Not shown |
-| Registered with the Threat Shield entitlement | Yes | Yes | Available, disabled by default |
+| Registered | Yes | Yes | Not available |
+| Registered with the Threat Shield add-on | Yes | Yes | Available, disabled by default |
 
 No configuration is needed. Reporting starts when you register the firewall and stops when you unregister it. A firewall that is not registered sends nothing.
-
-:::note
-
-banIP supports a single block hook, a script that runs on every blocked address. If you configured your own script in the `ban_blockhook` option, NethSecurity keeps it and does not send blocked addresses. A `threat_shield` message is written in `/var/log/messages`.
-
-:::
 
 ### Logging
 

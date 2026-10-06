@@ -58,7 +58,7 @@ Funziona così:
 
 - Quando Threat Shield IP blocca un indirizzo IP con la [protezione brute force](#brute_force-section), il firewall invia quell'indirizzo a Nethesis. Vengono inviati solo indirizzi pubblici. Il firewall li invia ogni 5 minuti.
 - Quando abbastanza sistemi segnalano lo stesso indirizzo, Nethesis lo aggiunge alla lista di blocco `Nethesis community - Level 2`.
-- I firewall con l'entitlement Threat Shield possono abilitare questa lista dalla scheda `Blocklist feeds`, come le altre liste di blocco Enterprise. È disabilitata di default.
+- I firewall con l'add-on Threat Shield possono abilitare questa lista dalla scheda `Blocklist feeds`, come le altre liste di blocco Enterprise. È disabilitata di default.
 
 I firewall registrati applicano anche la allowlist globale di Nethesis. Gli indirizzi in questa lista, come i server delle sottoscrizioni Nethesis, non vengono mai bloccati.
 
@@ -67,16 +67,10 @@ Il comportamento dipende dalla sottoscrizione:
 | Firewall | Invia gli indirizzi bloccati | Allowlist globale Nethesis | Lista di blocco `Nethesis community - Level 2` |
 |---|---|---|---|
 | Non registrato | No | No | Non disponibile |
-| Registrato | Sì | Sì | Non mostrata |
-| Registrato con l'entitlement Threat Shield | Sì | Sì | Disponibile, disabilitata di default |
+| Registrato | Sì | Sì | Non disponibile |
+| Registrato con l'add-on Threat Shield | Sì | Sì | Disponibile, disabilitata di default |
 
 Non serve alcuna configurazione. L'invio parte quando registri il firewall e si ferma quando annulli la registrazione. Un firewall non registrato non invia nulla.
-
-:::note
-
-banIP supporta un solo block hook, uno script eseguito per ogni indirizzo bloccato. Se hai configurato un tuo script nell'opzione `ban_blockhook`, NethSecurity lo mantiene e non invia gli indirizzi bloccati. Un messaggio `threat_shield` viene scritto in `/var/log/messages`.
-
-:::
 
 ### Registrazione
 
