@@ -28,7 +28,7 @@ After the installation, the controller must be configured. The configuration can
 
 - `Controller hostname`: The fully qualified domain name for the controller, like: `mycontroller.nethsecurity.org`. Ensure the hostname is resolvable and reachable from the units.
 - `Let's Encrypt certificate`: Enable or disable Let's Encrypt certificate for the controller web interface. It\'s recommended to enable it.
-- `VPN network` and `VPN netmask`: The OpenVPN network and netmask. When choosing the network, make sure it does not overlap with the existing networks inside all the units that will be connected to the controller. Use only class C networks like `192.168.7.0` with netmask `255.255.255.0`.
+- `VPN network` and `VPN netmask`: The OpenVPN network and netmask. When choosing the network, make sure it does not overlap with the existing networks inside all the units that will be connected to the controller. The netmask can be anywhere from `255.255.240.0` (/20) to `255.255.255.0` (/24), and the network must be the first address of the network, like `172.19.64.0` with netmask `255.255.240.0`. New installations get a random /20 network. These values can't be changed from the web interface after the first configuration, see [Change the VPN network](#controller_vpn_network-section).
 - `Administrator user`: The controller administrator user name. The administrator user is the only user that can create and manage other users inside the controller. The same user name is used to access the Grafana interface.
 - `Administrator password`: Choose a strong password for the administrator user. Note that the default password is displayed only once, please store it in a safe place. The same password is used to access the Grafana interface. For security reasons, you should change the password after the first login both for the controller and the Grafana interface.
 
@@ -50,6 +50,31 @@ To ensure proper operation, the controller must be accessible over the network o
 - `A dinamically allocated UDP port` opened by NethServer 8 and used for VPN connections from the units, this port is randomly generated at setup time.
 
 The actual `UDP port` number can be found in the Controller module status page under the `OpenVPN UDP Port` section. Make sure those ports are open on any firewall protecting the node running the controller.
+
+:::
+
+### Change the VPN network {#controller_vpn_network-section}
+
+Controllers installed before the /20 support use a /24 VPN network, which limits the number of units. The network can be widened from the NethServer 8 command line.
+
+Run the following command on the NethServer 8 node as `root`, replacing `nethsecurity-controller1` with the actual controller module instance name. This example widens `172.19.64.0/24` to `172.19.64.0/20`:
+
+    api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.19.64.0", "ovpn_netmask": "255.255.240.0"}'
+
+The command stops the controller, applies the new network and starts the controller again. Units reconnect on their own and keep their VPN IP address.
+
+Before running it, make sure that:
+
+- the network address is the same as the current one: only the netmask can change
+- the new netmask is wider than the current one, down to `255.255.240.0` (/20)
+- the network address is the first address of the new network: `172.19.64.0` is valid for a /20, `172.19.65.0` is not
+- the new network does not overlap with the networks inside the connected units
+
+The command rejects any other change, like moving to a different network or shrinking it.
+
+:::warning
+
+Adding `"force": true` to the data skips these checks and also allows netmasks wider than /20. Units with a VPN IP address outside the new network lose the connection to the controller: they must be removed and added again. Changing the network address does this to all units.
 
 :::
 
