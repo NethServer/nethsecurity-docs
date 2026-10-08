@@ -78,6 +78,22 @@ Aggiungendo `"force": true` ai dati si saltano questi controlli e si consentono 
 
 :::
 
+#### Quando l'indirizzo di rete attuale non è allineato
+
+Un indirizzo di rete /24 non è sempre un indirizzo /20 valido. Ad esempio `172.23.142.0/24` non può diventare `172.23.142.0/20`, perché il blocco /20 che lo contiene inizia a `172.23.128.0`.
+
+Ci sono due soluzioni.
+
+Allargare fino alla maschera più ampia che mantiene lo stesso indirizzo di rete. `172.23.142.0` è un indirizzo /23 valido, quindi la rete può diventare `172.23.142.0/23`:
+
+    api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.142.0", "ovpn_netmask": "255.255.254.0"}'
+
+Oppure spostarsi sul blocco /20 che già contiene la rete attuale, usando `force`:
+
+    api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.128.0", "ovpn_netmask": "255.255.240.0", "force": true}'
+
+In questo caso `force` serve solo perché cambia l'indirizzo di rete. Nessuna unità viene disconnessa: ogni indirizzo di `172.23.142.0/24`, come `172.23.142.2`, si trova anche dentro `172.23.128.0/20`. Prima di eseguirlo, assicurati che l'intera nuova /20 non si sovrapponga con le reti all'interno delle unità connesse.
+
 ## Utenti
 
 Il controller ha due tipi di utenti:
