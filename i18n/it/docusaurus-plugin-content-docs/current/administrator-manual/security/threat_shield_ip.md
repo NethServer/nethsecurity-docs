@@ -74,7 +74,7 @@ La funzione Threat Shield IP include funzionalità avanzate di logging per monit
 
 1.  Registra i pacchetti bloccati nella catena pre-routing: quando abilitata, questa opzione registra i pacchetti bloccati nella catena pre-routing, che elabora i pacchetti prima che entrino nella tabella di routing.
 2.  Registra i pacchetti in entrata bloccati (da internet): se abilitata, questa opzione registra i pacchetti bloccati provenienti dall'interfaccia WAN, sia quelli diretti al firewall stesso (catena WAN-input) sia quelli instradati verso host interni (catena WAN-forward), tipicamente servizi esposti tramite port forwarding. Si noti che abilitare questa opzione può generare un gran numero di log, soprattutto quando il firewall è esposto a traffico intenso o potenzialmente malevolo.
-3.  Registra i pacchetti in uscita bloccati (dalle reti locali): se abilitata, questa opzione registra i pacchetti bloccati originati dalle reti locali ed elaborati dalla catena forward, che gestisce il traffico instradato attraverso il firewall verso altre reti.
+3.  Registra i pacchetti in uscita bloccati (dalle reti locali): se abilitata, questa opzione registra i pacchetti bloccati originati dalle reti locali e instradati attraverso il firewall verso internet (catena LAN-forward).
 
 Queste opzioni di logging forniscono un controllo granulare su quali pacchetti bloccati vengono registrati, consentendo di esporre metriche all'interno della sezione [monitoraggio in tempo reale](../monitoring/monitoring.md#real_time_monitoring-section) e [monitoraggio storico](../monitoring/monitoring.md#historical_monitoring-section).
 
