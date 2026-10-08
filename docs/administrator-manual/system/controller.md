@@ -365,26 +365,28 @@ You can update the unit without connecting to it using the SSH terminal. Follow 
 
 Once connected, you can check for updates depending on what you want to update.
 
-a.  Install package updates on the unit:
-    1.  To check for updates for packages use the following command:
+1.  Install package updates on the unit:
+
+    1. To check for updates for packages use the following command:
 
         ``` bash
         /usr/libexec/rpcd/ns.update call check-package-updates
         ```
 
-    2.  If you\'re ok with the installation of the packages you can run the following command:
+    2. If you\'re ok with the installation of the packages you can run the following command:
 
         ``` bash
         /usr/libexec/rpcd/ns.update call install-package-updates
         ```
-b.  To update the image, you can simply schedule the installation, remember this is an operation that restarts the firewall (causing a downtime)
-    1.  Check if there is an updated image available:
+
+1.  To update the image, you can simply schedule the installation, remember this is an operation that restarts the firewall (causing a downtime)
+    1. Check if there is an updated image available:
 
         ``` bash
         /usr/libexec/rpcd/ns.update call check-system-update
         ```
 
-    2.  If you want to proceed with the update, this can be done through this command:
+    2. If you want to proceed with the update, this can be done through this command:
 
         ``` bash
         /usr/libexec/rpcd/ns.update call update-system
