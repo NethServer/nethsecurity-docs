@@ -66,11 +66,48 @@ This command will establish an SSH connection to the secondary node using the SS
 
 ### Upgrade
 
-The secondary node does not receive system updates automatically because it does not have direct Internet access. To update the secondary node, you need to connect to the primary node and run the update command on the primary node itself:
+The secondary node does not receive system updates automatically because it does not have direct Internet access. To update the secondary node, you need to connect to the primary node and **run the update command on the primary node** itself:
 
     ns-ha-config upgrade-remote
 
 This command will download the latest image, upload it to the secondary node, and install it. As a normal upgrade, the secondary node will reboot after the installation.
+
+### Upgrading an HA pair
+
+Both nodes must run the same version. Upgrade the secondary node first:`upgrade-remote` runs from the primary node, and upgrading the node that is not carrying traffic leaves a working firewall to fall back on.
+
+1. On the primary node, run `ns-ha-config status`: the roles must be correct and the `Last Sync Status` must be `Successful`. Do not upgrade a cluster that is not already healthy.
+2. From the primary node, run `ns-ha-config upgrade-remote`. The secondary node reboots; only redundancy is lost.
+3. Wait for the synchronization status to return to `Up to Date`.
+4. Upgrade the primary node and let it reboot, the secondary node takes over during the reboot and hands the role back when the primary node returns.
+5. Check `ns-ha-config status` on both nodes, confirm that the services are running on the primary node, then wait 10 minutes before testing a failover.
+
+### Reset the configuration
+
+The reset command restores the cluster configuration to its default state, it must be run locally on the primary node, and while the secondary node is still connected, so that the secondary node is reset too.
+Typically, after the reset, the primary node can continue operating normally, while the secondary node, no longer used in the cluster should be disconnected and reset to default to avoid any conflicts.
+
+The reset command will:
+
+- Stop and disable `keepalived` and `conntrackd`.
+- Remove HA configuration files.
+- Clean up `dropbear` configuration including SSH keys.
+
+At the end, a reboot is required to apply the changes. Just execute: :
+
+    ns-ha-config reset
+    reboot
+
+
+Interface addresses are not touched: both nodes keep their own IP addresses, and only the virtual IPs disappear because they are managed by `keepalived`. 
+The primary node can be set up again straight away.
+
+:::warning
+
+The virtual IP does not exist until the cluster is set up again: clients using it as gateway or DNS server lose connectivity in the meantime.
+
+:::
+
 
 ## Troubleshooting {#troubleshooting_ha-section}
 
@@ -173,17 +210,3 @@ Enable `keepalived` debug logging (on primary): :
 
 Then, search for `Keepalived_vrrp` in the `/var/log/messages` file.
 
-### Reset the configuration
-
-The reset command restores the cluster configuration to its default state. Typically, after the reset, the primary node can continue operating normally, while the secondary node, no longer used in the cluster should be reset to default to avoid any conflicts. After the reset, only the HA interface remains active, so a reboot is required to complete the process. The reset must be performed locally on the primary node.
-
-To reset command will:
-
-- Stop and disable `keepalived` and `conntrackd`.
-- Remove HA configuration files.
-- Clean up `dropbear` configuration including SSH keys.
-
-At the end, a reboot is required to apply the changes. Just execute: :
-
-    ns-ha-config reset
-    reboot
