@@ -73,10 +73,9 @@ Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will be lis
 
 The Threat Shield IP feature includes advanced logging capabilities to monitor and track potential threats. The logging section allows you to configure which types of blocked packets are logged:
 
-1.  Log packets blocked in pre-routing chain: when enabled, this option logs packets that are blocked in the pre-routing chain, which processes packets before they enter the routing table.
-2.  Log packets blocked in input chain: his option, when activated, logs packets blocked in the input chain, which handles packets destined to the firewall itself. Please note that this option can generate a large number of logs if the firewall is under heavy traffic.
-3.  Log packets blocked in forward chain: Enabling this logs packets blocked in the forward chain, which processes packets being routed through the firewall.
-4.  Log packets blocked forwarded from LAN: This option logs packets that are blocked when forwarded from the Local Area Network (LAN).
+1. Log packets blocked in pre-routing chain: when enabled, this option logs packets that are blocked in the pre-routing chain, where traffic is processed before routing decisions are made.
+2. Log blocked inbound packets (from the Internet): when enabled, this option logs blocked packets arriving from the WAN interface in both the input and forward chains. This includes traffic directed to the firewall itself as well as traffic targeting exposed internal services, typically through port forwarding. Please note that enabling this option may generate a large number of log entries, especially when the firewall is exposed to heavy or potentially malicious traffic.
+3. Log blocked outbound packets (from local networks): when enabled, this option logs blocked packets originating from local networks and processed by the forward chain, which handles traffic routed through the firewall toward other networks.
 
 These logging options provide granular control over which blocked packets are recorded, allowing to expose metrics inside the [real-time monitoring](../monitoring/monitoring.md#real_time_monitoring-section) and [historical monitoring](../monitoring/monitoring.md#historical_monitoring-section) sections.
 
