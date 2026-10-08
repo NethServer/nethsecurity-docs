@@ -84,15 +84,17 @@ A /24 network address is not always a valid /20 address. For example `172.23.142
 
 There are two ways out.
 
-Widen to the largest netmask that keeps the same network address. `172.23.142.0` is a valid /23 address, so the network can grow to `172.23.142.0/23`:
+Widen to the largest netmask that keeps the same network address. `172.23.142.0` is a valid /23 address, so the network can grow to `172.23.142.0/23`, which holds 509 units instead of 253:
 
     api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.142.0", "ovpn_netmask": "255.255.254.0"}'
 
-Or move to the /20 block that already contains the current network, using `force`:
+Or move to the /20 block that already contains the current network, using `force`. A /20 holds 4093 units:
 
     api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.128.0", "ovpn_netmask": "255.255.240.0", "force": true}'
 
 Here `force` is needed only because the network address changes. No unit is disconnected: every address of `172.23.142.0/24`, like `172.23.142.2`, is also inside `172.23.128.0/20`. Before running it, make sure the whole new /20 does not overlap with the networks inside the connected units.
+
+The number of units a network holds is the size of the network minus its network address, its broadcast address and one address for the controller itself.
 
 ## Users
 

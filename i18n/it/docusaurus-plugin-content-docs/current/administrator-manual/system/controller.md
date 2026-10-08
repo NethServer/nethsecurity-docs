@@ -84,15 +84,17 @@ Un indirizzo di rete /24 non è sempre un indirizzo /20 valido. Ad esempio `172.
 
 Ci sono due soluzioni.
 
-Allargare fino alla maschera più ampia che mantiene lo stesso indirizzo di rete. `172.23.142.0` è un indirizzo /23 valido, quindi la rete può diventare `172.23.142.0/23`:
+Allargare fino alla maschera più ampia che mantiene lo stesso indirizzo di rete. `172.23.142.0` è un indirizzo /23 valido, quindi la rete può diventare `172.23.142.0/23`, che ospita 509 unità invece di 253:
 
     api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.142.0", "ovpn_netmask": "255.255.254.0"}'
 
-Oppure spostarsi sul blocco /20 che già contiene la rete attuale, usando `force`:
+Oppure spostarsi sul blocco /20 che già contiene la rete attuale, usando `force`. Una /20 ospita 4093 unità:
 
     api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.128.0", "ovpn_netmask": "255.255.240.0", "force": true}'
 
 In questo caso `force` serve solo perché cambia l'indirizzo di rete. Nessuna unità viene disconnessa: ogni indirizzo di `172.23.142.0/24`, come `172.23.142.2`, si trova anche dentro `172.23.128.0/20`. Prima di eseguirlo, assicurati che l'intera nuova /20 non si sovrapponga con le reti all'interno delle unità connesse.
+
+Il numero di unità che una rete ospita è la dimensione della rete meno il suo indirizzo di rete, il suo indirizzo di broadcast e un indirizzo per il controller stesso.
 
 ## Utenti
 
