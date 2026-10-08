@@ -44,6 +44,25 @@ Enterprise blocklists are specifically focused on security and offer several adv
 3.  **Reduced false positives**: False positives occur when legitimate traffic is mistakenly blocked. Enterprise blocklists are designed to minimize false positives by carefully curating and verifying the listed IP addresses and hostnames. The companies behind Enterprise blocklists have robust processes in place to ensure that only malicious entities are included in the blocklists. This reduces the chances of legitimate traffic being blocked, minimizing disruptions to your network or services.
 4.  **Enterprise support**: Enterprise blocklists often come with additional support and services tailored for enterprise environments. This includes access to technical support, documentation, and integration assistance. If any issues or questions arise while using the Enterprise blocklists, you can rely on the support provided by the cybersecurity companies to help you address them effectively.
 
+### Direction
+
+Each blocklist feed acts on a specific traffic direction:
+
+- **Inbound**: the feed blocks connections coming from the internet, both those destined to the firewall itself and those routed towards hosts in the local networks. Most security feeds, which list known malicious or compromised addresses, work in this direction.
+- **Outbound**: the feed blocks connections originated by the local networks and directed to the internet. This direction is typically used by feeds that prevent local clients from reaching a specific category of remote hosts, rather than protecting the perimeter from external attackers.
+- **Inbound and outbound**: the feed is applied in both directions.
+
+Traffic exchanged between local networks is never inspected, regardless of the feed direction: only traffic crossing the firewall towards or from the internet is matched.
+
+### Ports
+
+Some feeds do not apply to every kind of traffic, but only to specific protocols and destination ports, when no restriction is shown, the feed is matched against any traffic.
+
+This is common for feeds that target a single service. For example, a feed listing public DNS resolvers is matched only on TCP and UDP ports 53 and 853, while a feed listing DNS-over-HTTPS servers is matched only on TCP and UDP ports 80 and 443. In both cases a listed address remains reachable on any other port: the purpose is to prevent clients from bypassing the
+resolver configured on the firewall, not to block the host entirely.
+
+Keep this in mind when a feed does not seem to produce the expected effect: a listed address that is still reachable may simply be contacted on a port outside the feed scope.
+
 ### Confidence
 
 Enterprise blocklists include a \"Confidence\" score which is shown in the UI. The score is expressed as a value from 1 to 10 and represents the provider\'s assessment of the list quality: higher values indicate higher confidence and a lower likelihood of false positives. This \"Confidence\" metric is available only for Enterprise lists; Community lists are presented \"as is\" and display \"Unknown\" for confidence.
@@ -54,10 +73,9 @@ Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will be lis
 
 The Threat Shield IP feature includes advanced logging capabilities to monitor and track potential threats. The logging section allows you to configure which types of blocked packets are logged:
 
-1.  Log packets blocked in pre-routing chain: when enabled, this option logs packets that are blocked in the pre-routing chain, which processes packets before they enter the routing table.
-2.  Log packets blocked in input chain: his option, when activated, logs packets blocked in the input chain, which handles packets destined to the firewall itself. Please note that this option can generate a large number of logs if the firewall is under heavy traffic.
-3.  Log packets blocked in forward chain: Enabling this logs packets blocked in the forward chain, which processes packets being routed through the firewall.
-4.  Log packets blocked forwarded from LAN: This option logs packets that are blocked when forwarded from the Local Area Network (LAN).
+1. **Log packets blocked in pre-routing chain**: when enabled, this option logs packets that are blocked in the pre-routing chain, where traffic is processed before routing decisions are made.
+2. **Log blocked inbound packets (from the Internet)**: when enabled, this option logs blocked packets arriving from the WAN interface, both those destined to the firewall itself (WAN input) and those routed towards internal hosts (WAN forward). This includes traffic directed to the firewall itself as well as traffic targeting exposed internal services, typically through port forwarding. Please note that enabling this option may generate a large number of log entries, especially when the firewall is exposed to heavy or potentially malicious traffic.
+3. **Log blocked outbound packets (from local networks)**: when enabled, this option logs blocked packets originating from local networks and routed through the firewall towards the Internet (LAN forward).
 
 These logging options provide granular control over which blocked packets are recorded, allowing to expose metrics inside the [real-time monitoring](../monitoring/monitoring.md#real_time_monitoring-section) and [historical monitoring](../monitoring/monitoring.md#historical_monitoring-section) sections.
 
@@ -109,10 +127,10 @@ Avoid blocking the regions where your own users are located, otherwise legitimat
 
 By default, geoblocking only blocks **incoming** connections, i.e. traffic initiated from the selected countries towards your firewall and networks. Outgoing connections (traffic initiated by your local clients towards hosts in the selected countries) are still allowed.
 
-If you also want to block **outgoing** connections to the selected countries, add the `country` feed to the `ban_blockforwardlan` property, which applies the feed to the LAN-forward chain. From the command line:
+If you also want to block **outgoing** connections to the selected countries, add the `country` feed to the `ban_feedinout` property, which applies the feed to the LAN-forward chain. From the command line:
 
 ```bash
-uci add_list banip.global.ban_blockforwardlan='country'
+uci add_list banip.global.ban_feedinout='country'
 uci commit banip
 /etc/init.d/banip restart
 ```
@@ -122,6 +140,8 @@ uci commit banip
 When Threat Shield IP is enabled, the system automatically starts checking for brute force attack attempts on firewall services. By default, the monitored services include SSH access and the login to NethSecurity UI. The system detects login attempts and automatically blocks IPs that have failed to enter the correct credentials.
 
 To enable or disable the brute force protection, navigate to the `Block brute force attacks` section in the Threat Shield IP interface, under the `Settings` tab and use the switch to activate or deactivate the feature.
+
+Brute force protection relies on the same enforcement chains used by the blocklist feeds, which only inspect traffic crossing the firewall from or towards the internet. Login attempts originated from a local network are detected and the source address is added to the blocklist, but the address is not actually blocked, since no rule inspects traffic sent from a local network to the firewall itself.
 
 The feature can be customized by adjusting the following settings:
 

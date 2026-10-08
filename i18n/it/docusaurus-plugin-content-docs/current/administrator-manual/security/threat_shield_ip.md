@@ -25,7 +25,7 @@ Le liste Community non forniscono una metrica "Affidabilità" standardizzata, pe
 
 **Manutenzione delle liste Community**
 
-Ogni lista di blocco è mantenuta dal suo provider specifico. NethSecurity include già gli URL per scaricare i feed, che sono validi al momento del rilascio. Tuttavia, poiché questi URL sono hard-coded, se il provider li modifica, alcuni blocklist potrebbero non essere più scaricabili.
+Ogni lista di blocco è mantenuta dal suo provider specifico. NethSecurity include già gli URL per scaricare i feed, che sono validi al momento del rilascio. Tuttavia, poiché questi URL sono hard-coded, se il provider li modifica, alcune blocklist potrebbero non essere più scaricabili.
 
 ### Liste di blocco Enterprise
 
@@ -40,30 +40,47 @@ Questa funzione è disponibile solo se il firewall ha un valido [abbonamento Com
 Le liste di blocco Enterprise sono specificamente focalizzate sulla sicurezza e offrono diversi vantaggi rispetto alle liste di blocco mantenute dalla comunità:
 
 1.  **Qualità e accuratezza**: Le liste di blocco Enterprise, come quelle fornite da Nethesis e Yoroi, sono curate e mantenute da rispettabili aziende di cybersicurezza. Queste aziende hanno team dedicati che monitorano e aggiornano continuamente le liste di blocco per garantire che siano accurate ed efficaci nel bloccare il traffico dannoso. Ciò si traduce in un livello più elevato di qualità e accuratezza rispetto alle liste di blocco mantenute dalla comunità, che potrebbero non ricevere lo stesso livello di attenzione e aggiornamenti.
-2.  **Tempestività**: Le liste di blocco Enterprise vengono aggiornate frequentemente per includere le minacce più recenti e gli indirizzi IP dannosi. Aziende di cybersicurezza come Nethesis e Yoroi traccia attivamente le minacce emergenti e le aggiungono prontamente ai loro blocklist. Questo assicura che il tuo sistema sia protetto contro le minacce più recenti e in evoluzione.
-3.  **Riduzione dei falsi positivi**: I falsi positivi si verificano quando il traffico legittimo viene bloccato per errore. Le liste di blocco Enterprise sono progettate per minimizzare i falsi positivi curando e verificando attentamente gli indirizzi IP e i nomi host elencati. Le aziende dietro ai blocklist Enterprise hanno processi robusti in atto per garantire che solo le entità dannose siano incluse nei blocklist. Questo riduce le possibilità che il traffico legittimo venga bloccato, minimizzando i disturbi alla tua rete o ai tuoi servizi.
-4.  **Supporto Enterprise**: Le liste di blocco Enterprise spesso vengono fornite con supporto e servizi aggiuntivi personalizzati per ambienti aziendali. Questo include l'accesso al supporto tecnico, alla documentazione e all'assistenza di integrazione. Se si riscontrano problemi o domande durante l'utilizzo dei blocklist Enterprise, puoi affidarti al supporto fornito dalle aziende di cybersicurezza per risolverli efficacemente.
+2.  **Tempestività**: Le liste di blocco Enterprise vengono aggiornate frequentemente per includere le minacce più recenti e gli indirizzi IP dannosi. Aziende di cybersicurezza come Nethesis e Yoroi tracciano attivamente le minacce emergenti e le aggiungono prontamente alle loro blocklist. Questo assicura che il tuo sistema sia protetto contro le minacce più recenti e in evoluzione.
+3.  **Riduzione dei falsi positivi**: I falsi positivi si verificano quando il traffico legittimo viene bloccato per errore. Le liste di blocco Enterprise sono progettate per minimizzare i falsi positivi curando e verificando attentamente gli indirizzi IP e i nomi host elencati. Le aziende dietro alle blocklist Enterprise hanno processi robusti in atto per garantire che solo le entità dannose siano incluse nelle blocklist. Questo riduce le possibilità che il traffico legittimo venga bloccato, minimizzando i disturbi alla tua rete o ai tuoi servizi.
+4.  **Supporto Enterprise**: Le liste di blocco Enterprise spesso vengono fornite con supporto e servizi aggiuntivi personalizzati per ambienti aziendali. Questo include l'accesso al supporto tecnico, alla documentazione e all'assistenza di integrazione. Se riscontri problemi o hai domande durante l'utilizzo delle blocklist Enterprise, puoi affidarti al supporto fornito dalle aziende di cybersicurezza per risolverli efficacemente.
+
+### Direzione
+
+Ogni feed della blocklist agisce su una specifica direzione del traffico:
+
+- **In entrata**: il feed blocca le connessioni provenienti da internet, sia quelle destinate al firewall stesso sia quelle instradate verso gli host delle reti locali. La maggior parte dei feed di sicurezza, che elencano indirizzi noti come malevoli o compromessi, lavora in questa direzione.
+- **In uscita**: il feed blocca le connessioni originate dalle reti locali e dirette verso internet. Questa direzione è usata tipicamente dai feed che impediscono ai client locali di raggiungere una specifica categoria di host remoti, più che proteggere il perimetro da attaccanti esterni.
+- **In entrata e in uscita**: il feed viene applicato in entrambe le direzioni.
+
+Il traffico scambiato tra reti locali non viene mai ispezionato, indipendentemente dalla direzione del feed: viene confrontato solo il traffico che attraversa il firewall da o verso internet.
+
+### Porte
+
+Alcuni feed non si applicano a tutto il traffico, ma solo a protocolli e porte di destinazione specifici. Se non è indicata alcuna restrizione, il feed viene confrontato con tutto il traffico.
+
+Questo è frequente per i feed che riguardano un singolo servizio. Ad esempio, un feed che elenca i resolver DNS pubblici viene confrontato solo sulle porte TCP e UDP 53 e 853, mentre un feed che elenca i server DNS-over-HTTPS viene confrontato solo sulle porte TCP e UDP 80 e 443. In entrambi i casi un indirizzo in elenco resta raggiungibile su qualsiasi altra porta: lo scopo è impedire ai client di aggirare il resolver configurato sul firewall, non bloccare completamente l'host.
+
+Tienilo presente quando un feed non sembra produrre l'effetto atteso: un indirizzo in elenco ancora raggiungibile potrebbe semplicemente essere contattato su una porta fuori dall'ambito del feed.
 
 ### Affidabilità
 
 Le liste di blocco Enterprise includono un punteggio "Affidabilità" mostrato nell'interfaccia utente. Il punteggio è espresso come un valore da 1 a 10 e rappresenta la valutazione del provider sulla qualità della lista: valori più alti indicano un'affidabilità maggiore e una minore probabilità di falsi positivi. Questa metrica "Affidabilità" è disponibile solo per le liste Enterprise; le liste Community vengono presentate "così come sono" e mostrano "Sconosciuta" per l'affidabilità.
 
-I blocklist di Yoroi e Nethesis sono blocklist Enterprise. Questi elenchi verranno visualizzati solo se la macchina ha un valido [abbonamento Enterprise o Community](../system/subscription.md) e un valido diritto per il servizio Threat Shield IP.
+Le blocklist di Yoroi e Nethesis sono blocklist Enterprise. Questi elenchi verranno visualizzati solo se la macchina ha un valido [abbonamento Enterprise o Community](../system/subscription.md) e un valido diritto per il servizio Threat Shield IP.
 
-### Registrazione
+### Logging
 
-La funzione Threat Shield IP include funzionalità avanzate di registrazione per monitorare e tracciare le minacce potenziali. La sezione di registrazione consente di configurare quali tipi di pacchetti bloccati vengono registrati:
+La funzione Threat Shield IP include funzionalità avanzate di logging per monitorare e tracciare le minacce potenziali. La sezione di logging consente di configurare quali tipi di pacchetti bloccati vengono registrati:
 
-1.  Registra i pacchetti bloccati nella catena pre-routing: quando abilitato, questa opzione registra i pacchetti bloccati nella catena pre-routing, che elabora i pacchetti prima che entrino nella tabella di routing.
-2.  Registra i pacchetti bloccati nella catena di input: questa opzione, quando attivata, registra i pacchetti bloccati nella catena di input, che gestisce i pacchetti destinati al firewall stesso. Si noti che questa opzione può generare un gran numero di log se il firewall è sottoposto a traffico intenso.
-3.  Registra i pacchetti bloccati nella catena forward: abilitare questo registra i pacchetti bloccati nella catena forward, che elabora i pacchetti instradati attraverso il firewall.
-4.  Registra i pacchetti bloccati inoltrati dalla LAN: questa opzione registra i pacchetti bloccati quando inoltrati dalla rete locale (LAN).
+1.  **Log dei pacchetti bloccati nella chain di pre-routing**: quando abilitata, questa opzione registra i pacchetti bloccati nella catena pre-routing, che elabora i pacchetti prima che entrino nella tabella di routing.
+2.  **Log dei pacchetti bloccati in entrata (da Internet)**: se abilitata, questa opzione registra i pacchetti bloccati provenienti dall'interfaccia WAN, sia quelli diretti al firewall stesso (catena WAN-input) sia quelli instradati verso host interni (catena WAN-forward), tipicamente servizi esposti tramite port forwarding. Si noti che abilitare questa opzione può generare un gran numero di log, soprattutto quando il firewall è esposto a traffico intenso o potenzialmente malevolo.
+3.  **Log dei pacchetti bloccati inoltrati dalle reti locali verso Internet**: se abilitata, questa opzione registra i pacchetti bloccati originati dalle reti locali e instradati attraverso il firewall verso internet (catena LAN-forward).
 
-Queste opzioni di registrazione forniscono un controllo granulare su quali pacchetti bloccati vengono registrati, consentendo di esporre metriche all'interno della sezione [monitoraggio in tempo reale](../monitoring/monitoring.md#real_time_monitoring-section) e [monitoraggio storico](../monitoring/monitoring.md#historical_monitoring-section).
+Queste opzioni di logging forniscono un controllo granulare su quali pacchetti bloccati vengono registrati, consentendo di esporre metriche all'interno della sezione [monitoraggio in tempo reale](../monitoring/monitoring.md#real_time_monitoring-section) e [monitoraggio storico](../monitoring/monitoring.md#historical_monitoring-section).
 
 ### Allowlist locale {#local_allowlist-section}
 
-A volte potrebbe essere necessario consentire l'accesso a determinati indirizzi IP. Per farlo, puoi utilizzare la scheda `Allowlist locale`. Usa il pulsante **Aggiungi indirizzo** per aggiungere un nuovo indirizzo all'elenco. L'indirizzo può essere un indirizzo IPv4/IPv6 valido con notazione CIDR opzionale, un indirizzo MAC o un nome host completamente qualificato (FQDN).
+A volte potrebbe essere necessario consentire l'accesso a determinati indirizzi IP. Per farlo è possibile utilizzare la scheda `Allowlist locale`. Usa il pulsante **Aggiungi indirizzo** per aggiungere un nuovo indirizzo all'elenco. L'indirizzo può essere un indirizzo IPv4/IPv6 valido con notazione CIDR opzionale, un indirizzo MAC o un nome host completamente qualificato (FQDN).
 
 Ad esempio, l'indirizzo può essere:
 
@@ -85,11 +102,45 @@ Per accedere e personalizzare la blocklist, vai alla scheda `Blocklist locale` n
 
 Quando aggiungi indirizzi alla blocklist locale, assicurati di inserirli correttamente per evitare di bloccare accidentalmente il traffico legittimo. È anche una buona pratica includere un commento descrittivo per ogni voce per aiutare nella futura gestione e auditing della tua blocklist.
 
+## Geoblocking {#geoblocking-section}
+
+La scheda `Geoblocking` permette di bloccare il traffico di rete in base all'origine geografica degli indirizzi IP, usando feed di indirizzi IP suddivisi per paese. È utile per tenere fuori il traffico proveniente da paesi con cui non prevedi di avere alcuna interazione.
+
+La funzionalità è disabilitata per impostazione predefinita. Per abilitarla, apri la scheda `Geoblocking` e attiva l'interruttore `Geo IP Blocking`. Perché il geoblocking funzioni, Threat Shield IP deve essere abilitato.
+
+I paesi sono organizzati in regioni (Africa, Americhe, Asia, Europa, Oceania e Altri), ognuna mostrata come una card che riporta il numero di paesi attualmente bloccati. Selezionando una regione viene mostrato l'elenco dei suoi paesi, dove puoi:
+
+- bloccare o consentire i singoli paesi con la relativa casella di controllo;
+- usare i pulsanti **Blocca tutti** e **Consenti tutti** per agire su tutta la regione in una volta;
+- filtrare l'elenco per nome del paese o per stato (bloccato / non bloccato).
+
+Fai clic su **Salva** per applicare la configurazione.
+
+:::warning
+
+Evita di bloccare le regioni in cui si trovano i tuoi utenti, altrimenti il traffico legittimo potrebbe essere scartato.
+
+:::
+
+### Direzione del blocco
+
+Per impostazione predefinita, il geoblocking blocca solo le connessioni **in entrata**, cioè il traffico avviato dai paesi selezionati verso il firewall e le tue reti. Le connessioni in uscita (traffico avviato dai client locali verso host nei paesi selezionati) restano consentite.
+
+Se vuoi bloccare anche le connessioni **in uscita** verso i paesi selezionati, aggiungi il feed `country` alla proprietà `ban_feedinout`, che applica il feed alla catena LAN-forward. Da riga di comando:
+
+```bash
+uci add_list banip.global.ban_feedinout='country'
+uci commit banip
+/etc/init.d/banip restart
+```
+
 ## Blocca gli attacchi brute force {#brute_force-section}
 
 Quando Threat Shield IP è abilitato, il sistema inizia automaticamente a controllare i tentativi di attacco brute force ai servizi del firewall. Per impostazione predefinita, i servizi monitorati includono l'accesso SSH e l'accesso all'interfaccia utente di NethSecurity. Il sistema rileva i tentativi di accesso e blocca automaticamente gli IP che non hanno inserito le credenziali corrette.
 
 Per abilitare o disabilitare la protezione brute force, vai alla sezione `Blocca gli attacchi brute force` nell'interfaccia Threat Shield IP, nella scheda `Impostazioni` e usa l'interruttore per attivare o disattivare la funzione.
+
+La protezione brute force si basa sulle stesse catene usate dai feed delle blocklist, che ispezionano solo il traffico che attraversa il firewall da o verso internet. I tentativi di accesso originati da una rete locale vengono rilevati e l'indirizzo sorgente viene aggiunto alla blocklist, ma l'indirizzo non viene effettivamente bloccato, perché nessuna regola ispeziona il traffico inviato da una rete locale al firewall stesso.
 
 La funzione può essere personalizzata regolando le seguenti impostazioni:
 
@@ -97,8 +148,8 @@ La funzione può essere personalizzata regolando le seguenti impostazioni:
 
 - `Schemi per rilevare gli attacchi`: questo campo consente di specificare gli schemi che il sistema utilizza per identificare potenziali attacchi brute force. Gli schemi comuni includono:
 
-  - *Esci prima dell'autenticazione da*: rileva i tentativi di autenticazione non riusciti al servizio SSH
-  - *autenticazione non riuscita per l'utente*: identifica i tentativi di autenticazione non riusciti all'interfaccia web di NethSecurity
+  - *Exit before auth from*: rileva i tentativi di autenticazione non riusciti al servizio SSH
+  - *authentication failed for user*: identifica i tentativi di autenticazione non riusciti all'interfaccia web di NethSecurity
   - *TLS Auth Error*, *TLS handshake failed*, *AUTH_FAILED*: rileva i tentativi di autenticazione non riusciti al servizio OpenVPN
 
   Puoi aggiungere schemi aggiuntivi utilizzando il pulsante **Aggiungi schema** per personalizzare il meccanismo di rilevamento. Ogni schema può essere un'espressione regolare *grep* valida.
@@ -107,16 +158,16 @@ La funzione può essere personalizzata regolando le seguenti impostazioni:
 
 Puoi eseguire ulteriori azioni utilizzando la riga di comando; questi sono i comandi supportati:
 
-- Visualizza tutti gli indirizzi IP attualmente nel blocklist: `/etc/init.d/banip survey blocklistv4`
-- Cerca un IP specifico nel blocklist: `/etc/init.d/banip search IP_ADDRESS`
+- Visualizza tutti gli indirizzi IP attualmente nella blocklist: `/etc/init.d/banip survey blocklistv4`
+- Cerca un IP specifico nella blocklist: `/etc/init.d/banip search IP_ADDRESS`
 - Sblocca un indirizzo IP: `nft delete element inet banIP blocklistv4 { IP_ADDRESS }`
 
-Tieni presente che devi specificare il blocklist corretto nei comandi quando richiesto (`blocklistv4` per IPv4, `blocklistv6` per IPv6).
+Tieni presente che devi specificare la blocklist corretta nei comandi quando richiesto (`blocklistv4` per IPv4, `blocklistv6` per IPv6).
 
 ### Blocca DoS
 
 Threat Shield IP include anche la protezione contro vari tipi di attacchi Denial of Service (DoS). La protezione DoS limita il traffico eccessivo di protocolli specifici, bloccando quel tipo di traffico finché la situazione non si normalizza. Monitora tutto il traffico in entrata WAN per rilevare e bloccare gli attacchi DoS basati su WAN.
 
-- `Blocca DoS ICMP`: quando abilitato, questa opzione protegge dagli attacchi DoS utilizzando il protocollo ICMP (Internet Control Message Protocol). Il limite è impostato a 100 pacchetti al secondo.
+- `Blocca DoS ICMP`: quando abilitata, questa opzione protegge dagli attacchi DoS che utilizzano il protocollo ICMP (Internet Control Message Protocol). Il limite è impostato a 100 pacchetti al secondo.
 - `Blocca DoS TCP SYN`: questa opzione, quando attivata, protegge dagli attacchi DoS basati su TCP limitando il numero di nuove connessioni al secondo. Un pacchetto potrebbe essere considerato non valido se non fa parte di una connessione stabilita o se fa parte di una connessione che è stata chiusa. Il limite è impostato a 10 connessioni al secondo.
-- `Blocca DoS UDP`: abilitare questo protegge dagli attacchi DoS basati su User Datagram Protocol (UDP). Il limite è impostato a 100 pacchetti al secondo.
+- `Blocca DoS UDP`: quando abilitata, questa opzione protegge dagli attacchi DoS basati su User Datagram Protocol (UDP). Il limite è impostato a 100 pacchetti al secondo.
