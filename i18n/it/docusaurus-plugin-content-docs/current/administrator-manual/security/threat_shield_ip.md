@@ -72,9 +72,9 @@ Le blocklist di Yoroi e Nethesis sono blocklist Enterprise. Questi elenchi verra
 
 La funzione Threat Shield IP include funzionalità avanzate di logging per monitorare e tracciare le minacce potenziali. La sezione di logging consente di configurare quali tipi di pacchetti bloccati vengono registrati:
 
-1.  Log dei pacchetti bloccati nella chain di pre-routing: quando abilitata, questa opzione registra i pacchetti bloccati nella catena pre-routing, che elabora i pacchetti prima che entrino nella tabella di routing.
-2.  Log dei pacchetti bloccati in entrata (da Internet): se abilitata, questa opzione registra i pacchetti bloccati provenienti dall'interfaccia WAN, sia quelli diretti al firewall stesso (catena WAN-input) sia quelli instradati verso host interni (catena WAN-forward), tipicamente servizi esposti tramite port forwarding. Si noti che abilitare questa opzione può generare un gran numero di log, soprattutto quando il firewall è esposto a traffico intenso o potenzialmente malevolo.
-3.  Log dei pacchetti bloccati inoltrati dalle reti locali verso Internet: se abilitata, questa opzione registra i pacchetti bloccati originati dalle reti locali e instradati attraverso il firewall verso internet (catena LAN-forward).
+1.  **Log dei pacchetti bloccati nella chain di pre-routing**: quando abilitata, questa opzione registra i pacchetti bloccati nella catena pre-routing, che elabora i pacchetti prima che entrino nella tabella di routing.
+2.  **Log dei pacchetti bloccati in entrata (da Internet)**: se abilitata, questa opzione registra i pacchetti bloccati provenienti dall'interfaccia WAN, sia quelli diretti al firewall stesso (catena WAN-input) sia quelli instradati verso host interni (catena WAN-forward), tipicamente servizi esposti tramite port forwarding. Si noti che abilitare questa opzione può generare un gran numero di log, soprattutto quando il firewall è esposto a traffico intenso o potenzialmente malevolo.
+3.  **Log dei pacchetti bloccati inoltrati dalle reti locali verso Internet**: se abilitata, questa opzione registra i pacchetti bloccati originati dalle reti locali e instradati attraverso il firewall verso internet (catena LAN-forward).
 
 Queste opzioni di logging forniscono un controllo granulare su quali pacchetti bloccati vengono registrati, consentendo di esporre metriche all'interno della sezione [monitoraggio in tempo reale](../monitoring/monitoring.md#real_time_monitoring-section) e [monitoraggio storico](../monitoring/monitoring.md#historical_monitoring-section).
 
