@@ -78,6 +78,22 @@ Adding `"force": true` to the data skips these checks and also allows netmasks w
 
 :::
 
+#### When the current network address is not aligned
+
+A /24 network address is not always a valid /20 address. For example `172.23.142.0/24` cannot become `172.23.142.0/20`, because the /20 block that contains it starts at `172.23.128.0`.
+
+There are two ways out.
+
+Widen to the largest netmask that keeps the same network address. `172.23.142.0` is a valid /23 address, so the network can grow to `172.23.142.0/23`:
+
+    api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.142.0", "ovpn_netmask": "255.255.254.0"}'
+
+Or move to the /20 block that already contains the current network, using `force`:
+
+    api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.128.0", "ovpn_netmask": "255.255.240.0", "force": true}'
+
+Here `force` is needed only because the network address changes. No unit is disconnected: every address of `172.23.142.0/24`, like `172.23.142.2`, is also inside `172.23.128.0/20`. Before running it, make sure the whole new /20 does not overlap with the networks inside the connected units.
+
 ## Users
 
 The controller has two types of users:
