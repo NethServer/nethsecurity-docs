@@ -73,9 +73,9 @@ Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will be lis
 
 The Threat Shield IP feature includes advanced logging capabilities to monitor and track potential threats. The logging section allows you to configure which types of blocked packets are logged:
 
-1. Log packets blocked in pre-routing chain: when enabled, this option logs packets that are blocked in the pre-routing chain, where traffic is processed before routing decisions are made.
-Log blocked inbound packets (from the Internet): when enabled, this option logs blocked packets arriving from the WAN interface, both those destined to the firewall itself (WAN input) and those routed towards internal hosts (WAN forward). This includes traffic directed to the firewall itself as well as traffic targeting exposed internal services, typically through port forwarding. Please note that enabling this option may generate a large number of log entries, especially when the firewall is exposed to heavy or potentially malicious traffic.
-3. Log blocked outbound packets (from local networks): when enabled, this option logs blocked packets originating from local networks and routed through the firewall towards the Internet (LAN forward).
+1. **Log packets blocked in pre-routing chain**: when enabled, this option logs packets that are blocked in the pre-routing chain, where traffic is processed before routing decisions are made.
+2. **Log blocked inbound packets (from the Internet)**: when enabled, this option logs blocked packets arriving from the WAN interface, both those destined to the firewall itself (WAN input) and those routed towards internal hosts (WAN forward). This includes traffic directed to the firewall itself as well as traffic targeting exposed internal services, typically through port forwarding. Please note that enabling this option may generate a large number of log entries, especially when the firewall is exposed to heavy or potentially malicious traffic.
+3. **Log blocked outbound packets (from local networks)**: when enabled, this option logs blocked packets originating from local networks and routed through the firewall towards the Internet (LAN forward).
 
 These logging options provide granular control over which blocked packets are recorded, allowing to expose metrics inside the [real-time monitoring](../monitoring/monitoring.md#real_time_monitoring-section) and [historical monitoring](../monitoring/monitoring.md#historical_monitoring-section) sections.
 
