@@ -28,7 +28,7 @@ Dopo l'installazione, il controller deve essere configurato. La configurazione p
 
 - `Hostname del controller`: Il nome di dominio completamente qualificato per il controller, ad esempio: `mycontroller.nethsecurity.org`. Assicurati che il nome host sia risolvibile e raggiungibile dalle unità.
 - `Certificato Let's Encrypt`: Abilita o disabilita il certificato Let's Encrypt per l'interfaccia web del controller. È consigliato abilitarlo.
-- `Rete VPN` e `Maschera VPN`: La rete OpenVPN e la maschera di rete. Quando scegli la rete, assicurati che non si sovrapponga con le reti esistenti all'interno di tutte le unità che verranno connesse al controller. Usa solo reti di classe C come `192.168.7.0` con maschera `255.255.255.0`.
+- `Rete VPN` e `Maschera VPN`: La rete OpenVPN e la maschera di rete. Quando scegli la rete, assicurati che non si sovrapponga con le reti esistenti all'interno di tutte le unità che verranno connesse al controller. La maschera può andare da `255.255.240.0` (/20) a `255.255.255.0` (/24) e la rete deve essere il primo indirizzo della rete, ad esempio `172.19.64.0` con maschera `255.255.240.0`. Le nuove installazioni ricevono una rete /20 casuale. Questi valori non possono essere modificati dall'interfaccia web dopo la prima configurazione, vedi [Cambiare la rete VPN](#controller_vpn_network-section).
 - `Utente amministratore`: Il nome utente dell'amministratore del controller. L'utente amministratore è l'unico utente che può creare e gestire altri utenti all'interno del controller. Lo stesso nome utente viene utilizzato per accedere all'interfaccia Grafana.
 - `Password amministratore`: Scegli una password complessa per l'utente amministratore. Nota che la password predefinita viene visualizzata una sola volta, conservala in un luogo sicuro. La stessa password viene utilizzata per accedere all'interfaccia Grafana. Per motivi di sicurezza, dovresti cambiare la password dopo il primo accesso sia per il controller che per l'interfaccia Grafana.
 
@@ -52,6 +52,49 @@ Per garantire il corretto funzionamento, il controller deve essere accessibile s
 Il numero di `porta UDP` effettivo può essere trovato nella pagina dello stato del modulo Controller sotto la sezione `OpenVPN UDP Port`. Assicurati che queste porte siano aperte su qualsiasi firewall che protegge il nodo che esegue il controller.
 
 :::
+
+### Cambiare la rete VPN {#controller_vpn_network-section}
+
+I controller installati prima del supporto alle reti /20 usano una rete VPN /24, che limita il numero di unità. La rete può essere allargata dalla riga di comando di NethServer 8.
+
+Esegui il seguente comando sul nodo NethServer 8 come `root`, sostituendo `nethsecurity-controller1` con il nome effettivo dell'istanza del modulo controller. Questo esempio allarga `172.19.64.0/24` a `172.19.64.0/20`:
+
+    api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.19.64.0", "ovpn_netmask": "255.255.240.0"}'
+
+Il comando ferma il controller, applica la nuova rete e riavvia il controller. Le unità si riconnettono da sole e mantengono il loro indirizzo IP VPN.
+
+Prima di eseguirlo, assicurati che:
+
+- l'indirizzo di rete sia lo stesso di quello attuale: può cambiare solo la maschera
+- la nuova maschera sia più ampia di quella attuale, fino a `255.255.240.0` (/20)
+- l'indirizzo di rete sia il primo indirizzo della nuova rete: `172.19.64.0` è valido per una /20, `172.19.65.0` no
+- la nuova rete non si sovrapponga con le reti all'interno delle unità connesse
+
+Il comando rifiuta qualsiasi altra modifica, come spostarsi su una rete diversa o restringerla.
+
+:::warning
+
+Aggiungendo `"force": true` ai dati si saltano questi controlli e si consentono anche maschere più ampie di /20. Le unità con un indirizzo IP VPN fuori dalla nuova rete perdono la connessione al controller: devono essere rimosse e aggiunte di nuovo. Cambiare l'indirizzo di rete ha questo effetto su tutte le unità.
+
+:::
+
+#### Quando l'indirizzo di rete attuale non è allineato
+
+Un indirizzo di rete /24 non è sempre un indirizzo /20 valido. Ad esempio `172.23.142.0/24` non può diventare `172.23.142.0/20`, perché il blocco /20 che lo contiene inizia a `172.23.128.0`.
+
+Ci sono due soluzioni.
+
+Allargare fino alla maschera più ampia che mantiene lo stesso indirizzo di rete. `172.23.142.0` è un indirizzo /23 valido, quindi la rete può diventare `172.23.142.0/23`, che ospita 509 unità invece di 253:
+
+    api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.142.0", "ovpn_netmask": "255.255.254.0"}'
+
+Oppure spostarsi sul blocco /20 che già contiene la rete attuale, usando `force`. Una /20 ospita 4093 unità:
+
+    api-cli run module/nethsecurity-controller1/set-vpn-network --data '{"ovpn_network": "172.23.128.0", "ovpn_netmask": "255.255.240.0", "force": true}'
+
+In questo caso `force` serve solo perché cambia l'indirizzo di rete. Nessuna unità viene disconnessa: ogni indirizzo di `172.23.142.0/24`, come `172.23.142.2`, si trova anche dentro `172.23.128.0/20`. Prima di eseguirlo, assicurati che l'intera nuova /20 non si sovrapponga con le reti all'interno delle unità connesse.
+
+Il numero di unità che una rete ospita è la dimensione della rete meno il suo indirizzo di rete, il suo indirizzo di broadcast e un indirizzo per il controller stesso.
 
 ## Utenti
 
