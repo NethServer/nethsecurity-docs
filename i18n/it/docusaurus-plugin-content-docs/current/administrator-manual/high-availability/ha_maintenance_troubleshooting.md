@@ -72,6 +72,42 @@ Il nodo secondario non riceve gli aggiornamenti di sistema automaticamente perch
 
 Questo comando scaricherà l'immagine più recente, la caricherà sul nodo secondario e l'installerà. Come un normale aggiornamento, il nodo secondario si riavvierà dopo l'installazione.
 
+### Aggiornamento di una coppia HA
+
+Entrambi i nodi devono eseguire la stessa versione. Aggiornare per primo il nodo secondario: `upgrade-remote` si lancia dal nodo primario, e aggiornare il nodo
+che non sta gestendo il traffico lascia a disposizione un firewall funzionante su cui ripiegare.
+
+1. Sul nodo primario eseguire `ns-ha-config status`: i ruoli devono essere corretti e `Last Sync Status` deve riportare `Successful`. Non aggiornare un
+   cluster che non sia già in buona salute.
+2. Dal nodo primario eseguire `ns-ha-config upgrade-remote`. Il nodo secondario si riavvia; si perde soltanto la ridondanza.
+3. Attendere una nuova sincronizzazione tra i 2 nodi.
+4. Aggiornare il nodo primario e lasciarlo riavviare: durante il riavvio il nodo secondario assume il ruolo di master e lo restituisce quando il nodo primario torna disponibile.
+5. Verificare `ns-ha-config status` su entrambi i nodi, controllare che i servizi siano attivi sul nodo primario, quindi attendere 10 minuti prima di provare un failover.
+
+### Reset della configurazione
+
+Il comando di reset riporta la configurazione del cluster allo stato predefinito. Va eseguito localmente sul nodo primario e con il nodo secondario ancora collegato, in modo che il reset coinvolga anche quest'ultimo.Di norma, dopo il reset il nodo primario può continuare a funzionare normalmente, mentre il nodo secondario, non più utilizzato nel cluster, va scollegato e riportato alla configurazione di fabbrica per evitare conflitti.
+
+Il comando di reset:
+
+- Arresta e disabilita `keepalived` e `conntrackd`.
+- Rimuove i file di configurazione dell'HA.
+- Ripulisce la configurazione di `dropbear`, comprese le chiavi SSH.
+
+Alla fine, è necessario un riavvio per applicare le modifiche. Basta eseguire:
+
+    ns-ha-config reset
+    reboot
+
+Gli indirizzi delle interfacce non vengono modificati: entrambi i nodi mantengono i propri indirizzi IP e spariscono solo gli IP virtuali, perché sono
+gestiti da `keepalived`. Il nodo primario può essere riconfigurato immediatamente.
+
+:::warning
+
+L'IP virtuale non esiste finché il cluster non viene riconfigurato: nel frattempo i client che lo usano come gateway o server DNS perdono la connettività.
+
+:::
+
 ## Risoluzione dei problemi {#troubleshooting_ha-section}
 
 La risoluzione dei problemi della configurazione HA può essere impegnativa, soprattutto se il nodo secondario non è raggiungibile o il nodo primario non risponde come previsto.
@@ -173,17 +209,3 @@ Abilita la registrazione di debug di `keepalived` (sul primario):
 
 Quindi, cerca `Keepalived_vrrp` nel file `/var/log/messages`.
 
-### Ripristina la configurazione
-
-Il comando reset ripristina la configurazione del cluster al suo stato predefinito. Tipicamente, dopo il reset, il nodo primario può continuare a operare normalmente, mentre il nodo secondario, non più utilizzato nel cluster dovrebbe essere ripristinato al valore predefinito per evitare conflitti. Dopo il reset, rimane attiva solo l'interfaccia HA, quindi è necessario un riavvio per completare il processo. Il reset deve essere eseguito localmente sul nodo primario.
-
-Il comando reset:
-
-- Arresta e disabilita `keepalived` e `conntrackd`.
-- Rimuove i file di configurazione HA.
-- Pulisce la configurazione di `dropbear` incluse le chiavi SSH.
-
-Alla fine, è necessario un riavvio per applicare le modifiche. Basta eseguire:
-
-    ns-ha-config reset
-    reboot
