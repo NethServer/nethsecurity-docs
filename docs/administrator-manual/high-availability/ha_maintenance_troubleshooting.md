@@ -64,7 +64,7 @@ After connecting to the primary node, use the following command to access the se
 
 This command will establish an SSH connection to the secondary node using the SSH key generated during the HA setup.
 
-### Upgrade
+### Upgrading the secondary node
 
 The secondary node does not receive system updates automatically because it does not have direct Internet access. To update the secondary node, you need to connect to the primary node and **run the update command on the primary node** itself:
 
@@ -74,7 +74,8 @@ This command will download the latest image, upload it to the secondary node, an
 
 ### Upgrading an HA pair
 
-Both nodes must run the same version. Upgrade the secondary node first:`upgrade-remote` runs from the primary node, and upgrading the node that is not carrying traffic leaves a working firewall to fall back on.
+When a new NethSecurity version is released, both nodes of the cluster have to be moved to it, and the order matters: upgrade the secondary node first, since
+`upgrade-remote` runs from the primary node and the node being upgraded is not carrying traffic.
 
 1. On the primary node, run `ns-ha-config status`: the roles must be correct and the `Last Sync Status` must be `Successful`. Do not upgrade a cluster that is not already healthy.
 2. From the primary node, run `ns-ha-config upgrade-remote`. The secondary node reboots; only redundancy is lost.
