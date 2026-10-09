@@ -227,6 +227,12 @@ A Virtual IP (VIP) is an additional IP address assigned to a network interface t
 
 This is useful for services that require multiple IP addresses on the same interface, such as virtual servers or load balancing.
 
+:::note
+
+Virtual IPs can only be added to the LAN interfaces of the cluster. Additional public addresses on a WAN are configured as aliases on the primary node and are replicated automatically, see [WAN interfaces](#wan-interfaces).
+
+:::
+
 Use the `ns-ha-config` command to register the virtual IP in the HA cluster configuration.
 
 Virtual IPs must be explicitly set on the primary node. :

@@ -64,13 +64,91 @@ After connecting to the primary node, use the following command to access the se
 
 This command will establish an SSH connection to the secondary node using the SSH key generated during the HA setup.
 
-### Upgrade
+### Upgrading the secondary node
 
-The secondary node does not receive system updates automatically because it does not have direct Internet access. To update the secondary node, you need to connect to the primary node and run the update command on the primary node itself:
+The secondary node does not receive system updates automatically because it does not have direct Internet access. To update the secondary node, you need to connect to the primary node and **run the update command on the primary node** itself:
 
     ns-ha-config upgrade-remote
 
 This command will download the latest image, upload it to the secondary node, and install it. As a normal upgrade, the secondary node will reboot after the installation.
+
+### Upgrading an HA pair
+
+When a new NethSecurity version is released, both nodes of the cluster have to be moved to it, and the order matters: upgrade the secondary node first, since
+`upgrade-remote` runs from the primary node and the node being upgraded is not carrying traffic.
+
+1. On the primary node, run `ns-ha-config status`: the roles must be correct and the `Last Sync Status` must be `Successful`. Do not upgrade a cluster that is not already healthy.
+2. From the primary node, run `ns-ha-config upgrade-remote`. The secondary node reboots; only redundancy is lost.
+3. Wait for the synchronization status to return to `Up to Date`.
+4. Upgrade the primary node and let it reboot, the secondary node takes over during the reboot and hands the role back when the primary node returns.
+5. Check `ns-ha-config status` on both nodes, confirm that the services are running on the primary node, then wait 10 minutes before testing a failover.
+
+### Adding a secondary node to a degraded HA cluster
+
+If you detached the secondary node for maintenance, or replaced its hardware, and the primary node has kept serving traffic on its own in a degraded cluster,
+this is the procedure to follow. The firewall you are about to put in has never belonged to this cluster and carries no HA configuration of its own.
+
+Adding it does not require a reset: the configuration of the primary node is still valid, and only the association with the new device has to be created.
+
+Prepare the new firewall exactly as you would when building a cluster from scratch, following [Setup and management](ha_setup_and_management): same interface names, same devices and the same static addresses as the node it replaces, on the HA interface and on every additional LAN of the cluster.
+
+Then repeat, from the primary node, every step of the initial cluster setup except `init-primary-node`. Start by checking the new node: the command verifies its addressing, the SSH access and the DHCP options before anything is written.
+
+    ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
+    ns-ha-config init-backup-node <lan_interface>
+
+Then run again, with the same values used when the cluster was first set up, one command for every additional LAN and every additional virtual IP:
+
+    ns-ha-config add-lan-interface <primary_node_ip> <backup_node_ip> <virtual_ip>
+    ns-ha-config add-vip <lan_interface> <virtual_ip>
+
+:::warning
+
+The additional LANs and virtual IPs must be added again even though nothing changed on the primary node. Those commands are the only thing that creates the corresponding
+sections on the secondary node.
+
+Skipping them leaves a cluster that looks healthy, with a correct `ns-ha-config status`, but whose additional LANs have no virtual IP after a failover.
+
+:::
+
+Finally, check the result and test a failover, confirming that **every** virtual IP is present on the secondary node, not only the one of the HA interface.
+
+### Reset the configuration
+
+:::note
+
+Reset the cluster when you want to dismantle it and go back to standalone firewalls, or when you are rebuilding it with a different layout: fewer interfaces, different virtual IPs. 
+The sections of the previous cluster survive on the primary node and no other command removes them.
+
+Resetting is not needed to replace or re-add a secondary node, see
+[Adding a secondary node to a degraded HA cluster](#adding-a-secondary-node-to-a-degraded-ha-cluster).
+
+:::
+
+The reset command restores the cluster configuration to its default state, it must be run locally on the primary node, and while the secondary node is still connected, so that the secondary node is reset too.
+Typically, after the reset, the primary node can continue operating normally, while the secondary node, no longer used in the cluster should be disconnected and reset to default to avoid any conflicts.
+
+The reset command will:
+
+- Stop and disable `keepalived` and `conntrackd`.
+- Remove HA configuration files.
+- Clean up `dropbear` configuration including SSH keys.
+
+At the end, a reboot is required to apply the changes. Just execute: :
+
+    ns-ha-config reset
+    reboot
+
+
+Interface addresses are not touched: both nodes keep their own IP addresses, and only the virtual IPs disappear because they are managed by `keepalived`. 
+The primary node can be set up again straight away.
+
+:::warning
+
+The virtual IP does not exist until the cluster is set up again: clients using it as gateway or DNS server lose connectivity in the meantime.
+
+:::
+
 
 ## Troubleshooting {#troubleshooting_ha-section}
 
@@ -173,17 +251,3 @@ Enable `keepalived` debug logging (on primary): :
 
 Then, search for `Keepalived_vrrp` in the `/var/log/messages` file.
 
-### Reset the configuration
-
-The reset command restores the cluster configuration to its default state. Typically, after the reset, the primary node can continue operating normally, while the secondary node, no longer used in the cluster should be reset to default to avoid any conflicts. After the reset, only the HA interface remains active, so a reboot is required to complete the process. The reset must be performed locally on the primary node.
-
-To reset command will:
-
-- Stop and disable `keepalived` and `conntrackd`.
-- Remove HA configuration files.
-- Clean up `dropbear` configuration including SSH keys.
-
-At the end, a reboot is required to apply the changes. Just execute: :
-
-    ns-ha-config reset
-    reboot
