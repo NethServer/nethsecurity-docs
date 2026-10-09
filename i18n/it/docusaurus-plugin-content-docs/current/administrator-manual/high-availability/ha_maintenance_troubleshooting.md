@@ -74,7 +74,7 @@ Questo comando scaricherà l'immagine più recente, la caricherà sul nodo secon
 
 ### Aggiornamento di una coppia HA
 
-Entrambi i nodi devono eseguire la stessa versione. Aggiornare per primo il nodo secondario: `upgrade-remote` si lancia dal nodo primario, e aggiornare il nodo che non sta gestendo il traffico lascia a disposizione un firewall funzionante su cui ripiegare.
+Quando esce una nuova versione di NethSecurity è necessario portare entrambi i nodi del cluster alla stessa versione, e l'ordine conta: è conveniente aggiornare per primo il nodo secondario, dato che `upgrade-remote` si lancia dal nodo primario e il nodo che viene aggiornato non sta gestendo traffico.
 
 1. Sul nodo primario eseguire `ns-ha-config status`: i ruoli devono essere corretti e `Last Sync Status` deve riportare `Successful`. Non aggiornare un
    cluster che non sia già in buona salute.
