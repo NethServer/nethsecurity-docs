@@ -64,7 +64,7 @@ Dopo aver stabilito la connessione al nodo primario, utilizza il seguente comand
 
 Questo comando stabilirà una connessione SSH al nodo secondario utilizzando la chiave SSH generata durante la configurazione HA.
 
-### Aggiornamento
+### Aggiornamento del nodo secondario
 
 Il nodo secondario non riceve gli aggiornamenti di sistema automaticamente perché non ha accesso diretto a Internet. Per aggiornare il nodo secondario, è necessario connettersi al nodo primario e da lì lanciare il comando di aggiornamento:
 
@@ -74,8 +74,7 @@ Questo comando scaricherà l'immagine più recente, la caricherà sul nodo secon
 
 ### Aggiornamento di una coppia HA
 
-Entrambi i nodi devono eseguire la stessa versione. Aggiornare per primo il nodo secondario: `upgrade-remote` si lancia dal nodo primario, e aggiornare il nodo
-che non sta gestendo il traffico lascia a disposizione un firewall funzionante su cui ripiegare.
+Entrambi i nodi devono eseguire la stessa versione. Aggiornare per primo il nodo secondario: `upgrade-remote` si lancia dal nodo primario, e aggiornare il nodo che non sta gestendo il traffico lascia a disposizione un firewall funzionante su cui ripiegare.
 
 1. Sul nodo primario eseguire `ns-ha-config status`: i ruoli devono essere corretti e `Last Sync Status` deve riportare `Successful`. Non aggiornare un
    cluster che non sia già in buona salute.
@@ -84,7 +83,47 @@ che non sta gestendo il traffico lascia a disposizione un firewall funzionante s
 4. Aggiornare il nodo primario e lasciarlo riavviare: durante il riavvio il nodo secondario assume il ruolo di master e lo restituisce quando il nodo primario torna disponibile.
 5. Verificare `ns-ha-config status` su entrambi i nodi, controllare che i servizi siano attivi sul nodo primario, quindi attendere 10 minuti prima di provare un failover.
 
+### Aggiungere un nodo secondario a un cluster HA degradato
+
+Se il nodo secondario è stato scollegato per manutenzione, o se ne è stato sostituito l'hardware, e nel frattempo il nodo primario ha continuato a servire il traffico da solo in un cluster degradato,
+questa è la procedura da seguire. Il firewall da inserire non ha mai fatto parte di questo cluster e non ha alcuna configurazione HA propria.
+
+Aggiungerlo non richiede un reset: la configurazione del nodo primario è ancora valida, e va creata soltanto l'associazione con il nuovo dispositivo.
+
+Preparare il nuovo firewall esattamente come per costruire un cluster da zero, seguendo [Setup and management](ha_setup_and_management): stessi nomi di interfaccia, stessi device e gli stessi indirizzi statici del nodo che sostituisce, sull'interfaccia HA e su ogni LAN aggiuntiva del cluster.
+
+Ripetere poi, dal nodo primario, tutti i passi della configurazione iniziale del cluster tranne `init-primary-node`. Cominciare dal controllo del nuovo nodo: il comando ne verifica l'indirizzamento, l'accesso SSH e le opzioni DHCP prima che venga scritto alcunché.
+
+    ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
+    ns-ha-config init-backup-node <lan_interface>
+
+Eseguire poi di nuovo, con gli stessi valori usati alla prima configurazione del cluster, un comando per ogni LAN aggiuntiva e per ogni IP virtuale aggiuntivo:
+
+    ns-ha-config add-lan-interface <primary_node_ip> <backup_node_ip> <virtual_ip>
+    ns-ha-config add-vip <lan_interface> <virtual_ip>
+
+:::warning
+
+Le LAN aggiuntive e gli IP virtuali vanno aggiunti di nuovo anche se sul nodo primario non è cambiato nulla. Quei comandi sono l'unica cosa che crea le sezioni corrispondenti
+sul nodo secondario.
+
+Saltare questi comandi lascia un cluster apparentemente sano, con un `ns-ha-config status` corretto, ma le cui LAN aggiuntive restano senza IP virtuale dopo un failover.
+
+:::
+
+Infine verificare il risultato e provare un failover, controllando che **ogni** IP virtuale sia presente sul nodo secondario, non solo quello dell'interfaccia HA.
+
 ### Reset della configurazione
+
+:::note
+
+Eseguire il reset del cluster quando si vuole smantellarlo e tornare a firewall indipendenti, oppure quando lo si sta ricostruendo con una struttura diversa: meno interfacce, altri IP virtuali.
+Le sezioni del cluster precedente sopravvivono sul nodo primario e nessun altro comando le rimuove.
+
+Il reset non serve per sostituire o reinserire un nodo secondario, vedere
+[Aggiungere un nodo secondario a un cluster HA degradato](#aggiungere-un-nodo-secondario-a-un-cluster-ha-degradato).
+
+:::
 
 Il comando di reset riporta la configurazione del cluster allo stato predefinito. Va eseguito localmente sul nodo primario e con il nodo secondario ancora collegato, in modo che il reset coinvolga anche quest'ultimo.Di norma, dopo il reset il nodo primario può continuare a funzionare normalmente, mentre il nodo secondario, non più utilizzato nel cluster, va scollegato e riportato alla configurazione di fabbrica per evitare conflitti.
 
