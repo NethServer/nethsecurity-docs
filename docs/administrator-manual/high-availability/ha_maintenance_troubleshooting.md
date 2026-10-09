@@ -82,7 +82,47 @@ Both nodes must run the same version. Upgrade the secondary node first:`upgrade-
 4. Upgrade the primary node and let it reboot, the secondary node takes over during the reboot and hands the role back when the primary node returns.
 5. Check `ns-ha-config status` on both nodes, confirm that the services are running on the primary node, then wait 10 minutes before testing a failover.
 
+### Adding a secondary node to a degraded HA cluster
+
+If you detached the secondary node for maintenance, or replaced its hardware, and the primary node has kept serving traffic on its own in a degraded cluster,
+this is the procedure to follow. The firewall you are about to put in has never belonged to this cluster and carries no HA configuration of its own.
+
+Adding it does not require a reset: the configuration of the primary node is still valid, and only the association with the new device has to be created.
+
+Prepare the new firewall exactly as you would when building a cluster from scratch, following [Setup and management](ha_setup_and_management): same interface names, same devices and the same static addresses as the node it replaces, on the HA interface and on every additional LAN of the cluster.
+
+Then repeat, from the primary node, every step of the initial cluster setup except `init-primary-node`. Start by checking the new node: the command verifies its addressing, the SSH access and the DHCP options before anything is written.
+
+    ns-ha-config check-backup-node <backup_node_ip> <lan_interface>
+    ns-ha-config init-backup-node <lan_interface>
+
+Then run again, with the same values used when the cluster was first set up, one command for every additional LAN and every additional virtual IP:
+
+    ns-ha-config add-lan-interface <primary_node_ip> <backup_node_ip> <virtual_ip>
+    ns-ha-config add-vip <lan_interface> <virtual_ip>
+
+:::warning
+
+The additional LANs and virtual IPs must be added again even though nothing changed on the primary node. Those commands are the only thing that creates the corresponding
+sections on the secondary node.
+
+Skipping them leaves a cluster that looks healthy, with a correct `ns-ha-config status`, but whose additional LANs have no virtual IP after a failover.
+
+:::
+
+Finally, check the result and test a failover, confirming that **every** virtual IP is present on the secondary node, not only the one of the HA interface.
+
 ### Reset the configuration
+
+:::note
+
+Reset the cluster when you want to dismantle it and go back to standalone firewalls, or when you are rebuilding it with a different layout: fewer interfaces, different virtual IPs. 
+The sections of the previous cluster survive on the primary node and no other command removes them.
+
+Resetting is not needed to replace or re-add a secondary node, see
+[Adding a secondary node to a degraded HA cluster](#adding-a-secondary-node-to-a-degraded-ha-cluster).
+
+:::
 
 The reset command restores the cluster configuration to its default state, it must be run locally on the primary node, and while the secondary node is still connected, so that the secondary node is reset too.
 Typically, after the reset, the primary node can continue operating normally, while the secondary node, no longer used in the cluster should be disconnected and reset to default to avoid any conflicts.
