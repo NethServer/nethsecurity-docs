@@ -227,6 +227,13 @@ Un IP virtuale (VIP) è un indirizzo IP aggiuntivo assegnato a un'interfaccia di
 
 Questo è utile per i servizi che richiedono più indirizzi IP sulla stessa interfaccia, come server virtuali o bilanciamento del carico.
 
+:::note
+
+Gli IP virtuali possono essere aggiunti solo alle interfacce LAN del cluster. Gli indirizzi pubblici aggiuntivi su una WAN si configurano come alias sul nodo primario e vengono replicati automaticamente, vedere
+[Interfacce WAN](#interfacce-wan).
+
+:::
+
 Utilizza il comando `ns-ha-config` per registrare l'IP virtuale nella configurazione del cluster HA.
 
 Gli IP virtuali devono essere impostati esplicitamente nel nodo primario. :
