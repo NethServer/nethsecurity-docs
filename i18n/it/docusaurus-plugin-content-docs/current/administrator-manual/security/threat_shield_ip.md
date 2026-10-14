@@ -70,7 +70,7 @@ Le blocklist di Yoroi e Nethesis sono blocklist Enterprise. Questi elenchi verra
 
 ### Lista di blocco Nethesis community {#nethesis_community-section}
 
-Gli attaccanti di solito colpiscono molti firewall contemporaneamente. I sistemi NethSecurity e NethServer con una sottoscrizione condividono gli attaccanti che bloccano, così ogni sistema può bloccarli prima che attacchino.
+Gli attaccanti di solito colpiscono molti firewall contemporaneamente. I sistemi NethSecurity e NethServer con una sottoscrizione condividono gli indirizzi IP degli attaccanti che bloccano, così ogni altro sistema può bloccarli prima che attacchino.
 
 Come funziona:
 
