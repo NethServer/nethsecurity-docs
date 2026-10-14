@@ -72,7 +72,7 @@ Le blocklist di Yoroi e Nethesis sono blocklist Enterprise. Questi elenchi verra
 
 Gli attaccanti di solito colpiscono molti firewall contemporaneamente. I sistemi NethSecurity e NethServer con una sottoscrizione condividono gli attaccanti che bloccano, così ogni sistema può bloccarli prima che attacchino.
 
-Funziona così:
+Come funziona:
 
 - Quando Threat Shield IP blocca un indirizzo IP con la [protezione brute force](#brute_force-section), il firewall invia quell'indirizzo a Nethesis. Vengono inviati solo indirizzi pubblici. Il firewall li invia ogni 5 minuti.
 - Quando abbastanza sistemi segnalano lo stesso indirizzo, Nethesis lo aggiunge alla lista di blocco `Nethesis community - Level 2`.
