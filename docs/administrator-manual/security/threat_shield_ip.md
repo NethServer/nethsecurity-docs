@@ -71,7 +71,7 @@ Yoroi and Nethesis blocklists are Enterprise blocklists. These lists will be lis
 
 ### Nethesis community blocklist {#nethesis_community-section}
 
-Attackers usually target many firewalls at once. NethSecurity and NethServer systems with a subscription share the attackers they block, so that each system can block them before they attack.
+Attackers usually target many firewalls at once. NethSecurity and NethServer systems with a subscription share the IP addresses of the attackers they block, so every other system can block them before being targeted.
 
 It works this way:
 
