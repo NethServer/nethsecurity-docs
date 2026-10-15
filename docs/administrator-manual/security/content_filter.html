@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Content filtering | NethSecurity documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.nethsecurity.org/docs/administrator-manual/security/content_filter"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="it_IT"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Content filtering | NethSecurity documentation"><meta data-rh="true" name="description" content="Content filtering is a crucial aspect of network security, serving two primary purposes:"><meta data-rh="true" property="og:description" content="Content filtering is a crucial aspect of network security, serving two primary purposes:"><link data-rh="true" rel="icon" href="/img/favicon.png"><link data-rh="true" rel="canonical" href="https://docs.nethsecurity.org/docs/administrator-manual/security/content_filter"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/docs/administrator-manual/security/content_filter" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/it/docs/administrator-manual/security/content_filter" hreflang="it-IT"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/docs/administrator-manual/security/content_filter" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://10HTUTQ94F-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Content filtering","item":"https://docs.nethsecurity.org/docs/administrator-manual/security/content_filter"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="NethSecurity documentation" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.c1f0ff24.css">
-<script src="/assets/js/runtime~main.720ec7a2.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.156bef61.js" defer="defer"></script>
 <script src="/assets/js/main.78a4aca9.js" defer="defer"></script>
 </head>
 <body>
@@ -94,7 +94,7 @@
 <ul>
 <li class="">May require more processing power compared to IP or DNS-based filtering</li>
 <li class="">Requires careful configuration to balance security and performance</li>
-<li class="">The administrator needs to create DPI rules for each interface</li>
+<li class="">Rules are evaluated in order and the first matching rule wins, so their position in the list matters</li>
 </ul>
 <p>To configure DPI filtering, see the <a class="" href="/docs/administrator-manual/security/dpi_filter">Deep Packet Inspection (DPI) filter</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="comparison-of-filtering-options">Comparison of filtering options<a href="#comparison-of-filtering-options" class="hash-link" aria-label="Direct link to Comparison of filtering options" title="Direct link to Comparison of filtering options" translate="no">​</a></h2>
@@ -145,7 +145,7 @@
 
 
 
-<table><thead><tr><th>Feature</th><th>Threat Shield IP</th><th>Threat Shield DNS</th><th>Flashstart DNS Filtering</th><th>DPI Filter</th></tr></thead><tbody><tr><td>Blocking method</td><td>IP-based</td><td>DNS-based</td><td>DNS-based</td><td>Packet inspection</td></tr><tr><td>Primary focus</td><td>Malware</td><td>Malware + basic content</td><td>Comprehensive content</td><td>Application/Protocol specific</td></tr><tr><td>List types</td><td>Community, Enterprise</td><td>Community, Enterprise</td><td>Commercial</td><td>N/A (real-time analysis)</td></tr><tr><td>Configuration</td><td>Firewall</td><td>Firewall</td><td>Cloud</td><td>Firewall (per interface)</td></tr><tr><td>Reporting</td><td>None</td><td>None</td><td>Advanced, customizable</td><td>Limited</td></tr></tbody></table>
+<table><thead><tr><th>Feature</th><th>Threat Shield IP</th><th>Threat Shield DNS</th><th>Flashstart DNS Filtering</th><th>DPI Filter</th></tr></thead><tbody><tr><td>Blocking method</td><td>IP-based</td><td>DNS-based</td><td>DNS-based</td><td>Packet inspection</td></tr><tr><td>Primary focus</td><td>Malware</td><td>Malware + basic content</td><td>Comprehensive content</td><td>Application/Protocol specific</td></tr><tr><td>List types</td><td>Community, Enterprise</td><td>Community, Enterprise</td><td>Commercial</td><td>N/A (real-time analysis)</td></tr><tr><td>Configuration</td><td>Firewall</td><td>Firewall</td><td>Cloud</td><td>Firewall</td></tr><tr><td>Reporting</td><td>None</td><td>None</td><td>Advanced, customizable</td><td>Limited</td></tr></tbody></table>
 <p><strong>Implementation strategies</strong></p>
 <p>For optimal security, consider a layered approach:</p>
 <ol>
