@@ -18,7 +18,7 @@ sidebar_position: 1
 Typical benefits of the subscription service include:
 
 - **Monitoring portals**: subscribers can access monitoring portals to manage their subscription and receive [alerts](../monitoring/monitoring.md#alert-section) for registered servers.
-- **Enhanced DPI signatures**: firewalls with a valid subscription have access to a much larger database of [DPI signatures](../security/dpi_filter.md) (more than 1820 in total instead of 415) that are regularly updated.
+- **Enhanced DPI signatures**: firewalls with a valid subscription have access to a much larger database of [DPI signatures](../security/dpi_filter.md) (approximately 2800 applications/protocols instead of 500) that are regularly updated.
 - **Enterprise Block lists**: Firewalls with a valid subscription can purchase high-quality IP and DNS blocklists. These lists are actively maintained, updated very frequently, and exhibit high effectiveness while generating a very low number of false positives, they can be used in [IP](../security/threat_shield_ip.md) and [DNS](../security/threat_shield_dns.md) block lists.
 - **Automatic remote backup**: subscribers can benefit from automatic remote backups of the firewall configuration. This feature is crucial for businesses that need to ensure the safety of their data and configurations.
 - **Support**: subscribers can receive priority support on stable releases. This can be crucial for businesses relying on NethSecurity for their operations. See also [Remote support](./remote_support.md).

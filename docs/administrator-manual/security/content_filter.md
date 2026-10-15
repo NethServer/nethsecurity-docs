@@ -103,7 +103,7 @@ Considerations:
 
 - May require more processing power compared to IP or DNS-based filtering
 - Requires careful configuration to balance security and performance
-- The administrator needs to create DPI rules for each interface
+- Rules are evaluated in order and the first matching rule wins, so their position in the list matters
 
 To configure DPI filtering, see the [Deep Packet Inspection (DPI) filter](./dpi_filter.md).
 
@@ -114,7 +114,7 @@ To configure DPI filtering, see the [Deep Packet Inspection (DPI) filter](./dpi_
 | Blocking method | IP-based | DNS-based | DNS-based | Packet inspection |
 | Primary focus | Malware | Malware + basic content | Comprehensive content | Application/Protocol specific |
 | List types | Community, Enterprise | Community, Enterprise | Commercial | N/A (real-time analysis) |
-| Configuration | Firewall | Firewall | Cloud | Firewall (per interface) |
+| Configuration | Firewall | Firewall | Cloud | Firewall |
 | Reporting | None | None | Advanced, customizable | Limited |
 
 **Implementation strategies**

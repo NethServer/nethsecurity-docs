@@ -18,7 +18,7 @@ sidebar_position: 1
 I vantaggi tipici del servizio di abbonamento includono:
 
 - **Portali di monitoraggio**: gli abbonati possono accedere ai portali di monitoraggio per gestire il loro abbonamento e ricevere [avvisi](../monitoring/monitoring.md#alert-section) per i server registrati.
-- **Firme DPI migliorate**: i firewall con un abbonamento valido hanno accesso a un database molto più ampio di [firme DPI](../security/dpi_filter.md) (più di 1820 in totale invece di 415) che vengono aggiornate regolarmente.
+- **Firme DPI migliorate**: i firewall con un abbonamento valido hanno accesso a un database molto più ampio di [firme DPI](../security/dpi_filter.md) (circa 2800 tra applicazioni e protocolli invece di 500) che vengono aggiornate regolarmente.
 - **Blocklist Enterprise**: i firewall con un abbonamento valido possono acquistare blocklist IP e DNS di alta qualità. Questi elenchi sono attivamente mantenuti, aggiornati molto frequentemente e mostrano un'elevata efficacia generando un numero molto basso di falsi positivi, possono essere utilizzati nelle blocklist [IP](../security/threat_shield_ip.md) e [DNS](../security/threat_shield_dns.md).
 - **Backup remoto automatico**: gli abbonati possono beneficiare di backup remoti automatici della configurazione del firewall. Questa funzione è fondamentale per le aziende che hanno bisogno di garantire la sicurezza dei loro dati e configurazioni.
 - **Supporto**: gli abbonati possono ricevere supporto prioritario sui rilasci stabili. Questo può essere cruciale per le aziende che si affidano a NethSecurity per le loro operazioni. Vedi anche [Supporto remoto](./remote_support.md).
