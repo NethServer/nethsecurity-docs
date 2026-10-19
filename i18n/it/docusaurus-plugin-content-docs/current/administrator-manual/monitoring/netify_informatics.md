@@ -1,6 +1,6 @@
 ---
 title: "Netify Informatics"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Netify Informatics {#netify_informatics-section}

@@ -11,7 +11,7 @@ Unified Threat Management (UTM) basata su OpenWrt.
 
 - **[Informazioni](./about/introduction.md)** — introduzione e note di rilascio
 - **[Installazione](./installation/system_requirements.md)** — requisiti di sistema, download, installazione e configurazione iniziale
-- **[Monitoraggio](./monitoring/monitoring.md)** — monitoraggio del sistema e Netify Informatics
+- **[Monitoraggio](./monitoring/monitoring.md)** — monitoraggio del sistema, notifiche degli avvisi e Netify Informatics
 - **[Sistema](./system/subscription.md)** — sottoscrizione, supporto, backup, aggiornamenti e archiviazione
 - **[Rete](./network/network.md)** — interfacce, DNS/DHCP, routing, multi-WAN, hotspot, reverse proxy e QoS
 - **[Utenti e oggetti](./users-objects/users_databases.md)** — database utenti, oggetti e [utenti amministrativi](./users-objects/administrative_users.md)

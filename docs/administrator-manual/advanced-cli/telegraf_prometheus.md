@@ -13,6 +13,8 @@ them directly from the firewall.
 
 The exporter is **disabled by default**.
 
+To send alerts from an external Prometheus stack, see [Alert notifications](../monitoring/alert_notifications.md#external-prometheus-stack).
+
 ## Enabling the exporter {#enabling-the-exporter}
 
 Always pick a listening port other than the default `9273`: that port is

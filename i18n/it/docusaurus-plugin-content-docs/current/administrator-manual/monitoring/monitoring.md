@@ -183,14 +183,9 @@ Avvisi disponibili:
 
 #### Notifiche di avviso remoto
 
-Se il server ha un [abbonamento](../system/subscription.md) valido, le notifiche di avviso vengono inviate senza problemi ai server remoti per il monitoraggio centralizzato e la gestione. Sia `my.nethesis.it` che `my.nethserver.com` fungono da hub centrali per la ricezione degli avvisi, consentendo agli amministratori di rimanere informati sullo stato del firewall e di rispondere prontamente a qualsiasi situazione critica.
+Se il firewall ha un [abbonamento](../system/subscription.md) Enterprise, tutti gli avvisi vengono inoltrati a `my.nethesis.it`, che invia le notifiche agli amministratori. Consultare il [manuale di my.nethesis.it](https://nethserver.github.io/my/it/docs/features/alerting) per configurare le notifiche.
 
-Attualmente, solo i seguenti avvisi vengono inoltrati ai server di monitoraggio remoto:
-
-- Spazio su disco: l'avviso di spazio su disco si attiva quando lo spazio su disco disponibile nel sistema raggiunge un livello critico. Questa notifica proattiva aiuta a prevenire le interruzioni affrontando i problemi di spazio su disco prima che influiscano sul funzionamento del firewall.
-- Stato MultiWAN (Up/Down): questo avviso notifica gli amministratori quando ci sono modifiche nello stato di MultiWAN, indicando se le connessioni sono attive o disattive. La consapevolezza tempestiva dei cambiamenti nello stato di MultiWAN è cruciale per mantenere una connettività Internet continua e affidabile.
-
-Altri avvisi, come l'utilizzo della CPU e della memoria, non vengono inoltrati ai server di monitoraggio remoto in questo momento.
+I firewall con abbonamento Community non inoltrano gli avvisi e non ricevono notifiche via mail. Per ricevere gli avvisi via mail, consultare [Notifiche degli avvisi](./alert_notifications.md).
 
 ## Monitoraggio remoto {#remote_monitoring-section}
 

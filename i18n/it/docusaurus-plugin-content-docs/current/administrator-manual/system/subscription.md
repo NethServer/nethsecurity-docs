@@ -13,11 +13,11 @@ sidebar_position: 1
 
 - **Abbonamento Enterprise**: servizio riservato ai rivenditori Nethesis, contatta il [reparto vendite](mailto:info@nethesis.it).
 
-  Il portale di abbonamento Enterprise è disponibile su: [my.nethesis.it](https://my.nethesis.it)
+  Il portale di abbonamento Enterprise è disponibile su: [my.nethesis.it](https://my.nethesis.it). Consultare il [manuale di my.nethesis.it](https://nethserver.github.io/my/it/) per maggiori informazioni.
 
 I vantaggi tipici del servizio di abbonamento includono:
 
-- **Portali di monitoraggio**: gli abbonati possono accedere ai portali di monitoraggio per gestire il loro abbonamento e ricevere [avvisi](../monitoring/monitoring.md#alert-section) per i server registrati.
+- **Portali di monitoraggio**: gli abbonati possono accedere ai portali di monitoraggio per gestire il loro abbonamento e ricevere [avvisi](../monitoring/monitoring.md#alert-section) per i server registrati. Le notifiche via mail degli avvisi sono disponibili solo con l'abbonamento Enterprise, consultare [Notifiche degli avvisi](../monitoring/alert_notifications.md).
 - **Firme DPI migliorate**: i firewall con un abbonamento valido hanno accesso a un database molto più ampio di [firme DPI](../security/dpi_filter.md) (circa 2800 tra applicazioni e protocolli invece di 500) che vengono aggiornate regolarmente.
 - **Blocklist Enterprise**: i firewall con un abbonamento valido possono acquistare blocklist IP e DNS di alta qualità. Questi elenchi sono attivamente mantenuti, aggiornati molto frequentemente e mostrano un'elevata efficacia generando un numero molto basso di falsi positivi, possono essere utilizzati nelle blocklist [IP](../security/threat_shield_ip.md) e [DNS](../security/threat_shield_dns.md).
 - **Backup remoto automatico**: gli abbonati possono beneficiare di backup remoti automatici della configurazione del firewall. Questa funzione è fondamentale per le aziende che hanno bisogno di garantire la sicurezza dei loro dati e configurazioni.

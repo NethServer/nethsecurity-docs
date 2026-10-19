@@ -13,6 +13,8 @@ leggerle direttamente dal firewall.
 
 L'esportatore è **disabilitato per impostazione predefinita**.
 
+Per inviare gli avvisi da uno stack Prometheus esterno, consultare [Notifiche degli avvisi](../monitoring/alert_notifications.md#external-prometheus-stack).
+
 ## Abilitare l'esportatore {#enabling-the-exporter}
 
 Scegliere sempre una porta di ascolto diversa da quella predefinita `9273`:
