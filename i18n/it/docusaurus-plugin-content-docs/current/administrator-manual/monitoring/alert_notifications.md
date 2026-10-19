@@ -54,13 +54,13 @@ Il firewall ha bisogno di un server di posta esterno per inviare la mail. Aprire
 un terminale sul firewall e impostare il server, ad esempio:
 
 ``` bash
-echo '{"host": "smtp.example.com", "port": 587, "auth": "on", "user": "myuser", "password": "mypassword", "tls": "on", "tls_starttls": "on", "from": "firewall@example.com", "syslog": "LOG_MAIL"}' | api-cli ns.smtp set --data -
+echo '{"host": "smtp.example.com", "port": 587, "auth": "on", "user": "myuser", "password": "mypassword", "tls": "on", "tls_starttls": "on", "from": "firewall@example.com", "syslog": "LOG_MAIL"}' | /usr/libexec/rpcd/ns.smtp call set
 ```
 
 Questo comando sovrascrive `/etc/msmtprc`. Inviare poi una mail di prova:
 
 ``` bash
-echo '{"to": "admin@example.com"}' | api-cli ns.smtp test --data -
+echo '{"to": "admin@example.com"}' | /usr/libexec/rpcd/ns.smtp call test
 ```
 
 Non proseguire finché la mail di prova non arriva. Consultare il [manuale dello
