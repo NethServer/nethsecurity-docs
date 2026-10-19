@@ -19,3 +19,5 @@ The [msmpt](https://marlam.de/msmtp/) SMTP client offers advanced features to en
 - **Authentication:** some SMTP servers require authentication to identify the user sending the email
 
 See the [developer manual](https://dev.nethsecurity.org/packages/ns-api/#nssmtp) for the commands on how to configure it from the command line.
+
+The SMTP client can be used to send the firewall alerts by mail, see [Mail alerts from the firewall](../monitoring/alert_notifications.md#mail-alerts-from-the-firewall).

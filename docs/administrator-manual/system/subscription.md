@@ -13,11 +13,11 @@ sidebar_position: 1
 
 - **Enterprise subscription**: service reserved to Nethesis resellers, please contact the [sales department](mailto:info@nethesis.it).
 
-  Enterprise subscription portal is available at: [my.nethesis.it](https://my.nethesis.it)
+  Enterprise subscription portal is available at: [my.nethesis.it](https://my.nethesis.it). See the [my.nethesis.it manual](https://nethserver.github.io/my/) for more information.
 
 Typical benefits of the subscription service include:
 
-- **Monitoring portals**: subscribers can access monitoring portals to manage their subscription and receive [alerts](../monitoring/monitoring.md#alert-section) for registered servers.
+- **Monitoring portals**: subscribers can access monitoring portals to manage their subscription and receive [alerts](../monitoring/monitoring.md#alert-section) for registered servers. Alert mail notifications are available only with the Enterprise subscription, see [Alert notifications](../monitoring/alert_notifications.md).
 - **Enhanced DPI signatures**: firewalls with a valid subscription have access to a much larger database of [DPI signatures](../security/dpi_filter.md) (approximately 2800 applications/protocols instead of 500) that are regularly updated.
 - **Enterprise Block lists**: Firewalls with a valid subscription can purchase high-quality IP and DNS blocklists. These lists are actively maintained, updated very frequently, and exhibit high effectiveness while generating a very low number of false positives, they can be used in [IP](../security/threat_shield_ip.md) and [DNS](../security/threat_shield_dns.md) block lists.
 - **Automatic remote backup**: subscribers can benefit from automatic remote backups of the firewall configuration. This feature is crucial for businesses that need to ensure the safety of their data and configurations.

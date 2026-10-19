@@ -183,14 +183,9 @@ Available alerts:
 
 #### Remote alert notifications
 
-If the server has a valid [Subscription](../system/subscription.md), alert notifications are seamlessly sent to remote servers for centralized monitoring and management. Both `my.nethesis.it` and `my.nethserver.com` serve as central hubs for receiving alerts, allowing administrators to stay informed about the firewall\'s status and promptly respond to any critical situations.
+If the firewall has an Enterprise [subscription](../system/subscription.md), all the alerts are forwarded to `my.nethesis.it`, which sends the notifications to the administrators. See the [my.nethesis.it manual](https://nethserver.github.io/my/docs/features/alerting) to configure the notifications.
 
-Currently, only the following alerts are forwarded to the remote monitoring servers:
-
-- Disk Space: the disk space alert triggers when available disk space on the system reaches a critical level. This proactive notification helps prevent potential disruptions by addressing disk space issues before they impact firewall operations.
-- MultiWAN Status (Up/Down): this alert notifies administrators when there are changes in the MultiWAN status, indicating whether connections are up or down. Timely awareness of MultiWAN status changes is crucial for maintaining continuous and reliable internet connectivity.
-
-Other alerts, such as CPU and memory usage, are not forwarded to the remote monitoring servers at this time.
+Firewalls with a Community subscription no longer forward alerts and do not receive mail notifications. To receive the alerts by mail, see [Alert notifications](./alert_notifications.md).
 
 ## Remote monitoring {#remote_monitoring-section}
 
