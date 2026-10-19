@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Telegraf Prometheus exporter | NethSecurity documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.nethsecurity.org/docs/administrator-manual/advanced-cli/telegraf_prometheus"><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:locale:alternate" content="it_IT"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Telegraf Prometheus exporter | NethSecurity documentation"><meta data-rh="true" name="description" content="telegraf-prometheus-exporter}"><meta data-rh="true" property="og:description" content="telegraf-prometheus-exporter}"><link data-rh="true" rel="icon" href="/img/favicon.png"><link data-rh="true" rel="canonical" href="https://docs.nethsecurity.org/docs/administrator-manual/advanced-cli/telegraf_prometheus"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/docs/administrator-manual/advanced-cli/telegraf_prometheus" hreflang="en-US"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/it/docs/administrator-manual/advanced-cli/telegraf_prometheus" hreflang="it-IT"><link data-rh="true" rel="alternate" href="https://docs.nethsecurity.org/docs/administrator-manual/advanced-cli/telegraf_prometheus" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://10HTUTQ94F-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Telegraf Prometheus exporter","item":"https://docs.nethsecurity.org/docs/administrator-manual/advanced-cli/telegraf_prometheus"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="NethSecurity documentation" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.c1f0ff24.css">
-<script src="/assets/js/runtime~main.156bef61.js" defer="defer"></script>
-<script src="/assets/js/main.78a4aca9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2fc15149.js" defer="defer"></script>
+<script src="/assets/js/main.b0020dec.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -18,6 +18,7 @@ can also expose the very same metrics in Prometheus format, so an external
 Prometheus server, Grafana Agent or any other compatible collector can scrape
 them directly from the firewall.</p>
 <p>The exporter is <strong>disabled by default</strong>.</p>
+<p>To send alerts from an external Prometheus stack, see <a class="" href="/docs/administrator-manual/monitoring/alert_notifications#external-prometheus-stack">Alert notifications</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="enabling-the-exporter">Enabling the exporter<a href="#enabling-the-exporter" class="hash-link" aria-label="Direct link to Enabling the exporter" title="Direct link to Enabling the exporter" translate="no">​</a></h2>
 <p>Always pick a listening port other than the default <code>9273</code>: that port is
 reserved for the controller, which scrapes the unit through the VPN tunnel.
