@@ -1,0 +1,130 @@
+#!/bin/bash
+LOG_FILE="/root/ns-upgrade-fix-eth.log"
+LOG_TAG="ns-upgrade-fix-eth"
+MAPPING_FILE="/root/eth-mac-mapping"
+SCRIPT_NAME="/root/ns-upgrade-fix-eth"
+RC_LOCAL="/etc/rc.local"
+SYSUPGRADE_CONF="/etc/sysupgrade.conf"
+
+log_msg() {
+    logger -t "$LOG_TAG" "$1"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') $1" >> "$LOG_FILE"
+}
+
+setup_sysupgrade_conf() {
+    grep -q "$MAPPING_FILE" "$SYSUPGRADE_CONF" 2>/dev/null || echo "$MAPPING_FILE" >> "$SYSUPGRADE_CONF"
+    grep -q "$SCRIPT_NAME" "$SYSUPGRADE_CONF" 2>/dev/null || echo "$SCRIPT_NAME" >> "$SYSUPGRADE_CONF"
+}
+
+setup_rc_local() {
+    grep -q "$SCRIPT_NAME" "$RC_LOCAL" 2>/dev/null || sed -i '/^exit 0$/i[ -x '"$SCRIPT_NAME"' ] \&\& '"$SCRIPT_NAME"' --fix' $RC_LOCAL
+}
+
+cleanup() {
+    sed -i "\\|$SCRIPT_NAME|d" "$RC_LOCAL" 2>/dev/null
+    sed -i "\\|$MAPPING_FILE|d" "$SYSUPGRADE_CONF" 2>/dev/null
+    sed -i "\\|$SCRIPT_NAME|d" "$SYSUPGRADE_CONF" 2>/dev/null
+}
+
+save_mode() {
+    echo "This tool saves the current ethernet MAC addresses before upgrading."
+    echo "After the upgrade, it will automatically update the network configuration"
+    echo "to use the new ethernet device names."
+    echo ""
+    echo "Saving current ethernet MAC addresses..."
+    echo ""
+
+    for eth in /sys/class/net/eth*; do
+        [ -e "$eth" ] || continue
+        name=$(basename "$eth")
+        [[ "$name" =~ ^eth[0-9]+$ ]] || continue
+        mac=$(cat "$eth/address" 2>/dev/null)
+        [ -n "$mac" ] && echo "${name}=${mac}" >> "$MAPPING_FILE"
+    done
+
+    setup_sysupgrade_conf
+    setup_rc_local
+
+    echo "MAC addresses saved to $MAPPING_FILE"
+    echo "Configuration preserved for upgrade"
+    echo ""
+    read -p "Upgrade now? (y/N): " answer
+    case "$answer" in
+        [yY])
+            echo ""
+            echo "WARNING: System will reboot during upgrade!"
+            read -p "Press Enter to continue or Ctrl+C to cancel"
+            log_msg "Starting upgrade via ns-upgrade"
+            ns-upgrade
+            ;;
+        *)
+            echo "Please use NethSecurity UI to upgrade."
+            echo "WARNING: Do not reboot before upgrading, otherwise you will lose network configuration."
+            ;;
+    esac
+}
+
+fix_mode() {
+    [ -f "$MAPPING_FILE" ] || { log_msg "ERROR: mapping file missing"; exit 1; }
+
+    declare -A old_mac
+    while IFS='=' read -r name mac; do
+        [ -n "$name" ] && old_mac["$name"]="$mac"
+    done < "$MAPPING_FILE"
+
+    declare -A current_eth
+    for eth in /sys/class/net/eth*; do
+        [ -e "$eth" ] || continue
+        name=$(basename "$eth")
+        [[ "$name" =~ ^eth[0-9]+$ ]] || continue
+        mac=$(cat "$eth/address" 2>/dev/null)
+        [ -n "$mac" ] && current_eth["$mac"]="$name"
+    done
+
+    declare -A rename_map
+    for old_name in "${!old_mac[@]}"; do
+        old_mac_val="${old_mac[$old_name]}"
+        new_name="${current_eth[$old_mac_val]}"
+        [ -n "$new_name" ] && [ "$new_name" != "$old_name" ] && rename_map["$old_name"]="$new_name"
+    done
+
+    if [ ${#rename_map[@]} -eq 0 ]; then
+        log_msg "No eth changes detected"
+        cleanup
+        exit 0
+    fi
+
+    log_msg "Detected ${#rename_map[@]} eth changes: ${rename_map[*]}"
+
+    TEMP_PREFIX="ETEMP_$$"
+
+    for cfg in /etc/config/*; do
+        [ -f "$cfg" ] || continue
+        skip=1
+        for old_name in "${!rename_map[@]}"; do
+            grep -q "\\<$old_name\\>" "$cfg" && { skip=0; break; }
+        done
+        [ $skip -eq 1 ] && continue
+
+        for old_name in "${!rename_map[@]}"; do
+            sed -i "s/\\<$old_name\\>/${TEMP_PREFIX}${old_name}/g" "$cfg"
+        done
+
+        for old_name in "${!rename_map[@]}"; do
+            new_name="${rename_map[$old_name]}"
+            sed -i "s/${TEMP_PREFIX}${old_name}/$new_name/g" "$cfg"
+        done
+
+        log_msg "Updated $cfg"
+    done
+
+    log_msg "Cleanup complete, rebooting"
+    cleanup
+    reboot
+}
+
+if [ "$1" = "--fix" ]; then
+    fix_mode
+else
+    save_mode
+fi
