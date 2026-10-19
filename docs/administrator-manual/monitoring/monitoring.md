@@ -185,7 +185,7 @@ Available alerts:
 
 If the firewall has an Enterprise [subscription](../system/subscription.md), all the alerts are forwarded to `my.nethesis.it`, which sends the notifications to the administrators. See the [my.nethesis.it manual](https://nethserver.github.io/my/docs/features/alerting) to configure the notifications.
 
-Firewalls with a Community subscription no longer forward alerts and do not receive mail notifications. To receive the alerts by mail, see [Alert notifications](./alert_notifications.md).
+Firewalls with a Community subscription do not forward alerts and do not receive mail notifications. To receive the alerts by mail, see [Alert notifications](./alert_notifications.md).
 
 ## Remote monitoring {#remote_monitoring-section}
 

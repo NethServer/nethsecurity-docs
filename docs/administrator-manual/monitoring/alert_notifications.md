@@ -19,14 +19,6 @@ Where alerts are sent, and who gets a mail, depends on the
 - **Community subscription** or **no subscription**: alerts are not sent
   anywhere and no mail notification is sent.
 
-:::note
-
-Since the move to the new my.nethesis.it, firewalls with a Community subscription
-no longer receive mail notifications for alerts. Enterprise subscriptions are not
-affected.
-
-:::
-
 This page describes two ways to receive alert notifications without an Enterprise
 subscription:
 
@@ -36,8 +28,7 @@ subscription:
 - [External Prometheus stack](#external-prometheus-stack): an existing
   Prometheus, Alertmanager and Grafana server collects the firewall metrics and
   sends the alerts. Best when a monitoring server is already in place, or for
-  many firewalls. A [NethServer 8](#nethserver-8-metrics) cluster can play this
-  role.
+  many firewalls.
 
 Both methods can be used together with an Enterprise subscription, too.
 
@@ -222,13 +213,6 @@ rm /etc/vmalert/rules/zz-test.yaml
 /etc/init.d/vmalert reload
 ```
 
-:::warning
-
-On a firewall with an Enterprise subscription, the test alert is also forwarded
-to my.nethesis.it. Remove it as soon as the test is over.
-
-:::
-
 ### Remove the configuration {#alert-mail-remove}
 
 ``` bash
@@ -302,8 +286,8 @@ curl -s http://127.0.0.1:9274/metrics | grep -v '^#' | cut -d '{' -f 1 | cut -d 
 
 ### Alert rules {#prometheus-alert-rules}
 
-Create `nethsecurity-rules.yml` next to `prometheus.yml`. The following rules
-mirror the most important alerts of the firewall:
+Create `nethsecurity-rules.yml` next to `prometheus.yml`. The following example
+sends an alert when the firewall cannot be reached or a WAN is down:
 
 ``` yaml
 groups:
@@ -323,41 +307,6 @@ groups:
           severity: critical
         annotations:
           summary: "WAN {{ $labels.interface }} is down on {{ $labels.instance }}"
-      - alert: DiskSpaceCritical
-        expr: disk_used_percent{job="nethsecurity"} > 90
-        for: 5m
-        labels:
-          severity: critical
-        annotations:
-          summary: "Disk {{ $labels.path }} is above 90% on {{ $labels.instance }}"
-      - alert: ServiceDown
-        expr: procd_service_running{job="nethsecurity"} == 0 and procd_service_exit_code{job="nethsecurity"} != 0
-        for: 5m
-        labels:
-          severity: critical
-        annotations:
-          summary: "Service {{ $labels.service }} is not running on {{ $labels.instance }}"
-      - alert: StorageStatus
-        expr: storage_status_error{job="nethsecurity"} == 1
-        for: 5m
-        labels:
-          severity: critical
-        annotations:
-          summary: "Data storage error on {{ $labels.instance }}"
-      - alert: CriticalCpuUsage
-        expr: 100 - cpu_usage_idle{job="nethsecurity", cpu="cpu-total"} > 85
-        for: 5m
-        labels:
-          severity: warning
-        annotations:
-          summary: "CPU usage is above 85% on {{ $labels.instance }}"
-      - alert: CriticalMemoryUsage
-        expr: mem_used_percent{job="nethsecurity"} > 90
-        for: 5m
-        labels:
-          severity: warning
-        annotations:
-          summary: "Memory usage is above 90% on {{ $labels.instance }}"
 ```
 
 The rules used by the firewall are in `/etc/vmalert/rules/` and can be used as a
@@ -394,181 +343,3 @@ the other channels, such as chat applications or webhooks.
 Add Prometheus as a data source in Grafana, then build the dashboards using the
 metric names listed above. Filter the firewalls with the `job="nethsecurity"`
 label.
-
-## NethServer 8 metrics {#nethserver-8-metrics}
-
-Every [NethServer 8](https://docs.nethserver.org/projects/ns8/) cluster includes
-a metrics module, installed on the leader node. It contains Prometheus,
-Alertmanager and Grafana, and can also collect the metrics of a NethSecurity
-firewall and send its alerts by mail.
-
-:::warning
-
-This is an advanced configuration. It uses internal settings of the NethServer 8
-metrics module, which are not shown in the web interface and may change in
-future releases.
-
-:::
-
-The setup has these limits:
-
-- **No password and no HTTPS options.** The metrics module cannot send a
-  password, and it always checks the HTTPS certificate. Use one of these two
-  options:
-  - plain HTTP inside a trusted network, with the firewall port open only to the
-    NethServer 8 leader node (recommended);
-  - HTTPS through the reverse proxy path, but only with a valid certificate (for
-    example Let's Encrypt) and without the exporter password.
-- **Only critical alerts are mailed.** Alerts with a different severity are
-  shown in Grafana and Prometheus only.
-- **The configuration is lost when the leader node changes.** Repeat it on the
-  new leader node.
-- **Enterprise clusters forward the alerts.** If the NethServer 8 cluster has
-  an Enterprise subscription, the firewall alerts are also forwarded to
-  my.nethesis.it as alerts of the cluster.
-
-A firewall connected to a [controller](../system/controller.md) already sends
-its metrics to the controller, but the controller does not send alerts. The
-metrics module is a separate service.
-
-### Prepare the firewall for NethServer 8 {#ns8-prepare-firewall}
-
-With the recommended plain HTTP option:
-
-1. Enable the [Telegraf Prometheus
-   exporter](../advanced-cli/telegraf_prometheus.md#enabling-the-exporter) on
-   port `9274`. Do not set a password.
-2. Allow the NethServer 8 leader node with a [firewall input
-   rule](../advanced-cli/telegraf_prometheus.md#firewall-input-rule) and drop
-   all the other hosts, as described in [Restricting access to the
-   metrics](../advanced-cli/telegraf_prometheus.md#restricting-access-to-the-metrics).
-
-Check from the leader node that the metrics can be read:
-
-``` bash
-curl -s http://192.168.1.1:9274/metrics | head
-```
-
-### Enable mail notifications on NethServer 8 {#ns8-mail}
-
-1. Configure the mail server of the cluster from the NethServer 8 web
-   interface: `Settings` page, `Email notifications` section.
-2. Open a terminal on the leader node as `root` and find the metrics module ID,
-   usually `metrics1`:
-
-   ``` bash
-   api-cli run cluster/get-metrics-id
-   ```
-
-3. Read the current configuration of the module:
-
-   ``` bash
-   api-cli run module/metrics1/get-configuration
-   ```
-
-4. Set the mail recipients. Keep the other values returned by the previous
-   command, otherwise they are reset:
-
-   ``` bash
-   api-cli run module/metrics1/configure-module --data '{"prometheus_path": "", "grafana_path": "grafana", "mail_to": ["admin@example.com"], "mail_from": "", "mail_template": ""}'
-   ```
-
-5. Send a test alert and check that the mail arrives:
-
-   ``` bash
-   runagent -m metrics1 test-alert
-   ```
-
-### Add the firewall as a target {#ns8-add-target}
-
-On the leader node, create the file `nethsecurity.yml` with one entry for each
-firewall. The `firewall` label is a free name shown in the alerts:
-
-``` yaml
-- targets:
-    - 192.168.1.1:9274
-  labels:
-    firewall: fw1
-```
-
-With the HTTPS option, use the firewall name and add the path and scheme:
-
-``` yaml
-- targets:
-    - fw1.example.com:443
-  labels:
-    firewall: fw1
-    __scheme__: https
-    __metrics_path__: /telegraf-metrics
-```
-
-Load the file and notify the metrics module:
-
-``` bash
-redis-cli -x hset module/metrics1/metrics_targets nethsecurity < nethsecurity.yml
-redis-cli publish module/metrics1/event/metrics-target-changed '{}'
-```
-
-Prometheus reads the new targets by itself, without a restart. All the firewall
-metrics get the label `target_type="nethsecurity"`.
-
-To change the firewall list, edit the file and run the same two commands again.
-
-### Add the alert rules on NethServer 8 {#ns8-alert-rules}
-
-The metrics module does not include alert rules for the firewall. Each custom
-rule is stored in a separate file. For example, to get a mail when the firewall
-cannot be reached, create `fwdown.yml`:
-
-``` yaml
-alert: FirewallDown
-expr: up{target_type="nethsecurity"} == 0
-for: 5m
-labels:
-  severity: critical
-annotations:
-  summary: "Firewall {{ $labels.firewall }} cannot be reached"
-```
-
-And a rule for the WAN status, `fwwan.yml`:
-
-``` yaml
-alert: FirewallWanDown
-expr: mwan_interface_online{target_type="nethsecurity"} == 0
-for: 5m
-labels:
-  severity: critical
-annotations:
-  summary: "WAN {{ $labels.interface }} is down on firewall {{ $labels.firewall }}"
-```
-
-Load the rules and restart Prometheus:
-
-``` bash
-redis-cli -x hset module/metrics1/custom_alerts fwdown < fwdown.yml
-redis-cli -x hset module/metrics1/custom_alerts fwwan < fwwan.yml
-runagent -m metrics1 systemctl --user restart prometheus
-```
-
-The other rules listed in [Alert rules](#prometheus-alert-rules) can be added
-the same way: use `target_type="nethsecurity"` instead of `job="nethsecurity"`
-and set `severity: critical` on the rules that must send a mail. Each file must
-contain a single rule, without the `groups` and `rules` keys.
-
-### Grafana on NethServer 8 {#ns8-grafana}
-
-Grafana is disabled by default. To enable it, set the `grafana_path` value of
-the metrics module, as shown in [Enable mail notifications on NethServer
-8](#ns8-mail). Grafana is then available at `https://<leader-node>/grafana`,
-with the same credentials of the NethServer 8 cluster administrator. The firewall
-metrics are in the `Local Promethus` data source, filtered by
-`target_type="nethsecurity"`.
-
-### Remove the firewall from NethServer 8 {#ns8-remove}
-
-``` bash
-redis-cli hdel module/metrics1/metrics_targets nethsecurity
-redis-cli publish module/metrics1/event/metrics-target-changed '{}'
-redis-cli hdel module/metrics1/custom_alerts fwdown fwwan
-runagent -m metrics1 systemctl --user restart prometheus
-```

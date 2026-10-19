@@ -185,7 +185,7 @@ Avvisi disponibili:
 
 Se il firewall ha un [abbonamento](../system/subscription.md) Enterprise, tutti gli avvisi vengono inoltrati a `my.nethesis.it`, che invia le notifiche agli amministratori. Consultare il [manuale di my.nethesis.it](https://nethserver.github.io/my/it/docs/features/alerting) per configurare le notifiche.
 
-I firewall con abbonamento Community non inoltrano più gli avvisi e non ricevono notifiche via mail. Per ricevere gli avvisi via mail, consultare [Notifiche degli avvisi](./alert_notifications.md).
+I firewall con abbonamento Community non inoltrano gli avvisi e non ricevono notifiche via mail. Per ricevere gli avvisi via mail, consultare [Notifiche degli avvisi](./alert_notifications.md).
 
 ## Monitoraggio remoto {#remote_monitoring-section}
 
