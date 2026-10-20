@@ -16,10 +16,7 @@
   --np-ui-td: #374151;
 
   container-type: inline-size;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 [data-theme='dark'] .planner {
@@ -32,24 +29,44 @@
   --np-ui-td: #e5e7eb;
 }
 
+.part {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* the result is kept apart from the inputs */
+.output {
+  border-top: 1px solid var(--np-rule);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.partHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
 .planner h3 {
-  font-size: 0.95rem;
-  margin: 0 0 10px;
+  font-size: 1.1rem;
+  margin: 0 0 6px;
 }
 
 .sectionTitle {
-  font-size: 1.05rem;
-  margin: 24px 0 10px;
+  font-size: 1.25rem;
+  margin: 0;
 }
 
-.sectionTitle:first-child {
-  margin-top: 6px;
+.output > .sectionTitle:not(:first-child) {
+  margin-top: 24px;
 }
 
 .sites {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 16px;
 }
 
 .site,
@@ -59,7 +76,7 @@
   background: var(--np-paper);
   border: 1px solid var(--np-hair);
   border-radius: 8px;
-  padding: 14px 16px;
+  padding: 18px 20px;
 }
 
 .site,
@@ -74,14 +91,14 @@
 
 .site label {
   display: block;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .caption {
   display: block;
   font-size: 0.8rem;
   color: var(--np-muted);
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .planner input[type='text'] {
@@ -106,7 +123,7 @@
 }
 
 .problems {
-  margin: 8px 0 0;
+  margin: 10px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -122,12 +139,13 @@
 
 .bar {
   display: flex;
-  gap: 9px;
+  gap: 10px 14px;
   flex-wrap: wrap;
 }
 
 .action,
-.copy {
+.copy,
+.link {
   font: inherit;
   cursor: pointer;
   border: 1px solid var(--np-rule);
@@ -141,8 +159,17 @@
   padding: 6px 12px;
 }
 
+.link {
+  font-size: 0.85rem;
+  border: 0;
+  padding: 0;
+  color: var(--np-muted);
+  text-decoration: underline;
+}
+
 .action:hover,
-.copy:hover {
+.copy:hover,
+.link:hover {
   border-color: var(--ifm-color-primary);
   color: var(--ifm-color-primary);
 }
@@ -264,13 +291,13 @@
 }
 
 .stepName {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .where {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--np-muted);
   margin-bottom: 6px;
 }
@@ -356,7 +383,8 @@
   stroke-linejoin: round;
 }
 
-.copy:focus-visible {
+.copy:focus-visible,
+.link:focus-visible {
   outline: 2px solid var(--ifm-color-primary);
   outline-offset: 1px;
 }
@@ -367,19 +395,27 @@
   border-color: var(--ifm-color-success);
 }
 
-.check {
-  margin-top: 18px;
-}
-
-.check p,
-.notes p {
+.check p {
   margin: 6px 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .notes {
-  margin-top: 18px;
-  color: var(--np-muted);
+  color: var(--ifm-color-info-contrast-foreground);
+  background: var(--ifm-color-info-contrast-background);
+  border-left: 4px solid var(--ifm-color-info-dark);
+  border-radius: 6px;
+  padding: 14px 18px;
+}
+
+.notes ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.notes li {
+  font-size: 0.9rem;
+  margin: 4px 0;
 }
 
 /* too narrow for four columns: one label/value row per column */

@@ -327,24 +327,26 @@ export default function NetmapPlanner(): ReactNode {
         </div>
         <div className={styles.notes}>
           <div className={styles.stepName}>{translate({id: 'netmapPlanner.notes.title', message: 'Good to know'})}</div>
-          <p>
-            {translate({
-              id: 'netmapPlanner.notes.rules',
-              message: "Firewall rules between the two sites use the other site's mapped network.",
-            })}
-          </p>
-          <p>
-            {translate({
-              id: 'netmapPlanner.notes.unused',
-              message: 'The mapped networks must not exist at either site or in any other VPN.',
-            })}
-          </p>
-          <p>
-            {translate({
-              id: 'netmapPlanner.notes.dns',
-              message: "A DNS name that resolves to a host's real IP at the other site won't work. Use the mapped address instead.",
-            })}
-          </p>
+          <ul>
+            <li>
+              {translate({
+                id: 'netmapPlanner.notes.rules',
+                message: "Firewall rules between the two sites use the other site's mapped network.",
+              })}
+            </li>
+            <li>
+              {translate({
+                id: 'netmapPlanner.notes.unused',
+                message: 'The mapped networks must not exist at either site or in any other VPN.',
+              })}
+            </li>
+            <li>
+              {translate({
+                id: 'netmapPlanner.notes.dns',
+                message: "A DNS name that resolves to a host's real IP at the other site won't work. Use the mapped address instead.",
+              })}
+            </li>
+          </ul>
         </div>
       </>
     );
@@ -352,41 +354,46 @@ export default function NetmapPlanner(): ReactNode {
 
   return (
     <div className={styles.planner}>
-      <div>
-        <div className={styles.sites}>
-          <div className={styles.site}>
-            <h3>{siteA}</h3>
-            {input('a_real', realLabel, '192.168.1.0/24')}
-            {input('a_map', mapLabel, '10.1.1.0/24')}
+      <section className={styles.part}>
+        <div className={styles.partHead}>
+          <h2 className={styles.sectionTitle}>{translate({id: 'netmapPlanner.networks.title', message: 'Networks'})}</h2>
+          <button type="button" className={styles.link} onClick={() => setForm(EXAMPLE)}>
+            {translate({id: 'netmapPlanner.action.example', message: 'Reload the example'})}
+          </button>
+        </div>
+        <div>
+          <div className={styles.sites}>
+            <div className={styles.site}>
+              <h3>{siteA}</h3>
+              {input('a_real', realLabel, '192.168.1.0/24')}
+              {input('a_map', mapLabel, '10.1.1.0/24')}
+            </div>
+            <div className={clsx(styles.site, styles.siteB)}>
+              <h3>{siteB}</h3>
+              {input('b_real', realLabel, '192.168.1.0/24')}
+              {input('b_map', mapLabel, '10.2.2.0/24')}
+            </div>
           </div>
-          <div className={clsx(styles.site, styles.siteB)}>
-            <h3>{siteB}</h3>
-            {input('b_real', realLabel, '192.168.1.0/24')}
-            {input('b_map', mapLabel, '10.2.2.0/24')}
+          {/* live region stays mounted so screen readers announce new problems */}
+          <div aria-live="polite">
+            {problems.length > 0 && (
+              <ul className={styles.problems}>
+                {problems.map((p) => (
+                  <li key={p.text} id={p.field && `${id}-${p.field}`}>
+                    {p.text}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
-        {/* live region stays mounted so screen readers announce new problems */}
-        <div aria-live="polite">
-          {problems.length > 0 && (
-            <ul className={styles.problems}>
-              {problems.map((p) => (
-                <li key={p.text} id={p.field && `${id}-${p.field}`}>
-                  {p.text}
-                </li>
-              ))}
-            </ul>
-          )}
+        <div className={styles.bar}>
+          <button type="button" className={styles.action} onClick={() => setForm(suggest(form))}>
+            {translate({id: 'netmapPlanner.action.suggest', message: 'Suggest mapped networks'})}
+          </button>
         </div>
-      </div>
-      <div className={styles.bar}>
-        <button type="button" className={styles.action} onClick={() => setForm(suggest(form))}>
-          {translate({id: 'netmapPlanner.action.suggest', message: 'Suggest mapped networks'})}
-        </button>
-        <button type="button" className={styles.action} onClick={() => setForm(EXAMPLE)}>
-          {translate({id: 'netmapPlanner.action.example', message: 'Reload the example'})}
-        </button>
-      </div>
-      {config && <div>{config}</div>}
+      </section>
+      {config && <section className={clsx(styles.part, styles.output)}>{config}</section>}
     </div>
   );
 }

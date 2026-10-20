@@ -692,6 +692,9 @@
   "netmapPlanner.action.example": {
     "message": "Ricarica l'esempio"
   },
+  "netmapPlanner.networks.title": {
+    "message": "Reti"
+  },
   "netmapPlanner.config.title": {
     "message": "Configurazione"
   },
@@ -718,5 +721,158 @@
   },
   "netmapPlanner.path.dstRule": {
     "message": "Il firewall della sede B riscrive la destinazione"
+  },
+  "haPlanner.copy": {
+    "message": "Copia"
+  },
+  "haPlanner.copied": {
+    "message": "Copiato"
+  },
+  "haPlanner.field.name": {
+    "message": "Nome interfaccia"
+  },
+  "haPlanner.field.primary": {
+    "message": "IP nodo primario"
+  },
+  "haPlanner.field.secondary": {
+    "message": "IP nodo secondario"
+  },
+  "haPlanner.field.vip": {
+    "message": "IP virtuale"
+  },
+  "haPlanner.field.prefix": {
+    "message": "Prefisso"
+  },
+  "haPlanner.field.iface": {
+    "message": "Interfaccia del cluster"
+  },
+  "haPlanner.error.required": {
+    "message": "campo obbligatorio"
+  },
+  "haPlanner.error.prefix": {
+    "message": "il prefisso deve essere fra 8 e 30"
+  },
+  "haPlanner.error.ip": {
+    "message": "\"{ip}\" non è un indirizzo IPv4 valido"
+  },
+  "haPlanner.error.notSame": {
+    "message": "{ip} non è nella stessa rete del nodo primario ({net})"
+  },
+  "haPlanner.error.edge": {
+    "message": "{ip} è l'indirizzo di rete o il broadcast"
+  },
+  "haPlanner.error.same": {
+    "message": "I tre indirizzi devono essere diversi fra loro."
+  },
+  "haPlanner.error.lanName": {
+    "message": "solo l'interfaccia HA può chiamarsi lan"
+  },
+  "haPlanner.error.duplicate": {
+    "message": "\"{name}\" è già usato da un'altra interfaccia"
+  },
+  "haPlanner.error.overlap": {
+    "message": "La rete {net} si sovrappone a {name}."
+  },
+  "haPlanner.error.vipUnknown": {
+    "message": "\"{name}\" non è un'interfaccia del cluster, il comando verrà rifiutato. Per indirizzi aggiuntivi su una WAN, aggiungi degli alias alla WAN del nodo primario: vengono replicati automaticamente"
+  },
+  "haPlanner.error.vipBroken": {
+    "message": "\"{name}\" contiene errori, correggili prima"
+  },
+  "haPlanner.cmd.vipWarning": {
+    "message": "Attenzione, verifica questi IP virtuali prima di lanciarne i comandi: {list}"
+  },
+  "haPlanner.cmd.check": {
+    "message": "Verifica i requisiti, dal nodo primario"
+  },
+  "haPlanner.cmd.checkNote": {
+    "message": "prima: IP statici configurati su entrambi i nodi, cavi collegati su tutte le interfacce del cluster"
+  },
+  "haPlanner.cmd.passwordReplace": {
+    "message": "sostituisci {password} con la password di root del nodo secondario"
+  },
+  "haPlanner.cmd.passwordPrompt": {
+    "message": "la password di root del nodo secondario viene chiesta a schermo e non viene mostrata"
+  },
+  "haPlanner.cmd.init": {
+    "message": "Inizializza il cluster, sempre dal nodo primario"
+  },
+  "haPlanner.cmd.lans": {
+    "message": "Aggiungi le interfacce LAN aggiuntive"
+  },
+  "haPlanner.cmd.vips": {
+    "message": "Aggiungi gli IP virtuali extra"
+  },
+  "haPlanner.cmd.sync": {
+    "message": "Sincronizza subito il nodo secondario"
+  },
+  "haPlanner.cmd.status": {
+    "message": "Controlla il risultato"
+  },
+  "haPlanner.cmd.statusNote": {
+    "message": "Last Sync Status deve riportare Successful"
+  },
+  "haPlanner.action.remove": {
+    "message": "Rimuovi"
+  },
+  "haPlanner.ha.title": {
+    "message": "Interfaccia HA"
+  },
+  "haPlanner.ha.lead": {
+    "message": "Una sola per cluster, è dove viaggia il VRRP. Tre indirizzi nella stessa rete: i due nodi e l'IP virtuale che segue quello attivo."
+  },
+  "haPlanner.lans.title": {
+    "message": "Interfacce LAN aggiuntive"
+  },
+  "haPlanner.lans.lead": {
+    "message": "Facoltative. DMZ, guest o altre reti non WAN del cluster, con la stessa logica a tre indirizzi."
+  },
+  "haPlanner.action.addLan": {
+    "message": "Aggiungi un'interfaccia LAN"
+  },
+  "haPlanner.vips.title": {
+    "message": "IP virtuali extra"
+  },
+  "haPlanner.vips.lead": {
+    "message": "Facoltativi. Un IP virtuale in più su un'interfaccia già nel cluster. Sulle WAN non servono: i loro alias vengono replicati automaticamente."
+  },
+  "haPlanner.action.addVip": {
+    "message": "Aggiungi un IP virtuale"
+  },
+  "haPlanner.action.example": {
+    "message": "Ricarica l'esempio"
+  },
+  "haPlanner.configure.title": {
+    "message": "Configurazione"
+  },
+  "haPlanner.commands.title": {
+    "message": "Comandi"
+  },
+  "haPlanner.commands.nonInteractive": {
+    "message": "Comandi non interattivi"
+  },
+  "haPlanner.action.copyAll": {
+    "message": "Copia tutto"
+  },
+  "haPlanner.commands.where": {
+    "message": "Lanciali sul nodo primario, da console o via SSH."
+  },
+  "haPlanner.commands.empty": {
+    "message": "Compila l'interfaccia HA: i comandi compaiono qui."
+  },
+  "haPlanner.commands.blocked": {
+    "message": "Comandi non generati: correggi prima gli errori qui sopra."
+  },
+  "haPlanner.notes.title": {
+    "message": "Dopo l'inizializzazione"
+  },
+  "haPlanner.notes.wait": {
+    "message": "Aspetta almeno 10 minuti prima di provare un failover: la configurazione si sincronizza a quell'intervallo."
+  },
+  "haPlanner.notes.wan": {
+    "message": "Configura le interfacce WAN solo sul nodo primario, dall'interfaccia web: vengono replicate automaticamente."
+  },
+  "haPlanner.notes.clients": {
+    "message": "I client devono usare l'IP virtuale come gateway e DNS, mai l'indirizzo di un singolo nodo."
   }
 }
