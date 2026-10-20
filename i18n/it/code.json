@@ -603,10 +603,10 @@
     "message": "usa l'indirizzo di rete: {n}"
   },
   "netmapPlanner.error.size": {
-    "message": "Ogni rete tradotta deve avere lo stesso prefisso della sua rete reale."
+    "message": "Ogni rete mappata deve avere lo stesso prefisso della sua rete reale."
   },
   "netmapPlanner.error.overlap": {
-    "message": "Le reti tradotte non devono sovrapporsi tra loro né a una delle reti reali."
+    "message": "Le reti mappate non devono sovrapporsi tra loro né a una delle reti reali."
   },
   "netmapPlanner.copied": {
     "message": "Copiato"
@@ -615,10 +615,10 @@
     "message": "Copia"
   },
   "netmapPlanner.step.tunnel": {
-    "message": "1 · Tunnel VPN"
+    "message": "1. Tunnel VPN"
   },
   "netmapPlanner.step.tunnelWhere": {
-    "message": "Usa le reti tradotte, mai quelle reali."
+    "message": "Usa le reti mappate, mai quelle reali."
   },
   "netmapPlanner.tunnel.local": {
     "message": "Rete locale"
@@ -627,10 +627,10 @@
     "message": "Rete remota"
   },
   "netmapPlanner.step.source": {
-    "message": "2 · Firewall › NAT › Regole e NETMAP › Aggiungi NETMAP sorgente"
+    "message": "2. Firewall › NAT › Regole e NETMAP › Aggiungi NETMAP sorgente"
   },
   "netmapPlanner.step.destination": {
-    "message": "3 · Firewall › NAT › Regole e NETMAP › Aggiungi NETMAP destinazione"
+    "message": "3. Firewall › NAT › Regole e NETMAP › Aggiungi NETMAP destinazione"
   },
   "netmapPlanner.ui.sourceNetmap": {
     "message": "NETMAP sorgente"
@@ -660,10 +660,10 @@
     "message": "Rete reale (LAN)"
   },
   "netmapPlanner.input.mapped": {
-    "message": "Rete tradotta"
+    "message": "Rete mappata"
   },
   "netmapPlanner.check.title": {
-    "message": "Verifica, con due host di esempio"
+    "message": "Verifica con due host di esempio"
   },
   "netmapPlanner.check.ab": {
     "message": "Da {ha} (sede A), per raggiungere {hb} (sede B):"
@@ -672,22 +672,22 @@
     "message": "Da {hb} (sede B), per raggiungere {ha} (sede A):"
   },
   "netmapPlanner.check.seenAs": {
-    "message": "Sull'altro lato la connessione arriva da {x}: è l'indirizzo da usare in regole firewall e log."
+    "message": "La sede B vede la connessione arrivare da {x}. Usa questo indirizzo nelle regole firewall e cercalo nei log."
   },
   "netmapPlanner.notes.title": {
     "message": "Da sapere"
   },
   "netmapPlanner.notes.rules": {
-    "message": "Le regole firewall tra le due sedi si scrivono con la rete tradotta dell'altra sede."
+    "message": "Le regole firewall tra le due sedi si scrivono con la rete mappata dell'altra sede."
   },
   "netmapPlanner.notes.unused": {
-    "message": "Le reti tradotte non devono esistere in nessuna delle due sedi né in altre VPN."
+    "message": "Le reti mappate non devono esistere in nessuna delle due sedi né in altre VPN."
   },
   "netmapPlanner.notes.dns": {
-    "message": "Se un nome DNS dell'altra sede risolve all'IP reale, non funziona: va usato l'indirizzo della rete tradotta."
+    "message": "Un nome DNS che risolve all'IP reale di un host dell'altra sede non funziona. Usa invece l'indirizzo mappato."
   },
   "netmapPlanner.action.suggest": {
-    "message": "Proponi le reti tradotte"
+    "message": "Proponi le reti mappate"
   },
   "netmapPlanner.action.example": {
     "message": "Ricarica l'esempio"

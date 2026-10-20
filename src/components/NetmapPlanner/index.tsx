@@ -184,7 +184,7 @@ function FirewallCard({site, siteB, mine, theirs}: {site: string; siteB: boolean
     <div className={clsx(styles.firewall, siteB && styles.firewallB)}>
       <h3>{site}</h3>
       <Step
-        title={translate({id: 'netmapPlanner.step.tunnel', message: '1 · VPN tunnel'})}
+        title={translate({id: 'netmapPlanner.step.tunnel', message: '1. VPN tunnel'})}
         where={translate({id: 'netmapPlanner.step.tunnelWhere', message: 'Use the mapped networks, never the real ones.'})}>
         <UiTable
           columns={[
@@ -193,7 +193,7 @@ function FirewallCard({site, siteB, mine, theirs}: {site: string; siteB: boolean
           ]}
         />
       </Step>
-      <Step title={translate({id: 'netmapPlanner.step.source', message: '2 · Firewall › NAT › Rules and NETMAP › Add source NETMAP'})}>
+      <Step title={translate({id: 'netmapPlanner.step.source', message: '2. Firewall › NAT › Rules and NETMAP › Add source NETMAP'})}>
         <UiTable
           tab={translate({id: 'netmapPlanner.ui.sourceNetmap', message: 'Source NETMAP'})}
           columns={[
@@ -205,7 +205,7 @@ function FirewallCard({site, siteB, mine, theirs}: {site: string; siteB: boolean
         />
       </Step>
       <Step
-        title={translate({id: 'netmapPlanner.step.destination', message: '3 · Firewall › NAT › Rules and NETMAP › Add destination NETMAP'})}>
+        title={translate({id: 'netmapPlanner.step.destination', message: '3. Firewall › NAT › Rules and NETMAP › Add destination NETMAP'})}>
         <UiTable
           tab={translate({id: 'netmapPlanner.ui.destinationNetmap', message: 'Destination NETMAP'})}
           columns={[
@@ -244,10 +244,10 @@ export default function NetmapPlanner(): ReactNode {
     problems.push({text: label + ': ' + error, field: k});
     return null;
   };
-  const aReal = check('a_real', siteA + ' · ' + realLabel);
-  const aMap = check('a_map', siteA + ' · ' + mapLabel);
-  const bReal = check('b_real', siteB + ' · ' + realLabel);
-  const bMap = check('b_map', siteB + ' · ' + mapLabel);
+  const aReal = check('a_real', siteA + ' - ' +realLabel);
+  const aMap = check('a_map', siteA + ' - ' +mapLabel);
+  const bReal = check('b_real', siteB + ' - ' +realLabel);
+  const bMap = check('b_map', siteB + ' - ' +mapLabel);
   if ((aReal && aMap && aReal.p !== aMap.p) || (bReal && bMap && bReal.p !== bMap.p)) {
     problems.push({
       text: translate({id: 'netmapPlanner.error.size', message: 'Each mapped network must have the same prefix as its real network.'}),
@@ -306,7 +306,7 @@ export default function NetmapPlanner(): ReactNode {
           <FirewallCard site={siteB} siteB mine={[bReal, bMap]} theirs={aMap} />
         </div>
         <div className={styles.check}>
-          <h3>{translate({id: 'netmapPlanner.check.title', message: 'Test, with two example hosts'})}</h3>
+          <h3>{translate({id: 'netmapPlanner.check.title', message: 'Test with two example hosts'})}</h3>
           <p>
             {translate({id: 'netmapPlanner.check.ab', message: 'From {ha} (site A), to reach {hb} (site B):'}, hosts)}{' '}
             <code>ping {longToIp(bMap.base + hB)}</code>
@@ -319,7 +319,7 @@ export default function NetmapPlanner(): ReactNode {
             {translate(
               {
                 id: 'netmapPlanner.check.seenAs',
-                message: 'On the other side the connection comes from {x}: use that address in firewall rules and logs.',
+                message: 'Site B sees the connection coming from {x}. Use that address in firewall rules and look for it in the logs.',
               },
               {x: longToIp(aMap.base + hA)},
             )}
@@ -342,7 +342,7 @@ export default function NetmapPlanner(): ReactNode {
           <p>
             {translate({
               id: 'netmapPlanner.notes.dns',
-              message: 'If a DNS name of the other site resolves to its real IP it will not work: use the mapped address.',
+              message: "A DNS name that resolves to a host's real IP at the other site won't work. Use the mapped address instead.",
             })}
           </p>
         </div>
