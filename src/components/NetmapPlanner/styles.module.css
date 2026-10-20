@@ -1,0 +1,443 @@
+.planner {
+  --np-paper: var(--ifm-background-surface-color);
+  --np-muted: var(--ifm-color-emphasis-700);
+  --np-rule: var(--ifm-color-emphasis-300);
+  --np-hair: var(--ifm-color-emphasis-200);
+  --np-wash: var(--ifm-color-emphasis-100);
+  /* site identity colors, validated for CVD separation and 3:1 contrast in both themes */
+  --np-a: #0891b2;
+  --np-b: #eb6834;
+  /* NethSecurity table colors (Tailwind gray/indigo) */
+  --np-ui-tab: #a5b4fc;
+  --np-ui-head: #f3f4f6;
+  --np-ui-body: #ffffff;
+  --np-ui-border: #d1d5db;
+  --np-ui-th: #111827;
+  --np-ui-td: #374151;
+
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 1rem;
+}
+
+[data-theme='dark'] .planner {
+  --np-b: #d95926;
+  --np-ui-tab: #3730a3;
+  --np-ui-head: #1f2937;
+  --np-ui-body: #030712;
+  --np-ui-border: #4b5563;
+  --np-ui-th: #f9fafb;
+  --np-ui-td: #e5e7eb;
+}
+
+.planner h3 {
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+}
+
+.sectionTitle {
+  font-size: 1.05rem;
+  margin: 24px 0 10px;
+}
+
+.sectionTitle:first-child {
+  margin-top: 6px;
+}
+
+.sites {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.site,
+.firewall,
+.check,
+.packet {
+  background: var(--np-paper);
+  border: 1px solid var(--np-hair);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.site,
+.firewall {
+  border-top: 3px solid var(--np-a);
+}
+
+.siteB,
+.firewallB {
+  border-top-color: var(--np-b);
+}
+
+.site label {
+  display: block;
+  margin-top: 8px;
+}
+
+.caption {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--np-muted);
+  margin-bottom: 3px;
+}
+
+.planner input[type='text'] {
+  width: 100%;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  color: var(--ifm-font-color-base);
+  background: var(--np-paper);
+  border: 1px solid var(--np-rule);
+  border-radius: 6px;
+  padding: 7px 9px;
+}
+
+.planner input[type='text']:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: -1px;
+  border-color: transparent;
+}
+
+.planner input[aria-invalid='true'] {
+  border-color: var(--ifm-color-danger);
+}
+
+.problems {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.problems li {
+  font-size: 0.8rem;
+  color: var(--ifm-color-danger-contrast-foreground);
+  background: var(--ifm-color-danger-contrast-background);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-top: 4px;
+}
+
+.bar {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.action,
+.copy {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--np-rule);
+  background: transparent;
+  color: var(--ifm-font-color-base);
+}
+
+.action {
+  font-size: 0.85rem;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.action:hover,
+.copy:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+/* packet path: three packets joined by the two rules that rewrite them */
+.path {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 112px minmax(0, 1fr) 112px minmax(0, 1fr);
+}
+
+.packet {
+  padding: 12px 14px;
+}
+
+.zone {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.zone::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--np-rule);
+}
+
+.packetA .zone::before {
+  background: var(--np-a);
+}
+
+.packetB .zone::before {
+  background: var(--np-b);
+}
+
+.packetTunnel {
+  background: var(--np-wash);
+}
+
+.packetRow {
+  padding: 4px 0 4px 10px;
+  border-left: 3px solid transparent;
+}
+
+.packetRow + .packetRow {
+  margin-top: 4px;
+}
+
+.packetRow .caption {
+  margin-bottom: 1px;
+}
+
+.packetRow code {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.changedA {
+  border-left-color: var(--np-a);
+}
+
+.changedB {
+  border-left-color: var(--np-b);
+}
+
+.changedA code,
+.changedB code {
+  font-weight: 700;
+}
+
+.hop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  /* same top offset on both hops keeps the arrows on one line */
+  padding: 40px 8px 0;
+  font-size: 0.75rem;
+  color: var(--np-muted);
+  line-height: 1.3;
+}
+
+.hop code {
+  font-size: 0.72rem;
+  color: var(--ifm-font-color-base);
+}
+
+.arrow {
+  width: 100%;
+  height: 12px;
+  fill: none;
+  stroke: var(--np-muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.configs {
+  display: grid;
+  gap: 16px;
+}
+
+.firewall {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.firewall h3 {
+  margin: 0;
+}
+
+.stepName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.where {
+  font-size: 0.8rem;
+  color: var(--np-muted);
+  margin-bottom: 6px;
+}
+
+/* replica of the NethSecurity table: tab chip sitting on a bordered table */
+.uiTable {
+  margin-top: 8px;
+}
+
+.tab {
+  width: fit-content;
+  font-size: 0.85rem;
+  color: var(--np-ui-th);
+  background: var(--np-ui-tab);
+  border-radius: 6px 6px 0 0;
+  padding: 6px 8px;
+}
+
+.grid {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--np-ui-border);
+  border-radius: 8px;
+  background: var(--np-ui-body);
+  overflow: hidden;
+  font-size: 0.85rem;
+  table-layout: fixed;
+}
+
+.tab + .grid {
+  border-top-left-radius: 0;
+}
+
+.grid tr:nth-child(n) {
+  background: transparent;
+  border: 0;
+}
+
+.grid th,
+.grid td {
+  border: 0;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.grid th {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--np-ui-th);
+  background: var(--np-ui-head);
+  border-bottom: 1px solid var(--np-ui-border);
+}
+
+.grid td {
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--np-ui-td);
+  white-space: nowrap;
+}
+
+.grid td > span {
+  margin-right: 6px;
+}
+
+.copy {
+  display: inline-flex;
+  vertical-align: middle;
+  color: var(--np-muted);
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.copy svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.copy:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 1px;
+}
+
+.copied,
+.copied:hover {
+  color: var(--ifm-color-success);
+  border-color: var(--ifm-color-success);
+}
+
+.check {
+  margin-top: 18px;
+}
+
+.check p,
+.notes p {
+  margin: 6px 0;
+  font-size: 0.85rem;
+}
+
+.notes {
+  margin-top: 18px;
+  color: var(--np-muted);
+}
+
+/* too narrow for four columns: one label/value row per column */
+@container (max-width: 640px) {
+  .grid thead {
+    display: none;
+  }
+
+  .grid,
+  .grid tbody,
+  .grid tr {
+    display: block;
+  }
+
+  .grid td {
+    display: flex;
+    align-items: center;
+    padding: 7px 12px;
+  }
+
+  .grid td + td {
+    border-top: 1px solid var(--np-ui-border);
+  }
+
+  .grid td::before {
+    content: attr(data-label);
+    flex: 0 0 45%;
+    padding-right: 10px;
+    font-family: var(--ifm-font-family-base);
+    font-size: 0.8rem;
+    color: var(--np-muted);
+  }
+
+  .grid td > span {
+    flex: 1;
+  }
+}
+
+@container (max-width: 800px) {
+  .path {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+
+  .hop {
+    padding: 8px 0;
+  }
+
+  /* rotated box keeps its 48x12 footprint, the margin makes room for the vertical arrow */
+  .arrow {
+    width: 48px;
+    transform: rotate(90deg);
+    margin: 18px 0;
+  }
+}
+
+@container (max-width: 520px) {
+  .sites {
+    grid-template-columns: 1fr;
+  }
+}

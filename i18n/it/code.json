@@ -592,5 +592,131 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etichette",
     "description": "The title of the tag list page"
+  },
+  "netmapPlanner.error.required": {
+    "message": "campo obbligatorio"
+  },
+  "netmapPlanner.error.cidr": {
+    "message": "non è una rete valida: scrivila come 192.168.1.0/24"
+  },
+  "netmapPlanner.error.hostBits": {
+    "message": "usa l'indirizzo di rete: {n}"
+  },
+  "netmapPlanner.error.size": {
+    "message": "Ogni rete tradotta deve avere lo stesso prefisso della sua rete reale."
+  },
+  "netmapPlanner.error.overlap": {
+    "message": "Le reti tradotte non devono sovrapporsi tra loro né a una delle reti reali."
+  },
+  "netmapPlanner.copied": {
+    "message": "Copiato"
+  },
+  "netmapPlanner.copy": {
+    "message": "Copia"
+  },
+  "netmapPlanner.step.tunnel": {
+    "message": "1 · Tunnel VPN"
+  },
+  "netmapPlanner.step.tunnelWhere": {
+    "message": "Usa le reti tradotte, mai quelle reali."
+  },
+  "netmapPlanner.tunnel.local": {
+    "message": "Rete locale"
+  },
+  "netmapPlanner.tunnel.remote": {
+    "message": "Rete remota"
+  },
+  "netmapPlanner.step.source": {
+    "message": "2 · Firewall › NAT › Regole e NETMAP › Aggiungi NETMAP sorgente"
+  },
+  "netmapPlanner.step.destination": {
+    "message": "3 · Firewall › NAT › Regole e NETMAP › Aggiungi NETMAP destinazione"
+  },
+  "netmapPlanner.ui.sourceNetmap": {
+    "message": "NETMAP sorgente"
+  },
+  "netmapPlanner.ui.destinationNetmap": {
+    "message": "NETMAP destinazione"
+  },
+  "netmapPlanner.ui.name": {
+    "message": "Nome"
+  },
+  "netmapPlanner.ui.sourceNetwork": {
+    "message": "Rete sorgente"
+  },
+  "netmapPlanner.ui.destinationNetwork": {
+    "message": "Rete destinazione"
+  },
+  "netmapPlanner.ui.mappedNetwork": {
+    "message": "Rete mappata"
+  },
+  "netmapPlanner.siteA": {
+    "message": "Sede A"
+  },
+  "netmapPlanner.siteB": {
+    "message": "Sede B"
+  },
+  "netmapPlanner.input.real": {
+    "message": "Rete reale (LAN)"
+  },
+  "netmapPlanner.input.mapped": {
+    "message": "Rete tradotta"
+  },
+  "netmapPlanner.check.title": {
+    "message": "Verifica, con due host di esempio"
+  },
+  "netmapPlanner.check.ab": {
+    "message": "Da {ha} (sede A), per raggiungere {hb} (sede B):"
+  },
+  "netmapPlanner.check.ba": {
+    "message": "Da {hb} (sede B), per raggiungere {ha} (sede A):"
+  },
+  "netmapPlanner.check.seenAs": {
+    "message": "Sull'altro lato la connessione arriva da {x}: è l'indirizzo da usare in regole firewall e log."
+  },
+  "netmapPlanner.notes.title": {
+    "message": "Da sapere"
+  },
+  "netmapPlanner.notes.rules": {
+    "message": "Le regole firewall tra le due sedi si scrivono con la rete tradotta dell'altra sede."
+  },
+  "netmapPlanner.notes.unused": {
+    "message": "Le reti tradotte non devono esistere in nessuna delle due sedi né in altre VPN."
+  },
+  "netmapPlanner.notes.dns": {
+    "message": "Se un nome DNS dell'altra sede risolve all'IP reale, non funziona: va usato l'indirizzo della rete tradotta."
+  },
+  "netmapPlanner.action.suggest": {
+    "message": "Proponi le reti tradotte"
+  },
+  "netmapPlanner.action.example": {
+    "message": "Ricarica l'esempio"
+  },
+  "netmapPlanner.config.title": {
+    "message": "Configurazione"
+  },
+  "netmapPlanner.path.title": {
+    "message": "Come un pacchetto della sede A raggiunge la sede B"
+  },
+  "netmapPlanner.path.source": {
+    "message": "Origine"
+  },
+  "netmapPlanner.path.destination": {
+    "message": "Destinazione"
+  },
+  "netmapPlanner.path.lanA": {
+    "message": "Esce dalla sede A"
+  },
+  "netmapPlanner.path.tunnel": {
+    "message": "Nel tunnel VPN"
+  },
+  "netmapPlanner.path.lanB": {
+    "message": "Arriva alla sede B"
+  },
+  "netmapPlanner.path.srcRule": {
+    "message": "Il firewall della sede A riscrive l'origine"
+  },
+  "netmapPlanner.path.dstRule": {
+    "message": "Il firewall della sede B riscrive la destinazione"
   }
 }

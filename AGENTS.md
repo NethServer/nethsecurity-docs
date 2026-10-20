@@ -28,7 +28,7 @@ reports broken links and anchors.
 
 ## Architecture
 
-- The site is split into two manuals, each rendered as its own sidebar
+- The site is split into three manuals, each rendered as its own sidebar
   (see `sidebars.ts` and the navbar in `docusaurus.config.ts`):
   - `docs/administrator-manual/` — install, configure and manage NethSecurity.
     Chapters are grouped into subfolders (`about/`, `installation/`,
@@ -39,6 +39,10 @@ reports broken links and anchors.
   - `docs/tutorial/` — step-by-step guides. New tutorials are imported from the
     Nethesis helpdesk using the `freshdesk-to-tutorial` skill
     (`.agents/skills/freshdesk-to-tutorial/`).
+  - `docs/tools/` — interactive planners, one `.mdx` page per tool rendering a
+    React component from `src/components/` (e.g. `NetmapPlanner`). Component
+    strings go through `translate()`; their Italian text lives in
+    `i18n/it/code.json`. Wording follows the administrator manual.
 - Each manual root has an `index.md` with a `slug:` so the navbar/footer links
   resolve.
 - `docusaurus.config.ts` sets `markdown.format: 'detect'`, so `.md` files are
@@ -96,7 +100,7 @@ locales structurally parallel.
 - **Links** — every internal and external link must resolve. `yarn build` fails
   on broken links and anchors; run it before submitting.
 - **Index parity** — each manual-root `index.md`
-  (`administrator-manual/index.md`, `tutorial/index.md`) must list its sections
+  (`administrator-manual/index.md`, `tutorial/index.md`, `tools/index.md`) must list its sections
   in the same order the sidebar renders them (`_category_.json` `position` and
   per-page `sidebar_position`), in both locales.
 - **Tutorial order** — tutorials follow this canonical sequence in both

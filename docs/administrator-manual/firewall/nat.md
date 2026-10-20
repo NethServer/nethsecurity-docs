@@ -94,6 +94,8 @@ If you need to allow requests starting from network B toward network A you must 
 
 :::
 
+To plan the networks and get the rules for both firewalls, use the [Netmap planner](../../tools/netmap_planner.mdx).
+
 ### Source netmap
 
 The \"source netmap\" allows us to determine how the source should change when traffic is directed towards a specific destination. E.g., destination network 10.2.2.0/24, source network: 192.168.0.0/24, natted source network: 10.1.1.0/24.
