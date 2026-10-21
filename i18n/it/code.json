@@ -592,5 +592,287 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etichette",
     "description": "The title of the tag list page"
+  },
+  "netmapPlanner.error.required": {
+    "message": "campo obbligatorio"
+  },
+  "netmapPlanner.error.cidr": {
+    "message": "non è una rete valida: scrivila come 192.168.1.0/24"
+  },
+  "netmapPlanner.error.hostBits": {
+    "message": "usa l'indirizzo di rete: {n}"
+  },
+  "netmapPlanner.error.size": {
+    "message": "Ogni rete mappata deve avere lo stesso prefisso della sua rete reale."
+  },
+  "netmapPlanner.error.overlap": {
+    "message": "Le reti mappate non devono sovrapporsi tra loro né a una delle reti reali."
+  },
+  "netmapPlanner.copied": {
+    "message": "Copiato"
+  },
+  "netmapPlanner.copy": {
+    "message": "Copia"
+  },
+  "netmapPlanner.step.tunnel": {
+    "message": "1. Tunnel VPN"
+  },
+  "netmapPlanner.step.tunnelWhere": {
+    "message": "Usa le reti mappate, mai quelle reali."
+  },
+  "netmapPlanner.tunnel.local": {
+    "message": "Rete locale"
+  },
+  "netmapPlanner.tunnel.remote": {
+    "message": "Rete remota"
+  },
+  "netmapPlanner.step.source": {
+    "message": "2. Firewall › NAT › Regole e NETMAP › Aggiungi NETMAP sorgente"
+  },
+  "netmapPlanner.step.destination": {
+    "message": "3. Firewall › NAT › Regole e NETMAP › Aggiungi NETMAP destinazione"
+  },
+  "netmapPlanner.ui.sourceNetmap": {
+    "message": "NETMAP sorgente"
+  },
+  "netmapPlanner.ui.destinationNetmap": {
+    "message": "NETMAP destinazione"
+  },
+  "netmapPlanner.ui.name": {
+    "message": "Nome"
+  },
+  "netmapPlanner.ui.sourceNetwork": {
+    "message": "Rete sorgente"
+  },
+  "netmapPlanner.ui.destinationNetwork": {
+    "message": "Rete destinazione"
+  },
+  "netmapPlanner.ui.mappedNetwork": {
+    "message": "Rete mappata"
+  },
+  "netmapPlanner.siteA": {
+    "message": "Sede A"
+  },
+  "netmapPlanner.siteB": {
+    "message": "Sede B"
+  },
+  "netmapPlanner.input.real": {
+    "message": "Rete reale (LAN)"
+  },
+  "netmapPlanner.input.mapped": {
+    "message": "Rete mappata"
+  },
+  "netmapPlanner.check.title": {
+    "message": "Verifica con due host di esempio"
+  },
+  "netmapPlanner.check.ab": {
+    "message": "Da {ha} (sede A), per raggiungere {hb} (sede B):"
+  },
+  "netmapPlanner.check.ba": {
+    "message": "Da {hb} (sede B), per raggiungere {ha} (sede A):"
+  },
+  "netmapPlanner.check.seenAs": {
+    "message": "La sede B vede la connessione arrivare da {x}. Usa questo indirizzo nelle regole firewall e cercalo nei log."
+  },
+  "netmapPlanner.notes.title": {
+    "message": "Da sapere"
+  },
+  "netmapPlanner.notes.rules": {
+    "message": "Le regole firewall tra le due sedi si scrivono con la rete mappata dell'altra sede."
+  },
+  "netmapPlanner.notes.unused": {
+    "message": "Le reti mappate non devono esistere in nessuna delle due sedi né in altre VPN."
+  },
+  "netmapPlanner.notes.dns": {
+    "message": "Un nome DNS che risolve all'IP reale di un host dell'altra sede non funziona. Usa invece l'indirizzo mappato."
+  },
+  "netmapPlanner.action.suggest": {
+    "message": "Proponi le reti mappate"
+  },
+  "netmapPlanner.action.example": {
+    "message": "Ricarica l'esempio"
+  },
+  "netmapPlanner.networks.title": {
+    "message": "Reti"
+  },
+  "netmapPlanner.config.title": {
+    "message": "Configurazione"
+  },
+  "netmapPlanner.path.title": {
+    "message": "Come un pacchetto della sede A raggiunge la sede B"
+  },
+  "netmapPlanner.path.source": {
+    "message": "Origine"
+  },
+  "netmapPlanner.path.destination": {
+    "message": "Destinazione"
+  },
+  "netmapPlanner.path.lanA": {
+    "message": "Esce dalla sede A"
+  },
+  "netmapPlanner.path.tunnel": {
+    "message": "Nel tunnel VPN"
+  },
+  "netmapPlanner.path.lanB": {
+    "message": "Arriva alla sede B"
+  },
+  "netmapPlanner.path.srcRule": {
+    "message": "Il firewall della sede A riscrive l'origine"
+  },
+  "netmapPlanner.path.dstRule": {
+    "message": "Il firewall della sede B riscrive la destinazione"
+  },
+  "haPlanner.copy": {
+    "message": "Copia"
+  },
+  "haPlanner.copied": {
+    "message": "Copiato"
+  },
+  "haPlanner.field.name": {
+    "message": "Nome interfaccia"
+  },
+  "haPlanner.field.primary": {
+    "message": "IP nodo primario"
+  },
+  "haPlanner.field.secondary": {
+    "message": "IP nodo secondario"
+  },
+  "haPlanner.field.vip": {
+    "message": "IP virtuale"
+  },
+  "haPlanner.field.prefix": {
+    "message": "Prefisso"
+  },
+  "haPlanner.field.iface": {
+    "message": "Interfaccia del cluster"
+  },
+  "haPlanner.error.required": {
+    "message": "campo obbligatorio"
+  },
+  "haPlanner.error.prefix": {
+    "message": "il prefisso deve essere fra 8 e 30"
+  },
+  "haPlanner.error.ip": {
+    "message": "\"{ip}\" non è un indirizzo IPv4 valido"
+  },
+  "haPlanner.error.notSame": {
+    "message": "{ip} non è nella stessa rete del nodo primario ({net})"
+  },
+  "haPlanner.error.edge": {
+    "message": "{ip} è l'indirizzo di rete o il broadcast"
+  },
+  "haPlanner.error.same": {
+    "message": "I tre indirizzi devono essere diversi fra loro."
+  },
+  "haPlanner.error.lanName": {
+    "message": "solo l'interfaccia HA può chiamarsi lan"
+  },
+  "haPlanner.error.duplicate": {
+    "message": "\"{name}\" è già usato da un'altra interfaccia"
+  },
+  "haPlanner.error.overlap": {
+    "message": "La rete {net} si sovrappone a {name}."
+  },
+  "haPlanner.error.vipUnknown": {
+    "message": "\"{name}\" non è un'interfaccia del cluster, il comando verrà rifiutato. Per indirizzi aggiuntivi su una WAN, aggiungi degli alias alla WAN del nodo primario: vengono replicati automaticamente"
+  },
+  "haPlanner.error.vipBroken": {
+    "message": "\"{name}\" contiene errori, correggili prima"
+  },
+  "haPlanner.cmd.vipWarning": {
+    "message": "Attenzione, verifica questi IP virtuali prima di lanciarne i comandi: {list}"
+  },
+  "haPlanner.cmd.check": {
+    "message": "Verifica i requisiti, dal nodo primario"
+  },
+  "haPlanner.cmd.checkNote": {
+    "message": "prima: IP statici configurati su entrambi i nodi, cavi collegati su tutte le interfacce del cluster"
+  },
+  "haPlanner.cmd.passwordReplace": {
+    "message": "sostituisci {password} con la password di root del nodo secondario"
+  },
+  "haPlanner.cmd.passwordPrompt": {
+    "message": "la password di root del nodo secondario viene chiesta a schermo e non viene mostrata"
+  },
+  "haPlanner.cmd.init": {
+    "message": "Inizializza il cluster, sempre dal nodo primario"
+  },
+  "haPlanner.cmd.lans": {
+    "message": "Aggiungi le interfacce LAN aggiuntive"
+  },
+  "haPlanner.cmd.vips": {
+    "message": "Aggiungi gli IP virtuali extra"
+  },
+  "haPlanner.cmd.sync": {
+    "message": "Sincronizza subito il nodo secondario"
+  },
+  "haPlanner.cmd.status": {
+    "message": "Controlla il risultato"
+  },
+  "haPlanner.cmd.statusNote": {
+    "message": "Last Sync Status deve riportare Successful"
+  },
+  "haPlanner.action.remove": {
+    "message": "Rimuovi"
+  },
+  "haPlanner.ha.title": {
+    "message": "Interfaccia HA"
+  },
+  "haPlanner.ha.lead": {
+    "message": "Una sola per cluster, è dove viaggia il VRRP. Tre indirizzi nella stessa rete: i due nodi e l'IP virtuale che segue quello attivo."
+  },
+  "haPlanner.lans.title": {
+    "message": "Interfacce LAN aggiuntive"
+  },
+  "haPlanner.lans.lead": {
+    "message": "Facoltative. DMZ, guest o altre reti non WAN del cluster, con la stessa logica a tre indirizzi."
+  },
+  "haPlanner.action.addLan": {
+    "message": "Aggiungi un'interfaccia LAN"
+  },
+  "haPlanner.vips.title": {
+    "message": "IP virtuali extra"
+  },
+  "haPlanner.vips.lead": {
+    "message": "Facoltativi. Un IP virtuale in più su un'interfaccia già nel cluster. Sulle WAN non servono: i loro alias vengono replicati automaticamente."
+  },
+  "haPlanner.action.addVip": {
+    "message": "Aggiungi un IP virtuale"
+  },
+  "haPlanner.action.example": {
+    "message": "Ricarica l'esempio"
+  },
+  "haPlanner.configure.title": {
+    "message": "Configurazione"
+  },
+  "haPlanner.commands.title": {
+    "message": "Comandi"
+  },
+  "haPlanner.commands.nonInteractive": {
+    "message": "Comandi non interattivi"
+  },
+  "haPlanner.action.copyAll": {
+    "message": "Copia tutto"
+  },
+  "haPlanner.commands.where": {
+    "message": "Lanciali sul nodo primario, da console o via SSH."
+  },
+  "haPlanner.commands.empty": {
+    "message": "Compila l'interfaccia HA: i comandi compaiono qui."
+  },
+  "haPlanner.commands.blocked": {
+    "message": "Comandi non generati: correggi prima gli errori qui sopra."
+  },
+  "haPlanner.notes.title": {
+    "message": "Dopo l'inizializzazione"
+  },
+  "haPlanner.notes.wait": {
+    "message": "Aspetta almeno 10 minuti prima di provare un failover: la configurazione si sincronizza a quell'intervallo."
+  },
+  "haPlanner.notes.wan": {
+    "message": "Configura le interfacce WAN solo sul nodo primario, dall'interfaccia web: vengono replicate automaticamente."
+  },
+  "haPlanner.notes.clients": {
+    "message": "I client devono usare l'IP virtuale come gateway e DNS, mai l'indirizzo di un singolo nodo."
   }
 }

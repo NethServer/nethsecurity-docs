@@ -99,6 +99,12 @@ const config: Config = {
           label: 'Tutorial',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'toolsSidebar',
+          position: 'left',
+          label: 'Tools',
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -122,6 +128,10 @@ const config: Config = {
             {
               label: 'Tutorial',
               to: '/docs/tutorial',
+            },
+            {
+              label: 'Tools',
+              to: '/docs/tools',
             },
             {
               label: 'Developer manual',

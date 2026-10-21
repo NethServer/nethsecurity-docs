@@ -1,0 +1,341 @@
+.planner {
+  --hp-paper: var(--ifm-background-surface-color);
+  --hp-muted: var(--ifm-color-emphasis-700);
+  --hp-rule: var(--ifm-color-emphasis-300);
+  --hp-hair: var(--ifm-color-emphasis-200);
+  --hp-accent: #0891b2;
+
+  container-type: inline-size;
+  margin-top: 1.5rem;
+}
+
+.part {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* the commands are the result, kept apart from the inputs */
+.output {
+  gap: 16px;
+  border-top: 1px solid var(--hp-rule);
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.planner h3 {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+}
+
+.planner h4 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.part > .sectionTitle {
+  margin-bottom: -16px;
+}
+
+.lead {
+  font-size: 0.9rem;
+  color: var(--hp-muted);
+  margin: 0 0 14px;
+}
+
+.card {
+  background: var(--hp-paper);
+  border: 1px solid var(--hp-hair);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+/* the HA interface is the only mandatory block */
+.haCard {
+  border-top: 3px solid var(--hp-accent);
+}
+
+.haCard .cardHead h3 {
+  margin: 0;
+}
+
+/* the optional sections hang under the HA card */
+.optional {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-left: 2px solid var(--hp-hair);
+  margin-left: 4px;
+  padding-left: 20px;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.ruled {
+  border-bottom: 1px solid var(--hp-hair);
+  margin: -4px 0 14px;
+  padding-bottom: 10px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px 14px;
+}
+
+.caption {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--hp-muted);
+  margin-bottom: 4px;
+}
+
+.planner input[type='text'],
+.planner input[type='number'] {
+  width: 100%;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  color: var(--ifm-font-color-base);
+  background: var(--hp-paper);
+  border: 1px solid var(--hp-rule);
+  border-radius: 6px;
+  padding: 7px 9px;
+}
+
+.planner input[type='text']:focus,
+.planner input[type='number']:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: -1px;
+  border-color: transparent;
+}
+
+.planner input[aria-invalid='true'] {
+  border-color: var(--ifm-color-danger);
+}
+
+.problems {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.problems li {
+  font-size: 0.8rem;
+  color: var(--ifm-color-danger-contrast-foreground);
+  background: var(--ifm-color-danger-contrast-background);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-top: 4px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px 14px;
+  flex-wrap: wrap;
+}
+
+.action,
+.copy,
+.link,
+.remove {
+  font: inherit;
+  cursor: pointer;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+}
+
+.action,
+.copy,
+.remove {
+  border: 1px solid var(--hp-rule);
+}
+
+.action {
+  font-size: 0.85rem;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.action:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.remove {
+  font-size: 0.8rem;
+  color: var(--hp-muted);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.action:not(:disabled):hover,
+.copy:hover,
+.link:hover,
+.remove:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.link {
+  font-size: 0.85rem;
+  border: 0;
+  padding: 0;
+  color: var(--hp-muted);
+  text-decoration: underline;
+}
+
+.action:focus-visible,
+.copy:focus-visible,
+.link:focus-visible,
+.remove:focus-visible,
+.toggle input:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 1px;
+}
+
+.commandsHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px 24px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.where {
+  font-size: 0.9rem;
+  color: var(--hp-muted);
+  margin: 4px 0 0;
+}
+
+/* the copy-all text is exactly what the terminal shows, comments included */
+.terminal {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  background: var(--ifm-pre-background);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.comment {
+  color: var(--hp-muted);
+  padding: 2px 0;
+}
+
+.step {
+  color: var(--ifm-font-color-base);
+  font-weight: 600;
+  border-top: 1px solid var(--hp-rule);
+  margin-top: 14px;
+  padding-top: 14px;
+}
+
+.step:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.warn {
+  color: var(--ifm-color-danger);
+}
+
+.cmd {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+/* wrapped lines are indented so they read as one command */
+.cmd code {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: inherit;
+  padding: 0 0 0 2ch;
+  text-indent: -2ch;
+  border: 0;
+  background: none;
+}
+
+.cmd mark {
+  color: inherit;
+  background: none;
+  font-style: italic;
+  text-decoration: underline dotted var(--hp-accent);
+  text-underline-offset: 3px;
+}
+
+.copy {
+  display: inline-flex;
+  flex: none;
+  color: var(--hp-muted);
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.copy svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.copied,
+.copied:hover {
+  color: var(--ifm-color-success);
+  border-color: var(--ifm-color-success);
+}
+
+.stepName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.notes {
+  color: var(--ifm-color-warning-contrast-foreground);
+  background: var(--ifm-color-warning-contrast-background);
+  border-left: 4px solid var(--ifm-color-warning-dark);
+  border-radius: 6px;
+  padding: 14px 18px;
+}
+
+.notes ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.notes li {
+  font-size: 0.9rem;
+  margin: 4px 0;
+}

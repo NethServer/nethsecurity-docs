@@ -94,6 +94,8 @@ Se hai bisogno di consentire richieste a partire dalla rete B verso la rete A de
 
 :::
 
+Per pianificare le reti e ottenere le regole per entrambi i firewall, usa il [Pianificatore Netmap](../../tools/netmap_planner.mdx).
+
 ### Source netmap
 
 Il "source netmap" ci consente di determinare come l'origine dovrebbe cambiare quando il traffico è diretto verso una destinazione specifica. Ad es., rete di destinazione 10.2.2.0/24, rete di origine: 192.168.0.0/24, rete di origine natted: 10.1.1.0/24.

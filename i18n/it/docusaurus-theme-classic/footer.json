@@ -19,6 +19,10 @@
     "message": "Tutorial",
     "description": "The label of footer link with label=Tutorial linking to /docs/tutorial"
   },
+  "link.item.label.Tools": {
+    "message": "Strumenti",
+    "description": "The label of footer link with label=Tools linking to /docs/tools"
+  },
   "link.item.label.Developer manual": {
     "message": "Manuale dello sviluppatore",
     "description": "The label of footer link with label=Developer manual linking to https://nethserver.github.io/nethsecurity/"

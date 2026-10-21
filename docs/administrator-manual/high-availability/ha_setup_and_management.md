@@ -17,6 +17,8 @@ Before setting up HA, ensure the following requirements are met:
 
 The HA setup process involves several steps. If you just want to see the commands, you can skip to the [Configuration example](#configuration-example) section, but it\'s recommended to read the entire section to understand the process and requirements.
 
+To get the commands for your own addresses, use the [High availability planner](../../tools/ha_planner.mdx).
+
 The setup process is as follows:
 
 1.  **Install the same NethSecurity version** on two identical machines (physical or virtual). See [Installation](../installation/install.mdx) for detailed installation instructions.

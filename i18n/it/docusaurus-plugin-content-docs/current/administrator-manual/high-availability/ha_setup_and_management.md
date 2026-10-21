@@ -17,6 +17,8 @@ Prima di configurare HA, assicurati che i seguenti requisiti siano soddisfatti:
 
 Il processo di configurazione HA prevede diversi passaggi. Se desideri solo visualizzare i comandi, puoi saltare alla sezione [Esempio di configurazione](#configuration-example), ma è consigliato leggere l'intera sezione per comprendere il processo e i requisiti.
 
+Per ottenere i comandi con i tuoi indirizzi, usa il [Pianificatore alta affidabilità](../../tools/ha_planner.mdx).
+
 Il processo di configurazione è il seguente:
 
 1.  **Installa la stessa versione di NethSecurity** su due macchine identiche (fisiche o virtuali). Vedi [Installazione](../installation/install.mdx) per istruzioni dettagliate sull'installazione.

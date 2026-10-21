@@ -11,6 +11,10 @@
     "message": "Tutorial",
     "description": "Navbar item with label Tutorial"
   },
+  "item.label.Tools": {
+    "message": "Strumenti",
+    "description": "Navbar item with label Tools"
+  },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
