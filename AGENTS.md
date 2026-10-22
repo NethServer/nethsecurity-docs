@@ -54,9 +54,8 @@ reports broken links and anchors.
   (`installation/download.mdx`, `installation/install.mdx`) and the
   `DownloadTable` component consume this data; `docusaurus.config.ts` reads the
   version into `customFields.productVersion`.
-- **Search:** the kapa.ai AI widget is injected via the `src/kapa.js` client
-  module. Algolia DocSearch is wired in `themeConfig.algolia` with placeholder
-  keys — fill them in once provisioned.
+- **Search:** Algolia DocSearch is wired in `themeConfig.algolia` with
+  placeholder keys — fill them in once provisioned.
 - **Branding:** logo is `static/img/logo.svg` (the NethSecurity wordmark);
   favicon is `static/img/favicon.png`. The brand accent is cyan (`#0891b2`),
   set in `src/css/custom.css`.

@@ -58,9 +58,6 @@ const config: Config = {
     },
   },
 
-  // Inject the kapa.ai AI assistant widget on every page.
-  clientModules: ['./src/kapa.js'],
-
   presets: [
     [
       'classic',
