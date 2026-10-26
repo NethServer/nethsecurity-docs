@@ -232,7 +232,7 @@ Questo è utile per i servizi che richiedono più indirizzi IP sulla stessa inte
 :::note
 
 Gli IP virtuali possono essere aggiunti solo alle interfacce LAN del cluster. Gli indirizzi pubblici aggiuntivi su una WAN si configurano come alias sul nodo primario e vengono replicati automaticamente, vedere
-[Interfacce WAN](#interfacce-wan).
+[Interfacce WAN](#wan-interfaces).
 
 :::
 
