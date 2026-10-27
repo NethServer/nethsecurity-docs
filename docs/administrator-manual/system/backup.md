@@ -27,7 +27,7 @@ To disable encrypted backups, click on the **Remove passphrase** button and **Do
 
 ## Restore {#automatic_backup-section}
 
-The backup can be restored from the the `Restore` tab inside the page inside the `Backup & Restore` page The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the machine has a valid Enterprise subscription, the web interface will additionally present a list of backups available from the remote server. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
+The backup can be restored from the the `Restore` tab inside the page inside the `Backup & Restore` page. The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
 
 After the restore the system will be rebooted.
 
@@ -51,7 +51,9 @@ Backups behave differently on devices with an active [subscription](./subscripti
 
 Unencrypted backups can still be downloaded directly from the NethSecurity UI by clicking the **Download unencrypted** button.
 
-Encrypted backups are stored in the cloud and integrated with Nethesis Operation Center: this approach simplifies backup management and the restore process for subscription-based devices, which can interact directly with the Operation Center and automatically download the backup when restoring.
+Encrypted backups are stored in the cloud and integrated with Nethesis Operation Center: this approach simplifies backup management for subscription-based devices.
+
+To restore a cloud backup, download it from my.nethesis.it or my.nethserver.com and upload it from the [Restore](#automatic_backup-section) tab. There's no need to get a new system key or register the machine again: the backup brings back the registration of the original system.
 
 To enable encrypted cloud backups first, a passphrase must be configured by clicking the **Configure passphrase** button and setting a strong password. Once the passphrase is set you can either:
 
