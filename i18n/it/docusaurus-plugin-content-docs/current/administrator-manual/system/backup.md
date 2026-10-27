@@ -27,7 +27,7 @@ Per disabilitare i backup crittografati, fai clic sul pulsante **Rimuovi passphr
 
 ## Ripristino {#automatic_backup-section}
 
-Il backup può essere ripristinato dalla scheda `Ripristino` all'interno della pagina `Backup & Ripristino`. L'utente può avviare il processo di ripristino facendo clic sul pulsante **Ripristina backup** e caricando il file di backup. Se il dispositivo dispone di un abbonamento Enterprise valido, l'interfaccia web presenterà inoltre un elenco di backup disponibili dal server remoto. Se il backup è crittografato, immetti la passphrase e infine fai clic sul pulsante **Ripristina** per completare il processo.
+Il backup può essere ripristinato dalla scheda `Ripristino` all'interno della pagina `Backup & Ripristino`. L'utente può avviare il processo di ripristino facendo clic sul pulsante **Ripristina backup** e caricando il file di backup. Se il backup è crittografato, immetti la passphrase e infine fai clic sul pulsante **Ripristina** per completare il processo.
 
 Dopo il ripristino il sistema verrà riavviato.
 
@@ -51,7 +51,9 @@ I backup si comportano diversamente nei dispositivi con un [abbonamento](./subsc
 
 I backup non crittografati possono ancora essere scaricati direttamente dall'interfaccia utente di NethSecurity facendo clic sul pulsante **Scarica non crittografato**.
 
-I backup crittografati vengono archiviati nel cloud e integrati con il Nethesis Operation Center: questo approccio semplifica la gestione del backup e il processo di ripristino per i dispositivi basati su abbonamento, che possono interagire direttamente con l'Operation Center e scaricare automaticamente il backup durante il ripristino.
+I backup crittografati vengono archiviati nel cloud e integrati con il Nethesis Operation Center: questo approccio semplifica la gestione del backup per i dispositivi basati su abbonamento.
+
+Per ripristinare un backup cloud, scaricalo da my.nethesis.it o my.nethserver.com e caricalo dalla scheda [Ripristino](#automatic_backup-section). Non serve ottenere una nuova chiave di sistema né registrare di nuovo il dispositivo: il backup riporta la registrazione del sistema originale.
 
 Per abilitare i backup cloud crittografati, una passphrase deve essere prima configurata facendo clic sul pulsante **Configura passphrase** e impostando una password complessa. Una volta impostata la passphrase, puoi:
 
