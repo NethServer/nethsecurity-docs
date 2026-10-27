@@ -27,7 +27,7 @@ To disable encrypted backups, click on the **Remove passphrase** button and **Do
 
 ## Restore {#automatic_backup-section}
 
-The backup can be restored from the the `Restore` tab inside the page inside the `Backup & Restore` page The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
+The backup can be restored from the the `Restore` tab inside the page inside the `Backup & Restore` page. The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
 
 After the restore the system will be rebooted.
 
