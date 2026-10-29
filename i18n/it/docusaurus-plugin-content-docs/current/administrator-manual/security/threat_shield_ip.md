@@ -90,6 +90,30 @@ Il comportamento dipende dalla sottoscrizione:
 
 Non serve alcuna configurazione. L'invio parte quando registri il firewall e si ferma quando annulli la registrazione. Un firewall non registrato non invia nulla.
 
+#### Disattivare l'invio {#nethesis_community_opt_out-section}
+
+Un firewall registrato può smettere di inviare gli indirizzi bloccati a Nethesis restando registrato. L'invio usa un block hook di banIP, e banIP ne supporta uno solo. Se l'opzione dell'hook punta già a un altro script, NethSecurity non la modifica e non invia nulla.
+
+Per disattivare l'invio, sostituisci l'hook con uno script che non fa nulla, cancella gli indirizzi in attesa di invio e riavvia banIP:
+
+```bash
+uci set banip.global.ban_blockhook=/bin/true
+uci commit banip
+rm -f /var/run/ns-insights/threat-events.jsonl
+/etc/init.d/banip restart
+```
+
+L'impostazione resta valida dopo gli aggiornamenti e le nuove registrazioni. Il firewall mantiene la allowlist globale di Nethesis e può comunque usare la lista di blocco `Nethesis community - Level 2`.
+
+Per riattivare l'invio, rimuovi l'hook personalizzato e ripristina quello predefinito:
+
+```bash
+uci delete banip.global.ban_blockhook
+uci commit banip
+ts-ip
+/etc/init.d/banip restart
+```
+
 ### Logging
 
 La funzione Threat Shield IP include funzionalità avanzate di logging per monitorare e tracciare le minacce potenziali. La sezione di logging consente di configurare quali tipi di pacchetti bloccati vengono registrati:
