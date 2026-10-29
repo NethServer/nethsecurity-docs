@@ -91,24 +91,21 @@ What happens depends on the subscription:
 
 No configuration is needed. Reporting starts when you register the firewall and stops when you unregister it. A firewall that is not registered sends nothing.
 
-#### Opt out of reporting {#nethesis_community_opt_out-section}
+#### Stop sending blocked addresses {#nethesis_community_push-section}
 
-A registered firewall can stop sending blocked addresses to Nethesis and stay registered. Reporting works through a banIP block hook, and banIP supports only one. If the hook option already points to another script, NethSecurity leaves it untouched and does not send anything.
+Sending blocked addresses to Nethesis is enabled by default for registered firewalls. To turn it off, run these commands in a root shell of the firewall:
 
-To opt out, replace the hook with a script that does nothing, delete the addresses waiting to be sent and restart banIP:
-
-```bash
+```
 uci set banip.global.ban_blockhook=/bin/true
 uci commit banip
-rm -f /var/run/ns-insights/threat-events.jsonl
 /etc/init.d/banip restart
 ```
 
-The setting is kept across updates and new registrations. The firewall keeps the Nethesis global allowlist and can still use the `Nethesis community - Level 2` blocklist.
+This setting is available only from the command line. The Enterprise blocklists, including `Nethesis community - Level 2`, and the Nethesis global allowlist keep working.
 
-To send the blocked addresses again, remove the custom hook and restore the default one:
+To send blocked addresses again, remove the setting and restart the service:
 
-```bash
+```
 uci delete banip.global.ban_blockhook
 uci commit banip
 ts-ip
