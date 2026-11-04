@@ -24,6 +24,8 @@ Il database utenti locale viene implementato come file di configurazione UCI. Le
 
 Gli utenti all'interno del database locale possono ottenere privilegi amministrativi sull'interfaccia utente web abilitando l'opzione `Utente amministratore`; l'utente deve avere una password impostata. Vedere [Utenti amministrativi](./administrative_users.md) per i dettagli.
 
+Un utente con un account [OpenVPN Road Warrior](../vpn/openvpn_roadwarrior.md) non può essere eliminato. Eliminare prima l'account dalla pagina OpenVPN Road Warrior: in questo modo viene revocato anche il certificato dell'utente, che non potrà essere riutilizzato se in futuro verrà creato un utente con lo stesso nome.
+
 ## Database remoti {#remote_user_databases-section}
 
 :::note

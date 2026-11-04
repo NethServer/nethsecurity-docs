@@ -24,6 +24,8 @@ The local user database is implemented as UCI configuration file. Passwords of l
 
 Users inside the local database can be granted administrative privileges on the web user interface by enabling the `Administrator user` option; the user must have a password set. See [Administrative users](./administrative_users.md) for details.
 
+A user with an [OpenVPN Road Warrior](../vpn/openvpn_roadwarrior.md) account can't be deleted. Delete the account from the OpenVPN Road Warrior page first: this also revokes the user certificate, so it can't be used again if a user with the same name is created later.
+
 ## Remote databases {#remote_user_databases-section}
 
 :::note
