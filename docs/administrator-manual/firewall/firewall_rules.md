@@ -21,11 +21,12 @@ Locate the button to add a new rule, click on it to initiate the rule creation p
 
 - `Rule name`: assign a descriptive name to identify the rule.
 
-- `Source address`: select the source address from three different options:
+- `Source address`: select the source address from four different options:
 
   - enter one or more IPv4/IPv6 addresses/networks or IP ranges
   - select one firewall object from the available ones
   - any source address
+  - enter one or more MAC addresses, see [MAC address source](#mac-address-source)
 
   This field is not present for `Output rules`, as the source address is always the firewall itself.
 
@@ -55,6 +56,22 @@ Locate the button to add a new rule, click on it to initiate the rule creation p
 - `Logging`: indicate whether traffic matching this rule should be logged. The log entry will include the rule name as a prefix. By default, logging is limited to 1 entry per second. See the [Logging limits](#logging-limits) section for instructions on changing this limit.
 
 - `Tags`: optionally, add tags for organizational purposes. Note that the \'automated\' tag is reserved for system use.
+
+## MAC address source {#mac-address-source}
+
+`Forward rules` and `Input rules` can match traffic by the source MAC address instead of the source IP address. This is useful to allow or block a device regardless of the IP address it is using, for example when the IP addresses are assigned by a DHCP server other than NethSecurity.
+
+To create a rule based on MAC addresses, select the `MAC address` option in the `Source address` field and enter one or more MAC addresses. The rule matches the traffic coming from any of the listed MAC addresses.
+
+MAC addresses can be entered using either `:` or `-` as separator, in uppercase or lowercase (e.g. `00:1A:2B:3C:4D:5E` or `00-1a-2b-3c-4d-5e`).
+
+A rule can match either MAC addresses, IP addresses or a firewall object: it is not possible to combine MAC addresses with source IP addresses or objects in the same rule. Source MAC addresses are not available for `Output rules`.
+
+:::note
+
+MAC addresses can be matched only for hosts on the same network segment as the firewall: traffic coming through another router carries the MAC address of that router.
+
+:::
 
 ## Logging limits
 
