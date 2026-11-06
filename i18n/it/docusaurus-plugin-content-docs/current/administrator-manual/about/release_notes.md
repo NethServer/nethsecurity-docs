@@ -74,19 +74,24 @@ fw4 reload
 - nginx non viene più riavviato due volte quando l'interfaccia web viene aggiornata.
 - High Availability: corretti i messaggi di aiuto dei comandi di configurazione dei nodi.
 
-## Principali modifiche il 2026-06-25
+## Principali modifiche il 2026-07-29
 
-Versione immagine: `8.8.0-beta1` (basata su OpenWrt 25.12.4)
+Versione immagine: `8.8.0` (basata su OpenWrt 25.12.5)
 
 **Nuove funzionalità**
 
-- NethSecurity è stato ribasato su OpenWrt 25.12.4 e il sistema di gestione dei pacchetti è stato cambiato da `opkg` a `apk`.
+- NethSecurity è stato ribasato su OpenWrt 25.12.5 e il sistema di gestione dei pacchetti è stato cambiato da `opkg` a `apk`.
 - Il monitoraggio ora archivia le metriche in VictoriaMetrics e utilizza automaticamente l'archiviazione persistente quando disponibile.
-- Gli avvisi sono ora accessibili dall'interfaccia web.
+- Gli avvisi sono ora accessibili dall'interfaccia web; sui sistemi con sottoscrizione gli avvisi vengono inoltrati tramite il proxy di my.nethesis.it, riutilizzando le credenziali di sistema esistenti.
+- È stato aggiunto un assistente di configurazione da console per completare la configurazione iniziale direttamente dalla console locale, e un banner di accesso che mostra nome del prodotto, versione e suggerimenti per la configurazione.
 - La cronologia di Bash è stata preservata tra i riavvii e `/var` persistente è stata abilitata quando l'archiviazione è disponibile.
 - Il pacchetto Avahi (mDNS) è stato aggiunto al repository di NethSecurity.
-- È stata aggiunta l'azione del firewall `DON\'T TRACK`.
+- È stata aggiunta l'azione del firewall `DON'T TRACK`.
 - Diverse funzionalità precedentemente limitate alle versioni basate su sottoscrizione sono ora disponibili nell'edizione Community.
+- È stata aggiunta la funzionalità di Geoblocking a Threat Shield IP, che permette di bloccare il traffico da specifici paesi o regioni.
+- È stato aggiunto il supporto a più intervalli DHCP direttamente nell'interfaccia, per un'assegnazione degli indirizzi IP più flessibile.
+- Il pacchetto softflowd è stato aggiunto al repository di NethSecurity.
+- Log remoto: ora è possibile selezionare l'indirizzo IP di ascolto del collettore syslog.
 
 **Miglioramenti**
 
@@ -97,13 +102,27 @@ Versione immagine: `8.8.0-beta1` (basata su OpenWrt 25.12.4)
 - Netdata non è più installato per impostazione predefinita; i dashboard del controller legacy possono ancora ripristinarlo manualmente.
 - I leasing DHCP sono ora persistenti se l'archiviazione locale è disponibile, prevenendo la perdita di leasing al riavvio.
 - Le modifiche all'elenco locale DNS di Threat Shield vengono ora applicate utilizzando il pulsante commit, come tutte le altre opzioni di Threat Shield.
+- La dashboard si carica molto più velocemente: l'interfaccia ora raggruppa le richieste in una singola chiamata API, con un miglioramento evidente sull'hardware meno recente.
+- I backup cloud vengono caricati solo quando la configurazione è effettivamente cambiata.
+- Telegraf: le interfacce non attive vengono ignorate, i controlli ping sono stati migliorati e sono stati aggiunti i plugin per WireGuard e nftables.
+- I log di accesso di nginx non vengono più scritti, riducendo l'uso del disco e il rumore nei log.
 
 **Correzioni di bug**
 
-- Gli errori DNS/DHCP ora mostrano informazioni di risoluzione dei problemi più chiare: se dnamsq non riesce ad avviarsi, l'interfaccia web visualizzerà un avviso.
+- Gli errori DNS/DHCP ora mostrano informazioni di risoluzione dei problemi più chiare: se dnsmasq non riesce ad avviarsi, l'interfaccia web visualizzerà un avviso.
 - Adblock non si riavvia più con elenchi vuoti dopo ripetute modifiche alla blocklist o allowlist.
 - Le opzioni di registrazione del traffico sono mostrate in modo coerente nell'interfaccia del firewall.
 - Il tunnel IPSec può ora utilizzare l'azione dpd_action di riavvio.
+- OpenVPN: gli utenti autenticati su un database esterno non vengono più mostrati come disconnessi mentre sono connessi.
+- OpenVPN: il contatore della dashboard non conta più come connessi i tunnel client disconnessi.
+- OpenVPN Roadwarrior: corretta l'estrazione del nome del certificato client.
+- Threat Shield IP: il Geoblocking ora blocca solo le connessioni in ingresso.
+- Flashstart: le regole di bypass vengono ora rispettate per le voci di tipo oggetto di rete nei profili Pro+.
+- rsyslog non riempie più il filesystem di root quando l'archiviazione configurata non è montata.
+- Hotspot: le righe di log di chilli e dedalo sono ora etichettate con la facility syslog corretta e non vengono più duplicate.
+- Le sessioni degli amministratori declassati o cancellati vengono ora revocate immediatamente.
+- La mappa della tastiera della console viene ora preservata durante gli aggiornamenti.
+- Interfaccia: la dimensione di pagina selezionata viene ora preservata nelle tabelle dei leasing DHCP.
 
 ## Principali modifiche il 2026-03-25
 
