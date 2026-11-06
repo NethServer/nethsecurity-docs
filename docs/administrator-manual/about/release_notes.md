@@ -10,6 +10,41 @@ NethSecurity releases changelogs.
 - List of [known bugs](https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20)
 - Discussions around [possible bugs](http://community.nethserver.org/c/bug)
 
+## Major changes on xx-xx-xx
+
+Image version: `8.9.0` (based on OpenWrt 25.12.6)
+
+:::warning
+
+New installations no longer allow access to the web interface on port 9090 from the WAN. Existing installations keep their current rule. To open or close this access, use the [`setup` command](../installation/remote_access.md#setup-command-section) from the console.
+
+:::
+
+**New features**
+
+- The web interface on port 9090 is closed on the WAN by default on new installations.
+- `setup` command: new menu entries to change the `root` password and to open or close access to the web interface from the WAN.
+- Logs: VictoriaLogs is now the default long-term log storage. It keeps its data on the persistent storage. rsyslog no longer writes logs to `/mnt/data`, and logrotate is no longer scheduled.
+- Logs: kernel boot messages are now written to `/var/log/messages`.
+- Disk monitoring: the `smartctl` and `nvme-cli` tools are included in the image, and Telegraf collects the disk health status.
+- OpenVPN: data channel offload (DCO) is enabled by default, for better performance.
+- The ulogd package is included in the image. It is installed but not running.
+
+**Improvements**
+
+- Updated the base image to OpenWrt 25.12.6.
+- Updated VictoriaLogs to 1.53.0.
+- Updated VictoriaMetrics to 1.153.0.
+- Updated Telegraf to 1.40.2.
+- Updated the Debian image used to build NethSecurity to 13.7.
+
+**Bug fixes**
+
+- Adblock: the credentials of the Nethesis DNS feeds are no longer written to the logs when a download fails.
+- The DROP log rule of the IP/MAC binding is now rate limited, so it can no longer overload the CPU.
+- DPI: scripts now write their messages to the system log.
+- Some log messages now use a more suitable log level.
+
 ## Major changes on 2026-11-09
 
 Image version: `8.8.1` (based on OpenWrt 25.12.5)

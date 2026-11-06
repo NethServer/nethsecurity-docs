@@ -10,6 +10,41 @@ Changelog dei rilasci di NethSecurity.
 - Elenco dei [bug noti](https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20)
 - Discussioni sui [possibili bug](http://community.nethserver.org/c/bug)
 
+## Principali modifiche il xx-xx-xx
+
+Versione immagine: `8.9.0` (basata su OpenWrt 25.12.6)
+
+:::warning
+
+Le nuove installazioni non permettono più l'accesso all'interfaccia web sulla porta 9090 dalla WAN. Le installazioni esistenti mantengono la regola attuale. Per aprire o chiudere questo accesso, usare il comando `setup` dalla console.
+
+:::
+
+**Nuove funzionalità**
+
+- Nelle nuove installazioni l'interfaccia web sulla porta 9090 è chiusa sulla WAN per impostazione predefinita.
+- Comando `setup`: nuove voci di menu per cambiare la password di `root` e per aprire o chiudere l'accesso all'interfaccia web dalla WAN.
+- Log: VictoriaLogs è ora l'archivio predefinito dei log a lungo termine. Conserva i dati sull'archiviazione persistente. rsyslog non scrive più i log in `/mnt/data`, e logrotate non viene più pianificato.
+- Log: i messaggi del kernel all'avvio vengono ora scritti in `/var/log/messages`.
+- Monitoraggio dei dischi: gli strumenti `smartctl` e `nvme-cli` sono inclusi nell'immagine, e Telegraf raccoglie lo stato di salute dei dischi.
+- OpenVPN: il data channel offload (DCO) è abilitato per impostazione predefinita, per prestazioni migliori.
+- Il pacchetto ulogd è incluso nell'immagine. È installato ma non in esecuzione.
+
+**Miglioramenti**
+
+- L'immagine di base è stata aggiornata a OpenWrt 25.12.6.
+- VictoriaLogs è stato aggiornato alla versione 1.53.0.
+- VictoriaMetrics è stato aggiornato alla versione 1.153.0.
+- Telegraf è stato aggiornato alla versione 1.40.2.
+- L'immagine Debian usata per compilare NethSecurity è stata aggiornata alla versione 13.7.
+
+**Correzioni di bug**
+
+- Adblock: le credenziali dei feed DNS di Nethesis non vengono più scritte nei log quando un download fallisce.
+- La regola di log DROP del binding IP/MAC ora ha un limite di frequenza, quindi non può più sovraccaricare la CPU.
+- DPI: gli script ora scrivono i propri messaggi nel log di sistema.
+- Alcuni messaggi di log usano ora un livello di log più adatto.
+
 ## Principali modifiche il 2026-11-09
 
 Versione immagine: `8.8.1` (basata su OpenWrt 25.12.5)
