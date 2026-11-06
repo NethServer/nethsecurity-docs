@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="cluster.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.03375"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <desc
+     id="desc1">
+    Cursor Click Streamline Icon: https://streamlinehq.com
+  </desc>
+  <g
+     id="cursor-click"
+     transform="matrix(1.1485826,0,0,1.1485826,0.04590845,0.01040868)"
+     style="fill:#0e7490;fill-opacity:1">
+    <path
+       id="Union"
+       fill="#000000"
+       fill-rule="evenodd"
+       d="m 3.65788,0.162155 c 0.4001,-0.107206 0.81135,0.130231 0.91856,0.53033 L 5.02468,2.36535 C 5.13189,2.76545 4.89445,3.1767 4.49435,3.28391 4.09425,3.39111 3.683,3.15367 3.57579,2.75358 L 3.12755,1.08071 C 3.02034,0.680614 3.25778,0.269362 3.65788,0.162155 Z M 0.0716402,3.75462 C -0.0355661,4.15472 0.201871,4.56597 0.60197,4.67318 L 2.27483,5.12142 C 2.67493,5.22863 3.08618,4.99119 3.19339,4.59109 3.3006,4.19099 3.06316,3.77974 2.66306,3.67253 L 0.990199,3.22429 C 0.590099,3.11708 0.178847,3.35452 0.0716402,3.75462 Z M 4.47129,5.7197 C 4.21042,4.93778 4.95445,4.19375 5.73637,4.45463 l 7.11903,2.37512 c 0.92,0.30694 0.9084,1.61231 -0.017,1.90272 l -2.0269,0.63611 2.7,2.70002 c 0.3905,0.3905 0.3905,1.0236 0,1.4142 -0.3905,0.3905 -1.0237,0.3905 -1.4142,0 L 9.39101,10.7765 8.74913,12.8217 C 8.45872,13.7471 7.15335,13.7588 6.84641,12.8388 Z M 2.06665,8.75494 c -0.29289,0.2929 -0.76777,0.2929 -1.06066,0 -0.292894,-0.29289 -0.292894,-0.76776 0,-1.06066 L 2.23061,6.46966 c 0.29289,-0.29289 0.76777,-0.29289 1.06066,0 0.29289,0.2929 0.29289,0.76777 0,1.06066 z M 8.52673,2.16363 c 0.29289,-0.29289 0.29289,-0.76776 0,-1.06066 -0.29289,-0.29289 -0.76776,-0.29289 -1.06066,0 L 6.24145,2.32759 c -0.29289,0.2929 -0.29289,0.76777 0,1.06066 0.2929,0.2929 0.76777,0.2929 1.06066,0 z"
+       clip-rule="evenodd"
+       stroke-width="1"
+       style="fill:#0e7490;fill-opacity:1" />
+  </g>
+</svg>
