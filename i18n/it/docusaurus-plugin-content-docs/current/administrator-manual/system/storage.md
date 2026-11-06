@@ -39,7 +39,7 @@ L'archiviazione viene quindi:
 
 - Formattata con il filesystem `ext4`
 - Montata in `/mnt/data`
-- Utilizzata da `rsyslog` per scrivere i log in `/mnt/data/log/messages`. Per ulteriori dettagli, vedere [Rotazione dei log di archiviazione](../advanced-cli/logs.md#storage-log-rotation-section).
+- Utilizzata da Victoria Logs per archiviare i log in `/mnt/data/victoria-logs-data`. Per ulteriori dettagli, vedere [Rotazione dei log di archiviazione](../advanced-cli/logs.md#storage-log-rotation-section).
 - Sincronizzata quotidianamente (durante la notte) per dati aggiuntivi come metriche
 
 Per rimuovere l'archiviazione persistente e tornare alla registrazione in memoria, fare clic sul pulsante **Rimuovi archiviazione**.

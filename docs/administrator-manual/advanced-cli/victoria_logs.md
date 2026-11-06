@@ -5,11 +5,11 @@ sidebar_position: 12
 
 # Victoria Logs
 
-NethSecurity 8.8 also ships the optional `victoria-logs` package for centralized log storage and aggregation.
+NethSecurity ships the `victoria-logs` package for centralized log storage and aggregation. From version 8.9.0 it's installed by default and it's where persistent logs are stored.
 
 Its Web UI keeps log navigation in one place, so you can browse, query, and visualize the rsyslog stream without jumping between files or services.
 
-Install it with:
+On version 8.8, install it with:
 
     apk update
     apk add victoria-logs
