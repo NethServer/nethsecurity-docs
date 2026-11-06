@@ -10,6 +10,70 @@ Changelog dei rilasci di NethSecurity.
 - Elenco dei [bug noti](https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20)
 - Discussioni sui [possibili bug](http://community.nethserver.org/c/bug)
 
+## Principali modifiche il 2026-11-09
+
+Versione immagine: `8.8.1` (basata su OpenWrt 25.12.5)
+
+Questa immagine include tutte le correzioni di bug e le funzionalità rilasciate dopo l'immagine 8.8.0. I sistemi con la 8.8.0 le hanno già ricevute come aggiornamenti dei pacchetti. L'unica novità è la correzione di un problema di sicurezza del kernel Linux. Gli aggiornamenti dei pacchetti non possono sostituire il kernel, quindi questa correzione richiede la nuova immagine.
+
+**Correzioni di sicurezza**
+
+- Kernel Linux: corretta la CVE-2026-98432, un bug di tipo use-after-free nella gestione delle opzioni TCP su IPv4 ([advisory](https://lists.openwall.net/linux-cve-announce/2026/10/15/1)). La correzione upstream è applicata al kernel attuale, quindi la versione resta `6.12.94`.
+- OpenVPN Road Warrior: rigenerare un certificato ora revoca quello vecchio, e cancellare un account revoca tutti i suoi certificati. I certificati lasciati da utenti cancellati in passato vengono revocati quando si aggiunge un nuovo account con lo stesso nome.
+- OpenVPN Road Warrior: quando sono richiesti sia certificato che credenziali, il certificato deve appartenere all'utente che effettua l'accesso.
+- Utenti: un utente con un account OpenVPN Road Warrior non può più essere cancellato. Rimuovere prima l'account. L'interfaccia web spiega perché l'utente non può essere cancellato.
+- Migliorata la validazione dei dati inseriti.
+
+:::note
+
+Se sulla 8.8.0 è stata applicata la soluzione temporanea per la CVE-2026-98432, rimuoverla dopo l'aggiornamento:
+
+```
+rm /etc/nftables.d/50-drop-ipv4-options.nft
+fw4 reload
+```
+
+:::
+
+**Nuove funzionalità**
+
+- Regole firewall: gli indirizzi MAC possono essere usati come sorgente della regola, e la tabella delle regole può essere filtrata per tag.
+- Threat Shield IP: i firewall registrati inviano a Nethesis gli indirizzi bloccati dalla protezione contro gli attacchi brute force, e i firewall con l'add-on Threat Shield possono abilitare la [blocklist della community Nethesis](../security/threat_shield_ip.md#nethesis_community-section).
+- Threat Shield IP: un feed di blocklist ora può applicarsi solo ad alcune porte, protocolli o direzioni del traffico.
+- DPI: la sezione è stata ridisegnata.
+- Il pacchetto sngrep può essere installato dal repository dei pacchetti.
+- I firewall con sottoscrizione Enterprise ora si collegano direttamente ai nuovi servizi di my.nethesis.it per backup, inventario e avvisi.
+- Controller: l'interfaccia web di un'unità viene ora aperta attraverso il controller, e le azioni eseguite dal controller vengono registrate con il nome dell'operatore.
+
+**Miglioramenti**
+
+- netifyd è stato aggiornato alla versione 5.2.9.
+- Avvisi: l'avviso sul filesystem di root ora usa limiti fissi di spazio libero (20 MB per il warning, 10 MB per il critico) invece di una percentuale, e `/boot` non viene più monitorata. L'avviso di WAN non raggiungibile è ora un warning.
+- Dashboard: gli avvisi mostrati corrispondono ora agli avvisi attivi.
+- OpenVPN Road Warrior: meno righe di log dallo script di tracciamento delle connessioni.
+- Port forward: la ricerca non distingue più tra maiuscole e minuscole.
+
+**Correzioni di bug**
+
+- Adblock: le query DNS vengono di nuovo reindirizzate al server DNS locale quando l'imposizione del DNS locale è abilitata.
+- Adblock: la blocklist non viene più scritta nel filesystem di root quando la directory di dnsmasq non viene trovata. Un eventuale file rimasto viene rimosso durante l'aggiornamento.
+- Storage: i servizi verificano che il disco dati sia davvero montato prima di scriverci, quindi un disco guasto non riempie più il filesystem di root.
+- Storage: configurazione e rimozione funzionano con qualsiasi schema di nomi delle partizioni.
+- Snort: le regole vengono generate in `/var` invece che sul disco dati.
+- Monitoraggio: i grafici del traffico delle interfacce mostrano valori corretti.
+- Monitoraggio: il log di sistema non viene più riempito di warning di VictoriaMetrics mentre un avviso è attivo.
+- Backup: i backup cloud rilevano i file aggiunti di recente, e l'elenco dei backup funziona con il nuovo portale.
+- Aggiornamenti: gli aggiornamenti dell'immagine usano le credenziali della sottoscrizione attuale.
+- Tunnel OpenVPN: i tunnel punto-punto partono di nuovo, l'impostazione del digest viene applicata correttamente, e i tunnel migrati ricevono valori MTU e MSS predefiniti. È richiesto almeno un indirizzo IP pubblico.
+- WireGuard: i nuovi tunnel peer ricevono il primo nome libero.
+- Multi-WAN: non è più possibile salvare una policy senza gateway.
+- FlashStart: gli account Pro non recuperano più sessioni che non possono usare.
+- Hotspot: il modulo di accesso viene mostrato di nuovo dopo la scadenza di una sessione, e il pulsante di deregistrazione è tornato per gli accessi con nome utente e password.
+- Threat Shield IP: i feed Enterprise vengono mantenuti durante l'aggiornamento, e i report malware raggruppano i blocchi per nome del feed.
+- Scansione di rete: le interfacce OpenVPN e WireGuard non vengono più scansionate.
+- nginx non viene più riavviato due volte quando l'interfaccia web viene aggiornata.
+- High Availability: corretti i messaggi di aiuto dei comandi di configurazione dei nodi.
+
 ## Principali modifiche il 2026-06-25
 
 Versione immagine: `8.8.0-beta1` (basata su OpenWrt 25.12.4)
