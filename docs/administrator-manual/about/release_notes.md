@@ -28,14 +28,7 @@ New installations no longer allow access to the web interface on port 9090 from 
 
 **New features**
 
-- Threat Shield IP: the [brute force protection](../security/threat_shield_ip.md#brute_force-section) now uses fail2ban instead of the banIP log monitor. Each protected service has its own jail with a fixed threshold, and you can enable each one from the Threat Shield IP settings:
-  - SSH
-  - web interface
-  - OpenVPN Road Warrior
-  - reverse proxy logins
-  - web scans: repeated "not found" errors on the reverse proxy and on the web interface
-- Threat Shield IP: the **Banned IPs** page lists recent bans, active and expired, with the reason, the number of failures and the matched log lines. Active bans can be removed with **Unban**.
-- Threat Shield IP: each address banned by fail2ban is reported to Nethesis right away, instead of every 5 minutes. To stop reporting, run `uci set banip.global.ns_insights_report=0` and `uci commit banip`.
+- Threat Shield IP: [brute force protection](../security/threat_shield_ip.md#brute_force-section) now uses fail2ban, with one jail per service, a list of recent bans, and immediate reporting to Nethesis ([new opt-out](../security/threat_shield_ip.md#nethesis_community_push-section)).
 - The web interface on port 9090 is closed on the WAN by default on new installations.
 - `setup` command: new menu entries to change the `root` password and to open or close access to the web interface from the WAN.
 - Logs: VictoriaLogs is now the default long-term log storage. It keeps its data on the persistent storage. rsyslog no longer writes logs to `/mnt/data`, and logrotate is no longer scheduled.

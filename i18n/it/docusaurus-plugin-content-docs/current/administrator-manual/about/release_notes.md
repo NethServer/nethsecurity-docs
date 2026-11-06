@@ -28,14 +28,7 @@ Le nuove installazioni non permettono più l'accesso all'interfaccia web sulla p
 
 **Nuove funzionalità**
 
-- Threat Shield IP: la [protezione brute force](../security/threat_shield_ip.md#brute_force-section) ora usa fail2ban al posto del monitor dei log di banIP. Ogni servizio protetto ha una propria jail con una soglia fissa, e ciascuna può essere abilitata dalle impostazioni di Threat Shield IP:
-  - SSH
-  - interfaccia web
-  - OpenVPN Road Warrior
-  - accessi al reverse proxy
-  - scansioni web: errori "not found" ripetuti sul reverse proxy e sull'interfaccia web
-- Threat Shield IP: la pagina **IP bloccati** elenca i blocchi recenti, attivi e scaduti, con il motivo, il numero di tentativi falliti e le righe di log corrispondenti. I blocchi attivi possono essere rimossi con **Sblocca**.
-- Threat Shield IP: ogni indirizzo bloccato da fail2ban viene segnalato subito a Nethesis, invece che ogni 5 minuti. Per interrompere le segnalazioni, eseguire `uci set banip.global.ns_insights_report=0` e `uci commit banip`.
+- Threat Shield IP: la [protezione brute force](../security/threat_shield_ip.md#brute_force-section) ora usa fail2ban, con una jail per servizio, un elenco dei blocchi recenti e l'invio immediato a Nethesis ([nuova procedura per disattivarlo](../security/threat_shield_ip.md#nethesis_community_push-section)).
 - Nelle nuove installazioni l'interfaccia web sulla porta 9090 è chiusa sulla WAN per impostazione predefinita.
 - Comando `setup`: nuove voci di menu per cambiare la password di `root` e per aprire o chiudere l'accesso all'interfaccia web dalla WAN.
 - Log: VictoriaLogs è ora l'archivio predefinito dei log a lungo termine. Conserva i dati sull'archiviazione persistente. rsyslog non scrive più i log in `/mnt/data`, e logrotate non viene più pianificato.
