@@ -75,7 +75,7 @@ Attackers usually target many firewalls at once. NethSecurity and NethServer sys
 
 It works this way:
 
-- When Threat Shield IP blocks an IP address with the [brute force protection](#brute_force-section), the firewall sends that address to Nethesis. Only public addresses are sent. The firewall sends them every 5 minutes.
+- When Threat Shield IP blocks an IP address with the [brute force protection](#brute_force-section), the firewall sends that address to Nethesis right away. Only public addresses are sent: private, CGNAT and link-local addresses are not.
 - When enough systems report the same address, Nethesis adds it to the `Nethesis community - Level 2` blocklist.
 - Firewalls with the Threat Shield add-on can enable this blocklist from the `Blocklist feeds` tab, like the other Enterprise blocklists. It is disabled by default.
 
@@ -96,21 +96,26 @@ No configuration is needed. Reporting starts when you register the firewall and 
 Sending blocked addresses to Nethesis is enabled by default for registered firewalls. To turn it off, run these commands in a root shell of the firewall:
 
 ```
-uci set banip.global.ban_blockhook=/bin/true
+uci set banip.global.ns_insights_report=0
 uci commit banip
-/etc/init.d/banip restart
 ```
+
+The change applies to the next ban: no restart is needed. Addresses are still banned on the firewall, they are just not sent to Nethesis.
 
 This setting is available only from the command line. The Enterprise blocklists, including `Nethesis community - Level 2`, and the Nethesis global allowlist keep working.
 
-To send blocked addresses again, remove the setting and restart the service:
+To send blocked addresses again, remove the setting:
 
 ```
-uci delete banip.global.ban_blockhook
+uci delete banip.global.ns_insights_report
 uci commit banip
-ts-ip
-/etc/init.d/banip restart
 ```
+
+:::warning
+
+Before NethSecurity 8.9.0, reporting was turned off with the `banip.global.ban_blockhook` option. That option no longer stops reporting. If you used it, run the commands above again after the upgrade.
+
+:::
 
 ### Logging
 

@@ -74,7 +74,7 @@ Gli attaccanti di solito colpiscono molti firewall contemporaneamente. I sistemi
 
 Come funziona:
 
-- Quando Threat Shield IP blocca un indirizzo IP con la [protezione brute force](#brute_force-section), il firewall invia quell'indirizzo a Nethesis. Vengono inviati solo indirizzi pubblici. Il firewall li invia ogni 5 minuti.
+- Quando Threat Shield IP blocca un indirizzo IP con la [protezione brute force](#brute_force-section), il firewall invia subito quell'indirizzo a Nethesis. Vengono inviati solo indirizzi pubblici: gli indirizzi privati, CGNAT e link-local non vengono inviati.
 - Quando abbastanza sistemi segnalano lo stesso indirizzo, Nethesis lo aggiunge alla lista di blocco `Nethesis community - Level 2`.
 - I firewall con l'add-on Threat Shield possono abilitare questa lista dalla scheda `Blocklist feeds`, come le altre liste di blocco Enterprise. È disabilitata di default.
 
@@ -95,21 +95,26 @@ Non serve alcuna configurazione. L'invio parte quando registri il firewall e si 
 L'invio degli indirizzi bloccati a Nethesis è abilitato di default per i firewall registrati. Per disattivarlo, esegui questi comandi in una shell di root del firewall:
 
 ```
-uci set banip.global.ban_blockhook=/bin/true
+uci set banip.global.ns_insights_report=0
 uci commit banip
-/etc/init.d/banip restart
 ```
+
+La modifica vale dal blocco successivo: non serve riavviare alcun servizio. Gli indirizzi vengono comunque bloccati sul firewall, semplicemente non vengono inviati a Nethesis.
 
 Questa impostazione è disponibile solo da riga di comando. Le liste di blocco Enterprise, compresa `Nethesis community - Level 2`, e la allowlist globale di Nethesis continuano a funzionare.
 
-Per riprendere l'invio degli indirizzi bloccati, rimuovi l'impostazione e riavvia il servizio:
+Per riprendere l'invio degli indirizzi bloccati, rimuovi l'impostazione:
 
 ```
-uci delete banip.global.ban_blockhook
+uci delete banip.global.ns_insights_report
 uci commit banip
-ts-ip
-/etc/init.d/banip restart
 ```
+
+:::warning
+
+Prima di NethSecurity 8.9.0, l'invio si disattivava con l'opzione `banip.global.ban_blockhook`. Questa opzione non interrompe più l'invio. Se l'avevi usata, esegui di nuovo i comandi sopra dopo l'aggiornamento.
+
+:::
 
 ### Logging
 
