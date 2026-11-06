@@ -21,7 +21,7 @@ NethSecurity can store logs in different ways depending on the installation type
 ### Physical appliances
 
 On NethSecurity physical appliances, **persistent storage is configured automatically** and used to store logs.
-When persistent storage is available, logs are saved on disk and managed by log rotation.
+When persistent storage is available, logs are saved on disk by [Victoria Logs](victoria_logs.md).
 
 ### Virtual machines
 
@@ -182,10 +182,11 @@ Logs are rotated to manage disk space and ensure that log files do not grow inde
 
 ### Storage log rotation {#storage-log-rotation-section}
 
-When using persistent storage, log rotation is managed by the `logrotate` utility, which is configured to rotate logs weekly and keep a maximum of 52 weeks (1 year) of logs.
-After rotation, the logs are compressed using gzip and stored in the same directory with a naming convention that includes the date of rotation (e.g., `/mnt/data/log/messages-20260315.gz`).
+When using persistent storage, logs are stored by [Victoria Logs](victoria_logs.md) under `/mnt/data/victoria-logs-data` and kept for 1 year.
 
-The configuration file for logrotate is located at `/etc/logrotate.d/data.conf` and can be modified to change the rotation frequency and retention period as needed. The configuration file is automatically added to the backup and preserved during upgrades, so any custom settings persist.
+Up to version 8.8, logs were also written to `/mnt/data/log/messages` and rotated weekly by `logrotate`. From version 8.9.0 that file is no longer written or rotated. Existing files are left on the disk and can be removed with:
+
+    rm -rf /mnt/data/log
 
 ### In-memory log rotation
 

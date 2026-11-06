@@ -39,7 +39,7 @@ The storage is then:
 
 - Formatted with the `ext4` filesystem
 - Mounted at `/mnt/data`
-- Used by `rsyslog` to write logs to `/mnt/data/log/messages`. For more details, see [Storage log rotation](../advanced-cli/logs.md#storage-log-rotation-section).
+- Used by Victoria Logs to store logs under `/mnt/data/victoria-logs-data`. For more details, see [Storage log rotation](../advanced-cli/logs.md#storage-log-rotation-section).
 - Synchronized daily (at night) for additional data like metrics
 
 To remove persistent storage and return to in-memory logging, click on the button **Remove storage**.

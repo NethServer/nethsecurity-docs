@@ -174,8 +174,10 @@ Available alerts:
 - `CriticalCpuUsage`: CPU usage is above 85%.
 - `HighMemoryUsage`: memory usage is above 80%.
 - `CriticalMemoryUsage`: memory usage is above 90%.
-- `DiskSpaceWarning`: a mounted filesystem is above 80% usage.
-- `DiskSpaceCritical`: a mounted filesystem is above 90% usage.
+- `DiskSpaceWarning`: the data storage `/mnt/data` is above 80% usage.
+- `DiskSpaceCritical`: the data storage `/mnt/data` is above 90% usage.
+- `RootSpaceWarning`: the root filesystem `/` has less than 20 MB of free space.
+- `RootSpaceCritical`: the root filesystem `/` has less than 10 MB of free space.
 - `HighSystemLoad`: system load per CPU is above 2.
 - `WanDown`: a monitored WAN interface is offline.
 - `ServiceDown`: a configured `procd` service is not running.
