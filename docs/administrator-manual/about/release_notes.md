@@ -14,6 +14,12 @@ NethSecurity releases changelogs.
 
 Image version: `8.9.0` (based on OpenWrt 25.12.6)
 
+:::note
+
+On the first upgrade from the banIP log monitor, all the brute force jails are enabled. Custom brute force patterns and the "Ban after N failed accesses" value are removed. Later upgrades keep your jail selection.
+
+:::
+
 :::warning
 
 New installations no longer allow access to the web interface on port 9090 from the WAN. Existing installations keep their current rule. To open or close this access, use the [`setup` command](../installation/remote_access.md#setup-command-section) from the console.
@@ -22,6 +28,14 @@ New installations no longer allow access to the web interface on port 9090 from 
 
 **New features**
 
+- Threat Shield IP: the [brute force protection](../security/threat_shield_ip.md#brute_force-section) now uses fail2ban instead of the banIP log monitor. Each protected service has its own jail with a fixed threshold, and you can enable each one from the Threat Shield IP settings:
+  - SSH
+  - web interface
+  - OpenVPN Road Warrior
+  - reverse proxy logins
+  - web scans: repeated "not found" errors on the reverse proxy and on the web interface
+- Threat Shield IP: the **Banned IPs** page lists recent bans, active and expired, with the reason, the number of failures and the matched log lines. Active bans can be removed with **Unban**.
+- Threat Shield IP: each address banned by fail2ban is reported to Nethesis right away, instead of every 5 minutes. To stop reporting, run `uci set banip.global.ns_insights_report=0` and `uci commit banip`.
 - The web interface on port 9090 is closed on the WAN by default on new installations.
 - `setup` command: new menu entries to change the `root` password and to open or close access to the web interface from the WAN.
 - Logs: VictoriaLogs is now the default long-term log storage. It keeps its data on the persistent storage. rsyslog no longer writes logs to `/mnt/data`, and logrotate is no longer scheduled.
@@ -36,10 +50,13 @@ New installations no longer allow access to the web interface on port 9090 from 
 - Updated VictoriaLogs to 1.53.0.
 - Updated VictoriaMetrics to 1.153.0.
 - Updated Telegraf to 1.40.2.
+- High Availability: fail2ban runs only on the primary node.
+- Monitoring: Telegraf collects fail2ban ban metrics, and the attack reports include fail2ban bans.
 - Updated the Debian image used to build NethSecurity to 13.7.
 
 **Bug fixes**
 
+- API server: request paths are cleaned before they are written to the rate limit log, so they can no longer forge log lines.
 - Adblock: the credentials of the Nethesis DNS feeds are no longer written to the logs when a download fails.
 - The DROP log rule of the IP/MAC binding is now rate limited, so it can no longer overload the CPU.
 - DPI: scripts now write their messages to the system log.

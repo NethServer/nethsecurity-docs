@@ -14,6 +14,12 @@ Changelog dei rilasci di NethSecurity.
 
 Versione immagine: `8.9.0` (basata su OpenWrt 25.12.6)
 
+:::note
+
+Al primo aggiornamento dal monitor dei log di banIP, tutte le jail brute force vengono abilitate. I pattern brute force personalizzati e il valore "Blocca dopo N accessi falliti" vengono rimossi. Gli aggiornamenti successivi mantengono la selezione delle jail.
+
+:::
+
 :::warning
 
 Le nuove installazioni non permettono più l'accesso all'interfaccia web sulla porta 9090 dalla WAN. Le installazioni esistenti mantengono la regola attuale. Per aprire o chiudere questo accesso, usare il comando `setup` dalla console.
@@ -22,6 +28,14 @@ Le nuove installazioni non permettono più l'accesso all'interfaccia web sulla p
 
 **Nuove funzionalità**
 
+- Threat Shield IP: la [protezione brute force](../security/threat_shield_ip.md#brute_force-section) ora usa fail2ban al posto del monitor dei log di banIP. Ogni servizio protetto ha una propria jail con una soglia fissa, e ciascuna può essere abilitata dalle impostazioni di Threat Shield IP:
+  - SSH
+  - interfaccia web
+  - OpenVPN Road Warrior
+  - accessi al reverse proxy
+  - scansioni web: errori "not found" ripetuti sul reverse proxy e sull'interfaccia web
+- Threat Shield IP: la pagina **IP bloccati** elenca i blocchi recenti, attivi e scaduti, con il motivo, il numero di tentativi falliti e le righe di log corrispondenti. I blocchi attivi possono essere rimossi con **Sblocca**.
+- Threat Shield IP: ogni indirizzo bloccato da fail2ban viene segnalato subito a Nethesis, invece che ogni 5 minuti. Per interrompere le segnalazioni, eseguire `uci set banip.global.ns_insights_report=0` e `uci commit banip`.
 - Nelle nuove installazioni l'interfaccia web sulla porta 9090 è chiusa sulla WAN per impostazione predefinita.
 - Comando `setup`: nuove voci di menu per cambiare la password di `root` e per aprire o chiudere l'accesso all'interfaccia web dalla WAN.
 - Log: VictoriaLogs è ora l'archivio predefinito dei log a lungo termine. Conserva i dati sull'archiviazione persistente. rsyslog non scrive più i log in `/mnt/data`, e logrotate non viene più pianificato.
@@ -36,10 +50,13 @@ Le nuove installazioni non permettono più l'accesso all'interfaccia web sulla p
 - VictoriaLogs è stato aggiornato alla versione 1.53.0.
 - VictoriaMetrics è stato aggiornato alla versione 1.153.0.
 - Telegraf è stato aggiornato alla versione 1.40.2.
+- High Availability: fail2ban è in esecuzione solo sul nodo primario.
+- Monitoraggio: Telegraf raccoglie le metriche dei blocchi di fail2ban, e i report degli attacchi includono i blocchi di fail2ban.
 - L'immagine Debian usata per compilare NethSecurity è stata aggiornata alla versione 13.7.
 
 **Correzioni di bug**
 
+- API server: i percorsi delle richieste vengono ripuliti prima di essere scritti nel log del rate limit, quindi non possono più falsificare righe di log.
 - Adblock: le credenziali dei feed DNS di Nethesis non vengono più scritte nei log quando un download fallisce.
 - La regola di log DROP del binding IP/MAC ora ha un limite di frequenza, quindi non può più sovraccaricare la CPU.
 - DPI: gli script ora scrivono i propri messaggi nel log di sistema.
