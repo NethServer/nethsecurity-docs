@@ -14,12 +14,6 @@ NethSecurity releases changelogs.
 
 Image version: `8.9.0` (based on OpenWrt 25.12.6)
 
-:::note
-
-On the first upgrade from the banIP log monitor, all the brute force jails are enabled. Custom brute force patterns and the "Ban after N failed accesses" value are removed. Later upgrades keep your jail selection.
-
-:::
-
 :::warning
 
 New installations no longer allow access to the web interface on port 9090 from the WAN. Existing installations keep their current rule. To open or close this access, use the [`setup` command](../installation/remote_access.md#setup-command-section) from the console.
