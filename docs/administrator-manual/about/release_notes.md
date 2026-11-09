@@ -10,6 +10,70 @@ NethSecurity releases changelogs.
 - List of [known bugs](https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20)
 - Discussions around [possible bugs](http://community.nethserver.org/c/bug)
 
+## Major changes on 2026-11-09
+
+Image version: `8.8.1` (based on OpenWrt 25.12.5)
+
+This image includes all the bug fixes and features released after the 8.8.0 image. Systems running 8.8.0 have already received them as package updates. The only new change is a fix for a security bug in the Linux kernel. Package updates cannot replace the kernel, so this fix requires the new image.
+
+**Security fixes**
+
+- Linux kernel: fixed CVE-2026-98432, a use-after-free bug in IPv4 TCP option handling ([advisory](https://lists.openwall.net/linux-cve-announce/2026/10/15/1)). The upstream fix is applied to the current kernel, so the version is still `6.12.94`.
+- OpenVPN Road Warrior: regenerating a certificate now revokes the old one, and deleting an account revokes all its certificates. Certificates left behind by users deleted in the past are revoked when a new account with the same name is added.
+- OpenVPN Road Warrior: when both certificate and credentials are required, the certificate must belong to the user who logs in.
+- Users: a user with an OpenVPN Road Warrior account can no longer be deleted. Remove the account first. The web interface explains why the user cannot be deleted.
+- Improved input validation.
+
+:::note
+
+If you applied the temporary workaround for CVE-2026-98432 on 8.8.0, remove it after the update:
+
+```
+rm /etc/nftables.d/50-drop-ipv4-options.nft
+fw4 reload
+```
+
+:::
+
+**New features**
+
+- Firewall rules: source MAC addresses can be used as the rule source, and the rules table can be filtered by tag.
+- Threat Shield IP: registered firewalls send the addresses blocked by the brute force protection to Nethesis, and firewalls with the Threat Shield add-on can enable the [Nethesis community blocklist](../security/threat_shield_ip.md#nethesis_community-section).
+- Threat Shield IP: a blocklist feed can now match only some ports, protocols or traffic directions.
+- DPI: the section has been redesigned.
+- The sngrep package can be installed from the package repository.
+- Firewalls with an Enterprise subscription now connect directly to the new my.nethesis.it services for backups, inventory and alerts.
+- Controller: the web interface of a unit is now opened through the controller, and actions made from the controller are logged with the name of the operator.
+
+**Improvements**
+
+- Updated netifyd to 5.2.9.
+- Alerts: the root filesystem alert now uses fixed free-space limits (20 MB warning, 10 MB critical) instead of a percentage, and `/boot` is no longer monitored. The WAN down alert is now a warning.
+- Dashboard: the warnings now match the active alerts.
+- OpenVPN Road Warrior: fewer log lines from the connection tracking script.
+- Port forward: the search is no longer case sensitive.
+
+**Bug fixes**
+
+- Adblock: DNS queries are redirected to the local DNS server again when local DNS enforcement is enabled.
+- Adblock: the blocklist is no longer written to the root filesystem when the dnsmasq directory cannot be found. A leftover file is removed on update.
+- Storage: services check that the data disk is really mounted before writing to it, so a failed disk no longer fills the root filesystem.
+- Storage: setup and removal work with any disk partition naming.
+- Snort: rules are generated in `/var` instead of the data disk.
+- Monitoring: interface traffic graphs show correct values.
+- Monitoring: the system log is no longer flooded with VictoriaMetrics warnings while an alert is active.
+- Backups: cloud backups detect newly added files, and the backup list works with the new portal.
+- Updates: image updates use the current subscription credentials.
+- OpenVPN tunnels: point-to-point tunnels start again, the digest setting is applied correctly, and migrated tunnels get default MTU and MSS values. At least one public IP address is required.
+- WireGuard: new peer tunnels get the first free name.
+- Multi-WAN: a policy without gateways can no longer be saved.
+- FlashStart: Pro accounts no longer fetch sessions they cannot use.
+- Hotspot: the login form is shown again after a session expires, and the unregister button is back for username and password logins.
+- Threat Shield IP: Enterprise feeds are kept on update, and malware reports group hits by feed name.
+- Network scan: OpenVPN and WireGuard interfaces are no longer scanned.
+- nginx is no longer restarted twice when the web interface is updated.
+- High Availability: fixed the help messages of the node configuration commands.
+
 ## Major changes on 2026-07-29
 
 Image version: `8.8.0` (based on OpenWrt 25.12.5)

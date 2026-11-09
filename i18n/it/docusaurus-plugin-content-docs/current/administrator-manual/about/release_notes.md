@@ -10,19 +10,88 @@ Changelog dei rilasci di NethSecurity.
 - Elenco dei [bug noti](https://github.com/NethServer/nethsecurity/issues?q=is%3Aissue%20is%3Aopen%20type%3ABug%20)
 - Discussioni sui [possibili bug](http://community.nethserver.org/c/bug)
 
-## Principali modifiche il 2026-06-25
+## Principali modifiche il 2026-11-09
 
-Versione immagine: `8.8.0-beta1` (basata su OpenWrt 25.12.4)
+Versione immagine: `8.8.1` (basata su OpenWrt 25.12.5)
+
+Questa immagine include tutte le correzioni di bug e le funzionalità rilasciate dopo l'immagine 8.8.0. I sistemi con la 8.8.0 le hanno già ricevute come aggiornamenti dei pacchetti. L'unica novità è la correzione di un problema di sicurezza del kernel Linux. Gli aggiornamenti dei pacchetti non possono sostituire il kernel, quindi questa correzione richiede la nuova immagine.
+
+**Correzioni di sicurezza**
+
+- Kernel Linux: corretta la CVE-2026-98432, un bug di tipo use-after-free nella gestione delle opzioni TCP su IPv4 ([advisory](https://lists.openwall.net/linux-cve-announce/2026/10/15/1)). La correzione upstream è applicata al kernel attuale, quindi la versione resta `6.12.94`.
+- OpenVPN Road Warrior: rigenerare un certificato ora revoca quello vecchio, e cancellare un account revoca tutti i suoi certificati. I certificati lasciati da utenti cancellati in passato vengono revocati quando si aggiunge un nuovo account con lo stesso nome.
+- OpenVPN Road Warrior: quando sono richiesti sia certificato che credenziali, il certificato deve appartenere all'utente che effettua l'accesso.
+- Utenti: un utente con un account OpenVPN Road Warrior non può più essere cancellato. Rimuovere prima l'account. L'interfaccia web spiega perché l'utente non può essere cancellato.
+- Migliorata la validazione dei dati inseriti.
+
+:::note
+
+Se sulla 8.8.0 è stata applicata la soluzione temporanea per la CVE-2026-98432, rimuoverla dopo l'aggiornamento:
+
+```
+rm /etc/nftables.d/50-drop-ipv4-options.nft
+fw4 reload
+```
+
+:::
 
 **Nuove funzionalità**
 
-- NethSecurity è stato ribasato su OpenWrt 25.12.4 e il sistema di gestione dei pacchetti è stato cambiato da `opkg` a `apk`.
+- Regole firewall: gli indirizzi MAC possono essere usati come sorgente della regola, e la tabella delle regole può essere filtrata per tag.
+- Threat Shield IP: i firewall registrati inviano a Nethesis gli indirizzi bloccati dalla protezione contro gli attacchi brute force, e i firewall con l'add-on Threat Shield possono abilitare la [blocklist della community Nethesis](../security/threat_shield_ip.md#nethesis_community-section).
+- Threat Shield IP: un feed di blocklist ora può applicarsi solo ad alcune porte, protocolli o direzioni del traffico.
+- DPI: la sezione è stata ridisegnata.
+- Il pacchetto sngrep può essere installato dal repository dei pacchetti.
+- I firewall con sottoscrizione Enterprise ora si collegano direttamente ai nuovi servizi di my.nethesis.it per backup, inventario e avvisi.
+- Controller: l'interfaccia web di un'unità viene ora aperta attraverso il controller, e le azioni eseguite dal controller vengono registrate con il nome dell'operatore.
+
+**Miglioramenti**
+
+- netifyd è stato aggiornato alla versione 5.2.9.
+- Avvisi: l'avviso sul filesystem di root ora usa limiti fissi di spazio libero (20 MB per il warning, 10 MB per il critico) invece di una percentuale, e `/boot` non viene più monitorata. L'avviso di WAN non raggiungibile è ora un warning.
+- Dashboard: gli avvisi mostrati corrispondono ora agli avvisi attivi.
+- OpenVPN Road Warrior: meno righe di log dallo script di tracciamento delle connessioni.
+- Port forward: la ricerca non distingue più tra maiuscole e minuscole.
+
+**Correzioni di bug**
+
+- Adblock: le query DNS vengono di nuovo reindirizzate al server DNS locale quando l'imposizione del DNS locale è abilitata.
+- Adblock: la blocklist non viene più scritta nel filesystem di root quando la directory di dnsmasq non viene trovata. Un eventuale file rimasto viene rimosso durante l'aggiornamento.
+- Storage: i servizi verificano che il disco dati sia davvero montato prima di scriverci, quindi un disco guasto non riempie più il filesystem di root.
+- Storage: configurazione e rimozione funzionano con qualsiasi schema di nomi delle partizioni.
+- Snort: le regole vengono generate in `/var` invece che sul disco dati.
+- Monitoraggio: i grafici del traffico delle interfacce mostrano valori corretti.
+- Monitoraggio: il log di sistema non viene più riempito di warning di VictoriaMetrics mentre un avviso è attivo.
+- Backup: i backup cloud rilevano i file aggiunti di recente, e l'elenco dei backup funziona con il nuovo portale.
+- Aggiornamenti: gli aggiornamenti dell'immagine usano le credenziali della sottoscrizione attuale.
+- Tunnel OpenVPN: i tunnel punto-punto partono di nuovo, l'impostazione del digest viene applicata correttamente, e i tunnel migrati ricevono valori MTU e MSS predefiniti. È richiesto almeno un indirizzo IP pubblico.
+- WireGuard: i nuovi tunnel peer ricevono il primo nome libero.
+- Multi-WAN: non è più possibile salvare una policy senza gateway.
+- FlashStart: gli account Pro non recuperano più sessioni che non possono usare.
+- Hotspot: il modulo di accesso viene mostrato di nuovo dopo la scadenza di una sessione, e il pulsante di deregistrazione è tornato per gli accessi con nome utente e password.
+- Threat Shield IP: i feed Enterprise vengono mantenuti durante l'aggiornamento, e i report malware raggruppano i blocchi per nome del feed.
+- Scansione di rete: le interfacce OpenVPN e WireGuard non vengono più scansionate.
+- nginx non viene più riavviato due volte quando l'interfaccia web viene aggiornata.
+- High Availability: corretti i messaggi di aiuto dei comandi di configurazione dei nodi.
+
+## Principali modifiche il 2026-07-29
+
+Versione immagine: `8.8.0` (basata su OpenWrt 25.12.5)
+
+**Nuove funzionalità**
+
+- NethSecurity è stato ribasato su OpenWrt 25.12.5 e il sistema di gestione dei pacchetti è stato cambiato da `opkg` a `apk`.
 - Il monitoraggio ora archivia le metriche in VictoriaMetrics e utilizza automaticamente l'archiviazione persistente quando disponibile.
-- Gli avvisi sono ora accessibili dall'interfaccia web.
+- Gli avvisi sono ora accessibili dall'interfaccia web; sui sistemi con sottoscrizione gli avvisi vengono inoltrati tramite il proxy di my.nethesis.it, riutilizzando le credenziali di sistema esistenti.
+- È stato aggiunto un assistente di configurazione da console per completare la configurazione iniziale direttamente dalla console locale, e un banner di accesso che mostra nome del prodotto, versione e suggerimenti per la configurazione.
 - La cronologia di Bash è stata preservata tra i riavvii e `/var` persistente è stata abilitata quando l'archiviazione è disponibile.
 - Il pacchetto Avahi (mDNS) è stato aggiunto al repository di NethSecurity.
-- È stata aggiunta l'azione del firewall `DON\'T TRACK`.
+- È stata aggiunta l'azione del firewall `DON'T TRACK`.
 - Diverse funzionalità precedentemente limitate alle versioni basate su sottoscrizione sono ora disponibili nell'edizione Community.
+- È stata aggiunta la funzionalità di Geoblocking a Threat Shield IP, che permette di bloccare il traffico da specifici paesi o regioni.
+- È stato aggiunto il supporto a più intervalli DHCP direttamente nell'interfaccia, per un'assegnazione degli indirizzi IP più flessibile.
+- Il pacchetto softflowd è stato aggiunto al repository di NethSecurity.
+- Log remoto: ora è possibile selezionare l'indirizzo IP di ascolto del collettore syslog.
 
 **Miglioramenti**
 
@@ -33,13 +102,27 @@ Versione immagine: `8.8.0-beta1` (basata su OpenWrt 25.12.4)
 - Netdata non è più installato per impostazione predefinita; i dashboard del controller legacy possono ancora ripristinarlo manualmente.
 - I leasing DHCP sono ora persistenti se l'archiviazione locale è disponibile, prevenendo la perdita di leasing al riavvio.
 - Le modifiche all'elenco locale DNS di Threat Shield vengono ora applicate utilizzando il pulsante commit, come tutte le altre opzioni di Threat Shield.
+- La dashboard si carica molto più velocemente: l'interfaccia ora raggruppa le richieste in una singola chiamata API, con un miglioramento evidente sull'hardware meno recente.
+- I backup cloud vengono caricati solo quando la configurazione è effettivamente cambiata.
+- Telegraf: le interfacce non attive vengono ignorate, i controlli ping sono stati migliorati e sono stati aggiunti i plugin per WireGuard e nftables.
+- I log di accesso di nginx non vengono più scritti, riducendo l'uso del disco e il rumore nei log.
 
 **Correzioni di bug**
 
-- Gli errori DNS/DHCP ora mostrano informazioni di risoluzione dei problemi più chiare: se dnamsq non riesce ad avviarsi, l'interfaccia web visualizzerà un avviso.
+- Gli errori DNS/DHCP ora mostrano informazioni di risoluzione dei problemi più chiare: se dnsmasq non riesce ad avviarsi, l'interfaccia web visualizzerà un avviso.
 - Adblock non si riavvia più con elenchi vuoti dopo ripetute modifiche alla blocklist o allowlist.
 - Le opzioni di registrazione del traffico sono mostrate in modo coerente nell'interfaccia del firewall.
 - Il tunnel IPSec può ora utilizzare l'azione dpd_action di riavvio.
+- OpenVPN: gli utenti autenticati su un database esterno non vengono più mostrati come disconnessi mentre sono connessi.
+- OpenVPN: il contatore della dashboard non conta più come connessi i tunnel client disconnessi.
+- OpenVPN Roadwarrior: corretta l'estrazione del nome del certificato client.
+- Threat Shield IP: il Geoblocking ora blocca solo le connessioni in ingresso.
+- Flashstart: le regole di bypass vengono ora rispettate per le voci di tipo oggetto di rete nei profili Pro+.
+- rsyslog non riempie più il filesystem di root quando l'archiviazione configurata non è montata.
+- Hotspot: le righe di log di chilli e dedalo sono ora etichettate con la facility syslog corretta e non vengono più duplicate.
+- Le sessioni degli amministratori declassati o cancellati vengono ora revocate immediatamente.
+- La mappa della tastiera della console viene ora preservata durante gli aggiornamenti.
+- Interfaccia: la dimensione di pagina selezionata viene ora preservata nelle tabelle dei leasing DHCP.
 
 ## Principali modifiche il 2026-03-25
 
