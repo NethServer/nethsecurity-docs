@@ -180,7 +180,7 @@ I registri vengono ruotati per gestire lo spazio su disco e garantire che i file
 
 Quando si utilizza l'archiviazione persistente, i registri vengono archiviati da [Victoria Logs](victoria_logs.md) in `/mnt/data/victoria-logs-data` e conservati per 1 anno.
 
-Fino alla versione 8.8, i registri venivano scritti anche in `/mnt/data/log/messages` e ruotati settimanalmente da `logrotate`. Dalla versione 8.9.0 quel file non viene più scritto né ruotato. I file esistenti restano sul disco e possono essere rimossi con:
+Fino alla versione 8.8, i log venivano scritti anche in `/mnt/data/log/messages` e ruotati settimanalmente da `logrotate`. Dalla versione 8.9.0 quel file non viene più scritto né ruotato. I file esistenti restano sul disco e possono essere rimossi con:
 
     rm -rf /mnt/data/log
 

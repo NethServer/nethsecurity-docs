@@ -9,7 +9,7 @@ NethSecurity include il pacchetto `victoria-logs` per l'archiviazione e l'aggreg
 
 La sua interfaccia Web mantiene la navigazione dei log in un unico posto, consentendo di sfogliare, interrogare e visualizzare il flusso rsyslog senza dover passare da un file all'altro o da un servizio all'altro.
 
-Sulla versione 8.8, installarlo con:
+Sulla versione 8.8, può essere installato con i comandi:
 
     apk update
     apk add victoria-logs
