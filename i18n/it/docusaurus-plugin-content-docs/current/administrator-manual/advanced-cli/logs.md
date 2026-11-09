@@ -21,7 +21,7 @@ NethSecurity può archiviare i log in modi diversi a seconda del tipo di install
 ### Appliance fisiche
 
 Sulle appliance fisiche NethSecurity, **lo storage persistente è configurato automaticamente** e utilizzato per archiviare i log.
-Quando lo storage persistente è disponibile, i log vengono salvati su disco e gestiti dalla rotazione dei log.
+Quando lo storage persistente è disponibile, i log vengono salvati su disco da [Victoria Logs](victoria_logs.md).
 
 ### Macchine virtuali
 
@@ -178,10 +178,11 @@ I registri vengono ruotati per gestire lo spazio su disco e garantire che i file
 
 ### Rotazione dei registri di archiviazione {#storage-log-rotation-section}
 
-Quando si utilizza l'archiviazione persistente, la rotazione dei registri viene gestita dall'utilità `logrotate`, configurata per ruotare i registri settimanalmente e mantenere un massimo di 52 settimane (1 anno) di registri.
-Dopo la rotazione, i registri vengono compressi con gzip e archiviati nella stessa directory con una convenzione di denominazione che include la data di rotazione (ad es. `/mnt/data/log/messages-20260315.gz`).
+Quando si utilizza l'archiviazione persistente, i registri vengono archiviati da [Victoria Logs](victoria_logs.md) in `/mnt/data/victoria-logs-data` e conservati per 1 anno.
 
-Il file di configurazione per logrotate si trova in `/etc/logrotate.d/data.conf` e può essere modificato per cambiare la frequenza di rotazione e il periodo di conservazione. Il file di configurazione viene aggiunto automaticamente al backup e preservato durante gli aggiornamenti, quindi le impostazioni personalizzate persistono.
+Fino alla versione 8.8, i log venivano scritti anche in `/mnt/data/log/messages` e ruotati settimanalmente da `logrotate`. Dalla versione 8.9.0 quel file non viene più scritto né ruotato. I file esistenti restano sul disco e possono essere rimossi con:
+
+    rm -rf /mnt/data/log
 
 ### Rotazione dei registri in memoria
 

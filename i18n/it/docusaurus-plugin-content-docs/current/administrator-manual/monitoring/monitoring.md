@@ -174,8 +174,10 @@ Avvisi disponibili:
 - `CriticalCpuUsage`: l'utilizzo della CPU è superiore all'85%.
 - `HighMemoryUsage`: l'utilizzo della memoria è superiore all'80%.
 - `CriticalMemoryUsage`: l'utilizzo della memoria è superiore al 90%.
-- `DiskSpaceWarning`: un file system montato è superiore all'80% di utilizzo.
-- `DiskSpaceCritical`: un file system montato è superiore al 90% di utilizzo.
+- `DiskSpaceWarning`: lo storage dati `/mnt/data` è superiore all'80% di utilizzo.
+- `DiskSpaceCritical`: lo storage dati `/mnt/data` è superiore al 90% di utilizzo.
+- `RootSpaceWarning`: il file system root `/` ha meno di 20 MB di spazio libero.
+- `RootSpaceCritical`: il file system root `/` ha meno di 10 MB di spazio libero.
 - `HighSystemLoad`: il carico del sistema per CPU è superiore a 2.
 - `WanDown`: un'interfaccia WAN monitorata è offline.
 - `ServiceDown`: un servizio `procd` configurato non è in esecuzione.
