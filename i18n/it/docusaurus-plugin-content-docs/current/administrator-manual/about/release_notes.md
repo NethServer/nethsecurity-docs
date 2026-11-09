@@ -18,7 +18,7 @@ Questa immagine include tutte le correzioni di bug e le funzionalità rilasciate
 
 **Correzioni di sicurezza**
 
-- Kernel Linux: corretta la CVE-2026-98432, un bug di tipo use-after-free nella gestione delle opzioni TCP su IPv4 ([advisory](https://lists.openwall.net/linux-cve-announce/2026/10/15/1)). La correzione upstream è applicata al kernel attuale, quindi la versione resta `6.12.94`.
+- Kernel Linux: corretta la CVE-2026-98432, un bug di tipo use-after-free nella gestione delle opzioni TCP su IPv4 ([advisory](https://lists.openwall.net/linux-cve-announce/2026/10/15/1), [mitigazione per le versioni precedenti](https://github.com/NethServer/nethsecurity/issues/2002)). La correzione upstream è applicata al kernel attuale, quindi la versione resta `6.12.94`.
 - OpenVPN Road Warrior: rigenerare un certificato ora revoca quello vecchio, e cancellare un account revoca tutti i suoi certificati. I certificati lasciati da utenti cancellati in passato vengono revocati quando si aggiunge un nuovo account con lo stesso nome.
 - OpenVPN Road Warrior: quando sono richiesti sia certificato che credenziali, il certificato deve appartenere all'utente che effettua l'accesso.
 - Utenti: un utente con un account OpenVPN Road Warrior non può più essere cancellato. Rimuovere prima l'account. L'interfaccia web spiega perché l'utente non può essere cancellato.
@@ -26,7 +26,7 @@ Questa immagine include tutte le correzioni di bug e le funzionalità rilasciate
 
 :::note
 
-Se sulla 8.8.0 è stata applicata la soluzione temporanea per la CVE-2026-98432, rimuoverla dopo l'aggiornamento:
+Se sulla 8.8.0 è stata applicata la [soluzione temporanea](https://github.com/NethServer/nethsecurity/issues/2002) per la CVE-2026-98432, rimuoverla dopo l'aggiornamento:
 
 ```
 rm /etc/nftables.d/50-drop-ipv4-options.nft

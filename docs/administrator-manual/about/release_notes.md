@@ -18,7 +18,7 @@ This image includes all the bug fixes and features released after the 8.8.0 imag
 
 **Security fixes**
 
-- Linux kernel: fixed CVE-2026-98432, a use-after-free bug in IPv4 TCP option handling ([advisory](https://lists.openwall.net/linux-cve-announce/2026/10/15/1)). The upstream fix is applied to the current kernel, so the version is still `6.12.94`.
+- Linux kernel: fixed CVE-2026-98432, a use-after-free bug in IPv4 TCP option handling ([advisory](https://lists.openwall.net/linux-cve-announce/2026/10/15/1), [mitigation for older versions](https://github.com/NethServer/nethsecurity/issues/2002)). The upstream fix is applied to the current kernel, so the version is still `6.12.94`.
 - OpenVPN Road Warrior: regenerating a certificate now revokes the old one, and deleting an account revokes all its certificates. Certificates left behind by users deleted in the past are revoked when a new account with the same name is added.
 - OpenVPN Road Warrior: when both certificate and credentials are required, the certificate must belong to the user who logs in.
 - Users: a user with an OpenVPN Road Warrior account can no longer be deleted. Remove the account first. The web interface explains why the user cannot be deleted.
@@ -26,7 +26,7 @@ This image includes all the bug fixes and features released after the 8.8.0 imag
 
 :::note
 
-If you applied the temporary workaround for CVE-2026-98432 on 8.8.0, remove it after the update:
+If you applied the [temporary workaround](https://github.com/NethServer/nethsecurity/issues/2002) for CVE-2026-98432 on 8.8.0, remove it after the update:
 
 ```
 rm /etc/nftables.d/50-drop-ipv4-options.nft
