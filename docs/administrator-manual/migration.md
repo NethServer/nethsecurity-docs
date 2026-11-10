@@ -167,7 +167,7 @@ The following features are not migrated to NethSecurity:
 - **Web proxy** (Squid) and filter (ufdbGuard): replaced by [Content Filtering](./security/content_filter.md) and [Deep Packet Inspection (DPI)](./security/dpi_filter.md)
 - **IPS** (Suricata) and IPS alerts (EveBox): replaced by [Intrusion Prevention System (Snort)](./security/ips.md)
 - **UPS monitoring** (NUT): available from command line via [UPS (NUT)](./advanced-cli/ups.md)
-- **System statistics** (Collectd): replaced by Netdata in [Real-time monitoring](./monitoring/monitoring.md)
+- **System statistics** (Collectd): replaced by the Metrics view (powered by VictoriaMetrics and Telegraf)
 - **Reports** (Dante): replaced by controller metrics in [Metrics](./system/controller.md)
 - **Bandwidth monitor** (ntopng): available in [Real-time monitoring](./monitoring/monitoring.md) and [Metrics](./system/controller.md)
 - **Fail2ban**: replaced by Threat Shield [brute force protection](./security/threat_shield_ip.md)
