@@ -15,7 +15,11 @@ Please note that to access the Nethesis and Yoroi blocklists, the machine must h
 
 The service is disabled by default, to enable it navigate to the `Threat shield IP` page under the `Security` section. Access the `Settings` tab and activate the `Status` switch.
 
-When the service is enabled, the `Blocklist feeds` tab will display all available blocklists. You can enable or disable each blocklist by using the switch on the right side of the list. Enabled blocklists will be automatically updated at regular intervals. NethSecurity 8 allows the use of Community and Enterprise blocklists.
+The page has these tabs, in this order: `Blocklist bans`, `Brute force bans`, `Blocklist feeds`, `Allowlist feeds`, `Local blocklist`, `Local allowlist`, `Geoblocking` and `Settings`. The page opens on the `Blocklist bans` tab.
+
+When the service is enabled, the `Blocklist feeds` tab will display all available blocklists. You can enable or disable each blocklist by using the switch on the right side of the list. Enabled blocklists will be automatically updated at regular intervals. NethSecurity 8 allows the use of Community, Enterprise and [custom](#custom_blocklist-section) blocklists.
+
+Changes made in the `Blocklist feeds` and `Allowlist feeds` tabs are applied only after you save the configuration: click **Unsaved changes** in the top bar, then **Apply changes**.
 
 ### Community blocklists
 
@@ -44,7 +48,7 @@ Enterprise blocklists are specifically focused on security and offer several adv
 3.  **Reduced false positives**: False positives occur when legitimate traffic is mistakenly blocked. Enterprise blocklists are designed to minimize false positives by carefully curating and verifying the listed IP addresses and hostnames. The companies behind Enterprise blocklists have robust processes in place to ensure that only malicious entities are included in the blocklists. This reduces the chances of legitimate traffic being blocked, minimizing disruptions to your network or services.
 4.  **Enterprise support**: Enterprise blocklists often come with additional support and services tailored for enterprise environments. This includes access to technical support, documentation, and integration assistance. If any issues or questions arise while using the Enterprise blocklists, you can rely on the support provided by the cybersecurity companies to help you address them effectively.
 
-### Direction
+### Direction {#direction-section}
 
 Each blocklist feed acts on a specific traffic direction:
 
@@ -79,7 +83,7 @@ It works this way:
 - When enough systems report the same address, Nethesis adds it to the `Nethesis community - Level 2` blocklist.
 - Firewalls with the Threat Shield add-on can enable this blocklist from the `Blocklist feeds` tab, like the other Enterprise blocklists. It is disabled by default.
 
-Registered firewalls also apply the Nethesis global allowlist. The addresses in this list, such as the Nethesis subscription servers, are never blocked.
+Registered firewalls also apply the Nethesis global allowlist. The addresses in this list, such as the Nethesis subscription servers, are never blocked. The [Allowlist feeds](#allowlist_feeds-section) tab shows whether it is enabled.
 
 What happens depends on the subscription:
 
@@ -117,6 +121,54 @@ Before NethSecurity 8.9.0, reporting was turned off with the `banip.global.ban_b
 
 :::
 
+### Custom blocklist feeds {#custom_blocklist-section}
+
+You can add your own blocklists, downloaded from a web server. Custom blocklists work with or without a subscription.
+
+To add a custom blocklist:
+
+1. Open the `Blocklist feeds` tab and click **Create custom feed**.
+2. Fill in the fields:
+   - `Status`: enable or disable the list.
+   - `Name`: 3 to 16 lowercase letters and digits, starting with a letter. Names starting with `yoroi` or `nethesis`, and the names `allowlist` and `blocklist`, are reserved. The name must not be used by another list and can't be changed later.
+   - `Description`: optional.
+   - `Direction`: `Incoming`, `Outgoing` or `Incoming and outgoing`. See [Direction](#direction-section).
+   - `IPv4 list URL` and `IPv6 list URL`: the address of a plain text file with one IPv4 or IPv6 address or network per line. Enter at least one of them. Only `http` and `https` URLs are accepted.
+3. Click **Create**.
+4. Save the configuration.
+
+Custom blocklists are listed first, with type `Custom`. Use the switch in the `Status` column to enable or disable a list, click **Edit** to change it, or open the menu at the end of the row and click **Delete** to remove it.
+
+If a file can't be downloaded, the last downloaded copy is used until the next restart.
+
+:::warning
+
+If a URL contains a username and password, for example `https://user:password@example.com/list.txt`, they are stored in plain text. Anyone with access to the firewall configuration or its backups can read them.
+
+:::
+
+### Allowlist feeds {#allowlist_feeds-section}
+
+Threat Shield IP never blocks the IP addresses and networks in the enabled allowlists. The `Allowlist feeds` tab lists:
+
+- `Nethesis global allowlist`: a built-in row. It is enabled automatically when the firewall has a subscription and disabled without one. It can't be disabled, edited or deleted. See [Nethesis community blocklist](#nethesis_community-section).
+- Custom allowlists, downloaded from a web server. They work with or without a subscription.
+
+To add a custom allowlist:
+
+1. Open the `Allowlist feeds` tab and click **Create custom feed**.
+2. Fill in the fields:
+   - `Status`: enable or disable the list.
+   - `Name`: same rules as for [custom blocklist feeds](#custom_blocklist-section).
+   - `Description`: optional.
+   - `List URL`: the address of a plain text file with one IP address or network per line. IPv4 and IPv6 entries can be mixed. Only `http` and `https` URLs are accepted.
+3. Click **Create**.
+4. Save the configuration.
+
+Use the switch in the `Status` column to enable or disable a custom allowlist, click **Edit** to change it, or open the menu at the end of the row and click **Delete** to remove it. As for custom blocklists, if a file can't be downloaded the last downloaded copy is used until the next restart, and credentials in the URL are stored in plain text.
+
+To allow single addresses, use the [Local allowlist](#local_allowlist-section).
+
 ### Logging
 
 The Threat Shield IP feature includes advanced logging capabilities to monitor and track potential threats. The logging section allows you to configure which types of blocked packets are logged:
@@ -126,6 +178,25 @@ The Threat Shield IP feature includes advanced logging capabilities to monitor a
 3. **Log blocked outbound packets (from local networks)**: when enabled, this option logs blocked packets originating from local networks and routed through the firewall towards the Internet (LAN forward).
 
 These logging options provide granular control over which blocked packets are recorded, allowing to expose metrics inside the [real-time monitoring](../monitoring/monitoring.md#real_time_monitoring-section) and [historical monitoring](../monitoring/monitoring.md#historical_monitoring-section) sections.
+
+### Blocklist bans {#blocklist_bans-section}
+
+The `Blocklist bans` tab shows the IP addresses banned by the blocklists in the last hour. There is one row for each address, blocklist and direction, and the rows with the most hits come first. The tab shows at most 500 rows.
+
+The table has these columns:
+
+- `IP address`: the banned address.
+- `Blocklist`: the blocklist that contains the address. `Local blocklist` stands for the [local blocklist](#local_blocklist_ip-section).
+- `Direction`: `Incoming` for traffic coming from the internet, `Outgoing` when a host in a local network tried to reach the address.
+- `Hits`: how many times the address was blocked.
+- `Last seen`: when the address was blocked the last time.
+
+Click **Details** to see the latest logged lines for that row. Click **Refresh** to reload the list.
+
+The data come from the log lines that banIP writes when it drops a packet, kept in the firewall log store ([Victoria Logs](../advanced-cli/victoria_logs.md)). For this reason:
+
+- only the logged directions appear: enable `Log blocked inbound packets (from the Internet)` and `Log blocked outbound packets (from local networks)` in the `Settings` tab. Both options are enabled by default.
+- banIP limits how many log lines it writes, so `Hits` can be lower than the real number of blocked packets.
 
 ### Local allowlist {#local_allowlist-section}
 
@@ -212,6 +283,14 @@ You can perform further actions using the command line; these are the supported 
 - Unban an IP address: `nft delete element inet banIP blocklistv4 { IP_ADDRESS }`
 
 Bear in mind that you need to specify the correct blocklist in commands when prompted (`blocklistv4` for IPv4, `blocklistv6` for IPv6).
+
+### Brute force bans {#brute_force_bans-section}
+
+The `Brute force bans` tab lists the IP addresses banned by the brute force protection. The status of each ban is one of:
+
+- `Banned`: the ban has no expiration.
+- `Banned until <date>`: the ban expires at the shown date.
+- `Ban expired`: the ban is no longer active.
 
 ### Block DoS
 

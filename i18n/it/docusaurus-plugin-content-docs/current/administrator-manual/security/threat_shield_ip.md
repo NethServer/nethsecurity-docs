@@ -15,7 +15,11 @@ Si noti che per accedere alle liste di blocco di Nethesis e Yoroi, la macchina d
 
 Il servizio è disabilitato per impostazione predefinita. Per abilitarlo, navigare alla pagina `Threat shield IP` nella sezione `Sicurezza`. Accedere alla scheda `Impostazioni` e attivare l'interruttore `Stato`.
 
-Quando il servizio è abilitato, la scheda `Blocklist feeds` mostrerà tutte le liste di blocco disponibili. Puoi abilitare o disabilitare ogni lista di blocco utilizzando l'interruttore sul lato destro dell'elenco. Le liste di blocco abilitate verranno aggiornate automaticamente a intervalli regolari. NethSecurity 8 consente l'utilizzo di liste di blocco Community ed Enterprise.
+La pagina ha queste schede, in quest'ordine: `Ban da blocklist`, `Ban per brute force`, `Blocklist feed`, `Allowlist feed`, `Blocklist locale`, `Allowlist locale`, `Geoblocking` e `Impostazioni`. La pagina si apre sulla scheda `Ban da blocklist`.
+
+Quando il servizio è abilitato, la scheda `Blocklist feed` mostrerà tutte le liste di blocco disponibili. Puoi abilitare o disabilitare ogni lista di blocco utilizzando l'interruttore sul lato destro dell'elenco. Le liste di blocco abilitate verranno aggiornate automaticamente a intervalli regolari. NethSecurity 8 consente l'utilizzo di liste di blocco Community, Enterprise e [personalizzate](#custom_blocklist-section).
+
+Le modifiche fatte nelle schede `Blocklist feed` e `Allowlist feed` vengono applicate solo dopo aver salvato la configurazione: fai clic su **Modifiche non salvate** nella barra in alto, poi su **Applica le modifiche**.
 
 ### Liste di blocco Community
 
@@ -44,7 +48,7 @@ Le liste di blocco Enterprise sono specificamente focalizzate sulla sicurezza e 
 3.  **Riduzione dei falsi positivi**: I falsi positivi si verificano quando il traffico legittimo viene bloccato per errore. Le liste di blocco Enterprise sono progettate per minimizzare i falsi positivi curando e verificando attentamente gli indirizzi IP e i nomi host elencati. Le aziende dietro alle blocklist Enterprise hanno processi robusti in atto per garantire che solo le entità dannose siano incluse nelle blocklist. Questo riduce le possibilità che il traffico legittimo venga bloccato, minimizzando i disturbi alla tua rete o ai tuoi servizi.
 4.  **Supporto Enterprise**: Le liste di blocco Enterprise spesso vengono fornite con supporto e servizi aggiuntivi personalizzati per ambienti aziendali. Questo include l'accesso al supporto tecnico, alla documentazione e all'assistenza di integrazione. Se riscontri problemi o hai domande durante l'utilizzo delle blocklist Enterprise, puoi affidarti al supporto fornito dalle aziende di cybersicurezza per risolverli efficacemente.
 
-### Direzione
+### Direzione {#direction-section}
 
 Ogni feed della blocklist agisce su una specifica direzione del traffico:
 
@@ -76,9 +80,9 @@ Come funziona:
 
 - Quando Threat Shield IP blocca un indirizzo IP con la [protezione brute force](#brute_force-section), il firewall invia subito quell'indirizzo a Nethesis. Vengono inviati solo indirizzi pubblici: gli indirizzi privati, CGNAT e link-local non vengono inviati.
 - Quando abbastanza sistemi segnalano lo stesso indirizzo, Nethesis lo aggiunge alla lista di blocco `Nethesis community - Level 2`.
-- I firewall con l'add-on Threat Shield possono abilitare questa lista dalla scheda `Blocklist feeds`, come le altre liste di blocco Enterprise. È disabilitata di default.
+- I firewall con l'add-on Threat Shield possono abilitare questa lista dalla scheda `Blocklist feed`, come le altre liste di blocco Enterprise. È disabilitata di default.
 
-I firewall registrati applicano anche la allowlist globale di Nethesis. Gli indirizzi in questa lista, come i server delle sottoscrizioni Nethesis, non vengono mai bloccati.
+I firewall registrati applicano anche la allowlist globale di Nethesis. Gli indirizzi in questa lista, come i server delle sottoscrizioni Nethesis, non vengono mai bloccati. La scheda [Allowlist feed](#allowlist_feeds-section) mostra se è abilitata.
 
 Il comportamento dipende dalla sottoscrizione:
 
@@ -116,6 +120,54 @@ Prima di NethSecurity 8.9.0, l'invio si disattivava con l'opzione `banip.global.
 
 :::
 
+### Blocklist feed personalizzati {#custom_blocklist-section}
+
+Puoi aggiungere blocklist tue, scaricate da un server web. Le blocklist personalizzate funzionano con o senza sottoscrizione.
+
+Per aggiungere una blocklist personalizzata:
+
+1. Apri la scheda `Blocklist feed` e fai clic su **Crea feed personalizzato**.
+2. Compila i campi:
+   - `Stato`: abilita o disabilita la lista.
+   - `Nome`: da 3 a 16 lettere minuscole e cifre, iniziando con una lettera. I nomi che iniziano con `yoroi` o `nethesis`, e i nomi `allowlist` e `blocklist`, sono riservati. Il nome non deve essere già usato da un'altra lista e non può essere cambiato in seguito.
+   - `Descrizione`: facoltativa.
+   - `Direzione`: `In entrata`, `In uscita` o `In entrata e in uscita`. Vedi [Direzione](#direction-section).
+   - `URL lista IPv4` e `URL lista IPv6`: l'indirizzo di un file di testo semplice con un indirizzo o una rete IPv4 o IPv6 per riga. Inserisci almeno uno dei due. Sono accettati solo URL `http` e `https`.
+3. Fai clic su **Crea**.
+4. Salva la configurazione.
+
+Le blocklist personalizzate compaiono per prime, con tipo `Personalizzata`. Usa l'interruttore nella colonna `Stato` per abilitare o disabilitare una lista, fai clic su **Modifica** per cambiarla, oppure apri il menu alla fine della riga e fai clic su **Elimina** per rimuoverla.
+
+Se un file non può essere scaricato, viene usata l'ultima copia scaricata fino al prossimo riavvio.
+
+:::warning
+
+Se un URL contiene nome utente e password, per esempio `https://user:password@example.com/list.txt`, vengono salvati in chiaro. Chiunque abbia accesso alla configurazione del firewall o ai suoi backup può leggerli.
+
+:::
+
+### Allowlist feed {#allowlist_feeds-section}
+
+Threat Shield IP non blocca mai gli indirizzi IP e le reti contenuti nelle allowlist abilitate. La scheda `Allowlist feed` elenca:
+
+- `Allowlist globale Nethesis`: una riga predefinita. Viene abilitata automaticamente quando il firewall ha una sottoscrizione ed è disabilitata senza. Non può essere disabilitata, modificata o eliminata. Vedi [Lista di blocco Nethesis community](#nethesis_community-section).
+- Le allowlist personalizzate, scaricate da un server web. Funzionano con o senza sottoscrizione.
+
+Per aggiungere una allowlist personalizzata:
+
+1. Apri la scheda `Allowlist feed` e fai clic su **Crea feed personalizzato**.
+2. Compila i campi:
+   - `Stato`: abilita o disabilita la lista.
+   - `Nome`: stesse regole dei [blocklist feed personalizzati](#custom_blocklist-section).
+   - `Descrizione`: facoltativa.
+   - `URL della lista`: l'indirizzo di un file di testo semplice con un indirizzo IP o una rete per riga. Le voci IPv4 e IPv6 possono essere mescolate. Sono accettati solo URL `http` e `https`.
+3. Fai clic su **Crea**.
+4. Salva la configurazione.
+
+Usa l'interruttore nella colonna `Stato` per abilitare o disabilitare una allowlist personalizzata, fai clic su **Modifica** per cambiarla, oppure apri il menu alla fine della riga e fai clic su **Elimina** per rimuoverla. Come per le blocklist personalizzate, se un file non può essere scaricato viene usata l'ultima copia scaricata fino al prossimo riavvio, e le credenziali nell'URL vengono salvate in chiaro.
+
+Per consentire singoli indirizzi, usa l'[Allowlist locale](#local_allowlist-section).
+
 ### Logging
 
 La funzione Threat Shield IP include funzionalità avanzate di logging per monitorare e tracciare le minacce potenziali. La sezione di logging consente di configurare quali tipi di pacchetti bloccati vengono registrati:
@@ -125,6 +177,25 @@ La funzione Threat Shield IP include funzionalità avanzate di logging per monit
 3.  **Log dei pacchetti bloccati inoltrati dalle reti locali verso Internet**: se abilitata, questa opzione registra i pacchetti bloccati originati dalle reti locali e instradati attraverso il firewall verso internet (catena LAN-forward).
 
 Queste opzioni di logging forniscono un controllo granulare su quali pacchetti bloccati vengono registrati, consentendo di esporre metriche all'interno della sezione [monitoraggio in tempo reale](../monitoring/monitoring.md#real_time_monitoring-section) e [monitoraggio storico](../monitoring/monitoring.md#historical_monitoring-section).
+
+### Ban da blocklist {#blocklist_bans-section}
+
+La scheda `Ban da blocklist` mostra gli indirizzi IP bloccati dalle blocklist nell'ultima ora. C'è una riga per ogni indirizzo, blocklist e direzione, e le righe con più hit compaiono per prime. La scheda mostra al massimo 500 righe.
+
+La tabella ha queste colonne:
+
+- `Indirizzo IP`: l'indirizzo bloccato.
+- `Blocklist`: la blocklist che contiene l'indirizzo. `Blocklist locale` indica la [blocklist locale](#local_blocklist_ip-section).
+- `Direzione`: `In entrata` per il traffico che arriva da internet, `In uscita` quando un host di una rete locale ha provato a raggiungere l'indirizzo.
+- `Hit`: quante volte l'indirizzo è stato bloccato.
+- `Ultima attività`: quando l'indirizzo è stato bloccato l'ultima volta.
+
+Fai clic su **Dettagli** per vedere le ultime righe di log registrate per quella riga. Fai clic su **Aggiorna** per ricaricare l'elenco.
+
+I dati vengono dalle righe di log che banIP scrive quando scarta un pacchetto, conservate nell'archivio dei log del firewall ([Victoria Logs](../advanced-cli/victoria_logs.md)). Per questo:
+
+- compaiono solo le direzioni registrate nei log: abilita `Log dei pacchetti bloccati in entrata (da Internet)` e `Log dei pacchetti bloccati inoltrati dalle reti locali verso Internet` nella scheda `Impostazioni`. Entrambe le opzioni sono abilitate di default.
+- banIP limita quante righe di log scrive, quindi `Hit` può essere più basso del numero reale di pacchetti bloccati.
 
 ### Allowlist locale {#local_allowlist-section}
 
@@ -211,6 +282,14 @@ Puoi eseguire ulteriori azioni utilizzando la riga di comando; questi sono i com
 - Sblocca un indirizzo IP: `nft delete element inet banIP blocklistv4 { IP_ADDRESS }`
 
 Tieni presente che devi specificare la blocklist corretta nei comandi quando richiesto (`blocklistv4` per IPv4, `blocklistv6` per IPv6).
+
+### Ban per brute force {#brute_force_bans-section}
+
+La scheda `Ban per brute force` elenca gli indirizzi IP bloccati dalla protezione brute force. Lo stato di ogni ban è uno di questi:
+
+- `Bannato`: il ban non ha scadenza.
+- `Bannato fino a <data>`: il ban scade alla data indicata.
+- `Ban scaduto`: il ban non è più attivo.
 
 ### Blocca DoS
 
