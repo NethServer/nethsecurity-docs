@@ -19,7 +19,7 @@ Utilizza Threat shield DNS solo se non stai già utilizzando il servizio FlashSt
 
 Il servizio è disabilitato per impostazione predefinita; per abilitarlo, vai alla pagina `Threat shield DNS` nella sezione `Security`. Accedi alla scheda `Settings` e attiva l'interruttore `Status`.
 
-Quando il servizio è abilitato, la scheda `Blocklist sources` visualizzerà tutte le liste di blocco disponibili. Puoi abilitare o disabilitare ogni lista di blocco utilizzando l'interruttore sul lato destro dell'elenco. Le liste di blocco abilitate verranno aggiornate automaticamente a intervalli regolari.
+Quando il servizio è abilitato, la scheda `Blocklist feed` visualizzerà tutte le liste di blocco disponibili. Puoi abilitare o disabilitare ogni lista di blocco utilizzando l'interruttore sul lato destro dell'elenco. Le liste di blocco abilitate verranno aggiornate automaticamente a intervalli regolari.
 
 Per specificare in quali zone il servizio deve essere attivo, selezionale nella casella combinata `Force DNS redirection on these zones`.
 
