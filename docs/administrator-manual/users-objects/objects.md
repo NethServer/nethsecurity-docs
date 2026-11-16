@@ -59,14 +59,14 @@ By utilizing static leases and local DNS records, you can create a more organize
 
 For detailed instructions on how to create and manage static leases and DNS records, please refer to the [DHCP and DNS configuration chapters](../network/dns_dhcp.md).
 
-## VPN users
+## VPN users {#vpn-users}
 
 [OpenVPN users](../vpn/openvpn_roadwarrior.md) with IP reservations can be used as firewall objects, enabling user-specific network access control. This feature applies to both local and remote (LDAP) users configured for OpenVPN access.
 
 Key points:
 
 - each user can be assigned a specific OpenVPN IP address
-- these users can be referenced in firewall rules as source or destination
+- these users can be referenced in firewall rules as source or destination, and in [DPI rules](../security/dpi_filter.md#objects-as-source) as source
 - applies to both local and remote (LDAP) users
 - allows for creation of user-specific access policies
 
@@ -81,6 +81,8 @@ Requirements:
 
 - user has OpenVPN access enabled
 - a specific IP address is reserved for the user
+
+The reserved IP of a user used as an object can not be removed until the user is removed from all the host sets and rules using it.
 
 By using OpenVPN users as firewall objects, you can create a more secure network environment with access policies tied directly to user identities.
 
@@ -128,11 +130,11 @@ Inside the list, you can also find hosts objects coming from other sections like
 
 These objects can be used in host sets to create more complex rules, but they cannot be edited directly from the host sets page.
 
-When an object is not used in any host set nor in any firewall rule, it will be marked as `unused` in the list.
+When an object is not used in any host set nor in any firewall or DPI rule, it will be marked as `unused` in the list.
 
 To see where an object is used, click on the `Show usages` link next to the object.
 
-Please note that used objects cannot be deleted until they are removed from all host sets and firewall rules.
+Please note that used objects cannot be deleted until they are removed from all host sets, firewall rules and [DPI rules](../security/dpi_filter.md#objects-as-source).
 
 #### Add an Host Set
 
