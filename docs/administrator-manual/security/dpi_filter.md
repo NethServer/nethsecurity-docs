@@ -49,7 +49,10 @@ This makes it possible to combine **Allow** and **Block** rules. For example, to
 To create a new rule, open the **Rules** tab and click **Add rule**. Application groups must be created first if the rule needs to match specific applications. The rule wizard has four steps:
 
 1. **General**: the rule **Name** and its **Status** (enabled or disabled)
-2. **Source**: choose **Any source address** to apply the rule to every host, or **Enter one or more addresses** to narrow it down. Each entry can be an IP address, a CIDR network (e.g. `10.10.10.0/24`) or an IP range (e.g. `10.10.10.1-10.10.10.5`)
+2. **Source**: choose the hosts the rule applies to:
+   - **Any source address**: every host
+   - **Enter one or more addresses**: each entry can be an IP address, a CIDR network (e.g. `10.10.10.0/24`) or an IP range (e.g. `10.10.10.1-10.10.10.5`)
+   - **Select one or more objects**: one or more [firewall objects](#objects-as-source)
 3. **Match and action**:
    - **Match type**: **Application groups** matches the traffic of the selected groups, while **All traffic** matches every flow from the source
    - **Action**: **Block matching traffic** or **Allow matching traffic**
@@ -65,6 +68,21 @@ From the rules list, each rule can be:
 - moved by drag and drop to change the evaluation order; reordering is available only when no filter is applied to the list
 
 The list can be filtered by name, source, match type and action.
+
+### Objects as source {#objects-as-source}
+
+Instead of typing addresses, a rule can use one or more [firewall objects](../users-objects/objects.md) as source:
+
+- host sets
+- static leases (DHCP reservations)
+- DNS records
+- VPN users with a reserved IP
+
+Domain sets can not be used as DPI source. A rule uses either objects or typed addresses: the two can not be combined in the same rule.
+
+Rules follow the objects: when an object is changed, for example when an address is added to a host set or the reserved IP of a VPN user changes, every rule using it is updated automatically, without editing the rules. Host sets can contain IP addresses, CIDR networks and IP ranges.
+
+An object used by a DPI rule can not be deleted until it is removed from all the rules, and the **Show usages** link of the object lists the **DPI rules** using it. Likewise, the reserved IP of an [OpenVPN Road Warrior account](../vpn/openvpn_roadwarrior.md) can not be removed while the user is used as an object: the error message lists where the user is used.
 
 ### Firewall and WAN traffic {#firewall-and-wan-traffic}
 

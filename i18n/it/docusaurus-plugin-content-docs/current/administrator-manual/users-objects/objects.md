@@ -59,14 +59,14 @@ Utilizzando lease statici e record DNS locali, è possibile creare un ambiente d
 
 Per istruzioni dettagliate su come creare e gestire lease statici e record DNS, consultare il [capitolo sulla configurazione DHCP e DNS](../network/dns_dhcp.md).
 
-## Utenti VPN
+## Utenti VPN {#vpn-users}
 
 Gli [utenti OpenVPN](../vpn/openvpn_roadwarrior.md) con prenotazioni IP possono essere utilizzati come oggetti firewall, abilitando il controllo dell'accesso di rete specifico per l'utente. Questa funzione si applica sia agli utenti locali che a quelli remoti (LDAP) configurati per l'accesso OpenVPN.
 
 Punti chiave:
 
 - a ogni utente può essere assegnato uno specifico indirizzo IP OpenVPN
-- questi utenti possono essere referenziati nelle regole firewall come origine o destinazione
+- questi utenti possono essere referenziati nelle regole firewall come origine o destinazione, e nelle [regole DPI](../security/dpi_filter.md#objects-as-source) come sorgente
 - si applica sia agli utenti locali che a quelli remoti (LDAP)
 - consente la creazione di politiche di accesso specifiche per l'utente
 
@@ -81,6 +81,8 @@ Requisiti:
 
 - l'utente ha l'accesso OpenVPN abilitato
 - un indirizzo IP specifico è riservato per l'utente
+
+L'IP riservato di un utente usato come oggetto non può essere rimosso finché l'utente non viene rimosso da tutti gli insiemi di host e dalle regole che lo utilizzano.
 
 Utilizzando gli utenti OpenVPN come oggetti firewall, è possibile creare un ambiente di rete più sicuro con politiche di accesso legate direttamente alle identità degli utenti.
 
@@ -128,11 +130,11 @@ All'interno dell'elenco, puoi trovare anche oggetti host provenienti da altre se
 
 Questi oggetti possono essere utilizzati negli insiemi di host per creare regole più complesse, ma non possono essere modificati direttamente dalla pagina degli insiemi di host.
 
-Quando un oggetto non viene utilizzato in nessun insieme di host né in nessuna regola firewall, sarà contrassegnato come `non utilizzato` nell'elenco.
+Quando un oggetto non viene utilizzato in nessun insieme di host né in nessuna regola firewall o DPI, sarà contrassegnato come `non utilizzato` nell'elenco.
 
 Per vedere dove viene utilizzato un oggetto, fai clic sul link `Mostra utilizzi` accanto all'oggetto.
 
-Tieni presente che gli oggetti utilizzati non possono essere eliminati fino a quando non vengono rimossi da tutti gli insiemi di host e dalle regole firewall.
+Tieni presente che gli oggetti utilizzati non possono essere eliminati fino a quando non vengono rimossi da tutti gli insiemi di host, dalle regole firewall e dalle [regole DPI](../security/dpi_filter.md#objects-as-source).
 
 #### Aggiungi un insieme di host
 

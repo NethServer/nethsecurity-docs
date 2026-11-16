@@ -49,7 +49,10 @@ Questo permette di combinare regole **Consenti** e **Blocca**. Ad esempio, per b
 Per creare una nuova regola, aprire la scheda **Regole** e fare clic su **Aggiungi regola**. Se la regola deve corrispondere ad applicazioni specifiche, i gruppi di applicazioni devono essere creati prima. La procedura guidata di creazione della regola prevede quattro passaggi:
 
 1. **Generale**: il **Nome** della regola e il suo **Stato** (abilitata o disabilitata)
-2. **Sorgente**: scegliere **Qualsiasi indirizzo sorgente** per applicare la regola a tutti gli host, oppure **Inserisci uno o più indirizzi** per restringerla. Ogni voce può essere un indirizzo IP, una rete CIDR (ad es. `10.10.10.0/24`) o un intervallo di IP (ad es. `10.10.10.1-10.10.10.5`)
+2. **Sorgente**: scegliere gli host a cui si applica la regola:
+   - **Qualsiasi indirizzo sorgente**: tutti gli host
+   - **Inserisci uno o più indirizzi**: ogni voce può essere un indirizzo IP, una rete CIDR (ad es. `10.10.10.0/24`) o un intervallo di IP (ad es. `10.10.10.1-10.10.10.5`)
+   - **Seleziona uno o più oggetti**: uno o più [oggetti firewall](#objects-as-source)
 3. **Corrispondenza e azione**:
    - **Tipo di corrispondenza**: **Gruppi di applicazioni** corrisponde al traffico dei gruppi selezionati, mentre **Tutto il traffico** corrisponde a ogni flusso proveniente dalla sorgente
    - **Azione**: **Blocca il traffico corrispondente** oppure **Consenti il traffico corrispondente**
@@ -65,6 +68,21 @@ Dall'elenco delle regole, ogni regola può essere:
 - spostata con il trascinamento (drag and drop) per modificare l'ordine di valutazione; il riordino è disponibile solo quando all'elenco non è applicato alcun filtro
 
 L'elenco può essere filtrato per nome, sorgente, tipo di corrispondenza e azione.
+
+### Oggetti come sorgente {#objects-as-source}
+
+Invece di inserire gli indirizzi, una regola può utilizzare come sorgente uno o più [oggetti firewall](../users-objects/objects.md):
+
+- insiemi di host
+- lease statici (prenotazioni DHCP)
+- record DNS
+- utenti VPN con un IP riservato
+
+Gli insiemi di domini non possono essere utilizzati come sorgente DPI. Una regola utilizza oggetti oppure indirizzi inseriti manualmente: i due non possono essere combinati nella stessa regola.
+
+Le regole seguono gli oggetti: quando un oggetto viene modificato, ad esempio quando si aggiunge un indirizzo a un insieme di host o cambia l'IP riservato di un utente VPN, tutte le regole che lo utilizzano vengono aggiornate automaticamente, senza doverle modificare. Gli insiemi di host possono contenere indirizzi IP, reti CIDR e intervalli di IP.
+
+Un oggetto utilizzato da una regola DPI non può essere eliminato finché non viene rimosso da tutte le regole, e il link **Mostra utilizzi** dell'oggetto elenca le **Regole DPI** che lo utilizzano. Allo stesso modo, l'IP riservato di un [account OpenVPN Road Warrior](../vpn/openvpn_roadwarrior.md) non può essere rimosso mentre l'utente è usato come oggetto: il messaggio di errore indica dove l'utente è utilizzato.
 
 ### Traffico del firewall e WAN {#firewall-and-wan-traffic}
 
