@@ -77,6 +77,8 @@ If the system restarts continuously and you cannot reach the command line, disab
 4. Press `Ctrl+X` to boot.
 5. Disable the watchdog permanently with the `uci` commands above.
 
+If the system keeps restarting even with `ns.watchdog=0`, the watchdog may have been started by the BIOS or firmware: NethSecurity cannot stop it, so disable it in the BIOS setup.
+
 ## Software watchdog
 
 If the hardware has no supported watchdog, you can use the software watchdog. It restarts the system when the processes stop responding, but not when the kernel itself hangs.
