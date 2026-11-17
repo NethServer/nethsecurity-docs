@@ -33,10 +33,6 @@ Add a watchdog device to the virtual machine, then restart it. From the Proxmox 
 
     qm set <vmid> --watchdog model=i6300esb,action=reset
 
-### PC Engines APU
-
-If the watchdog option is enabled in the APU BIOS, it uses a chip that NethSecurity does not support, and the board resets after the BIOS timeout. Disable the watchdog in the BIOS: NethSecurity uses the chipset watchdog instead.
-
 ## Check the status
 
 Show which watchdog is in use:
