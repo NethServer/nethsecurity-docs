@@ -19,7 +19,7 @@ Please use Threat shield DNS only if you are not already using the FlashStart se
 
 The service is disabled by default, to enable it navigate to the `Threat shield DNS` page under the `Security` section. Access the `Settings` tab and activate the `Status` switch.
 
-When the service is enabled, the `Blocklist sources` tab will display all available blocklists. You can enable or disable each blocklist by using the switch on the right side of the list. Enabled blocklists will be automatically updated at regular intervals.
+When the service is enabled, the `Blocklist feeds` tab will display all available blocklists. You can enable or disable each blocklist by using the switch on the right side of the list. Enabled blocklists will be automatically updated at regular intervals.
 
 To specify on which zones the service should be active, select them in the `Force DNS redirection on these zones` combobox.
 
