@@ -95,6 +95,25 @@ What happens depends on the subscription:
 
 No configuration is needed. Reporting starts when you register the firewall and stops when you unregister it. A firewall that is not registered sends nothing.
 
+#### Free collective defense blocklist {#nethesis_community_free-section}
+
+Registered firewalls without the Threat Shield add-on can use a free version of the `Nethesis community - Level 2` blocklist. It holds the same addresses, but 48 hours later.
+
+To use it, add a [custom blocklist feed](#custom_blocklist-section), for example named `collective`, with `Direction` set to `Incoming` and this URL in both `IPv4 list URL` and `IPv6 list URL`:
+
+```
+https://<system_id>:<secret>@insights.nethesis.it/blocklist/v1/basic-feed
+```
+
+Replace `<system_id>` and `<secret>` with the subscription credentials. To read them, run these commands in a root shell of the firewall:
+
+```
+uci get ns-plug.config.system_id
+uci get ns-plug.config.secret
+```
+
+If the firewall is unregistered and registered again, the credentials change: edit the feed and update the URLs. With the Threat Shield add-on, enable `Nethesis community - Level 2` instead, which has no delay.
+
 #### Stop sending blocked addresses {#nethesis_community_push-section}
 
 Sending blocked addresses to Nethesis is enabled by default for registered firewalls. To turn it off, run these commands in a root shell of the firewall:

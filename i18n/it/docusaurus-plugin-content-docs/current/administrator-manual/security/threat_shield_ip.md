@@ -94,6 +94,25 @@ Il comportamento dipende dalla sottoscrizione:
 
 Non serve alcuna configurazione. L'invio parte quando registri il firewall e si ferma quando annulli la registrazione. Un firewall non registrato non invia nulla.
 
+#### Lista di blocco collettiva gratuita {#nethesis_community_free-section}
+
+I firewall registrati senza l'add-on Threat Shield possono usare una versione gratuita della lista di blocco `Nethesis community - Level 2`. Contiene gli stessi indirizzi, ma con 48 ore di ritardo.
+
+Per usarla, aggiungi un [blocklist feed personalizzato](#custom_blocklist-section), per esempio chiamato `collective`, con `Direzione` impostata su `In entrata` e questo URL sia in `URL lista IPv4` sia in `URL lista IPv6`:
+
+```
+https://<system_id>:<secret>@insights.nethesis.it/blocklist/v1/basic-feed
+```
+
+Sostituisci `<system_id>` e `<secret>` con le credenziali della subscription. Per leggerle, esegui questi comandi in una shell di root del firewall:
+
+```
+uci get ns-plug.config.system_id
+uci get ns-plug.config.secret
+```
+
+Se annulli la registrazione del firewall e lo registri di nuovo, le credenziali cambiano: modifica il feed e aggiorna gli URL. Con l'add-on Threat Shield, abilita invece `Nethesis community - Level 2`, che non ha ritardo.
+
 #### Interrompere l'invio degli indirizzi bloccati {#nethesis_community_push-section}
 
 L'invio degli indirizzi bloccati a Nethesis è abilitato di default per i firewall registrati. Per disattivarlo, esegui questi comandi in una shell di root del firewall:
