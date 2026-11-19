@@ -143,6 +143,7 @@ The `Charts` tab shows the following charts:
 - `Disk usage (%)`
 - `Total processes`
 - `RAM usage`
+- `Temperature`: one chart for each hardware sensor chip, with the high and critical thresholds reported by the chip; not shown when the hardware has no temperature sensors (e.g. virtual machines)
 - `Network interface traffic`: one chart for each interface configured on the unit
 - `Network packets`
 - `Connections (conntrack)`
