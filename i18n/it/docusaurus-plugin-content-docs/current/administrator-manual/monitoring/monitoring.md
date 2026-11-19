@@ -143,6 +143,7 @@ La scheda `Charts` mostra i seguenti grafici:
 - `Disk usage (%)`
 - `Total processes`
 - `RAM usage`
+- `Temperature`: un grafico per ogni chip di sensori hardware, con le soglie alta e critica riportate dal chip; non viene mostrato se l'hardware non ha sensori di temperatura (ad esempio nelle macchine virtuali)
 - `Network interface traffic`: un grafico per ogni interfaccia configurata sull'unità
 - `Network packets`
 - `Connections (conntrack)`
