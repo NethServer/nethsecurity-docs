@@ -21,11 +21,12 @@ Individuare il pulsante per aggiungere una nuova regola, fare clic su di esso pe
 
 - `Nome regola`: assegnare un nome descrittivo per identificare la regola.
 
-- `Indirizzo sorgente`: selezionare l'indirizzo sorgente da tre diverse opzioni:
+- `Indirizzo sorgente`: selezionare l'indirizzo sorgente da quattro diverse opzioni:
 
   - inserire uno o più indirizzi/reti IPv4/IPv6 o intervalli di IP
   - selezionare un oggetto firewall da quelli disponibili
   - qualsiasi indirizzo sorgente
+  - inserire uno o più indirizzi MAC (vedi [Indirizzo MAC sorgente](#mac-address-source))
 
   Questo campo non è presente per le `Regole di uscita`, poiché l'indirizzo sorgente è sempre il firewall stesso.
 
@@ -55,6 +56,22 @@ Individuare il pulsante per aggiungere una nuova regola, fare clic su di esso pe
 - `Registrazione`: indicare se il traffico corrispondente a questa regola deve essere registrato. La voce di log includerà il nome della regola come prefisso. Per impostazione predefinita, la registrazione è limitata a 1 voce al secondo. Consultare la sezione [Limiti di registrazione](#logging-limits) per le istruzioni su come modificare questo limite.
 
 - `Tag`: facoltativamente, aggiungere tag per scopi organizzativi. Nota che il tag "automatico" è riservato all'uso del sistema.
+
+## Indirizzo MAC sorgente {#mac-address-source}
+
+Le `Regole di forward` e le `Regole di input` possono identificare il traffico in base all'indirizzo MAC sorgente invece che all'indirizzo IP sorgente. Questo è utile per consentire o bloccare un dispositivo indipendentemente dall'indirizzo IP che sta utilizzando, ad esempio quando gli indirizzi IP sono assegnati da un server DHCP diverso da NethSecurity.
+
+Per creare una regola basata sugli indirizzi MAC, selezionare l'opzione `Indirizzo MAC` nel campo `Indirizzo sorgente` e inserire uno o più indirizzi MAC. La regola si applica al traffico proveniente da uno qualsiasi degli indirizzi MAC inseriti.
+
+Gli indirizzi MAC possono essere inseriti usando `:` o `-` come separatore, in maiuscolo o minuscolo (es. `00:1A:2B:3C:4D:5E` o `00-1a-2b-3c-4d-5e`).
+
+Una regola può utilizzare indirizzi MAC, indirizzi IP oppure un oggetto firewall: non è possibile combinare indirizzi MAC con indirizzi IP sorgente o oggetti nella stessa regola. Gli indirizzi MAC sorgente non sono disponibili per le `Regole di output`.
+
+:::note
+
+Gli indirizzi MAC possono essere riconosciuti solo per gli host collegati allo stesso segmento di rete del firewall: il traffico che attraversa un altro router riporta l'indirizzo MAC di quel router.
+
+:::
 
 ## Limiti di registrazione {#logging-limits}
 
