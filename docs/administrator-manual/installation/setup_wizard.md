@@ -17,6 +17,14 @@ For optimal security and to ensure a controlled configuration environment, it is
 
 On the first page of the setup wizard, you can click **Start setup** to initiate the guided setup process. Alternatively, you can click **Skip wizard** to bypass the wizard and access the web user interface directly. However, it is highly recommended to complete the setup wizard to ensure a secure and functional configuration.
 
+The default values proposed by the wizard match the default configuration of a new installation. Skipping the wizard leaves the unit in the same state as completing it without changing any option, except for the root password, which keeps the default value.
+
+:::note
+
+The wizard always proposes the default values described below, not the current configuration of the unit. If you run the wizard on a unit that has already been configured, review every step: completing it overwrites the existing SSH and web access settings.
+
+:::
+
 ## Step 1: Change root password {#change_password-section}
 
 You are required to define a new, secure password for the root account. This measure significantly reduces the risk of compromise by eliminating reliance on publicly known default credentials.
@@ -39,7 +47,7 @@ You can customize SSH access to suit your security and operational requirements.
 ### Settings
 
 - **TCP port**: the listening port for SSH can be changed if needed. The default value is 22.
-- **Root login with password**: it is advised to disable password-based root login for SSH. Disabling this option significantly reduces the risk of unauthorized access by limiting the potential for brute-force password attacks.
+- **Root login with password**: enabled by default. It is advised to disable password-based root login for SSH. Disabling this option significantly reduces the risk of unauthorized access by limiting the potential for brute-force password attacks.
 
 :::note
 
@@ -53,7 +61,7 @@ Configure access parameters for the web user interface, which operates on port 9
 
 ### Default configuration
 
-By default, web interface access is enabled from the LAN, allowing administrative management from within the trusted local network.
+By default, web interface access is enabled from the LAN, allowing administrative management from within the trusted local network, and disabled from the WAN.
 
 ### Settings
 
@@ -72,8 +80,8 @@ If you choose the **Limited** option, the IP addresses you configured will appea
 
 Set up access controls for the web interface and WAN connections on port 443.
 
-- **Web interface service on TCP port 443**: by default, the web user interface is available on TCP port 9090. Enabling this option also makes it accessible on TCP port 443. It is recommended to keep this additional access disabled and always use TCP port 9090 to access the web UI.
-- **WAN access on TCP port 443**: this option controls if WAN access on port 443 is disabled (recommended) or enabled. Beware, by leaving this option disabled, reverse proxies will not function.
+- **Web interface service on TCP port 443**: enabled by default. The web user interface is always available on TCP port 9090; this option makes it accessible also on TCP port 443. By default, the web user interface on port 443 is reachable only from the LAN, because WAN access on port 443 is disabled. If you disable it, the web user interface is no longer available on port 443 from both LAN and WAN, and at the end of the wizard the browser is redirected to port 9090.
+- **WAN access on TCP port 443**: disabled by default. This option controls if WAN access on port 443 is disabled (recommended) or enabled. Beware, by leaving this option disabled, reverse proxies will not be reachable from the WAN. If you enable it while the web interface service on port 443 is enabled, the web user interface also becomes reachable from the WAN on port 443.
 
 ## Step 5: Summary {#summary-section}
 

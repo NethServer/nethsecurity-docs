@@ -52,19 +52,31 @@ NethSecurity UI (User Interface), the NethSecurity official web interface, is av
 
 To ease the access, NethSecurity UI is also available on standard HTTP port `443` at the following URL: **https://\<server_ip\>** or **http://\<server_fqdn\>**.
 
-Both URLs are accessible from LAN and WAN by default.
+By default, both URLs are accessible only from the LAN. Access from the WAN is blocked on both ports.
 
-### Restricting access to NethSecurity UI
+### Access to NethSecurity UI from WAN {#ui_wan_access-section}
 
-By default, this interface is accessible on port 9090 from both your internal network (LAN) and the wider internet (WAN). While convenient, this can potentially introduce a security risk.
+On new installations, access to the NethSecurity UI from the WAN is blocked by two input firewall rules that are disabled by default:
 
-To mitigate this risk, you have two options (remove or restrict access):
+- `Allow-UI-from-WAN`: allows access to port 9090 from the WAN
+- `Allow-HTTPS-from-WAN`: allows access to port 443 from the WAN; this port is also used by the [reverse proxy](../network/reverse_proxy.md)
 
-- remove the `Allow-UI-from-WAN` rule: go to the Firewall rules page, navigate to the `Input rules` tab, and locate the \"Allow-UI-from-WAN\" rule. Click the **Delete** button to remove it
+Units upgraded from previous versions keep their current rules: if the rules were enabled before the upgrade, the NethSecurity UI is still reachable from the WAN. To block it, disable both rules as described below.
 
-- restrict access from specific IPs or networks: in the Firewall rules page, locate the \"Allow-UI-from-WAN\" rule and click the **Edit** button. In the `Source address` field, enter the IP addresses or network CIDRs from which you want to allow access to the NethSecurity UI.
+If the unit must be managed remotely, enable access to port 9090 from the WAN in one of the following ways:
 
-  For example, to allow access only from your home network, you could enter the 192.168.1.0/24 network. Only allow access from trusted IP addresses or networks. Leaving this field blank will allow anyone on the internet to access the NethSecurity UI.
+- from the web interface: go to the Firewall rules page, navigate to the `Input rules` tab, locate the \"Allow-UI-from-WAN\" rule and enable it
+- from the console: run the [setup command](#setup-command-section) and select the `remote-access` item; this is useful when the web interface is not reachable yet, for example when the unit is connected only to the WAN
+
+It is strongly recommended to restrict the access to specific IPs or networks: in the Firewall rules page, locate the \"Allow-UI-from-WAN\" rule and click the **Edit** button. In the `Source address` field, enter the IP addresses or network CIDRs from which you want to allow access to the NethSecurity UI.
+
+For example, to allow access only from your home network, you could enter the 192.168.1.0/24 network. Only allow access from trusted IP addresses or networks. Leaving this field blank will allow anyone on the internet to access the NethSecurity UI.
+
+:::warning
+
+Enabling the `Allow-HTTPS-from-WAN` rule, for example to publish services through the reverse proxy, also makes the NethSecurity UI reachable from the WAN on port 443. To prevent it, [disable the web user interface on port 443](#disable_ui_443-section).
+
+:::
 
 Additional security measures:
 
@@ -91,9 +103,9 @@ The controller uses port 9090 to communicate with the unit. Changing the port wi
 
 If you still need to forward port 9090 to another machine inside the LAN, you can keep the controller connected by leaving the `ns-ui_extra_port` unchanged and forwarding the port to the new machine. Forwarding the port to another machine will be acceptable because the controller will reach port 9090 over the VPN.
 
-### Disable web user interface on port 443
+### Disable web user interface on port 443 {#disable_ui_443-section}
 
-While exposing port 443 (HTTPS) can be necessary for certain services, directly accessing the NethSecurity UI through this port may introduce a potential security risk. Here\'s how to safely maintain port 443 functionality while protecting your NethSecurity UI.
+While exposing port 443 (HTTPS) can be necessary for certain services, such as the reverse proxy, directly accessing the NethSecurity UI through this port may introduce a potential security risk. Here\'s how to safely maintain port 443 functionality while protecting your NethSecurity UI.
 
 If you don\'t require accessing the NethSecurity UI through port 443, disable it to minimize attack opportunities. Execute the following commands on your NethServer system: :
 
@@ -196,6 +208,7 @@ The interactive menu lets you:
 
 - configure the keyboard layout
 - configure the LAN and WAN interfaces
+- open or close access to the web user interface on port 9090 from the WAN
 
 ### Keyboard layout
 
@@ -213,6 +226,12 @@ The `setup` tool allows you to configure the following network settings:
 After making changes, the network configuration must be applied with the `Apply network changes` button in the network section.
 
 If you are using a non-US keyboard layout, you can change it in the setup tool before entering the network configuration. This is important because the network configuration requires typing IP addresses and other information that may be affected by the keyboard layout.
+
+### Access to port 9090 from WAN
+
+The `remote-access` item shows whether access to the web user interface on port 9090 from the WAN is currently `open` or `closed`. Select it to switch between the two states: the change is applied immediately by enabling or disabling the `Allow-UI-from-WAN` firewall rule.
+
+This option does not change access to port 443 from the WAN, which remains controlled by the `Allow-HTTPS-from-WAN` rule. See [Access to NethSecurity UI from WAN](#ui_wan_access-section) for more details.
 
 ## Serial console
 

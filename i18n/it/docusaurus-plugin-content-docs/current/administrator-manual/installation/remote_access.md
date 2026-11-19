@@ -52,19 +52,31 @@ NethSecurity UI (User Interface), l'interfaccia web ufficiale di NethSecurity, �
 
 Per facilitare l'accesso, NethSecurity UI è disponibile anche sulla porta HTTPS standard `443` al seguente URL: **https://\<server_ip\>** o **http://\<server_fqdn\>**.
 
-Entrambi gli URL sono accessibili da LAN e WAN per impostazione predefinita.
+Per impostazione predefinita, entrambi gli URL sono accessibili solo dalla LAN. L'accesso dalla WAN è bloccato su entrambe le porte.
 
-### Limitazione dell'accesso a NethSecurity UI
+### Accesso a NethSecurity UI dalla WAN {#ui_wan_access-section}
 
-Per impostazione predefinita, questa interfaccia è accessibile sulla porta 9090 sia dalla rete interna (LAN) che da Internet (WAN). Sebbene conveniente, questo può potenzialmente introdurre un rischio di sicurezza.
+Sulle nuove installazioni, l'accesso a NethSecurity UI dalla WAN è bloccato da due regole firewall di ingresso disabilitate per impostazione predefinita:
 
-Per mitigare questo rischio, hai due opzioni (rimuovere o limitare l'accesso):
+- `Allow-UI-from-WAN`: consente l'accesso alla porta 9090 dalla WAN
+- `Allow-HTTPS-from-WAN`: consente l'accesso alla porta 443 dalla WAN; questa porta è utilizzata anche dal [reverse proxy](../network/reverse_proxy.md)
 
-- rimuovere la regola `Allow-UI-from-WAN`: vai alla pagina Regole firewall, naviga nella scheda `Regole in ingresso` e individua la regola "Allow-UI-from-WAN". Fai clic sul pulsante **Elimina** per rimuoverla
+Le unità aggiornate da versioni precedenti mantengono le regole attuali: se le regole erano abilitate prima dell'aggiornamento, NethSecurity UI resta raggiungibile dalla WAN. Per bloccarla, disabilita entrambe le regole come descritto di seguito.
 
-- limitare l'accesso da IP o reti specifiche: nella pagina Regole firewall, individua la regola "Allow-UI-from-WAN" e fai clic sul pulsante **Modifica**. Nel campo `Indirizzo sorgente`, inserisci gli indirizzi IP o i CIDR di rete da cui desideri consentire l'accesso a NethSecurity UI.
+Se l'unità deve essere gestita da remoto, abilita l'accesso alla porta 9090 dalla WAN in uno dei seguenti modi:
 
-  Ad esempio, per consentire l'accesso solo dalla tua rete domestica, puoi inserire la rete 192.168.1.0/24. Consenti l'accesso solo da indirizzi IP o reti di cui ti fidi. Lasciare questo campo vuoto consentirà a chiunque su Internet di accedere a NethSecurity UI.
+- dall'interfaccia web: vai alla pagina Regole firewall, naviga nella scheda `Regole in ingresso`, individua la regola "Allow-UI-from-WAN" e abilitala
+- dalla console: esegui il comando `setup` come utente `root` e seleziona la voce `remote-access`; è utile quando l'interfaccia web non è ancora raggiungibile, ad esempio quando l'unità è collegata solo alla WAN. La voce mostra se l'accesso alla porta 9090 dalla WAN è `open` o `closed` e, se selezionata, passa da uno stato all'altro abilitando o disabilitando la regola `Allow-UI-from-WAN`. Non modifica l'accesso alla porta 443
+
+È fortemente consigliato limitare l'accesso a IP o reti specifiche: nella pagina Regole firewall, individua la regola "Allow-UI-from-WAN" e fai clic sul pulsante **Modifica**. Nel campo `Indirizzo sorgente`, inserisci gli indirizzi IP o i CIDR di rete da cui desideri consentire l'accesso a NethSecurity UI.
+
+Ad esempio, per consentire l'accesso solo dalla tua rete domestica, puoi inserire la rete 192.168.1.0/24. Consenti l'accesso solo da indirizzi IP o reti di cui ti fidi. Lasciare questo campo vuoto consentirà a chiunque su Internet di accedere a NethSecurity UI.
+
+:::warning
+
+Abilitare la regola `Allow-HTTPS-from-WAN`, ad esempio per pubblicare servizi tramite il reverse proxy, rende NethSecurity UI raggiungibile dalla WAN anche sulla porta 443. Per evitarlo, [disabilita l'interfaccia web sulla porta 443](#disable_ui_443-section).
+
+:::
 
 Misure di sicurezza aggiuntive:
 
@@ -91,9 +103,9 @@ Il controller utilizza la porta 9090 per comunicare con l'unità. Modificare la 
 
 Se hai ancora bisogno di inoltrare la porta 9090 a un'altra macchina all'interno della LAN, puoi mantenere il controller connesso lasciando `ns-ui_extra_port` invariato e inoltrando la porta alla nuova macchina. L'inoltro della porta a un'altra macchina sarà accettabile perché il controller raggiungerà la porta 9090 attraverso la VPN.
 
-### Disabilita l'interfaccia web sulla porta 443
+### Disabilita l'interfaccia web sulla porta 443 {#disable_ui_443-section}
 
-Sebbene l'esposizione della porta 443 (HTTPS) possa essere necessaria per alcuni servizi, l'accesso diretto a NethSecurity UI attraverso questa porta può introdurre un potenziale rischio di sicurezza. Ecco come mantenere in sicurezza la funzionalità della porta 443 proteggendo NethSecurity UI.
+Sebbene l'esposizione della porta 443 (HTTPS) possa essere necessaria per alcuni servizi, come il reverse proxy, l'accesso diretto a NethSecurity UI attraverso questa porta può introdurre un potenziale rischio di sicurezza. Ecco come mantenere in sicurezza la funzionalità della porta 443 proteggendo NethSecurity UI.
 
 Se non hai bisogno di accedere a NethSecurity UI attraverso la porta 443, disabilitala per minimizzare le opportunità di attacco. Esegui i seguenti comandi sul tuo sistema NethServer:
 

@@ -34,6 +34,18 @@ Additional information:
 - Certificate validation: if the destination uses HTTPS, the certificate is not validated to avoid errors on misconfigured servers.
 - WebSocket support: all reverse proxies automatically support WebSockets.
 
+### Access from WAN {#reverse_proxy-wan-section}
+
+On new installations, port 443 is closed from the WAN, so the reverse proxy is reachable only from the LAN. When port 443 is closed, the reverse proxy page shows a warning with a button to the firewall rules.
+
+To reach the reverse proxy from the WAN, go to the Firewall rules page, navigate to the `Input rules` tab and enable the `Allow-HTTPS-from-WAN` rule. Units upgraded from previous versions keep their current rule.
+
+:::warning
+
+Enabling the `Allow-HTTPS-from-WAN` rule also makes the NethSecurity UI reachable from the WAN on port 443. To prevent it, [disable the web user interface on port 443](../installation/remote_access.md#disable_ui_443-section).
+
+:::
+
 ### Interaction with port forward rules
 
 Reverse proxy uses only port 443. If a port forward rule is also configured on port 443, the port forward rule always takes precedence.
