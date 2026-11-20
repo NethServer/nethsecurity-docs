@@ -70,7 +70,7 @@ Se l'unità deve essere gestita da remoto, abilita l'accesso alla porta 9090 dal
 
 È fortemente consigliato limitare l'accesso a IP o reti specifiche: nella pagina Regole firewall, individua la regola "Allow-UI-from-WAN" e fai clic sul pulsante **Modifica**. Nel campo `Indirizzo sorgente`, inserisci gli indirizzi IP o i CIDR di rete da cui desideri consentire l'accesso a NethSecurity UI.
 
-Ad esempio, per consentire l'accesso solo dalla tua rete domestica, puoi inserire la rete 192.168.1.0/24. Consenti l'accesso solo da indirizzi IP o reti di cui ti fidi. Lasciare questo campo vuoto consentirà a chiunque su Internet di accedere a NethSecurity UI.
+Consenti l'accesso solo da indirizzi IP o reti di cui ti fidi. Lasciare questo campo vuoto consentirà a chiunque su Internet di accedere a NethSecurity UI.
 
 :::warning
 

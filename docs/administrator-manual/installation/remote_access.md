@@ -70,7 +70,7 @@ If the unit must be managed remotely, enable access to port 9090 from the WAN in
 
 It is strongly recommended to restrict the access to specific IPs or networks: in the Firewall rules page, locate the \"Allow-UI-from-WAN\" rule and click the **Edit** button. In the `Source address` field, enter the IP addresses or network CIDRs from which you want to allow access to the NethSecurity UI.
 
-For example, to allow access only from your home network, you could enter the 192.168.1.0/24 network. Only allow access from trusted IP addresses or networks. Leaving this field blank will allow anyone on the internet to access the NethSecurity UI.
+Only allow access from trusted IP addresses or networks. Leaving this field blank will allow anyone on the internet to access the NethSecurity UI.
 
 :::warning
 
