@@ -49,3 +49,19 @@ Use `lsblk` to list block devices and identify the VPS disk name.
    ```bash
    reboot -f
    ```
+
+## First access to the web interface
+
+On new installations, the web interface is not reachable from the WAN. On a VPS the WAN is often the only reachable interface, so you must open access to port 9090 from the provider console before you can use the web interface:
+
+1. Open the console of the VPS from the control panel of the cloud provider.
+2. Log in as `root` with the [default credentials](../administrator-manual/installation/remote_access.md#default_credentials-section).
+3. Run the `setup` command, select the `password` item and change the `root` password.
+4. Select the `remote-access` item to open access to port 9090 from the WAN.
+5. Access the web interface at **https://\<vps_public_ip\>:9090**.
+
+:::warning
+
+The web interface is now reachable from the whole internet. After the first login, restrict the access to trusted IP addresses or networks as described in [Access to NethSecurity UI from WAN](../administrator-manual/installation/remote_access.md#ui_wan_access-section).
+
+:::

@@ -17,6 +17,14 @@ Per garantire la sicurezza ottimale e un ambiente di configurazione controllato,
 
 Nella prima pagina della configurazione guidata, puoi fare clic su **Avvia configurazione** per avviare il processo guidato. In alternativa, puoi fare clic su **Salta configurazione** per bypassare la procedura guidata e accedere direttamente all'interfaccia web. Tuttavia, è altamente consigliato completare la configurazione guidata per garantire una configurazione sicura e funzionale.
 
+I valori predefiniti proposti dalla configurazione guidata corrispondono alla configurazione predefinita di una nuova installazione. Saltare la configurazione guidata lascia l'unità nello stesso stato ottenuto completandola senza modificare alcuna opzione, ad eccezione della password root, che mantiene il valore predefinito.
+
+:::note
+
+La configurazione guidata propone sempre i valori predefiniti descritti di seguito, non la configurazione attuale dell'unità. Se esegui la configurazione guidata su un'unità già configurata, verifica ogni passaggio: completandola, le impostazioni esistenti di accesso SSH e web vengono sovrascritte.
+
+:::
+
 ## Passaggio 1: Modifica password root {#change_password-section}
 
 È necessario definire una nuova password sicura per l'account root. Questa misura riduce significativamente il rischio di compromissione eliminando la dipendenza da credenziali predefinite pubblicamente note.
@@ -41,7 +49,7 @@ Puoi personalizzare l'accesso SSH in base ai tuoi requisiti di sicurezza e opera
 ### Impostazioni
 
 - **Porta TCP**: la porta di ascolto per SSH può essere modificata se necessario. Il valore predefinito è 22.
-- **Accesso root con password**: è consigliato disabilitare l'accesso root basato su password per SSH. La disabilitazione di questa opzione riduce significativamente il rischio di accesso non autorizzato limitando il potenziale di attacchi di forza bruta alla password.
+- **Accesso root con password**: abilitato per impostazione predefinita. È consigliato disabilitare l'accesso root basato su password per SSH. La disabilitazione di questa opzione riduce significativamente il rischio di accesso non autorizzato limitando il potenziale di attacchi di forza bruta alla password.
 
 :::note
 
@@ -55,7 +63,7 @@ Configura i parametri di accesso per l'interfaccia web, che funziona sulla porta
 
 ### Configurazione predefinita
 
-Per impostazione predefinita, l'accesso all'interfaccia web è abilitato dalla LAN, consentendo la gestione amministrativa dalla rete locale affidabile.
+Per impostazione predefinita, l'accesso all'interfaccia web è abilitato dalla LAN, consentendo la gestione amministrativa dalla rete locale affidabile, e disabilitato dalla WAN.
 
 ### Impostazioni
 
@@ -74,8 +82,8 @@ Se scegli l'opzione **Limitato**, gli indirizzi IP che hai configurato appariran
 
 Configura i controlli di accesso per l'interfaccia web e le connessioni WAN sulla porta 443.
 
-- **Servizio interfaccia web sulla porta TCP 443**: per impostazione predefinita, l'interfaccia web è disponibile sulla porta TCP 9090. L'abilitazione di questa opzione la rende accessibile anche sulla porta TCP 443. È consigliato mantenere questo accesso aggiuntivo disabilitato e utilizzare sempre la porta TCP 9090 per accedere all'interfaccia web.
-- **Accesso WAN sulla porta TCP 443**: questa opzione controlla se l'accesso WAN sulla porta 443 è disabilitato (consigliato) o abilitato. Attenzione, lasciando questa opzione disabilitata, i reverse proxy non funzioneranno.
+- **Servizio interfaccia web sulla porta TCP 443**: abilitato per impostazione predefinita. L'interfaccia web è sempre disponibile sulla porta TCP 9090; questa opzione la rende accessibile anche sulla porta TCP 443. Per impostazione predefinita, l'interfaccia web sulla porta 443 è raggiungibile solo dalla LAN, perché l'accesso WAN sulla porta 443 è disabilitato. Se la disabiliti, l'interfaccia web non è più disponibile sulla porta 443 né dalla LAN né dalla WAN e, al termine della configurazione guidata, il browser viene reindirizzato sulla porta 9090.
+- **Accesso WAN sulla porta TCP 443**: disabilitato per impostazione predefinita. Questa opzione controlla se l'accesso WAN sulla porta 443 è disabilitato (consigliato) o abilitato. Attenzione, lasciando questa opzione disabilitata, i reverse proxy non saranno raggiungibili dalla WAN. Se la abiliti mentre il servizio interfaccia web sulla porta 443 è abilitato, l'interfaccia web diventa raggiungibile dalla WAN anche sulla porta 443.
 
 ## Passaggio 5: Riepilogo {#summary-section}
 

@@ -53,3 +53,19 @@ della VPS.
    ```bash
    reboot -f
    ```
+
+## Primo accesso all'interfaccia web
+
+Sulle nuove installazioni, l'interfaccia web non è raggiungibile dalla WAN. Su una VPS la WAN è spesso l'unica interfaccia raggiungibile, quindi prima di poter usare l'interfaccia web devi aprire l'accesso alla porta 9090 dalla console del provider:
+
+1. Apri la console della VPS dal pannello di controllo del provider cloud.
+2. Accedi come `root` con le [credenziali predefinite](../administrator-manual/installation/remote_access.md#default_credentials-section).
+3. Esegui il comando `setup`, seleziona la voce `password` e cambia la password di `root`.
+4. Seleziona la voce `remote-access` per aprire l'accesso alla porta 9090 dalla WAN.
+5. Accedi all'interfaccia web all'indirizzo **https://\<ip_pubblico_vps\>:9090**.
+
+:::warning
+
+L'interfaccia web è ora raggiungibile da tutta Internet. Dopo il primo accesso, limita l'accesso a indirizzi IP o reti di cui ti fidi come descritto in [Accesso a NethSecurity UI dalla WAN](../administrator-manual/installation/remote_access.md#ui_wan_access-section).
+
+:::
