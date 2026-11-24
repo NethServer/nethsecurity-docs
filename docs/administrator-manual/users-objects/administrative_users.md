@@ -5,32 +5,71 @@ sidebar_position: 2
 
 # Administrative users {#administrative_users-section}
 
-NethSecurity allows local users to be granted administrative access to the web interface. Administrative users should be personal accounts assigned to individual operators so that actions can be attributed to a specific user in the logs.
+NethSecurity allows local users to be granted administrative access to the web interface.
+Every operator must use a personal administrative user for daily work, so that each action can be attributed to a specific person in the logs. Do not share administrative accounts between operators.
 
-## Administrative account types
+The `root` account is reserved for emergency and recovery operations, and for the few tasks that only `root` can perform, such as managing administrative users. Do not use it for ordinary administrative activity.
 
-NethSecurity uses the following administrative account types:
+## Roles and permissions {#admin_roles-section}
 
-- `root`: local system account. It should be reserved for emergency or recovery operations whenever possible.
-- **Administrative users**: local users with the **Administrator user** option enabled. They can access the NethSecurity UI and perform administrative operations.
-- **Non-administrative users**: local or remote users used for services such as VPN or authentication, without access to the NethSecurity UI.
+NethSecurity has three kinds of accounts:
 
-:::note
+- `root`: the local system account, with full control of the unit.
+- **Administrative users**: local users with the **Administrator user** option enabled. They log in to the NethSecurity UI with a personal account and manage the firewall, but they cannot manage other administrators or perform operations that would give them the same power as `root`.
+ - **Non-administrative users**: local or remote users used for services such as VPN or authentication, without access to the NethSecurity UI.
 
-Administrative access should be granted only to trusted operators.
+The following operations are reserved to `root`:
 
-:::
+| Operation | `root` | Administrative users |
+|---|---|---|
+| Create, edit or delete administrative users, or grant and remove the administrator role | Yes | No |
+| Delete a local database that contains administrative users | Yes | No |
+| Change the password of another account, including `root` | Yes | No, only their own |
+| Change SSH settings and keys | Yes | No |
+| Download a backup, encrypted or not | Yes | No |
+| Restore a backup from a file | Yes | No |
+| Set or remove the backup passphrase | Yes | No |
+| Run a cloud backup and restore a cloud backup | Yes | Yes |
+| Update the system from the Nethesis repositories | Yes | Yes |
+| Install a manually uploaded image | Yes | No |
+| Migrate from NethServer 7 | Yes | No |
+| Manage non-administrative users and the rest of the configuration | Yes | Yes |
+
+All actions, including denied ones, are logged: see [Administrative activity logging](#admin_logging-section).
+
+Only `root` can log in through SSH. Administrative users have no system account, so they cannot access the shell.
+
+The username `root` and the names of other system accounts are reserved and cannot be used for local users.
+
+### Sessions and 2FA of removed administrators
+
+When an administrative user is deleted, or the **Administrator user** option is disabled, all their active sessions are closed as soon as the changes are applied. The user is logged out immediately and cannot use the UI or the API anymore.
+
+The 2FA configuration of the user is deleted at the same time: if the user becomes an administrator again, 2FA must be configured from scratch.
+
+Changing the password of an administrative user does not close their active sessions. To log out an operator immediately, delete the user or disable the **Administrator user** option.
+
+
+### Dashboard warnings
+
+The dashboard warns `root` when:
+
+- `root` still uses the default password;
+- no administrative user exists besides `root`.
+
+Both warnings disappear as soon as the condition is fixed. Create a personal administrative account for each operator and keep `root` for recovery operations.
+
 
 ## Creating administrative users
 
 Administrative users are created from the local users database.
 
-To create an administrative user:
+To create an administrative user log in as `root`:
 
 1. Create a local user.
 2. Set a password for the user.
 3. Enable the **Administrator user** option.
-4. Save the configuration.
+4. Save and apply the configuration.
 
 For general information about local and remote user databases, see [Users databases](./users_databases.md).
 
@@ -80,18 +119,9 @@ printf '0' > "${SECRETS_DIR}/${USERNAME}/status"
 ```
 
 After these commands the user can log in with just their password. 2FA can be re-enabled at any time from the web interface.
+Only `root` can access the shell, so administrative users cannot recover their own account from SSH: `root` must run the commands above on their behalf
 
-:::note
-
-Only the `root` account has SSH access by default. Non-root administrators cannot be recovered from SSH by the affected user themselves; an existing `root` session is required to run the commands above on their behalf.
-
-:::
-
-## Root and emergency access
-
-The `root` account is the main local system account. It should be treated as an emergency or recovery account and not used for ordinary administrative activity when personal administrative users are available. Use personal administrative accounts for daily operations so that actions can be attributed to individual users in the logs.
-
-## Administrative activity logging
+## Administrative activity logging {#admin_logging-section}
 
 NethSecurity logs administrative activity performed through the web interface in `/var/log/messages`. Administrative logs can support troubleshooting, incident analysis, and audit reconstruction.
 
@@ -111,6 +141,7 @@ Administrative logs allow answering questions such as:
 - which configuration areas were changed;
 - which values were submitted;
 - whether a change was committed;
+- whether an operation was denied;
 - whether the action was followed by service errors or security events.
 
 Example login event for user `goofy`:
@@ -131,6 +162,16 @@ Example of an action performed by user `goofy`:
 ```bash
 Jun 21 09:43:19 NethSec nethsecurity-api[5376]: nethsecurity_api 2024/06/21 09:43:19 middleware.go:170: [INFO][AUTH] authorization success for user goofy. POST /api/ubus/call {"path":"ns.dashboard","method":"service-status","payload":{"service":"internet"}}
 ```
+
+Example of an operation denied to user `goofy`, who tried to delete the administrative user `donald`:
+
+```bash
+Nov 24 14:35:55 NethSec nethsecurity-api[6091]: [AUTH] authorization success for user goofy. POST /api/ubus/call {"path":"ns.users","method":"delete-local-user","payload":{"name":"donald","database":"main"}}
+Nov 24 14:35:55 NethSec nethsecurity-api[6091]: [UBUS][RESPONSE] ubus application error: Message='forbidden', Data='{"error":"forbidden"}'
+```
+
+The `forbidden` line does not contain the username: it refers to the request logged just before it.
+
 
 ## Audit and compliance recommendations
 
@@ -153,9 +194,10 @@ NethSecurity logs can support audit reconstruction and incident analysis. Organi
 
 ## Current limitations
 
-- NethSecurity does not currently provide a full local RBAC model for web administrators.
+- NethSecurity does not currently provide a full local RBAC model for web administrators: administrative users can change any part of the configuration except the operations reserved to `root`.
 - A dedicated local read-only administrator role is not currently available.
 - Administrative users should therefore be assigned only to trusted operators.
+- Administrative users can restore a cloud backup. A backup contains the users and the administrators too, so restoring an older backup brings back the accounts as they were when it was created, including administrators deleted later and the previous `root` password.
 - Some log entries may require correlation with configuration commit logs or related service logs.
 - An authorization event means that the API request was allowed, but related logs should be checked to confirm the final effect of the operation.
 - Not every log entry necessarily contains the same fields.
