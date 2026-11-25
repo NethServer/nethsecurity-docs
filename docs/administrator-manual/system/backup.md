@@ -20,21 +20,19 @@ Only `root` can download a backup, restore a backup from a file and configure or
 ## Backup
 
 NethSecurity allows the creation of both encrypted and unencrypted backups.
-`root`user only can download an unencrypted backup by clicking the **Download unencrypted** button.
+Only `root` can download an unencrypted backup by clicking the **Download unencrypted** button.
 
 To allow downloading an encrypted backup, first click on the **Configure passphrase** button and set a strong password. After that the **Download encrypted** button will become active.
 
 :::note
 
-If the backup is encrypted and the password is lost, it will no longer be possible to restore the configuration.
+If  is encrypted and the password is lost, it will no longer be possible to restore the configuration.
 
 :::
 
 To disable encrypted backups, click on the **Remove passphrase** button and **Download encrypted** button will become inactive.
 
 ## Restore {#automatic_backup-section}
-
-The backup can be restored from the the `Restore` tab inside the page inside the `Backup & Restore` page. The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
 
 Only `root` can restore a backup from a file. The backup can be restored from the `Restore` tab inside the page inside the `Backup & Restore` page. The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
 
