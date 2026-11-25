@@ -177,7 +177,6 @@ To allow SSH access from the wider internet (WAN), a firewall input rule must be
 
 Only `root` can log in through SSH: administrative users have no shell access. The SSH settings and keys in the NethSecurity UI can be changed only by `root`.
 
-
 From a Linux machine, use the following command: :
 
 ``` bash
