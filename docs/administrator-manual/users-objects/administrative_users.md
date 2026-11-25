@@ -63,7 +63,7 @@ Both warnings disappear as soon as the condition is fixed. Create a personal adm
 
 Administrative users are created from the local users database.
 
-To create an administrative user,log in as `root`:
+To create an administrative user, log in as `root`:
 
 1. Create a local user.
 2. Set a password for the user.
