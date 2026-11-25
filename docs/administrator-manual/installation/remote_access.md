@@ -172,7 +172,7 @@ For information about administrative accounts, two-factor authentication (2FA), 
 
 ## SSH
 
-By default, the system accepts SSH connections on the standard port 22 from the internal network (LAN). Root access is enabled using the default password. 
+By default, the system accepts SSH connections on the standard port 22 from the internal network (LAN). Root access is enabled using the default password.
 To allow SSH access from the wider internet (WAN), a firewall input rule must be added for the server\'s listening port.
 
 Only `root` can log in through SSH: administrative users have no shell access. The SSH settings and keys in the NethSecurity UI can be changed only by `root`.
