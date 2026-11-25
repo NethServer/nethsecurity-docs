@@ -196,7 +196,6 @@ NethSecurity logs can support audit reconstruction and incident analysis. Organi
 - NethSecurity does not currently provide a full local RBAC model for web administrators: administrative users can change any part of the configuration except the operations reserved to `root`.
 - A dedicated local read-only administrator role is not currently available.
 - Administrative users should therefore be assigned only to trusted operators.
-- Administrative users can restore a cloud backup. A backup contains the users and the administrators too, so restoring an older backup brings back the accounts as they were when it was created, including administrators deleted later and the previous `root` password.
 - Some log entries may require correlation with configuration commit logs or related service logs.
 - An authorization event means that the API request was allowed, but related logs should be checked to confirm the final effect of the operation.
 - Not every log entry necessarily contains the same fields.
