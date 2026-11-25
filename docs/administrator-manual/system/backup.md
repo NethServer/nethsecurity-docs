@@ -11,9 +11,16 @@ Access the `Backup & Restore` page under the `System` section, then click on the
 
 The backup includes all relevant configuration files and also the list of extra packages installed by the user. The list is saved in the file `/etc/backup/installed_packages.txt`.
 
+:::note
+
+Only `root` can download a backup, restore a backup from a file and configure or remove the passphrase. Administrative users can run a cloud backup and restore a cloud backup. See [Roles and permissions](../users-objects/administrative_users.md#admin_roles-section).
+
+:::
+
 ## Backup
 
-NethSecurity allows the creation of both encrypted and unencrypted backups. Downloading an unencrypted backup is always possible by clicking the **Download unencrypted** button.
+NethSecurity allows the creation of both encrypted and unencrypted backups.
+Only `root` can download an unencrypted backup by clicking the **Download unencrypted** button.
 
 To allow downloading an encrypted backup, first click on the **Configure passphrase** button and set a strong password. After that the **Download encrypted** button will become active.
 
@@ -27,7 +34,7 @@ To disable encrypted backups, click on the **Remove passphrase** button and **Do
 
 ## Restore {#automatic_backup-section}
 
-The backup can be restored from the the `Restore` tab inside the page inside the `Backup & Restore` page. The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
+Only `root` can restore a backup from a file. The backup can be restored from the `Restore` tab inside the page inside the `Backup & Restore` page. The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
 
 After the restore the system will be rebooted.
 
@@ -49,11 +56,13 @@ This feature is available only if the firewall has a valid subscription.
 
 Backups behave differently on devices with an active [subscription](./subscription.md).
 
-Unencrypted backups can still be downloaded directly from the NethSecurity UI by clicking the **Download unencrypted** button.
+`root` can still download unencrypted backups directly from the NethSecurity UI by clicking the **Download unencrypted** button.
 
 Encrypted backups are stored in the cloud and integrated with Nethesis Operation Center: this approach simplifies backup management for subscription-based devices.
 
 To restore a cloud backup, download it from my.nethesis.it or my.nethserver.com and upload it from the [Restore](#automatic_backup-section) tab. There's no need to get a new system key or register the machine again: the backup brings back the registration of the original system.
+
+Administrative users cannot upload a backup file, but they can restore the cloud backups stored on my.nethesis.it or my.nethserver.com directly from the NethSecurity UI.
 
 To enable encrypted cloud backups first, a passphrase must be configured by clicking the **Configure passphrase** button and setting a strong password. Once the passphrase is set you can either:
 

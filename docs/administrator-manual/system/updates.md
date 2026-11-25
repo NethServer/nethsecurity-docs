@@ -26,7 +26,8 @@ This type of update will reboot the device (which will therefore not be reachabl
 
 If a new version is available, the user interface will display an information banner and a dedicated button **Update System** that will allow you to perform the update.
 
-Alternatively, it is always possible to manually upload a compatible image using the **Update with image file** button and proceed with the update.
+Alternatively, `root` can manually upload a compatible image using the **Update with image file** button and proceed with the update. 
+Administrative users can still update the system from the Nethesis official repositories using the **Update System** button.
 
 **Update from command line**
 
