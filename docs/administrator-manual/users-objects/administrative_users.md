@@ -6,6 +6,7 @@ sidebar_position: 2
 # Administrative users {#administrative_users-section}
 
 NethSecurity allows local users to be granted administrative access to the web interface.
+
 Every operator must use a personal administrative user for daily work, so that each action can be attributed to a specific person in the logs. Do not share administrative accounts between operators.
 
 The `root` account is reserved for emergency and recovery operations, and for the few tasks that only `root` can perform, such as managing administrative users. Do not use it for ordinary administrative activity.
@@ -16,7 +17,7 @@ NethSecurity has three kinds of accounts:
 
 - `root`: the local system account, with full control of the unit.
 - **Administrative users**: local users with the **Administrator user** option enabled. They log in to the NethSecurity UI with a personal account and manage the firewall, but they cannot manage other administrators or perform operations that would give them the same power as `root`.
- - **Non-administrative users**: local or remote users used for services such as VPN or authentication, without access to the NethSecurity UI.
+- **Non-administrative users**: local or remote users used for services such as VPN or authentication, without access to the NethSecurity UI.
 
 The following operations are reserved to `root`:
 
@@ -49,7 +50,6 @@ The 2FA configuration of the user is deleted at the same time: if the user becom
 
 Changing the password of an administrative user does not close their active sessions. To log out an operator immediately, delete the user or disable the **Administrator user** option.
 
-
 ### Dashboard warnings
 
 The dashboard warns `root` when:
@@ -59,12 +59,11 @@ The dashboard warns `root` when:
 
 Both warnings disappear as soon as the condition is fixed. Create a personal administrative account for each operator and keep `root` for recovery operations.
 
-
 ## Creating administrative users
 
 Administrative users are created from the local users database.
 
-To create an administrative user log in as `root`:
+To create an administrative user,log in as `root`:
 
 1. Create a local user.
 2. Set a password for the user.
@@ -119,7 +118,7 @@ printf '0' > "${SECRETS_DIR}/${USERNAME}/status"
 ```
 
 After these commands the user can log in with just their password. 2FA can be re-enabled at any time from the web interface.
-Only `root` can access the shell, so administrative users cannot recover their own account from SSH: `root` must run the commands above on their behalf
+Only `root` can access the shell, so administrative users cannot recover their own account from SSH: `root` must run the commands above on their behalf.
 
 ## Administrative activity logging {#admin_logging-section}
 
