@@ -26,7 +26,7 @@ To allow downloading an encrypted backup, first click on the **Configure passphr
 
 :::note
 
-If  is encrypted and the password is lost, it will no longer be possible to restore the configuration.
+If the backup is encrypted and the password is lost, it will no longer be possible to restore the configuration.
 
 :::
 
@@ -35,7 +35,6 @@ To disable encrypted backups, click on the **Remove passphrase** button and **Do
 ## Restore {#automatic_backup-section}
 
 Only `root` can restore a backup from a file. The backup can be restored from the `Restore` tab inside the page inside the `Backup & Restore` page. The user can initiate the restore process by clicking the **Restore backup** button and uploading the backup file. If the backup is encrypted, enter the passphrase, and finally, click the **Restore** button to complete the process.
-
 
 After the restore the system will be rebooted.
 
